@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Life_05_developmental_interaction_structure",
+  "model": "mixed:bonsai2-27b-pq2+deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "40f5211724dc228b3956b2f8c358a5978036c8436e9a7d508a3c1121689a8b5f",
+  "workspace_input_file_count": 8,
+  "workspace_input_bytes": 396119,
+  "output_tree_sha256": "8c118ca86e7278cd7d54daa70d312215c2b3b3eb8723277a1d24ec2198eeaae7",
+  "output_file_count": 33,
+  "output_bytes": 1640644
+}

@@ -1,0 +1,116 @@
+{
+  "unit": "time",
+  "checks": [
+    {
+      "claim": "V5a: no time point significant at 0.05; all 7 p>=0.05; min p=0.506",
+      "recomputed": {
+        "per_time": {
+          "3.0": {
+            "n": 4,
+            "mean_diff_pp": -0.516715,
+            "paired_sd": 5.325766,
+            "t": -0.194043,
+            "p": 0.858538
+          },
+          "6.0": {
+            "n": 4,
+            "mean_diff_pp": -0.521745,
+            "paired_sd": 5.780956,
+            "t": -0.180505,
+            "p": 0.868261
+          },
+          "9.0": {
+            "n": 4,
+            "mean_diff_pp": 0.995735,
+            "paired_sd": 5.436791,
+            "t": 0.366295,
+            "p": 0.738453
+          },
+          "12.0": {
+            "n": 4,
+            "mean_diff_pp": -1.082767,
+            "paired_sd": 9.978196,
+            "t": -0.217027,
+            "p": 0.842109
+          },
+          "15.0": {
+            "n": 4,
+            "mean_diff_pp": 0.196098,
+            "paired_sd": 10.910945,
+            "t": 0.035945,
+            "p": 0.973584
+          },
+          "18.0": {
+            "n": 4,
+            "mean_diff_pp": -2.38235,
+            "paired_sd": 6.322767,
+            "t": -0.753578,
+            "p": 0.505852
+          },
+          "21.0": {
+            "n": 4,
+            "mean_diff_pp": -3.057375,
+            "paired_sd": 8.325482,
+            "t": -0.734462,
+            "p": 0.515867
+          }
+        },
+        "min_p": 0.505852,
+        "min_p_time": 18.0,
+        "all_p_ge_0_05": true
+      },
+      "agrees": true,
+      "expression": "stats.ttest_1samp(perturbation-baseline diff per time_units, popmean=0)"
+    },
+    {
+      "claim": "V5b: largest |mean diff| at t=21 with -3.057 pp",
+      "recomputed": {
+        "time": 21.0,
+        "mean_diff_pp": -3.057375,
+        "t_stat": -0.734462
+      },
+      "agrees": true,
+      "expression": "wide.groupby('time_units')['diff'].mean(); abs() argmax"
+    },
+    {
+      "claim": "V5c: OLS slope baseline = 0.839, p<0.001",
+      "recomputed": {
+        "slope": 0.839041,
+        "p": 8.358788610253814e-06
+      },
+      "agrees": true,
+      "expression": "sm.OLS(normalized_response_percent ~ time_units) within condition_role=baseline, n=28"
+    },
+    {
+      "claim": "V5c: OLS slope perturbation = 0.6945, p<0.001",
+      "recomputed": {
+        "slope": 0.694484,
+        "p": 1.754192250556534e-06
+      },
+      "agrees": true,
+      "expression": "sm.OLS(normalized_response_percent ~ time_units) within condition_role=perturbation, n=28"
+    },
+    {
+      "claim": "V5d: time x condition_role interaction p = 0.4304",
+      "recomputed": {
+        "p": 0.430445,
+        "params": [
+          "time_units:C(condition_role)[T.perturbation]"
+        ]
+      },
+      "agrees": true,
+      "expression": "smf.mixedlm('normalized_response_percent ~ time_units * C(condition_role)', groups=replicate_id).fit()"
+    }
+  ],
+  "paired_sds": {
+    "3.0": 5.325766,
+    "6.0": 5.780956,
+    "9.0": 5.436791,
+    "12.0": 9.978196,
+    "15.0": 10.910945,
+    "18.0": 6.322767,
+    "21.0": 8.325482
+  },
+  "conclusion": "V5a: all 7 paired t-tests non-significant at 0.05. min p=0.5059 at time 18.0. Largest |mean diff| = -3.0574 pp at time 21.0 (t=-0.734). Slopes: baseline 0.8390 (p=8.4e-06); perturbation 0.6945 (p=1.8e-06). Interaction p=0.4304. Paired SDs range 5.3258-10.9109 pp, so a 3 pp difference is near the noise floor; non-significance reflects low power (n=4).",
+  "errors": []
+}

@@ -1,0 +1,169 @@
+{
+  "A_leave_one_setting_out": {
+    "configs": 21,
+    "all_orderings_hold": 21
+  },
+  "A_alternative_gap_definition": {
+    "values": [
+      0.19315202610990376,
+      0.24144924342323365,
+      0.2767435882424265,
+      0.36912127756727464,
+      0.4579363831764121,
+      0.5295511692221524,
+      0.73205544956953
+    ],
+    "strictly_increasing": true,
+    "growth_factor": 3.7900479964574094
+  },
+  "B_soc_optimum": {
+    "fine_min_soc": 49.49999999999946,
+    "fine_min_rmse_eff_pp": 0.16167437144699076,
+    "rmse_eff_at_50_pp": 0.18367276459252005,
+    "rmse_V_at_50": 0.002678497088013163,
+    "band_rmse_le_1pp": [
+      43.249999999999815,
+      55.049999999999145
+    ]
+  },
+  "B_nearest_measured_to_50": {
+    "charge_like_s1": 8.480110000000003,
+    "charge_like_s4": -1.9496400000000023,
+    "charge_like_s7": -0.5097200000000015,
+    "discharge_like_s1": 1.2166399999999982,
+    "discharge_like_s4": -0.4329800000000006,
+    "discharge_like_s7": -1.316209999999998
+  },
+  "B_leave_one_rate_out": {
+    "rmse_eff_range_pp": [
+      0.16677973967463539,
+      0.19832789112053448
+    ],
+    "rmse_V_range": [
+      0.0024979777658320746,
+      0.002866449351231844
+    ]
+  },
+  "B_nearest_point_definition": {
+    "rmse_eff_pp": 0.12464781427319661,
+    "rmse_V": 0.0009115214910090473
+  },
+  "C_full": {
+    "slope": -0.11999399289081165,
+    "ci": [
+      -0.13482782599157528,
+      -0.11254253993852907
+    ],
+    "excludes_zero": true
+  },
+  "C_variants": [
+    {
+      "variant": "drop odd cycles",
+      "n": 300,
+      "slope": -0.1205201781797584,
+      "lo": -0.1472947111177155,
+      "hi": -0.11080053029600946,
+      "excl0": true,
+      "ret": 92.78350454311338
+    },
+    {
+      "variant": "drop even cycles",
+      "n": 300,
+      "slope": -0.11944924668607519,
+      "lo": -0.13858166739052813,
+      "hi": -0.11210536124539093,
+      "excl0": true,
+      "ret": 90.07036628572092
+    },
+    {
+      "variant": "drop first 50",
+      "n": 550,
+      "slope": -0.1296469793727348,
+      "lo": -0.14151565306629235,
+      "hi": -0.12557666986896335,
+      "excl0": true,
+      "ret": 89.86175112092704
+    },
+    {
+      "variant": "drop last 50",
+      "n": 550,
+      "slope": -0.12061117292120271,
+      "lo": -0.13932663048338093,
+      "hi": -0.11098345259115631,
+      "excl0": true,
+      "ret": 90.07036628572092
+    },
+    {
+      "variant": "first half only",
+      "n": 300,
+      "slope": -0.07459094081934228,
+      "lo": -0.10625775165626512,
+      "hi": -0.04407508638449722,
+      "excl0": true,
+      "ret": 97.107113544287
+    },
+    {
+      "variant": "second half only",
+      "n": 300,
+      "slope": -0.10536640796675519,
+      "lo": -0.11915953390166269,
+      "hi": -0.0676188182132343,
+      "excl0": true,
+      "ret": 95.1219507396391
+    },
+    {
+      "variant": "drop |residual|>2sd (order kept)",
+      "n": 570,
+      "slope": -0.12085041746347436,
+      "lo": -0.13225703233284117,
+      "hi": -0.11497498851253243,
+      "excl0": true,
+      "ret": 91.4777160814529
+    }
+  ],
+  "C_plateau_windows": [
+    "1",
+    "51",
+    "101",
+    "151",
+    "201",
+    "251",
+    "351",
+    "401",
+    "451",
+    "501"
+  ],
+  "D_quadratic_bootstrap": {
+    "point": -12.306141864303829,
+    "ci": [
+      -15.819950997335118,
+      -8.845366843338159
+    ],
+    "frac_negative": 1.0
+  },
+  "D_steepening_leave_one_out": {
+    "holds": 7,
+    "of": 7
+  },
+  "E_peak_definitions": [
+    [
+      "raw argmax (all 9 points)",
+      300.0,
+      330.0
+    ],
+    [
+      "exclude rate 300",
+      200.0,
+      280.3
+    ],
+    [
+      "implied-voltage intersection with 0.99 V floor",
+      300.0,
+      330.0
+    ]
+  ],
+  "E_requires_rate_300": {
+    "stated_peak": 330.0,
+    "peak_if_300_removed": 280.3
+  }
+}

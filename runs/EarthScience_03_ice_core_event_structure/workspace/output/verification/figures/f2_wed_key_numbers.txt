@@ -1,0 +1,36 @@
+REPORTED c06 final = 27.060000 m
+
+Quadratures of the true WED = int rho dz :
+  A trapezoid, c01 increments                   = 21.221770 m   gap -5.838230 m (-21.5751%)
+  B left endpoint, c01 increments               = 21.216420 m   gap -5.843580 m (-21.5949%)
+  C right endpoint, c01 increments              = 21.227120 m   gap -5.832880 m (-21.5554%)
+  D left endpoint, c03 increments               = 20.811450 m   gap -6.248550 m (-23.0915%)
+  E trapezoid, c03 increments                   = 20.814293 m   gap -6.245707 m (-23.0810%)
+  F right endpoint, c03 increments              = 20.817135 m   gap -6.242865 m (-23.0705%)
+  ice-equivalent (divide by 0.917), trapezoid   = 23.142606 m   gap -3.917394 m (-14.4767%)
+
+Envelope bound [rho_min*z, rho_max*z] = [15.910420, 27.035120]
+
+Decisive residuals (1931 rows):
+  X2 = c02*c05                             max|r|=0.023960  rmse=0.007841  mean=+0.000107  OLS R2=0.999998945  R2(identity)=0.999999
+  X1 = c01*c05                             max|r|=0.030320  rmse=0.009652  mean=+0.005501  OLS R2=0.999998927  R2(identity)=0.999998
+  X7 = int rho dz /0.917, trapezoid        max|r|=3.917394  rmse=1.594353  mean=+1.057565  OLS R2=0.997894952  R2(identity)=0.956369
+  X5 = int rho dz, right (c01 incr)        max|r|=5.832880  rmse=2.619610  mean=+1.981064  OLS R2=0.997889803  R2(identity)=0.882212
+  X4 = int rho dz, trapezoid (c01 incr)    max|r|=5.838230  rmse=2.623118  mean=+1.984918  OLS R2=0.997894952  R2(identity)=0.881896
+  X3 = int rho dz, left (c01 incr)         max|r|=5.843580  rmse=2.626628  mean=+1.988773  OLS R2=0.997900086  R2(identity)=0.881580
+  X6 = int rho dz, left (c03 incr)         max|r|=6.248550  rmse=2.940694  mean=+2.366295  OLS R2=0.998430343  R2(identity)=0.851568
+  X9 = cumsum(c03)/100 (pure depth)        max|r|=13.903700  rmse=9.849938  mean=-8.980929  OLS R2=0.989041085  R2(identity)=-0.665314
+  X8 = int c01*c05 dz, left                max|r|=456.784870  rmse=197.742128  mean=-145.657471  OLS R2=0.967287034  R2(identity)=-670.162139
+
+Quadratic-in-depth fits:
+  c06 (reported)   max|r|=0.099218  R2=0.999984435
+  c01*c05          max|r|=0.093866  R2=0.999983584
+  int rho dz       max|r|=0.030074  R2=0.999997319
+
+Inverse probe c06/rho:
+  median_abs(c06/rho - c01) = 0.013156146179397865
+  median_abs(c06/rho - c02) = 0.009496717724289283
+  median_abs(c06/rho - midpoint) = 0.009672580645162299
+  median_abs(c06 - round(c01*c05,2)) = 0.009999999999999787
+  n_rows_exact_c06_eq_round_c01c05_2dp = 767
+  n_rows_exact_c06_eq_round_c02c05_2dp = 1033

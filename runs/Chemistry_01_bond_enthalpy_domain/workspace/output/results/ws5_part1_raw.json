@@ -1,0 +1,179 @@
+{
+  "file_hashes": {
+    "experimental_benchmark.tsv": {
+      "sha256": "319bf2c88ab47bb2c7f779163ed48cd2f316e6299eeda0b999d924ffe81ad484",
+      "bytes": 44326,
+      "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/data/normalized_views/experimental_benchmark.tsv",
+      "manifest_sha256": "319bf2c88ab47bb2c7f779163ed48cd2f316e6299eeda0b999d924ffe81ad484",
+      "sha256_matches_manifest": true,
+      "manifest_bytes": 44326,
+      "bytes_match_manifest": true
+    },
+    "bde_db_full.csv.gz": {
+      "sha256": "2ee36d1548d51289e3faa21e1269b9bbb8f3a8975f9b29719e6beae226864cc6",
+      "bytes": 7491101,
+      "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/data/source_data/bde_db_full.csv.gz",
+      "manifest_sha256": "2ee36d1548d51289e3faa21e1269b9bbb8f3a8975f9b29719e6beae226864cc6",
+      "sha256_matches_manifest": true,
+      "manifest_bytes": 7491101,
+      "bytes_match_manifest": true
+    },
+    "experimental_source_tables.xlsx": {
+      "sha256": "e7c0c73db91d0d097ca8e9f5d6a8edf5cac537a10530d3732fe7738e9e581f08",
+      "bytes": 33180,
+      "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/data/source_data/experimental_source_tables.xlsx",
+      "manifest_sha256": "e7c0c73db91d0d097ca8e9f5d6a8edf5cac537a10530d3732fe7738e9e581f08",
+      "sha256_matches_manifest": true,
+      "manifest_bytes": 33180,
+      "bytes_match_manifest": true
+    }
+  },
+  "shapes": {
+    "benchmark_tsv": [
+      543,
+      8
+    ],
+    "xlsx_sheet001": [
+      543,
+      8
+    ],
+    "db": [
+      484907,
+      8
+    ]
+  },
+  "tsv_columns": [
+    "observation_id",
+    "parent_structure_smiles",
+    "fragment_a_smiles",
+    "fragment_b_smiles",
+    "experimental_bde_kcal_mol",
+    "quantum_estimate_bde_kcal_mol",
+    "learned_estimate_bde_kcal_mol",
+    "reference_estimate_bde_kcal_mol"
+  ],
+  "xlsx_columns": [
+    "Molecule",
+    "Radical 1",
+    "Radical 2",
+    "observed_value",
+    "estimate_quantum",
+    "estimate_learned",
+    "estimate_reference",
+    "in_reference_training_set"
+  ],
+  "db_columns": [
+    "rid",
+    "molecule",
+    "bond_index",
+    "fragment1",
+    "fragment2",
+    "bde",
+    "bond_type",
+    "delta_stereo"
+  ],
+  "cross_file_column_match": {
+    "parent_structure_smiles": {
+      "xlsx_col": "Molecule",
+      "n_compared": 543,
+      "n_exact_match": 543,
+      "frac_exact_match": 1.0,
+      "first_mismatch_row_index": null
+    },
+    "fragment_a_smiles": {
+      "xlsx_col": "Radical 1",
+      "n_compared": 543,
+      "n_exact_match": 543,
+      "frac_exact_match": 1.0,
+      "first_mismatch_row_index": null
+    },
+    "fragment_b_smiles": {
+      "xlsx_col": "Radical 2",
+      "n_compared": 543,
+      "n_exact_match": 543,
+      "frac_exact_match": 1.0,
+      "first_mismatch_row_index": null
+    },
+    "experimental_bde_kcal_mol": {
+      "xlsx_col": "observed_value",
+      "n_compared": 543,
+      "n_exact_match": 543,
+      "frac_exact_match": 1.0,
+      "first_mismatch_row_index": null,
+      "max_abs_diff": 0.0,
+      "n_within_1e-9": 543,
+      "n_within_1e-6": 543
+    },
+    "quantum_estimate_bde_kcal_mol": {
+      "xlsx_col": "estimate_quantum",
+      "n_compared": 543,
+      "n_exact_match": 543,
+      "frac_exact_match": 1.0,
+      "first_mismatch_row_index": null,
+      "max_abs_diff": 0.0,
+      "n_within_1e-9": 543,
+      "n_within_1e-6": 543
+    },
+    "learned_estimate_bde_kcal_mol": {
+      "xlsx_col": "estimate_learned",
+      "n_compared": 543,
+      "n_exact_match": 543,
+      "frac_exact_match": 1.0,
+      "first_mismatch_row_index": null,
+      "max_abs_diff": 0.0,
+      "n_within_1e-9": 543,
+      "n_within_1e-6": 543
+    },
+    "reference_estimate_bde_kcal_mol": {
+      "xlsx_col": "estimate_reference",
+      "n_compared": 543,
+      "n_exact_match": 543,
+      "frac_exact_match": 1.0,
+      "first_mismatch_row_index": null,
+      "max_abs_diff": 0.0,
+      "n_within_1e-9": 543,
+      "n_within_1e-6": 543
+    }
+  },
+  "n_shared_columns_tsv_vs_xlsx": 7,
+  "cross_file_all_shared_columns_identical": true,
+  "xlsx_extra_column": [
+    "in_reference_training_set"
+  ],
+  "row_order_identical_count": 543,
+  "row_order_identical_all": true,
+  "row_multiset_identical": true,
+  "train_flag": {
+    "dtype": "bool",
+    "n_true": 331,
+    "n_false": 212,
+    "value_counts": {
+      "True": 331,
+      "False": 212
+    }
+  },
+  "n_in_db_exact_row": 331,
+  "n_not_in_db_exact_row": 212,
+  "train_flag_vs_in_db_crosstab": {
+    "False": {
+      "False": 212,
+      "True": 0
+    },
+    "True": {
+      "False": 0,
+      "True": 331
+    }
+  },
+  "train_flag_vs_in_db": {
+    "both_true": 331,
+    "train_only_not_db": 0,
+    "db_only_not_train": 0,
+    "neither": 212,
+    "n_agreement": 543,
+    "agreement_fraction": 1.0,
+    "contradictions": 0,
+    "n_true_total": 331,
+    "n_in_db_total": 331
+  },
+  "n_parent_molecule_in_db": 369
+}

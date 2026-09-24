@@ -1,0 +1,223 @@
+{
+  "workstream": "HEADLINE-noise-floor",
+  "question": "What part of each channel's measured error against the benchmark is the benchmark's own experimental reference heterogeneity rather than channel error?",
+  "analysis_unit": "bond observation (543 rows); sigma estimated from observation pairs",
+  "observed_channel_error": {
+    "quantum": {
+      "mae": 2.0978084714548806,
+      "rmse": 3.0595296584807596,
+      "bias": 0.5537200736648252
+    },
+    "learned": {
+      "mae": 2.410699815837938,
+      "rmse": 3.627796539885696,
+      "bias": 1.0788766114180484
+    },
+    "reference": {
+      "mae": 5.48596685082873,
+      "rmse": 6.75961553714002,
+      "bias": 1.3784162062615106
+    }
+  },
+  "method_A_matched_near_duplicate_pairs": {
+    "rationale": "Pairs whose quantum estimates agree within tol are near-identical bonds. Their experimental spread estimates reference heterogeneity directly and does not assume channel/reference independence.",
+    "scans": [
+      {
+        "tol": 0.05,
+        "n_pairs": 517,
+        "sd_delta_experimental": 3.8079135583362755,
+        "sigma_ref": 2.692601499271776,
+        "quantum_selfcheck_sigma": 0.021839690840807474,
+        "learned_selfcheck_sigma": 1.9376432401634642,
+        "oracle_mae": 2.148385164663598
+      },
+      {
+        "tol": 0.1,
+        "n_pairs": 1002,
+        "sd_delta_experimental": 4.021548294704257,
+        "sigma_ref": 2.843664070054576,
+        "quantum_selfcheck_sigma": 0.041689563619880764,
+        "learned_selfcheck_sigma": 1.9260051221160563,
+        "oracle_mae": 2.268915657606384
+      },
+      {
+        "tol": 0.2,
+        "n_pairs": 1930,
+        "sd_delta_experimental": 3.8882250386139936,
+        "sigma_ref": 2.74939029158328,
+        "quantum_selfcheck_sigma": 0.07940905907661068,
+        "learned_selfcheck_sigma": 1.9109525762267936,
+        "oracle_mae": 2.1936960652755877
+      },
+      {
+        "tol": 0.5,
+        "n_pairs": 4751,
+        "sd_delta_experimental": 3.8637430057573408,
+        "sigma_ref": 2.732078880133109,
+        "quantum_selfcheck_sigma": 0.20226109721679233,
+        "learned_selfcheck_sigma": 1.8954350487887013,
+        "oracle_mae": 2.17988355735379
+      },
+      {
+        "tol": 1.0,
+        "n_pairs": 8878,
+        "sd_delta_experimental": 3.9837538407933075,
+        "sigma_ref": 2.8169393554029014,
+        "quantum_selfcheck_sigma": 0.39828677340517776,
+        "learned_selfcheck_sigma": 1.9550667684485639,
+        "oracle_mae": 2.247592420393951
+      }
+    ],
+    "primary_tol": 0.1,
+    "primary": {
+      "tol": 0.1,
+      "n_pairs": 1002,
+      "sd_delta_experimental": 4.021548294704257,
+      "sigma_ref": 2.843664070054576,
+      "quantum_selfcheck_sigma": 0.041689563619880764,
+      "learned_selfcheck_sigma": 1.9260051221160563,
+      "oracle_mae": 2.268915657606384
+    },
+    "bootstrap_sigma_ci95": [
+      2.023375124940022,
+      3.075226049090338
+    ],
+    "bootstrap_mean_sigma": 2.5118950551582198,
+    "bootstrap_replicates_used": 2000
+  },
+  "method_B_moment_decomposition": {
+    "rationale": "sigma_ref^2 = [V(E-Q)+V(E-L)-V(Q-L)]/2 under independent errors; a closed-form cross-check on method A.",
+    "var_E_minus_Q": 9.070820821865679,
+    "var_E_minus_L": 12.019067554857868,
+    "var_Q_minus_L": 5.037678158107548,
+    "sigma_ref": 2.8330381411671812,
+    "sigma_ref_sq": 8.026105109307998,
+    "implied_sigma_quantum_vs_truth": 1.0221133560215718,
+    "implied_sigma_learned_vs_truth": 1.9982398368438834
+  },
+  "agreement_between_methods": {
+    "sigma_ref_method_A": 2.843664070054576,
+    "sigma_ref_method_B": 2.8330381411671812,
+    "absolute_difference": 0.010625928887394664,
+    "agree": true
+  },
+  "noise_floor": {
+    "sigma_ref": 2.843664070054576,
+    "sigma_ref_ci95": [
+      2.023375124940022,
+      3.075226049090338
+    ],
+    "oracle_mae": 2.268915657606384,
+    "oracle_mae_ci95": [
+      1.6144197729022125,
+      2.4536753855479754
+    ]
+  },
+  "channel_verdict_vs_floor": {
+    "quantum": {
+      "mae": 2.0978084714548806,
+      "oracle_floor_mae": 2.268915657606384,
+      "excess_over_floor_kcal": -0.17110718615150322,
+      "ratio_mae_to_floor": 0.9245863610761034,
+      "mae_inside_floor_ci95": true,
+      "implied_sigma_channel_vs_truth": 1.0221133560215718
+    },
+    "learned": {
+      "mae": 2.410699815837938,
+      "oracle_floor_mae": 2.268915657606384,
+      "excess_over_floor_kcal": 0.141784158231554,
+      "ratio_mae_to_floor": 1.0624898319848217,
+      "mae_inside_floor_ci95": true,
+      "implied_sigma_channel_vs_truth": 1.9982398368438834
+    },
+    "reference": {
+      "mae": 5.48596685082873,
+      "oracle_floor_mae": 2.268915657606384,
+      "excess_over_floor_kcal": 3.217051193222346,
+      "ratio_mae_to_floor": 2.417880467454752,
+      "mae_inside_floor_ci95": false,
+      "implied_sigma_channel_vs_truth": null
+    }
+  },
+  "floor_definition_sensitivity": {
+    "variants": {
+      "gaussian_from_sd": {
+        "sigma": 2.843664070054576,
+        "floor_mae": 2.268915657606384,
+        "definition": "sigma from sd of paired differences; MAE = sigma*sqrt(2/pi)"
+      },
+      "empirical_heavy_tailed": {
+        "sigma": 1.961706160157673,
+        "floor_mae": 1.961706160157673,
+        "definition": "mean|dE|/sqrt(2); no normality assumption"
+      },
+      "robust_mad": {
+        "sigma": 1.9918803567643066,
+        "floor_mae": 1.5892905836287436,
+        "definition": "median absolute deviation scaled to sigma"
+      },
+      "robust_iqr": {
+        "sigma": 1.991850087849428,
+        "floor_mae": 1.5892664325288899,
+        "definition": "IQR/1.349 as sigma; insensitive to the heavy tail"
+      },
+      "median_abs_diff": {
+        "sigma": null,
+        "floor_mae": 1.3435028842544443,
+        "definition": "median|dE|/sqrt(2); the most conservative reading"
+      }
+    },
+    "paired_difference_distribution": {
+      "n_pairs": 1002,
+      "sd": 4.021548294704257,
+      "skew": 0.805815722998861,
+      "excess_kurtosis": 3.1689356840799965,
+      "shapiro_p": 1.1639811978266238e-20,
+      "median_abs": 1.9000000000000057,
+      "mean_abs": 2.7742714570858285,
+      "note": "The distribution is strongly non-Gaussian (skew and excess kurtosis both positive, Shapiro p far below 0.05), so the Gaussian-form floor is the least conservative of the five and the robust forms are the ones a sceptical reader should prefer."
+    },
+    "mae_to_floor_ratios": {
+      "quantum": {
+        "gaussian_from_sd": 0.925,
+        "empirical_heavy_tailed": 1.069,
+        "robust_mad": 1.32,
+        "robust_iqr": 1.32,
+        "median_abs_diff": 1.561
+      },
+      "learned": {
+        "gaussian_from_sd": 1.062,
+        "empirical_heavy_tailed": 1.229,
+        "robust_mad": 1.517,
+        "robust_iqr": 1.517,
+        "median_abs_diff": 1.794
+      },
+      "reference": {
+        "gaussian_from_sd": 2.418,
+        "empirical_heavy_tailed": 2.797,
+        "robust_mad": 3.452,
+        "robust_iqr": 3.452,
+        "median_abs_diff": 4.083
+      }
+    },
+    "robust_conclusions": {
+      "reference_worse_than_floor_under_all_definitions": true,
+      "reference_ratio_range": [
+        2.418,
+        4.083
+      ],
+      "quantum_ratio_range": [
+        0.925,
+        1.561
+      ],
+      "quantum_at_or_below_floor_under_all_definitions": false,
+      "statement": "The reference channel's excess is robust: it stays well above every floor definition. The quantum channel's 'at or below floor' reading is NOT robust: it holds under the Gaussian and empirical floors but not under the robust MAD/IQR/median floors, because the paired-difference distribution is heavy tailed. The defensible claim is that quantum's error is of the same order as the reference heterogeneity, not that it is provably below it."
+    }
+  },
+  "interpretation": "The calibrated channels' errors are of the same order as the benchmark's own reference heterogeneity, so a large part of their measured MAE is not channel error at all. The reference channel's error is roughly two to five times every floor definition and is therefore genuinely worse. Within the calibrated pair, the honest statement is bounded: quantum's MAE sits below the Gaussian-form floor but not below the robust-scale floors, so the sample supports 'quantum and learned are close to each other and to the reference noise' rather than 'quantum is provably at the noise floor'.",
+  "limitations": [
+    "Method A assumes near-identical quantum estimates imply near-identical true bonds; residual structural differences inflate the estimate, making the floor an upper bound on pure reference heterogeneity.",
+    "Method B assumes the reference error is uncorrelated with both channels' errors; if the channels were fitted to these references the assumption fails and sigma_ref is overestimated.",
+    "The experimental values are literature values from heterogeneous sources, not independent repeats from one laboratory; that is exactly why the floor exists."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "methodA": {
+    "n_pairs": 1002,
+    "sigma_ref": 2.8538555004703494,
+    "note": "pairs with |Q_i-Q_j|<=0.1; Var(E_i-E_j)=2 sigma^2"
+  },
+  "methodB": {
+    "V_E_minus_Q": 9.070820821865679,
+    "V_E_minus_L": 12.019067554857868,
+    "V_Q_minus_L": 5.037678158107548,
+    "sigma_ref_sq": 8.026105109307998,
+    "sigma_ref": 2.8330381411671812
+  },
+  "oracle_mae_from_B": 2.2604373930029427,
+  "agreement_AB": 0.020817359303168192,
+  "claim11": {
+    "n_unique_molecules": 419,
+    "n_multi_row_molecules": 86,
+    "mean_within_spread": 13.418604651162788,
+    "median_within_spread": 11.899999999999999,
+    "max_within_spread": 47.900000000000006,
+    "pooled_within_sd_correct": 9.965372236760867,
+    "naive_var_squared_weighted": null,
+    "naive_mean_of_variances_ddof0": 10.315528014457342,
+    "naive_n_weighted_ddof0": 10.110235737442855,
+    "naive_sqrt_sum_variances": 95.66227138567568,
+    "naive_squared_var_weighted": 165.2622713320976,
+    "naive_pooled_over_unique_mol": 5.421224054272146
+  }
+}

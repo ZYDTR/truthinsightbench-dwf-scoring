@@ -1,0 +1,135 @@
+[artifact] results/results.json
+{
+  "schema": "tib-verification-summary",
+  "task_id": "Energy_03_interface_response_boundaries",
+  "data_integrity": {
+    "anonymous_condition_response_curves.tsv": {
+      "sha256": "b3668160fac559700404181f686acec1394cfcdaf2ef34d38a75834556f89726",
+      "matches_manifest": true
+    },
+    "independent_condition_check_curves.tsv": {
+      "sha256": "1a79f8b8bf11fe116930ddc9e4b3a50baefe441235f41cf0bd8a1f81ae335237",
+      "matches_manifest": true
+    }
+  },
+  "design": {
+    "main_rows": 88,
+    "check_rows": 44,
+    "main_conditions": [
+      "condition_block1_1",
+      "condition_block1_2",
+      "condition_block1_3",
+      "condition_block1_4",
+      "condition_block2_1",
+      "condition_block2_2",
+      "condition_block2_3",
+      "condition_block2_4"
+    ],
+    "check_conditions": [
+      "condition_block1_1",
+      "condition_block1_2",
+      "condition_block1_4",
+      "condition_block1_5"
+    ],
+    "settings": [
+      120.0,
+      140.0,
+      160.0,
+      180.0,
+      200.0,
+      220.0,
+      240.0,
+      260.0,
+      280.0,
+      300.0,
+      320.0
+    ],
+    "n_settings": 11,
+    "main_is_balanced_complete": true,
+    "check_is_balanced_complete": true,
+    "no_missing_imposed": true,
+    "response_max_all_panels": 93.01486,
+    "n_zero_responses": 3
+  },
+  "D1_curvature": {
+    "model": "log(y) = a + b*T + c*T^2 estimated per curve on T>=140 K",
+    "curves": {
+      "main": [
+        {
+          "curve": "condition_block1_1",
+          "c": -5.9744618241323305e-05,
+          "se": 4.393273041247327e-06,
+          "t": -13.59911339003887,
+          "p_one_sided_lt0": 1.3675851869684808e-06,
+          "r2": 0.9996234875272308,
+          "n_neg_second_diffs": 7,
+          "n_second_diffs": 8
+        },
+        {
+          "curve": "condition_block1_2",
+          "c": -0.000130752653322629,
+          "se": 4.80702716457804e-06,
+          "t": -27.200315048376986,
+          "p_one_sided_lt0": 1.1641341860994245e-08,
+          "r2": 0.9991062349116887,
+          "n_neg_second_diffs": 7,
+          "n_second_diffs": 8
+        },
+        {
+          "curve": "condition_block1_3",
+          "c": -0.00011422688967314143,
+          "se": 9.91298662324629e-06,
+          "t": -11.522954081797659,
+          "p_one_sided_lt0": 4.172007992643656e-06,
+          "r2": 0.9965422894019593,
+          "n_neg_second_diffs": 6,
+          "n_second_diffs": 8
+        },
+        {
+          "curve": "condition_block1_4",
+          "c": -5.63887611745991e-05,
+          "se": 4.0750320665808e-06,
+          "t": -13.837623913942032,
+          "p_one_sided_lt0": 1.2155819903553754e-06,
+          "r2": 0.9994819859610841,
+          "n_neg_second_diffs": 7,
+          "n_second_diffs": 8
+        },
+        {
+          "curve": "condition_block2_1",
+          "c": -2.64283349688153e-05,
+          "se": 9.755074852344238e-06,
+          "t": -2.7091883321084222,
+          "p_one_sided_lt0": 0.01511724021314385,
+          "r2": 0.9975973041205988,
+          "n_neg_second_diffs": 6,
+          "n_second_diffs": 8
+        },
+        {
+          "curve": "condition_block2_2",
+          "c": -0.00014670050501529156,
+          "se": 6.641467088819238e-06,
+          "t": -22.088569144949705,
+          "p_one_sided_lt0": 4.924047395171139e-08,
+          "r2": 0.9979111516771466,
+          "n_neg_second_diffs": 8,
+          "n_second_diffs": 8
+        },
+        {
+          "curve": "condition_block2_3",
+          "c": -0.0001381030205918012,
+          "se": 4.905333287600638e-06,
+          "t": -28.153646754419,
+          "p_one_sided_lt0": 9.164768732140624e-09,
+          "r2": 0.9991468899098129,
+          "n_neg_second_diffs": 8,
+          "n_second_diffs": 8
+        },
+        {
+          "curve": "condition_block2_4",
+          "c": -9.749398145165501e-05,
+          "se": 1.8494715973766154e-06,
+          "t": -52.71450591073982,
+          "p_one_sided_lt0": 1.1583367210938825e-10,
+          "r2": 0.9998973871615537,
+          "n_neg_second_diffs": 

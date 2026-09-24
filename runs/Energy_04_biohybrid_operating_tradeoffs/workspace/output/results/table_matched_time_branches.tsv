@@ -1,0 +1,13 @@
+channel	time	n	min	max	ratio_max_min
+promoter_like_signal	0	5	0	4456	
+promoter_like_signal	1	3	3911	4990	1.2758885195602148
+promoter_like_signal	2	4	3	5248	1749.3333333333333
+promoter_like_signal	6	2	5300	5475	1.0330188679245282
+condition_a	0	5	1	5059	5059.0
+condition_a	1	3	4821	5647	1.171333748185024
+condition_a	2	4	4	5642	1410.5
+condition_a	6	2	5870	5933	1.0107325383304941
+condition_b	0	5	2	1013	506.5
+condition_b	1	3	948	1290	1.360759493670886
+condition_b	2	4	43	1312	30.511627906976745
+condition_b	6	2	1363	1384	1.0154071900220103

@@ -1,0 +1,222 @@
+{
+  "schema": "truthinsightbench-semantic-output-validation",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "output": "/data/user/conversations/conv-ef9804c2-78a8-407c-8722-19f66e9fbe2d/project/output",
+  "authoritative_report": {
+    "path": "Result.md",
+    "bytes": 12733,
+    "sha256": "1ece3b6fa51199a6e2fcd7b208ff98ab8a9575557bacd9b3ab9fa8bbdc015512"
+  },
+  "registered_findings": {
+    "count": 4,
+    "numbers": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "markers": [
+      {
+        "finding_number": 1,
+        "line": 27,
+        "marker": "## Finding 1: Frequency-domain agreement is high and near-exact on the coarse frequency grid across all three controls",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 2,
+        "line": 40,
+        "marker": "## Finding 2: Time-domain agreement is moderate and degrades monotonically across the three trajectory conditions, with all trajectories sharing an identical initial condition",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 3,
+        "line": 53,
+        "marker": "## Finding 3: The frequency and time channels CONFLICT — high frequency accuracy coexists with low-to-moderate full-trajectory accuracy (boundary finding)",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 4,
+        "line": 63,
+        "marker": "## Finding 4: Robustness — the condition ranking is stable, exact frequency matches are threshold-robust, and `signed_control` is the most frequency-accurate control",
+        "heading_level": 2
+      }
+    ],
+    "traceability": [
+      {
+        "finding_number": 1,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis_frequency.py"
+        ],
+        "result_evidence": [
+          "figures/freq_reference_vs_forecast.svg",
+          "frequency_results.json",
+          "robustness_results.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 2,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis_trajectory.py"
+        ],
+        "result_evidence": [
+          "figures/traj_reference_vs_forecast.svg",
+          "robustness_results.json",
+          "trajectory_results.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 3,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis_robustness.py"
+        ],
+        "result_evidence": [
+          "figures/error_bar.svg",
+          "robustness_results.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 4,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis_robustness.py"
+        ],
+        "result_evidence": [
+          "robustness_results.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      }
+    ]
+  },
+  "reproduction": {
+    "mode": "section_in_authoritative_report",
+    "document": null
+  },
+  "analysis_sources": [
+    {
+      "path": "analysis_frequency.py",
+      "bytes": 1731,
+      "sha256": "8f008ef4e85e7c763b0e13df496a86dbe90ebda974ea56b56ff0dd2f6bea8c6e"
+    },
+    {
+      "path": "analysis_robustness.py",
+      "bytes": 9070,
+      "sha256": "194406003f491737f6355d180cda026698e42f4551660ebd615e6014b1e058e1"
+    },
+    {
+      "path": "analysis_trajectory.py",
+      "bytes": 2100,
+      "sha256": "4f486bb952fcaa80a88c29dacb25fbb76eb6bf8d01af04bbf627d6e65cb5af97"
+    },
+    {
+      "path": "figures.py",
+      "bytes": 15307,
+      "sha256": "97e40799769bcf91dce60253bb0d08031eb38e285381b0718c94eade038e1da9"
+    },
+    {
+      "path": "integrity_check.py",
+      "bytes": 5412,
+      "sha256": "e369619dc85f032f39e9d44a6273db083edbcd16af6fc8d2b41ee9114bb6b177"
+    }
+  ],
+  "executed_notebooks": [],
+  "result_artifacts": [
+    {
+      "path": "figures/error_bar.svg",
+      "bytes": 3869,
+      "sha256": "98eda2d562b5db16b7e9a2174dd378911aec3a96fec54f87b7657aea7b93e6a0"
+    },
+    {
+      "path": "figures/freq_reference_vs_forecast.svg",
+      "bytes": 17595,
+      "sha256": "0017caf4e840b54657b15feef8f8bbfdc0dce2be8464b60d4e1c41bc90982f13"
+    },
+    {
+      "path": "figures/traj_reference_vs_forecast.svg",
+      "bytes": 220626,
+      "sha256": "1a60d849cabdfaeee3b8357cd63f3e67fd76182ff89d4f0b8db5c29a67ef758b"
+    },
+    {
+      "path": "frequency_results.json",
+      "bytes": 2977,
+      "sha256": "3d00c062f61049f7a6389f9d0569cf0a32d3f2396fa1adec0e28b8b62633351a"
+    },
+    {
+      "path": "integrity_check.json",
+      "bytes": 4413,
+      "sha256": "c47b485c37801d7d54a3fdcd2817ea78f53d24f8f19366b707779f6872265b18"
+    },
+    {
+      "path": "robustness_results.json",
+      "bytes": 5683,
+      "sha256": "6d077b8a43e34ebc7884b5ecdc80d71a2f853f338f420fd224b57ddcbbfbd0b0"
+    },
+    {
+      "path": "trajectory_results.json",
+      "bytes": 1906,
+      "sha256": "e369e6fda99452dcff7676b3f90e7fb7eb8ae7ea123b2bb44aa60a09e4f13ad0"
+    }
+  ],
+  "native_evidence_registry": {
+    "sources": [],
+    "resolved_ids": {}
+  },
+  "resolved_support_files": [
+    {
+      "path": "analysis_frequency.py",
+      "bytes": 1731,
+      "sha256": "8f008ef4e85e7c763b0e13df496a86dbe90ebda974ea56b56ff0dd2f6bea8c6e"
+    },
+    {
+      "path": "analysis_robustness.py",
+      "bytes": 9070,
+      "sha256": "194406003f491737f6355d180cda026698e42f4551660ebd615e6014b1e058e1"
+    },
+    {
+      "path": "analysis_trajectory.py",
+      "bytes": 2100,
+      "sha256": "4f486bb952fcaa80a88c29dacb25fbb76eb6bf8d01af04bbf627d6e65cb5af97"
+    },
+    {
+      "path": "figures/error_bar.svg",
+      "bytes": 3869,
+      "sha256": "98eda2d562b5db16b7e9a2174dd378911aec3a96fec54f87b7657aea7b93e6a0"
+    },
+    {
+      "path": "figures/freq_reference_vs_forecast.svg",
+      "bytes": 17595,
+      "sha256": "0017caf4e840b54657b15feef8f8bbfdc0dce2be8464b60d4e1c41bc90982f13"
+    },
+    {
+      "path": "figures/traj_reference_vs_forecast.svg",
+      "bytes": 220626,
+      "sha256": "1a60d849cabdfaeee3b8357cd63f3e67fd76182ff89d4f0b8db5c29a67ef758b"
+    },
+    {
+      "path": "frequency_results.json",
+      "bytes": 2977,
+      "sha256": "3d00c062f61049f7a6389f9d0569cf0a32d3f2396fa1adec0e28b8b62633351a"
+    },
+    {
+      "path": "robustness_results.json",
+      "bytes": 5683,
+      "sha256": "6d077b8a43e34ebc7884b5ecdc80d71a2f853f338f420fd224b57ddcbbfbd0b0"
+    },
+    {
+      "path": "trajectory_results.json",
+      "bytes": 1906,
+      "sha256": "e369e6fda99452dcff7676b3f90e7fb7eb8ae7ea123b2bb44aa60a09e4f13ad0"
+    }
+  ]
+}

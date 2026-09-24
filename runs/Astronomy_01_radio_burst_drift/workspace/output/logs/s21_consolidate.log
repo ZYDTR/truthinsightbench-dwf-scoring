@@ -1,0 +1,97 @@
+           dimension                                statistic     unit aggregation  full_sample     loo_min     loo_max  loo_range  crosses_boundary
+s17/s19-consolidated       s17[1.00+eps] fitted_rate_theilsen    MHz/s      median     0.330661    0.087853    0.353758   0.265905             False
+s17/s19-consolidated       s17[1.00+eps] abs_bias_vs_reported    MHz/s      median    12.782683    8.607766   13.002278   4.394512             False
+s17/s19-consolidated              s17[1.00+eps] mask_fraction fraction      median     0.494289    0.494148    0.496133   0.001985             False
+s17/s19-consolidated         s17[1.00+eps] n_components_8conn    count      median  1248.000000 1193.500000 1346.500000 153.000000             False
+s17/s19-consolidated         s17[1.00+eps] frac_multirun_cols fraction      median     1.000000    1.000000    1.000000   0.000000             False
+s17/s19-consolidated                  s17[1.00+eps] pca_slope    MHz/s      median   142.343612 -152.226256  155.908765 308.135021              True
+s17/s19-consolidated s17[1.00+eps] frac_events_identical_sign fraction    fraction     0.400000    0.250000    0.500000   0.250000             False
+s17/s19-consolidated           s17[1.01] fitted_rate_theilsen    MHz/s      median     0.330694    0.087574    0.353962   0.266388             False
+s17/s19-consolidated           s17[1.01] abs_bias_vs_reported    MHz/s      median    12.782716    8.607970   13.002621   4.394651             False
+s17/s19-consolidated                  s17[1.01] mask_fraction fraction      median     0.476307    0.476125    0.478633   0.002508             False
+s17/s19-consolidated             s17[1.01] n_components_8conn    count      median  1557.000000 1497.000000 1653.000000 156.000000             False
+s17/s19-consolidated             s17[1.01] frac_multirun_cols fraction      median     1.000000    1.000000    1.000000   0.000000             False
+s17/s19-consolidated                      s17[1.01] pca_slope    MHz/s      median   142.155324 -151.828216  155.721626 307.549843              True
+s17/s19-consolidated     s17[1.01] frac_events_identical_sign fraction    fraction     0.400000    0.250000    0.500000   0.250000             False
+s17/s19-consolidated           s17[1.02] fitted_rate_theilsen    MHz/s      median     0.331480    0.087649    0.354911   0.267262             False
+s17/s19-consolidated           s17[1.02] abs_bias_vs_reported    MHz/s      median    12.783502    8.608920   13.003048   4.394128             False
+s17/s19-consolidated                  s17[1.02] mask_fraction fraction      median     0.458148    0.457885    0.460811   0.002926             False
+s17/s19-consolidated             s17[1.02] n_components_8conn    count      median  1888.000000 1870.000000 1960.500000  90.500000             False
+s17/s19-consolidated             s17[1.02] frac_multirun_cols fraction      median     1.000000    1.000000    1.000000   0.000000             False
+s17/s19-consolidated                      s17[1.02] pca_slope    MHz/s      median   141.869604 -151.179444  155.309764 306.489208              True
+s17/s19-consolidated     s17[1.02] frac_events_identical_sign fraction    fraction     0.400000    0.250000    0.500000   0.250000             False
+s17/s19-consolidated           s17[1.05] fitted_rate_theilsen    MHz/s      median     0.332009    0.086679    0.360216   0.273537             False
+s17/s19-consolidated           s17[1.05] abs_bias_vs_reported    MHz/s      median    12.784032    8.614224   13.008246   4.394021             False
+s17/s19-consolidated                  s17[1.05] mask_fraction fraction      median     0.405741    0.405284    0.407837   0.002552             False
+s17/s19-consolidated             s17[1.05] n_components_8conn    count      median  3526.000000 3465.000000 3554.500000  89.500000             False
+s17/s19-consolidated             s17[1.05] frac_multirun_cols fraction      median     1.000000    1.000000    1.000000   0.000000             False
+s17/s19-consolidated                      s17[1.05] pca_slope    MHz/s      median   138.761440 -150.860952  151.688664 302.549616              True
+s17/s19-consolidated     s17[1.05] frac_events_identical_sign fraction    fraction     0.400000    0.250000    0.500000   0.250000             False
+s17/s19-consolidated           s17[1.10] fitted_rate_theilsen    MHz/s      median     0.343856    0.089453    0.375849   0.286396             False
+s17/s19-consolidated           s17[1.10] abs_bias_vs_reported    MHz/s      median    12.795879    8.629858   13.022604   4.392746             False
+s17/s19-consolidated                  s17[1.10] mask_fraction fraction      median     0.326024    0.324518    0.327715   0.003197             False
+s17/s19-consolidated             s17[1.10] n_components_8conn    count      median  6622.000000 6524.000000 6778.500000 254.500000             False
+s17/s19-consolidated             s17[1.10] frac_multirun_cols fraction      median     1.000000    1.000000    1.000000   0.000000             False
+s17/s19-consolidated                      s17[1.10] pca_slope    MHz/s      median   131.900612 -141.458184  144.087407 285.545592              True
+s17/s19-consolidated     s17[1.10] frac_events_identical_sign fraction    fraction     0.400000    0.250000    0.500000   0.250000             False
+s17/s19-consolidated           s17[1.20] fitted_rate_theilsen    MHz/s      median     0.370792    0.085422    0.450096   0.364673             False
+s17/s19-consolidated           s17[1.20] abs_bias_vs_reported    MHz/s      median    12.822814    8.704105   13.072659   4.368555             False
+s17/s19-consolidated                  s17[1.20] mask_fraction fraction      median     0.202436    0.199394    0.202447   0.003053             False
+s17/s19-consolidated             s17[1.20] n_components_8conn    count      median  9816.000000 9809.000000 9942.000000 133.000000             False
+s17/s19-consolidated             s17[1.20] frac_multirun_cols fraction      median     1.000000    1.000000    1.000000   0.000000             False
+s17/s19-consolidated                      s17[1.20] pca_slope    MHz/s      median   110.424941 -117.611105  116.155182 233.766287              True
+s17/s19-consolidated     s17[1.20] frac_events_identical_sign fraction    fraction     0.400000    0.250000    0.500000   0.250000             False
+s17/s19-consolidated s17[inj amp 0.02] median_pct_of_reported      pct      median    60.091743   59.174312   73.241590  14.067278             False
+s17/s19-consolidated s17[inj amp 0.05] median_pct_of_reported      pct      median    70.795107   66.360856   82.874618  16.513761             False
+s17/s19-consolidated  s17[inj amp 0.1] median_pct_of_reported      pct      median    79.357798   76.299694   89.143731  12.844037             False
+s17/s19-consolidated s17[inj amp 0.25] median_pct_of_reported      pct      median    95.259939   94.342508   97.400612   3.058104             False
+s17/s19-consolidated            s17 implied_displacement/band fraction      median     1.524884    1.010792    1.544880   0.534088             False
+s17/s19-consolidated             s17 implied_displacement_MHz      MHz      median    13.676861    9.065911   13.856206   4.790295             False
+s17/s19-consolidated         s19 n_events_reject_p_slope_0.05  count/5       count     0.000000    0.000000    0.000000   0.000000             False
+s17/s19-consolidated           s19 n_events_reject_p_any_0.05  count/5       count     5.000000    4.000000    4.000000   0.000000             False
+s17/s19-consolidated           s19 n_events_reject_p_len_0.05  count/5       count     5.000000    4.000000    4.000000   0.000000             False
+s17/s19-consolidated                       s19 median_p_slope        p      median     0.576923    0.346154    0.788462   0.442308             False
+        s18-decisive                             pct_all_band      NaN         NaN    33.042394   20.199501   45.760599  25.561097             False
+        s18-decisive                         pct_matched_band      NaN         NaN    45.726496   27.436419   53.443605  26.007186              True
+        s18-decisive               ratio_reported_over_mirror      NaN         NaN     0.897690    0.863179    0.972819   0.109640             False
+        s18-decisive           n_events_same_sign_as_reported      NaN         NaN     1.000000    1.000000    1.000000   0.000000             False
+        s18-decisive                             pct_all_band      NaN         NaN    33.042394   20.324190   45.137157  24.812968             False
+        s18-decisive                         pct_matched_band      NaN         NaN    44.871795   27.009068   53.462683  26.453615              True
+        s18-decisive               ratio_reported_over_mirror      NaN         NaN     0.892849    0.858392    0.971520   0.113129             False
+        s18-decisive           n_events_same_sign_as_reported      NaN         NaN     1.000000    1.000000    1.000000   0.000000             False
+        s18-decisive                             pct_all_band      NaN         NaN    36.034913   22.443890   44.763092  22.319202             False
+        s18-decisive                         pct_matched_band      NaN         NaN    45.726496   26.826662   49.872176  23.045514             False
+        s18-decisive               ratio_reported_over_mirror      NaN         NaN     0.827728    0.795904    0.933641   0.137737             False
+        s18-decisive           n_events_same_sign_as_reported      NaN         NaN     1.000000    1.000000    1.000000   0.000000             False
+       s20-symmetric                                  pct_all      NaN      median    30.798005   17.206983   36.907731  19.700748             False
+       s20-symmetric                              pct_matched      NaN      median    14.024390   12.354075   21.595528   9.241453             False
+       s20-symmetric               ratio_reported_over_mirror      NaN      median     0.828674    0.827576    0.864944   0.037368             False
+       s20-symmetric                       n_events_ratio_gt1      NaN       count     1.000000    0.000000    1.000000   1.000000             False
+       s20-symmetric                 n_events_pct_extreme_p10      NaN       count     2.000000    1.000000    2.000000   1.000000             False
+       s20-symmetric                      Lmax_over_Lreported      NaN      median     1.266587    1.266347    1.349708   0.083361             False
+       s20-symmetric                                  pct_all      NaN      median    30.548628   16.832918   37.780549  20.947631             False
+       s20-symmetric                              pct_matched      NaN      median    18.902439   14.365749   24.629791  10.264042             False
+       s20-symmetric               ratio_reported_over_mirror      NaN      median     0.826659    0.823940    0.863259   0.039319             False
+       s20-symmetric                       n_events_ratio_gt1      NaN       count     1.000000    0.000000    1.000000   1.000000             False
+       s20-symmetric                 n_events_pct_extreme_p10      NaN       count     2.000000    1.000000    2.000000   1.000000             False
+       s20-symmetric                      Lmax_over_Lreported      NaN      median     1.277783    1.276189    1.363010   0.086821             False
+       s20-symmetric                                  pct_all      NaN      median    40.523691   22.443890   45.760599  23.316708             False
+       s20-symmetric                              pct_matched      NaN      median    33.536585   21.255472   40.875436  19.619963             False
+       s20-symmetric               ratio_reported_over_mirror      NaN      median     0.765224    0.762637    0.813546   0.050910             False
+       s20-symmetric                       n_events_ratio_gt1      NaN       count     1.000000    0.000000    1.000000   1.000000             False
+       s20-symmetric                 n_events_pct_extreme_p10      NaN       count     2.000000    1.000000    2.000000   1.000000             False
+       s20-symmetric                      Lmax_over_Lreported      NaN      median     1.465996    1.411029    1.546431   0.135403             False
+
+FLAGGED (sign flip or decision-boundary crossing):
+           dimension               statistic  unit aggregation  full_sample     loo_min    loo_max  loo_range  crosses_boundary
+s17/s19-consolidated s17[1.00+eps] pca_slope MHz/s      median   142.343612 -152.226256 155.908765 308.135021              True
+s17/s19-consolidated     s17[1.01] pca_slope MHz/s      median   142.155324 -151.828216 155.721626 307.549843              True
+s17/s19-consolidated     s17[1.02] pca_slope MHz/s      median   141.869604 -151.179444 155.309764 306.489208              True
+s17/s19-consolidated     s17[1.05] pca_slope MHz/s      median   138.761440 -150.860952 151.688664 302.549616              True
+s17/s19-consolidated     s17[1.10] pca_slope MHz/s      median   131.900612 -141.458184 144.087407 285.545592              True
+s17/s19-consolidated     s17[1.20] pca_slope MHz/s      median   110.424941 -117.611105 116.155182 233.766287              True
+        s18-decisive        pct_matched_band   NaN         NaN    45.726496   27.436419  53.443605  26.007186              True
+        s18-decisive        pct_matched_band   NaN         NaN    44.871795   27.009068  53.462683  26.453615              True
+
+n statistics: 82  flagged: 8
+saved s21_consolidated_leave_one_out.csv/.json

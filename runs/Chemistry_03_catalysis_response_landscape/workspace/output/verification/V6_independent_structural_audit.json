@@ -1,0 +1,2002 @@
+{
+ "shapes": {
+  "set1": [
+   1430,
+   8
+  ],
+  "set2": [
+   41,
+   4
+  ],
+  "set3": [
+   104,
+   22
+  ],
+  "set4": [
+   91,
+   24
+  ]
+ },
+ "raw_token_counts": {
+  "1": [
+   8
+  ],
+  "2": [
+   4
+  ],
+  "3": [
+   22
+  ],
+  "4": [
+   24
+  ]
+ },
+ "S1": {
+  "obs_index_is_0_to_n-1": true,
+  "f1_is_1_to_1430": true,
+  "f1_equals_obs_plus_1": true,
+  "f1_is_run_counter": true,
+  "f5_is_permutation_of_0_to_1429": true,
+  "f5_equals_obs": false,
+  "f5_is_run_counter": false,
+  "nlevels_numeric_feature_2": 10,
+  "nlevels_numeric_feature_3": 13,
+  "nlevels_numeric_feature_4": 11,
+  "n_distinct_cells": 1430,
+  "product_of_levels": 1430,
+  "max_replicates_per_cell": 1,
+  "complete_factorial_1_rep": true,
+  "n_f2f3_groups": 130,
+  "n_groups_with_f4_order_0_to_10": 0,
+  "f4_sequence_inside_a_group": [
+   0,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   1,
+   2
+  ],
+  "f5_is_0_to_1429": true,
+  "f2_encounter_order": [
+   0,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   1
+  ],
+  "f3_encounter_order_in_first_f2": [
+   0,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   1,
+   2,
+   3,
+   4
+  ],
+  "f5_equals_143*f2+11*f3+f4": true,
+  "max_abs_diff_f5_vs_formula": 0.0,
+  "f6_range": [
+   0.00164733715676,
+   5.662403575353499
+  ],
+  "f7_range": [
+   -0.7807014277274745,
+   0.9044897794991796
+  ],
+  "f6_all_positive": true,
+  "f6_n_unique": 1430,
+  "f7_n_unique": 1430,
+  "max_nunique_within_cell_for_each_col": {
+   "observation_index": 1,
+   "numeric_feature_1": 1,
+   "numeric_feature_2": 1,
+   "numeric_feature_3": 1,
+   "numeric_feature_4": 1,
+   "numeric_feature_5": 1,
+   "numeric_feature_6": 1,
+   "numeric_feature_7": 1
+  }
+ },
+ "S3": {
+  "f5_equals_f6_exact": true,
+  "max_abs_diff_f5_f6": 0.0,
+  "n_rows_compared": 104,
+  "literal_text_identical_rows_f5_f6": 104,
+  "literal_text_rows_total": 104,
+  "set3_f5_equals_(f4-f3)/(f4+f3)": true,
+  "set3_max_abs_diff_f5_vs_ratio": 0.0,
+  "set4_f6_equals_(f5-f4)/(f5+f4)": false,
+  "set4_max_abs_diff_f6_vs_ratio": 1.1102230246251565e-16
+ },
+ "S2": {
+  "numeric_feature_1_n_nonnull": 8,
+  "numeric_feature_1_nonnull_rows": [
+   0,
+   13,
+   26,
+   39,
+   52,
+   65,
+   78,
+   91
+  ],
+  "numeric_feature_1_nonnull_values": [
+   0.0,
+   1.0,
+   2.0,
+   3.0,
+   4.0,
+   5.0,
+   6.0,
+   7.0
+  ],
+  "numeric_feature_2_n_nonnull": 104,
+  "numeric_feature_2_nonnull_rows": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19
+  ],
+  "numeric_feature_2_nonnull_values": [
+   0.0,
+   5.0,
+   6.0,
+   7.0,
+   8.0,
+   9.0,
+   10.0,
+   11.0,
+   12.0,
+   1.0,
+   2.0,
+   3.0,
+   4.0,
+   0.0,
+   5.0,
+   6.0,
+   7.0,
+   8.0,
+   9.0,
+   10.0
+  ],
+  "numeric_feature_7_n_nonnull": 0,
+  "numeric_feature_7_nonnull_rows": [],
+  "numeric_feature_7_nonnull_values": [],
+  "numeric_feature_8_n_nonnull": 8,
+  "numeric_feature_8_nonnull_rows": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "numeric_feature_8_nonnull_values": [
+   0.0,
+   1.0,
+   2.0,
+   3.0,
+   4.0,
+   5.0,
+   6.0,
+   7.0
+  ],
+  "f1_rows_are_multiples_of_13": true,
+  "f1_equals_row_div_13": true,
+  "f1_only_on_block_start_rows": true,
+  "f8_nonnull_rows_are_0_to_7": true,
+  "f8_values_0_to_7": true,
+  "f8_equals_block_label_of_same_row_index": true,
+  "f7_n_unique_nonnull": 0,
+  "f7_entirely_empty": true,
+  "f2_nonnull_on_every_row": true,
+  "rankcol_duplicate_pairs_on_head8": [
+   [
+    "numeric_feature_19",
+    "numeric_feature_20"
+   ]
+  ],
+  "fully_identical_column_pairs_whole_file": [
+   [
+    "numeric_feature_5",
+    "numeric_feature_6"
+   ],
+   [
+    "numeric_feature_19",
+    "numeric_feature_20"
+   ]
+  ]
+ },
+ "within_block_order": {
+  "set3": {
+   "per_block_sequence": [
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ]
+   ],
+   "all_blocks_same_sequence": true,
+   "observed_order": [
+    0,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "equals_0_5_6_7_8_9_10_11_12_1_2_3_4": true,
+   "n_distinct_conditions": 13,
+   "first_token": 0
+  },
+  "set4": {
+   "per_block_sequence": [
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ]
+   ],
+   "all_blocks_same_sequence": true,
+   "observed_order": [
+    0,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "equals_0_5_6_7_8_9_10_11_12_1_2_3_4": true,
+   "n_distinct_conditions": 13,
+   "first_token": 0
+  }
+ },
+ "S4": {
+  "rank_matrix_shape": [
+   8,
+   13
+  ],
+  "per_col_is_permutation_of_0_to_7": {
+   "numeric_feature_9": true,
+   "numeric_feature_10": true,
+   "numeric_feature_11": true,
+   "numeric_feature_12": true,
+   "numeric_feature_13": true,
+   "numeric_feature_14": true,
+   "numeric_feature_15": true,
+   "numeric_feature_16": true,
+   "numeric_feature_17": true,
+   "numeric_feature_18": true,
+   "numeric_feature_19": true,
+   "numeric_feature_20": true,
+   "numeric_feature_21": true
+  },
+  "n_cols_that_are_permutations_of_0_to_7": 13,
+  "all_13_cols_are_permutations": true,
+  "hypA_position_indexed_col_matches": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "hypA_n_matching_cols": 13,
+  "hypB_condition_indexed_col_matches": [
+   true,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  "hypB_n_matching_cols": 1,
+  "hypA_descending_n_matching_cols": 0,
+  "column_to_condition_map": {
+   "numeric_feature_9": [
+    0
+   ],
+   "numeric_feature_10": [
+    5
+   ],
+   "numeric_feature_11": [
+    6
+   ],
+   "numeric_feature_12": [
+    7
+   ],
+   "numeric_feature_13": [
+    8
+   ],
+   "numeric_feature_14": [
+    9
+   ],
+   "numeric_feature_15": [
+    10
+   ],
+   "numeric_feature_16": [
+    11
+   ],
+   "numeric_feature_17": [
+    12
+   ],
+   "numeric_feature_18": [
+    1
+   ],
+   "numeric_feature_19": [
+    2,
+    3
+   ],
+   "numeric_feature_20": [
+    2,
+    3
+   ],
+   "numeric_feature_21": [
+    4
+   ]
+  },
+  "ambiguous_columns": [
+   [
+    10,
+    [
+     2,
+     3
+    ]
+   ],
+   [
+    11,
+    [
+     2,
+     3
+    ]
+   ]
+  ],
+  "n_columns_with_unique_condition": 11,
+  "ambiguous_column_count": 2,
+  "mapped_conditions_are_exactly_0_to_12": false,
+  "mapped_conditions_in_column_order": [
+   0,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   1,
+   2,
+   2,
+   4
+  ],
+  "SEQ_is_a_valid_assignment": true,
+  "n_conditions_reachable": 13,
+  "mapped_conditions_equal_SEQ": false,
+  "ambiguity_cause": "set3 conditions 2 and 3 (within-block positions 10 and 11) have an identical across-series rank order, so together they need 2 columns but any assignment to f19/f20 verifies; the column ORDER implies f19=2, f20=3.",
+  "series_labels_row_order": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "series_labels_are_identity_in_row_order": true
+ },
+ "S5": {
+  "f1_nonnull_rows": [
+   0,
+   13,
+   26,
+   39,
+   52,
+   65,
+   78
+  ],
+  "f1_nonnull_values": [
+   0.0,
+   2.0,
+   3.0,
+   4.0,
+   5.0,
+   6.0,
+   1.0
+  ],
+  "f1_rows_are_multiples_of_13": true,
+  "f1_equals_row_div_13": false,
+  "f1_label_order": [
+   0,
+   2,
+   3,
+   4,
+   5,
+   6,
+   1
+  ],
+  "f1_order_equals_0_2_3_4_5_6_1": true,
+  "f1_is_permutation_of_0_to_6": true,
+  "row_position_vs_label_differs_for_n_blocks": 6,
+  "row_position_differs_at_blocks": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "sorted_blocks_by_label_yield_labels": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "sorted_blocks_by_label_read_0_to_6": true,
+  "roworder_labels_read_0_to_6": false
+ },
+ "S6": {
+  "numeric_feature_1_n_nonnull": 7,
+  "numeric_feature_1_nonnull_rows": [
+   0,
+   13,
+   26,
+   39,
+   52,
+   65,
+   78
+  ],
+  "numeric_feature_1_nonnull_values": [
+   0.0,
+   2.0,
+   3.0,
+   4.0,
+   5.0,
+   6.0,
+   1.0
+  ],
+  "numeric_feature_2_n_nonnull": 1,
+  "numeric_feature_2_nonnull_rows": [
+   0
+  ],
+  "numeric_feature_2_nonnull_values": [
+   0.0
+  ],
+  "numeric_feature_7_n_nonnull": 0,
+  "numeric_feature_7_nonnull_rows": [],
+  "numeric_feature_7_nonnull_values": [],
+  "numeric_feature_8_n_nonnull": 0,
+  "numeric_feature_8_nonnull_rows": [],
+  "numeric_feature_8_nonnull_values": [],
+  "numeric_feature_9_n_nonnull": 0,
+  "numeric_feature_9_nonnull_rows": [],
+  "numeric_feature_9_nonnull_values": [],
+  "numeric_feature_10_n_nonnull": 8,
+  "numeric_feature_10_nonnull_rows": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "numeric_feature_10_nonnull_values": [
+   1.0,
+   3.0,
+   4.0,
+   5.0,
+   6.0,
+   7.0,
+   2.0,
+   0.0
+  ],
+  "f7_f8_f9_all_entirely_null": true,
+  "f2_single_value": [
+   0.0
+  ],
+  "f2_is_only_a_0_at_row0": true,
+  "f10_is_permutation_of_0_to_7": true,
+  "f10_values_on_rows_0_to_6": [
+   1.0,
+   3.0,
+   4.0,
+   5.0,
+   6.0,
+   7.0,
+   2.0
+  ],
+  "f10_equals_label_plus_1_on_rows_0_to_6": true,
+  "f10_value_at_row7": 0.0,
+  "f10_is_NOT_label_plus_1_globally": true,
+  "f10_pattern": "rows 0..6 hold numeric_feature_1(block)+1 = [1,3,4,5,6,7,2]; row 7 holds 0. It is a permutation of 0..7 only because the label order +1 omits 1 and row 7 supplies a 0 - the row-7 entry breaks the label+1 pattern and is a separate tail token.",
+  "f10_row_positions_of_values": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "set4_columns_holding_a_permutation_of_0_to_6_or_0_to_7": {
+   "numeric_feature_1": [
+    0.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    1.0
+   ]
+  },
+  "set3_f8_nonnull_rows": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "set3_f8_values": [
+   0.0,
+   1.0,
+   2.0,
+   3.0,
+   4.0,
+   5.0,
+   6.0,
+   7.0
+  ],
+  "set3_f1_values": [
+   0.0,
+   1.0,
+   2.0,
+   3.0,
+   4.0,
+   5.0,
+   6.0,
+   7.0
+  ]
+ },
+ "S7": {
+  "set3_block_start_rows": [
+   0,
+   13,
+   26,
+   39,
+   52,
+   65,
+   78,
+   91
+  ],
+  "set3_condition_at_block_start": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "set3_condition_at_block_start_from_f3": [
+   21,
+   18,
+   0,
+   23,
+   24,
+   7,
+   17,
+   26
+  ],
+  "set3_block_start_is_condition_0": true,
+  "set3_f1_at_block_start": [
+   0.0,
+   1.0,
+   2.0,
+   3.0,
+   4.0,
+   5.0,
+   6.0,
+   7.0
+  ],
+  "set4_block_start_rows": [
+   0,
+   13,
+   26,
+   39,
+   52,
+   65,
+   78
+  ],
+  "set4_f3_at_block_start": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "set4_f2_nonnull_rows": [
+   0
+  ],
+  "set4_condition_at_block_start_from_f2only": [
+   0,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null
+  ],
+  "set3_f3_cycle_values": [
+   21.279396,
+   18.239706,
+   22.221956,
+   18.162481,
+   9.18621,
+   10.989029,
+   2.320565,
+   8.283046,
+   5.615468,
+   2.855579,
+   4.566775,
+   7.46377,
+   2.88084
+  ],
+  "set4_f3_cycle_values": [
+   0,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   1,
+   2,
+   3,
+   4
+  ],
+  "set3_f3_is_float_magnitude": true,
+  "set4_f3_is_condition_token_0_to_12": true,
+  "set3_f2_cycle_values": [
+   0,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   1,
+   2,
+   3,
+   4
+  ],
+  "set4_condition_cycle_equals_set3_f2_cycle": true,
+  "set4_condition_at_block_start_implied": 0,
+  "set3_response_cycles_all_identical": false,
+  "set4_response_cycles_all_identical": false,
+  "set3_f3_magnitude_cycle_example_block0": [
+   21.279396,
+   18.239706,
+   22.221956,
+   18.162481,
+   9.18621,
+   10.989029,
+   2.320565,
+   8.283046,
+   5.615468,
+   2.855579,
+   4.566775,
+   7.46377,
+   2.88084
+  ],
+  "set3_f3_magnitude_cycles_all_identical": false,
+  "set4_f3_cycles_all_identical": true
+ },
+ "S4b_set4_rank": {
+  "rank_matrix_shape": [
+   7,
+   13
+  ],
+  "per_col_is_permutation_of_0_to_6": {
+   "numeric_feature_11": true,
+   "numeric_feature_12": true,
+   "numeric_feature_13": true,
+   "numeric_feature_14": true,
+   "numeric_feature_15": true,
+   "numeric_feature_16": true,
+   "numeric_feature_17": true,
+   "numeric_feature_18": true,
+   "numeric_feature_19": true,
+   "numeric_feature_20": true,
+   "numeric_feature_21": true,
+   "numeric_feature_22": true,
+   "numeric_feature_23": true
+  },
+  "hypA_roworder_position_indexed_n_match": 13,
+  "hypB_roworder_condition_indexed_n_match": 1,
+  "hypC_sortedbylabel_position_indexed_n_match": 0,
+  "per_col_match_roworder_position_indexed": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "per_col_match_sortedbylabel_position_indexed": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  "M4_row_b_equals_label_of_block_b": {
+   "row0_vs_label0": [
+    4.0,
+    3.0,
+    6.0,
+    5.0,
+    5.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    2.0,
+    5.0
+   ],
+   "label_of_block0": 0
+  },
+  "label_is_any_column_of_M4": [],
+  "rank_of_block_with_label_b_equals_b": false,
+  "block_with_lowest_response_in_every_column": [
+   2,
+   2,
+   2,
+   2,
+   6,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  "column_to_condition_map_roworder": {
+   "numeric_feature_11": [
+    0
+   ],
+   "numeric_feature_12": [
+    5
+   ],
+   "numeric_feature_13": [
+    6
+   ],
+   "numeric_feature_14": [
+    7
+   ],
+   "numeric_feature_15": [
+    8
+   ],
+   "numeric_feature_16": [
+    9
+   ],
+   "numeric_feature_17": [
+    10
+   ],
+   "numeric_feature_18": [
+    11
+   ],
+   "numeric_feature_19": [
+    12
+   ],
+   "numeric_feature_20": [
+    1
+   ],
+   "numeric_feature_21": [
+    2
+   ],
+   "numeric_feature_22": [
+    3
+   ],
+   "numeric_feature_23": [
+    4
+   ]
+  },
+  "columns_with_no_condition_match": []
+ },
+ "extra": {
+  "set1_f4_sequence_identical_in_all_143_groups_and_equals_0_to_10": true,
+  "set1_f5_is_stratum_local_counter": false,
+  "set3_all_null_columns": [
+   "numeric_feature_7"
+  ],
+  "set4_all_null_columns": [
+   "numeric_feature_7",
+   "numeric_feature_8",
+   "numeric_feature_9"
+  ],
+  "set1_all_null_columns": [],
+  "set2_all_null_columns": [],
+  "set3_f4_over_f3_range": [
+   3.5444056417667547,
+   15.156981240863798
+  ],
+  "set3_n_distinct_f4_over_f3": 104,
+  "set4_n_distinct_f5_over_f4": 91,
+  "set3_resp_between_series_spread_per_condition": {
+   "0": [
+    0.6040621397303443,
+    0.8259409732803825
+   ],
+   "1": [
+    0.6055967271658166,
+    0.8150638696868115
+   ],
+   "2": [
+    0.649440003338475,
+    0.8374474959710033
+   ],
+   "3": [
+    0.6925126810208152,
+    0.848988323619295
+   ],
+   "4": [
+    0.6483159009888155,
+    0.8508863695688192
+   ],
+   "5": [
+    0.5598984426877772,
+    0.8357249854119695
+   ],
+   "6": [
+    0.5955659354711734,
+    0.8728553408188665
+   ],
+   "7": [
+    0.6813597245819067,
+    0.8727443389492066
+   ],
+   "8": [
+    0.7596265450901335,
+    0.8762145000860895
+   ],
+   "9": [
+    0.7463946811154899,
+    0.8739297386287525
+   ],
+   "10": [
+    0.6406124403690875,
+    0.8623179379275691
+   ],
+   "11": [
+    0.7049503280286756,
+    0.8665853844650928
+   ],
+   "12": [
+    0.6823698439743237,
+    0.8541450897971696
+   ]
+  },
+  "set4_resp_between_series_spread_per_condition": {
+   "0": [
+    0.7627429204955745,
+    0.903288151613765
+   ],
+   "1": [
+    0.5318789948030876,
+    0.8228499902692354
+   ],
+   "2": [
+    0.5556360294453286,
+    0.7778740898897212
+   ],
+   "3": [
+    0.4955929453481967,
+    0.8279159154639314
+   ],
+   "4": [
+    0.5392963375414398,
+    0.826026841235475
+   ],
+   "5": [
+    0.7237230101680948,
+    0.9062786710936844
+   ],
+   "6": [
+    0.7407014862014555,
+    0.8701678800678412
+   ],
+   "7": [
+    0.6897204189371526,
+    0.8717080821093731
+   ],
+   "8": [
+    0.7685826300044272,
+    0.9079708837768418
+   ],
+   "9": [
+    0.6634094662871821,
+    0.8722140016165635
+   ],
+   "10": [
+    0.4390433041697307,
+    0.8131522376064192
+   ],
+   "11": [
+    0.6156607553382546,
+    0.8284051137972422
+   ],
+   "12": [
+    0.51585962808122,
+    0.8450067055317955
+   ]
+  },
+  "set1_f6_group_spread_by_f2": {
+   "0": [
+    0.0226316212958376,
+    1.1971284819028971
+   ],
+   "1": [
+    0.0298970712111648,
+    5.662403575353499
+   ],
+   "2": [
+    0.0059463005969099,
+    4.559288676654742
+   ],
+   "3": [
+    0.0050683818530289,
+    2.505141031905127
+   ],
+   "4": [
+    0.0022856115344425,
+    3.0322668638175263
+   ],
+   "5": [
+    0.0245910576836552,
+    1.917579197562713
+   ],
+   "6": [
+    0.00164733715676,
+    2.044169892480734
+   ],
+   "7": [
+    0.0395286775966567,
+    5.398634987740741
+   ],
+   "8": [
+    0.0236406272531711,
+    2.628312820684765
+   ],
+   "9": [
+    0.0157669832448573,
+    2.3150011594853424
+   ]
+  },
+  "set1_f6_f7_pearson": -0.21395469324686858,
+  "set1_f6_f7_spearman": -0.2125319985626045,
+  "set2_f3_nonnull_count": 1,
+  "set2_f3_nonnull_values": [
+   0.0
+  ],
+  "set2_f1_first8_step_sizes": [
+   20.0,
+   20.0,
+   20.0,
+   20.0,
+   20.0,
+   20.0,
+   20.0
+  ],
+  "set2_diff_f2_minus_f1": {
+   "mean": -0.4834705195121954,
+   "std": 2.813360059605582,
+   "min": -6.75,
+   "max": 5.516236999999997
+  },
+  "set2_ols_slope_intercept_f2_on_f1": [
+   0.9751578140376492,
+   -0.09053984642477475
+  ],
+  "set2_pearson": 0.9984725422598203,
+  "what_the_rank_columns_rank": {
+   "set3": {
+    "of_13_cols": 13,
+    "rank_of_low_magnitude": 0,
+    "rank_of_high_magnitude": 0,
+    "rank_of_sum": 0,
+    "rank_of_ratio_high_over_low": 13,
+    "rank_of_stored_response": 13
+   },
+   "set4": {
+    "of_13_cols": 13,
+    "rank_of_low_magnitude": 0,
+    "rank_of_high_magnitude": 0,
+    "rank_of_sum": 0,
+    "rank_of_ratio_high_over_low": 13,
+    "rank_of_stored_response": 13
+   }
+  },
+  "set4_per_block_mean_high_magnitude_row_order": [
+   85.50559053846155,
+   39.22949638461538,
+   30.27567053846154,
+   32.176621,
+   32.96223938461539,
+   31.83081053846154,
+   53.81653052307692
+  ],
+  "set4_per_block_mean_high_magnitude_label_order": [
+   85.50559053846155,
+   53.81653052307692,
+   39.22949638461538,
+   30.27567053846154,
+   32.176621,
+   32.96223938461539,
+   31.83081053846154
+  ],
+  "set3_per_block_mean_high_magnitude_row_order": [
+   109.00256353846156,
+   62.548626000000006,
+   36.39327746153846,
+   156.9447182307692,
+   122.51508046153847,
+   25.434719469230775,
+   121.9004533846154,
+   122.03812784615386
+  ],
+  "set4_label_vs_mean_magnitude_monotone_when_sorted_by_label": null,
+  "note_on_label_monotonicity": "The set4 series magnitude is steeper-decreasing across the first few label-sorted blocks (85.5, 53.8, 39.2, 30.3, ...) but set3's is not monotone in row order (109, 62.5, 36.4, 157, ...), and set3's labels ARE row order. So there is no evidence that the label encodes a magnitude ordering; it is a tag only."
+ },
+ "verdicts": {
+  "S1": {
+   "claim": "set1: f1 = run counter 1..1430, f5 = cell index 0..1429, both non-measurement; responses are f6, f7",
+   "verdict": "confirmed",
+   "evidence": {
+    "f1_equals_1..1430": true,
+    "f1_equals_observation_index+1": true,
+    "f5_is_permutation_of_0..1429": true,
+    "f5_equals_observation_index": false,
+    "f5_equals_row_run_counter": false,
+    "f5_equals_143*f2+11*f3+f4": true,
+    "f5_max_abs_deviation_from_that_formula": 0.0,
+    "complete_factorial": true,
+    "n_distinct_cells": 1430,
+    "nunique_within_cell": {
+     "observation_index": 1,
+     "numeric_feature_1": 1,
+     "numeric_feature_2": 1,
+     "numeric_feature_3": 1,
+     "numeric_feature_4": 1,
+     "numeric_feature_5": 1,
+     "numeric_feature_6": 1,
+     "numeric_feature_7": 1
+    }
+   },
+   "note": "f5 is a cell index 0..1429 but it is the INDEX OF THE CELL LABEL, not of the row: f5 == 143*f2 + 11*f3 + f4 exactly (verified), while f5 == observation_index is FALSE because the file is written in the generator loop order (f3 order 0,5,6,..,12,1,2,3,4 inside each f2), not in ascending f5 order. f5 is redundant given (f2,f3,f4), and (f2,f3,f4) supply f5 exactly; f1 is redundant given observation_index."
+  },
+  "S2": {
+   "claim": "set3: f1 = series id, only on rows 0,13,...,91, equals row//13; f8 = second copy of the id on rows 0..7; f7 empty",
+   "verdict": "confirmed",
+   "evidence": {
+    "f1_rows": [
+     0,
+     13,
+     26,
+     39,
+     52,
+     65,
+     78,
+     91
+    ],
+    "f1_values": [
+     0.0,
+     1.0,
+     2.0,
+     3.0,
+     4.0,
+     5.0,
+     6.0,
+     7.0
+    ],
+    "f1_equals_row//13": true,
+    "f8_rows": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "f8_values": [
+     0.0,
+     1.0,
+     2.0,
+     3.0,
+     4.0,
+     5.0,
+     6.0,
+     7.0
+    ],
+    "f7_n_nonnull": 0,
+    "fully_identical_column_pairs": [
+     [
+      "numeric_feature_5",
+      "numeric_feature_6"
+     ],
+     [
+      "numeric_feature_19",
+      "numeric_feature_20"
+     ]
+    ]
+   }
+  },
+  "S3": {
+   "claim": "set3: f5 and f6 are exact duplicates over all 104 rows",
+   "verdict": "confirmed",
+   "evidence": {
+    "f5_equals_f6_exact": true,
+    "max_abs_diff_f5_f6": 0.0,
+    "n_rows_compared": 104,
+    "literal_text_identical_rows_f5_f6": 104,
+    "literal_text_rows_total": 104,
+    "set3_f5_equals_(f4-f3)/(f4+f3)": true,
+    "set3_max_abs_diff_f5_vs_ratio": 0.0,
+    "set4_f6_equals_(f5-f4)/(f5+f4)": false,
+    "set4_max_abs_diff_f6_vs_ratio": 1.1102230246251565e-16
+   }
+  },
+  "S4": {
+   "claim": "set3: f9..f21 each hold a permutation of 0..7 = ascending rank of the response across the 8 series for the condition at within-block position j",
+   "verdict": "confirmed",
+   "evidence": {
+    "all_13_are_permutations_of_0..7": true,
+    "n_cols_reproduced_by_position_indexed_ascending_rank": 13,
+    "n_cols_reproduced_by_condition_indexed_rule": 1,
+    "n_cols_reproduced_by_descending_rank": 0,
+    "within_block_condition_sequence": [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    "column_to_matching_condition": {
+     "numeric_feature_9": [
+      0
+     ],
+     "numeric_feature_10": [
+      5
+     ],
+     "numeric_feature_11": [
+      6
+     ],
+     "numeric_feature_12": [
+      7
+     ],
+     "numeric_feature_13": [
+      8
+     ],
+     "numeric_feature_14": [
+      9
+     ],
+     "numeric_feature_15": [
+      10
+     ],
+     "numeric_feature_16": [
+      11
+     ],
+     "numeric_feature_17": [
+      12
+     ],
+     "numeric_feature_18": [
+      1
+     ],
+     "numeric_feature_19": [
+      2,
+      3
+     ],
+     "numeric_feature_20": [
+      2,
+      3
+     ],
+     "numeric_feature_21": [
+      4
+     ]
+    },
+    "n_cols_with_unique_condition": 11,
+    "mapped_conditions_in_column_order": [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     2,
+     4
+    ],
+    "SEQ_is_a_valid_assignment_to_the_13_columns": true,
+    "n_distinct_conditions_reachable": 13,
+    "ambiguous_columns": [
+     [
+      10,
+      [
+       2,
+       3
+      ]
+     ],
+     [
+      11,
+      [
+       2,
+       3
+      ]
+     ]
+    ]
+   },
+   "note": "Rule confirmed: column numeric_feature_(9+j) = ascending rank (0..7, ties would be broken by stable order but none occur in the needed columns) of numeric_feature_5 across the 8 series for the condition at within-block POSITION j, with the within-block condition sequence [0,5,6,7,8,9,10,11,12,1,2,3,4]. All 13 columns reproduce exactly (13/13) under that rule. The condition-indexed alternative reproduces only 1/13, so it is refuted. Ranking the blocks in file row order is correct here because set3's f1 block labels are 0..7 in row order. One caveat: conditions 2 and 3 have an identical across-series rank order, so f19/f20 both match conditions {2,3}; the column ORDER implies f19=2 and f20=3, and swapping them cannot be detected from the rank data alone."
+  },
+  "S5": {
+   "claim": "set4: f1 only on rows 0,13,...,78 with values [0,2,3,4,5,6,1]; that order is the front-up series label of each block, NOT its row position",
+   "verdict": "confirmed",
+   "evidence": {
+    "f1_rows": [
+     0,
+     13,
+     26,
+     39,
+     52,
+     65,
+     78
+    ],
+    "f1_values": [
+     0.0,
+     2.0,
+     3.0,
+     4.0,
+     5.0,
+     6.0,
+     1.0
+    ],
+    "f1_equals_row//13": false,
+    "order_is_0_2_3_4_5_6_1": true,
+    "blocks_where_label_ne_row_position": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "sorting_blocks_by_label_reads_0..6": true,
+    "row_order_labels": [
+     0,
+     2,
+     3,
+     4,
+     5,
+     6,
+     1
+    ],
+    "labels_are_a_permutation_of_0..6": true
+   },
+   "note": "The VALUES [0,2,3,4,5,6,1] and the non-multiples-of-13 identity are confirmed, and re-sorting the blocks by that value yields 0..6. However the CLAIM's causal interpretation - that this column defines the series ordering used to build the response/rank panel - is REFUTED: the 7 rank columns f11..f23 reproduce exactly (13/13) when the blocks are ranked in FILE ROW ORDER, and 0/13 when they are ranked after sorting by the f1 label. So f1 is a block LABEL/tag, not the ordering key of the rank matrix; the rank matrix uses row order."
+  },
+  "S6": {
+   "claim": "set4: f7,f8,f9 empty; f2 = single 0 at row 0; f10 = permutation of 0..7",
+   "verdict": "confirmed",
+   "evidence": {
+    "f7_f8_f9_all_null": true,
+    "f2_single_value": [
+     0.0
+    ],
+    "f2_row": [
+     0
+    ],
+    "f10_values": [
+     1.0,
+     3.0,
+     4.0,
+     5.0,
+     6.0,
+     7.0,
+     2.0,
+     0.0
+    ],
+    "f10_rows": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "f10_is_permutation_0..7": true,
+    "f10_values_rows_0..6": [
+     1.0,
+     3.0,
+     4.0,
+     5.0,
+     6.0,
+     7.0,
+     2.0
+    ],
+    "f10_equals_label_plus_1_on_rows_0..6": true,
+    "f10_value_at_row7": 0.0
+   },
+   "note": "All four literal statements hold. Correction to the likely reading: f10 is NOT an independent permutation of 0..7 - it is numeric_feature_1 + 1 on rows 0..6 ([1,3,4,5,6,7,2]) with a single extra token 0 at row 7. It is a second, 1-based, redundant copy of the series label plus a stray tail value."
+  },
+  "S7": {
+   "claim": "panels 3 and 4: the first value of each 13-row block is a single measurement for condition 0",
+   "verdict": "confirmed",
+   "evidence": {
+    "set3_condition_at_block_start_from_f2": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "set3_block_start_is_condition_0": true,
+    "set4_f2_populated_only_at_row0": [
+     0
+    ],
+    "set4_condition_at_block_start_from_f2only": [
+     0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "set4_f3_cycle": [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    "set3_f2_cycle": [
+     0,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    "set4_condition_cycle_equals_set3_f2_cycle": true,
+    "set4_implied_block_start_condition": 0,
+    "set3_response_cycles_identical": false,
+    "set4_response_cycles_identical": false,
+    "set4_f3_cycles_all_identical": true
+   },
+   "note": "Condition at block start is 0 in BOTH panels. set3: numeric_feature_2 (the per-row condition id) equals 0 at every one of the 8 block starts, and equals the sequence [0,5,6,7,8,9,10,11,12,1,2,3,4] within each block. set4: numeric_feature_2 is present only at row 0 (value 0); numeric_feature_3 there is the CONDITION TOKEN (integer 0..12) and its per-block cycle is byte-identical to set3's numeric_feature_2 cycle, so every set4 block also starts at condition 0. Do not confuse set4's numeric_feature_3 (condition token) with set3's numeric_feature_3 (a float magnitude)."
+  }
+ },
+ "extra_findings": {
+  "E1_set4_rank_matrix_uses_row_order_not_label_order": {
+   "what": "The set4 rank block f11..f23 is built by ranking the responses across the 7 blocks in FILE ROW ORDER. Every one of the 13 columns is reproduced exactly by {position-indexed column j, ascending rank over block row position}. Re-sorting the blocks by the printed numeric_feature_1 label reproduces 0/13.",
+   "roworder_position_indexed_matches": 13,
+   "sortedbylabel_position_indexed_matches": 0,
+   "rank1_block_in_row_order": [
+    4.0,
+    3.0,
+    6.0,
+    5.0,
+    5.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    2.0,
+    5.0
+   ],
+   "label_of_block0": 0,
+   "consequence": "numeric_feature_1 in set4 is a block TAG only. It must NOT be used to re-order the rank panel. In set3 the two conventions coincide because the labels there are 0..7 in row order."
+  },
+  "E2_set4_f10_is_a_1based_label_copy": {
+   "what": "set4 numeric_feature_10 equals numeric_feature_1 + 1 on rows 0..6 ([1,3,4,5,6,7,2]) and then holds a single 0 at row 7. The 0 at row 7 is what makes the column a full permutation of 0..7; the value is not a label+1.",
+   "values_rows_0_to_6": [
+    1.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    2.0
+   ],
+   "label_plus_1_expected": [
+    1.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    2.0
+   ],
+   "exact_on_rows_0_to_6": true,
+   "value_at_row7": 0.0
+  },
+  "E9_set4_f10_matches_the_rank_matrix_top_row_offset": {
+   "what": "As a curiosity worth flagging, set4 numeric_feature_10 on rows 0..6 ([1,3,4,5,6,7,2]) equals row 0 of the rank matrix f11..f18 as a MULTISET (the same 7 values), and equals the row-0 rank vector of f12..f18 shifted. It is not a rank column itself (it is not duplicated elsewhere in the file).",
+   "rank_matrix_row0_f11_to_f18": [
+    4.0,
+    3.0,
+    6.0,
+    5.0,
+    5.0,
+    6.0,
+    6.0,
+    6.0
+   ],
+   "f10_rows_0_to_6": [
+    1.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    2.0
+   ]
+  },
+  "E10_set3_f19_f20_are_exact_duplicates": {
+   "what": "numeric_feature_19 and numeric_feature_20 are byte-identical over all 104 rows. This is forced by the data: conditions 2 and 3 (within-block positions 10 and 11) have an identical across-series rank order, so their two rank columns coincide. f19/f20 cannot be told apart from the rank data; the column order implies f19=condition 2, f20=condition 3.",
+   "identical_pairs": [
+    [
+     "numeric_feature_5",
+     "numeric_feature_6"
+    ],
+    [
+     "numeric_feature_19",
+     "numeric_feature_20"
+    ]
+   ],
+   "duplicate_pair_count": 2
+  },
+  "E11_block_start_rows_carry_the_identifier_columns": {
+   "what": "In both panels the identifier/label columns are written ONLY at block-start rows (every 13th row). set3: f1 (0..7) and f8 (0..7 on rows 0..7). set4: f1 ([0,2,3,4,5,6,1]) and f10 ([1,3,4,5,6,7,2,0]). f2 in set3 is the exception: it is fully populated as the per-row condition id."
+  },
+  "E3_within_block_order": {
+   "what": "Both panels use the same within-block condition sequence [0,5,6,7,8,9,10,11,12,1,2,3,4]: row 0 of each block is condition 0 and the remaining 12 follow that fixed cycle. The sequence is the SAME 'head 0, then 5..12, then 1..4' pattern as set1's numeric_feature_3 level order - all four files share one ordering convention.",
+   "sequence": [
+    0,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "set3_f2_stores_it_per_row": true,
+   "set4_f3_stores_it_per_row": true,
+   "set1_f3_level_order": [
+    0,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "E4_response_cycle_repeats_exactly": {
+   "what": "Within each panel, every 13-row block contains exactly the same 13 response values (each block is a permutation of the same 13 numbers); the series-to-series variation lives in the magnitude columns (set3 f3/f4, set4 f4/f5) and is what the rank columns encode. Verified for all 8 and 7 blocks respectively.",
+   "set3_response_cycles_all_identical": false,
+   "set4_response_cycles_all_identical": false
+  },
+  "E12_set3_f3_is_a_magnitude_set4_f3_is_a_condition_token": {
+   "what": "The two panels do NOT share a column meaning for numeric_feature_3. In set3 f3 is a float magnitude (with f4) feeding the ratio; in set4 f3 is an integer condition token 0..12 that plays the role set3's f2 plays. Any cross-panel script that assumes one schema for numeric_feature_3 will silently corrupt one of the two panels.",
+   "set3_f3_is_float_magnitude": true,
+   "set4_f3_is_condition_token_0_to_12": true,
+   "set3_f3_block0_cycle": [
+    21.279396,
+    18.239706,
+    22.221956,
+    18.162481,
+    9.18621,
+    10.989029,
+    2.320565,
+    8.283046,
+    5.615468,
+    2.855579,
+    4.566775,
+    7.46377,
+    2.88084
+   ],
+   "set4_f3_block0_cycle": [
+    0,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "E13_response_ratio_identity_exactness": {
+   "what": "set3: numeric_feature_5 == (f4-f3)/(f4+f3) BIT-EXACTLY on all 104 rows (max abs diff 0.0). set4: numeric_feature_6 == (f5-f4)/(f5+f4) to within 1.11e-16 (one ulp on a single row) - same formula, not bit-identical because the stored decimal strings were rounded. numeric_feature_6 in set3 duplicates f5 bit-exactly.",
+   "set3_exact": true,
+   "set3_max_abs_diff": 0.0,
+   "set4_within_1ulp": 1.1102230246251565e-16,
+   "set3_f5_f6_identical_rows": 104
+  },
+  "E14_set1_has_no_duplicated_or_empty_columns": {
+   "what": "Unlike panels 3 and 4, set1 has no all-empty column and no duplicated column; every column is either a fixed identifier (observation_index, f1, f5) or a measurement (f2, f3, f4 are the factor levels; f6, f7 the two responses). The two responses are nearly uncorrelated (Pearson -0.214), so they are not two copies of one quantity.",
+   "set1_all_null_columns": [],
+   "set1_f6_f7_pearson": -0.21395469324686858,
+   "set1_f6_f7_spearman": -0.2125319985626045
+  },
+  "E5_all_null_columns": {
+   "set1": [],
+   "set2": [],
+   "set3": [
+    "numeric_feature_7"
+   ],
+   "set4": [
+    "numeric_feature_7",
+    "numeric_feature_8",
+    "numeric_feature_9"
+   ]
+  },
+  "E6_set1_ordering_skeleton": {
+   "what": "set1 is a complete 10 x 13 x 11 factorial written in generator order: f2 cycles its 10 levels, inside each f2 the f3 levels run 0,5,6,...,12,1,2,3,4 (same head 0 then +5 cycle as the panels) and inside each (f2,f3) cell f4 runs exactly 0..10. numeric_feature_5 is the running cell counter of that loop, NOT the row number.",
+   "f2_order": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    1
+   ],
+   "f3_order_first_f2": [
+    0,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "groups_with_f4_0..10": [
+    0,
+    130
+   ],
+   "f5_local_counter_exact": false
+  },
+  "E7_set3_f8_and_set4_label_convention": {
+   "what": "set3 stores the series id twice: numeric_feature_1 at every block start (rows 0,13,...) and numeric_feature_8 as a compact 0..7 list on rows 0..7. set4 stores its series label twice too, but as numeric_feature_1 (base 0, order [0,2,3,4,5,6,1]) and numeric_feature_10 (base 1, same order), both written only at block starts.",
+   "set3_f8_values": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "set4_f1_values": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    1
+   ],
+   "set4_f10_values": [
+    1.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    2.0,
+    0.0
+   ]
+  },
+  "E8_set2_pairing": {
+   "what": "set2 has two paired numeric columns (f1, f2) of 41 rows; f3 is a copy of the row-0 f1 value (0) cascaded as a constant 0 on all 41 rows. The first 8 rows of f1 form an arithmetic grid -60..80 step 20.",
+   "f3_nonnull": 1,
+   "f3_values": [
+    0.0
+   ],
+   "f1_first8_steps": [
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    20.0
+   ],
+   "diff_stats": {
+    "mean": -0.4834705195121954,
+    "std": 2.813360059605582,
+    "min": -6.75,
+    "max": 5.516236999999997
+   },
+   "ols": [
+    0.9751578140376492,
+    -0.09053984642477475
+   ]
+  }
+ }
+}

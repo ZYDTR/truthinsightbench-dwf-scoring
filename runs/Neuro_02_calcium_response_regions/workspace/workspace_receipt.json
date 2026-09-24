@@ -1,0 +1,11 @@
+{
+  "schema": "truthinsightbench-participant-workspace",
+  "release": "V1.0",
+  "task_id": "Neuro_02_calcium_response_regions",
+  "t0": "2020-01-01",
+  "scientific_file_count": 1,
+  "scientific_bytes": 161023,
+  "data_manifest_sha256": "d843d587defe597a324565aa0c86e0fd3616d1e5b41078e81d569cc4989c4843",
+  "research_objective_sha256": "c73ffb701e33b7d8b35a25b39812c114f33ee57b77f779301de70a2846440105",
+  "launch_prompt_sha256": "0f4cafd2bc7a8b51b835101fa1d9032bc688caa09ac9ce12e60ff1bd4c68da3a"
+}

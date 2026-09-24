@@ -1,0 +1,147 @@
+==============================================================================
+S1  Compartment response cells: design and perturbation magnitude
+==============================================================================
+rows=144  cells=18 (expected 3 assay x 2 endpoint x 3 compartment = 18)  replicates per cell=[np.int64(4)]
+no missing response_value; no imputation applied
+
+assay_1 / endpoint_count
+   compartment_1: baseline=330338 perturbation=649962 FC_geo=2.1407 FC_rom=1.9676 frac_replicates_up=1.00
+   compartment_2: baseline=101839 perturbation=171246 FC_geo=1.7177 FC_rom=1.6815 frac_replicates_up=1.00
+   compartment_3: baseline=24789.8 perturbation=36998.5 FC_geo=1.5369 FC_rom=1.4925 frac_replicates_up=1.00
+
+assay_1 / endpoint_fraction
+   compartment_1: baseline=3.86 perturbation=6.9375 FC_geo=1.9078 FC_rom=1.7973 frac_replicates_up=1.00
+   compartment_2: baseline=5.8575 perturbation=8.9725 FC_geo=1.5682 FC_rom=1.5318 frac_replicates_up=1.00
+   compartment_3: baseline=9.27 perturbation=15.435 FC_geo=1.6560 FC_rom=1.6650 frac_replicates_up=1.00
+
+assay_2 / endpoint_count
+   compartment_1: baseline=2130.23 perturbation=4110.58 FC_geo=1.9836 FC_rom=1.9296 frac_replicates_up=1.00
+   compartment_2: baseline=2937.96 perturbation=4566.67 FC_geo=1.5515 FC_rom=1.5544 frac_replicates_up=1.00
+   compartment_3: baseline=629.874 perturbation=944.491 FC_geo=1.5587 FC_rom=1.4995 frac_replicates_up=0.75
+
+assay_2 / endpoint_fraction
+   compartment_1: baseline=10.54 perturbation=18.34 FC_geo=1.8284 FC_rom=1.7400 frac_replicates_up=1.00
+   compartment_2: baseline=24.1275 perturbation=35.2275 FC_geo=1.4995 FC_rom=1.4601 frac_replicates_up=1.00
+   compartment_3: baseline=4.085 perturbation=5.61 FC_geo=1.3824 FC_rom=1.3733 frac_replicates_up=1.00
+
+assay_3 / endpoint_count
+   compartment_1: baseline=8559.96 perturbation=19281 FC_geo=2.5312 FC_rom=2.2525 frac_replicates_up=1.00
+   compartment_2: baseline=3256.06 perturbation=6785.33 FC_geo=2.3427 FC_rom=2.0839 frac_replicates_up=0.75
+   compartment_3: baseline=935.189 perturbation=1895.93 FC_geo=2.0057 FC_rom=2.0273 frac_replicates_up=0.75
+
+assay_3 / endpoint_fraction
+   compartment_1: baseline=1.9775 perturbation=3.7275 FC_geo=2.0040 FC_rom=1.8850 frac_replicates_up=1.00
+   compartment_2: baseline=3.4625 perturbation=6.4125 FC_geo=2.0087 FC_rom=1.8520 frac_replicates_up=1.00
+   compartment_3: baseline=4.02 perturbation=8.9175 FC_geo=2.1407 FC_rom=2.2183 frac_replicates_up=1.00
+
+-- perturbation effect --
+   cells with FC > 1: 18/18 (all cells up = True)
+   replicate pairs up: 69/72; one-sided binomial p = 1.32e-17
+   cell mean log2FC = 0.871 [95% CI 0.749, 0.992], n = 18 cells
+   one-sample t vs 0: t = 15.102, p = 2.78e-11
+   median FC = 1.868 (range 1.382-2.531)
+
+   variance of cell log2FC explained by each design factor (SS fraction, one-way):
+      assay_id       0.553   levels(log2FC): {'assay_1': 0.801, 'assay_2': 0.697, 'assay_3': 1.113}
+      endpoint_type  0.054   levels(log2FC): {'endpoint_count': 0.926, 'endpoint_fraction': 0.815}
+      compartment_id 0.258   levels(log2FC): {'compartment_1': 1.039, 'compartment_2': 0.814, 'compartment_3': 0.76}
+   mixed model (replicate-level, random intercept for assay): endpoint coef = -0.111 log2FC (p = 0.4718); assay variance = 0.0291, residual = 0.4246
+   permutation test for assay identity on 18 cell means: observed SS = 0.5621, p = 0.0037 (20000 label permutations, seed 20200101)
+   arithmetic-mean-of-ratios definition (alternative): mean FC = 2.045 [1.815, 2.274]
+
+==============================================================================
+S2  Can the compartment ordering be reproduced from the other assays?
+==============================================================================
+
+   endpoint_count     baseline_level       Kendall W = 0.7778 (chi2 = 4.667, df = 2, p = 0.0970)
+      assay_1: compartment_1 > compartment_2 > compartment_3
+      assay_2: compartment_2 > compartment_1 > compartment_3
+      assay_3: compartment_1 > compartment_2 > compartment_3
+
+   endpoint_count     fold_change          Kendall W = 0.7778 (chi2 = 4.667, df = 2, p = 0.0970)
+      assay_1: compartment_1 > compartment_2 > compartment_3
+      assay_2: compartment_1 > compartment_3 > compartment_2
+      assay_3: compartment_1 > compartment_2 > compartment_3
+
+   endpoint_fraction  baseline_level       Kendall W = 0.3333 (chi2 = 2.000, df = 2, p = 0.3679)
+      assay_1: compartment_3 > compartment_2 > compartment_1
+      assay_2: compartment_2 > compartment_1 > compartment_3
+      assay_3: compartment_3 > compartment_2 > compartment_1
+
+   endpoint_fraction  fold_change          Kendall W = 0.1111 (chi2 = 0.667, df = 2, p = 0.7165)
+      assay_1: compartment_1 > compartment_3 > compartment_2
+      assay_2: compartment_1 > compartment_2 > compartment_3
+      assay_3: compartment_3 > compartment_2 > compartment_1
+
+   within-assay: does the baseline-level ordering match the fold-change ordering?
+      endpoint_count     assay_1: baseline order compartment_1 > compartment_2 > compartment_3 | FC order compartment_1 > compartment_2 > compartment_3  identical=True
+      endpoint_count     assay_2: baseline order compartment_2 > compartment_1 > compartment_3 | FC order compartment_1 > compartment_3 > compartment_2  identical=False
+      endpoint_count     assay_3: baseline order compartment_1 > compartment_2 > compartment_3 | FC order compartment_1 > compartment_2 > compartment_3  identical=True
+      endpoint_fraction  assay_1: baseline order compartment_3 > compartment_2 > compartment_1 | FC order compartment_1 > compartment_3 > compartment_2  identical=False
+      endpoint_fraction  assay_2: baseline order compartment_2 > compartment_1 > compartment_3 | FC order compartment_1 > compartment_2 > compartment_3  identical=False
+      endpoint_fraction  assay_3: baseline order compartment_3 > compartment_2 > compartment_1 | FC order compartment_3 > compartment_2 > compartment_1  identical=True
+
+==============================================================================
+S3  Endpoint-type conflict: count vs fraction
+==============================================================================
+   per-endpoint perturbation magnitude:
+      endpoint_count     n=9 meanFC=1.930 SD=0.365 CV=0.189 log2FC=0.926 [0.718, 1.134]
+      endpoint_fraction  n=9 meanFC=1.777 SD=0.262 CV=0.147 log2FC=0.815 [0.648, 0.982]
+   paired within assay x compartment (n=9): fraction FC < count FC in 7/9 strata (two-sided sign test p = 0.1797)
+   mean delta log2FC (count - fraction) = +0.111 [+0.000, +0.221]; paired t = 2.313, p = 0.0495
+   compartment-ordering agreement between endpoints (Spearman over 3 compartments):
+      assay_1: baseline rho = -1.00, FC rho = +0.50
+      assay_2: baseline rho = +1.00, FC rho = +0.50
+      assay_3: baseline rho = -1.00, FC rho = -1.00
+   assays where count and fraction give OPPOSITE compartment orderings (FC): 1/3
+
+==============================================================================
+S4  Complete-assay leave-one-out: can baseline context predict magnitude?
+==============================================================================
+   held-out unit = complete assay (['assay_1', 'assay_2', 'assay_3']); each fold predicts all 6 cells of one assay from the other two assays
+   pred_assay_invariant   MAE_FC=0.3398 RMSE_FC=0.3930 bias=+0.0203 pooled rho=-0.586
+   pred_level_transfer    MAE_FC=0.5688 RMSE_FC=0.7626 bias=-0.1874 pooled rho=-0.228
+   pred_rank_transfer     MAE_FC=0.3780 RMSE_FC=0.4394 bias=-0.0030 pooled rho=-0.484
+   within-assay compartment ordering (Spearman over 3 compartments, 6 folds):
+      rank-transfer  mean rho = +0.250 per-fold [1.0, 0.5, 0.5, -0.5, 1.0, -1.0]
+      level-transfer mean rho = +0.250 per-fold [1.0, 0.5, 0.5, -0.5, 1.0, -1.0]
+   NOTE: training-set baseline spans 0.43 decades between assays, so a pooled log10(baseline) model is dominated by assay identity rather than by the within-assay compartment contrast.
+
+==============================================================================
+S5  Mechanistic intervention settings: ordering across assays
+==============================================================================
+   design: 3 assays x 5 settings x 3 replicates = 45 rows
+   assay_1  1=   0.8992  2=    54.22  3=    10.03  4=     6.73  5=     49.9
+   assay_2  1=      700  2=     1721  3=     1301  4=     1176  5=     1806
+   assay_3  1=     4.23  2=    10.85  3=    7.537  4=    6.373  5=    10.35
+   rank matrix (1 = lowest response):
+   assay_1  1=1  2=5  3=3  4=2  5=4
+   assay_2  1=1  2=4  3=3  4=2  5=5
+   assay_3  1=1  2=5  3=3  4=2  5=4
+   Kendall's W = 0.9556 (chi2 = 11.4667, df = 4, p = 0.0218); Friedman p = 0.0150
+   lowest-response setting per assay: {'assay_1': 'intervention_setting_1', 'assay_2': 'intervention_setting_1', 'assay_3': 'intervention_setting_1'}
+   pairwise Spearman(assay_1, assay_2) = +0.900
+   pairwise Spearman(assay_1, assay_3) = +1.000
+   pairwise Spearman(assay_2, assay_3) = +0.900
+   leave-one-assay-out (train on 2 assays, rank the third):
+      hold out assay_1: rho = +0.900, exact rank positions matched = 3/5
+      hold out assay_2: rho = +0.900, exact rank positions matched = 3/5
+      hold out assay_3: rho = +0.900, exact rank positions matched = 3/5
+   mean rho = +0.900
+   per-setting rank spread across assays (0 = perfectly reproducible):
+      intervention_setting_1: ranks (1,1,1) spread = 0
+      intervention_setting_2: ranks (5,4,5) spread = 1
+      intervention_setting_3: ranks (3,3,3) spread = 0
+      intervention_setting_4: ranks (2,2,2) spread = 0
+      intervention_setting_5: ranks (4,5,4) spread = 1
+   counterexample: settings 2 and 5 swap between assay_2 and assays 1/3 (assay_2 ranks setting_5 above setting_2; assay_1 and assay_3 do the reverse)
+
+==============================================================================
+S6  Multi-condition response by class
+==============================================================================
+   design: 2 classes x 4 settings x 3 replicates = 24 rows
+   response_class_A: slope = 8.593 +/- 0.564 per setting (p = 3.02e-08), R2 = 0.9587, monotone = True
+      setting means = [8.510,17.967,26.447,34.327]
+   response_class_B: slope = 0.191 +/- 0.338 per setting (p = 0.5837), R2 = 0.0311, monotone = False
+      setting means = [7.413,7.537,7.330,8.120]
+   class x setting interaction: F = 45.415, p = 4.73e-08

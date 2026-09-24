@@ -1,0 +1,5 @@
+endpoint_type,measure,kendall_w,chi2,df,p_value,compartment_order_per_assay
+endpoint_count,baseline_level,0.777778,4.66667,2,0.096972,assay_1:compartment_1 > compartment_2 > compartment_3; assay_2:compartment_2 > compartment_1 > compartment_3; assay_3:compartment_1 > compartment_2 > compartment_3
+endpoint_count,fold_change,0.777778,4.66667,2,0.096972,assay_1:compartment_1 > compartment_2 > compartment_3; assay_2:compartment_1 > compartment_3 > compartment_2; assay_3:compartment_1 > compartment_2 > compartment_3
+endpoint_fraction,baseline_level,0.333333,2,2,0.367879,assay_1:compartment_3 > compartment_2 > compartment_1; assay_2:compartment_2 > compartment_1 > compartment_3; assay_3:compartment_3 > compartment_2 > compartment_1
+endpoint_fraction,fold_change,0.111111,0.666667,2,0.716531,assay_1:compartment_1 > compartment_3 > compartment_2; assay_2:compartment_1 > compartment_2 > compartment_3; assay_3:compartment_3 > compartment_2 > compartment_1

@@ -1,0 +1,45 @@
+[ws6] building analysis table ...
+[common] benchmark rows=543 labeler_agreement=331/331 in_db_row=331
+[ws6] baseline MAE: {'quantum': 2.0978, 'learned': 2.4107, 'reference': 5.486}
+[ws6] quantum vs learned: mean|e| diff=-0.3129 CI=[-0.4708,-0.1682] t=-4.071 p=5.37e-05 wilcoxon_p=0.553 a_better=246/530 (binom p=0.108)
+[ws6] quantum vs reference: mean|e| diff=-3.3882 CI=[-3.7418,-3.0529] t=-19.249 p=2.62e-63 wilcoxon_p=1.92e-59 a_better=451/543 (binom p=7.82e-58)
+[ws6] learned vs reference: mean|e| diff=-3.0753 CI=[-3.4484,-2.7183] t=-16.532 p=5.21e-50 wilcoxon_p=1.37e-51 a_better=444/543 (binom p=3.87e-53)
+[ws6] check 1: leave-one-molecule-out ...
+[ws6]   quantum: baseline MAE=2.0978 max|dMAE|=0.0252 (mol n=1)
+[ws6]   learned: baseline MAE=2.4107 max|dMAE|=0.0421 (mol n=1)
+[ws6]   reference: baseline MAE=5.4860 max|dMAE|=0.0515 (mol n=1)
+[ws6]   cluster bootstrap over parent molecules ...
+[ws6]   quantum vs learned: row CI [-0.4708301104972374, -0.1682279005524861] -> cluster CI [-0.4733,-0.1681]
+[ws6]   quantum vs reference: row CI [-3.7417688766114177, -3.05288950276243] -> cluster CI [-3.7460,-3.0465]
+[ws6]   learned vs reference: row CI [-3.4484019337016574, -2.718267955801105] -> cluster CI [-3.4543,-2.7112]
+[ws6]   ranking flips over 419 leave-outs: 0
+[ws6] check 2: alternative error definitions ...
+[ws6]   quantum vs learned: {'rmse': 'quantum', 'median_ae': 'quantum', 'p90_ae': 'quantum', 'frac_within_2': 'not_distinguishable', 'frac_within_5': 'quantum'}
+[ws6]   quantum vs reference: {'rmse': 'quantum', 'median_ae': 'quantum', 'p90_ae': 'quantum', 'frac_within_2': 'quantum', 'frac_within_5': 'quantum'}
+[ws6]   learned vs reference: {'rmse': 'learned', 'median_ae': 'learned', 'p90_ae': 'learned', 'frac_within_2': 'learned', 'frac_within_5': 'learned'}
+[ws6] check 3: outlier treatment ...
+[ws6]   ranking_flips: {'a_own_5pct': False, 'a_common_5pct': False, 'b_own_single': False, 'b_common_single': False, 'c_winsor': False}
+[ws6] check 4: class leave-out ...
+[ws6]   drop C-C: n_kept=303 order=['quantum', 'learned', 'reference']
+[ws6]   drop C-H: n_kept=241 order=['quantum', 'learned', 'reference']
+[ws6]   drop H-O: n_kept=542 order=['quantum', 'learned', 'reference']
+[ws6]   only_training_rows_in_db_331: n=331 order=['learned', 'quantum', 'reference'] q-vs-l=+0.0639 CI=[-0.0013, 0.1294]
+[ws6]   only_heldout_rows_not_in_db_212: n=212 order=['quantum', 'learned', 'reference'] q-vs-l=-0.9012 CI=[-1.2706, -0.5604]
+[ws6]   classes causing rank change: []
+[ws6] check 5: threshold sensitivity ...
+[ws6]   loaded cached descriptors (42577, 3)
+[ws6]   coverage: {"HAC>8": {"n_db_molecules_above": 29769, "frac_db_molecules_above": 0.6991803086173286, "n_bench_obs_above": 234, "frac_bench_obs_above": 0.430939226519337, "n_bench_obs_above_with_parent_in_db": 78, "n_bench_obs_above_with_exact_db_row": 72, "n_bench_unique_molecules_above": 207}, "HAC>9": {"n_db_molecules_above": 16373, "frac_db_molecules_above": 0.38455034408248584, "n_bench_obs_above": 193, "
+[ws6] check 6: paired-unit sensitivity ...
+[ws6]   unique ordered pairs: 539 (dropped 4), unique unordered pairs: 539 (dropped 4)
+[ws6]   unique-pair orders: ['quantum', 'learned', 'reference'] ['quantum', 'learned', 'reference']
+[ws6]   q-vs-l on unique pairs: {'mean_diff': -0.32996289424860853, 'boot95_ci': [-0.48885343228200384, -0.1908116883116883], 'ci_excludes_zero': True, 't': -4.294912367336662, 'p': 2.0738010948069295e-05, 'n_a_better': 246, 'n_b_better': 280}
+[ws6] check 4b: HAC x database-membership split ...
+[ws6]   HAC<=9|has_exact_db_row: n=296 qMAE=1.803 lMAE=1.740 diff=+0.0631 CI=[-0.0055,+0.1321]
+[ws6]   HAC<=9|no_exact_db_row: n=54 qMAE=1.970 lMAE=2.199 diff=-0.2285 CI=[-0.5974,+0.1293]
+[ws6]   HAC>=10|has_exact_db_row: n=35 qMAE=2.443 lMAE=2.373 diff=+0.0703 CI=[-0.1471,+0.3080]
+[ws6]   HAC>=10|no_exact_db_row: n=158 qMAE=2.617 lMAE=3.748 diff=-1.1311 CI=[-1.6031,-0.6945]
+[ws6]   the whole-sample 'quantum beats learned' result is carried by the 158 observations in HAC>=10|no_exact_db_row (diff -1.1311, CI [-1.6031, -0.6945]); in every other cell the difference is not distinguishable from 0 or points the other way, and on the 331 in-database rows quantum is if anything WORSE.
+[ws6] check 2b: test-choice sensitivity ...
+[ws6]   test sensitivity p-values: {'paired_t_on_mean_abs_err_diff': 0.0001, 'wilcoxon_signed_rank': 0.553}
+[common] wrote /data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws6_robustness.json
+[ws6] done

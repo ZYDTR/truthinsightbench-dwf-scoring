@@ -1,0 +1,7 @@
+workbook_sheet,workbook_group,workbook_channel,block_sums,assembled_total,normalized_series,exact_match
+Sheet_009,anonymous_group_1,channel_l,10560;790;102,11240.0,orientation_series_1,True
+Sheet_010,anonymous_group_1,channel_r,14492;1126;177,15551.0,orientation_series_2,True
+Sheet_011,anonymous_group_2,channel_l,357;580;223,1151.0,orientation_series_3,True
+Sheet_012,anonymous_group_2,channel_r,52;155;237,444.0,orientation_series_4,True
+Sheet_013,anonymous_group_3,channel_l,429;601;491,1503.0,orientation_series_5,True
+Sheet_014,anonymous_group_3,channel_r,664;1680;521,2843.0,orientation_series_6,True

@@ -1,0 +1,214 @@
+{
+  "step": "06_transition_structure",
+  "source_file": "data/observations.tsv",
+  "sha256": "dd1954d79d70fff765e91be1d1778eecb0b7f5bd3afe75a4169960e8ae46c358",
+  "n_rows_total": 621,
+  "n_rows_used": 593,
+  "min_segment_rows": 40,
+  "best_split_age_ka": 336.87,
+  "best_split_sse": 83.18709475412345,
+  "no_split_sse": 92.94257537942576,
+  "top5_splits": [
+    {
+      "split_k_rows_left": 551,
+      "split_age_ka": 336.87,
+      "sse": 83.18709475412345,
+      "mean_left": 3.2676406533575317,
+      "mean_right": 3.767619047619047,
+      "mean_shift": 0.49997839426151547
+    },
+    {
+      "split_k_rows_left": 547,
+      "split_age_ka": 334.745,
+      "sse": 83.27890227724004,
+      "mean_left": 3.2660329067641682,
+      "mean_right": 3.7432608695652174,
+      "mean_shift": 0.4772279628010492
+    },
+    {
+      "split_k_rows_left": 549,
+      "split_age_ka": 335.9,
+      "sse": 83.28374081387346,
+      "mean_left": 3.266921675774135,
+      "mean_right": 3.753863636363636,
+      "mean_shift": 0.4869419605895011
+    },
+    {
+      "split_k_rows_left": 548,
+      "split_age_ka": 335.355,
+      "sse": 83.39801949310254,
+      "mean_left": 3.266697080291971,
+      "mean_right": 3.7457777777777777,
+      "mean_shift": 0.4790806974858066
+    },
+    {
+      "split_k_rows_left": 552,
+      "split_age_ka": 337.355,
+      "sse": 83.42901385206426,
+      "mean_left": 3.268532608695652,
+      "mean_right": 3.7678048780487803,
+      "mean_shift": 0.4992722693531282
+    }
+  ],
+  "best_split_k_rows_left": 551,
+  "best_split_point": {
+    "k": 551,
+    "age_boundary_ka": 336.87,
+    "age_left_row_ka": 336.63,
+    "age_right_row_ka": 337.11,
+    "mean_left": 3.2676406533575317,
+    "mean_right": 3.767619047619047
+  },
+  "sse_reduction_fraction": 0.10496245219671241,
+  "n_eff": 91.73169384843051,
+  "tau_ka": 3.8854618839691057,
+  "step_ka": 0.45999999999997954,
+  "rho_lag1": 0.7882848763686212,
+  "total_age_span_ka": 356.42,
+  "bic_raw_no_split": -1086.184662600088,
+  "bic_raw_split": -1145.557006180615,
+  "bic_raw_delta_split_minus_noSplit": -59.37234358052706,
+  "bic_neff_no_split": 10.24069509150723,
+  "bic_neff_split": 4.587471397046636,
+  "bic_neff_delta_split_minus_noSplit": -5.6532236944605945,
+  "bic_formula": "BIC = n_eff*ln(SSE/n_eff) + p*ln(n_eff); p=2 (no split), p=3 (split), p=4 (2 splits)",
+  "changepoint_survives_bic_with_neff": true,
+  "ar1_surrogate_null": {
+    "n_surrogates": 300,
+    "rho_used": 0.7882848763686212,
+    "observed_sse_reduction": 0.10496245219671241,
+    "null_reduction_mean": 0.05341716985270239,
+    "null_reduction_p95": 0.11045052048031041,
+    "empirical_p_value_changepoint": 0.06976744186046512,
+    "frac_ar1_null_surviving_bic_neff_rule": 0.4633333333333333,
+    "empirical_p_value_sinusoid_r2": 0.0033222591362126247
+  },
+  "three_segment_model": {
+    "split_rows": [
+      504,
+      545
+    ],
+    "split_ages_ka": [
+      309.315,
+      333.53499999999997
+    ],
+    "segment_means": [
+      3.303373015873016,
+      2.805609756097561,
+      3.724583333333333
+    ],
+    "sse": 74.2680672957764,
+    "r2": 0.20092522729667373,
+    "bic_raw": -1206.4246213609763,
+    "bic_neff": -1.2970571820957382,
+    "delta_bic_neff_vs_2segment": -5.8845285791423745,
+    "delta_bic_neff_vs_noSplit": -11.537752273602969,
+    "second_split_supported": true
+  },
+  "second_split_supported": true,
+  "edge_diagnostics": {
+    "last6_age_ka": [
+      352.74,
+      353.51,
+      354.12,
+      354.83,
+      356.65,
+      359.18
+    ],
+    "last6_depth_m": [
+      6.24,
+      6.26,
+      6.27,
+      6.28,
+      6.29,
+      6.3
+    ],
+    "last5_age_gaps_ka": [
+      0.7699999999999818,
+      0.6100000000000136,
+      0.7099999999999795,
+      1.8199999999999932,
+      2.5300000000000296
+    ],
+    "last_age_gap_ka": 2.5300000000000296,
+    "median_age_step_ka": 0.45999999999997954,
+    "last_depth_m": 6.3,
+    "final_rows_carry_gap": true,
+    "enlarged_depth_steps": [
+      {
+        "after_raw_row_index": 44,
+        "depth_from_m": 0.47,
+        "depth_to_m": 0.49,
+        "depth_gap_m": 0.020000000000000018
+      },
+      {
+        "after_raw_row_index": 63,
+        "depth_from_m": 0.67,
+        "depth_to_m": 0.71,
+        "depth_gap_m": 0.039999999999999925
+      },
+      {
+        "after_raw_row_index": 312,
+        "depth_from_m": 3.19,
+        "depth_to_m": 3.21,
+        "depth_gap_m": 0.020000000000000018
+      },
+      {
+        "after_raw_row_index": 370,
+        "depth_from_m": 3.78,
+        "depth_to_m": 3.8,
+        "depth_gap_m": 0.020000000000000018
+      },
+      {
+        "after_raw_row_index": 411,
+        "depth_from_m": 4.2,
+        "depth_to_m": 4.22,
+        "depth_gap_m": 0.019999999999999574
+      }
+    ],
+    "n_enlarged_depth_steps": 5
+  },
+  "trim_10pct": {
+    "rows_trimmed_each_end": 59,
+    "rows_retained": 475,
+    "age_start_ka": 39.62,
+    "age_end_ka": 327.12,
+    "sse_no_split": 60.67466315789443,
+    "sse_best_split": 55.98947775119052,
+    "second_choice_split_age_ka": 300.805,
+    "n_eff_trimmed": 87.6335640164393,
+    "tau_trimmed_ka": 3.280706464774929,
+    "bic_raw_no_split": -965.1229573001035,
+    "bic_raw_split": -997.131794008817,
+    "bic_neff_no_split": -23.271089139093675,
+    "bic_neff_split": -25.84037071258362,
+    "split_survives_bic_neff_trimmed": true
+  },
+  "best_split_age_after_10pct_trim_ka": 73.965,
+  "split_location_shift_ka": -262.905,
+  "split_location_moves_more_than_10ka": true,
+  "smooth_alternatives": {
+    "linear_trend_coef": {
+      "intercept": 3.303052276559866,
+      "slope_per_ka": -5.3783355562107714e-05
+    },
+    "r2_segmented_mean_2segment": 0.10496245219671241,
+    "r2_sinusoid_fundamental_only": 0.40350409563975365,
+    "r2_sinusoid_2harmonic": 0.4251308068844849,
+    "r2_trend_plus_2harmonic": 0.43060961742851944,
+    "bic_neff": {
+      "segmented_mean_2segment": 4.587471397046636,
+      "linear_trend": 10.222036451852814,
+      "2harmonic_sinusoid_T108.8": -26.98653676157066
+    },
+    "best_model_by_bic_neff": "2harmonic_sinusoid_T108.8",
+    "delta_bic_neff_segment_minus_trend": -5.634565054806178,
+    "delta_bic_neff_sinusoid_minus_trend": -37.20857321342348,
+    "delta_bic_neff_segment_minus_sinusoid": 31.574008158617296,
+    "period_ka_used": 108.835
+  },
+  "r2_linear_trend": 0.00020338381833684416,
+  "r2_sinusoid": 0.4251308068844849,
+  "best_explaining_model": "2harmonic_sinusoid_T108.8",
+  "explanation": "n_eff=91.7 from tau=3.89 ka (step=0.46 ka, rho1=0.788); raw BIC prefers a split (dBIC=-59.4) but the penalty scales with n; with n_eff the split is supported (dBIC=-5.7). AR(1) surrogate p for the best-split variance reduction = 0.070 (only 46% of pure AR(1) records survive the same BIC-with-n_eff rule), so the best split (age 336.9 ka, +0.50 per mille step) is marginal: the preferred split lands in the sparse 330-360 ka tail where the last two age steps (1.82, 2.53 ka) are 4-6x the median step. Trimming 10% from each end moves the best split to 74.0 ka (shift -262.9 ka, moves>10ka: True); the trimmed split is even weaker (dBIC=-2.6 vs -5.7 full) and no longer in the 330-340 ka cluster, so the step location is edge-driven. The 3-segment model adds a split near 310 ka with dBIC_neff=-5.9, but its middle segment is only 24 ka long and R2 only rises to 0.201. R2: segmented mean 0.105, linear trend 0.000, 2-harmonic sinusoid at 108.835 ka 0.425 (fundamental only 0.404); sinusoid beats an AR(1) null at p=0.003. Under n_eff BIC the ranking is 2harmonic_sinusoid_T108.8; a mean-level step is not the dominant structure."
+}

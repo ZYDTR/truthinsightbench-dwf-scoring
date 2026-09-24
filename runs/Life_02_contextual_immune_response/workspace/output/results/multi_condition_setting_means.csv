@@ -1,0 +1,9 @@
+response_class_id,compound_setting_id,mean,std,count
+response_class_A,compound_setting_1,8.51,1.62748,3
+response_class_A,compound_setting_2,17.9667,2.6976,3
+response_class_A,compound_setting_3,26.4467,3.31071,3
+response_class_A,compound_setting_4,34.3267,1.43113,3
+response_class_B,compound_setting_1,7.41333,2.05525,3
+response_class_B,compound_setting_2,7.53667,1.32787,3
+response_class_B,compound_setting_3,7.33,1.23012,3
+response_class_B,compound_setting_4,8.12,0.875043,3

@@ -1,0 +1,37 @@
+{
+  "benchmark_rows": 543,
+  "benchmark_distinct_classes": 3,
+  "benchmark_class_counts": {
+    "C-H": 302,
+    "C-C": 240,
+    "H-O": 1
+  },
+  "benchmark_null_classes": 0,
+  "benchmark_unique_molecules": 419,
+  "benchmark_unique_molffragfrag": 543,
+  "benchmark_unique_unordered_pairs": 539,
+  "db_rows": 484907,
+  "db_distinct_classes": 9,
+  "db_class_counts": {
+    "C-H": 321949,
+    "C-C": 71166,
+    "H-N": 27314,
+    "C-N": 24707,
+    "C-O": 24354,
+    "H-O": 11884,
+    "N-O": 1634,
+    "N-N": 1597,
+    "O-O": 302
+  },
+  "db_labeler_mismatch_20k_sample": 0,
+  "benchmark_rows_in_db_exact": 331,
+  "db_classes_absent_from_benchmark": [
+    "C-N",
+    "C-O",
+    "H-N",
+    "H-O",
+    "N-N",
+    "N-O",
+    "O-O"
+  ]
+}

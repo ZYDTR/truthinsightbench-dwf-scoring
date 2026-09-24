@@ -1,0 +1,71 @@
+{
+  "dimension": "dataset structural/integrity claims and analysis-unit discipline of the deliverable",
+  "verdict": "confirmed_with_caveat",
+  "discrepancies": [
+    {
+      "claim": "Result.md l.297: peak power 330.00 is '24.24 % above the rate-500 value'",
+      "claimed_value": "24.24 % above the rate-500 value",
+      "recomputed_value": "32.00 % above (330/250-1); 24.24 % is how far 250 falls BELOW the peak",
+      "severity": "minor",
+      "note": "Direction reversed; the deliverable's own power_turnover.json field decline_from_peak_pct=24.2424 was mis-transcribed into prose."
+    },
+    {
+      "claim": "Result.md l.298-300 and power_turnover.json: dP/drate 'changes sign between rate 200 and rate 300'",
+      "claimed_value": "sign change between rate 200 and 300; sign_change_between=[200.0,300.0]",
+      "recomputed_value": "forward difference over 200->300 is still +0.4970; the sign change is across rate 300 (300->500 = -0.4000)",
+      "severity": "minor",
+      "note": "Off-by-one interval indexing in run_analysis.py l.464/487. The substantive conclusion (single interior maximum at rate 300) is unaffected."
+    },
+    {
+      "claim": "Result.md l.492-497: 'every variant gives a negative slope between -0.0746 and -0.2410 per cycle'",
+      "claimed_value": "variant slopes span -0.0746 to -0.2410 per cycle",
+      "recomputed_value": "true per-cycle range -0.0746 to -0.1297; odd/even variants are -0.1205 and -0.1194 per cycle",
+      "severity": "moderate",
+      "note": "robustness_checks.py l.207 re-uses np.arange(1,len(y)+1) after subsampling, so the -0.2410/-0.2389 values are per-2-cycle-step. Reported range overstates the spread of per-cycle slopes."
+    },
+    {
+      "claim": "Result.md l.516-517: cycles 51-600 'take 19 distinct values with a finest step of 0.090909'",
+      "claimed_value": "finest step 0.090909",
+      "recomputed_value": "19 distinct values confirmed; finest OBSERVED step between distinct values is 1.81818; 0.090909 = 1/11 is only the gcd of integer numerators",
+      "severity": "minor",
+      "note": "No observed pair of capacity values differs by 0.090909."
+    },
+    {
+      "claim": "Result.md l.32-34: 'the effective sample size is stated explicitly'",
+      "claimed_value": "effective sample size stated explicitly",
+      "recomputed_value": "no effective-sample-size number appears anywhere in Result.md or output/results/",
+      "severity": "minor",
+      "note": "Self-inconsistent methodological statement; the block-bootstrap scheme is otherwise correctly serial-aware."
+    },
+    {
+      "claim": "Result.md l.46-48 and l.198/294: power_density 'carries no unit string ... never converted', yet the ratio is tabulated as 'P / rate (V)'",
+      "claimed_value": "power_density/anonymous_rate_value labelled in volts (V)",
+      "recomputed_value": "anonymous_rate_value is unitless in the file; the ratio cannot be assigned volts without asserting a unit for the anonymous rate label",
+      "severity": "moderate",
+      "note": "Unsupported physical-unit assertion, contradicting the report's own scope statement; also present in reproduce.md l.113."
+    },
+    {
+      "claim": "Result.md l.240-241: 'an energy-weighted ratio (int V_dis dSoC / int V_ch dSoC) gives RMSE 3.07 pp'",
+      "claimed_value": "3.07 pp",
+      "recomputed_value": "2.87 pp (5-95 grid, 400 pts) to 3.06 pp (per-pair common window, 500 pts)",
+      "severity": "minor",
+      "note": "Value is definition-dependent and appears in no output/results/ file, contradicting the report's claim that every number is traceable to output/results/."
+    },
+    {
+      "claim": "Result.md l.263-264: 'All efficiency residuals are negative for the identity form at four of seven settings'",
+      "claimed_value": "residuals negative at 4 of 7 settings",
+      "recomputed_value": "3 negative / 4 positive under residual = measured - predicted (4 negative under results-file sign convention)",
+      "severity": "minor",
+      "note": "Sentence is self-contradictory ('All ... at four of seven'); the count matches only the opposite sign convention."
+    }
+  ],
+  "method_concerns": [
+    "SoC = 50 % probe depends on linear interpolation across per-curve sampling gaps up to 36.83 percentage points (charge setting 1, 754x that curve's median step); Result.md never quantifies this interpolation sensitivity. My monotone-cubic (PCHIP) recheck gave RMSE 0.1838 vs 0.1837 pp and preserved all orderings, so the conclusions survive, but the unreported sensitivity is a real gap.",
+    "The headline 95 % CI for the 600-cycle slope is block-length dependent: block=25 gives [-0.1346,-0.1117] as reported; block=50 gives [-0.1412,-0.1118]; block=100 gives [-0.156,-0.108]; Newey-West HAC with 100 lags gives [-0.134,-0.106]. Only one block length is presented.",
+    "Charge settings 6 and 7 are a template copy (bit-identical 47-point abscissa, exact constant +0.041520 V offset), so the charge branch has at most 6 independent rate levels; n=7 charge-family statistics (e.g. charge contribution +0.1916 V, Spearman rho = 1.0) are inflated by this pseudo-replication. Result.md flags the copy qualitatively but does not adjust any n=7 charge-side figure.",
+    "The Finding 2 linkage between the 7 anonymous rate settings and the 9 anonymous rate values is an inference (rank 1 of 5040 permutations), not a supplied key; the report labels it as such, but all downstream estimates inherit it.",
+    "No place in the deliverable computes a statistic over 852 or 600 raw points with an iid-derived uncertainty; block resampling is used consistently, which is the correct treatment for this repeated-observation structure."
+  ],
+  "summary": "Every one of the nine structural/integrity claims is confirmed by my own independent recomputation: row counts 852/16/600, 7+7 curves one per rate_setting_1..7, point counts 45-84, the stated SoC spans, strict monotonicity everywhere except charge settings 6 and 7 (one flat voltage step at SoC 99.84835->99.90269), exactly one bit-identical within-role abscissa pair, all three sha256 digests matching data_manifest.json, and the exact summary_role/unit partition. No unlisted categorical values exist, and no duplicate rows, duplicate (setting, SoC, voltage) triples, or cross-file value coincidences were found. Analysis-unit discipline is largely exemplary - no statistic over 852 or 600 points carries an independence-based uncertainty - but the deliverable contains one moderate reporting error (odd/even cycling 'per cycle' slopes inflated 2x by a rescaled index), one moderate unit-assertion defect (labelling power_density/rate as volts), and six minor numeric/wording errors, none of which changes any scientific conclusion. I flag as unreported that the abscissae are severely non-uniform (gaps up to 754x the median step) and that charge settings 6/7 reduce the charge family to at most 6 independent levels.",
+  "note": "Scratch code and outputs are in /tmp/scratch_audit/ (verify1-28 log files); nothing under output/ was written or modified."
+}

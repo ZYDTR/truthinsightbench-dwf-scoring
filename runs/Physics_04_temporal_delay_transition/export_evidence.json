@@ -1,0 +1,21 @@
+{
+  "task_id": "Physics_04_temporal_delay_transition",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260923T182037-dd3b31",
+  "source_run_json_sha256": "e53cdfa4afcf09c17005318ec8649c593f626353d86d052107d86acaea780eca",
+  "source_release_json_sha256": "3364fbeafac254f25c7dc7d4b0ce400111a7e97574617e5cb2ea1f4e74159e64",
+  "source_latest_validation_sha256": "d48c584079176e12ff7b59a73b3bbe0d5a9cbf2f88b082658e935f1f27eaddf2",
+  "source_snapshot_manifest_sha256": "02c0436bba465b6a1d83a952c9b11f365caecb37a1d4c86c2bc554849ee11243",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 367
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "fbc073b9018225da9e2c20ca9dd8a205c41c321ae69e89210437b198876e9c23",
+  "output_sha256": "3ccd7e9c25b802a9d3bc58eeb618b9b6f12f07ef78f73ace386b09c69fff8f41"
+}

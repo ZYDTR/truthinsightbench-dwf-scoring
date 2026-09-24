@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Energy_01_photocatalytic_tradeoffs",
+  "model": "deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "32f6fb9eadc7befc9453f4d785da55a312a609aa7f123848dbbc16a504543e1a",
+  "workspace_input_file_count": 11,
+  "workspace_input_bytes": 66934,
+  "output_tree_sha256": "d54d2ed6590b7065c79dd323f35025cfd9b57e2c74a8b802756e5b884b9ab9c8",
+  "output_file_count": 63,
+  "output_bytes": 1385515
+}

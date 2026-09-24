@@ -1,0 +1,36 @@
+{
+  "replicated": {
+    "rows": 8232,
+    "channels": 7,
+    "bins": 8,
+    "log_mean": 10.41981619149331,
+    "log_sd": 1.5491713520605275,
+    "main_effect_share": {
+      "input_axis_1_index": 0.0587505495715205,
+      "input_axis_2_index": 0.020890795045725323,
+      "signal_bin_index": 0.03786138890924567,
+      "output_channel_index": 0.5891551621309946
+    },
+    "raw_value_range": [
+      2447.825646514574,
+      29337190.4085409
+    ]
+  },
+  "independent": {
+    "rows": 4116,
+    "channels": 4,
+    "bins": 7,
+    "log_mean": 10.217854850177902,
+    "log_sd": 1.360288317554837,
+    "main_effect_share": {
+      "input_axis_1_index": 0.0496297222447601,
+      "input_axis_2_index": 0.23571216860827984,
+      "signal_bin_index": 0.45814585978420724,
+      "output_channel_index": 0.0017737270695262052
+    },
+    "raw_value_range": [
+      4741.764279452172,
+      9785051.558853354
+    ]
+  }
+}

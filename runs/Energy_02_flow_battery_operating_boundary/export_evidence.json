@@ -1,0 +1,21 @@
+{
+  "task_id": "Energy_02_flow_battery_operating_boundary",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260919T165204-ebd3d4",
+  "source_run_json_sha256": "7630842fd8297ec3faee9182d1fdcb6d6655a1cae8d1a7f3e32f049c79518a9d",
+  "source_release_json_sha256": "87329bbd67ce40c55fc8678ef956ef16b2ecbfba990b8ea745857115dec78f14",
+  "source_latest_validation_sha256": "a8d8b3e54e3ef59ae228db95f35dc949831cae889e7d36f1cc6be4012838a716",
+  "source_snapshot_manifest_sha256": "2fd30209cb16226e261eb8228e6f5c9c7f5d813afc6717b30fc1bd2944ecaa60",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 1320
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "806fee2a27626335cc3ef552fe4ace9922fc127e05a0195cf5a43fabe11eb157",
+  "output_sha256": "77571f9d9bd9758bb0003960485e45f0c5663a61409e2b3933fc19f887dc44fe"
+}

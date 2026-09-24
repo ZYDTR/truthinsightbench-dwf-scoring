@@ -1,0 +1,266 @@
+{
+  "main": {
+    "shape_test": {
+      "ymax_fixed": 100.0,
+      "shared_width": {
+        "params": 9,
+        "rss": 1.9565555346525285,
+        "aic": -276.8672870172036,
+        "bic": -253.04702067046478,
+        "w_K": 31.209541373134893,
+        "T50_per_curve": {
+          "condition_block1_1": 324.70390303286626,
+          "condition_block1_2": 247.43637722511085,
+          "condition_block1_3": 278.6617198662152,
+          "condition_block1_4": 305.0075770997731,
+          "condition_block2_1": 308.2284192486294,
+          "condition_block2_2": 233.29660305702274,
+          "condition_block2_3": 251.9942315524346,
+          "condition_block2_4": 277.4309681749573
+        }
+      },
+      "per_curve_width": {
+        "params": 16,
+        "rss": 0.6290540066272505,
+        "aic": -353.64518396390577,
+        "bic": -313.1507311744498,
+        "T50_per_curve": {
+          "condition_block1_1": 319.642167047701,
+          "condition_block1_2": 237.54730210562371,
+          "condition_block1_3": 286.7899982618054,
+          "condition_block1_4": 322.111504659685,
+          "condition_block2_1": 314.16185462723007,
+          "condition_block2_2": 220.921698075602,
+          "condition_block2_3": 240.5078883579936,
+          "condition_block2_4": 275.66744676240995
+        },
+        "w_per_curve": {
+          "condition_block1_1": 29.784992733717587,
+          "condition_block1_2": 26.406810465203957,
+          "condition_block1_3": 34.280235513490865,
+          "condition_block1_4": 36.728192931277384,
+          "condition_block2_1": 33.089520112581035,
+          "condition_block2_2": 24.339510232225006,
+          "condition_block2_3": 25.9009073569111,
+          "condition_block2_4": 30.535623640434952
+        }
+      },
+      "n_points": 80,
+      "nested_F": {
+        "F": 18.99282673086457,
+        "df1": 7,
+        "df2": 63,
+        "p_two_sided": 4.937435260679804e-05
+      },
+      "delta_bic_per_minus_shared": -60.10371050398501,
+      "per_curve_w_spread": {
+        "min_K": 24.339510232225006,
+        "max_K": 36.728192931277384,
+        "sd_K": 4.392850979730332
+      }
+    },
+    "synthetic_reconstruction": {
+      "protocol": "synthetic curves y=ymax/(1+exp(-(T-T50_curve)/w_shared)) sampled on the measured setting grid, then pushed through the identical wide-window log-linear estimator",
+      "generator_ymax": 100.0,
+      "generator_w": 31.209541373134893,
+      "generator_intrinsic_exponent_is_IDENTICAL_for_all_curves": true,
+      "curves": [
+        {
+          "curve": "condition_block1_1",
+          "T50_true_used": 324.70390303286626,
+          "wide_window_slope_observed": 0.0301518585736272,
+          "wide_window_slope_synthetic_same_exponent": 0.02916429152702589,
+          "narrow_window_slope_observed": 0.03160755358548381,
+          "wide_minus_narrow_observed": -0.0014556950118566093
+        },
+        {
+          "curve": "condition_block1_2",
+          "T50_true_used": 247.43637722511085,
+          "wide_window_slope_observed": 0.020472550707692144,
+          "wide_window_slope_synthetic_same_exponent": 0.019127907333519423,
+          "narrow_window_slope_observed": 0.0347307400136207,
+          "wide_minus_narrow_observed": -0.014258189305928554
+        },
+        {
+          "curve": "condition_block1_3",
+          "T50_true_used": 278.6617198662152,
+          "wide_window_slope_observed": 0.02177426960043202,
+          "wide_window_slope_synthetic_same_exponent": 0.02416537089831202,
+          "narrow_window_slope_observed": 0.029030358160980645,
+          "wide_minus_narrow_observed": -0.007256088560548626
+        },
+        {
+          "curve": "condition_block1_4",
+          "T50_true_used": 305.0075770997731,
+          "wide_window_slope_observed": 0.023791190484569957,
+          "wide_window_slope_synthetic_same_exponent": 0.027432489265003746,
+          "narrow_window_slope_observed": 0.026924187386498488,
+          "wide_minus_narrow_observed": -0.003132996901928531
+        },
+        {
+          "curve": "condition_block2_1",
+          "T50_true_used": 308.2284192486294,
+          "wide_window_slope_observed": 0.026575336375642033,
+          "wide_window_slope_synthetic_same_exponent": 0.027757268495335427,
+          "narrow_window_slope_observed": 0.029195249260453138,
+          "wide_minus_narrow_observed": -0.002619912884811105
+        },
+        {
+          "curve": "condition_block2_2",
+          "T50_true_used": 233.29660305702274,
+          "wide_window_slope_observed": 0.017958916886614034,
+          "wide_window_slope_synthetic_same_exponent": 0.016613511420152063,
+          "narrow_window_slope_observed": null,
+          "wide_minus_narrow_observed": null
+        },
+        {
+          "curve": "condition_block2_3",
+          "T50_true_used": 251.9942315524346,
+          "wide_window_slope_observed": 0.021358458803832123,
+          "wide_window_slope_synthetic_same_exponent": 0.019918580523810746,
+          "narrow_window_slope_observed": 0.03620056314143697,
+          "wide_minus_narrow_observed": -0.014842104337604849
+        },
+        {
+          "curve": "condition_block2_4",
+          "T50_true_used": 277.4309681749573,
+          "wide_window_slope_observed": 0.02393657273017926,
+          "wide_window_slope_synthetic_same_exponent": 0.02398762874607225,
+          "narrow_window_slope_observed": 0.03366236733812115,
+          "wide_minus_narrow_observed": -0.009725794607941887
+        }
+      ],
+      "spearman_observed_slope_vs_T50": [
+        0.9285714285714287,
+        0.01422150954127839
+      ],
+      "spearman_synthetic_slope_vs_T50": [
+        1.0,
+        NaN
+      ],
+      "spearman_observed_vs_synthetic": [
+        0.9285714285714287,
+        0.01422150954127839
+      ],
+      "observed_slope_range": [
+        0.017958916886614034,
+        0.0301518585736272
+      ],
+      "synthetic_slope_range": [
+        0.016613511420152063,
+        0.02916429152702589
+      ],
+      "ratio_observed_range_over_synthetic_range": 0.9714887507538533
+    }
+  },
+  "check": {
+    "shape_test": {
+      "ymax_fixed": 100.0,
+      "shared_width": {
+        "params": 5,
+        "rss": 0.7241836364979175,
+        "aic": -148.4635892520093,
+        "bic": -138.3303125273257,
+        "w_K": 33.56002347048126,
+        "T50_per_curve": {
+          "condition_block1_1": 322.0927689234538,
+          "condition_block1_2": 295.45993300417376,
+          "condition_block1_4": 315.6234564224538,
+          "condition_block1_5": 237.0344821546713
+        }
+      },
+      "per_curve_width": {
+        "params": 8,
+        "rss": 0.16540212070853613,
+        "aic": -201.5302051557029,
+        "bic": -186.33029006867747,
+        "T50_per_curve": {
+          "condition_block1_1": 328.24443393998314,
+          "condition_block1_2": 300.4370536473819,
+          "condition_block1_4": 314.162037569565,
+          "condition_block1_5": 220.9216843783665
+        },
+        "w_per_curve": {
+          "condition_block1_1": 35.465326069338985,
+          "condition_block1_2": 35.37235853945524,
+          "condition_block1_4": 33.08958132643536,
+          "condition_block1_5": 24.339504932002274
+        }
+      },
+      "n_points": 40,
+      "nested_F": {
+        "F": 34.90932062069353,
+        "df1": 3,
+        "df2": 31,
+        "p_two_sided": 1.592802947897132e-06
+      },
+      "delta_bic_per_minus_shared": -47.99997754135177,
+      "per_curve_w_spread": {
+        "min_K": 24.339504932002274,
+        "max_K": 35.465326069338985,
+        "sd_K": 5.267316437722669
+      }
+    },
+    "synthetic_reconstruction": {
+      "protocol": "synthetic curves y=ymax/(1+exp(-(T-T50_curve)/w_shared)) sampled on the measured setting grid, then pushed through the identical wide-window log-linear estimator",
+      "generator_ymax": 100.0,
+      "generator_w": 33.56002347048126,
+      "generator_intrinsic_exponent_is_IDENTICAL_for_all_curves": true,
+      "curves": [
+        {
+          "curve": "condition_block1_1",
+          "T50_true_used": 322.0927689234538,
+          "wide_window_slope_observed": 0.025448713541824826,
+          "wide_window_slope_synthetic_same_exponent": 0.026655866807997516,
+          "narrow_window_slope_observed": 0.02722590160939483,
+          "wide_minus_narrow_observed": -0.0017771880675700041
+        },
+        {
+          "curve": "condition_block1_2",
+          "T50_true_used": 295.45993300417376,
+          "wide_window_slope_observed": 0.02283688182937596,
+          "wide_window_slope_synthetic_same_exponent": 0.024240570492311795,
+          "narrow_window_slope_observed": 0.02906768051217542,
+          "wide_minus_narrow_observed": -0.0062307986827994585
+        },
+        {
+          "curve": "condition_block1_4",
+          "T50_true_used": 315.6234564224538,
+          "wide_window_slope_observed": 0.026575336375642033,
+          "wide_window_slope_synthetic_same_exponent": 0.026157743712092285,
+          "narrow_window_slope_observed": 0.029195249260453138,
+          "wide_minus_narrow_observed": -0.002619912884811105
+        },
+        {
+          "curve": "condition_block1_5",
+          "T50_true_used": 237.0344821546713,
+          "wide_window_slope_observed": 0.017958916886614034,
+          "wide_window_slope_synthetic_same_exponent": 0.016031892673282176,
+          "narrow_window_slope_observed": null,
+          "wide_minus_narrow_observed": null
+        }
+      ],
+      "spearman_observed_slope_vs_T50": [
+        0.7999999999999999,
+        0.47010768050422047
+      ],
+      "spearman_synthetic_slope_vs_T50": [
+        1.0,
+        NaN
+      ],
+      "spearman_observed_vs_synthetic": [
+        0.7999999999999999,
+        0.47010768050422047
+      ],
+      "observed_slope_range": [
+        0.017958916886614034,
+        0.026575336375642033
+      ],
+      "synthetic_slope_range": [
+        0.016031892673282176,
+        0.026655866807997516
+      ],
+      "ratio_observed_range_over_synthetic_range": 0.8110354354942024
+    }
+  }
+}

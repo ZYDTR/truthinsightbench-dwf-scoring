@@ -1,0 +1,1522 @@
+row_index,location,reference,csv_rate_mm_per_kyr,main_rate_mm_per_yr,ratio_main_over_csv
+0,SIR,Aalto et al. 2006,2800.0,2.8,0.001
+1,TAM,Aalto et al. 2006,950.0,0.95,0.001
+2,VBA,Aalto et al. 2006,1550.0,1.55,0.001
+3,HUL,Aalto et al. 2006,1530.0,1.53,0.001
+4,ACH,Aalto et al. 2006,2000.0,2.0,0.001
+5,LUR,Aalto et al. 2006,2980.0,2.98,0.001
+6,POR,Aalto et al. 2006,1250.0,1.25,0.001
+7,VER,Aalto et al. 2006,30.0,0.03,0.001
+8,MIG,Aalto et al. 2006,50.0,0.05,0.001
+9,CAJ,Aalto et al. 2006,6910.0,6.91,0.001
+10,COT,Aalto et al. 2006,2730.0,2.73,0.001
+11,MIS,Aalto et al. 2006,10.0,0.01,0.001
+12,VIN,Aalto et al. 2006,20.0,0.02,0.001
+13,LOC,Aalto et al. 2006,1260.0,1.26,0.001
+14,SPE,Aalto et al. 2006,4130.0,4.13,0.001
+15,ICO,Aalto et al. 2006,1870.0,1.87,0.001
+16,BER,Aalto et al. 2006,470.0,0.47,0.001
+17,ELV,Aalto et al. 2006,180.0,0.18,0.001
+18,EPS,Aalto et al. 2006,780.0,0.78,0.001
+19,AMO,Aalto et al. 2006,5170.0,5.17,0.001
+20,HUR,Aalto et al. 2006,480.0,0.48,0.001
+21,PNA,Aalto et al. 2006,2500.0,2.5,0.001
+22,MIZ,Aalto et al. 2006,490.0,0.49,0.001
+23,PAZ,Aalto et al. 2006,190.0,0.19,0.001
+24,SAN,Aalto et al. 2006,980.0,0.98,0.001
+25,AT,Aalto et al. 2006,710.0,0.71,0.001
+26,NU,Aalto et al. 2006,260.0,0.26,0.001
+27,VQ,Aalto et al. 2006,630.0,0.63,0.001
+28,SL,Aalto et al. 2006,40.0,0.04,0.001
+29,EP,Aalto et al. 2006,50.0,0.05,0.001
+30,CH,Aalto et al. 2006,120.0,0.12,0.001
+31,SJ,Aalto et al. 2006,250.0,0.25,0.001
+32,VI,Aalto et al. 2006,330.0,0.33,0.001
+33,CAB,Aalto et al. 2006,80.0,0.08,0.001
+34,OB,Aalto et al. 2006,160.0,0.16,0.001
+35,TO,Aalto et al. 2006,1230.0,1.23,0.001
+36,SA,Aalto et al. 2006,80.0,0.08,0.001
+37,PA,Aalto et al. 2006,190.0,0.19,0.001
+38,AQM,Aalto et al. 2006,1470.0,1.47,0.001
+39,SRC,Aalto et al. 2006,570.0,0.57,0.001
+40,AIN,Aalto et al. 2006,1430.0,1.43,0.001
+41,AB,Aalto et al. 2006,1210.0,1.21,0.001
+42,LBE,Aalto et al. 2006,300.0,0.3,0.001
+43,Bhote Koshi,Andermann et al. 2012,100.0,0.1,0.001
+44,Upper Karnali,Andermann et al. 2012,400.0,0.4,0.001
+45,Karnali,Andermann et al. 2012,900.0,0.9,0.001
+46,Saradha,Andermann et al. 2012,200.0,0.2,0.001
+47,Upper Rapti,Andermann et al. 2012,1900.0,1.9,0.001
+48,Rapti,Andermann et al. 2012,1000.0,1.0,0.001
+49,Kali-Gandaki,Andermann et al. 2012,2800.0,2.8,0.001
+50,Trishuli,Andermann et al. 2012,300.0,0.3,0.001
+51,Narayani,Andermann et al. 2012,1500.0,1.5,0.001
+52,Bagmati,Andermann et al. 2012,600.0,0.6,0.001
+53,Sapta-Koshi,Andermann et al. 2012,900.0,0.9,0.001
+54,Kankai Mai,Andermann et al. 2012,500.0,0.5,0.001
+55,Rio Puerco New Mexico,Bierman et al. 2005,405.625,0.405625,0.001
+56,Rio Puerco New Mexico,Bierman et al. 2005,437.5,0.4375,0.001
+57,Rio Puerco New Mexico,Bierman et al. 2005,151.25,0.15125,0.001
+58,Rio Puerco New Mexico,Bierman et al. 2005,290.625,0.290625,0.001
+59,Rio Puerco New Mexico,Bierman et al. 2005,42.5,0.0425,0.001
+60,Luquillo Forest Puerto Rico,Brown et al. 1995,126.25,0.12625,0.001
+61,Nahal Yael,Clapp et al. 2000,78.4375,0.0784375,0.001
+62,Fengshan,Dadson et al. 2005,3004.807692,3.00481,0.0010000007681024
+63,Taan,Dadson et al. 2005,6911.532385,6.91153,0.0009999996549245713
+64,Tachia,Dadson et al. 2005,1498.800959,1.4988,0.0009999993601551998
+65,Choshui,Dadson et al. 2005,11291.40181,11.2914,0.0009999998397010371
+66,Pachang,Dadson et al. 2005,8503.401361,8.5034,0.0009999998399463999
+67,Tsengwen,Dadson et al. 2005,13504.75367,13.5048,0.0010000034306438409
+68,Peinan,Dadson et al. 2005,34722.22222,34.7222,0.000999999360064
+69,Hsiukuluan,Dadson et al. 2005,8934.372969,8.93437,0.0009999996676879272
+70,Hualien,Dadson et al. 2005,12865.20584,12.8652,0.0009999995460624514
+71,Hoping,Dadson et al. 2005,16952.98373,16.953,0.0010000009597130664
+72,Tanshui (1140H058),Dadson et al. 2005,742.280285,0.74228,0.000999999616048
+73,Tanshui (1140H066),Dadson et al. 2005,1498.002663,1.498,0.0009999982222995555
+74,Tanshui (1140H067),Dadson et al. 2005,5208.333333,5.20833,0.000999999360064
+75,Nankang,Dadson et al. 2005,512.295082,0.512295,0.000999999839936
+76,Touchien,Dadson et al. 2005,1878.757515,1.87876,0.0010000013226826668
+77,Chungkang,Dadson et al. 2005,6060.606061,6.06061,0.0010000006499349997
+78,Houlung,Dadson et al. 2005,3840.042373,3.84004,0.000999999382038069
+79,Wu,Dadson et al. 2005,3091.872792,3.09187,0.0009999990969874286
+80,Peikang,Dadson et al. 2005,2303.18258,2.30318,0.0009999988798109092
+81,Potzu,Dadson et al. 2005,4541.522491,4.54152,0.0009999994515055238
+82,Chishui,Dadson et al. 2005,4955.947137,4.95595,0.0010000005776897775
+83,Yenshui,Dadson et al. 2005,4708.90411,4.7089,0.0009999991271854546
+84,Kaoping,Dadson et al. 2005,9956.111834,9.95611,0.000999999815791543
+85,Tungkang,Dadson et al. 2005,1428.571429,1.42857,0.0009999989997
+86,Linpien,Dadson et al. 2005,6653.225806,6.65323,0.0010000006303709091
+87,Chihpen,Dadson et al. 2005,13554.21687,13.5542,0.0009999987553688892
+88,Nanao,Dadson et al. 2005,8823.529412,8.82353,0.00100000006664
+89,Arroyo de los Frijoles Watershed New Mexico,Gellis et al. 2005,86.875,0.086875,0.001
+90,Volcano Hill Wash New Mexico,Gellis et al. 2012,372.5,0.3725,0.001
+91,Arroyo Chavez New Mexico,Gellis et al. 2012,748.125,0.748125,0.001
+92,Atabage oya Upper Mahaweli catchment,Hewawasam et al. 2003,224.375,0.224375,0.001
+93,Nilambe oya Upper Mahaweli catchment,Hewawasam et al. 2003,83.75,0.08375,0.001
+94,Huluganga Upper Mahaweli catchment,Hewawasam et al. 2003,140.0,0.14,0.001
+95,Maha oya Upper Mahaweli catchment,Hewawasam et al. 2003,246.875,0.246875,0.001
+96,Belihul oya Upper Mahaweli catchment,Hewawasam et al. 2003,345.625,0.345625,0.001
+97,Uma oya (1) Upper Mahaweli catchment,Hewawasam et al. 2003,1325.0,1.325,0.001
+98,Uma oya (2) Upper Mahaweli catchment,Hewawasam et al. 2003,1007.5,1.0075,0.001
+99,Peradeniya Upper Mahaweli catchment,Hewawasam et al. 2003,279.375,0.279375,0.001
+100,Polgolla Upper Mahaweli catchment,Hewawasam et al. 2003,253.125,0.253125,0.001
+101,Victoria Upper Mahaweli catchment,Hewawasam et al. 2003,318.75,0.31875,0.001
+102,Ganga Ganga basin,Hewawasam et al. 2003,11643.83562,11.6438,0.0009999969408705893
+103,Karnali Ganga basin,Hewawasam et al. 2003,624.7087912,0.624709,0.0010000003342357318
+104,Narayani/Gandak Ganga basin,Hewawasam et al. 2003,1172.25625,1.17226,0.001000003198959272
+105,Kosi Ganga basin,Hewawasam et al. 2003,864.0,0.864,0.001
+106,Ganga Bangladesh Ganga basin,Hewawasam et al. 2003,651.5151515,0.651515,0.000999999767465116
+107,Iller Kempten,Hinderer 2001,108.0625,0.108063,0.0010000046269519954
+108,Tiroler Ache Marquartstein,Hinderer 2001,154.0,0.154,0.001
+109,Inn Reisach,Hinderer 2001,159.25,0.15925,0.001
+110,Sarca Ponte Pia,Hinderer 2001,75.375,0.075375,0.001
+111,Ammer Weilheim,Hinderer et al. 2013,71.0,0.071,0.0009999999999999998
+112,Iller Krugzell,Hinderer et al. 2013,123.0,0.123,0.001
+113,Iller Wiblingen,Hinderer et al. 2013,25.0,0.025,0.001
+114,Isar Sylvenstein,Hinderer et al. 2013,72.0,0.072,0.001
+115,Isar Munchen,Hinderer et al. 2013,18.0,0.018,0.001
+116,Isar Plattling,Hinderer et al. 2013,12.0,0.012,0.001
+117,Kotlaine,Hinderer et al. 2013,1022.0,1.022,0.001
+118,Lainbach,Hinderer et al. 2013,327.0,0.327,0.001
+119,Lech Feldheim,Hinderer et al. 2013,17.0,0.017,0.001
+120,Loisach Schlehdorf,Hinderer et al. 2013,41.0,0.041,0.001
+121,Saalach Unterjettenburg,Hinderer et al. 2013,186.0,0.186,0.001
+122,Tiroler Achen Staudach,Hinderer et al. 2013,113.0,0.113,0.001
+123,Traun Altenmarkt/Stein,Hinderer et al. 2013,46.0,0.046,0.001
+124,Weissach Tegernsee,Hinderer et al. 2013,50.0,0.05,0.001
+125,Wertach Turkheim,Hinderer et al. 2013,22.0,0.022,0.001
+126,Wertach Schwabmunchen,Hinderer et al. 2013,63.0,0.063,0.001
+127,Inn Kufstein,Hinderer et al. 2013,92.0,0.092,0.001
+128,Inn Oberaudorf,Hinderer et al. 2013,74.0,0.074,0.001
+129,Inn Rosenheim,Hinderer et al. 2013,84.0,0.084,0.001
+130,Inn Wasserburg,Hinderer et al. 2013,96.0,0.096,0.001
+131,Inn Neuotting,Hinderer et al. 2013,102.0,0.102,0.001
+132,Inn Passau,Hinderer et al. 2013,64.0,0.064,0.001
+133,Salzach Laufen,Hinderer et al. 2013,118.0,0.118,0.001
+134,Salzach Burghausen,Hinderer et al. 2013,131.0,0.131,0.001
+135,Emme Wiler,Hinderer et al. 2013,21.0,0.021,0.001
+136,Thur Halden,Hinderer et al. 2013,81.0,0.081,0.001
+137,LArve Geneve,Hinderer et al. 2013,179.0,0.179,0.001
+138,Dongia Valle di Blenio,Hinderer et al. 2013,20.0,0.02,0.001
+139,Val Roseg Pontresina,Hinderer et al. 2013,184.0,0.184,0.001
+140,Ticino Bellinzona,Hinderer et al. 2013,102.0,0.102,0.001
+141,Maggia Locarno,Hinderer et al. 2013,82.0,0.082,0.001
+142,Moesa Lumino,Hinderer et al. 2013,35.0,0.035,0.001
+143,Drau Rosegg,Hinderer et al. 2013,76.0,0.076,0.001
+144,Enns Liezen,Hinderer et al. 2013,48.0,0.048,0.001
+145,Enns Grobreifling,Hinderer et al. 2013,43.0,0.043,0.001
+146,Gail Gailitz,Hinderer et al. 2013,90.0,0.09,0.001
+147,Steyr Steyrdurchbruch,Hinderer et al. 2013,46.0,0.046,0.001
+148,Rhone mouth Mediterranean,Hinderer et al. 2013,136.0,0.136,0.001
+149,Durance Mirabeau,Hinderer et al. 2013,440.0,0.44,0.001
+150,Isere,Hinderer et al. 2013,128.0,0.128,0.001
+151,Asse,Hinderer et al. 2013,254.0,0.254,0.001
+152,Bleone,Hinderer et al. 2013,244.0,0.244,0.001
+153,Ferrand,Hinderer et al. 2013,137.0,0.137,0.001
+154,Romanche,Hinderer et al. 2013,226.0,0.226,0.001
+155,Adda Tirano,Hinderer et al. 2013,103.0,0.103,0.001
+156,Adda Pizzighettone,Hinderer et al. 2013,68.0,0.068,0.001
+157,Dora Baltea Tavagnasco,Hinderer et al. 2013,301.0,0.301,0.001
+158,Oglio Marcaria,Hinderer et al. 2013,18.0,0.018,0.001
+159,Po Casale Monferrato,Hinderer et al. 2013,20.0,0.02,0.001
+160,Po Becca,Hinderer et al. 2013,43.0,0.043,0.001
+161,Sesia Vercelli,Hinderer et al. 2013,40.0,0.04,0.001
+162,Brenta Bassano,Hinderer et al. 2013,25.0,0.025,0.001
+163,Cismon Cismon,Hinderer et al. 2013,213.0,0.213,0.001
+164,Etsch/Adige Trento,Hinderer et al. 2013,91.0,0.091,0.001
+165,Rio Cordon Dolomites,Hinderer et al. 2013,59.0,0.059,0.001
+166,Sauglio Turin,Hinderer et al. 2013,63.0,0.063,0.001
+167,Sextenbach Dolomites,Hinderer et al. 2013,129.0,0.129,0.001
+168,Tanaro Nucetto,Hinderer et al. 2013,82.0,0.082,0.001
+169,Tanaro Clavesana,Hinderer et al. 2013,112.0,0.112,0.001
+170,Tanaro Farigliano,Hinderer et al. 2013,87.0,0.087,0.001
+171,Tanaro Alessandria,Hinderer et al. 2013,74.0,0.074,0.001
+172,Tanaro Montecastello,Hinderer et al. 2013,120.0,0.12,0.001
+173,West Fork Horse Creek Idaho,Kirchner et al. 2001,3.125,0.003125,0.001
+174,East Fork Horse Creek Idaho,Kirchner et al. 2001,1.5625,0.0015625,0.001
+175,Tailholt Creek Idaho,Kirchner et al. 2001,8.75,0.00875,0.001
+176,Circle End Creek Idaho,Kirchner et al. 2001,4.0625,0.0040625,0.001
+177,Trapper Creek Idaho,Kirchner et al. 2001,6.125,0.006125,0.001
+178,South Fork Red River Idaho,Kirchner et al. 2001,5.0,0.005,0.001
+179,Johns Creek Idaho,Kirchner et al. 2001,4.75,0.00475,0.001
+180,Johns Creek Idaho,Kirchner et al. 2001,4.75,0.00475,0.001
+181,Lochsa River Idaho,Kirchner et al. 2001,16.4375,0.0164375,0.001
+182,Selway River Idaho,Kirchner et al. 2001,15.3125,0.0153125,0.001
+183,Salmon River Idaho,Kirchner et al. 2001,8.5625,0.0085625,0.001
+184,Yamuna Ganga basin,Lupker et al. 2012,3446.153846,3.44615,0.000999998883973214
+185,Bryson City Tuckasegee River North Carolina,Matmon et al. 2003,65.0,0.065,0.001
+186,Little River North Carolina,Matmon et al. 2003,21.0,0.021,0.001
+187,Annapolis Wilmott,Meybeck et al 2003,4.5853125,0.00458531,0.0009999994547808901
+188,Chaudiere St Lambert,Meybeck et al 2003,35.359375,0.0353594,0.0010000007070260716
+189,Liard River mouth,Meybeck et al 2003,82.58125,0.0825813,0.0010000006054643154
+190,Peace Peace River,Meybeck et al 2003,198.0125,0.198013,0.001000002525093113
+191,Peace Peace Point,Meybeck et al 2003,76.19375,0.0761938,0.001000000656221803
+192,Red Deer Red Deer,Meybeck et al 2003,18.934375,0.0189344,0.0010000013203498928
+193,South Saskatchewan Lemsford,Meybeck et al 2003,50.1875,0.0501875,0.001
+194,South Saskatchewan Saskatoon,Meybeck et al 2003,10.356875,0.0103569,0.0010000024138555308
+195,Chena Fairbanks,Meybeck et al 2003,34.21875,0.0342188,0.0010000014611872146
+196,Elm Fork Red Magnum,Meybeck et al 2003,438.0,0.438,0.001
+197,Little Colorado Cameron,Meybeck et al 2003,110.4125,0.110413,0.0010000045284727726
+198,Pecos Santa Rosa,Meybeck et al 2003,54.065625,0.0540656,0.0009999995375989828
+199,Salt Fork Red Mangum,Meybeck et al 2003,47.90625,0.0479063,0.0010000010437051534
+200,Walla Walla Touchet,Meybeck et al 2003,515.5625,0.515563,0.001000000969814523
+201,Piray Taruma,Meybeck et al 2003,542.9375,0.542938,0.0010000009209163118
+202,Grand Morin Villier,Meybeck et al 2003,9.58125,0.00958125,0.0009999999999999998
+203,Lot Clairac,Meybeck et al 2003,46.309375,0.0463094,0.0010000005398474931
+204,Marne Noisiel,Meybeck et al 2003,5.703125,0.00570313,0.0010000008767123288
+205,Melarchez Melarchez,Meybeck et al 2003,9.125,0.009125,0.001
+206,Nam Mae Pai Sop Mae Samat,Meybeck et al 2003,31.025,0.031025,0.001
+207,Nam Mae Pai Ban Na Chalong,Meybeck et al 2003,52.240625,0.0522406,0.0009999995214452354
+208,Huai Mae Ya Sop Huai Mae Ya,Meybeck et al 2003,62.278125,0.0622781,0.000999999598574941
+209,Khlong Mala Hat Som Paem,Meybeck et al 2003,116.34375,0.116344,0.0010000021488047275
+210,Khlong Sok Ban Cheo Sai,Meybeck et al 2003,75.053125,0.0750531,0.0009999996669026107
+211,Bani Douna,Meybeck et al 2003,2.418125,0.00241813,0.0010000020677177566
+212,El Abid,Meybeck et al 2003,999.1875,0.999188,0.0010000005004065803
+213,Nzi Zienoa,Meybeck et al 2003,3.3534375,0.00335344,0.001000000745503681
+214,Somme,Meybeck et al 2003,2.965625,0.00296563,0.0010000016859852475
+215,Adour,Meybeck et al 2003,1140.625,1.14063,0.001000004383561644
+216,St. Lewis,Milliman and Farnsworth 2013,3.125,0.003125,0.001
+217,Saguenay,Milliman and Farnsworth 2013,2.840909091,0.00284091,0.001000000319968
+218,Severn,Milliman and Farnsworth 2013,1.375,0.001375,0.001
+219,Alsea,Milliman and Farnsworth 2013,116.2790698,0.116279,0.00099999939972
+220,Androscoggin,Milliman and Farnsworth 2013,12.07386364,0.0120739,0.0010000030114635284
+221,Calleguas,Milliman and Farnsworth 2013,744.047619,0.744048,0.001000000512064
+222,Connecticut,Milliman and Farnsworth 2013,5.580357143,0.00558036,0.0010000005119744002
+223,Coos,Milliman and Farnsworth 2013,74.21875,0.0742188,0.0010000006736842107
+224,Coquille,Milliman and Farnsworth 2013,67.12962963,0.0671296,0.0009999995586151725
+225,Duwamish,Milliman and Farnsworth 2013,125.0,0.125,0.001
+226,Edisto,Milliman and Farnsworth 2013,1.666666667,0.00166667,0.0010000019997999997
+227,Guadalupe,Milliman and Farnsworth 2013,7.211538462,0.00721154,0.0010000002132693332
+228,Gualala,Milliman and Farnsworth 2013,187.5,0.1875,0.001
+229,Hoh,Milliman and Farnsworth 2013,692.3076923,0.692308,0.0010000004444555557
+230,Housatonic,Milliman and Farnsworth 2013,74.4047619,0.0744048,0.001000000512064
+231,James,Milliman and Farnsworth 2013,23.80952381,0.0238095,0.00099999899998
+232,Kennebeck,Milliman and Farnsworth 2013,25.390625,0.0253906,0.0009999990153846154
+233,Los Angeles,Milliman and Farnsworth 2013,71.42857143,0.0714286,0.0010000003999799999
+234,Matolle,Milliman and Farnsworth 2013,750.0,0.75,0.001
+235,Merrimack,Milliman and Farnsworth 2013,10.41666667,0.0104167,0.0010000031996799988
+236,Mobile,Milliman and Farnsworth 2013,25.56818182,0.0255682,0.00100000071104
+237,Navarro,Milliman and Farnsworth 2013,187.5,0.1875,0.001
+238,Neches,Milliman and Farnsworth 2013,13.5,0.0135,0.001
+239,Nehalem,Milliman and Farnsworth 2013,62.5,0.0625,0.001
+240,Nooksak,Milliman and Farnsworth 2013,500.0,0.5,0.001
+241,Nueces,Milliman and Farnsworth 2013,10.31976744,0.0103198,0.0010000031551098598
+242,Pajaro,Milliman and Farnsworth 2013,60.48387097,0.0604839,0.0010000004799626666
+243,Pascagoula,Milliman and Farnsworth 2013,35.0,0.035,0.001
+244,Passaic,Milliman and Farnsworth 2013,9.868421053,0.00986842,0.0009999998932959998
+245,Patuxent,Milliman and Farnsworth 2013,10.41666667,0.0104167,0.0010000031996799988
+246,Penobscot,Milliman and Farnsworth 2013,28.67647059,0.0286765,0.001000001025579487
+247,Rogue,Milliman and Farnsworth 2013,102.6785714,0.102679,0.0010000041741913056
+248,Sacramento,Milliman and Farnsworth 2013,19.96527778,0.0199653,0.0010000011129321737
+249,St. John's,Milliman and Farnsworth 2013,19.39655172,0.0193966,0.0010000024891022228
+250,Salinas,Milliman and Farnsworth 2013,130.6818182,0.130682,0.0010000013911652171
+251,San Diego,Milliman and Farnsworth 2013,14.20454545,0.0142045,0.000999996800319999
+252,San Dieguito,Milliman and Farnsworth 2013,10.41666667,0.0104167,0.0010000031996799988
+253,San Joaquin,Milliman and Farnsworth 2013,2.635542169,0.00263554,0.0009999991770194287
+254,Santa Ana,Milliman and Farnsworth 2013,15.87301587,0.015873,0.00099999900019
+255,Santa Margarita,Milliman and Farnsworth 2013,39.47368421,0.0394737,0.0010000004000133332
+256,Santa Maria,Milliman and Farnsworth 2013,129.1666667,0.129167,0.001000002580387096
+257,Santa Ynez,Milliman and Farnsworth 2013,625.0,0.625,0.001
+258,Siletz,Milliman and Farnsworth 2013,72.11538462,0.0721154,0.0010000002132693332
+259,Siuslaw,Milliman and Farnsworth 2013,39.16666667,0.0391667,0.0010000008509787233
+260,Sixes,Milliman and Farnsworth 2013,812.5,0.8125,0.001
+261,Smith,Milliman and Farnsworth 2013,3333.333333,3.33333,0.0009999990001
+262,Snohomish,Milliman and Farnsworth 2013,36.85897436,0.036859,0.0010000006956243479
+263,Tijuana,Milliman and Farnsworth 2013,65.27777778,0.0652778,0.0010000003403914893
+264,Tillamook,Milliman and Farnsworth 2013,81.96721311,0.0819672,0.000999999840058
+265,Umpqua,Milliman and Farnsworth 2013,72.91666667,0.0729167,0.001000000457097143
+266,York,Milliman and Farnsworth 2013,4.595588235,0.00459559,0.001000000384064
+267,Chilkat,Milliman and Farnsworth 2013,789.4736842,0.789474,0.0010000004000133335
+268,Knik,Milliman and Farnsworth 2013,1465.517241,1.46552,0.001000001882611765
+269,Matanuska,Milliman and Farnsworth 2013,707.5471698,0.707547,0.0009999997600160001
+270,Speel,Milliman and Farnsworth 2013,2586.206897,2.58621,0.0010000011998266664
+271,Wailuku,Milliman and Farnsworth 2013,19.23076923,0.0192308,0.00100000160004
+272,Rewa,Milliman and Farnsworth 2013,1293.103448,1.2931,0.000999997333546666
+273,Actopan,Milliman and Farnsworth 2013,550.0,0.55,0.001
+274,Ameca,Milliman and Farnsworth 2013,218.75,0.21875,0.001
+275,Antigua,Milliman and Farnsworth 2013,132.5757576,0.132576,0.001000001828388571
+276,Balsas,Milliman and Farnsworth 2013,57.29166667,0.0572917,0.00100000058176
+277,Coahuayana,Milliman and Farnsworth 2013,383.3333333,0.383333,0.000999999130521739
+278,Culiacan,Milliman and Farnsworth 2013,55.55555556,0.0555556,0.0010000007999199998
+279,Diego,Milliman and Farnsworth 2013,50.0,0.05,0.001
+280,Grijalva,Milliman and Farnsworth 2013,16.25,0.01625,0.001
+281,Jamapa,Milliman and Farnsworth 2013,75.75757576,0.0757576,0.001000000319968
+282,La Union,Milliman and Farnsworth 2013,26.78571429,0.0267857,0.0009999994665066667
+283,Maraquelia,Milliman and Farnsworth 2013,110.2941176,0.110294,0.0009999989337599994
+284,Mayo,Milliman and Farnsworth 2013,41.96428571,0.0419643,0.0010000003405276597
+285,Misantia,Milliman and Farnsworth 2013,275.7352941,0.275735,0.0009999989333973334
+286,Mocorito,Milliman and Farnsworth 2013,107.1428571,0.107143,0.0010000013337333339
+287,Panuco,Milliman and Farnsworth 2013,48.52941176,0.0485294,0.0009999997576727272
+288,Papaloapan,Milliman and Farnsworth 2013,93.75,0.09375,0.001
+289,Piaxtla,Milliman and Farnsworth 2013,227.2727273,0.227273,0.0010000011998799998
+290,San Fernando,Milliman and Farnsworth 2013,125.0,0.125,0.001
+291,San Lorenzo,Milliman and Farnsworth 2013,150.0,0.15,0.001
+292,Suchiate,Milliman and Farnsworth 2013,173.6111111,0.173611,0.000999999360064
+293,Tehuantepec,Milliman and Farnsworth 2013,261.3636364,0.261364,0.0010000013911652171
+294,Usumacinta,Milliman and Farnsworth 2013,75.98039216,0.0759804,0.0010000001031845163
+295,Verde,Milliman and Farnsworth 2013,266.4473684,0.266447,0.0009999986173629628
+296,Motagua,Milliman and Farnsworth 2013,312.5,0.3125,0.001
+297,Lempa,Milliman and Farnsworth 2013,243.0555556,0.243056,0.0010000018283885712
+298,Coco,Milliman and Farnsworth 2013,150.462963,0.150463,0.0010000002459076922
+299,Escondido,Milliman and Farnsworth 2013,244.7916667,0.244792,0.0010000013615659572
+300,Grande de Matagalpa,Milliman and Farnsworth 2013,164.0625,0.164063,0.0010000030476190476
+301,Prinza Polka,Milliman and Farnsworth 2013,204.5454545,0.204545,0.0009999977779999996
+302,San Juan,Milliman and Farnsworth 2013,78.52564103,0.0785256,0.0009999994774955103
+303,Grande de Terraba,Milliman and Farnsworth 2013,247.3958333,0.247396,0.0010000006738189475
+304,Guanajibo,Milliman and Farnsworth 2013,90.72580645,0.0907258,0.0009999999289066668
+305,Ancho,Milliman and Farnsworth 2013,34.72222222,0.0347222,0.000999999360064
+306,Atrato,Milliman and Farnsworth 2013,190.9722222,0.190972,0.0009999988364799998
+307,Don Diego,Milliman and Farnsworth 2013,27.64423077,0.0276442,0.0009999988869286956
+308,Leon,Milliman and Farnsworth 2013,729.1666667,0.729167,0.001000000457097143
+309,Mira,Milliman and Farnsworth 2013,638.1578947,0.638158,0.0010000001650061856
+310,Mulatos,Milliman and Farnsworth 2013,131.25,0.13125,0.001
+311,Patia,Milliman and Farnsworth 2013,546.875,0.546875,0.001
+312,Rancheria,Milliman and Farnsworth 2013,28.40909091,0.0284091,0.001000000319968
+313,San Juan,Milliman and Farnsworth 2013,625.0,0.625,0.001
+314,Sinu,Milliman and Farnsworth 2013,175.0,0.175,0.001
+315,Turbo,Milliman and Farnsworth 2013,285.15625,0.285156,0.0009999991232876712
+316,Aconcagua,Milliman and Farnsworth 2013,148.8095238,0.14881,0.0010000032000640003
+317,Chubut,Milliman and Farnsworth 2013,9.375,0.009375,0.001
+318,Coig,Milliman and Farnsworth 2013,4.166666667,0.00416667,0.0010000007999199998
+319,Deseado,Milliman and Farnsworth 2013,22.32142857,0.0223214,0.0009999987200640002
+320,Gallegos,Milliman and Farnsworth 2013,12.25490196,0.0122549,0.000999999840064
+321,Santa Cruz,Milliman and Farnsworth 2013,18.22916667,0.0182292,0.001000001828388571
+322,Araguari,Milliman and Farnsworth 2013,7.26744186,0.00726744,0.000999999744064
+323,Contas,Milliman and Farnsworth 2013,1.116071429,0.00111607,0.0009999987196160005
+324,Doce,Milliman and Farnsworth 2013,82.23684211,0.0822368,0.0009999994879424001
+325,Gurupi,Milliman and Farnsworth 2013,156.25,0.15625,0.001
+326,Itajai-Acu,Milliman and Farnsworth 2013,31.66666667,0.0316667,0.0010000010525263157
+327,Itapicuru,Milliman and Farnsworth 2013,0.145348837,0.000145349,0.0010000011214400014
+328,Jaguaribe,Milliman and Farnsworth 2013,0.462962963,0.000462963,0.00100000007992
+329,Jequitinhonha,Milliman and Farnsworth 2013,45.95588235,0.0459559,0.001000000384064
+330,Mearim,Milliman and Farnsworth 2013,4.375,0.004375,0.001
+331,Mucuri,Milliman and Farnsworth 2013,104.1666667,0.104167,0.001000003199679999
+332,Paraguacu,Milliman and Farnsworth 2013,2.083333333,0.00208333,0.0009999984001599997
+333,Paraiba do Sul,Milliman and Farnsworth 2013,43.85964912,0.0438596,0.000999998880064
+334,Parnaiba,Milliman and Farnsworth 2013,5.514705882,0.00551471,0.0010000007467306667
+335,Tocantins,Milliman and Farnsworth 2013,61.67763158,0.0616776,0.0009999994879829333
+336,Approuague,Milliman and Farnsworth 2013,11.36363636,0.0113636,0.000999996800319999
+337,Mana,Milliman and Farnsworth 2013,5.208333333,0.00520833,0.000999999360064
+338,Marowijne,Milliman and Farnsworth 2013,13.25757576,0.0132576,0.001000001828388571
+339,Oyapoc,Milliman and Farnsworth 2013,10.41666667,0.0104167,0.0010000031996799988
+340,Coppename,Milliman and Farnsworth 2013,12.5,0.0125,0.001
+341,Nickerie,Milliman and Farnsworth 2013,12.88659794,0.0128866,0.001000000159856
+342,Saramacca,Milliman and Farnsworth 2013,7.8125,0.0078125,0.001
+343,Suriname,Milliman and Farnsworth 2013,11.71875,0.0117188,0.0010000042666666667
+344,Berbice,Milliman and Farnsworth 2013,11.36363636,0.0113636,0.000999996800319999
+345,Corantijn,Milliman and Farnsworth 2013,9.548611111,0.00954861,0.0009999998836480002
+346,Essequibo,Milliman and Farnsworth 2013,41.97761194,0.0419776,0.0009999997155626665
+347,Asi,Milliman and Farnsworth 2013,9.782608696,0.00978261,0.0010000001332977778
+348,Buyuk Menderes,Milliman and Farnsworth 2013,24.375,0.024375,0.001
+349,Devrekani,Milliman and Farnsworth 2013,102.2727273,0.102273,0.0010000026663999993
+350,Gediz,Milliman and Farnsworth 2013,45.13888889,0.0451389,0.001000000246129231
+351,Harsit,Milliman and Farnsworth 2013,125.0,0.125,0.001
+352,Iyidere,Milliman and Farnsworth 2013,133.9285714,0.133929,0.001000003200213334
+353,Karasu,Milliman and Farnsworth 2013,8.620689655,0.00862069,0.0010000000400200001
+354,Kucuk Menderes,Milliman and Farnsworth 2013,104.1666667,0.104167,0.001000003199679999
+355,Melet,Milliman and Farnsworth 2013,168.75,0.16875,0.001
+356,Bzybi,Milliman and Farnsworth 2013,200.0,0.2,0.001
+357,Chorokhi,Milliman and Farnsworth 2013,232.9545455,0.232955,0.0010000019510243898
+358,Inguri,Milliman and Farnsworth 2013,19.81707317,0.0198171,0.001000001353883077
+359,Khobi,Milliman and Farnsworth 2013,216.3461538,0.216346,0.000999999289102222
+360,Kodori,Milliman and Farnsworth 2013,256.25,0.25625,0.001
+361,Supsa,Milliman and Farnsworth 2013,142.0454545,0.142045,0.000999996800319999
+362,Wadi Siham,Milliman and Farnsworth 2013,357.1428571,0.357143,0.0010000004001199999
+363,Wadi Tuban,Milliman and Farnsworth 2013,288.4615385,0.288462,0.0010000015998666665
+364,Agrioun,Milliman and Farnsworth 2013,4545.454545,4.54545,0.0009999990001
+365,Kebir,Milliman and Farnsworth 2013,125.0,0.125,0.001
+366,Mazafran,Milliman and Farnsworth 2013,986.8421053,0.986842,0.000999999893296
+367,Sebaou,Milliman and Farnsworth 2013,300.0,0.3,0.001
+368,Seybousse,Milliman and Farnsworth 2013,136.3636364,0.136364,0.0010000026663999995
+369,Soumman,Milliman and Farnsworth 2013,301.4705882,0.301471,0.0010000013659707317
+370,Tafna,Milliman and Farnsworth 2013,71.02272727,0.0710227,0.0009999996160383999
+371,Bou Regreg,Milliman and Farnsworth 2013,299.744898,0.299745,0.0010000003402893616
+372,Draa,Milliman and Farnsworth 2013,76.75438596,0.0767544,0.0010000001829211429
+373,Loukos,Milliman and Farnsworth 2013,625.0,0.625,0.001
+374,Massa,Milliman and Farnsworth 2013,263.1578947,0.263158,0.0010000004001400001
+375,Mellah,Milliman and Farnsworth 2013,347.2222222,0.347222,0.000999999360064
+376,Mharhar,Milliman and Farnsworth 2013,729.1666667,0.729167,0.001000000457097143
+377,Nekor,Milliman and Farnsworth 2013,2215.189873,2.21519,0.0010000000573314287
+378,Oum Er Rbia,Milliman and Farnsworth 2013,137.5,0.1375,0.001
+379,Majardah,Milliman and Farnsworth 2013,267.0454545,0.267045,0.0009999982980425529
+380,Miliane,Milliman and Farnsworth 2013,281.25,0.28125,0.001
+381,Gambia,Milliman and Farnsworth 2013,1.623376623,0.00162338,0.0010000020802320006
+382,Konkoure,Milliman and Farnsworth 2013,14.84375,0.0148438,0.0010000033684210527
+383,Cavally,Milliman and Farnsworth 2013,118.3035714,0.118304,0.0010000036228830199
+384,Agneby,Milliman and Farnsworth 2013,105.3370787,0.105337,0.0009999992528746668
+385,Bandama,Milliman and Farnsworth 2013,7.731958763,0.00773196,0.0010000001599853334
+386,Comoe,Milliman and Farnsworth 2013,72.11538462,0.0721154,0.0010000002132693332
+387,Sassandra,Milliman and Farnsworth 2013,22.94303797,0.022943,0.0009999983450317239
+388,Ankobra,Milliman and Farnsworth 2013,181.4516129,0.181452,0.0010000021333511112
+389,Ayensu,Milliman and Farnsworth 2013,55.14705882,0.0551471,0.0010000007467306667
+390,Pra,Milliman and Farnsworth 2013,39.47368421,0.0394737,0.0010000004000133332
+391,Mono,Milliman and Farnsworth 2013,34.48275862,0.0344828,0.00100000120002
+392,Oueme,Milliman and Farnsworth 2013,30.0,0.03,0.001
+393,Cross,Milliman and Farnsworth 2013,78.125,0.078125,0.001
+394,Ogun,Milliman and Farnsworth 2013,14.62765957,0.0146277,0.001000002763941819
+395,Nyong,Milliman and Farnsworth 2013,2.232142857,0.00223214,0.000999998720064
+396,Keurbooms,Milliman and Farnsworth 2013,113.6363636,0.113636,0.000999996800319999
+397,Kromme,Milliman and Farnsworth 2013,125.0,0.125,0.001
+398,Matigulu,Milliman and Farnsworth 2013,137.5,0.1375,0.001
+399,Tugela,Milliman and Farnsworth 2013,189.6551724,0.189655,0.0009999990909818181
+400,Umfolozi,Milliman and Farnsworth 2013,150.0,0.15,0.001
+401,Umgeni,Milliman and Farnsworth 2013,241.4772727,0.241477,0.0009999988707011763
+402,Umhlantuzi,Milliman and Farnsworth 2013,185.8108108,0.185811,0.00100000101824
+403,Umkomazi,Milliman and Farnsworth 2013,232.5581395,0.232558,0.0009999994001499998
+404,Umtamvuna,Milliman and Farnsworth 2013,179.1666667,0.179167,0.0010000018602790693
+405,Umvoti,Milliman and Farnsworth 2013,180.8035714,0.180804,0.0010000023705283953
+406,Umzimvubu,Milliman and Farnsworth 2013,85.9375,0.0859375,0.001
+407,Ikopa,Milliman and Farnsworth 2013,312.5,0.3125,0.001
+408,Mangoky,Milliman and Farnsworth 2013,105.9322034,0.105932,0.000999998079904
+409,Tsiribihina,Milliman and Farnsworth 2013,166.6666667,0.166667,0.0010000019997999997
+410,Pasig,Milliman and Farnsworth 2013,62.5,0.0625,0.001
+411,Tagum,Milliman and Farnsworth 2013,201.6129032,0.201613,0.0010000004801279999
+412,Seraju,Milliman and Farnsworth 2013,1520.27027,1.52027,0.0009999998224
+413,Serang,Milliman and Farnsworth 2013,822.3684211,0.822368,0.0009999994879424001
+414,Jaba,Milliman and Farnsworth 2013,35326.08696,35.3261,0.0010000003691323076
+415,Adelaide,Milliman and Farnsworth 2013,41.11842105,0.0411184,0.000999999488064
+416,Baffle Creek,Milliman and Farnsworth 2013,64.1025641,0.0641026,0.00100000056004
+417,Black,Milliman and Farnsworth 2013,113.6363636,0.113636,0.000999996800319999
+418,Boyne,Milliman and Farnsworth 2013,75.0,0.075,0.001
+419,Brisbane,Milliman and Farnsworth 2013,12.94642857,0.0129464,0.000999997793213793
+420,Burnett,Milliman and Farnsworth 2013,13.25757576,0.0132576,0.001000001828388571
+421,Burrum,Milliman and Farnsworth 2013,56.81818182,0.0568182,0.001000000319968
+422,Calliope,Milliman and Farnsworth 2013,54.34782609,0.0543478,0.000999999519944
+423,Daintree,Milliman and Farnsworth 2013,357.1428571,0.357143,0.0010000004001199999
+424,Derwent,Milliman and Farnsworth 2013,7.472826087,0.00747283,0.0010000005236305454
+425,East Fitzroy,Milliman and Farnsworth 2013,13.39285714,0.0133929,0.001000003200213334
+426,Endeavour,Milliman and Farnsworth 2013,213.0681818,0.213068,0.000999999146752
+427,Finniss,Milliman and Farnsworth 2013,395.8333333,0.395833,0.0009999991579789473
+428,Flinders,Milliman and Farnsworth 2013,52.84090909,0.0528409,0.0009999998279741937
+429,Haughton,Milliman and Farnsworth 2013,69.44444444,0.0694444,0.000999999360064
+430,Hawkesbury,Milliman and Farnsworth 2013,42.61363636,0.0426136,0.000999999146752
+431,Herbert,Milliman and Farnsworth 2013,100.0,0.1,0.001
+432,Hunter,Milliman and Farnsworth 2013,312.5,0.3125,0.001
+433,Jardine,Milliman and Farnsworth 2013,143.9393939,0.143939,0.0009999972634315783
+434,Jeannie,Milliman and Farnsworth 2013,164.4736842,0.164474,0.0010000019200640002
+435,Johnson,Milliman and Farnsworth 2013,516.3043478,0.516304,0.0009999993263663158
+436,Kolan,Milliman and Farnsworth 2013,62.5,0.0625,0.001
+437,Lockhart,Milliman and Farnsworth 2013,133.9285714,0.133929,0.001000003200213334
+438,Macleay,Milliman and Farnsworth 2013,5.681818182,0.00568182,0.001000000319968
+439,Mary,Milliman and Farnsworth 2013,58.59375,0.0585938,0.0010000008533333333
+440,Mitchell,Milliman and Farnsworth 2013,3.732638889,0.00373264,0.0010000002976446511
+441,Normanby,Milliman and Farnsworth 2013,120.5357143,0.120536,0.0010000023702518516
+442,Pascoe,Milliman and Farnsworth 2013,174.4186047,0.174419,0.001000002266386666
+443,Plane Creek,Milliman and Farnsworth 2013,127.3148148,0.127315,0.0010000014546618185
+444,Prosperpine,Milliman and Farnsworth 2013,25.0,0.025,0.001
+445,Ross,Milliman and Farnsworth 2013,104.1666667,0.104167,0.001000003199679999
+446,Shoalhaven,Milliman and Farnsworth 2013,72.65625,0.0726563,0.0010000006881720428
+447,Shoalwater Creek,Milliman and Farnsworth 2013,50.67567568,0.0506757,0.0010000004799146666
+448,South Alligator,Milliman and Farnsworth 2013,2.604166667,0.00260417,0.0010000012798719999
+449,Stewart,Milliman and Farnsworth 2013,111.6071429,0.111607,0.0009999987196160005
+450,Styx,Milliman and Farnsworth 2013,60.48387097,0.0604839,0.0010000004799626666
+451,Tamar,Milliman and Farnsworth 2013,7.291666667,0.00729167,0.0010000004570971427
+452,Tully,Milliman and Farnsworth 2013,441.1764706,0.441176,0.0009999989333066667
+453,Water Park Creek,Milliman and Farnsworth 2013,98.68421053,0.0986842,0.000999999893296
+454,Wildman,Milliman and Farnsworth 2013,39.0625,0.0390625,0.001
+455,Yarra,Milliman and Farnsworth 2013,22.86585366,0.0228659,0.0010000020266026667
+456,Hutt,Milliman and Farnsworth 2013,188.9534884,0.188953,0.0009999974152369235
+457,Kaituna,Milliman and Farnsworth 2013,20.83333333,0.0208333,0.0009999984001599997
+458,Manawatu,Milliman and Farnsworth 2013,395.8333333,0.395833,0.0009999991579789473
+459,Mokau,Milliman and Farnsworth 2013,275.0,0.275,0.001
+460,Otaki,Milliman and Farnsworth 2013,81.73076923,0.0817308,0.00100000037648
+461,Pahaoa,Milliman and Farnsworth 2013,474.137931,0.474138,0.0010000001455272728
+462,Patea,Milliman and Farnsworth 2013,193.75,0.19375,0.001
+463,Piako,Milliman and Farnsworth 2013,14.58333333,0.0145833,0.0009999977145142853
+464,Porangahau,Milliman and Farnsworth 2013,305.0595238,0.30506,0.0010000015610068292
+465,Rangitaiki,Milliman and Farnsworth 2013,21.73913043,0.0217391,0.0009999986002199998
+466,Rangitikei,Milliman and Farnsworth 2013,176.2820513,0.176282,0.0009999997089890909
+467,Tarawera,Milliman and Farnsworth 2013,39.77272727,0.0397727,0.0009999993143542858
+468,Turakina,Milliman and Farnsworth 2013,193.2989691,0.193299,0.001000000159856
+469,Uawa,Milliman and Farnsworth 2013,5681.818182,5.68182,0.001000000319968
+470,Waihou,Milliman and Farnsworth 2013,50.0,0.05,0.001
+471,Waikato,Milliman and Farnsworth 2013,16.51785714,0.0165179,0.001000002594767568
+472,Wairoa,Milliman and Farnsworth 2013,793.9189189,0.793919,0.0010000001021514893
+473,Wairua,Milliman and Farnsworth 2013,190.9722222,0.190972,0.0009999988364799998
+474,Waitara,Milliman and Farnsworth 2013,551.1363636,0.551136,0.000999999340272165
+475,Waitotara,Milliman and Farnsworth 2013,250.0,0.25,0.001
+476,Whangaehu,Milliman and Farnsworth 2013,226.9736842,0.226974,0.0010000013913507248
+477,Whareama,Milliman and Farnsworth 2013,1046.875,1.04688,0.001000004776119403
+478,Aparima,Milliman and Farnsworth 2013,35.15625,0.0351563,0.0010000014222222222
+479,Arawata,Milliman and Farnsworth 2013,4838.709677,4.83871,0.0010000000667533334
+480,Ashburton,Milliman and Farnsworth 2013,113.9705882,0.113971,0.0010000036132129045
+481,Ashley,Milliman and Farnsworth 2013,43.26923077,0.0432692,0.0009999992888711112
+482,Awatere,Milliman and Farnsworth 2013,82.03125,0.0820313,0.0010000006095238095
+483,Clarence,Milliman and Farnsworth 2013,123.1060606,0.123106,0.0009999995077415384
+484,Clutha,Milliman and Farnsworth 2013,11.60714286,0.0116071,0.0009999963074461549
+485,Grey,Milliman and Farnsworth 2013,336.5384615,0.336538,0.0009999986286857142
+486,Hurunui,Milliman and Farnsworth 2013,447.6351351,0.447635,0.0009999996981916981
+487,Kakanui,Milliman and Farnsworth 2013,77.24719101,0.0772472,0.0010000001163796364
+488,Mataura,Milliman and Farnsworth 2013,79.86111111,0.0798611,0.0009999998608834783
+489,Mokihinui,Milliman and Farnsworth 2013,241.6666667,0.241667,0.0010000013791724134
+490,Motueka,Milliman and Farnsworth 2013,128.6764706,0.128676,0.0009999963427657149
+491,Opihi,Milliman and Farnsworth 2013,41.66666667,0.0416667,0.00100000079992
+492,Orari,Milliman and Farnsworth 2013,46.875,0.046875,0.001
+493,Oreti,Milliman and Farnsworth 2013,46.42857143,0.0464286,0.0010000006153538462
+494,Taieri,Milliman and Farnsworth 2013,35.0877193,0.0350877,0.00099999944995
+495,Takaka,Milliman and Farnsworth 2013,168.2692308,0.168269,0.0009999986283885716
+496,Taramakau,Milliman and Farnsworth 2013,1375.0,1.375,0.001
+497,Waiho,Milliman and Farnsworth 2013,7327.586207,7.32759,0.001000000517632941
+498,Waipara,Milliman and Farnsworth 2013,50.67567568,0.0506757,0.0010000004799146666
+499,Wairau,Milliman and Farnsworth 2013,125.0,0.125,0.001
+500,Waitaha,Milliman and Farnsworth 2013,5468.75,5.46875,0.001
+501,Waitaki,Milliman and Farnsworth 2013,17.70833333,0.0177083,0.0009999981178352938
+502,Whataroa,Milliman and Farnsworth 2013,5084.745763,5.08475,0.0010000008332766667
+503,Austari-Vestari,Milliman and Farnsworth 2013,131.5789474,0.131579,0.0010000003997599999
+504,Blanda,Milliman and Farnsworth 2013,183.8235294,0.183824,0.001000002560064
+505,Hvita,Milliman and Farnsworth 2013,71.02272727,0.0710227,0.0009999996160383999
+506,Olfusa,Milliman and Farnsworth 2013,92.21311475,0.0922131,0.0009999998400444445
+507,Skjalfandafljot,Milliman and Farnsworth 2013,47.34848485,0.0473485,0.001000000319968
+508,Drammenselva,Milliman and Farnsworth 2013,66.17647059,0.0661765,0.0010000004444177778
+509,Glomma,Milliman and Farnsworth 2013,223.2142857,0.223214,0.000999998720064
+510,Mandalselva,Milliman and Farnsworth 2013,0.367647059,0.000367647,0.00099999983952
+511,Skiensvassdraget,Milliman and Farnsworth 2013,93.75,0.09375,0.001
+512,Angerman,Milliman and Farnsworth 2013,1.171875,0.00117188,0.0010000042666666667
+513,Dalalven,Milliman and Farnsworth 2013,0.646551724,0.000646552,0.0010000004268800001
+514,Gota alv,Milliman and Farnsworth 2013,1.625,0.001625,0.001
+515,Indalsalven,Milliman and Farnsworth 2013,3.25,0.00325,0.001
+516,Kalixalven,Milliman and Farnsworth 2013,1.388888889,0.00138889,0.00100000079992
+517,Ljungan,Milliman and Farnsworth 2013,0.480769231,0.000480769,0.00099999951952
+518,Lule,Milliman and Farnsworth 2013,1.0,0.001,0.001
+519,Ore,Milliman and Farnsworth 2013,6.25,0.00625,0.001
+520,Pite,Milliman and Farnsworth 2013,2.272727273,0.00227273,0.0010000011998799998
+521,Rane,Milliman and Farnsworth 2013,0.304878049,0.000304878,0.0009999998392800002
+522,Skellefte,Milliman and Farnsworth 2013,0.46875,0.00046875,0.001
+523,Torne,Milliman and Farnsworth 2013,1.5625,0.0015625,0.001
+524,Ahtavanjoki,Milliman and Farnsworth 2013,3.125,0.003125,0.001
+525,Iijoki,Milliman and Farnsworth 2013,0.625,0.000625,0.001
+526,Kalajoki,Milliman and Farnsworth 2013,5.952380952,0.00595238,0.000999999840064
+527,Karjaanjoki,Milliman and Farnsworth 2013,0.625,0.000625,0.001
+528,Kemijoki,Milliman and Farnsworth 2013,0.857843137,0.000857843,0.0009999998402971427
+529,Kiiminkijoki,Milliman and Farnsworth 2013,1.644736842,0.00164474,0.0010000019200640002
+530,Kokemanjoki,Milliman and Farnsworth 2013,1.388888889,0.00138889,0.00100000079992
+531,Kyronjoki,Milliman and Farnsworth 2013,6.37755102,0.00637755,0.000999999840064
+532,Lapuanjoki,Milliman and Farnsworth 2013,4.573170732,0.00457317,0.0009999998399359998
+533,Oulujoki,Milliman and Farnsworth 2013,0.6,0.0006,0.001
+534,Paimionjoki,Milliman and Farnsworth 2013,51.13636364,0.0511364,0.00100000071104
+535,Perhonjoki,Milliman and Farnsworth 2013,2.314814815,0.00231481,0.00099999791992
+536,Pyhajoki,Milliman and Farnsworth 2013,27.02702703,0.027027,0.00099999899989
+537,Siikajoki,Milliman and Farnsworth 2013,0.284090909,0.000284091,0.0010000003203200001
+538,Simojoki,Milliman and Farnsworth 2013,1.3671875,0.00136719,0.0010000018285714284
+539,Narva,Milliman and Farnsworth 2013,6.25,0.00625,0.001
+540,Daugava,Milliman and Farnsworth 2013,3.338068182,0.00333807,0.0010000005446263829
+541,Venta,Milliman and Farnsworth 2013,4.518072289,0.00451807,0.000999999493368
+542,Nemanus,Milliman and Farnsworth 2013,4.209183673,0.00420918,0.0009999991273842424
+543,Parsenta,Milliman and Farnsworth 2013,2.5,0.0025,0.001
+544,Rega,Milliman and Farnsworth 2013,3.846153846,0.00384615,0.00099999900004
+545,Slupa,Milliman and Farnsworth 2013,5.803571429,0.00580357,0.0009999997537723077
+546,Maas,Milliman and Farnsworth 2013,12.15277778,0.0121528,0.0010000018283885712
+547,Rhine,Milliman and Farnsworth 2013,0.198863636,0.000198864,0.0010000018304000035
+548,Conon,Milliman and Farnsworth 2013,3.90625,0.00390625,0.001
+549,Dee,Milliman and Farnsworth 2013,10.41666667,0.0104167,0.0010000031996799988
+550,Deveron,Milliman and Farnsworth 2013,6.578947368,0.00657895,0.0010000004000640002
+551,Don,Milliman and Farnsworth 2013,14.42307692,0.0144231,0.0010000016002133336
+552,Earn,Milliman and Farnsworth 2013,48.07692308,0.0480769,0.000999999519936
+553,Findhorn,Milliman and Farnsworth 2013,32.05128205,0.0320513,0.00100000056004
+554,Ness,Milliman and Farnsworth 2013,6.944444444,0.00694444,0.0009999993600639998
+555,Ouse,Milliman and Farnsworth 2013,7.724719101,0.00772472,0.0010000001163796364
+556,Thames,Milliman and Farnsworth 2013,1.666666667,0.00166667,0.0010000019997999997
+557,Trent,Milliman and Farnsworth 2013,5.263157895,0.00526316,0.00100000039995
+558,Barrow,Milliman and Farnsworth 2013,1.979166667,0.00197917,0.001000001684042105
+559,Blackwater,Milliman and Farnsworth 2013,3.787878788,0.00378788,0.001000000319968
+560,Boyne,Milliman and Farnsworth 2013,2.083333333,0.00208333,0.0009999984001599997
+561,Erne,Milliman and Farnsworth 2013,2.450980392,0.00245098,0.000999999840064
+562,Lee,Milliman and Farnsworth 2013,5.208333333,0.00520833,0.000999999360064
+563,Liffey,Milliman and Farnsworth 2013,1.785714286,0.00178571,0.0009999975998400005
+564,Moy,Milliman and Farnsworth 2013,2.976190476,0.00297619,0.000999999840064
+565,Shannon,Milliman and Farnsworth 2013,17.39130435,0.0173913,0.000999999749875
+566,Slaney,Milliman and Farnsworth 2013,2.083333333,0.00208333,0.0009999984001599997
+567,Argens,Milliman and Farnsworth 2013,7.211538462,0.00721154,0.0010000002132693332
+568,Aude,Milliman and Farnsworth 2013,7.415254237,0.00741525,0.0009999994286102856
+569,Charente,Milliman and Farnsworth 2013,13.73626374,0.0137363,0.0010000026397279994
+570,Herault,Milliman and Farnsworth 2013,19.39655172,0.0193966,0.0010000024891022228
+571,Orb,Milliman and Farnsworth 2013,17.36111111,0.0173611,0.000999999360064
+572,Tet,Milliman and Farnsworth 2013,195.3125,0.195313,0.00100000256
+573,Var,Milliman and Farnsworth 2013,2232.142857,2.23214,0.000999998720064
+574,Vilaine,Milliman and Farnsworth 2013,11.36363636,0.0113636,0.000999996800319999
+575,Golo,Milliman and Farnsworth 2013,1.388888889,0.00138889,0.00100000079992
+576,Adra,Milliman and Farnsworth 2013,125.0,0.125,0.001
+577,Andarax,Milliman and Farnsworth 2013,51.13636364,0.0511364,0.00100000071104
+578,Besaya,Milliman and Farnsworth 2013,62.5,0.0625,0.001
+579,Bidasoa,Milliman and Farnsworth 2013,132.0422535,0.132042,0.0009999980801599997
+580,Deba,Milliman and Farnsworth 2013,37.5,0.0375,0.001
+581,Deva,Milliman and Farnsworth 2013,67.70833333,0.0677083,0.0009999995077415384
+582,Guadalfeo,Milliman and Farnsworth 2013,38.46153846,0.0384615,0.00099999900004
+583,Guadalhorce,Milliman and Farnsworth 2013,17.578125,0.0175781,0.0009999985777777777
+584,Guadiaro,Milliman and Farnsworth 2013,16.66666667,0.0166667,0.0010000019997999994
+585,Jucar,Milliman and Farnsworth 2013,22.72727273,0.0227273,0.0010000011998799998
+586,Llobregat,Milliman and Farnsworth 2013,8.413461538,0.00841346,0.0009999998171977141
+587,Narcea,Milliman and Farnsworth 2013,48.46938776,0.0484694,0.0010000002525305265
+588,Navia,Milliman and Farnsworth 2013,31.25,0.03125,0.001
+589,Nervion,Milliman and Farnsworth 2013,26.78571429,0.0267857,0.0009999994665066667
+590,Oria,Milliman and Farnsworth 2013,50.87209302,0.0508721,0.0010000001372068572
+591,Segura,Milliman and Farnsworth 2013,36.18421053,0.0361842,0.0009999997089890909
+592,Sella,Milliman and Farnsworth 2013,14.42307692,0.0144231,0.0010000016002133336
+593,Douro,Milliman and Farnsworth 2013,11.47959184,0.0114796,0.0010000007108266664
+594,Guadiana,Milliman and Farnsworth 2013,0.607638889,0.000607639,0.0010000001826742857
+595,Tagus,Milliman and Farnsworth 2013,3.125,0.003125,0.001
+596,Agri,Milliman and Farnsworth 2013,156.25,0.15625,0.001
+597,Crati,Milliman and Farnsworth 2013,312.5,0.3125,0.001
+598,Fortore,Milliman and Farnsworth 2013,852.2727273,0.852273,0.0010000003199679998
+599,Magra,Milliman and Farnsworth 2013,260.4166667,0.260417,0.0010000012798719999
+600,Marecchia,Milliman and Farnsworth 2013,1666.666667,1.66667,0.0010000019997999997
+601,Ofanto,Milliman and Farnsworth 2013,208.3333333,0.208333,0.0009999984001599997
+602,Ombrone,Milliman and Farnsworth 2013,371.09375,0.371094,0.0010000006736842104
+603,Potenza,Milliman and Farnsworth 2013,273.4375,0.273438,0.0010000018285714286
+604,Sinni,Milliman and Farnsworth 2013,1420.454545,1.42045,0.000999996800319999
+605,Tavo,Milliman and Farnsworth 2013,100.0,0.1,0.001
+606,Trigno,Milliman and Farnsworth 2013,218.75,0.21875,0.001
+607,Volturno,Milliman and Farnsworth 2013,477.2727273,0.477273,0.0010000005713714285
+608,Gela,Milliman and Farnsworth 2013,338.5416667,0.338542,0.001000000984516923
+609,Gornalunga,Milliman and Farnsworth 2013,81.52173913,0.0815217,0.0009999995200053334
+610,Mat,Milliman and Farnsworth 2013,706.5217391,0.706522,0.0010000003692738461
+611,Vijose,Milliman and Farnsworth 2013,762.8676471,0.762868,0.0010000004625966264
+612,Neretva,Milliman and Farnsworth 2013,673.0769231,0.673077,0.0010000001142514287
+613,Acheloos,Milliman and Farnsworth 2013,381.9444444,0.381944,0.0009999988364799998
+614,Alfios,Milliman and Farnsworth 2013,506.7567568,0.506757,0.0010000004799146666
+615,Aliakmon,Milliman and Farnsworth 2013,289.4736842,0.289474,0.0010000010909454547
+616,Arachthos,Milliman and Farnsworth 2013,2401.315789,2.40132,0.001000001753621918
+617,Axios,Milliman and Farnsworth 2013,122.3958333,0.122396,0.0010000013619744683
+618,Evros,Milliman and Farnsworth 2013,151.7857143,0.151786,0.0010000018822588234
+619,Gallikos,Milliman and Farnsworth 2013,2.777777778,0.00277778,0.00100000079992
+620,Kalamas,Milliman and Farnsworth 2013,659.7222222,0.659722,0.000999999663191579
+621,Louros,Milliman and Farnsworth 2013,625.0,0.625,0.001
+622,Nestos,Milliman and Farnsworth 2013,100.8064516,0.100806,0.0009999955201279995
+623,Pinios,Milliman and Farnsworth 2013,250.0,0.25,0.001
+624,Sperchios,Milliman and Farnsworth 2013,486.1111111,0.486111,0.0009999997714514285
+625,Strimonas,Milliman and Farnsworth 2013,147.0588235,0.147059,0.0010000012002000004
+626,Anabar,Milliman and Farnsworth 2013,2.5,0.0025,0.001
+627,Anadyr,Milliman and Farnsworth 2013,11.25,0.01125,0.001
+628,Gizhiga,Milliman and Farnsworth 2013,17.1875,0.0171875,0.001
+629,Kamchatka,Milliman and Farnsworth 2013,34.59821429,0.0345982,0.0009999995869729033
+630,Kem,Milliman and Farnsworth 2013,1.5625,0.0015625,0.001
+631,Khatanga,Milliman and Farnsworth 2013,2.951388889,0.00295139,0.001000000376432941
+632,Mezen,Milliman and Farnsworth 2013,7.211538462,0.00721154,0.0010000002132693332
+633,Mzymta,Milliman and Farnsworth 2013,187.5,0.1875,0.001
+634,Nadym,Milliman and Farnsworth 2013,6.8359375,0.00683594,0.0010000003657142857
+635,Neva,Milliman and Farnsworth 2013,4.222972973,0.00422297,0.0009999992959936
+636,Niva,Milliman and Farnsworth 2013,33.65384615,0.0336538,0.0009999986286857142
+637,Olenyok,Milliman and Farnsworth 2013,3.125,0.003125,0.001
+638,Onega,Milliman and Farnsworth 2013,2.74122807,0.00274123,0.001000000704064
+639,Penzhina,Milliman and Farnsworth 2013,8.561643836,0.00856164,0.0009999995519552002
+640,Pyr,Milliman and Farnsworth 2013,3.977272727,0.00397727,0.0009999993143542856
+641,Tauyo,Milliman and Farnsworth 2013,12.0,0.012,0.001
+642,Taz,Milliman and Farnsworth 2013,2.5,0.0025,0.001
+643,Tugur,Milliman and Farnsworth 2013,7.8125,0.0078125,0.001
+644,Uda,Milliman and Farnsworth 2013,9.528688525,0.00952869,0.0010000001547956988
+645,Achenkovil,Milliman and Farnsworth 2013,24.16666667,0.0241667,0.0010000013791724134
+646,Bharathpuzha,Milliman and Farnsworth 2013,21.16935484,0.0211694,0.0010000021332723808
+647,Brahmani,Milliman and Farnsworth 2013,84.13461538,0.0841346,0.0009999998171977143
+648,Cauweri,Milliman and Farnsworth 2013,2.840909091,0.00284091,0.001000000319968
+649,Chalakudi,Milliman and Farnsworth 2013,25.73529412,0.0257353,0.00100000022848
+650,Chaliyar,Milliman and Farnsworth 2013,105.6034483,0.105603,0.0009999957548734704
+651,Gundlakamma,Milliman and Farnsworth 2013,7.352941176,0.00735294,0.000999999840064
+652,Kadalundi,Milliman and Farnsworth 2013,340.9090909,0.340909,0.00099999973336
+653,Kalinadi,Milliman and Farnsworth 2013,84.13461538,0.0841346,0.0009999998171977143
+654,Kallada,Milliman and Farnsworth 2013,33.08823529,0.0330882,0.0009999989334577776
+655,Mahi,Milliman and Farnsworth 2013,35.71428571,0.0357143,0.00100000040012
+656,Muvatupuzha,Milliman and Farnsworth 2013,15.41666667,0.0154167,0.0010000021619459454
+657,Nagavali,Milliman and Farnsworth 2013,66.4893617,0.0664894,0.0010000005760320001
+658,Netravati,Milliman and Farnsworth 2013,208.3333333,0.208333,0.0009999984001599997
+659,Pamba,Milliman and Farnsworth 2013,71.02272727,0.0710227,0.0009999996160383999
+660,Penner,Milliman and Farnsworth 2013,20.45454545,0.0204545,0.0009999977779999996
+661,Periyar,Milliman and Farnsworth 2013,28.93518519,0.0289352,0.0010000005118336
+662,Ponnaiyar,Milliman and Farnsworth 2013,2.734375,0.00273438,0.0010000018285714284
+663,Rushikulya,Milliman and Farnsworth 2013,97.4025974,0.0974026,0.0010000000266933333
+664,Sabarmati,Milliman and Farnsworth 2013,5.952380952,0.00595238,0.000999999840064
+665,Shetrunji,Milliman and Farnsworth 2013,68.18181818,0.0681818,0.00099999973336
+666,Subarnarekha,Milliman and Farnsworth 2013,98.68421053,0.0986842,0.000999999893296
+667,Tamraparni,Milliman and Farnsworth 2013,104.1666667,0.104167,0.001000003199679999
+668,Tapti,Milliman and Farnsworth 2013,192.3076923,0.192308,0.00100000160004
+669,Valapattanam,Milliman and Farnsworth 2013,85.52631579,0.0855263,0.0009999998153784615
+670,Vamsadhara,Milliman and Farnsworth 2013,386.3636364,0.386364,0.0010000009410823527
+671,Salween,Milliman and Farnsworth 2013,416.6666667,0.416667,0.0010000007999199998
+672,Kelantan,Milliman and Farnsworth 2013,130.2083333,0.130208,0.0009999974402559993
+673,Langat,Milliman and Farnsworth 2013,150.0,0.15,0.001
+674,Muda,Milliman and Farnsworth 2013,7.601351351,0.00760135,0.0009999998222684444
+675,Muar,Milliman and Farnsworth 2013,13.671875,0.0136719,0.0010000018285714286
+676,Pahang,Milliman and Farnsworth 2013,98.68421053,0.0986842,0.000999999893296
+677,Perak,Milliman and Farnsworth 2013,43.26923077,0.0432692,0.0009999992888711112
+678,Selangor,Milliman and Farnsworth 2013,17.578125,0.0175781,0.0009999985777777777
+679,Terengganu,Milliman and Farnsworth 2013,109.8484848,0.109848,0.000999995586648274
+680,Rajang,Milliman and Farnsworth 2013,367.6470588,0.367647,0.000999999840064
+681,Khlong Phum Duang,Milliman and Farnsworth 2013,25.0,0.025,0.001
+682,Mae Klong,Milliman and Farnsworth 2013,163.3064516,0.163306,0.0009999972346469133
+683,Pattani,Milliman and Farnsworth 2013,54.6875,0.0546875,0.001
+684,Ba,Milliman and Farnsworth 2013,44.64285714,0.0446429,0.0010000009600640001
+685,Ca,Milliman and Farnsworth 2013,92.59259259,0.0925926,0.001000000080028
+686,Ma,Milliman and Farnsworth 2013,66.96428571,0.0669643,0.0010000002133973335
+687,Sai Gon,Milliman and Farnsworth 2013,42.61363636,0.0426136,0.000999999146752
+688,Thai Binh,Milliman and Farnsworth 2013,41.66666667,0.0416667,0.00100000079992
+689,Thu Bon,Milliman and Farnsworth 2013,125.0,0.125,0.001
+690,Tutong,Milliman and Farnsworth 2013,67.93478261,0.0679348,0.0010000002559808002
+691,Guanhe,Milliman and Farnsworth 2013,68.359375,0.0683594,0.0010000003657142857
+692,Hanjiang,Milliman and Farnsworth 2013,150.0,0.15,0.001
+693,Jianjiang,Milliman and Farnsworth 2013,98.68421053,0.0986842,0.000999999893296
+694,Jinjiang,Milliman and Farnsworth 2013,136.3636364,0.136364,0.0010000026663999995
+695,Jiulongjiang,Milliman and Farnsworth 2013,129.1666667,0.129167,0.001000002580387096
+696,Luanhe,Milliman and Farnsworth 2013,266.2037037,0.266204,0.0010000011130573913
+697,Majiahe,Milliman and Farnsworth 2013,5.028735632,0.00502874,0.001000000868608
+698,Minjiang,Milliman and Farnsworth 2013,24.59016393,0.0245902,0.001000001466846667
+699,Moyangjiang,Milliman and Farnsworth 2013,81.96721311,0.0819672,0.000999999840058
+700,Nanliujiang,Milliman and Farnsworth 2013,104.1666667,0.104167,0.001000003199679999
+701,Oujiang,Milliman and Farnsworth 2013,93.75,0.09375,0.001
+702,Qiantangjiang,Milliman and Farnsworth 2013,65.47619048,0.0654762,0.0010000001453963636
+703,Tuhaihe,Milliman and Farnsworth 2013,16.44736842,0.0164474,0.0010000019200640002
+704,Yalujiang,Milliman and Farnsworth 2013,46.875,0.046875,0.001
+705,Changhuajiang,Milliman and Farnsworth 2013,9.803921569,0.00980392,0.000999999839962
+706,Nandujiang,Milliman and Farnsworth 2013,104.1666667,0.104167,0.001000003199679999
+707,Agano,Milliman and Farnsworth 2013,73.05194805,0.0730519,0.000999999342248889
+708,Goumo,Milliman and Farnsworth 2013,8.493589744,0.00849359,0.0010000000301403774
+709,Iwaki,Milliman and Farnsworth 2013,140.0,0.14,0.001
+710,Jintsu,Milliman and Farnsworth 2013,5.555555556,0.00555556,0.00100000079992
+711,Kiso,Milliman and Farnsworth 2013,150.0,0.15,0.001
+712,Kitakami,Milliman and Farnsworth 2013,68.75,0.06875,0.001
+713,Kumano,Milliman and Farnsworth 2013,338.5416667,0.338542,0.001000000984516923
+714,Kurobe,Milliman and Farnsworth 2013,220.5882353,0.220588,0.0009999989333066667
+715,Kuzuryo,Milliman and Farnsworth 2013,8.405172414,0.00840517,0.0009999997127958973
+716,Mogami,Milliman and Farnsworth 2013,285.7142857,0.285714,0.00099999900005
+717,Omono,Milliman and Farnsworth 2013,9.441489362,0.00944149,0.0010000000675740846
+718,Ooi,Milliman and Farnsworth 2013,913.4615385,0.913462,0.0010000005052210527
+719,Shinano,Milliman and Farnsworth 2013,83.33333333,0.0833333,0.00099999960004
+720,Shou,Milliman and Farnsworth 2013,572.9166667,0.572917,0.00100000058176
+721,Tenryu,Milliman and Farnsworth 2013,612.745098,0.612745,0.000999999840064
+722,Yura,Milliman and Farnsworth 2013,3.947368421,0.00394737,0.0010000004000133335
+723,Chikugo,Milliman and Farnsworth 2013,387.9310345,0.387931,0.0009999999110666667
+724,Mankyong,Milliman and Farnsworth 2013,250.0,0.25,0.001
+725,Sapgyo,Milliman and Farnsworth 2013,47.79411765,0.0477941,0.0009999996307076923
+726,Seumjin,Milliman and Farnsworth 2013,255.1020408,0.255102,0.000999999840064
+727,Yeongsan,Milliman and Farnsworth 2013,156.25,0.15625,0.001
+728,Hudson,Milliman and Meade 1983,31.25,0.03125,0.001
+729,Brazos,Milliman and Meade 1983,90.90909091,0.0909091,0.00100000009999
+730,Eel,Milliman and Meade 1983,1093.75,1.09375,0.001
+731,Copper,Milliman and Meade 1983,729.1666667,0.729167,0.001000000457097143
+732,Susitna,Milliman and Meade 1983,312.5,0.3125,0.001
+733,Fraser,Milliman and Meade 1983,56.81818182,0.0568182,0.001000000319968
+734,Chira,Milliman and Meade 1983,1250.0,1.25,0.001
+735,Magdalena,Milliman and Meade 1983,572.9166667,0.572917,0.00100000058176
+736,Negro,Milliman and Meade 1983,81.25,0.08125,0.001
+737,Drini,Milliman and Meade 1983,937.5,0.9375,0.001
+738,Severnay Dvina,Milliman and Meade 1983,8.035714286,0.00803571,0.0009999994666311113
+739,Liaohe,Milliman and Meade 1983,150.7352941,0.150735,0.0009999980488975607
+740,Daling,Milliman and Meade 1983,1125.0,1.125,0.001
+741,Haihe,Milliman and Meade 1983,1012.5,1.0125,0.001
+742,Huaihe,Milliman and Meade 1983,33.65384615,0.0336538,0.0009999986286857142
+743,Pearl (Zhu Jiang),Milliman and Meade 1983,98.01136364,0.0980114,0.0010000003709773912
+744,Irrawaddy,Milliman and Meade 1983,385.1744186,0.385174,0.0009999989132196225
+745,Mahanadi,Milliman and Meade 1983,9.615384615,0.00961538,0.00099999952004
+746,Damodar,Milliman and Meade 1983,875.0,0.875,0.001
+747,Godavari,Milliman and Meade 1983,193.5483871,0.193548,0.0009999979999833332
+748,Limpopo,Milliman and Meade 1983,50.30487805,0.0503049,0.0010000004363393939
+749,Rufiji,Milliman and Meade 1983,59.02777778,0.0590278,0.001000000376432941
+750,Tana,Milliman and Meade 1983,625.0,0.625,0.001
+751,Haast,Milliman and Meade 1983,8125.0,8.125,0.001
+752,Fly,Milliman and Meade 1983,307.3770492,0.307377,0.000999999839936
+753,Purari,Milliman and Meade 1983,1612.903226,1.6129,0.0009999979998800003
+754,Aure,Milliman and Syvitski 1992,6875.0,6.875,0.001
+755,Cleddau,Milliman and Syvitski 1992,8125.0,8.125,0.001
+756,Hokitika,Milliman and Syvitski 1992,10625.0,10.625,0.001
+757,Cijolang,Milliman and Syvitski 1992,1187.5,1.1875,0.001
+758,Angat,Milliman and Syvitski 1992,5000.0,5.0,0.001
+759,Cimuntur,Milliman and Syvitski 1992,1875.0,1.875,0.001
+760,Cilutung,Milliman and Syvitski 1992,7500.0,7.5,0.001
+761,Agno,Milliman and Syvitski 1992,2718.75,2.71875,0.001
+762,Citanduy,Milliman and Syvitski 1992,2312.5,2.3125,0.001
+763,Waiau,Milliman and Syvitski 1992,812.5,0.8125,0.001
+764,Rakaia,Milliman and Syvitski 1992,1000.0,1.0,0.001
+765,Waimakariri,Milliman and Syvitski 1992,1062.5,1.0625,0.001
+766,Cimanuk,Milliman and Syvitski 1992,4875.0,4.875,0.001
+767,Kali Brantas,Milliman and Syvitski 1992,600.0,0.6,0.001
+768,Porong,Milliman and Syvitski 1992,1062.5,1.0625,0.001
+769,Solo,Milliman and Syvitski 1992,750.0,0.75,0.001
+770,Narmada,Milliman and Syvitski 1992,875.0,0.875,0.001
+771,Hungho,Milliman and Syvitski 1992,687.5,0.6875,0.001
+772,Chao Phraya,Milliman and Syvitski 1992,42.5,0.0425,0.001
+773,Krishna,Milliman and Syvitski 1992,162.5,0.1625,0.001
+774,Aso,Milliman and Syvitski 1992,375.0,0.375,0.001
+775,Djer,Milliman and Syvitski 1992,1062.5,1.0625,0.001
+776,El Harrach,Milliman and Syvitski 1992,1000.0,1.0,0.001
+777,Tenna,Milliman and Syvitski 1992,562.5,0.5625,0.001
+778,Lamone,Milliman and Syvitski 1992,1500.0,1.5,0.001
+779,Savio,Milliman and Syvitski 1992,1187.5,1.1875,0.001
+780,Carmel,Milliman and Syvitski 1992,396.875,0.396875,0.001
+781,Foglia,Milliman and Syvitski 1992,750.0,0.75,0.001
+782,Redwood Creek,Milliman and Syvitski 1992,1062.5,1.0625,0.001
+783,Hii,Milliman and Syvitski 1992,612.5,0.6125,0.001
+784,Mad,Milliman and Syvitski 1992,1250.0,1.25,0.001
+785,Tronto,Milliman and Syvitski 1992,562.5,0.5625,0.001
+786,Esino,Milliman and Syvitski 1992,500.0,0.5,0.001
+787,Biferno,Milliman and Syvitski 1992,1062.5,1.0625,0.001
+788,Metauro,Milliman and Syvitski 1992,543.75,0.54375,0.001
+789,Tarsus,Milliman and Syvitski 1992,58.125,0.058125,0.001
+790,Simeto,Milliman and Syvitski 1992,1250.0,1.25,0.001
+791,Shkumbini,Milliman and Syvitski 1992,2250.0,2.25,0.001
+792,Nagara,Milliman and Syvitski 1992,131.25,0.13125,0.001
+793,Osumi,Milliman and Syvitski 1992,1750.0,1.75,0.001
+794,Bou Sellem,Milliman and Syvitski 1992,62.5,0.0625,0.001
+795,Maticora,Milliman and Syvitski 1992,1375.0,1.375,0.001
+796,Bradano,Milliman and Syvitski 1992,625.0,0.625,0.001
+797,Pescara,Milliman and Syvitski 1992,184.375,0.184375,0.001
+798,Reno,Milliman and Syvitski 1992,500.0,0.5,0.001
+799,Squamish,Milliman and Syvitski 1992,362.5,0.3625,0.001
+800,Isser,Milliman and Syvitski 1992,1062.5,1.0625,0.001
+801,Santa Clara,Milliman and Syvitski 1992,875.0,0.875,0.001
+802,Morondava,Milliman and Syvitski 1992,1000.0,1.0,0.001
+803,Ord,Milliman and Syvitski 1992,393.75,0.39375,0.001
+804,Semani,Milliman and Syvitski 1992,2625.0,2.625,0.001
+805,Homathko,Milliman and Syvitski 1992,468.75,0.46875,0.001
+806,Kliniklim,Milliman and Syvitski 1992,481.25,0.48125,0.001
+807,Tuy,Milliman and Syvitski 1992,1125.0,1.125,0.001
+808,Arno,Milliman and Syvitski 1992,168.75,0.16875,0.001
+809,Kuem,Milliman and Syvitski 1992,350.0,0.35,0.001
+810,Goksu,Milliman and Syvitski 1992,156.25,0.15625,0.001
+811,Ishikari,Milliman and Syvitski 1992,93.75,0.09375,0.001
+812,Rioni,Milliman and Syvitski 1992,393.75,0.39375,0.001
+813,Filyos,Milliman and Syvitski 1992,200.0,0.2,0.001
+814,Tiber,Milliman and Syvitski 1992,218.75,0.21875,0.001
+815,Sous,Milliman and Syvitski 1992,162.5,0.1625,0.001
+816,Stikine,Milliman and Syvitski 1992,687.5,0.6875,0.001
+817,Seyhan,Milliman and Syvitski 1992,168.75,0.16875,0.001
+818,Ceyhan,Milliman and Syvitski 1992,171.875,0.171875,0.001
+819,Coruh,Milliman and Syvitski 1992,250.0,0.25,0.001
+820,Cheliff,Milliman and Syvitski 1992,87.5,0.0875,0.001
+821,Klamath,Milliman and Syvitski 1992,100.0,0.1,0.001
+822,Colorado,Milliman and Syvitski 1992,187.5,0.1875,0.001
+823,Nakdong,Milliman and Syvitski 1992,250.0,0.25,0.001
+824,Han,Milliman and Syvitski 1992,250.0,0.25,0.001
+825,San Juan,Milliman and Syvitski 1992,100.0,0.1,0.001
+826,Russian,Milliman and Syvitski 1992,425.0,0.425,0.001
+827,Yesil-Irmak,Milliman and Syvitski 1992,350.0,0.35,0.001
+828,Sebou,Milliman and Syvitski 1992,581.25,0.58125,0.001
+829,Skeena,Milliman and Syvitski 1992,162.5,0.1625,0.001
+830,Sakarya,Milliman and Syvitski 1992,125.0,0.125,0.001
+831,Kuban,Milliman and Syvitski 1992,100.0,0.1,0.001
+832,Moulouya,Milliman and Syvitski 1992,81.25,0.08125,0.001
+833,Kizil-Irmak,Milliman and Syvitski 1992,193.75,0.19375,0.001
+834,Ebro,Milliman and Syvitski 1992,131.25,0.13125,0.001
+835,Kura,Milliman and Syvitski 1992,125.0,0.125,0.001
+836,Ardour,Milliman and Syvitski 1992,11.25,0.01125,0.001
+837,Babbage,Milliman and Syvitski 1992,43.75,0.04375,0.001
+838,Garonne,Milliman and Syvitski 1992,27.5,0.0275,0.001
+839,Kuskokwim,Milliman and Syvitski 1992,62.5,0.0625,0.001
+840,Arzilla,Milliman and Syvitski 1992,812.5,0.8125,0.001
+841,Tesino,Milliman and Syvitski 1992,687.5,0.6875,0.001
+842,Gurabo,Milliman and Syvitski 1992,1062.5,1.0625,0.001
+843,Ete Vivo,Milliman and Syvitski 1992,1000.0,1.0,0.001
+844,Grande,Milliman and Syvitski 1992,1125.0,1.125,0.001
+845,Esk,Milliman and Syvitski 1992,687.5,0.6875,0.001
+846,Misa,Milliman and Syvitski 1992,812.5,0.8125,0.001
+847,Waioeka,Milliman and Syvitski 1992,368.75,0.36875,0.001
+848,Ruamahanga,Milliman and Syvitski 1992,225.0,0.225,0.001
+849,Musone,Milliman and Syvitski 1992,1062.5,1.0625,0.001
+850,Pampanga,Milliman and Syvitski 1992,812.5,0.8125,0.001
+851,Tutaekuri,Milliman and Syvitski 1992,262.5,0.2625,0.001
+852,Usk,Milliman and Syvitski 1992,28.75,0.02875,0.001
+853,Neveri,Milliman and Syvitski 1992,187.5,0.1875,0.001
+854,Karamea,Milliman and Syvitski 1992,200.0,0.2,0.001
+855,Chienti,Milliman and Syvitski 1992,625.0,0.625,0.001
+856,Motu,Milliman and Syvitski 1992,1250.0,1.25,0.001
+857,Waiapu,Milliman and Syvitski 1992,12500.0,12.5,0.001
+858,Waipaoa,Milliman and Syvitski 1992,3625.0,3.625,0.001
+859,Whakatane,Milliman and Syvitski 1992,1500.0,1.5,0.001
+860,Ngaruroro,Milliman and Syvitski 1992,293.75,0.29375,0.001
+861,Skykomish,Milliman and Syvitski 1992,68.75,0.06875,0.001
+862,Tukituki,Milliman and Syvitski 1992,275.0,0.275,0.001
+863,Mohaka,Milliman and Syvitski 1992,231.25,0.23125,0.001
+864,Buller,Milliman and Syvitski 1992,168.75,0.16875,0.001
+865,Whanganui,Milliman and Syvitski 1992,206.25,0.20625,0.001
+866,Yodo,Milliman and Syvitski 1992,168.75,0.16875,0.001
+867,Sabine,Milliman and Syvitski 1992,36.25,0.03625,0.001
+868,Romaine,Milliman and Syvitski 1992,6.875,0.006875,0.001
+869,Tone,Milliman and Syvitski 1992,156.25,0.15625,0.001
+870,Saguanay,Milliman and Syvitski 1992,3.125,0.003125,0.001
+871,Skagit,Milliman and Syvitski 1992,25.625,0.025625,0.001
+872,Muonio Alv,Milliman and Syvitski 1992,9.375,0.009375,0.001
+873,Savannah,Milliman and Syvitski 1992,68.75,0.06875,0.001
+874,Dnester,Milliman and Syvitski 1992,25.0,0.025,0.001
+875,Oder,Milliman and Syvitski 1992,0.75,0.00075,0.001
+876,Burdekin,Milliman and Syvitski 1992,14.375,0.014375,0.001
+877,Elbe,Milliman and Syvitski 1992,3.75,0.00375,0.001
+878,Vistula,Milliman and Syvitski 1992,8.125,0.008125,0.001
+879,Uruguay,Milliman and Syvitski 1992,28.125,0.028125,0.001
+880,Pechora,Milliman and Syvitski 1992,15.625,0.015625,0.001
+881,Indigirka,Milliman and Syvitski 1992,24.375,0.024375,0.001
+882,Volta,Milliman and Syvitski 1992,30.0,0.03,0.001
+883,Don,Milliman and Syvitski 1992,11.25,0.01125,0.001
+884,Volga,Milliman and Syvitski 1992,9.375,0.009375,0.001
+885,Erhjen,Milliman and Syvitski 1992,22500.0,22.5,0.001
+886,Ystwyth,Milliman and Syvitski 1992,102.5,0.1025,0.001
+887,Rangitaiki,Milliman and Syvitski 1992,51.875,0.051875,0.001
+888,Avon,Milliman and Syvitski 1992,100.625,0.100625,0.001
+889,Esk,Milliman and Syvitski 1992,36.25,0.03625,0.001
+890,Manzanares,Milliman and Syvitski 1992,156.25,0.15625,0.001
+891,Clyde,Milliman and Syvitski 1992,37.5,0.0375,0.001
+892,Tyne,Milliman and Syvitski 1992,38.125,0.038125,0.001
+893,San Pedro,Milliman and Syvitski 1992,13.75,0.01375,0.001
+894,Chehalis,Milliman and Syvitski 1992,21.25,0.02125,0.001
+895,Wye,Milliman and Syvitski 1992,31.875,0.031875,0.001
+896,St. Jean,Milliman and Syvitski 1992,30.0,0.03,0.001
+897,Severn,Milliman and Syvitski 1992,40.625,0.040625,0.001
+898,Cape Fear,Milliman and Syvitski 1992,13.125,0.013125,0.001
+899,Rappahannock,Milliman and Syvitski 1992,35.0,0.035,0.001
+900,Tano,Milliman and Syvitski 1992,13.75,0.01375,0.001
+901,Delaware,Milliman and Syvitski 1992,24.375,0.024375,0.001
+902,Pearl,Milliman and Syvitski 1992,28.75,0.02875,0.001
+903,Scheldt,Milliman and Syvitski 1992,28.125,0.028125,0.001
+904,Abitibi,Milliman and Syvitski 1992,3.75,0.00375,0.001
+905,Potomac,Milliman and Syvitski 1992,17.5,0.0175,0.001
+906,Roanoke,Milliman and Syvitski 1992,50.0,0.05,0.001
+907,Santee,Milliman and Syvitski 1992,23.125,0.023125,0.001
+908,Altamaha,Milliman and Syvitski 1992,44.375,0.044375,0.001
+909,Attawapiskat,Milliman and Syvitski 1992,3.75,0.00375,0.001
+910,Weser,Milliman and Syvitski 1992,5.0,0.005,0.001
+911,Mbam,Milliman and Syvitski 1992,53.125,0.053125,0.001
+912,Tombigbee,Milliman and Syvitski 1992,28.125,0.028125,0.001
+913,Y. Bug,Milliman and Syvitski 1992,9.375,0.009375,0.001
+914,Alabama,Milliman and Syvitski 1992,25.0,0.025,0.001
+915,Susquehanna,Milliman and Syvitski 1992,18.125,0.018125,0.001
+916,Moose,Milliman and Syvitski 1992,4.375,0.004375,0.001
+917,Seine,Milliman and Syvitski 1992,11.25,0.01125,0.001
+918,Nottaway,Milliman and Syvitski 1992,9.375,0.009375,0.001
+919,Sanaga,Milliman and Syvitski 1992,12.5,0.0125,0.001
+920,Senegal,Milliman and Syvitski 1992,5.0,0.005,0.001
+921,Creedy,Milliman and Syvitski 1992,33.125,0.033125,0.001
+922,Welland,Milliman and Syvitski 1992,8.75,0.00875,0.001
+923,Exe,Milliman and Syvitski 1992,15.0,0.015,0.001
+924,Bristol Avon,Milliman and Syvitski 1992,16.875,0.016875,0.001
+925,Swale,Milliman and Syvitski 1992,15.0,0.015,0.001
+926,Nene,Milliman and Syvitski 1992,6.875,0.006875,0.001
+927,Ely Ouse,Milliman and Syvitski 1992,5.0,0.005,0.001
+928,Neuse,Milliman and Syvitski 1992,7.5,0.0075,0.001
+929,Ogeechee,Milliman and Syvitski 1992,5.625,0.005625,0.001
+930,Pamlico,Milliman and Syvitski 1992,11.875,0.011875,0.001
+931,Peedee,Milliman and Syvitski 1992,10.625,0.010625,0.001
+932,Kymijoki,Milliman and Syvitski 1992,0.25,0.00025,0.001
+933,Apalachicola,Milliman and Syvitski 1992,2.5,0.0025,0.001
+934,Tar,Milliman and Syvitski 1992,1.25,0.00125,0.001
+935,Lucky Hills (102) Walnut Gulch Arizona,Nearing et al. 2007,144.375,0.144375,0.001
+936,Lucky Hills (105) Walnut Gulch Arizona,Nearing et al. 2007,46.875,0.046875,0.001
+937,Lucky Hills (106) Walnut Gulch Arizona,Nearing et al. 2007,50.0,0.05,0.001
+938,Lucky Hills (121) Walnut Gulch Arizona,Nearing et al. 2007,91.25,0.09125,0.001
+939,Upper Rio Chagres (CChC),Nichols et al. 2004,107.0,0.107,0.001
+940,Danghewan Qilian Shan,Pan et al. 2010,20.0,0.02,0.001
+941,Changmabao Qilian Shan,Pan et al. 2010,120.0,0.12,0.001
+942,Binggou Qilian Shan,Pan et al. 2010,50.0,0.05,0.001
+943,Xindi Qilian Shan,Pan et al. 2010,200.0,0.2,0.001
+944,Liyuanbao Qilian Shan,Pan et al. 2010,90.0,0.09,0.001
+945,Zhamashike Qilian Shan,Pan et al. 2010,120.0,0.12,0.001
+946,Qilian Qilian Shan,Pan et al. 2010,90.0,0.09,0.001
+947,Yingluoxia Qilian Shan,Pan et al. 2010,110.0,0.11,0.001
+948,Jiutiaoling Qilian Shan,Pan et al. 2010,90.0,0.09,0.001
+949,Zamusi Qilian Shan,Pan et al. 2010,110.0,0.11,0.001
+950,Shajintai Qilian Shan,Pan et al. 2010,120.0,0.12,0.001
+951,Lucky Hills (103) Walnut Gulch Arizona,Pelletier et al. 2016,377.0,0.377,0.001
+952,Lucky Hills (104) Walnut Gulch Arizona,Pelletier et al. 2016,91.0,0.091,0.001
+953,Kendall (112) Walnut Gulch Arizona,Pelletier et al. 2016,5.0,0.005,0.001
+954,Regenstauf Regen,Schaller et al. 2001,7.0,0.007,0.001
+955,Deizisau Neckar,Schaller et al. 2001,25.0,0.025,0.001
+956,Poppenweiler Neckar,Schaller et al. 2001,27.0,0.027,0.001
+957,Lauffen Neckar,Schaller et al. 2001,23.0,0.023,0.001
+958,Rockenau Neckar,Schaller et al. 2001,27.0,0.027,0.001
+959,Mannheim Neckar,Schaller et al. 2001,26.0,0.026,0.001
+960,Tailfer Meuse,Schaller et al. 2001,18.0,0.018,0.001
+961,Nameche Meuse,Schaller et al. 2001,18.0,0.018,0.001
+962,Liege Meuse,Schaller et al. 2001,17.0,0.017,0.001
+963,Eijsden Meuse,Schaller et al. 2001,17.0,0.017,0.001
+964,Heusden Meuse,Schaller et al. 2001,13.0,0.013,0.001
+965,Keizersveer Meuse,Schaller et al. 2001,11.0,0.011,0.001
+966,Goudet Loire,Schaller et al. 2001,3.0,0.003,0.001
+967,Bas Loire,Schaller et al. 2001,5.0,0.005,0.001
+968,Feurs Loire,Schaller et al. 2001,5.0,0.005,0.001
+969,Villerest Loire,Schaller et al. 2001,4.0,0.004,0.001
+970,Decize Loire,Schaller et al. 2001,5.0,0.005,0.001
+971,Nevers Loire,Schaller et al. 2001,7.0,0.007,0.001
+972,Gien Loire,Schaller et al. 2001,10.0,0.01,0.001
+973,Orleans Loire,Schaller et al. 2001,8.0,0.008,0.001
+974,Chaumont Loire,Schaller et al. 2001,10.0,0.01,0.001
+975,Langogne Allier,Schaller et al. 2001,3.0,0.003,0.001
+976,Langeac Allier,Schaller et al. 2001,4.0,0.004,0.001
+977,Chatel Allier,Schaller et al. 2001,6.0,0.006,0.001
+978,Villeneuve Allier,Schaller et al. 2001,8.0,0.008,0.001
+979,Cuffy Allier,Schaller et al. 2001,8.0,0.008,0.001
+980,Lanyang River (H001),Siame et al. 2011,4500.0,4.5,0.001
+981,Lanyang River (H006),Siame et al. 2011,10450.0,10.45,0.001
+982,Lanyang River (H019),Siame et al. 2011,4100.0,4.1,0.001
+983,Amazon,Summerfield and Hulton 1994,82.0,0.082,0.001
+984,Sao Francisco,Summerfield and Hulton 1994,4.0,0.004,0.001
+985,La Plata (Parana),Summerfield and Hulton 1994,11.0,0.011,0.001
+986,Orinoco,Summerfield and Hulton 1994,66.0,0.066,0.001
+987,Colorado,Summerfield and Hulton 1994,89.0,0.089,0.001
+988,Columbia,Summerfield and Hulton 1994,18.0,0.018,0.001
+989,Mississippi,Summerfield and Hulton 1994,70.0,0.07,0.001
+990,Rio Grande,Summerfield and Hulton 1994,18.0,0.018,0.001
+991,Yukon,Summerfield and Hulton 1994,35.0,0.035,0.001
+992,Mackenzie,Summerfield and Hulton 1994,23.0,0.023,0.001
+993,St. Lawrence,Summerfield and Hulton 1994,1.0,0.001,0.001
+994,Amur,Summerfield and Hulton 1994,10.0,0.01,0.001
+995,Lena,Summerfield and Hulton 1994,3.0,0.003,0.001
+996,Danube,Summerfield and Hulton 1994,35.0,0.035,0.001
+997,Dnieper,Summerfield and Hulton 1994,1.0,0.001,0.001
+998,Shatt-Al-Arab,Summerfield and Hulton 1994,21.0,0.021,0.001
+999,Brahmaputra,Summerfield and Hulton 1994,670.0,0.67,0.001
+1000,Ganges,Summerfield and Hulton 1994,257.0,0.257,0.001
+1001,Chiang Jiang (Yangtze River),Summerfield and Hulton 1994,104.0,0.104,0.001
+1002,Huang He (Yellow River),Summerfield and Hulton 1994,47.0,0.047,0.001
+1003,Indus,Summerfield and Hulton 1994,120.0,0.12,0.001
+1004,Mekong,Summerfield and Hulton 1994,86.0,0.086,0.001
+1005,Nile,Summerfield and Hulton 1994,10.0,0.01,0.001
+1006,Zaire,Summerfield and Hulton 1994,5.0,0.005,0.001
+1007,Zambezi,Summerfield and Hulton 1994,13.0,0.013,0.001
+1008,Orange,Summerfield and Hulton 1994,24.0,0.024,0.001
+1009,Niger,Summerfield and Hulton 1994,7.0,0.007,0.001
+1010,Murray,Summerfield and Hulton 1994,11.0,0.011,0.001
+1011,Gordeleg Catchment,Vanacker et al. 2007,93.75,0.00959805,0.0001023792
+1012,Quingeo Catchment,Vanacker et al. 2007,4737.5,0.00569841,1.2028306068601584e-06
+1013,Quingeo Catchment,Vanacker et al. 2007,2906.25,0.041158,1.416189247311828e-05
+1014,Quingeo Catchment,Vanacker et al. 2007,131.25,0.0138896,0.00010582552380952382
+1015,Quingeo Catchment,Vanacker et al. 2007,43.75,0.0107587,0.00024591314285714284
+1016,Quingeo Catchment,Vanacker et al. 2007,212.5,0.00170423,8.019905882352942e-06
+1017,Quingeo Catchment,Vanacker et al. 2007,406.25,0.0130448,3.211027692307693e-05
+1018,Quingeo Catchment,Vanacker et al. 2007,181.25,0.141505,0.0007807172413793103
+1019,Quingeo Catchment,Vanacker et al. 2007,406.25,0.0480396,0.00011825132307692309
+1020,Quingeo Catchment,Vanacker et al. 2007,2412.5,0.0159551,6.613512953367876e-06
+1021,Quingeo Catchment,Vanacker et al. 2007,1281.25,0.0429874,3.3551141463414636e-05
+1022,Jadan Catchment,Vanacker et al. 2007,1375.0,0.0221218,1.6088581818181818e-05
+1023,Jadan Catchment,Vanacker et al. 2007,1362.5,0.036898,2.7081100917431194e-05
+1024,Jadan Catchment,Vanacker et al. 2007,87.5,0.0234275,0.00026774285714285714
+1025,Jadan Catchment,Vanacker et al. 2007,3625.0,0.0216472,5.971641379310344e-06
+1026,Jadan Catchment,Vanacker et al. 2007,418.75,0.0395898,9.454280597014925e-05
+1027,Jadan Catchment,Vanacker et al. 2007,16.25,0.041924,0.002579938461538462
+1028,Deleg Catchment,Vanacker et al. 2007,637.5,0.00388827,6.09924705882353e-06
+1029,Deleg Catchment,Vanacker et al. 2007,937.5,0.0235663,2.5137386666666666e-05
+1030,Deleg Catchment,Vanacker et al. 2007,543.75,0.0304812,5.605737931034483e-05
+1031,Deleg Catchment,Vanacker et al. 2007,9437.5,0.0641818,6.800720529801324e-06
+1032,Deleg Catchment,Vanacker et al. 2007,1137.5,0.0509268,4.477081318681319e-05
+1033,Deleg Catchment,Vanacker et al. 2007,931.25,0.028702,3.082093959731543e-05
+1034,Burgay Catchment,Vanacker et al. 2007,8562.5,0.0595633,6.9562978102189784e-06
+1035,Burgay Catchment,Vanacker et al. 2007,931.25,0.0377483,4.0535087248322144e-05
+1036,Burgay Catchment,Vanacker et al. 2007,637.5,0.0854388,0.00013402164705882352
+1037,Burgay Catchment,Vanacker et al. 2007,1056.25,0.0461183,4.366229585798817e-05
+1038,Burgay Catchment,Vanacker et al. 2007,1112.5,0.0696535,6.260988764044943e-05
+1039,Burgay Catchment,Vanacker et al. 2007,1137.5,0.0685327,6.024852747252747e-05
+1040,Gualaceo Catchment,Vanacker et al. 2007,52.5,0.0141934,0.0002703504761904762
+1041,Gualaceo Catchment,Vanacker et al. 2007,268.75,0.0377536,0.00014047851162790696
+1042,Gualaceo Catchment,Vanacker et al. 2007,2000.0,0.0287194,1.4359699999999999e-05
+1043,Gualaceo Catchment,Vanacker et al. 2007,87.5,0.0438378,0.0005010034285714286
+1044,Gualaceo Catchment,Vanacker et al. 2007,381.25,0.250238,0.0006563619672131148
+1045,Gualaceo Catchment,Vanacker et al. 2007,100.0,0.0105398,0.000105398
+1046,Gualaceo Catchment,Vanacker et al. 2007,68.75,0.154467,0.0022467927272727273
+1047,Gualaceo Catchment,Vanacker et al. 2007,850.0,0.0198614,2.336635294117647e-05
+1048,Beni at Rurrenabaque,Wittmann et al. 2009,1180.0,0.0141574,1.1997796610169492e-05
+1049,Beni at Riberalta,Wittmann et al. 2009,390.0,0.0349561,8.963102564102564e-05
+1050,Madre de Dios at Miraflores,Wittmann et al. 2009,230.0,0.0349581,0.00015199173913043478
+1051,Orthon at Caracoles,Wittmann et al. 2009,30.0,0.0126169,0.00042056333333333337
+1052,Beni at Cachuela Esperanza,Wittmann et al. 2009,260.0,0.0503959,0.0001938303846153846
+1053,Grande at Puente Arce,Wittmann et al. 2009,2120.0,0.0205305,9.684198113207547e-06
+1054,Pirai at Angostura,Wittmann et al. 2009,770.0,0.0218748,2.840883116883117e-05
+1055,Paracti at Paracti,Wittmann et al. 2009,4050.0,0.0168918,4.170814814814814e-06
+1056,Grande at Abapo,Wittmann et al. 2009,890.0,0.0312347,3.509516853932584e-05
+1057,Ichilo at Puerto Villarroel,Wittmann et al. 2009,470.0,0.0652874,0.00013890936170212766
+1058,Mamore at Puerto Ganadero,Wittmann et al. 2009,160.0,0.051627,0.00032266875
+1059,Mamore at Puerto Siles,Wittmann et al. 2009,90.0,0.0729209,0.0008102322222222222
+1060,Mamore at Guayaramerin,Wittmann et al. 2009,50.0,0.0830893,0.0016617860000000002
+1061,Madeira at Porto Velho,Wittmann et al. 2009,90.0,0.0388764,0.00043196
+1062,Requena,Wittmann et al. 2011,210.0,0.042398,0.00020189523809523808
+1063,Tamshiyacu,Wittmann et al. 2011,210.0,0.122794,0.0005847333333333333
+1064,Bellavista,Wittmann et al. 2011,170.0,0.134103,0.0007888411764705882
+1065,Manacapuru,Wittmann et al. 2011,110.0,0.134371,0.0012215545454545454
+1066,Paricatuba,Wittmann et al. 2011,6.0,0.130901,0.02181683333333333
+1067,Confluence,Wittmann et al. 2011,10.0,0.109872,0.010987199999999999
+1068,Amatari,Wittmann et al. 2011,110.0,0.091994,0.0008363090909090909
+1069,Fazenda Vista Allegre,Wittmann et al. 2011,130.0,0.327453,0.0025188692307692305
+1070,Itenez,Wittmann et al. 2011,5.0,0.065379,0.013075800000000002
+1071,Obidos,Wittmann et al. 2011,80.0,0.305931,0.0038241375
+1072,Itaituba,Wittmann et al. 2011,6.0,0.258739,0.043123166666666664
+1073,YANTIC RIVER AT YANTIC CT,USGS,9.598045138,0.0582604,0.0060700277152624495
+1074,COGINCHAUG RIVER AT MIDDLEFIELD CT,USGS,5.698410383,0.0283559,0.004976107035848773
+1075,SALMON RIVER NEAR EAST HAMPTON CT,USGS,41.15800788,0.0323375,0.0007856915741471985
+1076,Passaic River near Chatham NJ,USGS,13.88963943,0.0447666,0.0032230210312954102
+1077,Baldwins Creek at Baldwin Lake nr Pennington NJ,USGS,10.75871145,0.0781727,0.0072659909472709205
+1078,Great Egg Harbor River at Folsom NJ,USGS,1.70422681,0.0205886,0.01208090371492278
+1079,Crosswicks Creek at Extonville NJ,USGS,13.04476135,0.0091113,0.00069846429195119
+1080,Schuylkill River at Port Carbon PA,USGS,141.5054759,0.0211348,0.00014935676422116466
+1081,Schuylkill River at Berne PA,USGS,48.03957491,0.0324461,0.0006754035617672787
+1082,French Creek near Phoenixville PA,USGS,15.95507949,0.121648,0.007624405762205326
+1083,Perkiomen Creek at Graterford PA,USGS,42.98741227,0.0487778,0.0011346996114497683
+1084,Valley Creek at PA Turnpike Br near Valley Forge,USGS,22.12179547,0.0364083,0.001645811256567051
+1085,West Branch Brandywine Creek near Honey Brook PA,USGS,36.89804769,0.0390844,0.0010592538751201337
+1086,West Branch Brandywine Creek at Modena PA,USGS,23.42748936,0.0371837,0.001587182451717908
+1087,East Branch Brandywine Creek below Downingtown PA,USGS,21.64724199,0.105138,0.004856877381819299
+1088,Brandywine Creek at Chadds Ford PA,USGS,39.58981072,0.19168,0.004841649821355851
+1089,BRANDYWINE CREEK AT WILMINGTON DE,USGS,41.92397571,0.319714,0.007626042010222317
+1090,CHOPTANK RIVER NEAR GREENSBORO MD,USGS,3.88827337,0.0400379,0.010297089785124856
+1091,Corey Creek near Mainesburg PA,USGS,23.56629886,0.419074,0.017782766928722552
+1092,Elk Run near Mainesburg PA,USGS,30.48122292,0.0139012,0.00045605781751226405
+1093,Blockhouse Creek Tributary at Liberty PA,USGS,64.18178532,0.130169,0.0020281299336096436
+1094,Blockhouse Creek at Buttonwood PA,USGS,50.92683641,0.256715,0.005040858967426287
+1095,Steam Valley Run at Buttonwood PA,USGS,28.70197025,0.0192298,0.0006699818804250903
+1096,Blockhouse Creek near English Center PA,USGS,59.56330258,0.112204,0.0018837773451077166
+1097,Conodoguinet Creek Trib No. 1 near Enola PA,USGS,37.74827238,0.327798,0.008683788140028249
+1098,Conodoguinet Creek Trib No. 3 near Enola PA,USGS,85.43882794,0.517169,0.0060530909946843545
+1099,PATAPSCO RIVER AT HOLLOFIELD MD,USGS,46.1183215,0.0626889,0.0013593057587752842
+1100,PATAPSCO RIVER NEAR CATONSVILLE MD,USGS,69.65352072,0.165797,0.002380310403353291
+1101,PATAPSCO RIVER NEAR ELKRIDGE MD,USGS,68.53266809,0.0645244,0.0009415130301838507
+1102,PATUXENT RIVER NEAR BOWIE MD,USGS,14.19341582,0.0426582,0.0030054921620692714
+1103,NORTH BRANCH POTOMAC RIVER NEAR CUMBERLAND MD,USGS,37.7535647,0.057727,0.0015290476663254
+1104,CONOCOCHEAGUE CREEK AT FAIRVIEW MD,USGS,28.71944262,0.00504671,0.00017572451063118858
+1105,MONOCACY R AT REICHS FORD BRIDGE NR FREDERICKMD,USGS,43.83781019,0.00473093,0.00010791893982604062
+1106,SNAKEDEN BRANCH AT RESTON VA,USGS,250.2384554,0.0168145,6.719390899820908e-05
+1107,NORTH BRANCH ROCK CREEK NEAR ROCKVILLE MD,USGS,10.53983289,0.00856545,0.0008126741751405511
+1108,NORTHWEST BRANCH ANACOSTIA RIVER NR COLESVILLE MD,USGS,154.4672775,0.00867117,5.6135967049720294e-05
+1109,S F QUANTICO CREEK NEAR INDEPENDENT HILL VA,USGS,19.8614313,0.0553199,0.0027852927195634687
+1110,N BRANCH CHOPAWAMSIC CR NR INDEPENDENT HILL VA,USGS,14.15740087,0.0461313,0.0032584582737749377
+1111,RAPPAHANNOCK RIVER AT REMINGTON VA,USGS,34.95607336,0.060239,0.0017232770791965177
+1112,RAPIDAN RIVER NEAR CULPEPER VA,USGS,34.9580816,0.0205197,0.0005869801505354916
+1113,CHICOD CR AT SR1760 NEAR SIMPSON NC,USGS,12.6169024,0.0882333,0.006993261674117412
+1114,SOUTH YADKIN RIVER NEAR MOCKSVILLE NC,USGS,50.39594573,0.0722701,0.0014340459128833975
+1115,THIRD CREEK NR STONY POINT NC,USGS,20.53045519,0.17464,0.008506387139680363
+1116,SHAVERS FORK ABOVE BOWDEN WV,USGS,21.87476945,0.0506668,0.0023162209830741784
+1117,TAYLOR RUN AT BOWDEN WV,USGS,16.89181381,0.0871042,0.005156592476080578
+1118,SHAVERS FORK BELOW BOWDEN WV,USGS,31.23467,0.0996523,0.0031904387016094614
+1119,Stony Fork Tributary near Gibbon Glade PA,USGS,65.28740437,0.00605925,9.280886655656763e-05
+1120,Stony Fork near Elliottsville PA,USGS,51.62702436,0.00694184,0.00013446136177816312
+1121,Wheeling Creek below Blaine OH,USGS,72.92093108,0.0101669,0.00013942361746377196
+1122,Enlow Fork near West Finley PA,USGS,83.089255,0.0756864,0.0009109047854623321
+1123,Killbuck Creek at Killbuck OH,USGS,38.87640974,0.0926609,0.002383473695737419
+1124,Hocking River at Athens OH,USGS,42.39802477,0.077214,0.0018211697459697485
+1125,BIG COAL RIVER NEAR ALUM CREEK WV,USGS,122.7938018,0.0962399,0.0007837520997741436
+1126,LITTLE COAL RIVER AT DANVILLE WV,USGS,134.1031528,0.0276402,0.00020611148524764586
+1127,LITTLE COAL RIVER AT JULIAN WV,USGS,134.3709223,0.00377283,2.8077726456150107e-05
+1128,COAL RIVER AT ALUM CREEK WV,USGS,130.9008537,0.0246781,0.00018852512647898797
+1129,COAL RIVER AT TORNADO WV,USGS,109.8722729,0.0215371,0.0001960194272089187
+1130,GUYANDOTTE RIVER NEAR BAILEYSVILLE WV,USGS,91.99402725,0.0161481,0.00017553422197852522
+1131,LEVISA FORK AT BIG ROCK VA,USGS,327.4532165,0.0345652,0.00010555767437392082
+1132,DICKS FORK AT PHYLLIS KY,USGS,65.37896083,0.0365525,0.0005590865858979423
+1133,GRAPEVINE CREEK NEAR PHYLLIS KY,USGS,305.9310758,0.058154,0.00019008856765508097
+1134,JOHNS CREEK NEAR META KY,USGS,258.7385501,0.00750391,2.9001901715456818e-05
+1135,TYGARTS CREEK NEAR GREENUP KY,USGS,58.26040595,0.00486626,8.352602287351553e-05
+1136,Little Darby Creek at West Jefferson OH,USGS,28.35585023,0.0147981,0.0005218711440485698
+1137,Hellbranch Run near Harrisburg OH,USGS,32.33751849,0.0236569,0.0007315620092282475
+1138,Big Darby Creek at Darbyville OH,USGS,44.76658957,0.0472467,0.0010554009240780324
+1139,Paint Creek near Bourneville OH,USGS,78.1726688,0.0161081,0.00020605795154840615
+1140,Little Miami River near Selma OH,USGS,20.58863639,0.0135472,0.000657994038234603
+1141,North Fork Little Miami River near Pitchin OH,USGS,9.111304794,0.0227063,0.0024921019012504784
+1142,Little Miami River near Oldtown OH,USGS,21.1348307,0.00983911,0.0004655400433370872
+1143,Massies Creek at Wilberforce OH,USGS,32.44613457,0.00564068,0.00017384751911913188
+1144,Todd Fork near Roachester OH,USGS,121.6479427,0.264346,0.002173041270840991
+1145,LICKING RIVER AT FARMERS KY,USGS,48.77779738,0.14468,0.002966103591617322
+1146,Great Miami River at Sidney OH,USGS,36.40834174,0.04314,0.0011848932947309784
+1147,Loramie Creek near Newport OH,USGS,39.08442733,0.094832,0.002426337200729813
+1148,Stillwater River at Pleasant Hill OH,USGS,37.1836801,0.0926985,0.0024929888529242163
+1149,MIDDLE FORK KENTUCKY RIVER NEAR HYDEN KY,USGS,105.1384894,0.107209,0.001019693174324797
+1150,EAGLE CREEK AT GLENCOE KY,USGS,191.6797872,0.00768333,4.008419516859731e-05
+1151,PLUM CREEK AT WATERFORD KY,USGS,319.7144057,0.164517,0.0005145748739090989
+1152,EEL RIVER NEAR LOGANSPORT IN,USGS,40.03786451,0.0104844,0.00026186211798037777
+1153,BIG RACCOON CREEK NEAR FINCASTLE IN,USGS,419.0738539,0.367817,0.0008776901650556539
+1154,TRADEWATER RIVER AT OLNEY KY,USGS,13.90116989,0.0408332,0.002937393062822283
+1155,CLOVER FORK AT HARLAN KY,USGS,130.1687524,0.0961726,0.0007388301587501426
+1156,YELLOW CREEK NEAR MIDDLESBORO KY,USGS,256.7149307,0.283742,0.001105280472882133
+1157,CUMBERLAND RIVER NEAR PINEVILLE KY,USGS,19.22982052,0.262549,0.013653221553832785
+1158,CUMBERLAND RIVER AT BARBOURVILLE KY,USGS,112.20415,0.109701,0.0009776911103555439
+1159,CANE BRANCH NEAR PARKERS LAKE KY,USGS,327.798261,0.0995622,0.00030373010429118777
+1160,SMOKY CREEK AT HEMBREE TN,USGS,517.1693483,0.0180946,3.4987765727955844e-05
+1161,SOUTH FORK CUMBERLAND RIVER NEAR STEARNS KY,USGS,62.68887367,0.0226462,0.0003612475176888913
+1162,NOLICHUCKY RIVER AT EMBREEVILLE TN,USGS,165.7965791,0.0657692,0.00039668610991262603
+1163,POWELL RIVER NEAR ARTHUR TN,USGS,64.5243988,0.0297864,0.00046163002761677804
+1164,EMORY RIVER AT OAKDALE TN,USGS,42.65822766,0.0184964,0.00043359513544309305
+1165,SEQUATCHIE RIVER NEAR WHITWELL TN,USGS,57.72699752,0.00247238,4.282883410216205e-05
+1166,MICHIGAMME RIVER NEAR WITCH LAKE MI,USGS,5.046709582,0.0222963,0.004417987529839992
+1167,SILVER CREEK AT SPAULDING ROAD NEAR GREEN LAKE WI,USGS,4.730928601,0.209682,0.044321531285777274
+1168,MENOMONEE RIVER AT WAUWATOSA WI,USGS,16.81452665,0.139613,0.008303118066068186
+1169,CASS RIVER AT FRANKENMUTH MI,USGS,8.565446235,0.119578,0.013960510254723467
+1170,FISH CREEK NEAR ARTIC IN,USGS,8.671169139,0.0243206,0.0028047659560247913
+1171,Eagle Creek above Findlay OH,USGS,55.31985142,0.0453967,0.0008206222329727291
+1172,Portage River at Woodville OH,USGS,46.1312543,0.136783,0.0029650830456608673
+1173,Rocky River near Berea OH,USGS,60.23897285,0.0861438,0.0014300343436217805
+1174,Cuyahoga River at Old Portage OH,USGS,20.5197274,0.127242,0.00620095957025238
+1175,Tinkers Creek at Bedford OH,USGS,88.23330928,0.578017,0.0065510066970934765
+1176,Cuyahoga River at Independence OH,USGS,72.27009901,0.570403,0.007892655576977603
+1177,Chagrin River at Willoughby OH,USGS,174.6398801,0.0223379,0.0001279083562540765
+1178,Grand River near Painesville OH,USGS,50.66683272,0.00562626,0.00011104424133026801
+1179,SIXMILE CREEK AT BROOKTONDALE NY,USGS,87.10420453,0.0867725,0.0009961918654582769
+1180,SIXMILE CREEK AT BETHEL GROVE NY,USGS,99.65226966,0.20309,0.0020379866980743686
+1181,WHETSTONE RIVER NEAR BIG STONE CITY SD,USGS,6.059248867,0.023072,0.0038077326920264287
+1182,YELLOW BANK RIVER NEAR ODESSA MN,USGS,6.941841336,0.0584861,0.008425156549847136
+1183,WILLOW RIVER @ WILLOW R STATE PARK NR BURKHARDTWI,USGS,10.16692296,0.0583507,0.005739268432501232
+1184,WHITEWATER RIVER NEAR BEAVER MN,USGS,75.68637962,0.0485351,0.0006412659747193758
+1185,SOUTH FORK ROOT RIVER NEAR HOUSTON MN,USGS,92.66091937,0.364571,0.003934463444553669
+1186,Upper Iowa River at Decorah IA,USGS,77.21401668,0.441696,0.005720412160793705
+1187,Upper Iowa River near Dorchester IA,USGS,96.23985577,0.143993,0.001496188859053607
+1188,Bloody Run Creek near Marquette IA,USGS,27.64019427,0.0583175,0.002109880250128937
+1189,DELL CREEK NEAR LAKE DELTON WI,USGS,3.772831432,0.181864,0.04820358483484984
+1190,BREWERY CREEK AT CROSS PLAINS WI,USGS,24.67810962,0.109437,0.0044345779188576274
+1191,GARFOOT CREEK NEAR CROSS PLAINS WI,USGS,21.53712373,0.180722,0.008391185483522315
+1192,BLACK EARTH CREEK AT BLACK EARTH WI,USGS,16.14806868,0.285566,0.017684220054976874
+1193,KICKAPOO RIVER AT LA FARGE WI,USGS,34.56515047,0.0189483,0.0005481908726665527
+1194,Sny Magill Creek near Clayton IA,USGS,36.55254045,0.0668149,0.0018279139883969403
+1195,GRANT RIVER AT BURTON WI,USGS,58.154038,0.000535412,9.206789733156621e-06
+1196,YAHARA RIVER AT WINDSOR WI,USGS,7.503908015,0.00377135,0.0005025847854826082
+1197,YAHARA RIVER AT STATE HIGHWAY 113 AT MADISON WI,USGS,4.866260754,0.204636,0.04205200056979931
+1198,PHEASANT BRANCH AT AIRPORT ROAD NEAR MIDDLETON WI,USGS,14.79813584,0.0998056,0.006744471133331615
+1199,PHEASANT BRANCH AT MIDDLETON WI,USGS,23.6568639,0.209291,0.008846946107679133
+1200,WILLOW CREEK AT MADISON WI,USGS,47.24667754,0.924373,0.019564825467725366
+1201,RIDGEWAY BRANCH NEAR HOLLANDALE WI,USGS,16.10805278,0.626243,0.0388776352147016
+1202,PLEASANT VALLEY CREEK @ CTH H NR BLANCHARDVILLEWI,USGS,13.54724477,2.49563,0.1842167940691899
+1203,MOUNT VERNON CREEK NEAR MOUNT VERNON WI,USGS,22.70625957,0.342281,0.015074301381290869
+1204,SUGAR RIVER NEAR BRODHEAD WI,USGS,9.83911225,0.463553,0.04711329520607919
+1205,Iowa River near Rowan IA,USGS,5.640680826,0.689737,0.12227903355579794
+1206,Ralston Creek at Iowa City IA,USGS,264.3455958,1.87364,0.0070878426944459795
+1207,Fourmile Creek near Lincoln IA,USGS,144.6796531,0.433814,0.002998445121375536
+1208,Halfmile Creek near Gladbrook IA,USGS,43.13999849,0.483126,0.011199026817582997
+1209,Fourmile Creek near Traer IA,USGS,94.83196151,0.351499,0.0037065457088845994
+1210,Squaw Creek near Colfax IA,USGS,92.69848336,0.0273318,0.0002948462478491191
+1211,South Skunk River at Colfax IA,USGS,107.2088999,0.0165734,0.00015458977767199343
+1212,East Fork Hardin Creek near Churdan IA,USGS,7.683334652,0.016596,0.0021599996292859637
+1213,Middle Raccoon River near Bayard IA,USGS,164.5165066,0.142101,0.0008637491941492514
+1214,Middle Raccoon River at Panora IA,USGS,10.48437583,0.0875899,0.008354326611353458
+1215,Middle River near Indianola IA,USGS,367.8170189,0.365368,0.0009933417466453183
+1216,Walnut Creek near Prairie City IA,USGS,40.83324631,0.350951,0.00859473668430944
+1217,Walnut Creek near Vandalia IA,USGS,96.17262718,0.562058,0.005844261683192171
+1218,White Breast Creek near Dallas IA,USGS,283.74151,0.10399,0.0003664955473028955
+1219,Middle Fabius River near Monticello MO,USGS,262.5489194,0.0274317,0.00010448224301470883
+1220,North Fork Salt River near Shelbina MO,USGS,109.7009428,0.904862,0.008248443239450445
+1221,Middle Fork Salt River at Paris MO,USGS,99.56217964,0.655539,0.006584217042759792
+1222,IROQUOIS RIVER AT IROQUOIS IL,USGS,18.09456483,0.226153,0.012498393972152798
+1223,NORTH MILL CREEK AT HICKORY CORNERS IL,USGS,22.64618773,0.0300525,0.001327044549762725
+1224,HASTINGS CREEK NEAR LINDENHURST IL,USGS,65.76915985,0.133618,0.00203162090415543
+1225,NORTH MILL CREEK NEAR MILBURN IL,USGS,29.78641344,0.228461,0.007669973441421485
+1226,DES PLAINES RIVER AT RIVERSIDE IL,USGS,18.49638294,0.26451,0.014300633851388028
+1227,MUSKEGO (BIG MUSKEGO) LAKE OUTLET NR WIND LAKE WI,USGS,2.4723822,0.210679,0.08521295777004056
+1228,NIPPERSINK CREEK ABOVE WONDER LAKE IL,USGS,22.29630615,0.106989,0.004798507846107953
+1229,SENACHWINE CREEK AT CHILLICOTHE IL,USGS,209.6817822,0.247331,0.0011795540719130725
+1230,BIG CREEK AT ST. DAVID IL,USGS,139.613253,0.0164951,0.00011814852562743453
+1231,BIG CREEK NEAR BRYANT IL,USGS,119.5776797,0.334388,0.0027964081661303554
+1232,SLUG RUN NEAR BRYANTIL,USGS,24.32062925,0.54374,0.02235715179943381
+1233,KICKAPOO CREEK AT 2100E ROAD NEAR BLOOMINGTON IL,USGS,45.39674153,0.853415,0.0187990364778941
+1234,KICKAPOO CREEK TRIBUTARY NEAR BLOOMINGTON IL,USGS,136.7831304,0.197684,0.0014452367000368051
+1235,KICKAPOO CREEK NEAR BLOOMINGTON IL,USGS,86.1437819,0.273895,0.0031795098143932317
+1236,MCKEE CREEK AT CHAMBERSBURG IL,USGS,127.2424646,0.265622,0.0020875263681429824
+1237,PIASA CREEK NEAR MELVILLE IL,USGS,578.0165283,0.228017,0.0003944817991115566
+1238,JUDYS BRANCH AT RTE 157 AT GLEN CARBON IL,USGS,570.4033682,7.16777,0.012566142487235053
+1239,KASKASKIA RIVER AT COOKS MILLS IL,USGS,22.33788248,0.354754,0.01588127255650241
+1240,L Prickly Pear C at Sieben Rnch nr Wolf Cr MT,USGS,5.626263684,0.440723,0.07833315762525145
+1241,Muddy Creek near Vaughn MT,USGS,86.77253597,0.742211,0.008553524357713893
+1242,Muddy Creek at Vaughn MT,USGS,203.0901402,1.05166,0.005178291762290093
+1243,Bluewater Creek near Bridger MT,USGS,23.0720102,0.307452,0.01332575693816224
+1244,Bluewater C at Sanford Ranch nr Bridger MT,USGS,58.4860783,0.198744,0.0033981420156187834
+1245,Bluewater Creek near Fromberg MT,USGS,58.35065697,0.0297931,0.0005105872246702829
+1246,FIVEMILE CREEK AB WYOMING CANAL NR PAVILLION WY,USGS,48.53510988,0.095023,0.0019578198181674747
+1247,FIVEMILE CREEK NEAR RIVERTON WY,USGS,364.5711828,0.215961,0.000592369913445611
+1248,FIVEMILE CREEK NEAR SHOSHONI WY,USGS,441.6961202,0.130554,0.00029557425123155975
+1249,BADWATER C AT LYSITE WY,USGS,143.9934908,0.109052,0.0007573397894177589
+1250,BRIDGER CREEK NEAR LYSITE WYO.,USGS,58.31754647,0.157377,0.0026986217618218664
+1251,BADWATER CREEK AT BONNEVILLE WY,USGS,181.8636701,0.182625,0.0010041862671064615
+1252,MUDDY CREEK NEAR PAVILLION WY,USGS,109.436538,0.18961,0.0017326023233666255
+1253,MUDDY CREEK NEAR SHOSHONI WY,USGS,180.7221721,0.150704,0.0008338987864566509
+1254,FIFTEEN MILE CREEK NEAR WORLAND WY,USGS,285.5657271,0.305309,0.001069137403499007
+1255,CROW CREEK AT MOUTH AT PAHASKA WY,USGS,18.94827518,0.137193,0.0072403951650864724
+1256,MIDDLE FORK POWDER RIVER ABOVE KAYCEE WY,USGS,66.81485422,0.0273279,0.00040900934858015167
+1257,BELLE FOURCHE R BL RATTLESNAKE C NR PINEY WY,USGS,0.535411768,0.0582511,0.10879682420428234
+1258,BELLE FOURCHE R AB DRY C NR PINEY WY,USGS,3.77134999,0.0055753,0.0014783300448866588
+1259,PLUM CREEK BELOW HAYES SD,USGS,204.63649,0.283299,0.0013844011886638597
+1260,Floyd River at James IA,USGS,99.80562701,0.0342483,0.0003431499908974922
+1261,West Fork Ditch at Hornick IA,USGS,209.2912863,5.84841,0.02794387718376788
+1262,Monona-Harrison Ditch near Turin IA,USGS,924.3732454,0.0752161,8.136983666965833e-05
+1263,Maple River at Mapleton IA,USGS,626.2429321,0.434599,0.0006939782913679291
+1264,Soldier River at Pisgah IA,USGS,2495.626827,0.0178651,7.158562252464518e-06
+1265,Steer Creek near Magnolia IA,USGS,342.2806158,0.016734,4.8889709868285206e-05
+1266,Boyer River at Deloit IA,USGS,463.5530679,0.0110588,2.3856599741856658e-05
+1267,East Boyer River at Denison IA,USGS,689.7370089,0.022109,3.205424635001052e-05
+1268,Boyer River at Logan IA,USGS,1873.638368,0.046326,2.4725155500231518e-05
+1269,Thompson Creek near Woodbine IA,USGS,433.8144231,0.352315,0.0008121329795408547
+1270,Big Papillion Creek at Fort Street at Omaha Nebr.,USGS,483.1259513,0.0738774,0.00015291540394634146
+1271,Little Papillion Creek at Irvington Nebr.,USGS,351.4994604,0.128087,0.00036440169738593436
+1272,ROCK CREEK AT ATLANTIC CITY WYO,USGS,27.33180521,0.221014,0.008086330130844657
+1273,CHERRY CREEK NEAR FRANKTOWN CO,USGS,16.57341132,0.146411,0.008834089565092625
+1274,CHERRY CREEK NEAR MELVIN CO,USGS,16.5960334,0.120169,0.0072408265941426705
+1275,KIOWA CREEK AT KIOWA CO,USGS,142.1013185,0.010755,7.568543426287774e-05
+1276,SHELL CR .5 MI SW OF PLATTE CENTER NE,USGS,87.58985494,0.0128978,0.0001472522132709905
+1277,Mule Creek near Malvern IA,USGS,365.3680681,0.0153223,4.193661498575825e-05
+1278,Davids Creek near Hamlin IA,USGS,350.9511846,0.429298,0.0012232413476230223
+1279,East Nishnabotna River at Red Oak IA,USGS,562.0581977,0.526792,0.0009372552560494395
+1280,BROWNELL C SUBWATERSHED 1A NR SYRACUSE NEBR,USGS,103.9903503,0.693709,0.006670897809255673
+1281,BROWNELL C SUBWATERSHED 1 NR SYRACUSE NEBR,USGS,27.43173492,0.350535,0.012778448064705926
+1282,TURKEY C NR SENECA KS,USGS,904.8620497,0.926632,0.0010240588610244156
+1283,Nodaway River at Clarinda IA,USGS,655.5392189,0.265468,0.00040496127820614206
+1284,Little Platte River at Smithville MO,USGS,226.1529164,0.411273,0.0018185615580237548
+1285,MEDICINE CREEK AT MAYWOOD NEBR.,USGS,30.05248518,0.446247,0.014848921722353213
+1286,BRUSHY CREEK NEAR MAYWOOD NEBR.,USGS,133.6176636,0.216373,0.0016193442855559708
+1287,FOX CREEK AT CURTIS NEBR.,USGS,228.4606389,0.140898,0.0006167276808749221
+1288,MEDICINE CREEK ABOVE HARRY STRUNK LAKE NE,USGS,264.5095961,0.692412,0.002617719773532254
+1289,MEDICINE CREEK AT CAMBRIDGE NEBR.,USGS,210.679434,0.01715,8.140329444781022e-05
+1290,PRAIRIE DOG C AT NORTON KS,USGS,106.9886305,0.0847113,0.0007917785245414466
+1291,LYON C NR WOODBINE KS,USGS,247.3309722,0.11712,0.00047353551784566996
+1292,LINCOLN CREEK NEAR SEWARD NEBR.,USGS,16.49508893,0.149175,0.009043600833742215
+1293,VERMILLION C NR WAMEGO KS,USGS,334.3875169,0.134832,0.00040322079379632493
+1294,DELAWARE R NR MUSCOTAH KS,USGS,543.7398155,0.235297,0.00043273822017913274
+1295,DELAWARE R AT VALLEY FALLS KS,USGS,853.4145749,0.133363,0.0001562698879564214
+1296,WAKARUSA R NR LAWRENCE KS,USGS,197.6835568,0.453931,0.002296250671264733
+1297,STRANGER C NR TONGANOXIE KS,USGS,273.8952795,0.386676,0.001411765842426649
+1298,Blue River at Kansas City MO,USGS,265.6217737,0.0293088,0.0001103403519664096
+1299,LITTLE BLUE R. AT LONGVIEW ROAD IN KANS. CITY M,USGS,228.0171352,0.0178259,7.817789651801572e-05
+1300,East Fork Big Creek near Bethany MO,USGS,7167.766683,0.0101722,1.4191589165598402e-06
+1301,Thompson River at Davis City IA,USGS,354.7543247,0.0857635,0.0002417546285659136
+1302,Thompson River at Mount Moriah MO,USGS,440.7231776,0.107402,0.0002436949211177588
+1303,Weldon River at Mill Grove MO,USGS,742.2108543,0.00848717,1.143498501918904e-05
+1304,Shoal Creek near Braymer MO,USGS,1051.659548,0.129638,0.00012326993107849386
+1305,Locust Creek near Linneus MO,USGS,307.4522955,0.000778173,2.5310365588081938e-06
+1306,West Yellow Creek near Brookfield MO,USGS,198.7441576,0.00226277,1.1385340969640658e-05
+1307,Chariton River near Rathbun IA,USGS,29.79310577,0.0448066,0.0015039251142832432
+1308,Chariton River near Centerville IA,USGS,95.02295082,0.00801911,8.439129632156375e-05
+1309,Mussel Fork near Musselfork MO,USGS,215.9606441,0.0105338,4.877647982528868e-05
+1310,East Fork Little Chariton R. near Huntsville MO,USGS,130.5544132,0.0472738,0.00036210035985210186
+1311,Moreau River near Jefferson City MO,USGS,109.0518654,0.313187,0.002871908690889757
+1312,MARAIS DES CYGNES R AT MELVERN KS,USGS,157.377084,0.113807,0.0007231484858367309
+1313,DRAGOON C NR BURLINGAME KS,USGS,182.624676,0.0159459,8.731514464124223e-05
+1314,HUNDRED AND TEN MILE C NR QUENEMO KS,USGS,189.6099906,0.0079685,4.202573912263039e-05
+1315,POTTAWATOMIE C NR GARNETT KS,USGS,150.7044377,0.0130937,8.688330748471384e-05
+1316,BIG BULL C NR HILLSDALE KS,USGS,305.3092949,0.00681318,2.231566517564284e-05
+1317,MARMATON R NR FORT SCOTT KS,USGS,137.1929914,0.0423806,0.0003089122816517287
+1318,Sac River near Dadeville MO,USGS,27.32790334,0.0273392,0.0010004133745593086
+1319,Pomme de Terre River near Bolivar MO,USGS,58.25114888,0.00295838,5.0786637806825005e-05
+1320,Pomme de Terre River near Polk MO,USGS,5.575301756,0.0239395,0.004293848305921184
+1321,NORTH REELFOOT CREEK AT HWY 22 NEAR CLAYTON TN,USGS,283.2987874,0.00834427,2.9453955933169665e-05
+1322,St. Francis River near Saco MO,USGS,34.24833411,0.00953115,0.0002782952878638569
+1323,Cross County Ditch near Birdeye AR,USGS,5848.41283,0.00355146,6.072519336840316e-07
+1324,Straight Slough near Birdeye AR,USGS,75.21605544,0.00214756,2.8551882805302295e-05
+1325,Clark Corner Cut-Off near Colt AR,USGS,434.5991927,0.0273248,6.287356363973292e-05
+1326,Little Black River below Fairdealing MO,USGS,17.86511574,0.102773,0.005752719517505908
+1327,Little Black River at Success AR,USGS,16.73401114,0.236932,0.014158709350542479
+1328,BADGER CREEK UPPER STATION NEAR HOWARD CO,USGS,11.05880726,0.0440811,0.003986062779070444
+1329,BADGER CREEK LOWER STATION NEAR HOWARD CO.,USGS,22.10903605,0.697601,0.031552755100781524
+1330,MONUMENT CR ABV WOODMEN RD AT COLORADO SPRINGS CO,USGS,46.32599941,0.0359106,0.0007751716197675442
+1331,COTTONWOOD CREEK AT MOUTH AT PIKEVIEW CO,USGS,352.3150976,1.16825,0.003315923751091614
+1332,MONUMENT CREEK AT BIJOU ST. AT COLO. SPRINGS CO,USGS,73.87739208,0.483578,0.006545683143177893
+1333,FOUNTAIN CREEK AT COLORADO SPRINGS CO,USGS,128.0868413,1.71965,0.013425657019461528
+1334,SAND CREEK ABOVE MOUTH AT COLORADO SPRINGS CO,USGS,221.0137204,1.2177,0.005509612696425158
+1335,FOUNTAIN CREEK AT SECURITY CO,USGS,146.411088,0.177791,0.0012143274285346475
+1336,FOUNTAIN CREEK AT PUEBLO CO.,USGS,120.1693152,0.553085,0.0046025476560259205
+1337,PURGATOIRE RIVER BELOW TRINIDAD LAKE CO.,USGS,10.75497301,0.27048,0.025149296027847493
+1338,Double Creek Sws 5 near Ramona OK,USGS,12.89776005,0.298339,0.023131070731929146
+1339,SIXMILE C SWS 6 NR CHISMVILLE ARK,USGS,15.32229211,0.156638,0.010222883030520687
+1340,HOTOPHA CREEK NR BATESVILLE MS,USGS,429.2980137,0.437574,0.0010192779515299211
+1341,OTOUCALOFA CREEK CANAL NR WATER VALLEY MS,USGS,526.7916266,0.116692,0.00022151453080822376
+1342,PETERS (LONG) CREEK NR POPE MS,USGS,693.7093771,0.606429,0.0008741830801468058
+1343,HICKAHALA CREEK NR SENATOBIA MS,USGS,350.5349315,0.964183,0.0027506046141367226
+1344,NORTH FORK TILLATOBA CREEK NR TEASDALE MS,USGS,926.6324255,0.0240374,2.594059881622392e-05
+1345,YALOBUSHA RIVER AT DERMA MS,USGS,265.468152,0.0656556,0.0002473200627094432
+1346,TOPASHAW CREEK CANAL NR DERMA MS,USGS,411.2733269,0.00823437,2.0021648527676498e-05
+1347,BATUPAN BOGUE AT GRENADA MS,USGS,446.2474626,0.0313782,7.031569393622811e-05
+1348,ABIACA CREEK NR SEVEN PINES MS,USGS,216.3728859,0.0288594,0.00013337807960530604
+1349,ABIACA CREEK AT CRUGER MS,USGS,140.8978633,0.0434511,0.0003083872173950845
+1350,HARLAND CREEK NR HOWARD MS,USGS,692.4117871,0.0441099,6.370472141259134e-05
+1351,Big Sandy Ck nr Bridgeport TX,USGS,17.14997286,0.525273,0.03062821173467443
+1352,Elm Fk Trinity Rv nr Muenster TX,USGS,84.71132138,1.28764,0.015200329531207224
+1353,Clear Ck nr Sanger TX,USGS,117.1198136,0.227562,0.0019429846496955149
+1354,Little Elm Ck nr Celina TX,USGS,149.1749154,0.00834214,5.592186848325841e-05
+1355,Little Elm Ck nr Aubrey TX,USGS,134.8318258,0.00729209,5.4082854376062304e-05
+1356,Pin Oak Ck nr Hubbard TX,USGS,235.2973505,0.0633304,0.00026915050197303433
+1357,GALISTEO CREEK BELOW GALISTEO DAM NM,USGS,133.3631665,0.229561,0.0017213223562744363
+1358,GALISTEO C AT DOMINGO NM,USGS,453.9310916,1.70413,0.0037541601171079595
+1359,RIO PUERCO ABV ARROYO CHICO NR GUADALUPE NM,USGS,386.6763089,0.0153088,3.959073687123426e-05
+1360,WEST TENMILE CREEK AT COPPER MOUNTAIN CO.,USGS,29.30875089,0.0199895,0.000682031795726249
+1361,BLACK GORE CREEK NEAR VAIL CO.,USGS,17.82592587,0.227441,0.012759000663341142
+1362,GORE CREEK AT VAIL CO.,USGS,10.1722002,0.190451,0.01872269482073308
+1363,PARACHUTE CREEK AT PARACHUTE CO.,USGS,85.76349689,0.702318,0.008189008441444394
+1364,ROAN CREEK NEAR DE BEQUE CO.,USGS,107.4020115,0.673454,0.00627040397655867
+1365,DRY PINEY CREEK NEAR BIG PINEY WYO.,USGS,8.487168282,0.359939,0.042409787109250106
+1366,RED CREEK NEAR DUTCH JOHN UTAH,USGS,129.6381636,0.995805,0.007681418591153199
+1367,STEWART GULCH AB WEST FORK NR RIO BLANCO CO,USGS,0.77817329,1.77954,2.286817117560023
+1368,WILLOW CREEK NEAR RIO BLANCO CO.,USGS,2.262769705,1.06839,0.47216028994872894
+1369,PICEANCE CREEK AB HUNTER C NEAR RIO BLANCO CO.,USGS,44.80658664,0.646442,0.014427387767648082
+1370,BLACK SULPHUR CREEK NEAR RIO BLANCO CO.,USGS,8.01910526,1.29128,0.16102544587374576
+1371,CORRAL GULCH BELOW WATER GULCH NR RANGELY CO.,USGS,10.53377035,0.607605,0.05768162583874823
+1372,WILLOW CREEK NEAR OURAY UTAH,USGS,47.2737998,0.803875,0.01700466227383736
+1373,VIRGIN RIVER AT VIRGIN UT,USGS,313.1870831,0.175651,0.0005608500780471683
+1374,SANTA CLARA RIVER AB WINSOR DAM NR SANTA CLARA UT,USGS,113.8073047,0.0124629,0.00010950878797149828
+1375,LITTLE BEAR R BL DAVENPORT C NR AVON UT,USGS,15.94586133,0.428492,0.0268716747958826
+1376,SEVIER RIVER AT HATCH UT,USGS,7.968496142,0.496332,0.062286784250789186
+1377,UPPER TRUCKEE RV AT SOUTH LAKE TAHOE CA,USGS,13.09365589,0.0249351,0.0019043650000794392
+1378,GENERAL C NR MEEKS BAY CA,USGS,6.813182842,0.0366326,0.005376723456499305
+1379,BLACKWOOD C NR TAHOE CITY CA,USGS,42.38064501,0.303598,0.007163600269140877
+1380,WARD C AT HWY 89 NR TAHOE PINES CA,USGS,27.33916037,0.123242,0.004507892646741148
+1381,SNOW C A TAHOE VISTA CA,USGS,2.958383808,0.00578335,0.0019549018570074596
+1382,THIRD CK NR CRYSTAL BAY NV,USGS,23.93952235,0.0181586,0.0007585197287781308
+1383,EDGEWOOD C NR STATELINE NV CA,USGS,8.344266543,0.00899199,0.001077624972028653
+1384,TROUT CK NR TAHOE VALLEY CA,USGS,9.53114811,3.52652,0.36999949631461554
+1385,TROUT C A SOUTH LAKE TAHOE CA,USGS,3.551461471,1.46906,0.41364942629839385
+1386,SAN DIEGO R NR SANTEE CA,USGS,2.147557611,2.60957,1.2151338742362616
+1387,SAN LUIS REY R A OCEANSIDE CA,USGS,27.32478962,0.0699781,0.002560974886656785
+1388,SANTA MARGARITA R A YSIDORA CA,USGS,102.773454,0.0628284,0.0006113290694696317
+1389,SAN JUAN C AT SAN JUAN CAPISTRANO CA,USGS,236.9315453,0.0789236,0.0003331071846092416
+1390,ARROYO TRABUCO A SAN JUAN CAPISTRANO CA,USGS,44.08105038,0.0715949,0.0016241650183654267
+1391,SAN DIEGO C AT CULVER DRIVE NR IRVINE CA,USGS,697.600752,0.23045,0.00033034654756220784
+1392,SANTA ANA R NR MENTONE CA,USGS,35.91055554,0.00705798,0.00019654332532222365
+1393,ARROYO SIMI NR SIMI CA,USGS,1168.248131,0.0221366,1.8948543047144835e-05
+1394,SANTA CLARA RIVER AT L.A.-VENTURA CO. LINE CA,USGS,483.5781057,0.044726,9.248971256723298e-05
+1395,SESPE C NR FILLMORE,USGS,1719.653423,0.219412,0.00012759082560788763
+1396,VENTURA R NR VENTURA,USGS,1217.701932,0.149441,0.0001227237931326531
+1397,LOPEZ C NR ARROYO GRANDE CA,USGS,177.7905531,0.178404,0.0010034503908633152
+1398,SANTA RITA C TRIB NR TEMPLETON CA,USGS,553.0848667,0.201334,0.00036402008465945973
+1399,SANTA RITA C NR TEMPLETON CA,USGS,270.4799101,0.102577,0.0003792407353362249
+1400,NACIMIENTO R NR BRYSON CA,USGS,298.3390907,0.0317846,0.00010653850263276949
+1401,SAN ANTONIO R NR LOCKWOOD CA,USGS,156.6377184,0.0508098,0.00032437780962979093
+1402,ARROYO SECO NR GREENFIELD CA,USGS,437.5738977,0.112931,0.00025808440721348814
+1403,UVAS C AB UVAS RES NR MORGAN HILL CA,USGS,116.6924102,0.0809483,0.0006936895026956946
+1404,SAN LORENZO R A BIG TREES CA,USGS,606.4286321,0.12613,0.00020798820062836542
+1405,COLMA C A SOUTH SAN FRANCISCO CA,USGS,964.1831438,0.0982884,0.0001019395543595895
+1406,GUADALUPE R ABV HWY 101 A SAN JOSE CA,USGS,24.03738122,0.0604467,0.0025146957335646066
+1407,COYOTE C NR GILROY CA,USGS,65.65556366,0.0878066,0.0013373824715710316
+1408,COYOTE C AB HWY 237 A MILPITAS CA,USGS,8.2343714,0.259481,0.031511937875427866
+1409,ALAMEDA C BL WELCH C NR SUNOL CA,USGS,31.37822053,0.222184,0.007080834930953938
+1410,ARROYO VALLE BL LANG CYN NR LIVERMORE CA,USGS,28.85938821,0.0197729,0.0006851461942338937
+1411,ARROYO DE LA LAGUNA A VERONA CA,USGS,43.45110976,0.304839,0.007015678119241666
+1412,ALAMEDA C NR NILES CA,USGS,44.10993648,0.00493074,0.00011178297665959369
+1413,SAN LORENZO C AB DON CASTRO RES NR CASTRO V CA,USGS,525.2728278,0.0150523,2.8656155817241764e-05
+1414,CULL C AB CULL C RES NR CASTRO VALLEY CA,USGS,1287.636977,0.0171402,1.33113605046774e-05
+1415,SAN LORENZO C A SAN LORENZO CA,USGS,227.5616962,0.77448,0.0034033847212991547
+1416,SF CALAVERAS R NR SAN ANDREAS CA,USGS,8.342135307,0.429446,0.05147914582968296
+1417,NF CALAVERAS R NR SAN ANDREAS CA,USGS,7.292088451,1.05864,0.1451765165924206
+1418,COSUMNES R A MICHIGAN BAR CA,USGS,63.33039751,0.651734,0.01029101388313708
+1419,COTTONWOOD C NR COTTONWOOD CA,USGS,229.5613554,1.42791,0.006220167142295938
+1420,THOMES C A PASKENTA CA,USGS,1704.130812,0.186596,0.00010949628906774324
+1421,DEER C NR SMARTSVILLE CA,USGS,15.30883495,0.40815,0.026661075211343893
+1422,HIGHLAND C BL HIGHLAND CREEK DAM CA,USGS,19.98950005,1.61125,0.08060481732758494
+1423,CACHE C AB RUMSEY CA,USGS,227.4406266,0.513358,0.002257107745762779
+1424,CORTE MADERA C A ROSS CA,USGS,190.4512235,0.553314,0.0029052793142071887
+1425,PENA C NR GEYSERVILLE CA,USGS,702.3177361,0.0749675,0.00010674299700346126
+1426,DRY C NR GEYSERVILLE CA,USGS,673.4541362,0.711915,0.0010571098486632177
+1427,EEL R NR DOS RIOS CA,USGS,359.939091,0.423171,0.001175673914229005
+1428,BLACK BUTTE R NR COVELO CA,USGS,995.8051076,0.321315,0.0003226685598895998
+1429,MF EEL R BL BLACK BUTTE R NR COVELO CA,USGS,1779.535904,0.696535,0.00039141385033836327
+1430,MF EEL R NR DOS RIOS CA,USGS,1068.389419,0.886494,0.0008297480153161269
+1431,SF EEL R NR BRANSCOMB CA,USGS,646.4424507,0.517798,0.0008009962827151939
+1432,MAD R NR ARCATA CA,USGS,1291.279752,0.304552,0.00023585284252176518
+1433,REDWOOD C NR BLUE LAKE CA,USGS,607.6053588,3.63419,0.005981168446534774
+1434,REDWOOD C A ORICK CA,USGS,803.8754111,2.42649,0.0030184901372709745
+1435,GRASS VALLEY C A FAWN LODGE NR LEWISTON CA,USGS,175.6505317,0.736908,0.004195307539738008
+1436,TRINITY R BL LIMEKILN GULCH NR DOUGLAS CITY CA,USGS,12.46289637,0.73695,0.059131519521733775
+1437,SF TRINITY R BL HYAMPOM CA,USGS,428.4918278,0.44236,0.0010323650797990785
+1438,SF TRINITY R NR SALYER CA,USGS,496.3316485,0.829478,0.0016712172244240841
+1439,Fisher River near Libby MT,USGS,24.93507372,0.652658,0.02617429598680168
+1440,Flathead River at Flathead British Columbia,USGS,36.63264619,0.366085,0.00999340855971071
+1441,TUCANNON RIVER NEAR STARBUCK WA,USGS,303.5977956,0.465252,0.0015324617198900375
+1442,MILL CREEK BELOW BLUE CREEK NEAR WALLA WALLA WA,USGS,123.2421947,0.606408,0.004920457652317352
+1443,FIR CREEK NEAR BRIGHTWOOD OR,USGS,5.783348644,0.432736,0.07482447049927499
+1444,NORTH FORK BULL RUN RIVER NEAR MULTNOMAH FALLS OR,USGS,18.15862794,0.335605,0.01848184791873653
+1445,SOUTH FORK BULL RUN RIVER NEAR BULL RUN OR,USGS,8.991992518,1.0811,0.12022919256614976
+1446,NF TOUTLE RIVER BELOW SRS NEAR KID VALLEY WA,USGS,3526.51772,0.685946,0.00019451086155324919
+1447,SOUTH FORK TOUTLE RIVER AT TOUTLE WA,USGS,1469.058889,0.930474,0.0006333810080502498
+1448,TOUTLE RIVER AT TOWER ROAD NEAR SILVER LAKE WA,USGS,2609.57461,0.33066,0.0001267103070105361
+1449,NEEDLE BRANCH NEAR SALADOOREG.,USGS,69.97811363,0.369237,0.005276464037774606
+1450,FLYNN CREEK NEAR SALADOOREG.,USGS,62.82837422,0.175572,0.002794469890072543
+1451,DEER CREEK NEAR SALADOOREG.,USGS,78.92358142,0.20228,0.0025629855660445266
+1452,SIUSLAW RIVER NEAR MAPLETON OR,USGS,71.59490152,0.520434,0.007269148905171928
+1453,Hanalei River nr Hanalei Kauai HI,USGS,230.4500267,1.35003,0.005858233211478296
+1454,Kaukonahua Stream blw Wahiawa Reservoir Oahu HI,USGS,7.057977602,0.489355,0.06933360058571633
+1455,Kaukonahua Str at Waialua Oahu HI,USGS,22.13661375,1.39086,0.06283074799550135
+1456,Honouliuli Stream Tributary near Waipahu Oahu HI,USGS,44.72597597,1.69243,0.037839979190956045
+1457,Kipapa Str nr Wahiawa Oahu HI,USGS,219.4117228,0.549004,0.0025021634805740653
+1458,Waikele Str at Waipahu Oahu HI,USGS,149.4414658,0.0156907,0.0001049956243135297
+1459,N. Halawa Str nr Kaneohe Oahu HI,USGS,178.4036582,0.09375,0.0005254937087383111
+1460,N. Halawa Str nr Honolulu Oahu HI,USGS,201.3342241,4.7375,0.023530525032082708
+1461,N. Halawa Str nr Quar. Stn. at Halawa Oahu HI,USGS,102.5765976,2.90625,0.028332485849579397
+1462,Moanalua Stream nr Kaneohe Oahu HI,USGS,31.78462834,0.13125,0.0041293545608279405
+1463,Makiki Stream at King St. bridge Oahu HI,USGS,50.80982279,0.04375,0.0008610539773150033
+1464,Pukele Stream near Honolulu Oahu HI,USGS,112.9312668,0.2125,0.001881675518404793
+1465,Manoa-Palolo Drainage Canal at Moiliili Oahu HI,USGS,80.94828032,0.40625,0.005018636571327227
+1466,RB of Kamooalii Str nr Kaneohe Oahu HI,USGS,126.1298902,0.18125,0.001437010685671714
+1467,Luluku Str at alt 220 ft nr Kaneohe Oahu HI,USGS,98.28837947,0.40625,0.0041332454781594745
+1468,Kamooalii Str blw Luluku Str nr Kaneohe Oahu HI,USGS,60.44668445,2.4125,0.03991120475756715
+1469,SF Kapunahala Str at Kaneohe Oahu HI,USGS,87.80658303,1.28125,0.014591730548975446
+1470,Heeia Stream at Haiku Valley nr Kaneohe Oahu HI,USGS,259.480655,1.375,0.0052990462815041064
+1471,Kawela Gulch near Moku Molokai HI,USGS,222.1841677,1.3625,0.006132300127881705
+1472,Wailuku River at Hilo HI,USGS,19.77286943,0.0875,0.0044252555406673715
+1473,Ugum River above Talofofo Falls nr Talofofo Guam,USGS,304.8394443,3.625,0.011891505734515603
+1474,SILVER CREEK AT SOUTH KORO ROAD NEAR RIPON WI,USGS,4.930739747,0.41875,0.08492640485736025
+1475,FISHER CREEK AT HOWARDS GROVE WI,USGS,15.05230746,0.01625,0.0010795687002263772
+1476,OTTER CREEK AT WILLOW ROAD NEAR PLYMOUTH WI,USGS,17.14023581,0.6375,0.0371931872505551
+1477,RIO GRANDE DE ARECIBO NR ADJUNTAS PR,USGS,774.4798277,0.9375,0.001210489888140956
+1478,RIO PELLEJAS ABV CENTRAL PELLEJAS PR,USGS,429.446384,0.54375,0.0012661650447148716
+1479,RIO PELLEJAS NR UTUADO PR,USGS,1058.636059,9.4375,0.008914772853018792
+1480,RIO VIVI NR CENTRAL PELLEJAS PR,USGS,651.7336824,1.1375,0.0017453448098787411
+1481,RIO GRANDE DE ARECIBO BLW UTUADO PR,USGS,1427.91299,0.93125,0.0006521755922957183
+1482,RIO SALIENTE AT COABEY NR JAYUYA PR,USGS,186.595877,8.5625,0.04588793781333121
+1483,RIO JAUCA AT PASO PALMA PR,USGS,408.149555,0.93125,0.0022816391408291502
+1484,RIO CAONILLAS AT PASO PALMA PR,USGS,1611.248339,0.6375,0.00039565595480809367
+1485,RIO YUNES AT HWY 140 NR FLORIDA PR,USGS,513.3582022,1.05625,0.002057530191342874
+1486,RIO LIMON ABV LAGO DOS BOCAS PR,USGS,553.3144965,1.1125,0.0020106106148259934
+1487,RIO GRANDE DE ARECIBO ABV ARECIBO PR,USGS,74.9674504,1.1375,0.015173251777013879
+1488,RIO TANAMA NR UTUADO PR,USGS,711.9153131,0.0525,7.374472642173034e-05
+1489,RIO GRANDE DE MANATI NR MOROVIS PR,USGS,423.1708104,0.26875,0.0006350863372309764
+1490,RIO GRANDE DE MANATI AT CIALES PR,USGS,321.3151822,2.0,0.006224417988301333
+1491,RIO DE LA PLATA AT COMERIO PR,USGS,696.5348802,0.0875,0.0001256218496550749
+1492,RIO GUADIANA AT GUADIANA PR,USGS,886.4942306,0.38125,0.0004300648406272888
+1493,RIO DE LA PLATA BLW LA PLATA DAMSITE PR,USGS,517.7976598,0.1,0.00019312563142642462
+1494,RIO DE BAYAMON BLW LAGO DE CIDRA DAM PR,USGS,304.5516973,0.06875,0.00022574164126978256
+1495,RIO PIEDRAS AT EL SENORIAL PR,USGS,3634.193413,0.85,0.000233889587978294
+1496,RIO PIEDRAS AT RIO PIEDRAS PR,USGS,2426.49343,1.18,0.00048629845249570695
+1497,QUEBRADA BLANCA AT EL JAGUAL PR,USGS,736.9076086,0.39,0.0005292386663518567
+1498,QUEBRADA SALVATIERRA NR SAN LORENZO PR,USGS,736.9501922,0.23,0.00031209707580560697
+1499,RIO GRANDE DE LOIZA AT HWY 183 SAN LORENZO PR,USGS,442.3600529,0.03,6.781805862289695e-05
+1500,RIO TURABO ABV BORINQUEN PR,USGS,829.4781801,0.26,0.00031345007769662485
+1501,RIO GRANDE DE LOIZA AT CAGUAS PR,USGS,652.6576336,2.12,0.003248257418374582
+1502,RIO CAGUITAS NR AGUAS BUENAS PR,USGS,366.0854178,0.77,0.0021033342563255737
+1503,RIO CAGUITAS NR CAGUAS PR,USGS,465.2522833,4.05,0.008704954592105706
+1504,RIO CAGUITAS AT VILLA BLANCA AT CAGUAS PR,USGS,606.4083974,0.89,0.001467657776204799
+1505,RIO BAIROA AT BAIROA PR,USGS,432.7358889,0.47,0.001086112827837608
+1506,RIO GURABO BLW EL MANGO PR,USGS,335.6050207,0.16,0.0004767509129222035
+1507,RIO VALENCIANO NR JUNCOS PR,USGS,1081.101784,0.09,8.32484057763797e-05
+1508,RIO GURABO AT GURABO PR,USGS,685.9459432,0.05,7.28920412689453e-05
+1509,RIO CANAS AT RIO CANAS PR,USGS,930.4736148,0.09,9.672493509592423e-05
+1510,RIO GRANDE DE LOIZA BLW LOIZA DAMSITE PR,USGS,330.6601967,0.21,0.0006350930716663426
+1511,RIO CANOVANAS NR CAMPO RICO PR,USGS,369.2369299,0.21,0.0005687405104816412
+1512,RIO MAMEYES NR SABANA PR,USGS,175.5717089,0.17,0.0009682653376508771
+1513,RIO FAJARDO ABV FAJARDO PR,USGS,202.2799869,0.11,0.0005438007075528439
+1514,RIO FAJARDO NR FAJARDO PR,USGS,520.4336496,0.006,1.1528847153929304e-05
+1515,RIO ICACOS NR NAGUABO PR,USGS,1350.02876,0.01,7.407249605556552e-06
+1516,RIO TOA VACA ABV LAGO TOA VACA PR,USGS,489.3546391,0.11,0.00022478585306212132
+1517,RIO PORTUGUES NR TIBES PR,USGS,1390.857942,0.13,9.346748943538045e-05
+1518,RIO PORTUGUES NR PONCE PR,USGS,1692.427474,0.005,2.954336346350284e-06
+1519,RIO ROSARIO NR HORMIGUEROS PR,USGS,549.0042498,0.08,0.0001457183619783338
+1520,JACKSON CREEK TRIBUTARY NEAR ELKHORN WI,USGS,15.69070503,0.006,0.0003823919950396263

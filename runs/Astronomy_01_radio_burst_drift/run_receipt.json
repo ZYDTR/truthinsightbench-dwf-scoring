@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Astronomy_01_radio_burst_drift",
+  "model": "deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "cc6ffa9952e8599344af8d58724a49deeeb7e17147e767809eab8cf85761cc5c",
+  "workspace_input_file_count": 16,
+  "workspace_input_bytes": 42181788,
+  "output_tree_sha256": "fbbca844b8323b6d4e9ce3f9bc64b69e99ace8ff6748f9d2c3e87ccdc5f0edff",
+  "output_file_count": 230,
+  "output_bytes": 45630249
+}

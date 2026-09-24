@@ -1,0 +1,9 @@
+condition_role,left_out_replicate,slope,p
+baseline,replicate_1,0.788266,0.000471773
+baseline,replicate_2,0.692828,0.000605976
+baseline,replicate_3,0.862265,2.63459e-06
+baseline,replicate_4,1.01281,3.04626e-05
+perturbation,replicate_1,0.628088,0.000414931
+perturbation,replicate_2,0.762288,4.02265e-05
+perturbation,replicate_3,0.638962,2.03607e-06
+perturbation,replicate_4,0.748598,2.3288e-06

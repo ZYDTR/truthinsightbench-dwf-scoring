@@ -1,0 +1,23 @@
+{
+ "experiment": {
+  "var_explained_by_common_phase_median": 0.12791132467687916,
+  "var_explained_min": 0.033730942130858255,
+  "max_coef_phase_deviation_deg_median": 170.03398474448954,
+  "max_coef_phase_deviation_deg_p95": 179.7828032378612
+ },
+ "theory": {
+  "var_explained_by_common_phase_median": 0.13285113676985194,
+  "var_explained_min": -0.02175926792178151,
+  "max_coef_phase_deviation_deg_median": 145.3518704482902,
+  "max_coef_phase_deviation_deg_p95": 169.48960323665327
+ },
+ "angular_phase_uniformity": {
+  "experiment_median_deg": 178.69465010319627,
+  "experiment_max_deg": 179.98208626885526,
+  "theory_median_deg": 165.94554225966775,
+  "theory_max_deg": 179.9802688274161
+ },
+ "data_sha256": {
+  "angle_energy_observations_datasets.tsv": "55a1d9621c0e386fb44a63764a97cf81491d2bd7af0209c74e212329172df396"
+ }
+}

@@ -1,0 +1,7 @@
+population_series_id,group,channel,fast_block_sum,orient_m35_m10,fast_matches_orient_m35_m10,slow_blockA_sum,orient_m10_0,slowA_matches_orient_m10_0,slow_blockB_sum,orient_0_20,slowB_matches_orient_0_20
+population_series_1,anonymous_group_1,channel_l,10560.0,10560.0,True,790.0,790.0,True,102.0,102.0,True
+population_series_2,anonymous_group_1,channel_r,14492.0,14492.0,True,1126.0,1126.0,True,177.0,177.0,True
+population_series_3,anonymous_group_2,channel_l,357.0,357.0,True,580.0,580.0,True,223.0,223.0,True
+population_series_4,anonymous_group_2,channel_r,52.0,52.0,True,155.0,155.0,True,237.0,237.0,True
+population_series_5,anonymous_group_3,channel_l,429.0,429.0,True,601.0,601.0,True,491.0,491.0,True
+population_series_6,anonymous_group_3,channel_r,664.0,664.0,True,1680.0,1680.0,True,521.0,521.0,True

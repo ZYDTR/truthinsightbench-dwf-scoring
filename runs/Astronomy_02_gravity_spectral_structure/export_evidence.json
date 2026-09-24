@@ -1,0 +1,21 @@
+{
+  "task_id": "Astronomy_02_gravity_spectral_structure",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260919T165948-1a7b60",
+  "source_run_json_sha256": "a0f1fed9869216ba79c9892a3988fc94b952ab79f24c01b20f8d60bbedea49f1",
+  "source_release_json_sha256": "57e668e1c686748e661353e1866f7c95bd19da252d3eb99232906e630813c1aa",
+  "source_latest_validation_sha256": "3a740309e2185d99ba11c56c43e0dee7046645a363b4a06e10ccdafaf613092d",
+  "source_snapshot_manifest_sha256": "ca578f326346d6f2eabcf0ae285dfb58b2d14692423be62e93ef60d1dfef1897",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 1318
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "5db4dfdfd71b92d192ee2a0b421c5556144d6ecc39339cc47dee70407056701b",
+  "output_sha256": "4a7bfc65058ee0e09507e7e38ad253e9cab0143539fea61290c3429c81768a86"
+}

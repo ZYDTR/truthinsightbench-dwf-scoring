@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Math_02_compositional_invariants",
+  "model": "deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "bfd0de53a0e76f639814bbea011608bd0d6ffb6ffd9de792762bba6ab4450f45",
+  "workspace_input_file_count": 10,
+  "workspace_input_bytes": 2604487,
+  "output_tree_sha256": "d95c22641855a40ac2c6f87bcfef83140b81641f98e9a0006a1d7c3d3b09a9be",
+  "output_file_count": 35,
+  "output_bytes": 1310286
+}

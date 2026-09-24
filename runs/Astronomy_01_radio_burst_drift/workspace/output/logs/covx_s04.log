@@ -1,0 +1,60 @@
+/usr/local/lib/python3.11/dist-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.11/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+==============================================================================
+1  COARSE HISTOGRAMS: common template or fine-tracked?
+  coarse curve bin counts: [20, 30]   x-ranges: [(0.0, 33.25), (0.0, 33.83333206176758)]
+  18 coarse curves on a common 40-point grid
+  coarse-vs-coarse shape r: same substride median=nan (n=0), different substride median=0.932 (n=153)
+  the six '(-35<s<-10)' coarse curves (normalised to unit sum):
+    0.0001 0.0000 0.0001 0.0000 0.0001 0.0000 0.1482 0.0000 0.2499 0.0000 0.2085 0.0000 0.1467 0.0000 0.1108 0.0000 0.0664 0.0000 0.0360 0.0000 0.0180 0.0000 0.0058 0.0000
+    0.0001 0.0000 0.0001 0.0000 0.0001 0.0000 0.1328 0.0000 0.2254 0.0000 0.2208 0.0000 0.1569 0.0000 0.1175 0.0000 0.0649 0.0000 0.0375 0.0000 0.0243 0.0000 0.0099 0.0000
+    0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.3409 0.0000 0.2273 0.0000 0.1392 0.0000 0.0767 0.0000 0.0739 0.0000 0.0426 0.0000 0.0568 0.0000 0.0057 0.0000 0.0057 0.0000
+    0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.4510 0.0000 0.1569 0.0000 0.1176 0.0000 0.1765 0.0000 0.0784 0.0000 0.0196 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.2884 0.0000 0.2270 0.0000 0.1749 0.0000 0.0851 0.0000 0.0686 0.0000 0.0804 0.0000 0.0213 0.0000 0.0142 0.0000 0.0095 0.0000
+    0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.1056 0.0000 0.1795 0.0000 0.1131 0.0000 0.1403 0.0000 0.1161 0.0000 0.0950 0.0000 0.0890 0.0000 0.0845 0.0000 0.0302 0.0000
+    pairwise r of these six: [0.996, 0.85, 0.742, 0.91, 0.916, 0.818, 0.72, 0.886, 0.92, 0.941, 0.98, 0.764, 0.909, 0.659, 0.811]
+  coarse_k vs fine_j correlation matrix (rows coarse, cols fine):
+    best integer 0.875 MHz/s shift per coarse curve: [8, 6, 6, 8, 8, 7, 6, 6, 6, 6, 6, 6, 6, 6, 6, 8, 6, 6]
+    same-substride r median=-0.060 (n=18)   cross-substride r median=-0.066 (n=306)
+  wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/figures/covx_coarse_template.png
+==============================================================================
+2  IMAGE SHEETS: structural tests
+  bounds rows:
+    Sheet_008  t=[23429.394,23430.492] f=[8.002,16.971] drift=-12.77765335534502
+    Sheet_015  t=[18177.325,18178.423] f=[8.002,16.971] drift=
+    Sheet_016  t=[18177.325,18178.423] f=[8.002,16.971] drift=-11.83458867965197
+    Sheet_017  t=[-191.850,191.850] f=[-23.363,23.363] drift=
+    Sheet_018  t=[-191.850,191.850] f=[-23.363,23.363] drift=
+    Sheet_021  t=[18053.698,18054.797] f=[8.002,16.971] drift=-9.501650227035915
+    Sheet_022  t=[18053.698,18054.797] f=[8.002,16.971] drift=
+    Sheet_036  t=[19187.733,19188.832] f=[8.002,16.971] drift=29.04152697707044
+    Sheet_037  t=[19187.733,19188.832] f=[8.002,16.971] drift=
+    Sheet_003  t=[18243.385,18244.484] f=[8.002,16.971] drift=-12.77765335534502
+  shared-bounds groups and their relationship:
+    Sheet_015 vs Sheet_016: r=+0.2193 slope=+0.0757 resid_sd=0.1324  A_std=0.3934 B_std=0.1357 resid_after_rowcolmedian(A)_std=0.1206
+    Sheet_017 vs Sheet_018: r=+0.8724 slope=+0.8326 resid_sd=0.2850  A_std=0.6110 B_std=0.5831 resid_after_rowcolmedian(A)_std=0.5694
+    Sheet_021 vs Sheet_022: r=-0.0003 slope=-0.0013 resid_sd=0.5523  A_std=0.1252 B_std=0.5523 resid_after_rowcolmedian(A)_std=0.1254
+    Sheet_036 vs Sheet_037: r=+0.0051 slope=+0.0215 resid_sd=0.5594  A_std=0.1334 B_std=0.5594 resid_after_rowcolmedian(A)_std=0.1292
+  standalone images: encoding fingerprint vs the 5 normalized events
+    reference events: frac_eq1 = [0.498, 0.502, 0.506, 0.506, 0.507], frac>1 = [0.502, 0.498, 0.494, 0.494, 0.493]
+    Sheet_008: frac==1 0.514 frac>1 0.486 frac<0 0.000 range[1,1.5]
+    Sheet_015: frac==1 0.000 frac>1 1.000 frac<0 0.000 range[4.28,7.44]
+    Sheet_016: frac==1 0.501 frac>1 0.499 frac<0 0.000 range[1,1.5]
+    Sheet_017: frac==1 0.000 frac>1 0.000 frac<0 1.000 range[-8.96,2.65]
+    Sheet_018: frac==1 0.000 frac>1 0.001 frac<0 0.654 range[-4.95,1.36]
+    Sheet_021: frac==1 0.507 frac>1 0.493 frac<0 0.000 range[1,1.5]
+    Sheet_022: frac==1 0.000 frac>1 0.000 frac<0 0.633 range[-7.28,1.62]
+    Sheet_036: frac==1 0.507 frac>1 0.493 frac<0 0.000 range[1,1.5]
+    Sheet_037: frac==1 0.000 frac>1 0.000 frac<0 0.636 range[-5.58,1.38]
+==============================================================================
+3  DEFINITIVE COVERAGE TABLE
+  blocks: {'absent': 50, 'image': 14, 'aggregate': 30, 'exact': 6, 'empty': 1}  total=101
+  rows:   {'absent': 71053, 'image': 0, 'aggregate': 1132, 'exact': 146, 'empty': 0}
+  y-sum:  {'absent': 9135408.2, 'image': 0.0, 'aggregate': 39920.0, 'exact': 26554.0, 'empty': 0.0}
+  normalized drift-population rows=948 across 6 series (from 30 workbook blocks = 1278 rows incl. labels)
+  normalized orientation rows=312 across 6 series (from 18 workbook blocks)
+  workbook table rows not represented = 71053 (98.2% of all table rows)
+  wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/covx_coverage_final.csv / .json
+wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/covx_tests.json

@@ -1,0 +1,9 @@
+file,aux_n_rows,main_n_rows,row_count_equal_main,main_unique_latlon_keys,row_count_equal_main_unique_keys,positional_match_after_rounding_5dp_frac,positional_match_strict_frac,values_in_main_not_in_aux,values_in_aux_not_in_main,aux_unique_latlon_keys,key_set_equal_main,aux_rowcount_equals_aux_unique_keys,aux_order_matches_main_row_order,aux_order_matches_main_first_occurrence_order,aux_key_not_in_main,main_key_not_in_aux,max_rows_per_key_main,max_rows_per_key_aux,inner_join_rows
+data/raw/slope_glacial.tsv,461,427,False,229,False,0.477752,0.0,4.0,38.0,,,,,,,,,,
+data/raw/slope_nonglacial.tsv,6271,6288,False,4900,False,0.995216,0.000957,56.0,39.0,,,,,,,,,,
+data/raw/prior compilations/CHELSEA/precipitation_glacial.tsv,444,427,False,229,False,,,,,233.0,False,False,False,False,4.0,0.0,36.0,36.0,3193.0
+data/raw/prior compilations/CHELSEA/precipitation_nonglacial.tsv,6271,6288,False,4900,False,,,,,4896.0,False,False,False,False,0.0,4.0,154.0,154.0,51157.0
+data/raw/lithology_parsed.tsv,229,427,False,229,True,,,,,229.0,True,True,False,True,0.0,0.0,36.0,1.0,427.0
+data/raw/lithology_parsed_nonglacial.tsv,4900,6288,False,4900,True,,,,,4900.0,True,True,False,True,0.0,0.0,154.0,1.0,6288.0
+data/raw/lithology_unparsed.tsv,229,427,False,229,True,,,,,229.0,True,True,False,True,0.0,0.0,36.0,1.0,427.0
+data/raw/lithology_unparsed_nonglacial.tsv,4900,6288,False,4900,True,,,,,4900.0,True,True,False,True,0.0,0.0,154.0,1.0,6288.0

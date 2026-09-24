@@ -1,0 +1,18 @@
+{
+  "set_3": {
+    "plusminus5e7_frac_inside_band": 1.0,
+    "plusminus5e7_frac_reach_1e-12": 0.7019230769230769,
+    "plusminus5e7_frac_reach_1e-9": 1.0,
+    "byte_identical_columns": [
+      "numeric_feature_6"
+    ],
+    "band_halfwidth_mean": 3.084953459940694e-08
+  },
+  "set_4": {
+    "plusminus5e7_frac_inside_band": 1.0,
+    "plusminus5e7_frac_reach_1e-12": 0.4725274725274725,
+    "plusminus5e7_frac_reach_1e-9": 1.0,
+    "byte_identical_columns": [],
+    "band_halfwidth_mean": 4.686035628182721e-08
+  }
+}

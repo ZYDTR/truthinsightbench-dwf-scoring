@@ -1,0 +1,21 @@
+{
+  "task_id": "Astronomy_03_stellar_spectral_boundary",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260919T174120-8389f0",
+  "source_run_json_sha256": "5be4264c6a12ccfa56218c2a670c7b92090289d9b19c97c6dfc491da1d7a0752",
+  "source_release_json_sha256": "55ce5a54f45720a59380b9a9db442561c22d1ddadc37777fe5a5ea090b232e31",
+  "source_latest_validation_sha256": "fe417167a5f12cedb34c780f80e5a004bfb7fcd76c93aa6620ff16f7970d2213",
+  "source_snapshot_manifest_sha256": "dc1bb428c344f1fc92d10945085912e17bc02529e61cd5e40fee499ec6e54f66",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 1571
+  },
+  "release_checks": {
+    "idle_confirmed": null,
+    "jsonl_result_event": null,
+    "output_nonempty": null,
+    "worker_stopped_by_release": null
+  },
+  "registered_findings": 4,
+  "input_sha256": "bb896ab91e339220ed094e042e1a471102e3b9167ad583af76a2e7e6e5b7d38a",
+  "output_sha256": "afe622fd5b33e2a7c8a5bbc94470f3f50bfe3dd559438559b1680d559b927959"
+}

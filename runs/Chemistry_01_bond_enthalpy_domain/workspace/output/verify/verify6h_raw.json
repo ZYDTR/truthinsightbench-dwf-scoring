@@ -1,0 +1,63 @@
+{
+  "MAE": {
+    "quantum": 2.0978084714548806,
+    "learned": 2.410699815837938,
+    "reference": 5.48596685082873
+  },
+  "floor_estimators_tol0.1": {
+    "sd_gauss": {
+      "floor": 2.268915657606384,
+      "ratios": {
+        "quantum": 0.9245863610761034,
+        "learned": 1.0624898319848217,
+        "reference": 2.417880467454752
+      }
+    },
+    "mad_gauss": {
+      "floor": 1.5892882054790152,
+      "ratios": {
+        "quantum": 1.3199673062587136,
+        "learned": 1.516842450303938,
+        "reference": 3.4518388999025174
+      }
+    },
+    "iqr_gauss": {
+      "floor": 1.5892664325288899,
+      "ratios": {
+        "quantum": 1.3199853898108092,
+        "learned": 1.5168632310455068,
+        "reference": 3.451886190095445
+      }
+    },
+    "meanabs_model_free": {
+      "floor": 1.3871357285429142,
+      "ratios": {
+        "quantum": 1.5123310778379826,
+        "learned": 1.7378975728425679,
+        "reference": 3.9548882909903424
+      }
+    },
+    "trimmed_meanabs_90": {
+      "floor": 1.0112693156732893,
+      "ratios": {
+        "quantum": 2.074431053075301,
+        "learned": 2.3838356197260144,
+        "reference": 5.424832698672606
+      }
+    },
+    "median_abs": {
+      "floor": 0.9500000000000028,
+      "ratios": {
+        "quantum": 2.2082194436367097,
+        "learned": 2.537578753513611,
+        "reference": 5.774701948240751
+      }
+    }
+  },
+  "outlier_share_of_variance": {
+    "frac_var_from_top1pct_abs_pairs": 0.16528321642580204,
+    "frac_var_from_top5pct_abs_pairs": 0.4941672121006273,
+    "n_pairs": 1002,
+    "n_abs_gt_8": 54
+  }
+}

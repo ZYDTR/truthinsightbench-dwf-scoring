@@ -1,0 +1,7 @@
+variant_sheet,group,channel,block_index,n_points,x_range,x_step,variant_total,base_total,total_ratio_variant_over_base,pearson_r_on_common_grid
+Sheet_046,anonymous_group_2,channel_l,0,25,-34..-10,1.0,335.0,357.0,0.938375350140056,0.9945927784384812
+Sheet_046,anonymous_group_2,channel_l,1,20,-9.5..0,0.5,562.0,580.0,0.9689655172413794,0.9986017580691718
+Sheet_046,anonymous_group_2,channel_l,2,20,1..20,1.0,180.0,223.0,0.8071748878923767,0.9991234249423186
+Sheet_047,anonymous_group_2,channel_l,0,25,-34..-10,1.0,48.0,52.0,0.9230769230769231,0.9870550675473935
+Sheet_047,anonymous_group_2,channel_l,1,20,-9.5..0,0.5,145.0,155.0,0.9354838709677419,0.9855167942674403
+Sheet_047,anonymous_group_2,channel_l,2,20,1..20,1.0,198.0,237.0,0.8354430379746836,0.997115575237669

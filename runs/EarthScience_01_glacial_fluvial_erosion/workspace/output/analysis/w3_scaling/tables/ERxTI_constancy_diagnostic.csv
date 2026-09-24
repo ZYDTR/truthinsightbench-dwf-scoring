@@ -1,0 +1,6 @@
+process,methodology,n_refs_ge3,n_refs_ET_max_over_min_lt_1p01,n_refs_ET_max_over_min_lt_1p1,median_ET_max_over_min,median_within_ref_CV_of_ET,interpretation
+Nonglacial,Cosmogenic detrital,155,12,127,1.050274928142308,0.015561466159535232,"ER*TI nearly constant within Reference -> pooled slope is near-definitional (ER = Exhumation/TI), not independent scaling"
+Nonglacial,Volumetric,53,0,0,25.950885020589176,1.0768341964303685,ER*TI varies substantially within Reference; pooled slope carries genuine between-row information
+Glacial,Volumetric,25,0,0,11.17063492063492,1.1250627661422536,ER*TI varies substantially within Reference; pooled slope carries genuine between-row information
+Glacial,Cosmogenic surface,5,0,0,21.185185185185187,1.8553281197692335,ER*TI varies substantially within Reference; pooled slope carries genuine between-row information
+Glacial,Thermochronometric,3,0,0,3.3333333333333335,0.3114352829784559,ER*TI varies substantially within Reference; pooled slope carries genuine between-row information

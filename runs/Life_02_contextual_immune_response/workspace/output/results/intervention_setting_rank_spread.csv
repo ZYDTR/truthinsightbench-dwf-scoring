@@ -1,0 +1,6 @@
+intervention_setting_id,rank_assay_1,rank_assay_2,rank_assay_3,rank_spread
+intervention_setting_1,1,1,1,0
+intervention_setting_2,5,4,5,1
+intervention_setting_3,3,3,3,0
+intervention_setting_4,2,2,2,0
+intervention_setting_5,4,5,4,1

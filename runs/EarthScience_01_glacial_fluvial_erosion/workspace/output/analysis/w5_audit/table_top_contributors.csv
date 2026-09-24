@@ -1,0 +1,37 @@
+name,rows,table,kind,name
+"Berger and Spotila, 2008",32,Glacial,Reference,
+"Balter-Kennedy et al., 2021",24,Glacial,Reference,
+"Briner and Swanson, 1998",23,Glacial,Reference,
+"Glotzbach et al., 2013",15,Glacial,Reference,
+"Koppes et al., 2015",14,Glacial,Reference,
+"Steinemann et al., 2021a",14,Glacial,Reference,
+"Bogen, 1989",13,Glacial,Reference,
+"Steinemann et al., 2020",13,Glacial,Reference,
+"Østrem, Ziegler, and Ekman, 1970",12,Glacial,Reference,
+"Fernandez et al., 2016",11,Glacial,Reference,
+Milliman and Farnsworth 2013,512,Nonglacial,Reference,
+USGS,448,Nonglacial,Reference,
+Milliman and Syvitski 1992,181,Nonglacial,Reference,
+"Van der Perck and Espinosa Vilches 2020, van der Weijden and Middelburg 1989",154,Nonglacial,Reference,
+"Stirton, 2016",96,Nonglacial,Reference,
+"Krickov et al., 2019",90,Nonglacial,Reference,
+"Matmon, 2003",89,Nonglacial,Reference,
+"Reuter, 2005",88,Nonglacial,Reference,
+"Mandal, 2015",79,Nonglacial,Reference,
+"Bierman, 2005",74,Nonglacial,Reference,
+,294,Glacial,Compilation,This study
+,62,Glacial,Compilation,"Hallet et al., 1996"
+,32,Glacial,Compilation,"Balter-Kennedy et al., 2021"
+,7,Glacial,Compilation,"Geirsdóttir et al., 2007"
+,6,Glacial,Compilation,"Faleide et al., 1996"
+,4,Glacial,Compilation,"Amantov et al., 2011"
+,4,Glacial,Compilation,"Anderson, 2005"
+,4,Glacial,Compilation,"Björnsson, 1979"
+,4,Glacial,Compilation,"Burbank et al., 2000"
+,4,Glacial,Compilation,"Lliboutry, 1994"
+,3457,Nonglacial,Compilation,OCTOPUS
+,1521,Nonglacial,Compilation,"Chen et al., 2022"
+,1057,Nonglacial,Compilation,GloRiSe
+,194,Nonglacial,Compilation,"Marrero et al., 2018"
+,48,Nonglacial,Compilation,This study
+,11,Nonglacial,Compilation,"Burbank et al., 2000"

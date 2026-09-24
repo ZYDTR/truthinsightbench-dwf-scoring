@@ -1,0 +1,285 @@
+{
+  "action_a": {
+    "rows": [
+      {
+        "action": "rbm_exact_cost_layer",
+        "graph": "cycle_5",
+        "nodes": 5,
+        "edges": 5,
+        "gamma": -0.63,
+        "rbm_hidden_units_after_cost_layer": 6,
+        "exact_state_fidelity": 1.0000000000000009,
+        "defect": 8.881784197001252e-16
+      },
+      {
+        "action": "rbm_exact_cost_layer",
+        "graph": "cycle_5",
+        "nodes": 5,
+        "edges": 5,
+        "gamma": 0.23,
+        "rbm_hidden_units_after_cost_layer": 6,
+        "exact_state_fidelity": 1.0000000000000004,
+        "defect": 4.440892098500626e-16
+      },
+      {
+        "action": "rbm_exact_cost_layer",
+        "graph": "cycle_5",
+        "nodes": 5,
+        "edges": 5,
+        "gamma": 0.71,
+        "rbm_hidden_units_after_cost_layer": 6,
+        "exact_state_fidelity": 1.0000000000000004,
+        "defect": 4.440892098500626e-16
+      },
+      {
+        "action": "rbm_exact_cost_layer",
+        "graph": "complete_4",
+        "nodes": 4,
+        "edges": 6,
+        "gamma": -0.63,
+        "rbm_hidden_units_after_cost_layer": 7,
+        "exact_state_fidelity": 1.0,
+        "defect": 0.0
+      },
+      {
+        "action": "rbm_exact_cost_layer",
+        "graph": "complete_4",
+        "nodes": 4,
+        "edges": 6,
+        "gamma": 0.23,
+        "rbm_hidden_units_after_cost_layer": 7,
+        "exact_state_fidelity": 1.0000000000000004,
+        "defect": 4.440892098500626e-16
+      },
+      {
+        "action": "rbm_exact_cost_layer",
+        "graph": "complete_4",
+        "nodes": 4,
+        "edges": 6,
+        "gamma": 0.71,
+        "rbm_hidden_units_after_cost_layer": 7,
+        "exact_state_fidelity": 0.9999999999999998,
+        "defect": 2.220446049250313e-16
+      },
+      {
+        "action": "rbm_exact_cost_layer",
+        "graph": "random_regular_3_6_seed123",
+        "nodes": 6,
+        "edges": 9,
+        "gamma": -0.63,
+        "rbm_hidden_units_after_cost_layer": 10,
+        "exact_state_fidelity": 1.0000000000000004,
+        "defect": 4.440892098500626e-16
+      },
+      {
+        "action": "rbm_exact_cost_layer",
+        "graph": "random_regular_3_6_seed123",
+        "nodes": 6,
+        "edges": 9,
+        "gamma": 0.23,
+        "rbm_hidden_units_after_cost_layer": 10,
+        "exact_state_fidelity": 0.9999999999999996,
+        "defect": 4.440892098500626e-16
+      },
+      {
+        "action": "rbm_exact_cost_layer",
+        "graph": "random_regular_3_6_seed123",
+        "nodes": 6,
+        "edges": 9,
+        "gamma": 0.71,
+        "rbm_hidden_units_after_cost_layer": 10,
+        "exact_state_fidelity": 1.0,
+        "defect": 0.0
+      },
+      {
+        "action": "rbm_exact_cost_layer",
+        "graph": "barbell_3_0",
+        "nodes": 6,
+        "edges": 7,
+        "gamma": -0.63,
+        "rbm_hidden_units_after_cost_layer": 8,
+        "exact_state_fidelity": 1.0000000000000022,
+        "defect": 2.220446049250313e-15
+      },
+      {
+        "action": "rbm_exact_cost_layer",
+        "graph": "barbell_3_0",
+        "nodes": 6,
+        "edges": 7,
+        "gamma": 0.23,
+        "rbm_hidden_units_after_cost_layer": 8,
+        "exact_state_fidelity": 1.0000000000000009,
+        "defect": 8.881784197001252e-16
+      },
+      {
+        "action": "rbm_exact_cost_layer",
+        "graph": "barbell_3_0",
+        "nodes": 6,
+        "edges": 7,
+        "gamma": 0.71,
+        "rbm_hidden_units_after_cost_layer": 8,
+        "exact_state_fidelity": 1.0000000000000013,
+        "defect": 1.3322676295501878e-15
+      }
+    ],
+    "graph_summary": [
+      {
+        "graph": "barbell_3_0",
+        "min_defect": 8.881784197001252e-16,
+        "max_defect": 2.220446049250313e-15,
+        "mean_defect": 1.4802973661668755e-15,
+        "n": 3
+      },
+      {
+        "graph": "complete_4",
+        "min_defect": 0.0,
+        "max_defect": 4.440892098500626e-16,
+        "mean_defect": 2.220446049250313e-16,
+        "n": 3
+      },
+      {
+        "graph": "cycle_5",
+        "min_defect": 4.440892098500626e-16,
+        "max_defect": 8.881784197001252e-16,
+        "mean_defect": 5.921189464667501e-16,
+        "n": 3
+      },
+      {
+        "graph": "random_regular_3_6_seed123",
+        "min_defect": 0.0,
+        "max_defect": 4.440892098500626e-16,
+        "mean_defect": 2.9605947323337506e-16,
+        "n": 3
+      }
+    ],
+    "gamma_summary": [
+      {
+        "gamma": -0.63,
+        "min_defect": 0.0,
+        "max_defect": 2.220446049250313e-15,
+        "mean_defect": 8.881784197001252e-16,
+        "n": 4
+      },
+      {
+        "gamma": 0.23,
+        "min_defect": 4.440892098500626e-16,
+        "max_defect": 8.881784197001252e-16,
+        "mean_defect": 5.551115123125783e-16,
+        "n": 4
+      },
+      {
+        "gamma": 0.71,
+        "min_defect": 0.0,
+        "max_defect": 1.3322676295501878e-15,
+        "mean_defect": 4.996003610813204e-16,
+        "n": 4
+      }
+    ],
+    "declared_min": 0.9999999999999996
+  },
+  "action_b": {
+    "rows": [
+      {
+        "case": "p2_case_1",
+        "graph_seed": 12345,
+        "stochastic_seed": 20210813,
+        "nodes": 6,
+        "degree": 3,
+        "n_edges": 9,
+        "qaoa_optimizer_step_count": 67,
+        "p1_final_fidelity": 0.9892774281295591,
+        "p2_final_fidelity": 0.9756043403530013,
+        "compression_exact_fidelity": 0.9995464024328914,
+        "compression_terminal_estimated_fidelity": 0.9996195947652939,
+        "min_gate_terminal_fidelity": 0.996852259370526,
+        "max_gate_terminal_fidelity": 1.0001811107313403,
+        "mean_gate_terminal_fidelity": 0.9992564780499092,
+        "optimized_exact_cost": -7.034330773959219,
+        "passed_frozen_thresholds": true,
+        "initial_angles": [
+          0.25076480061730955,
+          0.38064116905898393,
+          -0.607303030161062,
+          -0.4217043908635955
+        ],
+        "optimized_angles": [
+          0.25076480061730955,
+          0.38064116905898393,
+          -0.607303030161062,
+          -0.4217043908635955
+        ]
+      },
+      {
+        "case": "p2_case_2",
+        "graph_seed": 24680,
+        "stochastic_seed": 20210814,
+        "nodes": 6,
+        "degree": 3,
+        "n_edges": 9,
+        "qaoa_optimizer_step_count": 74,
+        "p1_final_fidelity": 0.990358773974237,
+        "p2_final_fidelity": 0.9815851170054515,
+        "compression_exact_fidelity": 0.9995392572316039,
+        "compression_terminal_estimated_fidelity": 1.000127030100402,
+        "min_gate_terminal_fidelity": 0.9934816062547616,
+        "max_gate_terminal_fidelity": 1.0001356072371859,
+        "mean_gate_terminal_fidelity": 0.9983150256489622,
+        "optimized_exact_cost": -4.205598642026452,
+        "passed_frozen_thresholds": true,
+        "initial_angles": [
+          0.25051492093070155,
+          0.45970174434394767,
+          -0.47811389266251086,
+          -0.2888374241870769
+        ],
+        "optimized_angles": [
+          0.25051492093070155,
+          0.45970174434394767,
+          -0.47811389266251086,
+          -0.2888374241870769
+        ]
+      },
+      {
+        "case": "p2_case_3",
+        "graph_seed": 97531,
+        "stochastic_seed": 20210815,
+        "nodes": 6,
+        "degree": 3,
+        "n_edges": 9,
+        "qaoa_optimizer_step_count": 74,
+        "p1_final_fidelity": 0.9805953975270472,
+        "p2_final_fidelity": 0.9774953129837863,
+        "compression_exact_fidelity": 0.9991800836013702,
+        "compression_terminal_estimated_fidelity": 0.9985108701831229,
+        "min_gate_terminal_fidelity": 0.9904045325288312,
+        "max_gate_terminal_fidelity": 0.9999720714690451,
+        "mean_gate_terminal_fidelity": 0.9973373814050938,
+        "optimized_exact_cost": -4.205598642026351,
+        "passed_frozen_thresholds": true,
+        "initial_angles": [
+          0.2505149209294045,
+          0.4597017443423358,
+          -0.4781138926653155,
+          -0.28883742418883823
+        ],
+        "optimized_angles": [
+          0.2505149209294045,
+          0.4597017443423358,
+          -0.4781138926653155,
+          -0.28883742418883823
+        ]
+      }
+    ],
+    "frozen_thresholds": {
+      "compression_fidelity": 0.95,
+      "p1_final_fidelity": 0.94,
+      "p2_final_fidelity": 0.92
+    },
+    "declared_mins": {
+      "compression_exact_fidelity": 0.9991800836013702,
+      "gate_terminal_fidelity": 0.9904045325288312,
+      "p1_final_fidelity": 0.9805953975270472,
+      "p2_final_fidelity": 0.9756043403530013
+    }
+  }
+}

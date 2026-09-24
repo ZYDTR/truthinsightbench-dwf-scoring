@@ -1,0 +1,975 @@
+{
+  "schema": "truthinsightbench-semantic-output-validation",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "output": "/data/user/conversations/conv-ab8a0c4c-4c0f-46e9-96bb-16e130938d6a/project/output",
+  "authoritative_report": {
+    "path": "Result.md",
+    "bytes": 32536,
+    "sha256": "47fa9551d08bfdeec821c299275e45c91b730a97b1bb4367c114507ef083f03a"
+  },
+  "registered_findings": {
+    "count": 5,
+    "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "markers": [
+      {
+        "finding_number": 1,
+        "line": 84,
+        "marker": "## Finding 1 — The dominant rate–timescale signal in this compilation is a construction artefact, not a scaling law",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 2,
+        "line": 167,
+        "marker": "## Finding 2 — Once product-locked strata are removed, no general rate–timescale scaling survives",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 3,
+        "line": 234,
+        "marker": "## Finding 3 — Measurement method, not process category, is the primary control on reported rate",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 4,
+        "line": 292,
+        "marker": "## Finding 4 — The glacial–nonglacial contrast is real at matched timescale but reverses in two method strata",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 5,
+        "line": 389,
+        "marker": "## Finding 5 — Non-independence, not sample size, is the binding constraint on every claim above",
+        "heading_level": 2
+      }
+    ],
+    "traceability": [
+      {
+        "finding_number": 1,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/w1_coupling/coupling_audit.py"
+        ],
+        "result_evidence": [
+          "analysis/w0_main/table_within_reference_slopes.csv",
+          "analysis/w1_coupling/results.json",
+          "analysis/w1_coupling/table_A_unit_identity.csv",
+          "analysis/w1_coupling/table_B_thickness_collapse.csv",
+          "analysis/w1_coupling/table_C_density_sensitivity.csv",
+          "analysis/w3_scaling/results.json",
+          "analysis/w6_decoupled/within_reference_slopes.csv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 2,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/w0_main/main_analysis.py",
+          "analysis/w2_variance/w2_variance.py",
+          "analysis/w6_decoupled/decoupled_corrected.py"
+        ],
+        "result_evidence": [
+          "analysis/w0_main/table_model_comparison.csv",
+          "analysis/w2_variance/incremental_r2.csv",
+          "analysis/w2_variance/results.json",
+          "analysis/w6_decoupled/corrected_results.json",
+          "analysis/w6_decoupled/table_class_slopes.csv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 3,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/w2_variance/w2_variance.py"
+        ],
+        "result_evidence": [
+          "analysis/w0_main/table_coverage_by_stratum.csv",
+          "analysis/w2_variance/incremental_r2.csv",
+          "analysis/w2_variance/model_comparison_primary.csv",
+          "analysis/w3_scaling/results.json",
+          "analysis/w3_scaling/tables/leave_one_compilation_out_summary.csv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 4,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/w4_process/w4_process_analysis.py"
+        ],
+        "result_evidence": [
+          "analysis/w0_main/table_common_support_process.csv",
+          "analysis/w0_main/table_compiler_effect.csv",
+          "analysis/w4_process/results.json",
+          "analysis/w4_process/reversal_strata.csv",
+          "analysis/w4_process/scale_matched_knn5.csv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 5,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/w2_variance/w2_variance.py"
+        ],
+        "result_evidence": [
+          "analysis/common/parse_audit.json",
+          "analysis/w2_variance/results.json",
+          "analysis/w3_scaling/results.json",
+          "analysis/w5_audit/independence_structure.csv",
+          "analysis/w5_audit/table_independence_structure.csv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      }
+    ]
+  },
+  "reproduction": {
+    "mode": "section_in_authoritative_report",
+    "document": null
+  },
+  "analysis_sources": [
+    {
+      "path": "analysis/common/prepare_data.py",
+      "bytes": 5912,
+      "sha256": "10ef61bb4200f555a47db209d60ea8e0b43dff397ff9702fd6d501c00a29d2bd"
+    },
+    {
+      "path": "analysis/w0_main/decisive_tests.py",
+      "bytes": 5725,
+      "sha256": "ddcfe71d687f10c2ab252861783767b19e2f3025c117ba947a28eb220f75d87e"
+    },
+    {
+      "path": "analysis/w0_main/main_analysis.py",
+      "bytes": 12749,
+      "sha256": "d2fd18e0bfa819cbb6251d18b2ec8f9d03a95e46337c98fec6a24c8b8e7423af"
+    },
+    {
+      "path": "analysis/w1_coupling/coupling_audit.py",
+      "bytes": 8503,
+      "sha256": "2e6b570bbfa69118086ecae7206d85158fead969d20222f2804f84363bd100bc"
+    },
+    {
+      "path": "analysis/w2_variance/w2_variance.py",
+      "bytes": 38001,
+      "sha256": "bd9a1b68249a2eca76df0cdf6f16c52aac2f840d7363a9a2b61f8b6e5c7af802"
+    },
+    {
+      "path": "analysis/w3_scaling/w3_scaling.py",
+      "bytes": 44448,
+      "sha256": "667028bba06a87a4fec8296787fda2f5f94819c8de785354e7a22f7521180549"
+    },
+    {
+      "path": "analysis/w4_process/w4_process_analysis.py",
+      "bytes": 61492,
+      "sha256": "b96182a18f3ad64c0ab4e691b37e35743802f0d9c50b522c28e86d6ebc65854e"
+    },
+    {
+      "path": "analysis/w5_audit/audit_data.py",
+      "bytes": 13908,
+      "sha256": "19365a7b75cb561a695031b035904fe5ef8e54c339db8163c380aca8012b2f86"
+    },
+    {
+      "path": "analysis/w5_audit/w5_audit.py",
+      "bytes": 65046,
+      "sha256": "3c269754553f16753e6b90482d86d429b2914ce7a276656db99c9d6e8c1ec687"
+    },
+    {
+      "path": "analysis/w6_decoupled/decoupled_corrected.py",
+      "bytes": 9709,
+      "sha256": "a972b0c885e7f6b97a383a01d36f71130d21105d3de307a835e8e54b7f8cb9d9"
+    },
+    {
+      "path": "analysis/w6_decoupled/w6_decoupled.py",
+      "bytes": 44963,
+      "sha256": "455a9d0f06278ec14e7f89b09bff1d39c7cdefda4d07d1e05dd55021c9e6b96e"
+    }
+  ],
+  "executed_notebooks": [],
+  "result_artifacts": [
+    {
+      "path": "analysis/common/erosion_consolidated.csv",
+      "bytes": 2467723,
+      "sha256": "1ce8b7999497c7ae3941cb452305639f11c66769eb86ef72a8caf81783068c68"
+    },
+    {
+      "path": "analysis/common/parse_audit.json",
+      "bytes": 1589,
+      "sha256": "edaff4c9cc6ea5bd59e8514cd18d224b85906fe0c946c2301ed68fb855242cd1"
+    },
+    {
+      "path": "analysis/w0_main/decisive_results.json",
+      "bytes": 2722,
+      "sha256": "e81617587e8f66c204b78e578b87306d9e3ffe409bbe8445a3edc4bf504fbaf1"
+    },
+    {
+      "path": "analysis/w0_main/figure_ET_spread.png",
+      "bytes": 50745,
+      "sha256": "4478d786fcbc0f8b3ce8ecd2ba6b3ab84c2f01aeeeb9ce413bf694ca8093d890"
+    },
+    {
+      "path": "analysis/w0_main/figure_scale_by_stratum.png",
+      "bytes": 146907,
+      "sha256": "65029f119e0255c2dcaf39855c75cfb0d76621e2806e2c93b81cf30bfbd38b03"
+    },
+    {
+      "path": "analysis/w0_main/results.json",
+      "bytes": 111220,
+      "sha256": "8133181c467d9e636af48ec36aa724ea74f50dccd86fda2ef5e66f549efac11f"
+    },
+    {
+      "path": "analysis/w0_main/table_ET_constancy.csv",
+      "bytes": 1016,
+      "sha256": "4ea09ac8f91c4347c486d854ad7c9e4fccfb062fb07a61619ff8d5824df00853"
+    },
+    {
+      "path": "analysis/w0_main/table_common_support_process.csv",
+      "bytes": 411,
+      "sha256": "9a22101dc0197e122098adef338951da694a931c1813e0ac4c34059a11d2d91c"
+    },
+    {
+      "path": "analysis/w0_main/table_compiler_effect.csv",
+      "bytes": 290,
+      "sha256": "cf7434d7402e989c48aaebcdeb59265a1fb6573e02dfb087aee5c52d5df8735f"
+    },
+    {
+      "path": "analysis/w0_main/table_coupling_identity.csv",
+      "bytes": 412,
+      "sha256": "df1fcc2e76f787600271e72700f0c7774898f5d32f784c326448bb0816b31e41"
+    },
+    {
+      "path": "analysis/w0_main/table_coverage_by_stratum.csv",
+      "bytes": 724,
+      "sha256": "14ed4318a4af1d268364f63920e1453f31bda949420401bdc04cac7a37526511"
+    },
+    {
+      "path": "analysis/w0_main/table_matched_process.csv",
+      "bytes": 583,
+      "sha256": "715ba383289dc2430195bfa3eb4b065aff0e00a3960b1683264fca4f24c5b396"
+    },
+    {
+      "path": "analysis/w0_main/table_model_comparison.csv",
+      "bytes": 1484,
+      "sha256": "cfb83039d20c09e1f7ba2d94888b79ea4552c7972675ba0025b62a01432276e7"
+    },
+    {
+      "path": "analysis/w0_main/table_stratum_slopes.csv",
+      "bytes": 1594,
+      "sha256": "5cbd22a42f6f8f457725e0ff2a6478b1f3a30a32d49bb0e582da722ba1475991"
+    },
+    {
+      "path": "analysis/w0_main/table_thickness_spread_diagnostic.csv",
+      "bytes": 717,
+      "sha256": "8a5b7ab953a9b0ce535c51790408af7b4be434e7dc1d88e86723a3b30f60bc7d"
+    },
+    {
+      "path": "analysis/w0_main/table_within_reference_slopes.csv",
+      "bytes": 6624,
+      "sha256": "a3ae4b84d693b335fa20c03c6b62a18e79fdd9256f4d8cf14c5976a02761ba67"
+    },
+    {
+      "path": "analysis/w1_coupling/results.json",
+      "bytes": 5594,
+      "sha256": "409dab598952d1bb79376761452eb95a894c5c0df5817fb3cf30e28287b8efab"
+    },
+    {
+      "path": "analysis/w1_coupling/table_A_unit_identity.csv",
+      "bytes": 400,
+      "sha256": "85442a78adf6fbb447a212e0b97fc4dbfce70765df328f2a46ba1fdb6a666a0a"
+    },
+    {
+      "path": "analysis/w1_coupling/table_B_thickness_collapse.csv",
+      "bytes": 842,
+      "sha256": "558cb3bda2e521dcab62a9469782bf7cb16ad791dbbb89954eae59ae3a3a779e"
+    },
+    {
+      "path": "analysis/w1_coupling/table_C_density_sensitivity.csv",
+      "bytes": 439,
+      "sha256": "29d82054fda1ceb7aca72aa2aafaf85e00ee46fa4f47da70173bf5500a2367d6"
+    },
+    {
+      "path": "analysis/w1_coupling/table_D_free_stratum_thickness.csv",
+      "bytes": 113,
+      "sha256": "e3f1b0cab8e46141e85d62b9c3d0ccb629bb0582d2e28cd99200816fbf0f6a4a"
+    },
+    {
+      "path": "analysis/w2_variance/compilation_slopes.csv",
+      "bytes": 891,
+      "sha256": "71ff863d9a4305b71446c38509a9bd6b7342990fc6745b552e58a370a76c90ab"
+    },
+    {
+      "path": "analysis/w2_variance/incremental_r2.csv",
+      "bytes": 1687,
+      "sha256": "03781a7ec0cd06bf119bc32ebb3fc1022b391e79bad2872a5a7521d43108927d"
+    },
+    {
+      "path": "analysis/w2_variance/method_stratified_slopes.csv",
+      "bytes": 622,
+      "sha256": "3523d8fc201d8c0effdb8f95fbb532a0165cca3d8c586d57f0ae53dd1791c860"
+    },
+    {
+      "path": "analysis/w2_variance/model_comparison_all.csv",
+      "bytes": 3159,
+      "sha256": "c67367b89b72fb5557e8cec809854a2c7a58fb41cef91ca825fa2117d84e554a"
+    },
+    {
+      "path": "analysis/w2_variance/model_comparison_full_logER.csv",
+      "bytes": 916,
+      "sha256": "b16259b06fbfbf432c494389266c5bfe0ef357212317a0c5e427b41f9e4ecd68"
+    },
+    {
+      "path": "analysis/w2_variance/model_comparison_logTI_subset.csv",
+      "bytes": 923,
+      "sha256": "604f8c47421b136e8c7dde4028da806626e41edbb35e2396fb5581f03005523d"
+    },
+    {
+      "path": "analysis/w2_variance/model_comparison_primary.csv",
+      "bytes": 889,
+      "sha256": "07f8dfdace91dc5b28d9dd204d8bd89143993dedacc727a5fe0943b83ca60d3f"
+    },
+    {
+      "path": "analysis/w2_variance/process_stratified_slopes.csv",
+      "bytes": 270,
+      "sha256": "ab85a36f9a2242b1b7cebb847b0bd5e7b76d13528e8be8751e089d2c454a0831"
+    },
+    {
+      "path": "analysis/w2_variance/process_x_method_strata_slopes.csv",
+      "bytes": 1102,
+      "sha256": "e2c20e9181808e15dce297ae9bf62254e7f00f02fe1b6a858e2a5a14e919087b"
+    },
+    {
+      "path": "analysis/w2_variance/reference_cluster_sizes.png",
+      "bytes": 38578,
+      "sha256": "428b0dacddd0efaddbe57f801007d091d3c8902dbeed37aab96783a7ad7d9aa8"
+    },
+    {
+      "path": "analysis/w2_variance/results.json",
+      "bytes": 49827,
+      "sha256": "e0b578d04b044acf612dc0e42848c41bf6aa30b6474f6108a3b4e8ce36ebd4aa"
+    },
+    {
+      "path": "analysis/w2_variance/w2_variance_summary.png",
+      "bytes": 92880,
+      "sha256": "2febf118d7567d0f8b19fe04ef16db301bbd0d3ddf6654f2e34699e2dfa9e7fa"
+    },
+    {
+      "path": "analysis/w3_scaling/figures/fig_loco_ranges.png",
+      "bytes": 55006,
+      "sha256": "efd3503108e1551a3e353f6428f7e2d61ad3464f3cecd4a32752ca845a0ac4d2"
+    },
+    {
+      "path": "analysis/w3_scaling/figures/fig_pooled_vs_within.png",
+      "bytes": 62929,
+      "sha256": "f708e8bd33d769f95ba557d048c708537bafc8d2577ecf867032550101967360"
+    },
+    {
+      "path": "analysis/w3_scaling/figures/fig_scatter_strata.png",
+      "bytes": 178959,
+      "sha256": "9fe7561521b97c3fe41fb19afa39d5112b5443398d9b19a861794d6fe4d7f4dc"
+    },
+    {
+      "path": "analysis/w3_scaling/figures/fig_slope_forest.png",
+      "bytes": 80701,
+      "sha256": "a37ca1d721bb760f2d3da3458ca0da7ee212822ef10baa340e843b1376ef1975"
+    },
+    {
+      "path": "analysis/w3_scaling/results.json",
+      "bytes": 95026,
+      "sha256": "986707a5da11196bd646985e22caa38f08a6f403ef18adc44dde644a4fa4a8f0"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/ERxTI_constancy_diagnostic.csv",
+      "bytes": 1026,
+      "sha256": "964a5054b8921b4cafacaf2b59bf3f2e13bdfb7ec33029e25afd19a9d23bfc1f"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/TI_composition_by_compilation.csv",
+      "bytes": 1768,
+      "sha256": "9e31ba3ece6e31ea9ee6c96e73828fece758f2f675da720109a280b67a8df758"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/consistency_classification.csv",
+      "bytes": 2171,
+      "sha256": "58eb299e58cb2da1aa50a45af678b81083b13fe17c614864ae237f1f87138848"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/consistency_classification_robust.csv",
+      "bytes": 1410,
+      "sha256": "ad70d526a0ca1e35468292401a1bed03e00b453f73320a81536c11ec2ea40b66"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/exhumation_identity_check.csv",
+      "bytes": 1497,
+      "sha256": "5aeb99848b5d6c4e77e147164d25252879684e482fa7480adf5c2e146e640464"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/large_strata_robustness.csv",
+      "bytes": 3032,
+      "sha256": "f0ef567173da32ebbbf6329f19674f52dfff5b0ec4b5cac1b81fa8140dc0602e"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/leave_one_compilation_out_all.csv",
+      "bytes": 4468,
+      "sha256": "9551ee6591ac6184782400bed9f3f45e7657a9de455baa701c3e0783f311077b"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/leave_one_compilation_out_summary.csv",
+      "bytes": 1890,
+      "sha256": "a48caff32e72ac7b7d13961103d4ae752bfd5eaea18cd273307bd34d3f5f50e8"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/outlier_treatments.csv",
+      "bytes": 7322,
+      "sha256": "f31d25539142405c30e3535c446fce01e6fd8e2cf230709178d19cf06c55825b"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/per_compilation_slopes.csv",
+      "bytes": 2687,
+      "sha256": "827991e45b5ccb623d609afb00acb8d68872a71e07c8392c27825a4f1b141faf"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/per_reference_distribution.csv",
+      "bytes": 474,
+      "sha256": "1089973e3b163086848602acd1b99c6a4e46b0498adbf56a274c7a0bc43212c2"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/per_reference_fittability.csv",
+      "bytes": 347,
+      "sha256": "2686c9668e5be1324be4d2d5f459d5856d2b8b6787fcdee6fc0df7c839cc165a"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/per_reference_slopes.csv",
+      "bytes": 3840,
+      "sha256": "fb2d56074e15462f582150559cd603e4826b4dba6895ee78ca863f7d6f6a30f9"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/strata_main_ols.csv",
+      "bytes": 3232,
+      "sha256": "7511aa6cb93e4914bba1ac1b7102926be26df45fe8493c57840c29691ab04eab"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/threshold_sensitivity.csv",
+      "bytes": 3432,
+      "sha256": "bd4ad41aa6dc737099d697f2e5645e4fcd51d17275e3416d6ada6b4c45474ae7"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/within_reference_fixed_effects.csv",
+      "bytes": 2373,
+      "sha256": "604424627ec44a9c66b349a01b9818e105b0bd03d90b3b81c92c46bcc6e8b303"
+    },
+    {
+      "path": "analysis/w4_process/fig_w4_ER_TI_by_process.png",
+      "bytes": 144351,
+      "sha256": "8b5de9c6a80f04e8c9d65e9ad3a4e0cfee4da019257f1f0f2d739bd779ec73af"
+    },
+    {
+      "path": "analysis/w4_process/fig_w4_matched_and_TI.png",
+      "bytes": 61731,
+      "sha256": "a853f2408e9f51b42a04141c313d8639abf61da328de93531bc812cf03192f73"
+    },
+    {
+      "path": "analysis/w4_process/fig_w4_process_overview.png",
+      "bytes": 89033,
+      "sha256": "b97fcea721f6e2bb9f45b19293c5b3495c38c91cc174d3dad92247f16cfa1ac2"
+    },
+    {
+      "path": "analysis/w4_process/fine_cell_contrasts.csv",
+      "bytes": 2068,
+      "sha256": "fd83fc145647a3099c0241f503a85415537dec2c816ea096468d10e755f9369d"
+    },
+    {
+      "path": "analysis/w4_process/functional_form_sensitivity.csv",
+      "bytes": 1656,
+      "sha256": "ccb6351fe4b9ab14411442e286b4d74108d0263d1c7b40995a938947b572a5c2"
+    },
+    {
+      "path": "analysis/w4_process/glacial_type_vs_fluvial.csv",
+      "bytes": 2668,
+      "sha256": "7f0d7e58f67839033cb8fbb44f814b2b30c189e48e8b6cd6f1a013c1efd56589"
+    },
+    {
+      "path": "analysis/w4_process/marginal_logER_stats.csv",
+      "bytes": 437,
+      "sha256": "2b1db8d896ed7a63b7c1c6c662de7ca148195f2b2dab0e8dafaf7b8be7f1ff60"
+    },
+    {
+      "path": "analysis/w4_process/matched_control_deltas.csv",
+      "bytes": 3453,
+      "sha256": "d27fd56002ec5b89f25ac0c84d3db1fa4c2cdd0e3df3c8234b5e4510fcc0bfd1"
+    },
+    {
+      "path": "analysis/w4_process/method_composition_by_process.csv",
+      "bytes": 293,
+      "sha256": "b23d08f9a2bb08790d0cf8fd72c4d227d766c6deb120d1e74638d8dd7e4b9254"
+    },
+    {
+      "path": "analysis/w4_process/method_matched_logER.csv",
+      "bytes": 1481,
+      "sha256": "748ee4590b48025ffad4bdc88ee9cf1b2a5585d548b1ed61896e37874d5f40b3"
+    },
+    {
+      "path": "analysis/w4_process/results.json",
+      "bytes": 138776,
+      "sha256": "6b52e2420f9852067bbe418beaff2f0cb3f1ae7bcac88527c435b0ce26d73b0b"
+    },
+    {
+      "path": "analysis/w4_process/reversal_strata.csv",
+      "bytes": 4309,
+      "sha256": "dcfb9b4198115f430e4ede51db2ff9575a752093e9c28d1e50ad88c799d0c3fa"
+    },
+    {
+      "path": "analysis/w4_process/scale_matched_alternatives.csv",
+      "bytes": 8788,
+      "sha256": "8eed06a10c9371d8a619bb2247d9947dda2d4504fdeb2b8d9a84802d8c2edd9b"
+    },
+    {
+      "path": "analysis/w4_process/scale_matched_knn5.csv",
+      "bytes": 3286,
+      "sha256": "8e8df786372cfba0e0244ee5aa437defdae89685007c06d1845171e8d0f4ccd5"
+    },
+    {
+      "path": "analysis/w4_process/simple_slopes_by_method.csv",
+      "bytes": 1245,
+      "sha256": "e6319c0efc65259103154146423a9e05478dfc679d780400dae5788668daf069"
+    },
+    {
+      "path": "analysis/w4_process/stratified_regression_coeffs.csv",
+      "bytes": 635,
+      "sha256": "4e4779d69fe1524456b67ea30e181db5be0d4853bbdb1b8f4f081397bcad07d5"
+    },
+    {
+      "path": "analysis/w4_process/type_logER_stats.csv",
+      "bytes": 1537,
+      "sha256": "5c37d3be9a506e59f1474b283e65a0a1bb8ac7a4e58794afd0c8b913d0553020"
+    },
+    {
+      "path": "analysis/w4_process/type_vs_other_process.csv",
+      "bytes": 1651,
+      "sha256": "7992ecd06f0cb83d6edb3912939c1241219a10b4d25c2d27953418a8b368e658"
+    },
+    {
+      "path": "analysis/w4_process/verification_ER_TI_slopes.csv",
+      "bytes": 803,
+      "sha256": "061e5d5ad7d2d3b66c508dfd82c63d8552fb5c3a2326eccdb85e66cd23dfa0dd"
+    },
+    {
+      "path": "analysis/w4_process/volumetric_TI_quintile_contrast.csv",
+      "bytes": 704,
+      "sha256": "43ea799a172680bae14b284dcb46f975600c6c1ad38fb1b90e421ddd873728b4"
+    },
+    {
+      "path": "analysis/w4_process/volumetric_by_glacial_type.csv",
+      "bytes": 798,
+      "sha256": "c1fa9c79c2dbb2b5a153ba2b923b19a2556ad947e389c8ec71e2fd4039b3d4f9"
+    },
+    {
+      "path": "analysis/w4_process/within_TI_decile.csv",
+      "bytes": 1682,
+      "sha256": "0d235a01cce99a9f2a759f3db4492dfa57e8ebda888c04266c97a4e89127fa1d"
+    },
+    {
+      "path": "analysis/w4_process/within_method_common_support.csv",
+      "bytes": 931,
+      "sha256": "0cd8baefa69430d08ce95c1614471ede302baa8648dcab9eca6568cdd886e028"
+    },
+    {
+      "path": "analysis/w5_audit/audit_area.csv",
+      "bytes": 70368,
+      "sha256": "d3eaa23cab91ad1d42240db9f7236528185a4845c102dd18e691feb1fceaebf2"
+    },
+    {
+      "path": "analysis/w5_audit/audit_duplicates.csv",
+      "bytes": 42047,
+      "sha256": "a3f42aeff16cea5f507b319d601c268cc111d6bc6b627bc6db11cc6d7dcdae8a"
+    },
+    {
+      "path": "analysis/w5_audit/audit_erosion_le_zero.csv",
+      "bytes": 819,
+      "sha256": "eedd7dddc35043f9aed85ee862ee8eb8b1437429595a350492a89892073741e1"
+    },
+    {
+      "path": "analysis/w5_audit/audit_latitude.csv",
+      "bytes": 390,
+      "sha256": "f9d9e063791db58b7fa0d76fd1408b48381216ce2af37e99be20716c6e7368f5"
+    },
+    {
+      "path": "analysis/w5_audit/audit_precipitation.csv",
+      "bytes": 390,
+      "sha256": "f9d9e063791db58b7fa0d76fd1408b48381216ce2af37e99be20716c6e7368f5"
+    },
+    {
+      "path": "analysis/w5_audit/audit_time_interval.csv",
+      "bytes": 26892,
+      "sha256": "d3639e48c6db7d9b3a4278e887794da0c9b1ff3e8946bc456341bbe8913afdad"
+    },
+    {
+      "path": "analysis/w5_audit/audit_time_interval_gt_1e8.csv",
+      "bytes": 313,
+      "sha256": "f92ea688305884447824ce641477f0e5ba9d1b7b65f9383b42412744deef3973"
+    },
+    {
+      "path": "analysis/w5_audit/chen_unit_check.csv",
+      "bytes": 114213,
+      "sha256": "52296f94140046d641616d4910a262fd0036ed3f0f7b9f96271aa2e7d920a685"
+    },
+    {
+      "path": "analysis/w5_audit/column_missingness_glacial.csv",
+      "bytes": 1495,
+      "sha256": "21daff8892a1808d35ffd3ac18edc8ff192f7a2d560eabc37e723e923efa2f68"
+    },
+    {
+      "path": "analysis/w5_audit/column_missingness_nonglacial.csv",
+      "bytes": 1731,
+      "sha256": "6597aa9fbccde3d9ae05045efd1058a3da430a28e74fb25e20589ccd6bb8f1c1"
+    },
+    {
+      "path": "analysis/w5_audit/companion_alignment.csv",
+      "bytes": 1428,
+      "sha256": "84c13e3b354c9ceb89bdc385edccee25577d55c3df9aad6e67798930a54ca547"
+    },
+    {
+      "path": "analysis/w5_audit/exhumation_identity_by_reference.csv",
+      "bytes": 2062,
+      "sha256": "9124cc762db9850822ce5ed8c1bdfc01bd04cad74acb5527fcc31bf3c896b80b"
+    },
+    {
+      "path": "analysis/w5_audit/file_inventory.csv",
+      "bytes": 5228,
+      "sha256": "bf089ee3dfba1772f3039f3bac709f2e61484851c20d14454bd57f700e566454"
+    },
+    {
+      "path": "analysis/w5_audit/glorise_reconciliation.csv",
+      "bytes": 1560,
+      "sha256": "dd9ecacfc800d68f74e865f6d02aae05710603d6930c347c2c63f88de49f12a8"
+    },
+    {
+      "path": "analysis/w5_audit/independence_structure.csv",
+      "bytes": 687,
+      "sha256": "8ece8ee36aa7977c5ab8ce9149bcc9bcdaf96c026a7d423b5651ed413397d6c7"
+    },
+    {
+      "path": "analysis/w5_audit/non_erosion_files.csv",
+      "bytes": 1715,
+      "sha256": "4e70697afb764a89d5173dbf2b471dad3b6853e7b461794d6cef79b47bdc95a6"
+    },
+    {
+      "path": "analysis/w5_audit/results.json",
+      "bytes": 75053,
+      "sha256": "9ee2d43804646cad19f565d346031a5db5bf87f32faceeecafa248c902c37ef1"
+    },
+    {
+      "path": "analysis/w5_audit/strata_sizes.csv",
+      "bytes": 798,
+      "sha256": "ee3623cd5f5f09908c4eb955acea1a119eea8b2cd1e7ebf781284c30f24ca538"
+    },
+    {
+      "path": "analysis/w5_audit/table_auxiliary_alignment.csv",
+      "bytes": 956,
+      "sha256": "e14e002d9d2c0780ad4750d4f5e33c1712678d40110c5966f7606ea638a418c6"
+    },
+    {
+      "path": "analysis/w5_audit/table_file_inventory.csv",
+      "bytes": 4239,
+      "sha256": "904dc2f26771a4c52568ee24259f38a4b16ec779df18d0477483ce276478e392"
+    },
+    {
+      "path": "analysis/w5_audit/table_file_shapes.csv",
+      "bytes": 3017,
+      "sha256": "aead130a23cae84c170564596053ab43fabdf853b7a1e09a2dcad7e169d2124f"
+    },
+    {
+      "path": "analysis/w5_audit/table_independence_structure.csv",
+      "bytes": 280,
+      "sha256": "ecfc37fd1e1277e05b95943bf11d2b9db21a174bb578fce1089175097ab75721"
+    },
+    {
+      "path": "analysis/w5_audit/table_row_anomaly_audit.csv",
+      "bytes": 30125,
+      "sha256": "78c529d4d71e170c8efed594b46fd4fa16c8cfa069ec01ecccd5333c684d6c15"
+    },
+    {
+      "path": "analysis/w5_audit/table_shapes.csv",
+      "bytes": 5370,
+      "sha256": "4205f08349b20d7320f1aedba6756c4e25ea9de1a6a1e5ef1643a0392b8bcfe0"
+    },
+    {
+      "path": "analysis/w5_audit/table_top_contributors.csv",
+      "bytes": 1709,
+      "sha256": "f75a1711c0ecfa0794f55620819d9f3711074bd66dabc986d5a833aa70ea83a4"
+    },
+    {
+      "path": "analysis/w5_audit/top_compilations.csv",
+      "bytes": 1050,
+      "sha256": "24ba5021694959420a7df01e20af06a5bece2239f3e42bd22d960cbac7ad0da2"
+    },
+    {
+      "path": "analysis/w5_audit/top_references.csv",
+      "bytes": 1371,
+      "sha256": "f296aa923c33158fcb788b62330a5235ec5b90167eb339cfaafe603982fb4f6b"
+    },
+    {
+      "path": "analysis/w6_decoupled/ET_spread_by_stratum.csv",
+      "bytes": 57022,
+      "sha256": "b4c6dfcb653aebcc088760387ac65981d34219af8727bd520420a1051337c4b0"
+    },
+    {
+      "path": "analysis/w6_decoupled/corrected_results.json",
+      "bytes": 6197,
+      "sha256": "fea3dae9e9fb7a1c1c4f896409a85cb3caaae228259050a34106034dad087bb5"
+    },
+    {
+      "path": "analysis/w6_decoupled/countercase_pairs.csv",
+      "bytes": 3946,
+      "sha256": "2cd9381f18ccde90c0deb3a0267955f632d6246ac6211ade1fd873378086dc8b"
+    },
+    {
+      "path": "analysis/w6_decoupled/crn_attenuation_depth_test.csv",
+      "bytes": 1121,
+      "sha256": "c8cde3d06d46ba9f6dee8902043823ad3ec72ad86465574a1c8da0b9db3db6d9"
+    },
+    {
+      "path": "analysis/w6_decoupled/fig_product_lock_partition.png",
+      "bytes": 61373,
+      "sha256": "845a10315160fb5b4ce19b78fddedb766e6d6d78d16e9ae07b0aa3472cd2c16a"
+    },
+    {
+      "path": "analysis/w6_decoupled/independent_definition_sensitivity.csv",
+      "bytes": 3842,
+      "sha256": "23124d746e4ae73ebc8f36bbf1792ed812ae8823c8dacbffde0a638748b80076"
+    },
+    {
+      "path": "analysis/w6_decoupled/no_timescale_models.csv",
+      "bytes": 2033,
+      "sha256": "858961388305e6837f4f34141d46c748985a5b8f75830724839232dfcf2a22be"
+    },
+    {
+      "path": "analysis/w6_decoupled/predictor_dominance.csv",
+      "bytes": 7631,
+      "sha256": "da3b66078f889f6ce407c1a830603d6ae74ab4b8a96d9fd9ca321dacb1c63c47"
+    },
+    {
+      "path": "analysis/w6_decoupled/reference_lock_diagnostics.csv",
+      "bytes": 35956,
+      "sha256": "1b6359bf931f19e3941a3d0db81309b51612469d4eca4f96deb1f187eb5803d1"
+    },
+    {
+      "path": "analysis/w6_decoupled/results.json",
+      "bytes": 177018,
+      "sha256": "a6c2f20fc40aead522978d6ac71a3adb61113a64cd1627009f66bff95e515246"
+    },
+    {
+      "path": "analysis/w6_decoupled/row_classification_audit.csv",
+      "bytes": 1236173,
+      "sha256": "244560a29db0a1ff879f676fbba810bcc929cfb684d0b274cb7be9e63724aaee"
+    },
+    {
+      "path": "analysis/w6_decoupled/slopes_by_class.csv",
+      "bytes": 7843,
+      "sha256": "04c4d3c7bfe95e4bf238cb3d968924623bd47a086b2cc38545dfea095933b60a"
+    },
+    {
+      "path": "analysis/w6_decoupled/stratum_lock_diagnostics.csv",
+      "bytes": 1926,
+      "sha256": "48676b3f48203246471c6b63568879283e961c6c8476ff4952eb90d68956cea3"
+    },
+    {
+      "path": "analysis/w6_decoupled/stratum_slope_vs_spread.csv",
+      "bytes": 4147,
+      "sha256": "2d639807c279ad0026af6691e8648538660f1ccec4f9616b52453319ddc1de96"
+    },
+    {
+      "path": "analysis/w6_decoupled/table_class_slopes.csv",
+      "bytes": 504,
+      "sha256": "ab40dcb543489e898f298778de8967a5df71103433cb6cc4aeb00a9edd1fba11"
+    },
+    {
+      "path": "analysis/w6_decoupled/table_predictor_dominance_free_strata.csv",
+      "bytes": 315,
+      "sha256": "c46911d172ef0c02eb5d733e0b3747c076d1cd6c74f3114ddff0cdbadd84504f"
+    },
+    {
+      "path": "analysis/w6_decoupled/table_product_lock_partition.csv",
+      "bytes": 923,
+      "sha256": "c57f4bee7e1b9af11d6341697723325f6a687e30a823c139fc00dc48067be7c9"
+    },
+    {
+      "path": "analysis/w6_decoupled/threshold_sensitivity.csv",
+      "bytes": 7359,
+      "sha256": "8f8ad6beb05d26b8c0f639187c3f93805b3414b9d962a9745cb038975b2d16bd"
+    },
+    {
+      "path": "analysis/w6_decoupled/threshold_sensitivity_by_method.csv",
+      "bytes": 4710,
+      "sha256": "f67b0c590b97572e9f90b2e9a601631c54f443dd5e7cbac65d5df129f42d1078"
+    },
+    {
+      "path": "analysis/w6_decoupled/w6_figures.png",
+      "bytes": 239655,
+      "sha256": "140cf55031ed31c6b4fbecdcdb2b69208a5ff5612e563dc7f69b422f00479f25"
+    },
+    {
+      "path": "analysis/w6_decoupled/within_reference_slopes.csv",
+      "bytes": 1893,
+      "sha256": "a2aa43626c3e5a9fa30be4377d53ef62bc08a8e94fc6676bae1b8e5af2dd1832"
+    }
+  ],
+  "native_evidence_registry": {
+    "sources": [],
+    "resolved_ids": {}
+  },
+  "resolved_support_files": [
+    {
+      "path": "analysis/common/parse_audit.json",
+      "bytes": 1589,
+      "sha256": "edaff4c9cc6ea5bd59e8514cd18d224b85906fe0c946c2301ed68fb855242cd1"
+    },
+    {
+      "path": "analysis/w0_main/main_analysis.py",
+      "bytes": 12749,
+      "sha256": "d2fd18e0bfa819cbb6251d18b2ec8f9d03a95e46337c98fec6a24c8b8e7423af"
+    },
+    {
+      "path": "analysis/w0_main/table_common_support_process.csv",
+      "bytes": 411,
+      "sha256": "9a22101dc0197e122098adef338951da694a931c1813e0ac4c34059a11d2d91c"
+    },
+    {
+      "path": "analysis/w0_main/table_compiler_effect.csv",
+      "bytes": 290,
+      "sha256": "cf7434d7402e989c48aaebcdeb59265a1fb6573e02dfb087aee5c52d5df8735f"
+    },
+    {
+      "path": "analysis/w0_main/table_coverage_by_stratum.csv",
+      "bytes": 724,
+      "sha256": "14ed4318a4af1d268364f63920e1453f31bda949420401bdc04cac7a37526511"
+    },
+    {
+      "path": "analysis/w0_main/table_model_comparison.csv",
+      "bytes": 1484,
+      "sha256": "cfb83039d20c09e1f7ba2d94888b79ea4552c7972675ba0025b62a01432276e7"
+    },
+    {
+      "path": "analysis/w0_main/table_within_reference_slopes.csv",
+      "bytes": 6624,
+      "sha256": "a3ae4b84d693b335fa20c03c6b62a18e79fdd9256f4d8cf14c5976a02761ba67"
+    },
+    {
+      "path": "analysis/w1_coupling/coupling_audit.py",
+      "bytes": 8503,
+      "sha256": "2e6b570bbfa69118086ecae7206d85158fead969d20222f2804f84363bd100bc"
+    },
+    {
+      "path": "analysis/w1_coupling/results.json",
+      "bytes": 5594,
+      "sha256": "409dab598952d1bb79376761452eb95a894c5c0df5817fb3cf30e28287b8efab"
+    },
+    {
+      "path": "analysis/w1_coupling/table_A_unit_identity.csv",
+      "bytes": 400,
+      "sha256": "85442a78adf6fbb447a212e0b97fc4dbfce70765df328f2a46ba1fdb6a666a0a"
+    },
+    {
+      "path": "analysis/w1_coupling/table_B_thickness_collapse.csv",
+      "bytes": 842,
+      "sha256": "558cb3bda2e521dcab62a9469782bf7cb16ad791dbbb89954eae59ae3a3a779e"
+    },
+    {
+      "path": "analysis/w1_coupling/table_C_density_sensitivity.csv",
+      "bytes": 439,
+      "sha256": "29d82054fda1ceb7aca72aa2aafaf85e00ee46fa4f47da70173bf5500a2367d6"
+    },
+    {
+      "path": "analysis/w2_variance/incremental_r2.csv",
+      "bytes": 1687,
+      "sha256": "03781a7ec0cd06bf119bc32ebb3fc1022b391e79bad2872a5a7521d43108927d"
+    },
+    {
+      "path": "analysis/w2_variance/model_comparison_primary.csv",
+      "bytes": 889,
+      "sha256": "07f8dfdace91dc5b28d9dd204d8bd89143993dedacc727a5fe0943b83ca60d3f"
+    },
+    {
+      "path": "analysis/w2_variance/results.json",
+      "bytes": 49827,
+      "sha256": "e0b578d04b044acf612dc0e42848c41bf6aa30b6474f6108a3b4e8ce36ebd4aa"
+    },
+    {
+      "path": "analysis/w2_variance/w2_variance.py",
+      "bytes": 38001,
+      "sha256": "bd9a1b68249a2eca76df0cdf6f16c52aac2f840d7363a9a2b61f8b6e5c7af802"
+    },
+    {
+      "path": "analysis/w3_scaling/results.json",
+      "bytes": 95026,
+      "sha256": "986707a5da11196bd646985e22caa38f08a6f403ef18adc44dde644a4fa4a8f0"
+    },
+    {
+      "path": "analysis/w3_scaling/tables/leave_one_compilation_out_summary.csv",
+      "bytes": 1890,
+      "sha256": "a48caff32e72ac7b7d13961103d4ae752bfd5eaea18cd273307bd34d3f5f50e8"
+    },
+    {
+      "path": "analysis/w4_process/results.json",
+      "bytes": 138776,
+      "sha256": "6b52e2420f9852067bbe418beaff2f0cb3f1ae7bcac88527c435b0ce26d73b0b"
+    },
+    {
+      "path": "analysis/w4_process/reversal_strata.csv",
+      "bytes": 4309,
+      "sha256": "dcfb9b4198115f430e4ede51db2ff9575a752093e9c28d1e50ad88c799d0c3fa"
+    },
+    {
+      "path": "analysis/w4_process/scale_matched_knn5.csv",
+      "bytes": 3286,
+      "sha256": "8e8df786372cfba0e0244ee5aa437defdae89685007c06d1845171e8d0f4ccd5"
+    },
+    {
+      "path": "analysis/w4_process/w4_process_analysis.py",
+      "bytes": 61492,
+      "sha256": "b96182a18f3ad64c0ab4e691b37e35743802f0d9c50b522c28e86d6ebc65854e"
+    },
+    {
+      "path": "analysis/w5_audit/independence_structure.csv",
+      "bytes": 687,
+      "sha256": "8ece8ee36aa7977c5ab8ce9149bcc9bcdaf96c026a7d423b5651ed413397d6c7"
+    },
+    {
+      "path": "analysis/w5_audit/table_independence_structure.csv",
+      "bytes": 280,
+      "sha256": "ecfc37fd1e1277e05b95943bf11d2b9db21a174bb578fce1089175097ab75721"
+    },
+    {
+      "path": "analysis/w6_decoupled/corrected_results.json",
+      "bytes": 6197,
+      "sha256": "fea3dae9e9fb7a1c1c4f896409a85cb3caaae228259050a34106034dad087bb5"
+    },
+    {
+      "path": "analysis/w6_decoupled/decoupled_corrected.py",
+      "bytes": 9709,
+      "sha256": "a972b0c885e7f6b97a383a01d36f71130d21105d3de307a835e8e54b7f8cb9d9"
+    },
+    {
+      "path": "analysis/w6_decoupled/table_class_slopes.csv",
+      "bytes": 504,
+      "sha256": "ab40dcb543489e898f298778de8967a5df71103433cb6cc4aeb00a9edd1fba11"
+    },
+    {
+      "path": "analysis/w6_decoupled/within_reference_slopes.csv",
+      "bytes": 1893,
+      "sha256": "a2aa43626c3e5a9fa30be4377d53ef62bc08a8e94fc6676bae1b8e5af2dd1832"
+    }
+  ]
+}

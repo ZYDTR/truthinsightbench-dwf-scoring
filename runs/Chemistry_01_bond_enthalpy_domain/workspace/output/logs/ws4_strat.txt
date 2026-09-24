@@ -1,0 +1,29 @@
+is in_db_row == train_flag? True
+quantum == db_bde on in_db rows? max|diff| = 6.998506930998104
+learned == db_bde on in_db rows? max|diff| = 4.7676349069559905
+
+=== STRATIFIED: restricted to NOT in_db_row (n=212) ===
+n=212  crowded n=93
+  quantum    crowded MAE= 2.479 (n=93)  notcrowded MAE= 2.432 (n=119) delta=+0.047 p=0.522 cliffs=0.051
+  learned    crowded MAE= 4.189 (n=93)  notcrowded MAE= 2.700 (n=119) delta=+1.489 p=0.000168 cliffs=0.302
+  reference  crowded MAE= 6.997 (n=93)  notcrowded MAE= 5.589 (n=119) delta=+1.408 p=0.0803 cliffs=0.140
+
+=== STRATIFIED: restricted to in_db_row (n=331) ===
+  quantum    crowded MAE= 3.270 (n=2)  notcrowded MAE= 1.862 (n=329)
+  learned    crowded MAE= 3.205 (n=2)  notcrowded MAE= 1.798 (n=329)
+  reference  crowded MAE= 5.100 (n=2)  notcrowded MAE= 5.024 (n=329)
+
+=== WITHIN out-of-DB: ring-count>=3 test ===
+  quantum    rings>=3 MAE= 2.490 (n=90)  rings<3 MAE= 2.425 (n=122) delta=+0.065 p=0.518
+  learned    rings>=3 MAE= 4.226 (n=90)  rings<3 MAE= 2.710 (n=122) delta=+1.516 p=0.000127
+  reference  rings>=3 MAE= 7.008 (n=90)  rings<3 MAE= 5.616 (n=122) delta=+1.392 p=0.0915
+
+=== WITHIN out-of-DB: n_arom_rings>=2 test ===
+  quantum    aro>=2 MAE= 2.654 (n=110)  aro<2 MAE= 2.234 (n=102) delta=+0.420 p=0.104
+  learned    aro>=2 MAE= 3.938 (n=110)  aro<2 MAE= 2.723 (n=102) delta=+1.215 p=0.00112
+  reference  aro>=2 MAE= 6.560 (n=110)  aro<2 MAE= 5.825 (n=102) delta=+0.735 p=0.848
+
+=== WITHIN in-DB: ring-count>=3 test ===
+  quantum    rings>=3 MAE= 5.750 (n=1)  rings<3 MAE= 1.859 (n=330) delta=+3.891 p=0.115
+  learned    rings>=3 MAE= 5.740 (n=1)  rings<3 MAE= 1.795 (n=330) delta=+3.945 p=0.115
+  reference  rings>=3 MAE= 8.300 (n=1)  rings<3 MAE= 5.014 (n=330) delta=+3.286 p=0.179

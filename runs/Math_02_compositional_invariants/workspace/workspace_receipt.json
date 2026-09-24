@@ -1,0 +1,11 @@
+{
+  "schema": "truthinsightbench-participant-workspace",
+  "release": "V1.0",
+  "task_id": "Math_02_compositional_invariants",
+  "t0": "2020-01-01",
+  "scientific_file_count": 3,
+  "scientific_bytes": 2566872,
+  "data_manifest_sha256": "95118f5be17de493e3f084986310d59ce651c2d7e397c87014e836acf242d720",
+  "research_objective_sha256": "9a03391bd391997570f56ace1f4c183edae97caf459759b5f1646cf2b7fbb503",
+  "launch_prompt_sha256": "0f4cafd2bc7a8b51b835101fa1d9032bc688caa09ac9ce12e60ff1bd4c68da3a"
+}

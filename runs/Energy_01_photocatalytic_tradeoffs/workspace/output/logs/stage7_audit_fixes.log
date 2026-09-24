@@ -1,0 +1,38 @@
+==============================================================================
+STAGE 7  normalised shape distances under both conventions
+==============================================================================
+  formulation_1 vs formulation_2: rms_excl_t0=0.02159 rms_incl_t0=0.01931
+  formulation_1 vs formulation_3: rms_excl_t0=0.06757 rms_incl_t0=0.06044
+  formulation_1 vs formulation_4: rms_excl_t0=0.06288 rms_incl_t0=0.05624
+  formulation_2 vs formulation_3: rms_excl_t0=0.08427 rms_incl_t0=0.07537
+  formulation_2 vs formulation_4: rms_excl_t0=0.08032 rms_incl_t0=0.07184
+  formulation_3 vs formulation_4: rms_excl_t0=0.00834 rms_incl_t0=0.00746
+
+  quoted (exclude t0): 3 vs 4 = 0.00834, 1 vs 3 = 0.06757
+  closest pair overall: formulation_3_vs_formulation_4
+
+------------------------------------------------------------------------------
+Transmittance-conversion bound, swept over k and several absorption pairs
+------------------------------------------------------------------------------
+  450->650 nm: A=0.861->0.201  raw ratio=0.2334  min over k=0.2334 at k=1.00e-06  bound holds=True
+  400->650 nm: A=0.887->0.201  raw ratio=0.2266  min over k=0.2266 at k=1.00e-06  bound holds=True
+  450->600 nm: A=0.861->0.364  raw ratio=0.4228  min over k=0.4228 at k=1.00e-06  bound holds=True
+  500->650 nm: A=0.850->0.201  raw ratio=0.2365  min over k=0.2365 at k=1.00e-06  bound holds=True
+  550->650 nm: A=0.585->0.201  raw ratio=0.3436  min over k=0.3436 at k=1.00e-06  bound holds=True
+
+  grid size = 1200 k values x 5 pairs = 6000 evaluations; violations of the stated inequality = 0
+  => a monotone transmittance conversion can only raise the predicted 450->650 action ratio above the absorption ratio 0.2334; the observed 0.0508 is below that floor, so no k rescues the absorption-limited null.
+
+------------------------------------------------------------------------------
+Loading leave-one-out: which subsets are monotone decreasing
+------------------------------------------------------------------------------
+  drop  0.20% (low point): remaining [1217.0, 470.0, 268.0] -> monotone_decreasing=True
+  drop  1.00% (low point): remaining [1081.0, 470.0, 268.0] -> monotone_decreasing=True
+  drop  3.00% (high point): remaining [1081.0, 1217.0, 268.0] -> monotone_decreasing=False
+  drop  8.00% (high point): remaining [1081.0, 1217.0, 470.0] -> monotone_decreasing=False
+
+  the strictly decreasing triple appears only when a LOW-loading point (0.2 or 1.0 percent) is removed, i.e. when both high-loading points are retained plus exactly one low point; removing either high-loading point leaves the non-monotone rise-then-fall pattern
+
+wrote results/audit_fixes.json
+
+stage 7 complete

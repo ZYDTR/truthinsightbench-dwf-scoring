@@ -1,0 +1,331 @@
+{
+  "quantile_mapping_variants": {
+    "raw": {
+      "numeric_feature_6": {
+        "eta2": {
+          "main": 0.521105198572285,
+          "two_way": 0.3249633720788695,
+          "three_way": 0.1539314293488453
+        },
+        "SS": {
+          "A": 55.42734568946106,
+          "B": 101.2368749324812,
+          "C": 194.8199984666083,
+          "AB": 62.35137549282075,
+          "AC": 82.97879822708633,
+          "BC": 73.85684913164026,
+          "ABC": 103.82638359029572,
+          "total": 674.4976255303937
+        }
+      },
+      "numeric_feature_7": {
+        "eta2": {
+          "main": 0.8869125426667429,
+          "two_way": 0.07643736752583649,
+          "three_way": 0.03665008980742064
+        },
+        "SS": {
+          "A": 1.699803356121561,
+          "B": 0.36995762266380067,
+          "C": 143.53459286416222,
+          "AB": 1.2018042635132866,
+          "AC": 8.89030878479285,
+          "BC": 2.4566028313804082,
+          "ABC": 6.016842008627041,
+          "total": 164.16991173126115
+        }
+      },
+      "main_gap_y6_minus_y7": -0.3658073440944579,
+      "threeway_gap_y6_minus_y7": 0.11728133954142465
+    },
+    "rank_uniform_both": {
+      "numeric_feature_6": {
+        "eta2": {
+          "main": 0.7064096811771,
+          "two_way": 0.18124463837299135,
+          "three_way": 0.11234568044990863
+        },
+        "SS": {
+          "A": 7.632540748761104,
+          "B": 27.967654552726337,
+          "C": 48.46263903318344,
+          "AB": 6.227190027704246,
+          "AC": 8.584626770750734,
+          "BC": 6.75631627725295,
+          "ABC": 13.3691490582911,
+          "total": 119.00011646866992
+        }
+      },
+      "numeric_feature_7": {
+        "eta2": {
+          "main": 0.8583805959424956,
+          "two_way": 0.08576729567704686,
+          "three_way": 0.055852108380457545
+        },
+        "SS": {
+          "A": 2.4967435386524808,
+          "B": 0.2820511679918618,
+          "C": 99.36859618495893,
+          "AB": 1.397017647345298,
+          "AC": 7.1503932009001705,
+          "BC": 1.6589073265259597,
+          "ABC": 6.646407402295224,
+          "total": 119.00011646866993
+        }
+      },
+      "main_gap_y6_minus_y7": -0.1519709147653956,
+      "threeway_gap_y6_minus_y7": 0.05649357206945108
+    },
+    "normal_scores_both": {
+      "numeric_feature_6": {
+        "eta2": {
+          "main": 0.7017950321404742,
+          "two_way": 0.18731190083754268,
+          "three_way": 0.11089306702198316
+        },
+        "SS": {
+          "A": 106.57361939784552,
+          "B": 330.0666975445193,
+          "C": 563.8444627142142,
+          "AB": 83.37640047382945,
+          "AC": 114.07451054366723,
+          "BC": 69.58247801195503,
+          "ABC": 158.09006995467513,
+          "total": 1425.6082386407056
+        }
+      },
+      "numeric_feature_7": {
+        "eta2": {
+          "main": 0.8417093832381741,
+          "two_way": 0.10414605835878489,
+          "three_way": 0.054144558403040964
+        },
+        "SS": {
+          "A": 24.32839082532745,
+          "B": 5.722877164985016,
+          "C": 1169.8965632952156,
+          "AB": 16.519670345139005,
+          "AC": 98.48401475054989,
+          "BC": 33.46779372255057,
+          "ABC": 77.18892853693805,
+          "total": 1425.6082386407056
+        }
+      },
+      "main_gap_y6_minus_y7": -0.1399143510976999,
+      "threeway_gap_y6_minus_y7": 0.0567485086189422
+    },
+    "swapped_marginals": {
+      "numeric_feature_6": {
+        "eta2": {
+          "main": 0.6822068528684214,
+          "two_way": 0.19616899959186856,
+          "three_way": 0.12162414753971
+        },
+        "SS": {
+          "A": 12.50523687582793,
+          "B": 36.273511871413824,
+          "C": 63.21909007062847,
+          "AB": 10.592545968191235,
+          "AC": 13.3193977582645,
+          "BC": 8.293103620951133,
+          "ABC": 19.967025565984073,
+          "total": 164.16991173126115
+        }
+      },
+      "numeric_feature_7": {
+        "eta2": {
+          "main": 0.7357668171239797,
+          "two_way": 0.19008792630608065,
+          "three_way": 0.07414525656993942
+        },
+        "SS": {
+          "A": 14.086368119552287,
+          "B": 4.924963928007631,
+          "C": 477.2616390466199,
+          "AB": 10.097953189957494,
+          "AC": 76.63397258505816,
+          "BC": 41.481929160432216,
+          "ABC": 50.01079950076597,
+          "total": 674.4976255303937
+        }
+      },
+      "main_gap_y6_minus_y7": -0.05355996425555831,
+      "threeway_gap_y6_minus_y7": 0.04747889096977058
+    },
+    "y6_as_gaussian_y7_unchanged": {
+      "numeric_feature_6": {
+        "eta2": {
+          "main": 0.7017950321404742,
+          "two_way": 0.18731190083754268,
+          "three_way": 0.11089306702198316
+        },
+        "SS": {
+          "A": 106.57361939784552,
+          "B": 330.0666975445193,
+          "C": 563.8444627142142,
+          "AB": 83.37640047382945,
+          "AC": 114.07451054366723,
+          "BC": 69.58247801195503,
+          "ABC": 158.09006995467513,
+          "total": 1425.6082386407056
+        }
+      },
+      "numeric_feature_7": {
+        "eta2": {
+          "main": 0.8869125426667429,
+          "two_way": 0.07643736752583649,
+          "three_way": 0.03665008980742064
+        },
+        "SS": {
+          "A": 1.699803356121561,
+          "B": 0.36995762266380067,
+          "C": 143.53459286416222,
+          "AB": 1.2018042635132866,
+          "AC": 8.89030878479285,
+          "BC": 2.4566028313804082,
+          "ABC": 6.016842008627041,
+          "total": 164.16991173126115
+        }
+      },
+      "main_gap_y6_minus_y7": -0.18511751052626868,
+      "threeway_gap_y6_minus_y7": 0.07424297721456252
+    }
+  },
+  "tukey_1df_forensics": {
+    "numeric_feature_6": {
+      "F_tukey_1df": 763.1790092526345,
+      "p": 2.1539445422699332e-134,
+      "df_error": 1397,
+      "SS_nonadditivity_1df": 114.11880702835491,
+      "SS_error_pooled": 208.8945994134881,
+      "error_stratum_is": "pooled 2-way + 3-way interaction SS (no pure error)",
+      "check_error_equals_SS2plusSS3_minus_nad": -5.684341886080802e-14,
+      "SS_two_way_total": 219.18702285154734,
+      "SS_three_way_total": 103.82638359029572,
+      "frac_of_3way_SS_captured_by_the_1df_nonadditivity": 1.0991310983022737,
+      "interpretation": "This F tests ONE degree of freedom (Tukey's non-additivity contrast on the additive-model fit), NOT the full (a-1)(b-1)(c-1)=1080-df 3-way interaction.  It is the fraction of the 3-way stratum that is smooth/multiplicative."
+    },
+    "numeric_feature_7": {
+      "F_tukey_1df": 9.854979105771221,
+      "p": 0.0017291844637100295,
+      "df_error": 1397,
+      "SS_nonadditivity_1df": 0.13005120484601193,
+      "SS_error_pooled": 18.435506683467576,
+      "error_stratum_is": "pooled 2-way + 3-way interaction SS (no pure error)",
+      "check_error_equals_SS2plusSS3_minus_nad": 3.552713678800501e-15,
+      "SS_two_way_total": 12.548715879686545,
+      "SS_three_way_total": 6.016842008627041,
+      "frac_of_3way_SS_captured_by_the_1df_nonadditivity": 0.021614528794264915,
+      "interpretation": "This F tests ONE degree of freedom (Tukey's non-additivity contrast on the additive-model fit), NOT the full (a-1)(b-1)(c-1)=1080-df 3-way interaction.  It is the fraction of the 3-way stratum that is smooth/multiplicative."
+    }
+  },
+  "claim_reconstruction": {
+    "claimed_eta2_y6": {
+      "main": 0.521,
+      "two_way": 0.325,
+      "three_way": 0.154
+    },
+    "claimed_eta2_y7": {
+      "main": 0.887,
+      "two_way": 0.076,
+      "three_way": 0.037
+    },
+    "reproduced_eta2_y6": {
+      "main": 0.521105198572285,
+      "two_way": 0.3249633720788695,
+      "three_way": 0.1539314293488453,
+      "SS": {
+        "A": 55.42734568946106,
+        "B": 101.2368749324812,
+        "C": 194.8199984666083,
+        "AB": 62.35137549282075,
+        "AC": 82.97879822708633,
+        "BC": 73.85684913164026,
+        "ABC": 103.82638359029572,
+        "total": 674.4976255303937
+      }
+    },
+    "reproduced_eta2_y7": {
+      "main": 0.8869125426667429,
+      "two_way": 0.07643736752583649,
+      "three_way": 0.03665008980742064,
+      "SS": {
+        "A": 1.699803356121561,
+        "B": 0.36995762266380067,
+        "C": 143.53459286416222,
+        "AB": 1.2018042635132866,
+        "AC": 8.89030878479285,
+        "BC": 2.4566028313804082,
+        "ABC": 6.016842008627041,
+        "total": 164.16991173126115
+      }
+    },
+    "claimed_F_y6": 764,
+    "reproduced_F_y6": 763.1790092526345,
+    "claimed_F_y7": 9.9,
+    "claimed_p_y7": 0.0017,
+    "reproduced_F_y7": 9.854979105771221,
+    "reproduced_p_y7": 0.0017291844637100295,
+    "F_match": true
+  },
+  "three_way_stratum_shape": {
+    "numeric_feature_6": {
+      "SS_3way": 103.82638359029572,
+      "df_3way": 1080,
+      "MS_3way": 0.09613554036138493,
+      "MS_3way_as_frac_of_MS_total": 0.20367408568472217,
+      "resid3_sd": 0.26954901504504425,
+      "resid3_skew": 0.3484236388775247,
+      "resid3_excess_kurt": 4.604304277040816,
+      "resid3_shapiro_p": 7.381176427524678e-26,
+      "response_sd": 0.6870274636799613,
+      "resid3_sd_over_response_sd": 0.39234096058001044
+    },
+    "numeric_feature_7": {
+      "SS_3way": 6.016842008627041,
+      "df_3way": 1080,
+      "MS_3way": 0.005571150007988,
+      "MS_3way_as_frac_of_MS_total": 0.048493498458151936,
+      "resid3_sd": 0.06488856793121943,
+      "resid3_skew": -0.6184115050748986,
+      "resid3_excess_kurt": 8.60758197611051,
+      "resid3_shapiro_p": 4.946875702059501e-28,
+      "response_sd": 0.33894612089537446,
+      "resid3_sd_over_response_sd": 0.19144213174591593
+    }
+  },
+  "half_split_by_factorA": {
+    "numeric_feature_6": {
+      "A_levels_0_4": {
+        "main": 0.5015775198076192,
+        "two_way": 0.346110962797264,
+        "three_way": 0.15231151739511659,
+        "n_cells": 715,
+        "is_complete_factorial": true
+      },
+      "A_levels_5_9": {
+        "main": 0.5647899357957177,
+        "two_way": 0.303943685128221,
+        "three_way": 0.13126637907606123,
+        "n_cells": 715,
+        "is_complete_factorial": true
+      }
+    },
+    "numeric_feature_7": {
+      "A_levels_0_4": {
+        "main": 0.8413355466974285,
+        "two_way": 0.1116223973413831,
+        "three_way": 0.047042055961188656,
+        "n_cells": 715,
+        "is_complete_factorial": true
+      },
+      "A_levels_5_9": {
+        "main": 0.9383277051256044,
+        "two_way": 0.04407138686076477,
+        "three_way": 0.01760090801363068,
+        "n_cells": 715,
+        "is_complete_factorial": true
+      }
+    }
+  }
+}

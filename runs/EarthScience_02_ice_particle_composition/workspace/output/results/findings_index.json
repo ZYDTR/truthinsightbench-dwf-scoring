@@ -1,0 +1,218 @@
+{
+  "schema": "ice-particle-findings-index-v1",
+  "task_id": "EarthScience_02_ice_particle_composition",
+  "authoritative_report": "Result.md",
+  "analysis_unit": "one sampled depth interval (30 intervals) clustered in 5 collection groups",
+  "independent_units": 5,
+  "findings": [
+    {
+      "number": 1,
+      "label": "abundance-depth tendency",
+      "type": "unresolved / broad tendency",
+      "core_result": {
+        "pooled_spearman_rho_depth_vs_log10total": -0.338,
+        "pooled_p": 0.0674,
+        "within_group_mean_rho": -0.287,
+        "fe_slope_log10_per_m": -0.8258,
+        "fe_cluster_se": 0.5701,
+        "fe_cluster_p": 0.221,
+        "df_cluster": 4,
+        "exact_signflip_p_two_sided": 0.3125,
+        "within_group_permutation_p_two_sided": 0.0332
+      },
+      "analysis_sources": [
+        "analysis/03_candidates.py",
+        "analysis/06_robustness.py",
+        "results/verify_F1.py",
+        "results/verify_F1_part2.py",
+        "results/verify_F1_part3.py"
+      ],
+      "result_evidence": [
+        "results/03_candidates.json",
+        "results/06_robustness.json",
+        "results/verify_F1.json",
+        "results/10_figures_adversarial.json",
+        "figures/fig1_depth_abundance.png",
+        "results/fig1_depth_abundance.csv"
+      ],
+      "key_limitation": "sign depends on group_02; dropping it removes the effect (slope -0.206, p=0.533)"
+    },
+    {
+      "number": 2,
+      "label": "chlorophyll a vs abundance",
+      "type": "supported within-group relationship",
+      "core_result": {
+        "within_group_mean_spearman_rho": -0.496,
+        "fe_slope_log10total_per_log10chl": -1.143,
+        "fe_cluster_se": 0.3288,
+        "fe_cluster_p": 0.0255,
+        "exclude_deepest_interval_slope": -1.782,
+        "exclude_deepest_interval_p": 0.0026,
+        "deepest_indicator_model_chl_p": 0.0019,
+        "factor_change_per_10x_chl": 0.072,
+        "exact_signflip_p_two_sided": 0.125
+      },
+      "analysis_sources": [
+        "analysis/03_candidates.py",
+        "analysis/06_robustness.py",
+        "verify/verify_F2.py",
+        "verify/verify_F2_adversarial.py",
+        "verify/verify_F2_cluster_inference.py"
+      ],
+      "result_evidence": [
+        "results/03_candidates.json",
+        "results/06_robustness.json",
+        "verify/verify_F2.json",
+        "verify/verify_F2_adversarial.json",
+        "results/10_figures_adversarial.json",
+        "figures/fig2_chlorophyll_abundance.png",
+        "results/fig2_chlorophyll_abundance.csv"
+      ],
+      "key_limitation": "group_02 supplies 70% of the within-group covariance; sign-flip null over the 5 groups is not significant"
+    },
+    {
+      "number": 3,
+      "label": "PE / varnish share vs abundance (low-abundance scoped)",
+      "type": "supported within low-abundance range, not detectable at high abundance",
+      "core_result": {
+        "pooled_spearman_rho_log10total_vs_PE": 0.647,
+        "pooled_p": 0.000112,
+        "within_group_mean_rho": 0.537,
+        "fe_slope_pp_per_decade": 29.85,
+        "fe_cluster_se": 6.135,
+        "fe_cluster_p": 0.0082,
+        "varnish_slope_pp_per_decade": -17.36,
+        "varnish_p": 0.0323,
+        "PE_over_PE_plus_varnish_slope": 28.67,
+        "PE_over_PE_plus_varnish_p": 0.0036,
+        "counting_null_p": 0.011,
+        "threshold_gt1000_per_L_slope": 11.47,
+        "threshold_gt1000_per_L_p": 0.443,
+        "threshold_gt3000_per_L_slope": 1.95,
+        "threshold_gt3000_per_L_p": 0.849,
+        "exact_signflip_p_two_sided": 0.1515
+      },
+      "analysis_sources": [
+        "analysis/03_candidates.py",
+        "analysis/05_quantisation_null.py",
+        "analysis/06_robustness.py",
+        "verify_F3/verify_F3_adversarial.py",
+        "verify_F3/verify_F3_addendum.py",
+        "verify_F3/verify_F3_addendum2.py"
+      ],
+      "result_evidence": [
+        "results/03_candidates.json",
+        "results/05_quantisation.json",
+        "results/06_robustness.json",
+        "verify_F3/verify_F3.json"
+      ],
+      "key_limitation": "effect is carried by the low-abundance half; not detectable above 1000 per L",
+      "verifier_verdict": "holds_with_qualification: real in the full range, but driven by the sub-1000/L transition; fragile at G=5; varnish half is the arithmetical mirror of the PE half"
+    },
+    {
+      "number": 4,
+      "label": "count resolution / detection floor",
+      "type": "metrology (methodological boundary)",
+      "core_result": {
+        "n_samples": 30,
+        "n_both_families_share_smallest_N": 15,
+        "N_min": 17,
+        "N_max_agreeing": 2436,
+        "quantum_pp_max_all_samples": 5.882,
+        "quantum_per_L_range_agreeing": [
+          0.482,
+          1.941
+        ],
+        "derived_count_max_abs_residual_per_L": 3.958,
+        "derived_count_median_abs_residual_per_L": 0.0,
+        "nonzero_bins_vs_log10total_spearman_rho": 0.692,
+        "nonzero_bins_vs_log10total_p": 2.29e-05
+      },
+      "analysis_sources": [
+        "analysis/01_data_audit.py",
+        "analysis/04_resolution.py",
+        "analysis/05_quantisation_null.py",
+        "analysis/07_resolution_and_spectrum.py"
+      ],
+      "result_evidence": [
+        "results/01_data_audit.json",
+        "results/04_resolution.json",
+        "results/05_quantisation.json",
+        "results/07_resolution_spectrum.json",
+        "results/verify_F4_maincheck.json",
+        "figures/fig4_quantisation.png",
+        "results/fig4_quantisation.csv"
+      ],
+      "key_limitation": "N is a lower bound on the true tally; reconstruction identified in only 15 of 30 samples",
+      "verifier_verdict": "holds: agreement of the two families' smallest consistent N occurs 400/400 under a shared tally and 2/400 under independent tallies, so the 15/30 observation is strong evidence; N is bounded not identified"
+    },
+    {
+      "number": 5,
+      "label": "size-spectrum steepening is resolution-dominated",
+      "type": "applicability boundary / unresolved residual",
+      "core_result": {
+        "slope_bins_1_9_mean": -2.312,
+        "slope_bins_1_9_vs_log10total_rho": -0.88,
+        "slope_bins_1_9_vs_log10total_p": 1.51e-10,
+        "slope_bins_1_3_vs_log10total_rho": 0.067,
+        "slope_bins_1_3_vs_log10total_p": 0.723,
+        "slope_bins_1_4_vs_log10total_rho": -0.58,
+        "counting_null_within_group_mean_rho": -0.43,
+        "observed_within_group_mean_rho": -0.737,
+        "counting_null_p": 0.0197,
+        "slope_vs_n_nonzero_bins_rho": -0.501,
+        "slope_vs_n_nonzero_bins_p": 0.0048,
+        "universal_bin_mean_percent": [
+          67.364,
+          22.6,
+          7.146
+        ],
+        "monotone_decreasing_all_30_samples": true,
+        "power_analysis_slope_change_needed_for_80pct_power": 2.69,
+        "second_null_run_within_group_p": 0.3
+      },
+      "analysis_sources": [
+        "analysis/03_candidates.py",
+        "analysis/06_robustness.py",
+        "analysis/07_resolution_and_spectrum.py"
+      ],
+      "result_evidence": [
+        "results/03_candidates.json",
+        "results/06_robustness.json",
+        "results/07_resolution_spectrum.json",
+        "verify_F5/verify_F5.json",
+        "figures/fig3_size_spectrum.png",
+        "results/fig3_size_spectrum.csv"
+      ],
+      "key_limitation": "the 3-bin restricted test is underpowered; residual effect after counting null is estimated, not measured",
+      "verifier_verdict": "holds_with_qualification / unresolved residual: independent null explains ~96% of the within-group association (vs ~58% in the main run); the 3-bin restricted test has ~0 power, so a real residual effect cannot be excluded"
+    }
+  ],
+  "cross_cutting": {
+    "variance_partition": {
+      "source": "results/08_variance_partition.json",
+      "between_group_eta2": {
+        "log10_POC": 0.785,
+        "salinity_PSU": 0.636,
+        "log10_chlorophyll_a": 0.444,
+        "carbon_to_nitrogen_ratio": 0.4,
+        "polymer_PE_percent": 0.33,
+        "polymer_varnish_percent": 0.199,
+        "log10_total_per_L": 0.158,
+        "size_gt25um_share": 0.089,
+        "size_11um_share": 0.046
+      },
+      "reading": "chemical/biomass covariates are station-determined; the size distribution is nearly invariant across stations"
+    }
+  },
+  "external_sources_used": [],
+  "external_source_note": "No external literature was used. The planned pre-T0 literature check failed upstream (HTTP 400 content-inspection rejection) before returning any source, and the contract requires a verified first-public date strictly before T0 for any source used.",
+  "verification_artifacts": {
+    "F1": "results/verify_F1.json",
+    "F2": "verify/verify_F2.json",
+    "F3": "verify_F3/verify_F3.json",
+    "F4": "results/verify_F4_maincheck.json",
+    "F5": "verify_F5/verify_F5.json",
+    "figures": "results/10_figures_adversarial.json"
+  }
+}

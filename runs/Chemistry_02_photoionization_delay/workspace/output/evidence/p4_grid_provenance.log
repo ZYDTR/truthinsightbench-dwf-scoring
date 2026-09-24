@@ -1,0 +1,242 @@
+p4_grid_provenance: energy-grid provenance, spline-derivation test,
+theory energy mapping.  ROOT = /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project
+
+SHA256 of data files used:
+  angle_energy_observations_datasets.tsv: 55a1d9621c0e386fb44a63764a97cf81491d2bd7af0209c74e212329172df396
+  dipole_matrix_elements_datasets.tsv: df51186c5de242e7b6d7aa51b30f2b75411bbea139507a3061273c23f2c01762
+  angular_coefficients_datasets.tsv: a47e1e06130ec2a0dc8e3a4b2b45233828b37e6ff31101dbefebfd8b9d0ac411
+  phase_and_delay_curves_datasets.tsv: 10b077ae335ce79515d03341dbf924a4143b78c310676c89dc8e56af5d6c044c
+  coordinate_definitions.json: 349bbd36f9de8dd1805b280c0f08270e3d1c75992efd76aa8effb603adbec23b
+
+==============================================================================
+PART 1a  measured energies vs dense grid membership
+==============================================================================
+measured energies on the 0.1 eV dense magnitude/phase mesh (7/13): [22.5, 24.8, 27.9, 31.0, 34.1, 37.2, 48.4]
+measured energies NOT on the mesh (6/13):
+   23.25 eV -> nearest dense 23.20 eV (offset +0.05 eV)
+   26.35 eV -> nearest dense 26.40 eV (offset -0.05 eV)
+   29.45 eV -> nearest dense 29.40 eV (offset +0.05 eV)
+   32.55 eV -> nearest dense 32.50 eV (offset +0.05 eV)
+   35.65 eV -> nearest dense 35.60 eV (offset +0.05 eV)
+   38.75 eV -> nearest dense 38.70 eV (offset +0.05 eV)
+dense delay grid is 22.6..50.0 (275 rows); its membership is the same list
+shifted by one row, because experiment/photon_energy_eV_del = E[1:] exactly (max|diff| = 0.000e+00 eV).
+
+==============================================================================
+PART 1a-bis  decimal quantisation of the stored values
+==============================================================================
+Per-row storage precision: number of decimal digits needed so that every
+value in that row is an exact decimal multiple of 10^-d (d = 99 means >8).
+  magnitude              digits histogram {5: 156, 6: 113, 7: 7}
+  phase                  digits histogram {5: 195, 6: 31, 7: 39, 8: 9, 99: 2}
+  delay                  digits histogram {3: 45, 4: 101, 5: 99, 6: 29, 7: 1}
+  theory/magnitude       digits histogram {99: 99}
+  theory/phase           digits histogram {99: 99}
+  theory/delay           digits histogram {99: 98}
+  magnitude: the 13 measured rows are stored with [5, 6] decimal digits; all of their 181 values are exact multiples of 1e-06: True
+  phase: the 13 measured rows are stored with [5, 6, 7] decimal digits; all of their 181 values are exact multiples of 1e-07: True
+  delay: the 13 measured rows are stored with [3, 4, 5, 6] decimal digits; all of their 181 values are exact multiples of 1e-06: True
+  => the comparison scale for interpolation residuals is 1e-5 (magnitude/phase)
+     and 1e-4..1e-3 (delay), not the 0.1-0.3 residual levels seen below.
+
+==============================================================================
+PART 1b  reproduce the FULL dense grid from the 13 measured rows
+==============================================================================
+Node energies used = the 13 measured energies snapped to the nearest dense row
+(snapping is exact for 7 energies and +-0.05 eV for 6 of them; see 1a).
+
+BASELINE/null model = piecewise-constant (nearest measured node): all max 4.5466e-01 rms 1.0727e-01
+
+--- magnitude ---
+  natural   ALLmax 1.9317e-01  ALLrms 4.6065e-02 | interior(<38.75) max 2.1348e-02 rms 2.8449e-03 | gap(38.75,48.4) max 1.9317e-01 rms 7.5095e-02 | tail(>48.4, extrapolation) max 1.4269e-01
+  notaknot  ALLmax 2.5326e-01  ALLrms 3.8851e-02 | interior(<38.75) max 2.1357e-02 rms 2.8126e-03 | gap(38.75,48.4) max 2.2720e-01 rms 5.8819e-02 | tail(>48.4, extrapolation) max 2.5326e-01
+  pchip     ALLmax 2.5573e-01  ALLrms 5.3184e-02 | interior(<38.75) max 4.9284e-02 rms 4.5486e-03 | gap(38.75,48.4) max 2.5573e-01 rms 8.7246e-02 | tail(>48.4, extrapolation) max 1.3983e-01
+  linear    ALLmax 2.6853e-01  ALLrms 5.7374e-02 | interior(<38.75) max 5.2561e-02 rms 7.4566e-03 | gap(38.75,48.4) max 2.6853e-01 rms 9.3917e-02 | tail(>48.4, extrapolation) max 1.5230e-01
+
+--- phase ---
+  natural   ALLmax 3.0123e+00  ALLrms 2.5938e-01 | interior(<38.75) max 8.1274e-02 rms 5.6408e-03 | gap(38.75,48.4) max 1.9522e+00 rms 4.0426e-01 | tail(>48.4, extrapolation) max 3.0123e+00
+  notaknot  ALLmax 4.2143e+00  ALLrms 4.1903e-01 | interior(<38.75) max 6.1783e-02 rms 5.7401e-03 | gap(38.75,48.4) max 2.6095e+00 rms 6.5486e-01 | tail(>48.4, extrapolation) max 4.2143e+00
+  pchip     ALLmax 3.2140e+00  ALLrms 2.7004e-01 | interior(<38.75) max 1.2488e-01 rms 9.4141e-03 | gap(38.75,48.4) max 2.2171e+00 rms 4.1379e-01 | tail(>48.4, extrapolation) max 3.2140e+00
+  linear    ALLmax 2.8534e+00  ALLrms 2.3198e-01 | interior(<38.75) max 9.4839e-02 rms 1.5700e-02 | gap(38.75,48.4) max 1.3920e+00 rms 3.6162e-01 | tail(>48.4, extrapolation) max 2.8534e+00
+
+--- complex Z ---
+  natural   ALLmax 2.4332e-01  ALLrms 6.2150e-02 | interior(<38.75) max 1.5941e-02 rms 3.4087e-03 | gap(38.75,48.4) max 2.4332e-01 rms 1.0020e-01 | tail(>48.4, extrapolation) max 2.4163e-01
+  notaknot  ALLmax 8.5777e-01  ALLrms 1.5352e-01 | interior(<38.75) max 1.5941e-02 rms 3.5740e-03 | gap(38.75,48.4) max 6.4082e-01 rms 2.3145e-01 | tail(>48.4, extrapolation) max 8.5777e-01
+  pchip     ALLmax 2.5478e-01  ALLrms 5.7824e-02 | interior(<38.75) max 3.7928e-02 rms 6.9830e-03 | gap(38.75,48.4) max 1.8379e-01 rms 9.1530e-02 | tail(>48.4, extrapolation) max 2.5478e-01
+  linear    ALLmax 2.2199e-01  ALLrms 7.1286e-02 | interior(<38.75) max 4.9278e-02 rms 1.0813e-02 | gap(38.75,48.4) max 2.2199e-01 rms 1.1701e-01 | tail(>48.4, extrapolation) max 1.6873e-01
+
+==============================================================================
+PART 1c  Legendre-coefficient route and the DME 13-energy nodes
+==============================================================================
+4 lowest-order complex Legendre coefficients already reproduce the dense complex amplitude to max 9.5618e-05 (grid RMS 1.2934e-05);
+coefs of order >=4 are < 1.12e-05, i.e. at/just above the 1e-5 storage quantum. The dense grid is a 4-parameter (per energy) angular object.
+control, same 13-node construction applied directly to the stored magnitude: natural 0.1932, linear 0.2685
+
+Linear map DME(7 complex) -> 4 complex Legendre coefs across the 13 measured energies: 15 real parameters for 104 real targets, rank 13, max residual 3.109e-15 -> the 4 coefficients at the measured energies are an exact linear function of the DME block.
+   => the 13 'measured' rows are consistent with a direct algebraic construction from the DME blocks, not with the raw arrays.
+
+Interpolating the 4 Legendre coefficients from the 13 nodes:
+  natural   ALLmax 2.4332e-01 rms 6.2150e-02 | interior max 1.5929e-02 rms 3.4087e-03 | gap max 2.4332e-01 | tail max 2.4162e-01
+  notaknot  ALLmax 8.5811e-01 rms 1.5352e-01 | interior max 1.5930e-02 rms 3.5740e-03 | gap max 6.4106e-01 | tail max 8.5811e-01
+  pchip     ALLmax 3.1854e-01 rms 7.2081e-02 | interior max 2.7017e-02 rms 6.5097e-03 | gap max 2.5467e-01 | tail max 3.1854e-01
+  linear    ALLmax 2.2198e-01 rms 7.1286e-02 | interior max 4.9280e-02 rms 1.0813e-02 | gap max 2.2198e-01 | tail max 1.6872e-01
+
+==============================================================================
+PART 1b-robustness  leave-one-node-out (12 of 13 nodes)
+==============================================================================
+  natural   LOO max-over-folds of max|residual| = 8.9477e+00 (median 2.4332e-01)
+  notaknot  LOO max-over-folds of max|residual| = 2.0697e+01 (median 8.5737e-01)
+  pchip     LOO max-over-folds of max|residual| = 1.0226e+01 (median 2.5478e-01)
+  linear    LOO max-over-folds of max|residual| = 9.6422e-01 (median 2.2199e-01)
+
+==============================================================================
+PART 1b-control  free-node refit: best possible 13-node natural spline
+==============================================================================
+  free-node magnitude+phase joint fit residual: ALLmax 1.7400e-01 rms 2.7480e-02
+  storage quantum 1e-5: fixed-node natural-spline residual 1.9317e-01 is 19317x the quantum, free-node residual 1.7400e-01 is 17400x the quantum -> the mismatch is structural, not a storage-precision effect.
+  free-node magnitude: interior(<38.75) max 8.4258e-02, gap max 9.1448e-02, tail max 1.7400e-01
+  => even with OPTIMAL node values the 13-knot natural spline misses the dense magnitude by 8.4258e-02 inside the well-sampled region (8426x the storage quantum): the dense grid is not any 13-knot natural cubic spline through the 13 measured energies.
+  knot-density control:  13 evenly spaced knots -> interior max residual 2.9730e-02
+  knot-density control:  26 evenly spaced knots -> interior max residual 2.1627e-03
+  knot-density control:  52 evenly spaced knots -> interior max residual 2.6613e-04
+  knot-density control: 104 evenly spaced knots -> interior max residual 8.8025e-05
+  (reference: the dense grid's own row-to-row second difference has median 2.341e-04 and max 1.898e-03; a spline through 13 nodes has no freedom at that scale, and the reference quantum is 1e-5.)
+
+==============================================================================
+PART 1d  the 38.75 -> 48.4 eV gap: 9.65 eV with no measured nodes
+==============================================================================
+gap interior rows 163..258  E = 38.80..48.30 eV (96 rows).  Other measured steps are 0.75/1.55 eV.
+
+--- magnitude in the gap ---
+  dev from the straight chord joining the two measured endpoints: max 0.26841 rms 0.09431
+  poly1 fit: max|residual| 0.13854 rms 0.04315
+  poly2 fit: max|residual| 0.06934 rms 0.01612
+  poly3 fit: max|residual| 0.04973 rms 0.00755
+  max |step| just outside 0.00656 / first step inside 0.00659 / last step inside 0.00780 / after 0.00792  -> no jump at either edge
+  mean |step| inside gap 0.003279 vs outside 0.005145 (ratio 0.637)
+  angular-profile correlation 38.7 vs 48.4 eV: 0.97876
+
+--- phase in the gap ---
+  dev from the straight chord joining the two measured endpoints: max 1.38066 rms 0.36556
+  poly1 fit: max|residual| 1.27163 rms 0.24086
+  poly2 fit: max|residual| 1.26161 rms 0.19545
+  poly3 fit: max|residual| 1.14215 rms 0.11776
+  max |step| just outside 0.07120 / first step inside 0.07700 / last step inside 0.08940 / after 0.10590  -> no jump at either edge
+  mean |step| inside gap 0.021640 vs outside 0.009618 (ratio 2.250)
+  angular-profile correlation 38.7 vs 48.4 eV: 0.48916
+  magnitude: max |2nd energy difference| at row 162 (edge) 0.00064, at row 259 0.00025, median over grid 0.00010
+  magnitude angle   0 deg in gap: 1 turning point(s); min 0.20572 at 46.00 eV
+  magnitude angle  45 deg in gap: 1 turning point(s); min 0.13757 at 45.40 eV
+  magnitude angle  90 deg in gap: 1 turning point(s); min 0.08427 at 43.10 eV
+  magnitude angle 135 deg in gap: 2 turning point(s); min 0.34953 at 38.70 eV
+  magnitude angle 180 deg in gap: 0 turning point(s); min 0.87017 at 48.40 eV
+  phase: max |2nd energy difference| at row 162 (edge) 0.00920, at row 259 0.01840, median over grid 0.00040
+  phase angle   0 deg in gap: 0 turning point(s); min -0.67692 at 38.70 eV
+  phase angle  45 deg in gap: 0 turning point(s); min -0.92178 at 38.70 eV
+  phase angle  90 deg in gap: 4 turning point(s); min -3.24600 at 45.10 eV
+  phase angle 135 deg in gap: 2 turning point(s); min 0.49352 at 40.30 eV
+  phase angle 180 deg in gap: 2 turning point(s); min -5.91810 at 39.60 eV
+  magnitude: |dense - 13-node natural spline| inside gap: max 0.19317 rms 0.07548  (vs chord: max 0.26841)
+  phase: |dense - 13-node natural spline| inside gap: max 1.95225 rms 0.40636  (vs chord: max 1.38066)
+
+==============================================================================
+PART 1e  fastest-changing angular structure
+==============================================================================
+
+magnitude: top energy rows by RMS over angle of |dA/dE|
+   E =  28.60 eV   rms   0.10752 /eV   max over angle   0.28300 /eV (row index 61)
+   E =  28.70 eV   rms   0.10736 /eV   max over angle   0.28200 /eV (row index 62)
+   E =  28.50 eV   rms   0.10735 /eV   max over angle   0.28300 /eV (row index 60)
+   E =  28.80 eV   rms   0.10706 /eV   max over angle   0.27900 /eV (row index 63)
+   E =  28.40 eV   rms   0.10697 /eV   max over angle   0.28400 /eV (row index 59)
+
+phase: top energy rows by RMS over angle of |dA/dE|
+   E =  43.50 eV   rms   1.57703 /eV   max over angle  13.61430 /eV (row index 210)
+   E =  43.40 eV   rms   0.99375 /eV   max over angle   8.45800 /eV (row index 209)
+   E =  43.60 eV   rms   0.94415 /eV   max over angle   7.52000 /eV (row index 211)
+   E =  49.00 eV   rms   0.94364 /eV   max over angle  10.85754 /eV (row index 265)
+   E =  49.10 eV   rms   0.69545 /eV   max over angle   7.32306 /eV (row index 266)
+   global max |dphase/dE| = 13.6143 rad/eV at angle 72 deg in the row pair 210->211 (E = 43.50 -> 43.60 eV)
+   corresponding delay row (E_del = 43.60 eV): max |delay| 8961.20 as at angle 72 deg
+
+==============================================================================
+PART 2f  theory energy mapping
+==============================================================================
+theory DME array (34056, 10) (rows x 10 cols); unique T_kin = 99, IE = 0.7974537299999999 a.u. (constant), gauges = [1. 2.]
+T_kin range 0.337523..1.216655 a.u. ; IE*27.211386 = 21.699821 eV
+
+photon_energy_eV vs T_kin, IE = 0.79745373 a.u.:
+  E = IE_eV + T_kin_eV                         max|res| = 1.360636e+01 eV   rms = 1.259e+01
+  E = IE_au + T_kin_au (numbers as eV)         max|res| = 3.982489e+01 eV   rms = 3.133e+01
+  E = IE_eV + T_kin_au^2/2 (a.u. energy as eV) max|res| = 4.030142e+01 eV   rms = 3.179e+01
+  E = IE_eV + T_kin_au^2/2 * 27.211386         max|res| = 8.085397e-04 eV   rms = 7.335e-04
+  E = IE_eV + T_kin_eV^2/2 (k as momentum)     max|res| = 5.278937e+02 eV   rms = 3.187e+02
+  E = a*(T_kin^2/2) + b, free a,b              max|res| = 1.709381e-06 eV   rms = 4.817e-07  a = 27.211609531 eV/a.u., b = 21.699000110 eV
+  E = 13.6058*T_kin^2 + 21.699 (rounded consts) max|res| = 8.636276e-06 eV   rms = 4.384e-06
+
+T_kin vs photon_energy_eV:
+  T_kin = (E - IE_eV)/27.211386                max|res| = 5.000245e-01 a.u.   rms = 4.626e-01
+  T_kin = (E - IE_eV)/13.6058                  max|res| = 2.635352e-01 a.u.   rms = 1.745e-01
+  T_kin^2 = (E - 21.699)/13.6058               max|res| = 6.347496e-07 a.u.^2   rms = 3.222e-07
+  T_kin = a*E + b, free linear                 max|res| = 1.066208e-01 a.u.   rms = 3.530e-02  a = 0.04450289, b = -0.59050362
+  T_kin^2 = a*E + b, free linear               max|res| = 1.256361e-07 a.u.^2   rms = 3.541e-08  a = 0.073498041, b = -1.594834005
+
+BEST mapping: E_eV = 27.2116095 * (T_kin^2/2) + 21.6990001  (eV, a.u.)
+  implied conversion factor  = 27.2116095 eV per Hartree (requested value 27.211386; relative deviation +8.215e-06)
+  implied IE                 = 0.79742355 a.u. = 21.6990001 eV
+  stored IE (DME col 2)      = 0.79745373 a.u. = 21.6998213 eV (difference -0.000821 eV)
+  LOO on the free fit: slope range 27.2116094..27.2116096 (spread 2.19e-07); intercept range 21.6990001..21.6990001 (spread 5.98e-08)
+
+==============================================================================
+PART 2g  delay-energy array and delay/phase alignment
+==============================================================================
+theory: photon_energy_eV_del - photon_energy_eV[1:] : max|diff| 1.534e-03 eV, mean 8.317641e-05 eV, std 5.952e-04 eV -> the delay energies are the upper endpoint of each consecutive energy pair (a one-row shift), not midpoints (midpoint test max|diff| = 0.0999 eV).
+experiment: photon_energy_eV_del - photon_energy_eV[1:] : max|diff| 0.000e+00 eV -> EXACT one-row shift (delay energies = E[1:]).
+Rounding check on theory delay energies: max|TEd - round(TEd,3) - (TE[1:]-round(TE[1:],3))| ... n_dev(round(TEd,3) vs TE[1:]) = 25 of 98 (the residual is sub-meV)
+
+theory delay vs hbar * forward finite difference of phase on the theory grid:
+   median deviation 0.04453 as, median deviation relative to |delay| 0.00042, max deviation 15.345 as (delay range -2622.7..5569.7 as)
+   least-squares scale factor delay / [hbar*dphase/dE] = 1.0000129 (1.0 would be exact; implied hbar = 658.2204)
+   control: central-difference estimate -> median deviation 2.50301 as, max 1948.500 as
+
+experiment delay vs hbar * forward difference (0.1 eV step):
+   median deviation 0.05043 as, max 0.6555 as, median relative 0.00101
+   least-squares scale factor = 0.9999990 (implied hbar 658.2113); stated hbar = 658.2119569
+   (control: central-difference and 5-point stencils give median deviations 1.377 / 1.384 as -> the stored delay uses the plain adjacent-row (forward) difference, not a higher-order stencil)
+
+EXACT theory grid identity: photon_energy_eV == round(21.699 + 13.6058*T_k^2, 3) for all 99 points: True  (max |E - unrounded| = 8.636e-06 eV); coordinate_definitions.json's stated IE*c = 21.699821 eV and c = 27.211386; the 13.6058 value is the Rydberg in eV, i.e. twice 13.6058 = 27.2116 != 27.211386.
+  implied IE from the exact identity = 21.699 eV = 0.79742355 a.u. vs stored IE = 0.79745373 a.u. (offset -3.018e-05 a.u. = -0.000821 eV)
+
+==============================================================================
+PART 2h  measured experiment energies vs the theory grid
+==============================================================================
+   22.50 eV -> nearest theory   23.249 eV  |diff| 0.7490 eV
+   23.25 eV -> nearest theory   23.249 eV  |diff| 0.0010 eV
+   24.80 eV -> nearest theory   24.799 eV  |diff| 0.0010 eV
+   26.35 eV -> nearest theory   26.349 eV  |diff| 0.0010 eV
+   27.90 eV -> nearest theory   27.899 eV  |diff| 0.0010 eV
+   29.45 eV -> nearest theory   29.449 eV  |diff| 0.0010 eV
+   31.00 eV -> nearest theory   30.999 eV  |diff| 0.0010 eV
+   32.55 eV -> nearest theory   32.549 eV  |diff| 0.0010 eV
+   34.10 eV -> nearest theory   34.099 eV  |diff| 0.0010 eV
+   35.65 eV -> nearest theory   35.649 eV  |diff| 0.0010 eV
+   37.20 eV -> nearest theory   37.199 eV  |diff| 0.0010 eV
+   38.75 eV -> nearest theory   38.749 eV  |diff| 0.0010 eV
+   48.40 eV -> nearest theory   41.839 eV  |diff| 6.5610 eV
+  min |diff| = 0.0010 eV (12 of 13 measured energies coincide with the theory grid to 1 meV); max |diff| = 6.5610 eV (48.40 eV has no theory crossing; the theory grid stops at 41.839 eV).
+  => the theory grid was computed at (essentially) every measured energy except the 48.40 eV point; 12/13 matches at <= 0.0010 eV, 1/13 unmatched.
+
+==============================================================================
+FIGURE
+==============================================================================
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p4_grid_provenance.png
+
+==============================================================================
+VERDICT
+==============================================================================
+best direct-array interpolation max residual (all methods): 1.9317e-01
+best Legendre-coefficient interpolation max residual      : 2.2198e-01
+free-node 13-knot refit max residual                       : 1.7400e-01
+stored decimal quantum                                     : 1e-5 (mag/phase), 1e-4 (delay)
+
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p4_grid_provenance.json

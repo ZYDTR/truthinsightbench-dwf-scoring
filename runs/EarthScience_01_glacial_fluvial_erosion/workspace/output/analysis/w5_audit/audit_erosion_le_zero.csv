@@ -1,0 +1,5 @@
+row_index,Compilation,Reference,Locality,Methodology,Erosion rate (mm/yr),Time interval (yr),Area (km2),Latitude,Longitude,Precipitation (mm/yr),Slope (m/km),table
+2600,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,0.00000E+00,,1.00000E-08,-71.83582,12.29557,444.40000,32.13354,nonglacial
+2659,"Marrero et al., 2018",Brook 1995,"Fleming, Sirius Group",Cosmogenic surface,0.00000E+00,,1.00000E-08,-77.54131,160.15066,109.70000,25.83029,nonglacial
+2661,"Marrero et al., 2018",Brook 1995,"Arena Valley,  Altar Till (Beacon Valley)",Cosmogenic surface,0.00000E+00,,1.00000E-08,-77.88357,160.90868,151.40000,32.64912,nonglacial
+2756,"Marrero et al., 2018","Nishiizumi et al., 1991",Sor Rondane,Cosmogenic surface,0.00000E+00,,1.00000E-08,-72.06300,25.07730,393.90000,32.07107,nonglacial

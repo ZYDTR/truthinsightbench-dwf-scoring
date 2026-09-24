@@ -1,0 +1,119 @@
+p4_grid_provenance VERIFICATION (independent script)
+ROOT = /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project
+shapes: E (276,) M (276, 181) P (276, 181) D (275, 181) TE (99,) TP (99, 181)
+
+[self-test] my natural cubic vs scipy CubicSpline(natural): max|d| = 7.105e-14
+[self-test] my PCHIP vs scipy PchipInterpolator        : max|d| = 5.684e-14
+
+==============================================================================
+CLAIM 1  grid membership of the 13 measured energies
+==============================================================================
+   22.500 eV -> nearest dense  22.500  offset +0.00000 eV  ongrid=True
+   23.250 eV -> nearest dense  23.200  offset +0.05000 eV  ongrid=False
+   24.800 eV -> nearest dense  24.800  offset +0.00000 eV  ongrid=True
+   26.350 eV -> nearest dense  26.400  offset -0.05000 eV  ongrid=False
+   27.900 eV -> nearest dense  27.900  offset +0.00000 eV  ongrid=True
+   29.450 eV -> nearest dense  29.400  offset +0.05000 eV  ongrid=False
+   31.000 eV -> nearest dense  31.000  offset +0.00000 eV  ongrid=True
+   32.550 eV -> nearest dense  32.500  offset +0.05000 eV  ongrid=False
+   34.100 eV -> nearest dense  34.100  offset +0.00000 eV  ongrid=True
+   35.650 eV -> nearest dense  35.600  offset +0.05000 eV  ongrid=False
+   37.200 eV -> nearest dense  37.200  offset +0.00000 eV  ongrid=True
+   38.750 eV -> nearest dense  38.700  offset +0.05000 eV  ongrid=False
+   48.400 eV -> nearest dense  48.400  offset +0.00000 eV  ongrid=True
+  |Ed - E[1:]| max = 0.000e+00 eV
+  on-grid count 7 / 13 ; off-grid all |offset| == 0.05: True ; all offsets integer multiples of 0.05: True
+
+==============================================================================
+CLAIM 1bis  stored decimal quantum (independent)
+==============================================================================
+  magnitude block (13x181): max|v/q - round(v/q)| 3:5.0e-01, 4:5.0e-01, 5:5.0e-01, 6:2.3e-10, 7:1.9e-09, 8:1.5e-08
+  smallest strict quantum for the 13 measured magnitude rows: 1e-6
+
+==============================================================================
+CLAIM 2  dense grid not reproducible by standard interpolation
+==============================================================================
+  magnitude natural                all_max 0.19317  interior_max 0.02135  gap_max 0.19317
+  magnitude not-a-knot             all_max 0.25326  interior_max 0.02136  gap_max 0.22720
+  magnitude pchip                  all_max 0.25573  interior_max 0.04928  gap_max 0.25573
+  magnitude linear                 all_max 0.26853  interior_max 0.05256  gap_max 0.26853
+  magnitude akima                  all_max 0.20355  interior_max 0.02906  gap_max 0.20355
+  phase     natural                all_max 3.01232  interior_max 0.08127  gap_max 1.95225
+  phase     not-a-knot             all_max 4.21431  interior_max 0.06178  gap_max 2.60951
+  phase     pchip                  all_max 3.21398  interior_max 0.12488  gap_max 2.21709
+  phase     linear                 all_max 2.85341  interior_max 0.09484  gap_max 1.39196
+  phase     akima                  all_max 3.03511  interior_max 0.10016  gap_max 1.99001
+  complex Z natural                all_max 0.24332  interior_max 0.01594  gap_max 0.24332
+  complex Z not-a-knot             all_max 0.85777  interior_max 0.01594  gap_max 0.64082
+  complex Z pchip                  all_max 0.25478  interior_max 0.03793  gap_max 0.18379
+  complex Z linear                 all_max 0.22199  interior_max 0.04928  gap_max 0.22199
+  complex Z akima                  all_max 0.25281  interior_max 0.02520  gap_max 0.25281
+
+  best standard-method whole-grid max residual (magnitude): 0.19317  (natural)  = 1.93e+04 x 1e-5
+  angular subset 30-150 deg, magnitude: natural 0.19317, pchip 0.25573, linear 0.26853
+
+  Voronoi cells of the 13 measured energies: sizes [4, 12, 15, 16, 15, 16, 15, 16, 15, 16, 15, 56, 65] (rows outside the outermost nodes: 16)
+    magnitude nearest-node(package baseline analogue) 0.2904 | optimal piecewise-constant 0.2249 | optimal piecewise-linear (13 breaks) 0.0926 (interior 0.0714)
+    phase     nearest-node(package baseline analogue) 2.8828 | optimal piecewise-constant 2.5539 | optimal piecewise-linear (13 breaks) 1.5225 (interior 0.5787)
+    free-node 13-knot natural-spline refit (complex Z): all_max 0.17400 interior 0.08426  = 8426 x 1e-5
+    free-node 13-knot natural-spline refit (magnitude alone): all_max 0.11908 interior 0.05278
+
+==============================================================================
+CLAIM 3  Legendre-coefficient interpolation does not rescue it
+==============================================================================
+  own Legendre(deg 3, recurrence basis) representation of the dense complex grid: max|res| 9.562e-05
+  natural   ALLmax 0.24332  interior 0.01593  gap 0.24332  ratio/1e-5 2.4e+04
+  not-a-knot ALLmax 0.85811  interior 0.01593  gap 0.64106  ratio/1e-5 8.6e+04
+  pchip     ALLmax 0.31854  interior 0.02702  gap 0.25467  ratio/1e-5 3.2e+04
+  linear    ALLmax 0.22198  interior 0.04928  gap 0.22198  ratio/1e-5 2.2e+04
+  harsher variant (5- and 7-coefficient sets): deg4/natural 0.24332, deg4/linear 0.22198, deg4/best 0.22198, deg6/natural 0.24333, deg6/linear 0.22198, deg6/best 0.22198
+
+==============================================================================
+CLAIM 4  38.75..48.4 eV gap is not the endpoint chord
+==============================================================================
+  magnitude rows 163..258 (38.80..48.30 eV): max|chord dev| 0.26841 (at 43.60 eV, 72 deg), rms 0.09431
+  phase     rows 163..258 (38.80..48.30 eV): max|chord dev| 1.38066 (at 44.00 eV, 72 deg), rms 0.36556
+  complex Z chord max |dev| 0.22211
+  reference: own 13-node natural spline in gap, magnitude 0.19317, phase 1.95225
+  delay array (38..48 eV): max|chord dev| 8872.6644 as
+
+==============================================================================
+CLAIM 5  theory photon energy = round(21.699 + 13.6058 T_kin^2, 3)
+==============================================================================
+  theory DME table (34056, 10) ; unique T_kin 99 ; IE = 0.79745373 a.u.
+  identity E == round(21.699 + 13.6058*T^2, 3): 0/99 mismatches
+  max|E - (21.699 + 13.6058*T^2)| (before rounding) = 8.636e-06 eV
+  free fit E = a*(T^2/2)+b : a = 27.2116095 eV/a.u. (= 27.2116095 per 0.5 a.u.), b = 21.6990001 eV, max|res| 1.709e-06 eV
+  -> a/2 = 13.6058048 vs stated Rydberg 13.6058 ; vs Hartree/2 (27.211386/2 = 13.605693) relative dev 3.50e-07
+  control, free linear T_kin = a*E+b: max|res| 0.1066 a.u.
+  control, free linear E = a*T_kin+b: max|res| 2.1582 eV
+
+==============================================================================
+CLAIM 6  11/13 measured energies have a theory counterpart
+==============================================================================
+    22.50 -> nearest theory   23.249  |diff| 0.7490 eV
+    23.25 -> nearest theory   23.249  |diff| 0.0010 eV
+    24.80 -> nearest theory   24.799  |diff| 0.0010 eV
+    26.35 -> nearest theory   26.349  |diff| 0.0010 eV
+    27.90 -> nearest theory   27.899  |diff| 0.0010 eV
+    29.45 -> nearest theory   29.449  |diff| 0.0010 eV
+    31.00 -> nearest theory   30.999  |diff| 0.0010 eV
+    32.55 -> nearest theory   32.549  |diff| 0.0010 eV
+    34.10 -> nearest theory   34.099  |diff| 0.0010 eV
+    35.65 -> nearest theory   35.649  |diff| 0.0010 eV
+    37.20 -> nearest theory   37.199  |diff| 0.0010 eV
+    38.75 -> nearest theory   38.749  |diff| 0.0010 eV
+    48.40 -> nearest theory   41.839  |diff| 6.5610 eV
+  within 1 meV: 11/13 ; unmatched: [22.5, 48.4] ; theory grid 23.249..41.839 eV
+
+==============================================================================
+SUMMARY
+==============================================================================
+  [OK ] Only 7 of the 13 measured energies lie exactly on the dense 0.1 eV grid; the other 6 are offset 
+  [OK ] The full dense experiment grid is NOT reproducible from the 13 measured rows by standard interpo
+  [OK ] Interpolating the 4 lowest Legendre coefficients instead of the raw arrays does not rescue it (b
+  [OK ] The 38.75..48.4 eV gap is NOT a straight interpolation of the two endpoint measurements: max dev
+  [OK ] The theory photon-energy axis maps to the DME kinetic-energy axis by E_eV = round(21.699 + 13.60
+  [OK ] 11 of the 13 measured energies have a theory photon energy within 1 meV; 22.5 and 48.4 eV have n
+
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p4_grid_provenance_verdict.json

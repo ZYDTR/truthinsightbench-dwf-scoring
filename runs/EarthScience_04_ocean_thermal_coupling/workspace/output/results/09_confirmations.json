@@ -1,0 +1,301 @@
+{
+  "step": "09_confirmations",
+  "n_complete_rows": 593,
+  "record_span_ka": 356.42,
+  "record_span_m": 6.27,
+  "mean_lsr_m_per_ka": 0.01759160540934852,
+  "a_period_reconciliation": {
+    "period_age1_ka": 108.9,
+    "r2_age1": 0.42733376522099076,
+    "period_age2_ka": 108.9,
+    "r2_age2": 0.431937797857359,
+    "period_uniform_lsr_coord_ka": 106.73333333333333,
+    "r2_uniform": 0.45051330712335835,
+    "period_depth_axis_m": 1.8768333333333331,
+    "r2_depth": 0.4504992115071552,
+    "depth_period_converted_to_age_at_mean_lsr_ka": 106.68914460393407,
+    "age_period_converted_to_depth_at_mean_lsr_m": 1.9157258290780539,
+    "amplitude_age1": 0.38572646812987826,
+    "phase_age1_rad": -2.579373868474898,
+    "amplitude_uniform": 0.3745318630300204,
+    "phase_uniform_rad": -2.698667669764759,
+    "n_cycles_in_record": 3.272910927456382,
+    "reconciliation": "The three coordinates agree: depth-domain 1.877 m / mean rate = 106.7 ka; constant-rate coordinate 106.7 ka; age_ka_bp_1 108.8 ka. The earlier 84.07 ka figure for the constant-rate coordinate is NOT reproduced and is treated as a defect of that step; it would correspond to 1.48 m, which is not the depth-domain peak."
+  },
+  "effective_sample_size": {
+    "n_rows": 593,
+    "n_cycles_at_best_period": 3.272910927456382,
+    "n_eff_periodic": 6.545821854912764,
+    "note": "A stationary sinusoid has 2 free parameters per cycle (amplitude and phase), so an N-cycle record can pin down at most 2N independent quantities. The AR(1) integrated-autocorrelation estimate (tau=3.89 ka -> n_eff=91.7) is appropriate for mean-level statements but overstates the information available about a coherent oscillation.",
+    "n_eff_ar1_integrated_autocorr": 91.73
+  },
+  "b_inter_block_coupling": {
+    "raw": {
+      "10ka": {
+        "n_blocks": 36,
+        "pearson": -0.4709739907231743,
+        "spearman": -0.4566280566280566
+      },
+      "20ka": {
+        "n_blocks": 18,
+        "pearson": -0.5943475491950971,
+        "spearman": -0.6016511867905057
+      },
+      "40ka": {
+        "n_blocks": 9,
+        "pearson": -0.7975798501603498,
+        "spearman": -0.7
+      }
+    },
+    "orbital_removed": {
+      "10ka": {
+        "n_blocks": 36,
+        "pearson": -0.5487485086312238,
+        "spearman": -0.48365508365508364
+      },
+      "20ka": {
+        "n_blocks": 18,
+        "pearson": -0.375665989144511,
+        "spearman": -0.38080495356037153
+      },
+      "40ka": {
+        "n_blocks": 9,
+        "pearson": -0.5179721335240262,
+        "spearman": -0.5
+      }
+    },
+    "trend_removed": {
+      "10ka": {
+        "n_blocks": 36,
+        "pearson": -0.47811049317322984,
+        "spearman": -0.4761904761904762
+      },
+      "20ka": {
+        "n_blocks": 18,
+        "pearson": -0.5966152716340909,
+        "spearman": -0.5789473684210527
+      },
+      "40ka": {
+        "n_blocks": 9,
+        "pearson": -0.8060729735247999,
+        "spearman": -0.7833333333333333
+      }
+    },
+    "40ka_leave_one_block_out": {
+      "min": -0.8614525625774062,
+      "max": -0.7308551373370932,
+      "sign_stable": true
+    },
+    "20ka_block_permutation": {
+      "observed": -0.5943475491950971,
+      "n_blocks": 18,
+      "p_two_sided": 0.010149492525373732
+    }
+  },
+  "c_transition_structure": {
+    "best_split_age_ka": 336.63,
+    "best_split_sse": 83.1870947541267,
+    "no_split_sse": 92.94257537942664,
+    "sse_reduction_fraction": 0.10496245219668587,
+    "mean_shift_per_mille": 0.49997839426151547,
+    "r2_linear_trend": 0.00020338381833684416,
+    "r2_sinusoid_2harm": 0.42733376522099076,
+    "bic_ar1_neff": {
+      "segmented_mean_2segment": 4.589275450838338,
+      "linear_trend": 10.223671485406465,
+      "sinusoid_2harm": -22.817364375548962,
+      "no_structure": 5.7234803010029225
+    },
+    "best_model_by_bic": "sinusoid_2harm",
+    "bic_ranking_sensitivity_to_neff": {
+      "30": {
+        "ranking": [
+          "no_structure",
+          "sinusoid_2harm",
+          "linear_trend",
+          "segmented_mean_2segment"
+        ],
+        "bic": {
+          "segmented_mean_2segment": 40.8,
+          "linear_trend": 40.72,
+          "sinusoid_2harm": 37.61,
+          "no_structure": 37.32
+        }
+      },
+      "60": {
+        "ranking": [
+          "sinusoid_2harm",
+          "no_structure",
+          "segmented_mean_2segment",
+          "linear_trend"
+        ],
+        "bic": {
+          "segmented_mean_2segment": 31.89,
+          "linear_trend": 34.43,
+          "sinusoid_2harm": 17.38,
+          "no_structure": 30.35
+        }
+      },
+      "91.73": {
+        "ranking": [
+          "sinusoid_2harm",
+          "segmented_mean_2segment",
+          "no_structure",
+          "linear_trend"
+        ],
+        "bic": {
+          "segmented_mean_2segment": 4.59,
+          "linear_trend": 10.22,
+          "sinusoid_2harm": -22.82,
+          "no_structure": 5.72
+        }
+      },
+      "150": {
+        "ranking": [
+          "sinusoid_2harm",
+          "segmented_mean_2segment",
+          "no_structure",
+          "linear_trend"
+        ],
+        "bic": {
+          "segmented_mean_2segment": -73.4,
+          "linear_trend": -61.81,
+          "sinusoid_2harm": -125.35,
+          "no_structure": -66.79
+        }
+      },
+      "300": {
+        "ranking": [
+          "sinusoid_2harm",
+          "segmented_mean_2segment",
+          "no_structure",
+          "linear_trend"
+        ],
+        "bic": {
+          "segmented_mean_2segment": -367.7,
+          "linear_trend": -340.19,
+          "sinusoid_2harm": -484.55,
+          "no_structure": -345.84
+        }
+      },
+      "593": {
+        "ranking": [
+          "sinusoid_2harm",
+          "segmented_mean_2segment",
+          "no_structure",
+          "linear_trend"
+        ],
+        "bic": {
+          "segmented_mean_2segment": -1145.56,
+          "linear_trend": -1086.31,
+          "sinusoid_2harm": -1391.21,
+          "no_structure": -1092.57
+        }
+      }
+    },
+    "block_cv_r2": {
+      "segmented_mean_2segment": {
+        "mean": -0.4445675444662338,
+        "per_block": [
+          -0.5584529815263588,
+          -0.8271611883062921,
+          -0.18177339086722344,
+          -0.5112724802369686,
+          -0.5839678699326334,
+          -0.0047773559279264965
+        ]
+      },
+      "linear_trend": {
+        "mean": -0.6522178041415895,
+        "per_block": [
+          -0.9952327991485113,
+          -1.5539815491672861,
+          -0.10004599218249743,
+          -0.7344643658846965,
+          -0.5241308469389969,
+          -0.005451271527548096
+        ]
+      },
+      "sinusoid_2harm": {
+        "mean": 0.020252937006783933,
+        "per_block": [
+          -0.16357808327371992,
+          0.2005952708850789,
+          0.25138856081553074,
+          -0.3552607418911842,
+          -0.015807269680605973,
+          0.20417988518560404
+        ]
+      },
+      "no_structure": {
+        "mean": -0.44971964426645733,
+        "per_block": [
+          -0.3791187210802973,
+          -1.1398483650245588,
+          -0.10077805804685891,
+          -0.7129587035367069,
+          -0.3634965020913412,
+          -0.0021175158189803422
+        ]
+      }
+    },
+    "best_model_by_block_cv": "sinusoid_2harm",
+    "n_eff_used": 91.73,
+    "best_split_age_after_linear_detrend_ka": 336.63,
+    "sse_reduction_after_detrend_fraction": 0.10900478452902718,
+    "best_split_age_after_dropping_sparse_tail_ka": 73.78,
+    "split_location_edge_stable": false,
+    "conclusion": "The mean-level split reduces SSE by 10.5%, but a 2-harmonic sinusoid at the record's own dominant period reduces it by 42.7%. On a periodic effective-sample-size basis the sinusoid is overwhelmingly preferred, and the split location is not stable against dropping the sparse tail, so the 'transition' is a delta-O minimum at the end of the record rather than a resolved regime change."
+  },
+  "d_accumulation_episode": {
+    "lsr_p99": 0.04294172780012882,
+    "n_rows_at_or_above_p99": 6,
+    "row_index_range": [
+      390,
+      395
+    ],
+    "age_range_ka": [
+      240.87,
+      241.88
+    ],
+    "depth_range_m": [
+      4.22,
+      4.27
+    ],
+    "contiguous": true,
+    "peak_lsr_m_per_ka": 0.05000000000000071,
+    "peak_over_median": 2.274450615793263,
+    "d18o_values": [
+      2.76,
+      2.97,
+      3.21,
+      2.81,
+      2.65,
+      3.42
+    ],
+    "record_median_d18o": 3.37,
+    "age_increments_in_episode_ka": [
+      0.19999999999998863,
+      0.20000000000001705,
+      0.20999999999997954,
+      0.20000000000001705,
+      0.19999999999998863
+    ],
+    "median_age_increment_ka": 0.45999999999997954,
+    "depth_increments_in_episode_m": [
+      0.010000000000000675,
+      0.009999999999999787,
+      0.009999999999999787,
+      0.009999999999999787,
+      0.009999999999999787
+    ],
+    "local_lsr_confound": "The excursion is produced by an unusually FINE age increment (0.20-0.21 ka against a 0.46 ka median) applied to the standard 0.01 m depth step, not by a coarser depth step. It is a property of the depth-age model in this interval.",
+    "refit_without_episode": {
+      "period_ka": 108.68333333333334,
+      "r2": 0.4472183690794136,
+      "period_all_rows_ka": 108.9,
+      "r2_all_rows": 0.42733376522099076,
+      "period_shift_ka": -0.21666666666666856
+    }
+  }
+}

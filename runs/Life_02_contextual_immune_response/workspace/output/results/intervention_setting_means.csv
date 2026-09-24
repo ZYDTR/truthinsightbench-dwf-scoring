@@ -1,0 +1,16 @@
+assay_id,intervention_setting_id,response_mean,response_sd,n_replicates
+assay_1,intervention_setting_1,0.899153,0.179622,3
+assay_1,intervention_setting_2,54.2161,4.46705,3
+assay_1,intervention_setting_3,10.0304,0.646185,3
+assay_1,intervention_setting_4,6.73002,1.14654,3
+assay_1,intervention_setting_5,49.9008,1.59536,3
+assay_2,intervention_setting_1,700,70,3
+assay_2,intervention_setting_2,1721.33,102.065,3
+assay_2,intervention_setting_3,1301.33,92.0072,3
+assay_2,intervention_setting_4,1176,30.2655,3
+assay_2,intervention_setting_5,1806,54.1479,3
+assay_3,intervention_setting_1,4.23,0.610492,3
+assay_3,intervention_setting_2,10.8467,0.75831,3
+assay_3,intervention_setting_3,7.53667,0.770865,3
+assay_3,intervention_setting_4,6.37333,0.141892,3
+assay_3,intervention_setting_5,10.3533,0.570029,3

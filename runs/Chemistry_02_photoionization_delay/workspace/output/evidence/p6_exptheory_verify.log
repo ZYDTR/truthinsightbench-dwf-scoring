@@ -1,0 +1,147 @@
+==============================================================================
+p6_exptheory_verify : independent re-derivation of the four claims
+==============================================================================
+measured DME energies: [22.5, 23.25, 24.8, 26.35, 27.9, 29.45, 31.0, 32.55, 34.1, 35.65, 37.2, 38.75, 48.4]
+tsv header: ['dataset_path', 'index_0', 'index_1', 'value']
+shapes: EMAG(276, 181) TMAG(99, 181) EPHA(276, 181) TPHA(99, 181) EDEL(275, 181) TDEL(98, 181)
+energy grids: exp 22.5000..50.0000 (n=276, step [0.1]), theory 23.249000..41.839000 (n=99)
+delay grids: exp 22.6000..50.0000 (n=275), theory 23.440421..41.840435 (n=98)
+post-unwrap max angular step: exp 2.406 rad, theory 3.136 rad
+steps within 1e-3 rad of pi (ambiguous branch): exp 0, theory 0
+unwrap cross-check vs numpy.unwrap: exp max|diff| 7.994e-15, theory 2.665e-15
+energy-unwrap cross-check vs numpy.unwrap: exp 6.661e-15, theory 2.665e-15
+provided theory delay vs diff(energy-unwrapped phase): r=0.9999960 rms=0.390 as
+provided exp delay    vs diff(energy-unwrapped phase): r=0.9999993 rms=0.200 as
+raw-panel energy steps > pi at fixed angle: exp 0, theory 0 (so raw == energy-unwrapped differencing)
+
+==============================================================================
+CLAIM 1 : theory grid within 1 meV of 12/13 measured energies
+==============================================================================
+    22.50 eV -> nearest theory  23.249000 eV (dE  +749.0000 meV) | nearest delay grid  23.440421 eV (dE  +940.4207 meV)
+    23.25 eV -> nearest theory  23.249000 eV (dE    -1.0000 meV) | nearest delay grid  23.440421 eV (dE  +190.4207 meV)
+    24.80 eV -> nearest theory  24.799000 eV (dE    -1.0000 meV) | nearest delay grid  24.799343 eV (dE    -0.6575 meV)
+    26.35 eV -> nearest theory  26.349000 eV (dE    -1.0000 meV) | nearest delay grid  26.349348 eV (dE    -0.6519 meV)
+    27.90 eV -> nearest theory  27.899000 eV (dE    -1.0000 meV) | nearest delay grid  27.899336 eV (dE    -0.6637 meV)
+    29.45 eV -> nearest theory  29.449000 eV (dE    -1.0000 meV) | nearest delay grid  29.449136 eV (dE    -0.8643 meV)
+    31.00 eV -> nearest theory  30.999000 eV (dE    -1.0000 meV) | nearest delay grid  30.999208 eV (dE    -0.7921 meV)
+    32.55 eV -> nearest theory  32.549000 eV (dE    -1.0000 meV) | nearest delay grid  32.549104 eV (dE    -0.8957 meV)
+    34.10 eV -> nearest theory  34.099000 eV (dE    -1.0000 meV) | nearest delay grid  34.099134 eV (dE    -0.8658 meV)
+    35.65 eV -> nearest theory  35.649000 eV (dE    -1.0000 meV) | nearest delay grid  35.649931 eV (dE    -0.0694 meV)
+    37.20 eV -> nearest theory  37.199000 eV (dE    -1.0000 meV) | nearest delay grid  37.197836 eV (dE    -2.1645 meV)
+    38.75 eV -> nearest theory  38.749000 eV (dE    -1.0000 meV) | nearest delay grid  38.747870 eV (dE    -2.1297 meV)
+    48.40 eV -> nearest theory  41.839000 eV (dE -6561.0000 meV) | nearest delay grid  41.840435 eV (dE -6559.5652 meV)
+-> within 1.000 meV: 11/13 (phase grid)   8/13 (delay grid);  within 5 meV (package tolerance): 11/13
+-> phase grid coverage 23.249-41.839 eV
+-> delay grid coverage 23.440-41.840 eV
+-> matched energies: [23.25, 24.8, 26.35, 27.9, 29.45, 31.0, 32.55, 34.1, 35.65, 37.2, 38.75]
+-> unmatched: [(22.5, 749.0), (48.4, -6561.0)]
+-> all matched offsets identical at -1 meV? True
+-> theory phase-grid coverage 23.249-41.839 eV (experiment panel 22.5-50.0 eV)
+
+==============================================================================
+CLAIM 2 : phase panel agreement after a single constant offset
+==============================================================================
+    23.25 eV  n=1
+     r_unwrapped : lin 0.998578  cub 0.998576  nn 0.998597
+     resid before: lin 0.2852  cub 0.2852  nn 0.2879 rad
+     resid after : lin 0.1072  cub 0.1073  nn 0.1070 rad  (med-offset variant 0.1135, circ-std 0.1072)
+     best constant offset: lin +15.147 deg  (cub +15.146, nn +15.317)
+    24.80 eV  n=2
+     r_unwrapped : lin 0.998721  cub 0.998721  nn 0.998719
+     resid before: lin 0.1750  cub 0.1750  nn 0.1750 rad
+     resid after : lin 0.1254  cub 0.1254  nn 0.1255 rad  (med-offset variant 0.1256, circ-std 0.1254)
+     best constant offset: lin +7.004 deg  (cub +7.004, nn +7.003)
+    26.35 eV  n=3
+     r_unwrapped : lin 0.989095  cub 0.989094  nn 0.989355
+     resid before: lin 0.3400  cub 0.3400  nn 0.3375 rad
+     resid after : lin 0.3337  cub 0.3337  nn 0.3317 rad  (med-offset variant 0.3359, circ-std 0.3337)
+     best constant offset: lin +3.992 deg  (cub +3.988, nn +3.861)
+    27.90 eV  n=4
+     r_unwrapped : lin 0.438595  cub 0.438595  nn 0.438612
+     resid before: lin 0.6249  cub 0.6249  nn 0.6250 rad
+     resid after : lin 0.6040  cub 0.6040  nn 0.6040 rad  (med-offset variant 0.6226, circ-std 0.5858)
+     best constant offset: lin +12.416 deg  (cub +12.416, nn +12.421)
+    29.45 eV  n=5
+     r_unwrapped : lin 0.632269  cub 0.632256  nn 0.631288
+     resid before: lin 0.8871  cub 0.8870  nn 0.8836 rad
+     resid after : lin 0.8848  cub 0.8848  nn 0.8819 rad  (med-offset variant 0.9033, circ-std 0.8002)
+     best constant offset: lin +14.968 deg  (cub +14.968, nn +14.623)
+    31.00 eV  n=6
+     r_unwrapped : lin 0.763466  cub 0.763465  nn 0.763513
+     resid before: lin 1.1039  cub 1.1039  nn 1.1041 rad
+     resid after : lin 1.1198  cub 1.1198  nn 1.1200 rad  (med-offset variant 1.1186, circ-std 0.9289)
+     best constant offset: lin +14.404 deg  (cub +14.404, nn +14.417)
+    32.55 eV  n=7
+     r_unwrapped : lin 0.887520  cub 0.887568  nn 0.886461
+     resid before: lin 0.9784  cub 0.9782  nn 0.9824 rad
+     resid after : lin 0.8585  cub 0.8583  nn 0.8643 rad  (med-offset variant 0.8752, circ-std 0.7857)
+     best constant offset: lin +18.734 deg  (cub +18.741, nn +18.469)
+    34.10 eV  n=8
+     r_unwrapped : lin 0.926335  cub 0.926335  nn 0.926331
+     resid before: lin 0.7174  cub 0.7174  nn 0.7174 rad
+     resid after : lin 0.6808  cub 0.6808  nn 0.6808 rad  (med-offset variant 0.6840, circ-std 0.6573)
+     best constant offset: lin +9.444 deg  (cub +9.444, nn +9.444)
+    35.65 eV  n=9
+     r_unwrapped : lin 0.940909  cub 0.940910  nn 0.941259
+     resid before: lin 0.6327  cub 0.6327  nn 0.6302 rad
+     resid after : lin 0.6326  cub 0.6326  nn 0.6300 rad  (med-offset variant 0.6315, circ-std 0.6186)
+     best constant offset: lin +0.126 deg  (cub +0.127, nn +0.166)
+    37.20 eV  n=10
+     r_unwrapped : lin 0.942014  cub 0.942014  nn 0.942007
+     resid before: lin 0.6607  cub 0.6607  nn 0.6607 rad
+     resid after : lin 0.6488  cub 0.6488  nn 0.6489 rad  (med-offset variant 0.6520, circ-std 0.6258)
+     best constant offset: lin -6.282 deg  (cub -6.282, nn -6.282)
+    38.75 eV  n=11
+     r_unwrapped : lin -0.497128  cub -0.497155  nn -0.498323
+     resid before: lin 0.7657  cub 0.7657  nn 0.7627 rad
+     resid after : lin 0.7617  cub 0.7616  nn 0.7575 rad  (med-offset variant 0.7603, circ-std 0.6532)
+     best constant offset: lin -3.539 deg  (cub -3.540, nn -3.821)
+
+  headline 23.25 eV values (package claimed r~0.9986, 0.285 -> 0.107 rad):
+    my r     = 0.998578 (lin) / 0.998576 (cub) / 0.998597 (nn)
+    my before= 0.2852 rad (lin)
+    my after = 0.1072 rad (lin) / 0.1073 (cub) / 0.1070 (nn)
+    across 11 matched energies: median r=0.926335, median before=0.6607, median after=0.6488 rad
+    ratio after/before (per matched energy): [0.376, 0.717, 0.981, 0.966, 0.997, 1.014, 0.877, 0.949, 1.0, 0.982, 0.995]
+
+==============================================================================
+CLAIM 3 : magnitude vs phase vs delay agreement (23.25 eV headline)
+==============================================================================
+    23.25 eV | mag r= 0.869 nrms= 0.562 | phase r= 0.9986 resid= 0.107 nrms= 0.060 | delay r= 0.599 rms=   82.1 as nrms= 1.486 (nn rms    82.9, phase-derived    81.9)
+    24.80 eV | mag r= 0.761 nrms= 1.137 | phase r= 0.9987 resid= 0.125 nrms= 0.066 | delay r= 0.342 rms=  109.8 as nrms= 1.309 (nn rms   109.8, phase-derived   110.2)
+    26.35 eV | mag r= 0.806 nrms= 1.437 | phase r= 0.9891 resid= 0.334 nrms= 0.165 | delay r= 0.425 rms=  118.3 as nrms= 1.527 (nn rms   118.5, phase-derived   117.2)
+    27.90 eV | mag r= 0.389 nrms= 1.516 | phase r= 0.4386 resid= 0.604 nrms= 0.282 | delay r= 0.361 rms=  298.5 as nrms= 5.852 (nn rms   298.6, phase-derived   299.6)
+    29.45 eV | mag r= 0.728 nrms= 0.844 | phase r= 0.6323 resid= 0.885 nrms= 0.412 | delay r=-0.515 rms=  210.1 as nrms= 4.097 (nn rms   207.7, phase-derived   210.9)
+    31.00 eV | mag r= 0.873 nrms= 0.613 | phase r= 0.7635 resid= 1.120 nrms= 0.559 | delay r=-0.599 rms=  268.9 as nrms= 2.032 (nn rms   269.0, phase-derived   272.2)
+    32.55 eV | mag r= 0.934 nrms= 0.444 | phase r= 0.8875 resid= 0.859 nrms= 0.473 | delay r=-0.603 rms=  201.7 as nrms= 2.367 (nn rms   205.6, phase-derived   202.9)
+    34.10 eV | mag r= 0.935 nrms= 0.486 | phase r= 0.9263 resid= 0.681 nrms= 0.383 | delay r= 0.537 rms=  121.7 as nrms= 4.148 (nn rms   121.7, phase-derived   120.9)
+    35.65 eV | mag r= 0.913 nrms= 0.541 | phase r= 0.9409 resid= 0.633 nrms= 0.341 | delay r= 0.552 rms=  109.5 as nrms= 2.121 (nn rms   108.4, phase-derived   108.4)
+    37.20 eV | mag r= 0.881 nrms= 0.579 | phase r= 0.9420 resid= 0.649 nrms= 0.337 | delay r= 0.210 rms=  122.3 as nrms= 2.049 (nn rms   122.3, phase-derived   122.2)
+    38.75 eV | mag r= 0.864 nrms= 0.546 | phase r=-0.4971 resid= 0.762 nrms= 0.365 | delay r=-0.181 rms=  154.3 as nrms= 1.351 (nn rms   153.5, phase-derived   157.0)
+
+  at 23.25 eV : mag nrms 0.562 vs phase nrms 0.060 vs delay nrms 1.486; delay rms 82.12 as (nrms by exp std 1.486, by theory std 1.086)
+  medians over 11 matched energies: mag nrms 0.579, phase nrms 0.341, delay nrms 2.049
+  medians: mag r 0.869, phase r 0.9263, delay r 0.342
+  mag nrms > phase nrms at 10/11 energies; mag r < phase r at 6/11 energies
+
+==============================================================================
+CLAIM 4 : agreement trend with photon energy
+==============================================================================
+  mag_nrms      spearman rho=-0.573 p=0.0655 | kendall tau=-0.345 p=0.1646 | ols slope=-0.04376 p=0.0642
+  mag_r         spearman rho=+0.527 p=0.0956 | kendall tau=+0.309 p=0.2183 | ols slope=+0.01215 p=0.2217
+  phase_resid   spearman rho=+0.564 p=0.0710 | kendall tau=+0.418 p=0.0866 | ols slope=+0.03748 p=0.0454
+  phase_nrms    spearman rho=+0.545 p=0.0827 | kendall tau=+0.382 p=0.1210 | ols slope=+0.01993 p=0.0323
+  phase_r       spearman rho=-0.482 p=0.1334 | kendall tau=-0.200 p=0.4454 | ols slope=-0.03882 p=0.1647
+  delay_rms     spearman rho=+0.209 p=0.5372 | kendall tau=+0.127 p=0.6481 | ols slope=+0.1327 p=0.9778
+  delay_nrms    spearman rho=+0.191 p=0.5739 | kendall tau=+0.091 p=0.7612 | ols slope=-0.006285 p=0.9490
+  delay_r       spearman rho=-0.282 p=0.4011 | kendall tau=-0.236 p=0.3587 | ols slope=-0.02217 p=0.4843
+
+  full-grid variant (all theory rows, exp panel linearly interpolated):
+  mag_nrms      (n= 99) spearman rho=-0.657 p=0.0000 | ols slope=-0.04397 p=0.0000
+  phase_resid   (n= 99) spearman rho=+0.501 p=0.0000 | ols slope=+0.03006 p=0.0000
+  delay_rms     (n= 98) spearman rho=+0.132 p=0.1966 | ols slope=+0.2914 p=0.8066
+  delay_nrms    (n= 99) spearman rho=-0.267 p=0.0078 | ols slope=-0.0658 p=0.0197
+  delay_r       (n= 99) spearman rho=-0.291 p=0.0036 | ols slope=-0.02223 p=0.0045
+
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p6_exptheory_verdict.json
+summary: [(False, 'The theory grid contains a point within 1 meV of 12 of the 1'), (True, 'At matched energies the experiment and theory phase panels a'), (True, 'The magnitude panels agree less well than the phase panels, '), (True, 'Agreement improves with photon energy for magnitude but not ')]

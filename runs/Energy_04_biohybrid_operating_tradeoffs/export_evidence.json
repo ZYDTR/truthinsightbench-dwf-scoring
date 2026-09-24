@@ -1,0 +1,21 @@
+{
+  "task_id": "Energy_04_biohybrid_operating_tradeoffs",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260919T160612-6e1a6e",
+  "source_run_json_sha256": "ef0e9bd09393c0edc640b4b83a901d9bbb3455242b7aa6f8485507aff6d913e3",
+  "source_release_json_sha256": "7f2e49412f643d82ee2195589687af562ccd5bb3619252127eca3ddac8fe2a02",
+  "source_latest_validation_sha256": "94dcbc5713fed70d58eb845a75464514a7af8de0f38abdee7b52d484797cf74f",
+  "source_snapshot_manifest_sha256": "3655374836b4dc71695aecb52221c5cfccbf68dd6a2173e50a147ad859b642fc",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 926
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "5ac9cbeeffcf5993fa6dc8ccd33319795f791f998c266b776da7bf7b1a0df115",
+  "output_sha256": "3a73b9308adaaf2f682a9a27c761be4385ad22b806b61f0bf7f4bb95a9c5d18f"
+}

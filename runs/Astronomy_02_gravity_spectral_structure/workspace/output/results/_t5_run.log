@@ -1,0 +1,16 @@
+[track5] stats (incl. 66 LS transforms) in 17.7 s
+[track5] fig1 in 85.6 s
+[track5] fig2 in 45.8 s
+[track5] fig3 in 16.5 s
+[track5] fig4 in 49.8 s
+[track5] fig5 in 41.5 s
+[track5] backend=Agg matplotlib=3.11.2
+[track5] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig1_residual_traces.png (1935225 bytes)
+[track5] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig2_per_pass_rms.png (202690 bytes)
+[track5] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig3_periodograms.png (482645 bytes)
+[track5] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig4_ic_surfaces.png (254273 bytes)
+[track5] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig5_grid_coverage.png (322619 bytes)
+[track5] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/figures_manifest.json
+[track5] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/results/track5_figure_annotations.json
+[track5] done in 258.8 s
+EXIT=0

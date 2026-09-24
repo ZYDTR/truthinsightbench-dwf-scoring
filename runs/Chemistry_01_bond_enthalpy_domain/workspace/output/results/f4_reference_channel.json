@@ -1,0 +1,197 @@
+{
+  "workstream": "FINDING-4-reference-channel",
+  "title": "The reference channel is genuinely worse and fails bimodally",
+  "analysis_unit": "benchmark bond observation (543)",
+  "accuracy": {
+    "quantum": {
+      "mae": 2.0978084714548806,
+      "rmse": 3.0595296584807596,
+      "median_abs_error": 1.4000000000000057,
+      "bias": 0.5537200736648252,
+      "sd_signed_error": 3.011780340905638,
+      "p90_abs_error": 4.707999999999996,
+      "max_abs_error": 15.740000000000007,
+      "frac_within_5_kcal": 0.9097605893186004
+    },
+    "learned": {
+      "mae": 2.410699815837938,
+      "rmse": 3.627796539885696,
+      "median_abs_error": 1.6099999999999994,
+      "bias": 1.0788766114180484,
+      "sd_signed_error": 3.466852687216154,
+      "p90_abs_error": 5.457999999999996,
+      "max_abs_error": 25.21,
+      "frac_within_5_kcal": 0.8692449355432781
+    },
+    "reference": {
+      "mae": 5.48596685082873,
+      "rmse": 6.75961553714002,
+      "median_abs_error": 4.899999999999992,
+      "bias": 1.3784162062615106,
+      "sd_signed_error": 6.623682412727947,
+      "p90_abs_error": 9.800000000000008,
+      "max_abs_error": 33.4,
+      "frac_within_5_kcal": 0.5211786372007366
+    }
+  },
+  "paired_against_calibrated_channels": {
+    "reference_vs_quantum": {
+      "mean_abs_error_difference": 3.388158379373849,
+      "median_abs_error_difference": 3.409999999999996,
+      "ci95_mean": [
+        3.05288950276243,
+        3.7417688766114177
+      ],
+      "paired_t": 19.248848612689212,
+      "paired_t_p": 2.616074594011431e-63,
+      "wilcoxon_p": 1.9379114925802434e-59,
+      "n_reference_worse": 451,
+      "n_reference_better": 92,
+      "cliffs_delta": 0.6311807060563204
+    },
+    "reference_vs_learned": {
+      "mean_abs_error_difference": 3.075267034990792,
+      "median_abs_error_difference": 3.299999999999997,
+      "ci95_mean": [
+        2.718267955801105,
+        3.4484019337016574
+      ],
+      "paired_t": 16.531868867837336,
+      "paired_t_p": 5.210749499009692e-50,
+      "wilcoxon_p": 1.3706286385954525e-51,
+      "n_reference_worse": 444,
+      "n_reference_better": 99,
+      "cliffs_delta": 0.5734867678031806
+    }
+  },
+  "coarse_lookup_structure": {
+    "n_distinct_fragment_environments": 539,
+    "n_distinct_reference_values": 290,
+    "environments_with_more_than_one_reference_value": 0,
+    "max_reference_values_per_environment": 1,
+    "quantum_environments_with_more_than_one_value": 4,
+    "learned_environments_with_more_than_one_value": 0
+  },
+  "bimodality": {
+    "by_bond_class": {
+      "C-C": {
+        "n": 240,
+        "reference_bias": -3.3033333333333332,
+        "reference_mae": 5.225,
+        "reference_t": -8.546412651346753,
+        "reference_p": 1.5209892518721823e-15,
+        "quantum_bias": 1.1073333333333337,
+        "learned_bias": 1.2510416666666677,
+        "sign_of_reference_bias": "negative"
+      },
+      "C-H": {
+        "n": 302,
+        "reference_bias": 5.102913907284768,
+        "reference_mae": 5.710860927152317,
+        "reference_t": 20.274090558456408,
+        "reference_p": 3.184378950770985e-58,
+        "quantum_bias": 0.11013245033112577,
+        "learned_bias": 0.9301324503311259,
+        "sign_of_reference_bias": "positive"
+      }
+    },
+    "reference_bias_sign_flips_between_classes": true,
+    "note": "A sign flip between bond classes means a single global bias correction cannot fix the reference channel, and a single summary of its worst cases mixes two opposing failure mechanisms."
+  },
+  "extreme_tail": {
+    "n_abs_gt_5": 260,
+    "n_abs_gt_10": 51,
+    "n_abs_gt_15": 12,
+    "n_positive_gt_10": 36,
+    "n_negative_gt_10": 15,
+    "worst_positive": [
+      {
+        "observation_id": "bond_observation_0227",
+        "parent": "CC1(C)C=C1",
+        "bond_class": "C-H",
+        "experimental": 106.7,
+        "reference": 128.3,
+        "error": 21.60000000000001
+      },
+      {
+        "observation_id": "bond_observation_0072",
+        "parent": "C1C2CC12",
+        "bond_class": "C-H",
+        "experimental": 102.0,
+        "reference": 123.5,
+        "error": 21.5
+      },
+      {
+        "observation_id": "bond_observation_0113",
+        "parent": "C=CC(=C)C",
+        "bond_class": "C-C",
+        "experimental": 108.8,
+        "reference": 127.4,
+        "error": 18.60000000000001
+      },
+      {
+        "observation_id": "bond_observation_0123",
+        "parent": "C=CC=C",
+        "bond_class": "C-C",
+        "experimental": 116.9,
+        "reference": 134.6,
+        "error": 17.69999999999999
+      },
+      {
+        "observation_id": "bond_observation_0054",
+        "parent": "C1=CCC2(C=C1)CC2",
+        "bond_class": "C-H",
+        "experimental": 70.7,
+        "reference": 87.8,
+        "error": 17.099999999999994
+      }
+    ],
+    "worst_negative": [
+      {
+        "observation_id": "bond_observation_0508",
+        "parent": "c1ccc(C(c2ccccc2)(c2ccccc2)c2ccccc2)cc1",
+        "bond_class": "C-C",
+        "experimental": 77.5,
+        "reference": 44.1,
+        "error": -33.4
+      },
+      {
+        "observation_id": "bond_observation_0520",
+        "parent": "c1ccc(CC(c2ccccc2)(c2ccccc2)c2ccccc2)cc1",
+        "bond_class": "C-C",
+        "experimental": 56.1,
+        "reference": 25.1,
+        "error": -31.0
+      },
+      {
+        "observation_id": "bond_observation_0509",
+        "parent": "c1ccc(C(c2ccccc2)c2ccccc2)cc1",
+        "bond_class": "C-C",
+        "experimental": 86.3,
+        "reference": 61.6,
+        "error": -24.7
+      },
+      {
+        "observation_id": "bond_observation_0199",
+        "parent": "CC(C)C(c1ccccc1)c1ccccc1",
+        "bond_class": "C-C",
+        "experimental": 73.6,
+        "reference": 53.5,
+        "error": -20.099999999999994
+      },
+      {
+        "observation_id": "bond_observation_0222",
+        "parent": "CC(O)C(C)O",
+        "bond_class": "C-C",
+        "experimental": 90.5,
+        "reference": 76.2,
+        "error": -14.299999999999995
+      }
+    ]
+  },
+  "interpretation": "The reference channel's error is 2.4x the experimental noise floor, so unlike the two calibrated channels it cannot be explained as reference heterogeneity - it carries a real defect. Its signed error flips sign between the C-H and C-C classes, consistent with an environment-level lookup whose value is not class-specific.",
+  "limitations": [
+    "Only C-H and C-C are populated well enough to compare, so the sign flip is established on two classes, not on the full nine-class taxonomy.",
+    "The reference values carry no method, phase or solvent metadata in this workspace, so the mechanism behind the coarse lookup cannot be identified, only its statistical signature."
+  ]
+}

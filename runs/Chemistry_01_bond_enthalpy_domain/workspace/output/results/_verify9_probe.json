@@ -1,0 +1,215 @@
+{
+  "claimed_slices_recomputed": {
+    "CH_hac_ge10": [
+      3.2458219178082186,
+      2.201643835616439,
+      146
+    ],
+    "CH_hac_le5": [
+      1.7303846153846156,
+      1.7571153846153846,
+      52
+    ]
+  },
+  "counts": {
+    "CH_total": 302,
+    "CH_hac_ge10": 146,
+    "CH_hac_le5": 52,
+    "CH_hac_ge10_unique_mols": 144,
+    "CH_hac_le5_unique_mols": 42,
+    "CH_hac_ge10_hac_eq_10": 22,
+    "CH_hac_ge10_hac_gt_10": 124
+  },
+  "domain_split": {
+    "hac_eq_10": {
+      "n": 22,
+      "learned": 2.4950000000000006,
+      "quantum": 2.438636363636367
+    },
+    "hac_gt_10": {
+      "n": 124,
+      "learned": 3.379032258064515,
+      "quantum": 2.1595967741935485
+    }
+  },
+  "parent_in_db": {
+    "hac>=10": {
+      "n": 146,
+      "frac_parent_in_db": 0.136986301369863,
+      "learned_in_db": 2.4605000000000006,
+      "quantum_in_db": 2.5540000000000034,
+      "learned_out_db": 3.3704761904761895,
+      "quantum_out_db": 2.1457142857142864
+    },
+    "hac<=5": {
+      "n": 52,
+      "frac_parent_in_db": 0.9615384615384616,
+      "learned_in_db": 1.7576000000000005,
+      "quantum_in_db": 1.7590000000000003,
+      "learned_out_db": 1.0499999999999972,
+      "quantum_out_db": 1.7099999999999937
+    },
+    "hac==10": {
+      "n": 22,
+      "frac_parent_in_db": 0.9090909090909091,
+      "learned_in_db": 2.4605000000000006,
+      "quantum_in_db": 2.5540000000000034,
+      "learned_out_db": 2.8400000000000034,
+      "quantum_out_db": 1.2850000000000037
+    },
+    "hac>10": {
+      "n": 124,
+      "frac_parent_in_db": 0.0,
+      "learned_in_db": null,
+      "quantum_in_db": null,
+      "learned_out_db": 3.379032258064515,
+      "quantum_out_db": 2.1595967741935485
+    }
+  },
+  "C-C": {
+    "hac_ge10": {
+      "n": 46,
+      "learned": 4.2749999999999995,
+      "quantum": 3.823478260869565
+    },
+    "hac_le5": {
+      "n": 61,
+      "learned": 1.4480327868852472,
+      "quantum": 1.6073770491803292
+    }
+  },
+  "overall": {
+    "n": 543,
+    "learned": 2.410699815837938,
+    "quantum": 2.0978084714548806,
+    "edge": 0.3128913443830572
+  },
+  "overall_edge_decomposition": {
+    "hac<=5": {
+      "n": 113,
+      "weight": 0.20810313075506445,
+      "slice_edge": -0.0983185840707963,
+      "absolute_contribution_to_overall_edge": -0.020460405156537718
+    },
+    "hac 6-9": {
+      "n": 237,
+      "weight": 0.43646408839779005,
+      "slice_edge": 0.02008438818565428,
+      "absolute_contribution_to_overall_edge": 0.00876611418047894
+    },
+    "hac>=10": {
+      "n": 193,
+      "weight": 0.35543278084714547,
+      "slice_edge": 0.9132124352331608,
+      "absolute_contribution_to_overall_edge": 0.32458563535911605
+    }
+  },
+  "overall_edge_leaving_out_hac_ge10": -0.018142857142857016,
+  "overall_edge_only_hac_le5": -0.0983185840707963,
+  "overall_edge_only_hac_ge10": 0.9132124352331608,
+  "CH_edge_decomposition": {
+    "overall_CH_edge": 0.5509271523178809,
+    "slices": {
+      "hac<=5": {
+        "n": 52,
+        "slice_edge": -0.026730769230769003,
+        "abs_contrib_to_CH_edge": -0.004602649006622477
+      },
+      "hac 6-9": {
+        "n": 104,
+        "slice_edge": 0.14730769230769303,
+        "abs_contrib_to_CH_edge": 0.050728476821192296
+      },
+      "hac>=10": {
+        "n": 146,
+        "slice_edge": 1.0441780821917797,
+        "abs_contrib_to_CH_edge": 0.5048013245033107
+      }
+    }
+  },
+  "CH_edge_excluding_hac_ge10": 0.0892948717948725,
+  "bootstrap95": {
+    "overall_edge": [
+      0.1682504604051562,
+      0.46703545119705386
+    ],
+    "CH_hac_ge10_edge": [
+      0.5905462328767098,
+      1.529351027397258
+    ],
+    "CH_hac_le5_edge": [
+      -0.11942788461538473,
+      0.058269230769230324
+    ],
+    "overall_edge_without_hac_ge10": [
+      -0.09994357142857054,
+      0.06534285714285737
+    ]
+  },
+  "paired_t": {
+    "CH_hac_ge10": {
+      "t": 4.364741548000845,
+      "p": 2.4049137913406565e-05,
+      "n": 146
+    },
+    "CH_hac_le5": {
+      "t": -0.5804775608616018,
+      "p": 0.5641488315910059,
+      "n": 52
+    },
+    "overall": {
+      "t": 4.071283281498413,
+      "p": 5.372465081189447e-05,
+      "n": 543
+    }
+  },
+  "interaction_dod": {
+    "mean_diff_ge10": 1.0441780821917799,
+    "mean_diff_le5": -0.026730769230769016,
+    "difference": 1.0709088514225489,
+    "welch_t": 4.395781054094855,
+    "p": 2.0370573628780564e-05
+  },
+  "interaction_perm_p": 0.0074496275186240685,
+  "unit_unique_molecule_CH": {
+    "hac_ge10": {
+      "n": 144,
+      "learned": 3.285138888888888,
+      "quantum": 2.2249305555555563
+    },
+    "hac_le5": {
+      "n": 42,
+      "learned": 1.7150000000000007,
+      "quantum": 1.725238095238095
+    }
+  },
+  "unit_molecule_mean_CH": {
+    "hac_ge10": {
+      "n": 144,
+      "learned": 3.262847222222222,
+      "quantum": 2.203541666666667
+    },
+    "hac_le5": {
+      "n": 42,
+      "learned": 1.8166269841269842,
+      "quantum": 1.8262301587301584
+    }
+  },
+  "duplication": {
+    "CH_hac_le5_rows_vs_mols": [
+      52,
+      42
+    ],
+    "CH_hac_ge10_rows_vs_mols": [
+      146,
+      144
+    ],
+    "top_dup_mols_CH_hac_le5": {
+      "CCCCC": 3,
+      "C#CC": 2,
+      "C1=CC1": 2,
+      "C1=CCC1": 2,
+      "C=C(C)CC": 2
+    }
+  }
+}

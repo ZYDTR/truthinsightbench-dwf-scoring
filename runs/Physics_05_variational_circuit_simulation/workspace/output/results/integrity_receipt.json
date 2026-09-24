@@ -1,0 +1,10 @@
+{
+  "file": "/data/user/conversations/conv-8ab5fa73-141f-470a-b3e5-45582443e897/project/data/source_data/computational_observations.json",
+  "sha256": "8512f362e9db0b199fdc3fafa12886656f01baad65684aadf84d4d32fce9fca8",
+  "manifest_sha256": "8512f362e9db0b199fdc3fafa12886656f01baad65684aadf84d4d32fce9fca8",
+  "hash_match": true,
+  "bytes": 9634,
+  "manifest_bytes": 9634,
+  "manifest_task_id": "Physics_05_variational_circuit_simulation",
+  "manifest_t0": "2020-03-30"
+}

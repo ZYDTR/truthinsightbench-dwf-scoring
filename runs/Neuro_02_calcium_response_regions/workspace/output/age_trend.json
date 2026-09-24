@@ -1,0 +1,32 @@
+{
+  "mean_amplitude_dff0": {
+    "r2": 0.2595,
+    "slope": 0.007243,
+    "p": 0.0
+  },
+  "mean_time_to_peak_s": {
+    "r2": 0.1734,
+    "slope": 0.19866,
+    "p": 0.165397
+  },
+  "mean_peak_width_s": {
+    "r2": 0.2951,
+    "slope": -0.029446,
+    "p": 0.651773
+  },
+  "mean_peak_prominence_dff0": {
+    "r2": 0.2107,
+    "slope": 0.007365,
+    "p": 0.0
+  },
+  "mean_peak_frequency_hz": {
+    "r2": 0.0927,
+    "slope": 5e-06,
+    "p": 0.805253
+  },
+  "mean_auc_au": {
+    "r2": 0.3559,
+    "slope": 0.426975,
+    "p": 0.01266
+  }
+}

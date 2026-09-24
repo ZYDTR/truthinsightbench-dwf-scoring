@@ -1,0 +1,25 @@
+table,column,n_rows,n_blank,n_nan_literal,n_numeric_parseable,n_missing_total,frac_parseable,min,median,max,n_le_zero
+glacial,Compilation,427,0,0,0,0,0.0,,,,0
+glacial,Reference,427,0,0,0,0,0.0,,,,0
+glacial,Reference DOI,427,0,0,0,0,0.0,,,,0
+glacial,Locality,427,0,0,0,0,0.0,,,,0
+glacial,Glacier,427,0,0,0,0,0.0,,,,0
+glacial,Region,427,0,0,0,0,0.0,,,,0
+glacial,Latitude,427,0,0,425,0,0.995316,-84.99878,58.9269,80.50038,53
+glacial,Longitude,427,0,0,425,0,0.995316,-160.00245,-49.9857,170.92619,242
+glacial,Elevation (m),427,0,0,15,0,0.035129,432.0,1197.0,1823.0,0
+glacial,Precipitation (mm/yr),427,0,0,425,0,0.995316,29.2,1631.0,7857.1,0
+glacial,Slope (m/km),427,0,0,425,0,0.995316,0.32039,250.5622,580.00047,0
+glacial,Type,427,0,0,0,0,0.0,,,,0
+glacial,Lithology,427,0,0,0,0,0.0,,,,0
+glacial,Methodology,427,0,0,0,0,0.0,,,,0
+glacial,Area (km2),427,0,0,392,0,0.918033,1e-08,13.35,2166090.0,0
+glacial,Time interval (yr),427,0,0,427,0,1.0,0.0191781,1270.0,250000000.0,0
+glacial,Sediment flux (km3/yr),427,0,0,51,0,0.119438,1.03704e-08,0.00296109,0.474074,0
+glacial,Exhumation (m),427,0,0,81,0,0.189696,0.0071,0.4058,3000.0,0
+glacial,Exhumation min (m),427,0,0,38,0,0.088993,0.0,3.0,2000.0,3
+glacial,Exhumation max (m),427,0,0,35,0,0.081967,0.02,10.0,2500.0,0
+glacial,Erosion rate (mm/yr),427,0,0,427,0,1.0,0.0004,0.55,1000.0,0
+glacial,Erosion rate min,427,0,0,205,0,0.480094,0.0,0.3,375.51,19
+glacial,Erosion rate max,427,0,0,197,0,0.461358,0.002,0.6,922.449,0
+glacial,Comments,427,0,0,0,0,0.0,,,,0

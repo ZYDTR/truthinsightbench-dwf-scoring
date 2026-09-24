@@ -1,0 +1,7 @@
+stage 7 ok
+  median covariate          : 15.0
+  rho below / above median  : +0.6186 / -0.0104
+  delta rho 95% CI          : [+0.466, +0.790]
+  best changepoint          : 23.00 (rho 0.557 -> -0.213)
+  boundary in all groups    : False
+  rarefied gap mean         : 0.5765 all reps: True

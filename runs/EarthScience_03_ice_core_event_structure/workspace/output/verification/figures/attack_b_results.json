@@ -1,0 +1,29 @@
+{
+  "threshold_only_full_recall": [
+    {
+      "window": 15,
+      "n_for_full_recall": 290,
+      "recall": 15
+    },
+    {
+      "window": 25,
+      "n_for_full_recall": 768,
+      "recall": 15
+    },
+    {
+      "window": 51,
+      "n_for_full_recall": 478,
+      "recall": 15
+    },
+    {
+      "window": 101,
+      "n_for_full_recall": 327,
+      "recall": 15
+    },
+    {
+      "window": 301,
+      "n_for_full_recall": 351,
+      "recall": 15
+    }
+  ]
+}

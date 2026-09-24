@@ -1,0 +1,709 @@
+[
+  {
+    "sheet": "Sheet_001",
+    "max_row": 33644,
+    "max_col": 4,
+    "headers": [
+      "cml angle",
+      "io phase angle"
+    ],
+    "labels_colB": [
+      "Gan(channel_l)",
+      "Gan(channel_r)",
+      "group_a (channel_l)",
+      "group_a(channel_r)",
+      "group_c (channel_l)",
+      "group_c (channel_r)"
+    ],
+    "class": "angle_time_series"
+  },
+  {
+    "sheet": "Sheet_002",
+    "max_row": 33644,
+    "max_col": 4,
+    "headers": [
+      "cml angle",
+      "group_b phase angle"
+    ],
+    "labels_colB": [
+      "Ganymed(channel_l)",
+      "group_a(channel_l)",
+      "group_a(channel_r)",
+      "group_b(channel_r)",
+      "group_c(channel_l)",
+      "group_c(channel_r)"
+    ],
+    "class": "angle_time_series"
+  },
+  {
+    "sheet": "Sheet_003",
+    "max_row": 430,
+    "max_col": 427,
+    "headers": [
+      "tmin(s)",
+      "tmax(s)",
+      "fmin(MHz)",
+      "fmax(MHz)",
+      "Drift-rate(MHZ/s)"
+    ],
+    "labels_colB": [
+      "Bounds",
+      "Image"
+    ],
+    "class": "dynamic_spectrum_image"
+  },
+  {
+    "sheet": "Sheet_004",
+    "max_row": 430,
+    "max_col": 427,
+    "headers": [
+      "tmin(s)",
+      "tmax(s)",
+      "fmin(MHz)",
+      "fmax(MHz)",
+      "Drift-rate(MHZ/s)"
+    ],
+    "labels_colB": [
+      "Bounds",
+      "Image"
+    ],
+    "class": "dynamic_spectrum_image"
+  },
+  {
+    "sheet": "Sheet_005",
+    "max_row": 430,
+    "max_col": 427,
+    "headers": [
+      "tmin(s)",
+      "tmax(s)",
+      "fmin(MHz)",
+      "fmax(MHz)",
+      "Drift-rate(MHZ/s)"
+    ],
+    "labels_colB": [
+      "Bounds",
+      "Image"
+    ],
+    "class": "dynamic_spectrum_image"
+  },
+  {
+    "sheet": "Sheet_006",
+    "max_row": 430,
+    "max_col": 427,
+    "headers": [
+      "tmin(s)",
+      "tmax(s)",
+      "fmin(MHz)",
+      "fmax(MHz)",
+      "Drift-rate(MHZ/s)"
+    ],
+    "labels_colB": [
+      "Bounds",
+      "Image"
+    ],
+    "class": "dynamic_spectrum_image"
+  },
+  {
+    "sheet": "Sheet_007",
+    "max_row": 430,
+    "max_col": 427,
+    "headers": [
+      "tmin(s)",
+      "tmax(s)",
+      "fmin(MHz)",
+      "fmax(MHz)",
+      "Drift-rate(MHZ/s)"
+    ],
+    "labels_colB": [
+      "Bounds",
+      "Image"
+    ],
+    "class": "dynamic_spectrum_image"
+  },
+  {
+    "sheet": "Sheet_008",
+    "max_row": 430,
+    "max_col": 427,
+    "headers": [
+      "tmin(s)",
+      "tmax(s)",
+      "fmin(MHz)",
+      "fmax(MHz)",
+      "Drift-rate(MHZ/s)"
+    ],
+    "labels_colB": [
+      "Bounds",
+      "Image"
+    ],
+    "class": "dynamic_spectrum_image"
+  },
+  {
+    "sheet": "Sheet_009",
+    "max_row": 62,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_a (-35<s<-10), channel_l",
+      "group_a(-10<s<0), channel_l",
+      "group_a(0<s<20), channel_l"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_010",
+    "max_row": 62,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_a (-35<s<-10), channel_r",
+      "group_a(-10<s<0), channel_r",
+      "group_a(0<s<20), channel_r"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_011",
+    "max_row": 62,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_b (-35<s<-10), channel_l",
+      "group_b(-10<s<0), channel_l",
+      "group_b(0<s<20), channel_l"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_012",
+    "max_row": 62,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_b (-35<s<-10), channel_r",
+      "group_b(-10<s<0), channel_r",
+      "group_b(0<s<20), channel_r"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_013",
+    "max_row": 62,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_c (-35<s<-10), channel_l",
+      "group_c(-10<s<0), channel_l",
+      "group_c(0<s<20), channel_l"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_014",
+    "max_row": 62,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_c (-35<s<-10), channel_r",
+      "group_c(-10<s<0), channel_r",
+      "group_c(0<s<20), channel_r"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_015",
+    "max_row": 430,
+    "max_col": 427,
+    "headers": [
+      "tmin(s)",
+      "tmax(s)",
+      "fmin(MHz)",
+      "fmax(MHz)"
+    ],
+    "labels_colB": [
+      "Bounds",
+      "Image"
+    ],
+    "class": "dynamic_spectrum_image"
+  },
+  {
+    "sheet": "Sheet_016",
+    "max_row": 430,
+    "max_col": 427,
+    "headers": [
+      "tmin(s)",
+      "tmax(s)",
+      "fmin(MHz)",
+      "fmax(MHz)"
+    ],
+    "labels_colB": [
+      "Bounds",
+      "Image"
+    ],
+    "class": "dynamic_spectrum_image"
+  },
+  {
+    "sheet": "Sheet_017",
+    "max_row": 430,
+    "max_col": 427,
+    "headers": [
+      "tmin(s)",
+      "tmax(s)",
+      "fmin(MHz)",
+      "fmax(MHz)"
+    ],
+    "labels_colB": [
+      "Bounds",
+      "Image"
+    ],
+    "class": "dynamic_spectrum_image"
+  },
+  {
+    "sheet": "Sheet_018",
+    "max_row": 430,
+    "max_col": 427,
+    "headers": [
+      "tmin(s)",
+      "tmax(s)",
+      "fmin(MHz)",
+      "fmax(MHz)"
+    ],
+    "labels_colB": [
+      "Bounds",
+      "Image"
+    ],
+    "class": "dynamic_spectrum_image"
+  },
+  {
+    "sheet": "Sheet_019",
+    "max_row": 1605,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "RD_box_of_ones",
+      "RD_raw"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_020",
+    "max_row": 630,
+    "max_col": 4,
+    "headers": [
+      "SNR"
+    ],
+    "labels_colB": [
+      "Fit",
+      "RD_corr",
+      "RD_corr_centered",
+      "params"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_021",
+    "max_row": 430,
+    "max_col": 427,
+    "headers": [
+      "tmin(s)",
+      "tmax(s)",
+      "fmin(MHz)",
+      "fmax(MHz)",
+      "Drift-rate (MHz/s)"
+    ],
+    "labels_colB": [
+      "Bounds",
+      "Image"
+    ],
+    "class": "dynamic_spectrum_image"
+  },
+  {
+    "sheet": "Sheet_022",
+    "max_row": 430,
+    "max_col": 427,
+    "headers": [
+      "tmin(s)",
+      "tmax(s)",
+      "fmin(MHz)",
+      "fmax(MHz)"
+    ],
+    "labels_colB": [
+      "Bounds",
+      "Image"
+    ],
+    "class": "dynamic_spectrum_image"
+  },
+  {
+    "sheet": "Sheet_023",
+    "max_row": 544,
+    "max_col": 4,
+    "headers": [
+      "SNR"
+    ],
+    "labels_colB": [
+      "Fit",
+      "RD_corr",
+      "RD_corr_centered",
+      "params"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_024",
+    "max_row": 142,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_a(-10<s<0), channel_l",
+      "group_a(0<s<20), channel_l"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_025",
+    "max_row": 29,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_a (-35<s<-10), channel_l"
+    ],
+    "class": "single_block_distribution"
+  },
+  {
+    "sheet": "Sheet_026",
+    "max_row": 136,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_a(-10<s<0), channel_r",
+      "group_a(0<s<20), channel_r"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_027",
+    "max_row": 29,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_a (-35<s<-10), channel_r"
+    ],
+    "class": "single_block_distribution"
+  },
+  {
+    "sheet": "Sheet_028",
+    "max_row": 144,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_b(-10<s<0), channel_l",
+      "group_b(0<s<20), channel_l"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_029",
+    "max_row": 27,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_b (-35<s<-10), channel_l"
+    ],
+    "class": "single_block_distribution"
+  },
+  {
+    "sheet": "Sheet_030",
+    "max_row": 137,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_b(-10<s<0), channel_r",
+      "group_b(0<s<20), channel_r"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_031",
+    "max_row": 24,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_b (-35<s<-10), channel_r"
+    ],
+    "class": "single_block_distribution"
+  },
+  {
+    "sheet": "Sheet_032",
+    "max_row": 132,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_c(-10<s<0), channel_l",
+      "group_c(0<s<20), channel_l"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_033",
+    "max_row": 27,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_c (-35<s<-10), channel_l"
+    ],
+    "class": "single_block_distribution"
+  },
+  {
+    "sheet": "Sheet_034",
+    "max_row": 141,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_c(-10<s<0), channel_r",
+      "group_c(0<s<20), channel_r"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_035",
+    "max_row": 28,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_c (-35<s<-10), channel_r"
+    ],
+    "class": "single_block_distribution"
+  },
+  {
+    "sheet": "Sheet_036",
+    "max_row": 430,
+    "max_col": 427,
+    "headers": [
+      "tmin(s)",
+      "tmax(s)",
+      "fmin(MHz)",
+      "fmax(MHz)",
+      "drift-rate(MHz/s)"
+    ],
+    "labels_colB": [
+      "Bounds",
+      "Image"
+    ],
+    "class": "dynamic_spectrum_image"
+  },
+  {
+    "sheet": "Sheet_037",
+    "max_row": 430,
+    "max_col": 427,
+    "headers": [
+      "tmin(s)",
+      "tmax(s)",
+      "fmin(MHz)",
+      "fmax(MHz)"
+    ],
+    "labels_colB": [
+      "Bounds",
+      "Image"
+    ],
+    "class": "dynamic_spectrum_image"
+  },
+  {
+    "sheet": "Sheet_038",
+    "max_row": 544,
+    "max_col": 4,
+    "headers": [
+      "SNR"
+    ],
+    "labels_colB": [
+      "Fit",
+      "RD_corr",
+      "RD_corr_centered",
+      "params"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_039",
+    "max_row": 67,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_a (-35<s<-10), channel_l",
+      "group_a(-10<s<0), channel_l",
+      "group_a(0<s<20), channel_l"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_040",
+    "max_row": 77,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_a (-35<s<-10), channel_r",
+      "group_a(-10<s<0), channel_r",
+      "group_a(0<s<20), channel_r"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_041",
+    "max_row": 67,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_b (-35<s<-10), channel_l",
+      "group_b(-10<s<0), channel_l",
+      "group_b(0<s<20), channel_l"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_042",
+    "max_row": 67,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_b (-35<s<-10), channel_r",
+      "group_b(-10<s<0), channel_r",
+      "group_b(0<s<20), channel_r"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_043",
+    "max_row": 67,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_c (-35<s<-10), channel_l",
+      "group_c(-10<s<0), channel_l",
+      "group_c(0<s<20), channel_l"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_044",
+    "max_row": 67,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_c (-35<s<-10), channel_r",
+      "group_c(-10<s<0), channel_r",
+      "group_c(0<s<20), channel_r"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_045",
+    "max_row": 1,
+    "max_col": 1,
+    "headers": [],
+    "labels_colB": [],
+    "class": "empty_placeholder"
+  },
+  {
+    "sheet": "Sheet_046",
+    "max_row": 72,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_b C(-10<s<0), channel_l",
+      "group_b C(-35<s<-10), channel_l",
+      "group_b C(0<s<20), channel_l"
+    ],
+    "class": "multi_block_distribution"
+  },
+  {
+    "sheet": "Sheet_047",
+    "max_row": 72,
+    "max_col": 4,
+    "headers": [
+      "x",
+      "y"
+    ],
+    "labels_colB": [
+      "group_b C(-10<s<0), channel_l",
+      "group_b C(-35<s<-10), channel_l",
+      "group_b C(0<s<20), channel_l"
+    ],
+    "class": "multi_block_distribution"
+  }
+]

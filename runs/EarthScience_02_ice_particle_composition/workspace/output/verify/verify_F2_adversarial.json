@@ -1,0 +1,490 @@
+{
+ "claim_id": "F2",
+ "purpose": "adversarial follow-up",
+ "exact_group_signflip": {
+  "observed_fe_slope": -1.142963046887473,
+  "n_configurations": 32,
+  "null_min": -1.1476465742806825,
+  "null_max": 1.1476465742806825,
+  "p_one_sided_le_obs": 0.0625,
+  "p_two_sided_symmetric": 0.125,
+  "note": "group sign-flip null forces the group mean of log-total to be irrelevant, so it is a sharp test of the within-group slope only",
+  "group_slopes": [
+   -2.527727984320106,
+   -1.6203376558807308,
+   -0.9285266740698463,
+   0.023672186142313787,
+   -0.15672581892170578
+  ],
+  "group_slope_weights": [
+   0.19046702452623115,
+   3.186776611306798,
+   1.8110678932234863,
+   0.641734197297295,
+   0.6570526065545801
+  ],
+  "weighted_mean_check": -1.1429630468874725
+ },
+ "deepest_indicator_model": {
+  "terms": [
+   "intercept",
+   "log10_chl_a",
+   "is_deepest_interval"
+  ],
+  "beta": [
+   -0.16745935171850188,
+   -1.7271115802407355,
+   1.0047561103110105
+  ],
+  "se_cluster": [
+   0.03607309458616465,
+   0.23623434987783096,
+   0.260002015099781
+  ],
+  "p_cluster": [
+   0.009717819055296372,
+   0.001861772776102926,
+   0.0180791452376552
+  ],
+  "note": "if the chl association were purely a surface-vs-bottom contrast, the log10_chl_a coefficient would collapse once the deepest interval gets its own intercept"
+ },
+ "chl_with_depth_and_depth2": {
+  "terms": [
+   "intercept",
+   "log10_chl_a",
+   "depth_mid_m",
+   "depth_mid_m^2"
+  ],
+  "beta": [
+   -0.14133382214756904,
+   -1.5707255136125247,
+   0.4973322456875714,
+   0.8650100814562277
+  ],
+  "se_cluster": [
+   0.0979029786309244,
+   0.4442756196087528,
+   0.27817961524608553,
+   0.4513667387552692
+  ],
+  "p_cluster": [
+   0.22233597520837406,
+   0.024111380796508076,
+   0.1483284911406457,
+   0.1277966311109573
+  ]
+ },
+ "chl_with_depth_tertile_dummies": {
+  "terms": [
+   "intercept",
+   "log10_chl_a",
+   "depth_mid_tertile",
+   "depth_deep_tertile"
+  ],
+  "beta": [
+   -0.339639193251399,
+   -1.7730024415391896,
+   0.20657095259915478,
+   1.211551349111775
+  ],
+  "se_cluster": [
+   0.11936320103380824,
+   0.23667299129861108,
+   0.1750088742708888,
+   0.24776030222922993
+  ],
+  "p_cluster": [
+   0.046610914366631964,
+   0.0016982510929270107,
+   0.3032597941491135,
+   0.008101963925311803
+  ]
+ },
+ "per_group_contribution": [
+  {
+   "group": "group_01",
+   "n": 5,
+   "x_ss": 0.19046702452623115,
+   "xy": -0.4814488279851385,
+   "share_of_denominator": 0.029360896775683404,
+   "share_of_numerator": 0.06493329826081042,
+   "group_slope": -2.527727984320106,
+   "rho_spearman": -0.9746794344808963
+  },
+  {
+   "group": "group_02",
+   "n": 7,
+   "x_ss": 3.1867766113067977,
+   "xy": -5.163654144180395,
+   "share_of_denominator": 0.49124838992197845,
+   "share_of_numerator": 0.6964251965529455,
+   "group_slope": -1.6203376558807308,
+   "rho_spearman": -0.9189562119494703
+  },
+  {
+   "group": "group_03",
+   "n": 7,
+   "x_ss": 1.8110678932234863,
+   "xy": -1.6816248474094873,
+   "share_of_denominator": 0.27917996618551666,
+   "share_of_numerator": 0.22680177296641102,
+   "group_slope": -0.9285266740698463,
+   "rho_spearman": -0.48650622985560193
+  },
+  {
+   "group": "group_04",
+   "n": 5,
+   "x_ss": 0.6417341972972949,
+   "xy": 0.015191251372309885,
+   "share_of_denominator": 0.09892469088095096,
+   "share_of_numerator": -0.002048853375427871,
+   "group_slope": 0.023672186142313787,
+   "rho_spearman": 0.09999999999999999
+  },
+  {
+   "group": "group_05",
+   "n": 6,
+   "x_ss": 0.6570526065545801,
+   "xy": -0.10297710783690792,
+   "share_of_denominator": 0.10128605623587035,
+   "share_of_numerator": 0.01388858559526078,
+   "group_slope": -0.15672581892170578,
+   "rho_spearman": -0.2
+  }
+ ],
+ "targeted_exclusions": {
+  "none": {
+   "label": "all 30",
+   "n": 30,
+   "slope": -1.142963046887473,
+   "se_cluster": 0.32884765011514316,
+   "p_cluster": 0.025452178114826144,
+   "df": 4,
+   "mean_within_rho": -0.4960283752571938
+  },
+  "drop_deepest_each": {
+   "label": "drop deepest of each group",
+   "n": 25,
+   "slope": -1.7817726761589794,
+   "se_cluster": 0.26523850275984046,
+   "p_cluster": 0.0025568516181248176,
+   "df": 4,
+   "mean_within_rho": -0.4900496531580331
+  },
+  "drop_2_deepest_each": {
+   "label": "drop 2 deepest of each group",
+   "n": 20,
+   "slope": -1.5546031276235892,
+   "se_cluster": 0.7351763590734465,
+   "p_cluster": 0.10196054642807534,
+   "df": 4,
+   "mean_within_rho": -0.33493588689617926
+  },
+  "drop_3_deepest_each": {
+   "label": "drop 3 deepest of each group",
+   "n": 15,
+   "slope": -2.0673363938361144,
+   "se_cluster": 0.6671458713095563,
+   "p_cluster": 0.03626408794209152,
+   "df": 4,
+   "mean_within_rho": -0.4684697517796486
+  },
+  "drop_3_strongest_SCM_samples": {
+   "label": "drop samples 012/017/024 (chl 1.74/4.19/6.64)",
+   "n": 27,
+   "slope": -1.4206446604241174,
+   "se_cluster": 0.5579208125563694,
+   "p_cluster": 0.06355307645553188,
+   "df": 4,
+   "mean_within_rho": -0.4152488804441097
+  },
+  "drop_both_012_024": {
+   "label": "drop samples 012/024",
+   "n": 28,
+   "slope": -1.202065752980472,
+   "se_cluster": 0.5869381825699754,
+   "p_cluster": 0.10993623169029769,
+   "df": 4,
+   "mean_within_rho": -0.4352488804441097
+  },
+  "drop_024_only": {
+   "label": "drop 024",
+   "n": 29,
+   "slope": -1.2375822201205264,
+   "se_cluster": 0.39481020454706006,
+   "p_cluster": 0.03502865369932272,
+   "df": 4,
+   "mean_within_rho": -0.4335133914252203
+  },
+  "drop_017_only": {
+   "label": "drop 017",
+   "n": 29,
+   "slope": -1.2295908107203637,
+   "se_cluster": 0.30254854739827086,
+   "p_cluster": 0.015296861663615043,
+   "df": 4,
+   "mean_within_rho": -0.47602837525719377
+  },
+  "drop_012_only": {
+   "label": "drop 012",
+   "n": 29,
+   "slope": -1.0874533908441852,
+   "se_cluster": 0.39773064158412913,
+   "p_cluster": 0.05221940042161936,
+   "df": 4,
+   "mean_within_rho": -0.4977638642760832
+  },
+  "shallowest_4_each": {
+   "label": "shallowest 4 of each group",
+   "n": 20,
+   "slope": -1.5053798016630942,
+   "se_cluster": 0.7729856553350716,
+   "p_cluster": 0.12331235310154007,
+   "df": 4,
+   "mean_within_rho": -0.37081851067789195
+  },
+  "shallowest_3_each": {
+   "label": "shallowest 3 of each group",
+   "n": 15,
+   "slope": -1.6070581625034688,
+   "se_cluster": 0.8437685632857774,
+   "p_cluster": 0.1295468557116411,
+   "df": 4,
+   "mean_within_rho": -0.4
+  },
+  "drop_max_chl_each": {
+   "label": "drop max-chl of each group",
+   "n": 25,
+   "slope": -1.6627262604328248,
+   "se_cluster": 0.310534585635732,
+   "p_cluster": 0.005868302272286281,
+   "df": 4,
+   "mean_within_rho": -0.4900496531580331
+  },
+  "overlap_deepest_vs_maxchl": {
+   "n_both": 4,
+   "groups": [
+    "group_01",
+    "group_02",
+    "group_03",
+    "group_04",
+    "group_05"
+   ],
+   "same_in_n_groups": 5
+  }
+ },
+ "depth_proxy_tests": {
+  "within_group_r2_logchl_on_depth": 0.549452624874982,
+  "within_group_r2_logtot_on_depth": 0.19165358684189285,
+  "within_group_r2_logtot_on_logchl": 0.4858401403779318,
+  "within_group_r2_logtot_on_both": 0.4996521355277073,
+  "mean_within_group_spearman_chl_depth": 0.5794360324013835,
+  "pooled_spearman_chl_depth": 0.4144306724066268,
+  "mean_within_group_spearman_total_depth": -0.2871428571428572,
+  "mean_within_group_spearman_chl_depth_no_deepest": 0.35961959749771966,
+  "fe_slope_logtot_on_depth": -0.8258403801185454,
+  "fe_slope_logtot_on_depth_no_deepest": -0.8278582296116881,
+  "within_group_r2_logchl_on_deepest_dummy": 0.5262437999142358
+ },
+ "cluster_bootstrap_diagnostics": {
+  "n_valid": 40000,
+  "n_nan": 0,
+  "sd": 0.3432797016492982,
+  "q025": -1.537222121093579,
+  "q975": -0.235656730866517,
+  "frac_negative": 0.999675,
+  "median": -1.1274093685055517,
+  "n_distinct_groups_drawn_mean": 3.3615999999999997,
+  "note": "with 5 clusters the bootstrap is lumpy; treat the interval as indicative only"
+ },
+ "cluster_jackknife_slope": {
+  "values": [
+   -1.101075243015276,
+   -0.6820121557018746,
+   -1.2260161482217478,
+   -1.2710422747059882,
+   -1.2541130741311435
+  ],
+  "mean": -1.106851779155206,
+  "se": 0.44124064065584245,
+  "t_vs_0": -2.508499166146676,
+  "df": 4,
+  "p": 0.06616324984030073
+ },
+ "joint_models": {
+  "full": {
+   "label": "full n=30",
+   "n": 30,
+   "terms": [
+    "intercept",
+    "log10_chl_a",
+    "depth_mid_m",
+    "log10_POC"
+   ],
+   "beta": [
+    -6.944748886455868e-18,
+    -1.7005179215319683,
+    0.5498731790193759,
+    1.2665202921362797
+   ],
+   "se": [
+    1.7637218067779873e-16,
+    0.4072454818811669,
+    0.28999313649312275,
+    0.2948794149356591
+   ],
+   "p": [
+    0.9704778841632209,
+    0.013967183682589273,
+    0.13081721918951913,
+    0.012695315888546943
+   ]
+  },
+  "no_deepest": {
+   "label": "no deepest",
+   "n": 25,
+   "terms": [
+    "intercept",
+    "log10_chl_a",
+    "depth_mid_m",
+    "log10_POC"
+   ],
+   "beta": [
+    -1.3252171087539638e-16,
+    -1.880056611991163,
+    0.19697315504138083,
+    0.3011237634070535
+   ],
+   "se": [
+    1.4649544864355653e-16,
+    0.29883594494303023,
+    0.3463501459330838,
+    1.7174224114783714
+   ],
+   "p": [
+    0.4168282643417131,
+    0.0032611656900962717,
+    0.5999617222595858,
+    0.8693344416530056
+   ]
+  },
+  "drop_3_scm": {
+   "label": "drop 3 SCM samples",
+   "n": 27,
+   "terms": [
+    "intercept",
+    "log10_chl_a",
+    "depth_mid_m",
+    "log10_POC"
+   ],
+   "beta": [
+    -1.0449492480904167e-16,
+    -1.8567130029186099,
+    0.679749054873723,
+    1.990962707145888
+   ],
+   "se": [
+    1.8032638472592112e-16,
+    0.3842697358604866,
+    0.2560023594299781,
+    0.7476054387875819
+   ],
+   "p": [
+    0.5933375442504513,
+    0.008450248393827907,
+    0.056670683060479975,
+    0.05620730507945272
+   ]
+  },
+  "chl_depth": {
+   "label": "chl+depth",
+   "n": 30,
+   "terms": [
+    "intercept",
+    "log10_chl_a",
+    "depth_mid_m"
+   ],
+   "beta": [
+    -6.944748886455868e-18,
+    -1.355781163536912,
+    0.3302901445676182
+   ],
+   "se": [
+    1.4575304498382716e-16,
+    0.3470455690986286,
+    0.2893071338582363
+   ],
+   "p": [
+    0.9642813663187264,
+    0.017443311476119206,
+    0.31729844725013345
+   ]
+  },
+  "no_deepest_chl_depth": {
+   "label": "no deepest chl+depth",
+   "n": 25,
+   "terms": [
+    "intercept",
+    "log10_chl_a",
+    "depth_mid_m"
+   ],
+   "beta": [
+    -1.3252171087539638e-16,
+    -1.8739435843044645,
+    0.13903480218688954
+   ],
+   "se": [
+    1.58786739184278e-16,
+    0.3024137199684143,
+    0.21779686854373637
+   ],
+   "p": [
+    0.4508938768259629,
+    0.0034486945602943027,
+    0.5579505940979428
+   ]
+  }
+ },
+ "poc_alone_fe": {
+  "slope": -1.1250331860564649,
+  "se_p_cluster": [
+   1.058418784740978,
+   -1.0629376597201925,
+   0.3477229743149579,
+   4
+  ]
+ },
+ "rank_views": {
+  "fe_slope_rank_rank": -0.5543478260869565,
+  "se_p_cluster": [
+   0.17811657220010088,
+   -3.112275400540425,
+   0.035792985581709534,
+   4
+  ],
+  "spearman_rank_vs_log_agreement": 0.5885499417616888,
+  "within_group_kendall_tau": {
+   "group_01": {
+    "tau": -0.9486832980505138,
+    "p": 0.02297740150320607
+   },
+   "group_02": {
+    "tau": -0.7807200583588265,
+    "p": 0.015074907310598051
+   },
+   "group_03": {
+    "tau": -0.39036002917941326,
+    "p": 0.22425655667185918
+   },
+   "group_04": {
+    "tau": 0.0,
+    "p": 1.0
+   },
+   "group_05": {
+    "tau": -0.06666666666666665,
+    "p": 1.0
+   }
+  },
+  "mean_tau": -0.437286010451084
+ }
+}

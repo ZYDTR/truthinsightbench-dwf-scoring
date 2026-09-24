@@ -1,0 +1,55 @@
+{
+  "variance_decomposition": {
+    "V_exp_minus_quantum": 9.070820821865679,
+    "V_exp_minus_learned": 12.019067554857868,
+    "V_quantum_minus_learned": 5.037678158107548,
+    "sigma_ref": 2.8330381411671812,
+    "sigma_ref_sq": 8.026105109307998,
+    "implied_quantum_vs_truth_sd": 1.0221133560215718,
+    "implied_learned_vs_truth_sd": 1.9982398368438834,
+    "predicted_sd_quantum_minus_learned": 2.2444772572043474,
+    "observed_sd_quantum_minus_learned": 2.244477257204347,
+    "self_consistency_ratio": 0.9999999999999998,
+    "sigma_ref_ci95": [
+      2.4554039075655605,
+      3.2020015081890794
+    ],
+    "sigma_ref_boot_sd": 0.19312168034291327
+  },
+  "mae_floor": {
+    "decomposition": {
+      "sigma_ref": 2.8330381411671812,
+      "oracle_mae": 2.2604373930029427
+    },
+    "matched_pair_tol0.1": {
+      "sigma_ref": 2.851,
+      "oracle_mae": 2.2747688828489694
+    },
+    "matched_pair_tol0.5": {
+      "sigma_ref": 2.737,
+      "oracle_mae": 2.1838100429174427
+    },
+    "bin_quantum_w1.0": {
+      "sigma_ref": 2.745,
+      "oracle_mae": 2.1901931194038657
+    },
+    "bin_learned_w1.0": {
+      "sigma_ref": 3.274,
+      "oracle_mae": 2.612274052068581
+    }
+  },
+  "mae_floor_range_from_bootstrap": {
+    "lo": 1.9591288683815868,
+    "hi": 2.5548275670515563
+  },
+  "mae_floor_conservative": 1.9591288683815868,
+  "observed_mae": {
+    "quantum": 2.0978084714548806,
+    "learned": 2.410699815837938,
+    "reference": 5.48596685082873,
+    "quantum_minus_learned": -0.3128913443830572
+  },
+  "ratio_quantum_mae_to_floor": 0.9280542243499109,
+  "ratio_learned_mae_to_floor": 1.0664749323737628,
+  "gap_quantum_learned_vs_floor": 0.13842070802385187
+}

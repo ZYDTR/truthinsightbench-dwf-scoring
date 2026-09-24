@@ -1,0 +1,3466 @@
+{
+  "workstream": "WS3 - error structure by chemical bond class and structural environment",
+  "analysis_units": {
+    "primary": "bond observation (1 of 543 benchmark rows)",
+    "also_reported": [
+      "unique molecule (parent SMILES)",
+      "unique fragment pair"
+    ],
+    "n_bond_observations": 543,
+    "n_unique_molecules": 419,
+    "n_unique_fragment_pairs": 543
+  },
+  "coverage": {
+    "by_bond_class": {
+      "C-C": {
+        "db_rows": 71166,
+        "benchmark_bond_observations": 240,
+        "db_share_pct": 14.6762,
+        "benchmark_share_pct": 44.1989,
+        "present_in_benchmark": true,
+        "n_lt_10_thin": false
+      },
+      "C-H": {
+        "db_rows": 321949,
+        "benchmark_bond_observations": 302,
+        "db_share_pct": 66.394,
+        "benchmark_share_pct": 55.6169,
+        "present_in_benchmark": true,
+        "n_lt_10_thin": false
+      },
+      "C-N": {
+        "db_rows": 24707,
+        "benchmark_bond_observations": 0,
+        "db_share_pct": 5.0952,
+        "benchmark_share_pct": 0.0,
+        "present_in_benchmark": false,
+        "n_lt_10_thin": true
+      },
+      "C-O": {
+        "db_rows": 24354,
+        "benchmark_bond_observations": 0,
+        "db_share_pct": 5.0224,
+        "benchmark_share_pct": 0.0,
+        "present_in_benchmark": false,
+        "n_lt_10_thin": true
+      },
+      "H-N": {
+        "db_rows": 27314,
+        "benchmark_bond_observations": 0,
+        "db_share_pct": 5.6328,
+        "benchmark_share_pct": 0.0,
+        "present_in_benchmark": false,
+        "n_lt_10_thin": true
+      },
+      "H-O": {
+        "db_rows": 11884,
+        "benchmark_bond_observations": 1,
+        "db_share_pct": 2.4508,
+        "benchmark_share_pct": 0.1842,
+        "present_in_benchmark": true,
+        "n_lt_10_thin": true
+      },
+      "N-N": {
+        "db_rows": 1597,
+        "benchmark_bond_observations": 0,
+        "db_share_pct": 0.3293,
+        "benchmark_share_pct": 0.0,
+        "present_in_benchmark": false,
+        "n_lt_10_thin": true
+      },
+      "N-O": {
+        "db_rows": 1634,
+        "benchmark_bond_observations": 0,
+        "db_share_pct": 0.337,
+        "benchmark_share_pct": 0.0,
+        "present_in_benchmark": false,
+        "n_lt_10_thin": true
+      },
+      "O-O": {
+        "db_rows": 302,
+        "benchmark_bond_observations": 0,
+        "db_share_pct": 0.0623,
+        "benchmark_share_pct": 0.0,
+        "present_in_benchmark": false,
+        "n_lt_10_thin": true
+      }
+    },
+    "labeler_agreement": {
+      "matched_rows": 331,
+      "agreement": 331,
+      "rate": 1.0,
+      "statement": "the RDKit radical-centre labeler reproduces the database bond_type on all 331 matched benchmark rows"
+    },
+    "headline": "The 543-observation benchmark contains only 3 of the 9 bond classes present in the database: C-H (302), C-C (240) and H-O (1). Every other class (C-N, C-O, H-N, N-N, N-O, O-O) is ABSENT (n=0), so no class-level error claim can be made for them."
+  },
+  "ch1_error_by_bond_class": {
+    "per_class": {
+      "C-H": {
+        "n_bond_observations": 302,
+        "unit": "bond observation",
+        "n_unique_molecules": 280,
+        "mean_experimental_bde_kcal_mol": 88.0468,
+        "quantum_mae": 1.9907,
+        "quantum_bias": 0.1101,
+        "quantum_median_ae": 1.63,
+        "quantum_rmse": 2.6534,
+        "quantum_max_ae": 10.69,
+        "quantum_p90_ae": 4.156,
+        "learned_mae": 2.5416,
+        "learned_bias": 0.9301,
+        "learned_median_ae": 1.905,
+        "learned_rmse": 3.5155,
+        "learned_max_ae": 14.51,
+        "learned_p90_ae": 5.71,
+        "reference_mae": 5.7109,
+        "reference_bias": 5.1029,
+        "reference_median_ae": 5.1,
+        "reference_rmse": 6.7163,
+        "reference_max_ae": 21.6,
+        "reference_p90_ae": 10.39,
+        "n_unique_fragment_pairs": 302,
+        "n_lt_10_thin": false,
+        "median_hac_parent": 9.0,
+        "mean_experimental_bde": 88.047
+      },
+      "C-C": {
+        "n_bond_observations": 240,
+        "unit": "bond observation",
+        "n_unique_molecules": 202,
+        "mean_experimental_bde_kcal_mol": 85.5737,
+        "quantum_mae": 2.2345,
+        "quantum_bias": 1.1073,
+        "quantum_median_ae": 1.18,
+        "quantum_rmse": 3.5083,
+        "quantum_max_ae": 15.74,
+        "quantum_p90_ae": 5.444,
+        "learned_mae": 2.2365,
+        "learned_bias": 1.251,
+        "learned_median_ae": 1.09,
+        "learned_rmse": 3.7595,
+        "learned_max_ae": 25.21,
+        "learned_p90_ae": 5.148,
+        "reference_mae": 5.225,
+        "reference_bias": -3.3033,
+        "reference_median_ae": 4.6,
+        "reference_rmse": 6.8277,
+        "reference_max_ae": 33.4,
+        "reference_p90_ae": 9.01,
+        "n_unique_fragment_pairs": 240,
+        "n_lt_10_thin": false,
+        "median_hac_parent": 7.0,
+        "mean_experimental_bde": 85.574
+      },
+      "H-O": {
+        "n_bond_observations": 1,
+        "unit": "bond observation",
+        "n_unique_molecules": 1,
+        "mean_experimental_bde_kcal_mol": 83.1,
+        "quantum_mae": 1.65,
+        "quantum_bias": 1.65,
+        "quantum_median_ae": 1.65,
+        "quantum_rmse": 1.65,
+        "quantum_max_ae": 1.65,
+        "quantum_p90_ae": 1.65,
+        "learned_mae": 4.68,
+        "learned_bias": 4.68,
+        "learned_median_ae": 4.68,
+        "learned_rmse": 4.68,
+        "learned_max_ae": 4.68,
+        "learned_p90_ae": 4.68,
+        "reference_mae": 0.2,
+        "reference_bias": 0.2,
+        "reference_median_ae": 0.2,
+        "reference_rmse": 0.2,
+        "reference_max_ae": 0.2,
+        "reference_p90_ae": 0.2,
+        "n_unique_fragment_pairs": 1,
+        "n_lt_10_thin": true,
+        "median_hac_parent": 22.0,
+        "mean_experimental_bde": 83.1
+      },
+      "ALL": {
+        "n_bond_observations": 543,
+        "unit": "bond observation",
+        "n_unique_molecules": 419,
+        "mean_experimental_bde_kcal_mol": 86.9446,
+        "quantum_mae": 2.0978,
+        "quantum_bias": 0.5537,
+        "quantum_median_ae": 1.4,
+        "quantum_rmse": 3.0595,
+        "quantum_max_ae": 15.74,
+        "quantum_p90_ae": 4.708,
+        "learned_mae": 2.4107,
+        "learned_bias": 1.0789,
+        "learned_median_ae": 1.61,
+        "learned_rmse": 3.6278,
+        "learned_max_ae": 25.21,
+        "learned_p90_ae": 5.458,
+        "reference_mae": 5.486,
+        "reference_bias": 1.3784,
+        "reference_median_ae": 4.9,
+        "reference_rmse": 6.7596,
+        "reference_max_ae": 33.4,
+        "reference_p90_ae": 9.8,
+        "n_lt_10_thin": false
+      }
+    },
+    "channel_ranking_overall": {
+      "by_mae": [
+        "quantum",
+        "learned",
+        "reference"
+      ],
+      "mae": {
+        "quantum": 2.0978,
+        "learned": 2.4107,
+        "reference": 5.486
+      }
+    },
+    "C_H_vs_C_C": {
+      "quantum": {
+        "mae_C_H_minus_C_C": {
+          "mae_a": 1.9907,
+          "mae_b": 2.2345,
+          "diff_mae": -0.2438,
+          "ci95_low": -0.6512,
+          "ci95_high": 0.1437,
+          "p_boot_two_sided": 0.218,
+          "n_a": 302,
+          "n_b": 240,
+          "n_boot": 4000
+        },
+        "mannwhitney_abs_err": {
+          "U": 37800.0,
+          "p_value": 0.389165,
+          "cliffs_delta": 0.043,
+          "n_a": 302,
+          "n_b": 240
+        },
+        "paired_on_shared_molecules": {
+          "molecules": 64,
+          "n_CH_obs": 79,
+          "n_CC_obs": 86,
+          "mae_CH": 1.6551,
+          "mae_CC": 1.3802
+        }
+      },
+      "learned": {
+        "mae_C_H_minus_C_C": {
+          "mae_a": 2.5416,
+          "mae_b": 2.2365,
+          "diff_mae": 0.305,
+          "ci95_low": -0.1788,
+          "ci95_high": 0.7517,
+          "p_boot_two_sided": 0.2135,
+          "n_a": 302,
+          "n_b": 240,
+          "n_boot": 4000
+        },
+        "mannwhitney_abs_err": {
+          "U": 41830.5,
+          "p_value": 0.002024,
+          "cliffs_delta": 0.1543,
+          "n_a": 302,
+          "n_b": 240
+        },
+        "paired_on_shared_molecules": {
+          "molecules": 64,
+          "n_CH_obs": 79,
+          "n_CC_obs": 86,
+          "mae_CH": 1.5476,
+          "mae_CC": 1.4188
+        }
+      },
+      "reference": {
+        "mae_C_H_minus_C_C": {
+          "mae_a": 5.7109,
+          "mae_b": 5.225,
+          "diff_mae": 0.4859,
+          "ci95_low": -0.2152,
+          "ci95_high": 1.1832,
+          "p_boot_two_sided": 0.1735,
+          "n_a": 302,
+          "n_b": 240,
+          "n_boot": 4000
+        },
+        "mannwhitney_abs_err": {
+          "U": 40809.0,
+          "p_value": 0.011644,
+          "cliffs_delta": 0.1261,
+          "n_a": 302,
+          "n_b": 240
+        },
+        "paired_on_shared_molecules": {
+          "molecules": 64,
+          "n_CH_obs": 79,
+          "n_CC_obs": 86,
+          "mae_CH": 4.8354,
+          "mae_CC": 4.8942
+        }
+      }
+    },
+    "interpretation": "Only C-H (n=302) and C-C (n=240) support a per-class MAE. H-O has n=1 and is reported for completeness only - no inference. The six other database classes have n=0 in the benchmark."
+  },
+  "ch2_class_vs_size": {
+    "crosstab": {
+      "C-H": {
+        "<=5": {
+          "n_bond_observations": 52,
+          "unit": "bond observation",
+          "n_unique_molecules": 42,
+          "mean_experimental_bde_kcal_mol": 96.2792,
+          "quantum_mae": 1.7571,
+          "quantum_bias": 0.1406,
+          "quantum_median_ae": 1.275,
+          "quantum_rmse": 2.5305,
+          "quantum_max_ae": 10.43,
+          "quantum_p90_ae": 3.464,
+          "learned_mae": 1.7304,
+          "learned_bias": 0.1938,
+          "learned_median_ae": 1.295,
+          "learned_rmse": 2.5298,
+          "learned_max_ae": 10.68,
+          "learned_p90_ae": 4.069,
+          "reference_mae": 6.1977,
+          "reference_bias": 5.4246,
+          "reference_median_ae": 5.35,
+          "reference_rmse": 7.7054,
+          "reference_max_ae": 21.6,
+          "reference_p90_ae": 10.36,
+          "n_lt_10_thin": false
+        },
+        "6-9": {
+          "n_bond_observations": 104,
+          "unit": "bond observation",
+          "n_unique_molecules": 94,
+          "mean_experimental_bde_kcal_mol": 92.6221,
+          "quantum_mae": 1.8113,
+          "quantum_bias": -0.3991,
+          "quantum_median_ae": 1.445,
+          "quantum_rmse": 2.3688,
+          "quantum_max_ae": 6.52,
+          "quantum_p90_ae": 3.921,
+          "learned_mae": 1.9586,
+          "learned_bias": -0.1414,
+          "learned_median_ae": 1.62,
+          "learned_rmse": 2.5957,
+          "learned_max_ae": 7.02,
+          "learned_p90_ae": 4.764,
+          "reference_mae": 5.4279,
+          "reference_bias": 5.1221,
+          "reference_median_ae": 4.6,
+          "reference_rmse": 6.305,
+          "reference_max_ae": 17.1,
+          "reference_p90_ae": 9.54,
+          "n_lt_10_thin": false
+        },
+        ">=10": {
+          "n_bond_observations": 146,
+          "unit": "bond observation",
+          "n_unique_molecules": 144,
+          "mean_experimental_bde_kcal_mol": 81.8555,
+          "quantum_mae": 2.2016,
+          "quantum_bias": 0.4621,
+          "quantum_median_ae": 1.84,
+          "quantum_rmse": 2.8785,
+          "quantum_max_ae": 10.69,
+          "quantum_p90_ae": 4.515,
+          "learned_mae": 3.2458,
+          "learned_bias": 1.9557,
+          "learned_median_ae": 2.445,
+          "learned_rmse": 4.2995,
+          "learned_max_ae": 14.51,
+          "learned_p90_ae": 7.505,
+          "reference_mae": 5.739,
+          "reference_bias": 4.9747,
+          "reference_median_ae": 5.45,
+          "reference_rmse": 6.6214,
+          "reference_max_ae": 14.8,
+          "reference_p90_ae": 10.55,
+          "n_lt_10_thin": false
+        }
+      },
+      "C-C": {
+        "<=5": {
+          "n_bond_observations": 61,
+          "unit": "bond observation",
+          "n_unique_molecules": 52,
+          "mean_experimental_bde_kcal_mol": 92.2426,
+          "quantum_mae": 1.6074,
+          "quantum_bias": 0.5923,
+          "quantum_median_ae": 0.82,
+          "quantum_rmse": 2.2258,
+          "quantum_max_ae": 5.09,
+          "quantum_p90_ae": 4.23,
+          "learned_mae": 1.448,
+          "learned_bias": 0.5218,
+          "learned_median_ae": 0.81,
+          "learned_rmse": 2.0367,
+          "learned_max_ae": 4.89,
+          "learned_p90_ae": 3.96,
+          "reference_mae": 4.3885,
+          "reference_bias": 0.1689,
+          "reference_median_ae": 3.2,
+          "reference_rmse": 5.8749,
+          "reference_max_ae": 18.6,
+          "reference_p90_ae": 7.8,
+          "n_lt_10_thin": false
+        },
+        "6-9": {
+          "n_bond_observations": 133,
+          "unit": "bond observation",
+          "n_unique_molecules": 107,
+          "mean_experimental_bde_kcal_mol": 85.097,
+          "quantum_mae": 1.9726,
+          "quantum_bias": 0.9708,
+          "quantum_median_ae": 1.14,
+          "quantum_rmse": 3.1727,
+          "quantum_max_ae": 15.74,
+          "quantum_p90_ae": 5.316,
+          "learned_mae": 1.8932,
+          "learned_bias": 0.9437,
+          "learned_median_ae": 0.95,
+          "learned_rmse": 2.9941,
+          "learned_max_ae": 13.66,
+          "learned_p90_ae": 5.254,
+          "reference_mae": 4.7308,
+          "reference_bias": -3.9098,
+          "reference_median_ae": 4.7,
+          "reference_rmse": 5.4158,
+          "reference_max_ae": 14.3,
+          "reference_p90_ae": 8.04,
+          "n_lt_10_thin": false
+        },
+        ">=10": {
+          "n_bond_observations": 46,
+          "unit": "bond observation",
+          "n_unique_molecules": 43,
+          "mean_experimental_bde_kcal_mol": 78.1087,
+          "quantum_mae": 3.8235,
+          "quantum_bias": 2.1852,
+          "quantum_median_ae": 2.785,
+          "quantum_rmse": 5.3423,
+          "quantum_max_ae": 15.69,
+          "quantum_p90_ae": 7.695,
+          "learned_mae": 4.275,
+          "learned_bias": 3.1067,
+          "learned_median_ae": 2.71,
+          "learned_rmse": 6.5055,
+          "learned_max_ae": 25.21,
+          "learned_p90_ae": 7.75,
+          "reference_mae": 7.763,
+          "reference_bias": -6.1543,
+          "reference_median_ae": 5.7,
+          "reference_rmse": 10.6135,
+          "reference_max_ae": 33.4,
+          "reference_p90_ae": 13.8,
+          "n_lt_10_thin": false
+        }
+      },
+      "H-O": {
+        "<=5": {
+          "n_bond_observations": 0,
+          "unit": "bond observation",
+          "n_lt_10_thin": true
+        },
+        "6-9": {
+          "n_bond_observations": 0,
+          "unit": "bond observation",
+          "n_lt_10_thin": true
+        },
+        ">=10": {
+          "n_bond_observations": 1,
+          "unit": "bond observation",
+          "n_unique_molecules": 1,
+          "mean_experimental_bde_kcal_mol": 83.1,
+          "quantum_mae": 1.65,
+          "quantum_bias": 1.65,
+          "quantum_median_ae": 1.65,
+          "quantum_rmse": 1.65,
+          "quantum_max_ae": 1.65,
+          "quantum_p90_ae": 1.65,
+          "learned_mae": 4.68,
+          "learned_bias": 4.68,
+          "learned_median_ae": 4.68,
+          "learned_rmse": 4.68,
+          "learned_max_ae": 4.68,
+          "learned_p90_ae": 4.68,
+          "reference_mae": 0.2,
+          "reference_bias": 0.2,
+          "reference_median_ae": 0.2,
+          "reference_rmse": 0.2,
+          "reference_max_ae": 0.2,
+          "reference_p90_ae": 0.2,
+          "n_lt_10_thin": true
+        }
+      },
+      "ALL": {
+        "<=5": {
+          "n_bond_observations": 113,
+          "unit": "bond observation",
+          "n_unique_molecules": 73,
+          "mean_experimental_bde_kcal_mol": 94.1002,
+          "quantum_mae": 1.6763,
+          "quantum_bias": 0.3844,
+          "quantum_median_ae": 1.16,
+          "quantum_rmse": 2.3709,
+          "quantum_max_ae": 10.43,
+          "quantum_p90_ae": 4.18,
+          "learned_mae": 1.578,
+          "learned_bias": 0.3709,
+          "learned_median_ae": 1.15,
+          "learned_rmse": 2.2769,
+          "learned_max_ae": 10.68,
+          "learned_p90_ae": 4.112,
+          "reference_mae": 5.2211,
+          "reference_bias": 2.5874,
+          "reference_median_ae": 4.3,
+          "reference_rmse": 6.7789,
+          "reference_max_ae": 21.6,
+          "reference_p90_ae": 9.56,
+          "n_lt_10_thin": false
+        },
+        "6-9": {
+          "n_bond_observations": 237,
+          "unit": "bond observation",
+          "n_unique_molecules": 168,
+          "mean_experimental_bde_kcal_mol": 88.3992,
+          "quantum_mae": 1.9018,
+          "quantum_bias": 0.3696,
+          "quantum_median_ae": 1.16,
+          "quantum_rmse": 2.848,
+          "quantum_max_ae": 15.74,
+          "quantum_p90_ae": 4.33,
+          "learned_mae": 1.9219,
+          "learned_bias": 0.4675,
+          "learned_median_ae": 1.13,
+          "learned_rmse": 2.8262,
+          "learned_max_ae": 13.66,
+          "learned_p90_ae": 5.024,
+          "reference_mae": 5.0367,
+          "reference_bias": 0.0536,
+          "reference_median_ae": 4.6,
+          "reference_rmse": 5.8228,
+          "reference_max_ae": 17.1,
+          "reference_p90_ae": 8.8,
+          "n_lt_10_thin": false
+        },
+        ">=10": {
+          "n_bond_observations": 193,
+          "unit": "bond observation",
+          "n_unique_molecules": 178,
+          "mean_experimental_bde_kcal_mol": 80.9689,
+          "quantum_mae": 2.5853,
+          "quantum_bias": 0.8789,
+          "quantum_median_ae": 2.08,
+          "quantum_rmse": 3.6173,
+          "quantum_max_ae": 15.69,
+          "quantum_p90_ae": 5.804,
+          "learned_mae": 3.4985,
+          "learned_bias": 2.2441,
+          "learned_median_ae": 2.62,
+          "learned_rmse": 4.9177,
+          "learned_max_ae": 25.21,
+          "learned_p90_ae": 7.52,
+          "reference_mae": 6.1927,
+          "reference_bias": 2.2974,
+          "reference_median_ae": 5.6,
+          "reference_rmse": 7.7469,
+          "reference_max_ae": 33.4,
+          "reference_p90_ae": 11.48,
+          "n_lt_10_thin": false
+        }
+      }
+    },
+    "confounding_check": {
+      "class_share_within_hac_bin_pct": {
+        "<=5": {
+          "C-H": 46.02,
+          "C-C": 53.98,
+          "H-O": 0.0
+        },
+        "6-9": {
+          "C-H": 43.88,
+          "C-C": 56.12,
+          "H-O": 0.0
+        },
+        ">=10": {
+          "C-H": 75.65,
+          "C-C": 23.83,
+          "H-O": 0.52
+        }
+      },
+      "hac_within_class": {
+        "C-H": {
+          "n": 302,
+          "mean_hac": 10.533,
+          "median_hac": 9.0,
+          "iqr_hac": [
+            6.0,
+            14.0
+          ]
+        },
+        "C-C": {
+          "n": 240,
+          "mean_hac": 7.642,
+          "median_hac": 7.0,
+          "iqr_hac": [
+            5.0,
+            9.0
+          ]
+        },
+        "H-O": {
+          "n": 1,
+          "mean_hac": 22.0,
+          "median_hac": 22.0,
+          "iqr_hac": [
+            22.0,
+            22.0
+          ]
+        }
+      },
+      "hac_CH_vs_CC_mannwhitney": {
+        "U": 48950.5,
+        "p_value": 0.0,
+        "median_CH": 9.0,
+        "median_CC": 7.0
+      }
+    },
+    "size_trend_within_class": {
+      "quantum": {
+        "spearman_abs_err_vs_hac": {
+          "rho": 0.1897,
+          "p_value": 9e-06,
+          "n": 543
+        },
+        "within_C-H_spearman": {
+          "rho": 0.143,
+          "p_value": 0.012838,
+          "n": 302
+        },
+        "within_C-H_mae_by_hac_bin": {
+          "<=5": 1.7571,
+          "6-9": 1.8113,
+          ">=10": 2.2016
+        },
+        "within_C-H_n_by_hac_bin": {
+          "<=5": 52,
+          "6-9": 104,
+          ">=10": 146
+        },
+        "within_C-C_spearman": {
+          "rho": 0.2204,
+          "p_value": 0.000584,
+          "n": 240
+        },
+        "within_C-C_mae_by_hac_bin": {
+          "<=5": 1.6074,
+          "6-9": 1.9726,
+          ">=10": 3.8235
+        },
+        "within_C-C_n_by_hac_bin": {
+          "<=5": 61,
+          "6-9": 133,
+          ">=10": 46
+        },
+        "within_H-O_spearman": null,
+        "within_H-O_mae_by_hac_bin": {
+          "<=5": null,
+          "6-9": null,
+          ">=10": 1.65
+        },
+        "within_H-O_n_by_hac_bin": {
+          "<=5": 0,
+          "6-9": 0,
+          ">=10": 1
+        }
+      },
+      "learned": {
+        "spearman_abs_err_vs_hac": {
+          "rho": 0.3266,
+          "p_value": 0.0,
+          "n": 543
+        },
+        "within_C-H_spearman": {
+          "rho": 0.3379,
+          "p_value": 0.0,
+          "n": 302
+        },
+        "within_C-H_mae_by_hac_bin": {
+          "<=5": 1.7304,
+          "6-9": 1.9586,
+          ">=10": 3.2458
+        },
+        "within_C-H_n_by_hac_bin": {
+          "<=5": 52,
+          "6-9": 104,
+          ">=10": 146
+        },
+        "within_C-C_spearman": {
+          "rho": 0.2732,
+          "p_value": 1.8e-05,
+          "n": 240
+        },
+        "within_C-C_mae_by_hac_bin": {
+          "<=5": 1.448,
+          "6-9": 1.8932,
+          ">=10": 4.275
+        },
+        "within_C-C_n_by_hac_bin": {
+          "<=5": 61,
+          "6-9": 133,
+          ">=10": 46
+        },
+        "within_H-O_spearman": null,
+        "within_H-O_mae_by_hac_bin": {
+          "<=5": null,
+          "6-9": null,
+          ">=10": 4.68
+        },
+        "within_H-O_n_by_hac_bin": {
+          "<=5": 0,
+          "6-9": 0,
+          ">=10": 1
+        }
+      },
+      "reference": {
+        "spearman_abs_err_vs_hac": {
+          "rho": 0.1172,
+          "p_value": 0.006261,
+          "n": 543
+        },
+        "within_C-H_spearman": {
+          "rho": 0.001,
+          "p_value": 0.986374,
+          "n": 302
+        },
+        "within_C-H_mae_by_hac_bin": {
+          "<=5": 6.1977,
+          "6-9": 5.4279,
+          ">=10": 5.739
+        },
+        "within_C-H_n_by_hac_bin": {
+          "<=5": 52,
+          "6-9": 104,
+          ">=10": 146
+        },
+        "within_C-C_spearman": {
+          "rho": 0.2085,
+          "p_value": 0.001159,
+          "n": 240
+        },
+        "within_C-C_mae_by_hac_bin": {
+          "<=5": 4.3885,
+          "6-9": 4.7308,
+          ">=10": 7.763
+        },
+        "within_C-C_n_by_hac_bin": {
+          "<=5": 61,
+          "6-9": 133,
+          ">=10": 46
+        },
+        "within_H-O_spearman": null,
+        "within_H-O_mae_by_hac_bin": {
+          "<=5": null,
+          "6-9": null,
+          ">=10": 0.2
+        },
+        "within_H-O_n_by_hac_bin": {
+          "<=5": 0,
+          "6-9": 0,
+          ">=10": 1
+        }
+      }
+    },
+    "variance_decomposition_abs_err": {
+      "models": {
+        "quantum": {
+          "r2_size_only": 0.04561,
+          "r2_class_only": 0.00298,
+          "r2_size_plus_class": 0.06022,
+          "incremental_r2_from_class_given_size": 0.01461,
+          "incremental_r2_from_size_given_class": 0.05723
+        },
+        "learned": {
+          "r2_size_only": 0.18176,
+          "r2_class_only": 0.00327,
+          "r2_size_plus_class": 0.18635,
+          "incremental_r2_from_class_given_size": 0.0046,
+          "incremental_r2_from_size_given_class": 0.18308
+        },
+        "reference": {
+          "r2_size_only": 0.02979,
+          "r2_class_only": 0.00346,
+          "r2_size_plus_class": 0.02988,
+          "incremental_r2_from_class_given_size": 0.0001,
+          "incremental_r2_from_size_given_class": 0.02642
+        }
+      },
+      "permutation_test_class_given_size": {
+        "quantum": {
+          "obs_incremental_r2": 0.01461,
+          "permutation_p_value": 0.0,
+          "n_permutations": 500
+        },
+        "learned": {
+          "obs_incremental_r2": 0.0046,
+          "permutation_p_value": 0.098,
+          "n_permutations": 500
+        },
+        "reference": {
+          "obs_incremental_r2": 0.0001,
+          "permutation_p_value": 0.822,
+          "n_permutations": 500
+        }
+      },
+      "note": "OLS R^2 on |error|, 543 bond observations, one dummy for C-C vs C-H."
+    },
+    "CH_vs_CC_stratified_by_size": {
+      "quantum": {
+        "<=5": {
+          "n_CH": 52,
+          "n_CC": 61,
+          "mae_CH": 1.7571,
+          "mae_CC": 1.6074,
+          "cliffs_delta_CH_vs_CC": 0.0993,
+          "mannwhitney_p": 0.36575
+        },
+        "6-9": {
+          "n_CH": 104,
+          "n_CC": 133,
+          "mae_CH": 1.8113,
+          "mae_CC": 1.9726,
+          "cliffs_delta_CH_vs_CC": 0.0559,
+          "mannwhitney_p": 0.46114
+        },
+        ">=10": {
+          "n_CH": 146,
+          "n_CC": 46,
+          "mae_CH": 2.2016,
+          "mae_CC": 3.8235,
+          "cliffs_delta_CH_vs_CC": -0.2767,
+          "mannwhitney_p": 0.00473
+        }
+      },
+      "learned": {
+        "<=5": {
+          "n_CH": 52,
+          "n_CC": 61,
+          "mae_CH": 1.7304,
+          "mae_CC": 1.448,
+          "cliffs_delta_CH_vs_CC": 0.1428,
+          "mannwhitney_p": 0.19292
+        },
+        "6-9": {
+          "n_CH": 104,
+          "n_CC": 133,
+          "mae_CH": 1.9586,
+          "mae_CC": 1.8932,
+          "cliffs_delta_CH_vs_CC": 0.1072,
+          "mannwhitney_p": 0.15714
+        },
+        ">=10": {
+          "n_CH": 146,
+          "n_CC": 46,
+          "mae_CH": 3.2458,
+          "mae_CC": 4.275,
+          "cliffs_delta_CH_vs_CC": -0.0736,
+          "mannwhitney_p": 0.45324
+        }
+      },
+      "reference": {
+        "<=5": {
+          "n_CH": 52,
+          "n_CC": 61,
+          "mae_CH": 6.1977,
+          "mae_CC": 4.3885,
+          "cliffs_delta_CH_vs_CC": 0.3001,
+          "mannwhitney_p": 0.00616
+        },
+        "6-9": {
+          "n_CH": 104,
+          "n_CC": 133,
+          "mae_CH": 5.4279,
+          "mae_CC": 4.7308,
+          "cliffs_delta_CH_vs_CC": 0.0798,
+          "mannwhitney_p": 0.29233
+        },
+        ">=10": {
+          "n_CH": 146,
+          "n_CC": 46,
+          "mae_CH": 5.739,
+          "mae_CC": 7.763,
+          "cliffs_delta_CH_vs_CC": -0.0795,
+          "mannwhitney_p": 0.41741
+        }
+      }
+    },
+    "answer": "Formula for the verdict is in the narrative field; see 'verdict' below.",
+    "verdict": {
+      "quantum": "size dominates",
+      "learned": "size dominates",
+      "reference": "size dominates"
+    }
+  },
+  "ch3_environment_effects": {
+    "flag_contrasts": {
+      "c_rad_aromatic": {
+        "description": "carbon radical centre is aromatic",
+        "n_true": 10,
+        "n_false": 533,
+        "true": {
+          "n_bond_observations": 10,
+          "unit": "bond observation",
+          "n_unique_molecules": 7,
+          "mean_experimental_bde_kcal_mol": 107.93,
+          "quantum_mae": 2.155,
+          "quantum_bias": -1.681,
+          "quantum_median_ae": 2.015,
+          "quantum_rmse": 2.5762,
+          "quantum_max_ae": 5.86,
+          "quantum_p90_ae": 3.007,
+          "learned_mae": 1.761,
+          "learned_bias": -0.975,
+          "learned_median_ae": 1.965,
+          "learned_rmse": 1.8776,
+          "learned_max_ae": 2.59,
+          "learned_p90_ae": 2.392,
+          "reference_mae": 7.24,
+          "reference_bias": -1.16,
+          "reference_median_ae": 4.25,
+          "reference_rmse": 11.371,
+          "reference_max_ae": 33.4,
+          "reference_p90_ae": 8.65
+        },
+        "false": {
+          "n_bond_observations": 533,
+          "unit": "bond observation",
+          "n_unique_molecules": 414,
+          "mean_experimental_bde_kcal_mol": 86.5509,
+          "quantum_mae": 2.0967,
+          "quantum_bias": 0.5956,
+          "quantum_median_ae": 1.4,
+          "quantum_rmse": 3.0679,
+          "quantum_max_ae": 15.74,
+          "quantum_p90_ae": 4.708,
+          "learned_mae": 2.4229,
+          "learned_bias": 1.1174,
+          "learned_median_ae": 1.6,
+          "learned_rmse": 3.6526,
+          "learned_max_ae": 25.21,
+          "learned_p90_ae": 5.46,
+          "reference_mae": 5.4531,
+          "reference_bias": 1.426,
+          "reference_median_ae": 4.9,
+          "reference_rmse": 6.6426,
+          "reference_max_ae": 31.0,
+          "reference_p90_ae": 9.8
+        },
+        "n_true_lt_10_thin": false,
+        "n_false_lt_10_thin": false,
+        "contrasts": {
+          "quantum": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 2.155,
+              "mae_b": 2.0967,
+              "diff_mae": 0.0583,
+              "ci95_low": -0.7082,
+              "ci95_high": 1.0757,
+              "p_boot_two_sided": 0.957,
+              "n_a": 10,
+              "n_b": 533,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 3149.0,
+              "p_value": 0.325303,
+              "cliffs_delta": 0.1816,
+              "n_a": 10,
+              "n_b": 533
+            }
+          },
+          "learned": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 1.761,
+              "mae_b": 2.4229,
+              "diff_mae": -0.6619,
+              "ci95_low": -1.1379,
+              "ci95_high": -0.2116,
+              "p_boot_two_sided": 0.002,
+              "n_a": 10,
+              "n_b": 533,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 2805.0,
+              "p_value": 0.776568,
+              "cliffs_delta": 0.0525,
+              "n_a": 10,
+              "n_b": 533
+            }
+          },
+          "reference": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 7.24,
+              "mae_b": 5.4531,
+              "diff_mae": 1.7869,
+              "ci95_low": -1.5971,
+              "ci95_high": 7.8109,
+              "p_boot_two_sided": 0.684,
+              "n_a": 10,
+              "n_b": 533,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 2599.5,
+              "p_value": 0.894795,
+              "cliffs_delta": -0.0246,
+              "n_a": 10,
+              "n_b": 533
+            }
+          }
+        }
+      },
+      "c_rad_in_ring": {
+        "description": "carbon radical centre is in a ring",
+        "n_true": 153,
+        "n_false": 390,
+        "true": {
+          "n_bond_observations": 153,
+          "unit": "bond observation",
+          "n_unique_molecules": 141,
+          "mean_experimental_bde_kcal_mol": 85.481,
+          "quantum_mae": 2.437,
+          "quantum_bias": 0.2144,
+          "quantum_median_ae": 1.84,
+          "quantum_rmse": 3.3734,
+          "quantum_max_ae": 14.76,
+          "quantum_p90_ae": 5.766,
+          "learned_mae": 3.2665,
+          "learned_bias": 1.2535,
+          "learned_median_ae": 2.1,
+          "learned_rmse": 4.7702,
+          "learned_max_ae": 25.21,
+          "learned_p90_ae": 7.052,
+          "reference_mae": 6.8399,
+          "reference_bias": 5.134,
+          "reference_median_ae": 6.3,
+          "reference_rmse": 8.1564,
+          "reference_max_ae": 33.4,
+          "reference_p90_ae": 11.72
+        },
+        "false": {
+          "n_bond_observations": 390,
+          "unit": "bond observation",
+          "n_unique_molecules": 284,
+          "mean_experimental_bde_kcal_mol": 87.5188,
+          "quantum_mae": 1.9647,
+          "quantum_bias": 0.6868,
+          "quantum_median_ae": 1.24,
+          "quantum_rmse": 2.9272,
+          "quantum_max_ae": 15.74,
+          "quantum_p90_ae": 4.425,
+          "learned_mae": 2.0749,
+          "learned_bias": 1.0104,
+          "learned_median_ae": 1.325,
+          "learned_rmse": 3.0655,
+          "learned_max_ae": 16.58,
+          "learned_p90_ae": 4.82,
+          "reference_mae": 4.9548,
+          "reference_bias": -0.0949,
+          "reference_median_ae": 4.4,
+          "reference_rmse": 6.1253,
+          "reference_max_ae": 31.0,
+          "reference_p90_ae": 8.71
+        },
+        "n_true_lt_10_thin": false,
+        "n_false_lt_10_thin": false,
+        "contrasts": {
+          "quantum": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 2.437,
+              "mae_b": 1.9647,
+              "diff_mae": 0.4722,
+              "ci95_low": 0.0569,
+              "ci95_high": 0.9198,
+              "p_boot_two_sided": 0.0255,
+              "n_a": 153,
+              "n_b": 390,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 34077.0,
+              "p_value": 0.009911,
+              "cliffs_delta": 0.1422,
+              "n_a": 153,
+              "n_b": 390
+            }
+          },
+          "learned": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 3.2665,
+              "mae_b": 2.0749,
+              "diff_mae": 1.1916,
+              "ci95_low": 0.6165,
+              "ci95_high": 1.8104,
+              "p_boot_two_sided": 0.0,
+              "n_a": 153,
+              "n_b": 390,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 36883.5,
+              "p_value": 1.8e-05,
+              "cliffs_delta": 0.2362,
+              "n_a": 153,
+              "n_b": 390
+            }
+          },
+          "reference": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 6.8399,
+              "mae_b": 4.9548,
+              "diff_mae": 1.885,
+              "ci95_low": 1.1195,
+              "ci95_high": 2.7128,
+              "p_boot_two_sided": 0.0,
+              "n_a": 153,
+              "n_b": 390,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 38624.0,
+              "p_value": 0.0,
+              "cliffs_delta": 0.2946,
+              "n_a": 153,
+              "n_b": 390
+            }
+          }
+        }
+      },
+      "rad_any_aromatic": {
+        "description": "either radical centre is aromatic",
+        "n_true": 31,
+        "n_false": 512,
+        "true": {
+          "n_bond_observations": 31,
+          "unit": "bond observation",
+          "n_unique_molecules": 26,
+          "mean_experimental_bde_kcal_mol": 104.2,
+          "quantum_mae": 1.7103,
+          "quantum_bias": -0.2471,
+          "quantum_median_ae": 1.11,
+          "quantum_rmse": 2.2318,
+          "quantum_max_ae": 5.86,
+          "quantum_p90_ae": 2.97,
+          "learned_mae": 1.7181,
+          "learned_bias": 0.1206,
+          "learned_median_ae": 1.24,
+          "learned_rmse": 2.249,
+          "learned_max_ae": 5.78,
+          "learned_p90_ae": 3.1,
+          "reference_mae": 5.7968,
+          "reference_bias": -3.1129,
+          "reference_median_ae": 4.5,
+          "reference_rmse": 8.7194,
+          "reference_max_ae": 33.4,
+          "reference_p90_ae": 7.0
+        },
+        "false": {
+          "n_bond_observations": 512,
+          "unit": "bond observation",
+          "n_unique_molecules": 410,
+          "mean_experimental_bde_kcal_mol": 85.8998,
+          "quantum_mae": 2.1213,
+          "quantum_bias": 0.6022,
+          "quantum_median_ae": 1.44,
+          "quantum_rmse": 3.1026,
+          "quantum_max_ae": 15.74,
+          "quantum_p90_ae": 4.818,
+          "learned_mae": 2.4526,
+          "learned_bias": 1.1369,
+          "learned_median_ae": 1.62,
+          "learned_rmse": 3.6948,
+          "learned_max_ae": 25.21,
+          "learned_p90_ae": 5.46,
+          "reference_mae": 5.4671,
+          "reference_bias": 1.6504,
+          "reference_median_ae": 4.9,
+          "reference_rmse": 6.6224,
+          "reference_max_ae": 31.0,
+          "reference_p90_ae": 9.8
+        },
+        "n_true_lt_10_thin": false,
+        "n_false_lt_10_thin": false,
+        "contrasts": {
+          "quantum": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 1.7103,
+              "mae_b": 2.1213,
+              "diff_mae": -0.4109,
+              "ci95_low": -0.9533,
+              "ci95_high": 0.1596,
+              "p_boot_two_sided": 0.149,
+              "n_a": 31,
+              "n_b": 512,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 7511.5,
+              "p_value": 0.617177,
+              "cliffs_delta": -0.0535,
+              "n_a": 31,
+              "n_b": 512
+            }
+          },
+          "learned": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 1.7181,
+              "mae_b": 2.4526,
+              "diff_mae": -0.7346,
+              "ci95_low": -1.2802,
+              "ci95_high": -0.1544,
+              "p_boot_two_sided": 0.0165,
+              "n_a": 31,
+              "n_b": 512,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 7151.5,
+              "p_value": 0.355351,
+              "cliffs_delta": -0.0989,
+              "n_a": 31,
+              "n_b": 512
+            }
+          },
+          "reference": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 5.7968,
+              "mae_b": 5.4671,
+              "diff_mae": 0.3296,
+              "ci95_low": -1.6229,
+              "ci95_high": 2.9437,
+              "p_boot_two_sided": 0.854,
+              "n_a": 31,
+              "n_b": 512,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 7084.5,
+              "p_value": 0.315725,
+              "cliffs_delta": -0.1073,
+              "n_a": 31,
+              "n_b": 512
+            }
+          }
+        }
+      },
+      "rad_any_in_ring": {
+        "description": "either radical centre is in a ring",
+        "n_true": 183,
+        "n_false": 360,
+        "true": {
+          "n_bond_observations": 183,
+          "unit": "bond observation",
+          "n_unique_molecules": 165,
+          "mean_experimental_bde_kcal_mol": 87.0951,
+          "quantum_mae": 2.362,
+          "quantum_bias": 0.3021,
+          "quantum_median_ae": 1.79,
+          "quantum_rmse": 3.3427,
+          "quantum_max_ae": 14.76,
+          "quantum_p90_ae": 5.542,
+          "learned_mae": 3.0956,
+          "learned_bias": 1.2003,
+          "learned_median_ae": 2.05,
+          "learned_rmse": 4.5878,
+          "learned_max_ae": 25.21,
+          "learned_p90_ae": 6.984,
+          "reference_mae": 6.4984,
+          "reference_bias": 3.7585,
+          "reference_median_ae": 5.8,
+          "reference_rmse": 7.9147,
+          "reference_max_ae": 33.4,
+          "reference_p90_ae": 11.34
+        },
+        "false": {
+          "n_bond_observations": 360,
+          "unit": "bond observation",
+          "n_unique_molecules": 269,
+          "mean_experimental_bde_kcal_mol": 86.8681,
+          "quantum_mae": 1.9635,
+          "quantum_bias": 0.6816,
+          "quantum_median_ae": 1.24,
+          "quantum_rmse": 2.905,
+          "quantum_max_ae": 15.74,
+          "quantum_p90_ae": 4.471,
+          "learned_mae": 2.0625,
+          "learned_bias": 1.0171,
+          "learned_median_ae": 1.33,
+          "learned_rmse": 3.0252,
+          "learned_max_ae": 16.58,
+          "learned_p90_ae": 4.772,
+          "reference_mae": 4.9713,
+          "reference_bias": 0.1686,
+          "reference_median_ae": 4.35,
+          "reference_rmse": 6.089,
+          "reference_max_ae": 31.0,
+          "reference_p90_ae": 8.71
+        },
+        "n_true_lt_10_thin": false,
+        "n_false_lt_10_thin": false,
+        "contrasts": {
+          "quantum": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 2.362,
+              "mae_b": 1.9635,
+              "diff_mae": 0.3984,
+              "ci95_low": -0.0134,
+              "ci95_high": 0.8074,
+              "p_boot_two_sided": 0.056,
+              "n_a": 183,
+              "n_b": 360,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 36560.5,
+              "p_value": 0.036196,
+              "cliffs_delta": 0.1099,
+              "n_a": 183,
+              "n_b": 360
+            }
+          },
+          "learned": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 3.0956,
+              "mae_b": 2.0625,
+              "diff_mae": 1.0331,
+              "ci95_low": 0.5183,
+              "ci95_high": 1.5846,
+              "p_boot_two_sided": 0.0,
+              "n_a": 183,
+              "n_b": 360,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 39203.5,
+              "p_value": 0.00029,
+              "cliffs_delta": 0.1901,
+              "n_a": 183,
+              "n_b": 360
+            }
+          },
+          "reference": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 6.4984,
+              "mae_b": 4.9713,
+              "diff_mae": 1.527,
+              "ci95_low": 0.7946,
+              "ci95_high": 2.2945,
+              "p_boot_two_sided": 0.0,
+              "n_a": 183,
+              "n_b": 360,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 40358.5,
+              "p_value": 1.8e-05,
+              "cliffs_delta": 0.2252,
+              "n_a": 183,
+              "n_b": 360
+            }
+          }
+        }
+      },
+      "parent_benzene": {
+        "description": "parent contains a benzene (aromatic 6-ring)",
+        "n_true": 220,
+        "n_false": 323,
+        "true": {
+          "n_bond_observations": 220,
+          "unit": "bond observation",
+          "n_unique_molecules": 189,
+          "mean_experimental_bde_kcal_mol": 83.3859,
+          "quantum_mae": 2.3924,
+          "quantum_bias": 0.859,
+          "quantum_median_ae": 1.805,
+          "quantum_rmse": 3.4314,
+          "quantum_max_ae": 15.69,
+          "quantum_p90_ae": 5.52,
+          "learned_mae": 3.1952,
+          "learned_bias": 2.0112,
+          "learned_median_ae": 2.235,
+          "learned_rmse": 4.6283,
+          "learned_max_ae": 25.21,
+          "learned_p90_ae": 6.963,
+          "reference_mae": 5.86,
+          "reference_bias": 2.2445,
+          "reference_median_ae": 5.05,
+          "reference_rmse": 7.3905,
+          "reference_max_ae": 33.4,
+          "reference_p90_ae": 10.95
+        },
+        "false": {
+          "n_bond_observations": 323,
+          "unit": "bond observation",
+          "n_unique_molecules": 230,
+          "mean_experimental_bde_kcal_mol": 89.3685,
+          "quantum_mae": 1.8972,
+          "quantum_bias": 0.3458,
+          "quantum_median_ae": 1.19,
+          "quantum_rmse": 2.7779,
+          "quantum_max_ae": 15.74,
+          "quantum_p90_ae": 4.298,
+          "learned_mae": 1.8763,
+          "learned_bias": 0.4438,
+          "learned_median_ae": 1.23,
+          "learned_rmse": 2.7449,
+          "learned_max_ae": 13.66,
+          "learned_p90_ae": 4.77,
+          "reference_mae": 5.2312,
+          "reference_bias": 0.7885,
+          "reference_median_ae": 4.8,
+          "reference_rmse": 6.2938,
+          "reference_max_ae": 21.6,
+          "reference_p90_ae": 9.26
+        },
+        "n_true_lt_10_thin": false,
+        "n_false_lt_10_thin": false,
+        "contrasts": {
+          "quantum": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 2.3924,
+              "mae_b": 1.8972,
+              "diff_mae": 0.4953,
+              "ci95_low": 0.103,
+              "ci95_high": 0.889,
+              "p_boot_two_sided": 0.014,
+              "n_a": 220,
+              "n_b": 323,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 40575.5,
+              "p_value": 0.004941,
+              "cliffs_delta": 0.142,
+              "n_a": 220,
+              "n_b": 323
+            }
+          },
+          "learned": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 3.1952,
+              "mae_b": 1.8763,
+              "diff_mae": 1.3189,
+              "ci95_low": 0.8273,
+              "ci95_high": 1.8318,
+              "p_boot_two_sided": 0.0,
+              "n_a": 220,
+              "n_b": 323,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 45422.5,
+              "p_value": 0.0,
+              "cliffs_delta": 0.2784,
+              "n_a": 220,
+              "n_b": 323
+            }
+          },
+          "reference": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 5.86,
+              "mae_b": 5.2312,
+              "diff_mae": 0.6288,
+              "ci95_low": -0.0822,
+              "ci95_high": 1.3308,
+              "p_boot_two_sided": 0.0805,
+              "n_a": 220,
+              "n_b": 323,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 37662.0,
+              "p_value": 0.234978,
+              "cliffs_delta": 0.06,
+              "n_a": 220,
+              "n_b": 323
+            }
+          }
+        }
+      },
+      "parent_has_N": {
+        "description": "parent contains nitrogen",
+        "n_true": 37,
+        "n_false": 506,
+        "true": {
+          "n_bond_observations": 37,
+          "unit": "bond observation",
+          "n_unique_molecules": 37,
+          "mean_experimental_bde_kcal_mol": 78.2649,
+          "quantum_mae": 2.3562,
+          "quantum_bias": 1.7843,
+          "quantum_median_ae": 1.62,
+          "quantum_rmse": 4.0297,
+          "quantum_max_ae": 15.74,
+          "quantum_p90_ae": 4.718,
+          "learned_mae": 4.9024,
+          "learned_bias": 3.677,
+          "learned_median_ae": 3.56,
+          "learned_rmse": 6.4648,
+          "learned_max_ae": 14.51,
+          "learned_p90_ae": 12.364,
+          "reference_mae": 5.3027,
+          "reference_bias": 3.7838,
+          "reference_median_ae": 4.4,
+          "reference_rmse": 6.2486,
+          "reference_max_ae": 13.3,
+          "reference_p90_ae": 10.84
+        },
+        "false": {
+          "n_bond_observations": 506,
+          "unit": "bond observation",
+          "n_unique_molecules": 382,
+          "mean_experimental_bde_kcal_mol": 87.5793,
+          "quantum_mae": 2.0789,
+          "quantum_bias": 0.4637,
+          "quantum_median_ae": 1.385,
+          "quantum_rmse": 2.9762,
+          "quantum_max_ae": 15.69,
+          "quantum_p90_ae": 4.705,
+          "learned_mae": 2.2285,
+          "learned_bias": 0.8889,
+          "learned_median_ae": 1.54,
+          "learned_rmse": 3.3267,
+          "learned_max_ae": 25.21,
+          "learned_p90_ae": 5.1,
+          "reference_mae": 5.4994,
+          "reference_bias": 1.2025,
+          "reference_median_ae": 4.9,
+          "reference_rmse": 6.7955,
+          "reference_max_ae": 33.4,
+          "reference_p90_ae": 9.7
+        },
+        "n_true_lt_10_thin": false,
+        "n_false_lt_10_thin": false,
+        "contrasts": {
+          "quantum": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 2.3562,
+              "mae_b": 2.0789,
+              "diff_mae": 0.2773,
+              "ci95_low": -0.6709,
+              "ci95_high": 1.461,
+              "p_boot_two_sided": 0.636,
+              "n_a": 37,
+              "n_b": 506,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 9138.0,
+              "p_value": 0.809154,
+              "cliffs_delta": -0.0238,
+              "n_a": 37,
+              "n_b": 506
+            }
+          },
+          "learned": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 4.9024,
+              "mae_b": 2.2285,
+              "diff_mae": 2.6739,
+              "ci95_low": 1.3195,
+              "ci95_high": 4.061,
+              "p_boot_two_sided": 0.0,
+              "n_a": 37,
+              "n_b": 506,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 13036.0,
+              "p_value": 6.6e-05,
+              "cliffs_delta": 0.3926,
+              "n_a": 37,
+              "n_b": 506
+            }
+          },
+          "reference": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 5.3027,
+              "mae_b": 5.4994,
+              "diff_mae": -0.1967,
+              "ci95_low": -1.2869,
+              "ci95_high": 0.9493,
+              "p_boot_two_sided": 0.716,
+              "n_a": 37,
+              "n_b": 506,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 9193.0,
+              "p_value": 0.855722,
+              "cliffs_delta": -0.0179,
+              "n_a": 37,
+              "n_b": 506
+            }
+          }
+        }
+      },
+      "parent_has_O": {
+        "description": "parent contains oxygen",
+        "n_true": 132,
+        "n_false": 411,
+        "true": {
+          "n_bond_observations": 132,
+          "unit": "bond observation",
+          "n_unique_molecules": 120,
+          "mean_experimental_bde_kcal_mol": 84.1386,
+          "quantum_mae": 2.5329,
+          "quantum_bias": 1.4414,
+          "quantum_median_ae": 1.5,
+          "quantum_rmse": 3.9384,
+          "quantum_max_ae": 15.74,
+          "quantum_p90_ae": 5.602,
+          "learned_mae": 2.7927,
+          "learned_bias": 1.8678,
+          "learned_median_ae": 1.75,
+          "learned_rmse": 4.2563,
+          "learned_max_ae": 16.58,
+          "learned_p90_ae": 6.619,
+          "reference_mae": 4.5379,
+          "reference_bias": -0.3212,
+          "reference_median_ae": 3.8,
+          "reference_rmse": 5.5297,
+          "reference_max_ae": 14.3,
+          "reference_p90_ae": 8.78
+        },
+        "false": {
+          "n_bond_observations": 411,
+          "unit": "bond observation",
+          "n_unique_molecules": 299,
+          "mean_experimental_bde_kcal_mol": 87.8458,
+          "quantum_mae": 1.9581,
+          "quantum_bias": 0.2686,
+          "quantum_median_ae": 1.36,
+          "quantum_rmse": 2.7176,
+          "quantum_max_ae": 14.76,
+          "quantum_p90_ae": 4.48,
+          "learned_mae": 2.288,
+          "learned_bias": 0.8255,
+          "learned_median_ae": 1.6,
+          "learned_rmse": 3.4014,
+          "learned_max_ae": 25.21,
+          "learned_p90_ae": 5.13,
+          "reference_mae": 5.7905,
+          "reference_bias": 1.9243,
+          "reference_median_ae": 5.1,
+          "reference_rmse": 7.1096,
+          "reference_max_ae": 33.4,
+          "reference_p90_ae": 10.4
+        },
+        "n_true_lt_10_thin": false,
+        "n_false_lt_10_thin": false,
+        "contrasts": {
+          "quantum": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 2.5329,
+              "mae_b": 1.9581,
+              "diff_mae": 0.5748,
+              "ci95_low": 0.0398,
+              "ci95_high": 1.1198,
+              "p_boot_two_sided": 0.036,
+              "n_a": 132,
+              "n_b": 411,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 29087.0,
+              "p_value": 0.211255,
+              "cliffs_delta": 0.0723,
+              "n_a": 132,
+              "n_b": 411
+            }
+          },
+          "learned": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 2.7927,
+              "mae_b": 2.288,
+              "diff_mae": 0.5046,
+              "ci95_low": -0.0785,
+              "ci95_high": 1.1042,
+              "p_boot_two_sided": 0.0885,
+              "n_a": 132,
+              "n_b": 411,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 28661.0,
+              "p_value": 0.327836,
+              "cliffs_delta": 0.0566,
+              "n_a": 132,
+              "n_b": 411
+            }
+          },
+          "reference": {
+            "mae_diff_true_minus_false": {
+              "mae_a": 4.5379,
+              "mae_b": 5.7905,
+              "diff_mae": -1.2526,
+              "ci95_low": -1.9277,
+              "ci95_high": -0.5886,
+              "p_boot_two_sided": 0.0,
+              "n_a": 132,
+              "n_b": 411,
+              "n_boot": 4000
+            },
+            "mannwhitney": {
+              "U": 21954.0,
+              "p_value": 0.000975,
+              "cliffs_delta": -0.1907,
+              "n_a": 132,
+              "n_b": 411
+            }
+          }
+        }
+      },
+      "parent_has_S": {
+        "description": "parent contains sulfur",
+        "n_true": 0,
+        "n_false": 543,
+        "true": {
+          "n_bond_observations": 0,
+          "unit": "bond observation"
+        },
+        "false": {
+          "n_bond_observations": 543,
+          "unit": "bond observation",
+          "n_unique_molecules": 419,
+          "mean_experimental_bde_kcal_mol": 86.9446,
+          "quantum_mae": 2.0978,
+          "quantum_bias": 0.5537,
+          "quantum_median_ae": 1.4,
+          "quantum_rmse": 3.0595,
+          "quantum_max_ae": 15.74,
+          "quantum_p90_ae": 4.708,
+          "learned_mae": 2.4107,
+          "learned_bias": 1.0789,
+          "learned_median_ae": 1.61,
+          "learned_rmse": 3.6278,
+          "learned_max_ae": 25.21,
+          "learned_p90_ae": 5.458,
+          "reference_mae": 5.486,
+          "reference_bias": 1.3784,
+          "reference_median_ae": 4.9,
+          "reference_rmse": 6.7596,
+          "reference_max_ae": 33.4,
+          "reference_p90_ae": 9.8
+        },
+        "n_true_lt_10_thin": true,
+        "n_false_lt_10_thin": false,
+        "contrasts": {
+          "quantum": {
+            "mae_diff_true_minus_false": {
+              "mae_a": null,
+              "mae_b": 2.0978,
+              "diff_mae": null,
+              "ci95_low": null,
+              "ci95_high": null,
+              "p_boot_two_sided": null,
+              "n_a": 0,
+              "n_b": 543,
+              "n_boot": null,
+              "note": "empty group - contrast not estimable"
+            },
+            "mannwhitney": null
+          },
+          "learned": {
+            "mae_diff_true_minus_false": {
+              "mae_a": null,
+              "mae_b": 2.4107,
+              "diff_mae": null,
+              "ci95_low": null,
+              "ci95_high": null,
+              "p_boot_two_sided": null,
+              "n_a": 0,
+              "n_b": 543,
+              "n_boot": null,
+              "note": "empty group - contrast not estimable"
+            },
+            "mannwhitney": null
+          },
+          "reference": {
+            "mae_diff_true_minus_false": {
+              "mae_a": null,
+              "mae_b": 5.486,
+              "diff_mae": null,
+              "ci95_low": null,
+              "ci95_high": null,
+              "p_boot_two_sided": null,
+              "n_a": 0,
+              "n_b": 543,
+              "n_boot": null,
+              "note": "empty group - contrast not estimable"
+            },
+            "mannwhitney": null
+          }
+        }
+      }
+    },
+    "magnitude_effect_within_bond_class": {
+      "C-H": {
+        "quantum": {
+          "<70": {
+            "n": 3,
+            "mae": 2.33,
+            "bias": -2.0767,
+            "thin": true
+          },
+          "70-85": {
+            "n": 140,
+            "mae": 2.2022,
+            "bias": 0.5104,
+            "thin": false
+          },
+          "85-100": {
+            "n": 123,
+            "mae": 1.7919,
+            "bias": -0.0018,
+            "thin": false
+          },
+          ">=100": {
+            "n": 36,
+            "mae": 1.8189,
+            "bias": -0.8817,
+            "thin": false
+          },
+          "spearman_abs_err_vs_exp_bde": {
+            "rho": -0.0774,
+            "p_value": 0.17997,
+            "n": 302
+          }
+        },
+        "learned": {
+          "<70": {
+            "n": 3,
+            "mae": 4.9033,
+            "bias": 1.4833,
+            "thin": true
+          },
+          "70-85": {
+            "n": 140,
+            "mae": 3.3436,
+            "bias": 2.0419,
+            "thin": false
+          },
+          "85-100": {
+            "n": 123,
+            "mae": 1.7246,
+            "bias": 0.1881,
+            "thin": false
+          },
+          ">=100": {
+            "n": 36,
+            "mae": 2.0172,
+            "bias": -0.9044,
+            "thin": false
+          },
+          "spearman_abs_err_vs_exp_bde": {
+            "rho": -0.2879,
+            "p_value": 0.0,
+            "n": 302
+          }
+        },
+        "reference": {
+          "<70": {
+            "n": 3,
+            "mae": 10.2333,
+            "bias": 10.2333,
+            "thin": true
+          },
+          "70-85": {
+            "n": 140,
+            "mae": 6.0386,
+            "bias": 5.36,
+            "thin": false
+          },
+          "85-100": {
+            "n": 123,
+            "mae": 4.9911,
+            "bias": 4.635,
+            "thin": false
+          },
+          ">=100": {
+            "n": 36,
+            "mae": 6.5189,
+            "bias": 5.2744,
+            "thin": false
+          },
+          "spearman_abs_err_vs_exp_bde": {
+            "rho": -0.1424,
+            "p_value": 0.013223,
+            "n": 302
+          }
+        }
+      },
+      "C-C": {
+        "quantum": {
+          "<70": {
+            "n": 15,
+            "mae": 6.73,
+            "bias": 5.894,
+            "thin": false
+          },
+          "70-85": {
+            "n": 105,
+            "mae": 2.2667,
+            "bias": 1.5032,
+            "thin": false
+          },
+          "85-100": {
+            "n": 87,
+            "mae": 1.4967,
+            "bias": 0.2534,
+            "thin": false
+          },
+          ">=100": {
+            "n": 33,
+            "mae": 2.0339,
+            "bias": -0.077,
+            "thin": false
+          },
+          "spearman_abs_err_vs_exp_bde": {
+            "rho": -0.206,
+            "p_value": 0.00133,
+            "n": 240
+          }
+        },
+        "learned": {
+          "<70": {
+            "n": 15,
+            "mae": 8.0513,
+            "bias": 7.9447,
+            "thin": false
+          },
+          "70-85": {
+            "n": 105,
+            "mae": 2.1122,
+            "bias": 1.5128,
+            "thin": false
+          },
+          "85-100": {
+            "n": 87,
+            "mae": 1.5161,
+            "bias": 0.1993,
+            "thin": false
+          },
+          ">=100": {
+            "n": 33,
+            "mae": 1.8885,
+            "bias": 0.1485,
+            "thin": false
+          },
+          "spearman_abs_err_vs_exp_bde": {
+            "rho": -0.2187,
+            "p_value": 0.000645,
+            "n": 240
+          }
+        },
+        "reference": {
+          "<70": {
+            "n": 15,
+            "mae": 7.48,
+            "bias": -5.3467,
+            "thin": false
+          },
+          "70-85": {
+            "n": 105,
+            "mae": 5.2124,
+            "bias": -3.7876,
+            "thin": false
+          },
+          "85-100": {
+            "n": 87,
+            "mae": 4.8632,
+            "bias": -3.9414,
+            "thin": false
+          },
+          ">=100": {
+            "n": 33,
+            "mae": 5.1939,
+            "bias": 0.8485,
+            "thin": false
+          },
+          "spearman_abs_err_vs_exp_bde": {
+            "rho": -0.1148,
+            "p_value": 0.075766,
+            "n": 240
+          }
+        }
+      }
+    },
+    "magnitude_size_confound": {
+      "weak_bin_n": 18,
+      "weak_bin_median_hac": 12.5,
+      "all_median_hac": 8.0,
+      "weak_bin_mean_hac": 14.944,
+      "all_mean_hac": 9.276,
+      "weak_bin_class_counts": {
+        "C-C": 15,
+        "C-H": 3
+      },
+      "weak_bin_hac_bin_counts": {
+        ">=10": 14,
+        "6-9": 4,
+        "<=5": 0
+      },
+      "weak_vs_rest_within_class_and_size": {
+        "C-H|<=5": {
+          "n_weak": 0,
+          "n_rest": 52,
+          "quantum_mae_weak": null,
+          "learned_mae_weak": null,
+          "reference_mae_weak": null,
+          "quantum_mae_rest": 1.7571,
+          "learned_mae_rest": 1.7304,
+          "reference_mae_rest": 6.1977,
+          "testable": false
+        },
+        "C-H|6-9": {
+          "n_weak": 1,
+          "n_rest": 103,
+          "quantum_mae_weak": 3.9,
+          "learned_mae_weak": 5.13,
+          "reference_mae_weak": 8.1,
+          "quantum_mae_rest": 1.791,
+          "learned_mae_rest": 1.9278,
+          "reference_mae_rest": 5.4019,
+          "testable": false
+        },
+        "C-H|>=10": {
+          "n_weak": 2,
+          "n_rest": 144,
+          "quantum_mae_weak": 1.545,
+          "learned_mae_weak": 4.79,
+          "reference_mae_weak": 11.3,
+          "quantum_mae_rest": 2.2108,
+          "learned_mae_rest": 3.2244,
+          "reference_mae_rest": 5.6618,
+          "testable": false
+        },
+        "C-C|<=5": {
+          "n_weak": 0,
+          "n_rest": 61,
+          "quantum_mae_weak": null,
+          "learned_mae_weak": null,
+          "reference_mae_weak": null,
+          "quantum_mae_rest": 1.6074,
+          "learned_mae_rest": 1.448,
+          "reference_mae_rest": 4.3885,
+          "testable": false
+        },
+        "C-C|6-9": {
+          "n_weak": 3,
+          "n_rest": 130,
+          "quantum_mae_weak": 2.9967,
+          "learned_mae_weak": 3.1867,
+          "reference_mae_weak": 3.2333,
+          "quantum_mae_rest": 1.9489,
+          "learned_mae_rest": 1.8633,
+          "reference_mae_rest": 4.7654,
+          "testable": false
+        },
+        "C-C|>=10": {
+          "n_weak": 12,
+          "n_rest": 34,
+          "quantum_mae_weak": 7.6633,
+          "learned_mae_weak": 9.2675,
+          "reference_mae_weak": 8.5417,
+          "quantum_mae_rest": 2.4682,
+          "learned_mae_rest": 2.5129,
+          "reference_mae_rest": 7.4882,
+          "testable": true
+        }
+      },
+      "verdict": "The weak-bond bin has ZERO observations with HAC<=5 and is shifted to larger parents (median HAC 12.5 vs 8.0 overall), so 'weak bond' and 'large molecule' cannot be separated across the sample as a whole. The one cell with enough weak-bond rows to test the magnitude effect with BOTH class and size held fixed is C-C / HAC>=10 (n_weak=12 vs n_rest=34); there the effect survives."
+    },
+    "bias_by_class": {
+      "quantum": {
+        "bias_C-H": 0.1101,
+        "bias_C-C": 1.1073,
+        "bias_diff_C_H_minus_C_C": -0.9972,
+        "welch_t_diff_in_bias": -3.777,
+        "welch_p_diff_in_bias": 0.00020062,
+        "sign_flip": false
+      },
+      "learned": {
+        "bias_C-H": 0.9301,
+        "bias_C-C": 1.251,
+        "bias_diff_C_H_minus_C_C": -0.3209,
+        "welch_t_diff_in_bias": -1.065,
+        "welch_p_diff_in_bias": 0.28789181,
+        "sign_flip": false
+      },
+      "reference": {
+        "bias_C-H": 5.1029,
+        "bias_C-C": -3.3033,
+        "bias_diff_C_H_minus_C_C": 8.4062,
+        "welch_t_diff_in_bias": 18.225,
+        "welch_p_diff_in_bias": 0.0,
+        "sign_flip": true
+      }
+    },
+    "flag_contrasts_within_bond_class": {
+      "c_rad_aromatic": {
+        "C-H": {
+          "n_true": 7,
+          "n_false": 295,
+          "quantum_mae_true": 1.9029,
+          "learned_mae_true": 1.8371,
+          "reference_mae_true": 4.3429,
+          "quantum_mae_false": 1.9927,
+          "learned_mae_false": 2.5583,
+          "reference_mae_false": 5.7433,
+          "n_true_lt_10_thin": true
+        },
+        "C-C": {
+          "n_true": 3,
+          "n_false": 237,
+          "quantum_mae_true": 2.7433,
+          "learned_mae_true": 1.5833,
+          "reference_mae_true": 14.0,
+          "quantum_mae_false": 2.2281,
+          "learned_mae_false": 2.2448,
+          "reference_mae_false": 5.1139,
+          "n_true_lt_10_thin": true
+        }
+      },
+      "c_rad_in_ring": {
+        "C-H": {
+          "n_true": 144,
+          "n_false": 158,
+          "quantum_mae_true": 2.2776,
+          "learned_mae_true": 3.0455,
+          "reference_mae_true": 6.7076,
+          "quantum_mae_false": 1.7292,
+          "learned_mae_false": 2.0823,
+          "reference_mae_false": 4.8024,
+          "n_true_lt_10_thin": false
+        },
+        "C-C": {
+          "n_true": 9,
+          "n_false": 231,
+          "quantum_mae_true": 4.9878,
+          "learned_mae_true": 6.8033,
+          "reference_mae_true": 8.9556,
+          "quantum_mae_false": 2.1272,
+          "learned_mae_false": 2.0586,
+          "reference_mae_false": 5.0797,
+          "n_true_lt_10_thin": true
+        }
+      },
+      "rad_any_in_ring": {
+        "C-H": {
+          "n_true": 144,
+          "n_false": 158,
+          "quantum_mae_true": 2.2776,
+          "learned_mae_true": 3.0455,
+          "reference_mae_true": 6.7076,
+          "quantum_mae_false": 1.7292,
+          "learned_mae_false": 2.0823,
+          "reference_mae_false": 4.8024,
+          "n_true_lt_10_thin": false
+        },
+        "C-C": {
+          "n_true": 39,
+          "n_false": 201,
+          "quantum_mae_true": 2.6736,
+          "learned_mae_true": 3.2808,
+          "reference_mae_true": 5.7256,
+          "quantum_mae_false": 2.1493,
+          "learned_mae_false": 2.0339,
+          "reference_mae_false": 5.1279,
+          "n_true_lt_10_thin": false
+        }
+      },
+      "parent_benzene": {
+        "C-H": {
+          "n_true": 162,
+          "n_false": 140,
+          "quantum_mae_true": 2.1183,
+          "learned_mae_true": 3.0922,
+          "reference_mae_true": 5.5389,
+          "quantum_mae_false": 1.843,
+          "learned_mae_false": 1.9045,
+          "reference_mae_false": 5.9099,
+          "n_true_lt_10_thin": false
+        },
+        "C-C": {
+          "n_true": 57,
+          "n_false": 183,
+          "quantum_mae_true": 3.1846,
+          "learned_mae_true": 3.4621,
+          "reference_mae_true": 6.8719,
+          "quantum_mae_false": 1.9386,
+          "learned_mae_false": 1.8548,
+          "reference_mae_false": 4.712,
+          "n_true_lt_10_thin": false
+        }
+      },
+      "parent_has_N": {
+        "C-H": {
+          "n_true": 31,
+          "n_false": 271,
+          "quantum_mae_true": 1.3371,
+          "learned_mae_true": 4.551,
+          "reference_mae_true": 5.0129,
+          "quantum_mae_false": 2.0654,
+          "learned_mae_false": 2.3117,
+          "reference_mae_false": 5.7907,
+          "n_true_lt_10_thin": false
+        },
+        "C-C": {
+          "n_true": 6,
+          "n_false": 234,
+          "quantum_mae_true": 7.6217,
+          "learned_mae_true": 6.7183,
+          "reference_mae_true": 6.8,
+          "quantum_mae_false": 2.0964,
+          "learned_mae_false": 2.1216,
+          "reference_mae_false": 5.1846,
+          "n_true_lt_10_thin": true
+        }
+      },
+      "parent_has_O": {
+        "C-H": {
+          "n_true": 41,
+          "n_false": 261,
+          "quantum_mae_true": 1.8178,
+          "learned_mae_true": 2.6437,
+          "reference_mae_true": 4.8756,
+          "quantum_mae_false": 2.0178,
+          "learned_mae_false": 2.5256,
+          "reference_mae_false": 5.8421,
+          "n_true_lt_10_thin": false
+        },
+        "C-C": {
+          "n_true": 90,
+          "n_false": 150,
+          "quantum_mae_true": 2.8684,
+          "learned_mae_true": 2.8396,
+          "reference_mae_true": 4.4322,
+          "quantum_mae_false": 1.8541,
+          "learned_mae_false": 1.8747,
+          "reference_mae_false": 5.7007,
+          "n_true_lt_10_thin": false
+        }
+      }
+    },
+    "experimental_magnitude_bins_fixed_edges": {
+      "<70": {
+        "n_bond_observations": 18,
+        "unit": "bond observation",
+        "n_unique_molecules": 18,
+        "mean_experimental_bde_kcal_mol": 59.9111,
+        "quantum_mae": 5.9967,
+        "quantum_bias": 4.5656,
+        "quantum_median_ae": 4.62,
+        "quantum_rmse": 7.6502,
+        "quantum_max_ae": 15.69,
+        "quantum_p90_ae": 14.976,
+        "learned_mae": 7.5267,
+        "learned_bias": 6.8678,
+        "learned_median_ae": 5.225,
+        "learned_rmse": 9.8351,
+        "learned_max_ae": 25.21,
+        "learned_p90_ae": 15.775,
+        "reference_mae": 7.9389,
+        "reference_bias": -2.75,
+        "reference_median_ae": 6.8,
+        "reference_rmse": 10.6715,
+        "reference_max_ae": 31.0,
+        "reference_p90_ae": 13.63,
+        "n_lt_10_thin": false,
+        "exp_bde_range": [
+          15.2,
+          69.5
+        ]
+      },
+      "70-85": {
+        "n_bond_observations": 246,
+        "unit": "bond observation",
+        "n_unique_molecules": 233,
+        "mean_experimental_bde_kcal_mol": 78.8622,
+        "quantum_mae": 2.2275,
+        "quantum_bias": 0.9388,
+        "quantum_median_ae": 1.68,
+        "quantum_rmse": 3.1186,
+        "quantum_max_ae": 15.74,
+        "quantum_p90_ae": 5.06,
+        "learned_mae": 2.8235,
+        "learned_bias": 1.8268,
+        "learned_median_ae": 1.935,
+        "learned_rmse": 3.9053,
+        "learned_max_ae": 14.51,
+        "learned_p90_ae": 6.12,
+        "reference_mae": 5.6622,
+        "reference_bias": 1.4346,
+        "reference_median_ae": 5.25,
+        "reference_rmse": 6.8884,
+        "reference_max_ae": 33.4,
+        "reference_p90_ae": 10.3,
+        "n_lt_10_thin": false,
+        "exp_bde_range": [
+          70.3,
+          85.0
+        ]
+      },
+      "85-100": {
+        "n_bond_observations": 210,
+        "unit": "bond observation",
+        "n_unique_molecules": 165,
+        "mean_experimental_bde_kcal_mol": 90.6129,
+        "quantum_mae": 1.6696,
+        "quantum_bias": 0.104,
+        "quantum_median_ae": 1.13,
+        "quantum_rmse": 2.3197,
+        "quantum_max_ae": 7.77,
+        "quantum_p90_ae": 4.12,
+        "learned_mae": 1.6382,
+        "learned_bias": 0.1928,
+        "learned_median_ae": 1.125,
+        "learned_rmse": 2.3261,
+        "learned_max_ae": 7.48,
+        "learned_p90_ae": 4.123,
+        "reference_mae": 4.9381,
+        "reference_bias": 1.0819,
+        "reference_median_ae": 4.5,
+        "reference_rmse": 5.8343,
+        "reference_max_ae": 24.7,
+        "reference_p90_ae": 8.51,
+        "n_lt_10_thin": false,
+        "exp_bde_range": [
+          85.1,
+          99.5
+        ]
+      },
+      ">=100": {
+        "n_bond_observations": 69,
+        "unit": "bond observation",
+        "n_unique_molecules": 58,
+        "mean_experimental_bde_kcal_mol": 111.6481,
+        "quantum_mae": 1.9217,
+        "quantum_bias": -0.4968,
+        "quantum_median_ae": 1.29,
+        "quantum_rmse": 2.7106,
+        "quantum_max_ae": 10.43,
+        "quantum_p90_ae": 4.154,
+        "learned_mae": 1.9557,
+        "learned_bias": -0.4009,
+        "learned_median_ae": 1.41,
+        "learned_rmse": 2.7377,
+        "learned_max_ae": 10.68,
+        "learned_p90_ae": 4.782,
+        "reference_mae": 5.8852,
+        "reference_bias": 3.1577,
+        "reference_median_ae": 4.6,
+        "reference_rmse": 7.5569,
+        "reference_max_ae": 21.6,
+        "reference_p90_ae": 11.28,
+        "n_lt_10_thin": false,
+        "exp_bde_range": [
+          100.2,
+          160.2
+        ]
+      },
+      "ALL": {
+        "n_bond_observations": 543,
+        "unit": "bond observation",
+        "n_unique_molecules": 419,
+        "mean_experimental_bde_kcal_mol": 86.9446,
+        "quantum_mae": 2.0978,
+        "quantum_bias": 0.5537,
+        "quantum_median_ae": 1.4,
+        "quantum_rmse": 3.0595,
+        "quantum_max_ae": 15.74,
+        "quantum_p90_ae": 4.708,
+        "learned_mae": 2.4107,
+        "learned_bias": 1.0789,
+        "learned_median_ae": 1.61,
+        "learned_rmse": 3.6278,
+        "learned_max_ae": 25.21,
+        "learned_p90_ae": 5.458,
+        "reference_mae": 5.486,
+        "reference_bias": 1.3784,
+        "reference_median_ae": 4.9,
+        "reference_rmse": 6.7596,
+        "reference_max_ae": 33.4,
+        "reference_p90_ae": 9.8
+      }
+    },
+    "experimental_magnitude_quartiles": {
+      "Q1 weakest": {
+        "n_bond_observations": 140,
+        "unit": "bond observation",
+        "n_unique_molecules": 140,
+        "mean_experimental_bde_kcal_mol": 73.2764,
+        "quantum_mae": 2.8811,
+        "quantum_bias": 1.7511,
+        "quantum_median_ae": 1.865,
+        "quantum_rmse": 4.2637,
+        "quantum_max_ae": 15.74,
+        "quantum_p90_ae": 5.943,
+        "learned_mae": 3.7369,
+        "learned_bias": 3.1604,
+        "learned_median_ae": 2.78,
+        "learned_rmse": 5.4318,
+        "learned_max_ae": 25.21,
+        "learned_p90_ae": 8.079,
+        "reference_mae": 6.56,
+        "reference_bias": 0.8414,
+        "reference_median_ae": 6.1,
+        "reference_rmse": 8.2205,
+        "reference_max_ae": 33.4,
+        "reference_p90_ae": 11.82,
+        "n_lt_10_thin": false
+      },
+      "Q2": {
+        "n_bond_observations": 133,
+        "unit": "bond observation",
+        "n_unique_molecules": 128,
+        "mean_experimental_bde_kcal_mol": 82.6075,
+        "quantum_mae": 2.0209,
+        "quantum_bias": 0.6329,
+        "quantum_median_ae": 1.65,
+        "quantum_rmse": 2.6761,
+        "quantum_max_ae": 10.79,
+        "quantum_p90_ae": 4.368,
+        "learned_mae": 2.4197,
+        "learned_bias": 1.0938,
+        "learned_median_ae": 1.84,
+        "learned_rmse": 3.252,
+        "learned_max_ae": 10.3,
+        "learned_p90_ae": 5.458,
+        "reference_mae": 5.0624,
+        "reference_bias": 1.5316,
+        "reference_median_ae": 4.8,
+        "reference_rmse": 5.9127,
+        "reference_max_ae": 13.3,
+        "reference_p90_ae": 8.6,
+        "n_lt_10_thin": false
+      },
+      "Q3": {
+        "n_bond_observations": 134,
+        "unit": "bond observation",
+        "n_unique_molecules": 116,
+        "mean_experimental_bde_kcal_mol": 87.9769,
+        "quantum_mae": 1.669,
+        "quantum_bias": 0.4327,
+        "quantum_median_ae": 1.095,
+        "quantum_rmse": 2.3769,
+        "quantum_max_ae": 7.77,
+        "quantum_p90_ae": 4.187,
+        "learned_mae": 1.7046,
+        "learned_bias": 0.4192,
+        "learned_median_ae": 0.93,
+        "learned_rmse": 2.4992,
+        "learned_max_ae": 7.48,
+        "learned_p90_ae": 4.336,
+        "reference_mae": 4.5933,
+        "reference_bias": -0.5007,
+        "reference_median_ae": 4.1,
+        "reference_rmse": 5.6282,
+        "reference_max_ae": 24.7,
+        "reference_p90_ae": 7.97,
+        "n_lt_10_thin": false
+      },
+      "Q4 strongest": {
+        "n_bond_observations": 136,
+        "unit": "bond observation",
+        "n_unique_molecules": 112,
+        "mean_experimental_bde_kcal_mol": 104.2391,
+        "quantum_mae": 1.7893,
+        "quantum_bias": -0.6371,
+        "quantum_median_ae": 1.195,
+        "quantum_rmse": 2.4678,
+        "quantum_max_ae": 10.43,
+        "quantum_p90_ae": 4.1,
+        "learned_mae": 1.7325,
+        "learned_bias": -0.4285,
+        "learned_median_ae": 1.41,
+        "learned_rmse": 2.3827,
+        "learned_max_ae": 10.68,
+        "learned_p90_ae": 3.465,
+        "reference_mae": 5.6741,
+        "reference_bias": 3.6329,
+        "reference_median_ae": 4.75,
+        "reference_rmse": 6.8899,
+        "reference_max_ae": 21.6,
+        "reference_p90_ae": 9.8,
+        "n_lt_10_thin": false
+      }
+    },
+    "heteroscedasticity": {
+      "quantum": {
+        "spearman_abs_err_vs_exp_bde": {
+          "rho": -0.1478,
+          "p_value": 0.00055,
+          "n": 543
+        },
+        "spearman_signed_err_vs_exp_bde": {
+          "rho": -0.3127,
+          "p_value": 0.0,
+          "n": 543
+        },
+        "sd_err_by_mag_bin": {
+          "<70": 6.3165,
+          "70-85": 2.98,
+          "85-100": 2.3229,
+          ">=100": 2.6842
+        },
+        "rmse_by_mag_bin": {
+          "<70": 7.6502,
+          "70-85": 3.1186,
+          "85-100": 2.3197,
+          ">=100": 2.7106
+        },
+        "levene_p": 0.0,
+        "kruskal_p_across_mag_bins": 2e-06
+      },
+      "learned": {
+        "spearman_abs_err_vs_exp_bde": {
+          "rho": -0.2522,
+          "p_value": 0.0,
+          "n": 543
+        },
+        "spearman_signed_err_vs_exp_bde": {
+          "rho": -0.4439,
+          "p_value": 0.0,
+          "n": 543
+        },
+        "sd_err_by_mag_bin": {
+          "<70": 7.2442,
+          "70-85": 3.4587,
+          "85-100": 2.3236,
+          ">=100": 2.7281
+        },
+        "rmse_by_mag_bin": {
+          "<70": 9.8351,
+          "70-85": 3.9053,
+          "85-100": 2.3261,
+          ">=100": 2.7377
+        },
+        "levene_p": 0.0,
+        "kruskal_p_across_mag_bins": 0.0
+      },
+      "reference": {
+        "spearman_abs_err_vs_exp_bde": {
+          "rho": -0.1223,
+          "p_value": 0.004324,
+          "n": 543
+        },
+        "spearman_signed_err_vs_exp_bde": {
+          "rho": 0.0624,
+          "p_value": 0.146703,
+          "n": 543
+        },
+        "sd_err_by_mag_bin": {
+          "<70": 10.61,
+          "70-85": 6.7511,
+          "85-100": 5.7468,
+          ">=100": 6.9158
+        },
+        "rmse_by_mag_bin": {
+          "<70": 10.6715,
+          "70-85": 6.8884,
+          "85-100": 5.8343,
+          ">=100": 7.5569
+        },
+        "levene_p": 5.7e-05,
+        "kruskal_p_across_mag_bins": 0.133592
+      }
+    }
+  },
+  "ch4_worst_best_regions": {
+    "cells_class_x_size_x_magnitude": [
+      {
+        "bond_class": "C-H",
+        "hac_bin": "<=5",
+        "exp_mag_bin": "70-85",
+        "n": 8,
+        "mean_exp_bde": 81.575,
+        "quantum_mae": 2.4162,
+        "quantum_bias": 1.6312,
+        "learned_mae": 2.2888,
+        "learned_bias": 1.4688,
+        "reference_mae": 5.3875,
+        "reference_bias": 5.3875
+      },
+      {
+        "bond_class": "C-H",
+        "hac_bin": "<=5",
+        "exp_mag_bin": "85-100",
+        "n": 26,
+        "mean_exp_bde": 92.246,
+        "quantum_mae": 1.405,
+        "quantum_bias": -0.1319,
+        "learned_mae": 1.3827,
+        "learned_bias": -0.2227,
+        "reference_mae": 4.7077,
+        "reference_bias": 3.9615
+      },
+      {
+        "bond_class": "C-H",
+        "hac_bin": "<=5",
+        "exp_mag_bin": ">=100",
+        "n": 18,
+        "mean_exp_bde": 108.64,
+        "quantum_mae": 1.9728,
+        "quantum_bias": -0.1283,
+        "learned_mae": 1.9844,
+        "learned_bias": 0.2289,
+        "reference_mae": 8.71,
+        "reference_bias": 7.5544
+      },
+      {
+        "bond_class": "C-H",
+        "hac_bin": "6-9",
+        "exp_mag_bin": "<70",
+        "n": 1,
+        "mean_exp_bde": 64.0,
+        "quantum_mae": 3.9,
+        "quantum_bias": -3.9,
+        "learned_mae": 5.13,
+        "learned_bias": -5.13,
+        "reference_mae": 8.1,
+        "reference_bias": 8.1
+      },
+      {
+        "bond_class": "C-H",
+        "hac_bin": "6-9",
+        "exp_mag_bin": "70-85",
+        "n": 32,
+        "mean_exp_bde": 80.778,
+        "quantum_mae": 2.3725,
+        "quantum_bias": 0.2556,
+        "learned_mae": 2.5834,
+        "learned_bias": 0.8566,
+        "reference_mae": 6.3594,
+        "reference_bias": 6.2469
+      },
+      {
+        "bond_class": "C-H",
+        "hac_bin": "6-9",
+        "exp_mag_bin": "85-100",
+        "n": 56,
+        "mean_exp_bde": 93.486,
+        "quantum_mae": 1.4663,
+        "quantum_bias": -0.3552,
+        "learned_mae": 1.487,
+        "learned_bias": -0.082,
+        "reference_mae": 5.1661,
+        "reference_bias": 5.0911
+      },
+      {
+        "bond_class": "C-H",
+        "hac_bin": "6-9",
+        "exp_mag_bin": ">=100",
+        "n": 15,
+        "mean_exp_bde": 116.573,
+        "quantum_mae": 1.7627,
+        "quantum_bias": -1.7267,
+        "learned_mae": 2.1747,
+        "learned_bias": -2.16,
+        "reference_mae": 4.24,
+        "reference_bias": 2.64
+      },
+      {
+        "bond_class": "C-H",
+        "hac_bin": ">=10",
+        "exp_mag_bin": "<70",
+        "n": 2,
+        "mean_exp_bde": 68.5,
+        "quantum_mae": 1.545,
+        "quantum_bias": -1.165,
+        "learned_mae": 4.79,
+        "learned_bias": 4.79,
+        "reference_mae": 11.3,
+        "reference_bias": 11.3
+      },
+      {
+        "bond_class": "C-H",
+        "hac_bin": ">=10",
+        "exp_mag_bin": "70-85",
+        "n": 100,
+        "mean_exp_bde": 78.294,
+        "quantum_mae": 2.1306,
+        "quantum_bias": 0.5022,
+        "learned_mae": 3.6713,
+        "learned_bias": 2.4671,
+        "reference_mae": 5.988,
+        "reference_bias": 5.074
+      },
+      {
+        "bond_class": "C-H",
+        "hac_bin": ">=10",
+        "exp_mag_bin": "85-100",
+        "n": 41,
+        "mean_exp_bde": 88.863,
+        "quantum_mae": 2.482,
+        "quantum_bias": 0.5634,
+        "learned_mae": 2.2659,
+        "learned_bias": 0.8176,
+        "reference_mae": 4.9317,
+        "reference_bias": 4.439
+      },
+      {
+        "bond_class": "C-H",
+        "hac_bin": ">=10",
+        "exp_mag_bin": ">=100",
+        "n": 3,
+        "mean_exp_bde": 113.7,
+        "quantum_mae": 1.1767,
+        "quantum_bias": -1.1767,
+        "learned_mae": 1.4267,
+        "learned_bias": -1.4267,
+        "reference_mae": 4.7667,
+        "reference_bias": 4.7667
+      },
+      {
+        "bond_class": "C-C",
+        "hac_bin": "<=5",
+        "exp_mag_bin": "70-85",
+        "n": 19,
+        "mean_exp_bde": 79.158,
+        "quantum_mae": 1.8779,
+        "quantum_bias": 1.7863,
+        "learned_mae": 1.7547,
+        "learned_bias": 1.6284,
+        "reference_mae": 3.6789,
+        "reference_bias": -1.7316
+      },
+      {
+        "bond_class": "C-C",
+        "hac_bin": "<=5",
+        "exp_mag_bin": "85-100",
+        "n": 29,
+        "mean_exp_bde": 89.014,
+        "quantum_mae": 1.3214,
+        "quantum_bias": 0.1048,
+        "learned_mae": 1.201,
+        "learned_bias": 0.0045,
+        "reference_mae": 3.6586,
+        "reference_bias": -1.4517
+      },
+      {
+        "bond_class": "C-C",
+        "hac_bin": "<=5",
+        "exp_mag_bin": ">=100",
+        "n": 13,
+        "mean_exp_bde": 118.569,
+        "quantum_mae": 1.85,
+        "quantum_bias": -0.0654,
+        "learned_mae": 1.5508,
+        "learned_bias": 0.0585,
+        "reference_mae": 7.0538,
+        "reference_bias": 6.5615
+      },
+      {
+        "bond_class": "C-C",
+        "hac_bin": "6-9",
+        "exp_mag_bin": "<70",
+        "n": 3,
+        "mean_exp_bde": 65.867,
+        "quantum_mae": 2.9967,
+        "quantum_bias": 2.7167,
+        "learned_mae": 3.1867,
+        "learned_bias": 2.6533,
+        "reference_mae": 3.2333,
+        "reference_bias": -3.2333
+      },
+      {
+        "bond_class": "C-C",
+        "hac_bin": "6-9",
+        "exp_mag_bin": "70-85",
+        "n": 68,
+        "mean_exp_bde": 79.401,
+        "quantum_mae": 2.1753,
+        "quantum_bias": 1.5426,
+        "learned_mae": 2.0551,
+        "learned_bias": 1.4266,
+        "reference_mae": 4.775,
+        "reference_bias": -3.6809
+      },
+      {
+        "bond_class": "C-C",
+        "hac_bin": "6-9",
+        "exp_mag_bin": "85-100",
+        "n": 50,
+        "mean_exp_bde": 88.814,
+        "quantum_mae": 1.5572,
+        "quantum_bias": 0.552,
+        "learned_mae": 1.5954,
+        "learned_bias": 0.5218,
+        "reference_mae": 4.784,
+        "reference_bias": -4.46
+      },
+      {
+        "bond_class": "C-C",
+        "hac_bin": "6-9",
+        "exp_mag_bin": ">=100",
+        "n": 12,
+        "mean_exp_bde": 106.692,
+        "quantum_mae": 2.2983,
+        "quantum_bias": -0.9617,
+        "learned_mae": 1.8925,
+        "learned_bias": -0.4625,
+        "reference_mae": 4.6333,
+        "reference_bias": -3.0833
+      },
+      {
+        "bond_class": "C-C",
+        "hac_bin": ">=10",
+        "exp_mag_bin": "<70",
+        "n": 12,
+        "mean_exp_bde": 56.65,
+        "quantum_mae": 7.6633,
+        "quantum_bias": 6.6883,
+        "learned_mae": 9.2675,
+        "learned_bias": 9.2675,
+        "reference_mae": 8.5417,
+        "reference_bias": -5.875
+      },
+      {
+        "bond_class": "C-C",
+        "hac_bin": ">=10",
+        "exp_mag_bin": "70-85",
+        "n": 18,
+        "mean_exp_bde": 74.822,
+        "quantum_mae": 3.0222,
+        "quantum_bias": 1.0556,
+        "learned_mae": 2.705,
+        "learned_bias": 1.7161,
+        "reference_mae": 8.4833,
+        "reference_bias": -6.3611
+      },
+      {
+        "bond_class": "C-C",
+        "hac_bin": ">=10",
+        "exp_mag_bin": "85-100",
+        "n": 8,
+        "mean_exp_bde": 91.2,
+        "quantum_mae": 1.7537,
+        "quantum_bias": -1.0737,
+        "learned_mae": 2.1625,
+        "learned_bias": -1.11,
+        "reference_mae": 9.725,
+        "reference_bias": -9.725
+      },
+      {
+        "bond_class": "C-C",
+        "hac_bin": ">=10",
+        "exp_mag_bin": ">=100",
+        "n": 8,
+        "mean_exp_bde": 104.6,
+        "quantum_mae": 1.9362,
+        "quantum_bias": 1.2313,
+        "learned_mae": 2.4313,
+        "learned_bias": 1.2113,
+        "reference_mae": 3.0125,
+        "reference_bias": -2.5375
+      },
+      {
+        "bond_class": "H-O",
+        "hac_bin": ">=10",
+        "exp_mag_bin": "70-85",
+        "n": 1,
+        "mean_exp_bde": 83.1,
+        "quantum_mae": 1.65,
+        "quantum_bias": 1.65,
+        "learned_mae": 4.68,
+        "learned_bias": 4.68,
+        "reference_mae": 0.2,
+        "reference_bias": 0.2
+      }
+    ],
+    "worst_best_by_min_n": {
+      "quantum_min_n1": {
+        "worst_cell": {
+          "bond_class": "C-C",
+          "hac_bin": ">=10",
+          "exp_mag_bin": "<70",
+          "n": 12.0,
+          "mean_exp_bde": 56.65,
+          "quantum_mae": 7.6633,
+          "quantum_bias": 6.6883,
+          "learned_mae": 9.2675,
+          "learned_bias": 9.2675,
+          "reference_mae": 8.5417,
+          "reference_bias": -5.875
+        },
+        "best_cell": {
+          "bond_class": "C-H",
+          "hac_bin": ">=10",
+          "exp_mag_bin": ">=100",
+          "n": 3.0,
+          "mean_exp_bde": 113.7,
+          "quantum_mae": 1.1767,
+          "quantum_bias": -1.1767,
+          "learned_mae": 1.4267,
+          "learned_bias": -1.4267,
+          "reference_mae": 4.7667,
+          "reference_bias": 4.7667
+        },
+        "n_eligible_cells": 23
+      },
+      "quantum_min_n5": {
+        "worst_cell": {
+          "bond_class": "C-C",
+          "hac_bin": ">=10",
+          "exp_mag_bin": "<70",
+          "n": 12.0,
+          "mean_exp_bde": 56.65,
+          "quantum_mae": 7.6633,
+          "quantum_bias": 6.6883,
+          "learned_mae": 9.2675,
+          "learned_bias": 9.2675,
+          "reference_mae": 8.5417,
+          "reference_bias": -5.875
+        },
+        "best_cell": {
+          "bond_class": "C-C",
+          "hac_bin": "<=5",
+          "exp_mag_bin": "85-100",
+          "n": 29.0,
+          "mean_exp_bde": 89.014,
+          "quantum_mae": 1.3214,
+          "quantum_bias": 0.1048,
+          "learned_mae": 1.201,
+          "learned_bias": 0.0045,
+          "reference_mae": 3.6586,
+          "reference_bias": -1.4517
+        },
+        "n_eligible_cells": 18
+      },
+      "quantum_min_n10": {
+        "worst_cell": {
+          "bond_class": "C-C",
+          "hac_bin": ">=10",
+          "exp_mag_bin": "<70",
+          "n": 12.0,
+          "mean_exp_bde": 56.65,
+          "quantum_mae": 7.6633,
+          "quantum_bias": 6.6883,
+          "learned_mae": 9.2675,
+          "learned_bias": 9.2675,
+          "reference_mae": 8.5417,
+          "reference_bias": -5.875
+        },
+        "best_cell": {
+          "bond_class": "C-C",
+          "hac_bin": "<=5",
+          "exp_mag_bin": "85-100",
+          "n": 29.0,
+          "mean_exp_bde": 89.014,
+          "quantum_mae": 1.3214,
+          "quantum_bias": 0.1048,
+          "learned_mae": 1.201,
+          "learned_bias": 0.0045,
+          "reference_mae": 3.6586,
+          "reference_bias": -1.4517
+        },
+        "n_eligible_cells": 15
+      },
+      "learned_min_n1": {
+        "worst_cell": {
+          "bond_class": "C-C",
+          "hac_bin": ">=10",
+          "exp_mag_bin": "<70",
+          "n": 12.0,
+          "mean_exp_bde": 56.65,
+          "quantum_mae": 7.6633,
+          "quantum_bias": 6.6883,
+          "learned_mae": 9.2675,
+          "learned_bias": 9.2675,
+          "reference_mae": 8.5417,
+          "reference_bias": -5.875
+        },
+        "best_cell": {
+          "bond_class": "C-C",
+          "hac_bin": "<=5",
+          "exp_mag_bin": "85-100",
+          "n": 29.0,
+          "mean_exp_bde": 89.014,
+          "quantum_mae": 1.3214,
+          "quantum_bias": 0.1048,
+          "learned_mae": 1.201,
+          "learned_bias": 0.0045,
+          "reference_mae": 3.6586,
+          "reference_bias": -1.4517
+        },
+        "n_eligible_cells": 23
+      },
+      "learned_min_n5": {
+        "worst_cell": {
+          "bond_class": "C-C",
+          "hac_bin": ">=10",
+          "exp_mag_bin": "<70",
+          "n": 12.0,
+          "mean_exp_bde": 56.65,
+          "quantum_mae": 7.6633,
+          "quantum_bias": 6.6883,
+          "learned_mae": 9.2675,
+          "learned_bias": 9.2675,
+          "reference_mae": 8.5417,
+          "reference_bias": -5.875
+        },
+        "best_cell": {
+          "bond_class": "C-C",
+          "hac_bin": "<=5",
+          "exp_mag_bin": "85-100",
+          "n": 29.0,
+          "mean_exp_bde": 89.014,
+          "quantum_mae": 1.3214,
+          "quantum_bias": 0.1048,
+          "learned_mae": 1.201,
+          "learned_bias": 0.0045,
+          "reference_mae": 3.6586,
+          "reference_bias": -1.4517
+        },
+        "n_eligible_cells": 18
+      },
+      "learned_min_n10": {
+        "worst_cell": {
+          "bond_class": "C-C",
+          "hac_bin": ">=10",
+          "exp_mag_bin": "<70",
+          "n": 12.0,
+          "mean_exp_bde": 56.65,
+          "quantum_mae": 7.6633,
+          "quantum_bias": 6.6883,
+          "learned_mae": 9.2675,
+          "learned_bias": 9.2675,
+          "reference_mae": 8.5417,
+          "reference_bias": -5.875
+        },
+        "best_cell": {
+          "bond_class": "C-C",
+          "hac_bin": "<=5",
+          "exp_mag_bin": "85-100",
+          "n": 29.0,
+          "mean_exp_bde": 89.014,
+          "quantum_mae": 1.3214,
+          "quantum_bias": 0.1048,
+          "learned_mae": 1.201,
+          "learned_bias": 0.0045,
+          "reference_mae": 3.6586,
+          "reference_bias": -1.4517
+        },
+        "n_eligible_cells": 15
+      },
+      "reference_min_n1": {
+        "worst_cell": {
+          "bond_class": "C-H",
+          "hac_bin": ">=10",
+          "exp_mag_bin": "<70",
+          "n": 2.0,
+          "mean_exp_bde": 68.5,
+          "quantum_mae": 1.545,
+          "quantum_bias": -1.165,
+          "learned_mae": 4.79,
+          "learned_bias": 4.79,
+          "reference_mae": 11.3,
+          "reference_bias": 11.3
+        },
+        "best_cell": {
+          "bond_class": "H-O",
+          "hac_bin": ">=10",
+          "exp_mag_bin": "70-85",
+          "n": 1.0,
+          "mean_exp_bde": 83.1,
+          "quantum_mae": 1.65,
+          "quantum_bias": 1.65,
+          "learned_mae": 4.68,
+          "learned_bias": 4.68,
+          "reference_mae": 0.2,
+          "reference_bias": 0.2
+        },
+        "n_eligible_cells": 23
+      },
+      "reference_min_n5": {
+        "worst_cell": {
+          "bond_class": "C-C",
+          "hac_bin": ">=10",
+          "exp_mag_bin": "85-100",
+          "n": 8.0,
+          "mean_exp_bde": 91.2,
+          "quantum_mae": 1.7537,
+          "quantum_bias": -1.0737,
+          "learned_mae": 2.1625,
+          "learned_bias": -1.11,
+          "reference_mae": 9.725,
+          "reference_bias": -9.725
+        },
+        "best_cell": {
+          "bond_class": "C-C",
+          "hac_bin": ">=10",
+          "exp_mag_bin": ">=100",
+          "n": 8.0,
+          "mean_exp_bde": 104.6,
+          "quantum_mae": 1.9362,
+          "quantum_bias": 1.2313,
+          "learned_mae": 2.4313,
+          "learned_bias": 1.2113,
+          "reference_mae": 3.0125,
+          "reference_bias": -2.5375
+        },
+        "n_eligible_cells": 18
+      },
+      "reference_min_n10": {
+        "worst_cell": {
+          "bond_class": "C-H",
+          "hac_bin": "<=5",
+          "exp_mag_bin": ">=100",
+          "n": 18.0,
+          "mean_exp_bde": 108.64,
+          "quantum_mae": 1.9728,
+          "quantum_bias": -0.1283,
+          "learned_mae": 1.9844,
+          "learned_bias": 0.2289,
+          "reference_mae": 8.71,
+          "reference_bias": 7.5544
+        },
+        "best_cell": {
+          "bond_class": "C-C",
+          "hac_bin": "<=5",
+          "exp_mag_bin": "85-100",
+          "n": 29.0,
+          "mean_exp_bde": 89.014,
+          "quantum_mae": 1.3214,
+          "quantum_bias": 0.1048,
+          "learned_mae": 1.201,
+          "learned_bias": 0.0045,
+          "reference_mae": 3.6586,
+          "reference_bias": -1.4517
+        },
+        "n_eligible_cells": 15
+      }
+    },
+    "class_x_size_marginal": {
+      "quantum": {
+        "table": [
+          {
+            "bond_class": "C-H",
+            "hac_bin": "<=5",
+            "n": 52,
+            "mae": 1.7571,
+            "bias": 0.1406
+          },
+          {
+            "bond_class": "C-H",
+            "hac_bin": "6-9",
+            "n": 104,
+            "mae": 1.8113,
+            "bias": -0.3991
+          },
+          {
+            "bond_class": "C-H",
+            "hac_bin": ">=10",
+            "n": 146,
+            "mae": 2.2016,
+            "bias": 0.4621
+          },
+          {
+            "bond_class": "C-C",
+            "hac_bin": "<=5",
+            "n": 61,
+            "mae": 1.6074,
+            "bias": 0.5923
+          },
+          {
+            "bond_class": "C-C",
+            "hac_bin": "6-9",
+            "n": 133,
+            "mae": 1.9726,
+            "bias": 0.9708
+          },
+          {
+            "bond_class": "C-C",
+            "hac_bin": ">=10",
+            "n": 46,
+            "mae": 3.8235,
+            "bias": 2.1852
+          },
+          {
+            "bond_class": "H-O",
+            "hac_bin": ">=10",
+            "n": 1,
+            "mae": 1.65,
+            "bias": 1.65
+          }
+        ],
+        "worst_n_ge_10": {
+          "bond_class": "C-C",
+          "hac_bin": ">=10",
+          "n": 46,
+          "mae": 3.8235,
+          "bias": 2.1852
+        },
+        "best_n_ge_10": {
+          "bond_class": "C-C",
+          "hac_bin": "<=5",
+          "n": 61,
+          "mae": 1.6074,
+          "bias": 0.5923
+        }
+      },
+      "learned": {
+        "table": [
+          {
+            "bond_class": "C-H",
+            "hac_bin": "<=5",
+            "n": 52,
+            "mae": 1.7304,
+            "bias": 0.1938
+          },
+          {
+            "bond_class": "C-H",
+            "hac_bin": "6-9",
+            "n": 104,
+            "mae": 1.9586,
+            "bias": -0.1414
+          },
+          {
+            "bond_class": "C-H",
+            "hac_bin": ">=10",
+            "n": 146,
+            "mae": 3.2458,
+            "bias": 1.9557
+          },
+          {
+            "bond_class": "C-C",
+            "hac_bin": "<=5",
+            "n": 61,
+            "mae": 1.448,
+            "bias": 0.5218
+          },
+          {
+            "bond_class": "C-C",
+            "hac_bin": "6-9",
+            "n": 133,
+            "mae": 1.8932,
+            "bias": 0.9437
+          },
+          {
+            "bond_class": "C-C",
+            "hac_bin": ">=10",
+            "n": 46,
+            "mae": 4.275,
+            "bias": 3.1067
+          },
+          {
+            "bond_class": "H-O",
+            "hac_bin": ">=10",
+            "n": 1,
+            "mae": 4.68,
+            "bias": 4.68
+          }
+        ],
+        "worst_n_ge_10": {
+          "bond_class": "C-C",
+          "hac_bin": ">=10",
+          "n": 46,
+          "mae": 4.275,
+          "bias": 3.1067
+        },
+        "best_n_ge_10": {
+          "bond_class": "C-C",
+          "hac_bin": "<=5",
+          "n": 61,
+          "mae": 1.448,
+          "bias": 0.5218
+        }
+      },
+      "reference": {
+        "table": [
+          {
+            "bond_class": "C-H",
+            "hac_bin": "<=5",
+            "n": 52,
+            "mae": 6.1977,
+            "bias": 5.4246
+          },
+          {
+            "bond_class": "C-H",
+            "hac_bin": "6-9",
+            "n": 104,
+            "mae": 5.4279,
+            "bias": 5.1221
+          },
+          {
+            "bond_class": "C-H",
+            "hac_bin": ">=10",
+            "n": 146,
+            "mae": 5.739,
+            "bias": 4.9747
+          },
+          {
+            "bond_class": "C-C",
+            "hac_bin": "<=5",
+            "n": 61,
+            "mae": 4.3885,
+            "bias": 0.1689
+          },
+          {
+            "bond_class": "C-C",
+            "hac_bin": "6-9",
+            "n": 133,
+            "mae": 4.7308,
+            "bias": -3.9098
+          },
+          {
+            "bond_class": "C-C",
+            "hac_bin": ">=10",
+            "n": 46,
+            "mae": 7.763,
+            "bias": -6.1543
+          },
+          {
+            "bond_class": "H-O",
+            "hac_bin": ">=10",
+            "n": 1,
+            "mae": 0.2,
+            "bias": 0.2
+          }
+        ],
+        "worst_n_ge_10": {
+          "bond_class": "C-C",
+          "hac_bin": ">=10",
+          "n": 46,
+          "mae": 7.763,
+          "bias": -6.1543
+        },
+        "best_n_ge_10": {
+          "bond_class": "C-C",
+          "hac_bin": "<=5",
+          "n": 61,
+          "mae": 4.3885,
+          "bias": 0.1689
+        }
+      }
+    }
+  },
+  "ch5_thin_samples": {
+    "threshold": 10,
+    "ledger": [
+      {
+        "slice": "bond_class=H-O",
+        "n": 1,
+        "reason": "n<10 bond observations - no class effect asserted"
+      },
+      {
+        "slice": "H-O x HAC >=10",
+        "n": 1,
+        "reason": "n<10 - cell reported but not interpreted"
+      },
+      {
+        "slice": "parent_has_S=True",
+        "n": 0,
+        "reason": "n<10 on the True side - flag effect not interpretable"
+      }
+    ],
+    "absent_classes": [
+      "C-N",
+      "C-O",
+      "H-N",
+      "N-N",
+      "N-O",
+      "O-O"
+    ]
+  },
+  "applicability_boundary": {
+    "best_measured_region": {
+      "quantum": {
+        "cell": "C-C / HAC <=5",
+        "mae": 1.6074,
+        "n_bond_observations": 61,
+        "bias": 0.5923
+      },
+      "learned": {
+        "cell": "C-C / HAC <=5",
+        "mae": 1.448,
+        "n_bond_observations": 61,
+        "bias": 0.5218
+      },
+      "reference": {
+        "cell": "C-C / HAC <=5",
+        "mae": 4.3885,
+        "n_bond_observations": 61,
+        "bias": 0.1689
+      }
+    },
+    "worst_measured_region": {
+      "quantum": {
+        "cell": "C-C / HAC >=10",
+        "mae": 3.8235,
+        "n_bond_observations": 46,
+        "bias": 2.1852
+      },
+      "learned": {
+        "cell": "C-C / HAC >=10",
+        "mae": 4.275,
+        "n_bond_observations": 46,
+        "bias": 3.1067
+      },
+      "reference": {
+        "cell": "C-C / HAC >=10",
+        "mae": 7.763,
+        "n_bond_observations": 46,
+        "bias": -6.1543
+      }
+    },
+    "quantum_best_magnitude_bin": {
+      "exp_bde_bin": "85-100",
+      "mae": 1.6696,
+      "n_bond_observations": 210
+    },
+    "quantum_worst_magnitude_bin": {
+      "exp_bde_bin": "<70",
+      "mae": 5.9967,
+      "n_bond_observations": 18
+    },
+    "learned_best_magnitude_bin": {
+      "exp_bde_bin": "85-100",
+      "mae": 1.6382,
+      "n_bond_observations": 210
+    },
+    "learned_worst_magnitude_bin": {
+      "exp_bde_bin": "<70",
+      "mae": 7.5267,
+      "n_bond_observations": 18
+    },
+    "reference_best_magnitude_bin": {
+      "exp_bde_bin": "85-100",
+      "mae": 4.9381,
+      "n_bond_observations": 210
+    },
+    "reference_worst_magnitude_bin": {
+      "exp_bde_bin": "<70",
+      "mae": 7.9389,
+      "n_bond_observations": 18
+    },
+    "statement": "Applicability boundary from the measured sample: all three channels are evaluated here only on C-H and C-C bonds. Within that domain the dominant failure axis is bond strength, not bond class. Below 70 kcal/mol (n=18 bond observations, mean experimental BDE 59.9) MAE rises to 5.9967 (quantum), 7.5267 (learned), 7.9389 (reference) kcal/mol, i.e. 3.0x / 3.2x / 1.5x the pooled MAE, with a large positive bias (quantum +4.57, learned +6.87). In the 85-100 kcal/mol window (n=210) quantum and learned are near-unbiased (MAE 1.6696 / 1.6382, bias +0.10 / +0.19)."
+  },
+  "narrative": "Overall (543 bond observations): quantum MAE 2.0978 kcal/mol (bias +0.554), learned MAE 2.4107 (bias +1.079), reference MAE 5.486 (bias +1.378). Bond-class coverage is the binding constraint: C-H n=302, C-C n=240, H-O n=1, and C-N/C-O/H-N/N-N/N-O/O-O are entirely absent from the benchmark although they make up 16.5% of the database rows; no class-level claim can be made for those six classes. C-H vs C-C MAE: quantum 1.9907 vs 2.2345, learned 2.5416 vs 2.2365, reference 5.7109 vs 5.225 kcal/mol. The pooled C-H/C-C gaps are not stable effects: quantum and reference bootstrap 95% CIs span zero, and the C-H-vs-C-C direction itself FLIPS between size bins - among HAC<=5 parents C-C is better for quantum (1.61 vs 1.76), while among HAC>=10 parents C-H is better (2.20 vs 3.82, Mann-Whitney p=0.005). That is an interaction, not a class main effect. The C-H group is the larger-molecule group (median HAC 9.0 vs 7.0, Mann-Whitney p<1e-8), so class and size are partly confounded. quantum: R2(size only)=0.04561, R2(class only)=0.00298, R2(size+class)=0.06022 -> verdict 'size dominates' (incremental R2 from class given size = 0.01461). learned: R2(size only)=0.18176, R2(class only)=0.00327, R2(size+class)=0.18635 -> verdict 'size dominates' (incremental R2 from class given size = 0.0046). reference: R2(size only)=0.02979, R2(class only)=0.00346, R2(size+class)=0.02988 -> verdict 'size dominates' (incremental R2 from class given size = 0.0001). Error grows toward the weak-bond end for every channel: quantum Spearman |err| vs exp BDE rho=-0.1478 (p=0.00055), learned rho=-0.2522, reference rho=-0.1223. Levene p across experimental-magnitude bins: quantum 0.0, learned 0.0, reference 5.7e-05 - error is strongly heteroscedastic in bond strength. The reference channel is the one real class effect found: its bias flips sign between classes, +5.103 kcal/mol on C-H versus -3.303 on C-C (Welch p=0.0). It systematically over-estimates C-H bonds and under-estimates C-C bonds, and this is why its pooled MAE (5.49) is 2.6x the quantum channel's despite a similar RMSE. The learned channel's largest single environment effect is nitrogen: MAE 4.9024 on N-containing parents (n=37) versus 2.2285 otherwise (bootstrap 95% CI of the difference [1.3195, 4.061]), a 2.2x degradation. Within C-H bonds alone it is still 4.551 vs 2.3117, so it is not a class artifact. Ring/aromatic environment also matters for the learned channel: benzene-containing parents MAE 3.1952 (n=220) versus 1.8763 (n=323), and a ring-member radical centre gives the same direction (in-ring 3.0956 vs not 2.0625). The quantum channel shows the same direction more weakly, and the reference channel is largely flat to aromaticity. Size and bond strength are themselves confounded: the <70 kcal/mol bin contains no HAC<=5 observation at all and is shifted to larger parents (median HAC 12.5 vs 8.0 overall), so the 'large molecule' and 'weak bond' failure modes cannot be separated globally. The one cell with enough weak-bond rows to hold class and size fixed is C-C / HAC>=10 (12 weak vs 34 other): there quantum MAE is 7.66 vs 2.47 and learned 9.27 vs 2.51, so the magnitude effect does survive that control. That same cell, C-C / HAC>=10 / <70 kcal/mol, is the worst 3-way cell for both quantum and learned (n=12).",
+  "commands": [
+    "python3 output/analysis/ws3_build.py",
+    "python3 output/analysis/ws3_analysis.py"
+  ],
+  "caveats": [
+    "The benchmark's 543 rows are 543 heterogeneous literature bond observations, not independent repeats; experimental reference uncertainty is not propagated.",
+    "Only C-H and C-C are populated (plus a single H-O row): six of the nine database bond classes have zero benchmark coverage, so class-level error claims exist only for C-H vs C-C.",
+    "Unique molecules (419) and unique fragment pairs (543) are different analysis units from the 543 bond observations; per-class n values above count bond observations.",
+    "OLS R^2 on |error| is descriptive; the residual distribution is skewed and heteroscedastic, so R^2 magnitudes are small and should not be read as a predictive model.",
+    "Environment flags (aromaticity, ring membership, N/O content) are correlated with each other and with parent size; the stratified tables control only one factor at a time."
+  ]
+}

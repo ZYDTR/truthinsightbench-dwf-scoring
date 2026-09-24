@@ -1,0 +1,34 @@
+crowded x in_db_row:
+in_db_row  False  True 
+crowded                
+False        119    329
+True          93      2
+crowded x train_flag:
+train_flag  False  True 
+crowded                 
+False         119    329
+True           93      2
+
+=== learned MAE stratified (crowded x in_db_row) ===
+ crowded=True  in_db=True  n=  2  q_MAE= 3.270 l_MAE= 3.205 r_MAE= 5.100
+ crowded=True  in_db=False n= 93  q_MAE= 2.479 l_MAE= 4.189 r_MAE= 6.997
+ crowded=False in_db=True  n=329  q_MAE= 1.862 l_MAE= 1.798 r_MAE= 5.024
+ crowded=False in_db=False n=119  q_MAE= 2.432 l_MAE= 2.700 r_MAE= 5.589
+
+=== n_arom_rings>=2 flag (fused/stacked aromatic) ===
+n=112
+  quantum    MAE_in= 2.621 (n=112) MAE_out= 1.962 (n=431) delta=+0.659 p=0.00227 cliffs=0.187
+  learned    MAE_in= 3.882 (n=112) MAE_out= 2.028 (n=431) delta=+1.854 p=2.78e-10 cliffs=0.387
+  reference  MAE_in= 6.540 (n=112) MAE_out= 5.212 (n=431) delta=+1.328 p=0.037 cliffs=0.128
+
+=== fused/bridged polycyclic (n_fused>0 or n_bridge>0 or n_spiro>0) ===
+n=294
+  quantum    MAE_in= 2.410 (n=294) MAE_out= 1.729 (n=249) delta=+0.682 p=0.000289 cliffs=0.180
+  learned    MAE_in= 3.080 (n=294) MAE_out= 1.620 (n=249) delta=+1.460 p=1.22e-10 cliffs=0.320
+  reference  MAE_in= 6.122 (n=294) MAE_out= 4.735 (n=249) delta=+1.387 p=0.000583 cliffs=0.171
+
+=== same_frag_canon ===
+n=27
+  quantum    MAE_same= 2.853 (n=27) MAE_diff= 2.058 (n=516) delta=+0.794 p=0.613
+  learned    MAE_same= 3.586 (n=27) MAE_diff= 2.349 (n=516) delta=+1.237 p=0.846
+  reference  MAE_same= 6.426 (n=27) MAE_diff= 5.437 (n=516) delta=+0.989 p=0.237

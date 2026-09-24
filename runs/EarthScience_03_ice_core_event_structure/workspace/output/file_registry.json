@@ -1,0 +1,385 @@
+{
+  "schema": "truthinsightbench-native-evidence-registry",
+  "task_id": "EarthScience_03_ice_core_event_structure",
+  "note": "Artifact IDs F001.. are referenced from the registered findings in output/Result.md so that each finding resolves to executed analysis source and machine-readable result evidence.",
+  "files": [
+    {
+      "id": "F001",
+      "relative_path": "analysis/common.py",
+      "role": "code",
+      "description": "Shared loader for data/observations.tsv; fixes the 1950 CE datum recovered from c08+c09.",
+      "bytes": 2819
+    },
+    {
+      "id": "F002",
+      "relative_path": "analysis/01_structure_audit.py",
+      "role": "code",
+      "description": "Column-independence audit: duplicate/dependency tests and the depth, water-equivalent and age model comparisons.",
+      "bytes": 11739
+    },
+    {
+      "id": "F003",
+      "relative_path": "analysis/02_event_detection.py",
+      "role": "code",
+      "description": "144-variant detector grid, annotated-horizon excess ranks, permutation enrichment test, block leave-one-out.",
+      "bytes": 10185
+    },
+    {
+      "id": "F004",
+      "relative_path": "analysis/03_long_record_relationships.py",
+      "role": "code",
+      "description": "Moving-block bootstrap of the sulfate trend, age-depth model comparison and leave-one-out, event-rate stability.",
+      "bytes": 11312
+    },
+    {
+      "id": "F005",
+      "relative_path": "analysis/04_event_classes_and_age_coordinate.py",
+      "role": "code",
+      "description": "Chronology coordinate competition with out-of-sample validation; label-class contrasts and spatial clustering.",
+      "bytes": 9330
+    },
+    {
+      "id": "F006",
+      "relative_path": "analysis/05_robustness.py",
+      "role": "code",
+      "description": "Adversarial checks: integer-cm depth arithmetic, quadrature alternatives, block-length sensitivity, local-maximum calibration, monotone-transform competition.",
+      "bytes": 14299
+    },
+    {
+      "id": "F007",
+      "relative_path": "analysis/06_build_registry.py",
+      "role": "code",
+      "description": "Builds and re-verifies this registry.",
+      "bytes": 11185
+    },
+    {
+      "id": "F010",
+      "relative_path": "results/structure_audit.json",
+      "role": "result",
+      "description": "Missingness, c02/c01 identity, the 1.008 m depth step, c06=c01*c05, age-column conversion, density grid.",
+      "bytes": 2031
+    },
+    {
+      "id": "F011",
+      "relative_path": "results/column_redundancy.csv",
+      "role": "result",
+      "description": "Per-column-pair dependency table with residual scales and an independence flag.",
+      "bytes": 650
+    },
+    {
+      "id": "F012",
+      "relative_path": "results/water_equivalent_model_comparison.csv",
+      "role": "result",
+      "description": "RMSE / max residual / R2 for the product model versus four density-integral quadratures.",
+      "bytes": 472
+    },
+    {
+      "id": "F013",
+      "relative_path": "results/depth_model_comparison.csv",
+      "role": "result",
+      "description": "c01 vs cumulative c03 with and without the inserted step.",
+      "bytes": 163
+    },
+    {
+      "id": "F014",
+      "relative_path": "results/detector_grid.csv",
+      "role": "result",
+      "description": "All 144 (background, window, threshold) variants with detected counts, recall of the 15 horizons and false positives.",
+      "bytes": 8058
+    },
+    {
+      "id": "F015",
+      "relative_path": "results/annotated_event_excess.csv",
+      "role": "result",
+      "description": "The 15 annotated horizons with background, excess, global rank and local-maximum status.",
+      "bytes": 1349
+    },
+    {
+      "id": "F016",
+      "relative_path": "results/event_detection_summary.json",
+      "role": "result",
+      "description": "Detector-grid spread, local-maximum ceiling, enrichment permutation p-value.",
+      "bytes": 558
+    },
+    {
+      "id": "F017",
+      "relative_path": "results/block_leave_one_out_detector.csv",
+      "role": "result",
+      "description": "Recall after dropping each contiguous block at 5, 10 and 20 blocks.",
+      "bytes": 1356
+    },
+    {
+      "id": "F018",
+      "relative_path": "results/trend_bootstrap.csv",
+      "role": "result",
+      "description": "Sulfate-vs-geometry correlations with moving-block bootstrap intervals and the i.i.d. contrast.",
+      "bytes": 679
+    },
+    {
+      "id": "F019",
+      "relative_path": "results/long_record_summary.json",
+      "role": "result",
+      "description": "Autocorrelation, effective sample size, shallow/deep contrast and age-fit summary.",
+      "bytes": 649
+    },
+    {
+      "id": "F020",
+      "relative_path": "results/age_depth_model_comparison.csv",
+      "role": "result",
+      "description": "Age-depth fits for four depth-like coordinates.",
+      "bytes": 580
+    },
+    {
+      "id": "F021",
+      "relative_path": "results/age_depth_leave_one_out.csv",
+      "role": "result",
+      "description": "Leave-one-out fits over the 15 dated horizons.",
+      "bytes": 1192
+    },
+    {
+      "id": "F022",
+      "relative_path": "results/event_rate_stability.csv",
+      "role": "result",
+      "description": "Exact binomial split tests for event rate in depth and water-equivalent depth.",
+      "bytes": 119
+    },
+    {
+      "id": "F023",
+      "relative_path": "results/event_spacing.csv",
+      "role": "result",
+      "description": "Gap statistics and coefficients of variation against the Poisson expectation.",
+      "bytes": 287
+    },
+    {
+      "id": "F024",
+      "relative_path": "results/age_coordinate_competition.csv",
+      "role": "result",
+      "description": "Linear and quadratic fits per coordinate.",
+      "bytes": 751
+    },
+    {
+      "id": "F025",
+      "relative_path": "results/age_coordinate_loo.csv",
+      "role": "result",
+      "description": "Held-out prediction error per dated horizon for c01 and c06.",
+      "bytes": 2488
+    },
+    {
+      "id": "F026",
+      "relative_path": "results/event_class_comparison.csv",
+      "role": "result",
+      "description": "Named vs unidentified label contrasts on three amplitude metrics.",
+      "bytes": 303
+    },
+    {
+      "id": "F027",
+      "relative_path": "results/event_clustering.csv",
+      "role": "result",
+      "description": "Nearest-neighbour gap statistics against a homogeneous Poisson null.",
+      "bytes": 285
+    },
+    {
+      "id": "F028",
+      "relative_path": "results/class_and_age_summary.json",
+      "role": "result",
+      "description": "Condensed summary of the class and coordinate analyses.",
+      "bytes": 1665
+    },
+    {
+      "id": "F029",
+      "relative_path": "results/robustness_integer_depth.csv",
+      "role": "result",
+      "description": "Distribution of the integer-centimetre deviation between depth increments and sample thickness.",
+      "bytes": 227
+    },
+    {
+      "id": "F030",
+      "relative_path": "results/robustness_breakpoint_grid.csv",
+      "role": "result",
+      "description": "Every candidate breakpoint/offset pair for the depth cascade.",
+      "bytes": 72044
+    },
+    {
+      "id": "F031",
+      "relative_path": "results/quadrature_comparison.csv",
+      "role": "result",
+      "description": "Final values of all candidate water-equivalent constructions.",
+      "bytes": 612
+    },
+    {
+      "id": "F032",
+      "relative_path": "results/trend_block_length_sensitivity.csv",
+      "role": "result",
+      "description": "Trend intervals at block lengths 25-400 samples.",
+      "bytes": 527
+    },
+    {
+      "id": "F033",
+      "relative_path": "results/trend_leave_one_block_out.csv",
+      "role": "result",
+      "description": "Trend correlation after dropping each of 20 contiguous blocks.",
+      "bytes": 352
+    },
+    {
+      "id": "F034",
+      "relative_path": "results/localmax_null_calibration.csv",
+      "role": "result",
+      "description": "Local-maximum count for the annotated set versus random subsets.",
+      "bytes": 105
+    },
+    {
+      "id": "F035",
+      "relative_path": "results/monotone_transform_competition.csv",
+      "role": "result",
+      "description": "In-sample and out-of-sample age fit quality for six candidate transforms.",
+      "bytes": 585
+    },
+    {
+      "id": "F036",
+      "relative_path": "results/robustness_summary.json",
+      "role": "result",
+      "description": "Machine-readable digest of every robustness check.",
+      "bytes": 2978
+    },
+    {
+      "id": "F037",
+      "relative_path": "results/run_log.txt",
+      "role": "result",
+      "description": "Verbatim stdout of every analysis script, in execution order.",
+      "bytes": 319235
+    },
+    {
+      "id": "F050",
+      "relative_path": "verification/figures/verify_draft1_attack.json",
+      "role": "result",
+      "description": "Independent column-dependency attack: exact duplicate/dependency search, breakpoint models, reversed derivation, density-vs-depth determinism.",
+      "bytes": 309731
+    },
+    {
+      "id": "F051",
+      "relative_path": "verification/figures/v10_draft1_independent.json",
+      "role": "result",
+      "description": "Second independent redundancy audit; establishes that equal c01 always implies equal c05.",
+      "bytes": 10484
+    },
+    {
+      "id": "F052",
+      "relative_path": "verification/figures/f2_wed_verification.json",
+      "role": "result",
+      "description": "Adversarial test of the water-equivalent gap: six quadratures, an ice-equivalent variant and residual-scale comparison.",
+      "bytes": 10944
+    },
+    {
+      "id": "F053",
+      "relative_path": "verification/figures/f2_wed_final_table.json",
+      "role": "result",
+      "description": "Final water-equivalent candidate table with gaps expressed against both the reported value and the core mean.",
+      "bytes": 5472
+    },
+    {
+      "id": "F054",
+      "relative_path": "verification/figures/verify_draft3_sulfate_trend.json",
+      "role": "result",
+      "description": "Independent serial-correlation-aware trend tests: Bartlett/Geyer effective sample size, AR(1) GLS, Newey-West, and minimum detectable slope.",
+      "bytes": 2119
+    },
+    {
+      "id": "F055",
+      "relative_path": "verification/figures/indep_finding4_summary.json",
+      "role": "result",
+      "description": "Independent 720-variant detector grid confirming the recall ceiling and the single non-local-maximum horizon.",
+      "bytes": 906
+    },
+    {
+      "id": "F056",
+      "relative_path": "verification/figures/indep_detector_grid.csv",
+      "role": "result",
+      "description": "The independent 720-variant detector grid in full.",
+      "bytes": 24395
+    },
+    {
+      "id": "F057",
+      "relative_path": "verification/figures/f5_summary.json",
+      "role": "result",
+      "description": "Independent label-class contrasts with exact Mann-Whitney p-values, AUCs, confidence intervals and power analysis.",
+      "bytes": 44874
+    },
+    {
+      "id": "F058",
+      "relative_path": "verification/figures/ver6_report.txt",
+      "role": "result",
+      "description": "Independent chronology report: step attribution, per-horizon leave-one-out errors, density-as-cubic mechanism, and the c01^1.25 counterexample.",
+      "bytes": 17740
+    },
+    {
+      "id": "F059",
+      "relative_path": "verification/figures/ver6_subset_robustness.txt",
+      "role": "result",
+      "description": "Subset robustness of the chronology: all 15, the 9 unidentified and the 5 named horizons, plus block bootstrap of the MAE difference.",
+      "bytes": 317
+    },
+    {
+      "id": "F060",
+      "relative_path": "verification/figures/g7_indep_results.json",
+      "role": "result",
+      "description": "Third independent redundancy audit including the segmented step fit and the forward-reconstruction fractions.",
+      "bytes": 3006
+    },
+    {
+      "id": "F070",
+      "relative_path": "figures/fig01_record_overview.png",
+      "role": "figure",
+      "description": "Four-panel record overview: sulfate, density, water-equivalent depth and sample thickness against depth, with the annotated horizons and the depth step marked.",
+      "bytes": 232047
+    },
+    {
+      "id": "F071",
+      "relative_path": "figures/fig02_event_definition_sensitivity.png",
+      "role": "figure",
+      "description": "Annotated horizons by label class, the detector-count distribution and the recall-versus-count relation.",
+      "bytes": 235490
+    },
+    {
+      "id": "F072",
+      "relative_path": "figures/fig03_chronology_coordinates.png",
+      "role": "figure",
+      "description": "Age against c01 and c06 with fit lines, leave-one-out predictions and residual curvature.",
+      "bytes": 210155
+    },
+    {
+      "id": "F073",
+      "relative_path": "figures/fig05_water_equivalent_gap.png",
+      "role": "figure",
+      "description": "Reported c06 against the density integral and their residual structure.",
+      "bytes": 204985
+    },
+    {
+      "id": "F074",
+      "relative_path": "figures/fig06_class_contrast_power.png",
+      "role": "figure",
+      "description": "Power curve showing how large a class difference the 5-vs-9 comparison could have detected.",
+      "bytes": 66236
+    },
+    {
+      "id": "F075",
+      "relative_path": "figures/fig07_independent_redundancy.png",
+      "role": "figure",
+      "description": "Independent redundancy audit figure.",
+      "bytes": 144170
+    },
+    {
+      "id": "F076",
+      "relative_path": "figures/fig08_age_fit_competition.png",
+      "role": "figure",
+      "description": "Age fit competition across candidate depth coordinates.",
+      "bytes": 165295
+    },
+    {
+      "id": "F077",
+      "relative_path": "figures/fig09_age_loo_errors.png",
+      "role": "figure",
+      "description": "Per-horizon leave-one-out prediction errors for the competing coordinates.",
+      "bytes": 75041
+    }
+  ]
+}

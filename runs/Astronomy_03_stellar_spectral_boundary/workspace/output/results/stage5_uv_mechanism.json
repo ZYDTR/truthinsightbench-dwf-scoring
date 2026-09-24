@@ -1,0 +1,243 @@
+{
+  "deviation_curve_sampled_nm": {
+    "180": {
+      "wavelength_nm": 179.31,
+      "deviation": 3.099287599202025,
+      "local_grid_step_nm": 1.5999999999999943,
+      "predicted_5_over_step": 3.125000000000011
+    },
+    "200": {
+      "wavelength_nm": 200.95,
+      "deviation": 2.483635476520478,
+      "local_grid_step_nm": 2.0,
+      "predicted_5_over_step": 2.5
+    },
+    "220": {
+      "wavelength_nm": 220.93,
+      "deviation": 2.0409224183045764,
+      "local_grid_step_nm": 2.4970833333333338,
+      "predicted_5_over_step": 2.0023360587351906
+    },
+    "240": {
+      "wavelength_nm": 239.46,
+      "deviation": 1.7391573348150589,
+      "local_grid_step_nm": 2.898571428571435,
+      "predicted_5_over_step": 1.7249876786594345
+    },
+    "260": {
+      "wavelength_nm": 261.37,
+      "deviation": 1.4569506683527944,
+      "local_grid_step_nm": 3.4981818181818194,
+      "predicted_5_over_step": 1.4293139293139288
+    },
+    "280": {
+      "wavelength_nm": 279.65,
+      "deviation": 1.2426068127000425,
+      "local_grid_step_nm": 3.9973684210526312,
+      "predicted_5_over_step": 1.250822909809085
+    },
+    "296": {
+      "wavelength_nm": 296.23,
+      "deviation": 1.1391314279462623,
+      "local_grid_step_nm": 2.726046511627893,
+      "predicted_5_over_step": 1.834157993516474
+    },
+    "299": {
+      "wavelength_nm": 298.92,
+      "deviation": 4.53450138491878,
+      "local_grid_step_nm": 1.0503703703703602,
+      "predicted_5_over_step": 4.760225669957733
+    },
+    "300": {
+      "wavelength_nm": 299.91,
+      "deviation": 4.969059043674298,
+      "local_grid_step_nm": 1.0,
+      "predicted_5_over_step": 5.0
+    },
+    "305": {
+      "wavelength_nm": 304.91,
+      "deviation": 5.069769121430908,
+      "local_grid_step_nm": 1.0,
+      "predicted_5_over_step": 5.0
+    },
+    "310": {
+      "wavelength_nm": 309.91,
+      "deviation": 4.953024669044815,
+      "local_grid_step_nm": 0.9999999999999483,
+      "predicted_5_over_step": 5.0000000000002585
+    },
+    "315": {
+      "wavelength_nm": 314.91,
+      "deviation": 4.973055677188885,
+      "local_grid_step_nm": 1.0000000000000568,
+      "predicted_5_over_step": 4.999999999999716
+    },
+    "320": {
+      "wavelength_nm": 319.91,
+      "deviation": 5.044011534847891,
+      "local_grid_step_nm": 0.9999999999999949,
+      "predicted_5_over_step": 5.000000000000026
+    },
+    "322": {
+      "wavelength_nm": 322.41,
+      "deviation": 2.5621589039056536,
+      "local_grid_step_nm": 1.9700000000001296,
+      "predicted_5_over_step": 2.538071065989681
+    },
+    "324": {
+      "wavelength_nm": 324.41,
+      "deviation": 2.511277938675269,
+      "local_grid_step_nm": 1.999999999999951,
+      "predicted_5_over_step": 2.5000000000000613
+    },
+    "326": {
+      "wavelength_nm": 326.41,
+      "deviation": 2.5305486451250214,
+      "local_grid_step_nm": 3.4325000000000143,
+      "predicted_5_over_step": 1.4566642388929292
+    },
+    "330": {
+      "wavelength_nm": 329.91,
+      "deviation": 1.014789514466505,
+      "local_grid_step_nm": 4.961428571428582,
+      "predicted_5_over_step": 1.007774258566079
+    },
+    "340": {
+      "wavelength_nm": 339.9,
+      "deviation": 0.9998962550408799,
+      "local_grid_step_nm": 5.0,
+      "predicted_5_over_step": 1.0
+    },
+    "400": {
+      "wavelength_nm": 399.89,
+      "deviation": 1.0128148924242042,
+      "local_grid_step_nm": 5.0,
+      "predicted_5_over_step": 1.0
+    },
+    "600": {
+      "wavelength_nm": 599.83,
+      "deviation": 0.9983436240559109,
+      "local_grid_step_nm": 5.0,
+      "predicted_5_over_step": 1.0
+    },
+    "850": {
+      "wavelength_nm": 849.77,
+      "deviation": 0.9971942031911318,
+      "local_grid_step_nm": 5.0,
+      "predicted_5_over_step": 1.0
+    }
+  },
+  "prediction_accuracy": {
+    "179-296 (ramp)": {
+      "n_points": 44,
+      "mean_measured_deviation": 2.070772735917821,
+      "mean_predicted": 2.0453008400682293,
+      "mean_abs_rel_error": 0.01767182270042865,
+      "max_abs_rel_error": 0.04676222040537814
+    },
+    "299-322 (plateau)": {
+      "n_points": 21,
+      "mean_measured_deviation": 5.010022971930054,
+      "mean_predicted": 5.0,
+      "mean_abs_rel_error": 0.007952692674612363,
+      "max_abs_rel_error": 0.025965295853126014
+    },
+    "322-327 (narrow)": {
+      "n_points": 3,
+      "mean_measured_deviation": 2.5346618292353145,
+      "mean_predicted": 2.164911768294224,
+      "mean_abs_rel_error": 0.2504078094957704,
+      "max_abs_rel_error": 0.7372216448783344
+    },
+    "330-850 (optical)": {
+      "n_points": 104,
+      "mean_measured_deviation": 1.0001376209886794,
+      "mean_predicted": 1.0,
+      "mean_abs_rel_error": 0.001744933229486103,
+      "max_abs_rel_error": 0.012814892424204194
+    },
+    "all": {
+      "n_points": 175,
+      "mean_measured_deviation": 1.7978925896501454,
+      "mean_predicted": 1.7890864582281432,
+      "mean_abs_rel_error": 0.013203303637940032,
+      "max_abs_rel_error": 0.7372216448783344
+    }
+  },
+  "exact_plateaus": {
+    "1nm_region_299_322": {
+      "n": 21,
+      "measured_mean": 5.010022971930054,
+      "predicted": 5.0,
+      "abs_error": 0.01002297193005397,
+      "rel_error": 0.002004594386010794
+    },
+    "2nm_region_322_327": {
+      "n": 3,
+      "measured_mean": 2.5346618292353145,
+      "predicted": 2.5,
+      "abs_error": 0.03466182923531447,
+      "rel_error": 0.013864731694125786
+    },
+    "optical_330_850": {
+      "n": 104,
+      "measured_mean": 1.0001376209886794,
+      "predicted": 1.0,
+      "abs_error": 0.00013762098867942107
+    }
+  },
+  "alternative_models": {
+    "5_over_grid_step": 0.013203303637940032,
+    "5_over_normalized_file_own_step": 0.016776507971006452,
+    "constant_5": 0.6416163565172434,
+    "constant_1": 0.7988477923532524
+  },
+  "best_model": "5_over_grid_step",
+  "composition_independence": {
+    "per_level_plateau_mean_299_322": [
+      5.010779928149831,
+      5.010542101611766,
+      5.010022971930054,
+      5.008408282142485,
+      5.005582974613988
+    ],
+    "rel_spread_across_levels_plateau": 0.000385009173148986,
+    "metallicity_sensitivity_at_300nm_log_slope": -0.42686516679434344,
+    "interpretation": "The five levels span a large range of composition sensitivity at 300 nm, yet the factor is the same to <1%. A physical composition effect cannot be composition-independent."
+  },
+  "transition_alignment": {
+    "deviation_jump_wavelengths_nm": [
+      296.23,
+      319.91,
+      326.41
+    ],
+    "grid_step_jump_wavelengths_nm": [
+      291.9,
+      296.23,
+      319.91,
+      324.41,
+      326.41
+    ],
+    "pairing": [
+      {
+        "deviation_jump_nm": 296.23,
+        "nearest_step_change_nm": 296.23,
+        "distance_nm": 0.0,
+        "within_one_local_step": true
+      },
+      {
+        "deviation_jump_nm": 319.91,
+        "nearest_step_change_nm": 319.91,
+        "distance_nm": 0.0,
+        "within_one_local_step": true
+      },
+      {
+        "deviation_jump_nm": 326.41,
+        "nearest_step_change_nm": 326.41,
+        "distance_nm": 0.0,
+        "within_one_local_step": true
+      }
+    ],
+    "all_deviation_jumps_accompany_a_step_change": true
+  }
+}

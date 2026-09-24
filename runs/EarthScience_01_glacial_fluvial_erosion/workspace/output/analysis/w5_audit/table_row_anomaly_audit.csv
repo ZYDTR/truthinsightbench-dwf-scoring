@@ -1,0 +1,266 @@
+Process,row_index,Reference,Locality,Methodology,Erosion rate (mm/yr),Time interval (yr),Area (km2),Latitude,issue
+Glacial,0,"Boulton et al., 1991",UK/Scotland,Volumetric,1.0,100000.0,,53.3443,missing_area
+Glacial,2,"Faleide et al., 1996",Barents Sea-Svalbard continental margin,Volumetric,0.6,2500000.0,,67.18026,missing_area
+Glacial,3,"Solheim et al., 1996",Norwegian margin,Volumetric,0.4,2500000.0,,62.28011,missing_area
+Glacial,8,"Bratlie, 1994",Svalbard,Volumetric,0.19,11700.0,,77.56008,missing_area
+Glacial,43,"Kaszycki and Shilts, 1980",Keewatin Peninsula Ontario,Volumetric,0.09375,64000.0,,49.75957,missing_area
+Glacial,50,"Harrison et al., 1997",Nepalese Himalaya,Relief,4.5,4000010.0,,28.59419,missing_area
+Glacial,51,"Zeitler et al., 2001","Nanga Parbat, Pakistan Himalaya",Relief,6.0,3000000.0,,35.23708,missing_area
+Glacial,61,"Guðmundsson personal communication to Geirsdóttir et al., 2007",Iceland,Relief,0.1,1000000.0,,65.0,missing_area
+Glacial,62,"Guðmundsson personal communication to Geirsdóttir et al., 2007",Iceland,Relief,0.5,400000.0,,65.0,missing_area
+Glacial,63,"Helgason and Duncan, 2001",Iceland,Relief,0.23,2.2,,64.5,missing_area
+Glacial,64,"Helgason and Duncan, 2001",Iceland,Relief,1.75,800000.0,,64.5,missing_area
+Glacial,65,"Anderson, 1978","Baffin Island, Canada",Volumetric,0.03,200.0,,66.44895,missing_area
+Glacial,73,"Bezinge, 1987",Switzerland,Volumetric,1.0,0.0191781,,46.6067,missing_area
+Glacial,74,"Bezinge, 1987",Switzerland,Volumetric,1.3,0.0191781,,46.1167,missing_area
+Glacial,76,"Bezinge, 1987",Switzerland,Volumetric,1.7,0.0191781,,46.108,missing_area
+Glacial,133,"Andrews & LeMasurier, 1973","Mt Murphy, Marie Byrd Land",Volumetric,0.41,820000.0,,-74.8386,missing_area
+Glacial,143,"Bell and Laine, 1985",Laurentia,Volumetric,0.0555556,2700000.0,,54.0,missing_area
+Glacial,223,"Darnault et al., 2012","Tinée Valley, France",Relief,1.8,105000.0,,44.1168,missing_area
+Glacial,224,"Darnault et al., 2012","Tinée Valley, France",Relief,2.5,80000.0,,44.1168,missing_area
+Glacial,282,"Grosval'd and Glazovskiy, 2008",Earth,Volumetric,2.7,280000.0,750000.0,,missing_precipitation
+Glacial,283,"Grosval'd and Glazovskiy, 2008",Earth,Volumetric,6.0,120000.0,750000.0,,missing_precipitation
+Glacial,286,"Hall et al., 2019","Forsmark/Uppland, Sweden",Cosmogenic detrital,0.0314286,35000.0,,60.4266,missing_area
+Glacial,287,"Hall et al., 2020",Eastern Sweden,Volumetric,0.0714286,35000.0,,63.74989,missing_area
+Glacial,304,"Koppes and Hallet, 2002","Glacier Bay, Alaska",Volumetric,37.0,79.0,,58.9269,missing_area
+Glacial,333,"Naylor et al., 2021",Laurentia,Volumetric,0.027,2600000.0,,54.0,missing_area
+Glacial,349,"Pedersen et al., 2021",Norway/Sweden,Volumetric,0.0576,2700000.0,,67.18026,missing_area
+Glacial,350,"Pedersen et al., 2021",Norway/Sweden,Volumetric,0.0822751,1890000.0,,67.18026,missing_area
+Glacial,356,"Ring, 2008",Rwenzori Mountains,Relief,2.75,300000.0,,0.3854,missing_area
+Glacial,357,"Rocchi et al., 2006","Dorrel Rock intrusive complex, Marie Byrd Land",Relief,0.5,6000000.0,,-75.0,missing_area
+Glacial,377,"Smith et al., 2007",Antarctic Peninsula,Relief,1000.0,6.0,,-79.0,missing_area
+Glacial,378,"Smith et al., 2012",Pine Island Glacier,Relief,648.98,49.0,,-75.2536,missing_area
+Glacial,409,"Stern et al., 2005",Transantarctic Mountains,Relief,0.0674157,44500000.0,,-83.74999,missing_area
+Glacial,411,"Sugden et al., 2014",Shackleton Range,Relief,0.0571429,14000000.0,,-80.50029,missing_area
+Glacial,413,"Tîrlă et al., 2020","Carpathian Mountains, Romania",Relief,0.6,120000.0,,45.5742,missing_area
+Glacial,415,"Wellman & Tingey, 1981","Lambert trough, East Antarctica",Relief,0.05,30000000.0,,-71.0,missing_area
+Glacial,416,"White, 1972",Laurentia,Relief,0.222222,2700000.0,,54.0,missing_area
+Glacial,418,"Willenbring Staiger, 2005","Torngat Mountains, Labrador, Canada",Cosmogenic detrital,0.0024031,2580000.0,,59.56226,missing_area
+Nonglacial,0,"Amato et al., 1999",Zermatt-Saas ophiolite,Relief,3.0,20000000.0,,46.02065,missing_area
+Nonglacial,1,"Amato et al., 1999",Zermatt-Saas,Relief,18.0,4750000.0,,46.02065,missing_area
+Nonglacial,2,"Brandon et al., 1998","Ultrahigh-P rocks, Olympic Range, Washington",Thermochronometric,1.2,11000000.0,,47.75,missing_area
+Nonglacial,3,"Foster and John, 1999","Chemehuevi Mountains, Basin and Range",Thermochronometric,3.0,4000000.0,,34.62437,missing_area
+Nonglacial,4,"Hacker et al., 2003",Kokchetav Massif,Relief,20.0,7000000.0,,53.08,missing_area
+Nonglacial,5,"Rubatto and Hermann, 2001",Dora Maira Massif,Relief,5.0,2000000.0,,44.89187,missing_area
+Nonglacial,6,"Rubatto and Hermann, 2001",Dora Maira Massif,Relief,34.0,2000000.0,,44.89187,missing_area
+Nonglacial,7,"Rubatto and Hermann, 2001",Dora Maira Massif,Relief,16.0,1000000.0,,44.89187,missing_area
+Nonglacial,8,"Thomson et al., 1999","Lendas, Crete",Relief,6.0,4000010.0,,34.95586,missing_area
+Nonglacial,9,"Tippett and Kamp, 1995",Southern Alps,Thermochronometric,8.0,2000000.0,,-43.59499,missing_area
+Nonglacial,10,"Weiland and Cloos, 1996","Gunung Bijih mining district, Irian Jaya",Thermochronometric,1.7,2000000.0,,-4.0,missing_area
+Nonglacial,122,"Hinderer et al., 2013",Ammer Weilheim,Volumetric,0.071,5.0,,47.84753,missing_area
+Nonglacial,123,"Hinderer et al., 2013",Iller Krugzell,Volumetric,0.123,5.0,,47.79858,missing_area
+Nonglacial,124,"Hinderer et al., 2013",Iller Wiblingen,Volumetric,0.025,5.0,,48.36808,missing_area
+Nonglacial,126,"Hinderer et al., 2013",Isar Munchen,Volumetric,0.018,5.0,,48.1461,missing_area
+Nonglacial,127,"Hinderer et al., 2013",Isar Plattling,Volumetric,0.012,5.0,,48.77053,missing_area
+Nonglacial,128,"Hinderer et al., 2013",Kotlaine,Volumetric,1.022,5.0,,47.68412,missing_area
+Nonglacial,129,"Hinderer et al., 2013",Lainbach,Volumetric,0.327,5.0,,47.69806,missing_area
+Nonglacial,130,"Hinderer et al., 2013",Lech Feldheim,Volumetric,0.017,5.0,,48.72814,missing_area
+Nonglacial,131,"Hinderer et al., 2013",Loisach Schlehdorf,Volumetric,0.041,5.0,,47.66809,missing_area
+Nonglacial,132,"Hinderer et al., 2013",Saalach Unterjettenburg,Volumetric,0.186,5.0,,47.6825,missing_area
+Nonglacial,133,"Hinderer et al., 2013",Tiroler Achen Staudach,Volumetric,0.113,5.0,,47.78111,missing_area
+Nonglacial,134,"Hinderer et al., 2013",Traun Altenmarkt/Stein,Volumetric,0.046,5.0,,47.99212,missing_area
+Nonglacial,135,"Hinderer et al., 2013",Weissach Tegernsee,Volumetric,0.05,5.0,,47.69227,missing_area
+Nonglacial,136,"Hinderer et al., 2013",Wertach Turkheim,Volumetric,0.022,5.0,,48.06286,missing_area
+Nonglacial,137,"Hinderer et al., 2013",Wertach Schwabmunchen,Volumetric,0.063,5.0,,48.17604,missing_area
+Nonglacial,138,"Hinderer et al., 2013",Inn Kufstein,Volumetric,0.092,5.0,,47.58062,missing_area
+Nonglacial,139,"Hinderer et al., 2013",Inn Oberaudorf,Volumetric,0.074,5.0,,47.65117,missing_area
+Nonglacial,140,"Hinderer et al., 2013",Inn Rosenheim,Volumetric,0.084,5.0,,47.85084,missing_area
+Nonglacial,141,"Hinderer et al., 2013",Inn Wasserburg,Volumetric,0.096,5.0,,48.05901,missing_area
+Nonglacial,142,"Hinderer et al., 2013",Inn Neuotting,Volumetric,0.102,5.0,,48.25004,missing_area
+Nonglacial,143,"Hinderer et al., 2013",Inn Passau,Volumetric,0.064,5.0,,48.57208,missing_area
+Nonglacial,144,"Hinderer et al., 2013",Salzach Laufen,Volumetric,0.118,5.0,,47.94048,missing_area
+Nonglacial,145,"Hinderer et al., 2013",Salzach Burghausen,Volumetric,0.131,5.0,,48.15907,missing_area
+Nonglacial,146,"Hinderer et al., 2013",Emme Wiler,Volumetric,0.021,5.0,,47.17702,missing_area
+Nonglacial,147,"Hinderer et al., 2013",Thur Halden,Volumetric,0.081,5.0,,47.50557,missing_area
+Nonglacial,148,"Hinderer et al., 2013",LArve Geneve,Volumetric,0.179,5.0,,46.18047,missing_area
+Nonglacial,149,"Hinderer et al., 2013",Dongia Valle di Blenio,Volumetric,0.02,5.0,,46.43128,missing_area
+Nonglacial,150,"Hinderer et al., 2013",Val Roseg Pontresina,Volumetric,0.184,5.0,,46.48673,missing_area
+Nonglacial,152,"Hinderer et al., 2013",Maggia Locarno,Volumetric,0.082,5.0,,46.16887,missing_area
+Nonglacial,153,"Hinderer et al., 2013",Moesa Lumino,Volumetric,0.035,5.0,,46.22309,missing_area
+Nonglacial,154,"Hinderer et al., 2013",Drau Rosegg,Volumetric,0.076,5.0,,46.58272,missing_area
+Nonglacial,155,"Hinderer et al., 2013",Enns Liezen,Volumetric,0.048,5.0,,47.55216,missing_area
+Nonglacial,156,"Hinderer et al., 2013",Enns Grobreifling,Volumetric,0.043,5.0,,47.66801,missing_area
+Nonglacial,157,"Hinderer et al., 2013",Gail Gailitz,Volumetric,0.09,5.0,,46.57082,missing_area
+Nonglacial,158,"Hinderer et al., 2013",Steyr Steyrdurchbruch,Volumetric,0.046,5.0,,47.86388,missing_area
+Nonglacial,159,"Hinderer et al., 2013",Rhone mouth Mediterranean,Volumetric,0.136,5.0,,43.42455,missing_area
+Nonglacial,160,"Hinderer et al., 2013",Durance Mirabeau,Volumetric,0.44,5.0,,43.69313,missing_area
+Nonglacial,161,"Hinderer et al., 2013",Isere,Volumetric,0.128,5.0,,45.1979,missing_area
+Nonglacial,162,"Hinderer et al., 2013",Asse,Volumetric,0.254,5.0,,43.87971,missing_area
+Nonglacial,163,"Hinderer et al., 2013",Bleone,Volumetric,0.244,5.0,,44.04404,missing_area
+Nonglacial,164,"Hinderer et al., 2013",Ferrand,Volumetric,0.137,5.0,,45.05326,missing_area
+Nonglacial,165,"Hinderer et al., 2013",Romanche,Volumetric,0.226,5.0,,45.03862,missing_area
+Nonglacial,166,"Hinderer et al., 2013",Adda Tirano,Volumetric,0.103,5.0,,46.21228,missing_area
+Nonglacial,167,"Hinderer et al., 2013",Adda Pizzighettone,Volumetric,0.068,5.0,,45.18722,missing_area
+Nonglacial,168,"Hinderer et al., 2013",Dora Baltea Tavagnasco,Volumetric,0.301,5.0,,45.54803,missing_area
+Nonglacial,169,"Hinderer et al., 2013",Oglio Marcaria,Volumetric,0.018,5.0,,45.11301,missing_area
+Nonglacial,170,"Hinderer et al., 2013",Po Casale Monferrato,Volumetric,0.02,5.0,,45.1428,missing_area
+Nonglacial,171,"Hinderer et al., 2013",Po Becca,Volumetric,0.043,5.0,,45.13839,missing_area
+Nonglacial,172,"Hinderer et al., 2013",Sesia Vercelli,Volumetric,0.04,5.0,,45.33265,missing_area
+Nonglacial,173,"Hinderer et al., 2013",Brenta Bassano,Volumetric,0.025,5.0,,45.76464,missing_area
+Nonglacial,174,"Hinderer et al., 2013",Cismon Cismon,Volumetric,0.213,5.0,,45.93164,missing_area
+Nonglacial,175,"Hinderer et al., 2013",Etsch/Adige Trento,Volumetric,0.091,5.0,,46.07124,missing_area
+Nonglacial,176,"Hinderer et al., 2013",Rio Cordon Dolomites,Volumetric,0.059,5.0,,46.45199,missing_area
+Nonglacial,177,"Hinderer et al., 2013",Sauglio Turin,Volumetric,0.063,5.0,,44.99317,missing_area
+Nonglacial,178,"Hinderer et al., 2013",Sextenbach Dolomites,Volumetric,0.129,5.0,,46.71256,missing_area
+Nonglacial,180,"Hinderer et al., 2013",Tanaro Clavesana,Volumetric,0.112,5.0,,44.48152,missing_area
+Nonglacial,182,"Hinderer et al., 2013",Tanaro Alessandria,Volumetric,0.074,5.0,,44.91851,missing_area
+Nonglacial,2589,"Ackert et al., 2004","Dominion Range, Oliver Platform Moraine",Cosmogenic surface,0.00011,,1e-08,-85.16263,missing_interval
+Nonglacial,2590,"Ackert et al., 2004","Dominion Range, Oliver Platform Moraine",Cosmogenic surface,0.00023,,1e-08,-85.15963,missing_interval
+Nonglacial,2591,"Ackert et al., 2004","Dominion Range, Oliver Platform Moraine",Cosmogenic surface,0.00012,,1e-08,-85.15963,missing_interval
+Nonglacial,2592,"Ackert et al., 2004","Dominion Range, Oliver Platform Moraine",Cosmogenic surface,0.00011,,1e-08,-85.16158,missing_interval
+Nonglacial,2593,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,0.00026,,1e-08,-71.89568,missing_interval
+Nonglacial,2594,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,0.00036,,1e-08,-71.89568,missing_interval
+Nonglacial,2595,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,0.0001,,1e-08,-71.88833,missing_interval
+Nonglacial,2596,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,0.00021,,1e-08,-71.88833,missing_interval
+Nonglacial,2597,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,0.00031,,1e-08,-71.8797,missing_interval
+Nonglacial,2598,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,0.00048,,1e-08,-71.8797,missing_interval
+Nonglacial,2599,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,0.00043,,1e-08,-71.8797,missing_interval
+Nonglacial,2600,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,0.0,,1e-08,-71.83582,nonpositive_rate
+Nonglacial,2601,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,8e-05,,1e-08,-71.83582,missing_interval
+Nonglacial,2602,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,6e-05,,1e-08,-72.13937,missing_interval
+Nonglacial,2603,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,0.00123,,1e-08,-71.85628,missing_interval
+Nonglacial,2604,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,0.00055,,1e-08,-71.85628,missing_interval
+Nonglacial,2605,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,0.00016,,1e-08,-71.41117,missing_interval
+Nonglacial,2606,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,1e-05,,1e-08,-71.43223,missing_interval
+Nonglacial,2607,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,9e-05,,1e-08,-71.43223,missing_interval
+Nonglacial,2608,"Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,0.00026,,1e-08,-71.51275,missing_interval
+Nonglacial,2609,Balco and Shuster2009,"Arena Valley, Dry Valleys",Cosmogenic surface,0.00167,,1e-08,-77.85685,missing_interval
+Nonglacial,2610,Balco and Shuster2009,"Arena Valley, Dry Valleys",Cosmogenic surface,0.00028,,1e-08,-77.8806,missing_interval
+Nonglacial,2611,Balco and Shuster2009,"Arena Valley, Dry Valleys",Cosmogenic surface,0.00062,,1e-08,-77.88663,missing_interval
+Nonglacial,2612,Balco and Shuster2009,"Arena Valley, Dry Valleys",Cosmogenic surface,0.00065,,1e-08,-77.88823,missing_interval
+Nonglacial,2613,Balco and Shuster2009,"Arena Valley, Dry Valleys",Cosmogenic surface,0.00029,,1e-08,-77.87908,missing_interval
+Nonglacial,2614,Balco and Shuster2009,"East Groin, Asgard Range",Cosmogenic surface,0.00042,,1e-08,-77.6419,missing_interval
+Nonglacial,2615,Balco and Shuster2009,"East Groin, Asgard Range",Cosmogenic surface,0.00088,,1e-08,-77.64415,missing_interval
+Nonglacial,2616,Balco and Shuster2009,Western Olympus Range,Cosmogenic surface,0.00011,,1e-08,-77.50545,missing_interval
+Nonglacial,2617,Balco and Shuster2009,Western Olympus Range,Cosmogenic surface,0.00013,,1e-08,-77.50545,missing_interval
+Nonglacial,2618,"Balco et al., 2014",Quartz Hills,Cosmogenic surface,4e-05,,1e-08,-85.90501,missing_interval
+Nonglacial,2619,"Balco et al., 2014",Quartz Hills,Cosmogenic surface,0.00012,,1e-08,-85.90501,missing_interval
+Nonglacial,2620,"Balco et al., 2014",Quartz Hills,Cosmogenic surface,1e-05,,1e-08,-85.90373,missing_interval
+Nonglacial,2621,"Balco et al., 2014",Quartz Hills,Cosmogenic surface,0.00012,,1e-08,-85.90373,missing_interval
+Nonglacial,2622,"Balco et al., 2014",Quartz Hills,Cosmogenic surface,6e-05,,1e-08,-85.90318,missing_interval
+Nonglacial,2623,"Balco et al., 2014",Quartz Hills,Cosmogenic surface,0.00017,,1e-08,-85.90318,missing_interval
+Nonglacial,2624,"Balco et al., 2014",Quartz Hills,Cosmogenic surface,1e-05,,1e-08,-85.90285,missing_interval
+Nonglacial,2625,"Balco et al., 2014",Quartz Hills,Cosmogenic surface,0.00011,,1e-08,-85.90285,missing_interval
+Nonglacial,2626,"Balco et al., 2014",Quartz Hills,Cosmogenic surface,4e-05,,1e-08,-85.90215,missing_interval
+Nonglacial,2627,"Balco et al., 2014",Quartz Hills,Cosmogenic surface,0.00014,,1e-08,-85.90215,missing_interval
+Nonglacial,2628,"Balco et al., 2014",Quartz Hills,Cosmogenic surface,1e-05,,1e-08,-85.9022,missing_interval
+Nonglacial,2629,"Balco et al., 2014",Quartz Hills,Cosmogenic surface,0.00013,,1e-08,-85.9022,missing_interval
+Nonglacial,2630,"Balco et al., 2014",Quartz Hills,Cosmogenic surface,7e-05,,1e-08,-85.90028,missing_interval
+Nonglacial,2631,"Balco et al., 2014",Quartz Hills,Cosmogenic surface,0.00015,,1e-08,-85.90028,missing_interval
+Nonglacial,2632,"Balco et al., 2014",Mount DeWitt,Cosmogenic surface,0.00077,,1e-08,-77.20457,missing_interval
+Nonglacial,2633,"Balco et al., 2014",Mount DeWitt,Cosmogenic surface,0.00069,,1e-08,-77.20457,missing_interval
+Nonglacial,2634,"Balco et al., 2014",Mount DeWitt,Cosmogenic surface,0.00072,,1e-08,-77.20123,missing_interval
+Nonglacial,2635,"Balco et al., 2014",Mount DeWitt,Cosmogenic surface,0.00069,,1e-08,-77.20123,missing_interval
+Nonglacial,2636,"Balco et al., 2014",Mount DeWitt,Cosmogenic surface,0.00072,,1e-08,-77.19872,missing_interval
+Nonglacial,2637,"Balco et al., 2014",Mount DeWitt,Cosmogenic surface,0.00061,,1e-08,-77.19872,missing_interval
+Nonglacial,2638,"Balco et al., 2014",Mount DeWitt,Cosmogenic surface,0.00044,,1e-08,-77.19622,missing_interval
+Nonglacial,2639,"Balco et al., 2014",Mount DeWitt,Cosmogenic surface,0.00048,,1e-08,-77.19622,missing_interval
+Nonglacial,2640,"Balco et al., 2014",Mount DeWitt,Cosmogenic surface,0.00139,,1e-08,-77.19492,missing_interval
+Nonglacial,2641,"Balco et al., 2014",Mount DeWitt,Cosmogenic surface,0.00111,,1e-08,-77.19492,missing_interval
+Nonglacial,2642,"Balco et al., 2014",Mount DeWitt,Cosmogenic surface,0.00081,,1e-08,-77.19385,missing_interval
+Nonglacial,2643,"Balco et al., 2014",Mount DeWitt,Cosmogenic surface,0.00075,,1e-08,-77.19385,missing_interval
+Nonglacial,2644,"Balco et al., 2014",East Groin,Cosmogenic surface,0.0005,,1e-08,-77.6419,missing_interval
+Nonglacial,2645,"Balco et al., 2014",East Groin,Cosmogenic surface,0.00082,,1e-08,-77.64415,missing_interval
+Nonglacial,2646,"Balco et al., 2014",East Groin,Cosmogenic surface,0.00107,,1e-08,-77.65335,missing_interval
+Nonglacial,2647,"Balco et al., 2014",East Groin,Cosmogenic surface,0.001,,1e-08,-77.65335,missing_interval
+Nonglacial,2648,"Balco et al., 2014",East Groin,Cosmogenic surface,0.00017,,1e-08,-77.66108,missing_interval
+Nonglacial,2649,"Balco et al., 2014",East Groin,Cosmogenic surface,0.00027,,1e-08,-77.66108,missing_interval
+Nonglacial,2650,"Balco et al., 2014",East Groin,Cosmogenic surface,0.00097,,1e-08,-77.67195,missing_interval
+Nonglacial,2651,"Balco et al., 2014",East Groin,Cosmogenic surface,0.00067,,1e-08,-77.67195,missing_interval
+Nonglacial,2652,"Balco et al., 2014",East Groin,Cosmogenic surface,0.00078,,1e-08,-77.67195,missing_interval
+Nonglacial,2653,"Balco et al., 2014",East Groin,Cosmogenic surface,0.00041,,1e-08,-77.67195,missing_interval
+Nonglacial,2654,"Balco et al., 2014",East Groin,Cosmogenic surface,0.00107,,1e-08,-77.66492,missing_interval
+Nonglacial,2655,"Balco et al., 2014",East Groin,Cosmogenic surface,0.00087,,1e-08,-77.66492,missing_interval
+Nonglacial,2656,"Balco et al., 2014",East Groin,Cosmogenic surface,0.00052,,1e-08,-77.66498,missing_interval
+Nonglacial,2657,"Balco et al., 2014",East Groin,Cosmogenic surface,0.00049,,1e-08,-77.66498,missing_interval
+Nonglacial,2659,Brook 1995,"Fleming, Sirius Group",Cosmogenic surface,0.0,,1e-08,-77.54131,nonpositive_rate
+Nonglacial,2660,Brook 1995,"Arena Valley,  Altar Till (Beacon Valley)",Cosmogenic surface,1e-05,,1e-08,-77.88357,missing_interval
+Nonglacial,2661,Brook 1995,"Arena Valley,  Altar Till (Beacon Valley)",Cosmogenic surface,0.0,,1e-08,-77.88357,nonpositive_rate
+Nonglacial,2662,Brook 1995,"Arena Valley, Quatermain 1 till",Cosmogenic surface,4e-05,,1e-08,-77.86084,missing_interval
+Nonglacial,2667,"Brown et al., 1991","Arena Valley, Taylor IVb",Cosmogenic surface,0.00024,,1e-08,-77.84955,missing_interval
+Nonglacial,2669,"Di Nicola et al., 2012","Mt Pollock, northern Victoria Land",Cosmogenic surface,2e-05,,1e-08,-73.6965,missing_interval
+Nonglacial,2670,"Di Nicola et al., 2012","Mt Pollock, northern Victoria Land",Cosmogenic surface,0.00014,,1e-08,-73.6965,missing_interval
+Nonglacial,2671,"Di Nicola et al., 2012","Mt Pollock, northern Victoria Land",Cosmogenic surface,4e-05,,1e-08,-73.7495,missing_interval
+Nonglacial,2672,"Di Nicola et al., 2012","Mt Pollock, northern Victoria Land",Cosmogenic surface,0.00013,,1e-08,-73.7495,missing_interval
+Nonglacial,2673,"Di Nicola et al., 2012","Mt Pollock, northern Victoria Land",Cosmogenic surface,5e-05,,1e-08,-73.7495,missing_interval
+Nonglacial,2674,"Di Nicola et al., 2012","Mt Pollock, northern Victoria Land",Cosmogenic surface,0.00011,,1e-08,-73.7495,missing_interval
+Nonglacial,2677,"Fink et al., 2006",Fisher Massif summit,Cosmogenic surface,7e-05,,1e-08,-71.39617,missing_interval
+Nonglacial,2680,Hodgson 2012,"Dufek Massif, Weddell Sea embayment",Cosmogenic surface,0.00034,,1e-08,-82.4829,missing_interval
+Nonglacial,2681,Hodgson 2012,"Dufek Massif, Weddell Sea embayment",Cosmogenic surface,0.00039,,1e-08,-82.483,missing_interval
+Nonglacial,2682,"Ivy-Ochs et al., 1995",Table mountain,Cosmogenic surface,1e-05,,1e-08,-77.94406,missing_interval
+Nonglacial,2683,"Ivy-Ochs et al., 1995",Table mountain,Cosmogenic surface,2e-05,,1e-08,-77.94406,missing_interval
+Nonglacial,2684,"Ivy-Ochs et al., 1995",Table mountain,Cosmogenic surface,1e-05,,1e-08,-77.94406,missing_interval
+Nonglacial,2685,"Lilly et al., 2010",Mt Harding,Cosmogenic surface,1e-05,,1e-08,-72.8949,missing_interval
+Nonglacial,2686,"Lilly et al., 2010",Mt Harding,Cosmogenic surface,7e-05,,1e-08,-72.8963,missing_interval
+Nonglacial,2687,"Lilly et al., 2010",Mt Harding,Cosmogenic surface,7e-05,,1e-08,-72.8988,missing_interval
+Nonglacial,2688,"Margerison et al.,  2005",Coombs Hills,Cosmogenic surface,9e-05,,1e-08,-76.8833,missing_interval
+Nonglacial,2689,"Margerison et al.,  2005",Coombs Hills,Cosmogenic surface,7e-05,,1e-08,-76.8,missing_interval
+Nonglacial,2690,"Margerison et al.,  2005",Coombs Hills,Cosmogenic surface,7e-05,,1e-08,-76.8,missing_interval
+Nonglacial,2691,"Margerison et al.,  2005",Robison Nunatak,Cosmogenic surface,0.00025,,1e-08,-77.1167,missing_interval
+Nonglacial,2692,"Margerison et al.,  2005",Robison Nunatak,Cosmogenic surface,0.00015,,1e-08,-77.15,missing_interval
+Nonglacial,2693,"Margerison et al.,  2005",Detour Nunatak,Cosmogenic surface,0.00043,,1e-08,-77.1167,missing_interval
+Nonglacial,2694,"Margerison et al.,  2005",Gateway Nunatak,Cosmogenic surface,0.0002,,1e-08,-77.0,missing_interval
+Nonglacial,2695,"Margerison et al.,  2005",Pegtop Nunatak,Cosmogenic surface,0.00036,,1e-08,-77.0667,missing_interval
+Nonglacial,2696,"Margerison et al.,  2005",Battleship Promentary,Cosmogenic surface,0.00016,,1e-08,-76.9167,missing_interval
+Nonglacial,2697,"Marrero et al., 2016","Marble Hills, Ellsworth Mtns",Cosmogenic surface,0.0007,,1e-08,-80.26309,missing_interval
+Nonglacial,2698,"Marrero et al., 2016","Marble Hills, Ellsworth Mtns",Cosmogenic surface,0.0008,,1e-08,-80.26309,missing_interval
+Nonglacial,2699,"Marrero et al., 2016","Marble Hills, Ellsworth Mtns",Cosmogenic surface,0.00077,,1e-08,-80.26309,missing_interval
+Nonglacial,2700,"Marrero et al., 2016","Marble Hills, Ellsworth Mtns",Cosmogenic surface,0.00111,,1e-08,-80.30576,missing_interval
+Nonglacial,2701,"Marrero et al., 2016","Marble Hills, Ellsworth Mtns",Cosmogenic surface,0.00084,,1e-08,-80.26334,missing_interval
+Nonglacial,2702,"Matsuoka et al., 2006",Sor Rondane,Cosmogenic surface,6e-05,,1e-08,-72.08056,missing_interval
+Nonglacial,2705,"Middleton et al., 2012","Battleship Promontory, McMurdo Dry Valleys",Cosmogenic surface,0.0011,,1e-08,-76.9084,missing_interval
+Nonglacial,2706,"Middleton et al., 2012","Battleship Promontory, McMurdo Dry Valleys",Cosmogenic surface,0.00111,,1e-08,-76.9084,missing_interval
+Nonglacial,2707,"Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,0.00052,,1e-08,-77.6146,missing_interval
+Nonglacial,2708,"Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,0.00049,,1e-08,-77.6146,missing_interval
+Nonglacial,2709,"Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,0.00209,,1e-08,-77.614,missing_interval
+Nonglacial,2710,"Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,0.00178,,1e-08,-77.614,missing_interval
+Nonglacial,2711,"Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,0.00285,,1e-08,-77.6076,missing_interval
+Nonglacial,2712,"Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,0.00255,,1e-08,-77.6076,missing_interval
+Nonglacial,2713,"Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,0.00073,,1e-08,-77.6076,missing_interval
+Nonglacial,2714,"Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,0.00063,,1e-08,-77.6076,missing_interval
+Nonglacial,2715,"Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,0.00103,,1e-08,-77.6098,missing_interval
+Nonglacial,2716,"Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,0.00093,,1e-08,-77.6098,missing_interval
+Nonglacial,2717,"Mukhopadhyay et al., 2012","Ohio Range, Bennett-1",Cosmogenic surface,0.00013,,1e-08,-84.78717,missing_interval
+Nonglacial,2718,"Mukhopadhyay et al., 2012","Ohio Range, Bennett-1",Cosmogenic surface,0.00021,,1e-08,-84.78717,missing_interval
+Nonglacial,2719,"Mukhopadhyay et al., 2012","Ohio Range, Bennett-2",Cosmogenic surface,0.0001,,1e-08,-84.77997,missing_interval
+Nonglacial,2720,"Mukhopadhyay et al., 2012","Ohio Range, Bennett-2",Cosmogenic surface,0.00021,,1e-08,-84.77997,missing_interval
+Nonglacial,2721,"Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge upper bench",Cosmogenic surface,3e-05,,1e-08,-84.72887,missing_interval
+Nonglacial,2722,"Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge upper bench",Cosmogenic surface,0.00011,,1e-08,-84.72887,missing_interval
+Nonglacial,2723,"Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge upper bench",Cosmogenic surface,2e-05,,1e-08,-84.72887,missing_interval
+Nonglacial,2724,"Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge upper bench",Cosmogenic surface,0.00012,,1e-08,-84.72887,missing_interval
+Nonglacial,2725,"Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge upper bench",Cosmogenic surface,3e-05,,1e-08,-84.72887,missing_interval
+Nonglacial,2726,"Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge upper bench",Cosmogenic surface,0.00012,,1e-08,-84.72887,missing_interval
+Nonglacial,2727,"Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge lower bench",Cosmogenic surface,0.0003,,1e-08,-84.72805,missing_interval
+Nonglacial,2728,"Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge lower bench",Cosmogenic surface,0.00035,,1e-08,-84.72805,missing_interval
+Nonglacial,2729,"Mukhopadhyay et al., 2012","Ohio Range, Tuning",Cosmogenic surface,0.00026,,1e-08,-84.73133,missing_interval
+Nonglacial,2730,"Mukhopadhyay et al., 2012","Ohio Range, Tuning",Cosmogenic surface,0.00032,,1e-08,-84.73133,missing_interval
+Nonglacial,2732,"Nishiizumi et al., 1991","Allan Hills, ALH Quartzite",Cosmogenic surface,0.00019,,1e-08,-76.6963,missing_interval
+Nonglacial,2737,"Nishiizumi et al., 1991",Allan Hills,Cosmogenic surface,0.00089,,1e-08,-76.6962,missing_interval
+Nonglacial,2748,"Nishiizumi et al., 1991",Tillite Glacier,Cosmogenic surface,0.00012,,1e-08,-83.9,missing_interval
+Nonglacial,2750,"Nishiizumi et al., 1991","Allan Hills, Reckling Peak",Cosmogenic surface,0.00182,,1e-08,-76.2631,missing_interval
+Nonglacial,2751,"Nishiizumi et al., 1991","Allan Hills, Reckling Peak",Cosmogenic surface,0.00345,,1e-08,-76.2631,missing_interval
+Nonglacial,2756,"Nishiizumi et al., 1991",Sor Rondane,Cosmogenic surface,0.0,,1e-08,-72.063,nonpositive_rate
+Nonglacial,2759,"Schaefer et al., 1999",Mt Fleming,Cosmogenic surface,7e-05,,1e-08,-77.5525,missing_interval
+Nonglacial,2760,"Schaefer et al., 1999",Friise,Cosmogenic surface,0.00025,,1e-08,-77.75693,missing_interval
+Nonglacial,2761,"Schaefer et al., 1999",Pandora,Cosmogenic surface,0.00027,,1e-08,-77.77925,missing_interval
+Nonglacial,2762,"Schaefer et al., 1999",Dais,Cosmogenic surface,0.00018,,1e-08,-77.54568,missing_interval
+Nonglacial,2763,"Schaefer et al., 1999",Dais,Cosmogenic surface,0.00017,,1e-08,-77.54568,missing_interval
+Nonglacial,2764,"Schaefer et al., 1999",Labyrinth,Cosmogenic surface,0.00042,,1e-08,-77.57055,missing_interval
+Nonglacial,2765,"Schaefer et al., 1999",Labyrinth,Cosmogenic surface,0.00032,,1e-08,-77.57055,missing_interval
+Nonglacial,2766,"Schaefer et al., 1999",Insel,Cosmogenic surface,0.00013,,1e-08,-77.39693,missing_interval
+Nonglacial,2767,"Schaefer et al., 1999",Insel,Cosmogenic surface,0.00011,,1e-08,-77.39693,missing_interval
+Nonglacial,2768,"Schaefer et al., 1999",Feather,Cosmogenic surface,0.00013,,1e-08,-77.92029,missing_interval
+Nonglacial,2769,"Summerfield et al., 1999",Lower Taylor Valley - rectilinear,Cosmogenic surface,0.00065,,1e-08,-77.69713,missing_interval
+Nonglacial,2770,"Summerfield et al., 1999",Mt Fleming,Cosmogenic surface,0.00016,,1e-08,-77.53051,missing_interval
+Nonglacial,2771,"Summerfield et al., 1999",Arena Valley - rectilinear,Cosmogenic surface,0.00055,,1e-08,-77.82658,missing_interval
+Nonglacial,2772,"Summerfield et al., 1999",Arena Valley - rectilinear,Cosmogenic surface,0.00032,,1e-08,-77.82658,missing_interval
+Nonglacial,2773,"Summerfield et al., 1999",Arena Valley - rectilinear,Cosmogenic surface,0.00023,,1e-08,-77.82658,missing_interval
+Nonglacial,2774,"Summerfield et al., 1999",Beacon/Arena Interfluve,Cosmogenic surface,0.00012,,1e-08,-77.87118,missing_interval
+Nonglacial,2775,"Summerfield et al., 1999",Beacon/Arena Interfluve,Cosmogenic surface,0.00013,,1e-08,-77.87118,missing_interval
+Nonglacial,2776,"Summerfield et al., 1999",Mt Fleming,Cosmogenic surface,0.00016,,1e-08,-77.53051,missing_interval
+Nonglacial,2777,"Swanger et al., 2011","Kennar Valley, near Beacon Valley",Cosmogenic surface,0.0002,,1e-08,-77.75,missing_interval
+Nonglacial,2778,"Swanger et al., 2011","Kennar Valley, near Beacon Valley",Cosmogenic surface,0.00022,,1e-08,-77.751,missing_interval
+Nonglacial,2779,"Swanger et al., 2011","Kennar Valley, near Beacon Valley",Cosmogenic surface,0.00018,,1e-08,-77.749,missing_interval
+Nonglacial,2780,"White et al., 2009",Rauer Group,Cosmogenic surface,0.00604,,1e-08,-68.8194,missing_interval
+Nonglacial,2781,"White et al., 2009",Rauer Group,Cosmogenic surface,0.005,,1e-08,-68.82566,missing_interval
+Nonglacial,2782,"Willenbring Staiger et al., 2006","Vernier Valley, near Quartermain Mtns",Cosmogenic surface,0.00015,,1e-08,-77.9704,missing_interval

@@ -1,0 +1,79 @@
+{
+  "efficiency_form_affine": {
+    "a": 0.9863414058211984,
+    "b": 1.1901701100138817
+  },
+  "voltage_form_affine": {
+    "a": 0.988927854870392,
+    "b": 0.01939033764726269
+  },
+  "holdout_efficiency": {
+    "n": 105,
+    "rmse_pp": 0.20276052623245155,
+    "max_abs_pp": 0.423417436226174
+  },
+  "holdout_voltage": {
+    "n": 105,
+    "rmse_V": 0.0032591938925302746,
+    "max_abs_V": 0.006713658280504076
+  },
+  "ordering_breakdown": [
+    "85",
+    "90",
+    "95"
+  ],
+  "cycling_quadratic_test": {
+    "observed_coef": -5.728196962848138e-05,
+    "p_block_null": 0.0525,
+    "rss_reduction_pct": 3.1574151350474033
+  },
+  "cycling_slope_change_test": {
+    "observed": -0.04179150431140549,
+    "null_mean": 0.0006304752000363877,
+    "null_sd": 0.020496342402939124,
+    "p": 0.0125
+  },
+  "offset_pair": {
+    "offset_V": 0.04152,
+    "identical_abscissa_charge": true,
+    "identical_abscissa_discharge": false
+  },
+  "n_identical_abscissa_pairs": 1,
+  "power_turnover_sensitivity": {
+    "peak_including_all": 330.0,
+    "peak_rate_including_all": 300.0,
+    "peak_excluding_300": 280.3,
+    "peak_rate_excluding_300": 200.0,
+    "interior_turnover_survives_excluding_round_values": true
+  },
+  "quantization": {
+    "grid": 0.09090909090909091,
+    "block1_residues": [
+      5
+    ],
+    "block2_residues": [
+      0,
+      1
+    ],
+    "block2_violations": 1
+  },
+  "permutation_is_tautological": {
+    "independent_monotone_pairs_rank1": "1500/1500",
+    "identity_rmse_pp": 0.18367276459256257,
+    "runner_up_rmse_pp": 1.062748101380969,
+    "runner_up_ratio": 5.786095198917709,
+    "note": "rank 1 of 5040 is guaranteed by the rearrangement inequality for any two monotone series in the same direction; only the magnitude gap is informative"
+  },
+  "residual_share_linear-in-log10": {
+    "largest_at_rate": 200.0,
+    "largest_residual_pp": -3.2735857513318223,
+    "rate80_rank": 5,
+    "rate80_share_pct": 8.549819397493026
+  },
+  "residual_share_linear-in-rate": {
+    "largest_at_rate": 10.0,
+    "largest_residual_pp": 2.171430109890096,
+    "rate80_rank": 4,
+    "rate80_share_pct": 16.206899966666942
+  }
+}

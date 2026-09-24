@@ -1,0 +1,43 @@
+{
+  "grid_variants": 720,
+  "n_detected_min": 4,
+  "n_detected_median": 19.0,
+  "n_detected_max": 530,
+  "recall_min": 4,
+  "recall_max": 14,
+  "variants_full_recall": 0,
+  "strict_lm_ceiling": 14,
+  "annotated_not_local_max": [
+    0
+  ],
+  "row0_gt_row1": false,
+  "top30_by_excess_101": 7,
+  "top30_by_raw": 7,
+  "p_null_excess": 0.0,
+  "p_null_raw": 0.0,
+  "top30_excess_within_localmax": 14,
+  "p_null_excess_localmax": 0.0,
+  "expected_fraction_if_random": 0.015535991714137753,
+  "expected_count_15_draws": 0.23303987571206627,
+  "annotated_missed_by_every_variant": [
+    0
+  ],
+  "per_row_variant_coverage": {
+    "0": 0,
+    "70": 594,
+    "502": 720,
+    "517": 704,
+    "796": 592,
+    "841": 400,
+    "907": 470,
+    "1012": 370,
+    "1305": 720,
+    "1640": 644,
+    "1660": 480,
+    "1674": 716,
+    "1696": 720,
+    "1752": 630,
+    "1862": 490
+  },
+  "null_overlap_localmax_mean": 0.3496
+}

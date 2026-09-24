@@ -1,0 +1,46 @@
+{
+  "dimension": "Finding 3: power-density turnover, implied voltages, forward-difference sign change, and measured-voltage-window comparison",
+  "verdict": "confirmed_with_caveat",
+  "discrepancies": [
+    {
+      "claim": "power values are exact to 2 decimals and the 24.24 percent figure is 'the peak above the rate-500 value'",
+      "claimed_value": "24.24 percent above the rate-500 value 250.00",
+      "recomputed_value": "(330-250)/250 = 32.00 percent above; (330-250)/330 = 24.24 percent is the decline from the peak",
+      "severity": "minor",
+      "note": "The stored artifact key is correctly named decline_from_peak_pct=24.2424 in output/results/power_turnover.json; only the Result.md prose reverses the direction. The absolute values 330.00, 250.00 and 24.24 are all reproduced exactly."
+    },
+    {
+      "claim": "fitting P ~ rate^alpha on the first 7 points gives log-space R2 = 0.878",
+      "claimed_value": "0.878 (power law, first 7 points, log-space R2)",
+      "recomputed_value": "true power law (log P ~ alpha log rate) log-space R2 = 0.998865 on the first 7; the value 0.8780155 comes from a SEMILOG regression of P in linear units on log10(rate) (slope 192.03, intercept -212.43), which is what run_analysis.py lines 476-481 actually compute",
+      "severity": "moderate",
+      "note": "The model is mislabelled. The companion value 0.996 (0.995875) is the same semilog design with a squared log10 term; a true power law plus log-log curvature gives 0.999970. The stated conclusion that a pure power law is rejected does not hold for the first 7 points under the stated model; rejection only works when all 9 points are used (true power law log-space R2 = 0.9351, linear-space R2 = 0.620)."
+    },
+    {
+      "claim": "0.99153 V is the lowest discharge voltage present anywhere in the curve file, and the full measured discharge window is 0.9915 to 1.9074 V",
+      "claimed_value": "file-wide window 0.99153 to 1.90743 V",
+      "recomputed_value": "over all 14 curves the window is 0.67421 to 2.29289 V; 0.99153-1.90743 V is the 7 discharge_like curves only (min at discharge_like rate_setting_7 SoC 97.99769, max at rate_setting_4 SoC 0.02764)",
+      "severity": "minor",
+      "note": "The conclusion is unaffected: 0.5000 V is below both the global min (0.67421) and the discharge-only min (0.99153), and rate 500 is the only out-of-window point under either definition. Only the stated scope is wrong."
+    },
+    {
+      "claim": "forward dP/drate has exactly one sign change, between rate 200 and rate 300",
+      "claimed_value": "sign change bracketed by [200, 300]",
+      "recomputed_value": "the last positive chord is 200->300 (+0.497) and the first negative chord is 300->500 (-0.400), so the flip is bracketed by [200, 500] with the extremum at the node rate 300; power_turnover.json stores sign_change_between=[200,300], which is not an interval in which the sign flips",
+      "severity": "minor",
+      "note": "Count of sign changes (exactly one) and peak location (rate 300) are both correct; only the bracket label is wrong."
+    }
+  ],
+  "method_concerns": [
+    "The 8 forward differences are overlapping chords of ONE ordered 9-point series, not independent observations; there are no per-rate error bars, replicates, or measurement uncertainties, so 'a genuine single interior maximum, not noise around a plateau' has no sampling model behind it and is not testable from these data.",
+    "The peak location is definition-dependent. Raw argmax, raw-window-restricted argmax and moving-average argmax place it at 300, but the SoC-50 physical-consistency criterion (the reduction Finding 2 identifies as generating the summary: P/rate = V50 to RMSE 0.00268 V, identity permutation best of 5040) excludes BOTH rate 300 (implied 1.1000 V vs locus range 1.39858-1.77653 V) and rate 500, putting the peak at rate 200. AIC- and BIC-best smooth forms put it at 342.5 and 336.4; a quadratic in log-rate puts the vertex at ~1006, outside the sampled domain.",
+    "The 'falling branch' consists of a single post-peak point (rate 500). Calling it a branch or a turnover contradicts the report's own limitation note; only an extremum at a sampled node is established, not a smooth hump.",
+    "The falling-branch-is-outside-the-window framing understates the problem: the rate-300 point is also irreproducible from the curves under the SoC-50 construction (extrapolated locus predicts 1.4204 V, summary implies 1.1000 V, a 0.320 V shortfall; rate 500 shortfall 0.858 V), and 1.1000 V is attained only at 92-96 percent SoC versus 48-52 percent for the first seven rates.",
+    "The rate-to-anonymous_rate_setting correspondence underlying the SoC-50 linkage is inferred from a 5040-permutation fit, not given in the data; every reconstruction and window comparison conditioned on SoC-50 inherits that unverified mapping (shared with Finding 2).",
+    "SoC = 50 percent is not on the stored grid (no exact 50.0 row), so V50 is an interpolation between neighbouring SoC rows; the residual scale reported for the linkage is therefore partly interpolation error.",
+    "run_analysis.py Section 3 hard-codes the bracket as [RATE_POW[k], RATE_POW[k+1]] for the sign-change pair, which pairs the positive chord with the wrong node; the same label propagates into key_results.json without an independent check.",
+    "In robustness_checks.py ROBUSTNESS E, the advertised alternative definition 'exclude pure log-line extrapolation' is set to None and silently dropped, so robustness_power_peak_definitions.csv reports 3 definitions, not the 4 the code lists; the report's statement 'two checks' is accurate but the code's own enumeration is not fully executed.",
+    "In verify_claims.py VERIFY 6, interior_turnover_survives_excluding_round_values is computed on the point set with 300 and 500 removed, where the argmax necessarily sits at the boundary; the flag name implies a surviving interior turnover that the code cannot test."
+  ],
+  "summary": "I independently reproduced the entire Finding 3 power table, the nine implied voltages, the eight forward differences, the interior peak at 330.00 at rate 300, the 280.30 rate-200 maximum when rate 300 is dropped, and the unique sign change; I also confirmed rate 500 (0.5000 V implied) is the only one of nine points outside the measured voltage window under both the file-wide window (0.67421-2.29289 V) and the discharge-only window (0.99153-1.90743 V). Four secondary statements fail as written: the 24.24 percent is the decline from the peak rather than the peak's elevation above 250.00 (which is 32.00 percent); the 0.878 'power law' R2 comes from a semilog regression of P on log10(rate), while a true power law on the first seven points gives log-space R2 = 0.9989, so the stated rejection of a pure power law on the first seven points is not supported; the 0.99153 V 'lowest voltage anywhere in the curve file' is only the discharge subset; and the sign-change bracket is [200,500] around the node 300, not [200,300]. Adversarially, the peak at rate 300 is not robust to peak definition: raw/argmax-type definitions agree on 300, but excluding rate 300, restricting to rates at or below 200, or requiring consistency with the SoC-50 reduction all put the maximum at the rate-200 endpoint, and AIC/BIC-best smooth fits put it at 336-343 with a log-log quadratic implying no in-domain turnover at all. Verdict is confirmed_with_caveat: the headline numbers are exact, the framing and four secondary claims are not."
+}

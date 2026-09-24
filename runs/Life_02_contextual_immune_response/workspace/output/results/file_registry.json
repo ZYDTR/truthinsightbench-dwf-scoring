@@ -1,0 +1,512 @@
+{
+  "schema": "life02-native-artifact-registry",
+  "task_id": "Life_02_contextual_immune_response",
+  "note": "relative_path is relative to the output/ directory",
+  "count": 56,
+  "files": [
+    {
+      "id": "F001",
+      "role": "analysis_source",
+      "title": "Core analysis: compartment cells, ordering reproducibility, endpoint conflict, assay-level leave-one-out, intervention ordering, multi-condition class fits",
+      "relative_path": "analysis/01_compartment_intervention.py",
+      "bytes": 30297,
+      "sha256": "8020f5e8418aae26615e6c66c20836df6eccbc06c28941b8ec0cd1a8d7b59fa0",
+      "produced_by": "scripts 01 + 04 + 06 read its CSV/JSON outputs"
+    },
+    {
+      "id": "F002",
+      "role": "analysis_source",
+      "title": "Time-resolved analysis: per-time-point paired contrasts, time x role interaction, segmented slopes, robustness",
+      "relative_path": "analysis/02_time_resolved.py",
+      "bytes": 16044,
+      "sha256": "3138c5746f1e317d81d86997cbe6a501ee02180848ea18168f1091f987af9b0e",
+      "produced_by": "fig4 and 06_sensitivity read its outputs"
+    },
+    {
+      "id": "F003",
+      "role": "analysis_source",
+      "title": "Targeted robustness: repeated-measures class contrast, ordering tie sensitivity, rank concordance, precision weighting, endpoint consistency, outlier treatment",
+      "relative_path": "analysis/03_robustness.py",
+      "bytes": 22789,
+      "sha256": "943f412ece7e4fa7a09f4b571df0c2b257c7cf2d3c97f9a52cd5e29857354586",
+      "produced_by": "supports finding 3 and finding 5"
+    },
+    {
+      "id": "F004",
+      "role": "analysis_source",
+      "title": "Figure generation for all four report figures (Agg backend, deterministic PNGs)",
+      "relative_path": "analysis/04_figures.py",
+      "bytes": 20733,
+      "sha256": "080a15bef1bb6a2603f0af21a02e2e3748a20d267dea93a7b831243fd1bce9dc",
+      "produced_by": "writes output/figures/*.png"
+    },
+    {
+      "id": "F005",
+      "role": "analysis_source",
+      "title": "Independent recomputation of the compartment-file headline numbers (own code path)",
+      "relative_path": "analysis/05_verification_compartment.py",
+      "bytes": 5957,
+      "sha256": "0ffc4d8e6d398e62b28b97730d40ea9d0fd9185888cede8870d5009f65291992",
+      "produced_by": "writes results/verification_compartment.json"
+    },
+    {
+      "id": "F006",
+      "role": "analysis_source",
+      "title": "Independent recomputation of the intervention and multi-condition numbers",
+      "relative_path": "analysis/05_verification_intervention.py",
+      "bytes": 6068,
+      "sha256": "eb8def534a54fb64dc617eff5f55b824183b608dd248cb7879f435e73b0b5d2a",
+      "produced_by": "writes results/verification_intervention.json"
+    },
+    {
+      "id": "F007",
+      "role": "analysis_source",
+      "title": "Independent recomputation of the time-resolved numbers",
+      "relative_path": "analysis/05_verification_time.py",
+      "bytes": 6448,
+      "sha256": "0425223f686118e8a8af1b575d7163a930d636f6c64ebc694009b1c43ae3bb78",
+      "produced_by": "writes results/verification_time.json"
+    },
+    {
+      "id": "F008",
+      "role": "analysis_source",
+      "title": "Resolution limits: minimum detectable effects, TOST equivalence, assays needed, ordering boundary, replicate resolution floor",
+      "relative_path": "analysis/06_sensitivity.py",
+      "bytes": 52409,
+      "sha256": "9a2e86748829e4d9d0e8fc4e44cf4fb35d197f95f5eb45da91d33aad11fcd86a",
+      "produced_by": "supports findings 2 and 4"
+    },
+    {
+      "id": "F009",
+      "role": "analysis_source",
+      "title": "Builds the artifact registry and the delivery-role self-check",
+      "relative_path": "analysis/07_registry_and_delivery.py",
+      "bytes": 8260,
+      "sha256": "911895df2dbefb956e57821421c5ebdfa9e23ba84060ab31c81313911469fffa",
+      "produced_by": "writes results/file_registry.json and results/delivery_report.json"
+    },
+    {
+      "id": "F010",
+      "role": "analysis_source",
+      "title": "Shared path/statistics helpers for the analysis scripts",
+      "relative_path": "analysis/common.py",
+      "bytes": 4633,
+      "sha256": "3185e3e6a776100d030b7ad68d4d227b703ddddb646e284bf2287bd9ec805439",
+      "produced_by": "support module; no scientific result of its own"
+    },
+    {
+      "id": "F011",
+      "role": "result_table",
+      "title": "Result table compartment_cell_effects.csv",
+      "relative_path": "results/compartment_cell_effects.csv",
+      "bytes": 1957,
+      "sha256": "f8452c8029d23ff39c55e5e0b9ab2b3bb8efd14c3f466f0eb62b15d9b155c990",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F012",
+      "role": "result_table",
+      "title": "Result table compartment_ordering_reproducibility.csv",
+      "relative_path": "results/compartment_ordering_reproducibility.csv",
+      "bytes": 959,
+      "sha256": "522498fb3192a92fae7041747b1c3905159c0f31a01a796c974804616aeb7e77",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F013",
+      "role": "result_table",
+      "title": "Result table compartment_replicate_effects.csv",
+      "relative_path": "results/compartment_replicate_effects.csv",
+      "bytes": 5857,
+      "sha256": "92d4b6ce5e87657dc90213efc395af8e98d966959064f1f0a8656e5fbfbca5b1",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F014",
+      "role": "result_table",
+      "title": "Result table endpoint_ordering_agreement.csv",
+      "relative_path": "results/endpoint_ordering_agreement.csv",
+      "bytes": 118,
+      "sha256": "2d9abeba48d1c0d3577f335b3ed0f093cb8181b27ba1134bbb1145f1f7dcf105",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F015",
+      "role": "result_table",
+      "title": "Result table endpoint_paired_deltas.csv",
+      "relative_path": "results/endpoint_paired_deltas.csv",
+      "bytes": 502,
+      "sha256": "447a4bd50e4c177ae2a02982178e1830ac00172b68ac22194e6d67f7a54b56a5",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F016",
+      "role": "result_table",
+      "title": "Result table endpoint_type_comparison.csv",
+      "relative_path": "results/endpoint_type_comparison.csv",
+      "bytes": 224,
+      "sha256": "73da48a81663eefe5e468ff0dbd5eb722c1491ffbf8b1451598c8aff73ad7757",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F017",
+      "role": "result_table",
+      "title": "Result table intervention_assay_by_setting_matrix.csv",
+      "relative_path": "results/intervention_assay_by_setting_matrix.csv",
+      "bytes": 256,
+      "sha256": "3980e03da37f43ab476561da2dac8f0925c554752a057407d381ef6892daf44b",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F018",
+      "role": "result_table",
+      "title": "Result table intervention_leave_one_assay_out.csv",
+      "relative_path": "results/intervention_leave_one_assay_out.csv",
+      "bytes": 119,
+      "sha256": "7bd9a7d94d60f87c905e3edbee7f4bef51ac417ee7c75dcb5a009cec773beb11",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F019",
+      "role": "result_table",
+      "title": "Result table intervention_setting_means.csv",
+      "relative_path": "results/intervention_setting_means.csv",
+      "bytes": 796,
+      "sha256": "ae09f2f17fa45b149745db7976667e281393391297d6bd43558c68974836c86a",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F020",
+      "role": "result_table",
+      "title": "Result table intervention_setting_rank_spread.csv",
+      "relative_path": "results/intervention_setting_rank_spread.csv",
+      "bytes": 230,
+      "sha256": "8183cc15f3d7e870241080f4cfeeddd049b4d537c36b3b926b9b45bd0171ca75",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F021",
+      "role": "result_table",
+      "title": "Result table loocv_assay_predictions.csv",
+      "relative_path": "results/loocv_assay_predictions.csv",
+      "bytes": 1678,
+      "sha256": "e19eefa72ba10815e81222f6422f5d9d6c876c979f1f20980e4baf12be260745",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F022",
+      "role": "result_table",
+      "title": "Result table loocv_rank_accuracy.csv",
+      "relative_path": "results/loocv_rank_accuracy.csv",
+      "bytes": 290,
+      "sha256": "d87372661be1d015de67e0e9e0f5f6c522f9c373e4370495c431223b8e968405",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F023",
+      "role": "result_table",
+      "title": "Result table multi_condition_anova.csv",
+      "relative_path": "results/multi_condition_anova.csv",
+      "bytes": 224,
+      "sha256": "f74151c0452ac31c67c53d131c5567a04cfd8ec9d06af68c337c6d573e015b7b",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F024",
+      "role": "result_table",
+      "title": "Result table multi_condition_class_fits.csv",
+      "relative_path": "results/multi_condition_class_fits.csv",
+      "bytes": 375,
+      "sha256": "e16e1b5b00fe45f6f4b8873bc0334e879908f1af0ece8577082dc96ae100cda6",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F025",
+      "role": "result_table",
+      "title": "Result table multi_condition_setting_means.csv",
+      "relative_path": "results/multi_condition_setting_means.csv",
+      "bytes": 476,
+      "sha256": "6219afa6eaa2abf6d139b9e06b884598a1acaa872995cb7c7d2761ef0e1867d8",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F026",
+      "role": "result_table",
+      "title": "Result table robustness_assay_leave_out.csv",
+      "relative_path": "results/robustness_assay_leave_out.csv",
+      "bytes": 161,
+      "sha256": "46d57536e840f8fa4233abe0501af1a7981692d955612a6257a59b8947bef7d1",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F027",
+      "role": "result_table",
+      "title": "Result table robustness_assay_precision.csv",
+      "relative_path": "results/robustness_assay_precision.csv",
+      "bytes": 118,
+      "sha256": "112ec08c1aaab5335e5a15e45ca7f0b4c1f7785dbe6caa46a608194332c3ad01",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F028",
+      "role": "result_table",
+      "title": "Result table robustness_multicondition_replicate_slopes.csv",
+      "relative_path": "results/robustness_multicondition_replicate_slopes.csv",
+      "bytes": 359,
+      "sha256": "da493c412bc626eb7474aaa2045408ba86ef1d9bb6760b5b52ceb034b61a1cfe",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F029",
+      "role": "result_table",
+      "title": "Result table robustness_ordering_ambiguity.csv",
+      "relative_path": "results/robustness_ordering_ambiguity.csv",
+      "bytes": 419,
+      "sha256": "47f014ef944f542d42620f36fc6a83c1fe32464d7862617857290c759dfc2eee",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F030",
+      "role": "result_table",
+      "title": "Result table robustness_ordering_gaps.csv",
+      "relative_path": "results/robustness_ordering_gaps.csv",
+      "bytes": 818,
+      "sha256": "a60fed5989bb7e6c24cd3b5ffa59b264cd2fb3d33dfdfbd787d8dc181bcd14d2",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F031",
+      "role": "result_table",
+      "title": "Result table robustness_rank_concordance.csv",
+      "relative_path": "results/robustness_rank_concordance.csv",
+      "bytes": 214,
+      "sha256": "91ebc3254228194b047cfcb5d520fdeacf27bcdaad594a451d5d9c17b28aa1f4",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F032",
+      "role": "result_table",
+      "title": "Result table robustness_time_trend_loo.csv",
+      "relative_path": "results/robustness_time_trend_loo.csv",
+      "bytes": 392,
+      "sha256": "d983160bd28084cb78819ef8412762f594d7c1bd9e1195927710c6ccbf5f1916",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F033",
+      "role": "result_table",
+      "title": "Result table robustness_time_trends.csv",
+      "relative_path": "results/robustness_time_trends.csv",
+      "bytes": 139,
+      "sha256": "10878ee6e7757ad6531cbdec3d42940f1942bf46810d7c00a74acc5c3b8ea504",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F034",
+      "role": "result_table",
+      "title": "Result table robustness_weighted_cells.csv",
+      "relative_path": "results/robustness_weighted_cells.csv",
+      "bytes": 1073,
+      "sha256": "8bc2f0988b58e157d98d81e2b35947462375a8bef3aa7e57361c30fc6ec01ad5",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F035",
+      "role": "result_table",
+      "title": "Result table time_resolved_contrasts.csv",
+      "relative_path": "results/time_resolved_contrasts.csv",
+      "bytes": 808,
+      "sha256": "bc4eafa6752a9e8eaafa92494708870515ee7bb64abffad013bad6e09d248ecb",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F036",
+      "role": "result_table",
+      "title": "Result table time_resolved_leave_one_replicate_out.csv",
+      "relative_path": "results/time_resolved_leave_one_replicate_out.csv",
+      "bytes": 163,
+      "sha256": "f242a4ee033c0bde882406e9994fd1d4aeba07dd56033bb088d49aeba2ce6013",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F037",
+      "role": "result_table",
+      "title": "Result table time_resolved_paired_wide.csv",
+      "relative_path": "results/time_resolved_paired_wide.csv",
+      "bytes": 1114,
+      "sha256": "2b03ea05a43c60e1660f10f601a0ea2e53b2ab8eb3f10470d357d3f1b4f5a90a",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F038",
+      "role": "result_table",
+      "title": "Result table time_resolved_replicate_slopes.csv",
+      "relative_path": "results/time_resolved_replicate_slopes.csv",
+      "bytes": 230,
+      "sha256": "3af42a9dd1a8651662d7ff46720b2b5bb252cd3a06e41955f439d00b42e6e5fa",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F039",
+      "role": "result_table",
+      "title": "Result table time_resolved_segments.csv",
+      "relative_path": "results/time_resolved_segments.csv",
+      "bytes": 310,
+      "sha256": "819c44b00b30a426a5e989ab137fb02383c81d545729f07da9a40299a21d4d00",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F040",
+      "role": "result_table",
+      "title": "Result table time_resolved_unpaired_robustness.csv",
+      "relative_path": "results/time_resolved_unpaired_robustness.csv",
+      "bytes": 247,
+      "sha256": "7663ac660d3a929be6fc66e2d9b870cc7d0859333fdb7918188cc1c5529d8d13",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F041",
+      "role": "result_json",
+      "title": "Machine-readable result summary core_analysis_summary.json",
+      "relative_path": "results/core_analysis_summary.json",
+      "bytes": 11731,
+      "sha256": "dea0a7dae6e5213c90ff66e6fdc20e58806e5e52788c21507d928cce95ec94ed",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F042",
+      "role": "result_json",
+      "title": "Machine-readable result summary robustness_summary.json",
+      "relative_path": "results/robustness_summary.json",
+      "bytes": 8527,
+      "sha256": "4b433548b8acbdd8f7d724e45329be28fc503d8ed95b2d2b5671e768517266f1",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F043",
+      "role": "result_json",
+      "title": "Machine-readable result summary sensitivity_report.json",
+      "relative_path": "results/sensitivity_report.json",
+      "bytes": 50444,
+      "sha256": "6c0fefb1d929eff5a9ed15c10e7ba5f65c6b32b281631ac7fa9b705255aa6c36",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F044",
+      "role": "result_json",
+      "title": "Machine-readable result summary time_resolved_summary.json",
+      "relative_path": "results/time_resolved_summary.json",
+      "bytes": 7242,
+      "sha256": "f8dfe9fb99309047d49b99498949b49e75ba65c6969579a46fd0ada628c04c79",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F045",
+      "role": "result_json",
+      "title": "Machine-readable result summary verification_compartment.json",
+      "relative_path": "results/verification_compartment.json",
+      "bytes": 2859,
+      "sha256": "34d0fe9f42e478379dcd58575dd27648bb7c83f0c1216758226ff6eea19c196f",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F046",
+      "role": "result_json",
+      "title": "Machine-readable result summary verification_intervention.json",
+      "relative_path": "results/verification_intervention.json",
+      "bytes": 2719,
+      "sha256": "bea0085eade433df335083d847dba968ae0d14f4cee5b3220ee1039e6b3442da",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F047",
+      "role": "result_json",
+      "title": "Machine-readable result summary verification_report.json",
+      "relative_path": "results/verification_report.json",
+      "bytes": 15480,
+      "sha256": "267ef99d4a1fe5f955fb47da5b12304a88b7c7cf555a1b157207bae3167b789d",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F048",
+      "role": "result_json",
+      "title": "Machine-readable result summary verification_time.json",
+      "relative_path": "results/verification_time.json",
+      "bytes": 3485,
+      "sha256": "e445df0b07c56ac33f440ba7658d65d0c8d3ea5404a914214ee0cfde9c8121e4",
+      "produced_by": "analysis scripts 01-06"
+    },
+    {
+      "id": "F049",
+      "role": "figure",
+      "title": "Report figure fig1_compartment_fold_change.png",
+      "relative_path": "figures/fig1_compartment_fold_change.png",
+      "bytes": 122378,
+      "sha256": "8eadf8b7a3167de2260b5f6f860e5ff67b6b37d546c280c368f7711d1632031d",
+      "produced_by": "04_figures.py"
+    },
+    {
+      "id": "F050",
+      "role": "figure",
+      "title": "Report figure fig2_baseline_vs_foldchange.png",
+      "relative_path": "figures/fig2_baseline_vs_foldchange.png",
+      "bytes": 148616,
+      "sha256": "a2ac32337455bbd057bd7e9ef0a46ce6e6527c1df9d46159fc4befe65a5e0da8",
+      "produced_by": "04_figures.py"
+    },
+    {
+      "id": "F051",
+      "role": "figure",
+      "title": "Report figure fig3_intervention_profiles.png",
+      "relative_path": "figures/fig3_intervention_profiles.png",
+      "bytes": 153776,
+      "sha256": "6d420e69169f536e03d3137151bb533c3f1cb10577387842ff802c83247ea7c2",
+      "produced_by": "04_figures.py"
+    },
+    {
+      "id": "F052",
+      "role": "figure",
+      "title": "Report figure fig4_time_resolved.png",
+      "relative_path": "figures/fig4_time_resolved.png",
+      "bytes": 214101,
+      "sha256": "c38687b9eb7537a57489490705229e1f792dffafca9e305281219544ea6c5170",
+      "produced_by": "04_figures.py"
+    },
+    {
+      "id": "F053",
+      "role": "process_log",
+      "title": "Executed-script console log 01_compartment_intervention.log",
+      "relative_path": "logs/01_compartment_intervention.log",
+      "bytes": 10410,
+      "sha256": "45da014f07c61b94879583ba99dead80feeac438803d0132aa3cc2ccf1798f6e",
+      "produced_by": "captured stdout of the corresponding analysis script"
+    },
+    {
+      "id": "F054",
+      "role": "process_log",
+      "title": "Executed-script console log 02_time_resolved.log",
+      "relative_path": "logs/02_time_resolved.log",
+      "bytes": 5181,
+      "sha256": "011f36873e66d5ae6ae017a700aa24c3feca3908b48542a489cbe3796bcc9142",
+      "produced_by": "captured stdout of the corresponding analysis script"
+    },
+    {
+      "id": "F055",
+      "role": "process_log",
+      "title": "Executed-script console log 03_robustness.log",
+      "relative_path": "logs/03_robustness.log",
+      "bytes": 8138,
+      "sha256": "d3a1eb53c570358383b722348a5cdf50bb889bb5aa55773eaecf487ac6df52da",
+      "produced_by": "captured stdout of the corresponding analysis script"
+    },
+    {
+      "id": "F056",
+      "role": "process_log",
+      "title": "Executed-script console log 06_sensitivity.log",
+      "relative_path": "logs/06_sensitivity.log",
+      "bytes": 16159,
+      "sha256": "e5d7e1d042f5f7914a93e02bce4b018a3785d6f1f56dfad7d3cfff0889d570f7",
+      "produced_by": "captured stdout of the corresponding analysis script"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+==============================================================================
+STAGE 4  cofactor-loading response (unit = one loading condition, n = 4)
+==============================================================================
+  loading (%) : rate (umol/h)
+     0.20 :  1081.0
+     1.00 :  1217.0
+     3.00 :   470.0
+     8.00 :   268.0
+  rate at the highest loading is -75.2% of the rate at the lowest loading; peak at 1%
+
+  loading-response model comparison (n = 4). AICc needs n - k - 1 > 0, so with n = 4 every 3-parameter model has an UNDEFINED AICc: ['M1_monotone_power_law', 'M2_monotone_exponential', 'M3_peaked_substrate_inhibition', 'M4_peaked_bilinear_kink']. Only the 1- and 2-parameter models can be ranked:
+                           M0_constant k=1 R2=0.00000 AICc=  63.92 dAICc=0.00  BIC=  50.69  params={'c': 759.0}
+  models with undefined AICc (ranked by BIC instead, which is defined at n = 4):
+        M3_peaked_substrate_inhibition k=3 R2=0.99007 AICc=undefined BIC=  35.02  params={'V': 17486.004697317745, 'K': 2.5989602399199265, 'Ki': 0.09228016959110744}
+               M2_monotone_exponential k=3 R2=0.85916 AICc=undefined BIC=  45.62  params={'a': 1154.0291879770225, 'k': 0.2838179148615087, 'c': 116.27174830356827}
+               M4_peaked_bilinear_kink k=3 R2=0.77683 AICc=undefined BIC=  47.47  params={'r_low': 5664.521659732599, 'r_high': -116.00868829664472, 'L_break': 0.19251207739829476}
+                 M1_monotone_power_law k=2 R2=0.61074 AICc=undefined BIC=  48.30  params={'a': 798.2833226493469, 'b': 0.26296954924655574}
+
+  Spearman rho(loading, rate) = -0.800, p = 0.2000, permutation p = 0.3310 (n = 4)
+  exact two-sided permutation p over all 24 orderings = 0.3333
+  interior peak: {'argmax_index': 1, 'strictly_rising_before_peak': True, 'strictly_falling_after_peak': True, 'is_interior_peak': True}
+  leave-out  0.20%: rho=-1.000 p=0.0000 monotone_decreasing=True peak_at=1%
+  leave-out  1.00%: rho=-1.000 p=0.0000 monotone_decreasing=True peak_at=0.2%
+  leave-out  3.00%: rho=-0.500 p=0.6667 monotone_decreasing=False peak_at=1%
+  leave-out  8.00%: rho=-0.500 p=0.6667 monotone_decreasing=False peak_at=1%
+  bootstrap peak location (M0_constant + residual resampling, n=5000): median 0.20%  95% CI [0.20, 0.20]%
+
+==============================================================================
+STAGE 4  cross-modal synthesis and its coverage boundary
+==============================================================================
+  formulation IDs in time courses      : ['formulation_1', 'formulation_2', 'formulation_3', 'formulation_4']
+  formulation IDs in transient traces  : ['formulation_1', 'formulation_2']
+  shared formulation IDs (cross-modal) : ['formulation_1', 'formulation_2']
+
+  cross-modal table for the formulations present in BOTH modalities:
+formulation_id  final_product_4h_umol  mean_rate_umol_h best_kinetic_model  best_kinetic_aicc  transient_peak_value  transient_peak_delay_ps  transient_late_ge30ps_mean  transient_late_ge30ps_fraction_positive  transient_final_value  transient_readout_noise
+ formulation_1                   9.48            2.3700         saturation          -4.099331               0.99928                  1.13634                   -0.250218                                 0.000000               -0.37602                 0.044827
+ formulation_2                   4.13            1.0325          power_law          -6.949468               1.00077                  2.24169                    0.188161                                 0.941176                0.14030                 0.121131
+
+  n shared analysis units available for a cross-modal association test = 2
+  with two shared formulations a rank correlation is not defined; only an ordinal contrast can be stated
+  ordinal contrast: yield order ['formulation_1', 'formulation_2'], late-transient order ['formulation_2', 'formulation_1'], agree = False
+  late-transient signs: {'formulation_1': 'negative', 'formulation_2': 'positive'}
+
+  coverage boundary: the optical spectra and the loading scan carry no formulation identifier, so they cannot be joined to a named formulation without an external assumption; their absolute scales also differ from the time-course scale
+  loading-scan rate scale [268.0, 1217.0] umol/h vs time-course mean-rate scale [0.04325, 2.37] umol/h (ratio ~113x)
+
+------------------------------------------------------------------------------
+Time-course robustness: leave-one-time-point-out and leave-one-curve-out
+------------------------------------------------------------------------------
+  formulation_1: full-fit winner (5 points, AICc) = saturation; leave-one-time-point-out stability = 3/5
+     drop_t=0h: winner=quadratic basis=BIC_fallback_aicc_undefined_at_n4 agrees=False
+     drop_t=1h: winner=saturation basis=BIC_fallback_aicc_undefined_at_n4 agrees=True
+     drop_t=2h: winner=saturation basis=BIC_fallback_aicc_undefined_at_n4 agrees=True
+     drop_t=3h: winner=saturation basis=BIC_fallback_aicc_undefined_at_n4 agrees=True
+     drop_t=4h: winner=quadratic basis=BIC_fallback_aicc_undefined_at_n4 agrees=False
+  formulation_2: full-fit winner (5 points, AICc) = power_law; leave-one-time-point-out stability = 4/5
+     drop_t=0h: winner=linear basis=BIC_fallback_aicc_undefined_at_n4 agrees=False
+     drop_t=1h: winner=power_law basis=BIC_fallback_aicc_undefined_at_n4 agrees=True
+     drop_t=2h: winner=power_law basis=BIC_fallback_aicc_undefined_at_n4 agrees=True
+     drop_t=3h: winner=power_law basis=BIC_fallback_aicc_undefined_at_n4 agrees=True
+     drop_t=4h: winner=power_law basis=BIC_fallback_aicc_undefined_at_n4 agrees=True
+  formulation_3: full-fit winner (5 points, AICc) = power_law; leave-one-time-point-out stability = 0/5
+     drop_t=0h: winner=logistic basis=BIC_fallback_aicc_undefined_at_n4 agrees=False
+     drop_t=1h: winner=induction_linear basis=BIC_fallback_aicc_undefined_at_n4 agrees=False
+     drop_t=2h: winner=quadratic basis=BIC_fallback_aicc_undefined_at_n4 agrees=False
+     drop_t=3h: winner=quadratic basis=BIC_fallback_aicc_undefined_at_n4 agrees=False
+     drop_t=4h: winner=quadratic basis=BIC_fallback_aicc_undefined_at_n4 agrees=False
+  formulation_4: full-fit winner (5 points, AICc) = power_law; leave-one-time-point-out stability = 2/5
+     drop_t=0h: winner=quadratic basis=BIC_fallback_aicc_undefined_at_n4 agrees=False
+     drop_t=1h: winner=power_law basis=BIC_fallback_aicc_undefined_at_n4 agrees=True
+     drop_t=2h: winner=power_law basis=BIC_fallback_aicc_undefined_at_n4 agrees=True
+     drop_t=3h: winner=quadratic basis=BIC_fallback_aicc_undefined_at_n4 agrees=False
+     drop_t=4h: winner=quadratic basis=BIC_fallback_aicc_undefined_at_n4 agrees=False
+  pooled fit dropping formulation_1: winner = power_law  rss = {'linear': 0.0236, 'power_law': 0.00335, 'quadratic': 0.00762}
+  pooled fit dropping formulation_2: winner = quadratic  rss = {'linear': 0.01365, 'power_law': 0.00763, 'quadratic': 0.00528}
+  pooled fit dropping formulation_3: winner = power_law  rss = {'linear': 0.03155, 'power_law': 0.01046, 'quadratic': 0.01258}
+  pooled fit dropping formulation_4: winner = power_law  rss = {'linear': 0.03415, 'power_law': 0.01072, 'quadratic': 0.01274}
+
+wrote figures/fig4_loading.png and figures/fig5_crossmodal.png
+
+stage 4 complete

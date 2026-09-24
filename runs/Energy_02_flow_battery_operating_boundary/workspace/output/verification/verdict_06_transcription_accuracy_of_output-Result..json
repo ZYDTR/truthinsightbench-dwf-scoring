@@ -1,0 +1,71 @@
+{
+  "dimension": "transcription accuracy of output/Result.md against output/results/ machine-readable artifacts",
+  "verdict": "confirmed_with_caveat",
+  "discrepancies": [
+    {
+      "claim": "Finding 4 robustness check 1: 95% bootstrap interval for the quadratic-in-log10 coefficient",
+      "claimed_value": "[-15.571, -9.324]",
+      "recomputed_value": "[-15.820, -8.845] (robustness_summary.json key D_quadratic_bootstrap; reproduced byte-identically by a clean run of /data/user/conversations/conv-21c3a526-05a9-4ee5-b62e-ff6748eb9e5a/project/output/analysis/robustness_checks.py with its documented seed 31337)",
+      "severity": "moderate",
+      "note": "The quoted interval exists in no frozen artifact. I reproduced it exactly ([-15.570595, -9.323659]) only by re-running the script's resampling scheme with RNG seed 119 instead of the documented 31337, so the registered number has an uncommitted provenance. The point estimate -12.306, frac_negative = 1.0, and the 7/7 leave-one-out steepening claim are all correct."
+    },
+    {
+      "claim": "Finding 2 robustness check 5 and boundary_checks.json: 'an energy-weighted ratio (integral V_dis dSoC / integral V_ch dSoC) gives RMSE 3.07 pp'",
+      "claimed_value": "3.07 pp",
+      "recomputed_value": "2.87 pp (grid 5-95%, 400 pts), 2.81 pp (common window 0.111-97.0%), 3.05 pp (1-97.01%), 3.77-3.80 pp (0-100%, 1000 pts); a grid search matched ~3.08 pp only for an undocumented [0,98] window",
+      "severity": "moderate",
+      "note": "No committed script computes this form; the number exists only as a string in boundary_checks.json and key_results.json. Window and quadrature are undocumented, so the value is not reproducible from the frozen evidence. The other forms in verify_efficiency_forms.tsv (6.0189 pp and 8.0494 pp) check out exactly."
+    },
+    {
+      "claim": "Finding 4: 'the rate-80 value ... is the largest single contributor to the residual of the linear models'",
+      "claimed_value": "rate-80 value is the largest residual contributor",
+      "recomputed_value": "largest residual is at rate 200 (-3.274 pp) for linear-in-log10 and log-in-rate, and at rate 10 (+2.171 pp) for linear-in-rate; rate 80 is 5th (|1.582|) and 4th (|1.725|) respectively",
+      "severity": "moderate",
+      "note": "The statement is true only for the quadratic-in-log10 model (max |res| 0.317 pp at rate 80), which the sentence explicitly excludes by saying 'linear models'. The adjacent observation that 80.0 is exactly round and has outsized influence is correct."
+    },
+    {
+      "claim": "Finding 2 counterevidence: 'All efficiency residuals are negative for the identity form at four of seven settings'",
+      "claimed_value": "four of seven",
+      "recomputed_value": "five of seven",
+      "severity": "minor",
+      "note": "summary_linkage.csv efficiency_residual_pp = [+0.2632, -0.2205, +0.0905, -0.0121, -0.0507, -0.2247, -0.2385]: 5 negative, 2 positive (reconstructed minus measured). Sign conventions cannot make 'four' correct."
+    },
+    {
+      "claim": "Finding 3 robustness 1: alternative peak definition 'based on the implied voltage staying above the lowest measured discharge voltage'",
+      "claimed_value": "lowest measured discharge voltage (0.99153 V)",
+      "recomputed_value": "artifact implements a 0.99 V floor (robustness_power_peak_definitions.csv row 'implied-voltage intersection with 0.99 V floor')",
+      "severity": "minor",
+      "note": "0.99 V differs from 0.99153 V; the peak rate (300) is unchanged, so there is no numeric impact, but the definition is mis-described."
+    },
+    {
+      "claim": "Finding 1 counterevidence: ordering boundary 'should therefore be read as holding over roughly SoC <= 80 %'",
+      "claimed_value": "SoC <= 80%",
+      "recomputed_value": "all three strict orderings hold only up to SoC ~ 77.85% (discharge pair settings 1-2 crosses there); at SoC = 80% the discharge ordering already fails (5 of 6 steps decrease, not 6 of 6)",
+      "severity": "minor",
+      "note": "The tested probe grid (75 passes, 85 fails) supports only '<= 75%'; the report's own grid gives no evidence for 80%. Pair 2-3 crosses at 84.6% and pairs 3-4/5-6 fail only below ~0.4% SoC, so the binding constraint is the 1-2 pair."
+    },
+    {
+      "claim": "Finding 5 robustness 1: 'A non-zero slope survives in 7 of 7 variants: all cycles, odd cycles only, even cycles only, ...'",
+      "claimed_value": "7 of 7 variants (eight items enumerated, first is 'all cycles')",
+      "recomputed_value": "robustness_cycling_variants.csv contains 7 variants (odd, even, drop first 50, drop last 50, first half, second half, |residual|>2sd); 'all cycles' is the separate whole-series fit, not one of the 7",
+      "severity": "minor",
+      "note": "Enumeration slip only; the count, the 7 slopes, and the stated range -0.0746 to -0.2410 per cycle all verify."
+    },
+    {
+      "claim": "Finding-to-evidence index: every artifact carrying evidence for a finding is listed",
+      "claimed_value": "complete finding-to-evidence traceability",
+      "recomputed_value": "output/results/linkage_leave_one_out.csv (produced by run_analysis.py Section 2 for Finding 2) is absent from Result.md's index table, from reproduce.md's inventory list, and from the prose; reproduce.md does list it in its output inventory at line 150 but the index row for Finding 2 lists only robustness_linkage_leave_one_rate_out.csv",
+      "severity": "minor",
+      "note": "Orphaned evidence file: it exists, is real and contains the same leave-one-rate-out RMSEs, but no finding is attached to it."
+    }
+  ],
+  "method_concerns": [
+    "One registered statistic (Finding 4's quadratic-coefficient bootstrap CI) is not reproducible from the committed script plus the seed documented in reproduce.md; I verified the committed script regenerates the frozen robustness_summary.json byte-for-byte, so the report is quoting a value from a different (uncommitted) run configuration.",
+    "The 'energy-weighted ratio = 3.07 pp' contrast, cited in both Result.md and boundary_checks.json as the discriminating evidence that the single-SoC reduction is not definitional, has no committed implementation and no artifact row; I could not reproduce it with any natural window (2.81-3.80 pp), so the comparison rests on an unverifiable one-liner.",
+    "The prose claim that both reduction residuals are 'within the rounding granularity of the published summary values' is an over-claim relative to the arithmetic: the max efficiency residual (0.2632 pp) is 26x the 0.01 pp step of those rows and the max voltage residual (0.00358 V) is ~7x the 0.0005 V step at rate 10. What the artifacts support is 'small relative to the 0.3 pp residual scale', not 'within rounding'.",
+    "Finding 2's headline RMSE (0.1837 pp) is reproduced by two different definitions in verify_efficiency_forms.tsv: the intended Vdis(SoC)/Vch(SoC) and the DoD-paired Vdis(x)/Vch(100-x) give identical residuals, so that file cannot itself discriminate the correct pairing; the lower-RMSE nearest-point variant (0.0779 pp) additionally uses a nearest-point numerator against an interpolated denominator (mismatched x), so the 0.1246 pp 'nearest measured point' robustness figure is computed on a different construction than the headline.",
+    "SoC = 50% is selected post hoc from the same 7 units (the report acknowledges this), so the 1/5040 permutation p-value for Findings 1 and 2 is a lower bound on significance; the report states this, but the permutation for Finding 1 is also partly guaranteed by the label-ordering warning in DATA_GUIDE.md.",
+    "All cycling statistics remain repeated-observation statistics on n = 1 experiment (lag-1 autocorrelation of first differences -0.5346, 82.4% sign reversals, 30/600 points beyond 2 sd); the report states this explicitly, but Finding 5's block-bootstrap intervals still rest on 50-cycle windows whose effective independent count is far below 50."
+  ],
+  "summary": "The five registered findings' tabulated values are exact: every cell in all five tables, and the accompanying RMSE, CI, AIC, p-value and retention statistics, reproduce from the raw TSVs to the quoted precision, and all 29 result artifacts plus 4 figures are bit-identical after a clean re-run of the committed scripts. All file references in Result.md and reproduce.md resolve (the only non-literal tokens are glob patterns and output/results/file_registry.json, which exists at output/file_registry.json), exactly five findings are labelled consecutively, and Result.md is the only Markdown file claiming sole authority. However this is not a clean confirmation: three moderate mismatches exist (Finding 4's bootstrap CI matches no frozen artifact and only reproduces with an undocumented seed; the '3.07 pp energy-weighted' figure has no committed implementation; the rate-80 'largest residual contributor' superlative is false for both linear models) plus four minor ones (residual sign count, a 0.99 V floor described as the lowest measured discharge voltage, an optimistic SoC <= 80% boundary, and an orphaned linkage_leave_one_out.csv missing from the evidence index). No core finding flips, but the prose carries roughly five numbers or counts that the artifacts do not support."
+}

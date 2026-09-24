@@ -1,0 +1,228 @@
+{
+  "claim_id": "C2",
+  "n_rows": 593,
+  "lsr_definition": "np.gradient(depth_m, age_ka_bp_1)",
+  "rate_definition": "abs(np.gradient(d18o_pdb, age_ka_bp_1))",
+  "n_surrogates_per_family": 300,
+  "autocorrelation_lag1": {
+    "lsr_row_grid": 0.9585418608545296,
+    "lsr_uniform_median_step_grid": 0.9756405115715031,
+    "d18o_row_grid": 0.7882364444808961,
+    "d18o_uniform_median_step_grid": 0.916267868255269,
+    "median_age_step_ka": 0.45999999999997954,
+    "uniform_grid_n": 775,
+    "note": "LSR is MORE persistent than the d18O proxy at every lag; the candidate's null rho choice is therefore material."
+  },
+  "observed_lsr_ls_power": {
+    "grid_A": {
+      "range_ka": [
+        5.0,
+        400.0
+      ],
+      "n": 8000,
+      "max_power": 0.18000626607324666,
+      "argmax_period_ka": 39.93210693158276
+    },
+    "grid_B": {
+      "log_spaced_range_ka": [
+        5.0,
+        400.0
+      ],
+      "n": 1500,
+      "max_power": 0.1799713634823608,
+      "argmax_period_ka": 39.96100811034978,
+      "max_power_90_110ka_band": 0.05448083141316475,
+      "argmax_period_in_90_110ka_band": 109.87748434193061,
+      "max_power_60_140ka_band": 0.10048411521090476
+    },
+    "my_batched_normalisation_vs_scipy_max_rel_diff": 1.3344880755994382e-13,
+    "note": "0.180 is the GLOBAL maximum and sits near 40 ka, NOT in the 100 ka band; inside 90-110 ka the power is only ~0.05."
+  },
+  "lsr_periodicity_nulls": {
+    "observed_global_max_gridA": 0.18000626607324666,
+    "observed_band90_110_gridB": 0.05448083141316475,
+    "families": {
+      "ar1_irregular_rho_d18o_0.9163": {
+        "global_max_mean": 0.18303532706226827,
+        "global_max_sd": 0.05307095030906188,
+        "global_max_p95": 0.28461985051660466,
+        "p_global": 0.4750830564784053,
+        "band90_110_mean": 0.08985206601509452,
+        "band90_110_p95": 0.20318382362110352,
+        "p_band90_110": 0.6511627906976745
+      },
+      "ar1_irregular_rho_lsr_0.9585": {
+        "global_max_mean": 0.2766460414491623,
+        "global_max_sd": 0.08547022395485283,
+        "global_max_p95": 0.4271033554238541,
+        "p_global": 0.8970099667774086,
+        "band90_110_mean": 0.15719434127421697,
+        "band90_110_p95": 0.38196593157734354,
+        "p_band90_110": 0.8571428571428571
+      },
+      "ar1_uniform_rho_0.9759": {
+        "global_max_mean": 0.34988898269320373,
+        "global_max_sd": 0.10389298712320734,
+        "global_max_p95": 0.5375038681689598,
+        "p_global": 0.9867109634551495,
+        "band90_110_mean": 0.1837421616283963,
+        "band90_110_p95": 0.41934521218728066,
+        "p_band90_110": 0.8837209302325582
+      },
+      "ar2_uniform_fitted": {
+        "global_max_mean": 0.17328729527980966,
+        "global_max_sd": 0.04716469213395569,
+        "global_max_p95": 0.26331781395777565,
+        "p_global": 0.40863787375415284,
+        "band90_110_mean": 0.07657666733432149,
+        "band90_110_p95": 0.16973461899958975,
+        "p_band90_110": 0.6112956810631229
+      },
+      "phase_randomised_fourier": {
+        "global_max_mean": 0.2074506107246278,
+        "global_max_sd": 0.0382575057750502,
+        "global_max_p95": 0.2746077839445807,
+        "p_global": 0.7740863787375415,
+        "band90_110_mean": 0.038252517299444566,
+        "band90_110_p95": 0.08246737332976686,
+        "p_band90_110": 0.1760797342192691
+      },
+      "iid_white_noise": {
+        "global_max_mean": 0.018734112909567127,
+        "global_max_sd": 0.00451256311626858,
+        "global_max_p95": 0.0274598514717685,
+        "p_global": 0.0033222591362126247,
+        "band90_110_mean": 0.005228545315048887,
+        "band90_110_p95": 0.012403528240685387,
+        "p_band90_110": 0.0033222591362126247
+      }
+    }
+  },
+  "rho_sweep_periodicity": {
+    "grid": {
+      "0.0000": {
+        "null_max_mean": 0.019380882790974985,
+        "null_max_p95": 0.026476012726323238,
+        "p_global": 0.004975124378109453
+      },
+      "0.2000": {
+        "null_max_mean": 0.028578984692778853,
+        "null_max_p95": 0.03898138104018648,
+        "p_global": 0.004975124378109453
+      },
+      "0.4000": {
+        "null_max_mean": 0.04031158012246064,
+        "null_max_p95": 0.058637775420544824,
+        "p_global": 0.004975124378109453
+      },
+      "0.6000": {
+        "null_max_mean": 0.05829625217971608,
+        "null_max_p95": 0.07931724076137758,
+        "p_global": 0.004975124378109453
+      },
+      "0.7500": {
+        "null_max_mean": 0.08903528522655443,
+        "null_max_p95": 0.1301700544039661,
+        "p_global": 0.009950248756218905
+      },
+      "0.8500": {
+        "null_max_mean": 0.12486540815657567,
+        "null_max_p95": 0.18317640635766333,
+        "p_global": 0.06467661691542288
+      },
+      "0.9000": {
+        "null_max_mean": 0.16457219996427253,
+        "null_max_p95": 0.26642697623376344,
+        "p_global": 0.2835820895522388
+      },
+      "0.9585": {
+        "null_max_mean": 0.2688227529810671,
+        "null_max_p95": 0.4179683428277548,
+        "p_global": 0.8855721393034826
+      }
+    },
+    "conclusion": "LSR is judged periodic (p<0.05) only for rho <= ~0.8, i.e. only when the surrogate is given far less persistence than the LSR series actually has (lag-1 rho = 0.9585 on the row grid)."
+  },
+  "correlation": {
+    "observed_pearson": 0.4447502603995698,
+    "observed_spearman": 0.4696393146010557,
+    "numerator_denominator_split_reproduces_observed": 0.4447502603995698,
+    "denominator_cv_inverse_central_age_width": 0.4546050395330045,
+    "nulls_all_keep_the_shared_denominator": {
+      "a_permute_d18o_values": {
+        "label": "candidate's null",
+        "null_mean": 0.47019540401509935,
+        "null_sd": 0.03392037050670292,
+        "null_p95": 0.522468686255144,
+        "empirical_p_one_sided": 0.7840531561461794,
+        "n": 300
+      },
+      "b_permute_numerator_series": {
+        "label": "numerator permuted",
+        "null_mean": 0.2926527410333251,
+        "null_sd": 0.029779204119264317,
+        "null_p95": 0.3366536301038861,
+        "empirical_p_one_sided": 0.0033222591362126247,
+        "n": 300
+      },
+      "c_circular_shift_numerator": {
+        "label": "numerator spectrum kept, alignment broken",
+        "null_mean": 0.2882314798244138,
+        "null_sd": 0.06568374211815362,
+        "null_p95": 0.3912198138232389,
+        "empirical_p_one_sided": 0.009966777408637873,
+        "n": 300
+      },
+      "d_phase_randomised_numerator": {
+        "label": "numerator spectrum+mean+sd kept",
+        "null_mean": 0.2947462564199177,
+        "null_sd": 0.08915258088925562,
+        "null_p95": 0.4427543146695598,
+        "empirical_p_one_sided": 0.04318936877076412,
+        "n": 300
+      },
+      "e_block_bootstrap_numerator_20rows": {
+        "label": "20-row blocks",
+        "null_mean": 0.29564866424266795,
+        "null_sd": 0.05217989049290964,
+        "null_p95": 0.3807158339841182,
+        "empirical_p_one_sided": 0.0033222591362126247,
+        "n": 300
+      },
+      "f_permute_age_literal": {
+        "label": "literal age permutation (non-monotone ages)",
+        "null_mean": 0.0004249017309484504,
+        "null_sd": 0.3523033539558044,
+        "null_p95": 0.5758343704262484,
+        "empirical_p_one_sided": 0.11960132890365449,
+        "n": 300
+      },
+      "g_iid_lognormal_numerator": {
+        "label": "pure-denominator limit",
+        "null_mean": 0.20834291827692028,
+        "null_sd": 0.04520338856203712,
+        "null_p95": 0.2802038465788473,
+        "empirical_p_one_sided": 0.0033222591362126247,
+        "n": 300
+      }
+    }
+  },
+  "partial_correlations": {
+    "raw_numerators_corr_negligible": 0.37666061837939113,
+    "partial_corr_numerators_given_inv_xc": 0.37973419772575867,
+    "note": "conditioning out the shared denominator leaves essentially no numerator-level coupling; the entire observed positive correlation is denominator-driven."
+  },
+  "verdict_inputs": {
+    "claimed_periodicity_power": 0.18,
+    "recomputed_periodicity_power_gridA": 0.18000626607324666,
+    "recomputed_periodicity_power_gridB": 0.1799713634823608,
+    "recomputed_100ka_band_power": 0.05448083141316475,
+    "claimed_null_mean": 0.291,
+    "claimed_null_p95": 0.451,
+    "claimed_p_periodicity": 0.9,
+    "claimed_observed_r": 0.445,
+    "recomputed_observed_r": 0.4447502603995698,
+    "claimed_perm_null_mean_r": 0.47,
+    "claimed_p_r": 0.78
+  }
+}

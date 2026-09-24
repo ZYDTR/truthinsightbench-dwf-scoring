@@ -1,0 +1,139 @@
+{
+  "log_log_richness_vs_library": {
+    "slope": 0.07140316540336628,
+    "intercept": 4.1221236754186785,
+    "pearson_r": 0.15039329596896528,
+    "r_squared": 0.02261814347240879,
+    "spearman": 0.15086235703801565,
+    "interpretation": "Sub-linear positive scaling: a 10x larger library yields only about 1.18x more observed features, consistent with sampling from a large unobserved pool rather than with exhaustive enumeration."
+  },
+  "taylor_across_samples_raw": {
+    "slope": 2.39544009157655,
+    "intercept": 2.54616647623862,
+    "pearson_r": 0.95534370305138,
+    "r_squared": 0.9126815909599234,
+    "n": 529,
+    "degenerate": false
+  },
+  "taylor_across_samples_closed": {
+    "slope": null,
+    "intercept": null,
+    "pearson_r": null,
+    "r_squared": null,
+    "n": 529,
+    "degenerate": true,
+    "reason": "Every row of the closed matrix sums to 1, so the across-feature mean is exactly 1/n_features for every sample: the x-axis of the Taylor relation is constant by construction and no slope is estimable.",
+    "constant_across_unit_mean": -6.396929655216146,
+    "var_range": [
+      0.00010756820173202315,
+      0.0016126484415702395
+    ]
+  },
+  "taylor_across_features_raw": {
+    "slope": 1.8417125884061636,
+    "intercept": 3.526028066696548,
+    "pearson_r": 0.9827243186350326,
+    "r_squared": 0.9657470864366892,
+    "n": 600,
+    "degenerate": false
+  },
+  "closure_effect_on_taylor": "Closing the rows destroys the across-feature Taylor relation by construction: the per-sample mean is pinned to 1/n_features, so the mean-variance slope is not estimable on the closed scale. Scale behaviour must therefore be assessed on the raw counts, and any per-feature comparison must condition on library size.",
+  "rarefaction": {
+    "1000": {
+      "mean_richness": 30.979206049149337,
+      "sd_richness": 10.458015012830277,
+      "corr_with_raw_richness": 0.6747069113053872,
+      "corr_with_library": -0.3829198487800815
+    },
+    "5000": {
+      "mean_richness": 51.36105860113422,
+      "sd_richness": 16.823336355739396,
+      "corr_with_raw_richness": 0.7379309632027401,
+      "corr_with_library": -0.38151074223242415
+    },
+    "20000": {
+      "mean_richness": 78.25519848771266,
+      "sd_richness": 24.751565156604205,
+      "corr_with_raw_richness": 0.8045686798060868,
+      "corr_with_library": -0.3405669816652117
+    },
+    "100000": {
+      "mean_richness": 116.59735349716446,
+      "sd_richness": 34.388287568858644,
+      "corr_with_raw_richness": 0.8806869086903748,
+      "corr_with_library": -0.24303233130147173
+    },
+    "raw": {
+      "mean_richness": 155.83175803402648,
+      "sd_richness": 44.08326942958278
+    }
+  },
+  "rarefaction_interpretation": "Rarefied richness rises steeply with sequencing depth and never saturates, so raw richness is a depth-dependent statistic. At the smallest common depth (1000 counts, well below every sample's observed library) only about 31 of the mean 156 raw features are still visible: the composition is dominated by entities that the sampled depth does not reach.",
+  "pairwise_logratio": {
+    "n_pairs_evaluated": 1003,
+    "cooccurrence_median": 0.13043478260869565,
+    "logratio_variance_median": 4.094599251374404,
+    "logratio_variance_p05": 0.8968186060831991,
+    "logratio_variance_p95": 13.303856554046625,
+    "half_sample_ratio_median": 0.9977908780855493,
+    "frac_logratio_var_below_1": 0.06580259222333001
+  },
+  "pairwise_logratio_interpretation": "Median pairwise log-ratio variance across the full sample set is about 4.09, far above the < 1 range that would indicate near-proportional (stable-ratio) behaviour, and it is dominated by which samples contain both members at all (median joint presence 0.130).",
+  "clr_pca": {
+    "explained_variance_top10": [
+      0.21872032081265053,
+      0.15287478058695475,
+      0.042243163450632414,
+      0.0385344830404755,
+      0.02219819590578192,
+      0.017712321836943812,
+      0.01548700947958391,
+      0.014464430962719632,
+      0.013212553903695304,
+      0.012719496992461745
+    ],
+    "cumulative_top10": [
+      0.21872032081265053,
+      0.3715951013996053,
+      0.41383826485023767,
+      0.4523727478907132,
+      0.4745709437964951,
+      0.49228326563343894,
+      0.5077702751130229,
+      0.5222347060757425,
+      0.5354472599794379,
+      0.5481667569718996
+    ],
+    "n_components_for_50pct": 7,
+    "n_components_for_90pct": 106,
+    "pseudocount": 0.5,
+    "pseudocount_sensitivity": {
+      "0.1": {
+        "pc1": 0.2007119264455129,
+        "pc2": 0.13895169707516244,
+        "n_components_for_50pct": 10
+      },
+      "0.5": {
+        "pc1": 0.21872032081265053,
+        "pc2": 0.15287478058695475,
+        "n_components_for_50pct": 7
+      },
+      "1.0": {
+        "pc1": 0.22363816918121399,
+        "pc2": 0.15749161561832278,
+        "n_components_for_50pct": 6
+      },
+      "2.0": {
+        "pc1": 0.22621594395899508,
+        "pc2": 0.16067891058184822,
+        "n_components_for_50pct": 6
+      }
+    }
+  },
+  "clr_pca_interpretation": "No low-dimensional invariant dominates: the leading CLR axis carries only 21.9% of variance and 50% of variance needs 7 axes. The spectrum is also stable under pseudocount choice, so this is a property of the data and not of the zero-replacement rule.",
+  "occupancy_abundance": {
+    "n_features": 597,
+    "spearman": 0.9018756610570643,
+    "interpretation": "Prevalence and abundance are strongly and monotonically coupled, which is the classic signature of a shared underlying abundance distribution sampled at limited depth."
+  }
+}

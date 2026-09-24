@@ -1,0 +1,7 @@
+auxiliary_file,main_table,aux_rows,main_rows,unique_coordinates_in_main,equals_main_rows,equals_unique_coordinates,row_aligned,verdict,unique_coordinates_in_aux
+slope_glacial.tsv,Glacial,461,427,229,False,False,False,"per-unique-location lookup (or partially overlapping), NOT row-aligned",
+slope_nonglacial.tsv,Nonglacial,6271,6288,4900,False,False,False,"per-unique-location lookup (or partially overlapping), NOT row-aligned",
+precipitation_glacial.tsv,Glacial,444,427,229,,,False,"coordinate-keyed lookup table, NOT row-aligned to the main table",233.0
+precipitation_nonglacial.tsv,Nonglacial,6271,6288,4900,,,False,"coordinate-keyed lookup table, NOT row-aligned to the main table",4896.0
+lithology_parsed.tsv,Glacial,229,427,229,,,False,"coordinate-keyed lookup table, NOT row-aligned to the main table",229.0
+lithology_parsed_nonglacial.tsv,Nonglacial,4900,6288,4900,,,False,"coordinate-keyed lookup table, NOT row-aligned to the main table",4900.0

@@ -1,0 +1,21 @@
+{
+  "task_id": "Energy_01_photocatalytic_tradeoffs",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260919T171105-ef2501",
+  "source_run_json_sha256": "30691085230dbf6c67cee02f843efe4bc2aa334b476491f46a923437fad744df",
+  "source_release_json_sha256": "8c1820993a28a7a43bd8c5e9159dae29cf865d2fd41dc897cbdac6e633efbb6b",
+  "source_latest_validation_sha256": "53646ad804a7fd26a881b1c3f769ed5a0f9f53bddf6ffe03d7b2f34eddb10c0a",
+  "source_snapshot_manifest_sha256": "2ea40bfc9d38acada8e3ceb4179603affe710d0a2c02a144676b41cb8ad2ba67",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 972
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "32f6fb9eadc7befc9453f4d785da55a312a609aa7f123848dbbc16a504543e1a",
+  "output_sha256": "d54d2ed6590b7065c79dd323f35025cfd9b57e2c74a8b802756e5b884b9ab9c8"
+}

@@ -1,0 +1,5 @@
+cell,window,lo,hi,events_l,events_r,ratio_l_over_r,expected_l_under_constant_ratio,expected_r_under_constant_ratio,binom_p_constant_ratio,G_joint_window,p_G_joint_window_monte_carlo,G_joint_null_median,G_joint_null_p95
+anonymous_group_2|fast|common_support_only,-2 < s < 2,-2.0,2.0,0.0,0.0,,0.0,0.0,,46.571959143786756,0.0,1.3988520304718586,6.02882053867528
+anonymous_group_2|fast|common_support_only,0 < s < 2,0.0,2.0,0.0,0.0,,0.0,0.0,,46.571959143786756,0.0,1.3988520304718586,6.02882053867528
+anonymous_group_2|fast|common_support_only,2 < s < 12,2.0,12.0,200.0,6.0,33.333333333333336,178.17662337662338,27.823376623376625,3.4985568124806566e-07,46.571959143786756,0.0,1.3988520304718586,6.02882053867528
+anonymous_group_2|fast|common_support_only,s > 12,12.0,inf,133.0,46.0,2.891304347826087,154.82337662337662,24.176623376623375,1.4162946502367378e-05,46.571959143786756,0.0,1.3988520304718586,6.02882053867528

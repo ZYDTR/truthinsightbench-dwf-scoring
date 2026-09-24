@@ -1,0 +1,30 @@
+==============================================================================
+STAGE 6  evidence consolidation and artifact registry
+==============================================================================
+
+wrote results/evidence_table.csv (12 rows)
+
+per-curve shared-shape vs own-shape comparison (within-curve units):
+formulation_id  power_law_exponent_b  aicc_shared_shape_k1  aicc_own_power_law_k2  own_power_law_beats_shared_shape_by_aicc
+ formulation_1              0.984436          -3451.924829              -2.600466                                     False
+ formulation_2              0.906301            -15.859409              -6.949468                                     False
+ formulation_3              1.248881            -25.044750             -19.268262                                     False
+ formulation_4              1.230331            -38.866161             -40.288857                                      True
+NOTE: at n = 5 the AICc small-sample correction is large (6 for k=2, 24 for k=3 in the k_total convention), so a 1-parameter shared shape can out-score a 2-parameter own-shape fit even when the own shape tracks the curve better. RSS within the same curve is therefore reported alongside AICc.
+
+--- headline numbers ---
+F1 power-law exponent b: {'formulation_1': 0.984435864552447, 'formulation_2': 0.9063008776661079, 'formulation_3': 1.248881085126458, 'formulation_4': 1.2303311194811994}
+F1 segment-rate ratio   : {'formulation_1': 0.9333333333333335, 'formulation_2': 0.8016528925619832, 'formulation_3': 1.5403225806451613, 'formulation_4': 1.5805471124620059}
+F1 final yields (umol)  : {'formulation_1': 9.48, 'formulation_2': 4.13, 'formulation_3': 0.636, 'formulation_4': 0.173}  span x54.8
+F1 AICc winners         : {'formulation_1': 'saturation', 'formulation_2': 'power_law', 'formulation_3': 'power_law', 'formulation_4': 'power_law'}
+F2 model ranking        : ['M1_action_proportional_to_A', 'M2_action_proportional_to_A_power_p', 'M3_onset_step', 'M0_constant_action', 'M4_absorption_times_exp_rolloff']
+F2 red-end supported    : True   blue-end supported: False
+F2 650 nm holdout       : observed 4.2 vs predicted 18.940998449295517
+F3 f1 late -0.2502 [-0.34047701470588243, -0.1562004117647059], f2 late +0.1882 [0.12329117647058825, 0.24772919117647052]
+F3 difference -0.4384 CI [-0.5403878676470589, -0.3188146911764706]
+F4 peak loading 1.0%; monotone exact p = 0.3333333333333333
+F5 shared formulations ['formulation_1', 'formulation_2']; orders agree = False
+
+wrote file_registry.json with 36 resolved artifacts
+
+stage 6 complete

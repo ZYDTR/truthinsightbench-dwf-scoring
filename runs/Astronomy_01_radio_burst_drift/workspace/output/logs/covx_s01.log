@@ -1,0 +1,54 @@
+pass1 Sheet_001: cells=67280 distinct_sst=8
+pass1 Sheet_002: cells=67280 distinct_sst=9
+pass1 Sheet_019: cells=3206 distinct_sst=4
+pass1 Sheet_020: cells=1252 distinct_sst=7
+pass1 Sheet_023: cells=1080 distinct_sst=7
+pass1 Sheet_038: cells=1080 distinct_sst=7
+pass1 Sheet_039: cells=129 distinct_sst=5
+pass1 Sheet_040: cells=149 distinct_sst=5
+pass1 Sheet_041: cells=129 distinct_sst=5
+pass1 Sheet_042: cells=129 distinct_sst=5
+pass1 Sheet_043: cells=129 distinct_sst=5
+pass1 Sheet_044: cells=129 distinct_sst=5
+pass1 Sheet_046: cells=139 distinct_sst=5
+pass1 Sheet_047: cells=139 distinct_sst=5
+pass1 Sheet_024: cells=280 distinct_sst=4
+pass1 Sheet_025: cells=55 distinct_sst=3
+pass1 Sheet_026: cells=268 distinct_sst=4
+pass1 Sheet_027: cells=55 distinct_sst=3
+pass1 Sheet_028: cells=284 distinct_sst=4
+pass1 Sheet_029: cells=51 distinct_sst=3
+pass1 Sheet_030: cells=270 distinct_sst=4
+pass1 Sheet_031: cells=45 distinct_sst=3
+pass1 Sheet_032: cells=260 distinct_sst=4
+pass1 Sheet_033: cells=51 distinct_sst=3
+pass1 Sheet_034: cells=278 distinct_sst=4
+pass1 Sheet_035: cells=53 distinct_sst=3
+pass2 resolved 45 shared strings
+Sheet_001: emitted 33637 rows, maxrow=33644
+Sheet_002: emitted 33637 rows, maxrow=33644
+Sheet_019: emitted 1602 rows, maxrow=1605
+Sheet_020: emitted 624 rows, maxrow=630
+Sheet_023: emitted 538 rows, maxrow=544
+Sheet_038: emitted 538 rows, maxrow=544
+Sheet_039: emitted 63 rows, maxrow=67
+Sheet_040: emitted 73 rows, maxrow=77
+Sheet_041: emitted 63 rows, maxrow=67
+Sheet_042: emitted 63 rows, maxrow=67
+Sheet_043: emitted 63 rows, maxrow=67
+Sheet_044: emitted 63 rows, maxrow=67
+Sheet_046: emitted 68 rows, maxrow=72
+Sheet_047: emitted 68 rows, maxrow=72
+Sheet_024: emitted 139 rows, maxrow=142
+Sheet_025: emitted 27 rows, maxrow=29
+Sheet_026: emitted 133 rows, maxrow=136
+Sheet_027: emitted 27 rows, maxrow=29
+Sheet_028: emitted 141 rows, maxrow=144
+Sheet_029: emitted 25 rows, maxrow=27
+Sheet_030: emitted 134 rows, maxrow=137
+Sheet_031: emitted 22 rows, maxrow=24
+Sheet_032: emitted 129 rows, maxrow=132
+Sheet_033: emitted 25 rows, maxrow=27
+Sheet_034: emitted 138 rows, maxrow=141
+Sheet_035: emitted 26 rows, maxrow=28
+wrote covx_absent_blocks.csv rows=72066

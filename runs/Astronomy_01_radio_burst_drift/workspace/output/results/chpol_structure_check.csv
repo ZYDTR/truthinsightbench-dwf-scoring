@@ -1,0 +1,13 @@
+population_series_id,regime,sheet,n_bins_view,n_bins_workbook,bins_identical_ordered,bins_identical_sorted,counts_identical,counts_sum_view,counts_sum_workbook
+population_series_1,fast,Sheet_025,26,26,True,True,True,10560.0,10560.0
+population_series_1,slow,Sheet_024,137,137,False,True,False,892.0,892.0
+population_series_2,fast,Sheet_027,26,26,True,True,True,14492.0,14492.0
+population_series_2,slow,Sheet_026,131,131,False,True,False,1303.0,1303.0
+population_series_3,fast,Sheet_029,24,24,True,True,True,357.0,357.0
+population_series_3,slow,Sheet_028,139,139,False,True,False,803.0,803.0
+population_series_4,fast,Sheet_031,21,21,True,True,True,52.0,52.0
+population_series_4,slow,Sheet_030,132,132,False,True,False,392.0,392.0
+population_series_5,fast,Sheet_033,24,24,True,True,True,429.0,429.0
+population_series_5,slow,Sheet_032,127,127,False,True,False,1092.0,1092.0
+population_series_6,fast,Sheet_035,25,25,True,True,True,664.0,664.0
+population_series_6,slow,Sheet_034,136,136,False,True,False,2201.0,2201.0

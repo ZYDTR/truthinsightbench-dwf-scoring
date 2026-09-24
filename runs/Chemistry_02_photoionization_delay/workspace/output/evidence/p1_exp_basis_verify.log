@@ -1,0 +1,37 @@
+Z shape (276, 181) |Z| max 1.782
+
+[claim 1] degree of the complex amplitude via a Legendre fit (legval route)
+  Lmax= 0  max|resid|=1.6484e+00  median|resid|=8.4911e-01  median|top coef|=1.9481e-01
+  Lmax= 1  max|resid|=1.2146e+00  median|resid|=6.9026e-01  median|top coef|=3.6722e-01
+  Lmax= 2  max|resid|=5.3269e-01  median|resid|=1.9493e-01  median|top coef|=6.9722e-01
+  Lmax= 3  max|resid|=9.5618e-05  median|resid|=4.8273e-05  median|top coef|=3.1018e-01
+  Lmax= 4  max|resid|=9.5019e-05  median|resid|=4.8288e-05  median|top coef|=1.8541e-06
+  Lmax= 8  max|resid|=9.4325e-05  median|resid|=4.8226e-05  median|top coef|=2.4881e-06
+  Lmax=12  max|resid|=9.3290e-05  median|resid|=4.7454e-05  median|top coef|=3.1490e-06
+  -> collapse L2/L3 = 5.571e+03; plateau spread L3..L12 = 1.025
+  -> median |c_3| = 3.102e-01, median |c_4| = 1.854e-06
+
+[claim 2] stored precision read independently with the csv module
+  experiment/magnitude     raw-decimal mode=17  min-significant-decimals mode=5 p95=6 max=7
+  experiment/phase         raw-decimal mode=16  min-significant-decimals mode=4 p95=5 max=9
+  5-sig quantum of Z: median 7.338e-06, max 1.391e-05
+  residual floor at L=3 = 9.562e-05 -> floor/max 5-sig quantum = 6.874
+  float64 quantum of Z = 3.957e-16; floor is 241653638240x larger
+
+[claim 3] L<=2-only null
+  L2 max resid 0.5327 vs L3 9.562e-05 -> improvement 5571.0
+  variance captured: l<=0 0.0000, l<=2 0.8562, l<=3 1.000000
+
+[claim 4] basis independence (Fourier) and angular-subset stability
+  Fourier K=2 2.7834e-01 -> K=3 8.9498e-05  (collapse 3110.0)
+  every-4th-angle coefficient difference: max 1.607e-05 (scale 1.106)
+
+[claim 5] delay panel angular degree
+  Lmax= 2 max|resid| = 8.9334e+03  (row-median 1.6016e+02)
+  Lmax= 3 max|resid| = 8.8568e+03  (row-median 1.4874e+02)
+  Lmax= 4 max|resid| = 8.9119e+03  (row-median 1.1424e+02)
+  Lmax= 6 max|resid| = 8.8364e+03  (row-median 7.7948e+01)
+  Lmax= 8 max|resid| = 8.7994e+03  (row-median 5.4220e+01)
+  Lmax=12 max|resid| = 8.8525e+03  (row-median 2.9330e+01)
+
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p1_exp_basis_verdict.json

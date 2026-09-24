@@ -1,0 +1,22 @@
+path,lines,delimiter,first_line_is_header,n_columns_first_line,first_line_preview
+raw/beryllium.tsv,71,tab,True,16,Reference	Reference DOI	Locality	Region	Sample ID	Type	Depth (m)	Sal (PSU)	T (C)	pH	Be (nmol/kg)	Be dissolved (nmol/kg)	
+raw/glacial_erosion_Earth.tsv,428,tab,True,24,Compilation	Reference	Reference DOI	Locality	Glacier	Region	Latitude	Longitude	Elevation (m)	Precipitation (mm/yr)	Slope
+raw/lithology_parsed.tsv,230,tab,True,7,Latitude	Longitude	Hash	Lithology	Age	Age Uncert	Unparsed Lithology
+raw/lithology_parsed_nonglacial.tsv,4901,tab,True,7,Latitude	Longitude	Hash	Lithology	Age	Age Uncert	Unparsed Lithology
+raw/lithology_reference.tsv,2,comma,True,2,"Chorlton, L.B. | 2007 | Generalized geology of the world: bedrock domains and major faults in GIS format: a small-scale "
+raw/lithology_reference_nonglacial.tsv,2,comma,True,2,"Chorlton, L.B. | 2007 | Generalized geology of the world: bedrock domains and major faults in GIS format: a small-scale "
+raw/lithology_unparsed.tsv,230,tab,True,11,agemax	agemin	age	rocktype	rockname	rockdescrip	rockstratname	rockcomments	refstrings	Latitude	Longitude
+raw/lithology_unparsed_nonglacial.tsv,4901,tab,True,11,agemax	agemin	age	rocktype	rockname	rockdescrip	rockstratname	rockcomments	refstrings	Latitude	Longitude
+raw/nonglacial_erosion_Earth.tsv,6289,tab,True,26,Compilation	Reference	Reference DOI	Locality	Basin	Place	Region	Sample ID	Latitude	Longitude	Elevation (m)	Precipitation
+raw/prior compilations/CHELSEA/annualprecipitation.jl,56,none,False,1,## --- Import datasets
+raw/prior compilations/CHELSEA/precipitation_glacial.tsv,445,tab,True,3,Latitude	Longitude	Precipitation_mm_yr
+raw/prior compilations/CHELSEA/precipitation_nonglacial.tsv,6272,tab,True,3,Latitude	Longitude	Precipitation_mm_yr
+raw/prior compilations/CHELSEA/references.txt,19,comma,True,18,"Karger, D.N., Conrad, O., Böhner, J., Kawohl, T., Kreft, H., Soria-Auza, R.W., Zimmermann, N.E., Linder, P., Kessler, M."
+raw/prior compilations/Chen et al. 2023/Chen_et_al_2021_short-term_erosion_rate_data.csv,1522,comma,True,11,"Country,Location,Station ID,Short-term erosion rate (mm kyr^-1),Basin area (km^2),Latitude,Longitude,Koppen�VGeiger clas"
+raw/prior compilations/GloRiSe/GloRiSe combined.tsv,1079,tab,True,26,Reference	Reference DOI	Sample_ID	Location_ID	Basin_ID	Basin	Place	Region	Latitude	Longitude	Elevation	Season	Observatio
+raw/prior compilations/OCTOPUS/octopusages.tsv,3343,tab,True,2,Be10_exposure_yr	Al26_exposure_yr
+raw/prior compilations/OCTOPUS/octopusdata.tsv,3343,tab,True,69,ahgfl1	ahgfl2	al26ep	al26ep_err	al26nc	al26nc_err	al26np	al26np_err	alams	alcorr	alprod	alself	alsnow	alstnd	altopo	alto
+raw/prior compilations/OCTOPUS/octopusexposureage.jl,87,none,False,1,# Calculate basin-averaged exposure ages from OCTOPUS data using CAIRN scalings
+raw/slope_glacial.tsv,461,none,False,1,88.13203214695751
+raw/slope_nonglacial.tsv,6271,none,False,1,416.31848852901487
+raw/source_notes.txt,1,none,False,1,A description of all the files in this folder...

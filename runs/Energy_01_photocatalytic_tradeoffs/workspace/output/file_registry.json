@@ -1,0 +1,259 @@
+{
+  "schema": "truthinsightbench-native-artifact-registry",
+  "task_id": "Energy_01_photocatalytic_tradeoffs",
+  "note": "Native artifact identifiers used by output/Result.md so that every registered finding resolves to real executed analysis source and machine-readable result evidence.",
+  "files": [
+    {
+      "id": "F001",
+      "relative_path": "analysis/common.py",
+      "description": "shared loaders, kinetic model bank, metrics, bootstrap",
+      "exists": true,
+      "bytes": 21824
+    },
+    {
+      "id": "F002",
+      "relative_path": "analysis/stage1_inventory_timecourse.py",
+      "description": "inventory + time-course kinetic model comparison",
+      "exists": true,
+      "bytes": 9544
+    },
+    {
+      "id": "F003",
+      "relative_path": "analysis/stage2_spectra.py",
+      "description": "action-vs-absorption model comparison and window holdout",
+      "exists": true,
+      "bytes": 14234
+    },
+    {
+      "id": "F004",
+      "relative_path": "analysis/stage3_transients.py",
+      "description": "rise/decay model comparison, windowed stats, cross-trace contrast",
+      "exists": true,
+      "bytes": 20577
+    },
+    {
+      "id": "F005",
+      "relative_path": "analysis/stage4_loading_crossmodal.py",
+      "description": "loading models, cross-modal synthesis, curve holdouts",
+      "exists": true,
+      "bytes": 20957
+    },
+    {
+      "id": "F006",
+      "relative_path": "analysis/stage5_robustness.py",
+      "description": "unit-free action ratios, shared-shape null, loading bootstrap",
+      "exists": true,
+      "bytes": 15574
+    },
+    {
+      "id": "F007",
+      "relative_path": "analysis/stage6_consolidate.py",
+      "description": "evidence consolidation and registry assembly",
+      "exists": true,
+      "bytes": 17771
+    },
+    {
+      "id": "F010",
+      "relative_path": "results/inventory.json",
+      "description": "schema, ranges, integrity, analysis-unit counts",
+      "exists": true,
+      "bytes": 3557
+    },
+    {
+      "id": "F011",
+      "relative_path": "results/timecourse_kinetics.json",
+      "description": "per-formulation kinetic fits and null baselines",
+      "exists": true,
+      "bytes": 16877
+    },
+    {
+      "id": "F012",
+      "relative_path": "results/spectra_analysis.json",
+      "description": "action/absorption model comparison and holdouts",
+      "exists": true,
+      "bytes": 6463
+    },
+    {
+      "id": "F013",
+      "relative_path": "results/transient_analysis.json",
+      "description": "transient decay models, window stats, contrast",
+      "exists": true,
+      "bytes": 29090
+    },
+    {
+      "id": "F014",
+      "relative_path": "results/loading_crossmodal.json",
+      "description": "loading response and cross-modal coverage",
+      "exists": true,
+      "bytes": 17595
+    },
+    {
+      "id": "F015",
+      "relative_path": "results/robustness.json",
+      "description": "R1/R2/R3 robustness battery",
+      "exists": true,
+      "bytes": 6277
+    },
+    {
+      "id": "F016",
+      "relative_path": "results/registration_summary.json",
+      "description": "consolidated headline numbers per finding",
+      "exists": true,
+      "bytes": 19517
+    },
+    {
+      "id": "F017",
+      "relative_path": "results/evidence_table.csv",
+      "description": "flat per-analysis-unit evidence table",
+      "exists": true,
+      "bytes": 1674
+    },
+    {
+      "id": "F020",
+      "relative_path": "figures/fig1_timecourses.png",
+      "description": "product-evolution curves",
+      "exists": true,
+      "bytes": 112440
+    },
+    {
+      "id": "F021",
+      "relative_path": "figures/fig2_spectra.png",
+      "description": "absorption, action, and efficiency ratio",
+      "exists": true,
+      "bytes": 156073
+    },
+    {
+      "id": "F022",
+      "relative_path": "figures/fig3_transients.png",
+      "description": "transient traces and rise/decay fits",
+      "exists": true,
+      "bytes": 182525
+    },
+    {
+      "id": "F023",
+      "relative_path": "figures/fig4_loading.png",
+      "description": "cofactor-loading response",
+      "exists": true,
+      "bytes": 136105
+    },
+    {
+      "id": "F024",
+      "relative_path": "figures/fig5_crossmodal.png",
+      "description": "cross-modal contrast for shared formulations",
+      "exists": true,
+      "bytes": 53355
+    },
+    {
+      "id": "F030",
+      "relative_path": "verification/recomputed_kinetics.json",
+      "description": "V1 independent recomputation of the kinetic fits",
+      "exists": true,
+      "bytes": 9688
+    },
+    {
+      "id": "F031",
+      "relative_path": "verification/final_result.json",
+      "description": "V2 independent recomputation of action vs absorption",
+      "exists": true,
+      "bytes": 4986
+    },
+    {
+      "id": "F032",
+      "relative_path": "verification/transient_verification.json",
+      "description": "V3 independent recomputation of the transient late window",
+      "exists": true,
+      "bytes": 1052
+    },
+    {
+      "id": "F033",
+      "relative_path": "verification/cofactor_loading_recomputed.json",
+      "description": "V4 independent recomputation of the loading scan",
+      "exists": true,
+      "bytes": 4183
+    },
+    {
+      "id": "F034",
+      "relative_path": "verification/audit_results.json",
+      "description": "V5 independent integrity and consistency audit of all four files",
+      "exists": true,
+      "bytes": 23265
+    },
+    {
+      "id": "F035",
+      "relative_path": "verification/transient_artifact_test.json",
+      "description": "A1 transient sign-contrast artifact tests (H1 offset / H2 drift / H3 decay)",
+      "exists": true,
+      "bytes": 12870
+    },
+    {
+      "id": "F036",
+      "relative_path": "verification/h1h2h3_optics_test.json",
+      "description": "A2 action-spectrum alternative explanations incl. the transmittance bound",
+      "exists": true,
+      "bytes": 17882
+    },
+    {
+      "id": "F037",
+      "relative_path": "verification/cofactor_shape_identifiability.json",
+      "description": "A3 loading-shape identifiability and AICc degeneracy at n = 4",
+      "exists": true,
+      "bytes": 9222
+    },
+    {
+      "id": "F038",
+      "relative_path": "verification/mechanism_fits_results.json",
+      "description": "A4 kinetic-shape identifiability and 8 h falsification predictions",
+      "exists": true,
+      "bytes": 51072
+    },
+    {
+      "id": "F039",
+      "relative_path": "verification/cofactor_shape_identifiability_agentB.json",
+      "description": "A3 second independent loading-shape run",
+      "exists": true,
+      "bytes": 52459
+    },
+    {
+      "id": "F040",
+      "relative_path": "analysis/stage7_audit_fixes.py",
+      "description": "stage 7: persisted audit-requested checks",
+      "exists": true,
+      "bytes": 8686
+    },
+    {
+      "id": "F041",
+      "relative_path": "results/audit_fixes.json",
+      "description": "normalisation conventions, transmittance bound grid, loading leave-one-out restatement",
+      "exists": true,
+      "bytes": 5453
+    },
+    {
+      "id": "F042",
+      "relative_path": "analysis/workflow_audit_findings.js",
+      "description": "native workflow auditing each finding against its artifacts",
+      "exists": true,
+      "bytes": 9624
+    },
+    {
+      "id": "F043",
+      "relative_path": "audit/audit_finding1_check.py",
+      "description": "auditor scratch check for Finding 1",
+      "exists": true,
+      "bytes": 2441
+    },
+    {
+      "id": "F044",
+      "relative_path": "audit/audit_finding2.py",
+      "description": "auditor scratch check for Finding 2",
+      "exists": true,
+      "bytes": 3561
+    },
+    {
+      "id": "F045",
+      "relative_path": "audit/audit_finding4_check.py",
+      "description": "auditor scratch check for Finding 4",
+      "exists": true,
+      "bytes": 4884
+    }
+  ]
+}

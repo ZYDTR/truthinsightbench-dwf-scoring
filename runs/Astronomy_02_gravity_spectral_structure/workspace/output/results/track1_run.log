@@ -1,0 +1,13 @@
+[    1.1s] loaded 1698 rows, 22 passes
+[    1.3s] gap passes (>1.5 min spacing): ['pass_02', 'pass_03', 'pass_09', 'pass_10', 'pass_15', 'pass_18', 'pass_19']
+[    1.8s] item1 done: median raw ratios B/A=0.5413, C/A=0.6741, B/C=0.8174
+[    2.1s] item2 done
+[    5.8s] item3 done: P(B/A<1)=1.0000, P(C/A<1)=1.0000, P(B/C<1)=1.0000
+[    6.0s] item4 done
+[    7.3s] item5 done
+[   73.6s] item6 done
+[   73.6s] item7 done
+[   73.9s] item8 done
+[   74.0s] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/results/model_comparison.json
+JSON_OK 74137
+EXIT=0

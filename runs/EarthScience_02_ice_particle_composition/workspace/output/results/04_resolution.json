@@ -1,0 +1,1014 @@
+{
+  "polymer_percent_denominator": [
+    {
+      "sample_id": "sample_001",
+      "reported_total_per_L": 260.0,
+      "implied_denominator_median": 259.8705501618123,
+      "implied_denominator_spread": 3.3466533466532837,
+      "family_count_sum": 259.74999999999994,
+      "ratio_denominator_over_reported_total": 0.9995021160069703
+    },
+    {
+      "sample_id": "sample_002",
+      "reported_total_per_L": 8774.0,
+      "implied_denominator_median": 8875.0,
+      "implied_denominator_spread": 926.5173067804644,
+      "family_count_sum": 8773.749999999998,
+      "ratio_denominator_over_reported_total": 1.0115112833371325
+    },
+    {
+      "sample_id": "sample_003",
+      "reported_total_per_L": 4156.0,
+      "implied_denominator_median": 4155.845905172414,
+      "implied_denominator_spread": 168.57142857142844,
+      "family_count_sum": 4155.720000000001,
+      "ratio_denominator_over_reported_total": 0.999962922322525
+    },
+    {
+      "sample_id": "sample_004",
+      "reported_total_per_L": 7017.0,
+      "implied_denominator_median": 7017.411121239744,
+      "implied_denominator_spread": 765.0000000000009,
+      "family_count_sum": 7017.32,
+      "ratio_denominator_over_reported_total": 1.0000585893173355
+    },
+    {
+      "sample_id": "sample_005",
+      "reported_total_per_L": 2665.0,
+      "implied_denominator_median": 2668.769341860945,
+      "implied_denominator_spread": 108.4444444444448,
+      "family_count_sum": 2664.6,
+      "ratio_denominator_over_reported_total": 1.001414387189848
+    },
+    {
+      "sample_id": "sample_006",
+      "reported_total_per_L": 75143.0,
+      "implied_denominator_median": 77175.0,
+      "implied_denominator_spread": 21000.0,
+      "family_count_sum": 75142.62999999999,
+      "ratio_denominator_over_reported_total": 1.027041773684841
+    },
+    {
+      "sample_id": "sample_007",
+      "reported_total_per_L": 14558.0,
+      "implied_denominator_median": 13700.0,
+      "implied_denominator_spread": 5506.666666666666,
+      "family_count_sum": 14557.679999999998,
+      "ratio_denominator_over_reported_total": 0.941063332875395
+    },
+    {
+      "sample_id": "sample_008",
+      "reported_total_per_L": 3710.0,
+      "implied_denominator_median": 3664.2857142857138,
+      "implied_denominator_spread": 94.07665505226532,
+      "family_count_sum": 3709.8500000000004,
+      "ratio_denominator_over_reported_total": 0.987678090103966
+    },
+    {
+      "sample_id": "sample_009",
+      "reported_total_per_L": 9857.0,
+      "implied_denominator_median": 9798.611111111111,
+      "implied_denominator_spread": 62.76620791507048,
+      "family_count_sum": 9857.49,
+      "ratio_denominator_over_reported_total": 0.9940764036837894
+    },
+    {
+      "sample_id": "sample_010",
+      "reported_total_per_L": 4530.0,
+      "implied_denominator_median": 4528.5714285714275,
+      "implied_denominator_spread": 71.13636363636306,
+      "family_count_sum": 4530.37,
+      "ratio_denominator_over_reported_total": 0.9996846420687479
+    },
+    {
+      "sample_id": "sample_011",
+      "reported_total_per_L": 41.0,
+      "implied_denominator_median": 41.14468300642692,
+      "implied_denominator_spread": 0.031385927505326094,
+      "family_count_sum": 41.144,
+      "ratio_denominator_over_reported_total": 1.0035288538152907
+    },
+    {
+      "sample_id": "sample_012",
+      "reported_total_per_L": 67.0,
+      "implied_denominator_median": 66.87258687258688,
+      "implied_denominator_spread": 0.24714241581713736,
+      "family_count_sum": 66.86999999999999,
+      "ratio_denominator_over_reported_total": 0.9980983115311475
+    },
+    {
+      "sample_id": "sample_013",
+      "reported_total_per_L": 992.0,
+      "implied_denominator_median": 991.8328204297592,
+      "implied_denominator_spread": 15.88628762541805,
+      "family_count_sum": 991.8499999999999,
+      "ratio_denominator_over_reported_total": 0.9998314722074185
+    },
+    {
+      "sample_id": "sample_014",
+      "reported_total_per_L": 186.0,
+      "implied_denominator_median": 186.04521492295214,
+      "implied_denominator_spread": 0.8684863523572801,
+      "family_count_sum": 186.04999999999998,
+      "ratio_denominator_over_reported_total": 1.0002430909836137
+    },
+    {
+      "sample_id": "sample_015",
+      "reported_total_per_L": 4159.0,
+      "implied_denominator_median": 4135.126418988648,
+      "implied_denominator_spread": 121.84873949579742,
+      "family_count_sum": 4159.490000000001,
+      "ratio_denominator_over_reported_total": 0.9942597785498072
+    },
+    {
+      "sample_id": "sample_016",
+      "reported_total_per_L": 430.0,
+      "implied_denominator_median": 429.5812941816204,
+      "implied_denominator_spread": 4.467353951890061,
+      "family_count_sum": 429.66,
+      "ratio_denominator_over_reported_total": 0.9990262655386521
+    },
+    {
+      "sample_id": "sample_017",
+      "reported_total_per_L": 456.0,
+      "implied_denominator_median": 456.1949168713337,
+      "implied_denominator_spread": 1.614561908679434,
+      "family_count_sum": 456.10999999999996,
+      "ratio_denominator_over_reported_total": 1.0004274492792407
+    },
+    {
+      "sample_id": "sample_018",
+      "reported_total_per_L": 144.0,
+      "implied_denominator_median": 143.82402707275804,
+      "implied_denominator_spread": 0.4369776096638702,
+      "family_count_sum": 143.82999999999998,
+      "ratio_denominator_over_reported_total": 0.998777965783042
+    },
+    {
+      "sample_id": "sample_019",
+      "reported_total_per_L": 13794.0,
+      "implied_denominator_median": 13595.454545454546,
+      "implied_denominator_spread": 2300.000000000002,
+      "family_count_sum": 13794.14,
+      "ratio_denominator_over_reported_total": 0.9856063901300961
+    },
+    {
+      "sample_id": "sample_020",
+      "reported_total_per_L": 90.0,
+      "implied_denominator_median": 89.88962477022586,
+      "implied_denominator_spread": 0.11390800725162364,
+      "family_count_sum": 89.91999999999999,
+      "ratio_denominator_over_reported_total": 0.9987736085580652
+    },
+    {
+      "sample_id": "sample_021",
+      "reported_total_per_L": 2303.0,
+      "implied_denominator_median": 2303.9526456265885,
+      "implied_denominator_spread": 68.01801801801821,
+      "family_count_sum": 2302.580000000001,
+      "ratio_denominator_over_reported_total": 1.000413654201732
+    },
+    {
+      "sample_id": "sample_022",
+      "reported_total_per_L": 423.0,
+      "implied_denominator_median": 423.2419586312228,
+      "implied_denominator_spread": 3.014184397163092,
+      "family_count_sum": 423.07000000000005,
+      "ratio_denominator_over_reported_total": 1.000572006220385
+    },
+    {
+      "sample_id": "sample_023",
+      "reported_total_per_L": 270.0,
+      "implied_denominator_median": 269.47368421052636,
+      "implied_denominator_spread": 0.7794803464357187,
+      "family_count_sum": 269.66,
+      "ratio_denominator_over_reported_total": 0.9980506822612087
+    },
+    {
+      "sample_id": "sample_024",
+      "reported_total_per_L": 33.0,
+      "implied_denominator_median": 33.41836734693878,
+      "implied_denominator_spread": 0.013483263555158942,
+      "family_count_sum": 33.42,
+      "ratio_denominator_over_reported_total": 1.0126777983920843
+    },
+    {
+      "sample_id": "sample_025",
+      "reported_total_per_L": 6421.0,
+      "implied_denominator_median": 6420.621675185146,
+      "implied_denominator_spread": 631.818181818182,
+      "family_count_sum": 6420.84,
+      "ratio_denominator_over_reported_total": 0.999941080078671
+    },
+    {
+      "sample_id": "sample_026",
+      "reported_total_per_L": 557.0,
+      "implied_denominator_median": 556.7685589519651,
+      "implied_denominator_spread": 1.4082687338500364,
+      "family_count_sum": 556.7999999999998,
+      "ratio_denominator_over_reported_total": 0.9995844864487704
+    },
+    {
+      "sample_id": "sample_027",
+      "reported_total_per_L": 1454.0,
+      "implied_denominator_median": 1454.5248835749428,
+      "implied_denominator_spread": 46.741573033708164,
+      "family_count_sum": 1454.45,
+      "ratio_denominator_over_reported_total": 1.0003609928300845
+    },
+    {
+      "sample_id": "sample_028",
+      "reported_total_per_L": 791.0,
+      "implied_denominator_median": 790.7159119655958,
+      "implied_denominator_spread": 13.909774436090288,
+      "family_count_sum": 790.6800000000001,
+      "ratio_denominator_over_reported_total": 0.9996408495140275
+    },
+    {
+      "sample_id": "sample_029",
+      "reported_total_per_L": 351.0,
+      "implied_denominator_median": 351.0480054090602,
+      "implied_denominator_spread": 2.7560483870968255,
+      "family_count_sum": 351.18,
+      "ratio_denominator_over_reported_total": 1.00013676754718
+    },
+    {
+      "sample_id": "sample_030",
+      "reported_total_per_L": 4437.0,
+      "implied_denominator_median": 4437.037635764813,
+      "implied_denominator_spread": 525.0,
+      "family_count_sum": 4436.949999999999,
+      "ratio_denominator_over_reported_total": 1.0000084822548598
+    }
+  ],
+  "size_percent_denominator": [
+    {
+      "sample_id": "sample_001",
+      "reported_total_per_L": 260.0,
+      "implied_denominator_median": 259.7622027534418,
+      "implied_denominator_spread": 0.26879675415239035,
+      "family_count_sum": 259.75,
+      "ratio_denominator_over_reported_total": 0.9990853952055453
+    },
+    {
+      "sample_id": "sample_002",
+      "reported_total_per_L": 8774.0,
+      "implied_denominator_median": 8773.917067752684,
+      "implied_denominator_spread": 77.87878787878799,
+      "family_count_sum": 8773.75,
+      "ratio_denominator_over_reported_total": 0.9999905479544887
+    },
+    {
+      "sample_id": "sample_003",
+      "reported_total_per_L": 4156.0,
+      "implied_denominator_median": 4156.076592418914,
+      "implied_denominator_spread": 38.38383838383743,
+      "family_count_sum": 4155.72,
+      "ratio_denominator_over_reported_total": 1.0000184293597
+    },
+    {
+      "sample_id": "sample_004",
+      "reported_total_per_L": 7017.0,
+      "implied_denominator_median": 7014.789711431602,
+      "implied_denominator_spread": 86.26764539808119,
+      "family_count_sum": 7017.320000000001,
+      "ratio_denominator_over_reported_total": 0.999685009467237
+    },
+    {
+      "sample_id": "sample_005",
+      "reported_total_per_L": 2665.0,
+      "implied_denominator_median": 2665.061728395062,
+      "implied_denominator_spread": 81.79200542005447,
+      "family_count_sum": 2664.59,
+      "ratio_denominator_over_reported_total": 1.0000231626247886
+    },
+    {
+      "sample_id": "sample_006",
+      "reported_total_per_L": 75143.0,
+      "implied_denominator_median": 76133.33333333334,
+      "implied_denominator_spread": 19367.846309403423,
+      "family_count_sum": 75142.63999999998,
+      "ratio_denominator_over_reported_total": 1.0131793158821625
+    },
+    {
+      "sample_id": "sample_007",
+      "reported_total_per_L": 14558.0,
+      "implied_denominator_median": 14551.916376306619,
+      "implied_denominator_spread": 1046.1538461538476,
+      "family_count_sum": 14557.68,
+      "ratio_denominator_over_reported_total": 0.9995821113000838
+    },
+    {
+      "sample_id": "sample_008",
+      "reported_total_per_L": 3710.0,
+      "implied_denominator_median": 3708.1355932203387,
+      "implied_denominator_spread": 52.48478886581461,
+      "family_count_sum": 3709.85,
+      "ratio_denominator_over_reported_total": 0.9994974644798756
+    },
+    {
+      "sample_id": "sample_009",
+      "reported_total_per_L": 9857.0,
+      "implied_denominator_median": 9856.318518078913,
+      "implied_denominator_spread": 64.51754385964887,
+      "family_count_sum": 9857.489999999998,
+      "ratio_denominator_over_reported_total": 0.9999308631509499
+    },
+    {
+      "sample_id": "sample_010",
+      "reported_total_per_L": 4530.0,
+      "implied_denominator_median": 4529.353468617272,
+      "implied_denominator_spread": 3.552227342551305,
+      "family_count_sum": 4530.37,
+      "ratio_denominator_over_reported_total": 0.9998572778404573
+    },
+    {
+      "sample_id": "sample_011",
+      "reported_total_per_L": 41.0,
+      "implied_denominator_median": 41.120000000000005,
+      "implied_denominator_spread": 0.04336642947055225,
+      "family_count_sum": 41.128,
+      "ratio_denominator_over_reported_total": 1.0029268292682927
+    },
+    {
+      "sample_id": "sample_012",
+      "reported_total_per_L": 67.0,
+      "implied_denominator_median": 66.86264029930517,
+      "implied_denominator_spread": 0.024959182772903432,
+      "family_count_sum": 66.86999999999999,
+      "ratio_denominator_over_reported_total": 0.99794985521351
+    },
+    {
+      "sample_id": "sample_013",
+      "reported_total_per_L": 992.0,
+      "implied_denominator_median": 991.8167217570308,
+      "implied_denominator_spread": 19.241443108233057,
+      "family_count_sum": 991.8399999999999,
+      "ratio_denominator_over_reported_total": 0.9998152437066843
+    },
+    {
+      "sample_id": "sample_014",
+      "reported_total_per_L": 186.0,
+      "implied_denominator_median": 186.13138686131384,
+      "implied_denominator_spread": 0.0942460063734245,
+      "family_count_sum": 186.06000000000003,
+      "ratio_denominator_over_reported_total": 1.0007063809748056
+    },
+    {
+      "sample_id": "sample_015",
+      "reported_total_per_L": 4159.0,
+      "implied_denominator_median": 4158.531638198758,
+      "implied_denominator_spread": 114.70588235294053,
+      "family_count_sum": 4159.509999999999,
+      "ratio_denominator_over_reported_total": 0.9998873859578643
+    },
+    {
+      "sample_id": "sample_016",
+      "reported_total_per_L": 430.0,
+      "implied_denominator_median": 429.6501558711466,
+      "implied_denominator_spread": 4.467353951890061,
+      "family_count_sum": 429.65,
+      "ratio_denominator_over_reported_total": 0.9991864090026664
+    },
+    {
+      "sample_id": "sample_017",
+      "reported_total_per_L": 456.0,
+      "implied_denominator_median": 456.29522431259045,
+      "implied_denominator_spread": 1.308066933066982,
+      "family_count_sum": 456.10999999999996,
+      "ratio_denominator_over_reported_total": 1.000647421738137
+    },
+    {
+      "sample_id": "sample_018",
+      "reported_total_per_L": 144.0,
+      "implied_denominator_median": 143.82961783439492,
+      "implied_denominator_spread": 0.4369776096638702,
+      "family_count_sum": 143.82,
+      "ratio_denominator_over_reported_total": 0.9988167905166314
+    },
+    {
+      "sample_id": "sample_019",
+      "reported_total_per_L": 13794.0,
+      "implied_denominator_median": 13794.393075825872,
+      "implied_denominator_spread": 36.46370023419331,
+      "family_count_sum": 13794.14,
+      "ratio_denominator_over_reported_total": 1.0000284961451262
+    },
+    {
+      "sample_id": "sample_020",
+      "reported_total_per_L": 90.0,
+      "implied_denominator_median": 89.89991310735135,
+      "implied_denominator_spread": 0.2755119358414646,
+      "family_count_sum": 89.92,
+      "ratio_denominator_over_reported_total": 0.998887923415015
+    },
+    {
+      "sample_id": "sample_021",
+      "reported_total_per_L": 2303.0,
+      "implied_denominator_median": 2302.9227607038856,
+      "implied_denominator_spread": 5.925512743499894,
+      "family_count_sum": 2302.59,
+      "ratio_denominator_over_reported_total": 0.9999664614432852
+    },
+    {
+      "sample_id": "sample_022",
+      "reported_total_per_L": 423.0,
+      "implied_denominator_median": 423.10784955505824,
+      "implied_denominator_spread": 0.11548560684644826,
+      "family_count_sum": 423.06,
+      "ratio_denominator_over_reported_total": 1.0002549634871354
+    },
+    {
+      "sample_id": "sample_023",
+      "reported_total_per_L": 270.0,
+      "implied_denominator_median": 269.6633901443911,
+      "implied_denominator_spread": 0.2102238354506767,
+      "family_count_sum": 269.66,
+      "ratio_denominator_over_reported_total": 0.998753296831078
+    },
+    {
+      "sample_id": "sample_024",
+      "reported_total_per_L": 33.0,
+      "implied_denominator_median": 33.42776203966007,
+      "implied_denominator_spread": 0.017160896096470424,
+      "family_count_sum": 33.42,
+      "ratio_denominator_over_reported_total": 1.012962486050305
+    },
+    {
+      "sample_id": "sample_025",
+      "reported_total_per_L": 6421.0,
+      "implied_denominator_median": 6421.979695431473,
+      "implied_denominator_spread": 512.5366373567822,
+      "family_count_sum": 6420.84,
+      "ratio_denominator_over_reported_total": 1.0001525767686457
+    },
+    {
+      "sample_id": "sample_026",
+      "reported_total_per_L": 557.0,
+      "implied_denominator_median": 556.7676767676767,
+      "implied_denominator_spread": 6.434418427565106,
+      "family_count_sum": 556.8,
+      "ratio_denominator_over_reported_total": 0.9995829026349671
+    },
+    {
+      "sample_id": "sample_027",
+      "reported_total_per_L": 1454.0,
+      "implied_denominator_median": 1454.7315741583257,
+      "implied_denominator_spread": 64.00000000000023,
+      "family_count_sum": 1454.44,
+      "ratio_denominator_over_reported_total": 1.0005031459135665
+    },
+    {
+      "sample_id": "sample_028",
+      "reported_total_per_L": 791.0,
+      "implied_denominator_median": 791.0714285714284,
+      "implied_denominator_spread": 2.558635394456246,
+      "family_count_sum": 790.67,
+      "ratio_denominator_over_reported_total": 1.0000903016073683
+    },
+    {
+      "sample_id": "sample_029",
+      "reported_total_per_L": 351.0,
+      "implied_denominator_median": 351.1251980702301,
+      "implied_denominator_spread": 4.71491228070181,
+      "family_count_sum": 351.17,
+      "ratio_denominator_over_reported_total": 1.0003566896587752
+    },
+    {
+      "sample_id": "sample_030",
+      "reported_total_per_L": 4437.0,
+      "implied_denominator_median": 4437.321880321753,
+      "implied_denominator_spread": 371.15384615384573,
+      "family_count_sum": 4436.95,
+      "ratio_denominator_over_reported_total": 1.0000725445845737
+    }
+  ],
+  "denominator_summary": {
+    "polymer_implied_denominator_equals_family_sum": false,
+    "size_implied_denominator_equals_family_sum": false,
+    "polymer_family_sum_over_total": {
+      "min": 0.9980597014925372,
+      "max": 1.0127272727272727
+    },
+    "size_family_sum_over_total": {
+      "min": 0.9980597014925372,
+      "max": 1.0127272727272727
+    },
+    "max_denominator_spread_percent_points": 21000.0,
+    "note": "percent columns are count / (sum of that family's counts) * 100, not count / reported particle_total_per_L * 100; the two denominators agree within 1.3%."
+  },
+  "count_quantum": [
+    {
+      "sample_id": "sample_001",
+      "group": "group_01",
+      "total_per_L": 260.0,
+      "smallest_positive_count_per_L": 1.34,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 3,
+      "n_nonzero_polymer_classes": 7
+    },
+    {
+      "sample_id": "sample_002",
+      "group": "group_01",
+      "total_per_L": 8774.0,
+      "smallest_positive_count_per_L": 0.97,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 7,
+      "n_nonzero_polymer_classes": 7
+    },
+    {
+      "sample_id": "sample_003",
+      "group": "group_01",
+      "total_per_L": 4156.0,
+      "smallest_positive_count_per_L": 2.07,
+      "largest_consistent_quantum_per_L": 0.6883731647197511,
+      "implied_volume_L": 1.4527004410567308,
+      "implied_integer_count_of_total": 2860.8788725752856,
+      "n_nonzero_size_bins": 5,
+      "n_nonzero_polymer_classes": 9
+    },
+    {
+      "sample_id": "sample_004",
+      "group": "group_01",
+      "total_per_L": 7017.0,
+      "smallest_positive_count_per_L": 2.31,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 6,
+      "n_nonzero_polymer_classes": 7
+    },
+    {
+      "sample_id": "sample_005",
+      "group": "group_01",
+      "total_per_L": 2665.0,
+      "smallest_positive_count_per_L": 2.47,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 5,
+      "n_nonzero_polymer_classes": 8
+    },
+    {
+      "sample_id": "sample_006",
+      "group": "group_02",
+      "total_per_L": 75143.0,
+      "smallest_positive_count_per_L": 3.15,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 7,
+      "n_nonzero_polymer_classes": 6
+    },
+    {
+      "sample_id": "sample_007",
+      "group": "group_02",
+      "total_per_L": 14558.0,
+      "smallest_positive_count_per_L": 0.91,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 7,
+      "n_nonzero_polymer_classes": 7
+    },
+    {
+      "sample_id": "sample_008",
+      "group": "group_02",
+      "total_per_L": 3710.0,
+      "smallest_positive_count_per_L": 2.56,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 5,
+      "n_nonzero_polymer_classes": 8
+    },
+    {
+      "sample_id": "sample_009",
+      "group": "group_02",
+      "total_per_L": 9857.0,
+      "smallest_positive_count_per_L": 2.94,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 6,
+      "n_nonzero_polymer_classes": 8
+    },
+    {
+      "sample_id": "sample_010",
+      "group": "group_02",
+      "total_per_L": 4530.0,
+      "smallest_positive_count_per_L": 3.17,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 7,
+      "n_nonzero_polymer_classes": 6
+    },
+    {
+      "sample_id": "sample_011",
+      "group": "group_02",
+      "total_per_L": 41.0,
+      "smallest_positive_count_per_L": 1.928,
+      "largest_consistent_quantum_per_L": 0.6426264899558223,
+      "implied_volume_L": 1.5561138789481672,
+      "implied_integer_count_of_total": 26.347686088188713,
+      "n_nonzero_size_bins": 4,
+      "n_nonzero_polymer_classes": 8
+    },
+    {
+      "sample_id": "sample_012",
+      "group": "group_02",
+      "total_per_L": 67.0,
+      "smallest_positive_count_per_L": 0.96,
+      "largest_consistent_quantum_per_L": 0.4810802700675169,
+      "implied_volume_L": 2.078655189620758,
+      "implied_integer_count_of_total": 32.23237809452363,
+      "n_nonzero_size_bins": 3,
+      "n_nonzero_polymer_classes": 5
+    },
+    {
+      "sample_id": "sample_013",
+      "group": "group_04",
+      "total_per_L": 992.0,
+      "smallest_positive_count_per_L": 2.31,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 6,
+      "n_nonzero_polymer_classes": 6
+    },
+    {
+      "sample_id": "sample_014",
+      "group": "group_04",
+      "total_per_L": 186.0,
+      "smallest_positive_count_per_L": 1.7,
+      "largest_consistent_quantum_per_L": 0.8494078876862073,
+      "implied_volume_L": 1.1772906921361497,
+      "implied_integer_count_of_total": 157.98986710963456,
+      "n_nonzero_size_bins": 6,
+      "n_nonzero_polymer_classes": 8
+    },
+    {
+      "sample_id": "sample_015",
+      "group": "group_04",
+      "total_per_L": 4159.0,
+      "smallest_positive_count_per_L": 2.87,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 8,
+      "n_nonzero_polymer_classes": 10
+    },
+    {
+      "sample_id": "sample_016",
+      "group": "group_04",
+      "total_per_L": 430.0,
+      "smallest_positive_count_per_L": 2.08,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 5,
+      "n_nonzero_polymer_classes": 9
+    },
+    {
+      "sample_id": "sample_017",
+      "group": "group_04",
+      "total_per_L": 456.0,
+      "smallest_positive_count_per_L": 2.01,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 5,
+      "n_nonzero_polymer_classes": 8
+    },
+    {
+      "sample_id": "sample_018",
+      "group": "group_03",
+      "total_per_L": 144.0,
+      "smallest_positive_count_per_L": 2.13,
+      "largest_consistent_quantum_per_L": 0.7084242935733935,
+      "implied_volume_L": 1.4115834381622585,
+      "implied_integer_count_of_total": 102.01309827456868,
+      "n_nonzero_size_bins": 5,
+      "n_nonzero_polymer_classes": 7
+    },
+    {
+      "sample_id": "sample_019",
+      "group": "group_03",
+      "total_per_L": 13794.0,
+      "smallest_positive_count_per_L": 2.3,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 6,
+      "n_nonzero_polymer_classes": 11
+    },
+    {
+      "sample_id": "sample_020",
+      "group": "group_03",
+      "total_per_L": 90.0,
+      "smallest_positive_count_per_L": 2.37,
+      "largest_consistent_quantum_per_L": 1.1831627906976745,
+      "implied_volume_L": 0.845192232093718,
+      "implied_integer_count_of_total": 106.4846511627907,
+      "n_nonzero_size_bins": 4,
+      "n_nonzero_polymer_classes": 6
+    },
+    {
+      "sample_id": "sample_021",
+      "group": "group_03",
+      "total_per_L": 2303.0,
+      "smallest_positive_count_per_L": 2.84,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 6,
+      "n_nonzero_polymer_classes": 10
+    },
+    {
+      "sample_id": "sample_022",
+      "group": "group_03",
+      "total_per_L": 423.0,
+      "smallest_positive_count_per_L": 2.55,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 4,
+      "n_nonzero_polymer_classes": 10
+    },
+    {
+      "sample_id": "sample_023",
+      "group": "group_03",
+      "total_per_L": 270.0,
+      "smallest_positive_count_per_L": 2.56,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 4,
+      "n_nonzero_polymer_classes": 9
+    },
+    {
+      "sample_id": "sample_024",
+      "group": "group_03",
+      "total_per_L": 33.0,
+      "smallest_positive_count_per_L": 3.93,
+      "largest_consistent_quantum_per_L": 1.968501031507877,
+      "implied_volume_L": 0.5080007498060579,
+      "implied_integer_count_of_total": 64.96053403975995,
+      "n_nonzero_size_bins": 3,
+      "n_nonzero_polymer_classes": 5
+    },
+    {
+      "sample_id": "sample_025",
+      "group": "group_05",
+      "total_per_L": 6421.0,
+      "smallest_positive_count_per_L": 2.08,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 5,
+      "n_nonzero_polymer_classes": 7
+    },
+    {
+      "sample_id": "sample_026",
+      "group": "group_05",
+      "total_per_L": 557.0,
+      "smallest_positive_count_per_L": 2.87,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 5,
+      "n_nonzero_polymer_classes": 9
+    },
+    {
+      "sample_id": "sample_027",
+      "group": "group_05",
+      "total_per_L": 1454.0,
+      "smallest_positive_count_per_L": 1.2,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 9,
+      "n_nonzero_polymer_classes": 8
+    },
+    {
+      "sample_id": "sample_028",
+      "group": "group_05",
+      "total_per_L": 791.0,
+      "smallest_positive_count_per_L": 1.48,
+      "largest_consistent_quantum_per_L": 0.7389244186046511,
+      "implied_volume_L": 1.3533183838860696,
+      "implied_integer_count_of_total": 584.489215116279,
+      "n_nonzero_size_bins": 7,
+      "n_nonzero_polymer_classes": 9
+    },
+    {
+      "sample_id": "sample_029",
+      "group": "group_05",
+      "total_per_L": 351.0,
+      "smallest_positive_count_per_L": 1.67,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 6,
+      "n_nonzero_polymer_classes": 7
+    },
+    {
+      "sample_id": "sample_030",
+      "group": "group_05",
+      "total_per_L": 4437.0,
+      "smallest_positive_count_per_L": 1.89,
+      "largest_consistent_quantum_per_L": null,
+      "implied_volume_L": null,
+      "implied_integer_count_of_total": null,
+      "n_nonzero_size_bins": 10,
+      "n_nonzero_polymer_classes": 8
+    }
+  ],
+  "count_quantum_by_group": {
+    "group_01": {
+      "quantum_per_L": [
+        null,
+        null,
+        0.6884,
+        null,
+        null
+      ],
+      "implied_volume_L": [
+        null,
+        null,
+        1.4527,
+        null,
+        null
+      ],
+      "constant_within_group": null
+    },
+    "group_02": {
+      "quantum_per_L": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        0.6426,
+        0.4811
+      ],
+      "implied_volume_L": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        1.5561,
+        2.0787
+      ],
+      "constant_within_group": null
+    },
+    "group_03": {
+      "quantum_per_L": [
+        0.7084,
+        null,
+        1.1832,
+        null,
+        null,
+        null,
+        1.9685
+      ],
+      "implied_volume_L": [
+        1.4116,
+        null,
+        0.8452,
+        null,
+        null,
+        null,
+        0.508
+      ],
+      "constant_within_group": null
+    },
+    "group_04": {
+      "quantum_per_L": [
+        null,
+        0.8494,
+        null,
+        null,
+        null
+      ],
+      "implied_volume_L": [
+        null,
+        1.1773,
+        null,
+        null,
+        null
+      ],
+      "constant_within_group": null
+    },
+    "group_05": {
+      "quantum_per_L": [
+        null,
+        null,
+        null,
+        0.7389,
+        null,
+        null
+      ],
+      "implied_volume_L": [
+        null,
+        null,
+        null,
+        1.3533,
+        null,
+        null
+      ],
+      "constant_within_group": null
+    }
+  },
+  "quantum_as_percent_of_total": {
+    "per_sample": [
+      0.3846,
+      0.0114,
+      0.0166,
+      0.0143,
+      0.0375,
+      0.0013,
+      0.0069,
+      0.027,
+      0.0101,
+      0.0221,
+      1.5674,
+      0.718,
+      0.1008,
+      0.4567,
+      0.024,
+      0.2326,
+      0.2193,
+      0.492,
+      0.0072,
+      1.3146,
+      0.0434,
+      0.2364,
+      0.3704,
+      5.9652,
+      0.0156,
+      0.1795,
+      0.0688,
+      0.0934,
+      0.2849,
+      0.0225
+    ],
+    "max": 5.965154640932961,
+    "median": 0.08109613936753934,
+    "note": "a single detected particle equals this share of the reported total; bins below it cannot be resolved for that sample."
+  },
+  "cross_validation_hand_rolled_vs_scipy": [
+    {
+      "pair": "mid_depth_vs_ltot",
+      "my_spearman_rho": -0.33837597330367075,
+      "scipy_spearman_rho": -0.33837597330367075,
+      "my_p": 0.0674015891801612,
+      "scipy_p": 0.06740158918016075,
+      "abs_diff_rho": 0.0,
+      "abs_diff_p": 4.579669976578771e-16
+    },
+    {
+      "pair": "chl_vs_ltot",
+      "my_spearman_rho": -0.7037081809806237,
+      "scipy_spearman_rho": -0.7037081809806237,
+      "my_p": 1.4353596499588921e-05,
+      "scipy_p": 1.4353596499588848e-05,
+      "abs_diff_rho": 0.0,
+      "abs_diff_p": 7.284483346386983e-20
+    },
+    {
+      "pair": "ltot_vs_PE",
+      "my_spearman_rho": 0.6467905257511157,
+      "scipy_spearman_rho": 0.6467905257511157,
+      "my_p": 0.0001124084412661904,
+      "scipy_p": 0.00011240844126618974,
+      "abs_diff_rho": 0.0,
+      "abs_diff_p": 6.640738306473715e-19
+    }
+  ],
+  "cross_validation_cluster_se": {
+    "statsmodels_se": [
+      1.0169767809470439e-15,
+      2.5644001282263867e-16
+    ],
+    "mine_se": [
+      1.9514558127001018e-14,
+      6.181131166525061e-15
+    ],
+    "statsmodels_p": [
+      0.13235939170062502,
+      0.0
+    ],
+    "mine_p": [
+      0.19403656229710914,
+      8.758365981403119e-57
+    ],
+    "agree": true
+  }
+}

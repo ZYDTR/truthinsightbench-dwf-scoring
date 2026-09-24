@@ -1,0 +1,13 @@
+{
+  "rep_model_r2_on_rep": 0.5750990799445043,
+  "rep_model_r2_on_ind": -0.27679842752218975,
+  "ind_own_model_r2": 0.7656797938930695,
+  "best_channel_permutation_r2": -0.24359185208552958,
+  "best_channel_permutation": [
+    3,
+    2,
+    0,
+    1
+  ],
+  "axis_swapped_r2": -0.25104791064800014
+}

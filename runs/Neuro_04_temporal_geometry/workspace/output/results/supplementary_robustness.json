@@ -1,0 +1,39 @@
+{
+  "permutation_test": {
+    "dist_vs_meanlat_spearman": {
+      "obs_p": 0.38841574025826864,
+      "perm_p": 0.3867226554689062,
+      "n_perm": 5000
+    },
+    "dist_vs_latencysd_spearman": {
+      "obs_p": 0.9009675826100705,
+      "perm_p": 0.9020195960807839,
+      "n_perm": 5000
+    }
+  },
+  "bootstrap_95ci": {
+    "dist_vs_meanlat_spearman_rho_ci95": [
+      -0.41199545457121606,
+      0.1651414568408028
+    ],
+    "point_estimate": -0.1383275261324042,
+    "n_boot": 5000
+  },
+  "event_state_perm": {
+    "set_a": {
+      "spearman_p": 0.0711830338851403,
+      "perm_p": 0.06958608278344332,
+      "n_perm": 5000
+    },
+    "set_b": {
+      "spearman_p": 1.6294144350879265e-07,
+      "perm_p": 0.0001999600079984003,
+      "n_perm": 5000
+    }
+  },
+  "cross_recording_ks_perm": {
+    "obs_p": 0.7295102075866976,
+    "perm_p": 0.6170765846830634,
+    "n_perm": 5000
+  }
+}

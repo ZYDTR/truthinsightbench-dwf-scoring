@@ -1,0 +1,19 @@
+{
+  "file": "multichannel_event_panel.tsv",
+  "n_rows": 117,
+  "units_present": [
+    1,
+    2,
+    3
+  ],
+  "events_per_unit": {
+    "1": 39,
+    "2": 39,
+    "3": 39
+  },
+  "per_unit_signal_mean": {
+    "1": 0.48868717948717955,
+    "2": -0.20395641025641023,
+    "3": 0.5982743589743591
+  }
+}

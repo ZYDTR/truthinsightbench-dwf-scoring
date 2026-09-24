@@ -1,0 +1,106 @@
+{
+  "integrity": {
+    "anonymous_condition_response_curves.tsv": {
+      "sha256": "b3668160fac559700404181f686acec1394cfcdaf2ef34d38a75834556f89726",
+      "matches_manifest": true
+    },
+    "independent_condition_check_curves.tsv": {
+      "sha256": "1a79f8b8bf11fe116930ddc9e4b3a50baefe441235f41cf0bd8a1f81ae335237",
+      "matches_manifest": true
+    }
+  },
+  "inventory": {
+    "anonymous_condition_response_curves.tsv": {
+      "rows": 88,
+      "columns": [
+        "condition_id",
+        "temperature_like_setting",
+        "rate_like_response"
+      ],
+      "n_unique_conditions": 8,
+      "condition_ids": [
+        "condition_block1_1",
+        "condition_block1_2",
+        "condition_block1_3",
+        "condition_block1_4",
+        "condition_block2_1",
+        "condition_block2_2",
+        "condition_block2_3",
+        "condition_block2_4"
+      ],
+      "n_unique_settings": 11,
+      "settings": [
+        120.0,
+        140.0,
+        160.0,
+        180.0,
+        200.0,
+        220.0,
+        240.0,
+        260.0,
+        280.0,
+        300.0,
+        320.0
+      ],
+      "setting_step": 20.0,
+      "balanced_panel": true,
+      "missing_cells": 0,
+      "duplicate_(condition,setting)_rows": 0,
+      "response_min": 0.0,
+      "response_max": 93.01486,
+      "n_zero_responses": 1,
+      "zero_response_rows": [
+        {
+          "condition_id": "condition_block2_1",
+          "temperature_like_setting": 120.0
+        }
+      ]
+    },
+    "independent_condition_check_curves.tsv": {
+      "rows": 44,
+      "columns": [
+        "condition_id",
+        "temperature_like_setting",
+        "rate_like_response"
+      ],
+      "n_unique_conditions": 4,
+      "condition_ids": [
+        "condition_block1_1",
+        "condition_block1_2",
+        "condition_block1_4",
+        "condition_block1_5"
+      ],
+      "n_unique_settings": 11,
+      "settings": [
+        120.0,
+        140.0,
+        160.0,
+        180.0,
+        200.0,
+        220.0,
+        240.0,
+        260.0,
+        280.0,
+        300.0,
+        320.0
+      ],
+      "setting_step": 20.0,
+      "balanced_panel": true,
+      "missing_cells": 0,
+      "duplicate_(condition,setting)_rows": 0,
+      "response_min": 0.0,
+      "response_max": 93.01486,
+      "n_zero_responses": 2,
+      "zero_response_rows": [
+        {
+          "condition_id": "condition_block1_1",
+          "temperature_like_setting": 120.0
+        },
+        {
+          "condition_id": "condition_block1_4",
+          "temperature_like_setting": 120.0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "Information_03_signal_surface_invariants",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260920T063042-731049",
+  "source_run_json_sha256": "37ff104b49571898db2711038105b519424243b69df2b387c38de16e70825f8b",
+  "source_release_json_sha256": "b2298b95a53b7eec1d8a72e8ad80dc394621e3f69cbb0b8278c6222ea612a029",
+  "source_latest_validation_sha256": "1b7ada4d8048321ea6084c997bc9eb1f63c5fa07c17a95d5cf22313894478d47",
+  "source_snapshot_manifest_sha256": "e928acdc6297f51e3ffef6921f77c1fd6fdee95b55096bbae2f6390ebe4f4605",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 550
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": false
+  },
+  "registered_findings": 5,
+  "input_sha256": "f8614839e89e3d852323388e7e69c49c9f5835ca0796ddfef5fcf452969dce6b",
+  "output_sha256": "82630cd9d51d579d09e8d33f34ed193a7f9ad673ad2969b7df932d1be5ab55b8"
+}

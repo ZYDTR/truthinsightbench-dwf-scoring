@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Energy_02_flow_battery_operating_boundary",
+  "model": "deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "806fee2a27626335cc3ef552fe4ace9922fc127e05a0195cf5a43fabe11eb157",
+  "workspace_input_file_count": 10,
+  "workspace_input_bytes": 86824,
+  "output_tree_sha256": "77571f9d9bd9758bb0003960485e45f0c5663a61409e2b3933fc19f887dc44fe",
+  "output_file_count": 50,
+  "output_bytes": 925086
+}

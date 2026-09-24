@@ -1,0 +1,21 @@
+{
+  "task_id": "Physics_05_variational_circuit_simulation",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260923T202110-b603e7",
+  "source_run_json_sha256": "b4c3c35c387bdf57f18555f2470d69ec54db5f6f9b18353cb7296678d2438730",
+  "source_release_json_sha256": "d073c704700a0aa036c9edbc48499048d2ea83216bc10d4a14f3aed51805de86",
+  "source_latest_validation_sha256": "d645bb5e37c233edbe713b5eb86f95d8abf646381a029729bb9e36b02db5bfbb",
+  "source_snapshot_manifest_sha256": "f9398cadcd0857f47f4bf577d3ca813b46167db2dfb99b131d53b854d1c0b6ee",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 169
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 4,
+  "input_sha256": "be6f81f69b778914006175540751b07ccf2059f39c952b25465414517165adea",
+  "output_sha256": "f8b4869df3ce31aa85aed0b2c0bcf5ba9d22479bd5b5cedbbb092d9abf3219fd"
+}

@@ -1,0 +1,250 @@
+{
+  "integrity": {
+    "raw_rows": 5990,
+    "sha256": "67ab6ace870c985522f905801f0eed680818a0c73225ca113057ba12fdea992f",
+    "sha256_matches_target": true
+  },
+  "census": {
+    "raw_rows": 5990,
+    "analysis_rows": 5920,
+    "units": 1105,
+    "families": 285,
+    "cell_pairs": 9,
+    "stages": 18,
+    "stage_values": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "rows_in_replicated_groups": 70,
+    "replicated_groups": 40,
+    "max_replicate": 8,
+    "p_levels": [
+      0.0009,
+      0.01,
+      0.02,
+      0.03,
+      0.04,
+      0.05
+    ],
+    "floor_share": 0.8756756756756757,
+    "one_record_per_unit_stage": 1
+  },
+  "F1_trend": {
+    "slope_reported": 0.0418,
+    "slope_recomputed": 0.042638695146873656,
+    "slope_match": true,
+    "curve_r_reported": 0.922,
+    "curve_r_recomputed": 0.9217462302118397,
+    "curve_r_match": true,
+    "curve_spearman_recomputed": 0.9215686274509803,
+    "early_mean": -0.17784089283866159,
+    "late_mean": 0.19684924808494506,
+    "per_stage_curve": [
+      -0.23719,
+      -0.35742,
+      -0.40024,
+      -0.37996,
+      -0.19049,
+      -0.20508,
+      -0.01843,
+      0.09187,
+      0.09636,
+      0.041,
+      0.20824,
+      0.20659,
+      0.08798,
+      0.22177,
+      0.20048,
+      0.22761,
+      0.22027,
+      0.35771
+    ],
+    "per_unit_slopes": {
+      "n": 579,
+      "mean_recomputed": 0.05286599149890523,
+      "median_recomputed": 0.05535992439409634,
+      "frac_positive_recomputed": 0.7271157167530224,
+      "t_stat": 9.274528718799091,
+      "t_p": 3.5242858783395334e-19,
+      "wilcoxon_p": 8.253571753582902e-32,
+      "sign_pos": 421,
+      "sign_neg": 158,
+      "sign_test_p": 1.4384073656906374e-28
+    },
+    "bootstrap": {
+      "point": 0.042638695146873656,
+      "ci_recomputed": [
+        0.029590541456346237,
+        0.05631105374492182
+      ],
+      "ci_reported": [
+        0.0293,
+        0.0544
+      ],
+      "ci_match": true
+    }
+  },
+  "F1_holdout": {
+    "n_records": 5533,
+    "mae_null_recomputed": 0.4680518997840495,
+    "mae_trend_recomputed": 0.42749902013105434,
+    "rmse_improvement_pct_recomputed": 9.256288400389458,
+    "improvement_pct_recomputed": 8.664184393163557,
+    "perm_control": {
+      "n_perm": 200,
+      "perm_mean": -0.0010957786656667244,
+      "perm_sd": 0.00039424669867639143,
+      "perm_max": -2.1165146420809577e-05,
+      "observed": 0.040552879652995144,
+      "observed_exceeds_all": true
+    },
+    "report_match": {
+      "mae_null": true,
+      "mae_trend": true,
+      "improvement_pct": true,
+      "rmse_improvement_pct": true
+    },
+    "cellpair_holdout": {
+      "mae_null": 0.4680518997840495,
+      "mae_trend": 0.42714132384975856,
+      "improvement_pct": 8.740606747492386,
+      "match": true
+    }
+  },
+  "F2_identity": {
+    "family_icc_recomputed": 0.836154879971811,
+    "unit_icc_recomputed": 0.9006166085022724,
+    "stage_eta2_recomputed": 0.018434262524290902,
+    "family_mean_sd_recomputed": 1.4336515269941612,
+    "fam_size_median_recomputed": 10.0,
+    "fam_size_max_recomputed": 130,
+    "fam_stage_spearman": 0.9331613591117249,
+    "report_match": {
+      "family_share_836": true,
+      "unit_share_901": true,
+      "stage_18": true,
+      "family_mean_sd_143": true,
+      "family_size_median_10": true,
+      "family_size_max_130": true
+    }
+  },
+  "F3_evidence_tier": {
+    "p_levels": [
+      0.0009,
+      0.01,
+      0.02,
+      0.03,
+      0.04,
+      0.05
+    ],
+    "floor_share": 0.8756756756756757,
+    "rho_raw": -0.2848121863240455,
+    "rho_within_unit": -0.13422193276523606,
+    "rho_nonfloor_only": {
+      "rho": -0.04057240582795611,
+      "p": 0.2716443947245138
+    },
+    "nonfloor_mean_strength_range": 0.2816198057169777,
+    "kruskal_nonfloor_stat": 7.845573841132047,
+    "report_match": {
+      "floor_share_876": true,
+      "rho_raw_-0285": true,
+      "rho_within_-0134": true,
+      "rho_nonfloor_-0041": true,
+      "nonfloor_range_028": true
+    },
+    "floor_vs_nonfloor_within_unit_auc_recomputed": 0.6179233290978932,
+    "floor_vs_nonfloor_within_unit_auc_match": true
+  },
+  "F4_transience": {
+    "n3_stages": 579,
+    "transient_recomputed": 210,
+    "report_match": true,
+    "per_family_improvement": {
+      "n_families": 214,
+      "n_improved": 102,
+      "n_worsened": 112,
+      "sign_test_p": 0.5385040002283777,
+      "report_match": true
+    }
+  },
+  "F5_lability": {
+    "total_multi_stage": 718,
+    "always_floor_recomputed": 360,
+    "always_nonfloor_recomputed": 22,
+    "mixed_recomputed": 336,
+    "share_mixed_recomputed": 0.467966573816156,
+    "report_match": {
+      "correct_360_22_336": true,
+      "buggy_8_22_688_would_match": false
+    },
+    "transitions": {
+      "floor_floor": 4065,
+      "floor_nonfloor": 301,
+      "nonfloor_floor": 318,
+      "nonfloor_nonfloor": 131,
+      "P_floor_next_given_floor": 0.9310581768208886,
+      "P_floor_next_given_nonfloor": 0.7082405345211581
+    },
+    "transition_match": {
+      "P_floor_given_floor_0931": true,
+      "P_floor_given_nonfloor_0708": true
+    },
+    "strength_split_half_r_recomputed": 0.9083750392681647,
+    "strength_split_half_match": true
+  },
+  "summary": {
+    "integrity_sha_match": true,
+    "census_match": true,
+    "F1_slope_match": true,
+    "F1_curve_r_match": true,
+    "F1_bootstrap_ci_match": true,
+    "F1_holdout_match": {
+      "mae_null": true,
+      "mae_trend": true,
+      "improvement_pct": true,
+      "rmse_improvement_pct": true
+    },
+    "F2_family_share_match": {
+      "family_share_836": true,
+      "unit_share_901": true,
+      "stage_18": true,
+      "family_mean_sd_143": true,
+      "family_size_median_10": true,
+      "family_size_max_130": true
+    },
+    "F3_floor_share_match": {
+      "floor_share_876": true,
+      "rho_raw_-0285": true,
+      "rho_within_-0134": true,
+      "rho_nonfloor_-0041": true,
+      "nonfloor_range_028": true
+    },
+    "F4_transience_match": true,
+    "F4_per_family_match": true,
+    "F5_lability_correct_match": true,
+    "F5_lability_buggy_would_match": false,
+    "F5_transition_match": {
+      "P_floor_given_floor_0931": true,
+      "P_floor_given_nonfloor_0708": true
+    },
+    "F5_strength_split_half_match": true
+  },
+  "all_headline_numbers_reproduce": true
+}

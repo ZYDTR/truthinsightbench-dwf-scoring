@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/analysis/chpol_s02_block_decomposed.py", line 541, in <module>
+    main()
+  File "/data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/analysis/chpol_s02_block_decomposed.py", line 194, in main
+    "slow_is_ordered_concat": bool(np.allclose(
+                                   ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/numpy/_core/numeric.py", line 2376, in allclose
+    res = all(isclose(a, b, rtol=rtol, atol=atol, equal_nan=equal_nan))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/numpy/_core/numeric.py", line 2507, in isclose
+    result = (less_equal(abs(x - y), atol + rtol * abs(y))
+                             ~~^~~
+ValueError: operands could not be broadcast together with shapes (137,) (30,) 

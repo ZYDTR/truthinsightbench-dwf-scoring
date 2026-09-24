@@ -1,0 +1,162 @@
+H1 fixed-width logistic:
+{
+  "w_fixed_1nm": {
+    "best_lamc_nm": 597.0,
+    "rss": 9.26868880391697,
+    "rmse": 0.12418579288551465,
+    "aicc": -2501.3035580424744
+  },
+  "w_fixed_2nm": {
+    "best_lamc_nm": 596.0,
+    "rss": 8.795969020775427,
+    "rmse": 0.12097750111074666,
+    "aicc": -2532.7649306685216
+  },
+  "w_fixed_5nm": {
+    "best_lamc_nm": 595.0,
+    "rss": 7.440995043552366,
+    "rmse": 0.11127004703412167,
+    "aicc": -2633.305600679179
+  },
+  "w_fixed_10nm": {
+    "best_lamc_nm": 592.0,
+    "rss": 5.420701456549141,
+    "rmse": 0.09497089015913877,
+    "aicc": -2823.6899931605158
+  },
+  "w_fixed_20nm": {
+    "best_lamc_nm": 588.0,
+    "rss": 2.6049184884722694,
+    "rmse": 0.06583545374015302,
+    "aicc": -3264.1171226850975
+  },
+  "w_fixed_40nm": {
+    "best_lamc_nm": 573.0,
+    "rss": 0.5551710596732624,
+    "rmse": 0.030393182189148923,
+    "aicc": -4193.191231905861
+  },
+  "w_fixed_80nm": {
+    "best_lamc_nm": 500.0,
+    "rss": 0.12801265627249417,
+    "rmse": 0.014594499925452519,
+    "aicc": -5074.946666486465
+  }
+}
+H1 falloff metrics:
+{
+  "unfiltered_data_max_abs_2nm_diff_in_500_800": 0.006000000000000005,
+  "smoothed_rolling20_max_abs_slope_per_nm": 0.00935000000000008,
+  "max_abs_slope_per_nm_in_500_800": 0.01200000000000001,
+  "lambda_of_max_slope_nm": 531.0,
+  "median_abs_slope_per_nm": 0.0030000000000000027,
+  "sharp_edge_threshold_note": "a 1-nm edge spanning ~0.85 units needs |dA/dlam|~0.85/1nm; observed smoothed max slope is 1-2 orders of magnitude smaller at every wavelength",
+  "fitted_logistic_90to10_width_nm": 352.2698638431036,
+  "fitted_logistic_width_param_w_nm": 80.16335878461305,
+  "fitted_exponential_tau_nm": 124.16734551202718,
+  "interpretation_note": "sharp instrument-like cut-off would require w of a few nm; data demand w ~ 80 nm and a kinked edge fits worse than a smooth curve"
+}
+H2 analytic bound:
+{
+  "claim": "alpha(k*Af)/(alpha(k*Ag)) >= Af/Ag for all k>0 (concavity/subadditivity of 1-10^-x)",
+  "A450": 0.861,
+  "A650": 0.201,
+  "min_possible_predicted_650_over_450_ratio": 0.2334494773519164,
+  "observed_action_650_over_450_ratio": 0.05084745762711865,
+  "observed_is_below_bound": true,
+  "k_to_0_rmse_sequence": {
+    "0.1": 9.820685744482656,
+    "0.01": 8.965328512394226,
+    "0.001": 8.8811210705037,
+    "0.0001": 8.872716601999938,
+    "1e-05": 8.87187632116551,
+    "1e-06": 8.871792294375325
+  }
+}
+H3 F / profile / verdict:
+{
+  "F_test_h3_vs_linear": {
+    "F": 20.472238881145657,
+    "dfn": 2,
+    "dfd": 3,
+    "p_value": 0.017837148196292396,
+    "note": "6 action points; 3-parameter model has little power"
+  },
+  "rss_profile_over_w": {
+    "50nm": {
+      "rss": 450.9154517935064,
+      "s": 86.98915246361241,
+      "C": 19635.292426879852,
+      "rmse": 8.669058501297458
+    },
+    "100nm": {
+      "rss": 449.3849662950355,
+      "s": 83.55385646273889,
+      "C": 524.6418993838032,
+      "rmse": 8.654333849725576
+    },
+    "150nm": {
+      "rss": 472.2174817722302,
+      "s": 90.6531276381108,
+      "C": -7.556862356598608,
+      "rmse": 8.871466261487164
+    },
+    "200nm": {
+      "rss": 399.02241930496194,
+      "s": 117.92001311276644,
+      "C": -222.7960341550174,
+      "rmse": 8.15498231456249
+    },
+    "300nm": {
+      "rss": 123.57398308879493,
+      "s": 149.58723584983989,
+      "C": -218.26336480152753,
+      "rmse": 4.538244577822188
+    },
+    "400nm": {
+      "rss": 49.74594170678484,
+      "s": 144.64080653263662,
+      "C": -134.6212809562695,
+      "rmse": 2.8794079746475907
+    },
+    "500nm": {
+      "rss": 35.183342429005116,
+      "s": 138.8286273217414,
+      "C": -94.64712939723297,
+      "rmse": 2.421547109769741
+    },
+    "640nm": {
+      "rss": 32.23965125900993,
+      "s": 133.67676850453907,
+      "C": -68.55613987328024,
+      "rmse": 2.3180326162146616
+    },
+    "800nm": {
+      "rss": 33.16813664253961,
+      "s": 130.24751415111535,
+      "C": -54.29992818255601,
+      "rmse": 2.351174764613767
+    },
+    "1000nm": {
+      "rss": 34.91606279501163,
+      "s": 127.70841115312237,
+      "C": -45.054845383211436,
+      "rmse": 2.4123316105313144
+    },
+    "1500nm": {
+      "rss": 37.984462107882145,
+      "s": 124.62130128048737,
+      "C": -35.16176286008547,
+      "rmse": 2.5160969147962136
+    }
+  },
+  "verdict_numbers": {
+    "unconstrained_C": -68.54742498519836,
+    "unconstrained_rmse": 2.318031760256821,
+    "constrained_C_ge_0_rmse": 8.592450609150395,
+    "linear_rmse": 8.871782958448726,
+    "rmse_improvement_from_positive_red_component": 0.27933234929833084,
+    "pred650_over_actual650_positive_component": 4.133647992465016
+  }
+}
+DONE -> /data/user/conversations/conv-f64cb198-aadc-4b6c-a8d3-7f7608a4e4ea/project/output/verification/h1h2h3_optics_test.json

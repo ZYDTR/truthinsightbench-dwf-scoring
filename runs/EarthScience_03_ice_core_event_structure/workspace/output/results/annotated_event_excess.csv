@@ -1,0 +1,16 @@
+row,depth_top_m,sulfate_ug_kg,background_median_101,excess_ug_kg,rank_all_rows_by_excess,n_rows,rank_all_rows_by_raw,is_local_max,is_window_max_pm5,is_window_max_pm50,label
+0,0.0,116.396,84.366,32.03,327,1931,377,False,False,False,reference_surface
+70,2.0,283.693,86.642,197.051,35,1931,36,True,True,True,event_01
+502,12.96,1047.754,95.946,951.8079999999999,1,1931,1,True,True,True,event_02
+517,13.27,431.026,96.26,334.766,16,1931,17,True,True,False,unidentified_event
+796,18.9,300.762,96.985,203.777,34,1931,35,True,True,True,unidentified_event
+841,19.85,243.178,98.73,144.44799999999998,51,1931,48,True,True,False,unidentified_event
+907,21.24,252.461,99.814,152.64700000000002,45,1931,46,True,True,True,unidentified_event
+1012,23.31,239.459,91.514,147.945,50,1931,51,True,True,True,event_03
+1305,29.2,507.568,96.258,411.31,12,1931,12,True,True,True,event_04
+1640,36.22,325.436,105.013,220.42299999999997,30,1931,29,True,True,False,unidentified_event
+1660,36.59,281.287,107.468,173.81899999999996,39,1931,37,True,True,False,unidentified_event
+1674,36.85,437.023,105.709,331.314,17,1931,15,True,True,False,unidentified_event
+1696,37.28,880.932,105.472,775.46,7,1931,7,True,True,True,event_05
+1752,38.4,312.942,86.571,226.371,28,1931,30,True,True,True,unidentified_event
+1862,40.59,259.762,90.053,169.709,40,1931,42,True,True,True,unidentified_event

@@ -1,0 +1,11 @@
+question,available_from_normalized,needs_workbook,note
+event drift rate per complete dynamic-spectrum event,"YES - 5 events, metadata + pixel grids",no,but re-derived rates disagree with the reported column (see s10)
+drift-rate distribution shape per source group x polarisation,YES - 6 slow + 6 fast series (948 rows),no,30 aggregate blocks exactly reconstruct the 12 series
+directional/orientation count distribution per group x channel,"PARTIAL - 52 of 55 raw coordinates; x=-34,-9,1 dropped",yes (Sheet_009..014 to recover the 3 dropped points),x=-9 drops 212 real counts for orientation_series_1
+absolute event totals per group x channel x drift regime,YES - the 12 series' y-sums,no,
+per-substride (substride) decomposition of the drift population,NO - the slow series merges two substrata into one monotone-ordered array,yes (Sheet_024/026/028/030/032/034),the junction is detectable as the single non-monotone step in each slow series
+CML-angle vs phase-angle relationship,NO - absent entirely,yes (Sheet_001/002),"67k angle pairs, 0-360 deg"
+radial-distance / SNR profile of the burst emission,NO,yes (Sheet_019/020/023/038),"4 sheets, 4 distinct SNR scalar values"
+whether the coarse 1.75 MHz/s histograms corroborate the fine ones,NO - not present,yes (Sheet_039..044),coarse totals match the fine totals to 0.0-4.5% but the shapes do NOT match at zero shift (r<=+0.23 for 11 of 18)
+second ('C' variant) orientation count family,NO,yes (Sheet_046/047),"near-identical shapes to the base group_b blocks, totals 0.81-0.97"
+drift rates of the 9 unrepresented dynamic-spectrum images,NO,yes (Sheet_008/015..018/021/022/036/037),4 sheets carry a Bounds drift value; the other 5 have a blank drift cell

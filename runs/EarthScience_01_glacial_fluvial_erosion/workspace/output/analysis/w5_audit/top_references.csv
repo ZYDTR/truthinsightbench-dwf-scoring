@@ -1,0 +1,31 @@
+Reference,n_rows,share_of_total,table
+"Berger and Spotila, 2008",32,0.07494,glacial
+"Balter-Kennedy et al., 2021",24,0.05621,glacial
+"Briner and Swanson, 1998",23,0.05386,glacial
+"Glotzbach et al., 2013",15,0.03513,glacial
+"Koppes et al., 2015",14,0.03279,glacial
+"Steinemann et al., 2021a",14,0.03279,glacial
+"Bogen, 1989",13,0.03044,glacial
+"Steinemann et al., 2020",13,0.03044,glacial
+"Østrem, Ziegler, and Ekman, 1970",12,0.0281,glacial
+"Fernandez et al., 2016",11,0.02576,glacial
+Milliman and Farnsworth 2013,512,0.08142,nonglacial
+USGS,448,0.07125,nonglacial
+Milliman and Syvitski 1992,181,0.02878,nonglacial
+"Van der Perck and Espinosa Vilches 2020, van der Weijden and Middelburg 1989",154,0.02449,nonglacial
+"Stirton, 2016",96,0.01527,nonglacial
+"Krickov et al., 2019",90,0.01431,nonglacial
+"Matmon, 2003",89,0.01415,nonglacial
+"Reuter, 2005",88,0.01399,nonglacial
+"Mandal, 2015",79,0.01256,nonglacial
+"Bierman, 2005",74,0.01177,nonglacial
+Milliman and Farnsworth 2013,512,0.07625,pooled
+USGS,448,0.06672,pooled
+Milliman and Syvitski 1992,181,0.02695,pooled
+"Van der Perck and Espinosa Vilches 2020, van der Weijden and Middelburg 1989",154,0.02293,pooled
+"Stirton, 2016",96,0.0143,pooled
+"Krickov et al., 2019",90,0.0134,pooled
+"Matmon, 2003",89,0.01325,pooled
+"Reuter, 2005",88,0.0131,pooled
+"Mandal, 2015",79,0.01176,pooled
+"Bierman, 2005",74,0.01102,pooled

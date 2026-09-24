@@ -1,0 +1,63 @@
+{
+  "error_correlations": {
+    "sd_exp_minus_reference": 6.623682412727947,
+    "sd_exp_minus_quantum": 3.011780340905638,
+    "sd_exp_minus_learned": 3.466852687216154,
+    "corr_expminusref_expminusquantum": 0.22028074437980233,
+    "corr_expminusref_expminuslearned": 0.23588240653959625,
+    "corr_expminusquantum_expminuslearned": 0.7686810251680487
+  },
+  "regression_expminusq_on_expminusr": {
+    "slope": 0.10016138668247436,
+    "intercept": -0.4156559950200767,
+    "r2": 0.048523606344519826,
+    "p": 2.1595038823670786e-07,
+    "se": 0.019068835376530723
+  },
+  "minimum_detectable_mae_difference": {
+    "n": 543,
+    "sd_paired_diff": 1.7908620863029667,
+    "se": 0.07685324816501078,
+    "mde_80pct_power": 0.21531092263102136,
+    "observed_mae_difference": -0.3128913443830571,
+    "observed_p": 5.3724650811894166e-05
+  },
+  "mae_vs_floor": {
+    "sigma_ref": 2.833,
+    "oracle_floor_mae": 2.260406960754518,
+    "quantum_mae": 2.0978084714548806,
+    "learned_mae": 2.410699815837938,
+    "reference_mae": 5.48596685082873,
+    "quantum_ratio_to_floor": 0.9280667189038552,
+    "learned_ratio_to_floor": 1.0664892905095518,
+    "reference_ratio_to_floor": 2.4269819311640806
+  },
+  "molecule_subsample_robustness": {
+    "n_draws": 300,
+    "mean_sigma_ref": 2.8289564420173483,
+    "sd": 0.09786507908175227,
+    "ci_lo": 2.609703045342401,
+    "ci_hi": 2.9931795715320444,
+    "mean_floor": 2.2571806682694486,
+    "floor_ci_lo": 2.082241768158922,
+    "floor_ci_hi": 2.388211767835954
+  },
+  "per_bondclass": {
+    "C-H": {
+      "n": 302,
+      "mae_quantum": 1.9906622516556294,
+      "mae_learned": 2.5415894039735103,
+      "mae_reference": 5.710860927152317,
+      "sigma_ref": 2.363969151345166,
+      "floor": 1.8861744880725604
+    },
+    "C-C": {
+      "n": 240,
+      "mae_quantum": 2.2344999999999997,
+      "mae_learned": 2.2365416666666667,
+      "mae_reference": 5.225,
+      "sigma_ref": 3.31176826869739,
+      "floor": 2.642408770550483
+    }
+  }
+}

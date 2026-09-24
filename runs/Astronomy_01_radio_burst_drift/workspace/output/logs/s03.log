@@ -1,0 +1,137 @@
+/usr/lib/python3/dist-packages/openpyxl/reader/drawings.py:59: UserWarning: wmf image format is not supported so the image is being dropped
+  warn(msg)
+non-image sheets recovered blocks: 86
+        sheet                            label      n          x0          x1        dx         y_sum
+0   Sheet_001              group_a (channel_l)  11517  351.450326  175.499664  0.011102  1.581284e+06
+1   Sheet_001               group_a(channel_r)  15856  351.439241  175.499664  0.011102  1.552303e+06
+2   Sheet_001                   Gan(channel_l)   1207  159.912372   16.658700  0.055445  4.026440e+05
+3   Sheet_001                   Gan(channel_r)    493  159.823636   16.481264  0.177472  1.600374e+05
+4   Sheet_001              group_c (channel_l)   1656  198.498691  194.223673  0.066547  4.023758e+05
+5   Sheet_001              group_c (channel_r)   2902  198.465418  194.345683  0.033274  7.083391e+05
+6   Sheet_002               group_a(channel_l)  11517  351.450326  175.499664  0.011102  8.734031e+05
+7   Sheet_002               group_a(channel_r)  15856  351.439241  175.499664  0.011102  1.377480e+06
+8   Sheet_002               Ganymed(channel_l)   1207  159.912372   16.658700  0.055445  2.910784e+05
+9   Sheet_002               group_b(channel_r)    493  159.823636   16.481264  0.177472  1.178001e+05
+10  Sheet_002               group_c(channel_l)   1656  198.498691  194.223673  0.066547  2.506769e+05
+11  Sheet_002               group_c(channel_r)   2902  198.465418  194.345683  0.033274  4.481849e+05
+12  Sheet_009   group_a (-35<s<-10), channel_l     25  -34.000000  -10.000000  1.000000  1.056000e+04
+13  Sheet_009      group_a(-10<s<0), channel_l     10   -9.000000    0.000000  1.000000  7.900000e+02
+14  Sheet_009       group_a(0<s<20), channel_l     20    1.000000   20.000000  1.000000  1.020000e+02
+15  Sheet_010   group_a (-35<s<-10), channel_r     25  -34.000000  -10.000000  1.000000  1.449200e+04
+16  Sheet_010      group_a(-10<s<0), channel_r     10   -9.000000    0.000000  1.000000  1.126000e+03
+17  Sheet_010       group_a(0<s<20), channel_r     20    1.000000   20.000000  1.000000  1.770000e+02
+18  Sheet_011   group_b (-35<s<-10), channel_l     25  -34.000000  -10.000000  1.000000  3.570000e+02
+19  Sheet_011      group_b(-10<s<0), channel_l     10   -9.000000    0.000000  1.000000  5.800000e+02
+20  Sheet_011       group_b(0<s<20), channel_l     20    1.000000   20.000000  1.000000  2.230000e+02
+21  Sheet_012   group_b (-35<s<-10), channel_r     25  -34.000000  -10.000000  1.000000  5.200000e+01
+22  Sheet_012      group_b(-10<s<0), channel_r     10   -9.000000    0.000000  1.000000  1.550000e+02
+23  Sheet_012       group_b(0<s<20), channel_r     20    1.000000   20.000000  1.000000  2.370000e+02
+24  Sheet_013   group_c (-35<s<-10), channel_l     25  -34.000000  -10.000000  1.000000  4.290000e+02
+25  Sheet_013      group_c(-10<s<0), channel_l     10   -9.000000    0.000000  1.000000  6.010000e+02
+26  Sheet_013       group_c(0<s<20), channel_l     20    1.000000   20.000000  1.000000  4.910000e+02
+27  Sheet_014   group_c (-35<s<-10), channel_r     25  -34.000000  -10.000000  1.000000  6.640000e+02
+28  Sheet_014      group_c(-10<s<0), channel_r     10   -9.000000    0.000000  1.000000  1.680000e+03
+29  Sheet_014       group_c(0<s<20), channel_r     20    1.000000   20.000000  1.000000  5.210000e+02
+30  Sheet_019                   RD_box_of_ones   1336    0.000000  179.865265  0.134731  6.371840e+05
+31  Sheet_019                           RD_raw    264    0.000000  180.000000  0.684411  1.488884e+05
+32  Sheet_020                           params      1   12.296175   12.296175       NaN  0.000000e+00
+33  Sheet_020                          RD_corr    264    0.000000  180.000000  0.684410  1.488884e+05
+34  Sheet_020                 RD_corr_centered    178    0.000000  119.325844  0.674156  3.225927e+01
+35  Sheet_020                              Fit    178    0.000000  119.325844  0.674156  3.225927e+01
+36  Sheet_023                           params      1    2.386328    2.386328       NaN  0.000000e+00
+37  Sheet_023                          RD_corr    178    0.000000  119.325844  0.674156  7.747382e-01
+38  Sheet_023                 RD_corr_centered    178    0.000000  119.325844  0.674156  7.747382e-01
+39  Sheet_023                              Fit    178    0.000000  119.325844  0.674156  7.738177e-01
+40  Sheet_024      group_a(-10<s<0), channel_l     29    0.158985    2.986996  0.101000  7.900000e+02
+41  Sheet_024       group_a(0<s<20), channel_l    108    0.219728   10.985917  0.100619  1.020000e+02
+42  Sheet_025   group_a (-35<s<-10), channel_l     26    1.929282   27.811098  1.035273  1.056000e+04
+43  Sheet_026      group_a(-10<s<0), channel_r     29    0.146297    2.986996  0.101454  1.126000e+03
+44  Sheet_026       group_a(0<s<20), channel_r    102    0.190664   10.299575  0.100088  1.770000e+02
+45  Sheet_027   group_a (-35<s<-10), channel_r     26    2.224652   27.811098  1.023458  1.449200e+04
+46  Sheet_028      group_b(-10<s<0), channel_l     24    0.258523    2.588561  0.101306  5.800000e+02
+47  Sheet_028       group_b(0<s<20), channel_l    115    0.244159   11.735270  0.100799  2.230000e+02
+48  Sheet_029   group_b (-35<s<-10), channel_l     24    4.468763   27.811098  1.014884  3.570000e+02
+49  Sheet_030      group_b(-10<s<0), channel_r     17    0.262693    1.950306  0.105476  1.550000e+02
+50  Sheet_030       group_b(0<s<20), channel_r    115    0.244159   11.735270  0.100799  2.370000e+02
+51  Sheet_031   group_b (-35<s<-10), channel_r     21    7.784072   27.811098  1.001351  5.200000e+01
+52  Sheet_032      group_c(-10<s<0), channel_l     26    0.260680    2.847253  0.103463  6.010000e+02
+53  Sheet_032       group_c(0<s<20), channel_l    101    0.243917   10.299575  0.100557  4.910000e+02
+54  Sheet_033   group_c (-35<s<-10), channel_l     24    4.013369   27.811098  1.034684  4.290000e+02
+55  Sheet_034      group_c(-10<s<0), channel_r     28    0.258281    2.986996  0.101064  1.680000e+03
+56  Sheet_034       group_c(0<s<20), channel_r    108    0.243754   10.985917  0.100394  5.210000e+02
+57  Sheet_035   group_c (-35<s<-10), channel_r     25    3.417966   27.811098  1.016381  6.640000e+02
+58  Sheet_038                           params      1    7.361634    7.361634       NaN  0.000000e+00
+59  Sheet_038                          RD_corr    178    0.000000  119.325844  0.674156  2.457806e+00
+60  Sheet_038                 RD_corr_centered    178    0.000000  119.325844  0.674156  2.457806e+00
+61  Sheet_038                              Fit    178    0.000000  119.325844  0.674156  2.457823e+00
+62  Sheet_039   group_a (-35<s<-10), channel_l     20    0.000000   33.250000  1.750000  1.057000e+04
+63  Sheet_039      group_a(-10<s<0), channel_l     20    0.000000   33.250000  1.750000  8.090000e+02
+64  Sheet_039       group_a(0<s<20), channel_l     20    0.000000   33.250000  1.750000  1.220000e+02
+65  Sheet_040   group_a (-35<s<-10), channel_r     20    0.000000   33.250000  1.750000  1.449800e+04
+66  Sheet_040      group_a(-10<s<0), channel_r     20    0.000000   33.250000  1.750000  1.144000e+03
+67  Sheet_040       group_a(0<s<20), channel_r     30    0.000000   33.833332  1.166667  2.070000e+02
+68  Sheet_041   group_b (-35<s<-10), channel_l     20    0.000000   33.250000  1.750000  3.520000e+02
+69  Sheet_041      group_b(-10<s<0), channel_l     20    0.000000   33.250000  1.750000  5.790000e+02
+70  Sheet_041       group_b(0<s<20), channel_l     20    0.000000   33.250000  1.750000  2.220000e+02
+71  Sheet_042   group_b (-35<s<-10), channel_r     20    0.000000   33.250000  1.750000  5.100000e+01
+72  Sheet_042      group_b(-10<s<0), channel_r     20    0.000000   33.250000  1.750000  1.480000e+02
+73  Sheet_042       group_b(0<s<20), channel_r     20    0.000000   33.250000  1.750000  2.340000e+02
+74  Sheet_043   group_c (-35<s<-10), channel_l     20    0.000000   33.250000  1.750000  4.230000e+02
+75  Sheet_043      group_c(-10<s<0), channel_l     20    0.000000   33.250000  1.750000  5.960000e+02
+76  Sheet_043       group_c(0<s<20), channel_l     20    0.000000   33.250000  1.750000  4.910000e+02
+77  Sheet_044   group_c (-35<s<-10), channel_r     20    0.000000   33.250000  1.750000  6.630000e+02
+78  Sheet_044      group_c(-10<s<0), channel_r     20    0.000000   33.250000  1.750000  1.671000e+03
+79  Sheet_044       group_c(0<s<20), channel_r     20    0.000000   33.250000  1.750000  5.180000e+02
+80  Sheet_046  group_b C(-35<s<-10), channel_l     25  -34.000000  -10.000000  1.000000  3.350000e+02
+81  Sheet_046    group_b C(-10<s<0), channel_l     20   -9.500000    0.000000  0.500000  5.620000e+02
+82  Sheet_046     group_b C(0<s<20), channel_l     20    1.000000   20.000000  1.000000  1.800000e+02
+83  Sheet_047  group_b C(-35<s<-10), channel_l     25  -34.000000  -10.000000  1.000000  4.800000e+01
+84  Sheet_047    group_b C(-10<s<0), channel_l     20   -9.500000    0.000000  0.500000  1.450000e+02
+85  Sheet_047     group_b C(0<s<20), channel_l     20    1.000000   20.000000  1.000000  1.980000e+02
+
+=== population series -> workbook block mapping ===
+   population_series_id drift_regime              group    channel  n_bins   events workbook_sheet                  workbook_label      match
+0   population_series_1         fast  anonymous_group_1  channel_l      26  10560.0      Sheet_025  group_a (-35<s<-10), channel_l      exact
+1   population_series_1         slow  anonymous_group_1  channel_l     137    892.0            NaN                             NaN  UNMATCHED
+2   population_series_2         fast  anonymous_group_1  channel_r      26  14492.0      Sheet_027  group_a (-35<s<-10), channel_r      exact
+3   population_series_2         slow  anonymous_group_1  channel_r     131   1303.0            NaN                             NaN  UNMATCHED
+4   population_series_3         fast  anonymous_group_2  channel_l      24    357.0      Sheet_029  group_b (-35<s<-10), channel_l      exact
+5   population_series_3         slow  anonymous_group_2  channel_l     139    803.0            NaN                             NaN  UNMATCHED
+6   population_series_4         fast  anonymous_group_2  channel_r      21     52.0      Sheet_031  group_b (-35<s<-10), channel_r      exact
+7   population_series_4         slow  anonymous_group_2  channel_r     132    392.0            NaN                             NaN  UNMATCHED
+8   population_series_5         fast  anonymous_group_3  channel_l      24    429.0      Sheet_033  group_c (-35<s<-10), channel_l      exact
+9   population_series_5         slow  anonymous_group_3  channel_l     127   1092.0            NaN                             NaN  UNMATCHED
+10  population_series_6         fast  anonymous_group_3  channel_r      25    664.0      Sheet_035  group_c (-35<s<-10), channel_r      exact
+11  population_series_6         slow  anonymous_group_3  channel_r     136   2201.0            NaN                             NaN  UNMATCHED
+
+=== orientation series -> workbook block mapping ===
+{'orientation_series_id': 'orientation_series_1', 'n': 52, 'x0': -33.0, 'x1': 20.0, 'events': 11240.0, 'candidates': []}
+{'orientation_series_id': 'orientation_series_2', 'n': 52, 'x0': -33.0, 'x1': 20.0, 'events': 15551.0, 'candidates': []}
+{'orientation_series_id': 'orientation_series_3', 'n': 52, 'x0': -33.0, 'x1': 20.0, 'events': 1151.0, 'candidates': []}
+{'orientation_series_id': 'orientation_series_4', 'n': 52, 'x0': -33.0, 'x1': 20.0, 'events': 444.0, 'candidates': []}
+{'orientation_series_id': 'orientation_series_5', 'n': 52, 'x0': -33.0, 'x1': 20.0, 'events': 1503.0, 'candidates': []}
+{'orientation_series_id': 'orientation_series_6', 'n': 52, 'x0': -33.0, 'x1': 20.0, 'events': 2843.0, 'candidates': []}
+
+=== orientation-type workbook labels -> x extent ===
+  'group_a (-35<s<-10), channel_l': n=25 x=[-34.0,-10.0]
+  'group_a (-35<s<-10), channel_r': n=25 x=[-34.0,-10.0]
+  'group_a(-10<s<0), channel_l': n=10 x=[-9.0,0.0]
+  'group_a(-10<s<0), channel_r': n=10 x=[-9.0,0.0]
+  'group_a(0<s<20), channel_l': n=20 x=[1.0,20.0]
+  'group_a(0<s<20), channel_r': n=20 x=[1.0,20.0]
+  'group_b (-35<s<-10), channel_l': n=25 x=[-34.0,-10.0]
+  'group_b (-35<s<-10), channel_r': n=25 x=[-34.0,-10.0]
+  'group_b C(-35<s<-10), channel_l': n=50 x=[-34.0,-10.0]
+  'group_b C(0<s<20), channel_l': n=40 x=[1.0,20.0]
+  'group_b(-10<s<0), channel_l': n=10 x=[-9.0,0.0]
+  'group_b(-10<s<0), channel_r': n=10 x=[-9.0,0.0]
+  'group_b(0<s<20), channel_l': n=20 x=[1.0,20.0]
+  'group_b(0<s<20), channel_r': n=20 x=[1.0,20.0]
+  'group_c (-35<s<-10), channel_l': n=25 x=[-34.0,-10.0]
+  'group_c (-35<s<-10), channel_r': n=25 x=[-34.0,-10.0]
+  'group_c(-10<s<0), channel_l': n=10 x=[-9.0,0.0]
+  'group_c(-10<s<0), channel_r': n=10 x=[-9.0,0.0]
+  'group_c(0<s<20), channel_l': n=20 x=[1.0,20.0]
+  'group_c(0<s<20), channel_r': n=20 x=[1.0,20.0]
+
+wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results

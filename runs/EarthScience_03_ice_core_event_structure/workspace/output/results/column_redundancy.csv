@@ -1,0 +1,7 @@
+column_a,column_b,relation,residual_scale,unit,independent
+c02_depth_ice_snow_m,c01_depth_top_m,"c02 - c01 in {0, 0.01, 0.02} m",0.020000000000003126,m,False
+c06_depth_w_e_m,c01_depth_top_m * c05_density_ice_g_cm_3,c06 = c01 * c05,0.03031999999999968,m,False
+c01_depth_top_m,cumsum(c03_samp_thick_cm)/100,c01 = cumsum(c03)/100 + 1.00 m (row >= 106),0.016278373739925467,m,False
+c09_age_ka_bp,c08_age_a_ad_ce,c09 = (1950 - c08)/1000,0.0,ka,False
+c05_density_ice_g_cm_3,c01_depth_top_m,"monotone smooth ramp, quadratic within 0.00055 g/cm3",0.0005494709532476438,g/cm3,False
+c04_sulfate_ug_kg,(all geometry columns),no algebraic relation found,,-,True

@@ -1,0 +1,318 @@
+{
+  "panel_1": {
+    "n_rows": 1430,
+    "f2_equals_f5": false,
+    "f5_is_run_counter": false,
+    "f1_is_run_counter": true,
+    "n_factor_cells": 1430,
+    "cell_replication": {
+      "min": 1,
+      "max": 1
+    },
+    "complete_factorial": true,
+    "factor_levels": {
+      "numeric_feature_2": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "numeric_feature_3": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "numeric_feature_4": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  },
+  "panel_2": {
+    "n_rows": 41,
+    "f3_nonmissing": 1,
+    "f3_values": [
+      0.0
+    ],
+    "f1_minus_f2": {
+      "mean": 0.4834705195121954,
+      "sd": 2.813360059605582,
+      "min": -5.516236999999997,
+      "max": 6.75,
+      "abs_max": 6.75
+    },
+    "pearson_f1_f2": 0.9984725422598203,
+    "ols_f2_on_f1": {
+      "slope": 0.9751578140376492,
+      "intercept": -0.09053984642477475
+    },
+    "spearman_f1_f2": 0.9864111498257843,
+    "identity_f2=f1": false,
+    "identity_f2=f1-0.5": false,
+    "identity_f2=f1+1": false,
+    "f1_is_D2_lattice": true
+  },
+  "panel_3": {
+    "n_rows": 104,
+    "f1_present_rows": [
+      0,
+      13,
+      26,
+      39,
+      52,
+      65,
+      78,
+      91
+    ],
+    "f1_values": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "f1_equals_row_div_13": true,
+    "n_series": 8,
+    "conditions_per_series": 13,
+    "complete_series_x_condition_grid": false,
+    "condition_order_within_series": [
+      0,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "same_condition_order_every_series": true,
+    "f8_equals_first_series_block": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "f7_all_missing": true,
+    "f5_equals_f6_exactly": true,
+    "f19_equals_f20_on_block": true,
+    "identity_C_equals_2B_over_AplusB_minus_1": {
+      "max_abs_residual": 2.220446049250313e-16,
+      "n": 104,
+      "exact_within_1e-12": true,
+      "alternative_C_equals_B_minus_A_over_AplusB": {
+        "max_abs_residual": 0.0
+      }
+    },
+    "R2_C_vs": {
+      "A/B": 0.9978430443873586,
+      "B/A": 0.9077760341525435,
+      "A/(A+B)": 1.0
+    }
+  },
+  "panel_4": {
+    "n_rows": 91,
+    "f1_present_rows": [
+      0,
+      13,
+      26,
+      39,
+      52,
+      65,
+      78
+    ],
+    "f1_values": [
+      0.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      1.0
+    ],
+    "f1_is_permutation_of_0_to_6": true,
+    "n_series": 7,
+    "f2_present_rows": [
+      0
+    ],
+    "conditions_per_series": 13,
+    "all_conditions_appear_once_per_series": true,
+    "series_blocks_13_rows_each": true,
+    "each_block_covers_13_distinct_conditions": true,
+    "condition_order_per_series": [
+      [
+        0,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ]
+    ],
+    "f6_identity": {
+      "max_abs_residual": 2.220446049250313e-16,
+      "exact_within_1e-12": true
+    },
+    "f7_f8_f9_all_missing": true
+  },
+  "panel_3_rank_block": {
+    "n_rank_rows": 8,
+    "rank_rows": [
+      0,
+      13,
+      26,
+      39,
+      52,
+      65,
+      78,
+      91
+    ],
+    "findings": []
+  },
+  "panel_4_rank_block": {
+    "n_rank_rows": 7,
+    "rank_rows": [
+      0,
+      13,
+      26,
+      39,
+      52,
+      65,
+      78
+    ],
+    "findings": []
+  }
+}

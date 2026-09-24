@@ -1,0 +1,10 @@
+process,methodology,n,slope,ci95_lo,ci95_hi,classical,hc3,d_from_minus1_se,d_from_0_se
+Glacial,Volumetric,233,-0.0728517486826726,-0.12276975018741669,-0.022933747177928523,"intermediate / other (negative, CI excludes both -1 and 0)","intermediate / other (negative, CI excludes both -1 and 0)",36.59497126651366,-2.8754922915183347
+Glacial,Cosmogenic surface,99,-0.3421028614739965,-0.4895179800391497,-0.19468774290884328,"intermediate / other (negative, CI excludes both -1 and 0)","intermediate / other (negative, CI excludes both -1 and 0)",8.857596951751677,-4.60590126560921
+Glacial,Thermochronometric,68,-0.6515564543513739,-0.8793231579294286,-0.42378975077331915,"intermediate / other (negative, CI excludes both -1 and 0)","intermediate / other (negative, CI excludes both -1 and 0)",3.0543972157775126,-5.711433731361329
+Glacial,Relief,18,-0.36992488940113794,-0.5946297587751437,-0.14522002002713216,"intermediate / other (negative, CI excludes both -1 and 0)",consistent with 0 (no relation),5.944239524434896,-3.4899365355988454
+Glacial,Cosmogenic detrital,9,-0.9404911109710853,-1.3163890185833906,-0.5645932033587799,consistent with -1 (mechanical coupling),consistent with -1 (mechanical coupling),0.3743467556841198,-5.916255569327003
+Nonglacial,Cosmogenic detrital,3470,-0.9950483209181248,-0.9965752716428031,-0.9935213701934464,"intermediate / other (negative, CI excludes both -1 and 0)","intermediate / other (negative, CI excludes both -1 and 0)",6.3580971178537355,-1277.6704137617135
+Nonglacial,Volumetric,2583,0.11740599746583383,0.09818320119993487,0.13662879373173278,"intermediate / other (positive, CI excludes both -1 and 0)","intermediate / other (positive, CI excludes both -1 and 0)",113.98461464137972,11.976378691433558
+Nonglacial,Cosmogenic surface,64,-0.9817671004221209,-1.1380959506802648,-0.825438250163977,consistent with -1 (mechanical coupling),consistent with -1 (mechanical coupling),0.23314344645230667,-12.553821427481722
+Nonglacial,Relief,7,-0.42031278389595333,-1.3352385517851286,0.4946129839932219,indeterminate (CI covers both -1 and 0),indeterminate (CI covers both -1 and 0),1.6286932561813527,-1.1809137369268452

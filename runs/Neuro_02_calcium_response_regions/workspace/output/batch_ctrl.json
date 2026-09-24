@@ -1,0 +1,230 @@
+{
+  "mean_amplitude_dff0": {
+    "r2": 0.5201,
+    "n": 819,
+    "terms": {
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_01]": {
+        "coef": 2.087868,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_03]": {
+        "coef": -0.693371,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_04]": {
+        "coef": -0.540335,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_05]": {
+        "coef": -0.4274,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_06]": {
+        "coef": -0.592221,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_07]": {
+        "coef": -0.400494,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_08]": {
+        "coef": -0.534663,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_09]": {
+        "coef": -0.514941,
+        "p": 0.0
+      }
+    }
+  },
+  "mean_time_to_peak_s": {
+    "r2": 0.2283,
+    "n": 819,
+    "terms": {
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_01]": {
+        "coef": 38.279252,
+        "p": 0.106044
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_03]": {
+        "coef": -7.281901,
+        "p": 0.252763
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_04]": {
+        "coef": -7.977235,
+        "p": 0.174424
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_05]": {
+        "coef": 18.973419,
+        "p": 0.035991
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_06]": {
+        "coef": 42.669113,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_07]": {
+        "coef": 1.556443,
+        "p": 0.793419
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_08]": {
+        "coef": -12.944845,
+        "p": 0.038524
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_09]": {
+        "coef": -0.445116,
+        "p": 0.939999
+      }
+    }
+  },
+  "mean_peak_width_s": {
+    "r2": 0.4441,
+    "n": 819,
+    "terms": {
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_01]": {
+        "coef": -3.244344,
+        "p": 0.743488
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_03]": {
+        "coef": 28.993848,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_04]": {
+        "coef": 13.128197,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_05]": {
+        "coef": 12.264727,
+        "p": 0.001239
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_06]": {
+        "coef": 19.766003,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_07]": {
+        "coef": 24.524176,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_08]": {
+        "coef": 28.540772,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_09]": {
+        "coef": 27.577059,
+        "p": 0.0
+      }
+    }
+  },
+  "mean_peak_prominence_dff0": {
+    "r2": 0.5058,
+    "n": 819,
+    "terms": {
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_01]": {
+        "coef": 1.910905,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_03]": {
+        "coef": -0.50627,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_04]": {
+        "coef": -0.458152,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_05]": {
+        "coef": -0.235673,
+        "p": 1.2e-05
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_06]": {
+        "coef": -0.433298,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_07]": {
+        "coef": -0.267237,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_08]": {
+        "coef": -0.400212,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_09]": {
+        "coef": -0.463464,
+        "p": 0.0
+      }
+    }
+  },
+  "mean_peak_frequency_hz": {
+    "r2": 0.1617,
+    "n": 819,
+    "terms": {
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_01]": {
+        "coef": -0.005927,
+        "p": 0.074311
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_03]": {
+        "coef": -0.005305,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_04]": {
+        "coef": -0.002816,
+        "p": 0.000652
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_05]": {
+        "coef": -0.004755,
+        "p": 0.000186
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_06]": {
+        "coef": -0.006222,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_07]": {
+        "coef": -0.005694,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_08]": {
+        "coef": -0.002922,
+        "p": 0.000887
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_09]": {
+        "coef": -0.004025,
+        "p": 1e-06
+      }
+    }
+  },
+  "mean_auc_au": {
+    "r2": 0.4672,
+    "n": 819,
+    "terms": {
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_01]": {
+        "coef": 39.515416,
+        "p": 0.137679
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_03]": {
+        "coef": -77.172184,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_04]": {
+        "coef": -44.690362,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_05]": {
+        "coef": -60.743341,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_06]": {
+        "coef": -88.295183,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_07]": {
+        "coef": -36.688886,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_08]": {
+        "coef": -60.037499,
+        "p": 0.0
+      },
+      "C(batch, Treatment(reference='recording_batch_02'))[T.recording_batch_09]": {
+        "coef": -42.384495,
+        "p": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+pass1 Sheet_003: cells=180625 distinct_sst=80026
+pass1 Sheet_004: cells=180625 distinct_sst=76070
+pass1 Sheet_005: cells=180625 distinct_sst=80821
+pass1 Sheet_006: cells=180625 distinct_sst=79147
+pass1 Sheet_007: cells=180625 distinct_sst=84163
+pass1 Sheet_008: cells=180625 distinct_sst=77355
+pass1 Sheet_015: cells=180625 distinct_sst=171195
+pass1 Sheet_016: cells=180625 distinct_sst=83008
+pass1 Sheet_017: cells=180625 distinct_sst=92427
+pass1 Sheet_018: cells=180625 distinct_sst=173104
+pass1 Sheet_021: cells=180625 distinct_sst=84538
+pass1 Sheet_022: cells=180625 distinct_sst=173926
+pass1 Sheet_036: cells=180625 distinct_sst=83450
+pass1 Sheet_037: cells=180625 distinct_sst=173494
+pass2 resolved 1442375 shared strings
+Sheet_003: grid=(425, 425) n_nan=0 range=[1.000000, 1.500000] n_gt1=90613 n_eq1=90012
+Sheet_004: grid=(425, 425) n_nan=0 range=[1.000000, 1.500000] n_gt1=89947 n_eq1=90678
+Sheet_005: grid=(425, 425) n_nan=0 range=[1.000000, 1.500000] n_gt1=89230 n_eq1=91395
+Sheet_006: grid=(425, 425) n_nan=0 range=[1.000000, 1.500000] n_gt1=89281 n_eq1=91344
+Sheet_007: grid=(425, 425) n_nan=0 range=[1.000000, 1.500000] n_gt1=89094 n_eq1=91531
+Sheet_008: grid=(425, 425) n_nan=0 range=[1.000000, 1.500000] n_gt1=87764 n_eq1=92861
+Sheet_015: grid=(425, 425) n_nan=0 range=[4.279517, 7.441819] n_gt1=180625 n_eq1=0
+Sheet_016: grid=(425, 425) n_nan=0 range=[1.000000, 1.500000] n_gt1=90170 n_eq1=90455
+Sheet_017: grid=(425, 425) n_nan=0 range=[-8.962063, 2.647472] n_gt1=1 n_eq1=0
+Sheet_018: grid=(425, 425) n_nan=0 range=[-4.952071, 1.360020] n_gt1=125 n_eq1=0
+Sheet_021: grid=(425, 425) n_nan=0 range=[1.000000, 1.500000] n_gt1=89130 n_eq1=91495
+Sheet_022: grid=(425, 425) n_nan=0 range=[-7.279670, 1.618343] n_gt1=13 n_eq1=0
+Sheet_036: grid=(425, 425) n_nan=0 range=[1.000000, 1.500000] n_gt1=89099 n_eq1=91526
+Sheet_037: grid=(425, 425) n_nan=0 range=[-5.580822, 1.381034] n_gt1=33 n_eq1=0
+event_1: (425, 425) range=[1.000000,1.500000]
+event_2: (425, 425) range=[1.000000,1.500000]
+event_3: (425, 425) range=[1.000000,1.500000]
+event_4: (425, 425) range=[1.000000,1.500000]
+event_5: (425, 425) range=[1.000000,1.500000]
+event_1: EXACT ('Sheet_003', 'direct')
+event_2: EXACT ('Sheet_004', 'direct')
+event_3: EXACT ('Sheet_005', 'direct')
+event_4: EXACT ('Sheet_006', 'direct')
+event_5: EXACT ('Sheet_007', 'direct')
+
+closest image pairs:
+  {'a': 'Sheet_007', 'b': 'Sheet_021', 'mean_abs': 0.1210314017681927, 'max_abs': 0.5, 'n_identical': 46526, 'frac_identical': 0.2575833910034602, 'pearson': 0.002917919827420418, 'sum_a': 196043.95265090466, 'sum_b': 195683.36482977867}
+  {'a': 'Sheet_021', 'b': 'Sheet_036', 'mean_abs': 0.12383526129772093, 'max_abs': 0.5, 'n_identical': 46699, 'frac_identical': 0.2585411764705882, 'pearson': 0.0008358129437503566, 'sum_a': 195683.36482977867, 'sum_b': 196747.98064905405}
+  {'a': 'Sheet_007', 'b': 'Sheet_036', 'mean_abs': 0.12440471925933469, 'max_abs': 0.5, 'n_identical': 47126, 'frac_identical': 0.2609051903114187, 'pearson': 0.011088523089302067, 'sum_a': 196043.95265090466, 'sum_b': 196747.98064905405}
+  {'a': 'Sheet_016', 'b': 'Sheet_021', 'mean_abs': 0.12489245205717515, 'max_abs': 0.5, 'n_identical': 46089, 'frac_identical': 0.25516401384083043, 'pearson': -0.0012869573470070965, 'sum_a': 196940.4688999653, 'sum_b': 195683.36482977867}
+  {'a': 'Sheet_007', 'b': 'Sheet_016', 'mean_abs': 0.12580638148429896, 'max_abs': 0.5, 'n_identical': 46455, 'frac_identical': 0.25719031141868515, 'pearson': 0.005280690706817783, 'sum_a': 196043.95265090466, 'sum_b': 196940.4688999653}
+  {'a': 'Sheet_005', 'b': 'Sheet_021', 'mean_abs': 0.12854866972959578, 'max_abs': 0.5, 'n_identical': 46595, 'frac_identical': 0.2579653979238754, 'pearson': -0.00011810307835740817, 'sum_a': 197843.44979304075, 'sum_b': 195683.36482977867}
+  {'a': 'Sheet_016', 'b': 'Sheet_036', 'mean_abs': 0.12880096578994013, 'max_abs': 0.5, 'n_identical': 46145, 'frac_identical': 0.25547404844290655, 'pearson': 0.0007107004786262995, 'sum_a': 196940.4688999653, 'sum_b': 196747.98064905405}
+  {'a': 'Sheet_005', 'b': 'Sheet_007', 'mean_abs': 0.13007047228202687, 'max_abs': 0.5, 'n_identical': 46720, 'frac_identical': 0.25865743944636677, 'pearson': -0.0008566120493639017, 'sum_a': 197843.44979304075, 'sum_b': 196043.95265090466}
+  {'a': 'Sheet_006', 'b': 'Sheet_021', 'mean_abs': 0.1308505929098822, 'max_abs': 0.5, 'n_identical': 46717, 'frac_identical': 0.258640830449827, 'pearson': 0.003775761479941542, 'sum_a': 198425.231490314, 'sum_b': 195683.36482977867}
+  {'a': 'Sheet_003', 'b': 'Sheet_021', 'mean_abs': 0.13129145527017982, 'max_abs': 0.5, 'n_identical': 46071, 'frac_identical': 0.2550643598615917, 'pearson': 0.0042957446394817295, 'sum_a': 198605.4310696125, 'sum_b': 195683.36482977867}
+  {'a': 'Sheet_006', 'b': 'Sheet_007', 'mean_abs': 0.13221429290078504, 'max_abs': 0.5, 'n_identical': 46883, 'frac_identical': 0.25955986159169553, 'pearson': 0.003859917356729954, 'sum_a': 198425.231490314, 'sum_b': 196043.95265090466}
+  {'a': 'Sheet_008', 'b': 'Sheet_021', 'mean_abs': 0.13289455625540658, 'max_abs': 0.5, 'n_identical': 47238, 'frac_identical': 0.26152525951557093, 'pearson': -0.0030740028184096167, 'sum_a': 198697.91013622284, 'sum_b': 195683.36482977867}
+
+wrote s14_images.npz / s14_image_stats.csv / s14_event_match.csv / s14_pairwise.csv

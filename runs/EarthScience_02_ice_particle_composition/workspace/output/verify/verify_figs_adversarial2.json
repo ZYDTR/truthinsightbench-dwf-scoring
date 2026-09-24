@@ -1,0 +1,164 @@
+{
+ "purpose": "honest small-cluster inference + F1/F2 overlap",
+ "n_clusters": 5,
+ "min_attainable_two_sided_signflip_p": 0.0625,
+ "F1_depth": {
+  "wcb_t": {
+   "slope": -0.8258403801185458,
+   "se_CR1": 0.5700800522994754,
+   "t": -1.4486393214206237,
+   "p_two_sided": 0.251025,
+   "p_one_sided_neg": 0.12745,
+   "boot_q": [
+    -1.9771040334453938,
+    -0.4866055265594112,
+    1.9771040334453938
+   ],
+   "B": 40000
+  },
+  "perm_drop_group_02": {
+   "observed": -0.2057640438837601,
+   "p_two_sided": 0.5797,
+   "p_one_sided_neg": 0.29175,
+   "n": 23
+  },
+  "cluster_boot_slope": {
+   "q025": -1.710268462271786,
+   "median": -0.8146480445631977,
+   "q975": 0.1466007750017698,
+   "B": 20000
+  }
+ },
+ "F2_chl": {
+  "wcb_t": {
+   "slope": -1.1429630468874727,
+   "se_CR1": 0.32884765011514316,
+   "t": -3.475661287186556,
+   "p_two_sided": 0.123975,
+   "p_one_sided_neg": 0.062025,
+   "boot_q": [
+    -3.527865958678409,
+    -0.5555419611607912,
+    3.527865958678409
+   ],
+   "B": 40000
+  },
+  "perm_drop_group_02": {
+   "observed": -0.6820121557018747,
+   "p_two_sided": 0.09535,
+   "p_one_sided_neg": 0.02515,
+   "n": 23
+  },
+  "cluster_boot_slope": {
+   "q025": -1.5372221210935795,
+   "median": -1.1274093685055517,
+   "q975": -0.235656730866517,
+   "B": 20000
+  }
+ },
+ "F2_joint_chl_plus_depth_chl_coef": {
+  "beta": -1.3557811635369121,
+  "se_CR1": 0.34704556909862866,
+  "t": -3.906637295667664,
+  "p_CR1_df4": 0.017443311476119206,
+  "p_wcb_t": 0.0,
+  "depth_coef": {
+   "beta": 0.3302901445676187,
+   "se_CR1": 0.2893071338582364,
+   "p_CR1_df4": 0.31729844725013306
+  }
+ },
+ "F2_excl_deepest_perm": {
+  "observed": -1.7817726761589792,
+  "p_two_sided": 0.0016,
+  "p_one_sided_neg": 0.0016,
+  "n": 25
+ },
+ "F2_excl_deepest_joint_chl_coef": {
+  "beta": -1.8739435843044667,
+  "se_CR1": 0.302413719968414,
+  "p_CR1_df4": 0.0034486945602942728,
+  "depth_beta": 0.13903480218689032,
+  "depth_p_CR1": 0.5579505940979403
+ },
+ "F2_excl_3hi_chl_perm": {
+  "excluded": [
+   "sample_012",
+   "sample_017",
+   "sample_024"
+  ],
+  "observed": -1.4206446604241172,
+  "p_two_sided": 0.00845,
+  "p_one_sided_neg": 0.00835,
+  "n": 27
+ },
+ "F2_excl_3hi_chl_joint_chl_coef": {
+  "beta": -1.7540472164865983,
+  "se_CR1": 0.4132949554921853,
+  "p_CR1_df4": 0.013220639995826495,
+  "depth_beta": 0.42685186122190477,
+  "depth_p_CR1": 0.18361124132519258
+ },
+ "overlap_chl_depth": {
+  "group_01": {
+   "spearman_rho_lchl_vs_depth": -0.20519567041703085,
+   "p": 0.7405819415910722,
+   "n": 5
+  },
+  "group_02": {
+   "spearman_rho_lchl_vs_depth": 0.8648999641877367,
+   "p": 0.011965034552489666,
+   "n": 7
+  },
+  "group_03": {
+   "spearman_rho_lchl_vs_depth": 0.594618725379069,
+   "p": 0.15908999370118468,
+   "n": 7
+  },
+  "group_04": {
+   "spearman_rho_lchl_vs_depth": 0.7,
+   "p": 0.1881204043741873,
+   "n": 5
+  },
+  "group_05": {
+   "spearman_rho_lchl_vs_depth": 0.942857142857143,
+   "p": 0.004804664723032056,
+   "n": 6
+  },
+  "mean_rho": 0.5794360324013835,
+  "n_positive": 4,
+  "note": "chlorophyll increases with depth in every group to some degree; the two claims share the deep-interval signal",
+  "deepest_interval_flags": {
+   "group_01": {
+    "sample_id": "sample_005",
+    "is_max_chl": false,
+    "is_min_total": false,
+    "is_max_depth": true
+   },
+   "group_02": {
+    "sample_id": "sample_012",
+    "is_max_chl": true,
+    "is_min_total": false,
+    "is_max_depth": true
+   },
+   "group_03": {
+    "sample_id": "sample_024",
+    "is_max_chl": true,
+    "is_min_total": true,
+    "is_max_depth": true
+   },
+   "group_04": {
+    "sample_id": "sample_017",
+    "is_max_chl": true,
+    "is_min_total": false,
+    "is_max_depth": true
+   },
+   "group_05": {
+    "sample_id": "sample_030",
+    "is_max_chl": true,
+    "is_min_total": false,
+    "is_max_depth": true
+   }
+  }
+ }
+}

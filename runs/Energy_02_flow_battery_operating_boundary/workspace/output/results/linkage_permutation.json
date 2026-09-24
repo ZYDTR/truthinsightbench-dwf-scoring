@@ -1,0 +1,31 @@
+{
+  "n_permutations": 5040,
+  "identity_rank_efficiency": 1,
+  "identity_rmse_efficiency_pp": 0.18367276459256257,
+  "best_rmse_efficiency_pp": 0.18367276459256257,
+  "best_perm_efficiency": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "median_rmse_efficiency_pp": 12.198101960857635,
+  "p_value_efficiency": 0.0001984126984126984,
+  "identity_rank_voltage": 1,
+  "identity_rmse_voltage_V": 0.0026784970880139205,
+  "best_rmse_voltage_V": 0.0026784970880139205,
+  "best_perm_voltage": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "median_rmse_voltage_V": 0.17765445237284816,
+  "p_value_voltage": 0.0001984126984126984
+}

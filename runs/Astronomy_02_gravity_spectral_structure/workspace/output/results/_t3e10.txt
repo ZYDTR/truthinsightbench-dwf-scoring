@@ -1,0 +1,23 @@
+lattice size 2240
+ranked rows inside declared lattice: 250 outside: 0
+coverage of lattice: 0.1116
+n distinct (vmax,vmin) pairs in table: 32 of 56
+max cells per (vmax,vmin) pair: 21 (of 40 possible)
+vmax=     1:   2 cells = 0.006 of its 320-cell sub-lattice
+vmax=     3:   4 cells = 0.013 of its 320-cell sub-lattice
+vmax=    10:  21 cells = 0.066 of its 320-cell sub-lattice
+vmax=    20:  60 cells = 0.188 of its 320-cell sub-lattice
+vmax=    30:  99 cells = 0.309 of its 320-cell sub-lattice
+vmax=    50:  59 cells = 0.184 of its 320-cell sub-lattice
+vmax=   100:   5 cells = 0.016 of its 320-cell sub-lattice
+median ic by vmax: {1: 121.80000000000001, 3: 103.9, 10: 101.9, 20: 71.4, 30: 72.09999999999998, 50: 99.1, 100: 130.2}
+min ic by vmax: {1: 117.2, 3: 42.6, 10: 81.9, 20: 2.0, 30: 0.0, 50: 36.6, 100: 123.1}
+span sec 4740.0 invT uHz 210.9704641350211
+df=  50.0 uHz (0.237 x 1/T): median n_local_max=1 frac_with_2_peaks=0.30
+df= 100.0 uHz (0.474 x 1/T): median n_local_max=1 frac_with_2_peaks=0.15
+df= 211.0 uHz (1.000 x 1/T): median n_local_max=2 frac_with_2_peaks=0.60
+df= 250.0 uHz (1.185 x 1/T): median n_local_max=2 frac_with_2_peaks=0.55
+df= 275.0 uHz (1.303 x 1/T): median n_local_max=2 frac_with_2_peaks=0.95
+df= 300.0 uHz (1.422 x 1/T): median n_local_max=2 frac_with_2_peaks=1.00
+df= 325.0 uHz (1.540 x 1/T): median n_local_max=2 frac_with_2_peaks=1.00
+df= 450.0 uHz (2.133 x 1/T): median n_local_max=2 frac_with_2_peaks=1.00

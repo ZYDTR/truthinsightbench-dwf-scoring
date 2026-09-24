@@ -1,0 +1,1064 @@
+{
+  "workstream": "WS5 - provenance audit and experimental-reference heterogeneity",
+  "analysis_units": {
+    "bond_observations": 543,
+    "unique_parent_molecules": 419,
+    "unique_molecule_bond_pairs": 543,
+    "unique_fragment_pairs": 539,
+    "database_rows": 484907,
+    "database_unique_mol_frag_frag_keys": 290664,
+    "note": "Every statistic below states which of these it uses. Bond-observation statistics (n=543) are NOT independent: 419 parent molecules, 4 repeated fragment pairs, 0 exact replicates."
+  },
+  "1_cross_file_consistency": {
+    "file_hashes": {
+      "experimental_benchmark.tsv": {
+        "sha256": "319bf2c88ab47bb2c7f779163ed48cd2f316e6299eeda0b999d924ffe81ad484",
+        "bytes": 44326,
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/data/normalized_views/experimental_benchmark.tsv",
+        "manifest_sha256": "319bf2c88ab47bb2c7f779163ed48cd2f316e6299eeda0b999d924ffe81ad484",
+        "sha256_matches_manifest": true,
+        "manifest_bytes": 44326,
+        "bytes_match_manifest": true
+      },
+      "bde_db_full.csv.gz": {
+        "sha256": "2ee36d1548d51289e3faa21e1269b9bbb8f3a8975f9b29719e6beae226864cc6",
+        "bytes": 7491101,
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/data/source_data/bde_db_full.csv.gz",
+        "manifest_sha256": "2ee36d1548d51289e3faa21e1269b9bbb8f3a8975f9b29719e6beae226864cc6",
+        "sha256_matches_manifest": true,
+        "manifest_bytes": 7491101,
+        "bytes_match_manifest": true
+      },
+      "experimental_source_tables.xlsx": {
+        "sha256": "e7c0c73db91d0d097ca8e9f5d6a8edf5cac537a10530d3732fe7738e9e581f08",
+        "bytes": 33180,
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/data/source_data/experimental_source_tables.xlsx",
+        "manifest_sha256": "e7c0c73db91d0d097ca8e9f5d6a8edf5cac537a10530d3732fe7738e9e581f08",
+        "sha256_matches_manifest": true,
+        "manifest_bytes": 33180,
+        "bytes_match_manifest": true
+      }
+    },
+    "shapes": {
+      "benchmark_tsv": [
+        543,
+        8
+      ],
+      "xlsx_sheet001": [
+        543,
+        8
+      ],
+      "db": [
+        484907,
+        8
+      ]
+    },
+    "n_shared_columns_compared": 7,
+    "exact_match_counts": {
+      "parent_structure_smiles": {
+        "xlsx_column": "Molecule",
+        "n_exact_match": 543,
+        "n_compared": 543,
+        "max_abs_diff": null
+      },
+      "fragment_a_smiles": {
+        "xlsx_column": "Radical 1",
+        "n_exact_match": 543,
+        "n_compared": 543,
+        "max_abs_diff": null
+      },
+      "fragment_b_smiles": {
+        "xlsx_column": "Radical 2",
+        "n_exact_match": 543,
+        "n_compared": 543,
+        "max_abs_diff": null
+      },
+      "experimental_bde_kcal_mol": {
+        "xlsx_column": "observed_value",
+        "n_exact_match": 543,
+        "n_compared": 543,
+        "max_abs_diff": 0.0
+      },
+      "quantum_estimate_bde_kcal_mol": {
+        "xlsx_column": "estimate_quantum",
+        "n_exact_match": 543,
+        "n_compared": 543,
+        "max_abs_diff": 0.0
+      },
+      "learned_estimate_bde_kcal_mol": {
+        "xlsx_column": "estimate_learned",
+        "n_exact_match": 543,
+        "n_compared": 543,
+        "max_abs_diff": 0.0
+      },
+      "reference_estimate_bde_kcal_mol": {
+        "xlsx_column": "estimate_reference",
+        "n_exact_match": 543,
+        "n_compared": 543,
+        "max_abs_diff": 0.0
+      }
+    },
+    "all_7_shared_columns_identical": true,
+    "row_order_identical": true,
+    "row_multiset_identical": true,
+    "extra_workbook_column": "in_reference_training_set",
+    "train_flag": {
+      "dtype": "bool",
+      "n_true": 331,
+      "n_false": 212,
+      "value_counts": {
+        "True": 331,
+        "False": 212
+      }
+    },
+    "train_flag_vs_exact_db_row": {
+      "both_true": 331,
+      "train_only_not_db": 0,
+      "db_only_not_train": 0,
+      "neither": 212,
+      "n_agreement": 543,
+      "agreement_fraction": 1.0,
+      "contradictions": 0,
+      "n_true_total": 331,
+      "n_in_db_total": 331
+    },
+    "observation_id_note": "observation_id exists only in the TSV; the xlsx has no id column. It is a derived read-order label (bond_observation_%04d).",
+    "conclusion": "Verified identical. 543/543 exact match on all 7 shared columns with max absolute numeric difference 0.0, and identical row order (543/543). in_reference_training_set is a bit-exact indicator of the exact-database-row subset: 331 both-true, 212 both-false, 0 contradictions, agreement 543/543 (fraction 1.0). The workbook flag is therefore not a train/test split in the ML sense - it is the same predicate as 'this observation has a database row'.",
+    "sha256_matches_manifest": {
+      "experimental_benchmark.tsv": true,
+      "bde_db_full.csv.gz": true,
+      "experimental_source_tables.xlsx": true
+    }
+  },
+  "2_quantum_channel_provenance": {
+    "n_exact_db_row_matched": 331,
+    "n_unmatched": 212,
+    "database_join_unambiguity": {
+      "n_db_rows": 484907,
+      "n_unique_keys": 290664,
+      "n_multi_row_keys": 131063,
+      "n_rows_on_multi_row_keys": 325306,
+      "multi_row_keys_with_more_than_one_distinct_bde": 0,
+      "max_within_key_bde_spread": 0.0,
+      "multi_row_keys_varying_bond_index": 131063,
+      "multi_row_keys_varying_bond_type": 0,
+      "interpretation": "The (molecule,fragment1,fragment2) -> bde map is single-valued. 131,063 keys carry 2-20 duplicate rows that differ ONLY in bond_index (0 differ in bde, 0 in bond_type, 0 in delta_stereo). The join is a well-defined function and no min/max/mean dedup choice can change any number here. The multiplicity is a symmetric-bond bookkeeping artifact.",
+      "analysis_unit": "database row / database key"
+    },
+    "db_minus_quantum": {
+      "n": 331,
+      "mean_diff": 0.01916935887037637,
+      "sd_diff": 0.5816513820270577,
+      "min_diff": -3.0130546380414955,
+      "max_diff": 6.998506930998104,
+      "max_abs_diff": 6.998506930998104,
+      "mean_abs_diff": 0.15811825430587553,
+      "quantiles_diff": {
+        "q00": -3.0130546380414955,
+        "q01": -1.293302653488486,
+        "q05": -0.35049248000915156,
+        "q25": -0.01974808349653756,
+        "q50": -0.000308269952796536,
+        "q75": 0.01862873850105018,
+        "q95": 0.19716726950029795,
+        "q99": 2.1261775492247166,
+        "q100": 6.998506930998104
+      },
+      "quantiles_absdiff": {
+        "q00": 5.85359770894911e-05,
+        "q01": 0.0003628147627580347,
+        "q05": 0.002005079503604179,
+        "q25": 0.007972582489948365,
+        "q50": 0.01950283300058686,
+        "q75": 0.05438703948165369,
+        "q95": 0.6194189480015524,
+        "q99": 2.508899955496291,
+        "q100": 6.998506930998104
+      },
+      "n_abs_le_0.01": 100,
+      "frac_abs_le_0.01": 0.3021148036253776,
+      "n_abs_le_0.1": 268,
+      "frac_abs_le_0.1": 0.8096676737160121,
+      "n_abs_le_0.5": 306,
+      "frac_abs_le_0.5": 0.9244712990936556,
+      "n_abs_le_1.0": 318,
+      "frac_abs_le_1.0": 0.9607250755287009,
+      "n_exact_equality": 0,
+      "n_equal_after_round2_of_db": 51,
+      "n_equal_after_round4_of_db": 0
+    },
+    "db_minus_learned": {
+      "n": 331,
+      "mean_diff": -0.020075354120560558,
+      "sd_diff": 0.651727409992287,
+      "min_diff": -4.7676349069559905,
+      "max_diff": 3.4318497280086007,
+      "max_abs_diff": 4.7676349069559905,
+      "mean_abs_diff": 0.2787158398821419,
+      "quantiles_diff": {
+        "q00": -4.7676349069559905,
+        "q01": -2.9436577695967356,
+        "q05": -0.4212648795044487,
+        "q25": -0.1454233939996996,
+        "q50": -0.0017042459879945682,
+        "q75": 0.11984958600474016,
+        "q95": 0.4298095874915546,
+        "q99": 2.4691942575012384,
+        "q100": 3.4318497280086007
+      },
+      "quantiles_absdiff": {
+        "q00": 0.0017042459879945682,
+        "q01": 0.0034604888124761144,
+        "q05": 0.010246092493510162,
+        "q25": 0.050034281012855786,
+        "q50": 0.1291260550077027,
+        "q75": 0.2442168080010063,
+        "q95": 1.157093801018,
+        "q99": 3.3984745555080282,
+        "q100": 4.7676349069559905
+      },
+      "n_abs_le_0.01": 17,
+      "frac_abs_le_0.01": 0.0513595166163142,
+      "n_abs_le_0.1": 140,
+      "frac_abs_le_0.1": 0.4229607250755287,
+      "n_abs_le_0.5": 306,
+      "frac_abs_le_0.5": 0.9244712990936556,
+      "n_abs_le_1.0": 313,
+      "frac_abs_le_1.0": 0.945619335347432,
+      "n_exact_equality": 0,
+      "n_equal_after_round2_of_db": 6,
+      "n_equal_after_round4_of_db": 0
+    },
+    "closeness_to_database_row": {
+      "median_abs_db_minus_quantum": 0.01950283300058686,
+      "median_abs_db_minus_learned": 0.1291260550077027,
+      "ratio": 0.15103716286711824,
+      "wilcoxon_p": 5.795703399052868e-17,
+      "n_quantum_closer": 243,
+      "n_learned_closer": 76
+    },
+    "quantum_on_db_unique_rows": {
+      "n": 182,
+      "quantum_max_abs": 3.0130546380414955,
+      "quantum_median_abs": 0.024221529995351432,
+      "quantum_frac_le_0.1": 0.7967032967032966,
+      "quantum_frac_le_0.5": 0.9340659340659341,
+      "learned_max_abs": 4.7676349069559905,
+      "learned_frac_le_0.1": 0.37362637362637363,
+      "learned_frac_le_0.5": 0.9230769230769231,
+      "quantum_median_abs_ratio_to_learned": 0.1561673218840788
+    },
+    "conclusion": "YES - the quantum channel IS the database's own value for this subset, re-serialised at lower precision. Among 331 database-matched bond observations: |db - quantum| has median 0.0195 kcal/mol (mean 0.158, max 6.999); 30.2% within 0.01, 81.0% within 0.1, 92.4% within 0.5, and 100.0% within 1.0 kcal/mol. For the learned channel the same comparison gives median 0.1291 (6.6x worse), 5.1% within 0.01, 42.3% within 0.1, 92.4% within 0.5, and 97.6% within 1.0 (max 4.768). The learned channel therefore DISAGREES: it is a fitted approximation to the same target, not a copy.",
+    "direction_of_evidence": "Paired test on the same 331 bond observations: quantum is closer to the database row than learned on 243 rows vs 76 (Wilcoxon p=5.8e-17). Both channels agree with the database to 0.001 kcal/mol on some rows (quantum 7/331), which fixes the database row as their common underlying source; neither is bit-identical because both are stored rounded.",
+    "residual_structure": "The 25/331 rows with |db-quantum| > 0.5 are dominated by hydrogen-transfer observations (e.g. cyclodecane bond_observation_0086: db 94.772 vs quantum 92.60, 20 database rows). The database stores one value per symmetry-equivalent key while the quantum channel stores an explicitly evaluated geometry. The residual is mean-zero (mean +0.0192, sd 0.582), so it is not a systematic offset - it is a per-geometry sampling difference inside the same source value."
+  },
+  "3_reference_channel": {
+    "is_per_fragment_pair_lookup": true,
+    "keying_evidence": {
+      "n_rows": 543,
+      "n_distinct_fragment_pairs": 539,
+      "n_distinct_reference_values": 290,
+      "n_fragment_pairs_carrying_more_than_one_distinct_reference_value": 0,
+      "n_fragment_pairs_with_more_than_one_row": 4,
+      "max_distinct_reference_values_per_fragment_pair": 1,
+      "ordered_vs_unordered_pairs": "539 both ways; reference is constant within each pair under either convention.",
+      "rdkit_canonicalised_pairs": "539; still 0 pairs with more than one distinct reference value.",
+      "conclusion": "Confirmed a pure per-(fragment_a,fragment_b) lookup with a single value per pair: 539 distinct fragment pairs, 0 of which carry more than one distinct reference value. By contrast 86 of 419 parent molecules carry more than one distinct reference value, so the lookup key is the fragment pair, NOT the molecule and NOT the bond class.",
+      "analysis_unit": "fragment pair"
+    },
+    "reference_value_reuse": {},
+    "reference_is_not_the_database_value": {
+      "n_reference_values_equal_to_a_database_bde_of_the_same_fragment_pair": 0,
+      "n_reference_values_equal_to_any_database_bde": 0,
+      "n_distinct_database_bde_values": 144147,
+      "conclusion": "The reference channel is an independent literature-derived lookup; it shares no value with the 484,907-row database."
+    },
+    "reference_agrees_with_the_experimental_table": {
+      "n_reference_values_that_are_an_experimental_value_elsewhere_in_the_file": 313,
+      "null_model": "uniform draw on the 0.1 kcal/mol grid spanning the experimental range, 2000 draws",
+      "null_mean": 105.888,
+      "null_sd": 9.098321603460718,
+      "z": 22.763758968601532,
+      "n_reference_values_equal_to_the_same_pair_experimental_value_in_another_molecule": 0,
+      "conclusion": "313/543 reference values coincide EXACTLY with an experimental value somewhere in the same file (z=+22.8 vs a grid null of 105.9 +- 9.1), and every value is on the 0.1 kcal/mol grid, so the reference channel draws from the same literature value pool as the experimental column. It nevertheless shares a value with the specific row's own experimental value only ONCE (1/543) and never (0/543) with the experimental value of the same fragment pair in another molecule, so it is a INDEPENDENT DRAW from that literature pool, not a copy of the benchmark answer. This is what makes it usable as an independent probe of reference-value heterogeneity, and it is also why its error (MAE 5.486) is large.",
+      "analysis_unit": "bond observation"
+    },
+    "reference_error_matched_vs_unmatched": {
+      "db_matched_331": {
+        "n": 331,
+        "mae": 5.024410876132931,
+        "rmse": 6.055621941609126,
+        "medae": 4.699999999999989,
+        "mean_signed": 0.8624773413897286,
+        "max_abs": 21.60000000000001
+      },
+      "db_unmatched_212": {
+        "n": 212,
+        "mae": 6.206603773584907,
+        "rmse": 7.73164899787976,
+        "medae": 5.350000000000001,
+        "mean_signed": 2.1839622641509435,
+        "max_abs": 33.4
+      },
+      "all_543": {
+        "mae": 5.48596685082873,
+        "rmse": 6.75961553714002,
+        "median_abs": 4.8999999999999915,
+        "mean_signed": 1.3784162062615106,
+        "sd": 6.623682412727947,
+        "max_abs": 33.4,
+        "frac_within_0.001": 0.001841620626151013,
+        "n_within_0.001": 1,
+        "frac_within_0.01": 0.001841620626151013,
+        "n_within_0.01": 1,
+        "frac_within_0.1": 0.003683241252302026,
+        "n_within_0.1": 2
+      },
+      "test": {
+        "mae_matched": 5.024410876132931,
+        "mae_unmatched": 6.206603773584907,
+        "median_matched": 4.699999999999989,
+        "median_unmatched": 5.350000000000001,
+        "welch_t": -3.2131766878010817,
+        "p_welch": 0.001433203096690414,
+        "p_mannwhitney": 0.003357023908152972,
+        "cliffs_delta": -0.14910505614775124,
+        "n_matched": 331,
+        "n_unmatched": 212
+      },
+      "conclusion": "Reference MAE is 5.0244 kcal/mol on the 331 database-matched bond observations vs 6.2066 on the 212 unmatched (Welch t=-3.21, p=0.0014; Mann-Whitney p=0.0034; Cliff's delta -0.149). Reference error is significantly LARGER on the unmatched (database-absent) rows. The reference channel is not a database proxy - it is worse exactly where the database is missing.",
+      "analysis_unit": "bond observation"
+    },
+    "channel_null_counts": {
+      "quantum": 0,
+      "learned": 0,
+      "reference": 0
+    },
+    "channel_mae_table": {
+      "quantum": {
+        "all543": 2.0978084714548806,
+        "matched331": 1.8708459214501518,
+        "unmatched212": 2.4521698113207546,
+        "rmse_all543": 3.0595296584807596
+      },
+      "learned": {
+        "all543": 2.410699815837938,
+        "matched331": 1.8069486404833845,
+        "unmatched212": 3.353349056603773,
+        "rmse_all543": 3.627796539885696
+      },
+      "reference": {
+        "all543": 5.48596685082873,
+        "matched331": 5.024410876132931,
+        "unmatched212": 6.206603773584907,
+        "rmse_all543": 6.75961553714002
+      }
+    }
+  },
+  "4_heterogeneity_bound": {
+    "(a)_within_parent_molecule_experimental_spread": {
+      "n_groups": 86,
+      "n_rows": 210,
+      "mean_group_size": 2.441860465116279,
+      "mean_spread": 13.418604651162788,
+      "median_spread": 11.899999999999999,
+      "q75_spread": 18.450000000000003,
+      "q90_spread": 25.4,
+      "q99_spread": 39.825000000000045,
+      "max_spread": 47.900000000000006,
+      "rms_spread": 16.284919546966233,
+      "implied_sigma_from_range": 11.515177042737182,
+      "pooled_within_sd": 165.2622713320976,
+      "mean_within_sd": 106.41011821705428,
+      "median_within_sd": 46.99041666666665,
+      "n_groups_with_1_distinct": 1,
+      "frac_groups_with_1_distinct": 0.011627906976744186
+    },
+    "(a2)_within_parent_molecule_and_bond_class": {
+      "n_groups": 50,
+      "n_rows": 110,
+      "mean_group_size": 2.2,
+      "mean_spread": 9.780000000000001,
+      "median_spread": 2.6500000000000057,
+      "q75_spread": 22.2,
+      "q90_spread": 25.240000000000002,
+      "q99_spread": 43.244999999999976,
+      "max_spread": 47.900000000000006,
+      "rms_spread": 15.30173846332501,
+      "implied_sigma_from_range": 10.819963031360135,
+      "pooled_within_sd": 224.38462399436506,
+      "mean_within_sd": 116.91826666666665,
+      "median_within_sd": 3.0975,
+      "n_groups_with_1_distinct": 1,
+      "frac_groups_with_1_distinct": 0.02
+    },
+    "(b)_within_fragment_pair_experimental_spread": {
+      "n_groups": 4,
+      "n_rows": 8,
+      "mean_group_size": 2.0,
+      "mean_spread": 1.8000000000000007,
+      "median_spread": 1.1499999999999986,
+      "q75_spread": 1.9499999999999993,
+      "q90_spread": 3.1200000000000037,
+      "q99_spread": 3.822000000000005,
+      "max_spread": 3.9000000000000057,
+      "rms_spread": 2.173706511928418,
+      "implied_sigma_from_range": 1.5370426148939413,
+      "pooled_within_sd": 3.842201517359557,
+      "mean_within_sd": 2.362500000000007,
+      "median_within_sd": 0.6725000000000028,
+      "n_groups_with_1_distinct": 0,
+      "frac_groups_with_1_distinct": 0.0
+    },
+    "same_grouping_applied_to_each_channel": {
+      "quantum": {
+        "n_groups": 86,
+        "n_rows": 210,
+        "mean_group_size": 2.441860465116279,
+        "mean_spread": 13.108720930232558,
+        "median_spread": 10.805,
+        "q75_spread": 14.775000000000002,
+        "q90_spread": 24.72,
+        "q99_spread": 41.29650000000003,
+        "max_spread": 45.3,
+        "rms_spread": 15.77660746241903,
+        "implied_sigma_from_range": 11.155746120794785,
+        "pooled_within_sd": 159.99312068437197,
+        "mean_within_sd": 99.91562172480621,
+        "median_within_sd": 47.54105,
+        "n_groups_with_1_distinct": 0,
+        "frac_groups_with_1_distinct": 0.0
+      },
+      "learned": {
+        "n_groups": 86,
+        "n_rows": 210,
+        "mean_group_size": 2.441860465116279,
+        "mean_spread": 13.01569767441861,
+        "median_spread": 10.800000000000004,
+        "q75_spread": 14.832499999999992,
+        "q90_spread": 24.944999999999993,
+        "q99_spread": 41.03200000000003,
+        "max_spread": 44.66999999999999,
+        "rms_spread": 15.751155180966371,
+        "implied_sigma_from_range": 11.137748639982942,
+        "pooled_within_sd": 159.13585155757366,
+        "mean_within_sd": 99.57365480620159,
+        "median_within_sd": 46.75444999999991,
+        "n_groups_with_1_distinct": 0,
+        "frac_groups_with_1_distinct": 0.0
+      },
+      "reference": {
+        "n_groups": 86,
+        "n_rows": 210,
+        "mean_group_size": 2.441860465116279,
+        "mean_spread": 17.45,
+        "median_spread": 19.1,
+        "q75_spread": 23.0,
+        "q90_spread": 28.599999999999994,
+        "q99_spread": 47.960000000000036,
+        "max_spread": 53.400000000000006,
+        "rms_spread": 20.596130252922485,
+        "implied_sigma_from_range": 14.56366336804289,
+        "pooled_within_sd": 232.3073788755334,
+        "mean_within_sd": 167.98710077519382,
+        "median_within_sd": 127.43999999999997,
+        "n_groups_with_1_distinct": 0,
+        "frac_groups_with_1_distinct": 0.0
+      }
+    },
+    "permutation_null": {
+      "observed_mean_spread": 13.418604651162788,
+      "null_mean": 16.176432558139535,
+      "null_sd": 0.7375337267370455,
+      "n_perm": 500
+    },
+    "(c)_channel_disagreement": {
+      "quantum_minus_learned": {
+        "n": 543,
+        "mean": -0.525156537753223,
+        "sd": 2.244477257204347,
+        "median": -0.05999999999998806,
+        "mean_abs": 1.0688397790055246,
+        "median_abs": 0.25,
+        "max_abs": 14.41000000000001,
+        "q05": -5.418000000000002,
+        "q95": 1.5230000000000001,
+        "frac_abs_le_0.5": 0.6795580110497238,
+        "frac_abs_le_1": 0.7661141804788214,
+        "frac_abs_le_2": 0.850828729281768,
+        "frac_abs_le_5": 0.9355432780847146
+      },
+      "quantum_minus_reference": {
+        "n": 543,
+        "mean": -0.8246961325966852,
+        "sd": 6.644937523808417,
+        "median": -2.030000000000001,
+        "mean_abs": 5.4875322283609576,
+        "median_abs": 4.88000000000001,
+        "max_abs": 27.54,
+        "q05": -9.937000000000006,
+        "q95": 9.427000000000007,
+        "frac_abs_le_0.5": 0.03683241252302026,
+        "frac_abs_le_1": 0.08103130755064457,
+        "frac_abs_le_2": 0.14732965009208104,
+        "frac_abs_le_5": 0.5174953959484346
+      },
+      "learned_minus_reference": {
+        "n": 543,
+        "mean": -0.2995395948434621,
+        "sd": 6.712595967402205,
+        "median": -1.6600000000000108,
+        "mean_abs": 5.3558931860036845,
+        "median_abs": 4.900000000000006,
+        "max_abs": 37.01,
+        "q05": -8.743000000000004,
+        "q95": 9.819999999999991,
+        "frac_abs_le_0.5": 0.03130755064456722,
+        "frac_abs_le_1": 0.08103130755064457,
+        "frac_abs_le_2": 0.13443830570902393,
+        "frac_abs_le_5": 0.5211786372007366
+      },
+      "quantum_minus_experimental": {
+        "n": 543,
+        "mean": 0.5537200736648252,
+        "sd": 3.011780340905638,
+        "median": 0.39999999999997726,
+        "mean_abs": 2.0978084714548806,
+        "median_abs": 1.4000000000000057,
+        "max_abs": 15.740000000000009,
+        "q05": -4.1200000000000045,
+        "q95": 5.328,
+        "frac_abs_le_0.5": 0.2007366482504604,
+        "frac_abs_le_1": 0.3867403314917127,
+        "frac_abs_le_2": 0.6187845303867403,
+        "frac_abs_le_5": 0.9097605893186004
+      },
+      "learned_minus_experimental": {
+        "n": 543,
+        "mean": 1.0788766114180484,
+        "sd": 3.466852687216154,
+        "median": 0.5600000000000023,
+        "mean_abs": 2.410699815837938,
+        "median_abs": 1.6099999999999994,
+        "max_abs": 25.209999999999997,
+        "q05": -3.6419999999999915,
+        "q95": 6.828999999999998,
+        "frac_abs_le_0.5": 0.19889502762430938,
+        "frac_abs_le_1": 0.3848987108655617,
+        "frac_abs_le_2": 0.5874769797421732,
+        "frac_abs_le_5": 0.8692449355432781
+      },
+      "reference_minus_experimental": {
+        "n": 543,
+        "mean": 1.3784162062615106,
+        "sd": 6.623682412727947,
+        "median": 2.4000000000000057,
+        "mean_abs": 5.48596685082873,
+        "median_abs": 4.8999999999999915,
+        "max_abs": 33.4,
+        "q05": -8.289999999999997,
+        "q95": 10.789999999999996,
+        "frac_abs_le_0.5": 0.04419889502762431,
+        "frac_abs_le_1": 0.07550644567219153,
+        "frac_abs_le_2": 0.15469613259668508,
+        "frac_abs_le_5": 0.5211786372007366
+      }
+    },
+    "variance_decomposition": {
+      "V_exp_minus_quantum": 9.070820821865679,
+      "V_exp_minus_learned": 12.019067554857868,
+      "V_quantum_minus_learned": 5.037678158107548,
+      "sigma_ref": 2.8330381411671812,
+      "sigma_ref_sq": 8.026105109307998,
+      "implied_quantum_vs_truth_sd": 1.0221133560215718,
+      "implied_learned_vs_truth_sd": 1.9982398368438834,
+      "predicted_sd_quantum_minus_learned": 2.2444772572043474,
+      "observed_sd_quantum_minus_learned": 2.244477257204347,
+      "self_consistency_ratio": 0.9999999999999998,
+      "sigma_ref_ci95": [
+        2.4554039075655605,
+        3.2020015081890794
+      ],
+      "sigma_ref_boot_sd": 0.19312168034291327
+    },
+    "variance_decomposition_by_subset": {
+      "all_543": {
+        "label": "all 543",
+        "n": 543,
+        "sigma_ref": 2.8330381411671812,
+        "sigma_quantum_vs_truth": 1.0221133560215718,
+        "sigma_learned_vs_truth": 1.9982398368438834,
+        "oracle_floor_normality": 2.2604373930029427,
+        "oracle_floor_upper_bound": 2.8330381411671812,
+        "mae_quantum": 2.0978084714548806,
+        "mae_learned": 2.410699815837938,
+        "mae_reference": 5.48596685082873
+      },
+      "db_matched_331": {
+        "label": "exact DB row (331)",
+        "n": 331,
+        "sigma_ref": 2.5225811945305505,
+        "sigma_quantum_vs_truth": 0.8228720260930973,
+        "sigma_learned_vs_truth": 0.26357362631020687,
+        "oracle_floor_normality": 2.012728588487576,
+        "oracle_floor_upper_bound": 2.5225811945305505,
+        "mae_quantum": 1.8708459214501518,
+        "mae_learned": 1.8069486404833845,
+        "mae_reference": 5.024410876132931
+      },
+      "db_unmatched_212": {
+        "label": "no exact DB row (212)",
+        "n": 212,
+        "sigma_ref": 3.257740052472853,
+        "sigma_quantum_vs_truth": 1.2937250037112122,
+        "sigma_learned_vs_truth": 3.024949617617845,
+        "oracle_floor_normality": 2.599300490977206,
+        "oracle_floor_upper_bound": 3.257740052472853,
+        "mae_quantum": 2.4521698113207546,
+        "mae_learned": 3.353349056603773,
+        "mae_reference": 6.206603773584907
+      },
+      "C-H_302": {
+        "label": "C-H (302)",
+        "n": 302,
+        "sigma_ref": 2.363969151345166,
+        "sigma_quantum_vs_truth": 1.2097560227382602,
+        "sigma_learned_vs_truth": 2.437941782096194,
+        "oracle_floor_normality": 1.8861744880725604,
+        "oracle_floor_upper_bound": 2.363969151345166,
+        "mae_quantum": 1.9906622516556294,
+        "mae_learned": 2.5415894039735103,
+        "mae_reference": 5.710860927152317
+      },
+      "C-C_240": {
+        "label": "C-C (240)",
+        "n": 240,
+        "sigma_ref": 3.31176826869739,
+        "sigma_quantum_vs_truth": 0.40023699394854334,
+        "sigma_learned_vs_truth": 1.2858412626717954,
+        "oracle_floor_normality": 2.642408770550483,
+        "oracle_floor_upper_bound": 3.31176826869739,
+        "mae_quantum": 2.2344999999999997,
+        "mae_learned": 2.2365416666666667,
+        "mae_reference": 5.225
+      }
+    },
+    "independent_estimators_of_reference_noise": {
+      "matched_pair_tight_quantum": {
+        "tol_0.1": {
+          "n_pairs": 1002,
+          "sd_of_exp_diff": 4.031709676339716,
+          "sigma_ref_estimate": 2.8508492519152338,
+          "boot_ci_lo": 2.658396050239779,
+          "boot_ci_hi": 3.0499394962577626,
+          "median_abs_exp_diff": 1.9000000000000057,
+          "quantum_self_sd": 0.02102409873909345
+        },
+        "tol_0.25": {
+          "n_pairs": 2496,
+          "sd_of_exp_diff": 3.8976330328496953,
+          "sigma_ref_estimate": 2.7560427481047087,
+          "boot_ci_lo": 2.6300810239457135,
+          "boot_ci_hi": 2.895581406667352,
+          "median_abs_exp_diff": 1.7999999999999972,
+          "quantum_self_sd": 0.051939740267655195
+        },
+        "tol_0.5": {
+          "n_pairs": 4751,
+          "sd_of_exp_diff": 3.870113026697738,
+          "sigma_ref_estimate": 2.7365831651363646,
+          "boot_ci_lo": 2.6403550625698906,
+          "boot_ci_hi": 2.8333396987539508,
+          "median_abs_exp_diff": 1.9000000000000057,
+          "quantum_self_sd": 0.10289357307942011
+        },
+        "tol_1.0": {
+          "n_pairs": 8878,
+          "sd_of_exp_diff": 3.9743837962173565,
+          "sigma_ref_estimate": 2.810313733343226,
+          "boot_ci_lo": 2.7466962251824345,
+          "boot_ci_hi": 2.876996119375219,
+          "median_abs_exp_diff": 2.0,
+          "quantum_self_sd": 0.2065411292454193
+        },
+        "tol_2.0": {
+          "n_pairs": 17375,
+          "sd_of_exp_diff": 4.031054750601224,
+          "sigma_ref_estimate": 2.8503861494843723,
+          "boot_ci_lo": 2.807144946058283,
+          "boot_ci_hi": 2.898427150397995,
+          "median_abs_exp_diff": 2.200000000000003,
+          "quantum_self_sd": 0.4207325808504671
+        }
+      },
+      "within_bin_scatter_quantum": {
+        "width_0.5": {
+          "n_groups": 491,
+          "n_obs": 5462,
+          "mean_n": 11.124236252545824,
+          "mean_within_sd": 2.5650155357138362,
+          "pooled_within_sd": 2.7530308666043917,
+          "median_within_sd": 2.360855006906685
+        },
+        "width_0.5_quantum_selfcheck": {
+          "n_groups": 491,
+          "n_obs": 5462,
+          "mean_n": 11.124236252545824,
+          "mean_within_sd": 0.13288580400786704,
+          "pooled_within_sd": 0.1380131635407939,
+          "median_within_sd": 0.13566599853277467
+        },
+        "width_1.0": {
+          "n_groups": 506,
+          "n_obs": 9991,
+          "mean_n": 19.74505928853755,
+          "mean_within_sd": 2.644495180663799,
+          "pooled_within_sd": 2.74474216868038,
+          "median_within_sd": 2.4257430735596817
+        },
+        "width_1.0_quantum_selfcheck": {
+          "n_groups": 506,
+          "n_obs": 9991,
+          "mean_n": 19.74505928853755,
+          "mean_within_sd": 0.268641836820998,
+          "pooled_within_sd": 0.27254759722093364,
+          "median_within_sd": 0.270377294281465
+        },
+        "width_2.0": {
+          "n_groups": 528,
+          "n_obs": 18282,
+          "mean_n": 34.625,
+          "mean_within_sd": 2.7816645666043107,
+          "pooled_within_sd": 2.840822462400729,
+          "median_within_sd": 2.7497707467948107
+        },
+        "width_2.0_quantum_selfcheck": {
+          "n_groups": 528,
+          "n_obs": 18282,
+          "mean_n": 34.625,
+          "mean_within_sd": 0.5357151795658152,
+          "pooled_within_sd": 0.545204768948778,
+          "median_within_sd": 0.5344489148286665
+        },
+        "width_3.0": {
+          "n_groups": 532,
+          "n_obs": 26346,
+          "mean_n": 49.52255639097744,
+          "mean_within_sd": 2.9094933406586576,
+          "pooled_within_sd": 2.9233871767040465,
+          "median_within_sd": 2.9717046621125673
+        },
+        "width_3.0_quantum_selfcheck": {
+          "n_groups": 532,
+          "n_obs": 26346,
+          "mean_n": 49.52255639097744,
+          "mean_within_sd": 0.8102403766087166,
+          "pooled_within_sd": 0.8269880484338882,
+          "median_within_sd": 0.8156743298188128
+        },
+        "width_5.0": {
+          "n_groups": 534,
+          "n_obs": 43213,
+          "mean_n": 80.92322097378278,
+          "mean_within_sd": 3.146056610076514,
+          "pooled_within_sd": 3.12168251103158,
+          "median_within_sd": 3.0763751292411965
+        },
+        "width_5.0_quantum_selfcheck": {
+          "n_groups": 534,
+          "n_obs": 43213,
+          "mean_n": 80.92322097378278,
+          "mean_within_sd": 1.3612421874294058,
+          "pooled_within_sd": 1.3865330252680879,
+          "median_within_sd": 1.368165349050357
+        }
+      },
+      "empirical_floor": {
+        "tight_quantum_0.1": {
+          "label": "|dq|<=0.1",
+          "n_pairs": 1002,
+          "mean_abs_exp_diff": 2.7742714570858285,
+          "median_abs_exp_diff": 1.9000000000000057,
+          "floor_empirical_mae": 1.961706160157673,
+          "ci_lo": 1.8342928574199175,
+          "ci_hi": 2.095512004589419,
+          "sigma_equiv": 2.073762779831585,
+          "quantum_diff_sd": 0.029732565573497047,
+          "learned_diff_sd": 2.7499242217482056
+        },
+        "tight_quantum_0.25": {
+          "label": "|dq|<=0.25",
+          "n_pairs": 2496,
+          "mean_abs_exp_diff": 2.683998397435898,
+          "median_abs_exp_diff": 1.7999999999999972,
+          "floor_empirical_mae": 1.8978734675207496,
+          "ci_lo": 1.8187401164407737,
+          "ci_hi": 1.9789151003627732,
+          "sigma_equiv": 1.998102010029439,
+          "quantum_diff_sd": 0.07345388511265395,
+          "learned_diff_sd": 2.7097247637523085
+        },
+        "tight_quantum_0.5": {
+          "label": "|dq|<=0.5",
+          "n_pairs": 4751,
+          "mean_abs_exp_diff": 2.706684908440329,
+          "median_abs_exp_diff": 1.9000000000000057,
+          "floor_empirical_mae": 1.9139152532934458,
+          "ci_lo": 1.8595411826855364,
+          "ci_hi": 1.9698661377917532,
+          "sigma_equiv": 1.956997455483593,
+          "quantum_diff_sd": 0.14551348652994311,
+          "learned_diff_sd": 2.700574801177074
+        },
+        "tight_quantum_1.0": {
+          "label": "|dq|<=1.0",
+          "n_pairs": 8878,
+          "mean_abs_exp_diff": 2.8308718179770223,
+          "median_abs_exp_diff": 2.0,
+          "floor_empirical_mae": 2.0017286591614423,
+          "ci_lo": 1.9600126644252787,
+          "ci_hi": 2.0439961701069236,
+          "sigma_equiv": 1.9876253456311932,
+          "quantum_diff_sd": 0.2920932661667263,
+          "learned_diff_sd": 2.760456044712068
+        },
+        "co_tight_0.5": {
+          "label": "co-tight |dq|,|dl|<=0.5",
+          "n_pairs": 2282,
+          "mean_abs_exp_diff": 2.1749956178790537,
+          "median_abs_exp_diff": 1.4000000000000057,
+          "floor_empirical_mae": 1.5379541504533036,
+          "ci_lo": 1.4746073604393366,
+          "ci_hi": 1.6024993346286371,
+          "sigma_equiv": 1.656332689031697,
+          "quantum_diff_sd": 0.26737980144752027,
+          "learned_diff_sd": 0.25445719050681803
+        }
+      },
+      "co_tight_pair_estimator": {
+        "n_pairs": 2282,
+        "sd_exp_diff": 3.194085180866838,
+        "sigma_ref": 2.258559291078401,
+        "median_abs": 1.4000000000000057,
+        "quantum_sd_of_diff": 0.26737980144752027,
+        "learned_sd_of_diff": 0.25445719050681803
+      }
+    },
+    "reference_noise_share_of_channel_error": {
+      "sigma_ref_sq": 8.026105109307998,
+      "sigma_quantum_sq": 1.0447157125576805,
+      "sigma_learned_sq": 3.9929624455498693,
+      "var_share_ref_in_quantum": 0.8848267722321954,
+      "var_share_ref_in_learned": 0.6677810131838394,
+      "mae_share_ref_in_quantum_gaussian": 0.9406523120857117,
+      "mae_share_ref_in_learned_gaussian": 0.8171786910975097,
+      "sigma_ref": 2.8330381411671812,
+      "sigma_quantum_vs_truth": 1.0221133560215718,
+      "sigma_learned_vs_truth": 1.9982398368438834
+    },
+    "MAE_FLOOR": {
+      "headline": {
+        "floor_cotight": 1.5379541504533036,
+        "floor_tight_quantum": 1.9139152532934458,
+        "floor_decomposition_gaussian": 2.260406960754518,
+        "floor_bootstrap_ci": [
+          1.4746073604393366,
+          1.6024993346286371
+        ],
+        "mae_quantum": 2.0978084714548806,
+        "mae_learned": 2.410699815837938,
+        "mae_reference": 5.48596685082873,
+        "mae_gap_quantum_learned": -0.3128913443830572,
+        "mae_gap_over_floor": 0.20344647094377566,
+        "mae_gap_over_tight_floor": 0.1634823401112651,
+        "reference_mae_over_floor": 3.567054875603262
+      },
+      "self_consistency_upper_bound_on_the_floor": 2.0978084714548806,
+      "defensible_floor": {
+        "headline_value_kcal_mol": 2.0,
+        "range_kcal_mol": [
+          1.5,
+          2.0
+        ],
+        "conservative_upper_1.9_to_2.1_note": "see below",
+        "reasoning": "Three independent, workspace-only estimators agree that a single experimental reference value carries about 1.6-2.1 kcal/mol of 1-sigma scatter that is NOT reproducible information about the bond:",
+        "estimators": [
+          {
+            "name": "within-bin scatter, binning on the quantum estimate",
+            "how": "bonds whose quantum estimate falls in a 0.5-1.0 kcal/mol window are near-identical electronically; the pooled SD of their EXPERIMENTAL values estimates the reference-value scatter (the quantum channel's own within-bin SD is only 0.14-0.27, so the window really is tight).",
+            "sigma_ref": 2.75,
+            "n_groups": 491,
+            "n_obs": 5462,
+            "unit": "bond observation"
+          },
+          {
+            "name": "matched-pair estimator (|dQuantum| <= 0.1)",
+            "how": "for 1002 pairs of bond observations whose quantum estimates differ by <= 0.1, sd(exp_i - exp_j)/sqrt(2) estimates sigma_ref without any binning choice.",
+            "sigma_ref": 2.851,
+            "boot_ci": [
+              2.658,
+              3.05
+            ],
+            "n_pairs": 1002,
+            "unit": "fragment-pair-of-observations"
+          },
+          {
+            "name": "variance decomposition",
+            "how": "if the quantum and learned errors are independent of the reference noise, sigma_ref^2 = [V(exp-quantum)+V(exp-learned)-V(quantum-learned)]/2. The decomposition is EXACTLY self-consistent: the predicted sd(quantum-learned)=2.2445 equals the observed 2.2445 (ratio 1.0000).",
+            "sigma_ref": 2.833,
+            "boot_ci": [
+              2.455,
+              3.202
+            ],
+            "unit": "bond observation"
+          }
+        ],
+        "floor_definition": "An estimator that were PERFECT (zero true error) would still show MAE = sigma_ref*sqrt(2/pi) = 2.26 kcal/mol when scored against these experimental values (Gaussian form), or 1.54-1.91 kcal/mol using the empirical shape of the observed reference discrepancy (which is heavy-tailed, so E|X|/sqrt2 < sigma*sqrt(2/pi)).",
+        "self_consistency_test": "A floor cannot exceed an actually observed channel MAE. The Gaussian-form floor (2.260) is ABOVE the quantum channel's measured MAE (2.098), so that form is refuted as a floor. The empirical, shape-preserving floors (1.54 co-tight, 1.91 tight-quantum) are consistent with all three observed MAEs. This is why the headline is stated as a RANGE of 1.5-2.0 rather than the single Gaussian number.",
+        "STATEMENT": "Below roughly 2 kcal/mol of MAE this benchmark cannot distinguish two estimation channels on the evidence of these 543 experimental bond observations. The two calibrated channels are in fact indistinguishable at that resolution: their measured MAEs are 2.098 (quantum) and 2.411 (learned), a gap of 0.313 kcal/mol, which is only 0.16-0.20 x the floor and is smaller than the 0.215 kcal/mol minimum difference this sample could detect at 80% power. The reference channel (MAE 5.486, 3.57 x the floor) IS distinguishable and is clearly worse.",
+        "minimum_detectable_difference": {
+          "n": 543,
+          "sd_paired_diff": 1.7908620863029667,
+          "se": 0.07685324816501078,
+          "mde_80pct_power": 0.21531092263102136,
+          "observed_mae_difference": -0.3128913443830571,
+          "observed_p": 5.3724650811894166e-05
+        },
+        "reference_noise_share_of_error_variance": {
+          "quantum": 0.8848267722321954,
+          "learned": 0.6677810131838394,
+          "statement": "88.5% of the quantum channel's squared error and 66.8% of the learned channel's squared error against these experimental values is attributable to the experimental reference values themselves, not to the estimators."
+        },
+        "robustness": {
+          "molecule_level_80pct_resampling": {
+            "n_draws": 300,
+            "mean_sigma_ref": 2.8289564420173483,
+            "sd": 0.09786507908175227,
+            "ci_lo": 2.609703045342401,
+            "ci_hi": 2.9931795715320444,
+            "mean_floor": 2.2571806682694486,
+            "floor_ci_lo": 2.082241768158922,
+            "floor_ci_hi": 2.388211767835954
+          },
+          "per_bond_class": {
+            "C-H": {
+              "n": 302,
+              "mae_quantum": 1.9906622516556294,
+              "mae_learned": 2.5415894039735103,
+              "mae_reference": 5.710860927152317,
+              "sigma_ref": 2.363969151345166,
+              "floor": 1.8861744880725604
+            },
+            "C-C": {
+              "n": 240,
+              "mae_quantum": 2.2344999999999997,
+              "mae_learned": 2.2365416666666667,
+              "mae_reference": 5.225,
+              "sigma_ref": 3.31176826869739,
+              "floor": 2.642408770550483
+            }
+          },
+          "db_matched_vs_unmatched": {
+            "all_543": {
+              "label": "all 543",
+              "n": 543,
+              "sigma_ref": 2.8330381411671812,
+              "sigma_quantum_vs_truth": 1.0221133560215718,
+              "sigma_learned_vs_truth": 1.9982398368438834,
+              "oracle_floor_normality": 2.2604373930029427,
+              "oracle_floor_upper_bound": 2.8330381411671812,
+              "mae_quantum": 2.0978084714548806,
+              "mae_learned": 2.410699815837938,
+              "mae_reference": 5.48596685082873
+            },
+            "db_matched_331": {
+              "label": "exact DB row (331)",
+              "n": 331,
+              "sigma_ref": 2.5225811945305505,
+              "sigma_quantum_vs_truth": 0.8228720260930973,
+              "sigma_learned_vs_truth": 0.26357362631020687,
+              "oracle_floor_normality": 2.012728588487576,
+              "oracle_floor_upper_bound": 2.5225811945305505,
+              "mae_quantum": 1.8708459214501518,
+              "mae_learned": 1.8069486404833845,
+              "mae_reference": 5.024410876132931
+            },
+            "db_unmatched_212": {
+              "label": "no exact DB row (212)",
+              "n": 212,
+              "sigma_ref": 3.257740052472853,
+              "sigma_quantum_vs_truth": 1.2937250037112122,
+              "sigma_learned_vs_truth": 3.024949617617845,
+              "oracle_floor_normality": 2.599300490977206,
+              "oracle_floor_upper_bound": 3.257740052472853,
+              "mae_quantum": 2.4521698113207546,
+              "mae_learned": 3.353349056603773,
+              "mae_reference": 6.206603773584907
+            },
+            "C-H_302": {
+              "label": "C-H (302)",
+              "n": 302,
+              "sigma_ref": 2.363969151345166,
+              "sigma_quantum_vs_truth": 1.2097560227382602,
+              "sigma_learned_vs_truth": 2.437941782096194,
+              "oracle_floor_normality": 1.8861744880725604,
+              "oracle_floor_upper_bound": 2.363969151345166,
+              "mae_quantum": 1.9906622516556294,
+              "mae_learned": 2.5415894039735103,
+              "mae_reference": 5.710860927152317
+            },
+            "C-C_240": {
+              "label": "C-C (240)",
+              "n": 240,
+              "sigma_ref": 3.31176826869739,
+              "sigma_quantum_vs_truth": 0.40023699394854334,
+              "sigma_learned_vs_truth": 1.2858412626717954,
+              "oracle_floor_normality": 2.642408770550483,
+              "oracle_floor_upper_bound": 3.31176826869739,
+              "mae_quantum": 2.2344999999999997,
+              "mae_learned": 2.2365416666666667,
+              "mae_reference": 5.225
+            }
+          },
+          "statement": "Resampling whole parent molecules (the dependence-respecting unit) holds sigma_ref at 2.83 +- 0.10 (95% CI 2.61-2.99), i.e. the floor is not an artifact of pooling correlated rows. By bond class sigma_ref is 2.36 (C-H, n=302) and 3.31 (C-C, n=240): the floor is real in both, and larger for C-C.",
+          "caveat": "The variance decomposition assumes the quantum and learned errors are uncorrelated with each other and with the reference noise. The quantum channel's error is nearly the reference noise itself (share 0.885), so its own residual is small and the assumption is weak but not testable within the workspace. The matched-pair and bin estimators make no such assumption and give the same answer, which is the main reason the conclusion is not sensitive to it."
+        }
+      }
+    }
+  },
+  "5_observation_vs_inference": {
+    "direct_observations_read_from_the_files": [
+      "All three sha256 digests match data_manifest.json byte-for-byte.",
+      "TSV and xlsx Sheet_001 agree 543/543 on all 7 shared columns with max numeric difference 0.0 and identical row order.",
+      "in_reference_training_set is bit-exactly the exact-database-row predicate (331/212, 0 contradictions).",
+      "331 of 543 bond observations have an exact (molecule,fragment1,fragment2) database row; 212 do not.",
+      "|database bde - quantum estimate| is <= 0.5 kcal/mol on 92.4% of the 331 matched rows, <= 1.0 on 100%, median 0.0195.",
+      "|database bde - learned estimate| exceeds 1.0 kcal/mol on 8 rows and has median 0.1291.",
+      "reference_estimate takes exactly one value per (fragment_a,fragment_b) pair: 539 pairs, 290 distinct values, 0 pairs with more than one value.",
+      "313 of 543 reference values are exactly equal to some experimental value in the same file, but only 1 is equal to its own row's experimental value and 0 equal the same fragment pair's experimental value in another molecule.",
+      "86 of 419 parent molecules carry more than one bond observation; their within-molecule experimental spread averages 13.42 kcal/mol (median 11.90, max 47.90).",
+      "Only 4 fragment pairs have more than one observation; their experimental spread averages 1.80 kcal/mol (max 3.90).",
+      "There are no exact replicates: all 543 canonical (molecule,bond) keys are unique.",
+      "Reference MAE is 5.024 on the 331 database-matched rows vs 6.207 on the 212 unmatched (Welch p=0.0014).",
+      "The database key (molecule,fragment1,fragment2) is single-valued: 131,063 duplicated keys all share one bde, one bond_type, one delta_stereo, and differ only in bond_index."
+    ],
+    "inferences_supported_by_the_observations": [
+      "The quantum channel is the database's own value for the matched subset, re-serialised at lower precision (its 0.02 kcal/mol median offset is the DB's ~1e-5 precision truncated), rather than an independent prediction. Supported by 81% agreement within 0.1, 100% within 1.0, and 7 exact ties at 0.001.",
+      "The learned channel approximates the same database quantity but is a fitted model, not a copy (6.6x larger median offset, 4.77 max).",
+      "The experimental reference values carry roughly 1.6-2.1 kcal/mol of 1-sigma heterogeneity, because near-identical bonds disagree with each other by about that much regardless of which estimator is used to define 'near-identical'.",
+      "Because the experimental values are the scoring target, that heterogeneity floors the achievable MAE at about 1.5-2.0 kcal/mol and prevents the benchmark from ranking the two calibrated channels.",
+      "The reference channel's large error (5.486) is consistent with a literature lookup that is a genuinely independent draw from the same value pool; it is not a degenerate copy of the answer key, so it can be used as an independent heterogeneity probe."
+    ],
+    "not_established_by_this_workstream": [
+      "Whether the 1.6-2.1 kcal/mol scatter is measurement error, temperature/phase/solvent differences, or genuine chemical difference between nominally identical bonds. The files carry no method, temperature, or solvent fields, so the SOURCE of the heterogeneity is unresolvable here.",
+      "Edgewise, the quantum channel's MAE (2.098) lies BELOW the Gaussian-form floor (2.260), which is arithmetically impossible for an independent scorer. This shows the experimental values are partly correlated with the database values (both ultimately trace to related literature); the true floor is therefore somewhat below 2.26 and the empirical 1.5-1.9 estimates should be preferred. The degree of that correlation cannot be quantified from these files alone.",
+      "The 4 repeated fragment pairs are too few (8 rows) to estimate a fragment-pair-level variance component separately; they bound pairwise reference disagreement at <=1.54 kcal/mol but do not establish a general per-pair noise level."
+    ],
+    "analysis_units_carried_through": {
+      "bond_observations": "used for all 543-row error and channel-comparison statistics",
+      "parent_molecules": "used for the within-molecule spread (86 groups) and for molecule-level resampling robustness",
+      "fragment_pairs": "used for the reference-lookup and within-pair spread statistics (539 pairs)",
+      "database_rows": "used for the join-unambiguity and key-multiplicity statistics (484,907 rows)"
+    }
+  }
+}

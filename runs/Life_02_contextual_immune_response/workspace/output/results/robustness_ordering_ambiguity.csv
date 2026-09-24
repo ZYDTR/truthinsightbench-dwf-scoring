@@ -1,0 +1,7 @@
+assay_id,endpoint_type,bottom_two_gap,bottom_two_ambiguous_at_5pct,unambiguous_top_compartment
+assay_1,endpoint_count,0.180841,False,compartment_1
+assay_1,endpoint_fraction,0.0877496,False,compartment_1
+assay_2,endpoint_count,0.00718626,True,compartment_1
+assay_2,endpoint_fraction,0.117141,False,compartment_1
+assay_3,endpoint_count,0.337009,False,compartment_1
+assay_3,endpoint_fraction,0.00475864,True,compartment_3

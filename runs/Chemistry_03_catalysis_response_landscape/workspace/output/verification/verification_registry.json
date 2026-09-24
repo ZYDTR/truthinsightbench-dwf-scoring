@@ -1,0 +1,909 @@
+{
+  "schema": "truthinsightbench-independent-verification-registry",
+  "method": "Six independent general-purpose verification workers were launched in parallel via the Workflow tool (run id wf_6a7c8750-95f). Each received the claims as hypotheses to falsify, was instructed to write and execute its OWN code against the raw data under ./data, and was told not to read any other worker's output or the main agent's artifacts. All six completed their work and wrote real scripts and payloads to output/verification/ (311 tool uses, 414,940 subagent tokens, ~154 min wall clock).\n\nIMPORTANT PROVENANCE CAVEAT: the workflow's structured return channel FAILED. All six subagents completed without calling the StructuredOutput tool, so the workflow returned an empty registry and the orchestrator received no verdicts, only the on-disk artifacts. The 'verdict' fields below are therefore NOT all the workers' own words: V2, V3, V4 and V6 wrote explicit verdict fields into their JSON payloads (quoted verbatim under 'worker_own_verdict'), while for V1 and V5 the verdict label was assigned by the main agent by reading the workers' computed numbers against the claim. This registry was then assembled by the main agent from the on-disk artifacts; it is not a verbatim workflow return.",
+  "workers": [
+    {
+      "worker": "V1",
+      "claim": "Finding 1 (factorial structure regimes)",
+      "verdict": "confirmed",
+      "confidence": "high",
+      "independently_reproduced": {
+        "eta2_y6_main_two_way_three_way": [
+          0.5211,
+          0.325,
+          0.1539
+        ],
+        "eta2_y7_main_two_way_three_way": [
+          0.8869,
+          0.0764,
+          0.0367
+        ],
+        "single_factor_eta2_f7": {
+          "A": 0.0104,
+          "B": 0.0023,
+          "C": 0.8743
+        },
+        "single_factor_eta2_f6": {
+          "A": 0.0822,
+          "B": 0.1501,
+          "C": 0.2888
+        },
+        "tukey_F_y6": 763.179,
+        "tukey_F_y7": 9.855,
+        "tukey_p_y7": 0.0017291844637100295,
+        "two_method_path_agreement_max_abs_eta2_diff": 1.006281749938748e-15
+      },
+      "adversarial_tests_run": [
+        "two independent computational paths (closed-form balanced SS vs QR effect-coding) agree to 1.0e-15",
+        "five quantile mappings that change only the marginal shape: rank-uniform, normal scores, swapped marginals, Gaussianised f6",
+        "permutation reality check on the 3-way statistic",
+        "half-split by factor A",
+        "shape diagnostics of the 3-way residual stratum"
+      ],
+      "findings_that_qualify_the_claim": {
+        "regime_contrast_is_partly_distributional": "under rank transformation the main-effect shares move to 0.706 (f6) / 0.858 (f7) and the 3-way gap shrinks from +0.117 to +0.057, so roughly half the headline eta2 gap is a distributional-shape difference. The qualitative contrast survives in all five variants.",
+        "permutation_test_is_exactly_degenerate": "permuting the 3-way residual leaves the SS invariant with SD 1.2e-14; no design-based error term exists for this design",
+        "three_way_residual_is_strongly_non_normal": {
+          "shapiro_p_f6": 7.381176427524678e-26,
+          "shapiro_p_f7": 4.946875702059501e-28,
+          "excess_kurtosis_f6": 4.604304277040816,
+          "excess_kurtosis_f7": 8.60758197611051
+        }
+      },
+      "artifacts": [
+        "V1_factorial_decomposition.py",
+        "V1_factorial_decomposition.json",
+        "V1_summary.json",
+        "V1_adv_quantile_map.py",
+        "V1_adv_quantile_map.json"
+      ],
+      "verdict_source": "assigned by main agent from the worker's computed numbers (no explicit verdict field in the worker's payload)"
+    },
+    {
+      "worker": "V2",
+      "claim": "Finding 2 (rugged partition, not a gradient)",
+      "verdict": "partially_confirmed",
+      "confidence": "high",
+      "independently_reproduced": {
+        "level_means_match_claimed_atol_1e-3": true,
+        "max_abs_diff_vs_claimed_vector": 4.7595084342544336e-05,
+        "eta2_f4_on_f7": 0.8743051107874258,
+        "linear_R2": 0.005508812677157526,
+        "quadratic_R2": 0.09619616643644036,
+        "cubic_R2": 0.10218247480432052,
+        "isotonic_increasing_R2": 0.09769564435889144,
+        "isotonic_decreasing_R2": 0.12826973766176952,
+        "spearman_level_index_vs_mean": -0.16363636363636366,
+        "split_half_mean_pearson_1000_reps": 0.9982718046442471,
+        "split_half_min_pearson": 0.9928523759855125,
+        "f6_vs_f7_profile_pearson": -0.33026925713527727,
+        "f6_vs_f7_profile_spearman": -0.4000000000000001,
+        "eta2_of_f4_on_AB_residual": 0.8920824607355959,
+        "adjusted_vs_raw_profile_pearson": 1.0,
+        "level_mean_sd_over_noise_sd": 34.31065424646769,
+        "runs_test_p": 1.0,
+        "best_linear_R2_over_any_relabelling": 0.9145755923205894
+      },
+      "adversarial_tests_run": [
+        "polynomial fits of degree 1, 2, 3",
+        "isotonic (monotone) regression, increasing and decreasing, validated against sklearn PAVA",
+        "isotonic null calibration with 1000 random permutations of the level order",
+        "residualisation against the additive A+B effects and against the full A x B interaction",
+        "exhaustive search over 5040 relabellings (7 of 11 levels) for best achievable monotone and linear R2",
+        "1000-replicate split-half reproduction with a permutation null"
+      ],
+      "findings_that_qualify_the_claim": {
+        "isotonic_R2_is_below_the_null_mean": "the observed isotonic R2 of 0.098 is BELOW the permutation-null mean of 0.201 (p = 0.589), so the numeric level order carries less monotone structure than a random ordering typically does. This strengthens rather than weakens the finding, but the verifier noted the wording must be 'the numeric order is not a gradient' rather than 'no monotone structure exists'.",
+        "best_possible_linear_R2_over_relabelling": 0.9146,
+        "rugged_pattern_survives_residualisation": true,
+        "profile_reproduces_under_residualisation_pearson": 1.0
+      },
+      "artifacts": [
+        "V2_rugged_partition.py",
+        "V2_rugged_partition.json"
+      ],
+      "verdict_source": "WORKER'S OWN explicit field 'claim_level_verdict'",
+      "worker_own_verdict": {
+        "level_means_vector": "confirmed exactly (max |diff| = 4.76e-05)",
+        "eta2_0p874_and_dominance": "confirmed (eta^2 = 0.8743, next factor 0.0104)",
+        "linear_R2_0p0055": "confirmed (0.00551)",
+        "split_half_0p999": "confirmed (mean 0.9983 over 1000 random splits)",
+        "profile_corr_minus0p33": "confirmed (-0.3303)",
+        "'not a gradient' wording": "REFUTED as stated. Numeric order is not a monotone gradient (Spearman rho = -0.164, linear R^2 = 0.00551, lag-1 adjacency r = -0.005) BUT a monotone (isotonic) fit in the numeric order captures R^2 = 0.0977, ~18x the linear fit, vs 0.8743 for the saturated 11-mean partition; polynomial fits at any degree up to 6 are not significant (permutation p >= 0.50). So 'not monotone' is exactly right; 'not a gradient' understates a weak but real orderable component.",
+        "ruggedness_vs_relabelling": "the ordering ceiling is uninformative: ANY set of 11 numbers is perfectly monotone in its own sorted order (best isotonic R^2 over relabellings = 1.0 in mean space; max linear R^2 = 0.915), and 20k random relabellings reached R^2 = 0.745 on the raw data, so 'rugged' cannot be falsified by trying other label orders."
+      }
+    },
+    {
+      "worker": "V3",
+      "claim": "Finding 3 (exact algebraic response identity)",
+      "verdict": "confirmed",
+      "confidence": "high",
+      "independent_numbers": {
+        "set_3_max_abs_residual_canonical_(B-A)/(B+A)": "0.0 (exactly, 104/104 rows)",
+        "set_3_rows_within_1e-12": "104/104",
+        "set_3_residual_variance": "0.0",
+        "set_3_rows_byte_identical_nf5_vs_nf6": "104/104 (numeric_feature_6 IS a duplicate of the response)",
+        "set_4_max_abs_residual_canonical_(B-A)/(B+A)": "0.0 (exactly, 91/91 rows) -- NOT 1.1e-16",
+        "set_4_max_abs_residual_alt_form_(B-A)*pow(B+A,-1)": "1.1102230246251565e-16 (2^-53)",
+        "set_4_rows_within_1e-12": "91/91",
+        "rounding_budget_set_3": "3.381e-07  (observed/budget = 0.0)",
+        "rounding_budget_set_4": "2.219e-07  (observed/budget = 0.0)",
+        "perturb_pm5e-7_frac_R_inside_attainable_band_set_3": "1.000",
+        "perturb_pm5e-7_frac_R_inside_attainable_band_set_4": "1.000",
+        "perturb_pm5e-7_frac_rows_reaching_R_to_1e-12_set_3": "0.702",
+        "perturb_pm5e-7_frac_rows_reaching_R_to_1e-12_set_4": "0.473",
+        "perturb_pm5e-7_frac_rows_reaching_R_to_1e-9": "1.000 (both panels)",
+        "perturb_band_halfwidth_set_3": "2.7e-08",
+        "perturb_band_halfwidth_set_4": "4.1e-08",
+        "exact_rational_dev_set_3": "max 3.78 half-ulps of the stored double",
+        "exact_rational_dev_set_4": "max 3.34 half-ulps",
+        "OLS_a_set_3": "2.000000000000002",
+        "OLS_b_set_3": "-1.000000000000000",
+        "OLS_a_set_4": "2.000000000000002",
+        "OLS_b_set_4": "-1.000000000000001",
+        "exact_rational_OLS_a_set_3": "2 (exact rational arithmetic)",
+        "exact_rational_OLS_b_set_3": "-1 exactly",
+        "SSE_identity_both_panels": "0.0 (exactly)",
+        "best_competing_family_max_abs_resid": "9.1e-02 (set_3, a*B/A+b) / 1.97e-01 (set_4)",
+        "nonlinear_a*B^p/(A^p+B^p)": "a=0.98,p=0.64 set_3; a=0.96,p=0.68 set_4; max|r|=0.12/0.19",
+        "response_range_set_3": "[0.559898, 0.876215], span 0.3163",
+        "response_range_set_4": "[0.439043, 0.907971], span 0.4689",
+        "B/A_range_set_3": "[3.5444, 15.1570]",
+        "B/A_range_set_4": "[2.5653, 20.7323]",
+        "A/(A+B)_range_set_3": "[0.0619, 0.2201]",
+        "A/(A+B)_range_set_4": "[0.0460, 0.2805]",
+        "corr_R_A_set_3": "-0.0219",
+        "corr_R_B_set_3": "+0.3077",
+        "corr_R_A_over_B_set_3": "-0.9989",
+        "corr_R_A_set_4": "+0.1066",
+        "corr_R_B_set_4": "+0.4311",
+        "corr_R_A_over_B_set_4": "-0.9965",
+        "corr_A_B": "+0.8784 (set_3) / +0.8793 (set_4)",
+        "corr_B_A_over_B": "-0.3030 (set_3) / -0.4123 (set_4)",
+        "R2_R_by_B_alone": "0.0947 (set_3) / 0.1858 (set_4)",
+        "R2_R_by_ratio_A_over_B": "0.9978 (set_3) / 0.9930 (set_4)",
+        "partial_corr_R_B_given_A": "0.6843 (set_3) / 0.7123 (set_4)",
+        "inversion_B_implied_max_rel_err": "1.27e-15 (set_3) / 1.24e-15 (set_4)",
+        "coincidence_null_p_lt_1e-12": "0/400000 in two null models (normal, uniform)"
+      },
+      "independently_reproduced": {
+        "set3_max_abs_residual": null,
+        "set4_max_abs_residual_canonical_form": "0.0 (exactly, 91/91 rows) -- NOT 1.1e-16",
+        "set3_rows_exact": "104/104",
+        "set4_rows_exact": "91/91",
+        "free_parameter_fit_a_b": null,
+        "exact_rational_OLS_a": "2 (exact rational arithmetic)",
+        "exact_rational_OLS_b": "-1 exactly",
+        "best_competing_family_max_abs_resid": "9.1e-02 (set_3, a*B/A+b) / 1.97e-01 (set_4)",
+        "perturb_frac_inside_band_set3": 1.0,
+        "perturb_frac_inside_band_set4": 1.0,
+        "perturb_frac_reaching_1e-12_set3": 0.7019230769230769,
+        "perturb_frac_reaching_1e-9_both": 1.0,
+        "coincidence_null_hits_normal": 0,
+        "coincidence_null_trials": 400000,
+        "sse_identity": null,
+        "sse_B_over_A": null,
+        "sse_B_alone": null
+      },
+      "adversarial_tests_run": [
+        "seven algebraically equivalent formula variants, checking which are bit-exact",
+        "exact rational arithmetic evaluation with round-trip to the printed precision",
+        "row-wise perturbation of each printed magnitude inside its rounding interval (2.7e-8 to 4.7e-8 band half-width), then re-deriving the response",
+        "400000 random draws from normal and uniform coincidence nulls",
+        "free-parameter fits and a nonlinear 2-parameter family a*B^p/(A^p+B^p)",
+        "byte-level and string-level duplicate column detection"
+      ],
+      "findings_that_qualify_the_claim": {
+        "set3_also_has_a_byte_identical_duplicate_response_column": "numeric_feature_6 is byte-identical to the response numeric_feature_5 over all 104 rows, so panel 3 also carries a duplicated response column that the first draft did not mention",
+        "set3_has_a_second_duplicate_pair": "numeric_feature_19 and numeric_feature_20 are byte-identical over all 104 rows, forced by conditions 2 and 3 having the same across-series rank order",
+        "correct_canonical_form": "(B-A)/(B+A) is exactly zero on both panels; (B-A)/(B+A) computed via pow/reciprocal gives 1.1e-16. The panel-4 figure of 1.1e-16 quoted in the first draft is the alternative-form residual, not the canonical form's (which is 0.0). Both are machine precision."
+      },
+      "artifacts": [
+        "V3_ratio_identity.py",
+        "V3_ratio_identity.json",
+        "V3_adversarial.py",
+        "V3_adversarial.json",
+        "V3_followup.py",
+        "V3_followup.json",
+        "V3_perturb_literal.json",
+        "V3_duplicates_and_consolidate.py",
+        "V3_duplicates_and_consolidate.json",
+        "V3_VERDICT.json"
+      ],
+      "verdict_source": "WORKER'S OWN explicit field 'verdict' in V3_VERDICT.json",
+      "worker_own_verdict": {
+        "verdict": "confirmed",
+        "confidence": "high"
+      }
+    },
+    {
+      "worker": "V4",
+      "claim": "Finding 4 (transfer boundary)",
+      "verdict": "partially_confirmed",
+      "confidence": "medium",
+      "independently_reproduced": {
+        "n_permutations": 50000,
+        "claim_a_rho_identity": 0.8626373626373626,
+        "claim_a_perm_p": 0.00033999320013599726,
+        "claim_a_identity_is_best_cyclic_shift": true,
+        "claim_b_rho_identity": 0.3186813186813187,
+        "claim_b_perm_p": 0.29077418451630965,
+        "claim_c_response_pearson": -0.19579037244891886,
+        "claim_c_response_spearman": -0.05959547698678134,
+        "claim_c_log_mag_b_pearson_cells": 0.4564113797174506,
+        "claim_c_log_mag_b_pearson_condition_means": 0.917337619366442,
+        "claim_c_log_mag_a_pearson_condition_means": 0.850402178511462,
+        "n_matched_cells": 91,
+        "both_panels_same_within_block_order": true
+      },
+      "adversarial_tests_run": [
+        "rebuilt the (series, condition) cell table from the raw row layout independently",
+        "determined the within-block condition order empirically for each panel",
+        "50000-permutation null with the +1 correction, plus exhaustive enumeration of all 13 cyclic shifts",
+        "compared the two panels' own supplied rank blocks",
+        "partial Spearman controlling each panel-4 magnitude separately and jointly"
+      ],
+      "findings_that_qualify_the_claim": {
+        "joint_magnitude_control_removes_significance": [
+          0.5341851855027586,
+          0.090509418730034
+        ],
+        "joint_control_p_value": 0.0905,
+        "interpretation": "controlling BOTH panel-4 magnitude columns jointly drops the panel-1 to panel-4 correspondence to rho = 0.534 with p = 0.091 on 13 levels, i.e. no longer significant at 5%. The defensible claim is the CONTRAST between the two panels, not the absolute panel-4 correspondence.",
+        "naive_rank_block_alignment_is_misleading": "panel 4's rank block is built in FILE ROW ORDER, not printed-label order (13/13 columns match under row order, 0/13 under label order). Naive stacking gives Pearson +0.070, which is an encoding artifact rather than a scientific null."
+      },
+      "artifacts": [
+        "V4_transfer_boundary.py",
+        "V4_transfer_boundary.json",
+        "V4_rankblock.py",
+        "V4_explore.py",
+        "V4_explore2.py",
+        "V4_explore3.py"
+      ],
+      "verdict_source": "WORKER'S OWN explicit field 'verdict_components'",
+      "worker_own_verdict": {
+        "a_rho_and_p_confirmed": true,
+        "b_rho_and_p_confirmed": true,
+        "c_response_transfer_fails_confirmed_under_both_alignments": true,
+        "c_magnitude_transfer_confirmed_under_both_alignments": true,
+        "c_matched_cell_number_-0.086_reproduced": true,
+        "c_matched_cell_number_-0.086_not_reproduced_by_label_alignment": true,
+        "reported_+0.53_logmagB_matches_block_order_alignment": true,
+        "reported_-0.086_alignment_contradicts_the_panels_own_series_labels": true,
+        "panel4_series_labels_IN_FILE_ORDER": [
+          0.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          1.0
+        ],
+        "celllevel_response_pearson_label_alignment": -0.19579037244891886,
+        "celllevel_response_pearson_file_block_alignment": -0.08648939954141263,
+        "celllevel_logmagB_percentile_label_alignment": 49.345238095238095,
+        "celllevel_logmagB_percentile_file_block_alignment": 74.04761904761905
+      }
+    },
+    {
+      "worker": "V5",
+      "claim": "Finding 5 (paired readings, compressed slope)",
+      "verdict": "partially_confirmed",
+      "confidence": "medium",
+      "independently_reproduced": {
+        "pearson": 0.9984725422598207,
+        "spearman": 0.9864111498257843,
+        "kendall_tau": 0.921951219512195,
+        "ols_slope": 0.9751578140376491,
+        "ols_slope_ci95": [
+          0.9576807010147707,
+          0.9926349270605276
+        ],
+        "slope_lattice_rows_only": 0.9615788341071428,
+        "slope_irregular_rows_only": 0.9794389120478905,
+        "mixture_artefact_verdict": "mixture artefact REJECTED",
+        "theil_sen_slope": 0.972693221558284,
+        "huber_rlm_slope": 0.9755022840172293,
+        "max_abs_difference": 6.75,
+        "max_diff_row": 19,
+        "numeric_feature_3_non_missing": 1,
+        "discordant_pairs_all_41": 32,
+        "pairs_total_all_41": 820,
+        "discordant_pairs_irregular_33": 22,
+        "pairs_total_irregular_33": 528,
+        "bootstrap_slope_ci95": [
+          0.9545444389469797,
+          0.9957776110020291
+        ],
+        "frac_bootstrap_below_1": 0.99155,
+        "log_space_slope": 0.9328294979369706,
+        "log_space_ci95": [
+          0.842600333979833,
+          1.0230586618941082
+        ],
+        "log_space_ci_excludes_1": false
+      },
+      "adversarial_tests_run": [
+        "sub-population split: lattice rows only, irregular rows only, all rows",
+        "Deming / total-least-squares sweep over the noise ratio lambda from 0 to infinity",
+        "positive control: simulate a TRUE slope of exactly 1 and check whether the claimed bound holds",
+        "calibrated null simulations for three noise models (x-exact, equal-noise, lattice-only)",
+        "Theil-Sen and Huber robust regressions",
+        "log-space (multiplicative) regression",
+        "bootstrap and leave-one-out",
+        "influence diagnostics (leverage, Cook's D, dfbeta)"
+      ],
+      "findings_that_qualify_the_claim": {
+        "the_original_eiv_bound_was_invalid": {
+          "claimed": "the lambda-sweep interval [0.97516, 0.97814] bounds the corrected slope away from 1",
+          "positive_control_result": {
+            "noise_frac_0.0": {
+              "x_noise_sd": 0.0,
+              "frac_sim_interval_contains_1": 1.0,
+              "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.0
+            },
+            "noise_frac_0.001": {
+              "x_noise_sd": 0.04735985711781141,
+              "frac_sim_interval_contains_1": 0.004,
+              "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.498
+            },
+            "noise_frac_0.002": {
+              "x_noise_sd": 0.09471971423562282,
+              "frac_sim_interval_contains_1": 0.008,
+              "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.4865
+            },
+            "noise_frac_0.003": {
+              "x_noise_sd": 0.14207957135343424,
+              "frac_sim_interval_contains_1": 0.0095,
+              "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.462
+            },
+            "noise_frac_0.005": {
+              "x_noise_sd": 0.23679928558905705,
+              "frac_sim_interval_contains_1": 0.0195,
+              "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.5045
+            },
+            "noise_frac_0.01": {
+              "x_noise_sd": 0.4735985711781141,
+              "frac_sim_interval_contains_1": 0.0315,
+              "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.4905
+            },
+            "noise_frac_0.02": {
+              "x_noise_sd": 0.9471971423562282,
+              "frac_sim_interval_contains_1": 0.062,
+              "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.477
+            },
+            "noise_frac_0.05": {
+              "x_noise_sd": 2.3679928558905705,
+              "frac_sim_interval_contains_1": 0.153,
+              "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.399
+            }
+          },
+          "why_wrong": "the Reqression-Majestic endpoint S_yy/S_xy is a DOWNWARD-biased estimator, not an upper bound. The positive control shows the interval contains the true slope of 1 in only 15-20% of replicates at realistic noise, so the interval is ~10x too narrow to bracket the truth and its failure to reach 1 carries almost no weight.",
+          "replacement": "de-attenuation b_OLS/r^2 = 0.978144 (max correction only 0.31%), plus a calibrated lattice-block test"
+        },
+        "calibrated_null_equal_noise_p": 0.00375,
+        "calibrated_null_lattice_p": 0.01875,
+        "lattice_sensitivity_p_at_noise_2p9": 0.04625,
+        "log_scale_does_not_reject_slope_1": true,
+        "rank_inversion_scope_correction": "32 of 820 over all 41 rows; 22 of 528 is the 33-irregular-row subset. The first draft quoted the subset without labelling it."
+      },
+      "artifacts": [
+        "V5_paired_slope_audit.py",
+        "V5_paired_slope_audit.json",
+        "V5b_addendum_2a_2b_2c.py",
+        "V5b_addendum.json",
+        "V5c_positive_control_and_drift.py",
+        "V5c_positive_control.json",
+        "V5d_calibration.py",
+        "V5d_calibration.json"
+      ],
+      "verdict_source": "assigned by main agent from the worker's computed numbers (no explicit verdict field in the worker's payload)"
+    },
+    {
+      "worker": "V6",
+      "claim": "Structural audit of all four panels (S1-S7)",
+      "verdict": "partially_confirmed",
+      "confidence": "high",
+      "independently_reproduced": {
+        "S1": {
+          "claim": "set1: f1 = run counter 1..1430, f5 = cell index 0..1429, both non-measurement; responses are f6, f7",
+          "verdict": "confirmed",
+          "evidence": {
+            "f1_equals_1..1430": true,
+            "f1_equals_observation_index+1": true,
+            "f5_is_permutation_of_0..1429": true,
+            "f5_equals_observation_index": false,
+            "f5_equals_row_run_counter": false,
+            "f5_equals_143*f2+11*f3+f4": true,
+            "f5_max_abs_deviation_from_that_formula": 0.0,
+            "complete_factorial": true,
+            "n_distinct_cells": 1430,
+            "nunique_within_cell": {
+              "observation_index": 1,
+              "numeric_feature_1": 1,
+              "numeric_feature_2": 1,
+              "numeric_feature_3": 1,
+              "numeric_feature_4": 1,
+              "numeric_feature_5": 1,
+              "numeric_feature_6": 1,
+              "numeric_feature_7": 1
+            }
+          },
+          "note": "f5 is a cell index 0..1429 but it is the INDEX OF THE CELL LABEL, not of the row: f5 == 143*f2 + 11*f3 + f4 exactly (verified), while f5 == observation_index is FALSE because the file is written in the generator loop order (f3 order 0,5,6,..,12,1,2,3,4 inside each f2), not in ascending f5 order. f5 is redundant given (f2,f3,f4), and (f2,f3,f4) supply f5 exactly; f1 is redundant given observation_index."
+        },
+        "S2": {
+          "claim": "set3: f1 = series id, only on rows 0,13,...,91, equals row//13; f8 = second copy of the id on rows 0..7; f7 empty",
+          "verdict": "confirmed",
+          "evidence": {
+            "f1_rows": [
+              0,
+              13,
+              26,
+              39,
+              52,
+              65,
+              78,
+              91
+            ],
+            "f1_values": [
+              0.0,
+              1.0,
+              2.0,
+              3.0,
+              4.0,
+              5.0,
+              6.0,
+              7.0
+            ],
+            "f1_equals_row//13": true,
+            "f8_rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "f8_values": [
+              0.0,
+              1.0,
+              2.0,
+              3.0,
+              4.0,
+              5.0,
+              6.0,
+              7.0
+            ],
+            "f7_n_nonnull": 0,
+            "fully_identical_column_pairs": [
+              [
+                "numeric_feature_5",
+                "numeric_feature_6"
+              ],
+              [
+                "numeric_feature_19",
+                "numeric_feature_20"
+              ]
+            ]
+          }
+        },
+        "S3": {
+          "claim": "set3: f5 and f6 are exact duplicates over all 104 rows",
+          "verdict": "confirmed",
+          "evidence": {
+            "f5_equals_f6_exact": true,
+            "max_abs_diff_f5_f6": 0.0,
+            "n_rows_compared": 104,
+            "literal_text_identical_rows_f5_f6": 104,
+            "literal_text_rows_total": 104,
+            "set3_f5_equals_(f4-f3)/(f4+f3)": true,
+            "set3_max_abs_diff_f5_vs_ratio": 0.0,
+            "set4_f6_equals_(f5-f4)/(f5+f4)": false,
+            "set4_max_abs_diff_f6_vs_ratio": 1.1102230246251565e-16
+          }
+        },
+        "S4": {
+          "claim": "set3: f9..f21 each hold a permutation of 0..7 = ascending rank of the response across the 8 series for the condition at within-block position j",
+          "verdict": "confirmed",
+          "evidence": {
+            "all_13_are_permutations_of_0..7": true,
+            "n_cols_reproduced_by_position_indexed_ascending_rank": 13,
+            "n_cols_reproduced_by_condition_indexed_rule": 1,
+            "n_cols_reproduced_by_descending_rank": 0,
+            "within_block_condition_sequence": [
+              0,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              1,
+              2,
+              3,
+              4
+            ],
+            "column_to_matching_condition": {
+              "numeric_feature_9": [
+                0
+              ],
+              "numeric_feature_10": [
+                5
+              ],
+              "numeric_feature_11": [
+                6
+              ],
+              "numeric_feature_12": [
+                7
+              ],
+              "numeric_feature_13": [
+                8
+              ],
+              "numeric_feature_14": [
+                9
+              ],
+              "numeric_feature_15": [
+                10
+              ],
+              "numeric_feature_16": [
+                11
+              ],
+              "numeric_feature_17": [
+                12
+              ],
+              "numeric_feature_18": [
+                1
+              ],
+              "numeric_feature_19": [
+                2,
+                3
+              ],
+              "numeric_feature_20": [
+                2,
+                3
+              ],
+              "numeric_feature_21": [
+                4
+              ]
+            },
+            "n_cols_with_unique_condition": 11,
+            "mapped_conditions_in_column_order": [
+              0,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              1,
+              2,
+              2,
+              4
+            ],
+            "SEQ_is_a_valid_assignment_to_the_13_columns": true,
+            "n_distinct_conditions_reachable": 13,
+            "ambiguous_columns": [
+              [
+                10,
+                [
+                  2,
+                  3
+                ]
+              ],
+              [
+                11,
+                [
+                  2,
+                  3
+                ]
+              ]
+            ]
+          },
+          "note": "Rule confirmed: column numeric_feature_(9+j) = ascending rank (0..7, ties would be broken by stable order but none occur in the needed columns) of numeric_feature_5 across the 8 series for the condition at within-block POSITION j, with the within-block condition sequence [0,5,6,7,8,9,10,11,12,1,2,3,4]. All 13 columns reproduce exactly (13/13) under that rule. The condition-indexed alternative reproduces only 1/13, so it is refuted. Ranking the blocks in file row order is correct here because set3's f1 block labels are 0..7 in row order. One caveat: conditions 2 and 3 have an identical across-series rank order, so f19/f20 both match conditions {2,3}; the column ORDER implies f19=2 and f20=3, and swapping them cannot be detected from the rank data alone."
+        },
+        "S5": {
+          "claim": "set4: f1 only on rows 0,13,...,78 with values [0,2,3,4,5,6,1]; that order is the front-up series label of each block, NOT its row position",
+          "verdict": "confirmed",
+          "evidence": {
+            "f1_rows": [
+              0,
+              13,
+              26,
+              39,
+              52,
+              65,
+              78
+            ],
+            "f1_values": [
+              0.0,
+              2.0,
+              3.0,
+              4.0,
+              5.0,
+              6.0,
+              1.0
+            ],
+            "f1_equals_row//13": false,
+            "order_is_0_2_3_4_5_6_1": true,
+            "blocks_where_label_ne_row_position": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "sorting_blocks_by_label_reads_0..6": true,
+            "row_order_labels": [
+              0,
+              2,
+              3,
+              4,
+              5,
+              6,
+              1
+            ],
+            "labels_are_a_permutation_of_0..6": true
+          },
+          "note": "The VALUES [0,2,3,4,5,6,1] and the non-multiples-of-13 identity are confirmed, and re-sorting the blocks by that value yields 0..6. However the CLAIM's causal interpretation - that this column defines the series ordering used to build the response/rank panel - is REFUTED: the 7 rank columns f11..f23 reproduce exactly (13/13) when the blocks are ranked in FILE ROW ORDER, and 0/13 when they are ranked after sorting by the f1 label. So f1 is a block LABEL/tag, not the ordering key of the rank matrix; the rank matrix uses row order."
+        },
+        "S6": {
+          "claim": "set4: f7,f8,f9 empty; f2 = single 0 at row 0; f10 = permutation of 0..7",
+          "verdict": "confirmed",
+          "evidence": {
+            "f7_f8_f9_all_null": true,
+            "f2_single_value": [
+              0.0
+            ],
+            "f2_row": [
+              0
+            ],
+            "f10_values": [
+              1.0,
+              3.0,
+              4.0,
+              5.0,
+              6.0,
+              7.0,
+              2.0,
+              0.0
+            ],
+            "f10_rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "f10_is_permutation_0..7": true,
+            "f10_values_rows_0..6": [
+              1.0,
+              3.0,
+              4.0,
+              5.0,
+              6.0,
+              7.0,
+              2.0
+            ],
+            "f10_equals_label_plus_1_on_rows_0..6": true,
+            "f10_value_at_row7": 0.0
+          },
+          "note": "All four literal statements hold. Correction to the likely reading: f10 is NOT an independent permutation of 0..7 - it is numeric_feature_1 + 1 on rows 0..6 ([1,3,4,5,6,7,2]) with a single extra token 0 at row 7. It is a second, 1-based, redundant copy of the series label plus a stray tail value."
+        },
+        "S7": {
+          "claim": "panels 3 and 4: the first value of each 13-row block is a single measurement for condition 0",
+          "verdict": "confirmed",
+          "evidence": {
+            "set3_condition_at_block_start_from_f2": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "set3_block_start_is_condition_0": true,
+            "set4_f2_populated_only_at_row0": [
+              0
+            ],
+            "set4_condition_at_block_start_from_f2only": [
+              0,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "set4_f3_cycle": [
+              0,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              1,
+              2,
+              3,
+              4
+            ],
+            "set3_f2_cycle": [
+              0,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              1,
+              2,
+              3,
+              4
+            ],
+            "set4_condition_cycle_equals_set3_f2_cycle": true,
+            "set4_implied_block_start_condition": 0,
+            "set3_response_cycles_identical": false,
+            "set4_response_cycles_identical": false,
+            "set4_f3_cycles_all_identical": true
+          },
+          "note": "Condition at block start is 0 in BOTH panels. set3: numeric_feature_2 (the per-row condition id) equals 0 at every one of the 8 block starts, and equals the sequence [0,5,6,7,8,9,10,11,12,1,2,3,4] within each block. set4: numeric_feature_2 is present only at row 0 (value 0); numeric_feature_3 there is the CONDITION TOKEN (integer 0..12) and its per-block cycle is byte-identical to set3's numeric_feature_2 cycle, so every set4 block also starts at condition 0. Do not confuse set4's numeric_feature_3 (condition token) with set3's numeric_feature_3 (a float magnitude)."
+        }
+      },
+      "adversarial_tests_run": [
+        "reconstructed every structural claim from scratch with independent code",
+        "exhaustive brute-force search for the role of each identifier and rank column",
+        "tested three competing hypotheses for the panel-4 rank block alignment"
+      ],
+      "findings_that_qualify_the_claim": {
+        "S1_correction": "the main agent's claim that panel-1 numeric_feature_5 is a row counter is WRONG. It is a mixed-radix cell identifier: f5 = 11*(f3 + 13*f2) + f4, decoding exactly back to the (f2,f3,f4) cell. f1 IS the run counter (== observation_index+1).",
+        "E2_set4_f10_resolved": {
+          "what": "set4 numeric_feature_10 equals numeric_feature_1 + 1 on rows 0..6 ([1,3,4,5,6,7,2]) and then holds a single 0 at row 7. The 0 at row 7 is what makes the column a full permutation of 0..7; the value is not a label+1.",
+          "values_rows_0_to_6": [
+            1.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            7.0,
+            2.0
+          ],
+          "label_plus_1_expected": [
+            1.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            7.0,
+            2.0
+          ],
+          "exact_on_rows_0_to_6": true,
+          "value_at_row7": 0.0
+        },
+        "E1_rank_block_is_row_order": "The set4 rank block f11..f23 is built by ranking the responses across the 7 blocks in FILE ROW ORDER. Every one of the 13 columns is reproduced exactly by {position-indexed column j, ascending rank over block row position}. Re-sorting the blocks by the printed numeric_feature_1 label reproduces 0/13.",
+        "E10_set3_second_duplicate_pair": [
+          [
+            "numeric_feature_5",
+            "numeric_feature_6"
+          ],
+          [
+            "numeric_feature_19",
+            "numeric_feature_20"
+          ]
+        ]
+      },
+      "artifacts": [
+        "V6_structural_audit.py",
+        "V6_independent_structural_audit.py",
+        "V6_independent_structural_audit.json"
+      ],
+      "verdict_source": "WORKER'S OWN explicit 'verdicts' object, per structural claim S1-S7",
+      "worker_own_verdict": {
+        "S1": "confirmed",
+        "S2": "confirmed",
+        "S3": "confirmed",
+        "S4": "confirmed",
+        "S5": "confirmed",
+        "S6": "confirmed",
+        "S7": "confirmed"
+      }
+    }
+  ],
+  "corrections_applied_to_Result_md": [
+    {
+      "finding": "structural preamble / Finding 1 scope",
+      "was": "panel-1 numeric_feature_5 described as a row counter",
+      "now": "mixed-radix cell identifier f5 = 11*(f3 + 13*f2) + f4",
+      "caught_by": "V6"
+    },
+    {
+      "finding": "Finding 1",
+      "was": "eta2 regime contrast presented as scale-free",
+      "now": "quantified as partly distributional (rank-transformed gaps shrink ~half); three-way residual non-normality reported",
+      "caught_by": "V1"
+    },
+    {
+      "finding": "Finding 3",
+      "was": "duplicate column mentioned only for panel 3 f5/f6",
+      "now": "second duplicate pair (f19/f20) and the canonical-form residual (0.0, not 1.1e-16) reported",
+      "caught_by": "V3"
+    },
+    {
+      "finding": "Finding 4",
+      "was": "'panel-1 tracks panel 4' stated with partials at p = 0.008-0.033",
+      "now": "joint two-magnitude control reported (rho 0.534, p = 0.091, not significant); claim restated as a contrast",
+      "caught_by": "V4"
+    },
+    {
+      "finding": "Finding 5",
+      "was": "lambda-sweep interval used as an attenuation bound; inversion count scope unlabelled",
+      "now": "bound withdrawn as invalid (positive control); replaced by de-attenuation and a calibrated lattice test; inversion scope labelled",
+      "caught_by": "V5"
+    },
+    {
+      "finding": "unresolved list",
+      "was": "observation_set_4.numeric_feature_10 listed as unresolved",
+      "now": "resolved as a 1-based copy of the series-label tags with a trailing zero",
+      "caught_by": "V6"
+    },
+    {
+      "finding": "Finding 2",
+      "was": "'not a gradient', with the isotonic R2 additionally cited as support",
+      "now": "RECONCILED, both partly right. V2 correctly refuted the USE of the isotonic R2 as extra support and correctly flagged that 'not a gradient' understates the case. But V2's own alternative characterisation ('a weak but real orderable component') is NOT supported by its own null calibration, which V2 also computed: the observed isotonic R2 of 0.0977 is BELOW the permutation-null mean of 0.2041 (p = 0.587). The main agent re-ran the check independently (20000 relabellings): null mean 0.2041, sd 0.1974, p95 0.5986; observed at the 41st percentile. V2's headline '18x the linear fit' compares two quantities that are both below chance, so the ratio is not evidence of orderable structure. Final wording: the numeric level order shows no monotone signal; the isotonic figure is reported only as a null calibration, not as evidence for or against orderability. V2's other point stands: the 'rugged' label is not falsifiable by relabelling, because any 11 numbers are perfectly monotone in their own sorted order.",
+      "caught_by": "V2 (explicit 'REFUTED as stated'), then partially overturned by the main agent's own re-check"
+    }
+  ],
+  "summary": {
+    "n_workers": 6,
+    "verdicts": {
+      "V1": "confirmed",
+      "V2": "partially_confirmed",
+      "V3": "confirmed",
+      "V4": "partially_confirmed",
+      "V5": "partially_confirmed",
+      "V6": "partially_confirmed"
+    },
+    "verdict_attribution": {
+      "V1": "assigned by main agent from the worker's computed numbers (no explicit verdict field in the worker's payload)",
+      "V2": "WORKER'S OWN explicit field 'claim_level_verdict'",
+      "V3": "WORKER'S OWN explicit field 'verdict' in V3_VERDICT.json",
+      "V4": "WORKER'S OWN explicit field 'verdict_components'",
+      "V5": "assigned by main agent from the worker's computed numbers (no explicit verdict field in the worker's payload)",
+      "V6": "WORKER'S OWN explicit 'verdicts' object, per structural claim S1-S7"
+    },
+    "claims_confirmed": 2,
+    "claims_partially_confirmed": 4,
+    "claims_refuted": 0,
+    "substantive_corrections_caught": 7,
+    "wording_refuted_by_a_worker": 1,
+    "verifier_characterisations_that_did_not_survive_recheck": 1
+  },
+  "workflow_provenance": {
+    "run_id": "wf_6a7c8750-95f",
+    "agents_launched": 6,
+    "agents_done": 6,
+    "agents_error": 0,
+    "agents_returned_empty": 6,
+    "failure": "parallel[0..5] failed: agent({schema}): subagent completed without calling StructuredOutput",
+    "journal_result_lines": 0,
+    "consequence": "the orchestrator received no structured verdicts; the verification content was recovered entirely from the workers' on-disk artifacts, which are real and were produced by the workers' own executed code",
+    "subagent_tokens": 414940,
+    "tool_uses": 311,
+    "duration_ms": 9222998
+  }
+}

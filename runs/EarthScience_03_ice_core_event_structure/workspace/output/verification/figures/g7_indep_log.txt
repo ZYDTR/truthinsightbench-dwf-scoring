@@ -1,0 +1,163 @@
+rows=1931 cols=9
+columns: c01_depth_top_m, c02_depth_ice_snow_m, c03_samp_thick_cm, c04_sulfate_ug_kg, c05_density_ice_g_cm_3, c06_depth_w_e_m, c07_signal, c08_age_a_ad_ce, c09_age_ka_bp
+dated rows (c08 non-null) = 15 ; c07 non-empty labels = 15
+c01 min=0.0000 max=41.9800 span=41.9800
+
+===== (a) c02 vs c01 =====
+max |c02-c01| = 0.020000  (claim: <=0.02)
+min c02-c01 = 0.000000
+distinct (c02-c01) values: 0(11), 0.01(1790), 0.02(130)
+
+===== (b) c09 vs (1950-c08)/1000 =====
+dated n=15  max |c09-(1950-c08)/1000| = 0.000e+00  (exact float eq: 15/15)
+also exact vs round(...,3): 15/15
+c08 values: 1172, 1230, 1259, 1269, 1277, 1286, 1459, 1595, 1643, 1674, 1695, 1809, 1816, 1991, 2018
+c09 values: -0.068, -0.041, 0.134, 0.141, 0.255, 0.276, 0.307, 0.355, 0.491, 0.664, 0.673, 0.681, 0.691, 0.72, 0.778
+
+===== (c) c01 vs cumsum(c03)/100 =====
+raw residual r=c01-cumsum(c03)/100 : min=-0.0350 max=1.0007
+best single breakpoint by max|resid|: after row idx 105 (0-based; row 106) -> max|res|=0.017304
+best single breakpoint by rms       : after row idx 105 (0-based; row 106) -> rms=0.006915
+top-8 breakpoints (max|resid|): k=106:0.01730, k=212:0.50695, k=211:0.50921, k=213:0.50932, k=210:0.51162, k=214:0.51165, k=215:0.51398, k=209:0.51403
+segment means: before=-0.02979  after=0.98570  implied JUMP=1.01550 m
+residual after step model: max|res|=0.01730 rms=0.00691
+band widths (max-min within segment): before=0.01060 after=0.03230
+c01 around break: c01[105]=2.97 c01[106]=4.00  raw diff=1.0300
+OLS c01 ~ 1 + cumsum + step*I: intercept=-0.03069 slope_cumsum=1.00058763 step=1.00324
+OLS residual: max|res|=0.00934 rms=0.00308
+
+--- (c) alternative explanations at k=106 ---
+global constant (1 param)                  max|res|=0.96496 rms=0.23141
+single step (2 params: segment means)      max|res|=0.01730 rms=0.00691
+global linear drift (2 params)             max|res|=0.81524 rms=0.21013
+global quadratic (3 params)                max|res|=0.65386 rms=0.18249
+CONTINUOUS piecewise-linear, knot k (3p)   max|res|=0.93970 rms=0.11380
+DISCONTINUOUS piecewise-linear, knot k (4p) max|res|=0.00930 rms=0.00309
+single step + post-step linear drift (3p)  max|res|=0.00930 rms=0.00310
+quartic poly in index, no step (5p)        max|res|=0.50570 rms=0.12260
+cubic in cumsum, no step (4p)              max|res|=0.53005 rms=0.14126
+greedy SECOND step: after row idx 767 -> max|res|=0.01135 (was 0.01730)
+
+--- (c)(iii) reversed derivation: c03 from diff(c01) ---
+diff(c01)*100 distinct values: 1(22), 2(1648), 3(259), 103(1)
+frac |round(diff(c01)*100) - c03| == 0 : 0.1295
+frac |diff(c01)*100 - c03| < 0.005    : 0.1295
+crosstab diff(c01)*100 (rows) vs c03 (cols), cm:
+c03       1.85  1.92  1.96  2.00  2.04  2.08  2.13  2.17  2.22  2.38  2.44  2.78  2.86
+diff*100                                                                              
+1.0          8     8     6     0     0     0     0     0     0     0     0     0     0
+2.0         46    96   147   250   516   176   123    38   140    52    46     8    10
+3.0          0     0     0     0    22    16    18     8    40    32    36    27    60
+103.0        0     0     0     0     0     0     0     0     0     0     0     1     0
+
+--- (c) forward: is c01 consistent with round(cumsum(c03)/100 + const, 2)? ---
+pre-step: band width of r = 0.01060 m -> consistent with cm-rounding (<=0.01)? NO
+post-step: band width of r = 0.03230 m -> consistent with cm-rounding (<=0.01)? NO
+=> c03 carries 0.01-cm resolution; c01 is quantized to 0.01 m. Reverse derivation is information-destroying; forward is plausible only if band<=0.01.
+best per-segment const offset pre-step: off=-0.0303 -> exact c01 match frac=0.9528
+best per-segment const offset post-step: off=0.9872 -> exact c01 match frac=0.5310
+
+--- (c) STEP MAGNITUDE under different estimators ---
+  raw c01 jump                           = 1.03000
+  jump minus c03[k-1]/100                = 1.00220
+  jump minus c03[k]/100                  = 1.00620
+  jump minus mean c03[90:106]/100        = 1.00220
+  mean(r_post)-mean(r_pre)               = 1.01550
+  median(r_post)-median(r_pre)           = 1.01570
+  midband(r_post)-midband(r_pre)         = 1.01425
+  OLS a+b*cs+step*I (step coef)          = 1.00324
+  OLS a+b*cs+step*I (step - slope*dT)    = 1.00323
+  affine fit pre : slope=-2.875e-02 per row, value at k=-3.04738 (rms=1.72098)
+  affine fit post: slope=9.734e-01 per row, value at k=103.18210 (rms=1114.89424)
+  shifted alignment (c03[i] -> interval ending at c01[i]): pre-mean=-0.00146 post-mean=1.00652 jump=1.00798 max|res|=0.01482
+  Chebyshev constants: pre=-0.02970 post=0.98455 -> max|res|=0.01615
+  r pre : min=-0.03500 max=-0.02440 band=0.01060
+  r post: min=0.96840 max=1.00070 band=0.03230
+  c03 rows 95..112: 2.78 2.78 2.78 2.78 2.78 2.78 2.78 2.78 2.78 2.78 2.78 2.38 2.38 2.38 2.38 2.38 2.38 2.38
+  c01 rows 95..112: 2.69 2.72 2.75 2.78 2.81 2.83 2.86 2.89 2.92 2.94 2.97 4.00 4.02 4.05 4.07 4.10 4.12 4.14
+  diff(c01)*100 rows 95..112: 3 3 3 3 2 3 3 3 2 3 103 2 3 2 3 2 2
+  d01*100: all integers? True ; mean=2.1751 vs mean(c03)=2.1224
+  sum(d01*100)=4198.0  sum(c03)=4098.4  relative gap=0.024300
+
+===== (d) c06 vs c01*c05  (and alternatives) =====
+c01*c05                      max|res|=0.03032 rms=0.00965 mean|res|=0.00768
+c02*c05                      max|res|=0.02396 rms=0.00784 mean|res|=0.00608
+(c01+c03/100)*c05            max|res|=0.02786 rms=0.00951 mean|res|=0.00758
+c01*c05 + c03/100*c05        max|res|=0.02786 rms=0.00951 mean|res|=0.00758
+round(c01*c05,2)             ) max|res|=0.03000  frac exact=767/1931
+round(c02*c05,2)             ) max|res|=0.02000  frac exact=1033/1931
+round((c01+c03/100)*c05,2)   ) max|res|=0.03000  frac exact=761/1931
+round(c01*c05 + c03/100*c05,2)) max|res|=0.03000  frac exact=761/1931
+cumsum(c03/100*c05)          max|res|=6.23541 rms=2.93141
+c06 distinct values=1912 ; are all c06 multiples of 0.01? True
+max-res row for c01*c05: idx=1876 c01=40.88 c02=40.89 c05=0.636 c06=26.03 prod=25.9997
+max-res row for c02*c05: idx=1876 c01=40.88 c02=40.89 c05=0.636 c06=26.03 prod=26.0060
+
+--- (d)/(task3) direction test: c06=round(c01*c05,2) vs c05=round(c06/c01,3) ---
+direction A  c06 == round(c01*c05,2) exact frac = 0.3972 (767/1931)
+direction B  c05 == round(c06/c01,3) exact frac = 0.6748 (1303/1931)
+A |c06-c01*c05|<=0.0005 frac=0.0409   B |c05-c06/c01|<=0.0005 frac=0.6763
+A max|c06-c01*c05|=0.030320   B max|c05-c06/c01|=0.286667
+with c02: A2 exact frac=0.5350  B2 exact frac=0.8089
+
+===== (e) c05 structure =====
+c05 distinct=262 (claim 261), min=0.3790 max=0.6440
+c05 non-decreasing as a sequence? True ; strictly increasing? False
+c05 all multiples of 0.001? True
+runs of constant c05 = 262 ; max run length = 9
+quadratic in c01 : max|res|=0.000549 rms=0.000289 (claim max 0.00055)
+quadratic in idx : max|res|=0.007679 rms=0.001887
+quadratic in c06 : max|res|=0.003654 rms=0.001024
+quartic   in c01 : max|res|=0.000551 rms=0.000289
+c05 = round(quadratic(c01),3) exact frac=0.9912
+c01 distinct=1931 -> test "equal c01 => equal c05" is vacuous
+quad-resid in first/last 10%: max|.|=0.000511 / 0.000509
+
+===== ATTACK 1: systematic pair scan =====
+pairwise |corr| on complete rows (Pearson):
+  c01-c02 r=1.0000
+  c01-c05 r=0.9993
+  c01-c06 r=0.9935
+  c01-c08 r=-0.9957
+  c01-c09 r=0.9957
+  c02-c05 r=0.9993
+  c02-c06 r=0.9935
+  c02-c08 r=-0.9957
+  c02-c09 r=0.9957
+  c05-c06 r=0.9971
+  c05-c08 r=-0.9985
+  c05-c09 r=0.9985
+  c06-c08 r=-0.9995
+  c06-c09 r=0.9995
+  c08-c09 r=-1.0000
+repeat-value probes:
+  c04: 1908 distinct / 1930 rows -> 22 repeated values
+    c04=49.307 at rows [769, 1878] ; c01=[18.38, 40.92] ; c05=[0.486, 0.637] ; c06=[8.94, 26.06]
+    c04=63.045 at rows [578, 1505] ; c01=[14.51, 33.37] ; c05=[0.462, 0.584] ; c06=[6.71, 19.49]
+    c04=63.195 at rows [219, 250] ; c01=[6.71, 7.4] ; c05=[0.417, 0.421] ; c06=[2.8, 3.12]
+    c04=67.911 at rows [400, 764] ; c01=[10.71, 18.29] ; c05=[0.44, 0.485] ; c06=[4.71, 8.88]
+    c04=69.713 at rows [1510, 1612] ; c01=[33.49, 35.67] ; c05=[0.585, 0.6] ; c06=[19.58, 21.4]
+  c06: 1912 distinct / 1931 rows -> 19 repeated values
+    c06=0.23 at rows [20, 21] ; c01=[0.57, 0.6] ; c05=[0.383, 0.383] ; c06=[0.23, 0.23]
+    c06=0.62 at rows [55, 56] ; c01=[1.57, 1.6] ; c05=[0.388, 0.388] ; c06=[0.62, 0.62]
+    c06=0.7 at rows [62, 63] ; c01=[1.77, 1.8] ; c05=[0.389, 0.389] ; c06=[0.7, 0.7]
+    c06=0.78 at rows [69, 70] ; c01=[1.97, 2.0] ; c05=[0.39, 0.39] ; c06=[0.78, 0.78]
+    c06=1.84 at rows [128, 129] ; c01=[4.52, 4.55] ; c05=[0.404, 0.404] ; c06=[1.84, 1.84]
+  c05: 262 distinct / 1931 rows -> 260 repeated values
+  c02: 1931 distinct / 1931 rows -> 0 repeated values
+  repeated c06 -> max spread of c01 = 0.0300 m (n_dup=19)
+  worst: c06=2.85 rows [223, 224] c01 spread 0.0300 c05 spread 0.0000
+c04 vs geometry: R^2 of c04 on cubic in c01 = 0.0035
+
+ATTACK 1b: is c07 derivable from c04 (local-max rule)?
+labelled rows: [0, 70, 502, 517, 796, 841, 907, 1012, 1305, 1640, 1660, 1674, 1696, 1752, 1862]
+  window +-1: labelled rows that are window max = 14/15 ; total rows that are window max = 582 -> precision 0.024
+  window +-2: labelled rows that are window max = 14/15 ; total rows that are window max = 322 -> precision 0.043
+  window +-3: labelled rows that are window max = 14/15 ; total rows that are window max = 240 -> precision 0.058
+  window +-5: labelled rows that are window max = 14/15 ; total rows that are window max = 151 -> precision 0.093
+  window +-10: labelled rows that are window max = 14/15 ; total rows that are window max = 87 -> precision 0.161
+  window +-20: labelled rows that are window max = 12/15 ; total rows that are window max = 44 -> precision 0.273
+c04 at labelled rows: 116.4, 283.7, 1047.8, 431.0, 300.8, 243.2, 252.5, 239.5, 507.6, 325.4, 281.3, 437.0, 880.9, 312.9, 259.8
+c04 quantile of labelled rows: 0.805, 0.981, 0.999, 0.991, 0.982, 0.975, 0.976, 0.974, 0.994, 0.985, 0.981, 0.992, 0.996, 0.984, 0.978
+
+saved figure: /data/user/conversations/conv-f07721cb-d3dc-42e9-83c7-7e986203115b/project/output/verification/figures/g7_indep_figure.png

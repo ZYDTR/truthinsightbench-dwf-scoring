@@ -1,0 +1,9 @@
+{
+  "files": [
+    "event_recording_set_a.tsv",
+    "event_recording_set_b.tsv"
+  ],
+  "ks_stat": 0.11521068859198355,
+  "ks_p": 0.7295102075866976,
+  "perm_p": 1.0
+}

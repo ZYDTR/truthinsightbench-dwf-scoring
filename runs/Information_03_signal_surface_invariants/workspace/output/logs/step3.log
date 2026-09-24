@@ -1,0 +1,16 @@
+loaded replicated_response_panel.tsv: shape=(8232, 6) sha256=410e51b559eb4d3416f131c2eb4d8f75995ff00d3b76af7b47a0ee8b1220533d
+loaded independent_response_panel.tsv: shape=(4116, 6) sha256=f85f73bbbf15535425752c6ca2ae65e523c8dd8c06a2d5de11bf1986aaa884a1
+loaded independent_fit_error.tsv: shape=(21, 3) sha256=57b739c708fb384f7a661d85e62b67f6c5f333cab170214d6f972ca067d2564a
+panel overview: replicated chan main share=0.5892, independent chan main share=0.0018; independent bin main share=0.4581, a2 main share=0.2357
+direct replication on the 1372 common grid cells: pearson=+0.0168 [-0.0260,+0.0372] spearman=+0.0324
+alignment search over reflections/axis swaps: strongest match = a1_reversed__a2_reversed (pearson -0.1579); identity pearson=+0.0168
+channel relabelling of the independent panel: best permutation [3, 2, 0, 1] gives pearson +0.0705
+marginal refraction: rep_a1~ind_a1 r=+0.9799 ; rep_a2~ind_a2 r=-0.8262 ; rep_a2~ind_a1 r=-0.9591 (rank -0.8929)
+marginal ranges: replicated a1=1.064 a2=0.677 ; independent a1=0.871 a2=1.989
+noise-scale sharing: cell CV pearson=+0.3822 (perm p<0.00001) ; after removing (a1,a2) means +0.1993 (p<0.00001)
+CV marginal profiles: by a1 rep~ind r=+0.8453 ; by a2 rep~ind r=+0.9154
+fit_error (n=21): mean=0.1299 ; axis SS share=0.598, replicate SS share=0.310 ; corr with rep CV by a1 r=+0.209 (p=0.656), with ind CV by a1 r=+0.374 (p=0.398)
+structural transfer: replicated model R2 on replicated=0.5751, applied unchanged to independent=-0.2768 (best channel permutation -0.2436, axis-swapped -0.2510)
+separability R2 - replicated a1a2 vs binchan=0.7867 ; independent a1a2 vs bin=0.8759, a1a2 vs binchan=0.8288
+independent panel channel rank: (a1,a2)x4ch rank1 R2=0.9107 ; (a1,a2,bin)x4ch rank1 R2=0.9483
+bin-0 boundary: replicated excess=+0.9482 (x2.58) ; independent excess=-0.4539 (x0.64) -- opposite sign

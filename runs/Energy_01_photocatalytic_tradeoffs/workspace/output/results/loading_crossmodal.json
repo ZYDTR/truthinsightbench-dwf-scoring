@@ -1,0 +1,612 @@
+{
+  "loading_analysis": {
+    "loading": [
+      0.2,
+      1.0,
+      3.0,
+      8.0
+    ],
+    "rate": [
+      1081.0,
+      1217.0,
+      470.0,
+      268.0
+    ],
+    "peak_loading_percent": 1.0,
+    "peak_rate": 1217.0,
+    "rate_ratio_highest_to_peak": 0.22021364009860311,
+    "rate_ratio_8pct_to_0.2pct": 0.2479185938945421,
+    "log_slope_8pct_vs_1pct": -0.7276747540853187,
+    "models": {
+      "M0_constant": {
+        "model": "M0_constant",
+        "ok": true,
+        "k_params": 1,
+        "rss": 638050.0,
+        "r2": 0.0,
+        "aicc": 63.91951027216893,
+        "aic": 51.91951027216893,
+        "bic": 50.69209899440871,
+        "params": {
+          "c": 759.0
+        }
+      },
+      "M1_monotone_power_law": {
+        "model": "M1_monotone_power_law",
+        "ok": true,
+        "k_params": 2,
+        "rss": 248365.5402825681,
+        "r2": 0.6107428253544893,
+        "aicc": null,
+        "aic": 50.145450126309555,
+        "bic": 48.304333209669224,
+        "params": {
+          "a": 798.2833226493469,
+          "b": 0.26296954924655574
+        }
+      },
+      "M2_monotone_exponential": {
+        "model": "M2_monotone_exponential",
+        "ok": true,
+        "k_params": 3,
+        "rss": 89864.30589887622,
+        "r2": 0.8591578937404964,
+        "aicc": null,
+        "aic": 48.079046952863905,
+        "bic": 45.62422439734347,
+        "params": {
+          "a": 1154.0291879770225,
+          "k": 0.2838179148615087,
+          "c": 116.27174830356827
+        }
+      },
+      "M3_peaked_substrate_inhibition": {
+        "model": "M3_peaked_substrate_inhibition",
+        "ok": true,
+        "k_params": 3,
+        "rss": 6335.691969511856,
+        "r2": 0.990070226519063,
+        "aicc": null,
+        "aic": 37.47063982107831,
+        "bic": 35.015817265557864,
+        "params": {
+          "V": 17486.004697317745,
+          "K": 2.5989602399199265,
+          "Ki": 0.09228016959110744
+        }
+      },
+      "M4_peaked_bilinear_kink": {
+        "model": "M4_peaked_bilinear_kink",
+        "ok": true,
+        "k_params": 3,
+        "rss": 142391.2773040604,
+        "r2": 0.7768336692985496,
+        "aicc": null,
+        "aic": 49.920158640306994,
+        "bic": 47.46533608478656,
+        "params": {
+          "r_low": 5664.521659732599,
+          "r_high": -116.00868829664472,
+          "L_break": 0.19251207739829476
+        }
+      }
+    },
+    "ranking_by_aicc": [
+      "M0_constant"
+    ],
+    "aicc_undefined_models": [
+      "M1_monotone_power_law",
+      "M2_monotone_exponential",
+      "M3_peaked_substrate_inhibition",
+      "M4_peaked_bilinear_kink"
+    ],
+    "aicc_delta_vs_best": {
+      "M0_constant": 0.0
+    },
+    "monotone_test": {
+      "rho": -0.7999999999999999,
+      "p": 0.2000000000000001,
+      "n": 4,
+      "method": "spearman",
+      "permutation_p": 0.3309834508274586,
+      "exact_permutation_p_two_sided": 0.3333333333333333,
+      "n_distinct_permutations": 24
+    },
+    "peak_shape": {
+      "argmax_index": 1,
+      "strictly_rising_before_peak": true,
+      "strictly_falling_after_peak": true,
+      "is_interior_peak": true
+    },
+    "leave_one_condition_out": {
+      "drop_0.2pct": {
+        "remaining_loading": [
+          1.0,
+          3.0,
+          8.0
+        ],
+        "remaining_rate": [
+          1217.0,
+          470.0,
+          268.0
+        ],
+        "spearman_rho": -1.0,
+        "spearman_p": 0.0,
+        "monotone_decreasing": true,
+        "peak_loading_percent": 1.0
+      },
+      "drop_1pct": {
+        "remaining_loading": [
+          0.2,
+          3.0,
+          8.0
+        ],
+        "remaining_rate": [
+          1081.0,
+          470.0,
+          268.0
+        ],
+        "spearman_rho": -1.0,
+        "spearman_p": 0.0,
+        "monotone_decreasing": true,
+        "peak_loading_percent": 0.2
+      },
+      "drop_3pct": {
+        "remaining_loading": [
+          0.2,
+          1.0,
+          8.0
+        ],
+        "remaining_rate": [
+          1081.0,
+          1217.0,
+          268.0
+        ],
+        "spearman_rho": -0.5,
+        "spearman_p": 0.6666666666666666,
+        "monotone_decreasing": false,
+        "peak_loading_percent": 1.0
+      },
+      "drop_8pct": {
+        "remaining_loading": [
+          0.2,
+          1.0,
+          3.0
+        ],
+        "remaining_rate": [
+          1081.0,
+          1217.0,
+          470.0
+        ],
+        "spearman_rho": -0.5,
+        "spearman_p": 0.6666666666666666,
+        "monotone_decreasing": false,
+        "peak_loading_percent": 1.0
+      }
+    },
+    "bootstrap_peak_location": {
+      "model": "M0_constant",
+      "median_peak_percent": 0.2,
+      "ci95": [
+        0.2,
+        0.2
+      ],
+      "fraction_of_grid_below_3pct": 1.0
+    }
+  },
+  "cross_modal": {
+    "table": [
+      {
+        "formulation_id": "formulation_1",
+        "final_product_4h_umol": 9.48,
+        "mean_rate_umol_h": 2.37,
+        "best_kinetic_model": "saturation",
+        "best_kinetic_aicc": -4.099330846779232,
+        "transient_peak_value": 0.99928,
+        "transient_peak_delay_ps": 1.13634,
+        "transient_late_ge30ps_mean": -0.25021764705882354,
+        "transient_late_ge30ps_fraction_positive": 0.0,
+        "transient_final_value": -0.37602,
+        "transient_readout_noise": 0.044827110398127167
+      },
+      {
+        "formulation_id": "formulation_2",
+        "final_product_4h_umol": 4.13,
+        "mean_rate_umol_h": 1.0325,
+        "best_kinetic_model": "power_law",
+        "best_kinetic_aicc": -6.949467861715917,
+        "transient_peak_value": 1.00077,
+        "transient_peak_delay_ps": 2.24169,
+        "transient_late_ge30ps_mean": 0.18816117647058822,
+        "transient_late_ge30ps_fraction_positive": 0.9411764705882353,
+        "transient_final_value": 0.1403,
+        "transient_readout_noise": 0.12113069389503284
+      }
+    ],
+    "association": {
+      "n_shared_formulations": 2,
+      "spearman_yield_vs_late_transient": null,
+      "reason": "with two shared formulations a rank correlation is not defined; only an ordinal contrast can be stated",
+      "ordinal_contrast": {
+        "yield_order_high_to_low": [
+          "formulation_1",
+          "formulation_2"
+        ],
+        "late_transient_order_high_to_low": [
+          "formulation_2",
+          "formulation_1"
+        ],
+        "orders_agree": false,
+        "yield_ratio_f1_over_f2": 2.2953995157384988,
+        "late_transient_difference": -0.43837882352941177,
+        "late_transient_signs": {
+          "formulation_1": "negative",
+          "formulation_2": "positive"
+        }
+      }
+    },
+    "coverage": {
+      "optical_spectra_have_formulation_id": false,
+      "optical_spectra_roles": [
+        "absorption",
+        "action_response"
+      ],
+      "loading_scan_has_formulation_id": false,
+      "loading_rate_scale_umol_h": [
+        268.0,
+        1217.0
+      ],
+      "timecourse_rate_scale_umol_h": [
+        0.04325,
+        2.37
+      ],
+      "note": "the optical spectra and the loading scan carry no formulation identifier, so they cannot be joined to a named formulation without an external assumption; their absolute scales also differ from the time-course scale"
+    },
+    "shared_ids": [
+      "formulation_1",
+      "formulation_2"
+    ]
+  },
+  "timecourse_holdout": {
+    "leave_one_timepoint_out": {
+      "formulation_1": {
+        "full_fit_winner": "saturation",
+        "per_dropout": {
+          "drop_t=0h": {
+            "winner": "quadratic",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": false,
+            "ranking": []
+          },
+          "drop_t=1h": {
+            "winner": "saturation",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": true,
+            "ranking": []
+          },
+          "drop_t=2h": {
+            "winner": "saturation",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": true,
+            "ranking": []
+          },
+          "drop_t=3h": {
+            "winner": "saturation",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": true,
+            "ranking": []
+          },
+          "drop_t=4h": {
+            "winner": "quadratic",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": false,
+            "ranking": []
+          }
+        },
+        "winner_stability": "3/5"
+      },
+      "formulation_2": {
+        "full_fit_winner": "power_law",
+        "per_dropout": {
+          "drop_t=0h": {
+            "winner": "linear",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": false,
+            "ranking": []
+          },
+          "drop_t=1h": {
+            "winner": "power_law",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": true,
+            "ranking": []
+          },
+          "drop_t=2h": {
+            "winner": "power_law",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": true,
+            "ranking": []
+          },
+          "drop_t=3h": {
+            "winner": "power_law",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": true,
+            "ranking": []
+          },
+          "drop_t=4h": {
+            "winner": "power_law",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": true,
+            "ranking": []
+          }
+        },
+        "winner_stability": "4/5"
+      },
+      "formulation_3": {
+        "full_fit_winner": "power_law",
+        "per_dropout": {
+          "drop_t=0h": {
+            "winner": "logistic",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": false,
+            "ranking": []
+          },
+          "drop_t=1h": {
+            "winner": "induction_linear",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": false,
+            "ranking": []
+          },
+          "drop_t=2h": {
+            "winner": "quadratic",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": false,
+            "ranking": []
+          },
+          "drop_t=3h": {
+            "winner": "quadratic",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": false,
+            "ranking": []
+          },
+          "drop_t=4h": {
+            "winner": "quadratic",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": false,
+            "ranking": []
+          }
+        },
+        "winner_stability": "0/5"
+      },
+      "formulation_4": {
+        "full_fit_winner": "power_law",
+        "per_dropout": {
+          "drop_t=0h": {
+            "winner": "quadratic",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": false,
+            "ranking": []
+          },
+          "drop_t=1h": {
+            "winner": "power_law",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": true,
+            "ranking": []
+          },
+          "drop_t=2h": {
+            "winner": "power_law",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": true,
+            "ranking": []
+          },
+          "drop_t=3h": {
+            "winner": "quadratic",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": false,
+            "ranking": []
+          },
+          "drop_t=4h": {
+            "winner": "quadratic",
+            "selection_basis": "BIC_fallback_aicc_undefined_at_n4",
+            "aicc_undefined_models": [
+              "induction_linear",
+              "linear",
+              "logistic",
+              "power_law",
+              "quadratic",
+              "saturation"
+            ],
+            "winner_agrees_with_full_fit": false,
+            "ranking": []
+          }
+        },
+        "winner_stability": "2/5"
+      }
+    },
+    "leave_one_curve_out": {
+      "drop_formulation_1": {
+        "pooled_rss": {
+          "linear": 0.023595691,
+          "power_law": 0.003354007060745361,
+          "quadratic": 0.007622956000000001
+        },
+        "winner": "power_law"
+      },
+      "drop_formulation_2": {
+        "pooled_rss": {
+          "linear": 0.013645691000000109,
+          "power_law": 0.007634357497840962,
+          "quadratic": 0.005280098857142846
+        },
+        "winner": "quadratic"
+      },
+      "drop_formulation_3": {
+        "pooled_rss": {
+          "linear": 0.0315517910000001,
+          "power_law": 0.010458891344460148,
+          "quadratic": 0.012584841714285705
+        },
+        "winner": "power_law"
+      },
+      "drop_formulation_4": {
+        "pooled_rss": {
+          "linear": 0.0341539000000001,
+          "power_law": 0.010717741565640555,
+          "quadratic": 0.012740971428571418
+        },
+        "winner": "power_law"
+      }
+    }
+  }
+}

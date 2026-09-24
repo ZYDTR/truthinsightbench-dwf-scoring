@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Physics_03_controlled_dynamics_forecast",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "fa057599cd068d29ec8254868832ac92aa9942b0f349f8d4f81b9d66b7903bde",
+  "workspace_input_file_count": 15,
+  "workspace_input_bytes": 31507567,
+  "output_tree_sha256": "38033528773905068283cba6569c25a2cff7003c3c63d1e87b48b17ee2d93067",
+  "output_file_count": 14,
+  "output_bytes": 211928
+}

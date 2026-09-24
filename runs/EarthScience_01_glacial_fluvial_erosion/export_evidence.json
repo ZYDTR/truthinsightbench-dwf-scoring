@@ -1,0 +1,21 @@
+{
+  "task_id": "EarthScience_01_glacial_fluvial_erosion",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260919T154419-2d9fb2",
+  "source_run_json_sha256": "17a00d649adcf5146ebfe34c852e229b4128d733f11df5b5aad8703efa2eb920",
+  "source_release_json_sha256": "93486341fb7f358a9f59ef08569745727bd4d94abccf209f79c31d85eb6cc4dc",
+  "source_latest_validation_sha256": "eb878d876abf3a7753ab131180850cd4d28e7f889cc9dcfc843f608d77802305",
+  "source_snapshot_manifest_sha256": "f765a0db62aed9948fb39fb9a32b5764278d3864a1fcbdbe16bb18fac1a3148b",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 965
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "19b4bc343a18496f58232d1e173af34c8dbd7580467cbf68b82a5a3cb5f28ec1",
+  "output_sha256": "bdb52060d41f2b27518b2f7af5dc7bc6eac82c766a0db495a1ba59a937fe28be"
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Neuro_04_temporal_geometry",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "3800a1451595be92dbfeb64583b7657b94e3a2c4b30e491d9e54b0eba56c3f76",
+  "workspace_input_file_count": 12,
+  "workspace_input_bytes": 51367,
+  "output_tree_sha256": "86ef428e3c8e09d1fbb186889e422a9a7818701c895a0acd2f2ffb2f66e4925e",
+  "output_file_count": 20,
+  "output_bytes": 167000
+}

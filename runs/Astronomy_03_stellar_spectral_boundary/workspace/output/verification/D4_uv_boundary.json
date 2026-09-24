@@ -1,0 +1,4254 @@
+{
+  "finding_id": "D4",
+  "verdict": {
+    "phenomenology_reproduced": true,
+    "mechanism_is_registration_shift": false,
+    "mechanism_is_local_sampling_interval": true,
+    "physical_composition_effect": false,
+    "conclusion": "The D4 numbers reproduce exactly: 5.000 over 299-322 nm, 2.500 over 322.4-326.4 nm, 3.109 at 179.31 nm, 1.000 above 330 nm, identical across all five levels to <=1%.  But the D4 EXPLANATION is wrong: the deviation is not caused by the one-index wavelength misregistration between the two files (fixing that leaves the deviation intact) and is not a registration artefact in the sense proposed.  It is caused by a constant of 5.0 nm implicit in the optical calibration: the factor equals 5/(local wavelength sampling interval) to <=1% at 91% of points (median |deviation| 0.06%), i.e. the normalized series is per-bin (interval-weighted) while the grid flux is per-unit-wavelength, or vice versa.  The 'discrete' segments are exactly the pieces of the sampling ladder: 1 nm (299-321), 1.5 nm (321-322.5), 2 nm (322.5-326.5), 3.5 nm (326.5-330), 5 nm (>330), which is why the factor snaps to 5.0 / 2.5 and why it varies smoothly through the FUV where the interval grows smoothly.  The claim's inference that this is a data-product artefact rather than physics is CORRECT, and strongly confirmed: it is composition-blind to <=1% while the five compositions differ by up to 152x pointwise in the UV."
+  },
+  "summary": {
+    "plateau_measured": {
+      "wl_range": [
+        298.92,
+        319.91
+      ],
+      "mean_factor": 5.002406514026391,
+      "cross_level_rel_spread": 0.007709846764212096
+    },
+    "narrow_measured": {
+      "wl_range": [
+        322.41,
+        326.41
+      ],
+      "mean_factor": 2.5002319595853097,
+      "cross_level_rel_spread": 0.004628976903566362
+    },
+    "fuv_measured": {
+      "wl_range": [
+        179.31,
+        296.23
+      ],
+      "mean_factor": 2.044839750310265,
+      "min_factor": 1.1393452884402289,
+      "max_factor": 3.1183250148060937,
+      "factor_at_179_31nm": 3.109188808770422,
+      "cross_level_rel_spread": 0.006216253278359109
+    },
+    "optical_measured": {
+      "mean_factor": 0.9997456156332714,
+      "std": 0.00268581183640283
+    },
+    "claim_vs_measured": {
+      "plateau_5.0_299_322": true,
+      "narrow_2.5_322_327": true,
+      "fuv_3.1_at_179": true,
+      "identical_across_5_levels": true
+    }
+  },
+  "level_to_metallicity_mapping": {
+    "1": {
+      "metallicity_index": -0.9,
+      "optical_rel_spread": 0.0014965910064441601,
+      "runner_up_metallicity": -0.95,
+      "runner_up_rel_spread": 0.002046367563805477,
+      "top5": [
+        [
+          -0.9,
+          0.0014965910064441601
+        ],
+        [
+          -0.95,
+          0.002046367563805477
+        ],
+        [
+          -0.85,
+          0.003083549973891542
+        ],
+        [
+          -1.0,
+          0.0032218386829356046
+        ],
+        [
+          -0.8,
+          0.004112018148129735
+        ]
+      ]
+    },
+    "2": {
+      "metallicity_index": -0.5,
+      "optical_rel_spread": 0.001400498408701325,
+      "runner_up_metallicity": -0.45,
+      "runner_up_rel_spread": 0.002053852312940104,
+      "top5": [
+        [
+          -0.5,
+          0.001400498408701325
+        ],
+        [
+          -0.45,
+          0.002053852312940104
+        ],
+        [
+          -0.55,
+          0.0021413483981753685
+        ],
+        [
+          -0.4,
+          0.003010117769149424
+        ],
+        [
+          -0.6,
+          0.0036629164791480272
+        ]
+      ]
+    },
+    "3": {
+      "metallicity_index": 0.0,
+      "optical_rel_spread": 0.001635373612155239,
+      "runner_up_metallicity": -0.05,
+      "runner_up_rel_spread": 0.0025955223605217334,
+      "top5": [
+        [
+          0.0,
+          0.001635373612155239
+        ],
+        [
+          -0.05,
+          0.0025955223605217334
+        ],
+        [
+          0.05,
+          0.0027928329043303978
+        ],
+        [
+          -0.1,
+          0.0044941536716542226
+        ],
+        [
+          0.1,
+          0.004682388893937336
+        ]
+      ]
+    },
+    "4": {
+      "metallicity_index": 0.5,
+      "optical_rel_spread": 0.0015835394342039145,
+      "runner_up_metallicity": 0.45,
+      "runner_up_rel_spread": 0.003656193889833362,
+      "top5": [
+        [
+          0.5,
+          0.0015835394342039145
+        ],
+        [
+          0.45,
+          0.003656193889833362
+        ],
+        [
+          0.4,
+          0.007025724295469334
+        ],
+        [
+          0.6,
+          0.007688278760309199
+        ],
+        [
+          0.35,
+          0.009976183819882129
+        ]
+      ]
+    },
+    "5": {
+      "metallicity_index": 0.9,
+      "optical_rel_spread": 0.0018970247614688391,
+      "runner_up_metallicity": 0.8,
+      "runner_up_rel_spread": 0.009552781580602783,
+      "top5": [
+        [
+          0.9,
+          0.0018970247614688391
+        ],
+        [
+          0.8,
+          0.009552781580602783
+        ],
+        [
+          0.7,
+          0.017615355093340366
+        ],
+        [
+          0.6,
+          0.02550972861017556
+        ],
+        [
+          0.5,
+          0.03214824290014314
+        ]
+      ]
+    }
+  },
+  "segments": {
+    "fuv_179_296": {
+      "n_points": 45,
+      "wl_min": 179.31,
+      "wl_max": 296.23,
+      "mean": 2.044839750310265,
+      "min": 1.1393452884402289,
+      "max": 3.1183250148060937,
+      "std": 0.5824962584192281,
+      "per_level_means": [
+        2.045329314147412,
+        2.044744829502438,
+        2.0446708108726743,
+        2.044247884560555,
+        2.045205912468246
+      ],
+      "max_cross_level_spread": 0.019327505125556588,
+      "max_cross_level_rel_spread": 0.006216253278359109
+    },
+    "plateau": {
+      "n_points": 22,
+      "wl_min": 298.92,
+      "wl_max": 319.91,
+      "mean": 5.002406514026391,
+      "min": 4.977065268121949,
+      "max": 5.037445182549496,
+      "std": 0.011404677774105957,
+      "per_level_means": [
+        5.003417712522134,
+        5.001890269890605,
+        5.001948959636927,
+        5.002523405856445,
+        5.002252222225848
+      ],
+      "max_cross_level_spread": 0.038562079583635445,
+      "max_cross_level_rel_spread": 0.007709846764212096
+    },
+    "narrow_322_327": {
+      "n_points": 3,
+      "wl_min": 322.41,
+      "wl_max": 326.41,
+      "mean": 2.5002319595853097,
+      "min": 2.494786352028248,
+      "max": 2.5063627244289304,
+      "std": 0.0033077456865840222,
+      "per_level_means": [
+        2.5005012980185835,
+        2.5012133250889277,
+        2.498233585968334,
+        2.499977027686324,
+        2.5012345611643823
+      ],
+      "max_cross_level_spread": 0.011576372400682544,
+      "max_cross_level_rel_spread": 0.004628976903566362
+    },
+    "gap_327_400": {
+      "n_points": 15,
+      "wl_min": 329.91,
+      "wl_max": 399.89,
+      "mean": 0.9997545207906088,
+      "min": 0.9955264179135743,
+      "max": 1.0034222365690144,
+      "std": 0.001564266393155877,
+      "per_level_means": [
+        0.9991782636289877,
+        0.9990867888532875,
+        1.0003563892154896,
+        1.0001287298374821,
+        1.0000224324177964
+      ],
+      "max_cross_level_spread": 0.0062395288011284356,
+      "max_cross_level_rel_spread": 0.006241864816799476
+    },
+    "optical_400_850": {
+      "n_points": 90,
+      "wl_min": 404.89,
+      "wl_max": 849.77,
+      "mean": 0.9997456156332714,
+      "min": 0.9753299391826966,
+      "max": 1.002628895192559,
+      "std": 0.00268581183640283,
+      "per_level_means": [
+        0.9998490341451428,
+        0.9995443934974841,
+        0.9996496751272961,
+        0.9998286689348651,
+        0.9998563064615679
+      ],
+      "max_cross_level_spread": 0.0047370646218901635,
+      "max_cross_level_rel_spread": 0.00483573944407347
+    }
+  },
+  "largest_steps_in_factor_curve": [
+    {
+      "norm_index_from": 44,
+      "norm_index_to": 45,
+      "wl_from": 296.23,
+      "wl_to": 298.92,
+      "grid_index_from": 44,
+      "grid_index_to": 45,
+      "grid_wl_from": 296.3,
+      "grid_wl_to": 299.0,
+      "factor_from": 1.1398968354799102,
+      "factor_to": 5.034651137456651,
+      "step": 3.8947543019767403
+    },
+    {
+      "norm_index_from": 66,
+      "norm_index_to": 67,
+      "wl_from": 319.91,
+      "wl_to": 322.41,
+      "grid_index_from": 66,
+      "grid_index_to": 68,
+      "grid_wl_from": 320.0,
+      "grid_wl_to": 322.49999999999994,
+      "factor_from": 5.005069819547432,
+      "factor_to": 2.500849030325386,
+      "step": -2.5042207892220465
+    },
+    {
+      "norm_index_from": 69,
+      "norm_index_to": 70,
+      "wl_from": 326.41,
+      "wl_to": 329.91,
+      "grid_index_from": 70,
+      "grid_index_to": 71,
+      "grid_wl_from": 326.5,
+      "grid_wl_to": 330.0,
+      "factor_from": 2.500709080415719,
+      "factor_to": 0.999509658098243,
+      "step": -1.501199422317476
+    },
+    {
+      "norm_index_from": 3,
+      "norm_index_to": 4,
+      "wl_from": 184.27,
+      "wl_to": 185.99,
+      "grid_index_from": 3,
+      "grid_index_to": 4,
+      "grid_wl_from": 184.3,
+      "grid_wl_to": 186.0,
+      "factor_from": 2.944302171300033,
+      "factor_to": 2.8873033308153895,
+      "step": -0.05699884048464332
+    },
+    {
+      "norm_index_from": 0,
+      "norm_index_to": 1,
+      "wl_from": 179.31,
+      "wl_to": 180.94,
+      "grid_index_from": 0,
+      "grid_index_to": 1,
+      "grid_wl_from": 179.4,
+      "grid_wl_to": 181.0,
+      "factor_from": 3.109188808770422,
+      "factor_to": 3.0529720618131306,
+      "step": -0.056216746957291175
+    },
+    {
+      "norm_index_from": 9,
+      "norm_index_to": 10,
+      "wl_from": 195.06,
+      "wl_to": 196.98,
+      "grid_index_from": 9,
+      "grid_index_to": 10,
+      "grid_wl_from": 195.1,
+      "grid_wl_to": 197.0,
+      "factor_from": 2.630810412199459,
+      "factor_to": 2.575520558047232,
+      "step": -0.05528985415222687
+    },
+    {
+      "norm_index_from": 2,
+      "norm_index_to": 3,
+      "wl_from": 182.59,
+      "wl_to": 184.27,
+      "grid_index_from": 2,
+      "grid_index_to": 3,
+      "grid_wl_from": 182.6,
+      "grid_wl_to": 184.3,
+      "factor_from": 2.999203534310891,
+      "factor_to": 2.944302171300033,
+      "step": -0.05490136301085835
+    },
+    {
+      "norm_index_from": 1,
+      "norm_index_to": 2,
+      "wl_from": 180.94,
+      "wl_to": 182.59,
+      "grid_index_from": 1,
+      "grid_index_to": 2,
+      "grid_wl_from": 181.0,
+      "grid_wl_to": 182.6,
+      "factor_from": 3.0529720618131306,
+      "factor_to": 2.999203534310891,
+      "step": -0.05376852750223948
+    }
+  ],
+  "axis_alignment": {
+    "n_grid_wl": 176,
+    "n_norm_wl": 175,
+    "n_grid_wl_absent_from_norm_axis": 176,
+    "grid_wl_absent_from_norm_axis": [
+      179.4,
+      181.0,
+      182.6,
+      184.3,
+      186.0,
+      187.8,
+      189.6,
+      191.4,
+      193.2,
+      195.1,
+      197.0,
+      199.0,
+      201.0,
+      203.0,
+      205.1,
+      207.3,
+      209.4,
+      211.6,
+      213.9,
+      216.2,
+      218.6,
+      221.0,
+      223.5,
+      226.0,
+      228.6,
+      231.2,
+      233.9,
+      236.7,
+      239.5,
+      242.4,
+      245.4,
+      248.4,
+      251.6,
+      254.8,
+      258.1,
+      261.4,
+      264.9,
+      268.5,
+      272.1,
+      275.9,
+      279.7,
+      283.7,
+      287.8,
+      292.0,
+      296.3,
+      299.0,
+      300.0,
+      301.0,
+      302.0,
+      303.0,
+      304.0,
+      305.0,
+      306.0,
+      307.0,
+      308.0,
+      309.0,
+      310.0,
+      311.0,
+      312.0,
+      313.0,
+      314.0,
+      315.0,
+      316.0,
+      317.0,
+      318.0,
+      319.0,
+      320.0,
+      321.0,
+      322.5,
+      324.5,
+      326.5,
+      330.0,
+      335.0,
+      340.0,
+      345.0,
+      350.0,
+      355.0,
+      360.0,
+      365.0,
+      370.0,
+      375.0,
+      380.0,
+      385.0,
+      390.0,
+      395.0,
+      400.0,
+      405.0,
+      410.0,
+      415.0,
+      420.0,
+      425.0,
+      430.0,
+      435.0,
+      440.0,
+      445.0,
+      450.0,
+      455.0,
+      460.0,
+      465.0,
+      470.0,
+      475.0,
+      480.0,
+      485.0,
+      490.0,
+      495.0,
+      500.0,
+      505.0,
+      510.0,
+      515.0,
+      520.0,
+      525.0,
+      530.0,
+      535.0,
+      540.0,
+      545.0,
+      550.0,
+      555.0,
+      560.0,
+      565.0,
+      570.0,
+      575.0,
+      580.0,
+      585.0,
+      590.0,
+      595.0,
+      600.0,
+      605.0,
+      610.0,
+      615.0,
+      620.0,
+      625.0,
+      630.0,
+      635.0,
+      640.0,
+      645.0,
+      650.0,
+      655.0,
+      660.0,
+      665.0,
+      670.0,
+      675.0,
+      680.0,
+      685.0,
+      690.0,
+      695.0,
+      700.0,
+      705.0,
+      710.0,
+      715.0,
+      720.0,
+      725.0,
+      730.0,
+      735.0,
+      740.0,
+      745.0,
+      750.0,
+      755.0,
+      760.0,
+      765.0,
+      770.0,
+      775.0,
+      780.0,
+      785.0,
+      790.0,
+      795.0,
+      800.0,
+      805.0,
+      810.0,
+      815.0,
+      820.0,
+      825.0,
+      830.0,
+      835.0,
+      840.0,
+      845.0,
+      850.0
+    ],
+    "max_abs_wl_diff_index_unshifted_i_le_66": 0.11000000000001364,
+    "max_abs_wl_diff_index_unshifted_i_ge_67": 4.899999999999977,
+    "max_abs_wl_diff_index_shifted_i_ge_67": 0.2300000000000182,
+    "break_index": 67,
+    "norm_wl_at_break": 322.41,
+    "grid_wl_at_break": 321.0,
+    "grid_wl_at_break_plus_1": 322.49999999999994,
+    "index_shift_verified": true
+  },
+  "grid_sampling_step_change_nodes": [
+    {
+      "grid_index": 2,
+      "wl": 182.6,
+      "step_before": 1.5999999999999943,
+      "step_after": 1.700000000000017
+    },
+    {
+      "grid_index": 4,
+      "wl": 186.0,
+      "step_before": 1.6999999999999886,
+      "step_after": 1.8000000000000114
+    },
+    {
+      "grid_index": 8,
+      "wl": 193.2,
+      "step_before": 1.799999999999983,
+      "step_after": 1.9000000000000057
+    },
+    {
+      "grid_index": 10,
+      "wl": 197.0,
+      "step_before": 1.9000000000000057,
+      "step_after": 2.0
+    },
+    {
+      "grid_index": 13,
+      "wl": 203.0,
+      "step_before": 2.0,
+      "step_after": 2.0999999999999943
+    },
+    {
+      "grid_index": 14,
+      "wl": 205.1,
+      "step_before": 2.0999999999999943,
+      "step_after": 2.200000000000017
+    },
+    {
+      "grid_index": 15,
+      "wl": 207.3,
+      "step_before": 2.200000000000017,
+      "step_after": 2.0999999999999943
+    },
+    {
+      "grid_index": 16,
+      "wl": 209.4,
+      "step_before": 2.0999999999999943,
+      "step_after": 2.1999999999999886
+    },
+    {
+      "grid_index": 17,
+      "wl": 211.6,
+      "step_before": 2.1999999999999886,
+      "step_after": 2.3000000000000114
+    },
+    {
+      "grid_index": 19,
+      "wl": 216.2,
+      "step_before": 2.299999999999983,
+      "step_after": 2.4000000000000057
+    },
+    {
+      "grid_index": 21,
+      "wl": 221.0,
+      "step_before": 2.4000000000000057,
+      "step_after": 2.5
+    },
+    {
+      "grid_index": 23,
+      "wl": 226.0,
+      "step_before": 2.5,
+      "step_after": 2.5999999999999943
+    },
+    {
+      "grid_index": 25,
+      "wl": 231.2,
+      "step_before": 2.5999999999999943,
+      "step_after": 2.700000000000017
+    },
+    {
+      "grid_index": 26,
+      "wl": 233.9,
+      "step_before": 2.700000000000017,
+      "step_after": 2.799999999999983
+    },
+    {
+      "grid_index": 28,
+      "wl": 239.5,
+      "step_before": 2.8000000000000114,
+      "step_after": 2.9000000000000057
+    },
+    {
+      "grid_index": 29,
+      "wl": 242.4,
+      "step_before": 2.9000000000000057,
+      "step_after": 3.0
+    },
+    {
+      "grid_index": 31,
+      "wl": 248.4,
+      "step_before": 3.0,
+      "step_after": 3.1999999999999886
+    },
+    {
+      "grid_index": 33,
+      "wl": 254.8,
+      "step_before": 3.200000000000017,
+      "step_after": 3.3000000000000114
+    },
+    {
+      "grid_index": 35,
+      "wl": 261.4,
+      "step_before": 3.2999999999999545,
+      "step_after": 3.5
+    },
+    {
+      "grid_index": 36,
+      "wl": 264.9,
+      "step_before": 3.5,
+      "step_after": 3.6000000000000227
+    },
+    {
+      "grid_index": 38,
+      "wl": 272.1,
+      "step_before": 3.6000000000000227,
+      "step_after": 3.7999999999999545
+    },
+    {
+      "grid_index": 40,
+      "wl": 279.7,
+      "step_before": 3.8000000000000114,
+      "step_after": 4.0
+    },
+    {
+      "grid_index": 41,
+      "wl": 283.7,
+      "step_before": 4.0,
+      "step_after": 4.100000000000023
+    },
+    {
+      "grid_index": 42,
+      "wl": 287.8,
+      "step_before": 4.100000000000023,
+      "step_after": 4.199999999999989
+    },
+    {
+      "grid_index": 43,
+      "wl": 292.0,
+      "step_before": 4.199999999999989,
+      "step_after": 4.300000000000011
+    },
+    {
+      "grid_index": 44,
+      "wl": 296.3,
+      "step_before": 4.300000000000011,
+      "step_after": 2.6999999999999886
+    },
+    {
+      "grid_index": 45,
+      "wl": 299.0,
+      "step_before": 2.6999999999999886,
+      "step_after": 1.0
+    },
+    {
+      "grid_index": 67,
+      "wl": 321.0,
+      "step_before": 1.0,
+      "step_after": 1.4999999999999432
+    },
+    {
+      "grid_index": 68,
+      "wl": 322.49999999999994,
+      "step_before": 1.4999999999999432,
+      "step_after": 2.0000000000001137
+    },
+    {
+      "grid_index": 70,
+      "wl": 326.5,
+      "step_before": 1.9999999999999432,
+      "step_after": 3.5
+    },
+    {
+      "grid_index": 71,
+      "wl": 330.0,
+      "step_before": 3.5,
+      "step_after": 5.0
+    }
+  ],
+  "mechanism_test_factor_equals_5_over_local_grid_step": {
+    "step_central": {
+      "n_evaluated": 175,
+      "median_abs_rel_dev": 0.0006172435581415225,
+      "mean_abs_rel_dev": 0.009633557170684839,
+      "p90_abs_rel_dev": 0.00889900815803508,
+      "frac_within_1pct": 0.9142857142857143,
+      "frac_within_2pct": 0.9485714285714286,
+      "frac_within_5pct": 0.9714285714285714
+    },
+    "step_after": {
+      "n_evaluated": 175,
+      "median_abs_rel_dev": 0.0006123400985862393,
+      "mean_abs_rel_dev": 0.010391523130881403,
+      "p90_abs_rel_dev": 0.02007820039826973,
+      "frac_within_1pct": 0.8285714285714286,
+      "frac_within_2pct": 0.8971428571428571,
+      "frac_within_5pct": 0.9885714285714285
+    },
+    "step_before": {
+      "n_evaluated": 174,
+      "median_abs_rel_dev": 0.0006147918283638809,
+      "mean_abs_rel_dev": 0.01249237204638789,
+      "p90_abs_rel_dev": 0.021245146286057906,
+      "frac_within_1pct": 0.8275862068965517,
+      "frac_within_2pct": 0.8850574712643678,
+      "frac_within_5pct": 0.9827586206896551
+    }
+  },
+  "points_breaking_the_step_model": [
+    {
+      "norm_index": 1,
+      "wl": 180.94,
+      "grid_index": 1,
+      "grid_wl": 181.0,
+      "factor": 3.0529720618131306,
+      "bin_width_central": 1.5999999999999943,
+      "model_prediction_5_over_width": 3.125000000000011,
+      "residual_model_over_obs": 0.9769510597801982,
+      "step_before": 1.5999999999999943,
+      "step_after": 1.5999999999999943,
+      "adjacent_to_sampling_change": false
+    },
+    {
+      "norm_index": 2,
+      "wl": 182.59,
+      "grid_index": 2,
+      "grid_wl": 182.6,
+      "factor": 2.999203534310891,
+      "bin_width_central": 1.6500000000000057,
+      "model_prediction_5_over_width": 3.03030303030302,
+      "residual_model_over_obs": 0.9897371663225976,
+      "step_before": 1.5999999999999943,
+      "step_after": 1.700000000000017,
+      "adjacent_to_sampling_change": true
+    },
+    {
+      "norm_index": 4,
+      "wl": 185.99,
+      "grid_index": 4,
+      "grid_wl": 186.0,
+      "factor": 2.8873033308153895,
+      "bin_width_central": 1.75,
+      "model_prediction_5_over_width": 2.857142857142857,
+      "residual_model_over_obs": 1.0105561657853863,
+      "step_before": 1.6999999999999886,
+      "step_after": 1.8000000000000114,
+      "adjacent_to_sampling_change": true
+    },
+    {
+      "norm_index": 5,
+      "wl": 187.73,
+      "grid_index": 5,
+      "grid_wl": 187.8,
+      "factor": 2.8348993383667986,
+      "bin_width_central": 1.7999999999999972,
+      "model_prediction_5_over_width": 2.777777777777782,
+      "residual_model_over_obs": 1.020563761812046,
+      "step_before": 1.8000000000000114,
+      "step_after": 1.799999999999983,
+      "adjacent_to_sampling_change": false
+    },
+    {
+      "norm_index": 7,
+      "wl": 191.33,
+      "grid_index": 7,
+      "grid_wl": 191.4,
+      "factor": 2.7286005668523514,
+      "bin_width_central": 1.7999999999999972,
+      "model_prediction_5_over_width": 2.777777777777782,
+      "residual_model_over_obs": 0.982296204066845,
+      "step_before": 1.8000000000000114,
+      "step_after": 1.799999999999983,
+      "adjacent_to_sampling_change": false
+    },
+    {
+      "norm_index": 14,
+      "wl": 205.07,
+      "grid_index": 14,
+      "grid_wl": 205.1,
+      "factor": 2.375373271897061,
+      "bin_width_central": 2.1500000000000057,
+      "model_prediction_5_over_width": 2.325581395348831,
+      "residual_model_over_obs": 1.0214105069157389,
+      "step_before": 2.0999999999999943,
+      "step_after": 2.200000000000017,
+      "adjacent_to_sampling_change": true
+    },
+    {
+      "norm_index": 16,
+      "wl": 209.36,
+      "grid_index": 16,
+      "grid_wl": 209.4,
+      "factor": 2.2811840985129868,
+      "bin_width_central": 2.1499999999999915,
+      "model_prediction_5_over_width": 2.3255813953488462,
+      "residual_model_over_obs": 0.9809091623605803,
+      "step_before": 2.0999999999999943,
+      "step_after": 2.1999999999999886,
+      "adjacent_to_sampling_change": true
+    },
+    {
+      "norm_index": 32,
+      "wl": 251.51,
+      "grid_index": 32,
+      "grid_wl": 251.6,
+      "factor": 1.579789260222445,
+      "bin_width_central": 3.200000000000003,
+      "model_prediction_5_over_width": 1.5624999999999987,
+      "residual_model_over_obs": 1.0110651265423658,
+      "step_before": 3.1999999999999886,
+      "step_after": 3.200000000000017,
+      "adjacent_to_sampling_change": false
+    },
+    {
+      "norm_index": 36,
+      "wl": 264.83,
+      "grid_index": 36,
+      "grid_wl": 264.9,
+      "factor": 1.424585470452281,
+      "bin_width_central": 3.5500000000000114,
+      "model_prediction_5_over_width": 1.4084507042253476,
+      "residual_model_over_obs": 1.0114556840211226,
+      "step_before": 3.5,
+      "step_after": 3.6000000000000227,
+      "adjacent_to_sampling_change": true
+    },
+    {
+      "norm_index": 44,
+      "wl": 296.23,
+      "grid_index": 44,
+      "grid_wl": 296.3,
+      "factor": 1.1398968354799102,
+      "bin_width_central": 3.5,
+      "model_prediction_5_over_width": 1.4285714285714286,
+      "residual_model_over_obs": 0.7979277848359371,
+      "step_before": 4.300000000000011,
+      "step_after": 2.6999999999999886,
+      "adjacent_to_sampling_change": true
+    },
+    {
+      "norm_index": 45,
+      "wl": 298.92,
+      "grid_index": 45,
+      "grid_wl": 299.0,
+      "factor": 5.034651137456651,
+      "bin_width_central": 1.8499999999999943,
+      "model_prediction_5_over_width": 2.702702702702711,
+      "residual_model_over_obs": 1.862820920858955,
+      "step_before": 2.6999999999999886,
+      "step_after": 1.0,
+      "adjacent_to_sampling_change": true
+    },
+    {
+      "norm_index": 67,
+      "wl": 322.41,
+      "grid_index": 68,
+      "grid_wl": 322.49999999999994,
+      "factor": 2.500849030325386,
+      "bin_width_central": 1.7500000000000284,
+      "model_prediction_5_over_width": 2.8571428571428106,
+      "residual_model_over_obs": 0.8752971606138992,
+      "step_before": 1.4999999999999432,
+      "step_after": 2.0000000000001137,
+      "adjacent_to_sampling_change": true
+    },
+    {
+      "norm_index": 69,
+      "wl": 326.41,
+      "grid_index": 70,
+      "grid_wl": 326.5,
+      "factor": 2.500709080415719,
+      "bin_width_central": 2.7499999999999716,
+      "model_prediction_5_over_width": 1.818181818181837,
+      "residual_model_over_obs": 1.3753899942286312,
+      "step_before": 1.9999999999999432,
+      "step_after": 3.5,
+      "adjacent_to_sampling_change": true
+    },
+    {
+      "norm_index": 70,
+      "wl": 329.91,
+      "grid_index": 71,
+      "grid_wl": 330.0,
+      "factor": 0.999509658098243,
+      "bin_width_central": 4.25,
+      "model_prediction_5_over_width": 1.1764705882352942,
+      "residual_model_over_obs": 0.8495832093835066,
+      "step_before": 3.5,
+      "step_after": 5.0,
+      "adjacent_to_sampling_change": true
+    },
+    {
+      "norm_index": 174,
+      "wl": 849.77,
+      "grid_index": 174,
+      "grid_wl": 845.0,
+      "factor": 0.977343462421071,
+      "bin_width_central": 5.0,
+      "model_prediction_5_over_width": 1.0,
+      "residual_model_over_obs": 0.977343462421071,
+      "step_before": 5.0,
+      "step_after": 5.0,
+      "adjacent_to_sampling_change": false
+    }
+  ],
+  "residual_of_step_model_by_segment": {
+    "fuv_179_296": {
+      "n": 45,
+      "mean": 0.9953752582424508,
+      "std": 0.031010428504840773,
+      "min": 0.7979277848359371,
+      "max": 1.0214105069157389,
+      "trend_spearman_like": -0.21339397443827984
+    },
+    "plateau": {
+      "n": 22,
+      "mean": 1.0393854252310797,
+      "std": 0.17969089614301284,
+      "min": 0.9987526395252171,
+      "max": 1.862820920858955,
+      "trend_spearman_like": -0.36096856720962117
+    },
+    "narrow_322_327": {
+      "n": 3,
+      "mean": 1.0834474206828248,
+      "std": 0.21258578567495817,
+      "min": 0.8752971606138992,
+      "max": 1.3753899942286312,
+      "trend_spearman_like": 0.9603748611330271
+    },
+    "gap_327_400": {
+      "n": 15,
+      "mean": 0.9897594242096263,
+      "std": 0.03747077309861185,
+      "min": 0.8495832093835066,
+      "max": 1.0013966743017517,
+      "trend_spearman_like": 0.4347505260288011
+    },
+    "optical_400_850": {
+      "n": 90,
+      "mean": 0.9997456156332712,
+      "std": 0.0024360904160526738,
+      "min": 0.977343462421071,
+      "max": 1.0017196935741353,
+      "trend_spearman_like": -0.21043106234271067
+    }
+  },
+  "registration_negative_control": {
+    "index_shifted": {
+      "optical_rel_spread": 0.0026776437265856644,
+      "plateau_mean": 5.002406514026391,
+      "narrow_mean": 2.5002319595853097,
+      "fuv_mean_lt_296": 2.044839750310265,
+      "factor_at_179nm": 3.109188808770422,
+      "optical_constants": [
+        3.9740505244825705e-13,
+        3.9751205053616466e-13,
+        3.975117308181818e-13,
+        3.974275226588898e-13,
+        3.9735011019230764e-13
+      ]
+    },
+    "index_unshifted": {
+      "optical_rel_spread": 0.039072532405955776,
+      "plateau_mean": 5.011473446671995,
+      "narrow_mean": 3.5558977926853554,
+      "fuv_mean_lt_296": 2.048545849353404,
+      "factor_at_179nm": 3.114821858653064,
+      "optical_constants": [
+        3.9642605511445823e-13,
+        3.966220907516288e-13,
+        3.965125301470588e-13,
+        3.965781593660847e-13,
+        3.9747437465517244e-13
+      ]
+    },
+    "linear": {
+      "optical_rel_spread": 0.001602605444594694,
+      "plateau_mean": 4.987897404021471,
+      "narrow_mean": 2.536201641289948,
+      "fuv_mean_lt_296": 2.04932013655205,
+      "factor_at_179nm": 3.109153876515124,
+      "optical_constants": [
+        3.9739774912837763e-13,
+        3.9745574317605244e-13,
+        3.9743172949645055e-13,
+        3.9752550318317507e-13,
+        3.974180068040952e-13
+      ]
+    },
+    "nearest": {
+      "optical_rel_spread": 0.0012444845064991405,
+      "plateau_mean": 5.002386514202833,
+      "narrow_mean": 2.5002219628563442,
+      "fuv_mean_lt_296": 2.04483157656491,
+      "factor_at_179nm": 3.109176374775133,
+      "optical_constants": [
+        3.9740505244825705e-13,
+        3.975145508372851e-13,
+        3.975117308181818e-13,
+        3.9743296776704746e-13,
+        3.9735011019230764e-13
+      ]
+    }
+  },
+  "which_axis_carries_the_interval": {
+    "norm_central": {
+      "n": 175,
+      "median_ratio": 1.0001138629134565,
+      "mean_ratio": 0.9953956118993719,
+      "std_ratio": 0.0572843105660005,
+      "frac_within_2pct": 0.96
+    },
+    "norm_after": {
+      "n": 174,
+      "median_ratio": 0.9998683114856197,
+      "mean_ratio": 0.9950273168375717,
+      "std_ratio": 0.07364666218532002,
+      "frac_within_2pct": 0.9827586206896551
+    },
+    "norm_before": {
+      "n": 174,
+      "median_ratio": 1.000435901784859,
+      "mean_ratio": 1.0009400345108836,
+      "std_ratio": 0.060121434085062216,
+      "frac_within_2pct": 0.9770114942528736
+    },
+    "grid_central": {
+      "n": 175,
+      "median_ratio": 1.0000570488946656,
+      "mean_ratio": 0.9992540276331722,
+      "std_ratio": 0.048327334661730476,
+      "frac_within_2pct": 0.9485714285714286
+    },
+    "grid_after": {
+      "n": 175,
+      "median_ratio": 0.9999787286759363,
+      "mean_ratio": 0.9985138969240731,
+      "std_ratio": 0.05803646102055778,
+      "frac_within_2pct": 0.8971428571428571
+    },
+    "grid_before": {
+      "n": 174,
+      "median_ratio": 1.0001400139518903,
+      "mean_ratio": 1.003934310399297,
+      "std_ratio": 0.0638656214287052,
+      "frac_within_2pct": 0.8850574712643678
+    },
+    "note": "both axes share the same sampling layout (1 nm band 299-321, 5 nm above 330), so this test cannot by itself say which file is per-bin and which is per-unit-wavelength; it only shows the interval is the right variable."
+  },
+  "factor_ladder_by_local_grid_step": [
+    {
+      "grid_step_nm": 1.0,
+      "predicted_factor_5_over_step": 5.0,
+      "n_points": 22,
+      "measured_mean": 5.002406514026393,
+      "measured_std": 0.008504512803509659,
+      "norm_wl_min": 298.92,
+      "norm_wl_max": 319.91
+    },
+    {
+      "grid_step_nm": 1.6,
+      "predicted_factor_5_over_step": 3.125,
+      "n_points": 2,
+      "measured_mean": 3.081080435291776,
+      "measured_std": 0.028108373478645587,
+      "norm_wl_min": 179.31,
+      "norm_wl_max": 180.94
+    },
+    {
+      "grid_step_nm": 1.7,
+      "predicted_factor_5_over_step": 2.9411764705882355,
+      "n_points": 2,
+      "measured_mean": 2.971752852805462,
+      "measured_std": 0.027450681505429172,
+      "norm_wl_min": 182.59,
+      "norm_wl_max": 184.27
+    },
+    {
+      "grid_step_nm": 1.8,
+      "predicted_factor_5_over_step": 2.7777777777777777,
+      "n_points": 4,
+      "measured_mean": 2.808133674214485,
+      "measured_std": 0.05917522146651552,
+      "norm_wl_min": 185.99,
+      "norm_wl_max": 191.33
+    },
+    {
+      "grid_step_nm": 1.9,
+      "predicted_factor_5_over_step": 2.6315789473684212,
+      "n_points": 2,
+      "measured_mean": 2.6551631681839054,
+      "measured_std": 0.024352755984446528,
+      "norm_wl_min": 193.18,
+      "norm_wl_max": 195.06
+    },
+    {
+      "grid_step_nm": 2.0,
+      "predicted_factor_5_over_step": 2.5,
+      "n_points": 5,
+      "measured_mean": 2.515112380043631,
+      "measured_std": 0.0336539457845317,
+      "norm_wl_min": 196.98,
+      "norm_wl_max": 324.41
+    },
+    {
+      "grid_step_nm": 2.1,
+      "predicted_factor_5_over_step": 2.380952380952381,
+      "n_points": 2,
+      "measured_mean": 2.377557186893125,
+      "measured_std": 0.048477831376839475,
+      "norm_wl_min": 202.99,
+      "norm_wl_max": 207.19
+    },
+    {
+      "grid_step_nm": 2.2,
+      "predicted_factor_5_over_step": 2.2727272727272725,
+      "n_points": 2,
+      "measured_mean": 2.328278685205024,
+      "measured_std": 0.047094586692037144,
+      "norm_wl_min": 205.07,
+      "norm_wl_max": 209.36
+    },
+    {
+      "grid_step_nm": 2.3,
+      "predicted_factor_5_over_step": 2.173913043478261,
+      "n_points": 2,
+      "measured_mean": 2.2075891788364324,
+      "measured_std": 0.02085496888609395,
+      "norm_wl_min": 211.58,
+      "norm_wl_max": 213.84
+    },
+    {
+      "grid_step_nm": 2.4,
+      "predicted_factor_5_over_step": 2.0833333333333335,
+      "n_points": 2,
+      "measured_mean": 2.1156826923696075,
+      "measured_std": 0.02203498701904416,
+      "norm_wl_min": 216.15,
+      "norm_wl_max": 218.52
+    },
+    {
+      "grid_step_nm": 2.5,
+      "predicted_factor_5_over_step": 2.0,
+      "n_points": 2,
+      "measured_mean": 2.0264974806509395,
+      "measured_std": 0.022899534395657284,
+      "norm_wl_min": 220.93,
+      "norm_wl_max": 223.4
+    },
+    {
+      "grid_step_nm": 2.6,
+      "predicted_factor_5_over_step": 1.923076923076923,
+      "n_points": 2,
+      "measured_mean": 1.9353713076232717,
+      "measured_std": 0.02212221803982717,
+      "norm_wl_min": 225.93,
+      "norm_wl_max": 228.51
+    },
+    {
+      "grid_step_nm": 2.7,
+      "predicted_factor_5_over_step": 1.8518518518518516,
+      "n_points": 2,
+      "measured_mean": 1.5057765045841989,
+      "measured_std": 0.3658796691042888,
+      "norm_wl_min": 231.15,
+      "norm_wl_max": 296.23
+    },
+    {
+      "grid_step_nm": 2.8,
+      "predicted_factor_5_over_step": 1.7857142857142858,
+      "n_points": 2,
+      "measured_mean": 1.805828036307386,
+      "measured_std": 0.020997312249455446,
+      "norm_wl_min": 233.85,
+      "norm_wl_max": 236.62
+    },
+    {
+      "grid_step_nm": 2.9,
+      "predicted_factor_5_over_step": 1.7241379310344829,
+      "n_points": 1,
+      "measured_mean": 1.743051229096278,
+      "measured_std": 0.0,
+      "norm_wl_min": 239.46,
+      "norm_wl_max": 239.46
+    },
+    {
+      "grid_step_nm": 3.0,
+      "predicted_factor_5_over_step": 1.6666666666666667,
+      "n_points": 2,
+      "measured_mean": 1.6798301777710467,
+      "measured_std": 0.020800428817375094,
+      "norm_wl_min": 242.36,
+      "norm_wl_max": 245.33
+    },
+    {
+      "grid_step_nm": 3.2,
+      "predicted_factor_5_over_step": 1.5625,
+      "n_points": 2,
+      "measured_mean": 1.6001221727654205,
+      "measured_std": 0.020332912542975423,
+      "norm_wl_min": 248.38,
+      "norm_wl_max": 251.51
+    },
+    {
+      "grid_step_nm": 3.3,
+      "predicted_factor_5_over_step": 1.5151515151515151,
+      "n_points": 2,
+      "measured_mean": 1.5216352031827127,
+      "measured_std": 0.020091849457499866,
+      "norm_wl_min": 254.71,
+      "norm_wl_max": 258.0
+    },
+    {
+      "grid_step_nm": 3.5,
+      "predicted_factor_5_over_step": 1.4285714285714286,
+      "n_points": 2,
+      "measured_mean": 1.9810719830971162,
+      "measured_std": 0.5196370973186029,
+      "norm_wl_min": 261.37,
+      "norm_wl_max": 326.41
+    },
+    {
+      "grid_step_nm": 3.6,
+      "predicted_factor_5_over_step": 1.3888888888888888,
+      "n_points": 2,
+      "measured_mean": 1.4061799746476535,
+      "measured_std": 0.01840549580462747,
+      "norm_wl_min": 264.83,
+      "norm_wl_max": 268.39
+    },
+    {
+      "grid_step_nm": 3.8,
+      "predicted_factor_5_over_step": 1.3157894736842106,
+      "n_points": 2,
+      "measured_mean": 1.3337557519112042,
+      "measured_std": 0.01737215165014039,
+      "norm_wl_min": 272.04,
+      "norm_wl_max": 275.79
+    },
+    {
+      "grid_step_nm": 4.0,
+      "predicted_factor_5_over_step": 1.25,
+      "n_points": 1,
+      "measured_mean": 1.2775402668883493,
+      "measured_std": 0.0,
+      "norm_wl_min": 279.65,
+      "norm_wl_max": 279.65
+    },
+    {
+      "grid_step_nm": 4.1,
+      "predicted_factor_5_over_step": 1.2195121951219514,
+      "n_points": 1,
+      "measured_mean": 1.242003951024809,
+      "measured_std": 0.0,
+      "norm_wl_min": 283.62,
+      "norm_wl_max": 283.62
+    },
+    {
+      "grid_step_nm": 4.2,
+      "predicted_factor_5_over_step": 1.1904761904761905,
+      "n_points": 1,
+      "measured_mean": 1.2084337497033553,
+      "measured_std": 0.0,
+      "norm_wl_min": 287.7,
+      "norm_wl_max": 287.7
+    },
+    {
+      "grid_step_nm": 4.3,
+      "predicted_factor_5_over_step": 1.1627906976744187,
+      "n_points": 1,
+      "measured_mean": 1.1730132646764169,
+      "measured_std": 0.0,
+      "norm_wl_min": 291.9,
+      "norm_wl_max": 291.9
+    },
+    {
+      "grid_step_nm": 5.0,
+      "predicted_factor_5_over_step": 1.0,
+      "n_points": 105,
+      "measured_mean": 0.9997468877986051,
+      "measured_std": 0.002272314486184416,
+      "norm_wl_min": 329.91,
+      "norm_wl_max": 849.77
+    }
+  ],
+  "factor_ladder_summary": {
+    "n_rungs": 26,
+    "n_rungs_matching_within_3pct": 24,
+    "rungs_that_fail": [
+      {
+        "grid_step_nm": 2.7,
+        "predicted_factor_5_over_step": 1.8518518518518516,
+        "n_points": 2,
+        "measured_mean": 1.5057765045841989,
+        "measured_std": 0.3658796691042888,
+        "norm_wl_min": 231.15,
+        "norm_wl_max": 296.23
+      },
+      {
+        "grid_step_nm": 3.5,
+        "predicted_factor_5_over_step": 1.4285714285714286,
+        "n_points": 2,
+        "measured_mean": 1.9810719830971162,
+        "measured_std": 0.5196370973186029,
+        "norm_wl_min": 261.37,
+        "norm_wl_max": 326.41
+      }
+    ],
+    "note": "the two failing rungs (2.70 nm, 3.50 nm) contain the transition nodes 296.23 and 326.41 nm where the interval itself is ambiguous; every other rung matches 5/step",
+    "last_norm_wl_with_factor_different_from_1": 849.77,
+    "grid_wl_where_step_becomes_5nm_permanently": 330.0
+  },
+  "global_fit_with_vs_without_interval": {
+    "n_points_total": 175,
+    "n_transition_nodes_excluded": 38,
+    "n_points_used": 137,
+    "without_interval": {
+      "mean": 1.714168288304561,
+      "std": 1.358892662977886,
+      "min": 0.9753299391826966,
+      "max": 5.021896636866448,
+      "uv_lt_330_mean": 3.796182508793402,
+      "uv_lt_330_std": 1.1856852960672486
+    },
+    "with_interval": {
+      "mean": 1.0000145950985848,
+      "std": 0.0027172506896874925,
+      "min": 0.9755271097014817,
+      "max": 1.016990125966592,
+      "uv_lt_330_mean": 1.0006970089948592,
+      "uv_lt_330_std": 0.002931039342883148,
+      "per_level_rel_std": [
+        0.0026303875759076593,
+        0.0028831392382663687,
+        0.0027995177112951526,
+        0.0026639036598670547,
+        0.002595636163635692
+      ],
+      "fuv_lt_296_mean": 1.0010631143689523,
+      "fuv_lt_296_std": 0.003606428548215232,
+      "plateau_mean": 1.000309368010525,
+      "plateau_std": 0.0019036144049615652
+    },
+    "uv_bias_without_interval": 2.796182508793402,
+    "uv_bias_with_interval": 0.0006970089948592495,
+    "note": "the entire D4 deviation is removed by one factor, the local sampling interval, with no free parameter away from the optical calibration band"
+  },
+  "physics_test": {
+    "per_level": {
+      "level_1": {
+        "metallicity_index": -0.9,
+        "mean_F_uv_lt_300": 66486956521739.13,
+        "mean_F_optical": 2341868131868132.0
+      },
+      "level_2": {
+        "metallicity_index": -0.5,
+        "mean_F_uv_lt_300": 54487608695652.17,
+        "mean_F_optical": 2387472527472527.5
+      },
+      "level_3": {
+        "metallicity_index": 0.0,
+        "mean_F_uv_lt_300": 41049869565217.39,
+        "mean_F_optical": 2447362637362637.5
+      },
+      "level_4": {
+        "metallicity_index": 0.5,
+        "mean_F_uv_lt_300": 29480108695652.176,
+        "mean_F_optical": 2509120879120879.0
+      },
+      "level_5": {
+        "metallicity_index": 0.9,
+        "mean_F_uv_lt_300": 21695256521739.13,
+        "mean_F_optical": 2558681318681318.5
+      }
+    },
+    "uv_flux_range_across_compositions": 3.0645849453366787,
+    "optical_flux_range_across_compositions": 1.0925812960442962,
+    "uv_pointwise_flux_range": 152.49169435215947,
+    "response_level_range_across_levels_uv": 9.18388675809625,
+    "response_level_ratios_uv_vs_optical": {
+      "level_1": {
+        "uv_median": 2.301831069108092,
+        "optical_median": 0.952090422495234
+      },
+      "level_2": {
+        "uv_median": 1.729903130481503,
+        "optical_median": 0.9711956364492573
+      },
+      "level_3": {
+        "uv_median": 1.0,
+        "optical_median": 1.0
+      },
+      "level_4": {
+        "uv_median": 0.4681411706122788,
+        "optical_median": 1.032142639519419
+      },
+      "level_5": {
+        "uv_median": 0.25063800651492835,
+        "optical_median": 1.0640554769788122
+      }
+    },
+    "factor_is_composition_blind_while_flux_is_not": {
+      "max_cross_level_rel_spread_of_factor_uv_lt_296": 0.009451843413462599,
+      "cross_composition_flux_ratio_uv_range": 3.0645849453366787,
+      "cross_composition_flux_ratio_pointwise_max": 152.49169435215947
+    }
+  },
+  "temperature_control": {
+    "5300": {
+      "optical_rel_spread_mean": 0.11239465548804058,
+      "factor_at_179nm": 54.49548526902155,
+      "plateau_mean": 9.765878258137537
+    },
+    "5800": {
+      "optical_rel_spread_mean": 0.0016026054445946955,
+      "factor_at_179nm": 3.109153876515124,
+      "plateau_mean": 4.987897404021471
+    },
+    "6300": {
+      "optical_rel_spread_mean": 0.08330756484446192,
+      "factor_at_179nm": 0.33929077235258887,
+      "plateau_mean": 3.162140186961833
+    }
+  },
+  "robustness_to_optical_window": {
+    "opt_400_850|index_shifted": {
+      "plateau_mean": 5.002406514026391,
+      "narrow_mean": 2.5002319595853097,
+      "factor_at_179nm": 3.109188808770422,
+      "optical_rel_spread": 0.0026776437265856644
+    },
+    "opt_400_850|index_unshifted": {
+      "plateau_mean": 5.011473446671995,
+      "narrow_mean": 3.5558977926853554,
+      "factor_at_179nm": 3.114821858653064,
+      "optical_rel_spread": 0.039072532405955776
+    },
+    "opt_400_850|linear": {
+      "plateau_mean": 4.987897404021471,
+      "narrow_mean": 2.536201641289948,
+      "factor_at_179nm": 3.109153876515124,
+      "optical_rel_spread": 0.001602605444594694
+    },
+    "opt_400_850|nearest": {
+      "plateau_mean": 5.002386514202833,
+      "narrow_mean": 2.5002219628563442,
+      "factor_at_179nm": 3.109176374775133,
+      "optical_rel_spread": 0.0012444845064991405
+    },
+    "opt_450_600|index_shifted": {
+      "plateau_mean": 5.003179462875167,
+      "narrow_mean": 2.5006183098530075,
+      "factor_at_179nm": 3.10966977059854,
+      "optical_rel_spread": 0.001156347135299645
+    },
+    "opt_450_600|index_unshifted": {
+      "plateau_mean": 4.942129242470141,
+      "narrow_mean": 3.5065243884590926,
+      "factor_at_179nm": 3.0717258026081486,
+      "optical_rel_spread": 0.031911339622370215
+    },
+    "opt_450_600|linear": {
+      "plateau_mean": 4.986912516471344,
+      "narrow_mean": 2.5357005845606917,
+      "factor_at_179nm": 3.108540567132132,
+      "optical_rel_spread": 0.0015654530208630232
+    },
+    "opt_450_600|nearest": {
+      "plateau_mean": 5.003179462875167,
+      "narrow_mean": 2.5006183098530075,
+      "factor_at_179nm": 3.10966977059854,
+      "optical_rel_spread": 0.001156347135299645
+    },
+    "opt_500_700|index_shifted": {
+      "plateau_mean": 5.002338851731533,
+      "narrow_mean": 2.500198060626333,
+      "factor_at_179nm": 3.1091462565100696,
+      "optical_rel_spread": 0.001169128191459737
+    },
+    "opt_500_700|index_unshifted": {
+      "plateau_mean": 5.006167882719077,
+      "narrow_mean": 3.5521578890381638,
+      "factor_at_179nm": 3.1115247008780527,
+      "optical_rel_spread": 0.026958248883881077
+    },
+    "opt_500_700|linear": {
+      "plateau_mean": 4.988481413471618,
+      "narrow_mean": 2.53649873722532,
+      "factor_at_179nm": 3.109517030159755,
+      "optical_rel_spread": 0.001425269023819845
+    },
+    "opt_500_700|nearest": {
+      "plateau_mean": 5.002338851731533,
+      "narrow_mean": 2.500198060626333,
+      "factor_at_179nm": 3.1091462565100696,
+      "optical_rel_spread": 0.001169128191459737
+    },
+    "opt_600_800|index_shifted": {
+      "plateau_mean": 5.00226447320665,
+      "narrow_mean": 2.50016095495826,
+      "factor_at_179nm": 3.1091004150976675,
+      "optical_rel_spread": 0.0012187649535455453
+    },
+    "opt_600_800|index_unshifted": {
+      "plateau_mean": 5.024916484791808,
+      "narrow_mean": 3.565499435503126,
+      "factor_at_179nm": 3.1231771521974165,
+      "optical_rel_spread": 0.016116849565357312
+    },
+    "opt_600_800|linear": {
+      "plateau_mean": 4.989012955634821,
+      "narrow_mean": 2.536769190179861,
+      "factor_at_179nm": 3.1098490292347236,
+      "optical_rel_spread": 0.001302472352538665
+    },
+    "opt_600_800|nearest": {
+      "plateau_mean": 5.00226447320665,
+      "narrow_mean": 2.50016095495826,
+      "factor_at_179nm": 3.1091004150976675,
+      "optical_rel_spread": 0.0012187649535455453
+    }
+  },
+  "deviation_curve": [
+    {
+      "wavelength_nm": 179.31,
+      "grid_wavelength_nm": 179.4,
+      "factor_mean_over_levels": 3.109188808770422,
+      "factor_per_level": [
+        3.1096599067376887,
+        3.1183250148060937,
+        3.098997509680537,
+        3.106136072375765,
+        3.112825540252025
+      ],
+      "cross_level_spread": 0.019327505125556588,
+      "grid_bin_width_central": 1.5999999999999943,
+      "model_5_over_width": 3.125000000000011
+    },
+    {
+      "wavelength_nm": 180.94,
+      "grid_wavelength_nm": 181.0,
+      "factor_mean_over_levels": 3.0529720618131306,
+      "factor_per_level": [
+        3.05344478129563,
+        3.0502578759883296,
+        3.0546107127420434,
+        3.0504248376927356,
+        3.0561221013469146
+      ],
+      "cross_level_spread": 0.005864225358584996,
+      "grid_bin_width_central": 1.5999999999999943,
+      "model_5_over_width": 3.125000000000011
+    },
+    {
+      "wavelength_nm": 182.59,
+      "grid_wavelength_nm": 182.6,
+      "factor_mean_over_levels": 2.999203534310891,
+      "factor_per_level": [
+        3.001106928315377,
+        2.996773944982989,
+        3.0020094341505477,
+        2.997610115384542,
+        2.9985172487210017
+      ],
+      "cross_level_spread": 0.005235489167558782,
+      "grid_bin_width_central": 1.6500000000000057,
+      "model_5_over_width": 3.03030303030302
+    },
+    {
+      "wavelength_nm": 184.27,
+      "grid_wavelength_nm": 184.3,
+      "factor_mean_over_levels": 2.944302171300033,
+      "factor_per_level": [
+        2.9474411010875685,
+        2.9434136784220875,
+        2.942947558207219,
+        2.941576082805456,
+        2.946132435977831
+      ],
+      "cross_level_spread": 0.005865018282112722,
+      "grid_bin_width_central": 1.7000000000000028,
+      "model_5_over_width": 2.94117647058823
+    },
+    {
+      "wavelength_nm": 185.99,
+      "grid_wavelength_nm": 186.0,
+      "factor_mean_over_levels": 2.8873033308153895,
+      "factor_per_level": [
+        2.887122905613078,
+        2.8935145242031073,
+        2.8910621256435407,
+        2.8779630094768445,
+        2.8868540891403778
+      ],
+      "cross_level_spread": 0.015551514726262816,
+      "grid_bin_width_central": 1.75,
+      "model_5_over_width": 2.857142857142857
+    },
+    {
+      "wavelength_nm": 187.73,
+      "grid_wavelength_nm": 187.8,
+      "factor_mean_over_levels": 2.8348993383667986,
+      "factor_per_level": [
+        2.8349288032281548,
+        2.8333429740584153,
+        2.8376151059487853,
+        2.8329962340488533,
+        2.8356135745497846
+      ],
+      "cross_level_spread": 0.004618871899932042,
+      "grid_bin_width_central": 1.7999999999999972,
+      "model_5_over_width": 2.777777777777782
+    },
+    {
+      "wavelength_nm": 189.51,
+      "grid_wavelength_nm": 189.6,
+      "factor_mean_over_levels": 2.7817314608234,
+      "factor_per_level": [
+        2.7828735571905825,
+        2.783815720942233,
+        2.7813442204096326,
+        2.778170343503158,
+        2.7824534620713934
+      ],
+      "cross_level_spread": 0.0056453774390750056,
+      "grid_bin_width_central": 1.7999999999999972,
+      "model_5_over_width": 2.777777777777782
+    },
+    {
+      "wavelength_nm": 191.33,
+      "grid_wavelength_nm": 191.4,
+      "factor_mean_over_levels": 2.7286005668523514,
+      "factor_per_level": [
+        2.7284069157125024,
+        2.732993371692304,
+        2.730538736543457,
+        2.7284592319985106,
+        2.7226045783149835
+      ],
+      "cross_level_spread": 0.010388793377320571,
+      "grid_bin_width_central": 1.7999999999999972,
+      "model_5_over_width": 2.777777777777782
+    },
+    {
+      "wavelength_nm": 193.18,
+      "grid_wavelength_nm": 193.2,
+      "factor_mean_over_levels": 2.679515924168352,
+      "factor_per_level": [
+        2.6769027124929514,
+        2.682569241766888,
+        2.6760603037230934,
+        2.6817062024396323,
+        2.6803411604191942
+      ],
+      "cross_level_spread": 0.006508938043794377,
+      "grid_bin_width_central": 1.8499999999999943,
+      "model_5_over_width": 2.702702702702711
+    },
+    {
+      "wavelength_nm": 195.06,
+      "grid_wavelength_nm": 195.1,
+      "factor_mean_over_levels": 2.630810412199459,
+      "factor_per_level": [
+        2.6376516011150506,
+        2.626400386354641,
+        2.6263838382133815,
+        2.62855655713361,
+        2.6350596781806104
+      ],
+      "cross_level_spread": 0.011267762901669087,
+      "grid_bin_width_central": 1.9000000000000057,
+      "model_5_over_width": 2.6315789473684132
+    },
+    {
+      "wavelength_nm": 196.98,
+      "grid_wavelength_nm": 197.0,
+      "factor_mean_over_levels": 2.575520558047232,
+      "factor_per_level": [
+        2.5828015618258573,
+        2.575309718731881,
+        2.570404600509066,
+        2.5735026159942556,
+        2.5755842931751
+      ],
+      "cross_level_spread": 0.012396961316791355,
+      "grid_bin_width_central": 1.9500000000000028,
+      "model_5_over_width": 2.5641025641025603
+    },
+    {
+      "wavelength_nm": 198.95,
+      "grid_wavelength_nm": 199.0,
+      "factor_mean_over_levels": 2.5234797772771174,
+      "factor_per_level": [
+        2.5228338035046467,
+        2.523464925256943,
+        2.5201640837700396,
+        2.5269052783338757,
+        2.524030795520081
+      ],
+      "cross_level_spread": 0.006741194563836039,
+      "grid_bin_width_central": 2.0,
+      "model_5_over_width": 2.5
+    },
+    {
+      "wavelength_nm": 200.95,
+      "grid_wavelength_nm": 201.0,
+      "factor_mean_over_levels": 2.476574766553594,
+      "factor_per_level": [
+        2.4826406721875776,
+        2.476431121632167,
+        2.4758098725797013,
+        2.4745357444173233,
+        2.4734564219512034
+      ],
+      "cross_level_spread": 0.009184250236374147,
+      "grid_bin_width_central": 2.0,
+      "model_5_over_width": 2.5
+    },
+    {
+      "wavelength_nm": 202.99,
+      "grid_wavelength_nm": 203.0,
+      "factor_mean_over_levels": 2.4260350182699644,
+      "factor_per_level": [
+        2.4220360671643792,
+        2.4253403352190412,
+        2.4311846485094075,
+        2.423936452475834,
+        2.4276775879811603
+      ],
+      "cross_level_spread": 0.009148581345028273,
+      "grid_bin_width_central": 2.049999999999997,
+      "model_5_over_width": 2.439024390243906
+    },
+    {
+      "wavelength_nm": 205.07,
+      "grid_wavelength_nm": 205.1,
+      "factor_mean_over_levels": 2.375373271897061,
+      "factor_per_level": [
+        2.3749575903337945,
+        2.374855651351949,
+        2.3709934222059417,
+        2.3774260657140944,
+        2.3786336298795274
+      ],
+      "cross_level_spread": 0.007640207673585753,
+      "grid_bin_width_central": 2.1500000000000057,
+      "model_5_over_width": 2.325581395348831
+    },
+    {
+      "wavelength_nm": 207.19,
+      "grid_wavelength_nm": 207.3,
+      "factor_mean_over_levels": 2.3290793555162854,
+      "factor_per_level": [
+        2.3285847701133173,
+        2.329300367796028,
+        2.3294505185899443,
+        2.3293380762018057,
+        2.328723044880332
+      ],
+      "cross_level_spread": 0.0008657484766270152,
+      "grid_bin_width_central": 2.1500000000000057,
+      "model_5_over_width": 2.325581395348831
+    },
+    {
+      "wavelength_nm": 209.36,
+      "grid_wavelength_nm": 209.4,
+      "factor_mean_over_levels": 2.2811840985129868,
+      "factor_per_level": [
+        2.2755762316856853,
+        2.285733016382979,
+        2.2815071650898906,
+        2.2839745130314175,
+        2.279129566374961
+      ],
+      "cross_level_spread": 0.010156784697293642,
+      "grid_bin_width_central": 2.1499999999999915,
+      "model_5_over_width": 2.3255813953488462
+    },
+    {
+      "wavelength_nm": 211.58,
+      "grid_wavelength_nm": 211.6,
+      "factor_mean_over_levels": 2.2284441477225263,
+      "factor_per_level": [
+        2.2288388762788633,
+        2.22511541173902,
+        2.2312050779899297,
+        2.2293653177583406,
+        2.227696054846478
+      ],
+      "cross_level_spread": 0.0060896662509097865,
+      "grid_bin_width_central": 2.25,
+      "model_5_over_width": 2.2222222222222223
+    },
+    {
+      "wavelength_nm": 213.84,
+      "grid_wavelength_nm": 213.9,
+      "factor_mean_over_levels": 2.1867342099503384,
+      "factor_per_level": [
+        2.1850812572931595,
+        2.1895108227993765,
+        2.183582144115309,
+        2.1871825966156853,
+        2.1883142289281623
+      ],
+      "cross_level_spread": 0.005928678684067545,
+      "grid_bin_width_central": 2.299999999999997,
+      "model_5_over_width": 2.1739130434782634
+    },
+    {
+      "wavelength_nm": 216.15,
+      "grid_wavelength_nm": 216.2,
+      "factor_mean_over_levels": 2.1377176793886514,
+      "factor_per_level": [
+        2.143742591964267,
+        2.133810783486755,
+        2.1382197953957216,
+        2.1384016867477604,
+        2.1344135393487518
+      ],
+      "cross_level_spread": 0.00993180847751196,
+      "grid_bin_width_central": 2.3499999999999943,
+      "model_5_over_width": 2.1276595744680904
+    },
+    {
+      "wavelength_nm": 218.52,
+      "grid_wavelength_nm": 218.6,
+      "factor_mean_over_levels": 2.093647705350563,
+      "factor_per_level": [
+        2.094955001197572,
+        2.0896389600504377,
+        2.0965169185075,
+        2.093896389528035,
+        2.09323125746927
+      ],
+      "cross_level_spread": 0.006877958457062405,
+      "grid_bin_width_central": 2.4000000000000057,
+      "model_5_over_width": 2.0833333333333286
+    },
+    {
+      "wavelength_nm": 220.93,
+      "grid_wavelength_nm": 221.0,
+      "factor_mean_over_levels": 2.0493970150465968,
+      "factor_per_level": [
+        2.0455894439423505,
+        2.0513009247686287,
+        2.0495711922822655,
+        2.049052872414392,
+        2.0514706418253468
+      ],
+      "cross_level_spread": 0.005881197882996236,
+      "grid_bin_width_central": 2.450000000000003,
+      "model_5_over_width": 2.04081632653061
+    },
+    {
+      "wavelength_nm": 223.4,
+      "grid_wavelength_nm": 223.5,
+      "factor_mean_over_levels": 2.003597946255282,
+      "factor_per_level": [
+        2.0019400366705304,
+        2.0015545148896026,
+        2.00798459983066,
+        2.001059167065782,
+        2.0054514128198364
+      ],
+      "cross_level_spread": 0.006925432764878003,
+      "grid_bin_width_central": 2.5,
+      "model_5_over_width": 2.0
+    },
+    {
+      "wavelength_nm": 225.93,
+      "grid_wavelength_nm": 226.0,
+      "factor_mean_over_levels": 1.9574935256630988,
+      "factor_per_level": [
+        1.9587702067414925,
+        1.95790167343472,
+        1.9574338558473812,
+        1.9572561015851233,
+        1.9561057907067763
+      ],
+      "cross_level_spread": 0.0026644160347162327,
+      "grid_bin_width_central": 2.549999999999997,
+      "model_5_over_width": 1.9607843137254923
+    },
+    {
+      "wavelength_nm": 228.51,
+      "grid_wavelength_nm": 228.6,
+      "factor_mean_over_levels": 1.9132490895834444,
+      "factor_per_level": [
+        1.9172371273589923,
+        1.911024512379838,
+        1.9107649455433726,
+        1.913438113039901,
+        1.913780749595118
+      ],
+      "cross_level_spread": 0.006472181815619704,
+      "grid_bin_width_central": 2.5999999999999943,
+      "model_5_over_width": 1.9230769230769273
+    },
+    {
+      "wavelength_nm": 231.15,
+      "grid_wavelength_nm": 231.2,
+      "factor_mean_over_levels": 1.8716561736884878,
+      "factor_per_level": [
+        1.8740537420508177,
+        1.8688128350268234,
+        1.8738377820117662,
+        1.8715203251765549,
+        1.8700561841764762
+      ],
+      "cross_level_spread": 0.005240907023994268,
+      "grid_bin_width_central": 2.6500000000000057,
+      "model_5_over_width": 1.8867924528301847
+    },
+    {
+      "wavelength_nm": 233.85,
+      "grid_wavelength_nm": 233.9,
+      "factor_mean_over_levels": 1.8268253485568415,
+      "factor_per_level": [
+        1.8233628141430738,
+        1.8231873904358464,
+        1.8343544478639393,
+        1.826404767346294,
+        1.8268173229950548
+      ],
+      "cross_level_spread": 0.011167057428092875,
+      "grid_bin_width_central": 2.75,
+      "model_5_over_width": 1.8181818181818181
+    },
+    {
+      "wavelength_nm": 236.62,
+      "grid_wavelength_nm": 236.7,
+      "factor_mean_over_levels": 1.7848307240579306,
+      "factor_per_level": [
+        1.7882440345406692,
+        1.7822193632352594,
+        1.7811729685871316,
+        1.786293465150642,
+        1.7862237887759516
+      ],
+      "cross_level_spread": 0.00707106595353757,
+      "grid_bin_width_central": 2.799999999999997,
+      "model_5_over_width": 1.7857142857142876
+    },
+    {
+      "wavelength_nm": 239.46,
+      "grid_wavelength_nm": 239.5,
+      "factor_mean_over_levels": 1.743051229096278,
+      "factor_per_level": [
+        1.743711141983077,
+        1.7447929739496564,
+        1.739559160440365,
+        1.7429157157291584,
+        1.7442771533791344
+      ],
+      "cross_level_spread": 0.005233813509291307,
+      "grid_bin_width_central": 2.8500000000000085,
+      "model_5_over_width": 1.7543859649122755
+    },
+    {
+      "wavelength_nm": 242.36,
+      "grid_wavelength_nm": 242.4,
+      "factor_mean_over_levels": 1.7006306065884218,
+      "factor_per_level": [
+        1.7019899423319902,
+        1.7026277057496901,
+        1.6996459770037402,
+        1.696073977890624,
+        1.702815429966064
+      ],
+      "cross_level_spread": 0.00674145207544008,
+      "grid_bin_width_central": 2.950000000000003,
+      "model_5_over_width": 1.6949152542372865
+    },
+    {
+      "wavelength_nm": 245.33,
+      "grid_wavelength_nm": 245.4,
+      "factor_mean_over_levels": 1.6590297489536716,
+      "factor_per_level": [
+        1.660229841397293,
+        1.6587637404314737,
+        1.6571567523170176,
+        1.6586006750791005,
+        1.660397735543475
+      ],
+      "cross_level_spread": 0.0032409832264572724,
+      "grid_bin_width_central": 3.0,
+      "model_5_over_width": 1.6666666666666667
+    },
+    {
+      "wavelength_nm": 248.38,
+      "grid_wavelength_nm": 248.4,
+      "factor_mean_over_levels": 1.6204550853083959,
+      "factor_per_level": [
+        1.6195906108930738,
+        1.6209960405750699,
+        1.6214714201393892,
+        1.6201127196920924,
+        1.6201046352423532
+      ],
+      "cross_level_spread": 0.0018808092463153958,
+      "grid_bin_width_central": 3.0999999999999943,
+      "model_5_over_width": 1.6129032258064546
+    },
+    {
+      "wavelength_nm": 251.51,
+      "grid_wavelength_nm": 251.6,
+      "factor_mean_over_levels": 1.579789260222445,
+      "factor_per_level": [
+        1.57743536113799,
+        1.5782745395956532,
+        1.5809362739144042,
+        1.582170429730457,
+        1.5801296967337204
+      ],
+      "cross_level_spread": 0.004735068592466973,
+      "grid_bin_width_central": 3.200000000000003,
+      "model_5_over_width": 1.5624999999999987
+    },
+    {
+      "wavelength_nm": 254.71,
+      "grid_wavelength_nm": 254.8,
+      "factor_mean_over_levels": 1.5417270526402127,
+      "factor_per_level": [
+        1.5422331157850833,
+        1.5413007177052567,
+        1.5375860292021448,
+        1.5412155596650279,
+        1.5462998408435509
+      ],
+      "cross_level_spread": 0.008713811641406055,
+      "grid_bin_width_central": 3.250000000000014,
+      "model_5_over_width": 1.5384615384615317
+    },
+    {
+      "wavelength_nm": 258.0,
+      "grid_wavelength_nm": 258.1,
+      "factor_mean_over_levels": 1.501543353725213,
+      "factor_per_level": [
+        1.5023589394106136,
+        1.5014926213767217,
+        1.5012793978348276,
+        1.5029675364613477,
+        1.4996182735425543
+      ],
+      "cross_level_spread": 0.0033492629187934497,
+      "grid_bin_width_central": 3.299999999999983,
+      "model_5_over_width": 1.515151515151523
+    },
+    {
+      "wavelength_nm": 261.37,
+      "grid_wavelength_nm": 261.4,
+      "factor_mean_over_levels": 1.4614348857785133,
+      "factor_per_level": [
+        1.4618308030217535,
+        1.4614394627465457,
+        1.4619467076569619,
+        1.4617777102233351,
+        1.4601797452439704
+      ],
+      "cross_level_spread": 0.0017669624129914574,
+      "grid_bin_width_central": 3.3999999999999773,
+      "model_5_over_width": 1.4705882352941275
+    },
+    {
+      "wavelength_nm": 264.83,
+      "grid_wavelength_nm": 264.9,
+      "factor_mean_over_levels": 1.424585470452281,
+      "factor_per_level": [
+        1.422782160724836,
+        1.425757574575654,
+        1.4246797600339496,
+        1.4250559817562147,
+        1.4246518751707498
+      ],
+      "cross_level_spread": 0.0029754138508180095,
+      "grid_bin_width_central": 3.5500000000000114,
+      "model_5_over_width": 1.4084507042253476
+    },
+    {
+      "wavelength_nm": 268.39,
+      "grid_wavelength_nm": 268.5,
+      "factor_mean_over_levels": 1.387774478843026,
+      "factor_per_level": [
+        1.3901010921125183,
+        1.3870921921750374,
+        1.3859336358311556,
+        1.3870446567241532,
+        1.388700817372266
+      ],
+      "cross_level_spread": 0.004167456281362725,
+      "grid_bin_width_central": 3.6000000000000227,
+      "model_5_over_width": 1.3888888888888802
+    },
+    {
+      "wavelength_nm": 272.04,
+      "grid_wavelength_nm": 272.1,
+      "factor_mean_over_levels": 1.3511279035613446,
+      "factor_per_level": [
+        1.3508133162944904,
+        1.3502456588782183,
+        1.3532654694307609,
+        1.3499134474536703,
+        1.351401625749583
+      ],
+      "cross_level_spread": 0.0033520219770906134,
+      "grid_bin_width_central": 3.6999999999999886,
+      "model_5_over_width": 1.3513513513513555
+    },
+    {
+      "wavelength_nm": 275.79,
+      "grid_wavelength_nm": 275.9,
+      "factor_mean_over_levels": 1.3163836002610638,
+      "factor_per_level": [
+        1.317133809133321,
+        1.316964214083121,
+        1.3179503197275455,
+        1.314548661145874,
+        1.3153209972154578
+      ],
+      "cross_level_spread": 0.0034016585816714073,
+      "grid_bin_width_central": 3.799999999999983,
+      "model_5_over_width": 1.3157894736842164
+    },
+    {
+      "wavelength_nm": 279.65,
+      "grid_wavelength_nm": 279.7,
+      "factor_mean_over_levels": 1.2775402668883493,
+      "factor_per_level": [
+        1.2773046097617848,
+        1.276397144966729,
+        1.2766571582294586,
+        1.2795426169249415,
+        1.2777998045588326
+      ],
+      "cross_level_spread": 0.0031454719582124646,
+      "grid_bin_width_central": 3.9000000000000057,
+      "model_5_over_width": 1.2820512820512802
+    },
+    {
+      "wavelength_nm": 283.62,
+      "grid_wavelength_nm": 283.7,
+      "factor_mean_over_levels": 1.242003951024809,
+      "factor_per_level": [
+        1.2420657386188318,
+        1.241525404973629,
+        1.244382836526101,
+        1.2399320511766354,
+        1.2421137238288484
+      ],
+      "cross_level_spread": 0.004450785349465525,
+      "grid_bin_width_central": 4.050000000000011,
+      "model_5_over_width": 1.2345679012345645
+    },
+    {
+      "wavelength_nm": 287.7,
+      "grid_wavelength_nm": 287.8,
+      "factor_mean_over_levels": 1.2084337497033553,
+      "factor_per_level": [
+        1.206363443207043,
+        1.2083301749159343,
+        1.2087910021152457,
+        1.2113901730649967,
+        1.207293955213557
+      ],
+      "cross_level_spread": 0.005026729857953827,
+      "grid_bin_width_central": 4.150000000000006,
+      "model_5_over_width": 1.204819277108432
+    },
+    {
+      "wavelength_nm": 291.9,
+      "grid_wavelength_nm": 292.0,
+      "factor_mean_over_levels": 1.1730132646764169,
+      "factor_per_level": [
+        1.1737448805940038,
+        1.17162170774903,
+        1.1729292571335326,
+        1.1709417350131734,
+        1.175828742892344
+      ],
+      "cross_level_spread": 0.004887007879170513,
+      "grid_bin_width_central": 4.25,
+      "model_5_over_width": 1.1764705882352942
+    },
+    {
+      "wavelength_nm": 296.23,
+      "grid_wavelength_nm": 296.3,
+      "factor_mean_over_levels": 1.1398968354799102,
+      "factor_per_level": [
+        1.1393452884402289,
+        1.1399763913279262,
+        1.1402877472425508,
+        1.1398629220379473,
+        1.1400118283508984
+      ],
+      "cross_level_spread": 0.0009424588023219105,
+      "grid_bin_width_central": 3.5,
+      "model_5_over_width": 1.4285714285714286
+    },
+    {
+      "wavelength_nm": 298.92,
+      "grid_wavelength_nm": 299.0,
+      "factor_mean_over_levels": 5.034651137456651,
+      "factor_per_level": [
+        5.034370443139983,
+        5.03124543288168,
+        5.03692624265791,
+        5.037445182549496,
+        5.03326838605418
+      ],
+      "cross_level_spread": 0.006199749667816334,
+      "grid_bin_width_central": 1.8499999999999943,
+      "model_5_over_width": 2.702702702702711
+    },
+    {
+      "wavelength_nm": 299.91,
+      "grid_wavelength_nm": 300.0,
+      "factor_mean_over_levels": 5.001500886208391,
+      "factor_per_level": [
+        5.002717332383449,
+        4.9971403364539375,
+        5.001744028472247,
+        5.002414669439313,
+        5.003488064293008
+      ],
+      "cross_level_spread": 0.0063477278390706715,
+      "grid_bin_width_central": 1.0,
+      "model_5_over_width": 5.0
+    },
+    {
+      "wavelength_nm": 300.91,
+      "grid_wavelength_nm": 301.0,
+      "factor_mean_over_levels": 4.999298086549713,
+      "factor_per_level": [
+        5.001454051794165,
+        4.99609004889606,
+        5.000981338079074,
+        4.997282525321742,
+        5.000682468657518
+      ],
+      "cross_level_spread": 0.005364002898105014,
+      "grid_bin_width_central": 1.0,
+      "model_5_over_width": 5.0
+    },
+    {
+      "wavelength_nm": 301.91,
+      "grid_wavelength_nm": 302.0,
+      "factor_mean_over_levels": 4.999714771798625,
+      "factor_per_level": [
+        5.001536148109732,
+        4.996792478262805,
+        5.0013952734793925,
+        5.0002839969066,
+        4.998565962234599
+      ],
+      "cross_level_spread": 0.004743669846927645,
+      "grid_bin_width_central": 1.0,
+      "model_5_over_width": 5.0
+    },
+    {
+      "wavelength_nm": 302.91,
+      "grid_wavelength_nm": 303.0,
+      "factor_mean_over_levels": 5.003983861237425,
+      "factor_per_level": [
+        4.99528643467873,
+        5.019478323896293,
+        5.001278138233314,
+        4.999898657925278,
+        5.00397775145351
+      ],
+      "cross_level_spread": 0.024191889217563656,
+      "grid_bin_width_central": 1.0,
+      "model_5_over_width": 5.0
+    },
+    {
+      "wavelength_nm": 303.91,
+      "grid_wavelength_nm": 304.0,
+      "factor_mean_over_levels": 5.000641135932152,
+      "factor_per_level": [
+        5.008827196541327,
+        4.989506983796795,
+        5.001080938347173,
+        5.000800965280606,
+        5.0029895956948565
+      ],
+      "cross_level_spread": 0.01932021274453266,
+      "grid_bin_width_central": 1.0,
+      "model_5_over_width": 5.0
+    },
+    {
+      "wavelength_nm": 304.91,
+      "grid_wavelength_nm": 305.0,
+      "factor_mean_over_levels": 5.008679031100386,
+      "factor_per_level": [
+        5.005935633989748,
+        5.016544294637038,
+        5.01845681429251,
+        4.998327085097329,
+        5.004131327485303
+      ],
+      "cross_level_spread": 0.02012972919518141,
+      "grid_bin_width_central": 1.0,
+      "model_5_over_width": 5.0
+    },
+    {
+      "wavelength_nm": 305.91,
+      "grid_wavelength_nm": 306.0,
+      "factor_mean_over_levels": 4.994666504825812,
+      "factor_per_level": [
+        4.986383421576106,
+        4.991210396604718,
+        4.9978049523134835,
+        4.99878406411126,
+        4.999149689523493
+      ],
+      "cross_level_spread": 0.012766267947387,
+      "grid_bin_width_central": 1.0,
+      "model_5_over_width": 5.0
+    },
+    {
+      "wavelength_nm": 306.91,
+      "grid_wavelength_nm": 307.0,
+      "factor_mean_over_levels": 4.995531637691796,
+      "factor_per_level": [
+        4.9904496238221165,
+        4.986256369949522,
+        5.00126459469249,
+        5.001062656622997,
+        4.998624943371854
+      ],
+      "cross_level_spread": 0.015008224742968146,
+      "grid_bin_width_central": 1.0000000000000284,
+      "model_5_over_width": 4.999999999999858
+    },
+    {
+      "wavelength_nm": 307.91,
+      "grid_wavelength_nm": 308.00000000000006,
+      "factor_mean_over_levels": 5.002558032460818,
+      "factor_per_level": [
+        4.995515895110579,
+        5.012802180930582,
+        5.001141961918457,
+        5.000993786127292,
+        5.002336338217179
+      ],
+      "cross_level_spread": 0.017286285820003577,
+      "grid_bin_width_central": 1.0,
+      "model_5_over_width": 5.0
+    },
+    {
+      "wavelength_nm": 308.91,
+      "grid_wavelength_nm": 309.0,
+      "factor_mean_over_levels": 5.007318294620209,
+      "factor_per_level": [
+        5.021896636866448,
+        5.016006914578417,
+        4.996448962224494,
+        4.998721269117731,
+        5.003517690313951
+      ],
+      "cross_level_spread": 0.02544767464195452,
+      "grid_bin_width_central": 0.9999999999999716,
+      "model_5_over_width": 5.000000000000142
+    },
+    {
+      "wavelength_nm": 309.91,
+      "grid_wavelength_nm": 310.0,
+      "factor_mean_over_levels": 5.001994096155348,
+      "factor_per_level": [
+        5.006886014259143,
+        4.999399252413507,
+        4.998468644097704,
+        5.002896762098707,
+        5.002319807907679
+      ],
+      "cross_level_spread": 0.008417370161438953,
+      "grid_bin_width_central": 0.9999999999999716,
+      "model_5_over_width": 5.000000000000142
+    },
+    {
+      "wavelength_nm": 310.91,
+      "grid_wavelength_nm": 310.99999999999994,
+      "factor_mean_over_levels": 4.995467689914637,
+      "factor_per_level": [
+        5.0027876437825896,
+        4.993716071343903,
+        4.980094783857544,
+        5.002252324325089,
+        4.998487626264057
+      ],
+      "cross_level_spread": 0.022692859925045994,
+      "grid_bin_width_central": 1.0,
+      "model_5_over_width": 5.0
+    },
+    {
+      "wavelength_nm": 311.91,
+      "grid_wavelength_nm": 312.0,
+      "factor_mean_over_levels": 5.005754747099941,
+      "factor_per_level": [
+        5.019285969676922,
+        4.991568637155839,
+        5.0194911570036,
+        5.000439507607999,
+        4.9979884640553385
+      ],
+      "cross_level_spread": 0.02792251984776062,
+      "grid_bin_width_central": 1.0000000000000568,
+      "model_5_over_width": 4.999999999999716
+    },
+    {
+      "wavelength_nm": 312.91,
+      "grid_wavelength_nm": 313.00000000000006,
+      "factor_mean_over_levels": 5.00166615018013,
+      "factor_per_level": [
+        5.014161989634049,
+        5.015627347705585,
+        4.977065268121949,
+        5.001143443016022,
+        5.000332702423048
+      ],
+      "cross_level_spread": 0.038562079583635445,
+      "grid_bin_width_central": 0.9999999999999716,
+      "model_5_over_width": 5.000000000000142
+    },
+    {
+      "wavelength_nm": 313.91,
+      "grid_wavelength_nm": 313.99999999999994,
+      "factor_mean_over_levels": 4.993763197626228,
+      "factor_per_level": [
+        5.000954824989028,
+        4.99075219510261,
+        4.97713637094717,
+        4.99965984671043,
+        5.000312750381899
+      ],
+      "cross_level_spread": 0.023818454041858672,
+      "grid_bin_width_central": 0.9999999999999716,
+      "model_5_over_width": 5.000000000000142
+    },
+    {
+      "wavelength_nm": 314.91,
+      "grid_wavelength_nm": 315.0,
+      "factor_mean_over_levels": 4.9937776262896225,
+      "factor_per_level": [
+        4.987075114316689,
+        4.983101163877876,
+        4.997328216845327,
+        5.001517564751515,
+        4.999866071656707
+      ],
+      "cross_level_spread": 0.018416400873638494,
+      "grid_bin_width_central": 1.0000000000000568,
+      "model_5_over_width": 4.999999999999716
+    },
+    {
+      "wavelength_nm": 315.91,
+      "grid_wavelength_nm": 316.00000000000006,
+      "factor_mean_over_levels": 4.997253575977483,
+      "factor_per_level": [
+        4.98382956686516,
+        5.006129507076244,
+        4.998993020468486,
+        4.998448390141656,
+        4.998867395335876
+      ],
+      "cross_level_spread": 0.022299940211083502,
+      "grid_bin_width_central": 0.9999999999999716,
+      "model_5_over_width": 5.000000000000142
+    },
+    {
+      "wavelength_nm": 316.91,
+      "grid_wavelength_nm": 316.99999999999994,
+      "factor_mean_over_levels": 4.995320722585587,
+      "factor_per_level": [
+        4.981933912554572,
+        4.980231786456808,
+        5.014382507257755,
+        5.001172686302626,
+        4.998882720356177
+      ],
+      "cross_level_spread": 0.034150720800947276,
+      "grid_bin_width_central": 0.9999999999999716,
+      "model_5_over_width": 5.000000000000142
+    },
+    {
+      "wavelength_nm": 317.91,
+      "grid_wavelength_nm": 318.0,
+      "factor_mean_over_levels": 5.004078129055884,
+      "factor_per_level": [
+        5.006313224275604,
+        5.000548413659135,
+        5.015459595788745,
+        4.9980151462299505,
+        5.000054265325985
+      ],
+      "cross_level_spread": 0.017444449558794872,
+      "grid_bin_width_central": 1.0000000000000568,
+      "model_5_over_width": 4.999999999999716
+    },
+    {
+      "wavelength_nm": 318.91,
+      "grid_wavelength_nm": 319.00000000000006,
+      "factor_mean_over_levels": 5.010254174266363,
+      "factor_per_level": [
+        5.01702268827225,
+        5.0164189665545065,
+        5.012402856984972,
+        5.002340271556813,
+        5.003086087963275
+      ],
+      "cross_level_spread": 0.014682416715436908,
+      "grid_bin_width_central": 1.0,
+      "model_5_over_width": 5.0
+    },
+    {
+      "wavelength_nm": 319.91,
+      "grid_wavelength_nm": 320.0,
+      "factor_mean_over_levels": 5.005069819547432,
+      "factor_per_level": [
+        5.01056590884858,
+        5.011018835359463,
+        4.993531445928615,
+        5.01161412760136,
+        4.998618779999143
+      ],
+      "cross_level_spread": 0.018082681672745515,
+      "grid_bin_width_central": 0.9999999999999716,
+      "model_5_over_width": 5.000000000000142
+    },
+    {
+      "wavelength_nm": 322.41,
+      "grid_wavelength_nm": 322.49999999999994,
+      "factor_mean_over_levels": 2.500849030325386,
+      "factor_per_level": [
+        2.5040922892739235,
+        2.5036146145112257,
+        2.494786352028248,
+        2.4953891713846024,
+        2.5063627244289304
+      ],
+      "cross_level_spread": 0.011576372400682544,
+      "grid_bin_width_central": 1.7500000000000284,
+      "model_5_over_width": 2.8571428571428106
+    },
+    {
+      "wavelength_nm": 324.41,
+      "grid_wavelength_nm": 324.50000000000006,
+      "factor_mean_over_levels": 2.4991377680148252,
+      "factor_per_level": [
+        2.4969123960707456,
+        2.4977326001357243,
+        2.499453457432219,
+        2.5009203199150365,
+        2.500670066520401
+      ],
+      "cross_level_spread": 0.004007923844290939,
+      "grid_bin_width_central": 2.0000000000000284,
+      "model_5_over_width": 2.4999999999999645
+    },
+    {
+      "wavelength_nm": 326.41,
+      "grid_wavelength_nm": 326.5,
+      "factor_mean_over_levels": 2.500709080415719,
+      "factor_per_level": [
+        2.5004992087110813,
+        2.502292760619832,
+        2.500460948444535,
+        2.503621591759332,
+        2.4966708925438144
+      ],
+      "cross_level_spread": 0.006950699215517719,
+      "grid_bin_width_central": 2.7499999999999716,
+      "model_5_over_width": 1.818181818181837
+    },
+    {
+      "wavelength_nm": 329.91,
+      "grid_wavelength_nm": 330.0,
+      "factor_mean_over_levels": 0.999509658098243,
+      "factor_per_level": [
+        0.9978046315688877,
+        0.9994543402017606,
+        0.9997631882654998,
+        1.0006207394023172,
+        0.99990539105275
+      ],
+      "cross_level_spread": 0.0028161078334295597,
+      "grid_bin_width_central": 4.25,
+      "model_5_over_width": 1.1764705882352942
+    },
+    {
+      "wavelength_nm": 334.9,
+      "grid_wavelength_nm": 335.0,
+      "factor_mean_over_levels": 0.9998802688241138,
+      "factor_per_level": [
+        1.000264633672309,
+        0.999716808388669,
+        0.999658982631507,
+        0.9994960242526783,
+        1.0002648951754056
+      ],
+      "cross_level_spread": 0.0007688709227273716,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 339.9,
+      "grid_wavelength_nm": 340.0,
+      "factor_mean_over_levels": 0.9993656019754594,
+      "factor_per_level": [
+        0.9980742321485726,
+        0.9995582867797721,
+        0.9992320589960764,
+        0.9998676006388139,
+        1.0000958313140624
+      ],
+      "cross_level_spread": 0.002021599165489829,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 344.9,
+      "grid_wavelength_nm": 345.0,
+      "factor_mean_over_levels": 1.0003637849275429,
+      "factor_per_level": [
+        1.0007448372771657,
+        1.0011961863364942,
+        1.0002555216480136,
+        0.9999013947295313,
+        0.9997209846465092
+      ],
+      "cross_level_spread": 0.0014752016899850506,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 349.9,
+      "grid_wavelength_nm": 350.0,
+      "factor_mean_over_levels": 0.9988908941679782,
+      "factor_per_level": [
+        0.9988350894527033,
+        0.9955264179135743,
+        0.9998301186910442,
+        1.0004664171500544,
+        0.9997964276325146
+      ],
+      "cross_level_spread": 0.0049399992364800305,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 354.9,
+      "grid_wavelength_nm": 355.0,
+      "factor_mean_over_levels": 0.9996257503583299,
+      "factor_per_level": [
+        0.997182707767886,
+        0.9972767511854922,
+        1.0034222365690144,
+        1.0003715806024738,
+        0.9998754756667839
+      ],
+      "cross_level_spread": 0.0062395288011284356,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 359.9,
+      "grid_wavelength_nm": 360.0,
+      "factor_mean_over_levels": 0.9986024598770399,
+      "factor_per_level": [
+        0.9968068675263337,
+        0.9968416411033164,
+        0.9999031984662661,
+        0.99959415159435,
+        0.9998664406949331
+      ],
+      "cross_level_spread": 0.0030963309399323347,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 364.9,
+      "grid_wavelength_nm": 365.0,
+      "factor_mean_over_levels": 1.0013966743017517,
+      "factor_per_level": [
+        0.9980974349974934,
+        1.0029061611532573,
+        1.0024891781510823,
+        1.0029339876281518,
+        1.0005566095787735
+      ],
+      "cross_level_spread": 0.004836552630658408,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 369.89,
+      "grid_wavelength_nm": 370.0,
+      "factor_mean_over_levels": 0.9987921084392465,
+      "factor_per_level": [
+        0.998119197957067,
+        0.9974351425704215,
+        0.9980767853521564,
+        1.000605119305758,
+        0.9997242970108298
+      ],
+      "cross_level_spread": 0.003169976735336366,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 374.89,
+      "grid_wavelength_nm": 375.0,
+      "factor_mean_over_levels": 1.0008021687916635,
+      "factor_per_level": [
+        1.0017457918030144,
+        1.000062873330317,
+        1.0022332075316036,
+        0.9997294599398644,
+        1.0002395113535187
+      ],
+      "cross_level_spread": 0.002503747591739214,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 379.89,
+      "grid_wavelength_nm": 380.0,
+      "factor_mean_over_levels": 0.9995726988303085,
+      "factor_per_level": [
+        0.997949967288214,
+        0.9984435739204961,
+        1.0004953795487062,
+        1.0007028157970577,
+        1.0002717575970683
+      ],
+      "cross_level_spread": 0.0027528485088437193,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 384.89,
+      "grid_wavelength_nm": 385.0,
+      "factor_mean_over_levels": 1.000485527638999,
+      "factor_per_level": [
+        1.0011952164392897,
+        1.001640474843653,
+        0.9994373923202865,
+        0.9994038802096993,
+        1.0007506743820673
+      ],
+      "cross_level_spread": 0.002236594633953648,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 389.89,
+      "grid_wavelength_nm": 390.0,
+      "factor_mean_over_levels": 0.9998603939889031,
+      "factor_per_level": [
+        0.9985169418127745,
+        1.0023203003152525,
+        0.9981076273134304,
+        0.9997548737793889,
+        1.0006022267236698
+      ],
+      "cross_level_spread": 0.004212673001822154,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 394.89,
+      "grid_wavelength_nm": 395.0,
+      "factor_mean_over_levels": 0.9996324373260876,
+      "factor_per_level": [
+        1.0016371071660335,
+        0.9967151925723925,
+        0.9999878367158956,
+        1.0002604902462107,
+        0.9995615599299055
+      ],
+      "cross_level_spread": 0.004921914593640997,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 399.89,
+      "grid_wavelength_nm": 400.0,
+      "factor_mean_over_levels": 0.9995373843134633,
+      "factor_per_level": [
+        1.0006992975570692,
+        0.9972076821844471,
+        1.0024531260317615,
+        0.9982224122858807,
+        0.9991044035081575
+      ],
+      "cross_level_spread": 0.005245443847314402,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 404.89,
+      "grid_wavelength_nm": 405.0,
+      "factor_mean_over_levels": 1.0011911012831747,
+      "factor_per_level": [
+        1.0015253233544026,
+        0.9994692679283468,
+        1.002463186725545,
+        1.0022854996554675,
+        1.0002122287521107
+      ],
+      "cross_level_spread": 0.002993918797198125,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 409.88,
+      "grid_wavelength_nm": 410.0,
+      "factor_mean_over_levels": 1.0001351845548272,
+      "factor_per_level": [
+        0.9992137630619804,
+        0.9992133243866624,
+        1.0005098766452967,
+        1.002606879603508,
+        0.999132079076688
+      ],
+      "cross_level_spread": 0.003474800526819921,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 414.88,
+      "grid_wavelength_nm": 415.0,
+      "factor_mean_over_levels": 1.0008852770033767,
+      "factor_per_level": [
+        1.000902206751986,
+        1.002154811669468,
+        0.9986832317700298,
+        1.0000572396328413,
+        1.002628895192559
+      ],
+      "cross_level_spread": 0.003945663422529222,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 419.88,
+      "grid_wavelength_nm": 420.0,
+      "factor_mean_over_levels": 1.0006397581170614,
+      "factor_per_level": [
+        0.9979047147666512,
+        1.000897367543469,
+        1.0023334866843931,
+        1.0021605166243572,
+        0.9999027049664364
+      ],
+      "cross_level_spread": 0.004428771917741936,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 424.88,
+      "grid_wavelength_nm": 425.0,
+      "factor_mean_over_levels": 0.9998861500498306,
+      "factor_per_level": [
+        0.9994714399151117,
+        0.9990244362108557,
+        0.9989856479181849,
+        1.0020717497340332,
+        0.9998774764709676
+      ],
+      "cross_level_spread": 0.003086101815848341,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 429.88,
+      "grid_wavelength_nm": 430.0,
+      "factor_mean_over_levels": 1.0002293553880515,
+      "factor_per_level": [
+        1.0000160139441912,
+        1.0000871519299006,
+        1.0018699806518474,
+        1.0019553475181047,
+        0.9972182828962145
+      ],
+      "cross_level_spread": 0.0047370646218901635,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 434.88,
+      "grid_wavelength_nm": 435.0,
+      "factor_mean_over_levels": 0.9995035288353729,
+      "factor_per_level": [
+        1.002177002099107,
+        0.9997518687762641,
+        0.9988720895824063,
+        0.998263525751129,
+        0.9984531579679577
+      ],
+      "cross_level_spread": 0.003913476347978007,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 439.88,
+      "grid_wavelength_nm": 440.0,
+      "factor_mean_over_levels": 0.9997869339580465,
+      "factor_per_level": [
+        0.9985372935561977,
+        1.001734084445756,
+        0.9996139380561191,
+        0.9996375049340599,
+        0.9994118487980994
+      ],
+      "cross_level_spread": 0.0031967908895583763,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 444.88,
+      "grid_wavelength_nm": 445.0,
+      "factor_mean_over_levels": 1.0003917782683662,
+      "factor_per_level": [
+        0.9999493924211772,
+        1.0004371363713922,
+        1.0006654886678288,
+        1.0008061324634974,
+        1.0001007414179355
+      ],
+      "cross_level_spread": 0.0008567400423201699,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 449.87,
+      "grid_wavelength_nm": 450.0,
+      "factor_mean_over_levels": 1.0009204750554936,
+      "factor_per_level": [
+        1.001662118616295,
+        1.0002312810828236,
+        1.0012600121239124,
+        0.999567347092263,
+        1.001881616362174
+      ],
+      "cross_level_spread": 0.0023142692699109624,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 454.87,
+      "grid_wavelength_nm": 455.0,
+      "factor_mean_over_levels": 0.9997322910540216,
+      "factor_per_level": [
+        0.9997353757324008,
+        0.9994801835705192,
+        0.9993977419047446,
+        0.9980447347728303,
+        1.0020034192896128
+      ],
+      "cross_level_spread": 0.003958684516782496,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 459.87,
+      "grid_wavelength_nm": 460.0,
+      "factor_mean_over_levels": 1.0003806618800017,
+      "factor_per_level": [
+        1.0004138239823197,
+        0.9983598750205226,
+        1.00128896277536,
+        1.0010940433816897,
+        1.000746604240116
+      ],
+      "cross_level_spread": 0.002929087754837467,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 464.87,
+      "grid_wavelength_nm": 465.0,
+      "factor_mean_over_levels": 1.0004349343534007,
+      "factor_per_level": [
+        0.9992768530905164,
+        1.001730371770049,
+        1.0007148699265636,
+        0.9990649369241952,
+        1.001387640055679
+      ],
+      "cross_level_spread": 0.002665434845853798,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 469.87,
+      "grid_wavelength_nm": 470.0,
+      "factor_mean_over_levels": 0.9998530543300017,
+      "factor_per_level": [
+        0.9985850033497544,
+        0.9978439901903076,
+        1.0012444515792145,
+        1.0000264227584506,
+        1.0015654037722812
+      ],
+      "cross_level_spread": 0.0037214135819736427,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 474.87,
+      "grid_wavelength_nm": 475.0,
+      "factor_mean_over_levels": 1.00056151232376,
+      "factor_per_level": [
+        0.9998551101756198,
+        0.9990672695625299,
+        1.0010236034489628,
+        1.0011445260286853,
+        1.0017170524030015
+      ],
+      "cross_level_spread": 0.0026497828404715706,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 479.87,
+      "grid_wavelength_nm": 480.0,
+      "factor_mean_over_levels": 0.9998800915433531,
+      "factor_per_level": [
+        1.001034570187215,
+        0.9989685139466549,
+        0.999213178006148,
+        1.0005866967763415,
+        0.9995974988004056
+      ],
+      "cross_level_spread": 0.00206605624056011,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 484.86,
+      "grid_wavelength_nm": 485.0,
+      "factor_mean_over_levels": 0.9994568776606714,
+      "factor_per_level": [
+        1.002030979940244,
+        0.9990565306092604,
+        0.9985851668220275,
+        0.9992652969645298,
+        0.9983464139672953
+      ],
+      "cross_level_spread": 0.00368456597294875,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 489.86,
+      "grid_wavelength_nm": 490.0,
+      "factor_mean_over_levels": 0.9995664695607298,
+      "factor_per_level": [
+        1.0001900224584743,
+        1.0000863680004968,
+        0.998274017857418,
+        0.9987256763624408,
+        1.0005562631248182
+      ],
+      "cross_level_spread": 0.0022822452674001736,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 494.86,
+      "grid_wavelength_nm": 495.0,
+      "factor_mean_over_levels": 1.000493866820564,
+      "factor_per_level": [
+        1.0018706837069669,
+        1.0003960772097926,
+        0.9988953184665241,
+        0.9999503610061943,
+        1.0013568937133426
+      ],
+      "cross_level_spread": 0.002975365240442729,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 499.86,
+      "grid_wavelength_nm": 500.0,
+      "factor_mean_over_levels": 0.9991086486694268,
+      "factor_per_level": [
+        0.9990679032740651,
+        0.9981951580163764,
+        0.9990032151972613,
+        1.0003351402021918,
+        0.9989418266572394
+      ],
+      "cross_level_spread": 0.002139982185815459,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 504.86,
+      "grid_wavelength_nm": 505.0,
+      "factor_mean_over_levels": 1.000017701745641,
+      "factor_per_level": [
+        1.0001870044954813,
+        0.9981779851807141,
+        1.0017523864777134,
+        0.9997904398617768,
+        1.0001806927125203
+      ],
+      "cross_level_spread": 0.0035744012969992633,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 509.86,
+      "grid_wavelength_nm": 510.0,
+      "factor_mean_over_levels": 0.999799600835372,
+      "factor_per_level": [
+        1.0020750213652971,
+        1.001009547760381,
+        0.9982219695514791,
+        0.9990955522469172,
+        0.9985959132527856
+      ],
+      "cross_level_spread": 0.003853051813818009,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 514.86,
+      "grid_wavelength_nm": 515.0,
+      "factor_mean_over_levels": 1.0001824824152985,
+      "factor_per_level": [
+        1.0022236553111148,
+        0.998441938966808,
+        1.0009791891701336,
+        0.9999258621274024,
+        0.9993417665010336
+      ],
+      "cross_level_spread": 0.003781716344306796,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 519.86,
+      "grid_wavelength_nm": 520.0,
+      "factor_mean_over_levels": 0.9998723259751235,
+      "factor_per_level": [
+        0.9992526643875629,
+        0.9989749506570778,
+        1.0016567853971057,
+        1.0000296584824548,
+        0.9994475709514166
+      ],
+      "cross_level_spread": 0.002681834740027922,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 524.85,
+      "grid_wavelength_nm": 525.0,
+      "factor_mean_over_levels": 0.9996735500596866,
+      "factor_per_level": [
+        1.001063418904633,
+        0.9982177864924455,
+        0.9978589441463023,
+        0.9999720636889576,
+        1.001255537066095
+      ],
+      "cross_level_spread": 0.0033965929197926625,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 529.85,
+      "grid_wavelength_nm": 530.0,
+      "factor_mean_over_levels": 0.999945136045682,
+      "factor_per_level": [
+        1.0012837949402622,
+        1.000668279303433,
+        0.9991383371764925,
+        0.9984933766942594,
+        1.0001418921139638
+      ],
+      "cross_level_spread": 0.0027904182460027904,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 534.85,
+      "grid_wavelength_nm": 535.0,
+      "factor_mean_over_levels": 0.9996460708935835,
+      "factor_per_level": [
+        0.9999656072996853,
+        0.9991893254137016,
+        0.9980130072901765,
+        1.0015490483022265,
+        0.9995133661621285
+      ],
+      "cross_level_spread": 0.003536041012049962,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 539.85,
+      "grid_wavelength_nm": 540.0,
+      "factor_mean_over_levels": 1.0004694990879481,
+      "factor_per_level": [
+        1.0007338747958696,
+        1.0000927356196765,
+        1.001462747513614,
+        0.9995523701139836,
+        1.0005057673965965
+      ],
+      "cross_level_spread": 0.001910377399630403,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 544.85,
+      "grid_wavelength_nm": 545.0,
+      "factor_mean_over_levels": 0.9997649423754362,
+      "factor_per_level": [
+        0.9989399013505925,
+        0.9983520220938672,
+        1.0001152095984653,
+        1.0001464200805665,
+        1.001271158753689
+      ],
+      "cross_level_spread": 0.002919136659821908,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 549.85,
+      "grid_wavelength_nm": 550.0,
+      "factor_mean_over_levels": 1.0002864706923478,
+      "factor_per_level": [
+        1.0020674827917682,
+        0.998594850020459,
+        1.0013538495266618,
+        1.0003893967123978,
+        0.9990267744104522
+      ],
+      "cross_level_spread": 0.0034726327713091587,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 554.85,
+      "grid_wavelength_nm": 555.0,
+      "factor_mean_over_levels": 0.9989215997095645,
+      "factor_per_level": [
+        0.9984903953993407,
+        1.000525009343684,
+        0.9984955662227716,
+        0.9984408866097102,
+        0.998656140972316
+      ],
+      "cross_level_spread": 0.0020841227339737367,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 559.84,
+      "grid_wavelength_nm": 560.0,
+      "factor_mean_over_levels": 0.9992757261254882,
+      "factor_per_level": [
+        0.9981444856233327,
+        0.9985760516296619,
+        0.9988813245271783,
+        0.9992261145274872,
+        1.0015506543197812
+      ],
+      "cross_level_spread": 0.003406168696448497,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 564.84,
+      "grid_wavelength_nm": 565.0,
+      "factor_mean_over_levels": 1.0000212717765427,
+      "factor_per_level": [
+        0.9991605347231509,
+        1.0007541505878619,
+        1.0013131389603311,
+        0.9999990209916014,
+        0.9988795136197686
+      ],
+      "cross_level_spread": 0.002433625340562573,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 569.84,
+      "grid_wavelength_nm": 570.0,
+      "factor_mean_over_levels": 0.9997941400094652,
+      "factor_per_level": [
+        1.0003576893420636,
+        0.9984276818254495,
+        0.9984898619051715,
+        1.0000009790083986,
+        1.001694487966243
+      ],
+      "cross_level_spread": 0.0032668061407935545,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 574.84,
+      "grid_wavelength_nm": 575.0,
+      "factor_mean_over_levels": 1.00001647681266,
+      "factor_per_level": [
+        0.9996498091242249,
+        0.9993331713526683,
+        1.0012640798602053,
+        0.9995635971062137,
+        1.0002717266199876
+      ],
+      "cross_level_spread": 0.0019309085075369659,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 579.84,
+      "grid_wavelength_nm": 580.0,
+      "factor_mean_over_levels": 0.9999326189280804,
+      "factor_per_level": [
+        0.9990908404759603,
+        1.0011799400101045,
+        0.9990590377177433,
+        1.0015459186714426,
+        0.9987873577651514
+      ],
+      "cross_level_spread": 0.0027585609062912297,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 584.84,
+      "grid_wavelength_nm": 585.0,
+      "factor_mean_over_levels": 1.0004241245913637,
+      "factor_per_level": [
+        1.001639819493306,
+        1.0005621352211589,
+        0.9998651128512144,
+        1.001373870358,
+        0.998679685033139
+      ],
+      "cross_level_spread": 0.0029601344601670743,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 589.84,
+      "grid_wavelength_nm": 590.0,
+      "factor_mean_over_levels": 1.0002371062953768,
+      "factor_per_level": [
+        0.9997717856015728,
+        1.0015560851310399,
+        1.0016962696695217,
+        0.9983666675707372,
+        0.9997947235040122
+      ],
+      "cross_level_spread": 0.003329602098784523,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 594.84,
+      "grid_wavelength_nm": 595.0,
+      "factor_mean_over_levels": 1.0006176247830603,
+      "factor_per_level": [
+        1.0017520278993777,
+        1.0009492208753261,
+        1.0000455760333609,
+        1.0017224049548306,
+        0.998618894152406
+      ],
+      "cross_level_spread": 0.0031331337469716614,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 599.83,
+      "grid_wavelength_nm": 600.0,
+      "factor_mean_over_levels": 1.0003052964788124,
+      "factor_per_level": [
+        1.0006806057887982,
+        1.0004638781981838,
+        0.9986231529108905,
+        1.0014744592184335,
+        1.000284386277756
+      ],
+      "cross_level_spread": 0.0028513063075429335,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 604.83,
+      "grid_wavelength_nm": 605.0,
+      "factor_mean_over_levels": 0.9992687662832174,
+      "factor_per_level": [
+        0.9993137243734023,
+        0.9981640194333312,
+        0.9982074213656376,
+        0.9989379222034609,
+        1.0017207440402551
+      ],
+      "cross_level_spread": 0.003556724606923911,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 609.83,
+      "grid_wavelength_nm": 610.0,
+      "factor_mean_over_levels": 0.9999642199261409,
+      "factor_per_level": [
+        0.9982268501157051,
+        1.0010554354612502,
+        1.0006866519563753,
+        0.9992316468011154,
+        1.0006205152962584
+      ],
+      "cross_level_spread": 0.002828585345545087,
+      "grid_bin_width_central": 5.000000000000057,
+      "model_5_over_width": 0.9999999999999887
+    },
+    {
+      "wavelength_nm": 614.83,
+      "grid_wavelength_nm": 615.0000000000001,
+      "factor_mean_over_levels": 0.9995299422626628,
+      "factor_per_level": [
+        0.9993971652392055,
+        0.9990684624260694,
+        0.9980603111572447,
+        1.0003516931222083,
+        1.0007720793685866
+      ],
+      "cross_level_spread": 0.0027117682113418917,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 619.83,
+      "grid_wavelength_nm": 620.0,
+      "factor_mean_over_levels": 0.9998581715559942,
+      "factor_per_level": [
+        0.998694957706708,
+        1.0010535767740134,
+        1.0013431365007837,
+        0.9984779364700395,
+        0.9997212503284266
+      ],
+      "cross_level_spread": 0.002865200030744197,
+      "grid_bin_width_central": 4.999999999999943,
+      "model_5_over_width": 1.0000000000000113
+    },
+    {
+      "wavelength_nm": 624.83,
+      "grid_wavelength_nm": 625.0,
+      "factor_mean_over_levels": 1.0002091534049575,
+      "factor_per_level": [
+        1.00130735916466,
+        0.9994408148593618,
+        0.9997578126124288,
+        0.9996816349766627,
+        1.0008581454116738
+      ],
+      "cross_level_spread": 0.0018665443052982011,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 629.83,
+      "grid_wavelength_nm": 630.0,
+      "factor_mean_over_levels": 1.0008758129784951,
+      "factor_per_level": [
+        1.0016041825493367,
+        0.9988026201234779,
+        1.0005564966786822,
+        1.001527266394316,
+        1.0018884991466628
+      ],
+      "cross_level_spread": 0.003085879023184912,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 634.82,
+      "grid_wavelength_nm": 635.0,
+      "factor_mean_over_levels": 1.000253761137517,
+      "factor_per_level": [
+        1.0009820952522637,
+        1.0015188166311775,
+        1.0001189051338593,
+        0.998905422026128,
+        0.9997435666441578
+      ],
+      "cross_level_spread": 0.0026133946050495016,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 639.82,
+      "grid_wavelength_nm": 640.0,
+      "factor_mean_over_levels": 0.9991490732333865,
+      "factor_per_level": [
+        0.9986456724987074,
+        0.9996815936011201,
+        0.9980493551100353,
+        0.9983133407446401,
+        1.0010554042124293
+      ],
+      "cross_level_spread": 0.003006049102393993,
+      "grid_bin_width_central": 4.999999999999943,
+      "model_5_over_width": 1.0000000000000113
+    },
+    {
+      "wavelength_nm": 644.82,
+      "grid_wavelength_nm": 644.9999999999999,
+      "factor_mean_over_levels": 1.0000280422675067,
+      "factor_per_level": [
+        0.9987930368642721,
+        0.9991999148089079,
+        0.9999120788560518,
+        1.0014139005510356,
+        1.000821280257267
+      ],
+      "cross_level_spread": 0.0026208636867635082,
+      "grid_bin_width_central": 4.999999999999943,
+      "model_5_over_width": 1.0000000000000113
+    },
+    {
+      "wavelength_nm": 649.82,
+      "grid_wavelength_nm": 649.9999999999999,
+      "factor_mean_over_levels": 1.0008590806952669,
+      "factor_per_level": [
+        1.0008610896235361,
+        1.0007677884222583,
+        1.0016369467741626,
+        1.001003638890566,
+        1.0000259397658113
+      ],
+      "cross_level_spread": 0.0016110070083512618,
+      "grid_bin_width_central": 5.000000000000114,
+      "model_5_over_width": 0.9999999999999772
+    },
+    {
+      "wavelength_nm": 654.82,
+      "grid_wavelength_nm": 655.0000000000001,
+      "factor_mean_over_levels": 1.0006983440114374,
+      "factor_per_level": [
+        1.000949598897949,
+        1.0016644154135896,
+        0.9999680592417719,
+        0.9995306579421207,
+        1.0013789885617561
+      ],
+      "cross_level_spread": 0.0021337574714689334,
+      "grid_bin_width_central": 5.000000000000057,
+      "model_5_over_width": 0.9999999999999887
+    },
+    {
+      "wavelength_nm": 659.82,
+      "grid_wavelength_nm": 660.0,
+      "factor_mean_over_levels": 0.9999900097985078,
+      "factor_per_level": [
+        1.0020171829115827,
+        0.9989839007091975,
+        0.9980549773785129,
+        1.001710393585645,
+        0.9991835944076007
+      ],
+      "cross_level_spread": 0.003962205533069807,
+      "grid_bin_width_central": 4.999999999999943,
+      "model_5_over_width": 1.0000000000000113
+    },
+    {
+      "wavelength_nm": 664.82,
+      "grid_wavelength_nm": 665.0,
+      "factor_mean_over_levels": 0.9995237088511079,
+      "factor_per_level": [
+        0.999307442266933,
+        0.9999953881114793,
+        1.0006848498481404,
+        0.9984725183738195,
+        0.9991583456551676
+      ],
+      "cross_level_spread": 0.002212331474320983,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 669.82,
+      "grid_wavelength_nm": 670.0,
+      "factor_mean_over_levels": 0.9997703672018812,
+      "factor_per_level": [
+        1.0001446703122647,
+        1.0006693994442841,
+        0.998126171785078,
+        0.9983487605065243,
+        1.0015628339612548
+      ],
+      "cross_level_spread": 0.0034366621761767746,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 674.81,
+      "grid_wavelength_nm": 675.0,
+      "factor_mean_over_levels": 1.0006127152887265,
+      "factor_per_level": [
+        1.0014316025695902,
+        1.0017757108468301,
+        0.9985415146427984,
+        1.001291688406876,
+        1.000023059977537
+      ],
+      "cross_level_spread": 0.0032341962040317584,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 679.81,
+      "grid_wavelength_nm": 680.0,
+      "factor_mean_over_levels": 0.9991379648790326,
+      "factor_per_level": [
+        0.9983940517150063,
+        0.9986534886476727,
+        0.9981610003145109,
+        1.0014121908664653,
+        0.9990690928515081
+      ],
+      "cross_level_spread": 0.0032511905519543305,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 684.81,
+      "grid_wavelength_nm": 685.0,
+      "factor_mean_over_levels": 1.0000917895318644,
+      "factor_per_level": [
+        1.0019200751149038,
+        1.0006306678478674,
+        0.9991238757567762,
+        1.0001012624880947,
+        0.9986830664516799
+      ],
+      "cross_level_spread": 0.0032370086632238504,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 689.81,
+      "grid_wavelength_nm": 690.0,
+      "factor_mean_over_levels": 0.999669814102254,
+      "factor_per_level": [
+        1.0001667948164095,
+        1.0002624502903439,
+        1.0004786408070845,
+        0.998275584923646,
+        0.999165599673786
+      ],
+      "cross_level_spread": 0.0022030558834384983,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 694.81,
+      "grid_wavelength_nm": 695.0,
+      "factor_mean_over_levels": 1.0000707783765832,
+      "factor_per_level": [
+        1.0003670461496832,
+        0.99965707873263,
+        0.9981915379685621,
+        1.0005424842182837,
+        1.0015957448137562
+      ],
+      "cross_level_spread": 0.0034042068451941576,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 699.81,
+      "grid_wavelength_nm": 700.0,
+      "factor_mean_over_levels": 0.9998898674871004,
+      "factor_per_level": [
+        0.9991754642562781,
+        1.0002763008855433,
+        0.9981075667619079,
+        1.0018165692426317,
+        1.0000734362891415
+      ],
+      "cross_level_spread": 0.003709002480723811,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 704.81,
+      "grid_wavelength_nm": 705.0,
+      "factor_mean_over_levels": 0.999562106734226,
+      "factor_per_level": [
+        1.0003591721017684,
+        0.9979858529760188,
+        1.0012543582599898,
+        0.9988762360206622,
+        0.9993349143126904
+      ],
+      "cross_level_spread": 0.003268505283970935,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 709.8,
+      "grid_wavelength_nm": 710.0,
+      "factor_mean_over_levels": 0.999939669528046,
+      "factor_per_level": [
+        1.000579280412046,
+        0.9979876200685543,
+        1.001557190435635,
+        0.9998815680576918,
+        0.9996926886663036
+      ],
+      "cross_level_spread": 0.003569570367080721,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 714.8,
+      "grid_wavelength_nm": 715.0,
+      "factor_mean_over_levels": 1.0017196935741353,
+      "factor_per_level": [
+        1.0020616220431287,
+        1.0013087103942089,
+        1.0013961307356198,
+        1.0017809481328703,
+        1.0020510565648486
+      ],
+      "cross_level_spread": 0.000752911648919774,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 719.8,
+      "grid_wavelength_nm": 720.0,
+      "factor_mean_over_levels": 0.9999642739868225,
+      "factor_per_level": [
+        0.999840578349784,
+        1.0008579371932655,
+        1.000958307660186,
+        0.9983952478816189,
+        0.9997692988492579
+      ],
+      "cross_level_spread": 0.0025630597785670783,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 724.8,
+      "grid_wavelength_nm": 725.0,
+      "factor_mean_over_levels": 0.9999347515009498,
+      "factor_per_level": [
+        1.000578686054468,
+        1.0008115883029631,
+        0.9984070986978506,
+        0.9996137864619135,
+        1.000262597987554
+      ],
+      "cross_level_spread": 0.0024044896051125253,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 729.8,
+      "grid_wavelength_nm": 730.0,
+      "factor_mean_over_levels": 0.9987618768509787,
+      "factor_per_level": [
+        0.9980946070485393,
+        1.0000046118885206,
+        0.9979117146725521,
+        0.9990672257512271,
+        0.9987312248940544
+      ],
+      "cross_level_spread": 0.0020928972159685033,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 734.8,
+      "grid_wavelength_nm": 735.0,
+      "factor_mean_over_levels": 1.0009850439033379,
+      "factor_per_level": [
+        1.0006510842283418,
+        1.000182836606321,
+        1.0010217872232061,
+        1.0012066187207214,
+        1.0018628927380988
+      ],
+      "cross_level_spread": 0.0016800561317777962,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 739.8,
+      "grid_wavelength_nm": 740.0,
+      "factor_mean_over_levels": 0.9992685128964596,
+      "factor_per_level": [
+        0.9988870719816895,
+        0.9980213693479218,
+        1.0006161726296245,
+        0.9988908129444044,
+        0.9999271375786575
+      ],
+      "cross_level_spread": 0.0025948032817026956,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 744.79,
+      "grid_wavelength_nm": 745.0,
+      "factor_mean_over_levels": 0.9999941964248963,
+      "factor_per_level": [
+        0.9990571561496584,
+        1.0016828576281451,
+        0.9978985128921555,
+        1.0019405434415982,
+        0.9993919120129238
+      ],
+      "cross_level_spread": 0.004042030549442743,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 749.79,
+      "grid_wavelength_nm": 750.0,
+      "factor_mean_over_levels": 0.9999132114015733,
+      "factor_per_level": [
+        0.9981774044719087,
+        1.0004855615123682,
+        1.0008500520387977,
+        1.0013191354660398,
+        0.9987339035187518
+      ],
+      "cross_level_spread": 0.0031417309941310645,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 754.79,
+      "grid_wavelength_nm": 755.0,
+      "factor_mean_over_levels": 1.000330072357614,
+      "factor_per_level": [
+        1.0006508769183666,
+        1.000026874146719,
+        1.0016878198709525,
+        1.000289414871997,
+        0.9989953759800352
+      ],
+      "cross_level_spread": 0.002692443890917273,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 759.79,
+      "grid_wavelength_nm": 760.0,
+      "factor_mean_over_levels": 0.9996257721437158,
+      "factor_per_level": [
+        0.9982320891836856,
+        1.0001717536477053,
+        0.9999914035698741,
+        0.999756674294851,
+        0.999976940022463
+      ],
+      "cross_level_spread": 0.0019396644640197191,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 764.79,
+      "grid_wavelength_nm": 765.0,
+      "factor_mean_over_levels": 0.9997569401949727,
+      "factor_per_level": [
+        1.0013913338398395,
+        0.9985586167713443,
+        0.9983748518209636,
+        1.0000466614415282,
+        1.0004132371011873
+      ],
+      "cross_level_spread": 0.0030164820188758323,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 769.79,
+      "grid_wavelength_nm": 770.0,
+      "factor_mean_over_levels": 0.9997498467070631,
+      "factor_per_level": [
+        0.9982106724233741,
+        1.0000089076045358,
+        1.0005360911355066,
+        0.999224368114147,
+        1.000769194257752
+      ],
+      "cross_level_spread": 0.0025585218343777694,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 774.79,
+      "grid_wavelength_nm": 775.0,
+      "factor_mean_over_levels": 0.9996573727105454,
+      "factor_per_level": [
+        1.0017798138668623,
+        0.9987447732040553,
+        0.9982000197994476,
+        0.9996755208793277,
+        0.9998867358030349
+      ],
+      "cross_level_spread": 0.00357979406741471,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 779.79,
+      "grid_wavelength_nm": 780.0,
+      "factor_mean_over_levels": 0.999106322247337,
+      "factor_per_level": [
+        0.999341266134625,
+        0.9977491928892445,
+        0.9994708151691989,
+        1.0005889387631597,
+        0.9983813982804568
+      ],
+      "cross_level_spread": 0.0028397458739152226,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 784.78,
+      "grid_wavelength_nm": 785.0,
+      "factor_mean_over_levels": 1.0003006330101796,
+      "factor_per_level": [
+        1.001949849382673,
+        0.9990459417114829,
+        0.9987776471563418,
+        1.0015325187896236,
+        1.0001972080107768
+      ],
+      "cross_level_spread": 0.0031722022263313,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 789.78,
+      "grid_wavelength_nm": 790.0,
+      "factor_mean_over_levels": 0.9999210667036543,
+      "factor_per_level": [
+        0.9984409346473075,
+        1.0001711389958836,
+        1.0018591530311418,
+        1.0008116850612845,
+        0.9983224217826536
+      ],
+      "cross_level_spread": 0.0035367312484881896,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 794.78,
+      "grid_wavelength_nm": 795.0,
+      "factor_mean_over_levels": 1.000861422742823,
+      "factor_per_level": [
+        0.9985271999322565,
+        1.0019931424351365,
+        1.0001246704715347,
+        1.0019222024673295,
+        1.0017398984078578
+      ],
+      "cross_level_spread": 0.003465942502880015,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 799.78,
+      "grid_wavelength_nm": 800.0,
+      "factor_mean_over_levels": 1.000872570624507,
+      "factor_per_level": [
+        1.0021735301822305,
+        0.9994232555449396,
+        1.0018380683500094,
+        0.9990445652963862,
+        1.0018834337489682
+      ],
+      "cross_level_spread": 0.003128964885844354,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 804.78,
+      "grid_wavelength_nm": 805.0,
+      "factor_mean_over_levels": 1.0000948089509938,
+      "factor_per_level": [
+        1.0006314654285269,
+        1.0006638225519942,
+        1.0003526197333372,
+        0.9979981959328026,
+        1.0008279411083087
+      ],
+      "cross_level_spread": 0.0028297451755061598,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 809.78,
+      "grid_wavelength_nm": 810.0,
+      "factor_mean_over_levels": 0.9999457102422447,
+      "factor_per_level": [
+        1.0002176696188323,
+        1.0000079678615375,
+        0.9986327656629694,
+        1.0018548937193743,
+        0.9990152543485107
+      ],
+      "cross_level_spread": 0.0032221280564048715,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 814.78,
+      "grid_wavelength_nm": 815.0,
+      "factor_mean_over_levels": 0.999294866256243,
+      "factor_per_level": [
+        1.0012525838942272,
+        0.998130145184589,
+        1.0000756172578196,
+        0.9983639700471456,
+        0.9986520148974337
+      ],
+      "cross_level_spread": 0.003122438709638242,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 819.77,
+      "grid_wavelength_nm": 820.0,
+      "factor_mean_over_levels": 1.0005452306024867,
+      "factor_per_level": [
+        0.9999839860558088,
+        1.0011809450157827,
+        0.9995485442836809,
+        1.002071288225309,
+        0.9999413894318523
+      ],
+      "cross_level_spread": 0.002522743941628214,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 824.77,
+      "grid_wavelength_nm": 825.0,
+      "factor_mean_over_levels": 0.9999024545652965,
+      "factor_per_level": [
+        0.9983863510039074,
+        0.9978900452565251,
+        1.0018867249187065,
+        1.000564647358688,
+        1.0007845042886554
+      ],
+      "cross_level_spread": 0.003996679662181313,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 829.77,
+      "grid_wavelength_nm": 830.0,
+      "factor_mean_over_levels": 0.9986232029065523,
+      "factor_per_level": [
+        0.9983591966046957,
+        0.9976863409471337,
+        1.000008596430126,
+        0.9981194298615674,
+        0.9989424506892388
+      ],
+      "cross_level_spread": 0.0023222554829922526,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 834.77,
+      "grid_wavelength_nm": 835.0,
+      "factor_mean_over_levels": 0.9999565632313363,
+      "factor_per_level": [
+        0.9990382629136837,
+        1.0010258951508098,
+        1.0019403830827494,
+        0.998760616744223,
+        0.9990176582652159
+      ],
+      "cross_level_spread": 0.0031797663385263464,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 839.77,
+      "grid_wavelength_nm": 840.0,
+      "factor_mean_over_levels": 1.0000083608556163,
+      "factor_per_level": [
+        0.9998197748094357,
+        0.9977731577749152,
+        1.000043344614242,
+        1.0004983843668631,
+        1.001907142712626
+      ],
+      "cross_level_spread": 0.004133984937710888,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 844.77,
+      "grid_wavelength_nm": 845.0,
+      "factor_mean_over_levels": 0.9994722910990289,
+      "factor_per_level": [
+        0.9980333599704098,
+        0.9993114865417019,
+        0.9988180705580316,
+        0.9994999675919244,
+        1.0016985708330763
+      ],
+      "cross_level_spread": 0.003665210862666579,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    },
+    {
+      "wavelength_nm": 849.77,
+      "grid_wavelength_nm": 845.0,
+      "factor_mean_over_levels": 0.977343462421071,
+      "factor_per_level": [
+        0.9800561175143335,
+        0.9785494082237001,
+        0.9754819073276525,
+        0.9753299391826966,
+        0.9772999398569719
+      ],
+      "cross_level_spread": 0.00472617833163691,
+      "grid_bin_width_central": 5.0,
+      "model_5_over_width": 1.0
+    }
+  ],
+  "provenance": {
+    "script": "/data/user/conversations/conv-b109a95b-77c2-4866-9c87-234d668cd900/project/output/verification/D4_verify.py",
+    "reproduce_command": "python3 /data/user/conversations/conv-b109a95b-77c2-4866-9c87-234d668cd900/project/output/verification/D4_verify.py",
+    "inputs": [
+      "/data/user/conversations/conv-b109a95b-77c2-4866-9c87-234d668cd900/project/data/photon_flux_grid.tsv",
+      "/data/user/conversations/conv-b109a95b-77c2-4866-9c87-234d668cd900/project/data/normalized_spectral_response.tsv"
+    ],
+    "independent_of_other_worker_artifacts": true,
+    "no_scipy_used": true,
+    "packages": [
+      "numpy",
+      "pandas",
+      "json"
+    ]
+  }
+}

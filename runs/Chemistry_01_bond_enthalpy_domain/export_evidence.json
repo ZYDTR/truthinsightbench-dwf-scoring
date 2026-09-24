@@ -1,0 +1,21 @@
+{
+  "task_id": "Chemistry_01_bond_enthalpy_domain",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260919T162646-25e56d",
+  "source_run_json_sha256": "8c0c60e7e90a254b29c401169030f97aecdcd5e525fbb371d5be244fc0065b41",
+  "source_release_json_sha256": "7867dd0d7cd9447155de1f5c1df83a88aa5d121c03042e313acfe52f23781ba0",
+  "source_latest_validation_sha256": "0fe3cbd3ea56722170bfcc59f555c5b687b1fe30c05a6f84795e1c61c4c4bb58",
+  "source_snapshot_manifest_sha256": "46334bf371583d858575fbcb101d3f1ff9a77ce7c209f27ed31c0141dadcccac",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 1335
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "264b790fb1723f7142cc6fa032cb444d8049d0aa1e294b9fa923b87fa783a053",
+  "output_sha256": "d9beadb4ba5b856b505aafd149aa67100b3012f46220d364edd983037ae34878"
+}

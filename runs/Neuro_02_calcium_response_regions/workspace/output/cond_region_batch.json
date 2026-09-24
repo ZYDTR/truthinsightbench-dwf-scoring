@@ -1,0 +1,92 @@
+{
+  "mean_amplitude_dff0": {
+    "formula": "condition + region + batch",
+    "r2": 0.5201,
+    "n": 819,
+    "terms": {
+      "C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": {
+        "coef": -0.024059,
+        "p": 0.626269
+      },
+      "C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": {
+        "coef": 0.327672,
+        "p": 0.0
+      }
+    }
+  },
+  "mean_time_to_peak_s": {
+    "formula": "condition + region + batch",
+    "r2": 0.2283,
+    "n": 819,
+    "terms": {
+      "C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": {
+        "coef": 12.541107,
+        "p": 0.056762
+      },
+      "C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": {
+        "coef": -38.404397,
+        "p": 0.0
+      }
+    }
+  },
+  "mean_peak_width_s": {
+    "formula": "condition + region + batch",
+    "r2": 0.4441,
+    "n": 819,
+    "terms": {
+      "C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": {
+        "coef": 0.449736,
+        "p": 0.87031
+      },
+      "C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": {
+        "coef": 30.28747,
+        "p": 0.0
+      }
+    }
+  },
+  "mean_peak_prominence_dff0": {
+    "formula": "condition + region + batch",
+    "r2": 0.5058,
+    "n": 819,
+    "terms": {
+      "C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": {
+        "coef": -0.027879,
+        "p": 0.474275
+      },
+      "C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": {
+        "coef": 0.065292,
+        "p": 0.061312
+      }
+    }
+  },
+  "mean_peak_frequency_hz": {
+    "formula": "condition + region + batch",
+    "r2": 0.1617,
+    "n": 819,
+    "terms": {
+      "C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": {
+        "coef": 0.001329,
+        "p": 0.149546
+      },
+      "C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": {
+        "coef": 0.000264,
+        "p": 0.748763
+      }
+    }
+  },
+  "mean_auc_au": {
+    "formula": "condition + region + batch",
+    "r2": 0.4672,
+    "n": 819,
+    "terms": {
+      "C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": {
+        "coef": -3.530964,
+        "p": 0.632862
+      },
+      "C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": {
+        "coef": 85.954468,
+        "p": 0.0
+      }
+    }
+  }
+}

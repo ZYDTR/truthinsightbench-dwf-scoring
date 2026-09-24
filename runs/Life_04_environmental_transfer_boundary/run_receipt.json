@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Life_04_environmental_transfer_boundary",
+  "model": "mixed:bonsai2-27b-pq2+deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "d6b33d116c42df76071bdc0bcf810fa9c81f4c7314d84426c4c8626e4336ea33",
+  "workspace_input_file_count": 10,
+  "workspace_input_bytes": 42967,
+  "output_tree_sha256": "d14200cc8a772e7c41d1b72080b8f3ef791db6dcc18ba4e49ce4e88fc66d09a7",
+  "output_file_count": 24,
+  "output_bytes": 272108
+}

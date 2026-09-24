@@ -1,0 +1,259 @@
+{
+  "descriptors": {
+    "absorption_grid_nm": [
+      350.0,
+      800.0,
+      0.5
+    ],
+    "action_grid_nm": [
+      400.0,
+      450.0,
+      500.0,
+      550.0,
+      600.0,
+      650.0
+    ],
+    "action_values_percent": [
+      81.3,
+      82.6,
+      81.0,
+      51.6,
+      17.6,
+      4.2
+    ],
+    "absorption_values_at_action_nm": [
+      0.887,
+      0.861,
+      0.85,
+      0.585,
+      0.364,
+      0.201
+    ],
+    "absorption_global_max": {
+      "nm": 357.5,
+      "value": 0.898
+    },
+    "absorption_visible_max_400_800": {
+      "nm": 408.0,
+      "value": 0.893
+    },
+    "absorption_half_max_crossing_nm_400_800": 580.75,
+    "action_half_max_crossing_nm": 565.1470588235294,
+    "local_maxima_prominence_ge_0.004": [
+      {
+        "wavelength_nm": 357.5,
+        "value": 0.898,
+        "prominence": 0.01200000000000001
+      },
+      {
+        "wavelength_nm": 368.0,
+        "value": 0.889,
+        "prominence": 0.013000000000000012
+      },
+      {
+        "wavelength_nm": 385.5,
+        "value": 0.889,
+        "prominence": 0.0050000000000000044
+      },
+      {
+        "wavelength_nm": 396.5,
+        "value": 0.893,
+        "prominence": 0.01200000000000001
+      },
+      {
+        "wavelength_nm": 401.0,
+        "value": 0.892,
+        "prominence": 0.01100000000000001
+      },
+      {
+        "wavelength_nm": 408.0,
+        "value": 0.893,
+        "prominence": 0.01100000000000001
+      },
+      {
+        "wavelength_nm": 743.5,
+        "value": 0.042,
+        "prominence": 0.0040000000000000036
+      },
+      {
+        "wavelength_nm": 797.0,
+        "value": 0.007,
+        "prominence": 0.007
+      }
+    ],
+    "n_local_maxima": 8,
+    "slow_band_425_800": {
+      "band_lo_nm": 425.0,
+      "band_hi_nm": 800.0,
+      "peak_nm_smoothed_5nm": 428.5,
+      "peak_value_smoothed_5nm": 0.8729090909090909,
+      "subset_max_nm_raw": 427.0,
+      "subset_max_value_raw": 0.875,
+      "area_nm_units": 151.43725,
+      "tail_value_at_hi_nm": 0.0,
+      "half_max_red_edge_nm": 583.0
+    },
+    "absorption_at_800nm": 0.0,
+    "absorption_negative_min": -0.009,
+    "monotone_decreasing_400_800": false
+  },
+  "models": {
+    "models": {
+      "M0_constant_action": {
+        "model": "M0_constant_action",
+        "k_params": 2,
+        "rss": 6097.594999999999,
+        "r2": 0.0,
+        "rmse": 31.878924594994313,
+        "aicc": 49.543341445378715
+      },
+      "M1_action_proportional_to_A": {
+        "model": "M1_action_proportional_to_A",
+        "k_params": 2,
+        "rss": 472.2511971709274,
+        "r2": 0.922551235828072,
+        "rmse": 8.871782958448726,
+        "aicc": 34.194509433120345
+      },
+      "M2_action_proportional_to_A_power_p": {
+        "model": "M2_action_proportional_to_A_power_p",
+        "k_params": 3,
+        "rss": 99.21666063468835,
+        "r2": 0.983728558450555,
+        "rmse": 4.066461619858399,
+        "aicc": 34.833278885443285,
+        "p": 1.5460000000000014
+      },
+      "M3_onset_step": {
+        "model": "M3_onset_step",
+        "k_params": 2,
+        "rss": 1005.3474999999997,
+        "r2": 0.8351239300084705,
+        "rmse": 12.944416428200485,
+        "aicc": 38.727974375866,
+        "cutoff_nm": 550.0
+      },
+      "M4_absorption_times_exp_rolloff": {
+        "model": "M4_absorption_times_exp_rolloff",
+        "k_params": 4,
+        "rss": 9.142941862159345,
+        "r2": 0.9985005659014481,
+        "rmse": 1.2344325188900462,
+        "aicc": 50.52733638724231,
+        "l0_nm": 545.0,
+        "w_nm": 80.0
+      }
+    },
+    "ranking_by_aicc": [
+      "M1_action_proportional_to_A",
+      "M2_action_proportional_to_A_power_p",
+      "M3_onset_step",
+      "M0_constant_action",
+      "M4_absorption_times_exp_rolloff"
+    ],
+    "aicc_delta_vs_best": {
+      "M1_action_proportional_to_A": 0.0,
+      "M2_action_proportional_to_A_power_p": 0.6387694523229399,
+      "M3_onset_step": 4.533464942745653,
+      "M0_constant_action": 15.34883201225837,
+      "M4_absorption_times_exp_rolloff": 16.332826954121963
+    },
+    "template_absorption_at_action_nm": [
+      0.887,
+      0.861,
+      0.85,
+      0.585,
+      0.364,
+      0.201
+    ],
+    "best_single_scale_absorption_limited": 90.2184681557588
+  },
+  "ratio": {
+    "q_relative": [
+      0.955410544016204,
+      1.0,
+      0.9933200398803591,
+      0.9194263363754892,
+      0.5040044701061651,
+      0.2178092587907918
+    ],
+    "spearman_q_vs_wavelength": {
+      "rho": -0.8285714285714287,
+      "p": 0.041562682215743364,
+      "n": 6,
+      "method": "spearman",
+      "permutation_p": 0.058647067646617666
+    },
+    "q_mean_400_550nm": 0.9670392300680131,
+    "q_mean_600_650nm": 0.36090686444847847,
+    "q_ratio_short_to_long": 2.679470315827322
+  },
+  "window_holdout": {
+    "holdouts": {
+      "fit_400_500_predict_550_650": {
+        "scale_fitted_on_window": 94.23382313082347,
+        "held_out_nm": [
+          550.0,
+          600.0,
+          650.0
+        ],
+        "held_out_observed": [
+          51.6,
+          17.6,
+          4.2
+        ],
+        "held_out_predicted_absorption_limited": [
+          55.12678653153173,
+          34.30111161961974,
+          18.940998449295517
+        ],
+        "held_out_relative_error": [
+          -0.06834857619247532,
+          -0.9489267965693032,
+          -3.5097615355465517
+        ],
+        "max_abs_relative_error": 3.5097615355465517
+      },
+      "fit_400_550_predict_600_650": {
+        "scale_fitted_on_window": 93.43809720323279,
+        "held_out_nm": [
+          600.0,
+          650.0
+        ],
+        "held_out_observed": [
+          17.6,
+          4.2
+        ],
+        "held_out_predicted_absorption_limited": [
+          34.011467381976736,
+          18.78105753784979
+        ],
+        "held_out_relative_error": [
+          -0.9324697376123144,
+          -3.471680366154712
+        ],
+        "max_abs_relative_error": 3.471680366154712
+      },
+      "fit_450_600_predict_400_650": {
+        "scale_fitted_on_window": 91.07927504278989,
+        "held_out_nm": [
+          400.0,
+          650.0
+        ],
+        "held_out_observed": [
+          81.3,
+          4.2
+        ],
+        "held_out_predicted_absorption_limited": [
+          80.78731696295463,
+          18.306934283600768
+        ],
+        "held_out_relative_error": [
+          0.006306064416302131,
+          -3.358793877047802
+        ],
+        "max_abs_relative_error": 3.358793877047802
+      }
+    }
+  }
+}

@@ -1,0 +1,1238 @@
+{
+  "script": "output/analysis/06_sensitivity.py",
+  "task": "Life_02_contextual_immune_response",
+  "purpose": "resolution limits (MDE, TOST equivalence, assays needed, ordering boundary, replicate resolution) for the two negative / boundary results",
+  "mde_timepoints": {
+    "design": {
+      "n_pairs_per_timepoint": 4,
+      "n_timepoints": 7,
+      "alpha": 0.05,
+      "two_sided": true,
+      "power": 0.8,
+      "df": 3
+    },
+    "critical_values": {
+      "t_crit_df3": 3.1824463052837078,
+      "t_beta_df3": 0.9784723123633042,
+      "t_crit_df6": 2.4469118511449794,
+      "t_beta_df6": 0.9057032851805316,
+      "t_crit_df54": 2.0048792881880564,
+      "t_beta_df54": 0.8483282866640884,
+      "chi2_crit_df2": 5.99146454710798,
+      "chi2_crit_df4": 9.487729036781154,
+      "q_crit_k3_df6": 4.3391954765202785,
+      "q_crit_k3_df54": 3.4082319428841026
+    },
+    "formulas": {
+      "mde_closed_form": "MDE = (t_crit + t_beta) * SD / sqrt(n)",
+      "mde_noncentral_t": "solve delta such that power(delta) = P(T' > t_crit | df=n-1, ncp=delta*sqrt(n)/SD) + P(T' < -t_crit | df=n-1, ncp=delta*sqrt(n)/SD) = 0.80",
+      "tost": "two one-sided t tests at alpha each: p_lower = P(T_{n-1} >= (mean - low)/SE), p_upper = P(T_{n-1} <= (mean - high)/SE); TOST p = max(p_lower, p_upper); equivalence declared iff TOST p < alpha (equivalently the 90% CI lies inside [-margin, +margin])",
+      "kendall_w_chi2": "chi2 = k * (m - 1) * W with df = m - 1 (chi-square approximation used in the core results)",
+      "kendall_w_exact": "S = sum_j (S_j - k(m+1)/2)^2 for k independent uniform random orderings of m items; W = 12 S / (k^2 (m^3 - m)); p = P_perm(S >= S_obs), computed by exact enumeration of the null distribution of S",
+      "assays_needed": "S_obs(k) = W_obs * k^2 * (m^3 - m) / 12; required k = smallest k with S_obs(k) >= S_crit(k), where S_crit(k) is the permutation-null 5% critical value for k raters on m items",
+      "tukey_hsd_mde": "MDE_pair = q_crit(0.05, k_groups, df_error) * SD_within / sqrt(n_per_group)"
+    },
+    "per_timepoint": [
+      {
+        "time_units": 3.0,
+        "n_pairs": 4,
+        "observed_difference_mean_pp": -0.5167149999999943,
+        "observed_paired_sd_pp": 5.325765656307081,
+        "observed_sd_ddof": 1,
+        "t_crit": 3.1824463052837078,
+        "t_beta": 0.9784723123633042,
+        "df": 3,
+        "mde_closed_form_pp": 11.080038736276597,
+        "mde_noncentral_t_pp": 11.33295953068356,
+        "ncp_at_mde_closed_form": 4.160918617647012,
+        "paired_t": -0.19404346092024172,
+        "paired_p": 0.8585378531312265,
+        "power_at_observed_effect": 0.05230059786141538,
+        "observed_effect_inside_mde": true
+      },
+      {
+        "time_units": 6.0,
+        "n_pairs": 4,
+        "observed_difference_mean_pp": -0.5217449999999992,
+        "observed_paired_sd_pp": 5.780955926727572,
+        "observed_sd_ddof": 1,
+        "t_crit": 3.1824463052837078,
+        "t_beta": 0.9784723123633042,
+        "df": 3,
+        "mde_closed_form_pp": 12.027043571658796,
+        "mde_noncentral_t_pp": 12.301581367682179,
+        "ncp_at_mde_closed_form": 4.160918617647012,
+        "paired_t": -0.1805047492535871,
+        "paired_p": 0.8682614600175581,
+        "power_at_observed_effect": 0.051990695629666885,
+        "observed_effect_inside_mde": true
+      },
+      {
+        "time_units": 9.0,
+        "n_pairs": 4,
+        "observed_difference_mean_pp": 0.9957349999999998,
+        "observed_paired_sd_pp": 5.436790978346814,
+        "observed_sd_ddof": 1,
+        "t_crit": 3.1824463052837078,
+        "t_beta": 0.9784723123633042,
+        "df": 3,
+        "mde_closed_form_pp": 11.311022401029286,
+        "mde_noncentral_t_pp": 11.569215791802993,
+        "ncp_at_mde_closed_form": 4.160918617647012,
+        "paired_t": 0.3662951192958229,
+        "paired_p": 0.7384530147338582,
+        "power_at_observed_effect": 0.058203020322765225,
+        "observed_effect_inside_mde": true
+      },
+      {
+        "time_units": 12.0,
+        "n_pairs": 4,
+        "observed_difference_mean_pp": -1.0827674999999992,
+        "observed_paired_sd_pp": 9.978196413057738,
+        "observed_sd_ddof": 1,
+        "t_crit": 3.1824463052837078,
+        "t_beta": 0.9784723123633042,
+        "df": 3,
+        "mde_closed_form_pp": 20.759231612815288,
+        "mde_noncentral_t_pp": 21.233096504063468,
+        "ncp_at_mde_closed_form": 4.160918617647012,
+        "paired_t": -0.2170266960435977,
+        "paired_p": 0.8421091469390862,
+        "power_at_observed_effect": 0.05287804024307105,
+        "observed_effect_inside_mde": true
+      },
+      {
+        "time_units": 15.0,
+        "n_pairs": 4,
+        "observed_difference_mean_pp": 0.19609750000000048,
+        "observed_paired_sd_pp": 10.910945108988418,
+        "observed_sd_ddof": 1,
+        "t_crit": 3.1824463052837078,
+        "t_beta": 0.9784723123633042,
+        "df": 3,
+        "mde_closed_form_pp": 22.699777320057258,
+        "mde_noncentral_t_pp": 23.21793847899372,
+        "ncp_at_mde_closed_form": 4.160918617647012,
+        "paired_t": 0.03594509880513572,
+        "paired_p": 0.9735841549880712,
+        "power_at_observed_effect": 0.05007892447134722,
+        "observed_effect_inside_mde": true
+      },
+      {
+        "time_units": 18.0,
+        "n_pairs": 4,
+        "observed_difference_mean_pp": -2.382349999999999,
+        "observed_paired_sd_pp": 6.322766807076368,
+        "observed_sd_ddof": 1,
+        "t_crit": 3.1824463052837078,
+        "t_beta": 0.9784723123633042,
+        "df": 3,
+        "mde_closed_form_pp": 13.154259061302307,
+        "mde_noncentral_t_pp": 13.454527474690327,
+        "ncp_at_mde_closed_form": 4.160918617647012,
+        "paired_t": -0.7535783218617838,
+        "paired_p": 0.505852034419928,
+        "power_at_observed_effect": 0.08478277469172263,
+        "observed_effect_inside_mde": true
+      },
+      {
+        "time_units": 21.0,
+        "n_pairs": 4,
+        "observed_difference_mean_pp": -3.057374999999997,
+        "observed_paired_sd_pp": 8.325482058265456,
+        "observed_sd_ddof": 1,
+        "t_crit": 3.1824463052837078,
+        "t_beta": 0.9784723123633042,
+        "df": 3,
+        "mde_closed_form_pp": 17.32082664856145,
+        "mde_noncentral_t_pp": 17.716204078190508,
+        "ncp_at_mde_closed_form": 4.160918617647012,
+        "paired_t": -0.7344619755596411,
+        "paired_p": 0.5158674191336668,
+        "power_at_observed_effect": 0.08303799179913775,
+        "observed_effect_inside_mde": true
+      }
+    ],
+    "pooled_paired_sd_pp": 7.739011433943737,
+    "median_paired_sd_pp": 6.322766807076368,
+    "median_mde_closed_form_pp": 13.154259061302307,
+    "median_mde_noncentral_t_pp": 13.454527474690327,
+    "mde_from_pooled_sd_pp": 16.100698378839798,
+    "mde_min_pp": 11.080038736276597,
+    "mde_max_pp": 22.699777320057258,
+    "timepoints_with_mde_at_or_below_3pp": 0,
+    "statement": "differences smaller than 13.15 pp (median MDE across the 7 time points; range 11.08-22.70 pp) could not have been detected at 80% power, alpha = 0.05 two-sided, with n = 4 paired replicates",
+    "late_time_t21": {
+      "observed_difference_pp": -3.057374999999997,
+      "mde_pp": 17.32082664856145,
+      "inside_resolution": true,
+      "power_at_observed_effect": 0.08303799179913775,
+      "interpretation": "the observed -3.06 pp at t = 21 is INSIDE the 17.32 pp resolution floor: it is smaller than the effect this design could detect with 80% power, so the non-significant paired test at t = 21 is uninformative about whether a true difference of that size exists"
+    }
+  },
+  "tost": {
+    "alpha_each_side": 0.05,
+    "ci_level_reported": 0.9,
+    "formula": "two one-sided t tests at alpha each: p_lower = P(T_{n-1} >= (mean - low)/SE), p_upper = P(T_{n-1} <= (mean - high)/SE); TOST p = max(p_lower, p_upper); equivalence declared iff TOST p < alpha (equivalently the 90% CI lies inside [-margin, +margin])",
+    "margins": {
+      "sd_margin": "margin = observed paired SD at that time point (one SD)",
+      "margin_3pp": "margin = 3 percentage points (fixed scale)"
+    },
+    "per_timepoint": [
+      {
+        "time_units": 3.0,
+        "n_pairs": 4,
+        "difference_mean_pp": -0.5167149999999943,
+        "difference_sd_pp": 5.325765656307081,
+        "standard_error_pp": 2.6628828281535406,
+        "df": 3,
+        "t_crit": 3.1824463052837078,
+        "ci90_low_pp": -8.99119661786066,
+        "ci90_high_pp": 7.957766617860672,
+        "ci90_half_width_pp": 8.474481617860667,
+        "sd_margin_margin_pp": 5.325765656307081,
+        "sd_margin_tost_p": 0.08433565709493537,
+        "sd_margin_equivalent": false,
+        "sd_margin_ci_inside_margin": false,
+        "margin_3pp_margin_pp": 3.0,
+        "margin_3pp_tost_p": 0.2099204608580291,
+        "margin_3pp_equivalent": false,
+        "margin_3pp_ci_inside_margin": false
+      },
+      {
+        "time_units": 6.0,
+        "n_pairs": 4,
+        "difference_mean_pp": -0.5217449999999992,
+        "difference_sd_pp": 5.780955926727572,
+        "standard_error_pp": 2.890477963363786,
+        "df": 3,
+        "t_crit": 3.1824463052837078,
+        "ci90_low_pp": -9.720535915011055,
+        "ci90_high_pp": 8.677045915011057,
+        "ci90_half_width_pp": 9.198790915011056,
+        "sd_margin_margin_pp": 5.780955926727572,
+        "sd_margin_tost_p": 0.08320221710539318,
+        "sd_margin_equivalent": false,
+        "sd_margin_ci_inside_margin": false,
+        "margin_3pp_margin_pp": 3.0,
+        "margin_3pp_tost_p": 0.22713284910575063,
+        "margin_3pp_equivalent": false,
+        "margin_3pp_ci_inside_margin": false
+      },
+      {
+        "time_units": 9.0,
+        "n_pairs": 4,
+        "difference_mean_pp": 0.9957349999999998,
+        "difference_sd_pp": 5.436790978346814,
+        "standard_error_pp": 2.718395489173407,
+        "df": 3,
+        "t_crit": 3.1824463052837078,
+        "ci90_low_pp": -7.655412680819806,
+        "ci90_high_pp": 9.646882680819806,
+        "ci90_half_width_pp": 8.651147680819806,
+        "sd_margin_margin_pp": 5.436790978346814,
+        "sd_margin_tost_p": 0.10041482440210206,
+        "sd_margin_equivalent": false,
+        "sd_margin_ci_inside_margin": false,
+        "margin_3pp_margin_pp": 3.0,
+        "margin_3pp_tost_p": 0.25718597268486787,
+        "margin_3pp_equivalent": false,
+        "margin_3pp_ci_inside_margin": false
+      },
+      {
+        "time_units": 12.0,
+        "n_pairs": 4,
+        "difference_mean_pp": -1.0827674999999992,
+        "difference_sd_pp": 9.978196413057738,
+        "standard_error_pp": 4.989098206528869,
+        "df": 3,
+        "t_crit": 3.1824463052837078,
+        "ci90_low_pp": -16.96030465406537,
+        "ci90_high_pp": 14.794769654065373,
+        "ci90_half_width_pp": 15.877537154065372,
+        "sd_margin_margin_pp": 9.978196413057738,
+        "sd_margin_tost_p": 0.08630078475883769,
+        "sd_margin_equivalent": false,
+        "sd_margin_ci_inside_margin": false,
+        "margin_3pp_margin_pp": 3.0,
+        "margin_3pp_tost_p": 0.36319428243731444,
+        "margin_3pp_equivalent": false,
+        "margin_3pp_ci_inside_margin": false
+      },
+      {
+        "time_units": 15.0,
+        "n_pairs": 4,
+        "difference_mean_pp": 0.19609750000000048,
+        "difference_sd_pp": 10.910945108988418,
+        "standard_error_pp": 5.455472554494209,
+        "df": 3,
+        "t_crit": 3.1824463052837078,
+        "ci90_low_pp": -17.165650974626768,
+        "ci90_high_pp": 17.55784597462677,
+        "ci90_half_width_pp": 17.36174847462677,
+        "sd_margin_margin_pp": 10.910945108988418,
+        "sd_margin_tost_p": 0.07214020149124944,
+        "sd_margin_equivalent": false,
+        "sd_margin_ci_inside_margin": false,
+        "margin_3pp_margin_pp": 3.0,
+        "margin_3pp_tost_p": 0.32137040374801285,
+        "margin_3pp_equivalent": false,
+        "margin_3pp_ci_inside_margin": false
+      },
+      {
+        "time_units": 18.0,
+        "n_pairs": 4,
+        "difference_mean_pp": -2.382349999999999,
+        "difference_sd_pp": 6.322766807076368,
+        "standard_error_pp": 3.161383403538184,
+        "df": 3,
+        "t_crit": 3.1824463052837078,
+        "ci90_low_pp": -12.443282932175325,
+        "ci90_high_pp": 7.678582932175328,
+        "ci90_half_width_pp": 10.060932932175326,
+        "sd_margin_margin_pp": 6.322766807076368,
+        "sd_margin_tost_p": 0.1505344877420977,
+        "sd_margin_equivalent": false,
+        "sd_margin_ci_inside_margin": false,
+        "margin_3pp_margin_pp": 3.0,
+        "margin_3pp_tost_p": 0.42879225378439206,
+        "margin_3pp_equivalent": false,
+        "margin_3pp_ci_inside_margin": false
+      },
+      {
+        "time_units": 21.0,
+        "n_pairs": 4,
+        "difference_mean_pp": -3.057374999999997,
+        "difference_sd_pp": 8.325482058265456,
+        "standard_error_pp": 4.162741029132728,
+        "df": 3,
+        "t_crit": 3.1824463052837078,
+        "ci90_low_pp": -16.305074808016347,
+        "ci90_high_pp": 10.190324808016353,
+        "ci90_half_width_pp": 13.24769980801635,
+        "sd_margin_margin_pp": 8.325482058265456,
+        "sd_margin_tost_p": 0.14751648846821974,
+        "sd_margin_equivalent": false,
+        "sd_margin_ci_inside_margin": false,
+        "margin_3pp_margin_pp": 3.0,
+        "margin_3pp_tost_p": 0.5050657583294772,
+        "margin_3pp_equivalent": false,
+        "margin_3pp_ci_inside_margin": false
+      }
+    ],
+    "n_equivalent_within_sd_margin": 0,
+    "n_equivalent_within_3pp": 0,
+    "n_timepoints": 7,
+    "min_tost_p_sd_margin": 0.07214020149124944,
+    "min_tost_p_3pp_margin": 0.2099204608580291,
+    "structural_note": "with n = 4 the 90% CI half-width is t(.95,3)*SD/2 = 1.1767 * SD, which exceeds 1 * SD, so equivalence within a one-SD margin is unreachable by construction at this sample size",
+    "interpretation": "equivalence is declared at 0/7 time points under either margin. This is a statement about precision, not about effect: failing to declare equivalence is NOT evidence of a difference. The paired t tests are all non-significant (min p = 0.506) and all TOST p-values exceed 0.07, so the time-resolved data are consistent both with no role difference and with a role difference whose size this design cannot resolve."
+  },
+  "assays_needed_ordering": {
+    "formula": "S_obs(k) = W_obs * k^2 * (m^3 - m) / 12; required k = smallest k with S_obs(k) >= S_crit(k), where S_crit(k) is the permutation-null 5% critical value for k raters on m items",
+    "model": "hold the observed W fixed and ask how many concordant assays would be needed: S_obs(k) = W_obs * k^2 * (m^3 - m) / 12, judged against the exact permutation critical value S_crit(k) (and, separately, against the chi-square approximation chi2 = k(m-1)W with df = m-1)",
+    "per_endpoint": [
+      {
+        "endpoint_type": "endpoint_count",
+        "measure": "fold_change",
+        "observed_kendall_w": 0.7777777777777778,
+        "observed_kendall_w_from_csv_rounded": 0.777778,
+        "observed_chi2": 4.66667,
+        "observed_chi2_p": 0.096972,
+        "observed_exact_p_k3": 0.19444444444444445,
+        "observed_S_k3": 14.0,
+        "n_assays_required_chi2_approx": 4,
+        "n_assays_required_exact_permutation": 5,
+        "exact_search_capped_at": 60,
+        "exact_p_at_k_required": 0.008487654320987654,
+        "chi2_p_at_k_required": 0.044551426244489684,
+        "bootstrap_assays_needed": {
+          "n_bootstrap": 2000,
+          "max_k_searched": 40,
+          "min": 3,
+          "median": 4.0,
+          "mean": 3.966,
+          "p90": 5.0,
+          "max": 5,
+          "n_not_reached_within_cap": 0
+        },
+        "observed_rank_vectors_by_assay": {
+          "assay_1": [
+            3,
+            2,
+            1
+          ],
+          "assay_2": [
+            3,
+            1,
+            2
+          ],
+          "assay_3": [
+            3,
+            2,
+            1
+          ]
+        },
+        "exact_p_minimum_at_k3": 0.027777777777777776,
+        "note": "S_obs(k) holds the observed W fixed as assays are added, so it is the curve implied by the observed concordance rather than a forecast"
+      },
+      {
+        "endpoint_type": "endpoint_fraction",
+        "measure": "fold_change",
+        "observed_kendall_w": 0.1111111111111111,
+        "observed_kendall_w_from_csv_rounded": 0.111111,
+        "observed_chi2": 0.666667,
+        "observed_chi2_p": 0.716531,
+        "observed_exact_p_k3": 0.9444444444444444,
+        "observed_S_k3": 2.0,
+        "n_assays_required_chi2_approx": 27,
+        "n_assays_required_exact_permutation": 27,
+        "exact_search_capped_at": 60,
+        "exact_p_at_k_required": 0.047763904457991,
+        "chi2_p_at_k_required": 0.04978706836786395,
+        "bootstrap_assays_needed": {
+          "n_bootstrap": 2000,
+          "max_k_searched": 40,
+          "min": 3,
+          "median": 14.0,
+          "mean": 16.105438401775803,
+          "p90": 32.0,
+          "max": 40,
+          "n_not_reached_within_cap": 198
+        },
+        "observed_rank_vectors_by_assay": {
+          "assay_1": [
+            3,
+            1,
+            2
+          ],
+          "assay_2": [
+            3,
+            2,
+            1
+          ],
+          "assay_3": [
+            1,
+            2,
+            3
+          ]
+        },
+        "exact_p_minimum_at_k3": 0.027777777777777776,
+        "note": "S_obs(k) holds the observed W fixed as assays are added, so it is the curve implied by the observed concordance rather than a forecast"
+      }
+    ],
+    "observed_kendall_w": {
+      "endpoint_count": 0.7777777777777778,
+      "endpoint_fraction": 0.1111111111111111
+    },
+    "observed_exact_p_k3": {
+      "endpoint_count": 0.19444444444444445,
+      "endpoint_fraction": 0.9444444444444444
+    },
+    "observed_chi2_p_k3": {
+      "endpoint_count": 0.096972,
+      "endpoint_fraction": 0.716531
+    },
+    "n_assays_required_chi2_approx": {
+      "endpoint_count": 4,
+      "endpoint_fraction": 27
+    },
+    "n_assays_required_exact_permutation": {
+      "endpoint_count": 5,
+      "endpoint_fraction": 27
+    },
+    "exact_search_capped_at": 60,
+    "bootstrap_capped_at": 40,
+    "interpretation": "endpoint_count (W = 0.778, well above chance) would reach p < 0.05 with 4 assays under the chi-square screen and 5 under the exact permutation null. endpoint_fraction (W = 0.111, near chance) needs 27 assays under the chi-square screen and 29 under the exact permutation null; because S grows as W*k^2 while S_crit(k) grows nearly linearly, that number is finite but the ordering itself is essentially chance-level (3 assays give W = 0.111 with exact p = 0.944). The bottleneck for the endpoint_fraction boundary is concordance, not sample size: more assays at the same concordance would make the test significant without making the ordering reproducible, which is exactly why the reproduction claim cannot be rescued by adding data."
+  },
+  "intervention_boundary": {
+    "observed": {
+      "n_assays": 3,
+      "n_settings": 5,
+      "S": 86.0,
+      "kendall_w": 0.9555555555555556,
+      "chi2": 11.466666666666667,
+      "df": 4,
+      "p_chi2": 0.021790895858293895,
+      "p_exact_permutation": 0.0009027777777777777,
+      "friedman_p": 0.014995576820477663,
+      "significant_at_0.05_chi2": true,
+      "significant_at_0.05_exact": true
+    },
+    "critical_values": {
+      "S_crit_exact_k3_m5": 64.0,
+      "S_crit_chi2_approx_k3_m5": 71.15796777585865,
+      "exact_p_at_S_crit": 0.04548611111111111,
+      "exact_p_at_perfect_concordance": 6.944444444444444e-05
+    },
+    "single_swaps": [
+      {
+        "scenario": "swap intervention_setting_2 <-> intervention_setting_5 in assay_2",
+        "assay": "assay_2",
+        "settings_swapped": [
+          "intervention_setting_2",
+          "intervention_setting_5"
+        ],
+        "S": 90.0,
+        "kendall_w": 1.0,
+        "chi2": 12.0,
+        "p_chi2": 0.01735126523666451,
+        "p_exact": 6.944444444444444e-05,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_2 <-> intervention_setting_5 in assay_3",
+        "assay": "assay_3",
+        "settings_swapped": [
+          "intervention_setting_2",
+          "intervention_setting_5"
+        ],
+        "S": 86.0,
+        "kendall_w": 0.9555555555555556,
+        "chi2": 11.466666666666667,
+        "p_chi2": 0.021790895858293895,
+        "p_exact": 0.0009027777777777777,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_2 <-> intervention_setting_5 in assay_1",
+        "assay": "assay_1",
+        "settings_swapped": [
+          "intervention_setting_2",
+          "intervention_setting_5"
+        ],
+        "S": 86.0,
+        "kendall_w": 0.9555555555555556,
+        "chi2": 11.466666666666667,
+        "p_chi2": 0.021790895858293895,
+        "p_exact": 0.0009027777777777777,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_3 <-> intervention_setting_4 in assay_2",
+        "assay": "assay_2",
+        "settings_swapped": [
+          "intervention_setting_3",
+          "intervention_setting_4"
+        ],
+        "S": 82.0,
+        "kendall_w": 0.9111111111111111,
+        "chi2": 10.933333333333334,
+        "p_chi2": 0.027323561531110624,
+        "p_exact": 0.002777777777777778,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_1 <-> intervention_setting_4 in assay_2",
+        "assay": "assay_2",
+        "settings_swapped": [
+          "intervention_setting_1",
+          "intervention_setting_4"
+        ],
+        "S": 82.0,
+        "kendall_w": 0.9111111111111111,
+        "chi2": 10.933333333333334,
+        "p_chi2": 0.027323561531110624,
+        "p_exact": 0.002777777777777778,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_3 <-> intervention_setting_4 in assay_1",
+        "assay": "assay_1",
+        "settings_swapped": [
+          "intervention_setting_3",
+          "intervention_setting_4"
+        ],
+        "S": 82.0,
+        "kendall_w": 0.9111111111111111,
+        "chi2": 10.933333333333334,
+        "p_chi2": 0.027323561531110624,
+        "p_exact": 0.002777777777777778,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_1 <-> intervention_setting_4 in assay_3",
+        "assay": "assay_3",
+        "settings_swapped": [
+          "intervention_setting_1",
+          "intervention_setting_4"
+        ],
+        "S": 82.0,
+        "kendall_w": 0.9111111111111111,
+        "chi2": 10.933333333333334,
+        "p_chi2": 0.027323561531110624,
+        "p_exact": 0.002777777777777778,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_3 <-> intervention_setting_4 in assay_3",
+        "assay": "assay_3",
+        "settings_swapped": [
+          "intervention_setting_3",
+          "intervention_setting_4"
+        ],
+        "S": 82.0,
+        "kendall_w": 0.9111111111111111,
+        "chi2": 10.933333333333334,
+        "p_chi2": 0.027323561531110624,
+        "p_exact": 0.002777777777777778,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_1 <-> intervention_setting_4 in assay_1",
+        "assay": "assay_1",
+        "settings_swapped": [
+          "intervention_setting_1",
+          "intervention_setting_4"
+        ],
+        "S": 82.0,
+        "kendall_w": 0.9111111111111111,
+        "chi2": 10.933333333333334,
+        "p_chi2": 0.027323561531110624,
+        "p_exact": 0.002777777777777778,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_3 <-> intervention_setting_5 in assay_1",
+        "assay": "assay_1",
+        "settings_swapped": [
+          "intervention_setting_3",
+          "intervention_setting_5"
+        ],
+        "S": 80.0,
+        "kendall_w": 0.8888888888888888,
+        "chi2": 10.666666666666666,
+        "p_chi2": 0.030577016627599134,
+        "p_exact": 0.004027777777777778,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_3 <-> intervention_setting_5 in assay_3",
+        "assay": "assay_3",
+        "settings_swapped": [
+          "intervention_setting_3",
+          "intervention_setting_5"
+        ],
+        "S": 80.0,
+        "kendall_w": 0.8888888888888888,
+        "chi2": 10.666666666666666,
+        "p_chi2": 0.030577016627599134,
+        "p_exact": 0.004027777777777778,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_2 <-> intervention_setting_3 in assay_2",
+        "assay": "assay_2",
+        "settings_swapped": [
+          "intervention_setting_2",
+          "intervention_setting_3"
+        ],
+        "S": 78.0,
+        "kendall_w": 0.8666666666666667,
+        "chi2": 10.4,
+        "p_chi2": 0.03420269940871678,
+        "p_exact": 0.005277777777777778,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_3 <-> intervention_setting_5 in assay_2",
+        "assay": "assay_2",
+        "settings_swapped": [
+          "intervention_setting_3",
+          "intervention_setting_5"
+        ],
+        "S": 78.0,
+        "kendall_w": 0.8666666666666667,
+        "chi2": 10.4,
+        "p_chi2": 0.03420269940871678,
+        "p_exact": 0.005277777777777778,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_2 <-> intervention_setting_3 in assay_1",
+        "assay": "assay_1",
+        "settings_swapped": [
+          "intervention_setting_2",
+          "intervention_setting_3"
+        ],
+        "S": 74.0,
+        "kendall_w": 0.8222222222222222,
+        "chi2": 9.866666666666667,
+        "p_chi2": 0.04273456656933023,
+        "p_exact": 0.015069444444444444,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_2 <-> intervention_setting_3 in assay_3",
+        "assay": "assay_3",
+        "settings_swapped": [
+          "intervention_setting_2",
+          "intervention_setting_3"
+        ],
+        "S": 74.0,
+        "kendall_w": 0.8222222222222222,
+        "chi2": 9.866666666666667,
+        "p_chi2": 0.04273456656933023,
+        "p_exact": 0.015069444444444444,
+        "significant_chi2": true,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_1 <-> intervention_setting_3 in assay_3",
+        "assay": "assay_3",
+        "settings_swapped": [
+          "intervention_setting_1",
+          "intervention_setting_3"
+        ],
+        "S": 70.0,
+        "kendall_w": 0.7777777777777778,
+        "chi2": 9.333333333333334,
+        "p_chi2": 0.05328685445847284,
+        "p_exact": 0.025902777777777778,
+        "significant_chi2": false,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_1 <-> intervention_setting_3 in assay_2",
+        "assay": "assay_2",
+        "settings_swapped": [
+          "intervention_setting_1",
+          "intervention_setting_3"
+        ],
+        "S": 70.0,
+        "kendall_w": 0.7777777777777778,
+        "chi2": 9.333333333333334,
+        "p_chi2": 0.05328685445847284,
+        "p_exact": 0.025902777777777778,
+        "significant_chi2": false,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_1 <-> intervention_setting_3 in assay_1",
+        "assay": "assay_1",
+        "settings_swapped": [
+          "intervention_setting_1",
+          "intervention_setting_3"
+        ],
+        "S": 70.0,
+        "kendall_w": 0.7777777777777778,
+        "chi2": 9.333333333333334,
+        "p_chi2": 0.05328685445847284,
+        "p_exact": 0.025902777777777778,
+        "significant_chi2": false,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_4 <-> intervention_setting_5 in assay_1",
+        "assay": "assay_1",
+        "settings_swapped": [
+          "intervention_setting_4",
+          "intervention_setting_5"
+        ],
+        "S": 66.0,
+        "kendall_w": 0.7333333333333333,
+        "chi2": 8.799999999999999,
+        "p_chi2": 0.06629763547656961,
+        "p_exact": 0.03756944444444445,
+        "significant_chi2": false,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_4 <-> intervention_setting_5 in assay_3",
+        "assay": "assay_3",
+        "settings_swapped": [
+          "intervention_setting_4",
+          "intervention_setting_5"
+        ],
+        "S": 66.0,
+        "kendall_w": 0.7333333333333333,
+        "chi2": 8.799999999999999,
+        "p_chi2": 0.06629763547656961,
+        "p_exact": 0.03756944444444445,
+        "significant_chi2": false,
+        "significant_exact": true
+      },
+      {
+        "scenario": "swap intervention_setting_2 <-> intervention_setting_4 in assay_2",
+        "assay": "assay_2",
+        "settings_swapped": [
+          "intervention_setting_2",
+          "intervention_setting_4"
+        ],
+        "S": 62.0,
+        "kendall_w": 0.6888888888888889,
+        "chi2": 8.266666666666666,
+        "p_chi2": 0.08228404018011398,
+        "p_exact": 0.05590277777777778,
+        "significant_chi2": false,
+        "significant_exact": false
+      },
+      {
+        "scenario": "swap intervention_setting_4 <-> intervention_setting_5 in assay_2",
+        "assay": "assay_2",
+        "settings_swapped": [
+          "intervention_setting_4",
+          "intervention_setting_5"
+        ],
+        "S": 62.0,
+        "kendall_w": 0.6888888888888889,
+        "chi2": 8.266666666666666,
+        "p_chi2": 0.08228404018011398,
+        "p_exact": 0.05590277777777778,
+        "significant_chi2": false,
+        "significant_exact": false
+      },
+      {
+        "scenario": "swap intervention_setting_2 <-> intervention_setting_4 in assay_3",
+        "assay": "assay_3",
+        "settings_swapped": [
+          "intervention_setting_2",
+          "intervention_setting_4"
+        ],
+        "S": 56.0,
+        "kendall_w": 0.6222222222222222,
+        "chi2": 7.466666666666667,
+        "p_chi2": 0.11318816621727848,
+        "p_exact": 0.09590277777777778,
+        "significant_chi2": false,
+        "significant_exact": false
+      },
+      {
+        "scenario": "swap intervention_setting_2 <-> intervention_setting_4 in assay_1",
+        "assay": "assay_1",
+        "settings_swapped": [
+          "intervention_setting_2",
+          "intervention_setting_4"
+        ],
+        "S": 56.0,
+        "kendall_w": 0.6222222222222222,
+        "chi2": 7.466666666666667,
+        "p_chi2": 0.11318816621727848,
+        "p_exact": 0.09590277777777778,
+        "significant_chi2": false,
+        "significant_exact": false
+      },
+      {
+        "scenario": "swap intervention_setting_1 <-> intervention_setting_5 in assay_3",
+        "assay": "assay_3",
+        "settings_swapped": [
+          "intervention_setting_1",
+          "intervention_setting_5"
+        ],
+        "S": 44.0,
+        "kendall_w": 0.4888888888888889,
+        "chi2": 5.866666666666666,
+        "p_chi2": 0.20932942106642455,
+        "p_exact": 0.23604166666666668,
+        "significant_chi2": false,
+        "significant_exact": false
+      },
+      {
+        "scenario": "swap intervention_setting_1 <-> intervention_setting_5 in assay_1",
+        "assay": "assay_1",
+        "settings_swapped": [
+          "intervention_setting_1",
+          "intervention_setting_5"
+        ],
+        "S": 44.0,
+        "kendall_w": 0.4888888888888889,
+        "chi2": 5.866666666666666,
+        "p_chi2": 0.20932942106642455,
+        "p_exact": 0.23604166666666668,
+        "significant_chi2": false,
+        "significant_exact": false
+      },
+      {
+        "scenario": "swap intervention_setting_1 <-> intervention_setting_5 in assay_2",
+        "assay": "assay_2",
+        "settings_swapped": [
+          "intervention_setting_1",
+          "intervention_setting_5"
+        ],
+        "S": 38.0,
+        "kendall_w": 0.4222222222222222,
+        "chi2": 5.066666666666666,
+        "p_chi2": 0.2805252273790096,
+        "p_exact": 0.3260416666666667,
+        "significant_chi2": false,
+        "significant_exact": false
+      },
+      {
+        "scenario": "swap intervention_setting_1 <-> intervention_setting_2 in assay_2",
+        "assay": "assay_2",
+        "settings_swapped": [
+          "intervention_setting_1",
+          "intervention_setting_2"
+        ],
+        "S": 38.0,
+        "kendall_w": 0.4222222222222222,
+        "chi2": 5.066666666666666,
+        "p_chi2": 0.2805252273790096,
+        "p_exact": 0.3260416666666667,
+        "significant_chi2": false,
+        "significant_exact": false
+      },
+      {
+        "scenario": "swap intervention_setting_1 <-> intervention_setting_2 in assay_3",
+        "assay": "assay_3",
+        "settings_swapped": [
+          "intervention_setting_1",
+          "intervention_setting_2"
+        ],
+        "S": 30.0,
+        "kendall_w": 0.3333333333333333,
+        "chi2": 4.0,
+        "p_chi2": 0.40600584970983794,
+        "p_exact": 0.47520833333333334,
+        "significant_chi2": false,
+        "significant_exact": false
+      },
+      {
+        "scenario": "swap intervention_setting_1 <-> intervention_setting_2 in assay_1",
+        "assay": "assay_1",
+        "settings_swapped": [
+          "intervention_setting_1",
+          "intervention_setting_2"
+        ],
+        "S": 30.0,
+        "kendall_w": 0.3333333333333333,
+        "chi2": 4.0,
+        "p_chi2": 0.40600584970983794,
+        "p_exact": 0.47520833333333334,
+        "significant_chi2": false,
+        "significant_exact": false
+      }
+    ],
+    "n_single_swaps_total": 30,
+    "n_single_swaps_significant_chi2": 15,
+    "n_single_swaps_significant_exact": 20,
+    "named_scenarios": [
+      {
+        "scenario": "observed",
+        "S": 86.0,
+        "kendall_w": 0.9555555555555556,
+        "chi2": 11.466666666666667,
+        "p_chi2": 0.021790895858293895,
+        "p_exact": 0.0009027777777777777,
+        "significant_chi2": true,
+        "significant_exact": true,
+        "note": "core result"
+      },
+      {
+        "scenario": "perfect concordance (all assays = assay_1 order)",
+        "S": 90.0,
+        "kendall_w": 1.0,
+        "chi2": 12.0,
+        "p_chi2": 0.01735126523666451,
+        "p_exact": 6.944444444444444e-05,
+        "significant_chi2": true,
+        "significant_exact": true,
+        "note": "W = 1.0"
+      },
+      {
+        "scenario": "swap settings 2<->5 in assay_1 only",
+        "S": 86.0,
+        "kendall_w": 0.9555555555555556,
+        "chi2": 11.466666666666667,
+        "p_chi2": 0.021790895858293895,
+        "p_exact": 0.0009027777777777777,
+        "significant_chi2": true,
+        "significant_exact": true,
+        "note": ""
+      },
+      {
+        "scenario": "swap settings 2<->5 in assay_2 only",
+        "S": 90.0,
+        "kendall_w": 1.0,
+        "chi2": 12.0,
+        "p_chi2": 0.01735126523666451,
+        "p_exact": 6.944444444444444e-05,
+        "significant_chi2": true,
+        "significant_exact": true,
+        "note": "this is the observed cross-assay rank spread"
+      },
+      {
+        "scenario": "swap settings 2<->5 in assay_3 only",
+        "S": 86.0,
+        "kendall_w": 0.9555555555555556,
+        "chi2": 11.466666666666667,
+        "p_chi2": 0.021790895858293895,
+        "p_exact": 0.0009027777777777777,
+        "significant_chi2": true,
+        "significant_exact": true,
+        "note": ""
+      },
+      {
+        "scenario": "assay_1 adopts the assay_2 ordering",
+        "S": 86.0,
+        "kendall_w": 0.9555555555555556,
+        "chi2": 11.466666666666667,
+        "p_chi2": 0.021790895858293895,
+        "p_exact": 0.0009027777777777777,
+        "significant_chi2": true,
+        "significant_exact": true,
+        "note": "single-assay replacement"
+      },
+      {
+        "scenario": "assay_2 adopts the assay_2 ordering",
+        "S": 86.0,
+        "kendall_w": 0.9555555555555556,
+        "chi2": 11.466666666666667,
+        "p_chi2": 0.021790895858293895,
+        "p_exact": 0.0009027777777777777,
+        "significant_chi2": true,
+        "significant_exact": true,
+        "note": "single-assay replacement"
+      },
+      {
+        "scenario": "assay_3 adopts the assay_2 ordering",
+        "S": 86.0,
+        "kendall_w": 0.9555555555555556,
+        "chi2": 11.466666666666667,
+        "p_chi2": 0.021790895858293895,
+        "p_exact": 0.0009027777777777777,
+        "significant_chi2": true,
+        "significant_exact": true,
+        "note": "single-assay replacement"
+      },
+      {
+        "scenario": "assay_1 fully reversed",
+        "S": 14.0,
+        "kendall_w": 0.15555555555555556,
+        "chi2": 1.8666666666666667,
+        "p_chi2": 0.76026539367929,
+        "p_exact": 0.8311805555555556,
+        "significant_chi2": false,
+        "significant_exact": false,
+        "note": "adversarial single assay"
+      },
+      {
+        "scenario": "assay_2 fully reversed",
+        "S": 14.0,
+        "kendall_w": 0.15555555555555556,
+        "chi2": 1.8666666666666667,
+        "p_chi2": 0.76026539367929,
+        "p_exact": 0.8311805555555556,
+        "significant_chi2": false,
+        "significant_exact": false,
+        "note": "adversarial single assay"
+      },
+      {
+        "scenario": "assay_3 fully reversed",
+        "S": 14.0,
+        "kendall_w": 0.15555555555555556,
+        "chi2": 1.8666666666666667,
+        "p_chi2": 0.76026539367929,
+        "p_exact": 0.8311805555555556,
+        "significant_chi2": false,
+        "significant_exact": false,
+        "note": "adversarial single assay"
+      },
+      {
+        "scenario": "assay_2 and assay_3 orderings exchanged",
+        "S": 86.0,
+        "kendall_w": 0.9555555555555556,
+        "chi2": 11.466666666666667,
+        "p_chi2": 0.021790895858293895,
+        "p_exact": 0.0009027777777777777,
+        "significant_chi2": true,
+        "significant_exact": true,
+        "note": "rank-identical reshuffle, S unchanged"
+      }
+    ],
+    "boundary": "the observed S = 86, W = 0.9556 sits between the chi-square 5% cutoff (chi2 = 9.4877 <=> S > 71.2) and the exact permutation 5% cutoff (S_crit = 64). Under the chi-square approximation used in the core results the conclusion survives only the 15/30 single transpositions with S >= 74 of a maximum 90; transposing settings 1 and 3 in any assay (S = 70, p_chi2 = 0.053) or settings 4 and 5 in assay_1/assay_3 (S = 66, p_chi2 = 0.066) already breaks it. Under the exact permutation null more single transpositions survive (20/30). The p < 0.05 conclusion is therefore at the edge of what 3 assays x 5 settings can resolve, which is expected because a Kendall/Friedman test on 3 raters has very little power."
+  },
+  "replicate_resolution": {
+    "design": {
+      "cells": 18,
+      "replicates_per_cell": 4,
+      "df_within": 54,
+      "compartments": 3
+    },
+    "within_cell_sd_log2fc": {
+      "pooled_rms": 0.7107152259482691,
+      "median": 0.6835913376037266,
+      "min": 0.14710647122728468,
+      "max": 1.2027204462567875,
+      "chi2_95ci_low": 0.5983257245381672,
+      "chi2_95ci_high": 0.8754892867062511,
+      "fold_change_equivalent": 1.6366152792640545,
+      "per_cell": [
+        {
+          "assay_id": "assay_1",
+          "endpoint_type": "endpoint_count",
+          "compartment_id": "compartment_1",
+          "sd_log2fc": 0.7290298390509268,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_1",
+          "endpoint_type": "endpoint_count",
+          "compartment_id": "compartment_2",
+          "sd_log2fc": 0.7503919017100333,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_1",
+          "endpoint_type": "endpoint_count",
+          "compartment_id": "compartment_3",
+          "sd_log2fc": 0.512558592947517,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_1",
+          "endpoint_type": "endpoint_fraction",
+          "compartment_id": "compartment_1",
+          "sd_log2fc": 0.5898209894388968,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_1",
+          "endpoint_type": "endpoint_fraction",
+          "compartment_id": "compartment_2",
+          "sd_log2fc": 0.5472662334754823,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_1",
+          "endpoint_type": "endpoint_fraction",
+          "compartment_id": "compartment_3",
+          "sd_log2fc": 0.34071084651332145,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_2",
+          "endpoint_type": "endpoint_count",
+          "compartment_id": "compartment_1",
+          "sd_log2fc": 0.9104086397964062,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_2",
+          "endpoint_type": "endpoint_count",
+          "compartment_id": "compartment_2",
+          "sd_log2fc": 0.4043594872395746,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_2",
+          "endpoint_type": "endpoint_count",
+          "compartment_id": "compartment_3",
+          "sd_log2fc": 0.6697288679400518,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_2",
+          "endpoint_type": "endpoint_fraction",
+          "compartment_id": "compartment_1",
+          "sd_log2fc": 0.6974538072674015,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_2",
+          "endpoint_type": "endpoint_fraction",
+          "compartment_id": "compartment_2",
+          "sd_log2fc": 0.40005871710779217,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_2",
+          "endpoint_type": "endpoint_fraction",
+          "compartment_id": "compartment_3",
+          "sd_log2fc": 0.14710647122728468,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_3",
+          "endpoint_type": "endpoint_count",
+          "compartment_id": "compartment_1",
+          "sd_log2fc": 0.976024147150267,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_3",
+          "endpoint_type": "endpoint_count",
+          "compartment_id": "compartment_2",
+          "sd_log2fc": 1.2027204462567875,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_3",
+          "endpoint_type": "endpoint_count",
+          "compartment_id": "compartment_3",
+          "sd_log2fc": 0.9132963165909188,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_3",
+          "endpoint_type": "endpoint_fraction",
+          "compartment_id": "compartment_1",
+          "sd_log2fc": 0.6555779101869724,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_3",
+          "endpoint_type": "endpoint_fraction",
+          "compartment_id": "compartment_2",
+          "sd_log2fc": 0.7513646139592454,
+          "n_replicates": 4
+        },
+        {
+          "assay_id": "assay_3",
+          "endpoint_type": "endpoint_fraction",
+          "compartment_id": "compartment_3",
+          "sd_log2fc": 0.7966876756514052,
+          "n_replicates": 4
+        }
+      ]
+    },
+    "mde_between_compartments": {
+      "tukey_k3_df6_log2": 1.5419661467644084,
+      "tukey_k3_df6_ratio": 2.911910768410107,
+      "two_sample_t_df6_log2": 1.6848619526267552,
+      "two_sample_t_df6_ratio": 3.2150963048588714,
+      "tukey_k3_df54_log2": 1.2111411676854915,
+      "tukey_k3_df54_ratio": 2.315206965859672,
+      "two_sample_t_df54_log2": 1.4338839056497326,
+      "two_sample_t_df54_ratio": 2.7017307507759543,
+      "paired_within_replicate_log2_upper_bound": 2.091076124691545,
+      "paired_within_replicate_ratio_upper_bound": 4.260657623863663,
+      "q_crit_k3_df6": 4.3391954765202785,
+      "q_crit_k3_df54": 3.4082319428841026
+    },
+    "observed_compartment_span_log2": 0.27900052297437383,
+    "observed_compartment_span_ratio": 1.2133540000872696,
+    "observed_ordering_gaps_log2": {
+      "min": 0.00475864,
+      "max": 0.337009,
+      "source": "results/robustness_ordering_gaps.csv (gap_1_2 / gap_2_3 per assay x endpoint, log2 fold-change scale)"
+    },
+    "interpretation": "with 4 replicates per cell the within-cell SD of log2 fold change is 0.711 log2 units (1.64x on the ratio scale). Taking the within-cell SD as the compartment-level error SD, two compartment mean fold changes can be reliably separated only if they differ by about 1.542 log2 = 2.91x or more (Tukey-style, k = 3 compartments, n = 4, df_error = 6; 1.21x using the pooled df = 54). This required difference is much larger than the entire observed compartment span (0.279 log2 = 1.21x) and than every observed ordering gap (0.005 - 0.337 log2), so the replicate noise of a single cell is of the same size as the between-compartment effect it would need to resolve. This is the proximate reason the ordering cannot be reproduced across assays."
+  },
+  "conclusion": "Both boundary results have stated resolutions. (1) Time-resolved role contrast: with n = 4 pairs and a pooled paired SD of 7.74 pp, the design could only detect differences of about 13.2 pp (median MDE; range 11.1-22.7 pp). The observed late-time difference at t = 21 (-3.06 pp) lies inside that resolution, and every time point is non-significant (min p = 0.506). The data therefore cannot distinguish 'no role difference' from a difference of the size the data themselves suggest. Equivalence is declared at 0/7 time points under either a one-SD or a 3 pp margin (min TOST p = 0.210 and 0.072); that failure must not be read as evidence of a difference. (2) Compartment ordering of fold change: the endpoint_fraction ordering is not reproducible (W = 0.111, exact permutation p = 0.944 for the fraction endpoint) and would need 27 assays at that same concordance to reach p < 0.05, which illustrates the boundary rather than rescuing it: a significant Kendall W after adding that many chance-level orderings would not make the ordering reproducible. The endpoint_count ordering is more concordant (W = 0.778) but still non-significant at k = 3 (exact p = 0.194) and would need about 5 concordant assays. Both exact p-values are much larger than the chi-square p-values used in the core results, so the ordering boundary is actually stronger than the core result states. (3) Replicate resolution: the within-cell SD of log2 fold change is 0.71 log2 units, which puts the smallest reliably detectable between-compartment fold-change difference at about 1.54 log2 = 2.91x, far above the whole observed compartment span (1.21x); the ordering is therefore read off differences below the per-cell replicate noise floor.",
+  "caveats": [
+    "Data-precision note: the existing result CSV stores Kendall's W rounded to 6 significant digits, and rounding 14/18 to 0.777778 moves S just above the achievable value 14. S is recomputed here from the integer rank matrix (14 for the count endpoint, 2 for the fraction endpoint) rather than from the rounded W; both the rounded CSV value and the exact value are stored in the report. No data file was modified.",
+    "Computations that failed and how they were handled: scipy.stats.nct returns NaN for some large noncentralities (e.g. ncp = 8 with df = 3), so the noncentral-t MDE inversion brackets on a grid and skips NaN points; the closed-form MDE is reported for every time point and the exact inversion for all 7 in this run. scipy.stats.studentized_range was probed for a noncentral power calculation and does accept a noncentrality argument, but the Tukey MDE is reported with the standard central-q definition to stay conservative and reproducible from the printed q critical value.",
+    "The exact permutation null for Kendall's W is discrete: at k = 3 raters the smallest achievable p is 0.0278 for m = 3 and 6.9e-5 for m = 5. The chi-square approximation used in the core results is anti-conservative for both ordering analyses (compartment count endpoint: p_chi2 = 0.097 vs exact p = 0.194; intervention: p_chi2 = 0.0218 vs exact p = 0.000903).",
+    "S3 holds the observed W fixed as assays are added. That answers 'how much data at this concordance', not 'how much data will a real new assay need'; the bootstrap over the observed orderings (2000 draws) is reported as a second, non-parametric view. Both are capped (exact search at k = 60, bootstrap at k = 40) and the caps are reported.",
+    "MDE calculations treat the observed SD as the true SD and the paired differences as normal. With n = 4 the SD has only df = 3; the 95% chi-square interval for the pooled within-cell compartment SD (df = 54) is [0.598, 0.875] log2, and the interval for the n = 4 paired SDs is far wider, so every MDE here is itself uncertain by roughly a factor of two or more.",
+    "The one-SD TOST margin is wide by construction (and structurally unreachable at n = 4); it is reported because the task asked for a data-derived margin. The 3 pp margin was chosen because 3 pp is the scale of the observed late-time divergence.",
+    "Noncentral-t power inversion uses scipy.stats.nct on a grid; for very large noncentrality scipy returns NaN and those grid points are skipped, so the exact MDE is reported only where it was finite (7/7 time points) with the closed-form value reported alongside everywhere.",
+    "S4 operates on the 3 x 5 assay-by-setting matrix of mean responses; a Kendall/Friedman test on 3 raters has very low power, so 'p < 0.05 is lost under an additional single swap' describes the limits of this design rather than a claim about the underlying ordering. Conclusions are reported under both the chi-square screen and the exact permutation null because they disagree about which swaps are tolerable.",
+    "No causal or mechanistic claim is made: compartment and intervention associations do not identify a unique cellular mechanism (DATA_GUIDE.md)."
+  ]
+}

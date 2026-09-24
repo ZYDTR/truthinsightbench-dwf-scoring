@@ -1,0 +1,5 @@
+term,sum_sq,df,F,PR(>F)
+C(response_class_id),1211.97,1,310.753,6.63694e-12
+C(compound_setting_id),579.262,3,49.5082,2.55283e-08
+C(response_class_id):C(compound_setting_id),531.365,3,45.4145,4.73032e-08
+Residual,62.4017,16,,

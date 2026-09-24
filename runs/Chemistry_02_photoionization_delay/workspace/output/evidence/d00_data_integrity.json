@@ -1,0 +1,37 @@
+{
+ "schema": "data-integrity-check",
+ "task_id": "Chemistry_02_photoionization_delay",
+ "files": {
+  "angle_energy_observations_datasets.tsv": {
+   "bytes": 8493010,
+   "sha256": "55a1d9621c0e386fb44a63764a97cf81491d2bd7af0209c74e212329172df396",
+   "matches_manifest": true,
+   "manifest_bytes": 8493010
+  },
+  "angular_coefficients_datasets.tsv": {
+   "bytes": 45556,
+   "sha256": "a47e1e06130ec2a0dc8e3a4b2b45233828b37e6ff31101dbefebfd8b9d0ac411",
+   "matches_manifest": true,
+   "manifest_bytes": 45556
+  },
+  "coordinate_definitions.json": {
+   "bytes": 942,
+   "sha256": "349bbd36f9de8dd1805b280c0f08270e3d1c75992efd76aa8effb603adbec23b",
+   "matches_manifest": true,
+   "manifest_bytes": 942
+  },
+  "dipole_matrix_elements_datasets.tsv": {
+   "bytes": 9859272,
+   "sha256": "df51186c5de242e7b6d7aa51b30f2b75411bbea139507a3061273c23f2c01762",
+   "matches_manifest": true,
+   "manifest_bytes": 9859272
+  },
+  "phase_and_delay_curves_datasets.tsv": {
+   "bytes": 43302,
+   "sha256": "10b077ae335ce79515d03341dbf924a4143b78c310676c89dc8e56af5d6c044c",
+   "matches_manifest": true,
+   "manifest_bytes": 43302
+  }
+ },
+ "all_match": true
+}

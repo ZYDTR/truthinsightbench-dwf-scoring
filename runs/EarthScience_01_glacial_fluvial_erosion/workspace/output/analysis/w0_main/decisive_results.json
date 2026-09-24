@@ -1,0 +1,88 @@
+{
+  "within_reference_slopes": {
+    "n_references": 115,
+    "median_slope": -1.0036857928834826,
+    "q25": -1.0160885383681255,
+    "q75": -0.9949046376771424,
+    "median_r2": 0.9996407300302783
+  },
+  "coupled_thickness": {
+    "n": 3470,
+    "median_mm": 650.446950942,
+    "iqr_mm": [
+      630.2507281635,
+      674.6566772325
+    ],
+    "fraction_within_620_680mm": 0.6685878962536023,
+    "implied_depth_m": 0.6504469509419999,
+    "implied_attenuation_length_over_density_cm": 65.0446950942
+  },
+  "common_support": [
+    {
+      "Methodology": "Cosmogenic detrital",
+      "overlap_lo_dex": 3.0,
+      "overlap_hi_dex": 6.467636219137569,
+      "n_glacial": 8,
+      "n_nonglacial": 3081,
+      "median_ER_glacial": 0.7,
+      "median_ER_nonglacial": 0.0497272,
+      "ratio_median": 14.076803037371901,
+      "median_logER_diff_dex": 1.1044359896548444,
+      "mannwhitney_p": 0.007407890924102648
+    },
+    {
+      "Methodology": "Volumetric",
+      "overlap_lo_dex": -1.7171944211689576,
+      "overlap_hi_dex": 4.204119982655925,
+      "n_glacial": 194,
+      "n_nonglacial": 1612,
+      "median_ER_glacial": 0.518451,
+      "median_ER_nonglacial": 0.0870521,
+      "ratio_median": 5.955640357900614,
+      "median_logER_diff_dex": 0.7749266035947555,
+      "mannwhitney_p": 1.344698240835864e-32
+    }
+  ],
+  "compiler_effect": [
+    {
+      "Process": "Glacial",
+      "n_this_study": 294,
+      "n_prior": 133,
+      "median_this_study_dex": -0.3979400086720376,
+      "median_prior_dex": -0.0655015487564322,
+      "mean_diff_dex": -0.3485552014081901,
+      "welch_p": 0.00010377136616693624
+    },
+    {
+      "Process": "Nonglacial",
+      "n_this_study": 48,
+      "n_prior": 6236,
+      "median_this_study_dex": -3.1968996350775862,
+      "median_prior_dex": -1.2094778722013833,
+      "mean_diff_dex": -1.0905838545344373,
+      "welch_p": 3.738274905213115e-05
+    }
+  ],
+  "tables": [
+    {
+      "file": "table_thickness_spread_diagnostic.csv",
+      "caption": "Spread of implied eroded thickness per stratum; a collapsed spread marks a rate time-locked to its own interval.",
+      "rows": 10
+    },
+    {
+      "file": "table_within_reference_slopes.csv",
+      "caption": "Slope of log10 rate vs log10 interval recomputed inside each individual study of the coupled stratum.",
+      "rows": 115
+    },
+    {
+      "file": "table_common_support_process.csv",
+      "caption": "Glacial vs nonglacial comparison restricted to the timescale range both processes actually sample.",
+      "rows": 2
+    },
+    {
+      "file": "table_compiler_effect.csv",
+      "caption": "Rows contributed by the present compilation versus rows inherited from prior compilations.",
+      "rows": 2
+    }
+  ]
+}

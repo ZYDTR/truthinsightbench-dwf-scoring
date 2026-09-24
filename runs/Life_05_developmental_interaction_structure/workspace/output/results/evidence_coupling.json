@@ -1,0 +1,103 @@
+{
+  "q1_p_vs_strength": {
+    "raw": {
+      "rho": -0.2848,
+      "pvalue": 7.015483404484003e-111
+    },
+    "within_unit_centered": {
+      "rho": -0.1342,
+      "pvalue": 3.3240907353863203e-25
+    },
+    "within_family_centered": {
+      "rho": -0.2197,
+      "pvalue": 1.307104135209186e-65
+    },
+    "restricted_to_nonfloor_p": {
+      "rho": -0.0406,
+      "pvalue": 0.2716443947245138,
+      "n": 736
+    },
+    "restricted_to_nonfloor_within_unit": {
+      "rho": -0.0198,
+      "pvalue": 0.5919803772572271,
+      "n": 736
+    }
+  },
+  "mean_strength_by_p_level": {
+    "0.0009": {
+      "n": 5184,
+      "raw_mean": 0.8318,
+      "within_unit_mean": 0.0262
+    },
+    "0.01": {
+      "n": 280,
+      "raw_mean": -0.5663,
+      "within_unit_mean": -0.2156
+    },
+    "0.02": {
+      "n": 146,
+      "raw_mean": -0.5598,
+      "within_unit_mean": -0.1315
+    },
+    "0.03": {
+      "n": 120,
+      "raw_mean": -0.7591,
+      "within_unit_mean": -0.1519
+    },
+    "0.04": {
+      "n": 100,
+      "raw_mean": -0.4814,
+      "within_unit_mean": -0.1024
+    },
+    "0.05": {
+      "n": 90,
+      "raw_mean": -0.7631,
+      "within_unit_mean": -0.3106
+    }
+  },
+  "floor_p_contrast_within_unit": {
+    "observed_diff_floor_minus_nonfloor": 0.211,
+    "permutation_p_two_sided": 0.0,
+    "n_perm": 2000,
+    "cohens_d_approx_sd_units": 0.5513
+  },
+  "q2_evidence_stability": {
+    "n_units_multi_stage": 718,
+    "always_floor_p": 8,
+    "always_nonfloor_p": 22,
+    "mixed_between_stages": 688,
+    "fraction_mixed": 0.9582
+  },
+  "q2_transition_counts_nonfloor_then_floor": {
+    "nonfloor->nonfloor": 131,
+    "nonfloor->floor": 318,
+    "floor->nonfloor": 301,
+    "floor->floor": 4065
+  },
+  "q2_transition_probabilities": {
+    "P(floor at next | nonfloor now)": 0.7082,
+    "P(floor at next | floor now)": 0.9311
+  },
+  "q2_contrast_strength_vs_evidence_stability": {
+    "n_units_both_halves": 479,
+    "split_half_r_strength": 0.9084,
+    "n_units_both_halves_evidence": 479,
+    "verdict_agreement_rate_early_vs_late": 0.8747,
+    "expected_agreement_by_chance": 0.8574,
+    "cohens_kappa_early_vs_late": 0.1218
+  },
+  "p_level_shares": {
+    "0.0009": 0.8757,
+    "0.01": 0.0473,
+    "0.02": 0.0247,
+    "0.03": 0.0203,
+    "0.04": 0.0169,
+    "0.05": 0.0152
+  },
+  "strength_value_granularity": {
+    "n_unique_strength_values": 3380,
+    "n_rows": 5920,
+    "n_unique_p_levels": 6,
+    "note": "association_pvalue is a six-level ordinal report tier, not a continuous statistic"
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "R1_leave_one_temperature_out": {
+    "without_5300K": {
+      "first_crossing_nm": 443.01207768432505,
+      "all_crossings_nm": [
+        443.01207768432505
+      ]
+    },
+    "without_5800K": {
+      "first_crossing_nm": 434.87825049728957,
+      "all_crossings_nm": [
+        434.87825049728957,
+        435.5422338259269,
+        446.1035557811981,
+        514.1344489850843,
+        517.7457697694823
+      ]
+    },
+    "without_6300K": {
+      "first_crossing_nm": 447.31718984666355,
+      "all_crossings_nm": [
+        447.31718984666355,
+        512.3441056951676,
+        522.8952298866989
+      ]
+    }
+  },
+  "R1_summary": {
+    "min_nm": 434.87825049728957,
+    "max_nm": 447.31718984666355,
+    "spread_nm": 12.438939349373982,
+    "spread_in_grid_intervals": 2.487787869874796,
+    "verdict": "dropping a slice moves the pooled crossover by up to 12.4 nm (2.5 grid intervals), and the three slices span 38.8 nm on their own. The crossover is therefore reproducible in LOCATION to within a few grid intervals, not exactly; 'reproducible from any two slices' overstates it."
+  },
+  "R2_holdout": {
+    "nominal_first_crossover_nm": 445.8248474583328,
+    "contiguous_band_results": [
+      {
+        "band_nm": [
+          400,
+          500
+        ],
+        "n_points": 21,
+        "mean_slope": -0.002984879603990425,
+        "contains_nominal_crossover": true
+      },
+      {
+        "band_nm": [
+          420,
+          470
+        ],
+        "n_points": 11,
+        "mean_slope": -0.004466960743161535,
+        "contains_nominal_crossover": true
+      },
+      {
+        "band_nm": [
+          430,
+          460
+        ],
+        "n_points": 7,
+        "mean_slope": 0.0009797397283734571,
+        "contains_nominal_crossover": true
+      },
+      {
+        "band_nm": [
+          480,
+          560
+        ],
+        "n_points": 17,
+        "mean_slope": 0.04658784156048653,
+        "contains_nominal_crossover": false
+      }
+    ],
+    "random_point_holdout_mean_slope_std": 0.11532508583026879,
+    "random_point_holdout_note": "random 40-point subsets reproduce the mean slope because neighbouring wavelengths are correlated; they cannot locate the boundary, which is a wavelength-localised feature"
+  },
+  "R3_rank_based_alternative": {
+    "5300": {
+      "first_crossing_nm": 447.7872723184169,
+      "correlation_at_180nm": -1.0,
+      "correlation_at_850nm": 0.9963709677419355
+    },
+    "5800": {
+      "first_crossing_nm": 446.82923707117254,
+      "correlation_at_180nm": -1.0,
+      "correlation_at_850nm": 0.9987903225806452
+    },
+    "6300": {
+      "first_crossing_nm": 409.4795807734008,
+      "correlation_at_180nm": -1.0,
+      "correlation_at_850nm": 0.9995967741935484
+    }
+  },
+  "R4_metallicity_window": {
+    "M<=0.0": {
+      "n_levels": 21,
+      "first_crossing_nm": 444.57059992417106
+    },
+    "M<=0.25": {
+      "n_levels": 26,
+      "first_crossing_nm": 445.26920043839425
+    },
+    "M<=0.5": {
+      "n_levels": 31,
+      "first_crossing_nm": 445.8248474583328
+    }
+  },
+  "R5_quadratic_model": {
+    "5300": {
+      "median_quadratic_stationary_point_M": -1.2204472091629968,
+      "frac_within_index_range": 0.2159090909090909
+    },
+    "5800": {
+      "median_quadratic_stationary_point_M": -1.2060926611933391,
+      "frac_within_index_range": 0.21022727272727273
+    },
+    "6300": {
+      "median_quadratic_stationary_point_M": -1.1856794920724922,
+      "frac_within_index_range": 0.32386363636363635
+    }
+  },
+  "R6_sampling_region": {
+    "5300": {
+      "uniform_region_decreasing_steps": 5,
+      "uniform_region_total_steps": 1530,
+      "all_index_decreasing_steps": 6,
+      "decreasing_metallicity_pairs": [
+        [
+          -0.85,
+          -0.8
+        ],
+        [
+          -0.8,
+          -0.75
+        ],
+        [
+          0.8,
+          0.9
+        ]
+      ],
+      "worst_pair_at_low_index": false
+    },
+    "5800": {
+      "uniform_region_decreasing_steps": 12,
+      "uniform_region_total_steps": 1530,
+      "all_index_decreasing_steps": 12,
+      "decreasing_metallicity_pairs": [
+        [
+          -0.9,
+          -0.85
+        ],
+        [
+          -0.85,
+          -0.8
+        ],
+        [
+          -0.8,
+          -0.75
+        ]
+      ],
+      "worst_pair_at_low_index": true
+    },
+    "6300": {
+      "uniform_region_decreasing_steps": 5,
+      "uniform_region_total_steps": 1530,
+      "all_index_decreasing_steps": 5,
+      "decreasing_metallicity_pairs": [
+        [
+          -0.9,
+          -0.85
+        ],
+        [
+          -0.85,
+          -0.8
+        ],
+        [
+          -0.8,
+          -0.75
+        ]
+      ],
+      "worst_pair_at_low_index": true
+    }
+  },
+  "R6_verdict": {
+    "n_decreasing_pairs_total": 9,
+    "n_decreasing_pairs_above_M_0p5": 1,
+    "all_decreasing_pairs": [
+      [
+        -0.9,
+        -0.85
+      ],
+      [
+        -0.85,
+        -0.8
+      ],
+      [
+        -0.8,
+        -0.75
+      ],
+      [
+        0.8,
+        0.9
+      ]
+    ],
+    "conclusion": "decreasing steps at long wavelength are rare (5-12 of 1530 uniform-ladder comparisons, i.e. under 0.8%) and concentrated at the blue end of the composition ladder. One slice (5300 K) does have a single decreasing pair inside the thinned M>0.5 region, so the stronger claim that every decrease lies below M=-0.6 does NOT hold. The defensible statement is the weaker one: the thinned region is not the main source of non-monotonicity."
+  },
+  "R7_C_across_temperature_slices": {
+    "per_slice": {
+      "5300": {
+        "C": 4.2095087066489695e-13
+      },
+      "5800": {
+        "C": 3.974745242072792e-13
+      },
+      "6300": {
+        "C": 3.9110278427676176e-13
+      }
+    },
+    "rel_spread": 0.031834847202394635
+  }
+}

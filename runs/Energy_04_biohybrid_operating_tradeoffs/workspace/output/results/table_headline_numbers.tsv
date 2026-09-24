@@ -1,0 +1,8 @@
+finding	quantity	value	unit	denominator
+1	sweep_rows	35.0	rows	1367.0
+1	n_distinct_time_in_sweep	23.0	timepoints	
+2	max_within_time_range_over_global_promoter	0.5240283744629833	ratio	
+3	a_b_corr_baseline	0.006174214588009049	pearson r	
+3	a_b_corr_pooled	0.6788945956838975	pearson r	
+4	fit_vs_raw_max_r	0.9995613148427213	pearson r	
+5	dose_settings	3.0	settings	

@@ -1,0 +1,85 @@
+{
+  "workbook_sheets": 47,
+  "workbook_blocks_total": 101,
+  "blocks_exact": 6,
+  "blocks_aggregate": 30,
+  "blocks_image": 14,
+  "blocks_empty": 1,
+  "blocks_absent": 50,
+  "absent_rows": 71053,
+  "absent_counts": 9135408.201141449,
+  "normalized_population_events": 33237.0,
+  "normalized_orientation_events": 32732.0,
+  "absent_by_family": {
+    "Sheet_001": {
+      "blocks": 6,
+      "rows": 33631,
+      "counts": 4806983.22448748
+    },
+    "Sheet_002": {
+      "blocks": 6,
+      "rows": 33631,
+      "counts": 3358623.881823656
+    },
+    "Sheet_019": {
+      "blocks": 2,
+      "rows": 1600,
+      "counts": 786072.4641572809
+    },
+    "Sheet_020": {
+      "blocks": 4,
+      "rows": 621,
+      "counts": 148952.93394368625
+    },
+    "Sheet_023": {
+      "blocks": 4,
+      "rows": 535,
+      "counts": 2.32329417451192
+    },
+    "Sheet_038": {
+      "blocks": 4,
+      "rows": 535,
+      "counts": 7.373435171593497
+    },
+    "Sheet_039": {
+      "blocks": 3,
+      "rows": 60,
+      "counts": 11501.0
+    },
+    "Sheet_040": {
+      "blocks": 3,
+      "rows": 70,
+      "counts": 15849.0
+    },
+    "Sheet_041": {
+      "blocks": 3,
+      "rows": 60,
+      "counts": 1153.0
+    },
+    "Sheet_042": {
+      "blocks": 3,
+      "rows": 60,
+      "counts": 433.0
+    },
+    "Sheet_043": {
+      "blocks": 3,
+      "rows": 60,
+      "counts": 1510.0
+    },
+    "Sheet_044": {
+      "blocks": 3,
+      "rows": 60,
+      "counts": 2852.0
+    },
+    "Sheet_046": {
+      "blocks": 3,
+      "rows": 65,
+      "counts": 1077.0
+    },
+    "Sheet_047": {
+      "blocks": 3,
+      "rows": 65,
+      "counts": 391.0
+    }
+  }
+}

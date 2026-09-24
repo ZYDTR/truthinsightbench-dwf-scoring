@@ -1,0 +1,32 @@
+updated /data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws2_channel_accuracy.json
+
+--- per-unit summary ---
+
+[bond_observation] n=543
+  quantum    MAE=2.098 medAE=1.400 bias=+0.554
+  learned    MAE=2.411 medAE=1.610 bias=+1.079
+  reference  MAE=5.486 medAE=4.900 bias=+1.378
+  quantum_vs_learned     meanD=-0.313 CI[-0.471,-0.165] excl0=True medD=+0.020 t_p=5.37e-05 wilcox_p=0.553 cliff=-0.042 n_better/worse=246/284
+  quantum_vs_reference   meanD=-3.388 CI[-3.740,-3.050] excl0=True medD=-3.410 t_p=2.62e-63 wilcox_p=1.92e-59 cliff=-0.631 n_better/worse=451/92
+  learned_vs_reference   meanD=-3.075 CI[-3.448,-2.722] excl0=True medD=-3.300 t_p=5.21e-50 wilcox_p=1.37e-51 cliff=-0.573 n_better/worse=444/99
+
+[unique_molecule] n=419
+  quantum    MAE=2.202 medAE=1.555 bias=+0.690
+  learned    MAE=2.618 medAE=1.720 bias=+1.371
+  reference  MAE=5.392 medAE=4.600 bias=+1.712
+  quantum_vs_learned     meanD=-0.416 CI[-0.616,-0.230] excl0=True medD=+0.005 t_p=2.92e-05 wilcox_p=0.0937 cliff=-0.066 n_better/worse=203/210
+  quantum_vs_reference   meanD=-3.190 CI[-3.597,-2.788] excl0=True medD=-3.120 t_p=5.94e-43 wilcox_p=1.51e-41 cliff=-0.567 n_better/worse=334/85
+  learned_vs_reference   meanD=-2.773 CI[-3.209,-2.343] excl0=True medD=-3.120 t_p=4.85e-31 wilcox_p=3.79e-34 cliff=-0.493 n_better/worse=324/95
+
+[unique_fragment_pair] n=539
+  quantum    MAE=2.091 medAE=1.400 bias=+0.580
+  learned    MAE=2.413 medAE=1.610 bias=+1.103
+  reference  MAE=5.469 medAE=4.800 bias=+1.383
+  quantum_vs_learned     meanD=-0.322 CI[-0.476,-0.177] excl0=True medD=+0.020 t_p=3.35e-05 wilcox_p=0.578 cliff=-0.042 n_better/worse=243/283
+  quantum_vs_reference   meanD=-3.378 CI[-3.726,-3.032] excl0=True medD=-3.410 t_p=1.06e-62 wilcox_p=6.64e-59 cliff=-0.632 n_better/worse=448/91
+  learned_vs_reference   meanD=-3.056 CI[-3.422,-2.690] excl0=True medD=-3.300 t_p=3.27e-49 wilcox_p=6.84e-51 cliff=-0.572 n_better/worse=440/99
+Traceback (most recent call last):
+  File "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws2_finalize2.py", line 158, in <module>
+    print(f"\n[{uname}] n={b['n_units']}")
+                           ~^^^^^^^^^^^
+KeyError: 'n_units'

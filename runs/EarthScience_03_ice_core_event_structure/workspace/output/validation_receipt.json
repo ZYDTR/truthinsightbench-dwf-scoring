@@ -1,0 +1,1652 @@
+{
+  "schema": "truthinsightbench-semantic-output-validation",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "output": "/data/user/conversations/conv-f07721cb-d3dc-42e9-83c7-7e986203115b/project/output",
+  "authoritative_report": {
+    "path": "Result.md",
+    "bytes": 26463,
+    "sha256": "9cf7bb86aed1fd003b692e414c9ebeda1b261b10c37bd655c848b9fef079d813"
+  },
+  "registered_findings": {
+    "count": 5,
+    "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "markers": [
+      {
+        "finding_number": 1,
+        "line": 38,
+        "marker": "## Finding 1 — Seven of the nine reported columns are redundant; only sulfate and the label are independent measurements",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 2,
+        "line": 100,
+        "marker": "## Finding 2 — The column named `c06_depth_w_e_m` is not a physically correct water-equivalent depth",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 3,
+        "line": 157,
+        "marker": "## Finding 3 — No resolvable sulfate trend with depth: the null survives every serial-correlation-aware test, but the record cannot exclude small trends",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 4,
+        "line": 212,
+        "marker": "## Finding 4 — Event counts are extremely definition-dependent, but event *locations* are robust, and the recall ceiling is structural",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 5,
+        "line": 268,
+        "marker": "## Finding 5 — The two label classes are not separable by any amplitude measure, and that null is underpowered rather than evidence of sameness",
+        "heading_level": 2
+      }
+    ],
+    "traceability": [
+      {
+        "finding_number": 1,
+        "resolved_native_tokens": [
+          "F002",
+          "F006",
+          "F010",
+          "F011",
+          "F012",
+          "F013",
+          "F029",
+          "F030",
+          "F050",
+          "F051",
+          "F060"
+        ],
+        "analysis_sources": [
+          "analysis/01_structure_audit.py",
+          "analysis/02_event_detection.py",
+          "analysis/03_long_record_relationships.py",
+          "analysis/04_event_classes_and_age_coordinate.py",
+          "analysis/05_robustness.py",
+          "analysis/06_build_registry.py",
+          "analysis/common.py",
+          "verification/figures/attack_enrichment_and_family.py",
+          "verification/figures/f2_wed_final_table.py",
+          "verification/figures/f2_wed_verification.py",
+          "verification/figures/g7_indep_recompute.py",
+          "verification/figures/indep_detector_verification.py",
+          "verification/figures/make_fig01.py",
+          "verification/figures/make_fig02.py",
+          "verification/figures/make_fig03.py",
+          "verification/figures/v10_draft1_independent.py",
+          "verification/figures/ver6_subset_robustness.py",
+          "verification/figures/ver6_supplement.py",
+          "verification/figures/verify_draft1_attack.py",
+          "verification/figures/verify_draft1_independent.py",
+          "verification/figures/verify_draft3_sulfate_trend.py",
+          "verification/figures/verify_finding1.py",
+          "verification/figures/verify_finding5_class_contrast.py",
+          "verification/figures/verify_finding6_age_coordinates.py"
+        ],
+        "result_evidence": [
+          "results/age_coordinate_competition.csv",
+          "results/age_coordinate_loo.csv",
+          "results/age_depth_leave_one_out.csv",
+          "results/age_depth_model_comparison.csv",
+          "results/annotated_event_excess.csv",
+          "results/block_leave_one_out_detector.csv",
+          "results/class_and_age_summary.json",
+          "results/column_redundancy.csv",
+          "results/depth_model_comparison.csv",
+          "results/detector_grid.csv",
+          "results/event_class_comparison.csv",
+          "results/event_clustering.csv",
+          "results/event_detection_summary.json",
+          "results/event_rate_stability.csv",
+          "results/event_spacing.csv",
+          "results/localmax_null_calibration.csv",
+          "results/long_record_summary.json",
+          "results/monotone_transform_competition.csv",
+          "results/quadrature_comparison.csv",
+          "results/robustness_breakpoint_grid.csv",
+          "results/robustness_integer_depth.csv",
+          "results/robustness_summary.json",
+          "results/structure_audit.json",
+          "results/trend_block_length_sensitivity.csv",
+          "results/trend_bootstrap.csv",
+          "results/trend_leave_one_block_out.csv",
+          "results/water_equivalent_model_comparison.csv",
+          "verification/figures/annotated_row_ranks.csv",
+          "verification/figures/attack_b_results.json",
+          "verification/figures/block_perm_pvalues.csv",
+          "verification/figures/f2_wed_candidate_rmse.png",
+          "verification/figures/f2_wed_final_table.json",
+          "verification/figures/f2_wed_final_table.png",
+          "verification/figures/f2_wed_overview.png",
+          "verification/figures/f2_wed_residuals.png",
+          "verification/figures/f2_wed_verification.json",
+          "verification/figures/f5_interleave.csv",
+          "verification/figures/f5_metric_table.csv",
+          "verification/figures/f5_position_vs_amplitude.csv",
+          "verification/figures/f5_positions.csv",
+          "verification/figures/f5_power.png",
+          "verification/figures/f5_power_curve.csv",
+          "verification/figures/f5_power_table.csv",
+          "verification/figures/f5_summary.json",
+          "verification/figures/finding4_verification.png",
+          "verification/figures/g7_indep_figure.png",
+          "verification/figures/g7_indep_results.json",
+          "verification/figures/indep_detector_grid.csv",
+          "verification/figures/indep_finding4_summary.json",
+          "verification/figures/power_curve.csv",
+          "verification/figures/sb_contrast_intervals.csv",
+          "verification/figures/sb_corr_intervals.csv",
+          "verification/figures/v10_draft1_independent.json",
+          "verification/figures/v10_draft1_independent.png",
+          "verification/figures/ver6_fig1_fits.png",
+          "verification/figures/ver6_fig2_loo.png",
+          "verification/figures/ver6_loo_per_horizon.csv",
+          "verification/figures/ver6_models_competition.csv",
+          "verification/figures/verify_draft1_attack.json",
+          "verification/figures/verify_draft1_figure.png",
+          "verification/figures/verify_draft3_sulfate_trend.json",
+          "verification/figures/verify_draft3_sulfate_trend.png",
+          "verification/figures/verify_finding1.png",
+          "verification/figures/verify_finding1_summary.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 2,
+        "resolved_native_tokens": [
+          "F002",
+          "F006",
+          "F012",
+          "F031",
+          "F052",
+          "F053",
+          "F073"
+        ],
+        "analysis_sources": [
+          "analysis/01_structure_audit.py",
+          "analysis/02_event_detection.py",
+          "analysis/03_long_record_relationships.py",
+          "analysis/04_event_classes_and_age_coordinate.py",
+          "analysis/05_robustness.py",
+          "analysis/06_build_registry.py",
+          "analysis/common.py",
+          "verification/figures/attack_enrichment_and_family.py",
+          "verification/figures/f2_wed_final_table.py",
+          "verification/figures/f2_wed_verification.py",
+          "verification/figures/g7_indep_recompute.py",
+          "verification/figures/indep_detector_verification.py",
+          "verification/figures/make_fig01.py",
+          "verification/figures/make_fig02.py",
+          "verification/figures/make_fig03.py",
+          "verification/figures/v10_draft1_independent.py",
+          "verification/figures/ver6_subset_robustness.py",
+          "verification/figures/ver6_supplement.py",
+          "verification/figures/verify_draft1_attack.py",
+          "verification/figures/verify_draft1_independent.py",
+          "verification/figures/verify_draft3_sulfate_trend.py",
+          "verification/figures/verify_finding1.py",
+          "verification/figures/verify_finding5_class_contrast.py",
+          "verification/figures/verify_finding6_age_coordinates.py"
+        ],
+        "result_evidence": [
+          "figures/fig01_record_overview.png",
+          "figures/fig02_event_definition_sensitivity.png",
+          "figures/fig03_chronology_coordinates.png",
+          "figures/fig05_water_equivalent_gap.png",
+          "figures/fig06_class_contrast_power.png",
+          "figures/fig07_independent_redundancy.png",
+          "figures/fig08_age_fit_competition.png",
+          "figures/fig09_age_loo_errors.png",
+          "results/age_coordinate_competition.csv",
+          "results/age_coordinate_loo.csv",
+          "results/age_depth_leave_one_out.csv",
+          "results/age_depth_model_comparison.csv",
+          "results/annotated_event_excess.csv",
+          "results/block_leave_one_out_detector.csv",
+          "results/class_and_age_summary.json",
+          "results/column_redundancy.csv",
+          "results/depth_model_comparison.csv",
+          "results/detector_grid.csv",
+          "results/event_class_comparison.csv",
+          "results/event_clustering.csv",
+          "results/event_detection_summary.json",
+          "results/event_rate_stability.csv",
+          "results/event_spacing.csv",
+          "results/localmax_null_calibration.csv",
+          "results/long_record_summary.json",
+          "results/monotone_transform_competition.csv",
+          "results/quadrature_comparison.csv",
+          "results/robustness_breakpoint_grid.csv",
+          "results/robustness_integer_depth.csv",
+          "results/robustness_summary.json",
+          "results/structure_audit.json",
+          "results/trend_block_length_sensitivity.csv",
+          "results/trend_bootstrap.csv",
+          "results/trend_leave_one_block_out.csv",
+          "results/water_equivalent_model_comparison.csv",
+          "verification/figures/annotated_row_ranks.csv",
+          "verification/figures/attack_b_results.json",
+          "verification/figures/block_perm_pvalues.csv",
+          "verification/figures/f2_wed_candidate_rmse.png",
+          "verification/figures/f2_wed_final_table.json",
+          "verification/figures/f2_wed_final_table.png",
+          "verification/figures/f2_wed_overview.png",
+          "verification/figures/f2_wed_residuals.png",
+          "verification/figures/f2_wed_verification.json",
+          "verification/figures/f5_interleave.csv",
+          "verification/figures/f5_metric_table.csv",
+          "verification/figures/f5_position_vs_amplitude.csv",
+          "verification/figures/f5_positions.csv",
+          "verification/figures/f5_power.png",
+          "verification/figures/f5_power_curve.csv",
+          "verification/figures/f5_power_table.csv",
+          "verification/figures/f5_summary.json",
+          "verification/figures/finding4_verification.png",
+          "verification/figures/g7_indep_figure.png",
+          "verification/figures/g7_indep_results.json",
+          "verification/figures/indep_detector_grid.csv",
+          "verification/figures/indep_finding4_summary.json",
+          "verification/figures/power_curve.csv",
+          "verification/figures/sb_contrast_intervals.csv",
+          "verification/figures/sb_corr_intervals.csv",
+          "verification/figures/v10_draft1_independent.json",
+          "verification/figures/v10_draft1_independent.png",
+          "verification/figures/ver6_fig1_fits.png",
+          "verification/figures/ver6_fig2_loo.png",
+          "verification/figures/ver6_loo_per_horizon.csv",
+          "verification/figures/ver6_models_competition.csv",
+          "verification/figures/verify_draft1_attack.json",
+          "verification/figures/verify_draft1_figure.png",
+          "verification/figures/verify_draft3_sulfate_trend.json",
+          "verification/figures/verify_draft3_sulfate_trend.png",
+          "verification/figures/verify_finding1.png",
+          "verification/figures/verify_finding1_summary.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 3,
+        "resolved_native_tokens": [
+          "F004",
+          "F006",
+          "F018",
+          "F019",
+          "F032",
+          "F033",
+          "F054"
+        ],
+        "analysis_sources": [
+          "analysis/01_structure_audit.py",
+          "analysis/02_event_detection.py",
+          "analysis/03_long_record_relationships.py",
+          "analysis/04_event_classes_and_age_coordinate.py",
+          "analysis/05_robustness.py",
+          "analysis/06_build_registry.py",
+          "analysis/common.py",
+          "verification/figures/attack_enrichment_and_family.py",
+          "verification/figures/f2_wed_final_table.py",
+          "verification/figures/f2_wed_verification.py",
+          "verification/figures/g7_indep_recompute.py",
+          "verification/figures/indep_detector_verification.py",
+          "verification/figures/make_fig01.py",
+          "verification/figures/make_fig02.py",
+          "verification/figures/make_fig03.py",
+          "verification/figures/v10_draft1_independent.py",
+          "verification/figures/ver6_subset_robustness.py",
+          "verification/figures/ver6_supplement.py",
+          "verification/figures/verify_draft1_attack.py",
+          "verification/figures/verify_draft1_independent.py",
+          "verification/figures/verify_draft3_sulfate_trend.py",
+          "verification/figures/verify_finding1.py",
+          "verification/figures/verify_finding5_class_contrast.py",
+          "verification/figures/verify_finding6_age_coordinates.py"
+        ],
+        "result_evidence": [
+          "results/age_coordinate_competition.csv",
+          "results/age_coordinate_loo.csv",
+          "results/age_depth_leave_one_out.csv",
+          "results/age_depth_model_comparison.csv",
+          "results/annotated_event_excess.csv",
+          "results/block_leave_one_out_detector.csv",
+          "results/class_and_age_summary.json",
+          "results/column_redundancy.csv",
+          "results/depth_model_comparison.csv",
+          "results/detector_grid.csv",
+          "results/event_class_comparison.csv",
+          "results/event_clustering.csv",
+          "results/event_detection_summary.json",
+          "results/event_rate_stability.csv",
+          "results/event_spacing.csv",
+          "results/localmax_null_calibration.csv",
+          "results/long_record_summary.json",
+          "results/monotone_transform_competition.csv",
+          "results/quadrature_comparison.csv",
+          "results/robustness_breakpoint_grid.csv",
+          "results/robustness_integer_depth.csv",
+          "results/robustness_summary.json",
+          "results/structure_audit.json",
+          "results/trend_block_length_sensitivity.csv",
+          "results/trend_bootstrap.csv",
+          "results/trend_leave_one_block_out.csv",
+          "results/water_equivalent_model_comparison.csv",
+          "verification/figures/annotated_row_ranks.csv",
+          "verification/figures/attack_b_results.json",
+          "verification/figures/block_perm_pvalues.csv",
+          "verification/figures/f2_wed_candidate_rmse.png",
+          "verification/figures/f2_wed_final_table.json",
+          "verification/figures/f2_wed_final_table.png",
+          "verification/figures/f2_wed_overview.png",
+          "verification/figures/f2_wed_residuals.png",
+          "verification/figures/f2_wed_verification.json",
+          "verification/figures/f5_interleave.csv",
+          "verification/figures/f5_metric_table.csv",
+          "verification/figures/f5_position_vs_amplitude.csv",
+          "verification/figures/f5_positions.csv",
+          "verification/figures/f5_power.png",
+          "verification/figures/f5_power_curve.csv",
+          "verification/figures/f5_power_table.csv",
+          "verification/figures/f5_summary.json",
+          "verification/figures/finding4_verification.png",
+          "verification/figures/g7_indep_figure.png",
+          "verification/figures/g7_indep_results.json",
+          "verification/figures/indep_detector_grid.csv",
+          "verification/figures/indep_finding4_summary.json",
+          "verification/figures/power_curve.csv",
+          "verification/figures/sb_contrast_intervals.csv",
+          "verification/figures/sb_corr_intervals.csv",
+          "verification/figures/v10_draft1_independent.json",
+          "verification/figures/v10_draft1_independent.png",
+          "verification/figures/ver6_fig1_fits.png",
+          "verification/figures/ver6_fig2_loo.png",
+          "verification/figures/ver6_loo_per_horizon.csv",
+          "verification/figures/ver6_models_competition.csv",
+          "verification/figures/verify_draft1_attack.json",
+          "verification/figures/verify_draft1_figure.png",
+          "verification/figures/verify_draft3_sulfate_trend.json",
+          "verification/figures/verify_draft3_sulfate_trend.png",
+          "verification/figures/verify_finding1.png",
+          "verification/figures/verify_finding1_summary.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 4,
+        "resolved_native_tokens": [
+          "F003",
+          "F006",
+          "F014",
+          "F015",
+          "F016",
+          "F017",
+          "F034",
+          "F055",
+          "F056",
+          "F071"
+        ],
+        "analysis_sources": [
+          "analysis/01_structure_audit.py",
+          "analysis/02_event_detection.py",
+          "analysis/03_long_record_relationships.py",
+          "analysis/04_event_classes_and_age_coordinate.py",
+          "analysis/05_robustness.py",
+          "analysis/06_build_registry.py",
+          "analysis/common.py",
+          "verification/figures/attack_enrichment_and_family.py",
+          "verification/figures/f2_wed_final_table.py",
+          "verification/figures/f2_wed_verification.py",
+          "verification/figures/g7_indep_recompute.py",
+          "verification/figures/indep_detector_verification.py",
+          "verification/figures/make_fig01.py",
+          "verification/figures/make_fig02.py",
+          "verification/figures/make_fig03.py",
+          "verification/figures/v10_draft1_independent.py",
+          "verification/figures/ver6_subset_robustness.py",
+          "verification/figures/ver6_supplement.py",
+          "verification/figures/verify_draft1_attack.py",
+          "verification/figures/verify_draft1_independent.py",
+          "verification/figures/verify_draft3_sulfate_trend.py",
+          "verification/figures/verify_finding1.py",
+          "verification/figures/verify_finding5_class_contrast.py",
+          "verification/figures/verify_finding6_age_coordinates.py"
+        ],
+        "result_evidence": [
+          "figures/fig01_record_overview.png",
+          "figures/fig02_event_definition_sensitivity.png",
+          "figures/fig03_chronology_coordinates.png",
+          "figures/fig05_water_equivalent_gap.png",
+          "figures/fig06_class_contrast_power.png",
+          "figures/fig07_independent_redundancy.png",
+          "figures/fig08_age_fit_competition.png",
+          "figures/fig09_age_loo_errors.png",
+          "results/age_coordinate_competition.csv",
+          "results/age_coordinate_loo.csv",
+          "results/age_depth_leave_one_out.csv",
+          "results/age_depth_model_comparison.csv",
+          "results/annotated_event_excess.csv",
+          "results/block_leave_one_out_detector.csv",
+          "results/class_and_age_summary.json",
+          "results/column_redundancy.csv",
+          "results/depth_model_comparison.csv",
+          "results/detector_grid.csv",
+          "results/event_class_comparison.csv",
+          "results/event_clustering.csv",
+          "results/event_detection_summary.json",
+          "results/event_rate_stability.csv",
+          "results/event_spacing.csv",
+          "results/localmax_null_calibration.csv",
+          "results/long_record_summary.json",
+          "results/monotone_transform_competition.csv",
+          "results/quadrature_comparison.csv",
+          "results/robustness_breakpoint_grid.csv",
+          "results/robustness_integer_depth.csv",
+          "results/robustness_summary.json",
+          "results/structure_audit.json",
+          "results/trend_block_length_sensitivity.csv",
+          "results/trend_bootstrap.csv",
+          "results/trend_leave_one_block_out.csv",
+          "results/water_equivalent_model_comparison.csv",
+          "verification/figures/annotated_row_ranks.csv",
+          "verification/figures/attack_b_results.json",
+          "verification/figures/block_perm_pvalues.csv",
+          "verification/figures/f2_wed_candidate_rmse.png",
+          "verification/figures/f2_wed_final_table.json",
+          "verification/figures/f2_wed_final_table.png",
+          "verification/figures/f2_wed_overview.png",
+          "verification/figures/f2_wed_residuals.png",
+          "verification/figures/f2_wed_verification.json",
+          "verification/figures/f5_interleave.csv",
+          "verification/figures/f5_metric_table.csv",
+          "verification/figures/f5_position_vs_amplitude.csv",
+          "verification/figures/f5_positions.csv",
+          "verification/figures/f5_power.png",
+          "verification/figures/f5_power_curve.csv",
+          "verification/figures/f5_power_table.csv",
+          "verification/figures/f5_summary.json",
+          "verification/figures/finding4_verification.png",
+          "verification/figures/g7_indep_figure.png",
+          "verification/figures/g7_indep_results.json",
+          "verification/figures/indep_detector_grid.csv",
+          "verification/figures/indep_finding4_summary.json",
+          "verification/figures/power_curve.csv",
+          "verification/figures/sb_contrast_intervals.csv",
+          "verification/figures/sb_corr_intervals.csv",
+          "verification/figures/v10_draft1_independent.json",
+          "verification/figures/v10_draft1_independent.png",
+          "verification/figures/ver6_fig1_fits.png",
+          "verification/figures/ver6_fig2_loo.png",
+          "verification/figures/ver6_loo_per_horizon.csv",
+          "verification/figures/ver6_models_competition.csv",
+          "verification/figures/verify_draft1_attack.json",
+          "verification/figures/verify_draft1_figure.png",
+          "verification/figures/verify_draft3_sulfate_trend.json",
+          "verification/figures/verify_draft3_sulfate_trend.png",
+          "verification/figures/verify_finding1.png",
+          "verification/figures/verify_finding1_summary.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 5,
+        "resolved_native_tokens": [
+          "F005",
+          "F026",
+          "F027",
+          "F028",
+          "F057",
+          "F074"
+        ],
+        "analysis_sources": [
+          "analysis/01_structure_audit.py",
+          "analysis/02_event_detection.py",
+          "analysis/03_long_record_relationships.py",
+          "analysis/04_event_classes_and_age_coordinate.py",
+          "analysis/05_robustness.py",
+          "analysis/06_build_registry.py",
+          "analysis/common.py",
+          "verification/figures/attack_enrichment_and_family.py",
+          "verification/figures/f2_wed_final_table.py",
+          "verification/figures/f2_wed_verification.py",
+          "verification/figures/g7_indep_recompute.py",
+          "verification/figures/indep_detector_verification.py",
+          "verification/figures/make_fig01.py",
+          "verification/figures/make_fig02.py",
+          "verification/figures/make_fig03.py",
+          "verification/figures/v10_draft1_independent.py",
+          "verification/figures/ver6_subset_robustness.py",
+          "verification/figures/ver6_supplement.py",
+          "verification/figures/verify_draft1_attack.py",
+          "verification/figures/verify_draft1_independent.py",
+          "verification/figures/verify_draft3_sulfate_trend.py",
+          "verification/figures/verify_finding1.py",
+          "verification/figures/verify_finding5_class_contrast.py",
+          "verification/figures/verify_finding6_age_coordinates.py"
+        ],
+        "result_evidence": [
+          "figures/fig01_record_overview.png",
+          "figures/fig02_event_definition_sensitivity.png",
+          "figures/fig03_chronology_coordinates.png",
+          "figures/fig05_water_equivalent_gap.png",
+          "figures/fig06_class_contrast_power.png",
+          "figures/fig07_independent_redundancy.png",
+          "figures/fig08_age_fit_competition.png",
+          "figures/fig09_age_loo_errors.png",
+          "results/age_coordinate_competition.csv",
+          "results/age_coordinate_loo.csv",
+          "results/age_depth_leave_one_out.csv",
+          "results/age_depth_model_comparison.csv",
+          "results/annotated_event_excess.csv",
+          "results/block_leave_one_out_detector.csv",
+          "results/class_and_age_summary.json",
+          "results/column_redundancy.csv",
+          "results/depth_model_comparison.csv",
+          "results/detector_grid.csv",
+          "results/event_class_comparison.csv",
+          "results/event_clustering.csv",
+          "results/event_detection_summary.json",
+          "results/event_rate_stability.csv",
+          "results/event_spacing.csv",
+          "results/localmax_null_calibration.csv",
+          "results/long_record_summary.json",
+          "results/monotone_transform_competition.csv",
+          "results/quadrature_comparison.csv",
+          "results/robustness_breakpoint_grid.csv",
+          "results/robustness_integer_depth.csv",
+          "results/robustness_summary.json",
+          "results/structure_audit.json",
+          "results/trend_block_length_sensitivity.csv",
+          "results/trend_bootstrap.csv",
+          "results/trend_leave_one_block_out.csv",
+          "results/water_equivalent_model_comparison.csv",
+          "verification/figures/annotated_row_ranks.csv",
+          "verification/figures/attack_b_results.json",
+          "verification/figures/block_perm_pvalues.csv",
+          "verification/figures/f2_wed_candidate_rmse.png",
+          "verification/figures/f2_wed_final_table.json",
+          "verification/figures/f2_wed_final_table.png",
+          "verification/figures/f2_wed_overview.png",
+          "verification/figures/f2_wed_residuals.png",
+          "verification/figures/f2_wed_verification.json",
+          "verification/figures/f5_interleave.csv",
+          "verification/figures/f5_metric_table.csv",
+          "verification/figures/f5_position_vs_amplitude.csv",
+          "verification/figures/f5_positions.csv",
+          "verification/figures/f5_power.png",
+          "verification/figures/f5_power_curve.csv",
+          "verification/figures/f5_power_table.csv",
+          "verification/figures/f5_summary.json",
+          "verification/figures/finding4_verification.png",
+          "verification/figures/g7_indep_figure.png",
+          "verification/figures/g7_indep_results.json",
+          "verification/figures/indep_detector_grid.csv",
+          "verification/figures/indep_finding4_summary.json",
+          "verification/figures/power_curve.csv",
+          "verification/figures/sb_contrast_intervals.csv",
+          "verification/figures/sb_corr_intervals.csv",
+          "verification/figures/v10_draft1_independent.json",
+          "verification/figures/v10_draft1_independent.png",
+          "verification/figures/ver6_fig1_fits.png",
+          "verification/figures/ver6_fig2_loo.png",
+          "verification/figures/ver6_loo_per_horizon.csv",
+          "verification/figures/ver6_models_competition.csv",
+          "verification/figures/verify_draft1_attack.json",
+          "verification/figures/verify_draft1_figure.png",
+          "verification/figures/verify_draft3_sulfate_trend.json",
+          "verification/figures/verify_draft3_sulfate_trend.png",
+          "verification/figures/verify_finding1.png",
+          "verification/figures/verify_finding1_summary.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      }
+    ]
+  },
+  "reproduction": {
+    "mode": "methods_section_plus_analysis_sources",
+    "document": null
+  },
+  "analysis_sources": [
+    {
+      "path": "analysis/01_structure_audit.py",
+      "bytes": 11739,
+      "sha256": "6b210315edda08ccc88fccec8a5db11df942e3812e899a079b6b634ff0fe5128"
+    },
+    {
+      "path": "analysis/02_event_detection.py",
+      "bytes": 10185,
+      "sha256": "cbd876a2533680f7656f5c0731b613d57eafb5ae4760df8c05ec71353ea14faf"
+    },
+    {
+      "path": "analysis/03_long_record_relationships.py",
+      "bytes": 11312,
+      "sha256": "4478b37c2712babea15d2232d5cec20948f4c7a4d75e1b88c1fd5593b366c8b5"
+    },
+    {
+      "path": "analysis/04_event_classes_and_age_coordinate.py",
+      "bytes": 9330,
+      "sha256": "6c845334676f2b4d5b33c0c02697891b7eb5b4fbd15ee95f4d2ebf2082f56f9e"
+    },
+    {
+      "path": "analysis/05_robustness.py",
+      "bytes": 14299,
+      "sha256": "1f5f46e8fdc7ae2fd03161b3fb4aaf83ad0f468c68ca04215d853c64fdcaf244"
+    },
+    {
+      "path": "analysis/06_build_registry.py",
+      "bytes": 11185,
+      "sha256": "56fe5b381dd411376c0cfe3295cb8f8ef50a504b37ededd0c948bdd66dd1c10d"
+    },
+    {
+      "path": "analysis/common.py",
+      "bytes": 2819,
+      "sha256": "94b8142caf2d053f750f5e91580d85a24f104a133b3674360830862ca5eca010"
+    },
+    {
+      "path": "verification/figures/attack_enrichment_and_family.py",
+      "bytes": 5012,
+      "sha256": "e5659c9d86acf4ff82fd47e798a3dd1f000a6709af511a5a62dae4dd5bd344e5"
+    },
+    {
+      "path": "verification/figures/f2_wed_final_table.py",
+      "bytes": 8573,
+      "sha256": "3ed7e890495aa94e1f69045c147093420cb04e12615f8a9ee77074333470cdc0"
+    },
+    {
+      "path": "verification/figures/f2_wed_verification.py",
+      "bytes": 17127,
+      "sha256": "1a5b9f230b452cd8a116131338d1f931e54499e1d3cbd82727ceeee1fdce0cd0"
+    },
+    {
+      "path": "verification/figures/g7_indep_recompute.py",
+      "bytes": 23716,
+      "sha256": "4dbd3fd5388ff5d08039dfbd5fd52e274116885f29aeb376003eb425c149484b"
+    },
+    {
+      "path": "verification/figures/indep_detector_verification.py",
+      "bytes": 16950,
+      "sha256": "616eedd163b1c7af7db20508ae09d45225fbbafe0b738df054cfcd9d31b6832a"
+    },
+    {
+      "path": "verification/figures/make_fig01.py",
+      "bytes": 5616,
+      "sha256": "8f9b7152957f36a3b8c97be416f5d0089efe419c90ddc42151a1177967ef37d9"
+    },
+    {
+      "path": "verification/figures/make_fig02.py",
+      "bytes": 9350,
+      "sha256": "9b762accb6f93c31ad5f0853d38b83ce5435db5d1846e0f1f3461a6b452c9bce"
+    },
+    {
+      "path": "verification/figures/make_fig03.py",
+      "bytes": 7048,
+      "sha256": "a9f401230d471f70a28c6842c1a80ce56c19087c195e0dda1a77c0a808714afb"
+    },
+    {
+      "path": "verification/figures/v10_draft1_independent.py",
+      "bytes": 17633,
+      "sha256": "d50a8ebff2871be13315540fd45244ad5476cd0b651d20eac0fe98e337219ddf"
+    },
+    {
+      "path": "verification/figures/ver6_subset_robustness.py",
+      "bytes": 1250,
+      "sha256": "0e9daa23462e8658a3596242583ed81a61d1e67298c6fb80f04a1b7c09222a46"
+    },
+    {
+      "path": "verification/figures/ver6_supplement.py",
+      "bytes": 2187,
+      "sha256": "be2286a7f4400ccdc8c65a8e34cab41e511037aa55f6e84f4c7fb163cf070093"
+    },
+    {
+      "path": "verification/figures/verify_draft1_attack.py",
+      "bytes": 11902,
+      "sha256": "4c5a150cc65d4f905283f9fa2b9f07b74998c874ff49814125403e77d40e8c56"
+    },
+    {
+      "path": "verification/figures/verify_draft1_independent.py",
+      "bytes": 13715,
+      "sha256": "df59cd81c5061e985a93ca32fd3c72461f545de4acefd24f3d71a6a6698c67b7"
+    },
+    {
+      "path": "verification/figures/verify_draft3_sulfate_trend.py",
+      "bytes": 25433,
+      "sha256": "0dbdcd00e1aa636426c242071e401e3b54b2e988103ff8f34e72a9e8782e8745"
+    },
+    {
+      "path": "verification/figures/verify_finding1.py",
+      "bytes": 22933,
+      "sha256": "7840d669ce45e6740f48296553990604911850c53390955ddc411f52a63ca80b"
+    },
+    {
+      "path": "verification/figures/verify_finding5_class_contrast.py",
+      "bytes": 32298,
+      "sha256": "04ab8814486703570e90985ec3f6067b8c5161ed50859986f5bacb3ed122a0dd"
+    },
+    {
+      "path": "verification/figures/verify_finding6_age_coordinates.py",
+      "bytes": 31719,
+      "sha256": "452cd7a2c2f11e14c9418b688722dd051b974632b3f2b05097589d2251cd9966"
+    }
+  ],
+  "executed_notebooks": [],
+  "result_artifacts": [
+    {
+      "path": "figures/fig01_record_overview.png",
+      "bytes": 232047,
+      "sha256": "906e0b14edceb9a571da85c3f7ddcbd9fa612835e875f135a5a7766f6c995aef"
+    },
+    {
+      "path": "figures/fig02_event_definition_sensitivity.png",
+      "bytes": 235490,
+      "sha256": "3ea5834e19d00eb27793c558272f205a55f6dcca950c17fd7ff501bebdd61e22"
+    },
+    {
+      "path": "figures/fig03_chronology_coordinates.png",
+      "bytes": 210155,
+      "sha256": "2b0404d5ccdaa92d2acebb0062684770a38a7e0bbe32f88b0d5803e087e93363"
+    },
+    {
+      "path": "figures/fig05_water_equivalent_gap.png",
+      "bytes": 204985,
+      "sha256": "fedb04b84b9b3d82b62ab7b97daaf90dd3c003c903fa00b66e5aab0a66c0b021"
+    },
+    {
+      "path": "figures/fig06_class_contrast_power.png",
+      "bytes": 66236,
+      "sha256": "b8cbb2e7cf1bef0f57657703f576a477f78851f5a53e1e2b13fe0a13b24c42b2"
+    },
+    {
+      "path": "figures/fig07_independent_redundancy.png",
+      "bytes": 144170,
+      "sha256": "4383378dc76597e7f10006f855d7dc277f6eeb24878d71e31e6db24dc3c2b0b7"
+    },
+    {
+      "path": "figures/fig08_age_fit_competition.png",
+      "bytes": 165295,
+      "sha256": "48b9eac6a3724db36d7d6e60a838bba0cc673f14ffc46a2f516ba30766eb457f"
+    },
+    {
+      "path": "figures/fig09_age_loo_errors.png",
+      "bytes": 75041,
+      "sha256": "d00c72f3ce0f335f2f996ee1efeafc7bd0b2fdd4ebdeec6e070b21708b2b18f4"
+    },
+    {
+      "path": "results/age_coordinate_competition.csv",
+      "bytes": 751,
+      "sha256": "569aba2a1a229fad54ceeaa07c557054c4cc80fa7de70dca2cfa9bda390b1279"
+    },
+    {
+      "path": "results/age_coordinate_loo.csv",
+      "bytes": 2488,
+      "sha256": "0841d17bc20975eef7ba21fb4e3b72269fa7d6783d5028d48162c1fc070ea40f"
+    },
+    {
+      "path": "results/age_depth_leave_one_out.csv",
+      "bytes": 1192,
+      "sha256": "b8314b885f0d9038dce6dfcaea09a9d23070ced7f31cc23a82de3222fd4dc65d"
+    },
+    {
+      "path": "results/age_depth_model_comparison.csv",
+      "bytes": 580,
+      "sha256": "ad0aa48cdce2518795ec1703b05d1adc636a9c36f1c8986d43657ce5989b7c32"
+    },
+    {
+      "path": "results/annotated_event_excess.csv",
+      "bytes": 1349,
+      "sha256": "84420feaafa588d35bba27c022aef5f0a6e8304ac865f05164d189333990495f"
+    },
+    {
+      "path": "results/block_leave_one_out_detector.csv",
+      "bytes": 1356,
+      "sha256": "d55c693146765ead3a26b9de6656c3a55f5dbc35fd5434e5950961f658d205fe"
+    },
+    {
+      "path": "results/class_and_age_summary.json",
+      "bytes": 1665,
+      "sha256": "d6c0cc120a881912b086e7241d7c58f6e1400938ddbb0ccc07617313fa32555f"
+    },
+    {
+      "path": "results/column_redundancy.csv",
+      "bytes": 650,
+      "sha256": "d2cbde76f54b00d9c60e66e7972e734d82575a681217e435a91247c1370db8dd"
+    },
+    {
+      "path": "results/depth_model_comparison.csv",
+      "bytes": 163,
+      "sha256": "2c0449d5f95056b43acb2883ba0b1600d787899699b2d1fe589f439eac0cf457"
+    },
+    {
+      "path": "results/detector_grid.csv",
+      "bytes": 8058,
+      "sha256": "7cc60a5177ae4be0c2464d970fc7c1896a96b5baf3379b6a6e93e5fd205f62a5"
+    },
+    {
+      "path": "results/event_class_comparison.csv",
+      "bytes": 303,
+      "sha256": "d61331b58ca71e99d58e2f6b37180f59acfd05136bed3ae82aa620ee342bea0b"
+    },
+    {
+      "path": "results/event_clustering.csv",
+      "bytes": 285,
+      "sha256": "5068533ce6b502a337f63469d5fad87782028d20c8e954bf2b33542436ee6655"
+    },
+    {
+      "path": "results/event_detection_summary.json",
+      "bytes": 558,
+      "sha256": "b39abc113f1b005fbb2ca3a8768da92fe94c46f3e911834f9aedae576dcd479f"
+    },
+    {
+      "path": "results/event_rate_stability.csv",
+      "bytes": 119,
+      "sha256": "769695f1b4f7d350d16af64a2afa8d1dd1eb72abd9fbb8ec9fa3b870a86029db"
+    },
+    {
+      "path": "results/event_spacing.csv",
+      "bytes": 287,
+      "sha256": "7bb90960431813ddd94385db70774f9f091284e910758732070af1fe05c38714"
+    },
+    {
+      "path": "results/localmax_null_calibration.csv",
+      "bytes": 105,
+      "sha256": "e40075f924e6b72d118f5768f03f6ec23529bba43454d665b321ccf006bae7c2"
+    },
+    {
+      "path": "results/long_record_summary.json",
+      "bytes": 649,
+      "sha256": "67b15c3851b8bc129eb4534a87213b5291ace28d22fc4689823e362c6454a6cd"
+    },
+    {
+      "path": "results/monotone_transform_competition.csv",
+      "bytes": 585,
+      "sha256": "69b245d25e6933972c76a4a7044947dbb7795904fe1b23bd0a63a14e210bdcda"
+    },
+    {
+      "path": "results/quadrature_comparison.csv",
+      "bytes": 612,
+      "sha256": "c961a095300c537b4acca4645c325f2e3b4d406a05f99dbc27c2d2e88c99d694"
+    },
+    {
+      "path": "results/robustness_breakpoint_grid.csv",
+      "bytes": 72044,
+      "sha256": "5f5cb1882897b0f7402770a47c10ecc081496d246b805efa81719394ff68101f"
+    },
+    {
+      "path": "results/robustness_integer_depth.csv",
+      "bytes": 227,
+      "sha256": "7d4c1916a2ca1fb368e8ee39399f19ac01d31e722ebe7dfdf2c1298c42595452"
+    },
+    {
+      "path": "results/robustness_summary.json",
+      "bytes": 2978,
+      "sha256": "e4ee2fd90a970747e9dc70a89aefa35b70e3f981ef09fbfeaae1ec357e7d8e3e"
+    },
+    {
+      "path": "results/structure_audit.json",
+      "bytes": 2031,
+      "sha256": "425655e8e95d820e02c8789164fe65b6568dccabb22ab68b71427ef74cc562f4"
+    },
+    {
+      "path": "results/trend_block_length_sensitivity.csv",
+      "bytes": 527,
+      "sha256": "39435f991c6add1a02639df29e1b5fafc447a9570c4c250b81bf63ed565c4b5f"
+    },
+    {
+      "path": "results/trend_bootstrap.csv",
+      "bytes": 679,
+      "sha256": "6077180f7c3272dd011f9cc82e06325a09c5b75a492ddeb6e226879e0adbf665"
+    },
+    {
+      "path": "results/trend_leave_one_block_out.csv",
+      "bytes": 352,
+      "sha256": "fd9b992a75571dc53840a2f1e43539b9a90dafddb7f43a3064a32dd916c3bef9"
+    },
+    {
+      "path": "results/water_equivalent_model_comparison.csv",
+      "bytes": 472,
+      "sha256": "d1bfc7e22df7e5773daab2cde49b7945abde6e91b86f9ab33fd9899145557870"
+    },
+    {
+      "path": "verification/figures/annotated_row_ranks.csv",
+      "bytes": 1063,
+      "sha256": "55b78ea871d24e1a590e4b5bf2d598e73d1d248ec3681b914715bbc6c22cd583"
+    },
+    {
+      "path": "verification/figures/attack_b_results.json",
+      "bytes": 462,
+      "sha256": "d4068bdd2fd091c5911521901a780b3f68e588209071fadef6608b5eac640a43"
+    },
+    {
+      "path": "verification/figures/block_perm_pvalues.csv",
+      "bytes": 107,
+      "sha256": "37111938c892d6348d3571e16334841adcbc089af75ebc9080bce88900e5393f"
+    },
+    {
+      "path": "verification/figures/f2_wed_candidate_rmse.png",
+      "bytes": 45261,
+      "sha256": "1b02be21177fd6c4c65380c1915fa288b2dcb95fa8f561bd4e95abeacbcae38b"
+    },
+    {
+      "path": "verification/figures/f2_wed_final_table.json",
+      "bytes": 5472,
+      "sha256": "a0da1d1466a9a48f6bb5e814d75381ea3b251b7f3b9e70256caa615693dd05d9"
+    },
+    {
+      "path": "verification/figures/f2_wed_final_table.png",
+      "bytes": 102520,
+      "sha256": "e9d6c231f013dc8c4fac5bf24cfe564fde55bc89da6ea0552832e3c1d491be8e"
+    },
+    {
+      "path": "verification/figures/f2_wed_overview.png",
+      "bytes": 204985,
+      "sha256": "fedb04b84b9b3d82b62ab7b97daaf90dd3c003c903fa00b66e5aab0a66c0b021"
+    },
+    {
+      "path": "verification/figures/f2_wed_residuals.png",
+      "bytes": 103812,
+      "sha256": "f371c83f4942a0641e9c403d318402c1a5f9dacdef29798a7eceddc984882c53"
+    },
+    {
+      "path": "verification/figures/f2_wed_verification.json",
+      "bytes": 10944,
+      "sha256": "371cc85d19d24858666cf3ce67ce08e691711ee07875483d944387583cd3f857"
+    },
+    {
+      "path": "verification/figures/f5_interleave.csv",
+      "bytes": 872,
+      "sha256": "96b8dbc455854a8c7a3bc3bf7581b5866af3cd2fe48ac0a43becb551c60c5faf"
+    },
+    {
+      "path": "verification/figures/f5_metric_table.csv",
+      "bytes": 8185,
+      "sha256": "400531ce66f3ab03b71d1175f0b9f29a37a1883c7b064a89adaa0929692ab451"
+    },
+    {
+      "path": "verification/figures/f5_position_vs_amplitude.csv",
+      "bytes": 976,
+      "sha256": "fc4b0a61b4369a7895e1e2b00d5cc6918df35c1bee835e6b07125c7f6918eba6"
+    },
+    {
+      "path": "verification/figures/f5_positions.csv",
+      "bytes": 768,
+      "sha256": "c0dbbccfc45696dcef178001bc63922f1d150617638d7c29a742297497603cec"
+    },
+    {
+      "path": "verification/figures/f5_power.png",
+      "bytes": 66236,
+      "sha256": "b8cbb2e7cf1bef0f57657703f576a477f78851f5a53e1e2b13fe0a13b24c42b2"
+    },
+    {
+      "path": "verification/figures/f5_power_curve.csv",
+      "bytes": 733,
+      "sha256": "4e739843f325896bc8a88f6f2770950509a6b09b220242840abccf4eeed1b7c7"
+    },
+    {
+      "path": "verification/figures/f5_power_table.csv",
+      "bytes": 2543,
+      "sha256": "76cdcaaf48fe2f323650724bce81233ebeff57e5df7477f5dbed8db6c2ed2eba"
+    },
+    {
+      "path": "verification/figures/f5_summary.json",
+      "bytes": 44874,
+      "sha256": "e1083b7ff4724ad9168d10239a9156f23ed9916e40dd382a79ebbe36494b60ae"
+    },
+    {
+      "path": "verification/figures/finding4_verification.png",
+      "bytes": 103045,
+      "sha256": "54f4abd21c616d32237a819d39b69b5c0244603a2e4c7c08f230355698f6ac13"
+    },
+    {
+      "path": "verification/figures/g7_indep_figure.png",
+      "bytes": 149890,
+      "sha256": "532dd29077954b8db0fc36e47a7f76908db152da679c660d37e4fac55f2027b0"
+    },
+    {
+      "path": "verification/figures/g7_indep_results.json",
+      "bytes": 3006,
+      "sha256": "202e10d6b3c8de174ee90f3326121975d2efdfdc3bb428e444f4fdfa19e1752c"
+    },
+    {
+      "path": "verification/figures/indep_detector_grid.csv",
+      "bytes": 24395,
+      "sha256": "80a0d7f2ec66b9587742688b91ec5494ffb9b9e0446d305aa573da7e97aed274"
+    },
+    {
+      "path": "verification/figures/indep_finding4_summary.json",
+      "bytes": 906,
+      "sha256": "c2fd2de50901b4b50d13e7fd41a0b42974742f3bb8a15ffef9564de69215da92"
+    },
+    {
+      "path": "verification/figures/power_curve.csv",
+      "bytes": 219,
+      "sha256": "28bf6604fb7cbea1fb4fd9afe12242a372b6e50e140063d30bc519f8022c4f86"
+    },
+    {
+      "path": "verification/figures/sb_contrast_intervals.csv",
+      "bytes": 391,
+      "sha256": "1583df862daf47c8a60bee23b68d1afd9c58abdcc206feaf728df05cdab29fc7"
+    },
+    {
+      "path": "verification/figures/sb_corr_intervals.csv",
+      "bytes": 391,
+      "sha256": "3cc4e0cb1d386cb48d559b03c097ed030ffc7001d2226ddd8fe452b5f7ab13ac"
+    },
+    {
+      "path": "verification/figures/v10_draft1_independent.json",
+      "bytes": 10484,
+      "sha256": "f53c66764240a7d9fc1362d7d92abd88579ea71645bd122659d31169e672bfb1"
+    },
+    {
+      "path": "verification/figures/v10_draft1_independent.png",
+      "bytes": 144170,
+      "sha256": "4383378dc76597e7f10006f855d7dc277f6eeb24878d71e31e6db24dc3c2b0b7"
+    },
+    {
+      "path": "verification/figures/ver6_fig1_fits.png",
+      "bytes": 165295,
+      "sha256": "48b9eac6a3724db36d7d6e60a838bba0cc673f14ffc46a2f516ba30766eb457f"
+    },
+    {
+      "path": "verification/figures/ver6_fig2_loo.png",
+      "bytes": 75041,
+      "sha256": "d00c72f3ce0f335f2f996ee1efeafc7bd0b2fdd4ebdeec6e070b21708b2b18f4"
+    },
+    {
+      "path": "verification/figures/ver6_loo_per_horizon.csv",
+      "bytes": 2137,
+      "sha256": "308279cd4bec040518406d5002739d89633fa57154390145439499deaa666960"
+    },
+    {
+      "path": "verification/figures/ver6_models_competition.csv",
+      "bytes": 3267,
+      "sha256": "805b185c2a1ce953632f6264ae511a6195cb76ba616895bf1c94272b9568dc9a"
+    },
+    {
+      "path": "verification/figures/verify_draft1_attack.json",
+      "bytes": 309731,
+      "sha256": "53babfba96c3470bb05db8d6d794832fe7cef6cc026d70064254150bec93d21c"
+    },
+    {
+      "path": "verification/figures/verify_draft1_figure.png",
+      "bytes": 182892,
+      "sha256": "f95acfef187a4ea8fd8ea7f5b2c764e656a1817f242dd08965c047f94efe2e05"
+    },
+    {
+      "path": "verification/figures/verify_draft3_sulfate_trend.json",
+      "bytes": 2119,
+      "sha256": "57be89d64e7363d775b90dffd551ae5c1c34f7e5d4e2675dd10b15fb38fb98d8"
+    },
+    {
+      "path": "verification/figures/verify_draft3_sulfate_trend.png",
+      "bytes": 214654,
+      "sha256": "24b248f3df8427990de77f3abf6dc99c4f0437d9fe9c0bf438ae3ac497dd34a0"
+    },
+    {
+      "path": "verification/figures/verify_finding1.png",
+      "bytes": 116482,
+      "sha256": "1864af126bbc7f5dc7c7b7dbae3ee77ed147b018e64d994173d4833c48ff9510"
+    },
+    {
+      "path": "verification/figures/verify_finding1_summary.json",
+      "bytes": 1423,
+      "sha256": "1731632fa2dfc4615b944792da36e3084f5b3645411444dc640feee655b4f923"
+    }
+  ],
+  "native_evidence_registry": {
+    "sources": [
+      {
+        "path": "file_registry.json",
+        "bytes": 13866,
+        "sha256": "05c14dd8593669cd15c5376c1671fe4c3e3e41b7203064c383ca5662be9aedcf"
+      }
+    ],
+    "resolved_ids": {
+      "F001": "analysis/common.py",
+      "F002": "analysis/01_structure_audit.py",
+      "F003": "analysis/02_event_detection.py",
+      "F004": "analysis/03_long_record_relationships.py",
+      "F005": "analysis/04_event_classes_and_age_coordinate.py",
+      "F006": "analysis/05_robustness.py",
+      "F007": "analysis/06_build_registry.py",
+      "F010": "results/structure_audit.json",
+      "F011": "results/column_redundancy.csv",
+      "F012": "results/water_equivalent_model_comparison.csv",
+      "F013": "results/depth_model_comparison.csv",
+      "F014": "results/detector_grid.csv",
+      "F015": "results/annotated_event_excess.csv",
+      "F016": "results/event_detection_summary.json",
+      "F017": "results/block_leave_one_out_detector.csv",
+      "F018": "results/trend_bootstrap.csv",
+      "F019": "results/long_record_summary.json",
+      "F020": "results/age_depth_model_comparison.csv",
+      "F021": "results/age_depth_leave_one_out.csv",
+      "F022": "results/event_rate_stability.csv",
+      "F023": "results/event_spacing.csv",
+      "F024": "results/age_coordinate_competition.csv",
+      "F025": "results/age_coordinate_loo.csv",
+      "F026": "results/event_class_comparison.csv",
+      "F027": "results/event_clustering.csv",
+      "F028": "results/class_and_age_summary.json",
+      "F029": "results/robustness_integer_depth.csv",
+      "F030": "results/robustness_breakpoint_grid.csv",
+      "F031": "results/quadrature_comparison.csv",
+      "F032": "results/trend_block_length_sensitivity.csv",
+      "F033": "results/trend_leave_one_block_out.csv",
+      "F034": "results/localmax_null_calibration.csv",
+      "F035": "results/monotone_transform_competition.csv",
+      "F036": "results/robustness_summary.json",
+      "F037": "results/run_log.txt",
+      "F050": "verification/figures/verify_draft1_attack.json",
+      "F051": "verification/figures/v10_draft1_independent.json",
+      "F052": "verification/figures/f2_wed_verification.json",
+      "F053": "verification/figures/f2_wed_final_table.json",
+      "F054": "verification/figures/verify_draft3_sulfate_trend.json",
+      "F055": "verification/figures/indep_finding4_summary.json",
+      "F056": "verification/figures/indep_detector_grid.csv",
+      "F057": "verification/figures/f5_summary.json",
+      "F058": "verification/figures/ver6_report.txt",
+      "F059": "verification/figures/ver6_subset_robustness.txt",
+      "F060": "verification/figures/g7_indep_results.json",
+      "F070": "figures/fig01_record_overview.png",
+      "F071": "figures/fig02_event_definition_sensitivity.png",
+      "F072": "figures/fig03_chronology_coordinates.png",
+      "F073": "figures/fig05_water_equivalent_gap.png",
+      "F074": "figures/fig06_class_contrast_power.png",
+      "F075": "figures/fig07_independent_redundancy.png",
+      "F076": "figures/fig08_age_fit_competition.png",
+      "F077": "figures/fig09_age_loo_errors.png"
+    }
+  },
+  "resolved_support_files": [
+    {
+      "path": "analysis/01_structure_audit.py",
+      "bytes": 11739,
+      "sha256": "6b210315edda08ccc88fccec8a5db11df942e3812e899a079b6b634ff0fe5128"
+    },
+    {
+      "path": "analysis/02_event_detection.py",
+      "bytes": 10185,
+      "sha256": "cbd876a2533680f7656f5c0731b613d57eafb5ae4760df8c05ec71353ea14faf"
+    },
+    {
+      "path": "analysis/03_long_record_relationships.py",
+      "bytes": 11312,
+      "sha256": "4478b37c2712babea15d2232d5cec20948f4c7a4d75e1b88c1fd5593b366c8b5"
+    },
+    {
+      "path": "analysis/04_event_classes_and_age_coordinate.py",
+      "bytes": 9330,
+      "sha256": "6c845334676f2b4d5b33c0c02697891b7eb5b4fbd15ee95f4d2ebf2082f56f9e"
+    },
+    {
+      "path": "analysis/05_robustness.py",
+      "bytes": 14299,
+      "sha256": "1f5f46e8fdc7ae2fd03161b3fb4aaf83ad0f468c68ca04215d853c64fdcaf244"
+    },
+    {
+      "path": "analysis/06_build_registry.py",
+      "bytes": 11185,
+      "sha256": "56fe5b381dd411376c0cfe3295cb8f8ef50a504b37ededd0c948bdd66dd1c10d"
+    },
+    {
+      "path": "analysis/common.py",
+      "bytes": 2819,
+      "sha256": "94b8142caf2d053f750f5e91580d85a24f104a133b3674360830862ca5eca010"
+    },
+    {
+      "path": "figures/fig01_record_overview.png",
+      "bytes": 232047,
+      "sha256": "906e0b14edceb9a571da85c3f7ddcbd9fa612835e875f135a5a7766f6c995aef"
+    },
+    {
+      "path": "figures/fig02_event_definition_sensitivity.png",
+      "bytes": 235490,
+      "sha256": "3ea5834e19d00eb27793c558272f205a55f6dcca950c17fd7ff501bebdd61e22"
+    },
+    {
+      "path": "figures/fig03_chronology_coordinates.png",
+      "bytes": 210155,
+      "sha256": "2b0404d5ccdaa92d2acebb0062684770a38a7e0bbe32f88b0d5803e087e93363"
+    },
+    {
+      "path": "figures/fig05_water_equivalent_gap.png",
+      "bytes": 204985,
+      "sha256": "fedb04b84b9b3d82b62ab7b97daaf90dd3c003c903fa00b66e5aab0a66c0b021"
+    },
+    {
+      "path": "figures/fig06_class_contrast_power.png",
+      "bytes": 66236,
+      "sha256": "b8cbb2e7cf1bef0f57657703f576a477f78851f5a53e1e2b13fe0a13b24c42b2"
+    },
+    {
+      "path": "figures/fig07_independent_redundancy.png",
+      "bytes": 144170,
+      "sha256": "4383378dc76597e7f10006f855d7dc277f6eeb24878d71e31e6db24dc3c2b0b7"
+    },
+    {
+      "path": "figures/fig08_age_fit_competition.png",
+      "bytes": 165295,
+      "sha256": "48b9eac6a3724db36d7d6e60a838bba0cc673f14ffc46a2f516ba30766eb457f"
+    },
+    {
+      "path": "figures/fig09_age_loo_errors.png",
+      "bytes": 75041,
+      "sha256": "d00c72f3ce0f335f2f996ee1efeafc7bd0b2fdd4ebdeec6e070b21708b2b18f4"
+    },
+    {
+      "path": "results/age_coordinate_competition.csv",
+      "bytes": 751,
+      "sha256": "569aba2a1a229fad54ceeaa07c557054c4cc80fa7de70dca2cfa9bda390b1279"
+    },
+    {
+      "path": "results/age_coordinate_loo.csv",
+      "bytes": 2488,
+      "sha256": "0841d17bc20975eef7ba21fb4e3b72269fa7d6783d5028d48162c1fc070ea40f"
+    },
+    {
+      "path": "results/age_depth_leave_one_out.csv",
+      "bytes": 1192,
+      "sha256": "b8314b885f0d9038dce6dfcaea09a9d23070ced7f31cc23a82de3222fd4dc65d"
+    },
+    {
+      "path": "results/age_depth_model_comparison.csv",
+      "bytes": 580,
+      "sha256": "ad0aa48cdce2518795ec1703b05d1adc636a9c36f1c8986d43657ce5989b7c32"
+    },
+    {
+      "path": "results/annotated_event_excess.csv",
+      "bytes": 1349,
+      "sha256": "84420feaafa588d35bba27c022aef5f0a6e8304ac865f05164d189333990495f"
+    },
+    {
+      "path": "results/block_leave_one_out_detector.csv",
+      "bytes": 1356,
+      "sha256": "d55c693146765ead3a26b9de6656c3a55f5dbc35fd5434e5950961f658d205fe"
+    },
+    {
+      "path": "results/class_and_age_summary.json",
+      "bytes": 1665,
+      "sha256": "d6c0cc120a881912b086e7241d7c58f6e1400938ddbb0ccc07617313fa32555f"
+    },
+    {
+      "path": "results/column_redundancy.csv",
+      "bytes": 650,
+      "sha256": "d2cbde76f54b00d9c60e66e7972e734d82575a681217e435a91247c1370db8dd"
+    },
+    {
+      "path": "results/depth_model_comparison.csv",
+      "bytes": 163,
+      "sha256": "2c0449d5f95056b43acb2883ba0b1600d787899699b2d1fe589f439eac0cf457"
+    },
+    {
+      "path": "results/detector_grid.csv",
+      "bytes": 8058,
+      "sha256": "7cc60a5177ae4be0c2464d970fc7c1896a96b5baf3379b6a6e93e5fd205f62a5"
+    },
+    {
+      "path": "results/event_class_comparison.csv",
+      "bytes": 303,
+      "sha256": "d61331b58ca71e99d58e2f6b37180f59acfd05136bed3ae82aa620ee342bea0b"
+    },
+    {
+      "path": "results/event_clustering.csv",
+      "bytes": 285,
+      "sha256": "5068533ce6b502a337f63469d5fad87782028d20c8e954bf2b33542436ee6655"
+    },
+    {
+      "path": "results/event_detection_summary.json",
+      "bytes": 558,
+      "sha256": "b39abc113f1b005fbb2ca3a8768da92fe94c46f3e911834f9aedae576dcd479f"
+    },
+    {
+      "path": "results/event_rate_stability.csv",
+      "bytes": 119,
+      "sha256": "769695f1b4f7d350d16af64a2afa8d1dd1eb72abd9fbb8ec9fa3b870a86029db"
+    },
+    {
+      "path": "results/event_spacing.csv",
+      "bytes": 287,
+      "sha256": "7bb90960431813ddd94385db70774f9f091284e910758732070af1fe05c38714"
+    },
+    {
+      "path": "results/localmax_null_calibration.csv",
+      "bytes": 105,
+      "sha256": "e40075f924e6b72d118f5768f03f6ec23529bba43454d665b321ccf006bae7c2"
+    },
+    {
+      "path": "results/long_record_summary.json",
+      "bytes": 649,
+      "sha256": "67b15c3851b8bc129eb4534a87213b5291ace28d22fc4689823e362c6454a6cd"
+    },
+    {
+      "path": "results/monotone_transform_competition.csv",
+      "bytes": 585,
+      "sha256": "69b245d25e6933972c76a4a7044947dbb7795904fe1b23bd0a63a14e210bdcda"
+    },
+    {
+      "path": "results/quadrature_comparison.csv",
+      "bytes": 612,
+      "sha256": "c961a095300c537b4acca4645c325f2e3b4d406a05f99dbc27c2d2e88c99d694"
+    },
+    {
+      "path": "results/robustness_breakpoint_grid.csv",
+      "bytes": 72044,
+      "sha256": "5f5cb1882897b0f7402770a47c10ecc081496d246b805efa81719394ff68101f"
+    },
+    {
+      "path": "results/robustness_integer_depth.csv",
+      "bytes": 227,
+      "sha256": "7d4c1916a2ca1fb368e8ee39399f19ac01d31e722ebe7dfdf2c1298c42595452"
+    },
+    {
+      "path": "results/robustness_summary.json",
+      "bytes": 2978,
+      "sha256": "e4ee2fd90a970747e9dc70a89aefa35b70e3f981ef09fbfeaae1ec357e7d8e3e"
+    },
+    {
+      "path": "results/structure_audit.json",
+      "bytes": 2031,
+      "sha256": "425655e8e95d820e02c8789164fe65b6568dccabb22ab68b71427ef74cc562f4"
+    },
+    {
+      "path": "results/trend_block_length_sensitivity.csv",
+      "bytes": 527,
+      "sha256": "39435f991c6add1a02639df29e1b5fafc447a9570c4c250b81bf63ed565c4b5f"
+    },
+    {
+      "path": "results/trend_bootstrap.csv",
+      "bytes": 679,
+      "sha256": "6077180f7c3272dd011f9cc82e06325a09c5b75a492ddeb6e226879e0adbf665"
+    },
+    {
+      "path": "results/trend_leave_one_block_out.csv",
+      "bytes": 352,
+      "sha256": "fd9b992a75571dc53840a2f1e43539b9a90dafddb7f43a3064a32dd916c3bef9"
+    },
+    {
+      "path": "results/water_equivalent_model_comparison.csv",
+      "bytes": 472,
+      "sha256": "d1bfc7e22df7e5773daab2cde49b7945abde6e91b86f9ab33fd9899145557870"
+    },
+    {
+      "path": "verification/figures/annotated_row_ranks.csv",
+      "bytes": 1063,
+      "sha256": "55b78ea871d24e1a590e4b5bf2d598e73d1d248ec3681b914715bbc6c22cd583"
+    },
+    {
+      "path": "verification/figures/attack_b_results.json",
+      "bytes": 462,
+      "sha256": "d4068bdd2fd091c5911521901a780b3f68e588209071fadef6608b5eac640a43"
+    },
+    {
+      "path": "verification/figures/attack_enrichment_and_family.py",
+      "bytes": 5012,
+      "sha256": "e5659c9d86acf4ff82fd47e798a3dd1f000a6709af511a5a62dae4dd5bd344e5"
+    },
+    {
+      "path": "verification/figures/block_perm_pvalues.csv",
+      "bytes": 107,
+      "sha256": "37111938c892d6348d3571e16334841adcbc089af75ebc9080bce88900e5393f"
+    },
+    {
+      "path": "verification/figures/f2_wed_candidate_rmse.png",
+      "bytes": 45261,
+      "sha256": "1b02be21177fd6c4c65380c1915fa288b2dcb95fa8f561bd4e95abeacbcae38b"
+    },
+    {
+      "path": "verification/figures/f2_wed_final_table.json",
+      "bytes": 5472,
+      "sha256": "a0da1d1466a9a48f6bb5e814d75381ea3b251b7f3b9e70256caa615693dd05d9"
+    },
+    {
+      "path": "verification/figures/f2_wed_final_table.png",
+      "bytes": 102520,
+      "sha256": "e9d6c231f013dc8c4fac5bf24cfe564fde55bc89da6ea0552832e3c1d491be8e"
+    },
+    {
+      "path": "verification/figures/f2_wed_final_table.py",
+      "bytes": 8573,
+      "sha256": "3ed7e890495aa94e1f69045c147093420cb04e12615f8a9ee77074333470cdc0"
+    },
+    {
+      "path": "verification/figures/f2_wed_overview.png",
+      "bytes": 204985,
+      "sha256": "fedb04b84b9b3d82b62ab7b97daaf90dd3c003c903fa00b66e5aab0a66c0b021"
+    },
+    {
+      "path": "verification/figures/f2_wed_residuals.png",
+      "bytes": 103812,
+      "sha256": "f371c83f4942a0641e9c403d318402c1a5f9dacdef29798a7eceddc984882c53"
+    },
+    {
+      "path": "verification/figures/f2_wed_verification.json",
+      "bytes": 10944,
+      "sha256": "371cc85d19d24858666cf3ce67ce08e691711ee07875483d944387583cd3f857"
+    },
+    {
+      "path": "verification/figures/f2_wed_verification.py",
+      "bytes": 17127,
+      "sha256": "1a5b9f230b452cd8a116131338d1f931e54499e1d3cbd82727ceeee1fdce0cd0"
+    },
+    {
+      "path": "verification/figures/f5_interleave.csv",
+      "bytes": 872,
+      "sha256": "96b8dbc455854a8c7a3bc3bf7581b5866af3cd2fe48ac0a43becb551c60c5faf"
+    },
+    {
+      "path": "verification/figures/f5_metric_table.csv",
+      "bytes": 8185,
+      "sha256": "400531ce66f3ab03b71d1175f0b9f29a37a1883c7b064a89adaa0929692ab451"
+    },
+    {
+      "path": "verification/figures/f5_position_vs_amplitude.csv",
+      "bytes": 976,
+      "sha256": "fc4b0a61b4369a7895e1e2b00d5cc6918df35c1bee835e6b07125c7f6918eba6"
+    },
+    {
+      "path": "verification/figures/f5_positions.csv",
+      "bytes": 768,
+      "sha256": "c0dbbccfc45696dcef178001bc63922f1d150617638d7c29a742297497603cec"
+    },
+    {
+      "path": "verification/figures/f5_power.png",
+      "bytes": 66236,
+      "sha256": "b8cbb2e7cf1bef0f57657703f576a477f78851f5a53e1e2b13fe0a13b24c42b2"
+    },
+    {
+      "path": "verification/figures/f5_power_curve.csv",
+      "bytes": 733,
+      "sha256": "4e739843f325896bc8a88f6f2770950509a6b09b220242840abccf4eeed1b7c7"
+    },
+    {
+      "path": "verification/figures/f5_power_table.csv",
+      "bytes": 2543,
+      "sha256": "76cdcaaf48fe2f323650724bce81233ebeff57e5df7477f5dbed8db6c2ed2eba"
+    },
+    {
+      "path": "verification/figures/f5_summary.json",
+      "bytes": 44874,
+      "sha256": "e1083b7ff4724ad9168d10239a9156f23ed9916e40dd382a79ebbe36494b60ae"
+    },
+    {
+      "path": "verification/figures/finding4_verification.png",
+      "bytes": 103045,
+      "sha256": "54f4abd21c616d32237a819d39b69b5c0244603a2e4c7c08f230355698f6ac13"
+    },
+    {
+      "path": "verification/figures/g7_indep_figure.png",
+      "bytes": 149890,
+      "sha256": "532dd29077954b8db0fc36e47a7f76908db152da679c660d37e4fac55f2027b0"
+    },
+    {
+      "path": "verification/figures/g7_indep_recompute.py",
+      "bytes": 23716,
+      "sha256": "4dbd3fd5388ff5d08039dfbd5fd52e274116885f29aeb376003eb425c149484b"
+    },
+    {
+      "path": "verification/figures/g7_indep_results.json",
+      "bytes": 3006,
+      "sha256": "202e10d6b3c8de174ee90f3326121975d2efdfdc3bb428e444f4fdfa19e1752c"
+    },
+    {
+      "path": "verification/figures/indep_detector_grid.csv",
+      "bytes": 24395,
+      "sha256": "80a0d7f2ec66b9587742688b91ec5494ffb9b9e0446d305aa573da7e97aed274"
+    },
+    {
+      "path": "verification/figures/indep_detector_verification.py",
+      "bytes": 16950,
+      "sha256": "616eedd163b1c7af7db20508ae09d45225fbbafe0b738df054cfcd9d31b6832a"
+    },
+    {
+      "path": "verification/figures/indep_finding4_summary.json",
+      "bytes": 906,
+      "sha256": "c2fd2de50901b4b50d13e7fd41a0b42974742f3bb8a15ffef9564de69215da92"
+    },
+    {
+      "path": "verification/figures/make_fig01.py",
+      "bytes": 5616,
+      "sha256": "8f9b7152957f36a3b8c97be416f5d0089efe419c90ddc42151a1177967ef37d9"
+    },
+    {
+      "path": "verification/figures/make_fig02.py",
+      "bytes": 9350,
+      "sha256": "9b762accb6f93c31ad5f0853d38b83ce5435db5d1846e0f1f3461a6b452c9bce"
+    },
+    {
+      "path": "verification/figures/make_fig03.py",
+      "bytes": 7048,
+      "sha256": "a9f401230d471f70a28c6842c1a80ce56c19087c195e0dda1a77c0a808714afb"
+    },
+    {
+      "path": "verification/figures/power_curve.csv",
+      "bytes": 219,
+      "sha256": "28bf6604fb7cbea1fb4fd9afe12242a372b6e50e140063d30bc519f8022c4f86"
+    },
+    {
+      "path": "verification/figures/sb_contrast_intervals.csv",
+      "bytes": 391,
+      "sha256": "1583df862daf47c8a60bee23b68d1afd9c58abdcc206feaf728df05cdab29fc7"
+    },
+    {
+      "path": "verification/figures/sb_corr_intervals.csv",
+      "bytes": 391,
+      "sha256": "3cc4e0cb1d386cb48d559b03c097ed030ffc7001d2226ddd8fe452b5f7ab13ac"
+    },
+    {
+      "path": "verification/figures/v10_draft1_independent.json",
+      "bytes": 10484,
+      "sha256": "f53c66764240a7d9fc1362d7d92abd88579ea71645bd122659d31169e672bfb1"
+    },
+    {
+      "path": "verification/figures/v10_draft1_independent.png",
+      "bytes": 144170,
+      "sha256": "4383378dc76597e7f10006f855d7dc277f6eeb24878d71e31e6db24dc3c2b0b7"
+    },
+    {
+      "path": "verification/figures/v10_draft1_independent.py",
+      "bytes": 17633,
+      "sha256": "d50a8ebff2871be13315540fd45244ad5476cd0b651d20eac0fe98e337219ddf"
+    },
+    {
+      "path": "verification/figures/ver6_fig1_fits.png",
+      "bytes": 165295,
+      "sha256": "48b9eac6a3724db36d7d6e60a838bba0cc673f14ffc46a2f516ba30766eb457f"
+    },
+    {
+      "path": "verification/figures/ver6_fig2_loo.png",
+      "bytes": 75041,
+      "sha256": "d00c72f3ce0f335f2f996ee1efeafc7bd0b2fdd4ebdeec6e070b21708b2b18f4"
+    },
+    {
+      "path": "verification/figures/ver6_loo_per_horizon.csv",
+      "bytes": 2137,
+      "sha256": "308279cd4bec040518406d5002739d89633fa57154390145439499deaa666960"
+    },
+    {
+      "path": "verification/figures/ver6_models_competition.csv",
+      "bytes": 3267,
+      "sha256": "805b185c2a1ce953632f6264ae511a6195cb76ba616895bf1c94272b9568dc9a"
+    },
+    {
+      "path": "verification/figures/ver6_subset_robustness.py",
+      "bytes": 1250,
+      "sha256": "0e9daa23462e8658a3596242583ed81a61d1e67298c6fb80f04a1b7c09222a46"
+    },
+    {
+      "path": "verification/figures/ver6_supplement.py",
+      "bytes": 2187,
+      "sha256": "be2286a7f4400ccdc8c65a8e34cab41e511037aa55f6e84f4c7fb163cf070093"
+    },
+    {
+      "path": "verification/figures/verify_draft1_attack.json",
+      "bytes": 309731,
+      "sha256": "53babfba96c3470bb05db8d6d794832fe7cef6cc026d70064254150bec93d21c"
+    },
+    {
+      "path": "verification/figures/verify_draft1_attack.py",
+      "bytes": 11902,
+      "sha256": "4c5a150cc65d4f905283f9fa2b9f07b74998c874ff49814125403e77d40e8c56"
+    },
+    {
+      "path": "verification/figures/verify_draft1_figure.png",
+      "bytes": 182892,
+      "sha256": "f95acfef187a4ea8fd8ea7f5b2c764e656a1817f242dd08965c047f94efe2e05"
+    },
+    {
+      "path": "verification/figures/verify_draft1_independent.py",
+      "bytes": 13715,
+      "sha256": "df59cd81c5061e985a93ca32fd3c72461f545de4acefd24f3d71a6a6698c67b7"
+    },
+    {
+      "path": "verification/figures/verify_draft3_sulfate_trend.json",
+      "bytes": 2119,
+      "sha256": "57be89d64e7363d775b90dffd551ae5c1c34f7e5d4e2675dd10b15fb38fb98d8"
+    },
+    {
+      "path": "verification/figures/verify_draft3_sulfate_trend.png",
+      "bytes": 214654,
+      "sha256": "24b248f3df8427990de77f3abf6dc99c4f0437d9fe9c0bf438ae3ac497dd34a0"
+    },
+    {
+      "path": "verification/figures/verify_draft3_sulfate_trend.py",
+      "bytes": 25433,
+      "sha256": "0dbdcd00e1aa636426c242071e401e3b54b2e988103ff8f34e72a9e8782e8745"
+    },
+    {
+      "path": "verification/figures/verify_finding1.png",
+      "bytes": 116482,
+      "sha256": "1864af126bbc7f5dc7c7b7dbae3ee77ed147b018e64d994173d4833c48ff9510"
+    },
+    {
+      "path": "verification/figures/verify_finding1.py",
+      "bytes": 22933,
+      "sha256": "7840d669ce45e6740f48296553990604911850c53390955ddc411f52a63ca80b"
+    },
+    {
+      "path": "verification/figures/verify_finding1_summary.json",
+      "bytes": 1423,
+      "sha256": "1731632fa2dfc4615b944792da36e3084f5b3645411444dc640feee655b4f923"
+    },
+    {
+      "path": "verification/figures/verify_finding5_class_contrast.py",
+      "bytes": 32298,
+      "sha256": "04ab8814486703570e90985ec3f6067b8c5161ed50859986f5bacb3ed122a0dd"
+    },
+    {
+      "path": "verification/figures/verify_finding6_age_coordinates.py",
+      "bytes": 31719,
+      "sha256": "452cd7a2c2f11e14c9418b688722dd051b974632b3f2b05097589d2251cd9966"
+    }
+  ]
+}

@@ -1,0 +1,1316 @@
+{
+  "F1_depth_abundance": {
+    "two_stage": {
+      "per_group": [
+        {
+          "group": "group_01",
+          "n": 5,
+          "slope": 0.8950555914861883,
+          "se": 0.8565239345288499,
+          "p": 0.3728157906129964,
+          "r2": 0.26686143802846696
+        },
+        {
+          "group": "group_02",
+          "n": 7,
+          "slope": -2.177066423515656,
+          "se": 0.4512126425481743,
+          "p": 0.004777725778040907,
+          "r2": 0.8231958896482201
+        },
+        {
+          "group": "group_03",
+          "n": 7,
+          "slope": -0.8364463119254331,
+          "se": 0.9096225247163783,
+          "p": 0.39999552013065665,
+          "r2": 0.14465260573146754
+        },
+        {
+          "group": "group_04",
+          "n": 5,
+          "slope": -0.18291260014766114,
+          "se": 0.8399757783157936,
+          "p": 0.841587127696195,
+          "r2": 0.015560427679112143
+        },
+        {
+          "group": "group_05",
+          "n": 6,
+          "slope": -0.1628957446780418,
+          "se": 0.4701310492510726,
+          "p": 0.7464336747577491,
+          "r2": 0.029139262540730848
+        }
+      ],
+      "mean_slope": -0.49285309775612074,
+      "sd": 1.1275921603212273,
+      "t": -0.9773507375131831,
+      "df": 4,
+      "p": 0.38373530614842744,
+      "n_groups": 5,
+      "n_negative": 4,
+      "sign_test_p_two_sided": 0.375
+    },
+    "fe_cluster": {
+      "slope": -0.8258403801185458,
+      "se": 0.5700800522994754,
+      "p": 0.2210181461056557,
+      "t": -1.4486393214206237,
+      "df_cluster": 4,
+      "ci95": [
+        -2.408636350896325,
+        0.7569555906592335
+      ],
+      "slope_units": "log10(particles per L) per metre"
+    },
+    "loo_cluster": [
+      {
+        "dropped": "group_01",
+        "slope": -1.0212474729875767,
+        "se": 0.5874045498489514,
+        "p": 0.18049543814208688,
+        "t": -1.7385760346088333,
+        "df_cluster": 3,
+        "ci95": [
+          -2.8906309123612095,
+          0.8481359663860564
+        ]
+      },
+      {
+        "dropped": "group_02",
+        "slope": -0.20576404388376002,
+        "se": 0.2926393670145371,
+        "p": 0.5326280169337478,
+        "t": -0.7031317965963839,
+        "df_cluster": 3,
+        "ci95": [
+          -1.1370731162197356,
+          0.7255450284522156
+        ]
+      },
+      {
+        "dropped": "group_03",
+        "slope": -0.8231742693614172,
+        "se": 0.7414398146221439,
+        "p": 0.3478822075609981,
+        "t": -1.1102374773074835,
+        "df_cluster": 3,
+        "ci95": [
+          -3.182766667995894,
+          1.5364181292730594
+        ]
+      },
+      {
+        "dropped": "group_04",
+        "slope": -0.8956366645386343,
+        "se": 0.6398656865242573,
+        "p": 0.2560810139832555,
+        "t": -1.3997260415755717,
+        "df_cluster": 3,
+        "ci95": [
+          -2.9319748544955786,
+          1.1407015254183097
+        ]
+      },
+      {
+        "dropped": "group_05",
+        "slope": -1.089659279777595,
+        "se": 0.6773585872838898,
+        "p": 0.20605447355410555,
+        "t": -1.6086889577158408,
+        "df_cluster": 3,
+        "ci95": [
+          -3.2453166132313997,
+          1.0659980536762097
+        ]
+      }
+    ],
+    "pooled_spearman": {
+      "rho": -0.33837597330367075,
+      "p": 0.0674015891801612,
+      "n": 30
+    },
+    "within_group_mean_rho": -0.2871428571428572,
+    "within_group_rhos": [
+      0.1,
+      -0.857,
+      -0.321,
+      -0.1,
+      -0.257
+    ],
+    "alt_power_law_pooled": {
+      "slope": -0.7505987447345118,
+      "se": 0.42872249704110293,
+      "p": 0.09093460963947597,
+      "r2": 0.09867077557675064
+    },
+    "alt_relative_depth_fe": {
+      "slope": -0.9464422011779291,
+      "se": 0.7636496783460908,
+      "p": 0.28295756492655033,
+      "t": -1.239366987265325,
+      "df_cluster": 4,
+      "ci95": [
+        -3.0666736127078003,
+        1.1737892103519418
+      ]
+    },
+    "deepest_vs_shallowest": {
+      "pairs": [
+        {
+          "group": "group_01",
+          "shallow_per_L": 260.0,
+          "deep_per_L": 2665.0,
+          "log10_ratio": 1.0107238653917734
+        },
+        {
+          "group": "group_02",
+          "shallow_per_L": 75143.0,
+          "deep_per_L": 67.0,
+          "log10_ratio": -3.0498137270927796
+        },
+        {
+          "group": "group_04",
+          "shallow_per_L": 992.0,
+          "deep_per_L": 456.0,
+          "log10_ratio": -0.33754682948974324
+        },
+        {
+          "group": "group_03",
+          "shallow_per_L": 144.0,
+          "deep_per_L": 33.0,
+          "log10_ratio": -0.6398485522173623
+        },
+        {
+          "group": "group_05",
+          "shallow_per_L": 6421.0,
+          "deep_per_L": 4437.0,
+          "log10_ratio": -0.16051324119993948
+        }
+      ],
+      "mean_log10_ratio": -0.6353996969216102,
+      "t": -0.9550094420049814,
+      "df": 4,
+      "p": 0.3936535289708014,
+      "n_deeper_lower": 4,
+      "n_pairs": 5
+    },
+    "alt_absolute_top_of_ice_origin": {
+      "slope": -0.8547493579076423,
+      "se": 0.5790690963698437,
+      "p": 0.2139649213318186,
+      "t": -1.476074898947336,
+      "df_cluster": 4,
+      "ci95": [
+        -2.4625029160950027,
+        0.753004200279718
+      ]
+    }
+  },
+  "F2_chlorophyll_abundance": {
+    "within_group_mean_rho": -0.4960283752571938,
+    "within_group_rhos": [
+      -0.975,
+      -0.919,
+      -0.487,
+      0.1,
+      -0.2
+    ],
+    "pooled_spearman": {
+      "rho": -0.7037081809806237,
+      "p": 1.4353596499588921e-05,
+      "n": 30
+    },
+    "fe_cluster": {
+      "slope": -1.1429630468874725,
+      "se": 0.32884765011514316,
+      "p": 0.025452178114826148,
+      "t": -3.4756612871865555,
+      "df_cluster": 4,
+      "ci95": [
+        -2.0559904954054575,
+        -0.22993559836948763
+      ]
+    },
+    "two_stage": {
+      "per_group": [
+        {
+          "group": "group_01",
+          "n": 5,
+          "slope": -2.527727984320092,
+          "se": 0.7044157676301953,
+          "p": 0.03706498945542671,
+          "r2": 0.811043136175853
+        },
+        {
+          "group": "group_02",
+          "n": 7,
+          "slope": -1.6203376558807328,
+          "se": 0.17897290632162172,
+          "p": 0.00027482475636539724,
+          "r2": 0.9425066070576952
+        },
+        {
+          "group": "group_03",
+          "n": 7,
+          "slope": -0.9285266740698461,
+          "se": 0.5945605584993869,
+          "p": 0.17911418587880623,
+          "r2": 0.32785892409474837
+        },
+        {
+          "group": "group_04",
+          "n": 5,
+          "slope": 0.02367218614231391,
+          "se": 0.7320613906665556,
+          "p": 0.9762349101081438,
+          "r2": 0.00034842485599462236
+        },
+        {
+          "group": "group_05",
+          "n": 6,
+          "slope": -0.1567258189217056,
+          "se": 0.6908856899806703,
+          "p": 0.8316639254830983,
+          "r2": 0.012701562775263131
+        }
+      ],
+      "mean_slope": -1.0419291894100124,
+      "sd": 1.057604113341755,
+      "t": -2.2029268474575048,
+      "df": 4,
+      "p": 0.09235089043297069,
+      "n_groups": 5,
+      "n_negative": 4,
+      "sign_test_p_two_sided": 0.375
+    },
+    "exclude_deepest_interval_per_group": {
+      "n_remaining": 25,
+      "within_group_mean_rho": -0.4900496531580332,
+      "fe_cluster": {
+        "slope": -1.7817726761589794,
+        "se": 0.26523850275984046,
+        "p": 0.0025568516181248184,
+        "t": -6.717624544021352,
+        "df_cluster": 4,
+        "ci95": [
+          -2.5181928188565292,
+          -1.0453525334614295
+        ]
+      }
+    },
+    "exclude_deepest_and_highest_chl_interval_per_group": {
+      "n_remaining": 24,
+      "within_group_mean_rho": -0.4735180743048182,
+      "fe_cluster": {
+        "slope": -1.6828037639036062,
+        "se": 0.31032251401107447,
+        "p": 0.005606741784355316,
+        "t": -5.422757576150444,
+        "df_cluster": 4,
+        "ci95": [
+          -2.5443971889623267,
+          -0.8212103388448857
+        ]
+      }
+    },
+    "alt_covariate_POC": {
+      "slope": -1.1250331860564653,
+      "se": 1.058418784740978,
+      "p": 0.347722974314958,
+      "t": -1.0629376597201925,
+      "df_cluster": 4,
+      "ci95": [
+        -4.063674840199948,
+        1.8136084680870173
+      ]
+    },
+    "alt_covariate_PON": {
+      "slope": -0.891265644834598,
+      "se": 0.8342207125632617,
+      "p": 0.3455372221844645,
+      "t": -1.0683811027612318,
+      "df_cluster": 4,
+      "ci95": [
+        -3.207433658885479,
+        1.4249023692162832
+      ]
+    },
+    "joint_model_chl_depth_POC": {
+      "intercept": {
+        "beta": -6.944748886455868e-18,
+        "se": 1.7637218067779873e-16,
+        "p": 0.9704778841632217
+      },
+      "log10_chl_a": {
+        "beta": -1.7005179215319683,
+        "se": 0.4072454818811669,
+        "p": 0.013967183682589274
+      },
+      "depth_mid_m": {
+        "beta": 0.5498731790193759,
+        "se": 0.28999313649312275,
+        "p": 0.13081721918951905
+      },
+      "log10_POC": {
+        "beta": 1.2665202921362797,
+        "se": 0.2948794149356591,
+        "p": 0.012695315888546941
+      },
+      "df_cluster": 4
+    },
+    "effect_size": {
+      "slope_log10_total_per_log10_chl": -1.1429630468874725,
+      "factor_change_in_total_per_10x_chl": 0.0719510196856914,
+      "note": "descriptive within-group association, not a causal effect"
+    },
+    "baseline_null_constant_composition": "a constant-composition baseline predicts slope = 0 between chlorophyll a and total particle concentration; the observed within-group slope is -1.143 (cluster-robust p = 0.0255), so the constant baseline is rejected"
+  },
+  "F3_PE_share_abundance": {
+    "within_group_mean_rho": 0.5365837426883295,
+    "within_group_rhos": [
+      0.3,
+      0.883,
+      0.857,
+      0.9,
+      -0.257
+    ],
+    "pooled_spearman": {
+      "rho": 0.6467905257511157,
+      "p": 0.0001124084412661904,
+      "n": 30
+    },
+    "fe_cluster": {
+      "slope": 29.848573896005004,
+      "se": 6.1347601187432454,
+      "p": 0.008246545145421967,
+      "t": 4.865483461172353,
+      "df_cluster": 4,
+      "ci95": [
+        12.815749192757703,
+        46.88139859925231
+      ],
+      "slope_units": "percentage points of PE per decade of concentration"
+    },
+    "two_stage": {
+      "per_group": [
+        {
+          "group": "group_01",
+          "n": 5,
+          "slope": 52.74635398674322,
+          "se": 23.750218224733914,
+          "p": 0.11295074859623201,
+          "r2": 0.6217995848636333
+        },
+        {
+          "group": "group_02",
+          "n": 7,
+          "slope": 33.5202649718979,
+          "se": 5.433054607162299,
+          "p": 0.0016289445132893284,
+          "r2": 0.8838966510394223
+        },
+        {
+          "group": "group_03",
+          "n": 7,
+          "slope": 16.809431926012174,
+          "se": 9.501806186506386,
+          "p": 0.13711044108955003,
+          "r2": 0.3849662639742434
+        },
+        {
+          "group": "group_04",
+          "n": 5,
+          "slope": 63.319179721982046,
+          "se": 19.118133430197847,
+          "p": 0.0453244261865648,
+          "r2": 0.7852436149734421
+        },
+        {
+          "group": "group_05",
+          "n": 6,
+          "slope": -1.1582327873829852,
+          "se": 9.318108665676522,
+          "p": 0.9070745127394327,
+          "r2": 0.003847706314338395
+        }
+      ],
+      "mean_slope": 33.04739956385047,
+      "sd": 26.164622864408038,
+      "t": 2.8242804143333644,
+      "df": 4,
+      "p": 0.04762065265085736,
+      "n_groups": 5,
+      "n_negative": 1,
+      "sign_test_p_two_sided": 0.375
+    },
+    "loo_cluster": [
+      {
+        "dropped": "group_01",
+        "slope": 27.693445209659508,
+        "se": 6.641713494143533,
+        "p": 0.025109715721064036,
+        "t": 4.1696235819384215,
+        "df_cluster": 3,
+        "ci95": [
+          6.556548639469497,
+          48.83034177984952
+        ]
+      },
+      {
+        "dropped": "group_02",
+        "slope": 26.04336734911725,
+        "se": 10.876674895204664,
+        "p": 0.09635672271944512,
+        "t": 2.394423626709604,
+        "df_cluster": 3,
+        "ci95": [
+          -8.571066484898854,
+          60.65780118313336
+        ]
+      },
+      {
+        "dropped": "group_03",
+        "slope": 34.74579032302262,
+        "se": 5.7446454545134,
+        "p": 0.00906537569724647,
+        "t": 6.048378546272837,
+        "df_cluster": 3,
+        "ci95": [
+          16.46376462114162,
+          53.027816024903615
+        ]
+      },
+      {
+        "dropped": "group_04",
+        "slope": 27.74356603427153,
+        "se": 6.467804476520645,
+        "p": 0.02329150109391992,
+        "t": 4.289487435030841,
+        "df_cluster": 3,
+        "ci95": [
+          7.1601255746709995,
+          48.32700649387206
+        ]
+      },
+      {
+        "dropped": "group_05",
+        "slope": 32.28474358081874,
+        "se": 6.331125767578155,
+        "p": 0.014582817104485618,
+        "t": 5.099368542976935,
+        "df_cluster": 3,
+        "ci95": [
+          12.136275773503183,
+          52.433211388134296
+        ]
+      }
+    ],
+    "alt_outcome_varnish_percent": {
+      "slope": -17.364727737603857,
+      "se": 5.395196954128114,
+      "p": 0.032324923801520425,
+      "t": -3.218553073269606,
+      "df_cluster": 4,
+      "ci95": [
+        -32.34419591247089,
+        -2.3852595627368256
+      ]
+    },
+    "alt_outcome_PE_share_of_PE_plus_varnish": {
+      "slope": 28.671599028572725,
+      "se": 4.676686048134388,
+      "p": 0.003587071466329318,
+      "t": 6.130751291293185,
+      "df_cluster": 4,
+      "ci95": [
+        15.687036941683203,
+        41.65616111546225
+      ]
+    },
+    "alt_outcome_log10_count_PE": {
+      "slope": 1.1721270738789789,
+      "se": 0.31291135739105014,
+      "p": 0.020018617531877704,
+      "t": 3.7458757766154,
+      "df_cluster": 4,
+      "ci95": [
+        0.3033458672898012,
+        2.0409082804681566
+      ]
+    },
+    "restricted_fine_resolution": {
+      "n": 29,
+      "excluded": [
+        "sample_024"
+      ],
+      "within_group_mean_rho": 0.5194408855454724,
+      "fe_cluster": {
+        "slope": 30.716169035025604,
+        "se": 5.963809464050652,
+        "p": 0.006742462393157519,
+        "t": 5.150427628545164,
+        "df_cluster": 4,
+        "ci95": [
+          14.157979440229912,
+          47.27435862982129
+        ]
+      }
+    },
+    "joint_model_total_depth_chl": {
+      "intercept": {
+        "beta": 3.7305320869466625e-15,
+        "se": 3.818496119492315e-15,
+        "p": 0.3839052846886306
+      },
+      "log10_total": {
+        "beta": 26.21148209173986,
+        "se": 5.754856814862436,
+        "p": 0.010380722167531943
+      },
+      "depth_mid_m": {
+        "beta": 29.13852992676824,
+        "se": 13.647750555304393,
+        "p": 0.09964133649655438
+      },
+      "log10_chl_a": {
+        "beta": -24.464867151095234,
+        "se": 12.48763690229644,
+        "p": 0.12167637881280101
+      },
+      "df_cluster": 4
+    },
+    "simple_baseline_uniform_composition": "a uniform-composition baseline predicts PE_percent independent of total concentration (slope 0); observed within-group slope is 29.85 pp per decade (cluster-robust p = 0.0082)"
+  },
+  "F4_uncertainty_scaling": {
+    "recovered_tallies": [
+      {
+        "sample_id": "sample_001",
+        "group": "group_01",
+        "total_per_L": 260.0,
+        "N_common_min": 388,
+        "N_polymer_min": 388,
+        "N_size_min": 194,
+        "families_agree": false,
+        "quantum_percent_pp": 0.25773195876288657,
+        "quantum_per_L": 0.6701030927835051
+      },
+      {
+        "sample_id": "sample_002",
+        "group": "group_01",
+        "total_per_L": 8774.0,
+        "N_common_min": 6918,
+        "N_polymer_min": 6625,
+        "N_size_min": 3021,
+        "families_agree": false,
+        "quantum_percent_pp": 0.014455044810638912,
+        "quantum_per_L": 1.2682856316854583
+      },
+      {
+        "sample_id": "sample_003",
+        "group": "group_01",
+        "total_per_L": 4156.0,
+        "N_common_min": 5943,
+        "N_polymer_min": 3995,
+        "N_size_min": 2614,
+        "families_agree": false,
+        "quantum_percent_pp": 0.016826518593303044,
+        "quantum_per_L": 0.6993101127376746
+      },
+      {
+        "sample_id": "sample_004",
+        "group": "group_01",
+        "total_per_L": 7017.0,
+        "N_common_min": 5942,
+        "N_polymer_min": 3756,
+        "N_size_min": 3689,
+        "families_agree": false,
+        "quantum_percent_pp": 0.01682935038707506,
+        "quantum_per_L": 1.180915516661057
+      },
+      {
+        "sample_id": "sample_005",
+        "group": "group_01",
+        "total_per_L": 2665.0,
+        "N_common_min": 3234,
+        "N_polymer_min": 3230,
+        "N_size_min": 2166,
+        "families_agree": false,
+        "quantum_percent_pp": 0.030921459492888066,
+        "quantum_per_L": 0.8240568954854669
+      },
+      {
+        "sample_id": "sample_006",
+        "group": "group_02",
+        "total_per_L": 75143.0,
+        "N_common_min": 6637,
+        "N_polymer_min": 6623,
+        "N_size_min": 6637,
+        "families_agree": false,
+        "quantum_percent_pp": 0.015067048365225252,
+        "quantum_per_L": 11.321832153081212
+      },
+      {
+        "sample_id": "sample_007",
+        "group": "group_02",
+        "total_per_L": 14558.0,
+        "N_common_min": 7973,
+        "N_polymer_min": 6652,
+        "N_size_min": 4686,
+        "families_agree": false,
+        "quantum_percent_pp": 0.012542330364981813,
+        "quantum_per_L": 1.8259124545340524
+      },
+      {
+        "sample_id": "sample_008",
+        "group": "group_02",
+        "total_per_L": 3710.0,
+        "N_common_min": 4341,
+        "N_polymer_min": 1446,
+        "N_size_min": 1492,
+        "families_agree": false,
+        "quantum_percent_pp": 0.0230361667818475,
+        "quantum_per_L": 0.8546417876065423
+      },
+      {
+        "sample_id": "sample_009",
+        "group": "group_02",
+        "total_per_L": 9857.0,
+        "N_common_min": 6665,
+        "N_polymer_min": 6151,
+        "N_size_min": 3280,
+        "families_agree": false,
+        "quantum_percent_pp": 0.015003750937734433,
+        "quantum_per_L": 1.4789197299324832
+      },
+      {
+        "sample_id": "sample_010",
+        "group": "group_02",
+        "total_per_L": 4530.0,
+        "N_common_min": 4275,
+        "N_polymer_min": 2963,
+        "N_size_min": 1425,
+        "families_agree": false,
+        "quantum_percent_pp": 0.023391812865497075,
+        "quantum_per_L": 1.0596491228070175
+      },
+      {
+        "sample_id": "sample_011",
+        "group": "group_02",
+        "total_per_L": 41.0,
+        "N_common_min": 64,
+        "N_polymer_min": 64,
+        "N_size_min": 64,
+        "families_agree": true,
+        "quantum_percent_pp": 1.5625,
+        "quantum_per_L": 0.640625
+      },
+      {
+        "sample_id": "sample_012",
+        "group": "group_02",
+        "total_per_L": 67.0,
+        "N_common_min": 139,
+        "N_polymer_min": 139,
+        "N_size_min": 139,
+        "families_agree": true,
+        "quantum_percent_pp": 0.7194244604316546,
+        "quantum_per_L": 0.48201438848920863
+      },
+      {
+        "sample_id": "sample_013",
+        "group": "group_04",
+        "total_per_L": 992.0,
+        "N_common_min": 1286,
+        "N_polymer_min": 1285,
+        "N_size_min": 1286,
+        "families_agree": false,
+        "quantum_percent_pp": 0.07776049766718507,
+        "quantum_per_L": 0.7713841368584758
+      },
+      {
+        "sample_id": "sample_014",
+        "group": "group_04",
+        "total_per_L": 186.0,
+        "N_common_min": 219,
+        "N_polymer_min": 219,
+        "N_size_min": 219,
+        "families_agree": true,
+        "quantum_percent_pp": 0.45662100456621,
+        "quantum_per_L": 0.8493150684931506
+      },
+      {
+        "sample_id": "sample_015",
+        "group": "group_04",
+        "total_per_L": 4159.0,
+        "N_common_min": 4354,
+        "N_polymer_min": 4352,
+        "N_size_min": 2680,
+        "families_agree": false,
+        "quantum_percent_pp": 0.022967386311437757,
+        "quantum_per_L": 0.9552135966926963
+      },
+      {
+        "sample_id": "sample_016",
+        "group": "group_04",
+        "total_per_L": 430.0,
+        "N_common_min": 620,
+        "N_polymer_min": 620,
+        "N_size_min": 620,
+        "families_agree": true,
+        "quantum_percent_pp": 0.16129032258064516,
+        "quantum_per_L": 0.6935483870967742
+      },
+      {
+        "sample_id": "sample_017",
+        "group": "group_04",
+        "total_per_L": 456.0,
+        "N_common_min": 680,
+        "N_polymer_min": 680,
+        "N_size_min": 680,
+        "families_agree": true,
+        "quantum_percent_pp": 0.14705882352941177,
+        "quantum_per_L": 0.6705882352941176
+      },
+      {
+        "sample_id": "sample_018",
+        "group": "group_03",
+        "total_per_L": 144.0,
+        "N_common_min": 203,
+        "N_polymer_min": 203,
+        "N_size_min": 203,
+        "families_agree": true,
+        "quantum_percent_pp": 0.49261083743842365,
+        "quantum_per_L": 0.7093596059113301
+      },
+      {
+        "sample_id": "sample_019",
+        "group": "group_03",
+        "total_per_L": 13794.0,
+        "N_common_min": 8000,
+        "N_polymer_min": 5832,
+        "N_size_min": 4023,
+        "families_agree": false,
+        "quantum_percent_pp": 0.0125,
+        "quantum_per_L": 1.72425
+      },
+      {
+        "sample_id": "sample_020",
+        "group": "group_03",
+        "total_per_L": 90.0,
+        "N_common_min": 76,
+        "N_polymer_min": 76,
+        "N_size_min": 76,
+        "families_agree": true,
+        "quantum_percent_pp": 1.3157894736842106,
+        "quantum_per_L": 1.1842105263157894
+      },
+      {
+        "sample_id": "sample_021",
+        "group": "group_03",
+        "total_per_L": 2303.0,
+        "N_common_min": 2436,
+        "N_polymer_min": 2436,
+        "N_size_min": 2436,
+        "families_agree": true,
+        "quantum_percent_pp": 0.041050903119868636,
+        "quantum_per_L": 0.9454022988505747
+      },
+      {
+        "sample_id": "sample_022",
+        "group": "group_03",
+        "total_per_L": 423.0,
+        "N_common_min": 498,
+        "N_polymer_min": 498,
+        "N_size_min": 498,
+        "families_agree": true,
+        "quantum_percent_pp": 0.20080321285140562,
+        "quantum_per_L": 0.8493975903614458
+      },
+      {
+        "sample_id": "sample_023",
+        "group": "group_03",
+        "total_per_L": 270.0,
+        "N_common_min": 316,
+        "N_polymer_min": 316,
+        "N_size_min": 316,
+        "families_agree": true,
+        "quantum_percent_pp": 0.31645569620253167,
+        "quantum_per_L": 0.8544303797468354
+      },
+      {
+        "sample_id": "sample_024",
+        "group": "group_03",
+        "total_per_L": 33.0,
+        "N_common_min": 17,
+        "N_polymer_min": 17,
+        "N_size_min": 17,
+        "families_agree": true,
+        "quantum_percent_pp": 5.882352941176471,
+        "quantum_per_L": 1.9411764705882353
+      },
+      {
+        "sample_id": "sample_025",
+        "group": "group_05",
+        "total_per_L": 6421.0,
+        "N_common_min": 6174,
+        "N_polymer_min": 6146,
+        "N_size_min": 2919,
+        "families_agree": false,
+        "quantum_percent_pp": 0.016196954972465177,
+        "quantum_per_L": 1.040006478781989
+      },
+      {
+        "sample_id": "sample_026",
+        "group": "group_05",
+        "total_per_L": 557.0,
+        "N_common_min": 583,
+        "N_polymer_min": 583,
+        "N_size_min": 583,
+        "families_agree": true,
+        "quantum_percent_pp": 0.17152658662092624,
+        "quantum_per_L": 0.9554030874785592
+      },
+      {
+        "sample_id": "sample_027",
+        "group": "group_05",
+        "total_per_L": 1454.0,
+        "N_common_min": 2429,
+        "N_polymer_min": 2429,
+        "N_size_min": 2429,
+        "families_agree": true,
+        "quantum_percent_pp": 0.04116920543433512,
+        "quantum_per_L": 0.5986002470152326
+      },
+      {
+        "sample_id": "sample_028",
+        "group": "group_05",
+        "total_per_L": 791.0,
+        "N_common_min": 1070,
+        "N_polymer_min": 1070,
+        "N_size_min": 1070,
+        "families_agree": true,
+        "quantum_percent_pp": 0.09345794392523364,
+        "quantum_per_L": 0.7392523364485981
+      },
+      {
+        "sample_id": "sample_029",
+        "group": "group_05",
+        "total_per_L": 351.0,
+        "N_common_min": 629,
+        "N_polymer_min": 629,
+        "N_size_min": 629,
+        "families_agree": true,
+        "quantum_percent_pp": 0.1589825119236884,
+        "quantum_per_L": 0.5580286168521462
+      },
+      {
+        "sample_id": "sample_030",
+        "group": "group_05",
+        "total_per_L": 4437.0,
+        "N_common_min": 6822,
+        "N_polymer_min": 4485,
+        "N_size_min": 4696,
+        "families_agree": false,
+        "quantum_percent_pp": 0.01465845793022574,
+        "quantum_per_L": 0.6503957783641161
+      }
+    ],
+    "tally_summary": {
+      "n_samples_reconstructed": 30,
+      "n_families_agree": 15,
+      "N_min": 17,
+      "N_max": 8000,
+      "quantum_pp_min": 0.0125,
+      "quantum_pp_median": 0.05946485155076009,
+      "quantum_pp_max": 5.882352941176471,
+      "quantum_per_L_min": 0.48201438848920863,
+      "quantum_per_L_median": 0.8519139850541406,
+      "quantum_per_L_max": 11.321832153081212
+    },
+    "quantum_pp_by_sample": [
+      0.258,
+      0.014,
+      0.017,
+      0.017,
+      0.031,
+      0.015,
+      0.013,
+      0.023,
+      0.015,
+      0.023,
+      1.562,
+      0.719,
+      0.078,
+      0.457,
+      0.023,
+      0.161,
+      0.147,
+      0.493,
+      0.013,
+      1.316,
+      0.041,
+      0.201,
+      0.316,
+      5.882,
+      0.016,
+      0.172,
+      0.041,
+      0.093,
+      0.159,
+      0.015
+    ],
+    "n_visible_bins_by_sample": [
+      3,
+      7,
+      5,
+      6,
+      5,
+      7,
+      7,
+      5,
+      6,
+      7,
+      4,
+      3,
+      6,
+      6,
+      8,
+      5,
+      5,
+      5,
+      6,
+      4,
+      6,
+      4,
+      4,
+      3,
+      5,
+      5,
+      9,
+      7,
+      6,
+      10
+    ],
+    "n_visible_vs_logtotal": {
+      "rho": 0.6918316768971561,
+      "p": 2.2903383326888173e-05,
+      "n": 30
+    },
+    "bound_check": {
+      "n_samples_smallest_nonzero_ge_quantum": 29,
+      "n_samples_with_quantum": 30,
+      "note": "a class can only be reported if at least one particle was counted, so the smallest nonzero percent in a sample must be >= 100/N."
+    },
+    "samples_with_coarse_resolution": [
+      {
+        "sample_id": "sample_011",
+        "total_per_L": 41.0,
+        "N": 64,
+        "quantum_pp": 1.562,
+        "n_visible_size_bins": 4,
+        "PE_percent": 9.38,
+        "chlorophyll_a": 0.81
+      },
+      {
+        "sample_id": "sample_020",
+        "total_per_L": 90.0,
+        "N": 76,
+        "quantum_pp": 1.316,
+        "n_visible_size_bins": 4,
+        "PE_percent": 19.74,
+        "chlorophyll_a": 0.19
+      },
+      {
+        "sample_id": "sample_024",
+        "total_per_L": 33.0,
+        "N": 17,
+        "quantum_pp": 5.882,
+        "n_visible_size_bins": 3,
+        "PE_percent": 17.65,
+        "chlorophyll_a": 6.64
+      }
+    ],
+    "fe_cluster": {
+      "slope": 1.0231858297443437,
+      "se": 0.030024149790803985,
+      "p": 4.423103909422389e-06,
+      "t": 34.07876115971592,
+      "df_cluster": 4,
+      "ci95": [
+        0.9398254260199407,
+        1.1065462334687466
+      ]
+    },
+    "two_stage": {
+      "per_group": [
+        {
+          "group": "group_01",
+          "n": 5,
+          "slope": 0.9227348419740766,
+          "se": 0.1433148884910801,
+          "p": 0.007596756790714116,
+          "r2": 0.9325152014444587
+        },
+        {
+          "group": "group_02",
+          "n": 7,
+          "slope": 1.0539520158863585,
+          "se": 0.08535565208279612,
+          "p": 6.170443909844481e-05,
+          "r2": 0.9682474040565375
+        },
+        {
+          "group": "group_03",
+          "n": 7,
+          "slope": 0.9801400385763636,
+          "se": 0.12262108970139271,
+          "p": 0.0004948635635031557,
+          "r2": 0.9274225450081978
+        },
+        {
+          "group": "group_04",
+          "n": 5,
+          "slope": 1.2433031510436767,
+          "se": 0.3182877583904044,
+          "p": 0.02979713857174256,
+          "r2": 0.8356937096236257
+        },
+        {
+          "group": "group_05",
+          "n": 6,
+          "slope": 0.9094093609715982,
+          "se": 0.2608242346187512,
+          "p": 0.02519876002205317,
+          "r2": 0.7524278037969941
+        }
+      ],
+      "mean_slope": 1.0219078816904148,
+      "sd": 0.13627036867682518,
+      "t": 16.768542658175022,
+      "df": 4,
+      "p": 7.412124544303515e-05,
+      "n_groups": 5,
+      "n_negative": 0,
+      "sign_test_p_two_sided": 0.0625
+    },
+    "loo_cluster": [
+      {
+        "dropped": "group_01",
+        "slope": 1.032640231195382,
+        "se": 0.03051464679945571,
+        "p": 5.672638653064928e-05,
+        "t": 33.84080562957069,
+        "df_cluster": 3,
+        "ci95": [
+          0.9355290062314169,
+          1.129751456159347
+        ]
+      },
+      {
+        "dropped": "group_02",
+        "slope": 0.9913008779576823,
+        "se": 0.04182431537863104,
+        "p": 0.00016457529727680615,
+        "t": 23.701544639369274,
+        "df_cluster": 3,
+        "ci95": [
+          0.8581972400099376,
+          1.124404515905427
+        ]
+      },
+      {
+        "dropped": "group_03",
+        "slope": 1.0393528870635247,
+        "se": 0.03215031446154638,
+        "p": 6.504941018679601e-05,
+        "t": 32.32792289813061,
+        "df_cluster": 3,
+        "ci95": [
+          0.9370362375916672,
+          1.1416695365353822
+        ]
+      },
+      {
+        "dropped": "group_04",
+        "slope": 1.0093423787399645,
+        "se": 0.032872843342314995,
+        "p": 7.589464492576946e-05,
+        "t": 30.70444403696306,
+        "df_cluster": 3,
+        "ci95": [
+          0.904726319901044,
+          1.113958437578885
+        ]
+      },
+      {
+        "dropped": "group_05",
+        "slope": 1.0321251180399629,
+        "se": 0.030390063674082455,
+        "p": 5.611962207315927e-05,
+        "t": 33.96258491291645,
+        "df_cluster": 3,
+        "ci95": [
+          0.9354103721830427,
+          1.128839863896883
+        ]
+      }
+    ],
+    "cv_summary": {
+      "min": 0.12643678160919541,
+      "median": 0.5815630736952531,
+      "mean": 0.6656042893681847,
+      "max": 2.5374364610523426,
+      "sd": 0.4575746720802861
+    },
+    "cv_vs_total_spearman": {
+      "rho": 0.14972191323692993,
+      "p": 0.42971383271970487,
+      "n": 30
+    },
+    "test_slope_equals_half_poisson": {
+      "t": 17.425500251953473,
+      "p": 6.367000206428111e-05
+    },
+    "test_slope_equals_one_proportional": {
+      "t": 0.772239344191029,
+      "p": 0.48306527785866127
+    },
+    "alt_scale_arithmetic_ols": {
+      "slope": 0.9552226448184619,
+      "se": 0.010229248848492828,
+      "p": 7.884530467831131e-08
+    }
+  },
+  "F5_size_spectrum_boundary": {
+    "bin_ranges": {
+      "bins_1_9": {
+        "n_samples": 30,
+        "mean_slope": -2.311885284550514,
+        "median_slope": -2.293998666477273,
+        "rho_with_logtotal": {
+          "rho": -0.8798665183537263,
+          "p": 1.5101174757474428e-10,
+          "n": 30
+        },
+        "within_group_mean_rho": -0.7371428571428572,
+        "fe_cluster": {
+          "slope": -0.6703191540490403,
+          "se": 0.04925924431460855,
+          "p": 0.0001688495969417753,
+          "t": -13.607986955054594,
+          "df_cluster": 4,
+          "ci95": [
+            -0.8070847418120773,
+            -0.5335535662860033
+          ]
+        },
+        "bins_resolved_min": 3,
+        "bins_resolved_max": 8
+      },
+      "bins_1_4": {
+        "n_samples": 30,
+        "mean_slope": -2.1002029529925705,
+        "median_slope": -2.0730120690973277,
+        "rho_with_logtotal": {
+          "rho": -0.5799777530589544,
+          "p": 0.0007814168616554158,
+          "n": 30
+        },
+        "within_group_mean_rho": -0.33,
+        "fe_cluster": {
+          "slope": -0.39830333386978023,
+          "se": 0.08813507076360523,
+          "p": 0.010664528165192314,
+          "t": -4.519237692996292,
+          "df_cluster": 4,
+          "ci95": [
+            -0.6430055196876528,
+            -0.15360114805190758
+          ]
+        },
+        "bins_resolved_min": 3,
+        "bins_resolved_max": 4
+      },
+      "bins_1_3": {
+        "n_samples": 30,
+        "mean_slope": -1.91109994551179,
+        "median_slope": -1.8837894162208086,
+        "rho_with_logtotal": {
+          "rho": 0.06740823136818688,
+          "p": 0.7233952866667444,
+          "n": 30
+        },
+        "within_group_mean_rho": 0.13714285714285715,
+        "fe_cluster": {
+          "slope": -0.09289649449496197,
+          "se": 0.26779428258998256,
+          "p": 0.7461516588494621,
+          "t": -0.3468949881846244,
+          "df_cluster": 4,
+          "ci95": [
+            -0.836412619591873,
+            0.650619630601949
+          ]
+        },
+        "bins_resolved_min": 2,
+        "bins_resolved_max": 3
+      },
+      "bins_1_3_N_ge_100": {
+        "n_samples": 27,
+        "mean_slope": -1.91394446176719,
+        "rho_with_logtotal": {
+          "rho": 0.020757020757020756,
+          "p": 0.9181504315343109,
+          "n": 27
+        },
+        "fe_cluster": {
+          "slope": -0.019290969700421864,
+          "se": 0.10917520267536496,
+          "p": 0.8683319822646942,
+          "t": -0.1766973564297748,
+          "df_cluster": 4,
+          "ci95": [
+            -0.32240992677741565,
+            0.2838279873765719
+          ]
+        }
+      }
+    },
+    "slope_bins_1_9_vs_n_visible": {
+      "rho": -0.501231936459763,
+      "p": 0.004778764515479443,
+      "n": 30
+    },
+    "slope_bins_1_9_vs_log_N": {
+      "rho": -0.8398220244716351,
+      "p": 6.5423359590651306e-09,
+      "n": 30
+    },
+    "slope_vs_nvisible_controlling_abundance": {
+      "intercept": {
+        "beta": 1.0544317321445748e-16,
+        "se": 1.2628010712218898e-16,
+        "p": 0.45069055161330474
+      },
+      "n_visible_bins": {
+        "beta": 0.1831003133589693,
+        "se": 0.044819490628607545,
+        "p": 0.015033133051869344
+      },
+      "log10_total": {
+        "beta": -0.9100662767084402,
+        "se": 0.08660427463354863,
+        "p": 0.0004637047012186964
+      },
+      "df_cluster": 4
+    },
+    "universal_three_bin_shape": {
+      "mean_percent_bin_11um": 67.36399999999999,
+      "mean_percent_bin_11_25um": 22.599666666666675,
+      "mean_percent_bin_25_50um": 7.145666666666668,
+      "monotone_decreasing_all_samples": true,
+      "n_samples_with_monotone_shape": 30
+    }
+  }
+}

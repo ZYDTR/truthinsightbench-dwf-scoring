@@ -1,0 +1,21 @@
+process,methodology,reference,n,n_unique_TI,TI_values,slope,se,p,r2,ci_lo,ci_hi,note
+Nonglacial,Cosmogenic detrital,"Matmon, 2003",89,88,"[11199.7, 11355.1, 11403.8, 12190.7]",-1.0016009286639975,0.004825142518262238,4.648201440274476e-119,0.9979850043074682,-1.011191421893143,-0.992010435434852,
+Nonglacial,Cosmogenic detrital,"Reuter, 2005",88,88,"[7600.48, 9185.07, 9608.87, 9803.81]",-1.0197587231097311,0.0024961800949984195,3.48578417735107e-143,0.9994849709892758,-1.0247209649055116,-1.0147964813139507,
+Nonglacial,Cosmogenic detrital,"Mandal, 2015",79,79,"[10088.7, 12404.4, 13394.2, 14250.4]",-1.046983322213891,0.007499960976484115,2.3241193303633034e-94,0.9960643488049494,-1.0619176524735563,-1.0320489919542255,
+Nonglacial,Cosmogenic detrital,"Bierman, 2005",74,74,"[1606.12, 1978.39, 2712.45, 2739.44]",-1.0069012280771847,0.0013370291015916385,5.021865959261272e-142,0.9998730638434106,-1.0095665468787742,-1.0042359092755953,
+Nonglacial,Cosmogenic detrital,"Kober, 2015",74,74,"[942.757, 946.577, 998.87, 1000.53]",-1.0231033001541525,0.0034097428444462654,2.9185057154394266e-113,0.9992009212079419,-1.029900498286242,-1.016306102022063,
+Nonglacial,Cosmogenic detrital,"Schaller, 2001",69,67,"[6609.9, 7289.05, 7851.95, 8060.14]",-1.0099371470440337,0.003906499106093211,3.2246222613684973e-102,0.9989985565533258,-1.017734551894788,-1.0021397421932794,
+Nonglacial,Cosmogenic detrital,"Ouimet, 2009",67,67,"[255.571, 257.404, 462.999, 508.153]",-1.0064866690851386,0.0012644332261928272,2.253111120927694e-131,0.9998974242853877,-1.0090119166137987,-1.0039614215564785,
+Nonglacial,Cosmogenic detrital,"Duxburry, 2008",65,65,"[17811.7, 24037.0, 26903.3, 27425.4]",-1.0275655322175528,0.002238529397209299,9.536815477432518e-113,0.9997011059500357,-1.0320388762676207,-1.0230921881674848,
+Nonglacial,Cosmogenic detrital,"Safran, 2005",65,65,"[675.574, 775.263, 798.372, 984.369]",-0.9796151565371952,0.004215953725204609,3.944635236862663e-94,0.9988344933384501,-0.988040067791663,-0.9711902452827275,
+Nonglacial,Cosmogenic detrital,"Gonzalez, 2016",58,58,"[1825.42, 2511.7, 2738.91, 2799.19]",-1.0309969677871178,0.006695114626614665,2.799104858644118e-75,0.9976440563191575,-1.0444088940245062,-1.0175850415497294,
+Nonglacial,Volumetric,Milliman and Farnsworth 2013,512,1,[5.0],,,,,,,degenerate x: only 1 unique Time interval value(s); within-Reference slope not identified
+Nonglacial,Volumetric,USGS,448,1,[5.0],,,,,,,degenerate x: only 1 unique Time interval value(s); within-Reference slope not identified
+Nonglacial,Volumetric,Milliman and Syvitski 1992,181,1,[5.0],,,,,,,degenerate x: only 1 unique Time interval value(s); within-Reference slope not identified
+Nonglacial,Volumetric,"Van der Perck and Espinosa Vilches 2020, van der Weijden and Middelburg 1989",154,2,"[0.00274, 1.0]",,,,,,,degenerate x: only 2 unique Time interval value(s); within-Reference slope not identified
+Nonglacial,Volumetric,"Stirton, 2016",96,1,[0.00274],,,,,,,degenerate x: only 1 unique Time interval value(s); within-Reference slope not identified
+Nonglacial,Volumetric,"Krickov et al., 2019",90,1,[0.00274],,,,,,,degenerate x: only 1 unique Time interval value(s); within-Reference slope not identified
+Nonglacial,Volumetric,"Negrel and Grosbois, 1999",65,1,[0.00274],,,,,,,degenerate x: only 1 unique Time interval value(s); within-Reference slope not identified
+Nonglacial,Volumetric,"Ollivier et al., 2010",64,1,[0.00274],,,,,,,degenerate x: only 1 unique Time interval value(s); within-Reference slope not identified
+Nonglacial,Volumetric,"Hinderer et al., 2013",62,1,[5.0],,,,,,,degenerate x: only 1 unique Time interval value(s); within-Reference slope not identified
+Nonglacial,Volumetric,"Guinoiseau et al., 2016",61,1,[0.00274],,,,,,,degenerate x: only 1 unique Time interval value(s); within-Reference slope not identified

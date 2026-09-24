@@ -1,0 +1,71 @@
+{
+  "schema": "life02-delivery-role-inventory",
+  "task_id": "Life_02_contextual_immune_response",
+  "roles": {
+    "authoritative_findings_root_markdown": [],
+    "executed_analysis_source": [
+      "analysis/01_compartment_intervention.py",
+      "analysis/02_time_resolved.py",
+      "analysis/03_robustness.py",
+      "analysis/04_figures.py",
+      "analysis/05_verification_compartment.py",
+      "analysis/05_verification_intervention.py",
+      "analysis/05_verification_time.py",
+      "analysis/06_sensitivity.py",
+      "analysis/07_registry_and_delivery.py",
+      "analysis/common.py"
+    ],
+    "inspectable_result_evidence": [
+      "results/compartment_cell_effects.csv",
+      "results/compartment_ordering_reproducibility.csv",
+      "results/compartment_replicate_effects.csv",
+      "results/endpoint_ordering_agreement.csv",
+      "results/endpoint_paired_deltas.csv",
+      "results/endpoint_type_comparison.csv",
+      "results/intervention_assay_by_setting_matrix.csv",
+      "results/intervention_leave_one_assay_out.csv",
+      "results/intervention_setting_means.csv",
+      "results/intervention_setting_rank_spread.csv",
+      "results/loocv_assay_predictions.csv",
+      "results/loocv_rank_accuracy.csv",
+      "results/multi_condition_anova.csv",
+      "results/multi_condition_class_fits.csv",
+      "results/multi_condition_setting_means.csv",
+      "results/robustness_assay_leave_out.csv",
+      "results/robustness_assay_precision.csv",
+      "results/robustness_multicondition_replicate_slopes.csv",
+      "results/robustness_ordering_ambiguity.csv",
+      "results/robustness_ordering_gaps.csv",
+      "results/robustness_rank_concordance.csv",
+      "results/robustness_time_trend_loo.csv",
+      "results/robustness_time_trends.csv",
+      "results/robustness_weighted_cells.csv",
+      "results/time_resolved_contrasts.csv",
+      "results/time_resolved_leave_one_replicate_out.csv",
+      "results/time_resolved_paired_wide.csv",
+      "results/time_resolved_replicate_slopes.csv",
+      "results/time_resolved_segments.csv",
+      "results/time_resolved_unpaired_robustness.csv",
+      "results/core_analysis_summary.json",
+      "results/robustness_summary.json",
+      "results/sensitivity_report.json",
+      "results/time_resolved_summary.json",
+      "results/verification_compartment.json",
+      "results/verification_intervention.json",
+      "results/verification_report.json",
+      "results/verification_time.json",
+      "figures/fig1_compartment_fold_change.png",
+      "figures/fig2_baseline_vs_foldchange.png",
+      "figures/fig3_intervention_profiles.png",
+      "figures/fig4_time_resolved.png"
+    ],
+    "reproduction_trace": [
+      "reproduce.md (companion reproduction document)",
+      "reproduce.md#methods (methods + execution order)"
+    ]
+  },
+  "roles_missing": [
+    "authoritative_findings_root_markdown"
+  ],
+  "self_check_passed": false
+}

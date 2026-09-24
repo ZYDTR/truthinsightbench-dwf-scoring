@@ -1,0 +1,36 @@
+=== quantum: n_fail(>5)=49 (9.0%)
+   p_hac          fail_mean= 11.653 rest_mean=  9.040  MWU p=0.00563  cliffs_d=0.239
+   p_n_rings      fail_mean=  1.612 rest_mean=  1.024  MWU p=0.00891  cliffs_d=0.213
+   p_n_arom_rings fail_mean=  1.082 rest_mean=  0.678  MWU p=0.0417  cliffs_d=0.156
+   p_n_rotb       fail_mean=  1.571 rest_mean=  1.318  MWU p=0.172  cliffs_d=0.114
+   p_n_bridge     fail_mean=  0.041 rest_mean=  0.024  MWU p=0.627  cliffs_d=0.008
+   p_n_spiro      fail_mean=  0.020 rest_mean=  0.002  MWU p=0.0434  cliffs_d=0.018
+   p_n_hetero     fail_mean=  0.898 rest_mean=  0.389  MWU p=0.0248  cliffs_d=0.155
+   same_frag_canon  fail_rate T=0.185 (n=27)  F=0.085 (n=516)  fisher_p=0.0856
+   both_rad_in_ring fail_rate T=0.333 (n=6)  F=0.088 (n=537)  fisher_p=0.0946
+   any_rad_arom     fail_rate T=0.065 (n=31)  F=0.092 (n=512)  fisher_p=1
+   crowded          fail_rate T=0.116 (n=95)  F=0.085 (n=448)  fisher_p=0.328
+=== learned: n_fail(>5)=71 (13.1%)
+   p_hac          fail_mean= 13.000 rest_mean=  8.716  MWU p=5.11e-09  cliffs_d=0.428
+   p_n_rings      fail_mean=  2.085 rest_mean=  0.926  MWU p=1.37e-10  cliffs_d=0.444
+   p_n_arom_rings fail_mean=  1.296 rest_mean=  0.627  MWU p=3.3e-06  cliffs_d=0.302
+   p_n_rotb       fail_mean=  1.268 rest_mean=  1.352  MWU p=0.9  cliffs_d=-0.009
+   p_n_bridge     fail_mean=  0.056 rest_mean=  0.021  MWU p=0.222  cliffs_d=0.018
+   p_n_spiro      fail_mean=  0.014 rest_mean=  0.002  MWU p=0.122  cliffs_d=0.012
+   p_n_hetero     fail_mean=  0.845 rest_mean=  0.373  MWU p=7.65e-05  cliffs_d=0.231
+   same_frag_canon  fail_rate T=0.222 (n=27)  F=0.126 (n=516)  fisher_p=0.147
+   both_rad_in_ring fail_rate T=0.500 (n=6)  F=0.127 (n=537)  fisher_p=0.032
+   any_rad_arom     fail_rate T=0.065 (n=31)  F=0.135 (n=512)  fisher_p=0.409
+   crowded          fail_rate T=0.295 (n=95)  F=0.096 (n=448)  fisher_p=2.16e-06
+=== reference: n_fail(>5)=260 (47.9%)
+   p_hac          fail_mean=  9.727 rest_mean=  8.862  MWU p=0.0195  cliffs_d=0.116
+   p_n_rings      fail_mean=  1.281 rest_mean=  0.890  MWU p=0.000507  cliffs_d=0.162
+   p_n_arom_rings fail_mean=  0.804 rest_mean=  0.633  MWU p=0.192  cliffs_d=0.057
+   p_n_rotb       fail_mean=  1.169 rest_mean=  1.498  MWU p=0.0223  cliffs_d=-0.109
+   p_n_bridge     fail_mean=  0.023 rest_mean=  0.028  MWU p=0.79  cliffs_d=-0.003
+   p_n_spiro      fail_mean=  0.008 rest_mean=  0.000  MWU p=0.14  cliffs_d=0.008
+   p_n_hetero     fail_mean=  0.350 rest_mean=  0.512  MWU p=0.00338  cliffs_d=-0.116
+   same_frag_canon  fail_rate T=0.556 (n=27)  F=0.475 (n=516)  fisher_p=0.436
+   both_rad_in_ring fail_rate T=0.500 (n=6)  F=0.479 (n=537)  fisher_p=1
+   any_rad_arom     fail_rate T=0.355 (n=31)  F=0.486 (n=512)  fisher_p=0.195
+   crowded          fail_rate T=0.621 (n=95)  F=0.449 (n=448)  fisher_p=0.00314

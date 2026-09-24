@@ -1,0 +1,77 @@
+{
+  "method": "permute region_1/region_2 labels within (batch,slice,condition) strata on the balanced region_1/2 subset; region_2-vs-region_1 coeff via partial-out M1 (fixed non-region design); two-sided empirical p and 95% CI",
+  "n_perms": 1000,
+  "seed": 42,
+  "n_cells": 580,
+  "n_strata": 23,
+  "observed_contrast": {
+    "mean_amplitude_dff0": 0.3116,
+    "mean_time_to_peak_s": -25.1724,
+    "mean_peak_width_s": 10.7224,
+    "mean_peak_prominence_dff0": 0.3219,
+    "mean_peak_frequency_hz": -0.0038,
+    "mean_auc_au": 1.3998
+  },
+  "per_measure": {
+    "mean_amplitude_dff0": {
+      "observed_contrast": 0.3116,
+      "null_median": 0.025,
+      "null_std": 0.0294,
+      "empirical_p_two_sided": 0.0,
+      "empirical_ci95": [
+        -0.0354,
+        0.0801
+      ]
+    },
+    "mean_time_to_peak_s": {
+      "observed_contrast": -25.1724,
+      "null_median": -0.2577,
+      "null_std": 4.3199,
+      "empirical_p_two_sided": 0.0,
+      "empirical_ci95": [
+        -8.4705,
+        8.0636
+      ]
+    },
+    "mean_peak_width_s": {
+      "observed_contrast": 10.7224,
+      "null_median": -1.311,
+      "null_std": 1.7373,
+      "empirical_p_two_sided": 0.0,
+      "empirical_ci95": [
+        -4.4863,
+        2.1445
+      ]
+    },
+    "mean_peak_prominence_dff0": {
+      "observed_contrast": 0.3219,
+      "null_median": 0.0142,
+      "null_std": 0.0263,
+      "empirical_p_two_sided": 0.0,
+      "empirical_ci95": [
+        -0.036,
+        0.0663
+      ]
+    },
+    "mean_peak_frequency_hz": {
+      "observed_contrast": -0.0038,
+      "null_median": 0.0004,
+      "null_std": 0.0006,
+      "empirical_p_two_sided": 0.0,
+      "empirical_ci95": [
+        -0.0008,
+        0.0016
+      ]
+    },
+    "mean_auc_au": {
+      "observed_contrast": 1.3998,
+      "null_median": 3.4024,
+      "null_std": 4.1547,
+      "empirical_p_two_sided": 0.797,
+      "empirical_ci95": [
+        -4.4463,
+        11.9374
+      ]
+    }
+  }
+}

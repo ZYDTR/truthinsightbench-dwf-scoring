@@ -1,0 +1,27 @@
+table,column,n_rows,n_blank,n_nan_literal,n_numeric_parseable,n_missing_total,frac_parseable,min,median,max,n_le_zero
+nonglacial,Compilation,6288,0,0,0,0,0.0,,,,0
+nonglacial,Reference,6288,0,0,0,0,0.0,,,,0
+nonglacial,Reference DOI,6288,0,0,0,0,0.0,,,,0
+nonglacial,Locality,6288,0,37,0,37,0.0,,,,0
+nonglacial,Basin,6288,0,0,0,0,0.0,,,,0
+nonglacial,Place,6288,0,0,0,0,0.0,,,,0
+nonglacial,Region,6288,0,0,0,0,0.0,,,,0
+nonglacial,Sample ID,6288,0,0,461,0,0.073314,122.0,6888000.0,91013103.0,0
+nonglacial,Latitude,6288,0,0,6288,0,1.0,-85.90501,33.088515,73.53979,1581
+nonglacial,Longitude,6288,0,0,6288,0,1.0,-164.81526,4.62296,178.52993,2889
+nonglacial,Elevation (m),6288,0,0,3677,0,0.584765,30.0,1578.0,5514.744024,0
+nonglacial,Precipitation (mm/yr),6288,0,0,6288,0,1.0,5.4,1017.85,8646.0,0
+nonglacial,Slope (m/km),6288,0,0,6288,0,1.0,0.35696,77.148765,594.86154,0
+nonglacial,Type,6288,0,0,0,0,0.0,,,,0
+nonglacial,Lithology,6288,0,0,0,0,0.0,,,,0
+nonglacial,Methodology,6288,0,0,0,0,0.0,,,,0
+nonglacial,Area (km2),6288,0,0,6220,0,0.989186,1e-08,296.726,7000000.0,0
+nonglacial,Time interval (yr),6288,0,0,6128,0,0.974555,0.00274,1201.185,20000000.0,0
+nonglacial,Sediment flux (km3/yr),6288,0,0,1057,0,0.168098,1.73772e-08,0.000881606,5.56909,0
+nonglacial,Exhumation (m),6288,0,0,11,0,0.001749,3.0,15.0,160.0,0
+nonglacial,Exhumation min (m),6288,0,0,3,0,0.000477,4.0,10.0,10.0,0
+nonglacial,Exhumation max (m),6288,0,0,2,0,0.000318,15.0,17.5,20.0,0
+nonglacial,Erosion rate (mm/yr),6288,0,0,6288,0,1.0,0.0,0.061094300000000004,118.864,4
+nonglacial,Erosion rate min,6288,0,0,4759,0,0.756838,-131.403,0.0322067,62.4612,21
+nonglacial,Erosion rate max,6288,0,0,4759,0,0.756838,0.0,0.0622767,175.268,3
+nonglacial,Comments,6288,0,0,0,0,0.0,,,,0

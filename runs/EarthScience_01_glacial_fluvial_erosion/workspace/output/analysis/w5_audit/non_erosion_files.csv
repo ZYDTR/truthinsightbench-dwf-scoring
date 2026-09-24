@@ -1,0 +1,8 @@
+path,n_rows,columns,role,reason
+data/raw/beryllium.tsv,70.0,Reference | Reference DOI | Locality | Region | Sample ID | Type | Depth (m) | Sal (PSU) | T (C) | pH | Be (nmol/kg) | Be dissolved (nmol/kg) | Be colloidal (nmol/kg) | DOC (nmol/kg) | Alkalinity (mM HCO3) | Notes,NOT part of the erosion-rate evidence chain,"dissolved/colloidal beryllium concentrations in estuaries; no erosion-rate, time-interval, area, slope or precipitation column"
+data/raw/lithology_reference.tsv,1.0,"Chorlton, L.B. | 2007 | Generalized geology of the world: bedrock domains and major faults in GIS format: a small-scale world geology map with an extended geological attribute database | doi: 10.4095/223767",NOT part of the erosion-rate evidence chain,1-row source citation for the Chorlton 2007 geology map
+data/raw/lithology_reference_nonglacial.tsv,1.0,"Chorlton, L.B. | 2007 | Generalized geology of the world: bedrock domains and major faults in GIS format: a small-scale world geology map with an extended geological attribute database | doi: 10.4095/223767",NOT part of the erosion-rate evidence chain,identical 1-row source citation
+data/raw/prior compilations/CHELSEA/references.txt,,,NOT part of the erosion-rate evidence chain,prose reference list for the CHELSA climate product
+data/raw/prior compilations/CHELSEA/annualprecipitation.jl,,,NOT part of the erosion-rate evidence chain,Julia code that built precipitation_*.tsv
+data/raw/prior compilations/OCTOPUS/octopusexposureage.jl,,,NOT part of the erosion-rate evidence chain,Julia code that built octopusages.tsv
+data/raw/source_notes.txt,,,NOT part of the erosion-rate evidence chain,placeholder one-line text ('A description of all the files in this folder...')

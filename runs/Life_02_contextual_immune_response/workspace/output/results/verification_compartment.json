@@ -1,0 +1,112 @@
+{
+  "unit": "compartment_response_replicates",
+  "checks": [
+    {
+      "claim": "V1a cells with fold change > 1",
+      "recomputed": 18,
+      "claimed": 18,
+      "agrees": true
+    },
+    {
+      "claim": "V1b replicate pairs pert > baseline",
+      "recomputed": 69,
+      "claimed": 69,
+      "agrees": true
+    },
+    {
+      "claim": "V1c mean cell log2 fold change",
+      "recomputed": 0.870613,
+      "claimed": 0.871,
+      "agrees": true
+    },
+    {
+      "claim": "V1d 95% CI of mean log2 FC (t, df=17)",
+      "recomputed": [
+        0.748984,
+        0.992242
+      ],
+      "claimed": [
+        0.749,
+        0.992
+      ],
+      "agrees": true
+    },
+    {
+      "claim": "V1e median cell fold change",
+      "recomputed": 1.868097,
+      "claimed": 1.868,
+      "agrees": true
+    },
+    {
+      "claim": "V1f min cell fold change",
+      "recomputed": 1.382399,
+      "claimed": 1.382,
+      "agrees": true
+    },
+    {
+      "claim": "V1f max cell fold change",
+      "recomputed": 2.531222,
+      "claimed": 2.531,
+      "agrees": true
+    },
+    {
+      "claim": "V1g mean FC endpoint_count",
+      "recomputed": 1.92986,
+      "claimed": 1.93,
+      "agrees": true
+    },
+    {
+      "claim": "V1g mean FC endpoint_fraction",
+      "recomputed": 1.7773,
+      "claimed": 1.777,
+      "agrees": true
+    },
+    {
+      "claim": "V1g cells per endpoint type",
+      "recomputed": [
+        9,
+        9
+      ],
+      "claimed": [
+        9,
+        9
+      ],
+      "agrees": true
+    },
+    {
+      "claim": "V1h paired t statistic",
+      "recomputed": 2.313046,
+      "claimed": 2.313,
+      "agrees": true
+    },
+    {
+      "claim": "V1h paired t p-value",
+      "recomputed": 0.049453,
+      "claimed": 0.0495,
+      "agrees": true
+    },
+    {
+      "claim": "V1h mean log2 delta (count - fraction)",
+      "recomputed": 0.110517,
+      "claimed": 0.111,
+      "agrees": true
+    },
+    {
+      "claim": "V1h strata n",
+      "recomputed": 9,
+      "claimed": 9,
+      "agrees": true
+    }
+  ],
+  "adversarial_check": {
+    "check": "Cell-level sign test: each of 18 cells contributes one sign of its mean log2 FC",
+    "n_positive_cells": 18,
+    "n_cells": 18,
+    "p_one_sided": 3.814697265625e-06,
+    "p_two_sided": 7.62939453125e-06,
+    "pooled_pairs_note": "pooled binomial on 72 pairs would treat pairs as independent; 69/72 gives p=1.319e-17",
+    "conclusion": "SIGNIFICANT \u2014 all 18 cell-level signs are positive; p_two_sided=7.629e-06. Effective n drops from 72 to 18 but the conclusion that all cells are up is unchanged."
+  },
+  "conclusion": "All V1a-V1h claims reproduced from raw TSV. Adversarial cell-level sign test: SIGNIFICANT \u2014 all 18 cell-level signs are positive; p_two_sided=7.629e-06. Effective n drops from 72 to 18 but the conclusion that all cells are up is unchanged.",
+  "errors": []
+}

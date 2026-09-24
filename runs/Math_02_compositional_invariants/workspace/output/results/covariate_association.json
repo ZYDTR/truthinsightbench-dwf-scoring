@@ -1,0 +1,141 @@
+{
+  "n_joined": 489,
+  "n_covariate_rows": 490,
+  "marginal_spearman_vs_covariate": {
+    "lib": {
+      "spearman": -0.28344584525880656,
+      "p": 1.7334802054979539e-10
+    },
+    "rich": {
+      "spearman": 0.45983145584426166,
+      "p": 5.8978845561277516e-27
+    },
+    "PC1": {
+      "spearman": -0.2942171901125489,
+      "p": 3.202736950641117e-11
+    },
+    "PC2": {
+      "spearman": 0.5926320749921584,
+      "p": 1.0726285544675844e-47
+    },
+    "PC3": {
+      "spearman": -0.11056624727108318,
+      "p": 0.014435626203339219
+    }
+  },
+  "partial_rank_correlation": {
+    "rich_vs_cov_given_lib": {
+      "rho": 0.5320362557728026,
+      "p": 4.359881313755769e-37,
+      "n": 489
+    },
+    "lib_vs_cov_given_rich": {
+      "rho": -0.40480383237715545,
+      "p": 1.0482092213452525e-20,
+      "n": 489
+    },
+    "raw_rich_vs_cov": 0.45983145584426166,
+    "raw_lib_vs_cov": -0.28344584525880656,
+    "raw_rich_vs_lib": 0.15578282333757054,
+    "interpretation": "Richness and library size move in opposite directions with the covariate, and each keeps its own sign after controlling the other. The richness effect is therefore not a restatement of the depth effect."
+  },
+  "per_group": {
+    "group_A": {
+      "n": 97,
+      "rich_median": 192.0,
+      "lib_median": 280068.0,
+      "covariate_median": 9.0,
+      "raw_rich_vs_cov": 0.5314342641937754,
+      "raw_p": 2.1356605488515278e-08,
+      "partial_rich_vs_cov_given_lib": 0.6011506502159478,
+      "partial_p": 7.487143973912399e-11
+    },
+    "group_B": {
+      "n": 83,
+      "rich_median": 122.0,
+      "lib_median": 318555.0,
+      "covariate_median": 1.53,
+      "raw_rich_vs_cov": 0.846611811502829,
+      "raw_p": 6.751703052110909e-24,
+      "partial_rich_vs_cov_given_lib": 0.8469034974928,
+      "partial_p": 6.2887949796089604e-24
+    },
+    "group_C": {
+      "n": 309,
+      "rich_median": 147.0,
+      "lib_median": 209032.0,
+      "covariate_median": 16.0,
+      "raw_rich_vs_cov": 0.39955558390939805,
+      "raw_p": 2.8470541771977223e-13,
+      "partial_rich_vs_cov_given_lib": 0.47169244983916536,
+      "partial_p": 1.5944944965840584e-18
+    }
+  },
+  "variance_shares": {
+    "covariate_between_group_share": 0.08757724406704485,
+    "richness_between_group_share": 0.1772732602637912,
+    "library_between_group_share": 0.05698801854690113,
+    "interpretation": "The coarse group label explains only a small share of covariate variance and a modest share of richness variance, so it is a coarse stratifier rather than a proxy that could produce the association by itself."
+  },
+  "kruskal_by_group": {
+    "lib": {
+      "H": 33.40013911864593,
+      "p": 5.5879426854893456e-08
+    },
+    "rich": {
+      "H": 73.28717606620638,
+      "p": 1.21868627502209e-16
+    },
+    "PC1": {
+      "H": 340.5262508202254,
+      "p": 1.1367479057943218e-74
+    }
+  },
+  "leave_one_group_out": {
+    "group_A": {
+      "n": 392,
+      "raw_rho": 0.5370952931643367,
+      "partial_rho_given_lib": 0.5883483119946543,
+      "directional_agreement": true
+    },
+    "group_B": {
+      "n": 406,
+      "raw_rho": 0.30802969206141295,
+      "partial_rho_given_lib": 0.41039624174691164,
+      "directional_agreement": true
+    },
+    "group_C": {
+      "n": 180,
+      "raw_rho": 0.7517104094567482,
+      "partial_rho_given_lib": 0.7621693349712725,
+      "directional_agreement": true
+    }
+  },
+  "rarefaction_robustness": {
+    "depth": 3000,
+    "n_replicates": 10,
+    "rich_vs_cov_mean": 0.5620600325246001,
+    "rich_vs_cov_sd": 0.010463768672867193,
+    "rich_vs_cov_min": 0.5497485880841523,
+    "rich_vs_rawrich_mean": 0.7154264354750508,
+    "rich_vs_lib_mean": -0.38513376020413104,
+    "interpretation": "At a common rarefied depth of 3000 counts the covariate-richness association persists with the same sign and similar magnitude, so it is not produced by unequal library size."
+  },
+  "baselines": {
+    "group_label_only": {
+      "spearman_group_code_vs_rich": -0.24038574816705088,
+      "note": "A coarse 3-level label has limited rank information relative to the continuous covariate."
+    },
+    "permutation_null": {
+      "observed_rho": 0.45983145584426166,
+      "n_permutations": 2000,
+      "permutation_p": 0.0,
+      "null_abs_rho_p95": 0.08976301439631969
+    },
+    "outlier_trim_1_99": {
+      "n_after_trim": 479,
+      "raw_rho": 0.43829857865986716,
+      "partial_rho_given_lib": 0.5112183191735116
+    }
+  }
+}

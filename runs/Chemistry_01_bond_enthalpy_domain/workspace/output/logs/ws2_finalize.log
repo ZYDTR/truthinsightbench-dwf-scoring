@@ -1,0 +1,39 @@
+updated /data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws2_channel_accuracy.json
+
+--- composition-controlled degradation ---
+
+[C-H]
+  n_train=144 n_held_out=158
+  quantum    train=1.950 heldout=2.028 deg=+0.077 ratio=1.040 p=0.703
+  learned    train=1.952 heldout=3.079 deg=+1.126 ratio=1.577 p=3.57e-05
+  reference  train=5.705 heldout=5.716 deg=+0.010 ratio=1.002 p=0.98
+
+[C-C]
+  n_train=187 n_held_out=53
+  quantum    train=1.810 heldout=3.733 deg=+1.923 ratio=2.063 p=0.000929
+  learned    train=1.695 heldout=4.147 deg=+2.452 ratio=2.447 p=0.000792
+  reference  train=4.500 heldout=7.783 deg=+3.283 ratio=1.730 p=0.00143
+
+[overlapping_experiment_range_held_out]
+  range=[61.4, 160.2] n_inside=208 n_outside=4
+  quantum    train=1.871 heldout_inside=2.283 deg=+0.412 ratio=1.220 p=0.0282 heldout_outside=11.252
+  learned    train=1.807 heldout_inside=3.128 deg=+1.321 ratio=1.731 p=1.32e-08 heldout_outside=15.065
+  reference  train=5.024 heldout_inside=6.107 deg=+1.083 ratio=1.216 p=0.00218 heldout_outside=11.375
+
+--- composition check ---
+{
+ "experiment_min_train": 61.4,
+ "experiment_max_train": 160.2,
+ "experiment_min_held_out": 15.2,
+ "experiment_max_held_out": 129.8,
+ "welch_p_experiment_mean_train_vs_held_out": 5.067264031917601e-10,
+ "bond_class_counts_train": {
+  "C-C": 187,
+  "C-H": 144
+ },
+ "bond_class_counts_held_out": {
+  "C-H": 158,
+  "C-C": 53,
+  "H-O": 1
+ }
+}

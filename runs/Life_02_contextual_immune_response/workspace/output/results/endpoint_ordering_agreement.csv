@@ -1,0 +1,4 @@
+assay_id,spearman_baseline_count_vs_fraction,spearman_fc_count_vs_fraction
+assay_1,-1,0.5
+assay_2,1,0.5
+assay_3,-1,-1

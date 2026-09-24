@@ -1,0 +1,755 @@
+{
+  "task": "Information_03_signal_surface_invariants",
+  "step": "step6_verification",
+  "t0": "2022-01-01",
+  "independence": {
+    "imports_common_py": false,
+    "note": "no project module imported; cell means, SVD rank R2 (two independent formulas), OLS slopes (simple and multi-regressor), Pearson, average-rank Spearman, polynomial least-squares fits and permutation nulls are re-implemented in this file"
+  },
+  "inputs": {
+    "replicated_response_panel.tsv": {
+      "sha256": "410e51b559eb4d3416f131c2eb4d8f75995ff00d3b76af7b47a0ee8b1220533d",
+      "rows": 8232,
+      "columns": [
+        "input_axis_1_index",
+        "input_axis_2_index",
+        "signal_bin_index",
+        "output_channel_index",
+        "replicate_id",
+        "response_value"
+      ]
+    },
+    "independent_response_panel.tsv": {
+      "sha256": "f85f73bbbf15535425752c6ca2ae65e523c8dd8c06a2d5de11bf1986aaa884a1",
+      "rows": 4116,
+      "columns": [
+        "input_axis_1_index",
+        "input_axis_2_index",
+        "signal_bin_index",
+        "output_channel_index",
+        "replicate_id",
+        "response_value"
+      ]
+    },
+    "independent_fit_error.tsv": {
+      "sha256": "57b739c708fb384f7a661d85e62b67f6c5f333cab170214d6f972ca067d2564a",
+      "rows": 21,
+      "columns": [
+        "input_axis_index",
+        "replicate_id",
+        "fit_error"
+      ]
+    }
+  },
+  "A_rank1_r2": {
+    "definition": "replicate-averaged natural-log response; 49 (a1,a2) rows x 7 channels; columns centred before SVD; rank-k R2 = 1 - sum_{i>=k} s_i^2 / sum_i s_i^2",
+    "primary": {
+      "shape": [
+        49,
+        7
+      ],
+      "singular_values": [
+        13.559390251354442,
+        2.6037026521178,
+        1.191904931765507,
+        0.5224843966448213,
+        0.33962037445831883,
+        0.2420516907543295,
+        0.1414349402010418
+      ],
+      "squared_share_by_spectrum": [
+        0.9549830958176841,
+        0.03521260333813697,
+        0.007379018465409889,
+        0.0014179535825101495,
+        0.0005991048516269302,
+        0.0003043207774500435,
+        0.00010390316718171784
+      ],
+      "rank1_r2_spectrum": 0.9549830958176843,
+      "rank2_r2_spectrum": 0.9901956991558213,
+      "rank1_r2_reconstruction": 0.9549830958176843,
+      "rank2_r2_reconstruction": 0.9901956991558213,
+      "formula_agreement": true
+    },
+    "rank1": {
+      "claim": 0.955,
+      "observed": 0.9549830958176843,
+      "difference": -1.6904182315702343e-05,
+      "tolerance": 5e-05,
+      "verdict": "MATCH"
+    },
+    "rank2": {
+      "claim": 0.9902,
+      "observed": 0.9901956991558213,
+      "difference": -4.300844178684038e-06,
+      "tolerance": 5e-05,
+      "verdict": "MATCH"
+    },
+    "variants_not_the_claim": {
+      "uncentred_columns": {
+        "shape": [
+          49,
+          7
+        ],
+        "singular_values": [
+          194.48589590234562,
+          9.530505392490108,
+          1.2498528739080244,
+          0.631919184075278,
+          0.4155660264798519,
+          0.24994803765229914,
+          0.21025777199942192
+        ],
+        "squared_share_by_spectrum": [
+          0.9975454462418041,
+          0.002395456725569209,
+          4.119782164652769e-05,
+          1.0531240891531201e-05,
+          4.554456288120625e-06,
+          1.6476157304790346e-06,
+          1.1658980689461488e-06
+        ],
+        "rank1_r2_spectrum": 0.9975454462418052,
+        "rank2_r2_spectrum": 0.9999409029673744,
+        "rank1_r2_reconstruction": 0.9975454462418052,
+        "rank2_r2_reconstruction": 0.9999409029673744,
+        "formula_agreement": true
+      },
+      "grid_a1a2bin_392x7": {
+        "shape": [
+          392,
+          7
+        ],
+        "singular_values": [
+          48.6992350358698,
+          8.226176804813504,
+          4.960672869050919,
+          2.6239694479540945,
+          2.2316512552332486,
+          1.990887192725485,
+          1.4310392782540353
+        ],
+        "squared_share_by_spectrum": [
+          0.9556142529535505,
+          0.027266815461330446,
+          0.009915611826217183,
+          0.002774315753200441,
+          0.0020067394791282813,
+          0.001597098292755957,
+          0.0008251662338162966
+        ],
+        "rank1_r2_spectrum": 0.9556142529535514,
+        "rank2_r2_spectrum": 0.9828810684148819,
+        "rank1_r2_reconstruction": 0.9556142529535514,
+        "rank2_r2_reconstruction": 0.9828810684148819,
+        "formula_agreement": true
+      },
+      "per_channel_zscore": {
+        "shape": [
+          49,
+          7
+        ],
+        "singular_values": [
+          13.959438084971769,
+          11.773531917586581,
+          2.1857956044458176,
+          1.5716419302555198,
+          1.2028364383766161,
+          0.7784152830439098,
+          0.4663988697401276
+        ],
+        "squared_share_by_spectrum": [
+          0.5681221913940533,
+          0.40412843677676374,
+          0.013929161587214743,
+          0.007201336317601446,
+          0.004218120983925782,
+          0.0017665607955578142,
+          0.0006341921448829986
+        ],
+        "rank1_r2_spectrum": 0.5681221913940535,
+        "rank2_r2_spectrum": 0.9722506281708172,
+        "rank1_r2_reconstruction": 0.5681221913940533,
+        "rank2_r2_reconstruction": 0.9722506281708172,
+        "formula_agreement": true
+      }
+    }
+  },
+  "B_slope_ratio": {
+    "definition": "per channel: OLS slope of log(response) on input_axis_1_index fitted within each a2 row of the replicate-averaged 7x7 surface, then averaged over the 7 a2 rows; ratio = slope(chan6)/slope(chan0)",
+    "slope_a1_per_channel": {
+      "0": 0.016601207032330888,
+      "1": 0.030423422549814956,
+      "2": 0.05708794165809865,
+      "3": 0.0949105867909041,
+      "4": 0.20637568696994832,
+      "5": 0.38879053599818175,
+      "6": 0.48458760330427875
+    },
+    "primary": {
+      "claim": 29.2,
+      "observed": 29.1899018162079,
+      "difference": -0.010098183792099036,
+      "tolerance": 0.05,
+      "verdict": "MATCH"
+    },
+    "variants_not_the_claim": {
+      "pooled_cells_slope_ratio_ch6_over_ch0": 29.189901816207932,
+      "a1_slope_controlling_a2_and_bin_ratio_ch6_over_ch0": 29.18990181621496,
+      "ratio_per_a2_row": [
+        43.80671478620027,
+        42.3875577258186,
+        39.21342721471084,
+        28.936940393131472,
+        22.422910341527544,
+        16.826049381687756,
+        5.70660715807143
+      ],
+      "ratio_per_a2_row_min": 5.70660715807143,
+      "ratio_per_a2_row_max": 43.80671478620027
+    }
+  },
+  "C_cross_panel_correlation": {
+    "definition": "replicate-averaged log response matched on (a1,a2,bin,chan), 7x7x7x4=1372 cells",
+    "n_cells": 1372,
+    "pearson_log": 0.01676817822716669,
+    "pearson_linear": -0.010949209114774823,
+    "spearman_log": 0.03242767140167187,
+    "perm_p_two_sided": 0.5384730763461827,
+    "perm_null_mean": -0.00025967650368764284,
+    "perm_null_sd": 0.027141396062460195,
+    "perm_n": 20000,
+    "log_sd_rep": 0.3753478834240615,
+    "log_sd_ind": 1.3466107027127254,
+    "primary": {
+      "claim": 0.0168,
+      "observed": 0.01676817822716669,
+      "difference": -3.1821772833309087e-05,
+      "tolerance": 5e-05,
+      "verdict": "MATCH"
+    }
+  },
+  "D_cv_sharing": {
+    "definition": "per-cell sd/mean of the 3 replicates, linear space, matched on the 1372 shared cells",
+    "n_cells": 1372,
+    "pearson_cv": 0.3822437330306706,
+    "perm_p_two_sided": 4.999750012499375e-05,
+    "perm_null_mean": -0.00042706274997151184,
+    "perm_null_sd": 0.027180666455948625,
+    "perm_n": 20000,
+    "mean_cv_rep": 0.29037553913987046,
+    "mean_cv_ind": 0.18977853619706805,
+    "primary": {
+      "claim": 0.3822,
+      "observed": 0.3822437330306706,
+      "difference": 4.373303067062295e-05,
+      "tolerance": 5e-05,
+      "verdict": "MATCH"
+    }
+  },
+  "E_bin0_excess": {
+    "definition": "mean log response per signal_bin over all a1,a2,chan,replicates; degree-2 fit on bins 1-7 evaluated at bin 0",
+    "bin_means": {
+      "0": 11.117135043924856,
+      "1": 10.162985988204035,
+      "2": 10.193217161010823,
+      "3": 10.195809424430122,
+      "4": 10.211938043537458,
+      "5": 10.399012246421115,
+      "6": 10.517656885786932,
+      "7": 10.560774738631121
+    },
+    "quadratic_coef_bins1_7": [
+      10.168933201809905,
+      -0.020908881086956876,
+      0.011745076755621739
+    ],
+    "predicted_bin0": 10.168933201809905,
+    "excess": 0.9482018421149512,
+    "excess_ratio_exp": 2.5810643228793464,
+    "primary": {
+      "claim": 0.9482,
+      "observed": 0.9482018421149512,
+      "difference": 1.8421149511338442e-06,
+      "tolerance": 5e-05,
+      "verdict": "MATCH"
+    }
+  },
+  "R1_scale_artefact": {
+    "i_per_channel_centred": {
+      "observed": 0.06909274834661328,
+      "perm_p_two_sided": 0.01134943252837358,
+      "null_mean": -1.546755221548648e-05,
+      "null_sd": 0.027331599304044878,
+      "n_perm": 20000,
+      "material_positive": false
+    },
+    "i_alt_per_channel_centred_own_panel_means": {
+      "pearson": 0.06908749948836002,
+      "n_cells": 1372
+    },
+    "ii_variance_standardised_global": {
+      "observed": 0.016768178227166697,
+      "perm_p_two_sided": 0.5372731363431829,
+      "null_mean": -0.00010773036126241777,
+      "null_sd": 0.02706030173314786,
+      "n_perm": 20000,
+      "material_positive": false
+    },
+    "ii_alt_variance_standardised_within_channel": {
+      "observed": 0.10099513475858236,
+      "perm_p_two_sided": 9.99950002499875e-05,
+      "null_mean": -0.00011956875169818382,
+      "null_sd": 0.02681756371873602,
+      "n_perm": 20000,
+      "material_positive": true
+    },
+    "iii_rank_transformed_pooled": {
+      "observed": 0.03242767140167187,
+      "perm_p_two_sided": 0.2312884355782211,
+      "null_mean": 2.8424378441501214e-05,
+      "null_sd": 0.027104474162813412,
+      "n_perm": 20000,
+      "material_positive": false
+    },
+    "iii_alt_rank_within_channel": {
+      "observed": 0.11544515952910278,
+      "perm_p_two_sided": 9.99950002499875e-05,
+      "null_mean": 0.00010751381226559518,
+      "null_sd": 0.02701591083421965,
+      "n_perm": 20000,
+      "material_positive": true
+    },
+    "iv_replicate_deviations": {
+      "observed": -0.09169819002822659,
+      "perm_p_two_sided": 4.999750012499375e-05,
+      "null_mean": -4.888904686704756e-05,
+      "null_sd": 0.015659237490638085,
+      "n_perm": 20000,
+      "material_positive": false,
+      "n_rows": 4116
+    },
+    "v_ind_panel_a1a2_structure_removed": {
+      "observed": -0.10451318848048778,
+      "perm_p_two_sided": 0.00014999250037498125,
+      "null_mean": -0.00018911725148257872,
+      "null_sd": 0.026957154737516215,
+      "n_perm": 20000,
+      "material_positive": false
+    },
+    "vi_linear_control_same_treatment": {
+      "observed": -0.07858427760996396,
+      "perm_p_two_sided": 0.009649517524123795,
+      "null_mean": -0.00015114523472523232,
+      "null_sd": 0.02711859793993833,
+      "n_perm": 20000,
+      "material_positive": false
+    },
+    "vii_a1a2_marginal_49_points": {
+      "pearson": 0.28620627227026185,
+      "spearman": 0.4092857142857143,
+      "n_points": 49
+    },
+    "vii_a1a2_chan_cell_196_points": {
+      "pearson_pooled_over_bins": 0.08143626409672172,
+      "n_points": 196
+    },
+    "_summary": {
+      "variants_checked": [
+        "i_per_channel_centred",
+        "i_alt_per_channel_centred_own_panel_means",
+        "ii_variance_standardised_global",
+        "ii_alt_variance_standardised_within_channel",
+        "iii_rank_transformed_pooled",
+        "iii_alt_rank_within_channel",
+        "iv_replicate_deviations",
+        "v_ind_panel_a1a2_structure_removed",
+        "vi_linear_control_same_treatment",
+        "vii_a1a2_marginal_49_points",
+        "vii_a1a2_chan_cell_196_points"
+      ],
+      "any_material_positive": true,
+      "material_variants": [
+        "ii_alt_variance_standardised_within_channel",
+        "iii_alt_rank_within_channel"
+      ]
+    }
+  },
+  "R2_multiplicative_artefact": {
+    "linear_sd": {
+      "observed": 0.11082180957218024,
+      "perm_p_two_sided": 0.0016999150042497876,
+      "null_mean": 0.00014116965160048582,
+      "null_sd": 0.0268856439194499,
+      "n_perm": 20000,
+      "abs_observed": 0.11082180957218024
+    },
+    "log_space_sd": {
+      "observed": 0.3691998828538102,
+      "perm_p_two_sided": 4.999750012499375e-05,
+      "null_mean": 9.789351780700411e-05,
+      "null_sd": 0.026910892183819042,
+      "n_perm": 20000,
+      "abs_observed": 0.3691998828538102
+    },
+    "log_of_cv": {
+      "observed": 0.316392592482185,
+      "perm_p_two_sided": 4.999750012499375e-05,
+      "null_mean": -0.00019321803007755326,
+      "null_sd": 0.026994566389465482,
+      "n_perm": 20000,
+      "abs_observed": 0.316392592482185
+    },
+    "cv_after_a1a2_means_removed": {
+      "observed": 0.19934890374436456,
+      "perm_p_two_sided": 4.999750012499375e-05,
+      "null_mean": 3.695896292891926e-05,
+      "null_sd": 0.026997006786507884,
+      "n_perm": 20000,
+      "abs_observed": 0.19934890374436456
+    },
+    "linear_sd_after_a1a2_means_removed": {
+      "observed": -0.04823081737425634,
+      "perm_p_two_sided": 0.06819659017049147,
+      "null_mean": -0.0003706598708435233,
+      "null_sd": 0.02674182931157808,
+      "n_perm": 20000,
+      "abs_observed": 0.04823081737425634
+    },
+    "cv_after_a1a2_and_channel_means_removed": {
+      "observed": 0.1817077182972113,
+      "perm_p_two_sided": 4.999750012499375e-05,
+      "null_mean": 0.0003791288324082598,
+      "null_sd": 0.027013939208862338,
+      "n_perm": 20000,
+      "abs_observed": 0.1817077182972113
+    },
+    "linear_sd_after_a1a2_and_channel_means_removed": {
+      "observed": -0.08205431009444097,
+      "perm_p_two_sided": 0.008299585020748963,
+      "null_mean": 0.0002819028617022567,
+      "null_sd": 0.027012292319282767,
+      "n_perm": 20000,
+      "abs_observed": 0.08205431009444097
+    },
+    "_summary": {
+      "cv_on_original_scale_pearson": 0.3822437330306706,
+      "linear_sd_pearson": 0.11082180957218024,
+      "log_space_sd_pearson": 0.3691998828538102,
+      "cv_after_a1a2_removal": 0.19934890374436456,
+      "linear_sd_after_a1a2_removal": -0.04823081737425634,
+      "cv_survives_a1a2_removal": true,
+      "linear_sd_survives_a1a2_removal": false,
+      "sharing_survives_on_linear_sd_scale": false,
+      "material_threshold": "|r| >= 0.10 with permutation p < 0.001",
+      "sharing_present_at_at_least_one_dispersion_scale": true
+    }
+  },
+  "R3_trend_model_artefact": {
+    "definition": "bin-0 mean log response minus the predicted value at bin 0 of a polynomial trend fitted to the listed bins",
+    "estimates": {
+      "deg1_bins1_7": {
+        "degree": 1,
+        "fit_bins": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "predicted_bin0": 10.027992280742444,
+        "excess": 1.0891427631824122,
+        "ratio_exp": 2.9717255078402927
+      },
+      "deg1_bins1_6": {
+        "degree": 1,
+        "fit_bins": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "predicted_bin0": 10.039416455239822,
+        "excess": 1.077718588685034,
+        "ratio_exp": 2.9379691832837973
+      },
+      "deg1_bins2_7": {
+        "degree": 1,
+        "fit_bins": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "predicted_bin0": 9.961920841271981,
+        "excess": 1.1552142026528749,
+        "ratio_exp": 3.1747033745856243
+      },
+      "deg2_bins1_7": {
+        "degree": 2,
+        "fit_bins": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "predicted_bin0": 10.168933201809905,
+        "excess": 0.9482018421149512,
+        "ratio_exp": 2.5810643228793464
+      },
+      "deg2_bins1_6": {
+        "degree": 2,
+        "fit_bins": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "predicted_bin0": 10.236082303681924,
+        "excess": 0.8810527402429322,
+        "ratio_exp": 2.413439093983045
+      },
+      "deg2_bins2_7": {
+        "degree": 2,
+        "fit_bins": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "predicted_bin0": 10.15156361189244,
+        "excess": 0.9655714320324158,
+        "ratio_exp": 2.626287972843365
+      },
+      "deg3_bins1_7": {
+        "degree": 3,
+        "fit_bins": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "predicted_bin0": 10.298786998149932,
+        "excess": 0.8183480457749237,
+        "ratio_exp": 2.2667521720709227
+      },
+      "deg3_bins1_6": {
+        "degree": 3,
+        "fit_bins": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "predicted_bin0": 10.173484940505546,
+        "excess": 0.9436501034193103,
+        "ratio_exp": 2.5693426896684
+      },
+      "deg3_bins2_7": {
+        "degree": 3,
+        "fit_bins": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "predicted_bin0": 10.88840967541531,
+        "excess": 0.2287253685095454,
+        "ratio_exp": 1.2569967807032263
+      },
+      "direct_mean_bins1_2": {
+        "excess": 0.9390334693174278,
+        "ratio_exp": 2.5575083131002114,
+        "degree": null,
+        "fit_bins": null
+      },
+      "direct_mean_bins1_3": {
+        "excess": 0.9331308527098621,
+        "ratio_exp": 2.542456787450631,
+        "degree": null,
+        "fit_bins": null
+      }
+    },
+    "range_excess": [
+      0.2287253685095454,
+      1.1552142026528749
+    ],
+    "range_ratio_exp": [
+      1.2569967807032263,
+      3.1747033745856243
+    ],
+    "all_positive": true,
+    "per_cell": {
+      "deg2_bins1_7": {
+        "min": 0.07029124244466267,
+        "max": 2.3157649152818998,
+        "mean": 0.9482018421149462,
+        "fraction_positive": 1.0,
+        "n_cells": 49
+      },
+      "deg2_bins2_7": {
+        "min": -0.024412098281413108,
+        "max": 2.397380180261301,
+        "mean": 0.965571432032419,
+        "fraction_positive": 0.9591836734693877,
+        "n_cells": 49
+      },
+      "deg1_bins1_7": {
+        "min": 0.06321125386319437,
+        "max": 2.325094135744651,
+        "mean": 1.0891427631824109,
+        "fraction_positive": 1.0,
+        "n_cells": 49
+      },
+      "mean_bins1_2": {
+        "min": 0.05056089663276708,
+        "max": 2.257111519708465,
+        "mean": 0.9390334693174271,
+        "fraction_positive": 1.0,
+        "n_cells": 49
+      }
+    },
+    "primary": {
+      "claim": 0.9482,
+      "observed": 0.9482018421149512,
+      "difference": 1.8421149511338442e-06,
+      "tolerance": 5e-05,
+      "verdict": "MATCH"
+    }
+  },
+  "R3s_independent_panel_bin0": {
+    "deg1_bins1_6": {
+      "bin0_observed": 8.932441476602571,
+      "predicted_bin0": 8.790788299791517,
+      "excess": 0.1416531768110545
+    },
+    "deg2_bins1_6": {
+      "bin0_observed": 8.932441476602571,
+      "predicted_bin0": 9.386351169377882,
+      "excess": -0.45390969277531035
+    },
+    "deg3_bins1_6": {
+      "bin0_observed": 8.932441476602571,
+      "predicted_bin0": 9.592843040121991,
+      "excess": -0.6604015635194198
+    },
+    "direct_mean_bins1_2": {
+      "excess": -0.6454973629093583
+    },
+    "bin_means": {
+      "0": 8.932441476602571,
+      "1": 9.493440967558698,
+      "2": 9.662436711465164,
+      "3": 10.000665776111008,
+      "4": 10.508885588781451,
+      "5": 11.13812543381207,
+      "6": 11.788987996914347
+    }
+  },
+  "headline_verdicts": {
+    "A_rank1_r2": {
+      "claim": 0.955,
+      "observed": 0.9549830958176843,
+      "difference": -1.6904182315702343e-05,
+      "tolerance": 5e-05,
+      "verdict": "MATCH"
+    },
+    "A_rank2_r2": {
+      "claim": 0.9902,
+      "observed": 0.9901956991558213,
+      "difference": -4.300844178684038e-06,
+      "tolerance": 5e-05,
+      "verdict": "MATCH"
+    },
+    "B_slope_ratio": {
+      "claim": 29.2,
+      "observed": 29.1899018162079,
+      "difference": -0.010098183792099036,
+      "tolerance": 0.05,
+      "verdict": "MATCH"
+    },
+    "C_cross_panel_correlation": {
+      "claim": 0.0168,
+      "observed": 0.01676817822716669,
+      "difference": -3.1821772833309087e-05,
+      "tolerance": 5e-05,
+      "verdict": "MATCH"
+    },
+    "D_cv_sharing": {
+      "claim": 0.3822,
+      "observed": 0.3822437330306706,
+      "difference": 4.373303067062295e-05,
+      "tolerance": 5e-05,
+      "verdict": "MATCH"
+    },
+    "E_bin0_excess": {
+      "claim": 0.9482,
+      "observed": 0.9482018421149512,
+      "difference": 1.8421149511338442e-06,
+      "tolerance": 5e-05,
+      "verdict": "MATCH"
+    }
+  },
+  "n_discrepancies": 0,
+  "errors": [],
+  "log": [
+    "step6_verification: adversarial recomputation, independent of output/analysis/common.py",
+    "loaded replicated_response_panel.tsv: shape=(8232, 6) sha256=410e51b559eb4d3416f131c2eb4d8f75995ff00d3b76af7b47a0ee8b1220533d",
+    "loaded independent_response_panel.tsv: shape=(4116, 6) sha256=f85f73bbbf15535425752c6ca2ae65e523c8dd8c06a2d5de11bf1986aaa884a1",
+    "loaded independent_fit_error.tsv: shape=(21, 3) sha256=57b739c708fb384f7a661d85e62b67f6c5f333cab170214d6f972ca067d2564a",
+    "rep: rows=8232 cells=2744 replicate counts min=1 max=1 bins=8 chans=7",
+    "ind: rows=4116 cells=1372 replicate counts min=1 max=1 bins=7 chans=4",
+    "A: 49x7 log rank1 R2=0.954983 rank2 R2=0.990196 (spectrum vs reconstruction agree=True)",
+    "A variants: uncentred rank1=0.9975 ; 392x7 rank1=0.9556 rank2=0.9829 ; per-channel z rank1=0.5681",
+    "B: mean a1 slope (logged, by-a2 averaged) ch0=0.016601 ch6=0.484588 ratio=29.1899",
+    "B variants: pooled-cell ratio=29.1899 ; controlling a2+bin ratio=29.1899 ; per-a2 row range=[5.707, 43.807]",
+    "C: shared cells=1372 ; pearson(log)=+0.016768 pearson(linear)=-0.010949 spearman(log)=+0.032428 perm p=0.5385",
+    "C scale context: rep log sd=0.3753 ind log sd=1.3466 ; rep log mean=9.5669 ind log mean=10.2179",
+    "D: shared cells=1372 ; pearson(CV)=0.382244 perm p=0.00005 ; mean CV rep=0.2904 ind=0.1898",
+    "E: bin0 mean=11.117135 ; quadratic(1-7) prediction at bin0=10.168933 ; excess=+0.948202 (x2.5811)",
+    "E bin means: bin0=11.1171, bin1=10.1630, bin2=10.1932, bin3=10.1958, bin4=10.2119, bin5=10.3990, bin6=10.5177, bin7=10.5608",
+    "R1 i(per-channel centred): pearson=+0.069093 perm p=0.01135 (null sd=0.0273) material_positive=False",
+    "R1 ii(global z): pearson=+0.016768 perm p=0.53727 (null sd=0.0271) material_positive=False",
+    "R1 ii(channel z): pearson=+0.100995 perm p=0.00010 (null sd=0.0268) material_positive=True",
+    "R1 iii(pooled ranks): pearson=+0.032428 perm p=0.23129 (null sd=0.0271) material_positive=False",
+    "R1 iii(within-channel ranks): pearson=+0.115445 perm p=0.00010 (null sd=0.0270) material_positive=True",
+    "R1 iv(replicate deviations): pearson=-0.091698 perm p=0.00005 (null sd=0.0157) material_positive=False",
+    "R1 v(ind a1a2 removed, both z): pearson=-0.104513 perm p=0.00015 (null sd=0.0270) material_positive=False",
+    "R1 vi(linear control, same treatment): pearson=-0.078584 perm p=0.00965 (null sd=0.0271) material_positive=False",
+    "R1 vii: (a1,a2) marginal 49-point pearson=+0.2862 ; (a1,a2,chan) 196-point pearson=+0.0814",
+    "R1 summary: any variant with substantial positive correlation: True ['ii_alt_variance_standardised_within_channel', 'iii_alt_rank_within_channel']",
+    "R2 linear sd: pearson=+0.110822 perm p=0.00170 (null sd=0.0269)",
+    "R2 log-space sd: pearson=+0.369200 perm p=0.00005 (null sd=0.0269)",
+    "R2 log cv: pearson=+0.316393 perm p=0.00005 (null sd=0.0270)",
+    "R2 cv minus (a1,a2) means: pearson=+0.199349 perm p=0.00005 (null sd=0.0270)",
+    "R2 linear sd minus (a1,a2) means: pearson=-0.048231 perm p=0.06820 (null sd=0.0267)",
+    "R2 cv minus (a1,a2,chan) means: pearson=+0.181708 perm p=0.00005 (null sd=0.0270)",
+    "R2 linear sd minus (a1,a2,chan) means: pearson=-0.082054 perm p=0.00830 (null sd=0.0270)",
+    "R2 summary: {\"cv_on_original_scale_pearson\": 0.3822437330306706, \"linear_sd_pearson\": 0.11082180957218024, \"log_space_sd_pearson\": 0.3691998828538102, \"cv_after_a1a2_removal\": 0.19934890374436456, \"linear_sd_after_a1a2_removal\": -0.04823081737425634, \"cv_survives_a1a2_removal\": true, \"linear_sd_survives_a1a2_removal\": false, \"sharing_survives_on_linear_sd_scale\": false, \"material_threshold\": \"|r| >= 0.10 with permutation p < 0.001\", \"sharing_present_at_at_least_one_dispersion_scale\": true}",
+    "R3: excess range across 11 trend/comparison variants = [+0.2287, +1.1552]",
+    "R3 all estimates: deg1_bins1_7=+1.0891, deg1_bins1_6=+1.0777, deg1_bins2_7=+1.1552, deg2_bins1_7=+0.9482, deg2_bins1_6=+0.8811, deg2_bins2_7=+0.9656, deg3_bins1_7=+0.8183, deg3_bins1_6=+0.9437, deg3_bins2_7=+0.2287, direct_mean_bins1_2=+0.9390, direct_mean_bins1_3=+0.9331",
+    "R3 per-cell fraction positive: deg2_bins1_7=1.00, deg2_bins2_7=0.96, deg1_bins1_7=1.00, mean_bins1_2=1.00",
+    "R3 supplementary (independent panel, bins 0-6): quadratic excess=-0.4539 ; linear=+0.1417 ; direct bins1-2=-0.6455"
+  ]
+}

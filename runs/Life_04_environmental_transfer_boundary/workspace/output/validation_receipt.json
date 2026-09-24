@@ -1,0 +1,487 @@
+{
+  "schema": "truthinsightbench-semantic-output-validation",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "output": "/data/user/conversations/conv-b3a51d52-1a98-46f8-8eb1-519a0fc9ea52/project/output",
+  "authoritative_report": {
+    "path": "Result.md",
+    "bytes": 28319,
+    "sha256": "0400df9f9d462d4b8a23fbc04e1cf46fc6080b3d7540b451c32e5b657e56eeee"
+  },
+  "registered_findings": {
+    "count": 5,
+    "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "markers": [
+      {
+        "finding_number": 1,
+        "line": 40,
+        "marker": "### Finding 1 — Environmental positivity is a property of the sampled unit, not of the sampled site; site-level labels carry no recoverable location signal",
+        "heading_level": 3
+      },
+      {
+        "finding_number": 2,
+        "line": 101,
+        "marker": "### Finding 2 — Positivity concentrates at low quantitative assay values, but as a threshold step rather than a graded dose–response",
+        "heading_level": 3
+      },
+      {
+        "finding_number": 3,
+        "line": 163,
+        "marker": "### Finding 3 — The apparent 4-fold protective effect of later illness day is a design artefact; no threshold-free day or stay-day association survives blocking",
+        "heading_level": 3
+      },
+      {
+        "finding_number": 4,
+        "line": 226,
+        "marker": "### Finding 4 — Symptom status is uninformative about unit environmental positivity, while surface positivity is a strict subset of environmental positivity",
+        "heading_level": 3
+      },
+      {
+        "finding_number": 5,
+        "line": 287,
+        "marker": "### Finding 5 — The clustering constraint changes conclusions, not just their precision: it is the failure boundary of this dataset",
+        "heading_level": 3
+      }
+    ],
+    "traceability": [
+      {
+        "finding_number": 1,
+        "resolved_native_tokens": [
+          "F001",
+          "F003",
+          "F006",
+          "F007",
+          "F010",
+          "F015",
+          "F016",
+          "F017",
+          "F020"
+        ],
+        "analysis_sources": [
+          "analysis/run_analysis.py",
+          "analysis/run_checks_figures.py",
+          "analysis/run_sensitivity.py",
+          "analysis/run_supplementary.py",
+          "analysis/ti_lib.py"
+        ],
+        "result_evidence": [
+          "analysis/results/block_holdouts.csv",
+          "analysis/results/checks.json",
+          "analysis/results/day_threshold_sensitivity.csv",
+          "analysis/results/leave_one_unit_out.csv",
+          "analysis/results/results.json",
+          "analysis/results/sensitivity.json",
+          "analysis/results/site_label_positivity.csv",
+          "analysis/results/site_position_positivity.csv",
+          "analysis/results/supplementary.json",
+          "analysis/results/unit_level_analysis_table.csv",
+          "analysis/results/unit_positivity_summary.csv",
+          "figures/fig1_unit_level_positivity.svg",
+          "figures/fig2_assay_threshold.svg",
+          "figures/fig3_naive_vs_blocked.svg",
+          "figures/fig4_site_label_rotation.svg"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 2,
+        "resolved_native_tokens": [
+          "F001",
+          "F003",
+          "F004",
+          "F006",
+          "F007",
+          "F008",
+          "F018"
+        ],
+        "analysis_sources": [
+          "analysis/run_analysis.py",
+          "analysis/run_checks_figures.py",
+          "analysis/run_sensitivity.py",
+          "analysis/run_supplementary.py",
+          "analysis/ti_lib.py"
+        ],
+        "result_evidence": [
+          "analysis/results/block_holdouts.csv",
+          "analysis/results/checks.json",
+          "analysis/results/day_threshold_sensitivity.csv",
+          "analysis/results/leave_one_unit_out.csv",
+          "analysis/results/results.json",
+          "analysis/results/sensitivity.json",
+          "analysis/results/site_label_positivity.csv",
+          "analysis/results/site_position_positivity.csv",
+          "analysis/results/supplementary.json",
+          "analysis/results/unit_level_analysis_table.csv",
+          "analysis/results/unit_positivity_summary.csv",
+          "figures/fig1_unit_level_positivity.svg",
+          "figures/fig2_assay_threshold.svg",
+          "figures/fig3_naive_vs_blocked.svg",
+          "figures/fig4_site_label_rotation.svg"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 3,
+        "resolved_native_tokens": [
+          "F001",
+          "F003",
+          "F006",
+          "F007",
+          "F011",
+          "F012",
+          "F019"
+        ],
+        "analysis_sources": [
+          "analysis/run_analysis.py",
+          "analysis/run_checks_figures.py",
+          "analysis/run_sensitivity.py",
+          "analysis/run_supplementary.py",
+          "analysis/ti_lib.py"
+        ],
+        "result_evidence": [
+          "analysis/results/block_holdouts.csv",
+          "analysis/results/checks.json",
+          "analysis/results/day_threshold_sensitivity.csv",
+          "analysis/results/leave_one_unit_out.csv",
+          "analysis/results/results.json",
+          "analysis/results/sensitivity.json",
+          "analysis/results/site_label_positivity.csv",
+          "analysis/results/site_position_positivity.csv",
+          "analysis/results/supplementary.json",
+          "analysis/results/unit_level_analysis_table.csv",
+          "analysis/results/unit_positivity_summary.csv",
+          "figures/fig1_unit_level_positivity.svg",
+          "figures/fig2_assay_threshold.svg",
+          "figures/fig3_naive_vs_blocked.svg",
+          "figures/fig4_site_label_rotation.svg"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 4,
+        "resolved_native_tokens": [
+          "F001",
+          "F005",
+          "F006",
+          "F007",
+          "F009"
+        ],
+        "analysis_sources": [
+          "analysis/run_analysis.py",
+          "analysis/run_checks_figures.py",
+          "analysis/run_sensitivity.py",
+          "analysis/run_supplementary.py",
+          "analysis/ti_lib.py"
+        ],
+        "result_evidence": [
+          "analysis/results/block_holdouts.csv",
+          "analysis/results/checks.json",
+          "analysis/results/day_threshold_sensitivity.csv",
+          "analysis/results/leave_one_unit_out.csv",
+          "analysis/results/results.json",
+          "analysis/results/sensitivity.json",
+          "analysis/results/site_label_positivity.csv",
+          "analysis/results/site_position_positivity.csv",
+          "analysis/results/supplementary.json",
+          "analysis/results/unit_level_analysis_table.csv",
+          "analysis/results/unit_positivity_summary.csv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 5,
+        "resolved_native_tokens": [
+          "F001",
+          "F003",
+          "F006",
+          "F007",
+          "F011",
+          "F019"
+        ],
+        "analysis_sources": [
+          "analysis/run_analysis.py",
+          "analysis/run_checks_figures.py",
+          "analysis/run_sensitivity.py",
+          "analysis/run_supplementary.py",
+          "analysis/ti_lib.py"
+        ],
+        "result_evidence": [
+          "analysis/results/block_holdouts.csv",
+          "analysis/results/checks.json",
+          "analysis/results/day_threshold_sensitivity.csv",
+          "analysis/results/leave_one_unit_out.csv",
+          "analysis/results/results.json",
+          "analysis/results/sensitivity.json",
+          "analysis/results/site_label_positivity.csv",
+          "analysis/results/site_position_positivity.csv",
+          "analysis/results/supplementary.json",
+          "analysis/results/unit_level_analysis_table.csv",
+          "analysis/results/unit_positivity_summary.csv",
+          "figures/fig1_unit_level_positivity.svg",
+          "figures/fig2_assay_threshold.svg",
+          "figures/fig3_naive_vs_blocked.svg",
+          "figures/fig4_site_label_rotation.svg"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      }
+    ]
+  },
+  "reproduction": {
+    "mode": "companion_markdown",
+    "document": {
+      "path": "reproduce.md",
+      "bytes": 8706,
+      "sha256": "f77f51f6659f8415aadeda1ce180226f3225f83449d729d4f8b593f90d0ad279"
+    }
+  },
+  "analysis_sources": [
+    {
+      "path": "analysis/run_analysis.py",
+      "bytes": 31288,
+      "sha256": "c53fac63cbfd17203b5274bc12589cfe07df368ae753fbe4992b85fc44776607"
+    },
+    {
+      "path": "analysis/run_checks_figures.py",
+      "bytes": 13236,
+      "sha256": "5454cb5071726dfba958a4ff58540500897816557a783face1a16b1e2a031db0"
+    },
+    {
+      "path": "analysis/run_sensitivity.py",
+      "bytes": 14130,
+      "sha256": "7fe7a25ce2450afadf4372a1fc92588aba72d73bfa3361825e701b46edbe692d"
+    },
+    {
+      "path": "analysis/run_supplementary.py",
+      "bytes": 9733,
+      "sha256": "8fcabc45620345e70fa12922e0d2714148d5a4df1e2d79c7af8d8ea95ac19716"
+    },
+    {
+      "path": "analysis/ti_lib.py",
+      "bytes": 16702,
+      "sha256": "287a0ed5c4ad4c381332bfaa63c926b2269df840cc7b48ffd13586fdd29b921d"
+    }
+  ],
+  "executed_notebooks": [],
+  "result_artifacts": [
+    {
+      "path": "analysis/results/block_holdouts.csv",
+      "bytes": 780,
+      "sha256": "14a035fe7c8c1c256e666120041b8e2e3a636feb0142d5b148e40b520ea93b85"
+    },
+    {
+      "path": "analysis/results/checks.json",
+      "bytes": 1886,
+      "sha256": "c62c202b9adc275bc88acefcac98706f0e5f8013eac0353dec5f0a5dce0afe97"
+    },
+    {
+      "path": "analysis/results/day_threshold_sensitivity.csv",
+      "bytes": 3217,
+      "sha256": "d4c3f11c98acb0c2883d0df760e2302579fd558b0f957df6a5976fbbd00bc66c"
+    },
+    {
+      "path": "analysis/results/leave_one_unit_out.csv",
+      "bytes": 3445,
+      "sha256": "8977a30e0f4e76194b0ce0661734ce831ae2b6c1d8b22b6fc3364f4e3c84380a"
+    },
+    {
+      "path": "analysis/results/results.json",
+      "bytes": 45529,
+      "sha256": "befa5fcd52ca199b792b66d5108ba1a5ca680cb35a83d68cb0d860969270ece3"
+    },
+    {
+      "path": "analysis/results/sensitivity.json",
+      "bytes": 17836,
+      "sha256": "db7d240cf3562d84b30679108405cb0f8aa35626b1f286df15c75d455a4c0aba"
+    },
+    {
+      "path": "analysis/results/site_label_positivity.csv",
+      "bytes": 345,
+      "sha256": "f062316ef4ab52559d9a0e569dae1baa57abfd119a1e682d39a6c5fe168a81e2"
+    },
+    {
+      "path": "analysis/results/site_position_positivity.csv",
+      "bytes": 317,
+      "sha256": "1ff6d8fd1a126a782e461a545aab2310cbae67775e4e75373cd168c02c640665"
+    },
+    {
+      "path": "analysis/results/supplementary.json",
+      "bytes": 12502,
+      "sha256": "cac52b0e052b056c73d501a71e86ae7b809c19f926a42e34dd18f3dc7960f648"
+    },
+    {
+      "path": "analysis/results/unit_level_analysis_table.csv",
+      "bytes": 912,
+      "sha256": "7198390ed59beede07ef7d239bf24295a3e909db13a916ae5f78c14bf8c9b57b"
+    },
+    {
+      "path": "analysis/results/unit_positivity_summary.csv",
+      "bytes": 707,
+      "sha256": "97ccbca677279e556fe0061cc508e5a28b3a20c646d64d4607903a40ec3b2244"
+    },
+    {
+      "path": "figures/fig1_unit_level_positivity.svg",
+      "bytes": 9110,
+      "sha256": "ef033fc1413b2bc48e8c5b913c35468730e7cc07e783d04e367d42d7aacad1c7"
+    },
+    {
+      "path": "figures/fig2_assay_threshold.svg",
+      "bytes": 6041,
+      "sha256": "f8101fb80248311320d6b8b8c79c528f1974bd282f652e87be400aadcebe5066"
+    },
+    {
+      "path": "figures/fig3_naive_vs_blocked.svg",
+      "bytes": 2665,
+      "sha256": "457ddfd74d4c20173a4aefc2e1b60e5fc5116de588431f66c387a21c513fa72a"
+    },
+    {
+      "path": "figures/fig4_site_label_rotation.svg",
+      "bytes": 22984,
+      "sha256": "9d7c821e0eac48b26b73d3556e59b7e1e193af1ae3b6233b3a88fe1f9cac0b0c"
+    }
+  ],
+  "native_evidence_registry": {
+    "sources": [
+      {
+        "path": "file_registry.json",
+        "bytes": 4996,
+        "sha256": "51267e6156e47aaad2fe37208bcee1613c18624c999b8cf3ae5f36c89893f7ac"
+      }
+    ],
+    "resolved_ids": {
+      "F001": "analysis/run_analysis.py",
+      "F002": "analysis/ti_lib.py",
+      "F003": "analysis/run_sensitivity.py",
+      "F004": "analysis/run_supplementary.py",
+      "F005": "analysis/run_checks_figures.py",
+      "F006": "analysis/results/results.json",
+      "F007": "analysis/results/sensitivity.json",
+      "F008": "analysis/results/supplementary.json",
+      "F009": "analysis/results/checks.json",
+      "F010": "analysis/results/unit_positivity_summary.csv",
+      "F011": "analysis/results/day_threshold_sensitivity.csv",
+      "F012": "analysis/results/leave_one_unit_out.csv",
+      "F013": "analysis/results/block_holdouts.csv",
+      "F014": "analysis/results/unit_level_analysis_table.csv",
+      "F015": "analysis/results/site_label_positivity.csv",
+      "F016": "analysis/results/site_position_positivity.csv",
+      "F017": "figures/fig1_unit_level_positivity.svg",
+      "F018": "figures/fig2_assay_threshold.svg",
+      "F019": "figures/fig3_naive_vs_blocked.svg",
+      "F020": "figures/fig4_site_label_rotation.svg"
+    }
+  },
+  "resolved_support_files": [
+    {
+      "path": "analysis/results/block_holdouts.csv",
+      "bytes": 780,
+      "sha256": "14a035fe7c8c1c256e666120041b8e2e3a636feb0142d5b148e40b520ea93b85"
+    },
+    {
+      "path": "analysis/results/checks.json",
+      "bytes": 1886,
+      "sha256": "c62c202b9adc275bc88acefcac98706f0e5f8013eac0353dec5f0a5dce0afe97"
+    },
+    {
+      "path": "analysis/results/day_threshold_sensitivity.csv",
+      "bytes": 3217,
+      "sha256": "d4c3f11c98acb0c2883d0df760e2302579fd558b0f957df6a5976fbbd00bc66c"
+    },
+    {
+      "path": "analysis/results/leave_one_unit_out.csv",
+      "bytes": 3445,
+      "sha256": "8977a30e0f4e76194b0ce0661734ce831ae2b6c1d8b22b6fc3364f4e3c84380a"
+    },
+    {
+      "path": "analysis/results/results.json",
+      "bytes": 45529,
+      "sha256": "befa5fcd52ca199b792b66d5108ba1a5ca680cb35a83d68cb0d860969270ece3"
+    },
+    {
+      "path": "analysis/results/sensitivity.json",
+      "bytes": 17836,
+      "sha256": "db7d240cf3562d84b30679108405cb0f8aa35626b1f286df15c75d455a4c0aba"
+    },
+    {
+      "path": "analysis/results/site_label_positivity.csv",
+      "bytes": 345,
+      "sha256": "f062316ef4ab52559d9a0e569dae1baa57abfd119a1e682d39a6c5fe168a81e2"
+    },
+    {
+      "path": "analysis/results/site_position_positivity.csv",
+      "bytes": 317,
+      "sha256": "1ff6d8fd1a126a782e461a545aab2310cbae67775e4e75373cd168c02c640665"
+    },
+    {
+      "path": "analysis/results/supplementary.json",
+      "bytes": 12502,
+      "sha256": "cac52b0e052b056c73d501a71e86ae7b809c19f926a42e34dd18f3dc7960f648"
+    },
+    {
+      "path": "analysis/results/unit_level_analysis_table.csv",
+      "bytes": 912,
+      "sha256": "7198390ed59beede07ef7d239bf24295a3e909db13a916ae5f78c14bf8c9b57b"
+    },
+    {
+      "path": "analysis/results/unit_positivity_summary.csv",
+      "bytes": 707,
+      "sha256": "97ccbca677279e556fe0061cc508e5a28b3a20c646d64d4607903a40ec3b2244"
+    },
+    {
+      "path": "analysis/run_analysis.py",
+      "bytes": 31288,
+      "sha256": "c53fac63cbfd17203b5274bc12589cfe07df368ae753fbe4992b85fc44776607"
+    },
+    {
+      "path": "analysis/run_checks_figures.py",
+      "bytes": 13236,
+      "sha256": "5454cb5071726dfba958a4ff58540500897816557a783face1a16b1e2a031db0"
+    },
+    {
+      "path": "analysis/run_sensitivity.py",
+      "bytes": 14130,
+      "sha256": "7fe7a25ce2450afadf4372a1fc92588aba72d73bfa3361825e701b46edbe692d"
+    },
+    {
+      "path": "analysis/run_supplementary.py",
+      "bytes": 9733,
+      "sha256": "8fcabc45620345e70fa12922e0d2714148d5a4df1e2d79c7af8d8ea95ac19716"
+    },
+    {
+      "path": "analysis/ti_lib.py",
+      "bytes": 16702,
+      "sha256": "287a0ed5c4ad4c381332bfaa63c926b2269df840cc7b48ffd13586fdd29b921d"
+    },
+    {
+      "path": "figures/fig1_unit_level_positivity.svg",
+      "bytes": 9110,
+      "sha256": "ef033fc1413b2bc48e8c5b913c35468730e7cc07e783d04e367d42d7aacad1c7"
+    },
+    {
+      "path": "figures/fig2_assay_threshold.svg",
+      "bytes": 6041,
+      "sha256": "f8101fb80248311320d6b8b8c79c528f1974bd282f652e87be400aadcebe5066"
+    },
+    {
+      "path": "figures/fig3_naive_vs_blocked.svg",
+      "bytes": 2665,
+      "sha256": "457ddfd74d4c20173a4aefc2e1b60e5fc5116de588431f66c387a21c513fa72a"
+    },
+    {
+      "path": "figures/fig4_site_label_rotation.svg",
+      "bytes": 22984,
+      "sha256": "9d7c821e0eac48b26b73d3556e59b7e1e193af1ae3b6233b3a88fe1f9cac0b0c"
+    }
+  ]
+}

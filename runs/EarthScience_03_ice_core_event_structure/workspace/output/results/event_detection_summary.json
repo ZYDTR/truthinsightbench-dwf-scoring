@@ -1,0 +1,23 @@
+{
+  "data_rows": 1931,
+  "annotated_horizons": 15,
+  "local_max_ceiling": 14,
+  "grid_combinations": 144,
+  "detected_count_min": 4,
+  "detected_count_median": 21.0,
+  "detected_count_max": 247,
+  "recall_min": 4,
+  "recall_max": 14,
+  "n_variants_with_full_recall": 0,
+  "n_top30_by_excess": 7,
+  "expected_top30_by_chance": 0.233,
+  "permutation_p_top30": 0.0,
+  "best_agreement_variant": {
+    "background": "rolling_q25",
+    "window_samples": 401,
+    "k_sigma": 2.0,
+    "n_detected": 16,
+    "n_annotated_recalled": 14,
+    "false_positives": 2
+  }
+}

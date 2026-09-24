@@ -1,0 +1,527 @@
+{
+ "data_checks": {
+  "n_intervals": 30,
+  "n_groups": 5,
+  "n_per_group": {
+   "group_01": 5,
+   "group_02": 7,
+   "group_03": 7,
+   "group_04": 5,
+   "group_05": 6
+  },
+  "comp_vs_env_depth_and_total_agree": true,
+  "log10_transform_ok_min_total": 33.0,
+  "min_chl": 0.02
+ },
+ "F1_depth": {
+  "claim": "within a collection group, total particle concentration decreases with depth",
+  "per_group": {
+   "group_01": {
+    "n": 5,
+    "ols_slope_log10_per_m": 0.8950555914861883,
+    "ols_se_classical": 0.8565239345288499,
+    "ols_p_classical": 0.37281579061299597,
+    "ols_se_hc3": 1.8092849035849954,
+    "ols_ci95_hc3": [
+     -4.86289646513347,
+     6.653007648105846
+    ],
+    "ci95_classical": [
+     -1.8307858393422145,
+     3.620897022314591
+    ],
+    "r2": 0.26686143802846696,
+    "spearman_rho": 0.09999999999999999,
+    "spearman_p": 0.8728885715695384,
+    "pearson_r": 0.5165863316314775,
+    "depth_mid_range_m": [
+     0.14,
+     1.04
+    ],
+    "ice_regime": "Landfast ice"
+   },
+   "group_02": {
+    "n": 7,
+    "ols_slope_log10_per_m": -2.177066423515656,
+    "ols_se_classical": 0.4512126425481743,
+    "ols_p_classical": 0.004777725778040905,
+    "ols_se_hc3": 0.3631251419720422,
+    "ols_ci95_hc3": [
+     -3.1105093175318457,
+     -1.2436235294994662
+    ],
+    "ci95_classical": [
+     -3.336945446459454,
+     -1.0171874005718577
+    ],
+    "r2": 0.8231958896482201,
+    "spearman_rho": -0.8571428571428573,
+    "spearman_p": 0.013697326615325614,
+    "pearson_r": -0.9073014326276688,
+    "depth_mid_range_m": [
+     0.09,
+     1.5299999999999998
+    ],
+    "ice_regime": "Pack ice"
+   },
+   "group_03": {
+    "n": 7,
+    "ols_slope_log10_per_m": -0.8364463119254331,
+    "ols_se_classical": 0.9096225247163783,
+    "ols_p_classical": 0.3999955201306565,
+    "ols_se_hc3": 1.4492146437680284,
+    "ols_ci95_hc3": [
+     -4.561771151133679,
+     2.888878527282813
+    ],
+    "ci95_classical": [
+     -3.1747054512469997,
+     1.5018128273961335
+    ],
+    "r2": 0.14465260573146754,
+    "spearman_rho": -0.3214285714285715,
+    "spearman_p": 0.4820720382996777,
+    "pearson_r": -0.38033223072922384,
+    "depth_mid_range_m": [
+     0.13,
+     1.27
+    ],
+    "ice_regime": "Pack ice"
+   },
+   "group_04": {
+    "n": 5,
+    "ols_slope_log10_per_m": -0.18291260014766114,
+    "ols_se_classical": 0.8399757783157936,
+    "ols_p_classical": 0.8415871276961948,
+    "ols_se_hc3": 0.4961633435253076,
+    "ols_ci95_hc3": [
+     -1.7619257995669872,
+     1.396100599271665
+    ],
+    "ci95_classical": [
+     -2.8560904123765654,
+     2.4902652120812427
+    ],
+    "r2": 0.015560427679112365,
+    "spearman_rho": -0.09999999999999999,
+    "spearman_p": 0.8728885715695384,
+    "pearson_r": -0.12474144331020261,
+    "depth_mid_range_m": [
+     0.115,
+     1.0025
+    ],
+    "ice_regime": "Pack ice"
+   },
+   "group_05": {
+    "n": 6,
+    "ols_slope_log10_per_m": -0.1628957446780418,
+    "ols_se_classical": 0.4701310492510726,
+    "ols_p_classical": 0.7464336747577485,
+    "ols_se_hc3": 0.9241466972107228,
+    "ols_ci95_hc3": [
+     -2.7287383186334604,
+     2.402946829277377
+    ],
+    "ci95_classical": [
+     -1.468188795172685,
+     1.1423973058166013
+    ],
+    "r2": 0.029139262540730848,
+    "spearman_rho": -0.2571428571428572,
+    "spearman_p": 0.6227871720116619,
+    "pearson_r": -0.17070226284595852,
+    "depth_mid_range_m": [
+     0.145,
+     1.54
+    ],
+    "ice_regime": "Pack ice"
+   }
+  },
+  "fixed_effect_within_group": {
+   "slope_log10_per_m": -0.8258403801185458,
+   "se_CR1": 0.5700800522994754,
+   "t": -1.4486393214206237,
+   "p_CR1_df4": 0.22101814610565557,
+   "df_cluster": 4,
+   "ci95_CR1": [
+    -2.4086363508963267,
+    0.756955590659235
+   ],
+   "se_classical": 0.32052165796518,
+   "p_classical_df28": 0.01554278150523681,
+   "r2_within": 0.19165358684189315
+  },
+  "signflip_exact": {
+   "observed": -0.8258403801185454,
+   "n_configs": 32,
+   "p_one_sided": 0.15625,
+   "p_two_sided": 0.3125
+  },
+  "within_group_permutation": {
+   "observed": -0.8258403801185454,
+   "p_two_sided": 0.03315,
+   "p_one_sided_neg": 0.0169,
+   "null_sd": 0.397686963139818,
+   "B": 20000,
+   "null_q": [
+    -0.7663896779152446,
+    0.0001630727843705254,
+    0.7628405089069432
+   ]
+  },
+  "permutation_drop_group_02": {
+   "observed": -0.2057640438837601,
+   "p_two_sided": 0.58015,
+   "p_one_sided_neg": 0.2878,
+   "null_sd": 0.3595430657429041,
+   "B": 20000,
+   "null_q": [
+    -0.7034332617309714,
+    0.005416842457241666,
+    0.6920206382885469
+   ]
+  },
+  "permutation_raw_scale": {
+   "observed": -13038.442730767349,
+   "p_two_sided": 0.0167,
+   "p_one_sided_neg": 0.0036,
+   "null_sd": 6925.444346517484,
+   "B": 20000,
+   "null_q": [
+    -11416.038212883115,
+    -314.2565292479418,
+    12411.909969826016
+   ]
+  },
+  "theil_sen_within_group": {
+   "group_01": 0.41746650555399634,
+   "group_02": -2.117926199369986,
+   "group_03": -1.0128654712522327,
+   "group_04": -0.1411357142568367,
+   "group_05": -0.2318474898357284
+  },
+  "leave_one_group_out_FE": {
+   "group_01": -1.0212474729875765,
+   "group_02": -0.2057640438837601,
+   "group_03": -0.823174269361417,
+   "group_04": -0.8956366645386339,
+   "group_05": -1.0896592797775948
+  },
+  "group_share_of_within_covariance": {
+   "numerator_share": {
+    "group_01": -0.1105172386667852,
+    "group_02": 0.8292156255522384,
+    "group_03": 0.20346156359871015,
+    "group_04": 0.021689941982452905,
+    "group_05": 0.05615010753338409
+   },
+   "denominator_share": {
+    "group_01": 0.1019708711485527,
+    "group_02": 0.31455160945454497,
+    "group_03": 0.20088172142822644,
+    "group_04": 0.09792890110947798,
+    "group_05": 0.28466689685919805
+   }
+  },
+  "group_mean_regression_n5": {
+   "spearman_rho": 0.09999999999999999,
+   "note": "5 group means only; confounded with ice regime/station identity"
+  },
+  "two_stage_group_as_unit": {
+   "mean_slope": -0.49285309775612074,
+   "sd_slope": 1.1275921603212273,
+   "t": -0.9773507375131831,
+   "df": 4,
+   "p": 0.3837353061484275,
+   "n_negative": 4,
+   "sign_test_p_two_sided": 0.375,
+   "inverse_variance_weighted": -0.8551389992000448,
+   "random_effects_DL": {
+    "mu": -0.5803168744008994,
+    "se": 0.5806287895948908,
+    "z": -0.999462797574662,
+    "p": 0.31757055221252706,
+    "tau2": 1.191736045527751,
+    "Q": 15.567618132862451,
+    "Q_p": 0.00365777983378526,
+    "I2_percent": 74.30563901386942
+   }
+  },
+  "raw_scale_check": {
+   "note": "arithmetic (not log10) within-group slope, to make sure the log transform is not creating the sign",
+   "per_group_slope_per_L_per_m": {
+    "group_01": 1554.2364403897363,
+    "group_02": -37662.51546162506,
+    "group_03": -4927.410094122338,
+    "group_04": -538.1282974058234,
+    "group_05": -1080.5604328663067
+   }
+  }
+ },
+ "F2_chlorophyll": {
+  "claim": "within a collection group, total particle concentration decreases as chlorophyll a increases",
+  "per_group": {
+   "group_01": {
+    "n": 5,
+    "ols_slope_log10total_per_log10chl": -2.527727984320092,
+    "ols_se_classical": 0.7044157676301953,
+    "ols_p_classical": 0.03706498945542671,
+    "ols_se_hc3": 1.39325790653201,
+    "spearman_rho": -0.9746794344808963,
+    "spearman_p": 0.004818230468198566,
+    "pearson_r": -0.9005793336379938,
+    "max_chl_ug_L": 0.09
+   },
+   "group_02": {
+    "n": 7,
+    "ols_slope_log10total_per_log10chl": -1.6203376558807328,
+    "ols_se_classical": 0.17897290632162172,
+    "ols_p_classical": 0.0002748247563653978,
+    "ols_se_hc3": 0.4001074491785901,
+    "spearman_rho": -0.9189562119494703,
+    "spearman_p": 0.003436626156217533,
+    "pearson_r": -0.9708277947492517,
+    "max_chl_ug_L": 1.74
+   },
+   "group_03": {
+    "n": 7,
+    "ols_slope_log10total_per_log10chl": -0.9285266740698461,
+    "ols_se_classical": 0.5945605584993869,
+    "ols_p_classical": 0.1791141858788064,
+    "ols_se_hc3": 1.12226538199525,
+    "spearman_rho": -0.48650622985560193,
+    "spearman_p": 0.2682485623178309,
+    "pearson_r": -0.5725896646768511,
+    "max_chl_ug_L": 6.64
+   },
+   "group_04": {
+    "n": 5,
+    "ols_slope_log10total_per_log10chl": 0.02367218614231391,
+    "ols_se_classical": 0.7320613906665556,
+    "ols_p_classical": 0.9762349101081426,
+    "ols_se_hc3": 2.6354467143210853,
+    "spearman_rho": 0.09999999999999999,
+    "spearman_p": 0.8728885715695384,
+    "pearson_r": 0.018666141968669975,
+    "max_chl_ug_L": 4.19
+   },
+   "group_05": {
+    "n": 6,
+    "ols_slope_log10total_per_log10chl": -0.1567258189217056,
+    "ols_se_classical": 0.6908856899806703,
+    "ols_p_classical": 0.8316639254830988,
+    "ols_se_hc3": 1.492048491702774,
+    "spearman_rho": -0.2,
+    "spearman_p": 0.704,
+    "pearson_r": -0.11270121017656928,
+    "max_chl_ug_L": 0.51
+   }
+  },
+  "mean_within_group_spearman": {
+   "mean_rho": -0.4960283752571938,
+   "n_negative": 4,
+   "per_group": {
+    "group_01": -0.9746794344808963,
+    "group_02": -0.9189562119494703,
+    "group_03": -0.48650622985560193,
+    "group_04": 0.09999999999999999,
+    "group_05": -0.2
+   },
+   "stouffer_Z": -1.10915316584386,
+   "fisher_chi2": 25.622758296240693
+  },
+  "fixed_effect": {
+   "slope_log10total_per_log10chl": -1.1429630468874727,
+   "se_CR1": 0.32884765011514316,
+   "t": -3.475661287186556,
+   "p_CR1_df4": 0.025452178114826144,
+   "df_cluster": 4,
+   "ci95_CR1": [
+    -2.0559904954054584,
+    -0.22993559836948696
+   ],
+   "se_classical": 0.22220588722310025,
+   "p_classical_df28": 1.872335377512324e-05,
+   "r2_within": 0.4858401403779322,
+   "factor_per_10x_chl": 0.07195101968569136
+  },
+  "signflip_exact": {
+   "observed": -1.1429630468874727,
+   "n_configs": 32,
+   "p_one_sided": 0.0625,
+   "p_two_sided": 0.125
+  },
+  "within_group_permutation": {
+   "observed": -1.1429630468874727,
+   "p_two_sided": 0.00045,
+   "p_one_sided_neg": 0.00025,
+   "null_sd": 0.3979167728554913,
+   "B": 20000,
+   "null_q": [
+    -0.7889077716248587,
+    0.007443378546146002,
+    0.7457983988959507
+   ]
+  },
+  "permutation_drop_group_02": {
+   "observed": -0.6820121557018747,
+   "p_two_sided": 0.0998,
+   "p_one_sided_neg": 0.02475,
+   "null_sd": 0.4146283081821115,
+   "B": 20000,
+   "null_q": [
+    -0.6808943828602747,
+    -0.05480139016669788,
+    0.8739636259833292
+   ]
+  },
+  "theil_sen_within_group": {
+   "group_01": -2.2090747986273107,
+   "group_02": -1.8225009852257665,
+   "group_03": -0.7682798808996854,
+   "group_04": -0.15836813464329813,
+   "group_05": -0.15914457055816267
+  },
+  "leave_one_group_out_FE": {
+   "group_01": -1.1010752430152757,
+   "group_02": -0.6820121557018747,
+   "group_03": -1.226016148221748,
+   "group_04": -1.2710422747059884,
+   "group_05": -1.2541130741311433
+  },
+  "group_share_of_within_covariance": {
+   "numerator_share": {
+    "group_01": 0.06493329826081042,
+    "group_02": 0.6964251965529455,
+    "group_03": 0.22680177296641102,
+    "group_04": -0.002048853375427871,
+    "group_05": 0.01388858559526078
+   },
+   "denominator_share": {
+    "group_01": 0.029360896775683407,
+    "group_02": 0.4912483899219785,
+    "group_03": 0.2791799661855167,
+    "group_04": 0.09892469088095097,
+    "group_05": 0.10128605623587036
+   }
+  },
+  "deepest_interval_diagnostics": {
+   "n_deepest_is_max_chl": 4,
+   "detail": {
+    "group_01": {
+     "sample_id": "sample_005",
+     "depth_mid_m": 1.04,
+     "chl_a": 0.07,
+     "total_per_L": 2665.0
+    },
+    "group_02": {
+     "sample_id": "sample_012",
+     "depth_mid_m": 1.5299999999999998,
+     "chl_a": 1.74,
+     "total_per_L": 67.0
+    },
+    "group_03": {
+     "sample_id": "sample_024",
+     "depth_mid_m": 1.27,
+     "chl_a": 6.64,
+     "total_per_L": 33.0
+    },
+    "group_04": {
+     "sample_id": "sample_017",
+     "depth_mid_m": 1.0025,
+     "chl_a": 4.19,
+     "total_per_L": 456.0
+    },
+    "group_05": {
+     "sample_id": "sample_030",
+     "depth_mid_m": 1.54,
+     "chl_a": 0.51,
+     "total_per_L": 4437.0
+    }
+   }
+  },
+  "exclude_deepest_per_group": {
+   "n": 25,
+   "slope": -1.7817726761589798,
+   "se_CR1": 0.26523850275984034,
+   "p_CR1": 0.002556851618124812,
+   "ci95": [
+    -2.51819281885653,
+    -1.0453525334614295
+   ]
+  },
+  "joint_chl_plus_depth": {
+   "terms": [
+    "intercept",
+    "log10_chl_a",
+    "depth_mid_m"
+   ],
+   "beta": [
+    -2.0822536694270325e-17,
+    -1.3557811635369121,
+    0.3302901445676187
+   ],
+   "se_CR1": [
+    1.4354081524836508e-16,
+    0.34704556909862866,
+    0.2893071338582364
+   ],
+   "p_CR1": [
+    0.8916767099877443,
+    0.017443311476119206,
+    0.31729844725013306
+   ]
+  },
+  "joint_chl_depth_POC": {
+   "terms": [
+    "intercept",
+    "log10_chl_a",
+    "depth_mid_m",
+    "log10_POC"
+   ],
+   "beta": [
+    -2.0822536694270325e-17,
+    -1.7005179215319675,
+    0.5498731790193759,
+    1.2665202921362797
+   ],
+   "se_CR1": [
+    1.7863046007962993e-16,
+    0.40724548188116716,
+    0.2899931364931228,
+    0.29487941493566
+   ],
+   "p_CR1": [
+    0.9128208553611874,
+    0.013967183682589333,
+    0.13081721918951913,
+    0.012695315888547077
+   ]
+  },
+  "exclude_3_highest_chl_intervals": {
+   "excluded": [
+    "sample_012",
+    "sample_017",
+    "sample_024"
+   ],
+   "n": 27,
+   "slope": -1.4206446604241172,
+   "se_CR1": 0.5579208125563694,
+   "p_CR1": 0.06355307645553188
+  },
+  "chl_quantisation": {
+   "unique_values": 23,
+   "min_step": 0.009999999999999995,
+   "n_at_or_below_0p1": 12,
+   "share_of_chl_variance_from_3_largest": 2.1577000445259658
+  }
+ },
+ "figures": {
+  "fig1": "/data/user/conversations/conv-db0bf41e-db48-4b3b-8351-ef78ee787f62/project/output/figures/fig1_depth_abundance.png",
+  "fig2": "/data/user/conversations/conv-db0bf41e-db48-4b3b-8351-ef78ee787f62/project/output/figures/fig2_chlorophyll_abundance.png"
+ },
+ "csvs": {
+  "fig1": "/data/user/conversations/conv-db0bf41e-db48-4b3b-8351-ef78ee787f62/project/output/results/fig1_depth_abundance.csv",
+  "fig2": "/data/user/conversations/conv-db0bf41e-db48-4b3b-8351-ef78ee787f62/project/output/results/fig2_chlorophyll_abundance.csv"
+ }
+}

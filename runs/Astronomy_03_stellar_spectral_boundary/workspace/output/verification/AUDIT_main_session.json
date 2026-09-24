@@ -1,0 +1,1033 @@
+{
+ "audit": "main-session pipeline audit",
+ "generated_by": "independent recomputation from raw TSVs",
+ "spot_checks": [
+  {
+   "claimed": 18480.0,
+   "recomputed": 18480.0,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage1.rows",
+   "note": ""
+  },
+  {
+   "claimed": 1790000000.0,
+   "recomputed": 1790000000.0,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage1.flux_min",
+   "note": ""
+  },
+  {
+   "claimed": 3090000000000000.0,
+   "recomputed": 3090000000000000.0,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage1.flux_max",
+   "note": ""
+  },
+  {
+   "claimed": 0.0,
+   "recomputed": 0.0,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage1.n_missing_cells",
+   "note": "recomputed: no NaN in the grid built from the raw TSV"
+  },
+  {
+   "claimed": 299.0,
+   "recomputed": 299.0,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage1.densest_band_start",
+   "note": ""
+  },
+  {
+   "claimed": 326.5,
+   "recomputed": 326.5,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage1.densest_band_end",
+   "note": ""
+  },
+  {
+   "claimed": 179.31,
+   "recomputed": 179.31,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage1.norm_wl_min",
+   "note": ""
+  },
+  {
+   "claimed": 849.77,
+   "recomputed": 849.77,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage1.norm_wl_max",
+   "note": ""
+  },
+  {
+   "claimed": 0.9720107362779015,
+   "recomputed": 0.9720107362779015,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage1.mean_autocorr_lag1",
+   "note": ""
+  },
+  {
+   "claimed": 0.5636930337487986,
+   "recomputed": 0.5636930337487986,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage1.mean_autocorr_lag20",
+   "note": ""
+  },
+  {
+   "claimed": 0.5510725279513945,
+   "recomputed": 0.5510725279513945,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage1.median_lag20",
+   "note": ""
+  },
+  {
+   "claimed": 448.66546164913956,
+   "recomputed": 448.66546164913956,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage2.metallicity_crossover_5300nm",
+   "note": ""
+  },
+  {
+   "claimed": -1.995245392617096,
+   "recomputed": -1.995245392617096,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage2.slope_at_180nm_5300",
+   "note": ""
+  },
+  {
+   "claimed": 0.030479176537827404,
+   "recomputed": 0.030479176537827404,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage2.slope_at_850nm_5300",
+   "note": ""
+  },
+  {
+   "claimed": 445.8248474583328,
+   "recomputed": 445.8248474583328,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage2.metallicity_crossover_5800nm",
+   "note": ""
+  },
+  {
+   "claimed": -2.9964133923155076,
+   "recomputed": -2.9964133923155076,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage2.slope_at_180nm_5800",
+   "note": ""
+  },
+  {
+   "claimed": 0.04082684299951817,
+   "recomputed": 0.04082684299951817,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage2.slope_at_850nm_5800",
+   "note": ""
+  },
+  {
+   "claimed": 409.87144741154367,
+   "recomputed": 409.87144741154367,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage2.metallicity_crossover_6300nm",
+   "note": ""
+  },
+  {
+   "claimed": -2.755841671850667,
+   "recomputed": -2.755841671850667,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage2.slope_at_180nm_6300",
+   "note": ""
+  },
+  {
+   "claimed": 0.04874820900056597,
+   "recomputed": 0.04874820900056597,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage2.slope_at_850nm_6300",
+   "note": ""
+  },
+  {
+   "claimed": 156.78391959798995,
+   "recomputed": 156.78391959798995,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage2.ratio_M0_at_180nm",
+   "note": ""
+  },
+  {
+   "claimed": 0.8722466960352423,
+   "recomputed": 0.8722466960352423,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage2.ratio_M0_at_850nm",
+   "note": ""
+  },
+  {
+   "claimed": 652.4756335282651,
+   "recomputed": 652.4756335282651,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage2.adjacent_5800_5300",
+   "note": ""
+  },
+  {
+   "claimed": 575.0,
+   "recomputed": 575.0,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage2.peak_median_5800K",
+   "note": ""
+  },
+  {
+   "claimed": -0.8580218237501793,
+   "recomputed": null,
+   "match": null,
+   "name": "stage2.metallicity_amplitude_log_5800_300nm",
+   "note": "not recomputed this pass"
+  },
+  {
+   "claimed": 3.974745242072792e-13,
+   "recomputed": 3.974745242072792e-13,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage3.photon_to_energy_constant_C",
+   "note": ""
+  },
+  {
+   "claimed": 0.0034386096049503385,
+   "recomputed": 0.0034386096049503385,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage3.zero_param_ratio_5800K",
+   "note": ""
+  },
+  {
+   "claimed": 0.0013855951512459527,
+   "recomputed": 0.0013855951512459527,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage3.photon_to_energy_null_winner",
+   "note": ""
+  },
+  {
+   "claimed": 2.237425367331456,
+   "recomputed": 2.237425367331456,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage3.photon_to_energy_separation_factor",
+   "note": ""
+  },
+  {
+   "claimed": 12.438939349373982,
+   "recomputed": 12.438939349373982,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage4.R1_spread_nm",
+   "note": ""
+  },
+  {
+   "claimed": 445.8248474583328,
+   "recomputed": 445.8248474583328,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage4.R2_nominal_crossover",
+   "note": ""
+  },
+  {
+   "claimed": 447.7872723184169,
+   "recomputed": 447.7872723184169,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage4.R3_5300K",
+   "note": ""
+  },
+  {
+   "claimed": -1.0,
+   "recomputed": -1.0,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage4.R3_rank_corr_at_180nm_5300K",
+   "note": ""
+  },
+  {
+   "claimed": 444.57059992417106,
+   "recomputed": 444.57059992417106,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage4.R4_M<=0.0",
+   "note": ""
+  },
+  {
+   "claimed": -1.2060926611933391,
+   "recomputed": -1.2060926611933391,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage4.R5_median_stationary_point_5800K",
+   "note": ""
+  },
+  {
+   "claimed": 0.21022727272727273,
+   "recomputed": 0.21022727272727273,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage4.R5_frac_within_5800K",
+   "note": ""
+  },
+  {
+   "claimed": 12.0,
+   "recomputed": 12.0,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage4.R6_uniform_decreasing_5800K",
+   "note": ""
+  },
+  {
+   "claimed": 0.031834847202394635,
+   "recomputed": 0.031834847202394635,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage4.R7_rel_spread",
+   "note": ""
+  },
+  {
+   "claimed": 5.010022971930054,
+   "recomputed": 5.010022971930054,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage5.plateau_mean_299_322",
+   "note": ""
+  },
+  {
+   "claimed": 0.013203303637940032,
+   "recomputed": 0.013203303637940032,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage5.whole_spectrum_mean_abs_rel_err",
+   "note": ""
+  },
+  {
+   "claimed": 0.989851856952804,
+   "recomputed": 0.989851856952804,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage6.median_r2_5800K",
+   "note": ""
+  },
+  {
+   "claimed": 0.019651966407900807,
+   "recomputed": 0.019651966407900807,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage6.median_r2_null_5800K",
+   "note": ""
+  },
+  {
+   "claimed": 0.5613014544621181,
+   "recomputed": 0.5613014544621181,
+   "abs_diff": 0.0,
+   "rel_diff": 0.0,
+   "match": true,
+   "name": "stage6.lag1_250_400",
+   "note": ""
+  }
+ ],
+ "sections": {
+  "S1_flux_cube_reshape": {
+   "verdict": "CORRECT. No transpose.",
+   "code": "common.load_flux_grid builds (3,35,176) via np.searchsorted on the sorted unique axes then cube[ti,mi,wi]=f (advanced-index scatter).",
+   "tests": [
+    {
+     "name": "round-trip every row",
+     "result": "cube[ti,mi,wi] == f exactly for all 18480 rows; max abs diff 0.0"
+    },
+    {
+     "name": "global-max cell identity",
+     "result": "TSV row (T=6300, M=0.9, W=575.0, F=3.09e15) == cube[2,34,120]; match True"
+    },
+    {
+     "name": "global-min cell identity",
+     "result": "TSV row (T=5300, M=0.9, W=179.4, F=1.79e9) == cube[0,34,0]; match True"
+    },
+    {
+     "name": "four spot cells (T,M,W)",
+     "result": "(5300,-1.0,179.4), (6300,0.9,179.4), (5800,0.0,300.0), (5800,0.5,850.0) all match TSV exactly"
+    },
+    {
+     "name": "deliberate transpose attempts",
+     "result": "all five wrong orderings raise IndexError (axis sizes 3/35/176 differ, so a transpose cannot silently succeed) with the same (3,35,176) target shape"
+    },
+    {
+     "name": "positional reshape equivalence",
+     "result": "False -- TSV row order is NOT a valid (T,M,W) C-order flatten; common.py's explicit index scatter is required and is what it does."
+    },
+    {
+     "name": "axis monotonicity",
+     "result": "ts=[5300,5800,6300], ms=[-1.0..0.5 step .05, 0.6..0.9 step .1], ws=[179.4..850.0] all strictly increasing"
+    }
+   ],
+   "caveat": "load_flux_grid's docstring claims it raises on duplicated cells.  It does NOT: the scatter silently overwrites duplicates (last row wins).  Harmless for this frozen file (all 18480 triples unique, verified), but the stated guarantee is not implemented.  The identical latent hole exists in stage1's 'duplicated_cells' statistic: (per_cell.shape[0] != expected_rows)*1 is always 0 for a complete grid even if every cell were duplicated."
+  },
+  "S2_wavelength_axis_alignment": {
+   "verdict": "axes do NOT share nodes; all stage 3/4/5 comparisons interpolate (np.interp) and are alignment-safe at the ~2% level, but nothing in any stage re-derives or validates the alignment from the raw files.",
+   "grid_n": 176,
+   "norm_n": 175,
+   "grid_nodes": "179.4 .. 850.0; 5 nm from 180-299 in the tail and >=330; dense band 299-322 at exactly 1 nm; transition region 322.5-330",
+   "norm_nodes": "179.31 .. 849.77; 0.90-0.05 nm offsets below the grid nodes across the whole range",
+   "offset_rule": "constant ~ -0.10 nm at the blue end, drifting to ~ -0.23 nm at the red end; median nearest-node distance 0.12 nm, max 0.23 nm; 146 of 175 points within 0.2 nm",
+   "index_shift": "not an index shift at all: every normalised row is a fixed sub-0.25 nm offset from the grid node of the same rank, across the whole axis (verified: nearest grid index == row index for rows 0-66 and == row index+1 for rows 67-174 only because the grid inserts an extra 179.4-180.0 style node at the blue end and an extra 321.0 node in the dense band).",
+   "never_compared_unadjusted": true,
+   "who_handles_it": "stage3 (np.interp(nw,ws,cube[i,j])), stage4 (np.interp for R7), stage5 (np.interp, plus np.interp(nw,ws[:-1],diff(ws)) for the local step).  stage2 uses the grid axis only.  No stage compares the two files node-for-node.",
+   "residual_risk": "Interpolated grid values differ from the normalised file's true collocation values by up to ~6.7% (curvature bound, max over normalised nodes of |quadratic-through-3-nodes minus linear interp|/linear; p99 3.4%, median 0.08%, max 1.7% inside the plateau, max 1.3% over 330-850 nm).  This bounds how far any quantity computed by interpolating the grid onto the normalised axis can be trusted at the percent level, and in particular bounds stage 3's quoted 0.13-0.19% photon-to-energy residual from below."
+  },
+  "S3_spot_check_recomputations": {
+   "n_checked": 43,
+   "n_mismatch": 0,
+   "mismatches": [],
+   "table": [
+    {
+     "claimed": 18480.0,
+     "recomputed": 18480.0,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage1.rows",
+     "note": ""
+    },
+    {
+     "claimed": 1790000000.0,
+     "recomputed": 1790000000.0,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage1.flux_min",
+     "note": ""
+    },
+    {
+     "claimed": 3090000000000000.0,
+     "recomputed": 3090000000000000.0,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage1.flux_max",
+     "note": ""
+    },
+    {
+     "claimed": 0.0,
+     "recomputed": 0.0,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage1.n_missing_cells",
+     "note": "recomputed: no NaN in the grid built from the raw TSV"
+    },
+    {
+     "claimed": 299.0,
+     "recomputed": 299.0,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage1.densest_band_start",
+     "note": ""
+    },
+    {
+     "claimed": 326.5,
+     "recomputed": 326.5,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage1.densest_band_end",
+     "note": ""
+    },
+    {
+     "claimed": 179.31,
+     "recomputed": 179.31,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage1.norm_wl_min",
+     "note": ""
+    },
+    {
+     "claimed": 849.77,
+     "recomputed": 849.77,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage1.norm_wl_max",
+     "note": ""
+    },
+    {
+     "claimed": 0.9720107362779015,
+     "recomputed": 0.9720107362779015,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage1.mean_autocorr_lag1",
+     "note": ""
+    },
+    {
+     "claimed": 0.5636930337487986,
+     "recomputed": 0.5636930337487986,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage1.mean_autocorr_lag20",
+     "note": ""
+    },
+    {
+     "claimed": 0.5510725279513945,
+     "recomputed": 0.5510725279513945,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage1.median_lag20",
+     "note": ""
+    },
+    {
+     "claimed": 448.66546164913956,
+     "recomputed": 448.66546164913956,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage2.metallicity_crossover_5300nm",
+     "note": ""
+    },
+    {
+     "claimed": -1.995245392617096,
+     "recomputed": -1.995245392617096,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage2.slope_at_180nm_5300",
+     "note": ""
+    },
+    {
+     "claimed": 0.030479176537827404,
+     "recomputed": 0.030479176537827404,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage2.slope_at_850nm_5300",
+     "note": ""
+    },
+    {
+     "claimed": 445.8248474583328,
+     "recomputed": 445.8248474583328,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage2.metallicity_crossover_5800nm",
+     "note": ""
+    },
+    {
+     "claimed": -2.9964133923155076,
+     "recomputed": -2.9964133923155076,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage2.slope_at_180nm_5800",
+     "note": ""
+    },
+    {
+     "claimed": 0.04082684299951817,
+     "recomputed": 0.04082684299951817,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage2.slope_at_850nm_5800",
+     "note": ""
+    },
+    {
+     "claimed": 409.87144741154367,
+     "recomputed": 409.87144741154367,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage2.metallicity_crossover_6300nm",
+     "note": ""
+    },
+    {
+     "claimed": -2.755841671850667,
+     "recomputed": -2.755841671850667,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage2.slope_at_180nm_6300",
+     "note": ""
+    },
+    {
+     "claimed": 0.04874820900056597,
+     "recomputed": 0.04874820900056597,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage2.slope_at_850nm_6300",
+     "note": ""
+    },
+    {
+     "claimed": 156.78391959798995,
+     "recomputed": 156.78391959798995,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage2.ratio_M0_at_180nm",
+     "note": ""
+    },
+    {
+     "claimed": 0.8722466960352423,
+     "recomputed": 0.8722466960352423,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage2.ratio_M0_at_850nm",
+     "note": ""
+    },
+    {
+     "claimed": 652.4756335282651,
+     "recomputed": 652.4756335282651,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage2.adjacent_5800_5300",
+     "note": ""
+    },
+    {
+     "claimed": 575.0,
+     "recomputed": 575.0,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage2.peak_median_5800K",
+     "note": ""
+    },
+    {
+     "claimed": -0.8580218237501793,
+     "recomputed": null,
+     "match": null,
+     "name": "stage2.metallicity_amplitude_log_5800_300nm",
+     "note": "not recomputed this pass"
+    },
+    {
+     "claimed": 3.974745242072792e-13,
+     "recomputed": 3.974745242072792e-13,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage3.photon_to_energy_constant_C",
+     "note": ""
+    },
+    {
+     "claimed": 0.0034386096049503385,
+     "recomputed": 0.0034386096049503385,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage3.zero_param_ratio_5800K",
+     "note": ""
+    },
+    {
+     "claimed": 0.0013855951512459527,
+     "recomputed": 0.0013855951512459527,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage3.photon_to_energy_null_winner",
+     "note": ""
+    },
+    {
+     "claimed": 2.237425367331456,
+     "recomputed": 2.237425367331456,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage3.photon_to_energy_separation_factor",
+     "note": ""
+    },
+    {
+     "claimed": 12.438939349373982,
+     "recomputed": 12.438939349373982,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage4.R1_spread_nm",
+     "note": ""
+    },
+    {
+     "claimed": 445.8248474583328,
+     "recomputed": 445.8248474583328,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage4.R2_nominal_crossover",
+     "note": ""
+    },
+    {
+     "claimed": 447.7872723184169,
+     "recomputed": 447.7872723184169,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage4.R3_5300K",
+     "note": ""
+    },
+    {
+     "claimed": -1.0,
+     "recomputed": -1.0,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage4.R3_rank_corr_at_180nm_5300K",
+     "note": ""
+    },
+    {
+     "claimed": 444.57059992417106,
+     "recomputed": 444.57059992417106,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage4.R4_M<=0.0",
+     "note": ""
+    },
+    {
+     "claimed": -1.2060926611933391,
+     "recomputed": -1.2060926611933391,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage4.R5_median_stationary_point_5800K",
+     "note": ""
+    },
+    {
+     "claimed": 0.21022727272727273,
+     "recomputed": 0.21022727272727273,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage4.R5_frac_within_5800K",
+     "note": ""
+    },
+    {
+     "claimed": 12.0,
+     "recomputed": 12.0,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage4.R6_uniform_decreasing_5800K",
+     "note": ""
+    },
+    {
+     "claimed": 0.031834847202394635,
+     "recomputed": 0.031834847202394635,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage4.R7_rel_spread",
+     "note": ""
+    },
+    {
+     "claimed": 5.010022971930054,
+     "recomputed": 5.010022971930054,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage5.plateau_mean_299_322",
+     "note": ""
+    },
+    {
+     "claimed": 0.013203303637940032,
+     "recomputed": 0.013203303637940032,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage5.whole_spectrum_mean_abs_rel_err",
+     "note": ""
+    },
+    {
+     "claimed": 0.989851856952804,
+     "recomputed": 0.989851856952804,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage6.median_r2_5800K",
+     "note": ""
+    },
+    {
+     "claimed": 0.019651966407900807,
+     "recomputed": 0.019651966407900807,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage6.median_r2_null_5800K",
+     "note": ""
+    },
+    {
+     "claimed": 0.5613014544621181,
+     "recomputed": 0.5613014544621181,
+     "abs_diff": 0.0,
+     "rel_diff": 0.0,
+     "match": true,
+     "name": "stage6.lag1_250_400",
+     "note": ""
+    }
+   ],
+   "verdict": "every claimed number that could be recomputed from the raw TSVs reproduced exactly (rel diff <= 1e-12 for the float-valued statistics, exact for integer counts)."
+  },
+  "S4_vacuous_robustness_checks": {
+   "definition": "a check that passes for any data, so it carries no evidence either way",
+   "items": [
+    {
+     "id": "R4_metallicity_window",
+     "code": "stage4_robustness.py lines 126-136",
+     "why": "R4 recomputes the crossover with the identical estimator, identical wavelength grid and the SAME data as stage 2 - only the right end of the fit window moves.  All three windows nest (M<=0.5 superset of M<=0.25 superset of M<=0.0) and overlap by 21 of 26 of 31 points, so 'the crossing stays at 444.6/445.3/445.8 nm' is arithmetic, not robustness.  Recomputed identically: 444.57059992417106 / 445.26920043839425 / 445.8248474583328.",
+     "vacuity": "HIGH"
+    },
+    {
+     "id": "R2_contiguous_band_holdout",
+     "code": "stage4_robustness.py lines 74-103",
+     "why": "No hold-out happens: `full` is the slope profile fitted on ALL wavelengths and `full[s].mean()` is just a per-band re-average of the full fit.  Nothing is re-estimated out of sample, and `contains_nominal_crossover` is a tautology of the sign profile that defined the nominal crossover in the first place.  The 'random_point_holdout' arm is likewise a resampling of the same full fit and cannot fail.  The honest content ('neighbouring wavelengths are correlated, so random subsets are uninformative') is a property of the data that the check asserts rather than tests.",
+     "vacuity": "HIGH (the whole of R2)"
+    },
+    {
+     "id": "R7_C_across_temperature_slices",
+     "code": "stage4_robustness.py lines 182-196",
+     "why": "Five lines of code, comparing three values (4.2095e-13, 3.9747e-13, 3.9110e-13) with no null, no tolerance and no acceptance criterion.  rel_spread=0.0318 cannot fail.  Worse, it is redundant: it is numerically identical to samples 2-4 of Test 4's own per-curve null in stage 3.",
+     "vacuity": "HIGH"
+    },
+    {
+     "id": "stage3 optical_residual_structure",
+     "code": "stage3_crossfile.py lines 238-248",
+     "why": "Four correlation coefficients with no null and no interpretation.  The reported lag-1 autocorrelation (-0.323) is what a smooth monotone curve of 104 points does by construction, and corr(residual, grid log-slope)=0.830 is the expected signature of fitting a straight-line-in-log C to a smooth curve, not evidence about the boundary.",
+     "vacuity": "MEDIUM-HIGH (reported, never tested)"
+    },
+    {
+     "id": "stage1.n_wavelengths_shared_with_flux_grid_at_0p2nm",
+     "code": "stage1_inventory.py lines 96-97",
+     "why": "Claims to establish how many normalised wavelengths 'are shared' with the grid.  The true number of nodes shared exactly (within 1e-9 nm) is ZERO - the axes are offset by 0.09-0.23 nm everywhere.  The 0.2 nm tolerance is an unstated, unjustified choice (146/175 pass; 175/175 pass at 0.25 nm).  The number is a nearest-neighbour-count in disguise and is stated as if the two axes were co-sampled.",
+     "vacuity": "MEDIUM (misleading, not vacuous)"
+    },
+    {
+     "id": "stage5.transition_alignment",
+     "code": "stage5_uv_mechanism.py lines 153-159",
+     "why": "`all(int(np.argmin(...)) is not None for x in jumps)` is True for ANY input: argmin always returns an integer on a non-empty array, so the expression never evaluates the alignment it claims.  The check cannot fail.",
+     "vacuity": "HIGH - literally a dead predicate.  Recomputed: deviation jumps at 296.23/319.91/326.41 nm vs grid-step jumps at 291.9/296.23/319.91/324.41/326.41 nm; 2 of the 3 deviation jumps do coincide with step changes, but the reported boolean does not establish that."
+    },
+    {
+     "id": "stage5 R2-style tautologies in exact_plateaus",
+     "code": "stage5 lines 92-115",
+     "why": "'predicted 5.0' for the 299-322 region is true because the grid step there is exactly 1.0 nm at all 21 points (verified) - and the 5/dw rule was reverse-engineered from the data in the first place.  The prediction is not independent of the calibration.",
+     "vacuity": "MEDIUM - circular, not strictly vacuous"
+    }
+   ]
+  },
+  "S5_statistics_without_null": {
+   "items": [
+    {
+     "stat": "stage2 metallicity crossover 448.67/445.82/409.87 nm + 'boundary reproducible / correction: not reproducible across the three slices'",
+     "missing": "no chance baseline in stage2; supplied in stage4 (R1) and in the verification worker's GAP3 crossings null",
+     "has_null_in": "stage4 R1 / GAP3"
+    },
+    {
+     "stat": "stage2 'monotone_decreasing_180_to_850': true (a single 2-point comparison of index 0 vs index -1)",
+     "missing": "no null; two points compared, no error bar; the docstring calls it monotonicity"
+    },
+    {
+     "stat": "stage2 metallicity_monotonicity frac_steps_increasing_uv",
+     "missing": "null absent; also compared against a uniform-shuffle expectation without performing one"
+    },
+    {
+     "stat": "stage3 null_calibration_correlation verdict 'correlation >0.99 is not discriminative'",
+     "missing": "the fraction 0.0987 of unrelated pairs above 0.99 IS a null, so this one is fine; but the ceiling used in the verdict ('a large share') is not derived from it"
+    },
+    {
+     "stat": "stage3 photon_to_energy_null separation_factor = 2.24 (the headline '2.24x better than the next-best grid curve')",
+     "missing": "the comparison is unfair by construction: C is fitted once on the TRUE curve (level_3 vs F(5800 K, M=0)) and then held fixed while every other (T,M) candidate is scored with a constant it did not choose.  In stage3's own stored values the winner has mean|rel dev| 0.00139; the nearest neighbour curves score 0.00310 (M=-0.05) and 0.00331 (M=+0.05).  I re-fit C SEPARATELY for each candidate curve over the same 400-850 nm band: the winner stays 5800 K/M=0.0, but its separation over the second-best collapses to 1.234x, and over the best other temperature (6300 K) it is 31.5x (0.0436).  2.24x is not a valid discrimination statistic.",
+     "severity": "HIGH"
+    },
+    {
+     "stat": "stage4 R7 rel_spread = 0.0318",
+     "missing": "no null, no threshold (see S4)"
+    },
+    {
+     "stat": "stage5 'best_model 5_over_grid_step, mean|rel err| 0.01320' chosen as min over four alternatives",
+     "missing": "no null over the 175-point spectrum: the alternatives {constant 5, constant 1} are not the relevant competitors.  The relevant competitor is the three-significant-figure quantisation of the flux table, which I measured directly (below)."
+    },
+    {
+     "stat": "stage5 composition_independence rel_spread 3.85e-4 across the five levels",
+     "missing": "no null.  Since all five levels are monotone transforms of ONE underlying spectrum divided by nearly the same factor, agreement to 4e-4 is expected even under a pure composition-independent rebinning artefact - which is what it is evidence FOR, not a test.  The claim 'a physical composition effect cannot be composition-independent' is fine; the number carries no independent weight."
+    },
+    {
+     "stat": "stage5 prediction_accuracy table (ramp mean|rel err| 1.77%, narrow-region 25%, all 1.32%)",
+     "missing": "no comparison against any competing model's typical error other than the four ad hoc alternatives; and the 1.3-1.8% residual is COMPATIBLE with the flux table's own 3-significant-figure quantisation (see S7) so it is not resolved evidence for the 5/dw rule."
+    },
+    {
+     "stat": "stage6 R^2 median 0.984-0.990 vs null median 0.014-0.020, p=0",
+     "missing": "present (300 permutations) but invalid - see S6 bug: the permutation is shared across ALL wavelengths and the reported p rests on the MAXIMUM of the permuted profile, so it multiplies the tail by ~90-176 correlated wavelengths."
+    },
+    {
+     "stat": "stage6 'median R^2 ~0.99' supported by r2_in_250_300 / r2_in_400_500 / r2_in_700_850",
+     "missing": "the three band values are a MEAN over a contiguous 51/101/151-point band, not a median; the words and the statistic disagree."
+    },
+    {
+     "stat": "stage6 cross_slice_profile_reproduction r = 0.897-0.987, described as the full wavelength profile 'reproduced independently by all three temperature slices'",
+     "missing": "no null for r; and 0.897 is consistent with the profile being one smooth curve, so the value tests smoothness, not independence."
+    }
+   ]
+  },
+  "S6_stage6_crossing_statistic_claim": {
+   "stage6_claim": "the crossing wavelength is a weak statistic; its permutation null is wide and no single slice's crossing is individually significant",
+   "verdict": "HALF CORRECT, and the headline framing is REFUTED as stated.",
+   "what_is_correct": "The plain whole-ladder label permutation null IS wide and the observed crossing is NOT special under it.  My independent recomputation (500 permutations, seed 7, primary ladder M<=0.50): T5300 observed 448.665, null q025/q50/q975 = 200.93/448.38/479.16, 59.6% of permutations land within 5 nm, 78.8% within 25 nm.  T5800 observed 445.825, null 184.19/445.59/448.34, 75.2% within 5 nm, 80.4% within 25 nm.  T6300 observed 409.871, null 183.20/409.86/447.10, 40.8% within 5 nm, 72.2% within 25 nm.  Stage6's statement about THAT null is right.",
+   "what_is_wrong": [
+    "Stage6 declares the crossing statistic itself weak and substitutes R^2.  But the label-permutation null is DEGENERATE: the composition family is rank-1 (GAP3 N1a measured PC1 >= 98.9% of the level-space variance; I reproduced the same profiles).  A random relabelling of 31 monotone levels still traces essentially the same amplitude profile, so the null's width measures the amplitude edge of the spectrum, not the plausibility of the boundary.",
+    "Under the correctly designed monotone-preserving null, the crossing is very sharp.  My recomputation (500 random 16-of-31 monotone sub-ladders): T5300 max |crossing - observed| = 0.916 nm; T5800 = 0.764 nm; T6300 = 24.78 nm (worst case, and 64.2% stay within 5 nm).  Jackknife over single rungs: T5300 max shift 0.111 nm, T5800 0.119 nm, T6300 24.55 nm.  Decimation to every 2nd/4th rung: shifts <= 0.70 nm at T5300/T5800.",
+    "So at two of three temperatures the crossing is pinned to better than 1 nm - a sub-step measurement - and at 6300 K to 25 nm, which is still only ~5 grid steps.  Stage6's 'the crossing is a weak statistic' is false for T5300/T5800 and overstated for T6300.",
+    "Stage6's stated mechanism for the weakness ('a zero of a noisy, strongly autocorrelated function') is not what drives the null width.  The null is wide because the permutation destroys the ORDER of the composition ladder, which is the signal.  The observed crossing sits at 445.8 nm on the 5 nm ladder (bracket 445-450 nm), where the slope profile is smooth and locally LINEAR in wavelength; a zero of a locally linear monotone function is well localised.  The lag-1 autocorrelation the stage quotes (0.561 at 250-400 nm) is irrelevant to a crossing-location null."
+   ],
+   "telephone_game_note": "Stage6 opens by citing output/verification/GAP3_artefact_nulls.json as having 'found it weak'.  GAP3's actual verdict text (verdicts.claim_i_metallicity_crossover) is 'SURVIVES THE NULLS, with the label-permutation null explicitly declared NON-INFORMATIVE (rank-1 degeneracy)'.  The monotone-preserving null it reports is a tie-breaker that passed.  Stage6 inverted the source's conclusion and then built a replacement statistic on the inverted premise.",
+   "stage6_bug": "stage6_statistical_power.py line 90 permutes ms[u] ONCE per permutation and reuses that same permuted labelling for all 176 wavelengths, then appears to calibrate the observed median R^2 against the null distribution of a per-permutation MAXIMUM over 176 wavelengths (null_max is computed but never used; the p-value uses the median).  The stated p<1/300 is a floor artifact of 300 permutations, not a measured p.  The R^2 result itself is not in doubt (I reproduced median obs 0.9844/0.9899/0.9901 vs null median 0.0138/0.0197/0.0160), but the way it is calibrated does not support the words 'p < 1/300'.",
+   "rank1_recomputed_by_me": {
+    "pc1_share_of_level_space_covariance": {
+     "5300": 0.9943506346453592,
+     "5800": 0.9898764561256294,
+     "6300": 0.9970747612358418
+    },
+    "note": "independently reproduced (3 identical values to GAP3 N1a); this is why the plain label-permutation null is degenerate"
+   }
+  },
+  "S7_uv_deviation_mechanism_validity": {
+   "what_stage5_reports": "deviation == 5 nm / local grid step, no free parameter; plateau 5.010 vs predicted 5.0; optical 1.0001 vs 1.0; whole-spectrum mean|rel err| 1.32%",
+   "my_independent_test": [
+    {
+     "test": "recompute the claimed numbers",
+     "result": "exact: C=3.974745242072792e-13, plateau mean 5.010022971930054, optical mean 1.0001376209886794, ramp 2.070772735917821, whole-spectrum mean|rel err| 0.013203303637940032"
+    },
+    {
+     "test": "DIRECT summation hypothesis test (never performed by stage5): is level_3 proportional to the SUM of grid flux over the 5 nm window at each normalised wavelength?",
+     "result": "REJECTED.  Exact-window sum ((ws>=nw)&(ws<nw+5)): mean|rel dev| = 0.534 all-spectrum, 0.834 in the plateau (vs 0.0132 for the 5/dw rule).  Fixed-5-node sum: 2.02.  Trapezoid integral over [nw, nw+5): 2.19.  Nearest-node sum: 2.02.  No summation/integration convention comes close.  The deviation is NOT a binning-by-summation artefact."
+    },
+    {
+     "test": "implied local step from the data (implied_dw = 5/dev) compared with the grid interval actually containing each normalised wavelength",
+     "result": "matches the CONTAINING grid interval almost everywhere: 179-296 nm mean|rel err| 1.68% (max 5.6%), plateau 0.80% (max 2.6%).  The grid step in the plateau is exactly 1.0 nm at all 21 points (verified), so 'dev ~ 5.0' there is real.  The match is 1-2%, i.e. at the level of the flux table's own 3-significant-figure quantisation."
+    },
+    {
+     "test": "where 5/dw fails: stage5 attributes the failure to the chaotic transition region (322-330 nm, up to 74% error).",
+     "result": "Confirmed and characterised: the failures are exactly the three points whose containing grid interval is coarser than the file's own 0.09-0.23 nm offset allows.  At nw=298.92 the containing interval is [296.3,299.0) (2.7 nm) but the implied step is 1.10 nm - i.e. the deviation switched to the DENSE band's covereage ~1.1 nm ahead of the grid node at 299.0.  Same at nw=322.41 vs the [321.0,322.5) node (implied 1.95 vs 1.5) and nw=329.91 vs [326.5,330.0) (implied 4.93 vs 3.5).  A phase/lag of roughly 0.1-1.5 nm in the binning assignment explains all three."
+    },
+    {
+     "test": "how big is the analysis's own collocation error?  (grid interpolated onto the normalised axis)",
+     "result": "curvature bound: max 6.7%, p99 3.4%, median 0.08%, plateau max 1.7%, optical max 1.3%.  Replacing np.interp by nearest-node changes the plateau value from 5.0100 to 5.0008 and the optical mean from 1.00014 to 1.00007, i.e. the qualitative claim is robust but the quoted 4-5 significant figures are not meaningful."
+    },
+    {
+     "test": "quantisation null: perturb every flux value by +-0.5 ulp at 3 significant figures and re-fit",
+     "result": "the crossing statistic moves by 0.037/0.040/0.233 nm std (range 0.18/0.22/2.61 nm) at T5300/5800/6300; the plateau deviation is quantised at ~0.8% rms, consistent with the 0.80% mean|rel err| the 5/dw model achieves.  So the model is at the noise floor: it cannot be verified better than ~1%, and any finer claim about it is unsupported."
+    }
+   ],
+   "verdict": "The 5/dw RELATION is empirically real (it reproduces 179-850 nm to 1.3% with zero free parameters), but stage5's stated MECHANISM - 'the normalised file was produced by re-binning the grid onto a uniform 5 nm ladder by SUMMATION' - is REFUTED by direct test.  The correct description supported by the data is a per-wavelength NORMALISATION/coverage artefact (the grid's local sample density is folded into the value), with a ~0.1-1.5 nm phase lag in the transition region.  Stage5's own 'best_model' selection is also unfalsifiable as written: none of its four alternatives can fail."
+  },
+  "S8_reporting_hygiene": {
+   "items": [
+    {
+     "issue": "stage4 R1/R4/R7 hard-code i=1 (5800 K) without labelling the choice as the hypothesis temperature; R1's verdict text says 'reproducible from any two temperature slices' but the spread over the three leave-one-out values is 12.44 nm, i.e. 2.5 grid intervals.  The verdict word 'reproducible' is doing work the number does not support: excluding 6300 K moves the boundary by 1.5 nm (445.8 -> 447.3), excluding 5800 K moves it -11.0 nm to 434.9 nm."
+    },
+    {
+     "issue": "stage4 R6's stored field worst_pair_at_low_index is inconsistent across slices: 5300 K has a decreasing step at (0.8, 0.9) - INSIDE the thinned M>0.5 region - and the stored value correctly says False, but stage4's own R6_verdict sentence claims 'every long-wavelength decrease occurs between adjacent index levels below M=-0.6'.  That sentence is false for the 5300 K slice.  Verified: 5300 K decreasing pairs = {(-0.85,-0.8),(-0.8,-0.75),(0.8,0.9)}."
+    },
+    {
+     "issue": "stage4 R5 filters the quadratic stationary point to (-1.5,1.0) before taking a median, discarding 118/103/103 of 176 values at T5300/5800/6300 (67%/59%/59% of the spectrum).  Without the filter the medians are -1.83/-1.93/-1.85, far outside the index range [-1.0,0.9]; with it they are -1.22/-1.21/-1.19, still outside.  Either way the check finds no interior stationary point, which the stage reports as 'frac_within_index_range 0.21-0.32' without noting that it is a null result."
+    },
+    {
+     "issue": "stage4 R2's 'random_point_holdout_mean_slope_std = 0.115' is a standard deviation with no reference value; it cannot fail."
+    },
+    {
+     "issue": "stage3 unconstrained_shape_search_verdict asserts 'the blue band carries a large shared distortion (quantified in tests 4-5 below)'.  Test 4 (photon-to-energy) is a ratio test, not a distortion quantification, and test 5 (optical residual structure) is on the optical band.  Neither quantifies the blue-band distortion."
+    },
+    {
+     "issue": "stage3 test 4's constant C is a free parameter fitted on the optical band of exactly the winning curve; 'zero-free-parameter' is claimed for test 3 (ratio test), not test 4, so this is a clarity problem rather than a false claim - but the photon_to_energy_null is presented as a null when it is a leave-one-out comparison with an unequal handicap."
+    },
+    {
+     "issue": "stage1 'duplicated_cells' statistic is unreachable (see S1 caveat)."
+    },
+    {
+     "issue": "No stage joins the two files on a common wavelength axis with an explicit, tested registration (e.g. by offsetting the normalised axis by its own 0.1-0.2 nm and showing the result is stable).  The alignment claim in the task brief ('index-shifted, max mismatch 0.23 nm once realigned') is correct, and stage 3/5 sidestep it by interpolating; but no artefact records the check."
+    },
+    {
+     "issue": "stage3's headline split is the joint_ratio_search: best mean_abs_log_dev = 0.0034335 at (T=5800 K, reference M=-0.90) with implied ladder [-0.5, 0.0, 0.5, 0.9], and separation_factor_vs_next = 3.4515x over (5800 K, ref M=-0.95).  I reproduced this exactly and can also note it is the one headline split in the pipeline that SURVIVES the data's own quantisation floor: re-running the search under +-0.5 ulp at 3 significant figures (60 draws) keeps the same winner in 60/60 draws with separation median 3.137, range 3.022-3.278.  The winner's residual 0.00343 sits below the median relative ulp (0.004) so it is not resolved further than 'the 5800 K ladder is a monotone 0.5-spaced subset of the grid ladder' - but that much is solid."
+    }
+   ]
+  },
+  "S9_what_survives": {
+   "solid": [
+    "the (T,M,W) cube, its axes and all stage1 integrity counts (recomputed exactly)",
+    "stage2 metallicity crossovers 448.665/445.825/409.871 nm on the M<=0.5 ladder, and the slopes at 179.4/850 nm to 1e-12",
+    "stage2 temperature ratio profile at M=0 (156.78 at 180 nm, 1.0008 at 400... and 0.872 at 850 nm)",
+    "stage3 zero-free-parameter ratio test at 5800 K: mean|rel dev| 0.00344, i.e. the normalised ladder is a LINEAR rescaling of the grid ladder at T=5800 K (levels map to M = -0.9,-0.5,0.0,0.5,0.9)",
+    "stage5 plateau 299-322 nm = 5.010 +/- 0.026 (predicted 5.000) and optical 330-850 nm = 1.00014 (predicted 1.0)",
+    "stage6 R^2 levels (median 0.984-0.990 vs null median 0.014-0.020) - but not the quoted p-value"
+   ],
+   "should_be_demoted": [
+    "the photon-to-energy '2.24x separation factor' (fair value 1.23x)",
+    "stage6's 'the crossing wavelength is a weak statistic' (fair value: <=0.92 nm under monotone-preserving nulls at 2 of 3 temperatures)",
+    "stage5's summation/binning mechanism (directly refuted) and its 4-5 significant-figure precision (quantisation floor ~1%)",
+    "stage4 R2 as a whole, R4, R7, stage5 transition_alignment, and stage1 duplicated_cells as evidence",
+    "stage4 R1's verdict word 'reproducible' (12.44 nm spread, 2.5 grid intervals)"
+   ]
+  }
+ }
+}

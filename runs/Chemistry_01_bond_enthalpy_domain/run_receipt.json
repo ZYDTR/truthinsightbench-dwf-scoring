@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Chemistry_01_bond_enthalpy_domain",
+  "model": "deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "264b790fb1723f7142cc6fa032cb444d8049d0aa1e294b9fa923b87fa783a053",
+  "workspace_input_file_count": 10,
+  "workspace_input_bytes": 7606708,
+  "output_tree_sha256": "d9beadb4ba5b856b505aafd149aa67100b3012f46220d364edd983037ae34878",
+  "output_file_count": 169,
+  "output_bytes": 46046602
+}

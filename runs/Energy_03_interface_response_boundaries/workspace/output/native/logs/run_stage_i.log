@@ -1,0 +1,38 @@
+[artifact] results/I_consolidation.json
+[artifact] results/curve_parameters.csv
+[artifact] results/response_matrix_with_ranks.csv
+
+=== block test ===
+  T50: block1 mean=268.624 block2 mean=256.859 diff=-11.765 exact p=0.7429 separated=False
+  w: block1 mean=29.190 block2 mean=26.252 diff=-2.938 exact p=0.5714 separated=False
+  ymax: block1 mean=67.639 block2 mean=96.030 diff=+28.391 exact p=0.0857 separated=False
+
+=== ordering predicted by T50 alone ===
+  [main] predicted order: ['condition_block2_2', 'condition_block1_2', 'condition_block2_3', 'condition_block2_4', 'condition_block1_3', 'condition_block1_1', 'condition_block1_4', 'condition_block2_1']
+    T=  120 spearman=-0.571 p=0.2060 kendall=-0.357
+    T=  140 spearman=-0.929 p=0.0142 kendall=-0.857
+    T=  160 spearman=-0.929 p=0.0142 kendall=-0.857
+    T=  180 spearman=-0.905 p=0.0203 kendall=-0.786
+    T=  200 spearman=-0.905 p=0.0203 kendall=-0.786
+    T=  220 spearman=-0.929 p=0.0142 kendall=-0.857
+    T=  240 spearman=-0.929 p=0.0142 kendall=-0.857
+    T=  260 spearman=-0.905 p=0.0203 kendall=-0.786
+    T=  280 spearman=-0.905 p=0.0203 kendall=-0.786
+    T=  300 spearman=-0.905 p=0.0203 kendall=-0.786
+    T=  320 spearman=-0.857 p=0.0351 kendall=-0.786
+  [check] predicted order: ['condition_block1_5', 'condition_block1_2', 'condition_block1_4', 'condition_block1_1']
+    T=  120 spearman=-1.000 p=nan kendall=-1.000
+    T=  140 spearman=-1.000 p=nan kendall=-1.000
+    T=  160 spearman=-1.000 p=nan kendall=-1.000
+    T=  180 spearman=-1.000 p=nan kendall=-1.000
+    T=  200 spearman=-1.000 p=nan kendall=-1.000
+    T=  220 spearman=-1.000 p=nan kendall=-1.000
+    T=  240 spearman=-1.000 p=nan kendall=-1.000
+    T=  260 spearman=-1.000 p=nan kendall=-1.000
+    T=  280 spearman=-1.000 p=nan kendall=-1.000
+    T=  300 spearman=-1.000 p=nan kendall=-1.000
+    T=  320 spearman=-0.800 p=0.4701 kendall=-0.667
+
+=== reversal census ===
+  main: 12/28 pairs reverse; 12 flip net direction
+  check: 1/6 pairs reverse; 3 flip net direction

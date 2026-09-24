@@ -1,0 +1,3 @@
+endpoint_type,n_cells,mean_fc,sd_fc,cv_fc,mean_log2fc,log2fc_ci_low,log2fc_ci_high
+endpoint_count,9,1.92986,0.364945,0.189104,0.925872,0.718193,1.13355
+endpoint_fraction,9,1.7773,0.261769,0.147285,0.815355,0.648264,0.982446

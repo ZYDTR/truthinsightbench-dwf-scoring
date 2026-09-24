@@ -1,0 +1,62 @@
+{
+  "best_age_coordinate": "c06_depth_w_e_m",
+  "c06_linear_r2": 0.9990499096803452,
+  "c01_linear_r2": 0.9913794731900764,
+  "c06_loo_mae_yr": 8.207279687092583,
+  "c01_loo_mae_yr": 27.652219516584168,
+  "c06_beats_c01_n_horizons": 15,
+  "sign_test_p": 6.103515625e-05,
+  "class_contrasts": [
+    {
+      "metric": "c04_sulfate_ug_kg",
+      "named_median": 507.568,
+      "unidentified_median": 300.762,
+      "named_n": 5,
+      "unidentified_n": 9,
+      "mannwhitney_U": 31.0,
+      "p_two_sided": 0.25707429868483
+    },
+    {
+      "metric": "excess_over_101_median",
+      "named_median": 411.31,
+      "unidentified_median": 203.777,
+      "named_n": 5,
+      "unidentified_n": 9,
+      "mannwhitney_U": 32.0,
+      "p_two_sided": 0.2052745036642716
+    },
+    {
+      "metric": "local_prominence_ug_kg",
+      "named_median": 91.36699999999996,
+      "unidentified_median": 65.72799999999995,
+      "named_n": 5,
+      "unidentified_n": 9,
+      "mannwhitney_U": 33.0,
+      "p_two_sided": 0.16151331846754216
+    }
+  ],
+  "clustering": [
+    {
+      "coordinate": "depth c01",
+      "n_events": 15,
+      "span": 40.59,
+      "min_gap": 0.259999999999998,
+      "median_gap": 1.6949999999999985,
+      "n_gaps_below_threshold": 4,
+      "threshold": 0.5,
+      "poisson_expected_gaps_below": 2.3754,
+      "p_clustering": 0.1867
+    },
+    {
+      "coordinate": "water-equivalent c06",
+      "n_events": 15,
+      "span": 25.76,
+      "min_gap": 0.16000000000000014,
+      "median_gap": 0.9349999999999996,
+      "n_gaps_below_threshold": 2,
+      "threshold": 0.3,
+      "poisson_expected_gaps_below": 2.24395,
+      "p_clustering": 0.70645
+    }
+  ]
+}

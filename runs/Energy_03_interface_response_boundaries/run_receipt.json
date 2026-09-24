@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Energy_03_interface_response_boundaries",
+  "model": "mixed:bonsai2-27b-pq2+deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "e9c05e732db2e6a3c73a26d1a2dde20f89c3323990c3066ec159d751209850d5",
+  "workspace_input_file_count": 9,
+  "workspace_input_bytes": 41705,
+  "output_tree_sha256": "cf68144f76151729bf353eb66183961d86ffb7a512d3e3f1da0d1f32ec2cf518",
+  "output_file_count": 53,
+  "output_bytes": 1364680
+}

@@ -1,0 +1,15 @@
+=== CROWDED FLAG (both rad centres in rings OR n_rings>=3) ===
+n crowded=95  n rest=448
+quantum    crowded MAE= 2.495 (n=95)  rest MAE= 2.014 (n=448)  delta=+0.482  cliffs_d=0.160  MWU p=0.0145
+learned    crowded MAE= 4.169 (n=95)  rest MAE= 2.038 (n=448)  delta=+2.131  cliffs_d=0.430  MWU p=4.32e-11
+reference  crowded MAE= 6.957 (n=95)  rest MAE= 5.174 (n=448)  delta=+1.783  cliffs_d=0.211  MWU p=0.00124
+
+--- sub-flags ---
+ flag both_rad_in_ring n=6
+    quantum    MAE_in= 5.153  MAE_out= 2.064  p=0.158
+    learned    MAE_in= 8.425  MAE_out= 2.344  p=0.168
+    reference  MAE_in= 5.983  MAE_out= 5.480  p=0.943
+ flag p_n_rings>=3 n=91
+    quantum    MAE_in= 2.525  MAE_out= 2.012  p=0.0132
+    learned    MAE_in= 4.242  MAE_out= 2.042  p=1.88e-11
+    reference  MAE_in= 7.022  MAE_out= 5.177  p=0.000927

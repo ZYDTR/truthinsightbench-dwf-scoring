@@ -1,0 +1,82 @@
+{
+  "joint_bootstrap": {
+    "floor_mean": 2.0021674010704444,
+    "floor_ci95": [
+      1.6149486882332302,
+      2.4624887204445516
+    ],
+    "P_floor_below_Q_MAE": 0.7115,
+    "P_floor_below_L_MAE": 0.97125,
+    "learned_minus_floor_mean": 0.40670816522789827,
+    "learned_minus_floor_ci95": [
+      -0.007993363363136961,
+      0.769265456706969
+    ],
+    "P_learned_above_floor": 0.97125,
+    "quantum_minus_floor_mean": 0.09322658603821139,
+    "quantum_minus_floor_ci95": [
+      -0.2941834186402864,
+      0.4301861937006416
+    ],
+    "P_quantum_above_floor": 0.7115
+  },
+  "methodB_bootstrap": {
+    "sigma_ref_ci95": [
+      2.4430703521761172,
+      3.224586668011165
+    ],
+    "sigma_Q_vs_truth_ci95": [
+      0.4446885266694503,
+      1.3553756409036164
+    ],
+    "sigma_L_vs_truth_ci95": [
+      1.5715728770564148,
+      2.3832693552256434
+    ],
+    "P_sigma_Q_vs_truth_gt_0": 0.9885,
+    "P_sigma_L_vs_truth_gt_0": 1.0,
+    "P_sigma_L_gt_sigma_Q": 0.9995,
+    "implied_MAE_Q_ci95": [
+      0.35481010979572764,
+      1.081433297965284
+    ],
+    "implied_MAE_L_ci95": [
+      1.2539337347798531,
+      1.9015738227691408
+    ]
+  },
+  "mae_ci95_observed": {
+    "quantum": {
+      "mae": 2.0978084714548806,
+      "ci95": [
+        1.911198434622468,
+        2.2897693370165753
+      ]
+    },
+    "learned": {
+      "mae": 2.410699815837938,
+      "ci95": [
+        2.1859378453038683,
+        2.6605690607734815
+      ]
+    },
+    "reference": {
+      "mae": 5.48596685082873,
+      "ci95": [
+        5.153517495395949,
+        5.825242173112339
+      ]
+    }
+  },
+  "pooled_variance_check": {
+    "n_multi_row_molecules": 86,
+    "correct_pooled_within_sd_ddof1": 9.965372236760867,
+    "naive_ddof0_nweighted": 10.110235737442855,
+    "unweighted_mean_of_var": 10.315528014457344,
+    "sqrt_sum_of_variances": 1611.433303761428,
+    "var_squared_weighted_artifact": 165.2622713320976,
+    "mean_within_spread": 13.418604651162788,
+    "median_within_spread": 11.899999999999999,
+    "max_within_spread": 47.900000000000006
+  }
+}

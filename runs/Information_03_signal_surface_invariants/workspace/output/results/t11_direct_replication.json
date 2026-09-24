@@ -1,0 +1,16 @@
+{
+  "n_rows_matched": 4116,
+  "n_cells_matched": 1372,
+  "row_pearson": 0.005406032793359054,
+  "row_spearman": 0.006150336908882761,
+  "row_bootstrap_ci95": [
+    -0.026042254587825876,
+    0.03717605009969936
+  ],
+  "cell_pearson": 0.01676817822716671,
+  "cell_spearman": 0.03242767140167187,
+  "replicated_log_mean": 9.56690822648478,
+  "independent_log_mean": 10.217854850177902,
+  "replicated_log_sd": 0.46899789181051943,
+  "independent_log_sd": 1.360288317554837
+}

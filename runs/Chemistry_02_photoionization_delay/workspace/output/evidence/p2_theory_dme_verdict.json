@@ -1,0 +1,79 @@
+{
+ "package": "p2_theory_dme",
+ "verify_script": "/data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/analysis/p2_theory_dme_verify.py",
+ "generated": "2026-09-19T18:08:06",
+ "runtime_s": 55.1,
+ "verdicts": [
+  {
+   "claim": "The theory-like dense complex amplitude Z_t = magnitude*exp(i*phase) does NOT have an exact finite angular degree: the Legendre residual decays smoothly from 9.58e-01 at L=2 to 7.75e-06 at L=14, with no collapse step; largest single-step ratio is only 9.04 (L=2->3).",
+   "reproduced": true,
+   "my_value": "chebfit route: L=2 9.580623e-01, L=3 1.060294e-01, L=4 2.608562e-02, L=9 8.089942e-06, L=14 7.753075e-06; Legendre.fit route: L=2 9.580623e-01, L=14 7.753075e-06; hand-recurrence+QR route: L=2 9.580623e-01, L=14 7.753075e-06; largest single-step ratio 9.0358 (L=2->3); extended: L=90 residual 3.968e-06 (still >> storage step ~5e-7); positive control on the experiment panel collapses by 5.57e+03 at L=3.",
+   "method": "three independent degree scans (numpy Chebyshev chebfit/chebval, numpy Legendre.fit, hand-rolled 3-term Legendre recurrence + QR) on all 99 energies x 181 angles, plus an in-data positive control on the experiment magnitude*exp(i*phase) panel and an extended scan to L=90.",
+   "comment": "Verified. The three routes agree to within 5 percent; the step-ratio structure is monotone-smooth (9.04, 4.07, 5.14, 6.53, 3.67, 5.19, 5.04, 1.05, ...), with no collapse. The positive control shows the identical code path collapses by >5e3 for a genuinely finite-degree panel, so the smooth decay of Z_t is a property of the data, not of the method. Storage precision is ~15-16 significant digits, so the L=14 floor (7.75e-6) is not a rounding artefact."
+  },
+  {
+   "claim": "No selection of the theory/DMEs block (gauge, m_ini, m_final, mu, basis, m-selection) reproduces the theory dense panel: best relative residual after a single complex scale is 0.531, and 0 of 144 candidates fall below a 2% reproduction threshold.",
+   "reproduced": true,
+   "my_value": "single-complex-scale relative residual: idx 0 (23.249 eV) 0.5313, idx 49 (32.549 eV) 0.8624, idx 98 (41.839 eV) 0.7562; minimum over ALL 99 energies 0.528406 at idx 9 (E=24.799 eV); 2772 candidate evaluations, 0 below the 2% threshold. Extended families (per-l phase/weight conventions, cross-gauge sums/differences, SH normalisation) min 0.4017; incoherent sqrt(|A|^2) per-m sums min 0.2975.",
+   "method": "hand-rolled associated-Legendre recurrence (validated against scipy.lpmv, max dev 9e-13) with every (m_ini,m_final,mu,gauge) x {m=0, all-m} selection and a single complex scale, evaluated at all 99 energies (not only 3); residual computed both by direct least squares and by sqrt(1-|<Z|A>|^2/(|Z||A|)^2). Extended selection families and an incoherent |A|^2 variant were additionally scanned.",
+   "comment": "Verified; the quoted 0.531 is reproduced exactly at idx 0 and is in fact slightly beaten (0.5284 at idx 9) when all 99 energies are scanned, so the 0.531 figure is conservative. The 2% threshold is missed by a factor ~26 even in the widest family tested. Caveat: a free 48-coefficient per-(l,|m|) projection of the panel matches to 2.0e-06, i.e. the panel's angular content lies in the DME angular span; it is the block's coefficient values that never match."
+  },
+  {
+   "claim": "The theory/DMEs T_kin axis is not the photon-energy axis of the theory panel: T_kin spans 9.18..33.11 eV while panel photon energies span 23.249..41.839 eV.",
+   "reproduced": true,
+   "my_value": "T_kin 0.337523..1.216655 a.u. -> 9.1845..33.1069 eV with scipy.constants Hartree 27.211386246 eV; panel photon energy 23.2490..41.8390 eV; E_panel - T_kin*Ha spans 8.093..14.065 eV; best affine map residual 2.158 eV max; best pure scale residual 10.856 eV max.",
+   "method": "scipy.constants Hartree energy (independent of the package's hardcoded 27.211386245988) applied to the unique T_kin column of theory/DMEs, compared against the theory/photon_energy_eV array; plus best affine and best pure-scale maps from T_kin*Ha to E_panel.",
+   "comment": "Verified. The ranges are disjoint at the low end (9.18-33.11 vs 23.25-41.84 eV) and neither an offset (spread 5.97 eV, IE offset makes it worse) nor any affine map (affine residual 2.16 eV max vs 0.19-0.19 eV panel spacing) relates them, so the two axes are different quantities, matched only by ascending index as the package states."
+  }
+ ],
+ "residual_doubt": "Claim 1: the letter of the claim is reproduced, but the L=14 residual floor (7.753e-06) is not numerical round-off, and an extended scan only reaches L=90 (Nyquist limit of 181 angles) with 4.0e-06, so 'no exact finite degree' is proven only for degrees <= 90. Also |Z|^2 fits a degree-20 polynomial to 8.4e-13, so the magnitude is the square root of a low-degree polynomial; whether the generator was a finite-degree amplitude in another variable cannot be excluded. Claim 2: I confirm the package's exact 0.531 figure and its zero count under a single complex scale, but a free 48-parameter per-(l,|m|) projection reproduces the panel to 2.0e-06 relative. That means the panel's theta-dependence lies (very nearly) in the 48-function DME angular span, so the failure is specifically in the block's coefficient values, not in its angular basis - a physically weighted combination of channels was not excluded, only discrete selections with one complex scale, which is what the claim asserts. Claim 3: the value checked is the T_kin column of the theory/DMEs block (a.u.) converted with the Hartree energy; if the block's T_kin were reinterpreted as a photoelectron kinetic energy, adding IE (0.7975 a.u.) still leaves a 7.6-13.1 eV gap to the panel energies, so the axis distinction holds under both readings.",
+ "key_numbers": {
+  "claim1": {
+   "chebfit_L2": 0.9580622735138116,
+   "chebfit_L14": 7.75307516854919e-06,
+   "legfit_L2": 0.9580622735138118,
+   "legfit_L14": 7.753075168648336e-06,
+   "qr_L2": 0.9580622735138115,
+   "qr_L14": 7.753075168910118e-06,
+   "largest_step_ratio": 9.035820076649458,
+   "largest_step_pair": "2->3",
+   "L90_max_res": 3.968410571761794e-06,
+   "control_exp_L2": 0.5326909079171055,
+   "control_exp_L3": 9.561835397800181e-05,
+   "control_collapse": 5571.011063834645,
+   "absZ2_L20_res": 8.364559045404008e-13,
+   "min_sig_digits_mag": 7
+  },
+  "claim2": {
+   "min_relres_all99": 0.5284059171854922,
+   "argmin_idx": 9,
+   "per_energy_best_idx0": 0.5313432414424445,
+   "per_energy_best_idx49": 0.8623535703461336,
+   "per_energy_best_idx98": 0.7562269743902679,
+   "n_candidates": 2772,
+   "n_below_2pct": 0,
+   "ext_coherent_min": 0.4016685133400746,
+   "ext_incoherent_min": 0.29748528011434766,
+   "free_lm_proj_max": 1.985025368234668e-06,
+   "idx0_best_selection": [
+    -1.0,
+    -1.0,
+    0.0,
+    1,
+    0
+   ]
+  },
+  "claim3": {
+   "Tkin_eV_min": 9.184476339090391,
+   "Tkin_eV_max": 33.10688273879713,
+   "panel_eV_min": 23.249,
+   "panel_eV_max": 41.839,
+   "diff_min": 8.093460350796896,
+   "diff_max": 14.064523660909607,
+   "affine_max_res": 2.158214297555073,
+   "pure_scale_max_res": 10.855854837694311,
+   "HA_eV": 27.211386245981
+  }
+ },
+ "failures": []
+}

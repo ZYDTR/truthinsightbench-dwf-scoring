@@ -1,0 +1,11 @@
+Process,Methodology,n,n_logTI,median_ER_mm_yr,median_TI_yr,min_TI_yr,max_TI_yr
+Glacial,Volumetric,233,233,0.44,45.0,0.0191781,34000000.0
+Glacial,Cosmogenic surface,99,99,0.4,5000.0,87.0,190000.0
+Glacial,Thermochronometric,68,68,1.5,1000000.0,100000.0,250000000.0
+Glacial,Relief,18,18,0.55,900000.0,2.2,44500000.0
+Glacial,Cosmogenic detrital,9,9,0.4,7500.0,1000.0,3000000.0
+Nonglacial,Cosmogenic detrital,3470,3470,0.06608025000000001,10042.25,5.27484,2935190.0
+Nonglacial,Volumetric,2583,2583,0.0660102,5.0,0.00274,16000.0
+Nonglacial,Cosmogenic surface,224,64,0.00026,1410000.0,7760.0,10400000.0
+Nonglacial,Relief,7,7,16.0,4000010.0,1000000.0,20000000.0
+Nonglacial,Thermochronometric,4,4,2.35,3000000.0,2000000.0,11000000.0

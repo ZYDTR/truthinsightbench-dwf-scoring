@@ -1,0 +1,105 @@
+=== A. orientation series totals (analysis unit = series) ===
+  orientation_series_1: total=11240
+  orientation_series_2: total=15551
+  orientation_series_3: total=1151
+  orientation_series_4: total=444
+  orientation_series_5: total=1503
+  orientation_series_6: total=2843
+  coordinates: n=52 min=-33.0 max=20.0
+  coordinate set == -33..20 minus (-34,-9,1)? True
+
+=== B. per-series shape statistics (unit = series) ===
+orientation_series_id  total_events  n_coordinates  n_zero_bins  zero_fraction  peak_coordinate  peak_count  centre_of_mass  median_coordinate  n_local_maxima                                      local_maxima  fast_regime_total_s_le_-10  slow_regime_total_s_gt_-10  share_fast_s_le_-10  share_mid_-10_lt_s_le_0  share_s_gt_0
+ orientation_series_1       11240.0             52           13       0.250000            -12.0      1439.0      -14.716192              -15.0              14    -29;-27;-21;-19;-17;-15;-12;-3;4;7;10;12;14;17                     10560.0                       680.0             0.939502                 0.051423      0.009075
+ orientation_series_2       15551.0             52           12       0.230769            -15.0      2458.0      -14.986175              -15.0              15 -30;-25;-21;-19;-17;-15;-13;-6;-3;3;7;10;13;17;19                     14492.0                      1059.0             0.931901                 0.056717      0.011382
+ orientation_series_3        1151.0             52           17       0.326923             -3.0       257.0       -6.525630               -3.0              13     -29;-27;-24;-21;-19;-17;-15;-11;-8;-3;3;14;16                       357.0                       794.0             0.310165                 0.496090      0.193745
+ orientation_series_4         444.0             52           27       0.519231              3.0       163.0       -1.887387                3.0               9                     -29;-25;-19;-15;-2;3;10;14;16                        52.0                       392.0             0.117117                 0.349099      0.533784
+ orientation_series_5        1503.0             52           17       0.326923              3.0       297.0       -4.666667               -2.0               9                     -29;-26;-19;-15;-6;-2;3;17;19                       429.0                      1074.0             0.285429                 0.387891      0.326680
+ orientation_series_6        2843.0             52           13       0.250000             -3.0       763.0       -4.903271               -3.0              14    -30;-26;-23;-21;-19;-15;-13;-6;-3;3;7;10;14;16                       664.0                      2179.0             0.233556                 0.583187      0.183257
+
+  coordinates that are ZERO in every series (coverage gaps): [-33.0, -32.0, -31.0, -28.0, -1.0, 0.0, 2.0, 11.0]
+  coordinates absent from the grid entirely: [-34.0, -9.0, 1.0]
+
+=== C. pairwise series comparison (unit = series) ===
+            series_a             series_b  total_a  total_b  total_ratio_b_over_a  pearson_r_counts  spearman_rho_counts  pearson_r_log1p_counts  tv_distance_normalized  max_abs_count_difference
+orientation_series_1 orientation_series_2  11240.0  15551.0              1.383541          0.886511             0.949492                0.959909                0.193035                    1456.0
+orientation_series_1 orientation_series_3  11240.0   1151.0              0.102402          0.061119             0.706159                0.644997                0.692283                    1436.0
+orientation_series_1 orientation_series_4  11240.0    444.0              0.039502         -0.132904             0.260928                0.197116                0.903644                    1439.0
+orientation_series_1 orientation_series_5  11240.0   1503.0              0.133719          0.050927             0.719486                0.678874                0.698492                    1385.0
+orientation_series_1 orientation_series_6  11240.0   2843.0              0.252936          0.085984             0.655341                0.618922                0.710926                    1363.0
+orientation_series_2 orientation_series_3  15551.0   1151.0              0.074015          0.125873             0.697134                0.657736                0.695157                    2410.0
+orientation_series_2 orientation_series_4  15551.0    444.0              0.028551         -0.117932             0.242445                0.195604                0.901008                    2456.0
+orientation_series_2 orientation_series_5  15551.0   1503.0              0.096650          0.040541             0.754574                0.712408                0.703683                    2406.0
+orientation_series_2 orientation_series_6  15551.0   2843.0              0.182818          0.105171             0.697407                0.666508                0.703704                    2318.0
+orientation_series_3 orientation_series_4   1151.0    444.0              0.385752          0.666266             0.584418                0.659587                0.454820                     229.0
+orientation_series_3 orientation_series_5   1151.0   1503.0              1.305821          0.830758             0.761340                0.787030                0.323161                     150.0
+orientation_series_3 orientation_series_6   1151.0   2843.0              2.470026          0.848450             0.635741                0.652261                0.359747                     506.0
+orientation_series_4 orientation_series_5    444.0   1503.0              3.385135          0.915544             0.515419                0.630265                0.331059                     179.0
+orientation_series_4 orientation_series_6    444.0   2843.0              6.403153          0.458647             0.512947                0.554779                0.591556                     735.0
+orientation_series_5 orientation_series_6   1503.0   2843.0              1.891550          0.676617             0.847227                0.843371                0.366796                     606.0
+
+  total ratio max/min across series = 35.02
+
+=== D. normalized orientation series -> workbook mapping (assembled = 3 blocks, x in -34..20, boundary zeros dropped) ===
+workbook_sheet    workbook_group workbook_channel     block_sums  assembled_total    normalized_series  exact_match
+     Sheet_009 anonymous_group_1        channel_l  10560;790;102          11240.0 orientation_series_1         True
+     Sheet_010 anonymous_group_1        channel_r 14492;1126;177          15551.0 orientation_series_2         True
+     Sheet_011 anonymous_group_2        channel_l    357;580;223           1151.0 orientation_series_3         True
+     Sheet_012 anonymous_group_2        channel_r     52;155;237            444.0 orientation_series_4         True
+     Sheet_013 anonymous_group_3        channel_l    429;601;491           1503.0 orientation_series_5         True
+     Sheet_014 anonymous_group_3        channel_r   664;1680;521           2843.0 orientation_series_6         True
+  all six series exactly recovered: True
+
+=== D2. group_b 'C' variant blocks (Sheet_046/047) vs group_b base (Sheet_011/012) ===
+variant_sheet             group   channel  block_index  n_points  x_range  x_step  variant_total  base_total  total_ratio_variant_over_base  pearson_r_on_common_grid
+    Sheet_046 anonymous_group_2 channel_l            0        25 -34..-10     1.0          335.0       357.0                       0.938375                  0.994593
+    Sheet_046 anonymous_group_2 channel_l            1        20  -9.5..0     0.5          562.0       580.0                       0.968966                  0.998602
+    Sheet_046 anonymous_group_2 channel_l            2        20    1..20     1.0          180.0       223.0                       0.807175                  0.999123
+    Sheet_047 anonymous_group_2 channel_l            0        25 -34..-10     1.0           48.0        52.0                       0.923077                  0.987055
+    Sheet_047 anonymous_group_2 channel_l            1        20  -9.5..0     0.5          145.0       155.0                       0.935484                  0.985517
+    Sheet_047 anonymous_group_2 channel_l            2        20    1..20     1.0          198.0       237.0                       0.835443                  0.997116
+
+=== E. cross-view check vs drift regimes (unit = series) ===
+  fast regime = orientation block s<=-10 (matches Sheet_025/027/029/031/033/035);
+  slow regime = orientation s>-10 PLUS the two interior boundary bins x=-9 and x=1
+  that the normalized orientation view pins to zero.
+orientation_series_id population_series_id  orientation_fast_region_s_le_-10  drift_regime_fast_total  fast_equal  orientation_slow_region_s_gt_-10  workbook_dropped_boundary_bins  slow_reconstructed  drift_regime_slow_total  slow_equal
+ orientation_series_1  population_series_1                           10560.0                  10560.0        True                             680.0                           212.0               892.0                    892.0        True
+ orientation_series_2  population_series_2                           14492.0                  14492.0        True                            1059.0                           244.0              1303.0                   1303.0        True
+ orientation_series_3  population_series_3                             357.0                    357.0        True                             794.0                             9.0               803.0                    803.0        True
+ orientation_series_4  population_series_4                              52.0                     52.0        True                             392.0                             0.0               392.0                    392.0        True
+ orientation_series_5  population_series_5                             429.0                    429.0        True                            1074.0                            18.0              1092.0                   1092.0        True
+ orientation_series_6  population_series_6                             664.0                    664.0        True                            2179.0                            22.0              2201.0                   2201.0        True
+  fast totals identical for all six series: True
+  slow totals identical for all six series: True
+
+=== F. group summary (unit = group of 2 series; coordinates nested) ===
+            group     channel_l_series     channel_r_series  group_total  mean_of_series_totals  tv_between_its_two_channels  com_channel_l  com_channel_r  com_pooled  peak_coordinate_pooled  share_fast_s_le_-10_pooled  share_mid_-10_s_le_0_pooled  share_s_gt_0_pooled
+anonymous_group_1 orientation_series_1 orientation_series_2      26791.0                13395.5                     0.193035     -14.716192     -14.986175  -14.872905                   -15.0                    0.935090                     0.054496             0.010414
+anonymous_group_2 orientation_series_3 orientation_series_4       1595.0                  797.5                     0.454820      -6.525630      -1.887387   -5.234483                     3.0                    0.256426                     0.455172             0.288401
+anonymous_group_3 orientation_series_5 orientation_series_6       4346.0                 2173.0                     0.366796      -4.666667      -4.903271   -4.821445                    -3.0                    0.251496                     0.515647             0.232858
+
+  group x group total-variation distance between pooled profiles:
+                   anonymous_group_1  anonymous_group_2  anonymous_group_3
+anonymous_group_1           0.000000           0.744116           0.699550
+anonymous_group_2           0.744116           0.000000           0.299804
+anonymous_group_3           0.699550           0.299804           0.000000
+
+=== F2. exact permutation tests, resampling at the SERIES level ===
+  units = 6 series; 3 groups x 2 series; 90 distinct assignments, p_min=1/90=0.0111
+  PERMANOVA pseudo-F on 52-dim normalized profiles: F=3.81  p=0.1333
+  centre-of-mass range across group means: 10.051  p=0.2667
+  max pairwise TV between group profiles: 0.744  p=0.0667
+  two-group contrasts (4 series, 6 distinct partitions, p_min=1/6):
+    anonymous_group_1 vs anonymous_group_2: TV=0.790 p=0.333
+    anonymous_group_1 vs anonymous_group_3: TV=0.698 p=0.333
+    anonymous_group_2 vs anonymous_group_3: TV=0.302 p=0.667
+Traceback (most recent call last):
+  File "/data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/analysis/s04_orientation_group_contrast.py", line 598, in <module>
+    main()
+  File "/data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/analysis/s04_orientation_group_contrast.py", line 452, in main
+    chi2, pchi, dof, exp = chi2_contingency(tab)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/state/home/.local/lib/python3.11/site-packages/scipy/stats/contingency.py", line 328, in chi2_contingency
+    raise ValueError("The internally computed table of expected "
+ValueError: The internally computed table of expected frequencies has a zero element at (np.int64(0), np.int64(0)).

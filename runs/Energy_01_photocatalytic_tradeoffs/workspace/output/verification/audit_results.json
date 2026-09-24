@@ -1,0 +1,905 @@
+{
+  "files": {
+    "cofactor_loading_response.tsv": {
+      "sha256_recomputed": "7989d5ace46bebde92e71ddf5b52f94373cf8cef2d466e9a2d77f687567dabac",
+      "sha256_manifest": "7989d5ace46bebde92e71ddf5b52f94373cf8cef2d466e9a2d77f687567dabac",
+      "sha256_match": true,
+      "bytes_recomputed": 102,
+      "bytes_manifest": 102,
+      "bytes_match": true,
+      "n_rows_data": 4,
+      "n_rows_file_lines": 4,
+      "n_cols": 2,
+      "columns": [
+        "cofactor_loading_percent",
+        "product_evolution_rate_umol_h"
+      ],
+      "missing_values_per_column": {
+        "cofactor_loading_percent": 0,
+        "product_evolution_rate_umol_h": 0
+      },
+      "empty_or_na_fields_raw_scan": {},
+      "rows_with_wrong_field_count": [],
+      "line_terminator": "CRLF",
+      "trailing_newline": true,
+      "n_duplicate_rows_exact": 0,
+      "n_fully_unique_rows": 4,
+      "precision": {
+        "cofactor_loading_percent": {
+          "sig_fig_histogram": {
+            "1": 1,
+            "2": 3
+          },
+          "decimal_places_histogram": {
+            "1": 4
+          },
+          "exactly_representable_at_k_decimals": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "min": 0.2,
+          "max": 8.0,
+          "n": 4
+        },
+        "product_evolution_rate_umol_h": {
+          "sig_fig_histogram": {
+            "4": 2,
+            "5": 2
+          },
+          "decimal_places_histogram": {
+            "1": 4
+          },
+          "exactly_representable_at_k_decimals": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "min": 268.0,
+          "max": 1217.0,
+          "n": 4
+        }
+      },
+      "loading_values": [
+        0.2,
+        1.0,
+        3.0,
+        8.0
+      ],
+      "any_loading_over_100_percent": false,
+      "any_negative_rate": false,
+      "argmax_loading": 1.0,
+      "max_rate": 1217.0
+    },
+    "conversion_timecourses.tsv": {
+      "sha256_recomputed": "90b25f070700e1b926ec71e669db37e0cb1db96da8316bcbfebc1fd81b5d3ffa",
+      "sha256_manifest": "90b25f070700e1b926ec71e669db37e0cb1db96da8316bcbfebc1fd81b5d3ffa",
+      "sha256_match": true,
+      "bytes_recomputed": 541,
+      "bytes_manifest": 541,
+      "bytes_match": true,
+      "n_rows_data": 20,
+      "n_rows_file_lines": 20,
+      "n_cols": 3,
+      "columns": [
+        "formulation_id",
+        "illumination_time_h",
+        "gaseous_product_umol"
+      ],
+      "missing_values_per_column": {
+        "formulation_id": 0,
+        "illumination_time_h": 0,
+        "gaseous_product_umol": 0
+      },
+      "empty_or_na_fields_raw_scan": {},
+      "rows_with_wrong_field_count": [],
+      "line_terminator": "CRLF",
+      "trailing_newline": true,
+      "n_duplicate_rows_exact": 0,
+      "n_fully_unique_rows": 20,
+      "formulations": [
+        "formulation_1",
+        "formulation_2",
+        "formulation_3",
+        "formulation_4"
+      ],
+      "rows_per_formulation": {
+        "formulation_1": 5,
+        "formulation_2": 5,
+        "formulation_3": 5,
+        "formulation_4": 5
+      },
+      "time_grids": {
+        "formulation_1": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "formulation_2": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "formulation_3": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "formulation_4": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ]
+      },
+      "time_grid_identical_across_formulations": true,
+      "precision": {
+        "illumination_time_h": {
+          "sig_fig_histogram": {
+            "2": 16,
+            "None": 4
+          },
+          "decimal_places_histogram": {
+            "1": 20
+          },
+          "exactly_representable_at_k_decimals": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "min": 0.0,
+          "max": 4.0,
+          "n": 20
+        },
+        "gaseous_product_umol": {
+          "sig_fig_histogram": {
+            "2": 2,
+            "3": 14,
+            "None": 4
+          },
+          "decimal_places_histogram": {
+            "1": 6,
+            "2": 6,
+            "3": 6,
+            "4": 2
+          },
+          "exactly_representable_at_k_decimals": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "min": 0.0,
+          "max": 9.48,
+          "n": 20
+        }
+      },
+      "negative_product_values": 0,
+      "product_per_hour_ratio": {
+        "formulation_1": [
+          null,
+          2.4,
+          2.4,
+          2.413333,
+          2.37
+        ],
+        "formulation_2": [
+          null,
+          1.21,
+          1.08,
+          1.053333,
+          1.0325
+        ],
+        "formulation_3": [
+          null,
+          0.124,
+          0.128,
+          0.148333,
+          0.159
+        ],
+        "formulation_4": [
+          null,
+          0.0329,
+          0.0362,
+          0.040333,
+          0.04325
+        ]
+      },
+      "max_ratio_spread_within_formulation": {
+        "formulation_1": 0.043333000000000066,
+        "formulation_2": 0.1775,
+        "formulation_3": 0.035,
+        "formulation_4": 0.010349999999999998
+      },
+      "is_exact_proportional_to_time": {
+        "formulation_1": false,
+        "formulation_2": false,
+        "formulation_3": false,
+        "formulation_4": false
+      },
+      "exact_relations": [
+        {
+          "formulation": "formulation_1",
+          "y(t2)==2*y(t1) exactly": true
+        },
+        {
+          "formulation": "formulation_2",
+          "y(t2)==2*y(t1) exactly": false
+        },
+        {
+          "formulation": "formulation_3",
+          "y(t2)==2*y(t1) exactly": false
+        },
+        {
+          "formulation": "formulation_4",
+          "y(t2)==2*y(t1) exactly": false
+        }
+      ]
+    },
+    "optical_action_spectra.tsv": {
+      "sha256_recomputed": "0d00c837f3ec48c009337ee5301a81e9ab4fd6db4063417ebf3809af06282c70",
+      "sha256_manifest": "0d00c837f3ec48c009337ee5301a81e9ab4fd6db4063417ebf3809af06282c70",
+      "sha256_match": true,
+      "bytes_recomputed": 21737,
+      "bytes_manifest": 21737,
+      "bytes_match": true,
+      "n_rows_data": 907,
+      "n_rows_file_lines": 907,
+      "n_cols": 3,
+      "columns": [
+        "measurement_role",
+        "wavelength_nm",
+        "response_au_or_percent"
+      ],
+      "missing_values_per_column": {
+        "measurement_role": 0,
+        "wavelength_nm": 0,
+        "response_au_or_percent": 0
+      },
+      "empty_or_na_fields_raw_scan": {},
+      "rows_with_wrong_field_count": [],
+      "line_terminator": "CRLF",
+      "trailing_newline": true,
+      "n_duplicate_rows_exact": 0,
+      "n_fully_unique_rows": 907,
+      "roles": {
+        "absorption": 901,
+        "action_response": 6
+      },
+      "absorption_grid": {
+        "n_points": 901,
+        "min_nm": 350.0,
+        "max_nm": 800.0,
+        "expected_n_for_0.5_step_inclusive": 901,
+        "all_diffs_equal_0.5": true,
+        "min_diff": 0.5,
+        "max_diff": 0.5,
+        "n_duplicate_wavelengths": 0,
+        "unique_step_values_rounded": [
+          0.5
+        ],
+        "strictly_increasing": true
+      },
+      "absorption_is_exactly_regular_0p5nm": true,
+      "action_wavelengths": [
+        400.0,
+        450.0,
+        500.0,
+        550.0,
+        600.0,
+        650.0
+      ],
+      "action_values": [
+        81.3,
+        82.6,
+        81.0,
+        51.6,
+        17.6,
+        4.2
+      ],
+      "action_on_absorption_grid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "any_action_over_100": false,
+      "any_action_negative": false,
+      "absorption_min": -0.009,
+      "absorption_max": 0.898,
+      "absorption_min_wavelength": 793.5,
+      "absorption_max_wavelength": 357.5,
+      "n_negative_absorption": 8,
+      "n_absorption_above_1": 0,
+      "absorption_at_action_wavelengths": {
+        "400.0": 0.887,
+        "450.0": 0.861,
+        "500.0": 0.85,
+        "550.0": 0.585,
+        "600.0": 0.364,
+        "650.0": 0.201
+      },
+      "action_vs_absorption_100x_check": {
+        "400.0": {
+          "action": 81.3,
+          "100*absorption_at_same_wl": 88.7
+        },
+        "450.0": {
+          "action": 82.6,
+          "100*absorption_at_same_wl": 86.1
+        },
+        "500.0": {
+          "action": 81.0,
+          "100*absorption_at_same_wl": 85.0
+        },
+        "550.0": {
+          "action": 51.6,
+          "100*absorption_at_same_wl": 58.5
+        },
+        "600.0": {
+          "action": 17.6,
+          "100*absorption_at_same_wl": 36.4
+        },
+        "650.0": {
+          "action": 4.2,
+          "100*absorption_at_same_wl": 20.1
+        }
+      },
+      "action_vs_100x_abs_max_abs_diff": 18.799999999999997,
+      "precision": {
+        "wavelength_nm": {
+          "sig_fig_histogram": {
+            "4": 907
+          },
+          "decimal_places_histogram": {
+            "1": 907
+          },
+          "exactly_representable_at_k_decimals": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "min": 350.0,
+          "max": 800.0,
+          "n": 907
+        },
+        "response_au_or_percent": {
+          "sig_fig_histogram": {
+            "1": 57,
+            "2": 227,
+            "3": 620,
+            "None": 3
+          },
+          "decimal_places_histogram": {
+            "1": 14,
+            "2": 101,
+            "3": 792
+          },
+          "exactly_representable_at_k_decimals": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "min": -0.009,
+          "max": 82.6,
+          "n": 907
+        }
+      },
+      "absorption_only_precision_response": {
+        "sig_fig_histogram": {
+          "1": 57,
+          "2": 226,
+          "3": 615,
+          "None": 3
+        },
+        "decimal_places_histogram": {
+          "1": 8,
+          "2": 101,
+          "3": 792
+        },
+        "exactly_representable_at_k_decimals": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "min": -0.009,
+        "max": 0.898,
+        "n": 901
+      },
+      "action_only_precision_response": {
+        "sig_fig_histogram": {
+          "2": 1,
+          "3": 5
+        },
+        "decimal_places_histogram": {
+          "1": 6
+        },
+        "exactly_representable_at_k_decimals": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "min": 4.2,
+        "max": 82.6,
+        "n": 6
+      },
+      "file_is_wavelength_sorted": false,
+      "n_out_of_order_pairs": 6,
+      "n_duplicate_role_wavelength_pairs": 0
+    },
+    "ultrafast_transient_traces.tsv": {
+      "sha256_recomputed": "11a903bb232d1e0ed013552de915686100c4a59bcac919d8a43ef8ceb58a88bc",
+      "sha256_manifest": "11a903bb232d1e0ed013552de915686100c4a59bcac919d8a43ef8ceb58a88bc",
+      "sha256_match": true,
+      "bytes_recomputed": 6132,
+      "bytes_manifest": 6132,
+      "bytes_match": true,
+      "n_rows_data": 196,
+      "n_rows_file_lines": 196,
+      "n_cols": 3,
+      "columns": [
+        "formulation_id",
+        "delay_ps",
+        "normalized_transient_signal"
+      ],
+      "missing_values_per_column": {
+        "formulation_id": 0,
+        "delay_ps": 0,
+        "normalized_transient_signal": 0
+      },
+      "empty_or_na_fields_raw_scan": {},
+      "rows_with_wrong_field_count": [],
+      "line_terminator": "CRLF",
+      "trailing_newline": true,
+      "n_duplicate_rows_exact": 0,
+      "n_fully_unique_rows": 196,
+      "formulations": [
+        "formulation_1",
+        "formulation_2"
+      ],
+      "n_points_per_formulation": {
+        "formulation_1": 98,
+        "formulation_2": 98
+      },
+      "delay_grids_identical": true,
+      "delay_duplicates_within_formulation": {
+        "formulation_1": 0,
+        "formulation_2": 0
+      },
+      "delay_strictly_increasing": {
+        "formulation_1": true,
+        "formulation_2": true
+      },
+      "delay_grid_shape": {
+        "formulation_1": {
+          "min": 0.000321615,
+          "max": 76.8937,
+          "n": 98,
+          "min_gap": 0.01602,
+          "max_gap": 4.1813999999999965,
+          "mean_gap": 0.7927152410824743,
+          "gap_ratio_max_over_min": 261.01123595505595,
+          "is_uniform": false
+        },
+        "formulation_2": {
+          "min": 0.000321615,
+          "max": 76.8937,
+          "n": 98,
+          "min_gap": 0.01602,
+          "max_gap": 4.1813999999999965,
+          "mean_gap": 0.7927152410824743,
+          "gap_ratio_max_over_min": 261.01123595505595,
+          "is_uniform": false
+        }
+      },
+      "trace_max": {
+        "formulation_1": 0.99928,
+        "formulation_2": 1.00077
+      },
+      "trace_min": {
+        "formulation_1": -0.46059,
+        "formulation_2": -0.2201
+      },
+      "trace_argmax_delay": {
+        "formulation_1": 1.13634,
+        "formulation_2": 2.24169
+      },
+      "any_trace_max_exactly_1": {
+        "formulation_1": false,
+        "formulation_2": false
+      },
+      "n_abs_signal_above_1": {
+        "formulation_1": 0,
+        "formulation_2": 1
+      },
+      "precision": {
+        "delay_ps": {
+          "sig_fig_histogram": {
+            "3": 2,
+            "4": 12,
+            "5": 56,
+            "6": 126
+          },
+          "decimal_places_histogram": {
+            "3": 24,
+            "4": 56,
+            "5": 114,
+            "9": 2
+          },
+          "exactly_representable_at_k_decimals": [
+            9
+          ],
+          "min": 0.000321615,
+          "max": 76.8937,
+          "n": 196
+        },
+        "normalized_transient_signal": {
+          "sig_fig_histogram": {
+            "2": 1,
+            "3": 15,
+            "4": 54,
+            "5": 125,
+            "6": 1
+          },
+          "decimal_places_histogram": {
+            "3": 2,
+            "4": 20,
+            "5": 174
+          },
+          "exactly_representable_at_k_decimals": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "min": -0.46059,
+          "max": 1.00077,
+          "n": 196
+        }
+      },
+      "delay_precision_by_formulation": {
+        "formulation_1": {
+          "sig_fig_histogram": {
+            "3": 1,
+            "4": 6,
+            "5": 28,
+            "6": 63
+          },
+          "decimal_places_histogram": {
+            "3": 12,
+            "4": 28,
+            "5": 57,
+            "9": 1
+          },
+          "exactly_representable_at_k_decimals": [
+            9
+          ],
+          "min": 0.000321615,
+          "max": 76.8937,
+          "n": 98
+        },
+        "formulation_2": {
+          "sig_fig_histogram": {
+            "3": 1,
+            "4": 6,
+            "5": 28,
+            "6": 63
+          },
+          "decimal_places_histogram": {
+            "3": 12,
+            "4": 28,
+            "5": 57,
+            "9": 1
+          },
+          "exactly_representable_at_k_decimals": [
+            9
+          ],
+          "min": 0.000321615,
+          "max": 76.8937,
+          "n": 98
+        }
+      },
+      "f1_over_f2_ratio_std": 5.973885231460471,
+      "f1_over_f2_ratio_mean": -0.5020067432396045,
+      "diff_std": 0.27617912738732675,
+      "diff_mean": -0.1983545918367347,
+      "corr_f1_f2": 0.5996313372527999,
+      "n_duplicate_formulation_delay_pairs": 0,
+      "file_interleaving_first_8_formulations": [
+        "formulation_1",
+        "formulation_2",
+        "formulation_1",
+        "formulation_2",
+        "formulation_1",
+        "formulation_2",
+        "formulation_1",
+        "formulation_2"
+      ]
+    }
+  },
+  "checks": {
+    "conversion_ratio_exact_fractions": [
+      {
+        "formulation": "formulation_1",
+        "t": 1.0,
+        "y_over_t": "12/5"
+      },
+      {
+        "formulation": "formulation_1",
+        "t": 2.0,
+        "y_over_t": "12/5"
+      },
+      {
+        "formulation": "formulation_1",
+        "t": 3.0,
+        "y_over_t": "181/75"
+      },
+      {
+        "formulation": "formulation_1",
+        "t": 4.0,
+        "y_over_t": "237/100"
+      },
+      {
+        "formulation": "formulation_2",
+        "t": 1.0,
+        "y_over_t": "121/100"
+      },
+      {
+        "formulation": "formulation_2",
+        "t": 2.0,
+        "y_over_t": "27/25"
+      },
+      {
+        "formulation": "formulation_2",
+        "t": 3.0,
+        "y_over_t": "79/75"
+      },
+      {
+        "formulation": "formulation_2",
+        "t": 4.0,
+        "y_over_t": "413/400"
+      },
+      {
+        "formulation": "formulation_3",
+        "t": 1.0,
+        "y_over_t": "31/250"
+      },
+      {
+        "formulation": "formulation_3",
+        "t": 2.0,
+        "y_over_t": "16/125"
+      },
+      {
+        "formulation": "formulation_3",
+        "t": 3.0,
+        "y_over_t": "89/600"
+      },
+      {
+        "formulation": "formulation_3",
+        "t": 4.0,
+        "y_over_t": "159/1000"
+      },
+      {
+        "formulation": "formulation_4",
+        "t": 1.0,
+        "y_over_t": "329/10000"
+      },
+      {
+        "formulation": "formulation_4",
+        "t": 2.0,
+        "y_over_t": "181/5000"
+      },
+      {
+        "formulation": "formulation_4",
+        "t": 3.0,
+        "y_over_t": "121/3000"
+      },
+      {
+        "formulation": "formulation_4",
+        "t": 4.0,
+        "y_over_t": "173/4000"
+      }
+    ],
+    "conversion_y_over_t_all_distinct": false,
+    "exact_multiple_relations_found": [
+      {
+        "formulation": "formulation_1",
+        "t": 1.0,
+        "y_over_t": "12/5"
+      },
+      {
+        "formulation": "formulation_1",
+        "t": 2.0,
+        "y_over_t": "12/5"
+      },
+      {
+        "formulation": "formulation_1",
+        "t": 3.0,
+        "y_over_t": "181/75"
+      },
+      {
+        "formulation": "formulation_1",
+        "t": 4.0,
+        "y_over_t": "237/100"
+      },
+      {
+        "formulation": "formulation_2",
+        "t": 1.0,
+        "y_over_t": "121/100"
+      },
+      {
+        "formulation": "formulation_2",
+        "t": 2.0,
+        "y_over_t": "27/25"
+      },
+      {
+        "formulation": "formulation_2",
+        "t": 3.0,
+        "y_over_t": "79/75"
+      },
+      {
+        "formulation": "formulation_2",
+        "t": 4.0,
+        "y_over_t": "413/400"
+      },
+      {
+        "formulation": "formulation_3",
+        "t": 1.0,
+        "y_over_t": "31/250"
+      },
+      {
+        "formulation": "formulation_3",
+        "t": 2.0,
+        "y_over_t": "16/125"
+      },
+      {
+        "formulation": "formulation_3",
+        "t": 3.0,
+        "y_over_t": "89/600"
+      },
+      {
+        "formulation": "formulation_3",
+        "t": 4.0,
+        "y_over_t": "159/1000"
+      },
+      {
+        "formulation": "formulation_4",
+        "t": 1.0,
+        "y_over_t": "329/10000"
+      },
+      {
+        "formulation": "formulation_4",
+        "t": 2.0,
+        "y_over_t": "181/5000"
+      },
+      {
+        "formulation": "formulation_4",
+        "t": 3.0,
+        "y_over_t": "121/3000"
+      },
+      {
+        "formulation": "formulation_4",
+        "t": 4.0,
+        "y_over_t": "173/4000"
+      }
+    ],
+    "absorption_linear_fit_slope": -0.002592717264958953,
+    "absorption_linear_fit_max_resid": 0.2016210976881252,
+    "absorption_constant_per_wavelength_count": 471,
+    "absorption_at_350": 0.882,
+    "absorption_at_800": 0.0,
+    "absorption_700_800_max": 0.094,
+    "absorption_700_800_min": -0.009,
+    "duplicate_rows_any_file": {},
+    "n_sha256_mismatches": 0,
+    "n_bytes_mismatches": 0
+  },
+  "discrepancies": [],
+  "notes": [],
+  "summary": {
+    "sha256_all_match_manifest": true,
+    "bytes_all_match_manifest": true,
+    "file_shapes": {
+      "cofactor_loading_response.tsv": {
+        "data_rows": 4,
+        "cols": 2,
+        "missing_total": 0
+      },
+      "conversion_timecourses.tsv": {
+        "data_rows": 20,
+        "cols": 3,
+        "missing_total": 0
+      },
+      "optical_action_spectra.tsv": {
+        "data_rows": 907,
+        "cols": 3,
+        "missing_total": 0,
+        "absorption_rows": 901,
+        "action_rows": 6
+      },
+      "ultrafast_transient_traces.tsv": {
+        "data_rows": 196,
+        "cols": 3,
+        "missing_total": 0,
+        "per_formulation": 98
+      }
+    },
+    "absorption_grid_exactly_regular": true,
+    "absorption_grid": "901 points, 350.0-800.0 nm, every consecutive step exactly 350+0.5*i, no gaps/dups, strictly increasing",
+    "delay_grids_identical": true,
+    "delay_grid": "98 points both traces; 0.000321615 to 76.8937 ps; non-uniform (min gap 0.01602, max gap 4.1814 ps, ratio 261)",
+    "rounding": {
+      "wavelength_nm": "all 907 values 1 decimal, exact 0.5 nm grid",
+      "absorption_response": "792/901 at 3 dp, 101 at 2 dp, 8 at 1 dp; exact multiples of 0.001; range -0.009..0.898",
+      "action_response": "6 values, all 1 dp / 3 sig figs (81.3, 82.6, 81.0, 51.6, 17.6, 4.2)",
+      "conversion_umol": "2-4 dp (e.g. 2.4, 7.24, 0.124, 0.0329)",
+      "cofactor_loading_percent": "1 dp (0.2, 1.0, 3.0, 8.0)",
+      "cofactor_rate": "1 dp but all whole numbers (1081.0, 1217.0, 470.0, 268.0), 4-5 sig figs",
+      "transient_delay_ps": "24 at 3 dp, 56 at 4 dp, 114 at 5 dp, 2 at 9 dp (0.000321615)",
+      "transient_signal": "174/196 at 5 dp, 20 at 4 dp, 2 at 3 dp; all exact multiples of 1e-5"
+    },
+    "duplicate_rows": "none in any of the four files; 0 duplicate (role,wavelength) and 0 duplicate (formulation,delay) pairs",
+    "tautological_relations": "none found: no column is a fixed multiple of another; cofactor rate/loading ratio non-constant (5405,1217,470/3,67/2); absorption not linear in wavelength (max resid 0.204); f1/f2 transient ratio has 98 distinct values; action 400-500 nm is ~100x absorption at the same wavelength but diverges at 600/650 nm (raw diff up to 18.8 pp), so not an exact rescaling",
+    "normalisation": "formulation_1 max 0.99928 (not 1.0), formulation_2 max 1.00077 (>1.0); neither trace reaches exactly 1.0",
+    "contradictions": [
+      "8 negative absorption values (-0.001 to -0.009) at 791.5-795.0 nm in an absorbance column expected non-negative; magnitude <=0.009, adjacent to 0.000 entries, consistent with a baseline/rounding artefact",
+      "normalized transient signal 1.00077 slightly exceeds 1.0 for formulation_2 (rounding to 5 dp of a normalised trace)",
+      "response_au_or_percent column mixes two units (au for absorption ~0-0.9, percent for action 4.2-82.6) selected by measurement_role"
+    ],
+    "no_action_over_100_percent": true,
+    "no_negative_rates": true,
+    "line_endings": "CRLF, trailing newline, UTF-8 no BOM, all files quoted-free plain TSV"
+  }
+}

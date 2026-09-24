@@ -1,0 +1,3 @@
+table,rows,unique_references,unique_compilations,unique_localities,unique_coordinate_pairs,max_rows_single_reference,max_rows_single_compilation,share_top_compilation
+Glacial,427,154,13,123,229,32,294,0.6885245901639344
+Nonglacial,6288,265,6,1819,4900,512,3457,0.5497773536895675

@@ -1,0 +1,83 @@
+dimension,statistic,unit,aggregation,full_sample,loo_min,loo_max,loo_range,crosses_boundary
+s17/s19-consolidated,s17[1.00+eps] fitted_rate_theilsen,MHz/s,median,0.3306605405148138,0.08785296207872055,0.3537575141644189,0.26590455208569835,False
+s17/s19-consolidated,s17[1.00+eps] abs_bias_vs_reported,MHz/s,median,12.782683299256673,8.607766267789343,13.00227847485646,4.394512207067118,False
+s17/s19-consolidated,s17[1.00+eps] mask_fraction,fraction,median,0.4942892733564014,0.4941480968858132,0.49613287197231837,0.001984775086505186,False
+s17/s19-consolidated,s17[1.00+eps] n_components_8conn,count,median,1248.0,1193.5,1346.5,153.0,False
+s17/s19-consolidated,s17[1.00+eps] frac_multirun_cols,fraction,median,1.0,1.0,1.0,0.0,False
+s17/s19-consolidated,s17[1.00+eps] pca_slope,MHz/s,median,142.34361228713573,-152.22625638339596,155.90876487611115,308.1350212595071,True
+s17/s19-consolidated,s17[1.00+eps] frac_events_identical_sign,fraction,fraction,0.4,0.25,0.5,0.25,False
+s17/s19-consolidated,s17[1.01] fitted_rate_theilsen,MHz/s,median,0.3306936411916786,0.0875736478536791,0.3539617244328245,0.26638807657914537,False
+s17/s19-consolidated,s17[1.01] abs_bias_vs_reported,MHz/s,median,12.78271639993354,8.607970478057748,13.002621101590021,4.394650623532273,False
+s17/s19-consolidated,s17[1.01] mask_fraction,fraction,median,0.4763072664359861,0.4761245674740484,0.47863252595155703,0.0025079584775086206,False
+s17/s19-consolidated,s17[1.01] n_components_8conn,count,median,1557.0,1497.0,1653.0,156.0,False
+s17/s19-consolidated,s17[1.01] frac_multirun_cols,fraction,median,1.0,1.0,1.0,0.0,False
+s17/s19-consolidated,s17[1.01] pca_slope,MHz/s,median,142.15532357258715,-151.82821633787864,155.7216264440542,307.54984278193285,True
+s17/s19-consolidated,s17[1.01] frac_events_identical_sign,fraction,fraction,0.4,0.25,0.5,0.25,False
+s17/s19-consolidated,s17[1.02] fitted_rate_theilsen,MHz/s,median,0.3314795247153466,0.08764947034605525,0.354911162974336,0.26726169262828076,False
+s17/s19-consolidated,s17[1.02] abs_bias_vs_reported,MHz/s,median,12.783502283457207,8.60891991659926,13.003047558561967,4.394127641962706,False
+s17/s19-consolidated,s17[1.02] mask_fraction,fraction,median,0.4581480968858131,0.4578851211072664,0.46081107266435983,0.002925951557093409,False
+s17/s19-consolidated,s17[1.02] n_components_8conn,count,median,1888.0,1870.0,1960.5,90.5,False
+s17/s19-consolidated,s17[1.02] frac_multirun_cols,fraction,median,1.0,1.0,1.0,0.0,False
+s17/s19-consolidated,s17[1.02] pca_slope,MHz/s,median,141.8696037831881,-151.17944390641065,155.30976384862169,306.48920775503234,True
+s17/s19-consolidated,s17[1.02] frac_events_identical_sign,fraction,fraction,0.4,0.25,0.5,0.25,False
+s17/s19-consolidated,s17[1.05] fitted_rate_theilsen,MHz/s,median,0.3320090485442412,0.08667857068794989,0.36021563621446023,0.27353706552651036,False
+s17/s19-consolidated,s17[1.05] abs_bias_vs_reported,MHz/s,median,12.784031807286102,8.614224389839384,13.008245770067877,4.394021380228493,False
+s17/s19-consolidated,s17[1.05] mask_fraction,fraction,median,0.4057411764705882,0.4052844290657439,0.407836678200692,0.0025522491349481147,False
+s17/s19-consolidated,s17[1.05] n_components_8conn,count,median,3526.0,3465.0,3554.5,89.5,False
+s17/s19-consolidated,s17[1.05] frac_multirun_cols,fraction,median,1.0,1.0,1.0,0.0,False
+s17/s19-consolidated,s17[1.05] pca_slope,MHz/s,median,138.7614396923674,-150.86095218252996,151.6886640141848,302.54961619671474,True
+s17/s19-consolidated,s17[1.05] frac_events_identical_sign,fraction,fraction,0.4,0.25,0.5,0.25,False
+s17/s19-consolidated,s17[1.10] fitted_rate_theilsen,MHz/s,median,0.3438564465662961,0.0894527302033921,0.37584915463401414,0.286396424430622,False
+s17/s19-consolidated,s17[1.10] abs_bias_vs_reported,MHz/s,median,12.795879205308156,8.629857908258938,13.022603573086215,4.392745664827277,False
+s17/s19-consolidated,s17[1.10] mask_fraction,fraction,median,0.3260235294117647,0.32451764705882347,0.32771487889273354,0.0031972318339100747,False
+s17/s19-consolidated,s17[1.10] n_components_8conn,count,median,6622.0,6524.0,6778.5,254.5,False
+s17/s19-consolidated,s17[1.10] frac_multirun_cols,fraction,median,1.0,1.0,1.0,0.0,False
+s17/s19-consolidated,s17[1.10] pca_slope,MHz/s,median,131.90061246028165,-141.45818416673012,144.08740740029867,285.5455915670288,True
+s17/s19-consolidated,s17[1.10] frac_events_identical_sign,fraction,fraction,0.4,0.25,0.5,0.25,False
+s17/s19-consolidated,s17[1.20] fitted_rate_theilsen,MHz/s,median,0.3707916597555533,0.08542249565115594,0.4500958800280866,0.36467338437693064,False
+s17/s19-consolidated,s17[1.20] abs_bias_vs_reported,MHz/s,median,12.822814418497414,8.70410463365301,13.072659235087336,4.368554601434326,False
+s17/s19-consolidated,s17[1.20] mask_fraction,fraction,median,0.2024359861591695,0.19939377162629757,0.20244705882352934,0.0030532871972317743,False
+s17/s19-consolidated,s17[1.20] n_components_8conn,count,median,9816.0,9809.0,9942.0,133.0,False
+s17/s19-consolidated,s17[1.20] frac_multirun_cols,fraction,median,1.0,1.0,1.0,0.0,False
+s17/s19-consolidated,s17[1.20] pca_slope,MHz/s,median,110.42494125598604,-117.61110460058438,116.15518196810714,233.76628656869153,True
+s17/s19-consolidated,s17[1.20] frac_events_identical_sign,fraction,fraction,0.4,0.25,0.5,0.25,False
+s17/s19-consolidated,s17[inj amp 0.02] median_pct_of_reported,pct,median,60.09174311926605,59.1743119266055,73.24159021406727,14.067278287461775,False
+s17/s19-consolidated,s17[inj amp 0.05] median_pct_of_reported,pct,median,70.79510703363914,66.36085626911314,82.87461773700305,16.513761467889907,False
+s17/s19-consolidated,s17[inj amp 0.1] median_pct_of_reported,pct,median,79.35779816513761,76.29969418960243,89.14373088685014,12.844036697247702,False
+s17/s19-consolidated,s17[inj amp 0.25] median_pct_of_reported,pct,median,95.25993883792049,94.34250764525993,97.4006116207951,3.0581039755351753,False
+s17/s19-consolidated,s17 implied_displacement/band,fraction,median,1.5248838982984463,1.0107920045336112,1.5448796971530685,0.5340876926194573,False
+s17/s19-consolidated,s17 implied_displacement_MHz,MHz,median,13.676860892026165,9.065910953748423,13.856205535683802,4.790294581935379,False
+s17/s19-consolidated,s19 n_events_reject_p_slope_0.05,count/5,count,0.0,0.0,0.0,0.0,False
+s17/s19-consolidated,s19 n_events_reject_p_any_0.05,count/5,count,5.0,4.0,4.0,0.0,False
+s17/s19-consolidated,s19 n_events_reject_p_len_0.05,count/5,count,5.0,4.0,4.0,0.0,False
+s17/s19-consolidated,s19 median_p_slope,p,median,0.5769230769230769,0.3461538461538461,0.7884615384615384,0.44230769230769235,False
+s18-decisive,pct_all_band,,,33.0423940149626,20.1995012468828,45.76059850374065,25.561097256857856,False
+s18-decisive,pct_matched_band,,,45.72649572649573,27.43641859495518,53.44360500610501,26.007186411149828,True
+s18-decisive,ratio_reported_over_mirror,,,0.8976902740924525,0.863178894442993,0.9728191514213278,0.1096402569783348,False
+s18-decisive,n_events_same_sign_as_reported,,,1.0,1.0,1.0,0.0,False
+s18-decisive,pct_all_band,,,33.0423940149626,20.32418952618454,45.13715710723192,24.81296758104738,False
+s18-decisive,pct_matched_band,,,44.87179487179487,27.009068167604752,53.46268315018315,26.4536149825784,True
+s18-decisive,ratio_reported_over_mirror,,,0.8928493877023947,0.8583916495158554,0.9715202999871048,0.1131286504712492,False
+s18-decisive,n_events_same_sign_as_reported,,,1.0,1.0,1.0,0.0,False
+s18-decisive,pct_all_band,,,36.03491271820449,22.443890274314214,44.76309226932669,22.31920199501247,False
+s18-decisive,pct_matched_band,,,45.72649572649573,26.826662497394206,49.87217643467643,23.045513937282227,False
+s18-decisive,ratio_reported_over_mirror,,,0.8277275600031682,0.795904268355861,0.933641208182354,0.137736939826493,False
+s18-decisive,n_events_same_sign_as_reported,,,1.0,1.0,1.0,0.0,False
+s20-symmetric,pct_all,,median,30.79800498753117,17.206982543640898,36.90773067331671,19.70074812967581,False
+s20-symmetric,pct_matched,,median,14.024390243902438,12.35407546383156,21.59552845528455,9.241452991452991,False
+s20-symmetric,ratio_reported_over_mirror,,median,0.8286735567264767,0.8275762254464939,0.8649439715364236,0.0373677460899296,False
+s20-symmetric,n_events_ratio_gt1,,count,1.0,0.0,1.0,1.0,False
+s20-symmetric,n_events_pct_extreme_p10,,count,2.0,1.0,2.0,1.0,False
+s20-symmetric,Lmax_over_Lreported,,median,1.2665868492112031,1.266346855917421,1.3497081759431324,0.0833613200257115,False
+s20-symmetric,pct_all,,median,30.54862842892768,16.83291770573566,37.78054862842893,20.94763092269327,False
+s20-symmetric,pct_matched,,median,18.902439024390244,14.365749426725037,24.62979094076655,10.264041514041516,False
+s20-symmetric,ratio_reported_over_mirror,,median,0.8266586691728295,0.8239397590195836,0.8632591761427475,0.0393194171231638,False
+s20-symmetric,n_events_ratio_gt1,,count,1.0,0.0,1.0,1.0,False
+s20-symmetric,n_events_pct_extreme_p10,,count,2.0,1.0,2.0,1.0,False
+s20-symmetric,Lmax_over_Lreported,,median,1.2777834900253209,1.276188578850459,1.3630095062180343,0.0868209273675755,False
+s20-symmetric,pct_all,,median,40.52369077306734,22.443890274314217,45.76059850374065,23.316708229426435,False
+s20-symmetric,pct_matched,,median,33.53658536585366,21.25547217010632,40.87543554006969,19.61996336996337,False
+s20-symmetric,ratio_reported_over_mirror,,median,0.7652242246219713,0.7626366353056068,0.8135461762598595,0.0509095409542527,False
+s20-symmetric,n_events_ratio_gt1,,count,1.0,0.0,1.0,1.0,False
+s20-symmetric,n_events_pct_extreme_p10,,count,2.0,1.0,2.0,1.0,False
+s20-symmetric,Lmax_over_Lreported,,median,1.465995758626281,1.411028675756494,1.546431312546808,0.135402636790314,False

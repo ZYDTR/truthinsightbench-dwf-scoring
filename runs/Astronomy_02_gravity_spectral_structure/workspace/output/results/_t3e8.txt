@@ -1,0 +1,54 @@
+ranks 1..250 complete: True
+ic monotone in rank: True
+ties in ic: 26
+FN rows (in candidate file, ic<137.2, absent from table):
+Empty DataFrame
+Columns: [candidate_family, vmax, vmin, f, w, ic]
+Index: []
+min ic absent: 139.9 max ic present: 137.2
+lattice cells in candidate file per family:
+                          sum  count
+candidate_family                    
+frequency_amplitude_scan   18     70
+minimum_velocity_scan      11     35
+rigid-comb null: obs median 5.759999999999991 null median 7.335000000000036 5-95 [ 3.15       11.87239218] p(<=obs) 0.28759 min possible 3.1399999999999295
+phase 0 median 5.759999999999991
+fa vmax>=0.1: n=16 slope=0.1214 A=709.3 R2=0.9729 maxres=0.0559 dex
+fa vmax>=0.5: n=13 slope=0.1354 A=672.7 R2=0.9881 maxres=0.0235 dex
+fa vmax>=1.0: n=12 slope=0.1350 A=673.6 R2=0.9847 maxres=0.0236 dex
+fa vmax>=3.0: n=10 slope=0.1278 A=696.3 R2=0.9797 maxres=0.0272 dex
+fa fbest == 610 (scan edge): 4 at vmax [0.1 0.2 0.3 0.5]
+vmax 10.0 fstar 960.0 ic* 106.2 penalty -50 5.299999999999997 penalty +50 63.39999999999999
+vmax 20.0 fstar 1010.0 ic* 43.9 penalty -50 14.100000000000001 penalty +50 12.800000000000004
+vmax 30.0 fstar 1010.0 ic* 47.2 penalty -50 25.299999999999997 penalty +50 10.099999999999994
+vmax 50.0 fstar 1110.0 ic* 109.7 penalty -50 20.60000000000001 penalty +50 1.0999999999999943
+  vmax  vmin_best     ic  n_scanned
+  0.02       0.02 2234.1          1
+  0.03       0.03 1988.4          1
+  0.05       0.05 1677.4          1
+  0.10       0.10 1522.1          5
+  0.20       0.10 1422.0          6
+  0.30       0.10 1316.7          7
+  0.50       0.10 1210.6          8
+  1.00       0.10 1146.1          9
+  2.00       0.10 1091.3         10
+  3.00       0.10  991.3         11
+  5.00       0.05  775.2         12
+ 10.00       0.05  389.8         13
+ 20.00       0.03  122.3         14
+ 30.00       0.03   50.7         15
+ 50.00       0.03   65.1         16
+100.00       0.05  167.3         17
+200.00       0.05  308.4         18
+300.00       0.10  402.0         19
+500.00       0.10  554.4         20
+mv vmax>=0.1: n=16 slope=-0.0825 A=0.0791 R2=0.2041
+vmin_best levels used: [0.02 0.03 0.05 0.1 ]
+full fit coef [-1.44214e+01 -4.43200e+00  5.61000e-02 -1.41300e-01  7.14870e+01] R2 0.023554221594099145
+  drop vmax=    1 n=186 R2=0.0187 coef=[-5.415e+00 -4.937e+00  4.800e-02 -1.340e-01  6.426e+01]
+  drop vmax=    3 n=184 R2=0.0204 coef=[-1.2715e+01 -4.4900e+00  5.4000e-02 -1.5400e-01  7.4528e+01]
+  drop vmax=   10 n=172 R2=0.0473 coef=[-4.429 -2.505  0.084 -0.272 64.986]
+  drop vmax=   20 n=146 R2=0.0238 coef=[-1.5786e+01 -4.2510e+00  4.1000e-02 -1.2400e-01  8.7179e+01]
+  drop vmax=   30 n=110 R2=0.0309 coef=[-6.383 -6.496  0.058  0.079 -1.206]
+  drop vmax=   50 n=147 R2=0.0673 coef=[-3.3674e+01 -7.2550e+00  7.9000e-02 -2.1500e-01  8.6301e+01]
+  drop vmax=  100 n=183 R2=0.0301 coef=[-2.15960e+01 -4.15600e+00  3.20000e-02 -1.38000e-01  1.05548e+02]

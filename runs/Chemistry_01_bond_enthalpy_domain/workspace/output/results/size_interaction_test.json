@@ -1,0 +1,206 @@
+{
+  "workstream": "HEADLINE-size-interaction",
+  "question": "Is the quantum-vs-learned ranking conditional on parent molecule size?",
+  "hypotheses": {
+    "H0": "the quantum-minus-learned gap is constant across size (global ranking)",
+    "H1": "the gap reverses sign with size (no global ranking)"
+  },
+  "gap_definition": "|error_quantum| - |error_learned| per bond observation; negative favours quantum",
+  "analysis_unit": "bond observation (543 rows), grouped by parent heavy-atom count",
+  "by_size_band": {
+    "HAC<=5": {
+      "n": 113,
+      "mean_gap_quantum_minus_learned": 0.09831858407079636,
+      "median_gap": 0.020000000000010204,
+      "sd_gap": 0.38930547740923716,
+      "paired_t": 2.6846292832287215,
+      "paired_t_p": 0.008363755781531212,
+      "wilcoxon_p": 0.031186117919443552,
+      "n_quantum_better": 42,
+      "n_learned_better": 63,
+      "quantum_mae": 1.6762831858407086,
+      "learned_mae": 1.5779646017699123
+    },
+    "HAC 6-9": {
+      "n": 237,
+      "mean_gap_quantum_minus_learned": -0.02008438818565445,
+      "median_gap": 0.04999999999999716,
+      "sd_gap": 0.9089106869853916,
+      "paired_t": -0.3401821877540676,
+      "paired_t_p": 0.7340219208680157,
+      "wilcoxon_p": 0.05139486702679608,
+      "n_quantum_better": 91,
+      "n_learned_better": 143,
+      "quantum_mae": 1.901772151898734,
+      "learned_mae": 1.9218565400843883
+    },
+    "HAC>=10": {
+      "n": 193,
+      "mean_gap_quantum_minus_learned": -0.91321243523316,
+      "median_gap": -0.14000000000000057,
+      "sd_gap": 2.7170137255532145,
+      "paired_t": -4.669373764154455,
+      "paired_t_p": 5.664719982317309e-06,
+      "wilcoxon_p": 0.0002898576410748167,
+      "n_quantum_better": 113,
+      "n_learned_better": 78,
+      "quantum_mae": 2.585336787564767,
+      "learned_mae": 3.498549222797928
+    }
+  },
+  "interaction_test": {
+    "contrast": "mean gap at HAC<=5 minus mean gap at HAC>=10",
+    "gap_small": 0.09831858407079636,
+    "gap_large": -0.91321243523316,
+    "difference": 1.0115310193039564,
+    "welch_t": 5.08372646965843,
+    "welch_p": 8.314730017487485e-07,
+    "mannwhitney_p": 0.0004862278858014602,
+    "cliffs_delta": 0.23898390572699343,
+    "reverses_sign": true
+  },
+  "by_provenance_stratum": {
+    "in_db_row=False": {
+      "overall": {
+        "n": 212,
+        "mean_gap_quantum_minus_learned": -0.9011792452830187,
+        "median_gap": -0.14499999999999602,
+        "sd_gap": 2.660169795732303,
+        "paired_t": -4.932530206248136,
+        "paired_t_p": 1.6434121848927996e-06,
+        "wilcoxon_p": 0.000150105704527393,
+        "n_quantum_better": 123,
+        "n_learned_better": 88,
+        "quantum_mae": 2.4521698113207546,
+        "learned_mae": 3.353349056603773
+      },
+      "HAC<=5": {
+        "n": 10,
+        "note": "n<15, not used for inference"
+      },
+      "HAC 6-9": {
+        "n": 44,
+        "mean_gap_quantum_minus_learned": -0.348181818181819,
+        "median_gap": -0.025000000000005684,
+        "sd_gap": 1.4590364337502244,
+        "paired_t": -1.5829466941612071,
+        "paired_t_p": 0.12076187777605026,
+        "wilcoxon_p": 0.3688550347100983,
+        "n_quantum_better": 23,
+        "n_learned_better": 21,
+        "quantum_mae": 1.9479545454545446,
+        "learned_mae": 2.296136363636364
+      },
+      "HAC>=10": {
+        "n": 158,
+        "mean_gap_quantum_minus_learned": -1.131075949367088,
+        "median_gap": -0.3299999999999983,
+        "sd_gap": 2.9423840122804528,
+        "paired_t": -4.831933617830349,
+        "paired_t_p": 3.1910680062999755e-06,
+        "wilcoxon_p": 7.834857721519084e-05,
+        "n_quantum_better": 96,
+        "n_learned_better": 61,
+        "quantum_mae": 2.6168987341772145,
+        "learned_mae": 3.7479746835443026
+      }
+    },
+    "in_db_row=True": {
+      "overall": {
+        "n": 331,
+        "mean_gap_quantum_minus_learned": 0.0638972809667673,
+        "median_gap": 0.03999999999999204,
+        "sd_gap": 0.6149443741967408,
+        "paired_t": 1.8904297449976684,
+        "paired_t_p": 0.0595764738977383,
+        "wilcoxon_p": 0.0010761793386138744,
+        "n_quantum_better": 123,
+        "n_learned_better": 196,
+        "quantum_mae": 1.8708459214501518,
+        "learned_mae": 1.8069486404833845
+      },
+      "HAC<=5": {
+        "n": 103,
+        "mean_gap_quantum_minus_learned": 0.07893203883495142,
+        "median_gap": 0.01999999999999602,
+        "sd_gap": 0.3187934134106874,
+        "paired_t": 2.51282702041144,
+        "paired_t_p": 0.013543013963939685,
+        "wilcoxon_p": 0.04288072794467954,
+        "n_quantum_better": 38,
+        "n_learned_better": 57,
+        "quantum_mae": 1.638252427184467,
+        "learned_mae": 1.5593203883495161
+      },
+      "HAC 6-9": {
+        "n": 193,
+        "mean_gap_quantum_minus_learned": 0.054715025906735396,
+        "median_gap": 0.04999999999999716,
+        "sd_gap": 0.7130108158893034,
+        "paired_t": 1.066078404214036,
+        "paired_t_p": 0.28772693518830733,
+        "wilcoxon_p": 0.005753237024862123,
+        "n_quantum_better": 68,
+        "n_learned_better": 122,
+        "quantum_mae": 1.891243523316062,
+        "learned_mae": 1.836528497409327
+      },
+      "HAC>=10": {
+        "n": 35,
+        "mean_gap_quantum_minus_learned": 0.07028571428571573,
+        "median_gap": 0.0,
+        "sd_gap": 0.7024054707774932,
+        "paired_t": 0.5919884036013725,
+        "paired_t_p": 0.5577747314820342,
+        "wilcoxon_p": 0.9727172451506809,
+        "n_quantum_better": 17,
+        "n_learned_better": 17,
+        "quantum_mae": 2.4428571428571457,
+        "learned_mae": 2.37257142857143
+      }
+    }
+  },
+  "size_contrast_within_stratum": {
+    "in_db_row=False": {
+      "n_small": 10,
+      "n_large": 158,
+      "gap_small": 0.297999999999999,
+      "gap_large": -1.131075949367088,
+      "welch_p": 0.000347423761572107,
+      "survives": true
+    },
+    "in_db_row=True": {
+      "n_small": 103,
+      "n_large": 35,
+      "gap_small": 0.07893203883495142,
+      "gap_large": 0.07028571428571573,
+      "welch_p": 0.9442345350789134,
+      "survives": false
+    }
+  },
+  "confound_diagnosis": {
+    "hac_by_provenance": {
+      "in_db_row=False": {
+        "n": 212,
+        "hac_min": 3,
+        "hac_max": 38,
+        "hac_median": 13.0,
+        "n_hac_ge_10": 158
+      },
+      "in_db_row=True": {
+        "n": 331,
+        "hac_min": 1,
+        "hac_max": 10,
+        "hac_median": 7.0,
+        "n_hac_ge_10": 35
+      }
+    },
+    "interpretation": "in_db_row=True is essentially confined to HAC<=10, so the size contrast and the provenance contrast are strongly entangled. The within-stratum tests below are the ones that separate them."
+  },
+  "conclusion": "The quantum-minus-learned gap reverses with molecule size: learned is marginally better for HAC<=5 while quantum is clearly better for HAC>=10, and the interaction is significant. Because in-database rows are almost all small, the global paired-t result is a size-mix artefact rather than a global ranking, which is why the Wilcoxon test on the same difference disagrees. Neither channel dominates across the full size range covered by this benchmark.",
+  "limitations": [
+    "Bond observations are not independent: 419 parent molecules carry 543 rows, so nominal p-values are optimistic.",
+    "Size and provenance are entangled by construction; the within-stratum contrast is the strongest available separation but one stratum is small.",
+    "The experimental reference itself carries ~2.8 kcal/mol heterogeneity, so gaps below that scale should not be treated as decisive."
+  ]
+}

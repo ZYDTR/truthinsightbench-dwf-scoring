@@ -1,0 +1,362 @@
+{
+  "task_id": "Life_02_contextual_immune_response",
+  "primary_fold_change_definition": "geometric mean of per-replicate perturbation/baseline ratios",
+  "analysis_units": {
+    "compartment": "biological replicate nested in assay x compartment x endpoint x condition",
+    "intervention": "biological replicate nested in assay x intervention setting",
+    "multi_condition": "biological replicate nested in response class x compound setting",
+    "time_resolved": "biological replicate nested in condition role x time point"
+  },
+  "S1_perturbation": {
+    "cells_total": 18,
+    "cells_with_fc_gt_1": 18,
+    "replicate_pairs_up": 69,
+    "replicate_pairs_total": 72,
+    "sign_test_p": 1.3185973648144507e-17,
+    "cell_mean_log2fc": {
+      "n": 18,
+      "mean": 0.8706131554877765,
+      "sd": 0.24458408095049078,
+      "ci_low": 0.7489843534904601,
+      "ci_high": 0.9922419574850929,
+      "ci_level": 0.95,
+      "t_critical": 2.1098155778333156
+    },
+    "cell_ttest_p": 2.7804589350296707e-11,
+    "median_fc": 1.8680971696130966,
+    "min_fc": 1.3823985795551972,
+    "max_fc": 2.5312223641487073,
+    "ss_fraction_assay": 0.5526883094455751,
+    "ss_fraction_endpoint": 0.05404610471153274,
+    "ss_fraction_compartment": 0.25828062585062145,
+    "assay_levels_log2fc": {
+      "assay_1": 0.8012061229732591,
+      "assay_2": 0.6974088955164105,
+      "assay_3": 1.11322444797366
+    },
+    "endpoint_levels_log2fc": {
+      "endpoint_count": 0.9258715921980508,
+      "endpoint_fraction": 0.8153547187775022
+    },
+    "compartment_levels_log2fc": {
+      "compartment_1": 1.0385632027597602,
+      "compartment_2": 0.8137135839181829,
+      "compartment_3": 0.7595626797853864
+    },
+    "assay_permutation_p": 0.00365,
+    "mixed_model": {
+      "formula": "replicate log2_fold_change ~ C(endpoint_type), random intercept for assay_id",
+      "n_replicate_rows": 72,
+      "params": {
+        "Intercept": 0.9258715921980508,
+        "C(endpoint_type)[T.endpoint_fraction]": -0.11051687342054844,
+        "Group Var": 0.06863352530277979
+      },
+      "bse": {
+        "Intercept": 0.1466655129977905,
+        "C(endpoint_type)[T.endpoint_fraction]": 0.15359530383786524,
+        "Group Var": 0.11191058147782527
+      },
+      "pvalues": {
+        "Intercept": 2.7401292809350517e-10,
+        "C(endpoint_type)[T.endpoint_fraction]": 0.471812642476642,
+        "Group Var": 0.53968528494453
+      },
+      "endpoint_coef": -0.11051687342054844,
+      "endpoint_p": 0.471812642476642,
+      "group_variance": 0.02914504206714594,
+      "residual_variance": 0.4246473124988308
+    }
+  },
+  "S2_ordering_reproducibility": [
+    {
+      "endpoint_type": "endpoint_count",
+      "measure": "baseline_level",
+      "kendall_w": 0.7777777777777778,
+      "chi2": 4.666666666666667,
+      "df": 2,
+      "p_value": 0.09697196786440504,
+      "compartment_order_per_assay": "assay_1:compartment_1 > compartment_2 > compartment_3; assay_2:compartment_2 > compartment_1 > compartment_3; assay_3:compartment_1 > compartment_2 > compartment_3"
+    },
+    {
+      "endpoint_type": "endpoint_count",
+      "measure": "fold_change",
+      "kendall_w": 0.7777777777777778,
+      "chi2": 4.666666666666667,
+      "df": 2,
+      "p_value": 0.09697196786440504,
+      "compartment_order_per_assay": "assay_1:compartment_1 > compartment_2 > compartment_3; assay_2:compartment_1 > compartment_3 > compartment_2; assay_3:compartment_1 > compartment_2 > compartment_3"
+    },
+    {
+      "endpoint_type": "endpoint_fraction",
+      "measure": "baseline_level",
+      "kendall_w": 0.3333333333333333,
+      "chi2": 2.0,
+      "df": 2,
+      "p_value": 0.36787944117144245,
+      "compartment_order_per_assay": "assay_1:compartment_3 > compartment_2 > compartment_1; assay_2:compartment_2 > compartment_1 > compartment_3; assay_3:compartment_3 > compartment_2 > compartment_1"
+    },
+    {
+      "endpoint_type": "endpoint_fraction",
+      "measure": "fold_change",
+      "kendall_w": 0.1111111111111111,
+      "chi2": 0.6666666666666666,
+      "df": 2,
+      "p_value": 0.7165313105737892,
+      "compartment_order_per_assay": "assay_1:compartment_1 > compartment_3 > compartment_2; assay_2:compartment_1 > compartment_2 > compartment_3; assay_3:compartment_3 > compartment_2 > compartment_1"
+    }
+  ],
+  "S3_endpoint_conflict": {
+    "endpoint_summary": [
+      {
+        "endpoint_type": "endpoint_count",
+        "n_cells": 9,
+        "mean_fc": 1.9298599536363896,
+        "sd_fc": 0.364945074817668,
+        "cv_fc": 0.18910443430364499,
+        "mean_log2fc": 0.9258715921980508,
+        "log2fc_ci_low": 0.7181930391092073,
+        "log2fc_ci_high": 1.1335501452868944
+      },
+      {
+        "endpoint_type": "endpoint_fraction",
+        "n_cells": 9,
+        "mean_fc": 1.777300176245554,
+        "sd_fc": 0.26176881236864646,
+        "cv_fc": 0.14728452507196518,
+        "mean_log2fc": 0.8153547187775022,
+        "log2fc_ci_low": 0.6482636344070115,
+        "log2fc_ci_high": 0.9824458031479929
+      }
+    ],
+    "paired": {
+      "n_strata": 9,
+      "fraction_lower_count": 7,
+      "sign_test_p": 0.1796875,
+      "mean_delta_log2fc": {
+        "n": 9,
+        "mean": 0.11051687342054849,
+        "sd": 0.14333941543976547,
+        "ci_low": 0.0003364451732661422,
+        "ci_high": 0.22069730166783083,
+        "ci_level": 0.95,
+        "t_critical": 2.306004135204166
+      },
+      "paired_t": 2.3130457121263386,
+      "paired_t_p": 0.049453397218322696
+    },
+    "ordering_agreement": [
+      {
+        "assay_id": "assay_1",
+        "spearman_baseline_count_vs_fraction": -1.0,
+        "spearman_fc_count_vs_fraction": 0.5
+      },
+      {
+        "assay_id": "assay_2",
+        "spearman_baseline_count_vs_fraction": 1.0,
+        "spearman_fc_count_vs_fraction": 0.5
+      },
+      {
+        "assay_id": "assay_3",
+        "spearman_baseline_count_vs_fraction": -1.0,
+        "spearman_fc_count_vs_fraction": -1.0
+      }
+    ],
+    "assays_with_opposite_ordering": 1
+  },
+  "S4_loocv": {
+    "metrics": {
+      "pred_assay_invariant": {
+        "mae_fc": 0.33975072418215,
+        "rmse_fc": 0.3930449721782233,
+        "mean_bias_fc": 0.0203467990340489,
+        "spearman_pred_vs_observed": -0.586252986981897
+      },
+      "pred_level_transfer": {
+        "mae_fc": 0.5688088854855993,
+        "rmse_fc": 0.7625598911182387,
+        "mean_bias_fc": -0.18740122268139917,
+        "spearman_pred_vs_observed": -0.2280701754385965
+      },
+      "pred_rank_transfer": {
+        "mae_fc": 0.3780479011703276,
+        "rmse_fc": 0.4393818280484707,
+        "mean_bias_fc": -0.0030114417121148212,
+        "spearman_pred_vs_observed": -0.4840041279669762
+      }
+    },
+    "rank_transfer_mean_spearman": 0.25,
+    "level_transfer_mean_spearman": 0.25,
+    "per_fold": [
+      {
+        "held_out_assay": "assay_1",
+        "endpoint_type": "endpoint_count",
+        "n_compartments": 3,
+        "spearman_rank_transfer": 1.0,
+        "spearman_level_transfer": 1.0
+      },
+      {
+        "held_out_assay": "assay_1",
+        "endpoint_type": "endpoint_fraction",
+        "n_compartments": 3,
+        "spearman_rank_transfer": 0.5,
+        "spearman_level_transfer": 0.5
+      },
+      {
+        "held_out_assay": "assay_2",
+        "endpoint_type": "endpoint_count",
+        "n_compartments": 3,
+        "spearman_rank_transfer": 0.5,
+        "spearman_level_transfer": 0.5
+      },
+      {
+        "held_out_assay": "assay_2",
+        "endpoint_type": "endpoint_fraction",
+        "n_compartments": 3,
+        "spearman_rank_transfer": -0.5,
+        "spearman_level_transfer": -0.5
+      },
+      {
+        "held_out_assay": "assay_3",
+        "endpoint_type": "endpoint_count",
+        "n_compartments": 3,
+        "spearman_rank_transfer": 1.0,
+        "spearman_level_transfer": 1.0
+      },
+      {
+        "held_out_assay": "assay_3",
+        "endpoint_type": "endpoint_fraction",
+        "n_compartments": 3,
+        "spearman_rank_transfer": -1.0,
+        "spearman_level_transfer": -1.0
+      }
+    ]
+  },
+  "S5_intervention": {
+    "kendall_w": 0.9555555555555556,
+    "kendall_chi2": 11.466666666666667,
+    "kendall_p": 0.021790895858293895,
+    "friedman_p": 0.014995576820477663,
+    "lowest_setting_per_assay": {
+      "assay_1": "intervention_setting_1",
+      "assay_2": "intervention_setting_1",
+      "assay_3": "intervention_setting_1"
+    },
+    "leave_one_assay_out": [
+      {
+        "held_out_assay": "assay_1",
+        "spearman_pooled_training_vs_held_out": 0.8999999999999998,
+        "rank_agreement_positions": 3
+      },
+      {
+        "held_out_assay": "assay_2",
+        "spearman_pooled_training_vs_held_out": 0.8999999999999998,
+        "rank_agreement_positions": 3
+      },
+      {
+        "held_out_assay": "assay_3",
+        "spearman_pooled_training_vs_held_out": 0.8999999999999998,
+        "rank_agreement_positions": 3
+      }
+    ],
+    "setting_rank_spread": [
+      {
+        "intervention_setting_id": "intervention_setting_1",
+        "rank_assay_1": 1,
+        "rank_assay_2": 1,
+        "rank_assay_3": 1,
+        "rank_spread": 0
+      },
+      {
+        "intervention_setting_id": "intervention_setting_2",
+        "rank_assay_1": 5,
+        "rank_assay_2": 4,
+        "rank_assay_3": 5,
+        "rank_spread": 1
+      },
+      {
+        "intervention_setting_id": "intervention_setting_3",
+        "rank_assay_1": 3,
+        "rank_assay_2": 3,
+        "rank_assay_3": 3,
+        "rank_spread": 0
+      },
+      {
+        "intervention_setting_id": "intervention_setting_4",
+        "rank_assay_1": 2,
+        "rank_assay_2": 2,
+        "rank_assay_3": 2,
+        "rank_spread": 0
+      },
+      {
+        "intervention_setting_id": "intervention_setting_5",
+        "rank_assay_1": 4,
+        "rank_assay_2": 5,
+        "rank_assay_3": 4,
+        "rank_spread": 1
+      }
+    ]
+  },
+  "S6_multi_condition": {
+    "class_fits": [
+      {
+        "response_class_id": "response_class_A",
+        "n_observations": 12,
+        "slope_per_setting": 8.593,
+        "slope_stderr": 0.5642404333851532,
+        "slope_p": 3.0216820512978374e-08,
+        "intercept": 0.32999999999999474,
+        "r_squared": 0.958666120886806,
+        "setting_means": "8.510,17.967,26.447,34.327",
+        "min_step_delta": 7.879999999999999,
+        "max_step_delta": 9.456666666666665,
+        "monotone_increasing": true
+      },
+      {
+        "response_class_id": "response_class_B",
+        "n_observations": 12,
+        "slope_per_setting": 0.19133333333333333,
+        "slope_stderr": 0.3379316827736373,
+        "slope_p": 0.5837468151274056,
+        "intercept": 7.121666666666667,
+        "r_squared": 0.031061308836949717,
+        "setting_means": "7.413,7.537,7.330,8.120",
+        "min_step_delta": -0.20666666666666522,
+        "max_step_delta": 0.7899999999999983,
+        "monotone_increasing": false
+      }
+    ],
+    "interaction_F": 45.4145429720969,
+    "interaction_p": 4.7303240535929876e-08,
+    "anova": [
+      {
+        "term": "C(response_class_id)",
+        "sum_sq": 1211.9709375000014,
+        "df": 1.0,
+        "F": 310.7531468142982,
+        "PR(>F)": 6.6369390460049265e-12
+      },
+      {
+        "term": "C(compound_setting_id)",
+        "sum_sq": 579.2619791666666,
+        "df": 3.0,
+        "F": 49.508195641289156,
+        "PR(>F)": 2.5528329523523408e-08
+      },
+      {
+        "term": "C(response_class_id):C(compound_setting_id)",
+        "sum_sq": 531.3649124999997,
+        "df": 3.0,
+        "F": 45.4145429720969,
+        "PR(>F)": 4.7303240535929876e-08
+      },
+      {
+        "term": "Residual",
+        "sum_sq": 62.40173333333334,
+        "df": 16.0,
+        "F": null,
+        "PR(>F)": null
+      }
+    ]
+  }
+}

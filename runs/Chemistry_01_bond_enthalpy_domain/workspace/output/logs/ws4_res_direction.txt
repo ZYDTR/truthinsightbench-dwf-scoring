@@ -1,0 +1,16 @@
+any_res n=227  (fa_res=21 fb_res=219)
+
+=== any_res flag: MAE ===
+  quantum    res MAE= 2.382 (n=227)  nonres MAE= 1.894 (n=316) delta=+0.488 p=0.00275 cliffs=0.151
+  learned    res MAE= 3.155 (n=227)  nonres MAE= 1.876 (n=316) delta=+1.279 p=4.75e-08 cliffs=0.275
+  reference  res MAE= 5.738 (n=227)  nonres MAE= 5.305 (n=316) delta=+0.433 p=0.539 cliffs=0.031
+
+=== any_res x extreme fail (>10) contingency ===
+  quantum    res fail-rate=0.018 (n=227) nonres=0.013 (n=316) OR=1.40 p=0.725
+  learned    res fail-rate=0.040 (n=227) nonres=0.009 (n=316) OR=4.31 p=0.0336
+  reference  res fail-rate=0.119 (n=227) nonres=0.076 (n=316) OR=1.64 p=0.102
+
+=== DIRECTION: worst-25 by |err|, sign of signed error ===
+Traceback (most recent call last):
+  File "<string>", line 50, in <module>
+TypeError: 'BinomTestResult' object is not subscriptable

@@ -1,0 +1,186 @@
+{
+  "cross_channel": {
+    "frequency": {
+      "mean_abs_error_by_condition": {
+        "control_a": 0.04650297619047619,
+        "control_b": 0.09765625,
+        "signed_control": 0.0146484375
+      },
+      "overall_mean": 0.0529358878968254,
+      "overall_max": 0.09765625,
+      "best_condition": "signed_control",
+      "worst_condition": "control_b"
+    },
+    "time": {
+      "rmse_by_condition": {
+        "condition_01": 0.30669032263733664,
+        "condition_02": 0.6086299498179386,
+        "condition_03": 1.0907518127168179
+      },
+      "max_abs_error_by_condition": {
+        "condition_01": 1.2489583106342912,
+        "condition_02": 2.6922488449824744,
+        "condition_03": 4.756030700155878
+      },
+      "rmse_overall_mean": 0.6686906950573643,
+      "rmse_overall_max": 1.0907518127168179,
+      "rmse_best_condition": "condition_01",
+      "rmse_worst_condition": "condition_03",
+      "max_abs_error_overall_mean": 2.8990792852575478,
+      "max_abs_error_overall_max": 4.756030700155878,
+      "max_abs_error_best_condition": "condition_01",
+      "max_abs_error_worst_condition": "condition_03"
+    },
+    "magnitude_comparison": {
+      "ratio_time_rmse_mean_to_freq_mae": 12.632086125780582,
+      "ratio_time_max_abs_max_to_freq_mae_max": 48.701754369596195
+    },
+    "verdict": "CONFLICT",
+    "explanation": "Time-channel errors are ~12.6x larger (rmse mean 0.6687 vs freq mean_abs_error 0.0529) and max_abs_error reaches 4.7560 vs freq max 0.0977. Frequency channel shows near-exact matches (control_a 16/21, control_b 8/16, signed_control 3/10), while time channel shows substantial divergence. The two channels do NOT agree on overall quality."
+  },
+  "leave_one_condition_out": {
+    "per_condition_from_raw_tsv": {
+      "condition_01": {
+        "rmse": 0.30669032263733664,
+        "max_abs_error": 1.2489583106342912,
+        "n_points": 15000
+      },
+      "condition_02": {
+        "rmse": 0.6086299498179386,
+        "max_abs_error": 2.6922488449824744,
+        "n_points": 15000
+      },
+      "condition_03": {
+        "rmse": 1.0907518127168179,
+        "max_abs_error": 4.756030700155878,
+        "n_points": 15000
+      }
+    },
+    "global_ranking_by_rmse": [
+      "condition_01",
+      "condition_02",
+      "condition_03"
+    ],
+    "global_ranking_by_max_abs_error": [
+      "condition_01",
+      "condition_02",
+      "condition_03"
+    ],
+    "leave_one_out": {
+      "condition_01": {
+        "remaining_conditions": [
+          "condition_02",
+          "condition_03"
+        ],
+        "mean_rmse": 0.8496908812673782,
+        "max_abs_error": 4.756030700155878,
+        "remaining_ranking_by_rmse": [
+          "condition_02",
+          "condition_03"
+        ],
+        "global_restricted_ranking_by_rmse": [
+          "condition_02",
+          "condition_03"
+        ],
+        "rmse_ranking_stable": true,
+        "remaining_ranking_by_max_abs_error": [
+          "condition_02",
+          "condition_03"
+        ],
+        "global_restricted_ranking_by_max_abs_error": [
+          "condition_02",
+          "condition_03"
+        ],
+        "max_abs_error_ranking_stable": true
+      },
+      "condition_02": {
+        "remaining_conditions": [
+          "condition_01",
+          "condition_03"
+        ],
+        "mean_rmse": 0.6987210676770772,
+        "max_abs_error": 4.756030700155878,
+        "remaining_ranking_by_rmse": [
+          "condition_01",
+          "condition_03"
+        ],
+        "global_restricted_ranking_by_rmse": [
+          "condition_01",
+          "condition_03"
+        ],
+        "rmse_ranking_stable": true,
+        "remaining_ranking_by_max_abs_error": [
+          "condition_01",
+          "condition_03"
+        ],
+        "global_restricted_ranking_by_max_abs_error": [
+          "condition_01",
+          "condition_03"
+        ],
+        "max_abs_error_ranking_stable": true
+      },
+      "condition_03": {
+        "remaining_conditions": [
+          "condition_01",
+          "condition_02"
+        ],
+        "mean_rmse": 0.4576601362276376,
+        "max_abs_error": 2.6922488449824744,
+        "remaining_ranking_by_rmse": [
+          "condition_01",
+          "condition_02"
+        ],
+        "global_restricted_ranking_by_rmse": [
+          "condition_01",
+          "condition_02"
+        ],
+        "rmse_ranking_stable": true,
+        "remaining_ranking_by_max_abs_error": [
+          "condition_01",
+          "condition_02"
+        ],
+        "global_restricted_ranking_by_max_abs_error": [
+          "condition_01",
+          "condition_02"
+        ],
+        "max_abs_error_ranking_stable": true
+      }
+    },
+    "per_condition_ranking_changes": false,
+    "per_condition_ranking_changes_by_max_abs_error": false
+  },
+  "threshold_sensitivity": {
+    "control_a": {
+      "n_pairs": 21,
+      "1e-6": 16,
+      "1e-3": 16,
+      "1e-1": 16
+    },
+    "control_b": {
+      "n_pairs": 16,
+      "1e-6": 8,
+      "1e-3": 8,
+      "1e-1": 8
+    },
+    "signed_control": {
+      "n_pairs": 10,
+      "1e-6": 3,
+      "1e-3": 3,
+      "1e-1": 10
+    }
+  },
+  "signed_control_comparison": {
+    "signed_control_mean_relative_error": 0.004907623823882976,
+    "control_a_mean_relative_error": 0.0030535126091727305,
+    "control_b_mean_relative_error": 0.007128131277526389,
+    "avg_control_a_b": 0.00509082194334956,
+    "signed_control_minus_avg": -0.00018319811946658406,
+    "signed_control_is_better_or_worse": "below average (closer to 0)",
+    "recomputed_from_raw_tsv": {
+      "signed_control": 0.004907623823882976,
+      "control_a": 0.0030535126091727305,
+      "control_b": 0.007128131277526389,
+      "avg_control_a_b": 0.00509082194334956
+    }
+  }
+}

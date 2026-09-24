@@ -1,0 +1,12 @@
+{
+  "sigma_ref_sq": 8.026105109307998,
+  "sigma_quantum_sq": 1.0447157125576805,
+  "sigma_learned_sq": 3.9929624455498693,
+  "var_share_ref_in_quantum": 0.8848267722321954,
+  "var_share_ref_in_learned": 0.6677810131838394,
+  "mae_share_ref_in_quantum_gaussian": 0.9406523120857117,
+  "mae_share_ref_in_learned_gaussian": 0.8171786910975097,
+  "sigma_ref": 2.8330381411671812,
+  "sigma_quantum_vs_truth": 1.0221133560215718,
+  "sigma_learned_vs_truth": 1.9982398368438834
+}

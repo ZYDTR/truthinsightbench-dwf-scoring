@@ -1,0 +1,23 @@
+{
+  "files": [
+    {
+      "path": "anonymous_feature_counts.tsv",
+      "bytes": 2451213,
+      "sha256": "7fe18cf02bfd14691e5c157b8b81a0658263d2c1cc2f965b37121d373beddf92",
+      "matches_manifest": true
+    },
+    {
+      "path": "anonymous_sample_covariates.tsv",
+      "bytes": 12226,
+      "sha256": "cefd666d112289f07a9fb641b481514410043df9df61831aafb77a9b0ee2c1e9",
+      "matches_manifest": true
+    },
+    {
+      "path": "bias_scenario_metrics.tsv",
+      "bytes": 103433,
+      "sha256": "a256a68457a2ca53ed2fa48c2277f716a1e7192c97e568315af7291a0f852893",
+      "matches_manifest": true
+    }
+  ],
+  "all_match": true
+}

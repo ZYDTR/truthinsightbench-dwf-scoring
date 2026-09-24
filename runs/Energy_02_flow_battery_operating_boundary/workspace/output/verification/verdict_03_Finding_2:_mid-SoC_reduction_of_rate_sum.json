@@ -1,0 +1,82 @@
+{
+  "dimension": "Finding 2: mid-SoC reduction of rate summaries onto voltage curves (arithmetic, permutation test, alternative constructions, SoC scan, hold-out, script methodology)",
+  "verdict": "refuted",
+  "discrepancies": [
+    {
+      "claim": "Permutation identity rank 1/5040 for both reductions; p = 1.98e-4, i.e. the assignment is significant evidence",
+      "claimed_value": "rank 1 of 5040, p = 1.98e-4",
+      "recomputed_value": "rank 1 of 5040 and p = 1.984e-4 confirmed numerically; but rank 1 is mathematically guaranteed by the rearrangement inequality because all four series are strictly monotone (my check: 20000/20000 random independent monotone pairs also give identity rank 1; identity is rank 1 at 124/124 scan grid points from 35-66% and throughout 30-70%)",
+      "severity": "critical",
+      "note": "The p-value is an upper bound on a quantity that is identically 1/5040 for any two monotone series; it carries no evidential weight about construction."
+    },
+    {
+      "claim": "Both residuals are within the rounding granularity of the published summary values",
+      "claimed_value": "max eff residual 0.2632 pp, max V residual 0.00358 V, described as within rounding",
+      "recomputed_value": "summary values are 1-2 dp (step 0.01); max eff residual 0.2632 pp is 26x-53x the step; max V residual 0.00358 V is 7x-117x the 0.01/rate bound",
+      "severity": "critical",
+      "note": "Both residuals demonstrably exceed the rounding granularity; the stated justification for the residual scale is false."
+    },
+    {
+      "claim": "A fine SoC scan locates the joint optimum at SoC = 49.50",
+      "claimed_value": "argmin SoC = 49.50 (RMSE 0.1617 pp, 0.00222 V)",
+      "recomputed_value": "the true continuous minimizer of RMSE_eff is SoC = 49.489 (0.161657 pp); 49.50 is the argmin of the 0.05 grid only, not the genuine minimum; the combined-rule argmin is 49.487; RMSE_V argmin is 49.378",
+      "severity": "minor",
+      "note": "Difference is in the 5th decimal (0.16167 vs 0.16166), so the grid artifact is real but immaterial to the conclusion."
+    },
+    {
+      "claim": "The region RMSE_eff <= 1.0 pp spans SoC 48.0 to 52.0%",
+      "claimed_value": "48.0 to 52.0%",
+      "recomputed_value": "the criterion holds continuously on 43.23 to 55.06%",
+      "severity": "moderate",
+      "note": "The declared scan window (48-52, robustness_checks.py) truncated the reported band; the true plateau is roughly twice as wide."
+    },
+    {
+      "claim": "Competing reductions are much worse: energy-weighted integral ratio RMSE 3.07 pp",
+      "claimed_value": "3.07 pp",
+      "recomputed_value": "3.0688 pp is reproducible ONLY with a per-setting own-overlap integration window (my computation); common-window gives 2.82 pp, 0-100 gives 3.80 pp, per-curve full range gives 4.85 pp; no script in output/analysis computes any integral form",
+      "severity": "moderate",
+      "note": "The value exists only as a hard-coded prose string in run_analysis.py:774, propagated verbatim into boundary_checks.json and key_results.json. The definition is never stated or executed."
+    },
+    {
+      "claim": "Systematic, not random, residual structure: all efficiency residuals are negative for the identity form at four of seven settings",
+      "claimed_value": "negative at four of seven settings",
+      "recomputed_value": "at the probe actually used (50.0) the count is 2 of 7; at SoC 49.50 it is 4 of 7",
+      "severity": "minor",
+      "note": "The prose describes the abandoned 49.5 probe, not SoC=50 which the analysis reports throughout; sign conventions also differ between Result.md's displayed table, its prose, and summary_linkage.csv."
+    },
+    {
+      "claim": "The identity form is recovered rather than imposed; free affine fit returns a = 0.9863, b = +1.19, R2 = 0.99976",
+      "claimed_value": "a = 0.9863, b = +1.19, R2 = 0.99976",
+      "recomputed_value": "a = 0.9863, b = +1.1902, R2 = 0.999763 (reproduced); BUT 100*(1 - k*(Vc-Vd)/Vc) with ONE free parameter (k=1.0029) achieves RMSE 0.1120 pp, better than the claimed zero-parameter form's 0.1837 pp, so the claimed construction is not the uniquely parsimonious fit",
+      "severity": "moderate",
+      "note": "The 2-parameter affine (0.1301 pp) is also better than the zero-parameter identity, so the free-affine check does not establish that the identity form is recovered."
+    },
+    {
+      "claim": "VERIFY 1 alternative forms table lists Vdis(x)/Vch(x) as the primary form with RMSE 0.07789 pp",
+      "claimed_value": "RMSE 0.0779 pp for 'Vdis(x)/Vch(x)'",
+      "recomputed_value": "the label is inconsistent with the code: the lambda uses nearest-index extraction for the discharge branch but np.interp for the charge branch and is evaluated at x=50.0, not at any point nearest 50; the stated primary form evaluated as written at SoC=50 gives 0.1837 pp",
+      "severity": "moderate",
+      "note": "The 0.0779 pp value also contradicts the headline 0.1837 pp without the label disclosing the different extraction rule."
+    },
+    {
+      "claim": "DoD-paired form 'Vdis(x)/Vch(100-x)' is an independent competing reduction",
+      "claimed_value": "listed as a separate alternative form",
+      "recomputed_value": "at x=50, Vch(100-x) = Vch(50), making this form bit-identical to the primary ratio and yielding the same 0.1837 pp",
+      "severity": "minor",
+      "note": "The entry is degenerate at the evaluated probe and cannot discriminate between hypotheses."
+    }
+  ],
+  "method_concerns": [
+    "Circularity: run_analysis.py line 48 hard-codes SOC_PROBE = 50.0 with the comment 'identified by the grid scan below', and that same probe is then used for every reported residual and for the permutation p-value. The probe point was chosen from the same data used to compute the reported significance.",
+    "The permutation p-value is tautological: with strictly monotone series the identity assignment is the unique minimizer by the rearrangement inequality, so 1/5040 is guaranteed and measures nothing about construction. This is stated nowhere in the deliverable; Result.md calls it a 'robustness result' and only downgrades it as 'mildly optimistic'.",
+    "The 3.07 pp energy-weighted comparison is unbacked prose, hard-coded in run_analysis.py:774 with no producing code; the definition is never stated and no script in output/analysis computes it.",
+    "Error bars on the SoC scan statistic are never reported: RMSE_eff varies by only 0.00389 pp across the whole interval 49.30-49.70, so reporting the minimizer to 2 decimals is nominally unsupported. Correspondingly, the p-value at the optimum (0.1617 pp) and at 50 (0.1837 pp) involve selection from a plateau.",
+    "The 48-52% scan window used in robustness_checks.py was too narrow to resolve the actual RMSE <= 1.0 pp plateau (43.23-55.06%), producing an artifactually tight reported band.",
+    "The 105 hold-out predictions are not independent: they come from 35 overlapping 4/3 splits of the same 7 points, so the pooled RMSE is presented as if it had ~105 degrees of freedom. The analysis unit (one complete rate curve) means n=7, not n=105.",
+    "The hold-out 'transport' argument is uninformative as a model comparison: the zero-parameter identity form (0.1837 pp) predicts held-out rates better than every 2-parameter affine fit tested (ratio 0.2028 pp), so 'it transports' does not discriminate the construction.",
+    "The nine power rows are presented as a single 9-point series in Finding 3, but the exact archived-point hits show the first 7 are read off discharge curves while rate 300 and rate 500 have no archived counterpart; the first 7 and the last 2 are not the same kind of observation.",
+    "Result.md Finding 1 instructs that the permutation figure is 'not an independent test of label identity', yet Finding 2 presents the structurally identical permutation test as a headline robustness check without applying the same caveat."
+  ],
+  "summary": "The arithmetic in Finding 2 is exact: I reproduced the efficiency RMSE 0.183672765 pp / max 0.263167061 pp (claimed 0.1837/0.2632), the voltage RMSE 0.002678497 V / max 0.003575062 V (claimed 0.00268/0.00358), the full per-setting residual table, the affine fit a=0.9863 b=+1.1902 R2=0.999763, the hold-out 0.202761 pp / 0.0032592 V, and the permutation rank 1/5040 both ways. However the inferential framing is refuted on four counts: (1) the 1/5040 p-value is tautological because arrhenius-style monotonicity guarantees the identity rank 1 by the rearrangement inequality (20,000/20,000 random independent monotone pairs also rank 1), so it is no evidence of shared construction; (2) the claim that residuals are 'within rounding granularity' is false, exceeding the summary rounding step by 26-53x for efficiency and 7-117x for voltage; (3) 49.50 is a grid artifact, the true continuous minimizer being 49.489, and the reported RMSE<=1.0 band 48-52% is a windowed truncation of the actual 43.23-55.06% plateau; (4) the discriminating 3.07 pp comparison is an unbacked hard-coded string in run_analysis.py:774 that no script computes. I could not break the construction reading itself: my ~20 alternatives all fit worse, an endpoint-forced monotone null yields P(RMSE <= 0.1837) < 1e-6, and three of the seven power rows equal archived discharge voltages to floating-point identity, which positively indicates the summaries were drawn from these curves rather than interpolated at a common SoC. The correct verdict on the construction is a caveated confirmation; the reported p-value, rounding justification, and uniqueness claims do not survive.",
+  "verdict_note": "The core construction claim is supported by evidence stronger than the deliverable itself offers (exact archived-point identity, null tests), but the finding as written contains a tautological p-value, a false rounding justification, a grid-artifact optimum, a truncated robustness band, and an unbacked headline comparison number - hence 'refuted' for the claim set as stated."
+}

@@ -1,0 +1,638 @@
+{
+  "unconstrained_shape_search": {
+    "response_level_1": {
+      "top5": [
+        {
+          "mean_abs_log_dev": 0.4965278974416066,
+          "temperature_K": 6300.0,
+          "metallicity_index": -1.0
+        },
+        {
+          "mean_abs_log_dev": 0.5020034588787977,
+          "temperature_K": 6300.0,
+          "metallicity_index": -0.95
+        },
+        {
+          "mean_abs_log_dev": 0.5085797451884354,
+          "temperature_K": 6300.0,
+          "metallicity_index": -0.9
+        },
+        {
+          "mean_abs_log_dev": 0.5157950689207361,
+          "temperature_K": 6300.0,
+          "metallicity_index": -0.85
+        },
+        {
+          "mean_abs_log_dev": 0.5253734497551269,
+          "temperature_K": 6300.0,
+          "metallicity_index": -0.8
+        }
+      ],
+      "best": {
+        "mean_abs_log_dev": 0.4965278974416066,
+        "temperature_K": 6300.0,
+        "metallicity_index": -1.0
+      }
+    },
+    "response_level_2": {
+      "top5": [
+        {
+          "mean_abs_log_dev": 0.48415718638444566,
+          "temperature_K": 6300.0,
+          "metallicity_index": -1.0
+        },
+        {
+          "mean_abs_log_dev": 0.4845287867826457,
+          "temperature_K": 6300.0,
+          "metallicity_index": -0.95
+        },
+        {
+          "mean_abs_log_dev": 0.4854298754979654,
+          "temperature_K": 6300.0,
+          "metallicity_index": -0.9
+        },
+        {
+          "mean_abs_log_dev": 0.4860573296636962,
+          "temperature_K": 6300.0,
+          "metallicity_index": -0.85
+        },
+        {
+          "mean_abs_log_dev": 0.48707488676557803,
+          "temperature_K": 6300.0,
+          "metallicity_index": -0.8
+        }
+      ],
+      "best": {
+        "mean_abs_log_dev": 0.48415718638444566,
+        "temperature_K": 6300.0,
+        "metallicity_index": -1.0
+      }
+    },
+    "response_level_3": {
+      "top5": [
+        {
+          "mean_abs_log_dev": 0.4683481604688932,
+          "temperature_K": 6300.0,
+          "metallicity_index": -0.15
+        },
+        {
+          "mean_abs_log_dev": 0.4685434310327118,
+          "temperature_K": 6300.0,
+          "metallicity_index": -0.1
+        },
+        {
+          "mean_abs_log_dev": 0.4688263051132464,
+          "temperature_K": 6300.0,
+          "metallicity_index": -0.2
+        },
+        {
+          "mean_abs_log_dev": 0.46909890084330363,
+          "temperature_K": 6300.0,
+          "metallicity_index": -0.25
+        },
+        {
+          "mean_abs_log_dev": 0.4691461147832115,
+          "temperature_K": 6300.0,
+          "metallicity_index": -0.05
+        }
+      ],
+      "best": {
+        "mean_abs_log_dev": 0.4683481604688932,
+        "temperature_K": 6300.0,
+        "metallicity_index": -0.15
+      }
+    },
+    "response_level_4": {
+      "top5": [
+        {
+          "mean_abs_log_dev": 0.4167667475060463,
+          "temperature_K": 6300.0,
+          "metallicity_index": 0.4
+        },
+        {
+          "mean_abs_log_dev": 0.41710945745639266,
+          "temperature_K": 6300.0,
+          "metallicity_index": 0.35
+        },
+        {
+          "mean_abs_log_dev": 0.41758655153839064,
+          "temperature_K": 6300.0,
+          "metallicity_index": 0.3
+        },
+        {
+          "mean_abs_log_dev": 0.4186725529453998,
+          "temperature_K": 6300.0,
+          "metallicity_index": 0.45
+        },
+        {
+          "mean_abs_log_dev": 0.4189751957283551,
+          "temperature_K": 6300.0,
+          "metallicity_index": 0.25
+        }
+      ],
+      "best": {
+        "mean_abs_log_dev": 0.4167667475060463,
+        "temperature_K": 6300.0,
+        "metallicity_index": 0.4
+      }
+    },
+    "response_level_5": {
+      "top5": [
+        {
+          "mean_abs_log_dev": 0.397919506099627,
+          "temperature_K": 6300.0,
+          "metallicity_index": 0.7
+        },
+        {
+          "mean_abs_log_dev": 0.39805314230624544,
+          "temperature_K": 6300.0,
+          "metallicity_index": 0.6
+        },
+        {
+          "mean_abs_log_dev": 0.40062931395382806,
+          "temperature_K": 6300.0,
+          "metallicity_index": 0.5
+        },
+        {
+          "mean_abs_log_dev": 0.4006635248369587,
+          "temperature_K": 6300.0,
+          "metallicity_index": 0.8
+        },
+        {
+          "mean_abs_log_dev": 0.4036715169751936,
+          "temperature_K": 6300.0,
+          "metallicity_index": 0.45
+        }
+      ],
+      "best": {
+        "mean_abs_log_dev": 0.397919506099627,
+        "temperature_K": 6300.0,
+        "metallicity_index": 0.7
+      }
+    }
+  },
+  "unconstrained_shape_search_verdict": {
+    "picks_temperature_5800_for_all_levels": false,
+    "recalled_metallicity_ladder": [
+      -1.0,
+      -1.0,
+      -0.15,
+      0.4,
+      0.7
+    ],
+    "interpretation": "Absolute-shape matching does NOT cleanly recover a single temperature or a monotone ladder, because the blue band carries a large shared distortion (quantified in tests 4-5 below). The test is retained as a reported negative result; test 3 replaces it with a distortion-cancelling ratio formulation."
+  },
+  "joint_ratio_search": {
+    "top5": [
+      {
+        "mean_abs_log_dev": 0.003433537818835899,
+        "temperature_K": 5800.0,
+        "reference_metallicity_index": -0.9,
+        "implied_ladder": [
+          -0.5,
+          0.0,
+          0.5,
+          0.9
+        ],
+        "monotone_increasing_ladder": true
+      },
+      {
+        "mean_abs_log_dev": 0.011850894558561354,
+        "temperature_K": 5800.0,
+        "reference_metallicity_index": -0.95,
+        "implied_ladder": [
+          -0.55,
+          -0.05,
+          0.45,
+          0.9
+        ],
+        "monotone_increasing_ladder": true
+      },
+      {
+        "mean_abs_log_dev": 0.013930527914266935,
+        "temperature_K": 5800.0,
+        "reference_metallicity_index": -0.85,
+        "implied_ladder": [
+          -0.45,
+          0.05,
+          0.5,
+          0.9
+        ],
+        "monotone_increasing_ladder": true
+      },
+      {
+        "mean_abs_log_dev": 0.017307057496556894,
+        "temperature_K": 5800.0,
+        "reference_metallicity_index": -1.0,
+        "implied_ladder": [
+          -0.55,
+          -0.05,
+          0.45,
+          0.8
+        ],
+        "monotone_increasing_ladder": true
+      },
+      {
+        "mean_abs_log_dev": 0.02346509119915525,
+        "temperature_K": 5800.0,
+        "reference_metallicity_index": -0.8,
+        "implied_ladder": [
+          -0.45,
+          0.1,
+          0.6,
+          0.9
+        ],
+        "monotone_increasing_ladder": true
+      }
+    ],
+    "best": {
+      "mean_abs_log_dev": 0.003433537818835899,
+      "temperature_K": 5800.0,
+      "reference_metallicity_index": -0.9,
+      "implied_ladder": [
+        -0.5,
+        0.0,
+        0.5,
+        0.9
+      ],
+      "monotone_increasing_ladder": true
+    },
+    "best_non_winner": {
+      "mean_abs_log_dev": 0.011850894558561354,
+      "temperature_K": 5800.0,
+      "reference_metallicity_index": -0.95,
+      "implied_ladder": [
+        -0.55,
+        -0.05,
+        0.45,
+        0.9
+      ],
+      "monotone_increasing_ladder": true
+    },
+    "separation_factor_vs_next": 3.4515112935553054,
+    "best_other_temperature": {
+      "mean_abs_log_dev": 0.07177841608820945,
+      "temperature_K": 6300.0,
+      "reference_metallicity_index": -0.75,
+      "implied_ladder": [
+        -0.2,
+        0.3,
+        0.8,
+        0.9
+      ],
+      "monotone_increasing_ladder": true
+    }
+  },
+  "null_calibration_correlation": {
+    "n_pairs": 5460,
+    "min": -0.9889347459820941,
+    "median": -0.8591901391356003,
+    "max": 0.9999669118613679,
+    "frac_above_0.99": 0.09871794871794871,
+    "frac_above_0.9999": 0.0014652014652014652,
+    "verdict": "log-ratio correlation is not discriminative: a large share of unrelated grid curve pairs also exceed 0.99"
+  },
+  "zero_parameter_ratio_test": {
+    "5300": {
+      "response_level_2": {
+        "max_abs_rel_dev": 0.4282497535324177,
+        "rms_rel_dev": 0.10955179230769742,
+        "mean_abs_rel_dev": 0.05599127108869765
+      },
+      "response_level_3": {
+        "max_abs_rel_dev": 1.0869823432878567,
+        "rms_rel_dev": 0.26505959312592997,
+        "mean_abs_rel_dev": 0.14169117552486238
+      },
+      "response_level_4": {
+        "max_abs_rel_dev": 1.3460817468432604,
+        "rms_rel_dev": 0.3202384297405368,
+        "mean_abs_rel_dev": 0.186796458020896
+      },
+      "response_level_5": {
+        "max_abs_rel_dev": 1.9319596873270246,
+        "rms_rel_dev": 0.48955370534107173,
+        "mean_abs_rel_dev": 0.2630310751983104
+      }
+    },
+    "5800": {
+      "response_level_2": {
+        "max_abs_rel_dev": 0.013072347509002213,
+        "rms_rel_dev": 0.0026611438307109006,
+        "mean_abs_rel_dev": 0.001922442934334988
+      },
+      "response_level_3": {
+        "max_abs_rel_dev": 0.018761586106547545,
+        "rms_rel_dev": 0.0045690051193801,
+        "mean_abs_rel_dev": 0.0031354867141311594
+      },
+      "response_level_4": {
+        "max_abs_rel_dev": 0.02884316171167778,
+        "rms_rel_dev": 0.006523234380285799,
+        "mean_abs_rel_dev": 0.003994039050448548
+      },
+      "response_level_5": {
+        "max_abs_rel_dev": 0.03291035371883155,
+        "rms_rel_dev": 0.007926694228777726,
+        "mean_abs_rel_dev": 0.004702469720886659
+      }
+    },
+    "6300": {
+      "response_level_2": {
+        "max_abs_rel_dev": 0.4521183785784165,
+        "rms_rel_dev": 0.1315668566950901,
+        "mean_abs_rel_dev": 0.06108899508387307
+      },
+      "response_level_3": {
+        "max_abs_rel_dev": 0.5947630848045138,
+        "rms_rel_dev": 0.17857677811788567,
+        "mean_abs_rel_dev": 0.09674872844821063
+      },
+      "response_level_4": {
+        "max_abs_rel_dev": 0.5508014815832212,
+        "rms_rel_dev": 0.15956617214983232,
+        "mean_abs_rel_dev": 0.10033206799263356
+      },
+      "response_level_5": {
+        "max_abs_rel_dev": 0.5581917096159339,
+        "rms_rel_dev": 0.17681415963034205,
+        "mean_abs_rel_dev": 0.11750654440493362
+      }
+    }
+  },
+  "ratio_test_summary": {
+    "mean_abs_rel_dev_at_5800K": 0.0034386096049503385,
+    "mean_abs_rel_dev_at_5300K": 0.1618774949581916,
+    "mean_abs_rel_dev_at_6300K": 0.09391908398241272
+  },
+  "photon_to_energy": {
+    "constant_C": 3.974745242072792e-13,
+    "per_level": {
+      "response_level_1": {
+        "330-850": {
+          "mean": 0.9941210785066953,
+          "rel_std": 0.09970410731781325,
+          "max_abs_rel_dev": 0.4602508701346957
+        },
+        "350-850": {
+          "mean": 0.985129643574734,
+          "rel_std": 0.09128146818129432,
+          "max_abs_rel_dev": 0.4602508701346957
+        },
+        "400-850": {
+          "mean": 0.9585922315537476,
+          "rel_std": 0.030539010559331472,
+          "max_abs_rel_dev": 0.07900188409576159
+        },
+        "200-350": {
+          "mean": 5.7970111374957405,
+          "rel_std": 1.060575342166943,
+          "max_abs_rel_dev": 27.86377926236852
+        },
+        "179-300": {
+          "mean": 14.635035597491479,
+          "rel_std": 1.1030502853070518,
+          "max_abs_rel_dev": 57.601146642128825
+        },
+        "179-850": {
+          "mean": 5.277419799089613,
+          "rel_std": 1.9386344525117924,
+          "max_abs_rel_dev": 57.601146642128825
+        }
+      },
+      "response_level_2": {
+        "330-850": {
+          "mean": 0.9980000807152434,
+          "rel_std": 0.060259859640874554,
+          "max_abs_rel_dev": 0.28877978851468744
+        },
+        "350-850": {
+          "mean": 0.9927270871317647,
+          "rel_std": 0.05547119082933564,
+          "max_abs_rel_dev": 0.28877978851468744
+        },
+        "400-850": {
+          "mean": 0.976456139910555,
+          "rel_std": 0.018727825621674982,
+          "max_abs_rel_dev": 0.05166410385952269
+        },
+        "200-350": {
+          "mean": 4.0839528609740325,
+          "rel_std": 0.5692777148465076,
+          "max_abs_rel_dev": 9.776691124313595
+        },
+        "179-300": {
+          "mean": 5.827768283825735,
+          "rel_std": 0.7549656320950112,
+          "max_abs_rel_dev": 15.817685887332797
+        },
+        "179-850": {
+          "mean": 2.858064913231949,
+          "rel_std": 1.135203426366303,
+          "max_abs_rel_dev": 15.817685887332797
+        }
+      },
+      "response_level_3": {
+        "330-850": {
+          "mean": 1.0001376209886794,
+          "rel_std": 0.002448386525711201,
+          "max_abs_rel_dev": 0.012814892424204194
+        },
+        "350-850": {
+          "mean": 1.0001247330904857,
+          "rel_std": 0.002467952966838098,
+          "max_abs_rel_dev": 0.012814892424204194
+        },
+        "400-850": {
+          "mean": 1.0000013369420921,
+          "rel_std": 0.001635373612155229,
+          "max_abs_rel_dev": 0.0038655014974917634
+        },
+        "200-350": {
+          "mean": 2.869657417555463,
+          "rel_std": 0.558702689854546,
+          "max_abs_rel_dev": 4.12982647926563
+        },
+        "179-300": {
+          "mean": 2.1650360050409247,
+          "rel_std": 0.3654638226183678,
+          "max_abs_rel_dev": 3.9690590436742976
+        },
+        "179-850": {
+          "mean": 1.7978925896501454,
+          "rel_std": 0.7413107384121194,
+          "max_abs_rel_dev": 4.12982647926563
+        }
+      },
+      "response_level_4": {
+        "330-850": {
+          "mean": 0.9992712453978829,
+          "rel_std": 0.07044061483628061,
+          "max_abs_rel_dev": 0.31264423975320355
+        },
+        "350-850": {
+          "mean": 1.0051292960858076,
+          "rel_std": 0.06493270577566679,
+          "max_abs_rel_dev": 0.31264423975320355
+        },
+        "400-850": {
+          "mean": 1.0238086265576234,
+          "rel_std": 0.02714025829279294,
+          "max_abs_rel_dev": 0.09335197318974842
+        },
+        "200-350": {
+          "mean": 2.153817325527099,
+          "rel_std": 0.7263184835111194,
+          "max_abs_rel_dev": 3.67575311670105
+        },
+        "179-300": {
+          "mean": 1.1184629773579462,
+          "rel_std": 0.5134893374102855,
+          "max_abs_rel_dev": 2.840141225681724
+        },
+        "179-850": {
+          "mean": 1.42690663544304,
+          "rel_std": 0.7618389666508297,
+          "max_abs_rel_dev": 3.67575311670105
+        }
+      },
+      "response_level_5": {
+        "330-850": {
+          "mean": 0.9975936100173075,
+          "rel_std": 0.13072021065854905,
+          "max_abs_rel_dev": 0.5074522609140588
+        },
+        "350-850": {
+          "mean": 1.0083768899735335,
+          "rel_std": 0.12007787708517596,
+          "max_abs_rel_dev": 0.5074522609140588
+        },
+        "400-850": {
+          "mean": 1.0424876855934675,
+          "rel_std": 0.05731969045916677,
+          "max_abs_rel_dev": 0.21132663094674864
+        },
+        "200-350": {
+          "mean": 1.7075993970202301,
+          "rel_std": 0.8375894914710662,
+          "max_abs_rel_dev": 3.2291822822832126
+        },
+        "179-300": {
+          "mean": 0.67387954667233,
+          "rel_std": 0.7426926650602537,
+          "max_abs_rel_dev": 2.059483703247732
+        },
+        "179-850": {
+          "mean": 1.2272699964429508,
+          "rel_std": 0.7681178962156007,
+          "max_abs_rel_dev": 3.2291822822832126
+        }
+      }
+    }
+  },
+  "photon_to_energy_null": {
+    "top5_grid_curves_fixed_C": [
+      {
+        "mean_abs_rel_dev": 0.0013855951512459564,
+        "temperature_K": 5800.0,
+        "metallicity_index": 0.0
+      },
+      {
+        "mean_abs_rel_dev": 0.003100165740249172,
+        "temperature_K": 5800.0,
+        "metallicity_index": -0.05
+      },
+      {
+        "mean_abs_rel_dev": 0.003306119626988582,
+        "temperature_K": 5800.0,
+        "metallicity_index": 0.05
+      },
+      {
+        "mean_abs_rel_dev": 0.006034539593887909,
+        "temperature_K": 5800.0,
+        "metallicity_index": -0.1
+      },
+      {
+        "mean_abs_rel_dev": 0.006197156256945785,
+        "temperature_K": 5800.0,
+        "metallicity_index": 0.1
+      }
+    ],
+    "top5_grid_curves_refit_C": [
+      {
+        "mean_abs_rel_dev": 0.0013855951512459564,
+        "temperature_K": 5800.0,
+        "metallicity_index": 0.0
+      },
+      {
+        "mean_abs_rel_dev": 0.0017092408629291375,
+        "temperature_K": 5800.0,
+        "metallicity_index": -0.05
+      },
+      {
+        "mean_abs_rel_dev": 0.0018432895840013643,
+        "temperature_K": 5800.0,
+        "metallicity_index": 0.05
+      },
+      {
+        "mean_abs_rel_dev": 0.0030192396517038276,
+        "temperature_K": 5800.0,
+        "metallicity_index": -0.1
+      },
+      {
+        "mean_abs_rel_dev": 0.0031238923238879755,
+        "temperature_K": 5800.0,
+        "metallicity_index": 0.1
+      }
+    ],
+    "median_mean_abs_rel_dev": 0.06657407999766829,
+    "winner_temperature_K": 5800.0,
+    "winner_metallicity_index": 0.0,
+    "fixed_C": {
+      "best_non_winner": 0.003100165740249172,
+      "separation_factor_vs_next": 2.2374253673314586,
+      "best_other_temperature": 6300.0,
+      "separation_factor_vs_other_temperature": 42.95447272780748
+    },
+    "refit_C": {
+      "best_non_winner": 0.0017092408629291375,
+      "separation_factor_vs_next": 1.233578842558847,
+      "best_other_temperature": 6300.0,
+      "separation_factor_vs_other_temperature": 31.495971002533157
+    },
+    "reading": "Refitting the constant per candidate leaves the winner unchanged (5800 K, M=0.0) and leaves the TEMPERATURE identification strongly separated, but collapses the margin among neighbouring metallicities. The assignment is therefore well identified in temperature and only weakly separated in metallicity, which is expected given the ranking of adjacent levels."
+  },
+  "photon_to_energy_boundary": {
+    "deviation_curve_sampled_nm": {
+      "180": 3.099287599202025,
+      "200": 2.483635476520478,
+      "220": 2.0409224183045764,
+      "240": 1.7391573348150589,
+      "260": 1.4569506683527944,
+      "280": 1.2426068127000425,
+      "296": 1.1391314279462623,
+      "299": 4.53450138491878,
+      "300": 4.969059043674298,
+      "305": 5.069769121430908,
+      "310": 4.953024669044815,
+      "315": 4.973055677188885,
+      "320": 5.044011534847891,
+      "322": 2.5621589039056536,
+      "326": 2.5305486451250214,
+      "330": 1.014789514466505,
+      "340": 0.9998962550408799,
+      "400": 1.0128148924242042,
+      "500": 0.9977394805787902,
+      "700": 0.9977566836288895,
+      "850": 0.9971942031911318
+    },
+    "holds_from_nm": 330.0,
+    "reason": "rel-std of level*wavelength/F stays <= 0.3% over 330-850 nm and grows monotonically blueward of ~330 nm"
+  },
+  "optical_residual_structure": {
+    "rel_std_of_fit": 0.002464721580864216,
+    "lag1_autocorrelation_of_residual": -0.32310685102432596,
+    "corr_residual_with_grid_log_slope": 0.8301505267573347,
+    "corr_residual_with_grid_log_flux": -0.03122226397648171
+  }
+}

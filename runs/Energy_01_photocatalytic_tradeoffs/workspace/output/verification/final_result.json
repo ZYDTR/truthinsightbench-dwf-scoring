@@ -1,0 +1,114 @@
+{
+  "target": "relation between action-response spectrum and absorption spectrum (optical_action_spectra.tsv)",
+  "recomputed": {
+    "absorption_at_action_wavelengths": {
+      "400.0": 0.887,
+      "450.0": 0.861,
+      "500.0": 0.85,
+      "550.0": 0.585,
+      "600.0": 0.364,
+      "650.0": 0.201
+    },
+    "ratio_statistic_400_to_650": 0.22797451855115566,
+    "ratio_statistic_450_to_650": 0.2178092587907918,
+    "ratio_statistic_all_15_pairs": {
+      "400->450": 1.0466704667046671,
+      "400->500": 1.039678749728674,
+      "400->550": 0.9623363925946954,
+      "400->600": 0.5275265939472582,
+      "400->650": 0.22797451855115566,
+      "450->400": 0.955410544016204,
+      "450->500": 0.993320039880359,
+      "450->550": 0.9194263363754891,
+      "450->600": 0.5040044701061651,
+      "450->650": 0.2178092587907918,
+      "500->400": 0.9618355672470668,
+      "500->450": 1.0067248820636354,
+      "500->550": 0.9256093700538145,
+      "500->600": 0.5073938407271741,
+      "500->650": 0.21927400036852773,
+      "550->400": 1.0391376733698643,
+      "550->450": 1.0876347135564377,
+      "550->500": 1.0803693570451436,
+      "550->600": 0.5481727574750831,
+      "550->650": 0.23689691079486289,
+      "600->400": 1.8956390283898736,
+      "600->450": 1.9841093865484105,
+      "600->500": 1.9708556149732617,
+      "600->550": 1.8242424242424242,
+      "600->650": 0.43215739484396193,
+      "650->400": 4.38645514575616,
+      "650->450": 4.5911730545876885,
+      "650->500": 4.560504201680672,
+      "650->550": 4.221245421245421,
+      "650->600": 2.3139717425431714
+    },
+    "best_single_scale_fit": {
+      "s": 90.2184681557588,
+      "rmse": 8.871782958448726,
+      "r2": 0.922551235828072,
+      "s_free_intercept_slope": 119.4146463282089,
+      "intercept": -21.544349073021166
+    },
+    "holdout_le500": {
+      "s_fit": 94.23382313082347,
+      "predictions": {
+        "550": {
+          "observed": 51.6,
+          "predicted": 55.12678653153173,
+          "rel_err_pct": 6.834857619247532
+        },
+        "600": {
+          "observed": 17.6,
+          "predicted": 34.30111161961974,
+          "rel_err_pct": 94.89267965693031
+        },
+        "650": {
+          "observed": 4.2,
+          "predicted": 18.940998449295517,
+          "rel_err_pct": 350.9761535546551
+        }
+      }
+    }
+  },
+  "comparison_to_reported": {
+    "absorption_400": 0.887,
+    "absorption_450": 0.861,
+    "absorption_500": 0.85,
+    "absorption_550": 0.585,
+    "absorption_600": 0.364,
+    "absorption_650": 0.201,
+    "ratio_400_650_recomputed": 0.22797,
+    "ratio_400_650_reported": 0.228,
+    "ratio_450_650_recomputed": 0.21781,
+    "ratio_450_650_reported": 0.218,
+    "fit_s_recomputed_all6": 90.21847,
+    "rmse_recomputed": 8.87178,
+    "r2_recomputed": 0.922551,
+    "rmse_reported": 8.872,
+    "r2_reported": 0.92255,
+    "s_reported": 94.2,
+    "s_94.2338_rmse": 9.28119,
+    "s_94.2338_r2": 0.915238,
+    "holdout_s_fit_le500": 94.23382,
+    "holdout_pred_650": 18.941,
+    "holdout_obs_650": 4.2,
+    "holdout_pred_600": 34.301,
+    "holdout_obs_600": 17.6,
+    "holdout_pred_550": 55.127,
+    "holdout_obs_550": 51.6
+  },
+  "agrees_with_reported": false,
+  "discrepancies": [
+    "Best single-scale s: reported 94.2; through-origin LSQ on all six points gives s=90.2185.",
+    "The reported RMSE 8.872 / R2 0.92255 are only reproduced by s=90.2185, not by s=94.2 (s=94.2 gives RMSE 9.2812, R2 0.91524) - reported s and reported RMSE/R2 are mutually inconsistent.",
+    "s=94.2338 is instead the through-origin slope fitted on the <=500 nm subset only (the holdout fit); it was evidently reported as the full-range s."
+  ],
+  "agreements": [
+    "Absorption values at all six action wavelengths match exactly (0.887, 0.861, 0.85, 0.585, 0.364, 0.201); exact 0.5 nm grid lookup, no interpolation needed.",
+    "Ratio statistic (400->650) = 0.22797 ~ 0.228 reported; (450->650) = 0.21781 ~ 0.218 reported.",
+    "All 15 probe/ref pairs computed; the 65-> pairs vary 0.218-0.237, far below 1, indicating action/absorption mismatch.",
+    "Holdout fit on <=500 nm: s=94.2338, predicted action at 650 nm = 18.941 vs observed 4.2 (relative error +351%)."
+  ],
+  "method_notes": "Absorption values taken by exact nearest-grid lookup (wavelengths coincide exactly with the 0.5 nm grid; asserted unique match). Ratio statistic R = (action_probe/action_ref)/(abs_probe/abs_ref) for all 30 ordered pairs (15 unordered). Single-scale fit action ~ s*absorption fitted through the origin by ordinary least squares s = sum(A*y)/sum(A^2) on all six action points. R2 computed as 1 - SSE/SST against the 6-point mean. Holdout: s refit through origin on the three points with lambda<=500 nm, then applied to 550/600/650 nm; relative error = (pred-obs)/obs*100. Note: one curve in each modality, so the 6 points of each are one trajectory (wavelengths are not independent replicates); only 6 action points, so fit statistics are low-power. Runtime negligible."
+}

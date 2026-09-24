@@ -1,0 +1,21 @@
+{
+  "task_id": "Neuro_02_calcium_response_regions",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260922T150042-b2e603",
+  "source_run_json_sha256": "26d7912801232f41b242e5987c5632f2f56956bfcb9ffdee0655c5e0298a3f81",
+  "source_release_json_sha256": "2c4d6b18a1da31b2d1578f8e80c0f946aee28ede1155ae48b6089ada4a3b8538",
+  "source_latest_validation_sha256": "878492a8f77ba8e7ce381883c9d267881b78692f38cf6f7ac8c42adef9297d5c",
+  "source_snapshot_manifest_sha256": "4d524b8ad330a85a9391003379b53648f697c0ae299111d25976323587f0aa09",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 254
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 4,
+  "input_sha256": "27f397617021d719e198c557fb0c799fa0c06e79ab2ebdd7ab9999c0a33d8b84",
+  "output_sha256": "453361373f429b9bd7977a6131618c83d43363b8141d9aa3cf6ad4594e9f0445"
+}

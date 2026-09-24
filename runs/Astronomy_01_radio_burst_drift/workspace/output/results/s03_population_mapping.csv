@@ -1,0 +1,13 @@
+population_series_id,drift_regime,group,channel,n_bins,events,workbook_sheet,workbook_label,match
+population_series_1,fast,anonymous_group_1,channel_l,26,10560.0,Sheet_025,"group_a (-35<s<-10), channel_l",exact
+population_series_1,slow,anonymous_group_1,channel_l,137,892.0,,,UNMATCHED
+population_series_2,fast,anonymous_group_1,channel_r,26,14492.0,Sheet_027,"group_a (-35<s<-10), channel_r",exact
+population_series_2,slow,anonymous_group_1,channel_r,131,1303.0,,,UNMATCHED
+population_series_3,fast,anonymous_group_2,channel_l,24,357.0,Sheet_029,"group_b (-35<s<-10), channel_l",exact
+population_series_3,slow,anonymous_group_2,channel_l,139,803.0,,,UNMATCHED
+population_series_4,fast,anonymous_group_2,channel_r,21,52.0,Sheet_031,"group_b (-35<s<-10), channel_r",exact
+population_series_4,slow,anonymous_group_2,channel_r,132,392.0,,,UNMATCHED
+population_series_5,fast,anonymous_group_3,channel_l,24,429.0,Sheet_033,"group_c (-35<s<-10), channel_l",exact
+population_series_5,slow,anonymous_group_3,channel_l,127,1092.0,,,UNMATCHED
+population_series_6,fast,anonymous_group_3,channel_r,25,664.0,Sheet_035,"group_c (-35<s<-10), channel_r",exact
+population_series_6,slow,anonymous_group_3,channel_r,136,2201.0,,,UNMATCHED

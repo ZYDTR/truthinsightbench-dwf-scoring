@@ -1,0 +1,113 @@
+rows total 1931, rows with sulfate 1930  (dropped 1 NaN at depth [1.74] m)
+depth c01 range 0.00-41.98 m ; water-equiv c06 range 0.00-27.06 m
+log10 sulfate: mean 1.9725 dex, sd 0.1742 dex
+
+==============================================================================
+PART 1 -- point correlation and shallow/deep contrast (recomputation)
+==============================================================================
+(a) Pearson r(log10 c04, c01 depth) = +0.070496   R2 = 0.004970
+    OLS slope = +0.001054 dex/m ; naive SE = 0.000340 ; naive p = 0.001943
+    Spearman rho = +0.0630 (p=0.005624)
+    r(log10 c04, c05 density)  = +0.071062
+    r(log10 c04, c06 w-equiv)  = +0.071439
+(b) own i.i.d. permutation test (4000 draws): p = 0.0010 (claim quotes 0.003)
+(c) shallow/deep contrast (split at median of ALL 1931 depths = row 966):
+    n_shallow = 964, n_deep = 966
+    observed contrast = -0.012794 dex          (claim: -0.0128 dex)
+    convention check, median over the 1930 valid rows: n_shallow=965, contrast = -0.012864 dex
+    convention check, mean split: n_shallow=953, contrast = -0.015163 dex
+
+==============================================================================
+PART 2 -- serial-correlation-aware uncertainty (own methods)
+==============================================================================
+lag-1 autocorrelation of log10(sulfate) = 0.7179  (claim mentions rho_used ~0.718)
+ACF lags 1-8  : [0.718 0.603 0.466 0.372 0.259 0.197 0.122 0.095]
+ACF lags 9-16 : [0.053 0.047 0.041 0.06  0.044 0.08  0.074 0.085]
+first negative ACF lag: 27
+(A) effective sample size:
+    Bartlett  n(1-r1)/(1+r1)      = 317.0  (nominal n = 1930)
+    Geyer initial-positive-seq    = 194.3  (tau=9.93)
+    Bartlett: SE(r) = 0.05589 ; 95% CI for r = [-0.0390, +0.1800] ; p = 0.207 (spans zero)
+    Geyer   : SE(r) = 0.07138 ; 95% CI for r = [-0.0694, +0.2104] ; p = 0.323 (spans zero)
+(B) Gaussian AR(1) errors, rho by exact profile MLE, GLS/whitened regression:
+    rho_MLE = 0.7170
+    GLS slope = +0.001025 dex/m ; AR(1)-GLS SE = 0.000833 (naive OLS SE 0.000340; inflation x2.5)
+    95% CI = [-0.000609, +0.002659] ; p = 0.219  (SPANS zero)
+(C) stationary bootstrap (Politis-Romano geometric blocks), 2000 reps:
+    mean block   25: r 95% CI [-0.0395, +0.1828]  sd=0.0575  spans zero
+    mean block   50: r 95% CI [-0.0473, +0.1851]  sd=0.0620  spans zero
+    mean block  100: r 95% CI [-0.0465, +0.1885]  sd=0.0601  spans zero
+    mean block  200: r 95% CI [-0.0510, +0.1796]  sd=0.0579  spans zero
+    mean block  400: r 95% CI [-0.0300, +0.1463]  sd=0.0468  spans zero
+    same for the shallow/deep contrast:
+    contrast, mean block   25: 95% CI [-0.0541, +0.0297] dex  P(>0)=0.277  (degenerate reps 0/2000)  spans zero
+    contrast, mean block   50: 95% CI [-0.0586, +0.0303] dex  P(>0)=0.276  (degenerate reps 0/2000)  spans zero
+    contrast, mean block  100: 95% CI [-0.0564, +0.0281] dex  P(>0)=0.306  (degenerate reps 0/2000)  spans zero
+    contrast, mean block  200: 95% CI [-0.0578, +0.0282] dex  P(>0)=0.298  (degenerate reps 1/2000)  spans zero
+    contrast, mean block  400: 95% CI [-0.0515, +0.0265] dex  P(>0)=0.290  (degenerate reps 2/2000)  spans zero
+    contrast, AR(1)-GLS (rho_MLE=0.7180): diff = -0.013456 dex, SE = 0.01937
+      95% CI [-0.051439, +0.024527] ; p = 0.487  (SPANS zero)
+(D) block permutation test (consecutive blocks of y permuted, 2000 perms):
+    block length   50: p = 0.2600  (null |r| sd = 0.0607)
+    block length  100: p = 0.2870  (null |r| sd = 0.0626)
+    block length  200: p = 0.2830  (null |r| sd = 0.0600)
+(E) Newey-West HAC SE of the OLS slope:
+    lag   7: SE = 0.000699, 95% CI = [-0.000317, +0.002425], p = 0.132  (spans zero)
+    lag  27: SE = 0.000848, 95% CI = [-0.000607, +0.002715], p = 0.214  (spans zero)
+    lag  50: SE = 0.000932, 95% CI = [-0.000773, +0.002880], p = 0.258  (spans zero)
+
+==============================================================================
+PART 3 -- CRITICAL ATTACK: power and minimum detectable slope
+==============================================================================
+observed |slope| = 0.001054 dex/m ; rho = 0.717 ; sigma_innov = 0.1212 dex
+minimum detectable |slope| at 80% power, alpha=0.05 (two-sided):
+    naive OLS  (ignores autocorrelation) : 0.000952 dex/m  <- INVALID (type-I error inflated, see size check)
+    OLS with analytic AR(1) variance     : 0.002339 dex/m (SE 0.000835)
+    AR(1) GLS (efficient, rho known)     : 0.002335 dex/m   <- best case
+observed/MDES(AR1-GLS) = 0.45
+    a trend of 0.00095 dex/m would give 0.0400 dex (1.096x sulfate) across the 41.98 m core
+    a trend of 0.00234 dex/m would give 0.0980 dex (1.253x sulfate) across the 41.98 m core
+whereas the OBSERVED point estimate is +0.0442 dex (1.107x)
+validation, 800 AR(1) simulations with NO trend (rho=0.717, sigma_innov=0.1212):
+    simulated SD(OLS slope) = 0.000838 vs analytic OLS-AR(1) SE 0.000835 (ratio 1.004) -> analytic formula validated
+    simulated SE(GLS slope) = 0.000833 vs analytic GLS SE 0.000833 (ratio 0.999) -> efficient, ratio OLS/GLS = 1.00
+    naive OLS t-test rejects at 5% in 42.1% of runs -> its p-values are fiction
+    AR(1)-GLS t-test rejects at 5% in 5.2% of runs -> calibrated
+    slope 0.00050 dex/m -> power GLS 0.135 | naive OLS 0.512
+    slope 0.00100 dex/m -> power GLS 0.210 | naive OLS 0.680
+    slope 0.00150 dex/m -> power GLS 0.430 | naive OLS 0.823
+    slope 0.00200 dex/m -> power GLS 0.662 | naive OLS 0.930
+    slope 0.00220 dex/m -> power GLS 0.743 | naive OLS 0.973
+    slope 0.00250 dex/m -> power GLS 0.860 | naive OLS 0.993
+    slope 0.00300 dex/m -> power GLS 0.955 | naive OLS 0.998
+    slope 0.00400 dex/m -> power GLS 0.998 | naive OLS 1.000
+    slope 0.00600 dex/m -> power GLS 1.000 | naive OLS 1.000
+    slope 0.00800 dex/m -> power GLS 1.000 | naive OLS 1.000
+    simulated MDES(80% power, AR(1)-GLS) by interpolation = 0.002347 dex/m
+    analytic  MDES(80% power, AR(1)-GLS)                   = 0.002335 dex/m
+VERDICT OF THE POWER ATTACK:
+    the record can exclude only |trend| > ~0.0023 dex/m (1.25x over 42.0 m, ~0.9 kyr).
+    the 95% CI upper bound on the slope is +0.002659 dex/m = 1.29x, so a rise of up to 29% across the core is NOT excluded.
+    a 2x (100%) increase would need 0.00717 dex/m -> power ~1.0; strongly excluded.
+
+==============================================================================
+PART 4 -- sensitivity: c06 abscissa, and the 15 dated horizons only
+==============================================================================
+(a) water-equivalent depth c06 instead of c01
+    r = +0.071439 (R2=0.005104) ; OLS slope = +0.001631 dex/m
+    rho_MLE = 0.7169 ; AR(1)-GLS slope = +0.001575 dex/m, SE = 0.001272
+    95% CI [-0.000920, +0.004070], p = 0.216 (spans zero)
+    MDES(80%, AR1-GLS) = 0.003566 dex per m water-equivalent; range 27.06 m w.e. -> 1.25x
+    NOTE: c06 is cm-rounded (19 pairs of exactly-equal consecutive values); c01 is finer-grained.
+(b) 15 dated horizons only
+    dated rows in the full table: 15 (all retained, none is the sulfate-NaN row) -> values below are on exactly those rows
+    n = 15 ; depth span 0.00-40.59 m ; age span 2018-1172 CE
+    mean log10 sulfate on dated horizons = 2.5321 dex vs 1.9725 dex for the full record (+0.560 dex SELECTION SHIFT -- dated horizons are sulfate-enriched)
+    r(log10 c04, c01) = +0.2685 ; OLS slope +0.004714 dex/m, naive SE 0.004689, p = 0.333
+    r(log10 c04, c06) = +0.2344
+    Spearman rho = +0.200 (p=0.475)
+    lag-1 autocorrelation within the 15 dated values = +0.129
+    MDES(80% power) with n=15 naive = 0.014215 dex/m (3.78x over the dated span)
+    -> the dated subsample is ~6.1x less sensitive than the full record; it cannot resolve anything below 0.0142 dex/m
+
+figure written: /data/user/conversations/conv-f07721cb-d3dc-42e9-83c7-7e986203115b/project/output/verification/figures/verify_draft3_sulfate_trend.png

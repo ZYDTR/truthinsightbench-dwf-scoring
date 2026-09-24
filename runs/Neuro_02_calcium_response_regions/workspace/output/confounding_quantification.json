@@ -1,0 +1,69 @@
+{
+  "region_condition_confound": {
+    "full_model_region3_vs_region1_AUC_coef": 20.3815,
+    "full_model_region3_vs_region1_AUC_p": 9e-05,
+    "within_receptor_stimulated_AUC": {
+      "region_1": 385.5526,
+      "region_2": 385.0681,
+      "region_3": 415.6382,
+      "region_3_vs_region_1_receptor": 30.0856,
+      "region_2_vs_region_1_receptor": -0.4845,
+      "region_1_n": 226,
+      "region_2_n": 199,
+      "region_3_n": 189
+    },
+    "region_4_AUC_non_receptor": 301.798,
+    "region_4_n_non_receptor": 50,
+    "interpretation": "The full-model region_3 AUC contrast is driven by region_3 being sampled only under receptor_stimulated. Within receptor_stimulated the region_3 vs region_1 AUC gap is much smaller."
+  },
+  "batch_age_confound": {
+    "n_batches": 9,
+    "all_batches_single_age": 9,
+    "mapping": {
+      "recording_batch_01": 56,
+      "recording_batch_02": 59,
+      "recording_batch_03": 40,
+      "recording_batch_04": 41,
+      "recording_batch_05": 42,
+      "recording_batch_06": 65,
+      "recording_batch_07": 66,
+      "recording_batch_08": 67,
+      "recording_batch_09": 42
+    },
+    "age_unique_values": [
+      40,
+      41,
+      42,
+      56,
+      59,
+      65,
+      66,
+      67
+    ],
+    "note": "Each batch has exactly one age, so batch and age are perfectly confounded and cannot be separated in this data.",
+    "rank_deficient_model": {
+      "model": "AUC ~ age + batch + condition + region",
+      "exog_rank": 14,
+      "n_params": 15,
+      "is_singular": true
+    }
+  },
+  "vif_full_model": {
+    "max_vif": 31.3948,
+    "vif": {
+      "C(region, Treatment(reference='region_1'))[T.region_2]": 1.3768,
+      "C(region, Treatment(reference='region_1'))[T.region_3]": 1.445,
+      "C(region, Treatment(reference='region_1'))[T.region_4]": 1.4853,
+      "C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": 2.0656,
+      "C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": 2.4985,
+      "C(batch)[T.recording_batch_02]": 25.8146,
+      "C(batch)[T.recording_batch_03]": 23.613,
+      "C(batch)[T.recording_batch_04]": 31.3948,
+      "C(batch)[T.recording_batch_05]": 9.6137,
+      "C(batch)[T.recording_batch_06]": 11.2472,
+      "C(batch)[T.recording_batch_07]": 28.8902,
+      "C(batch)[T.recording_batch_08]": 24.4887,
+      "C(batch)[T.recording_batch_09]": 29.2899
+    }
+  }
+}

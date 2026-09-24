@@ -1,0 +1,102 @@
+sheet,block_label,block_class,n,y_sum,status,normalized_counterpart,note
+Sheet_001,Gan(channel_l),table,1207,402643.975103965,absent,,CML-angle vs phase-angle path samples
+Sheet_001,Gan(channel_r),table,493,160037.44519786397,absent,,CML-angle vs phase-angle path samples
+Sheet_001,group_a (channel_l),table,11517,1581284.2978209793,absent,,CML-angle vs phase-angle path samples
+Sheet_001,group_a(channel_r),table,15856,1552302.6416074322,absent,,CML-angle vs phase-angle path samples
+Sheet_001,group_c (channel_l),table,1656,402375.7882265663,absent,,CML-angle vs phase-angle path samples
+Sheet_001,group_c (channel_r),table,2902,708339.0765306731,absent,,CML-angle vs phase-angle path samples
+Sheet_002,Ganymed(channel_l),table,1207,291078.3750809202,absent,,CML-angle vs phase-angle path samples
+Sheet_002,group_a(channel_l),table,11517,873403.1173444499,absent,,CML-angle vs phase-angle path samples
+Sheet_002,group_a(channel_r),table,15856,1377480.4978026352,absent,,CML-angle vs phase-angle path samples
+Sheet_002,group_b(channel_r),table,493,117800.0747528153,absent,,CML-angle vs phase-angle path samples
+Sheet_002,group_c(channel_l),table,1656,250676.8967868631,absent,,CML-angle vs phase-angle path samples
+Sheet_002,group_c(channel_r),table,2902,448184.9200559725,absent,,CML-angle vs phase-angle path samples
+Sheet_003,Image,image,0,,image,,dynamic-spectrum pixel grid
+Sheet_004,Image,image,0,,image,,dynamic-spectrum pixel grid
+Sheet_005,Image,image,0,,image,,dynamic-spectrum pixel grid
+Sheet_006,Image,image,0,,image,,dynamic-spectrum pixel grid
+Sheet_007,Image,image,0,,image,,dynamic-spectrum pixel grid
+Sheet_008,Image,image,0,,image,,dynamic-spectrum pixel grid
+Sheet_009,"group_a (-35<s<-10), channel_l",table,25,10560.0,aggregate,orientation_series_1,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_009,"group_a(-10<s<0), channel_l",table,10,790.0,aggregate,orientation_series_1,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_009,"group_a(0<s<20), channel_l",table,20,102.0,aggregate,orientation_series_1,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_010,"group_a (-35<s<-10), channel_r",table,25,14492.0,aggregate,orientation_series_2,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_010,"group_a(-10<s<0), channel_r",table,10,1126.0,aggregate,orientation_series_2,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_010,"group_a(0<s<20), channel_r",table,20,177.0,aggregate,orientation_series_2,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_011,"group_b (-35<s<-10), channel_l",table,25,357.0,aggregate,orientation_series_3,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_011,"group_b(-10<s<0), channel_l",table,10,580.0,aggregate,orientation_series_3,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_011,"group_b(0<s<20), channel_l",table,20,223.0,aggregate,orientation_series_3,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_012,"group_b (-35<s<-10), channel_r",table,25,52.0,aggregate,orientation_series_4,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_012,"group_b(-10<s<0), channel_r",table,10,155.0,aggregate,orientation_series_4,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_012,"group_b(0<s<20), channel_r",table,20,237.0,aggregate,orientation_series_4,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_013,"group_c (-35<s<-10), channel_l",table,25,429.0,aggregate,orientation_series_5,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_013,"group_c(-10<s<0), channel_l",table,10,601.0,aggregate,orientation_series_5,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_013,"group_c(0<s<20), channel_l",table,20,491.0,aggregate,orientation_series_5,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_014,"group_c (-35<s<-10), channel_r",table,25,664.0,aggregate,orientation_series_6,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_014,"group_c(-10<s<0), channel_r",table,10,1680.0,aggregate,orientation_series_6,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_014,"group_c(0<s<20), channel_r",table,20,521.0,aggregate,orientation_series_6,3 blocks of 25/10/20 x 55 points; normalized series = the three blocks concatenated with the FIRST point of each block dropped (52 points)
+Sheet_015,Image,image,0,,image,,dynamic-spectrum pixel grid
+Sheet_016,Image,image,0,,image,,dynamic-spectrum pixel grid
+Sheet_017,Image,image,0,,image,,dynamic-spectrum pixel grid
+Sheet_018,Image,image,0,,image,,dynamic-spectrum pixel grid
+Sheet_019,RD_box_of_ones,table,1336,637184.0495605469,absent,,radial-distance / fit / SNR block
+Sheet_019,RD_raw,table,264,148888.41459673396,absent,,radial-distance / fit / SNR block
+Sheet_020,Fit,table,178,32.25927076939776,absent,,radial-distance / fit / SNR block
+Sheet_020,RD_corr,table,264,148888.4154,absent,,radial-distance / fit / SNR block
+Sheet_020,RD_corr_centered,table,178,32.25927291684183,absent,,radial-distance / fit / SNR block
+Sheet_020,params,table,1,0.0,absent,,radial-distance / fit / SNR block
+Sheet_021,Image,image,0,,image,,dynamic-spectrum pixel grid
+Sheet_022,Image,image,0,,image,,dynamic-spectrum pixel grid
+Sheet_023,Fit,table,178,0.7738177004585043,absent,,radial-distance / fit / SNR block
+Sheet_023,RD_corr,table,178,0.774738237026708,absent,,radial-distance / fit / SNR block
+Sheet_023,RD_corr_centered,table,178,0.7747382370267077,absent,,radial-distance / fit / SNR block
+Sheet_023,params,table,1,0.0,absent,,radial-distance / fit / SNR block
+Sheet_024,"group_a(-10<s<0), channel_l",table,29,790.0,aggregate,population_series_1|slow,52/55 points kept; the other block of the same sheet supplies the other substride; union == normalized slow series exactly
+Sheet_024,"group_a(0<s<20), channel_l",table,108,102.0,aggregate,population_series_1|slow,52/55 points kept; the other block of the same sheet supplies the other substride; union == normalized slow series exactly
+Sheet_025,"group_a (-35<s<-10), channel_l",table,26,10560.0,exact,population_series_1|fast,"identical (x,y) to the normalized fast series"
+Sheet_026,"group_a(-10<s<0), channel_r",table,29,1126.0,aggregate,population_series_2|slow,52/55 points kept; the other block of the same sheet supplies the other substride; union == normalized slow series exactly
+Sheet_026,"group_a(0<s<20), channel_r",table,102,177.0,aggregate,population_series_2|slow,52/55 points kept; the other block of the same sheet supplies the other substride; union == normalized slow series exactly
+Sheet_027,"group_a (-35<s<-10), channel_r",table,26,14492.0,exact,population_series_2|fast,"identical (x,y) to the normalized fast series"
+Sheet_028,"group_b(-10<s<0), channel_l",table,24,580.0,aggregate,population_series_3|slow,52/55 points kept; the other block of the same sheet supplies the other substride; union == normalized slow series exactly
+Sheet_028,"group_b(0<s<20), channel_l",table,115,223.0,aggregate,population_series_3|slow,52/55 points kept; the other block of the same sheet supplies the other substride; union == normalized slow series exactly
+Sheet_029,"group_b (-35<s<-10), channel_l",table,24,357.0,exact,population_series_3|fast,"identical (x,y) to the normalized fast series"
+Sheet_030,"group_b(-10<s<0), channel_r",table,17,155.0,aggregate,population_series_4|slow,52/55 points kept; the other block of the same sheet supplies the other substride; union == normalized slow series exactly
+Sheet_030,"group_b(0<s<20), channel_r",table,115,237.0,aggregate,population_series_4|slow,52/55 points kept; the other block of the same sheet supplies the other substride; union == normalized slow series exactly
+Sheet_031,"group_b (-35<s<-10), channel_r",table,21,52.0,exact,population_series_4|fast,"identical (x,y) to the normalized fast series"
+Sheet_032,"group_c(-10<s<0), channel_l",table,26,601.0,aggregate,population_series_5|slow,52/55 points kept; the other block of the same sheet supplies the other substride; union == normalized slow series exactly
+Sheet_032,"group_c(0<s<20), channel_l",table,101,491.0,aggregate,population_series_5|slow,52/55 points kept; the other block of the same sheet supplies the other substride; union == normalized slow series exactly
+Sheet_033,"group_c (-35<s<-10), channel_l",table,24,429.0,exact,population_series_5|fast,"identical (x,y) to the normalized fast series"
+Sheet_034,"group_c(-10<s<0), channel_r",table,28,1680.0,aggregate,population_series_6|slow,52/55 points kept; the other block of the same sheet supplies the other substride; union == normalized slow series exactly
+Sheet_034,"group_c(0<s<20), channel_r",table,108,521.0,aggregate,population_series_6|slow,52/55 points kept; the other block of the same sheet supplies the other substride; union == normalized slow series exactly
+Sheet_035,"group_c (-35<s<-10), channel_r",table,25,664.0,exact,population_series_6|fast,"identical (x,y) to the normalized fast series"
+Sheet_036,Image,image,0,,image,,dynamic-spectrum pixel grid
+Sheet_037,Image,image,0,,image,,dynamic-spectrum pixel grid
+Sheet_038,Fit,table,178,2.4578234717390046,absent,,radial-distance / fit / SNR block
+Sheet_038,RD_corr,table,178,2.4578058499272464,absent,,radial-distance / fit / SNR block
+Sheet_038,RD_corr_centered,table,178,2.4578058499272464,absent,,radial-distance / fit / SNR block
+Sheet_038,params,table,1,0.0,absent,,radial-distance / fit / SNR block
+Sheet_039,"group_a (-35<s<-10), channel_l",table,20,10570.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_039,"group_a(-10<s<0), channel_l",table,20,809.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_039,"group_a(0<s<20), channel_l",table,20,122.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_040,"group_a (-35<s<-10), channel_r",table,20,14498.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_040,"group_a(-10<s<0), channel_r",table,20,1144.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_040,"group_a(0<s<20), channel_r",table,30,207.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_041,"group_b (-35<s<-10), channel_l",table,20,352.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_041,"group_b(-10<s<0), channel_l",table,20,579.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_041,"group_b(0<s<20), channel_l",table,20,222.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_042,"group_b (-35<s<-10), channel_r",table,20,51.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_042,"group_b(-10<s<0), channel_r",table,20,148.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_042,"group_b(0<s<20), channel_r",table,20,234.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_043,"group_c (-35<s<-10), channel_l",table,20,423.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_043,"group_c(-10<s<0), channel_l",table,20,596.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_043,"group_c(0<s<20), channel_l",table,20,491.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_044,"group_c (-35<s<-10), channel_r",table,20,663.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_044,"group_c(-10<s<0), channel_r",table,20,1671.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_044,"group_c(0<s<20), channel_r",table,20,518.0,absent,,1.75 MHz/s coarse re-binning; totals differ slightly from every normalized series
+Sheet_045,<none>,empty,0,0.0,empty,,sheet has a single blank cell
+Sheet_046,"group_b C(-10<s<0), channel_l",table,20,562.0,absent,,"third orientation block family, no normalized counterpart"
+Sheet_046,"group_b C(-35<s<-10), channel_l",table,25,335.0,absent,,"third orientation block family, no normalized counterpart"
+Sheet_046,"group_b C(0<s<20), channel_l",table,20,180.0,absent,,"third orientation block family, no normalized counterpart"
+Sheet_047,"group_b C(-10<s<0), channel_l",table,20,145.0,absent,,"third orientation block family, no normalized counterpart"
+Sheet_047,"group_b C(-35<s<-10), channel_l",table,25,48.0,absent,,"third orientation block family, no normalized counterpart"
+Sheet_047,"group_b C(0<s<20), channel_l",table,20,198.0,absent,,"third orientation block family, no normalized counterpart"

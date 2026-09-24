@@ -1,0 +1,2346 @@
+{
+  "workstream": "w5_audit",
+  "project_root": "/data/user/conversations/conv-ab8a0c4c-4c0f-46e9-96bb-16e130938d6a/project",
+  "data_root": "/data/user/conversations/conv-ab8a0c4c-4c0f-46e9-96bb-16e130938d6a/project/data",
+  "filter_rules": {
+    "read": "pd.read_csv(path, sep='\\t', dtype=str) for .tsv; sep=',' with encoding='latin-1' for the Chen CSV",
+    "numeric": "blank / 'nan' / 'NA' / 'nd' -> NaN via numify(), then pd.to_numeric(errors='coerce')",
+    "erosion_rate": "'Erosion rate (mm/yr)' restricted to > 0 (rate <= 0 flagged, excluded from log models); logER = log10(rate)",
+    "time_interval": "'Time interval (yr)' restricted to > 0 and non-missing; logTI = log10(interval)",
+    "area": "logA = log10(Area (km2)); Area == 1e-8 flagged as placeholder (see audit)",
+    "age_type_conflict": "'Geologic age' (Exhumation-style / long-term) rows are NOT excluded here, but flagged when Time interval > 1e8 yr",
+    "duplicate_marker": "exact full-row duplicate OR duplicate on (Compilation, Reference, Locality, Methodology, Erosion rate, Time interval, Area)",
+    "independence_unit": "one published erosion-rate estimate per row; Reference is the publication key",
+    "key": "(Latitude rounded 5 dp, Longitude rounded 5 dp)"
+  },
+  "files": {
+    "n_files_on_disk": 21,
+    "n_files_in_manifest": 21,
+    "n_manifest_raw_entries": 21,
+    "all_bytes_match": true,
+    "all_sha256_match": true,
+    "n_mismatch": 0,
+    "n_absent_from_manifest": 0,
+    "absent_from_manifest": [],
+    "manifest_entries_absent_from_disk": [],
+    "manifest_entries_outside_raw_prefix": [],
+    "per_file": [
+      {
+        "path": "raw/beryllium.tsv",
+        "bytes": 9363,
+        "sha256": "cde5b0794baf9622e74e9749fd38514cfd9ab63fb54250baf6a15777c983e4d2",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/glacial_erosion_Earth.tsv",
+        "bytes": 117004,
+        "sha256": "b49192d77082fd431963ca67278d9face1079e8054711b84296554573c24e2cf",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/lithology_parsed.tsv",
+        "bytes": 25837,
+        "sha256": "cfeb948dfc91fb3f9bb8a511ac4b06db49950cb9ae9ac5a4a6dbeeb0e3a5fe52",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/lithology_parsed_nonglacial.tsv",
+        "bytes": 555816,
+        "sha256": "613eed80774145e0ab4fc02842845b9c8235210a9375e52e0edb1ae074e074c9",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/lithology_reference.tsv",
+        "bytes": 225,
+        "sha256": "fa1f1ac37fe320193b0ecc0b932d0a874da0e89070952d64b634d3d5ed08a114",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/lithology_reference_nonglacial.tsv",
+        "bytes": 225,
+        "sha256": "fa1f1ac37fe320193b0ecc0b932d0a874da0e89070952d64b634d3d5ed08a114",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/lithology_unparsed.tsv",
+        "bytes": 63752,
+        "sha256": "a35c4508e54560a3e47b14e30f4e3ea8346e150770ef11c96634c10f3e5add54",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/lithology_unparsed_nonglacial.tsv",
+        "bytes": 1385057,
+        "sha256": "f78b0da0b02e23c0b1883462f5c8b01c3a49b844932198de2f35c8c5603da701",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/nonglacial_erosion_Earth.tsv",
+        "bytes": 1662513,
+        "sha256": "214063142d936c3a5408583b682397042392b4d46e0443e30c88811fbe9fee89",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/slope_glacial.tsv",
+        "bytes": 8440,
+        "sha256": "fe6da89d7cd43389930f980d0bb71b32dddc795f499bf61508e56fb3956f2853",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/slope_nonglacial.tsv",
+        "bytes": 115468,
+        "sha256": "3d8e9432844157a64ecae54636a0b3b41c49a5f1128493366673d10474541629",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/source_notes.txt",
+        "bytes": 49,
+        "sha256": "439086b61c2ae6beffe241882fc23309cb4d07b7a4f4db7930a646070b96b8a3",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/prior compilations/CHELSEA/annualprecipitation.jl",
+        "bytes": 1513,
+        "sha256": "0382a24d004961127e00440af20e416d6f5c0e8a81317e5911d2b5603e7a1342",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/prior compilations/CHELSEA/precipitation_glacial.tsv",
+        "bytes": 10543,
+        "sha256": "24c72eb98ad29659e5275959755ec064e4a3cfd4301ebcd5aa7a11f3d5260126",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/prior compilations/CHELSEA/precipitation_nonglacial.tsv",
+        "bytes": 154572,
+        "sha256": "1a0075335963506e93a89a013c1d85c7db32bdeddfe787862be1a02401dba296",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/prior compilations/CHELSEA/references.txt",
+        "bytes": 1902,
+        "sha256": "42bd95d10e4a9da30fc5870a86bd7b2eff2170296a3c6cfb347d9bd4f26c746e",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/prior compilations/Chen et al. 2023/Chen_et_al_2021_short-term_erosion_rate_data.csv",
+        "bytes": 153924,
+        "sha256": "5a0668568db63339e8ed83c2196edc258b2c0d975c120588fca90503842fcb4f",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/prior compilations/GloRiSe/GloRiSe combined.tsv",
+        "bytes": 253975,
+        "sha256": "a419086603c8a6a52742cee08abf9a953958fe921d4109f2759e3e22ef5fbff1",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/prior compilations/OCTOPUS/octopusages.tsv",
+        "bytes": 66818,
+        "sha256": "89a9feb971dac5dbe850cf786083ecd0bfe5a10f9ea877ad39f9b9d87e241665",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/prior compilations/OCTOPUS/octopusdata.tsv",
+        "bytes": 1600386,
+        "sha256": "dd7620a0078af24a6e1882faaa76c22bc74d7d0243d265e5bf2d1fb6174ee4c0",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      },
+      {
+        "path": "raw/prior compilations/OCTOPUS/octopusexposureage.jl",
+        "bytes": 2397,
+        "sha256": "17172ed350479323955a2c3c13d6531286e3232df389b7bf2badceef205230b8",
+        "in_manifest": true,
+        "bytes_match": true,
+        "sha256_match": true,
+        "status": "MATCH"
+      }
+    ]
+  },
+  "tables": {
+    "shapes": [
+      {
+        "path": "raw/beryllium.tsv",
+        "bytes": 9363,
+        "inferred_format": "TSV (tab-separated, header row present)",
+        "n_rows_data": 70.0,
+        "n_cols": 16.0,
+        "columns": "Reference | Reference DOI | Locality | Region | Sample ID | Type | Depth (m) | Sal (PSU) | T (C) | pH | Be (nmol/kg) | Be dissolved (nmol/kg) | Be colloidal (nmol/kg) | DOC (nmol/kg) | Alkalinity (mM HCO3) | Notes",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/glacial_erosion_Earth.tsv",
+        "bytes": 117004,
+        "inferred_format": "TSV (tab-separated, header row present)",
+        "n_rows_data": 427.0,
+        "n_cols": 24.0,
+        "columns": "Compilation | Reference | Reference DOI | Locality | Glacier | Region | Latitude | Longitude | Elevation (m) | Precipitation (mm/yr) | Slope (m/km) | Type | Lithology | Methodology | Area (km2) | Time interval (yr) | Sediment flux (km3/yr) | Exhumation (m) | Exhumation min (m) | Exhumation max (m) | Erosion rate (mm/yr) | Erosion rate min | Erosion rate max | Comments",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/lithology_parsed.tsv",
+        "bytes": 25837,
+        "inferred_format": "TSV (tab-separated, header row present)",
+        "n_rows_data": 229.0,
+        "n_cols": 7.0,
+        "columns": "Latitude | Longitude | Hash | Lithology | Age | Age Uncert | Unparsed Lithology",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/lithology_parsed_nonglacial.tsv",
+        "bytes": 555816,
+        "inferred_format": "TSV (tab-separated, header row present)",
+        "n_rows_data": 4900.0,
+        "n_cols": 7.0,
+        "columns": "Latitude | Longitude | Hash | Lithology | Age | Age Uncert | Unparsed Lithology",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/lithology_reference.tsv",
+        "bytes": 225,
+        "inferred_format": "TSV-like, no tabs in header",
+        "n_rows_data": 1.0,
+        "n_cols": 1.0,
+        "columns": "Chorlton, L.B. | 2007 | Generalized geology of the world: bedrock domains and major faults in GIS format: a small-scale world geology map with an extended geological attribute database | doi: 10.4095/223767",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/lithology_reference_nonglacial.tsv",
+        "bytes": 225,
+        "inferred_format": "TSV-like, no tabs in header",
+        "n_rows_data": 1.0,
+        "n_cols": 1.0,
+        "columns": "Chorlton, L.B. | 2007 | Generalized geology of the world: bedrock domains and major faults in GIS format: a small-scale world geology map with an extended geological attribute database | doi: 10.4095/223767",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/lithology_unparsed.tsv",
+        "bytes": 63752,
+        "inferred_format": "TSV (tab-separated, header row present)",
+        "n_rows_data": 229.0,
+        "n_cols": 11.0,
+        "columns": "agemax | agemin | age | rocktype | rockname | rockdescrip | rockstratname | rockcomments | refstrings | Latitude | Longitude",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/lithology_unparsed_nonglacial.tsv",
+        "bytes": 1385057,
+        "inferred_format": "TSV (tab-separated, header row present)",
+        "n_rows_data": 4900.0,
+        "n_cols": 11.0,
+        "columns": "agemax | agemin | age | rocktype | rockname | rockdescrip | rockstratname | rockcomments | refstrings | Latitude | Longitude",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/nonglacial_erosion_Earth.tsv",
+        "bytes": 1662513,
+        "inferred_format": "TSV (tab-separated, header row present)",
+        "n_rows_data": 6288.0,
+        "n_cols": 26.0,
+        "columns": "Compilation | Reference | Reference DOI | Locality | Basin | Place | Region | Sample ID | Latitude | Longitude | Elevation (m) | Precipitation (mm/yr) | Slope (m/km) | Type | Lithology | Methodology | Area (km2) | Time interval (yr) | Sediment flux (km3/yr) | Exhumation (m) | Exhumation min (m) | Exhumation max (m) | Erosion rate (mm/yr) | Erosion rate min | Erosion rate max | Comments",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/slope_glacial.tsv",
+        "bytes": 8440,
+        "inferred_format": "TSV-like, no tabs in header",
+        "n_rows_data": 461.0,
+        "n_cols": 1.0,
+        "columns": "<headerless, single unnamed column of slope values>",
+        "headerless_single_column": true
+      },
+      {
+        "path": "raw/slope_nonglacial.tsv",
+        "bytes": 115468,
+        "inferred_format": "TSV-like, no tabs in header",
+        "n_rows_data": 6271.0,
+        "n_cols": 1.0,
+        "columns": "<headerless, single unnamed column of slope values>",
+        "headerless_single_column": true
+      },
+      {
+        "path": "raw/source_notes.txt",
+        "bytes": 49,
+        "inferred_format": "plain text",
+        "n_rows_data": NaN,
+        "n_cols": NaN,
+        "columns": "",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/prior compilations/CHELSEA/annualprecipitation.jl",
+        "bytes": 1513,
+        "inferred_format": "Julia source code",
+        "n_rows_data": NaN,
+        "n_cols": NaN,
+        "columns": "",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/prior compilations/CHELSEA/precipitation_glacial.tsv",
+        "bytes": 10543,
+        "inferred_format": "TSV (tab-separated, header row present)",
+        "n_rows_data": 444.0,
+        "n_cols": 3.0,
+        "columns": "Latitude | Longitude | Precipitation_mm_yr",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/prior compilations/CHELSEA/precipitation_nonglacial.tsv",
+        "bytes": 154572,
+        "inferred_format": "TSV (tab-separated, header row present)",
+        "n_rows_data": 6271.0,
+        "n_cols": 3.0,
+        "columns": "Latitude | Longitude | Precipitation_mm_yr",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/prior compilations/CHELSEA/references.txt",
+        "bytes": 1902,
+        "inferred_format": "plain text",
+        "n_rows_data": NaN,
+        "n_cols": NaN,
+        "columns": "",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/prior compilations/Chen et al. 2023/Chen_et_al_2021_short-term_erosion_rate_data.csv",
+        "bytes": 153924,
+        "inferred_format": "CSV (comma-separated, header row present)",
+        "n_rows_data": 1521.0,
+        "n_cols": 11.0,
+        "columns": "Country | Location | Station ID | Short-term erosion rate (mm kyr^-1) | Basin area (km^2) | Latitude | Longitude | Koppen\u00a1VGeiger classification | Aridity Index | Aridity Index category | Reference",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/prior compilations/GloRiSe/GloRiSe combined.tsv",
+        "bytes": 253975,
+        "inferred_format": "TSV (tab-separated, header row present)",
+        "n_rows_data": 1078.0,
+        "n_cols": 26.0,
+        "columns": "Reference | Reference DOI | Sample_ID | Location_ID | Basin_ID | Basin | Place | Region | Latitude | Longitude | Elevation | Season | Observation Type | Sample Type | filtersize_mum | Area (km2) | Time interval (yr) | Discharge_m3_s | Annual_Discharge_m3_s | TSS_mg_L | TSS_kg_s | TSS_km3_yr | Erosion rate (mm/yr) | Sand_perc | Silt_perc | Clay_perc",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/prior compilations/OCTOPUS/octopusages.tsv",
+        "bytes": 66818,
+        "inferred_format": "TSV (tab-separated, header row present)",
+        "n_rows_data": 3342.0,
+        "n_cols": 2.0,
+        "columns": "Be10_exposure_yr | Al26_exposure_yr",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/prior compilations/OCTOPUS/octopusdata.tsv",
+        "bytes": 1600386,
+        "inferred_format": "TSV (tab-separated, header row present)",
+        "n_rows_data": 3342.0,
+        "n_cols": 69.0,
+        "columns": "ahgfl1 | ahgfl2 | al26ep | al26ep_err | al26nc | al26nc_err | al26np | al26np_err | alams | alcorr | alprod | alself | alsnow | alstnd | altopo | altots | area | auth | basin | be10ep | be10ep_err | be10nc | be10nc_err | be10np | be10np_err | beams | becorr | beprod | beself | besnow | bestnd | betopo | betots | cntry | dbdoi | dbver | eal_err | eal_gcmyr | eal_mmkyr | ebe_err | ebe_gcmyr | ebe_mmkyr | elev_ave | elev_std | erral_ams | erral_muon | erral_prod | erral_tot | errbe_ams | errbe_muon | errbe_prod | errbe_tot | igsnid | material | precip | projection | pubyear | refdoi | refid | region | sizemax | sizemin | slp_ave | slp_std | smpid1 | smpid2 | studyid | x_wgs84 | y_wgs84",
+        "headerless_single_column": false
+      },
+      {
+        "path": "raw/prior compilations/OCTOPUS/octopusexposureage.jl",
+        "bytes": 2397,
+        "inferred_format": "Julia source code",
+        "n_rows_data": NaN,
+        "n_cols": NaN,
+        "columns": "",
+        "headerless_single_column": false
+      }
+    ],
+    "glacial": {
+      "path": "data/raw/glacial_erosion_Earth.tsv",
+      "n_rows": 427,
+      "n_cols": 24,
+      "columns": [
+        "Compilation",
+        "Reference",
+        "Reference DOI",
+        "Locality",
+        "Glacier",
+        "Region",
+        "Latitude",
+        "Longitude",
+        "Elevation (m)",
+        "Precipitation (mm/yr)",
+        "Slope (m/km)",
+        "Type",
+        "Lithology",
+        "Methodology",
+        "Area (km2)",
+        "Time interval (yr)",
+        "Sediment flux (km3/yr)",
+        "Exhumation (m)",
+        "Exhumation min (m)",
+        "Exhumation max (m)",
+        "Erosion rate (mm/yr)",
+        "Erosion rate min",
+        "Erosion rate max",
+        "Comments"
+      ],
+      "numeric_ranges": {
+        "Latitude": {
+          "n": 425,
+          "min": -84.99878,
+          "median": 58.9269,
+          "max": 80.50038
+        },
+        "Longitude": {
+          "n": 425,
+          "min": -160.00245,
+          "median": -49.9857,
+          "max": 170.92619
+        },
+        "Elevation (m)": {
+          "n": 15,
+          "min": 432.0,
+          "median": 1197.0,
+          "max": 1823.0
+        },
+        "Precipitation (mm/yr)": {
+          "n": 425,
+          "min": 29.2,
+          "median": 1631.0,
+          "max": 7857.1
+        },
+        "Slope (m/km)": {
+          "n": 425,
+          "min": 0.32039,
+          "median": 250.5622,
+          "max": 580.00047
+        },
+        "Area (km2)": {
+          "n": 392,
+          "min": 1e-08,
+          "median": 13.35,
+          "max": 2166090.0
+        },
+        "Time interval (yr)": {
+          "n": 427,
+          "min": 0.0191781,
+          "median": 1270.0,
+          "max": 250000000.0
+        },
+        "Sediment flux (km3/yr)": {
+          "n": 51,
+          "min": 1.03704e-08,
+          "median": 0.00296109,
+          "max": 0.474074
+        },
+        "Exhumation (m)": {
+          "n": 81,
+          "min": 0.0071,
+          "median": 0.4058,
+          "max": 3000.0
+        },
+        "Exhumation min (m)": {
+          "n": 38,
+          "min": 0.0,
+          "median": 3.0,
+          "max": 2000.0
+        },
+        "Exhumation max (m)": {
+          "n": 35,
+          "min": 0.02,
+          "median": 10.0,
+          "max": 2500.0
+        },
+        "Erosion rate (mm/yr)": {
+          "n": 427,
+          "min": 0.0004,
+          "median": 0.55,
+          "max": 1000.0
+        },
+        "Erosion rate min": {
+          "n": 205,
+          "min": 0.0,
+          "median": 0.3,
+          "max": 375.51
+        },
+        "Erosion rate max": {
+          "n": 197,
+          "min": 0.002,
+          "median": 0.6,
+          "max": 922.449
+        }
+      },
+      "n_blank_all": 0
+    },
+    "nonglacial": {
+      "path": "data/raw/nonglacial_erosion_Earth.tsv",
+      "n_rows": 6288,
+      "n_cols": 26,
+      "columns": [
+        "Compilation",
+        "Reference",
+        "Reference DOI",
+        "Locality",
+        "Basin",
+        "Place",
+        "Region",
+        "Sample ID",
+        "Latitude",
+        "Longitude",
+        "Elevation (m)",
+        "Precipitation (mm/yr)",
+        "Slope (m/km)",
+        "Type",
+        "Lithology",
+        "Methodology",
+        "Area (km2)",
+        "Time interval (yr)",
+        "Sediment flux (km3/yr)",
+        "Exhumation (m)",
+        "Exhumation min (m)",
+        "Exhumation max (m)",
+        "Erosion rate (mm/yr)",
+        "Erosion rate min",
+        "Erosion rate max",
+        "Comments"
+      ],
+      "numeric_ranges": {
+        "Latitude": {
+          "n": 6288,
+          "min": -85.90501,
+          "median": 33.088515,
+          "max": 73.53979
+        },
+        "Longitude": {
+          "n": 6288,
+          "min": -164.81526,
+          "median": 4.62296,
+          "max": 178.52993
+        },
+        "Elevation (m)": {
+          "n": 3677,
+          "min": 30.0,
+          "median": 1578.0,
+          "max": 5514.744024
+        },
+        "Precipitation (mm/yr)": {
+          "n": 6288,
+          "min": 5.4,
+          "median": 1017.85,
+          "max": 8646.0
+        },
+        "Slope (m/km)": {
+          "n": 6288,
+          "min": 0.35696,
+          "median": 77.148765,
+          "max": 594.86154
+        },
+        "Area (km2)": {
+          "n": 6220,
+          "min": 1e-08,
+          "median": 296.726,
+          "max": 7000000.0
+        },
+        "Time interval (yr)": {
+          "n": 6128,
+          "min": 0.00274,
+          "median": 1201.185,
+          "max": 20000000.0
+        },
+        "Sediment flux (km3/yr)": {
+          "n": 1057,
+          "min": 1.73772e-08,
+          "median": 0.000881606,
+          "max": 5.56909
+        },
+        "Exhumation (m)": {
+          "n": 11,
+          "min": 3.0,
+          "median": 15.0,
+          "max": 160.0
+        },
+        "Exhumation min (m)": {
+          "n": 3,
+          "min": 4.0,
+          "median": 10.0,
+          "max": 10.0
+        },
+        "Exhumation max (m)": {
+          "n": 2,
+          "min": 15.0,
+          "median": 17.5,
+          "max": 20.0
+        },
+        "Erosion rate (mm/yr)": {
+          "n": 6288,
+          "min": 0.0,
+          "median": 0.061094300000000004,
+          "max": 118.864
+        },
+        "Erosion rate min": {
+          "n": 4759,
+          "min": -131.403,
+          "median": 0.0322067,
+          "max": 62.4612
+        },
+        "Erosion rate max": {
+          "n": 4759,
+          "min": 0.0,
+          "median": 0.0622767,
+          "max": 175.268
+        }
+      }
+    }
+  },
+  "audit_row_counts": {
+    "glacial": {
+      "n_rows": 427,
+      "erosion_rate_le_zero": 0,
+      "erosion_rate_missing": 0,
+      "erosion_rate_min_median_max": {
+        "n": 427,
+        "min": 0.0004,
+        "median": 0.55,
+        "max": 1000.0
+      },
+      "time_interval_le_zero": 0,
+      "time_interval_missing": 0,
+      "time_interval_min_median_max": {
+        "n": 427,
+        "min": 0.0191781,
+        "median": 1270.0,
+        "max": 250000000.0
+      },
+      "area_missing": 35,
+      "area_below_1e-4": 100,
+      "area_equal_1e-8": 100,
+      "area_above_1e7": 0,
+      "area_min_median_max": {
+        "n": 392,
+        "min": 1e-08,
+        "median": 13.35,
+        "max": 2166090.0
+      },
+      "latitude_out_of_range": 0,
+      "latitude_missing": 2,
+      "longitude_out_of_range": 0,
+      "precipitation_missing": 2,
+      "precipitation_le_zero": 0,
+      "precipitation_min_median_max": {
+        "n": 425,
+        "min": 29.2,
+        "median": 1631.0,
+        "max": 7857.1
+      },
+      "slope_missing": 2,
+      "slope_le_zero": 0,
+      "exact_full_row_duplicates": 0,
+      "analysis_key_duplicates": 7,
+      "exhumation_populated": 81,
+      "time_interval_gt_1e8": 1
+    },
+    "nonglacial": {
+      "n_rows": 6288,
+      "erosion_rate_le_zero": 4,
+      "erosion_rate_missing": 0,
+      "erosion_rate_min_median_max": {
+        "n": 6288,
+        "min": 0.0,
+        "median": 0.061094300000000004,
+        "max": 118.864
+      },
+      "time_interval_le_zero": 0,
+      "time_interval_missing": 160,
+      "time_interval_min_median_max": {
+        "n": 6128,
+        "min": 0.00274,
+        "median": 1201.185,
+        "max": 20000000.0
+      },
+      "area_missing": 68,
+      "area_below_1e-4": 224,
+      "area_equal_1e-8": 224,
+      "area_above_1e7": 0,
+      "area_min_median_max": {
+        "n": 6220,
+        "min": 1e-08,
+        "median": 296.726,
+        "max": 7000000.0
+      },
+      "latitude_out_of_range": 0,
+      "latitude_missing": 0,
+      "longitude_out_of_range": 0,
+      "precipitation_missing": 0,
+      "precipitation_le_zero": 0,
+      "precipitation_min_median_max": {
+        "n": 6288,
+        "min": 5.4,
+        "median": 1017.85,
+        "max": 8646.0
+      },
+      "slope_missing": 0,
+      "slope_le_zero": 0,
+      "exact_full_row_duplicates": 0,
+      "analysis_key_duplicates": 198,
+      "exhumation_populated": 11,
+      "time_interval_gt_1e8": 0
+    },
+    "area_flags": {
+      "tiny_threshold_km2": 0.0001,
+      "large_threshold_km2": 10000000.0,
+      "placeholder_value_km2": 1e-08
+    }
+  },
+  "independence": {
+    "by_table": [
+      {
+        "table": "glacial",
+        "n_rows": 427,
+        "unique_reference": 154,
+        "unique_compilation": 13,
+        "unique_locality": 122,
+        "unique_latitude_longitude_pair": 229,
+        "unique_reference_doi": 120,
+        "max_rows_single_reference": 32,
+        "max_rows_single_reference_name": "Berger and Spotila, 2008",
+        "max_rows_single_reference_share": 0.07494,
+        "max_rows_single_compilation": 294,
+        "max_rows_single_compilation_name": "This study",
+        "max_rows_single_locality": 38,
+        "max_rows_single_location_key": 36,
+        "rows_per_reference_median": 1.0,
+        "rows_per_reference_mean": 2.773
+      },
+      {
+        "table": "nonglacial",
+        "n_rows": 6288,
+        "unique_reference": 265,
+        "unique_compilation": 6,
+        "unique_locality": 1819,
+        "unique_latitude_longitude_pair": 4900,
+        "unique_reference_doi": 251,
+        "max_rows_single_reference": 512,
+        "max_rows_single_reference_name": "Milliman and Farnsworth 2013",
+        "max_rows_single_reference_share": 0.08142,
+        "max_rows_single_compilation": 3457,
+        "max_rows_single_compilation_name": "OCTOPUS",
+        "max_rows_single_locality": 154,
+        "max_rows_single_location_key": 154,
+        "rows_per_reference_median": 13.0,
+        "rows_per_reference_mean": 23.728
+      },
+      {
+        "table": "pooled",
+        "n_rows": 6715,
+        "unique_reference": 417,
+        "unique_compilation": 17,
+        "unique_locality": 1937,
+        "unique_latitude_longitude_pair": 5116,
+        "unique_reference_doi": 369,
+        "max_rows_single_reference": 512,
+        "max_rows_single_reference_name": "Milliman and Farnsworth 2013",
+        "max_rows_single_reference_share": 0.07625,
+        "max_rows_single_compilation": 3457,
+        "max_rows_single_compilation_name": "OCTOPUS",
+        "max_rows_single_locality": 154,
+        "max_rows_single_location_key": 154,
+        "rows_per_reference_median": 7.0,
+        "rows_per_reference_mean": 16.103
+      }
+    ],
+    "references_shared_across_both_tables": [
+      "Glotzbach et al., 2013",
+      "Willenbring Staiger et al., 2006"
+    ],
+    "n_references_shared": 2,
+    "top10_references": [
+      {
+        "Reference": "Berger and Spotila, 2008",
+        "n_rows": 32,
+        "share_of_total": 0.07494,
+        "table": "glacial"
+      },
+      {
+        "Reference": "Balter-Kennedy et al., 2021",
+        "n_rows": 24,
+        "share_of_total": 0.05621,
+        "table": "glacial"
+      },
+      {
+        "Reference": "Briner and Swanson, 1998",
+        "n_rows": 23,
+        "share_of_total": 0.05386,
+        "table": "glacial"
+      },
+      {
+        "Reference": "Glotzbach et al., 2013",
+        "n_rows": 15,
+        "share_of_total": 0.03513,
+        "table": "glacial"
+      },
+      {
+        "Reference": "Koppes et al., 2015",
+        "n_rows": 14,
+        "share_of_total": 0.03279,
+        "table": "glacial"
+      },
+      {
+        "Reference": "Steinemann et al., 2021a",
+        "n_rows": 14,
+        "share_of_total": 0.03279,
+        "table": "glacial"
+      },
+      {
+        "Reference": "Bogen, 1989",
+        "n_rows": 13,
+        "share_of_total": 0.03044,
+        "table": "glacial"
+      },
+      {
+        "Reference": "Steinemann et al., 2020",
+        "n_rows": 13,
+        "share_of_total": 0.03044,
+        "table": "glacial"
+      },
+      {
+        "Reference": "\u00d8strem, Ziegler, and Ekman, 1970",
+        "n_rows": 12,
+        "share_of_total": 0.0281,
+        "table": "glacial"
+      },
+      {
+        "Reference": "Fernandez et al., 2016",
+        "n_rows": 11,
+        "share_of_total": 0.02576,
+        "table": "glacial"
+      },
+      {
+        "Reference": "Milliman and Farnsworth 2013",
+        "n_rows": 512,
+        "share_of_total": 0.08142,
+        "table": "nonglacial"
+      },
+      {
+        "Reference": "USGS",
+        "n_rows": 448,
+        "share_of_total": 0.07125,
+        "table": "nonglacial"
+      },
+      {
+        "Reference": "Milliman and Syvitski 1992",
+        "n_rows": 181,
+        "share_of_total": 0.02878,
+        "table": "nonglacial"
+      },
+      {
+        "Reference": "Van der Perck and Espinosa Vilches 2020, van der Weijden and Middelburg 1989",
+        "n_rows": 154,
+        "share_of_total": 0.02449,
+        "table": "nonglacial"
+      },
+      {
+        "Reference": "Stirton, 2016",
+        "n_rows": 96,
+        "share_of_total": 0.01527,
+        "table": "nonglacial"
+      },
+      {
+        "Reference": "Krickov et al., 2019",
+        "n_rows": 90,
+        "share_of_total": 0.01431,
+        "table": "nonglacial"
+      },
+      {
+        "Reference": "Matmon, 2003",
+        "n_rows": 89,
+        "share_of_total": 0.01415,
+        "table": "nonglacial"
+      },
+      {
+        "Reference": "Reuter, 2005",
+        "n_rows": 88,
+        "share_of_total": 0.01399,
+        "table": "nonglacial"
+      },
+      {
+        "Reference": "Mandal, 2015",
+        "n_rows": 79,
+        "share_of_total": 0.01256,
+        "table": "nonglacial"
+      },
+      {
+        "Reference": "Bierman, 2005",
+        "n_rows": 74,
+        "share_of_total": 0.01177,
+        "table": "nonglacial"
+      },
+      {
+        "Reference": "Milliman and Farnsworth 2013",
+        "n_rows": 512,
+        "share_of_total": 0.07625,
+        "table": "pooled"
+      },
+      {
+        "Reference": "USGS",
+        "n_rows": 448,
+        "share_of_total": 0.06672,
+        "table": "pooled"
+      },
+      {
+        "Reference": "Milliman and Syvitski 1992",
+        "n_rows": 181,
+        "share_of_total": 0.02695,
+        "table": "pooled"
+      },
+      {
+        "Reference": "Van der Perck and Espinosa Vilches 2020, van der Weijden and Middelburg 1989",
+        "n_rows": 154,
+        "share_of_total": 0.02293,
+        "table": "pooled"
+      },
+      {
+        "Reference": "Stirton, 2016",
+        "n_rows": 96,
+        "share_of_total": 0.0143,
+        "table": "pooled"
+      },
+      {
+        "Reference": "Krickov et al., 2019",
+        "n_rows": 90,
+        "share_of_total": 0.0134,
+        "table": "pooled"
+      },
+      {
+        "Reference": "Matmon, 2003",
+        "n_rows": 89,
+        "share_of_total": 0.01325,
+        "table": "pooled"
+      },
+      {
+        "Reference": "Reuter, 2005",
+        "n_rows": 88,
+        "share_of_total": 0.0131,
+        "table": "pooled"
+      },
+      {
+        "Reference": "Mandal, 2015",
+        "n_rows": 79,
+        "share_of_total": 0.01176,
+        "table": "pooled"
+      },
+      {
+        "Reference": "Bierman, 2005",
+        "n_rows": 74,
+        "share_of_total": 0.01102,
+        "table": "pooled"
+      }
+    ],
+    "top10_compilations": [
+      {
+        "Compilation": "This study",
+        "n_rows": 294,
+        "share_of_total": 0.68852,
+        "table": "glacial"
+      },
+      {
+        "Compilation": "Hallet et al., 1996",
+        "n_rows": 62,
+        "share_of_total": 0.1452,
+        "table": "glacial"
+      },
+      {
+        "Compilation": "Balter-Kennedy et al., 2021",
+        "n_rows": 32,
+        "share_of_total": 0.07494,
+        "table": "glacial"
+      },
+      {
+        "Compilation": "Geirsd\u00f3ttir et al., 2007",
+        "n_rows": 7,
+        "share_of_total": 0.01639,
+        "table": "glacial"
+      },
+      {
+        "Compilation": "Faleide et al., 1996",
+        "n_rows": 6,
+        "share_of_total": 0.01405,
+        "table": "glacial"
+      },
+      {
+        "Compilation": "Amantov et al., 2011",
+        "n_rows": 4,
+        "share_of_total": 0.00937,
+        "table": "glacial"
+      },
+      {
+        "Compilation": "Anderson, 2005",
+        "n_rows": 4,
+        "share_of_total": 0.00937,
+        "table": "glacial"
+      },
+      {
+        "Compilation": "Bj\u00f6rnsson, 1979",
+        "n_rows": 4,
+        "share_of_total": 0.00937,
+        "table": "glacial"
+      },
+      {
+        "Compilation": "Burbank et al., 2000",
+        "n_rows": 4,
+        "share_of_total": 0.00937,
+        "table": "glacial"
+      },
+      {
+        "Compilation": "Lliboutry, 1994",
+        "n_rows": 4,
+        "share_of_total": 0.00937,
+        "table": "glacial"
+      },
+      {
+        "Compilation": "OCTOPUS",
+        "n_rows": 3457,
+        "share_of_total": 0.54978,
+        "table": "nonglacial"
+      },
+      {
+        "Compilation": "Chen et al., 2022",
+        "n_rows": 1521,
+        "share_of_total": 0.24189,
+        "table": "nonglacial"
+      },
+      {
+        "Compilation": "GloRiSe",
+        "n_rows": 1057,
+        "share_of_total": 0.1681,
+        "table": "nonglacial"
+      },
+      {
+        "Compilation": "Marrero et al., 2018",
+        "n_rows": 194,
+        "share_of_total": 0.03085,
+        "table": "nonglacial"
+      },
+      {
+        "Compilation": "This study",
+        "n_rows": 48,
+        "share_of_total": 0.00763,
+        "table": "nonglacial"
+      },
+      {
+        "Compilation": "Burbank et al., 2000",
+        "n_rows": 11,
+        "share_of_total": 0.00175,
+        "table": "nonglacial"
+      },
+      {
+        "Compilation": "OCTOPUS",
+        "n_rows": 3457,
+        "share_of_total": 0.51482,
+        "table": "pooled"
+      },
+      {
+        "Compilation": "Chen et al., 2022",
+        "n_rows": 1521,
+        "share_of_total": 0.22651,
+        "table": "pooled"
+      },
+      {
+        "Compilation": "GloRiSe",
+        "n_rows": 1057,
+        "share_of_total": 0.15741,
+        "table": "pooled"
+      },
+      {
+        "Compilation": "This study",
+        "n_rows": 342,
+        "share_of_total": 0.05093,
+        "table": "pooled"
+      },
+      {
+        "Compilation": "Marrero et al., 2018",
+        "n_rows": 194,
+        "share_of_total": 0.02889,
+        "table": "pooled"
+      },
+      {
+        "Compilation": "Hallet et al., 1996",
+        "n_rows": 62,
+        "share_of_total": 0.00923,
+        "table": "pooled"
+      },
+      {
+        "Compilation": "Balter-Kennedy et al., 2021",
+        "n_rows": 32,
+        "share_of_total": 0.00477,
+        "table": "pooled"
+      },
+      {
+        "Compilation": "Burbank et al., 2000",
+        "n_rows": 15,
+        "share_of_total": 0.00223,
+        "table": "pooled"
+      },
+      {
+        "Compilation": "Geirsd\u00f3ttir et al., 2007",
+        "n_rows": 7,
+        "share_of_total": 0.00104,
+        "table": "pooled"
+      },
+      {
+        "Compilation": "Faleide et al., 1996",
+        "n_rows": 6,
+        "share_of_total": 0.00089,
+        "table": "pooled"
+      }
+    ]
+  },
+  "companion_alignment": {
+    "rule": "key = (Latitude rounded 5 dp, Longitude rounded 5 dp); rows with missing coordinates collapse into a single 'MISSING|MISSING' group",
+    "tests": [
+      {
+        "file": "data/raw/slope_glacial.tsv",
+        "aux_n_rows": 461,
+        "main_n_rows": 427,
+        "row_count_equal_main": false,
+        "main_unique_latlon_keys": 229,
+        "row_count_equal_main_unique_keys": false,
+        "positional_match_after_rounding_5dp_frac": 0.477752,
+        "positional_match_strict_frac": 0.0,
+        "values_in_main_not_in_aux": 4,
+        "values_in_aux_not_in_main": 38
+      },
+      {
+        "file": "data/raw/slope_nonglacial.tsv",
+        "aux_n_rows": 6271,
+        "main_n_rows": 6288,
+        "row_count_equal_main": false,
+        "main_unique_latlon_keys": 4900,
+        "row_count_equal_main_unique_keys": false,
+        "positional_match_after_rounding_5dp_frac": 0.995216,
+        "positional_match_strict_frac": 0.000957,
+        "values_in_main_not_in_aux": 56,
+        "values_in_aux_not_in_main": 39
+      },
+      {
+        "file": "data/raw/prior compilations/CHELSEA/precipitation_glacial.tsv",
+        "aux_n_rows": 444,
+        "main_n_rows": 427,
+        "row_count_equal_main": false,
+        "main_unique_latlon_keys": 229,
+        "row_count_equal_main_unique_keys": false,
+        "aux_unique_latlon_keys": 233,
+        "key_set_equal_main": false,
+        "aux_rowcount_equals_aux_unique_keys": false,
+        "aux_order_matches_main_row_order": false,
+        "aux_order_matches_main_first_occurrence_order": false,
+        "aux_key_not_in_main": 4,
+        "main_key_not_in_aux": 0,
+        "max_rows_per_key_main": 36,
+        "max_rows_per_key_aux": 36,
+        "inner_join_rows": 3193
+      },
+      {
+        "file": "data/raw/prior compilations/CHELSEA/precipitation_nonglacial.tsv",
+        "aux_n_rows": 6271,
+        "main_n_rows": 6288,
+        "row_count_equal_main": false,
+        "main_unique_latlon_keys": 4900,
+        "row_count_equal_main_unique_keys": false,
+        "aux_unique_latlon_keys": 4896,
+        "key_set_equal_main": false,
+        "aux_rowcount_equals_aux_unique_keys": false,
+        "aux_order_matches_main_row_order": false,
+        "aux_order_matches_main_first_occurrence_order": false,
+        "aux_key_not_in_main": 0,
+        "main_key_not_in_aux": 4,
+        "max_rows_per_key_main": 154,
+        "max_rows_per_key_aux": 154,
+        "inner_join_rows": 51157
+      },
+      {
+        "file": "data/raw/lithology_parsed.tsv",
+        "aux_n_rows": 229,
+        "main_n_rows": 427,
+        "row_count_equal_main": false,
+        "main_unique_latlon_keys": 229,
+        "row_count_equal_main_unique_keys": true,
+        "aux_unique_latlon_keys": 229,
+        "key_set_equal_main": true,
+        "aux_rowcount_equals_aux_unique_keys": true,
+        "aux_order_matches_main_row_order": false,
+        "aux_order_matches_main_first_occurrence_order": true,
+        "aux_key_not_in_main": 0,
+        "main_key_not_in_aux": 0,
+        "max_rows_per_key_main": 36,
+        "max_rows_per_key_aux": 1,
+        "inner_join_rows": 427
+      },
+      {
+        "file": "data/raw/lithology_parsed_nonglacial.tsv",
+        "aux_n_rows": 4900,
+        "main_n_rows": 6288,
+        "row_count_equal_main": false,
+        "main_unique_latlon_keys": 4900,
+        "row_count_equal_main_unique_keys": true,
+        "aux_unique_latlon_keys": 4900,
+        "key_set_equal_main": true,
+        "aux_rowcount_equals_aux_unique_keys": true,
+        "aux_order_matches_main_row_order": false,
+        "aux_order_matches_main_first_occurrence_order": true,
+        "aux_key_not_in_main": 0,
+        "main_key_not_in_aux": 0,
+        "max_rows_per_key_main": 154,
+        "max_rows_per_key_aux": 1,
+        "inner_join_rows": 6288
+      },
+      {
+        "file": "data/raw/lithology_unparsed.tsv",
+        "aux_n_rows": 229,
+        "main_n_rows": 427,
+        "row_count_equal_main": false,
+        "main_unique_latlon_keys": 229,
+        "row_count_equal_main_unique_keys": true,
+        "aux_unique_latlon_keys": 229,
+        "key_set_equal_main": true,
+        "aux_rowcount_equals_aux_unique_keys": true,
+        "aux_order_matches_main_row_order": false,
+        "aux_order_matches_main_first_occurrence_order": true,
+        "aux_key_not_in_main": 0,
+        "main_key_not_in_aux": 0,
+        "max_rows_per_key_main": 36,
+        "max_rows_per_key_aux": 1,
+        "inner_join_rows": 427
+      },
+      {
+        "file": "data/raw/lithology_unparsed_nonglacial.tsv",
+        "aux_n_rows": 4900,
+        "main_n_rows": 6288,
+        "row_count_equal_main": false,
+        "main_unique_latlon_keys": 4900,
+        "row_count_equal_main_unique_keys": true,
+        "aux_unique_latlon_keys": 4900,
+        "key_set_equal_main": true,
+        "aux_rowcount_equals_aux_unique_keys": true,
+        "aux_order_matches_main_row_order": false,
+        "aux_order_matches_main_first_occurrence_order": true,
+        "aux_key_not_in_main": 0,
+        "main_key_not_in_aux": 0,
+        "max_rows_per_key_main": 154,
+        "max_rows_per_key_aux": 1,
+        "inner_join_rows": 6288
+      }
+    ],
+    "key_counts_main_tables": {
+      "glacial": {
+        "n_rows": 427,
+        "n_unique_keys_including_missing_group": 229,
+        "n_unique_keys_nonnissing_only": 228,
+        "n_rows_with_missing_key": 2,
+        "max_rows_per_key": 36
+      },
+      "nonglacial": {
+        "n_rows": 6288,
+        "n_unique_keys_including_missing_group": 4900,
+        "n_unique_keys_nonnissing_only": 4900,
+        "n_rows_with_missing_key": 0,
+        "max_rows_per_key": 154
+      },
+      "lithology_parsed": {
+        "n_rows": 229,
+        "n_unique_keys_including_missing_group": 229,
+        "n_unique_keys_nonnissing_only": 228,
+        "n_rows_with_missing_key": 1,
+        "max_rows_per_key": 1
+      },
+      "lithology_parsed_nonglacial": {
+        "n_rows": 4900,
+        "n_unique_keys_including_missing_group": 4900,
+        "n_unique_keys_nonnissing_only": 4900,
+        "n_rows_with_missing_key": 0,
+        "max_rows_per_key": 1
+      },
+      "precipitation_glacial": {
+        "n_rows": 444,
+        "n_unique_keys_including_missing_group": 233,
+        "n_unique_keys_nonnissing_only": 232,
+        "n_rows_with_missing_key": 2,
+        "max_rows_per_key": 36
+      },
+      "precipitation_nonglacial": {
+        "n_rows": 6271,
+        "n_unique_keys_including_missing_group": 4896,
+        "n_unique_keys_nonnissing_only": 4896,
+        "n_rows_with_missing_key": 0,
+        "max_rows_per_key": 154
+      }
+    },
+    "precipitation_value_agreement": {
+      "glacial": {
+        "inner_join_rows": 3193,
+        "frac_exact_value_agreement": 0.998747,
+        "pearson_r": 1.0,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0
+      },
+      "nonglacial": {
+        "inner_join_rows": 51157,
+        "frac_exact_value_agreement": 1.0,
+        "pearson_r": 1.0,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0
+      }
+    },
+    "per_location_tests": [
+      {
+        "file": "data/raw/prior compilations/CHELSEA/precipitation_glacial.tsv",
+        "aux_rows": 444,
+        "main_rows": 427,
+        "main_unique_keys": 229,
+        "aux_unique_keys": 233,
+        "aux_is_one_row_per_unique_key": false,
+        "aux_max_distinct_values_per_key": 1,
+        "aux_has_multiple_values_per_key": false,
+        "main_max_distinct_values_per_key": 1,
+        "aux_rows_per_key_mirror_main_rows_per_key": false,
+        "n_key_rowcount_mismatches": 4,
+        "mismatch_keys": [],
+        "keys_only_in_aux": [
+          "-76.98366|161.52648",
+          "-77.85|160.92",
+          "-77.9|160.92",
+          "-77.54999|160.0897"
+        ],
+        "conclusion": "per-row companion for the shared key set: for every (lat,lon) present in both, the number of aux rows equals the number of main rows; 4 key(s) differ, of which 4 exist only in the aux file"
+      },
+      {
+        "file": "data/raw/prior compilations/CHELSEA/precipitation_nonglacial.tsv",
+        "aux_rows": 6271,
+        "main_rows": 6288,
+        "main_unique_keys": 4900,
+        "aux_unique_keys": 4896,
+        "aux_is_one_row_per_unique_key": false,
+        "aux_max_distinct_values_per_key": 1,
+        "aux_has_multiple_values_per_key": false,
+        "main_max_distinct_values_per_key": 1,
+        "aux_rows_per_key_mirror_main_rows_per_key": false,
+        "n_key_rowcount_mismatches": 4,
+        "mismatch_keys": [],
+        "keys_only_in_aux": [],
+        "conclusion": "per-row companion for the shared key set: for every (lat,lon) present in both, the number of aux rows equals the number of main rows; 4 key(s) differ, of which 0 exist only in the aux file"
+      },
+      {
+        "file": "data/raw/lithology_parsed.tsv",
+        "aux_rows": 229,
+        "main_rows": 427,
+        "main_unique_keys": 229,
+        "aux_unique_keys": 229,
+        "aux_is_one_row_per_unique_key": true,
+        "aux_max_distinct_values_per_key": 0,
+        "aux_has_multiple_values_per_key": false,
+        "main_max_distinct_values_per_key": 1,
+        "aux_rows_per_key_mirror_main_rows_per_key": false,
+        "n_key_rowcount_mismatches": 50,
+        "conclusion": "per-unique-location file: exactly one row per (lat,lon); the main table reuses those keys for many rows"
+      },
+      {
+        "file": "data/raw/lithology_parsed_nonglacial.tsv",
+        "aux_rows": 4900,
+        "main_rows": 6288,
+        "main_unique_keys": 4900,
+        "aux_unique_keys": 4900,
+        "aux_is_one_row_per_unique_key": true,
+        "aux_max_distinct_values_per_key": 0,
+        "aux_has_multiple_values_per_key": false,
+        "main_max_distinct_values_per_key": 1,
+        "aux_rows_per_key_mirror_main_rows_per_key": false,
+        "n_key_rowcount_mismatches": 518,
+        "conclusion": "per-unique-location file: exactly one row per (lat,lon); the main table reuses those keys for many rows"
+      },
+      {
+        "file": "data/raw/slope_glacial.tsv",
+        "aux_rows": 461,
+        "main_rows": 427,
+        "main_unique_keys": 229,
+        "main_max_distinct_values_per_key": 1,
+        "aux_rows_equals_main_rows": false,
+        "aux_rows_equals_main_unique_keys": false,
+        "conclusion": "per-unique-location style values (main table holds exactly one slope per (lat,lon) key) but aux row count does not equal the unique-key count"
+      },
+      {
+        "file": "data/raw/slope_nonglacial.tsv",
+        "aux_rows": 6271,
+        "main_rows": 6288,
+        "main_unique_keys": 4900,
+        "main_max_distinct_values_per_key": 1,
+        "aux_rows_equals_main_rows": false,
+        "aux_rows_equals_main_unique_keys": false,
+        "conclusion": "per-unique-location style values (main table holds exactly one slope per (lat,lon) key) but aux row count does not equal the unique-key count"
+      }
+    ],
+    "antarctic_17_rows": {
+      "n_rows": 17,
+      "present_in_nonglacial_main_table": true,
+      "absent_from": [
+        "data/raw/slope_nonglacial.tsv",
+        "data/raw/prior compilations/CHELSEA/precipitation_nonglacial.tsv",
+        "data/raw/lithology_parsed_nonglacial.tsv",
+        "data/raw/lithology_unparsed_nonglacial.tsv"
+      ],
+      "note": "those 17 rows were generated from the GLACIAL table's locations and appended to the nonglacial table, but the nonglacial companion files predate the append",
+      "slope_glacial_extra_rows": 34,
+      "precip_glacial_extra_rows": 17,
+      "precip_glacial_rows_after_dropping_antarctic_keys": 427,
+      "precip_glacial_order_equals_main_after_drop": true,
+      "test17": {
+        "dropped_row_indices": [
+          6241,
+          6242,
+          6243,
+          6244,
+          6245,
+          6246,
+          6247,
+          6265,
+          6266,
+          6267,
+          6268,
+          6269,
+          6270,
+          6271,
+          6272,
+          6273,
+          6274
+        ],
+        "dropped_locations": [
+          {
+            "Reference": "Brook et al., 1995",
+            "Locality": "Arena Valley"
+          },
+          {
+            "Reference": "Brook et al., 1995",
+            "Locality": "Beardmore glacier"
+          },
+          {
+            "Reference": "Brook et al., 1995",
+            "Locality": "Side lobe of the Taylor Glacier in Arena Valley"
+          },
+          {
+            "Reference": "Margerison et al., 2005",
+            "Locality": "Mackay Glacier"
+          }
+        ],
+        "n_kept_rows": 6271,
+        "slope_file_n_rows": 6271,
+        "positions_match_after_drop": true,
+        "slope_match_after_5dp_rounding_frac": 1.0,
+        "slope_rel_diff_median": 2.63390925235444e-08,
+        "precip_nonglacial_order_matches_main_minus17": true,
+        "precip_nonglacial_value_match_frac": 1.0
+      }
+    },
+    "slope_structure": {
+      "slope_nonglacial": {
+        "file": "data/raw/slope_nonglacial.tsv",
+        "aux_rows": 6271,
+        "main_rows": 6288,
+        "rows_kept": 6271,
+        "n_rows_dropped_from_main": 17,
+        "aligned": true,
+        "positional_5dp_match_frac": 1.0,
+        "n_rel_diff_gt_1e-6": 132,
+        "rel_diff_median": 2.63390925235444e-08,
+        "rel_diff_p99": 1.3534271188939208e-06,
+        "extra_rows_source": {
+          "n": 0,
+          "references": [],
+          "localities": []
+        },
+        "conclusion": "row-aligned modulo rounding for most rows but with residual differences"
+      },
+      "slope_glacial": {
+        "file": "data/raw/slope_glacial.tsv",
+        "aux_rows": 461,
+        "main_rows": 427,
+        "file_blocks_removed": [
+          [
+            202,
+            209
+          ],
+          [
+            295,
+            316
+          ],
+          [
+            353,
+            363
+          ]
+        ],
+        "main_blocks_removed": [
+          [
+            288,
+            292
+          ]
+        ],
+        "rows_after_excision_file": 423,
+        "rows_after_excision_main": 423,
+        "aligned": true,
+        "positional_5dp_match_frac": 0.995272,
+        "n_rel_diff_gt_1e-6": 12,
+        "rel_diff_median": NaN,
+        "max_rel_diff": 5.151488613666408e-06,
+        "residual_diff_explained_by_5dp_display_rounding_of_main_table": false,
+        "conclusion": "slope_glacial.tsv is the row-ordered Slope column of the glacial table over the shared rows (all residual differences are the 5-decimal display rounding of the main table), with three extra file blocks whose row structure predates the main table: [(202, 209), (295, 316), (353, 363)] (7 rows of Brook et al., 1995 and 10 rows of Margerison et al., 2005 that were later moved into the nonglacial table, plus a 21-row Hasholt and Hagedorn, 2000 block that the main glacial table kept as 4 'This study' rows with slope 64.31303)",
+        "file_block_contents": {
+          "block_202_209_references": [
+            "Brook et al., 1995"
+          ],
+          "block_295_316_note_replaced_main_rows": [
+            "Hasholt and Hagedorn, 2000"
+          ],
+          "block_353_363_references": [
+            "Margerison et al., 2005"
+          ]
+        },
+        "extra_values_in_block_295_316": [
+          85.90092,
+          90.02111,
+          97.37886,
+          69.74185,
+          69.74185,
+          62.65132,
+          28.3281,
+          28.3281,
+          70.1603,
+          71.04971,
+          71.04971,
+          71.04971,
+          68.86115,
+          63.12193,
+          65.99546,
+          65.65184,
+          28.94819,
+          29.3888,
+          73.97296,
+          73.97296,
+          65.25885
+        ],
+        "main_values_replaced": [
+          64.31303,
+          64.31303,
+          64.31303,
+          64.31303
+        ]
+      }
+    },
+    "slope_glacial_extra_block_analysis": {
+      "main_rows": 427,
+      "aux_rows": 461,
+      "rows_added": 34,
+      "extra_value_counts": {
+        "33.235": 2,
+        "24.212": 2,
+        "33.098": 3,
+        "85.901": 1,
+        "90.021": 1,
+        "97.379": 1,
+        "69.742": 2,
+        "62.651": 1,
+        "28.328": 2,
+        "70.16": 1,
+        "71.05": 3,
+        "68.861": 1,
+        "63.122": 1,
+        "65.995": 1,
+        "65.652": 1,
+        "28.948": 1,
+        "29.389": 1,
+        "73.973": 2,
+        "65.259": 1,
+        "38.565": 10
+      },
+      "values_missing_from_aux": {
+        "64.313": 4
+      }
+    }
+  },
+  "chen_unit_audit": {
+    "csv_path": "data/raw/prior compilations/Chen et al. 2023/Chen_et_al_2021_short-term_erosion_rate_data.csv",
+    "csv_col": "Short-term erosion rate (mm kyr^-1)",
+    "csv_n_rows": 1521,
+    "csv_n_cols": 13,
+    "csv_rate_range": {
+      "n": 1521,
+      "min": 0.145348837,
+      "median": 93.75,
+      "max": 35326.08696
+    },
+    "main_value": "no companion 'Erosion rate (mm/yr)' column exists in the CSV; the main table converts mm/kyr -> mm/yr",
+    "implied_unit": "mm per 1000 yr (mm/kyr); the main table stores mm/yr = csv / 1000",
+    "conversion_factor_main_over_csv": 0.001,
+    "location_level": {
+      "n_locations_compared": 1477,
+      "pearson_r": 0.99999999999954,
+      "pearson_r_log10": 0.9999999999998426,
+      "median_ratio_main_over_csv": 0.001,
+      "frac_ratio_exactly_0.001": 0.771158,
+      "frac_ratio_within_1pct_of_0.001": 1.0,
+      "ratio_q05": 0.0009999984107558664,
+      "ratio_q95": 0.001000002133288127
+    },
+    "positional_row_order": {
+      "n_rows": 1521,
+      "locality_string_order_equal_frac": 0.664694,
+      "frac_ratio_exactly_0.001": 0.539776,
+      "frac_ratio_within_1pct": 0.667982,
+      "median_ratio": 0.001,
+      "n_rows_with_locality_mismatch": 510
+    },
+    "area_positional": {
+      "frac_exact_area_agreement": 0.625247,
+      "n_rows": 1521
+    },
+    "strict": {
+      "n_rows_rate_ratio_0.001": 821,
+      "n_rows_rate_ratio_other": 700
+    },
+    "n_main_chen_rows": 1521,
+    "main_chen_methodology": {
+      "Volumetric": 1521
+    }
+  },
+  "glorise_reconciliation": {
+    "combined_tsv_rows": 1078,
+    "nonglacial_subset_rows": 1057,
+    "difference": 21,
+    "combined_unique_sample_id": 1078,
+    "main_unique_sample_id": 1057,
+    "sample_ids_in_combined_not_main": 21,
+    "sample_ids_in_main_not_combined": 0,
+    "combined_rows_missing_rate": 0,
+    "combined_rate_min_median_max": {
+      "n": 1078,
+      "min": 6.3049430753e-06,
+      "median": 0.0060739849625628,
+      "max": 4.10227556378661
+    },
+    "main_rate_min_median_max": {
+      "n": 1057,
+      "min": 0.000281143,
+      "median": 0.0412115,
+      "max": 4.1064
+    },
+    "dropped_rows_by_reference": {
+      "Hasholt and Hagedorn, 2000": 21
+    },
+    "dropped_basin": {
+      "Zackenbergelven": 21
+    },
+    "dropped_sample_ids": [
+      "GRL-ZKB-111111-HSH4",
+      "GRL-ZKB-111112-HSH1",
+      "GRL-ZKB-111113-HSH1",
+      "GRL-ZKB-111114-HSH1",
+      "GRL-ZKB-111114-HSH2",
+      "GRL-ZKB-111115-HSH1",
+      "GRL-ZKB-111116-HSH1",
+      "GRL-ZKB-111117-HSH1",
+      "GRL-ZKB-111118-HSH1",
+      "GRL-ZKB-111119-HSH1",
+      "GRL-ZKB-111119-HSH2",
+      "GRL-ZKB-111119-HSH3",
+      "GRL-ZKB-111120-HSH1",
+      "GRL-ZKB-111121-HSH1",
+      "GRL-ZKB-111122-HSH1",
+      "GRL-ZKB-111123-HSH1",
+      "GRL-ZKB-111124-HSH1",
+      "GRL-ZKB-111125-HSH1",
+      "GRL-ZKB-111126-HSH1",
+      "GRL-ZKB-111126-HSH3",
+      "GRL-ZKB-111127-HSH1"
+    ],
+    "explanation": "all 21 dropped rows are Hasholt and Hagedorn, 2000 samples of the Zackenbergelven basin (Greenland); the nonglacial main table's GloRiSe subset has no Hasholt rows. Difference is fully accounted for by this single-reference exclusion; 4 of the 21 rows additionally have missing Longitude.",
+    "accounted": true,
+    "shared_sample_id_rows": 1057,
+    "rate_pearson_r": 0.9950408203137138,
+    "rate_frac_agree_5sig": 0.0,
+    "rate_median_rel_diff": 1.1591826686702822,
+    "area_frac_exact": 0.857143,
+    "rate_units_both": "the column NAME is mm/yr in both files, but the VALUES differ (see below)",
+    "rate_value_inconsistency": {
+      "combined_erosion_rate_identity": "VERIFIED EXACT: combined['Erosion rate (mm/yr)'] == TSS_km3_yr / Area_km2 * 1e6 for all 1078 rows (max relative deviation 1.3e-11), i.e. the published conversion TSS_km3_yr -> mm/yr over Area_km2 with an implicit 2700 kg/m3 sediment density (implied density from TSS_kg_s is exactly 2700.0 kg/m3).",
+      "main_table_erosion_rate_identity": "NOT REPRODUCIBLE from the combined.tsv columns: main['Erosion rate (mm/yr)'] / (TSS_km3_yr/Area*1e6) has median 2.159, IQR 1.16-8.38, max 472.3, and the ratio is NOT constant within a Basin (36 of 60 basins have a single ratio, the rest up to 190 distinct values). The ratio is strongly ANTI-correlated with TSS_mg_L (r = -0.698 in log space) but no closed form (rate = f(TSS, Q, C, Area, Season, Observation Type)) was found; a 125-combination brute-force search over the available columns found no exact identity. The nonglacial main table's GloRiSe 'Erosion rate (mm/yr)' values are therefore THE SAME UNIT (mm/yr) but a DIFFERENT NUMERIC SERIES from the bundled GloRiSe combined.tsv column of that name.",
+      "consequence_for_domain_workstreams": "Do NOT treat the nonglacial GloRiSe stratum as a byte-for-byte copy of GloRiSe combined.tsv. Also, main-table rate x Area is only approximately conserved within a basin (see next fields)."
+    },
+    "main_rate_times_area_constant_within_basin_frac": 0.5,
+    "main_rate_area_exponent_note": "slope of log10(main Erosion rate) vs log10(Area) WITHIN a basin: -1 would mean rate x Area is constant (flux conserved). The observed within-basin median exponent measures how the GloRiSe-level recomputation behaves.",
+    "main_rate_median_area_exponent": null,
+    "main_rate_vs_area_regression": {
+      "n": 1057,
+      "slope": 0.04423020237930026,
+      "se": 0.016472560348230268,
+      "r2": 0.006787430349129241,
+      "p": 0.007364889803463217,
+      "intercept": -1.7060213280744205,
+      "interpretation": "pooled log-log slope of main-table GloRiSe rate on Area is ~0, so across basins the main rate is not a simple flux/area rescaling; the value stored in the main table differs from the combined.tsv column of the same name"
+    },
+    "combined_rate_vs_area_regression": {
+      "n": 1078,
+      "slope": 0.09720737913743847,
+      "se": 0.022064288493084488,
+      "r2": 0.017719115326302166,
+      "p": 1.1601275646279566e-05,
+      "intercept": -2.535497637793511
+    },
+    "reference_rename_in_main": {
+      "Negrel and Grosbois 1999": "Negrel and Grosbois, 1999",
+      "Meybeck and Ragu, 1998": "Meybeck and Ragu, 1998",
+      "Canfield 1997": "Canfield, 1997",
+      "Chakrapani 2005": "Chakrapani, 2005",
+      "Vale 1986": "Vale, 1986",
+      "note": "GEMS-GLORI (Meybeck and Ragu, 1998) in the combined file became Meybeck and Ragu, 1998 in the main table"
+    },
+    "rows_only_in_main": {
+      "sample_ids": [],
+      "count": 0,
+      "by_reference": {},
+      "explanation": "NO main-table sample is missing from the combined file. The +1 Canfield offset is not an extra main row: the combined file contains the row USA-COL-111111-CAN1 (Colorado basin, area 6.4e5 km2) but with a MISSING Reference, while the main table assigns it to 'Canfield, 1997'. The main table therefore has 23 Canfield rows against the combined file's 22. This also explains why the combined file has 1078 rows but only 1077 non-null References.",
+      "net_accounting": "row total: combined 1078 - 21 dropped Hasholt rows = main 1057 exactly; the only per-reference offset outside those 21 is the reassigned NaN-reference row USA-COL-111111-CAN1, which changes the per-reference tally but not the row total."
+    },
+    "per_reference_diff": [
+      {
+        "_refn": "negrel and grosbois 1999",
+        "combined": 65.0,
+        "main": 0.0,
+        "diff": 65.0
+      },
+      {
+        "_refn": "gems-glori (meybeck and ragu, 1998)",
+        "combined": 50.0,
+        "main": 0.0,
+        "diff": 50.0
+      },
+      {
+        "_refn": "canfield 1997",
+        "combined": 22.0,
+        "main": 0.0,
+        "diff": 22.0
+      },
+      {
+        "_refn": "hasholt and hagedorn, 2000",
+        "combined": 21.0,
+        "main": 0.0,
+        "diff": 21.0
+      },
+      {
+        "_refn": "chakrapani 2005",
+        "combined": 14.0,
+        "main": 0.0,
+        "diff": 14.0
+      },
+      {
+        "_refn": "vale 1986",
+        "combined": 4.0,
+        "main": 0.0,
+        "diff": 4.0
+      },
+      {
+        "_refn": "negrel and grosbois, 1999",
+        "combined": 0.0,
+        "main": 65.0,
+        "diff": -65.0
+      },
+      {
+        "_refn": "meybeck and ragu, 1998",
+        "combined": 0.0,
+        "main": 50.0,
+        "diff": -50.0
+      },
+      {
+        "_refn": "canfield, 1997",
+        "combined": 0.0,
+        "main": 23.0,
+        "diff": -23.0
+      },
+      {
+        "_refn": "chakrapani, 2005",
+        "combined": 0.0,
+        "main": 14.0,
+        "diff": -14.0
+      },
+      {
+        "_refn": "vale, 1986",
+        "combined": 0.0,
+        "main": 4.0,
+        "diff": -4.0
+      }
+    ],
+    "reference_name_normalization_examples": {
+      "combined_only_style": [
+        "Canfield 1997",
+        "Chakrapani 2005",
+        "GEMS-GLORI (Meybeck and Ragu, 1998)",
+        "Hasholt and Hagedorn, 2000",
+        "Negrel and Grosbois 1999",
+        "Vale 1986"
+      ],
+      "main_only_style": [
+        "Canfield, 1997",
+        "Chakrapani, 2005",
+        "Meybeck and Ragu, 1998",
+        "Negrel and Grosbois, 1999",
+        "Vale, 1986"
+      ]
+    }
+  },
+  "non_erosion_files": {
+    "files": [
+      {
+        "path": "data/raw/beryllium.tsv",
+        "n_rows": 70.0,
+        "columns": "Reference | Reference DOI | Locality | Region | Sample ID | Type | Depth (m) | Sal (PSU) | T (C) | pH | Be (nmol/kg) | Be dissolved (nmol/kg) | Be colloidal (nmol/kg) | DOC (nmol/kg) | Alkalinity (mM HCO3) | Notes",
+        "role": "NOT part of the erosion-rate evidence chain",
+        "reason": "dissolved/colloidal beryllium concentrations in estuaries; no erosion-rate, time-interval, area, slope or precipitation column"
+      },
+      {
+        "path": "data/raw/lithology_reference.tsv",
+        "n_rows": 1.0,
+        "columns": "Chorlton, L.B. | 2007 | Generalized geology of the world: bedrock domains and major faults in GIS format: a small-scale world geology map with an extended geological attribute database | doi: 10.4095/223767",
+        "role": "NOT part of the erosion-rate evidence chain",
+        "reason": "1-row source citation for the Chorlton 2007 geology map"
+      },
+      {
+        "path": "data/raw/lithology_reference_nonglacial.tsv",
+        "n_rows": 1.0,
+        "columns": "Chorlton, L.B. | 2007 | Generalized geology of the world: bedrock domains and major faults in GIS format: a small-scale world geology map with an extended geological attribute database | doi: 10.4095/223767",
+        "role": "NOT part of the erosion-rate evidence chain",
+        "reason": "identical 1-row source citation"
+      },
+      {
+        "path": "data/raw/prior compilations/CHELSEA/references.txt",
+        "n_rows": NaN,
+        "columns": "",
+        "role": "NOT part of the erosion-rate evidence chain",
+        "reason": "prose reference list for the CHELSA climate product"
+      },
+      {
+        "path": "data/raw/prior compilations/CHELSEA/annualprecipitation.jl",
+        "n_rows": NaN,
+        "columns": "",
+        "role": "NOT part of the erosion-rate evidence chain",
+        "reason": "Julia code that built precipitation_*.tsv"
+      },
+      {
+        "path": "data/raw/prior compilations/OCTOPUS/octopusexposureage.jl",
+        "n_rows": NaN,
+        "columns": "",
+        "role": "NOT part of the erosion-rate evidence chain",
+        "reason": "Julia code that built octopusages.tsv"
+      },
+      {
+        "path": "data/raw/source_notes.txt",
+        "n_rows": NaN,
+        "columns": "",
+        "role": "NOT part of the erosion-rate evidence chain",
+        "reason": "placeholder one-line text ('A description of all the files in this folder...')"
+      }
+    ],
+    "beryllium_columns": [
+      "Reference",
+      "Reference DOI",
+      "Locality",
+      "Region",
+      "Sample ID",
+      "Type",
+      "Depth (m)",
+      "Sal (PSU)",
+      "T (C)",
+      "pH",
+      "Be (nmol/kg)",
+      "Be dissolved (nmol/kg)",
+      "Be colloidal (nmol/kg)",
+      "DOC (nmol/kg)",
+      "Alkalinity (mM HCO3)",
+      "Notes"
+    ],
+    "beryllium_has_erosion_columns": false,
+    "note": "'Compilation', 'Reference', 'Reference DOI', 'Locality' and 'Region' are shared identifier columns with the main tables, so beryllium.tsv can be mistaken for an erosion table; its measures are Be (nmol/kg), Sal, T, pH, DOC, Alkalinity."
+  },
+  "errors": [],
+  "exhumation_identity": {
+    "glacial": {
+      "populated": 81,
+      "er_ti_available": 81,
+      "exact_identity_er_ti_eq_exhumation_1000_rel_lt_1e-9": 11,
+      "identity_rel_lt_1e-6": 20,
+      "ratio_in_0.99_1.01": 48,
+      "ratio_min": 0.0999999677419355,
+      "ratio_median": 1.0000006289308176,
+      "ratio_max": 1875.0
+    },
+    "nonglacial": {
+      "populated": 11,
+      "er_ti_available": 11,
+      "exact_identity_er_ti_eq_exhumation_1000_rel_lt_1e-9": 0,
+      "identity_rel_lt_1e-6": 0,
+      "ratio_in_0.99_1.01": 0,
+      "ratio_min": 875.0,
+      "ratio_median": 1000.0,
+      "ratio_max": 10000.0
+    },
+    "glacial_by_reference": [
+      {
+        "Reference": "Balter-Kennedy et al., 2021",
+        "count": 24,
+        "min": 0.9253521126760562,
+        "median": 1.0022528772805805,
+        "max": 1.0638297872340425
+      },
+      {
+        "Reference": "Bell and Laine, 1985",
+        "count": 1,
+        "min": 1.0000008,
+        "median": 1.0000008,
+        "max": 1.0000008
+      },
+      {
+        "Reference": "Braun, 1989",
+        "count": 1,
+        "min": 1.0021954022988506,
+        "median": 1.0021954022988506,
+        "max": 1.0021954022988506
+      },
+      {
+        "Reference": "Corbett et al., 2019",
+        "count": 1,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1.0
+      },
+      {
+        "Reference": "Cuffey et al., 2022",
+        "count": 2,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1.0
+      },
+      {
+        "Reference": "Dowdeswell et al., 2010",
+        "count": 1,
+        "min": 0.9790076335877863,
+        "median": 0.9790076335877863,
+        "max": 0.9790076335877863
+      },
+      {
+        "Reference": "D\u00fchnforth et al., 2010",
+        "count": 1,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1.0
+      },
+      {
+        "Reference": "Fitzgerald et al., 1995",
+        "count": 1,
+        "min": 800.0,
+        "median": 800.0,
+        "max": 800.0
+      },
+      {
+        "Reference": "Foster et al., 1994",
+        "count": 1,
+        "min": 1875.0,
+        "median": 1875.0,
+        "max": 1875.0
+      },
+      {
+        "Reference": "Harrison et al., 1997",
+        "count": 1,
+        "min": 720.0018,
+        "median": 720.0018,
+        "max": 720.0018
+      },
+      {
+        "Reference": "Hjelstuen et al., 1996",
+        "count": 4,
+        "min": 0.6827586206896552,
+        "median": 0.8619764357535007,
+        "max": 0.9999990000000001
+      },
+      {
+        "Reference": "Jamieson et al., 2005",
+        "count": 1,
+        "min": 1.8133333333333332,
+        "median": 1.8133333333333332,
+        "max": 1.8133333333333332
+      },
+      {
+        "Reference": "Kaszycki and Shilts, 1980",
+        "count": 1,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1.0
+      },
+      {
+        "Reference": "Laberg and Vorren, 2009",
+        "count": 1,
+        "min": 0.99875,
+        "median": 0.99875,
+        "max": 0.99875
+      },
+      {
+        "Reference": "Laberg et al., 2012",
+        "count": 3,
+        "min": 0.9999990000000001,
+        "median": 0.9999997938144329,
+        "max": 1.0
+      },
+      {
+        "Reference": "Lasabuda et al., 2018",
+        "count": 1,
+        "min": 0.9999984905660376,
+        "median": 0.9999984905660376,
+        "max": 0.9999984905660376
+      },
+      {
+        "Reference": "Medvedev et al., 2008",
+        "count": 1,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1.0
+      },
+      {
+        "Reference": "Nesje and Sulebak, 2008",
+        "count": 1,
+        "min": 0.9090909090909091,
+        "median": 0.9090909090909091,
+        "max": 0.9090909090909091
+      },
+      {
+        "Reference": "Rocchi et al., 2006",
+        "count": 1,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1.0
+      },
+      {
+        "Reference": "Rolland et al., 2019",
+        "count": 1,
+        "min": 0.9999995,
+        "median": 0.9999995,
+        "max": 0.9999995
+      },
+      {
+        "Reference": "Rydningen et al., 2016",
+        "count": 1,
+        "min": 1.0000012826421052,
+        "median": 1.0000012826421052,
+        "max": 1.0000012826421052
+      },
+      {
+        "Reference": "Shuster et al., 2005",
+        "count": 1,
+        "min": 4.5,
+        "median": 4.5,
+        "max": 4.5
+      },
+      {
+        "Reference": "Smith et al., 2007",
+        "count": 1,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1.0
+      },
+      {
+        "Reference": "Smith et al., 2012",
+        "count": 1,
+        "min": 1.0000006289308176,
+        "median": 1.0000006289308176,
+        "max": 1.0000006289308176
+      },
+      {
+        "Reference": "Steinemann et al., 2020",
+        "count": 13,
+        "min": 0.5586592178770949,
+        "median": 3.230769230769231,
+        "max": 7.611650485436893
+      },
+      {
+        "Reference": "Stern et al., 2005",
+        "count": 1,
+        "min": 0.99999955,
+        "median": 0.99999955,
+        "max": 0.99999955
+      },
+      {
+        "Reference": "Thomson et al., 2013",
+        "count": 1,
+        "min": 0.9999997073170732,
+        "median": 0.9999997073170732,
+        "max": 0.9999997073170732
+      },
+      {
+        "Reference": "T\u00eerl\u0103 et al., 2020",
+        "count": 1,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1.0
+      },
+      {
+        "Reference": "Wellman & Tingey, 1981",
+        "count": 1,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1.0
+      },
+      {
+        "Reference": "White, 1972",
+        "count": 1,
+        "min": 0.9999990000000001,
+        "median": 0.9999990000000001,
+        "max": 0.9999990000000001
+      },
+      {
+        "Reference": "Willenbring Staiger, 2005",
+        "count": 1,
+        "min": 0.0999999677419355,
+        "median": 0.0999999677419355,
+        "max": 0.0999999677419355
+      },
+      {
+        "Reference": "Young et al., 2016",
+        "count": 8,
+        "min": 0.9921052631578946,
+        "median": 1.0017658923588932,
+        "max": 1.0059375
+      },
+      {
+        "Reference": "Zeitler et al., 2001",
+        "count": 1,
+        "min": 1028.5714285714287,
+        "median": 1028.5714285714287,
+        "max": 1028.5714285714287
+      }
+    ],
+    "glacial_ratio_near_1_references": [
+      "Balter-Kennedy et al., 2021",
+      "Bell and Laine, 1985",
+      "Braun, 1989",
+      "Corbett et al., 2019",
+      "Cuffey et al., 2022",
+      "D\u00fchnforth et al., 2010",
+      "Kaszycki and Shilts, 1980",
+      "Laberg and Vorren, 2009",
+      "Laberg et al., 2012",
+      "Lasabuda et al., 2018",
+      "Medvedev et al., 2008",
+      "Rocchi et al., 2006",
+      "Rolland et al., 2019",
+      "Rydningen et al., 2016",
+      "Smith et al., 2007",
+      "Smith et al., 2012",
+      "Stern et al., 2005",
+      "Thomson et al., 2013",
+      "T\u00eerl\u0103 et al., 2020",
+      "Wellman & Tingey, 1981",
+      "White, 1972",
+      "Young et al., 2016"
+    ]
+  },
+  "octopus_expansion": {
+    "octopusdata_rows": 3342,
+    "octopusdata_unique_smpid1": 3342,
+    "rows_with_al26_rate": 236,
+    "rows_with_be10_rate": 3221,
+    "rows_with_either": 3223,
+    "sum_of_al26_and_be10": 3457,
+    "main_octopus_rows": 3457,
+    "main_octopus_unique_sample_id": 3060,
+    "accounted": true,
+    "explanation": "the nonglacial OCTOPUS subset has one row per (sample, nuclide) pair, not one row per sample: rows_with_Al26 + rows_with_Be10 == main rows"
+  },
+  "strata_sizes": [
+    {
+      "table": "glacial",
+      "methodology": "Cosmogenic detrital",
+      "n_rows": 9,
+      "n_rate_pos": 9,
+      "n_interval_pos": 9,
+      "n_both_pos": 9,
+      "n_area_pos": 7,
+      "er_min": 0.0004,
+      "er_median": 0.4,
+      "er_max": 7.0,
+      "ti_median": 7500.0
+    },
+    {
+      "table": "glacial",
+      "methodology": "Cosmogenic surface",
+      "n_rows": 99,
+      "n_rate_pos": 99,
+      "n_interval_pos": 99,
+      "n_both_pos": 99,
+      "n_area_pos": 99,
+      "er_min": 0.0014,
+      "er_median": 0.4,
+      "er_max": 6.8,
+      "ti_median": 5000.0
+    },
+    {
+      "table": "glacial",
+      "methodology": "Relief",
+      "n_rows": 18,
+      "n_rate_pos": 18,
+      "n_interval_pos": 18,
+      "n_both_pos": 18,
+      "n_area_pos": 1,
+      "er_min": 0.05,
+      "er_median": 0.55,
+      "er_max": 1000.0,
+      "ti_median": 900000.0
+    },
+    {
+      "table": "glacial",
+      "methodology": "Thermochronometric",
+      "n_rows": 68,
+      "n_rate_pos": 68,
+      "n_interval_pos": 68,
+      "n_both_pos": 68,
+      "n_area_pos": 68,
+      "er_min": 0.0068,
+      "er_median": 1.5,
+      "er_max": 32.0,
+      "ti_median": 1000000.0
+    },
+    {
+      "table": "glacial",
+      "methodology": "Volumetric",
+      "n_rows": 233,
+      "n_rate_pos": 233,
+      "n_interval_pos": 233,
+      "n_both_pos": 233,
+      "n_area_pos": 217,
+      "er_min": 0.0015,
+      "er_median": 0.44,
+      "er_max": 372.714,
+      "ti_median": 45.0
+    },
+    {
+      "table": "nonglacial",
+      "methodology": "Cosmogenic detrital",
+      "n_rows": 3470,
+      "n_rate_pos": 3470,
+      "n_interval_pos": 3470,
+      "n_both_pos": 3470,
+      "n_area_pos": 3470,
+      "er_min": 0.000246791,
+      "er_median": 0.06608025000000001,
+      "er_max": 118.864,
+      "ti_median": 10042.25
+    },
+    {
+      "table": "nonglacial",
+      "methodology": "Cosmogenic surface",
+      "n_rows": 224,
+      "n_rate_pos": 220,
+      "n_interval_pos": 64,
+      "n_both_pos": 64,
+      "n_area_pos": 224,
+      "er_min": 0.0,
+      "er_median": 0.00026,
+      "er_max": 0.108919,
+      "ti_median": 1410000.0
+    },
+    {
+      "table": "nonglacial",
+      "methodology": "Relief",
+      "n_rows": 7,
+      "n_rate_pos": 7,
+      "n_interval_pos": 7,
+      "n_both_pos": 7,
+      "n_area_pos": 0,
+      "er_min": 3.0,
+      "er_median": 16.0,
+      "er_max": 34.0,
+      "ti_median": 4000010.0
+    },
+    {
+      "table": "nonglacial",
+      "methodology": "Thermochronometric",
+      "n_rows": 4,
+      "n_rate_pos": 4,
+      "n_interval_pos": 4,
+      "n_both_pos": 4,
+      "n_area_pos": 0,
+      "er_min": 1.2,
+      "er_median": 2.35,
+      "er_max": 8.0,
+      "ti_median": 3000000.0
+    },
+    {
+      "table": "nonglacial",
+      "methodology": "Volumetric",
+      "n_rows": 2583,
+      "n_rate_pos": 2583,
+      "n_interval_pos": 2583,
+      "n_both_pos": 2583,
+      "n_area_pos": 2526,
+      "er_min": 0.000145349,
+      "er_median": 0.0660102,
+      "er_max": 35.3261,
+      "ti_median": 5.0
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "quantum": {
+    "mae": 2.0978084714548806,
+    "rmse": 3.0595296584807596,
+    "bias": 0.5537200736648252
+  },
+  "learned": {
+    "mae": 2.410699815837938,
+    "rmse": 3.627796539885696,
+    "bias": 1.0788766114180484
+  },
+  "reference": {
+    "mae": 5.48596685082873,
+    "rmse": 6.75961553714002,
+    "bias": 1.3784162062615106
+  },
+  "unit_forensics": {
+    "n_rows": 543,
+    "n_unique_observation_id": 543,
+    "n_unique_molecule": 419,
+    "n_unique_fragment_pair": 539,
+    "n_unique_mol_fragpair_triple": 543,
+    "n_unique_quantum_value": 494,
+    "n_unique_experimental_value": 284,
+    "n_unique_learned_value": 479,
+    "n_unique_reference_value": 290,
+    "dup_triples": 0,
+    "dup_molecules": 124
+  },
+  "quantum_value_repeats": {
+    "n_rows_with_quantum_value_seen_more_than_once": 93,
+    "max_multiple": 3
+  },
+  "method_A": [
+    {
+      "tol": 0.0,
+      "n_pairs": 54,
+      "sd_delta_E": 3.5485220986427937,
+      "sigma_ref": 2.509184039140638,
+      "oracle_mae": 2.002039205043288,
+      "sigma_delta_Q_selfcheck_sqrt2": 0.0,
+      "sigma_delta_L_selfcheck_sqrt2": 1.4987177375154848,
+      "sigma_delta_R_selfcheck_sqrt2": 6.517352529762736,
+      "frac_pairs_exact_zero_dQ": 1.0
+    },
+    {
+      "tol": 0.05,
+      "n_pairs": 517,
+      "sd_delta_E": 3.8079135583362755,
+      "sigma_ref": 2.692601499271776,
+      "oracle_mae": 2.148385164663598,
+      "sigma_delta_Q_selfcheck_sqrt2": 0.021839690840807474,
+      "sigma_delta_L_selfcheck_sqrt2": 1.9376432401634642,
+      "sigma_delta_R_selfcheck_sqrt2": 5.59693340704467,
+      "frac_pairs_exact_zero_dQ": 0.10444874274661509
+    },
+    {
+      "tol": 0.1,
+      "n_pairs": 1002,
+      "sd_delta_E": 4.021548294704257,
+      "sigma_ref": 2.843664070054576,
+      "oracle_mae": 2.268915657606384,
+      "sigma_delta_Q_selfcheck_sqrt2": 0.041689563619880764,
+      "sigma_delta_L_selfcheck_sqrt2": 1.9260051221160563,
+      "sigma_delta_R_selfcheck_sqrt2": 5.424229199457784,
+      "frac_pairs_exact_zero_dQ": 0.05389221556886228
+    },
+    {
+      "tol": 0.2,
+      "n_pairs": 1930,
+      "sd_delta_E": 3.8882250386139936,
+      "sigma_ref": 2.74939029158328,
+      "oracle_mae": 2.1936960652755877,
+      "sigma_delta_Q_selfcheck_sqrt2": 0.07940905907661068,
+      "sigma_delta_L_selfcheck_sqrt2": 1.9109525762267936,
+      "sigma_delta_R_selfcheck_sqrt2": 5.491303352150425,
+      "frac_pairs_exact_zero_dQ": 0.027979274611398965
+    },
+    {
+      "tol": 0.5,
+      "n_pairs": 4751,
+      "sd_delta_E": 3.8637430057573408,
+      "sigma_ref": 2.732078880133109,
+      "oracle_mae": 2.17988355735379,
+      "sigma_delta_Q_selfcheck_sqrt2": 0.20226109721679233,
+      "sigma_delta_L_selfcheck_sqrt2": 1.8954350487887013,
+      "sigma_delta_R_selfcheck_sqrt2": 5.4850595379547045,
+      "frac_pairs_exact_zero_dQ": 0.011366028204588508
+    },
+    {
+      "tol": 1.0,
+      "n_pairs": 8878,
+      "sd_delta_E": 3.9837538407933075,
+      "sigma_ref": 2.8169393554029014,
+      "oracle_mae": 2.247592420393951,
+      "sigma_delta_Q_selfcheck_sqrt2": 0.39828677340517776,
+      "sigma_delta_L_selfcheck_sqrt2": 1.9550667684485639,
+      "sigma_delta_R_selfcheck_sqrt2": 5.685774830453746,
+      "frac_pairs_exact_zero_dQ": 0.006082451002478036
+    }
+  ],
+  "method_A_tol0.1_chemical_breakdown": {
+    "same_mol_same_fragset": {
+      "n_pairs": 0
+    },
+    "same_mol_diff_fragset": {
+      "n_pairs": 2
+    },
+    "diff_mol": {
+      "n_pairs": 1000,
+      "sd_delta_E": 4.024488210065095,
+      "sigma_ref": 2.845742904142339,
+      "oracle_mae": 2.270574327229481,
+      "median_sigma_delta_E": 2.816940000000008,
+      "sd_delta_Q": 0.05897345986940987
+    }
+  },
+  "clusters_identical_quantum": {
+    "n_clusters_gt1": 44,
+    "n_rows_in_clusters": 93,
+    "pooled_within_sd_E": 2.5728897964665927,
+    "median_within_sd_E": 1.3435028842544394,
+    "examples": [
+      {
+        "quantum": 83.88,
+        "n": 3,
+        "sd_E": 1.674315780649918,
+        "range_E": 2.9000000000000057
+      },
+      {
+        "quantum": 84.82,
+        "n": 3,
+        "sd_E": 0.873689494805412,
+        "range_E": 1.7000000000000028
+      },
+      {
+        "quantum": 87.33,
+        "n": 3,
+        "sd_E": 2.9160475533388253,
+        "range_E": 5.1000000000000085
+      },
+      {
+        "quantum": 87.53,
+        "n": 3,
+        "sd_E": 0.4041451884327368,
+        "range_E": 0.7999999999999972
+      },
+      {
+        "quantum": 92.6,
+        "n": 3,
+        "sd_E": 0.2309401076758536,
+        "range_E": 0.4000000000000057
+      },
+      {
+        "quantum": 74.8,
+        "n": 2,
+        "sd_E": 0.9899494936611605,
+        "range_E": 1.3999999999999915
+      },
+      {
+        "quantum": 75.69,
+        "n": 2,
+        "sd_E": 2.1213203435596424,
+        "range_E": 3.0
+      },
+      {
+        "quantum": 76.01,
+        "n": 2,
+        "sd_E": 7.424621202458749,
+        "range_E": 10.5
+      }
+    ]
+  },
+  "method_B": {
+    "var_EQ": 9.070820821865679,
+    "var_EL": 12.019067554857868,
+    "var_QL": 5.037678158107548,
+    "sigma_ref_sq": 8.026105109307998,
+    "sigma_ref": 2.8330381411671812,
+    "oracle_mae": 2.2604373930029427,
+    "implied_sigma_Q": 1.0221133560215718,
+    "implied_sigma_L": 1.9982398368438834
+  },
+  "method_B_covariance_form": {
+    "sigma_ref_sq": 8.026105109307991,
+    "sigma_ref": 2.8330381411671803
+  },
+  "floor_assumption_probe": {
+    "oracle_mae_gaussian_assumption_tol0.1": 2.268915657606384,
+    "oracle_mae_empirical_same_bond_pairs": null
+  },
+  "ratios_by_floor": {
+    "A_tol0.1": {
+      "quantum": 0.9245863610761034,
+      "learned": 1.0624898319848217,
+      "reference": 2.417880467454752
+    },
+    "A_tol0.05": {
+      "quantum": 0.9764582747821027,
+      "learned": 1.1220985210142307,
+      "reference": 2.553530410217547
+    },
+    "A_tol0.2": {
+      "quantum": 0.9562894808727019,
+      "learned": 1.098921520623272,
+      "reference": 2.5007871134324815
+    },
+    "A_tol0.5": {
+      "quantum": 0.9623488669282215,
+      "learned": 1.105884673383353,
+      "reference": 2.5166329790056627
+    },
+    "A_tol1.0": {
+      "quantum": 0.9333580467793103,
+      "learned": 1.0725698280364364,
+      "reference": 2.440819252214406
+    },
+    "B_moment": {
+      "quantum": 0.9280542243499109,
+      "learned": 1.0664749323737628,
+      "reference": 2.4269492567280264
+    },
+    "claim_2.26": {
+      "quantum": 0.9282338369269384,
+      "learned": 1.0666813344415655,
+      "reference": 2.4274189605436858
+    }
+  },
+  "bootstrap_floor": {
+    "n_ok": 2000,
+    "mean_sigma": 2.5137754109239645,
+    "ci95_sigma": [
+      2.0325681937984235,
+      3.0654496690570707
+    ],
+    "oracle_mae_ci95": [
+      1.6217547806107284,
+      2.44587496285889
+    ],
+    "frac_floors_below_quantum_mae": 0.692,
+    "frac_floors_below_learned_mae": 0.964,
+    "frac_floors_below_reference_mae": 1.0
+  }
+}

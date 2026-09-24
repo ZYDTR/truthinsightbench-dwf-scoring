@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Neuro_03_spatial_code_stability",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "941a2b5262fd5bafa59b560bd59f6e047a8936964a3e9e676ce8b7a3b2c9ca39",
+  "workspace_input_file_count": 9,
+  "workspace_input_bytes": 72790,
+  "output_tree_sha256": "3ecb79b7ef4cb50f66f3504c082a065a19d352aedfc8fc530ab34f0dc227d817",
+  "output_file_count": 23,
+  "output_bytes": 381410
+}

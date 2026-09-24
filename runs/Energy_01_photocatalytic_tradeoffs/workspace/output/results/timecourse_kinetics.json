@@ -1,0 +1,581 @@
+{
+  "kinetics": {
+    "unit": "one complete formulation time course (5 illumination times)",
+    "models": [
+      "linear",
+      "quadratic",
+      "power_law",
+      "logistic",
+      "saturation",
+      "induction_linear"
+    ],
+    "per_formulation": {
+      "formulation_1": {
+        "times_h": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "product_umol": [
+          0.0,
+          2.4,
+          4.8,
+          7.24,
+          9.48
+        ],
+        "final_product_umol_at_4h": 9.48,
+        "segment_rates_umol_h": [
+          2.4,
+          2.4,
+          2.4400000000000004,
+          2.24
+        ],
+        "segment_rate_ratio_last_over_first": 0.9333333333333335,
+        "mean_rate_umol_h": 2.37,
+        "models": {
+          "linear": {
+            "model": "linear",
+            "ok": true,
+            "k_params": 3,
+            "rss": 0.010720000000000106,
+            "r2": 0.9998107836381506,
+            "rmse": 0.04630334761116113,
+            "aicc": -0.725410178867854,
+            "bic": -25.89709644156555,
+            "params": {
+              "slope_umol_h": 2.38,
+              "intercept_umol": 0.023999999999998585
+            }
+          },
+          "quadratic": {
+            "model": "quadratic",
+            "ok": true,
+            "k_params": 4,
+            "rss": 0.005119999999999989,
+            "r2": 0.9999096280062808,
+            "rmse": 0.031999999999999966,
+            "aicc": null,
+            "bic": -27.982442112087714,
+            "params": {
+              "a_umol_h2": -0.02000000000000037,
+              "b_umol_h": 2.460000000000001,
+              "c_umol": -0.01600000000000029
+            }
+          },
+          "power_law": {
+            "model": "power_law",
+            "ok": true,
+            "k_params": 3,
+            "rss": 0.007367658762150314,
+            "r2": 0.9998699550759028,
+            "rmse": 0.03838660902489386,
+            "aicc": -2.6004660351662494,
+            "bic": -27.772152297863947,
+            "params": {
+              "amplitude": 2.431526920322599,
+              "exponent_b": 0.984435864552447
+            }
+          },
+          "logistic": {
+            "model": "logistic",
+            "ok": true,
+            "k_params": 4,
+            "rss": 0.7889510797125575,
+            "r2": 0.9860743980428717,
+            "rmse": 0.39722816609917216,
+            "aicc": null,
+            "bic": -2.794692727222544,
+            "params": {
+              "L_umol": 10.357919903263182,
+              "k_per_h": 1.1999957751198849,
+              "t_mid_h": 2.1712905907467306
+            }
+          },
+          "saturation": {
+            "model": "saturation",
+            "ok": true,
+            "k_params": 3,
+            "rss": 0.005459335188854615,
+            "r2": 0.9999036384755082,
+            "rmse": 0.033043411412427184,
+            "aicc": -4.099330846779232,
+            "bic": -29.27101710947693,
+            "params": {
+              "A_umol": 163.20881892173844,
+              "k_per_h": 0.014999999999999996
+            }
+          },
+          "induction_linear": {
+            "model": "induction_linear",
+            "ok": true,
+            "k_params": 3,
+            "rss": 0.011679999999999961,
+            "r2": 0.9997938388893282,
+            "rmse": 0.048332183894378204,
+            "aicc": -0.2965760700807998,
+            "bic": -25.4682623327785,
+            "params": {
+              "rate_umol_h": 2.388,
+              "lag_h": 0.0
+            }
+          }
+        },
+        "ranking_by_aicc": [
+          "saturation",
+          "power_law",
+          "linear",
+          "induction_linear"
+        ],
+        "aicc_undefined_models": [
+          "logistic",
+          "quadratic"
+        ],
+        "aicc_delta_vs_best": {
+          "saturation": 0.0,
+          "power_law": 1.4988648116129824,
+          "linear": 3.373920667911378,
+          "induction_linear": 3.802754776698432
+        },
+        "best_by_aicc": "saturation",
+        "best_parsimonious_1_or_2_param": "saturation"
+      },
+      "formulation_2": {
+        "times_h": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "product_umol": [
+          0.0,
+          1.21,
+          2.16,
+          3.16,
+          4.13
+        ],
+        "final_product_umol_at_4h": 4.13,
+        "segment_rates_umol_h": [
+          1.21,
+          0.9500000000000002,
+          1.0,
+          0.9699999999999998
+        ],
+        "segment_rate_ratio_last_over_first": 0.8016528925619832,
+        "mean_rate_umol_h": 1.0325,
+        "models": {
+          "linear": {
+            "model": "linear",
+            "ok": true,
+            "k_params": 3,
+            "rss": 0.020669999999999994,
+            "r2": 0.9980210778663255,
+            "rmse": 0.06429618962271402,
+            "aicc": 2.5574509113871997,
+            "bic": -22.614235351310498,
+            "params": {
+              "slope_umol_h": 1.0210000000000001,
+              "intercept_umol": 0.0899999999999993
+            }
+          },
+          "quadratic": {
+            "model": "quadratic",
+            "ok": true,
+            "k_params": 4,
+            "rss": 0.007462857142857144,
+            "r2": 0.9992855146018166,
+            "rmse": 0.038633811986023704,
+            "aicc": null,
+            "bic": -26.098522627780472,
+            "params": {
+              "a_umol_h2": -0.0307142857142859,
+              "b_umol_h": 1.1438571428571438,
+              "c_umol": 0.028571428571428564
+            }
+          },
+          "power_law": {
+            "model": "power_law",
+            "ok": true,
+            "k_params": 3,
+            "rss": 0.0030873083250547136,
+            "r2": 0.9997044246358041,
+            "rmse": 0.024848775925806543,
+            "aicc": -6.949467861715917,
+            "bic": -32.121154124413614,
+            "params": {
+              "amplitude": 1.171279651916969,
+              "exponent_b": 0.9063008776661079
+            }
+          },
+          "logistic": {
+            "model": "logistic",
+            "ok": true,
+            "k_params": 4,
+            "rss": 0.21882696764771062,
+            "r2": 0.9790497566655583,
+            "rmse": 0.20920180097107702,
+            "aicc": null,
+            "bic": -9.206807730064245,
+            "params": {
+              "L_umol": 4.50138512341314,
+              "k_per_h": 1.1534964108825152,
+              "t_mid_h": 2.105589965896203
+            }
+          },
+          "saturation": {
+            "model": "saturation",
+            "ok": true,
+            "k_params": 3,
+            "rss": 0.007875920130793447,
+            "r2": 0.9992459684242923,
+            "rmse": 0.03968858810991756,
+            "aicc": -2.2669158576225925,
+            "bic": -27.43860212032029,
+            "params": {
+              "A_umol": 16.824804149910314,
+              "k_per_h": 0.06999999999999995
+            }
+          },
+          "induction_linear": {
+            "model": "induction_linear",
+            "ok": true,
+            "k_params": 3,
+            "rss": 0.03417000000000002,
+            "r2": 0.9967286033232872,
+            "rmse": 0.08266801074176156,
+            "aicc": 5.070774373554819,
+            "bic": -20.10091188914288,
+            "params": {
+              "rate_umol_h": 1.051,
+              "lag_h": 0.0
+            }
+          }
+        },
+        "ranking_by_aicc": [
+          "power_law",
+          "saturation",
+          "linear",
+          "induction_linear"
+        ],
+        "aicc_undefined_models": [
+          "logistic",
+          "quadratic"
+        ],
+        "aicc_delta_vs_best": {
+          "power_law": 0.0,
+          "saturation": 4.682552004093324,
+          "linear": 9.506918773103116,
+          "induction_linear": 12.020242235270736
+        },
+        "best_by_aicc": "power_law",
+        "best_parsimonious_1_or_2_param": "power_law"
+      },
+      "formulation_3": {
+        "times_h": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "product_umol": [
+          0.0,
+          0.124,
+          0.256,
+          0.445,
+          0.636
+        ],
+        "final_product_umol_at_4h": 0.636,
+        "segment_rates_umol_h": [
+          0.124,
+          0.132,
+          0.189,
+          0.191
+        ],
+        "segment_rate_ratio_last_over_first": 1.5403225806451613,
+        "mean_rate_umol_h": 0.159,
+        "models": {
+          "linear": {
+            "model": "linear",
+            "ok": true,
+            "k_params": 3,
+            "rss": 0.002763900000000003,
+            "r2": 0.9892257711414859,
+            "rmse": 0.023511273891475993,
+            "aicc": -7.5027523280768875,
+            "bic": -32.674438590774585,
+            "params": {
+              "slope_umol_h": 0.1593,
+              "intercept_umol": -0.026400000000000052
+            }
+          },
+          "quadratic": {
+            "model": "quadratic",
+            "ok": true,
+            "k_params": 4,
+            "rss": 0.0001581142857142854,
+            "r2": 0.9993836392416201,
+            "rmse": 0.005623420413134437,
+            "aicc": null,
+            "bic": -45.370400207968196,
+            "params": {
+              "a_umol_h2": 0.01364285714285716,
+              "b_umol_h": 0.10472857142857131,
+              "c_umol": 0.0008857142857143493
+            }
+          },
+          "power_law": {
+            "model": "power_law",
+            "ok": true,
+            "k_params": 3,
+            "rss": 0.00026277447843552705,
+            "r2": 0.9989756531101556,
+            "rmse": 0.0072494755456588315,
+            "aicc": -19.268261512619276,
+            "bic": -44.43994777531697,
+            "params": {
+              "amplitude": 0.1123748840188586,
+              "exponent_b": 1.248881085126458
+            }
+          },
+          "logistic": {
+            "model": "logistic",
+            "ok": true,
+            "k_params": 4,
+            "rss": 0.0020321709951917123,
+            "r2": 0.9920781955273961,
+            "rmse": 0.020160213268672095,
+            "aicc": null,
+            "bic": -32.602690920581054,
+            "params": {
+              "L_umol": 0.7821690888557443,
+              "k_per_h": 1.099699220459414,
+              "t_mid_h": 2.694919067989278
+            }
+          },
+          "saturation": {
+            "model": "saturation",
+            "ok": true,
+            "k_params": 3,
+            "rss": 0.004355856310587179,
+            "r2": 0.9830200105774198,
+            "rmse": 0.02951561048186935,
+            "aicc": -5.228359867199131,
+            "bic": -30.40004612989683,
+            "params": {
+              "A_umol": 15.297074773659304,
+              "k_per_h": 0.01
+            }
+          },
+          "induction_linear": {
+            "model": "induction_linear",
+            "ok": true,
+            "k_params": 3,
+            "rss": 0.0010216486541678844,
+            "r2": 0.9960174114790703,
+            "rmse": 0.014294395084562931,
+            "aicc": -12.478877706780544,
+            "bic": -37.65056396947824,
+            "params": {
+              "rate_umol_h": 0.17265243809215958,
+              "lag_h": 0.385
+            }
+          }
+        },
+        "ranking_by_aicc": [
+          "power_law",
+          "induction_linear",
+          "linear",
+          "saturation"
+        ],
+        "aicc_undefined_models": [
+          "logistic",
+          "quadratic"
+        ],
+        "aicc_delta_vs_best": {
+          "power_law": 0.0,
+          "induction_linear": 6.789383805838732,
+          "linear": 11.765509184542388,
+          "saturation": 14.039901645420144
+        },
+        "best_by_aicc": "power_law",
+        "best_parsimonious_1_or_2_param": "power_law"
+      },
+      "formulation_4": {
+        "times_h": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "product_umol": [
+          0.0,
+          0.0329,
+          0.0724,
+          0.121,
+          0.173
+        ],
+        "final_product_umol_at_4h": 0.173,
+        "segment_rates_umol_h": [
+          0.0329,
+          0.03950000000000001,
+          0.04859999999999999,
+          0.05199999999999999
+        ],
+        "segment_rate_ratio_last_over_first": 1.5805471124620059,
+        "mean_rate_umol_h": 0.04325,
+        "models": {
+          "linear": {
+            "model": "linear",
+            "ok": true,
+            "k_params": 3,
+            "rss": 0.00016179099999999994,
+            "r2": 0.9914874046567854,
+            "rmse": 0.00568842684755636,
+            "aicc": -21.69321545774254,
+            "bic": -46.86490172044024,
+            "params": {
+              "slope_umol_h": 0.04341,
+              "intercept_umol": -0.006960000000000013
+            }
+          },
+          "quadratic": {
+            "model": "quadratic",
+            "ok": true,
+            "k_params": 4,
+            "rss": 1.9845714285714255e-06,
+            "r2": 0.9998955822418977,
+            "rmse": 0.0006300113377664604,
+            "aicc": null,
+            "bic": -67.2599757731229,
+            "params": {
+              "a_umol_h2": 0.0033785714285714235,
+              "b_umol_h": 0.029895714285714293,
+              "c_umol": -0.00020285714285714698
+            }
+          },
+          "power_law": {
+            "model": "power_law",
+            "ok": true,
+            "k_params": 3,
+            "rss": 3.924257255120222e-06,
+            "r2": 0.9997935261291696,
+            "rmse": 0.0008859184223302078,
+            "aicc": -40.288856857176796,
+            "bic": -65.4605431198745,
+            "params": {
+              "amplitude": 0.03136339680049652,
+              "exponent_b": 1.2303311194811994
+            }
+          },
+          "logistic": {
+            "model": "logistic",
+            "ok": true,
+            "k_params": 4,
+            "rss": 0.00015891561384853567,
+            "r2": 0.9916386924216358,
+            "rmse": 0.005637652239160122,
+            "aicc": null,
+            "bic": -45.345124048152535,
+            "params": {
+              "L_umol": 0.2093889187331501,
+              "k_per_h": 1.1119292923694548,
+              "t_mid_h": 2.643771280420651
+            }
+          },
+          "saturation": {
+            "model": "saturation",
+            "ok": true,
+            "k_params": 3,
+            "rss": 0.0002722856936132902,
+            "r2": 0.9856737523874849,
+            "rmse": 0.007379508027142327,
+            "aicc": -19.090483055806764,
+            "bic": -44.26216931850446,
+            "params": {
+              "A_umol": 4.176552898763787,
+              "k_per_h": 0.01
+            }
+          },
+          "induction_linear": {
+            "model": "induction_linear",
+            "ok": true,
+            "k_params": 3,
+            "rss": 4.0689220955952024e-05,
+            "r2": 0.9978591462267452,
+            "rmse": 0.002852690693221122,
+            "aicc": -28.594926272017986,
+            "bic": -53.766612534715684,
+            "params": {
+              "rate_umol_h": 0.04687133871330073,
+              "lag_h": 0.37
+            }
+          }
+        },
+        "ranking_by_aicc": [
+          "power_law",
+          "induction_linear",
+          "linear",
+          "saturation"
+        ],
+        "aicc_undefined_models": [
+          "logistic",
+          "quadratic"
+        ],
+        "aicc_delta_vs_best": {
+          "power_law": 0.0,
+          "induction_linear": 11.69393058515881,
+          "linear": 18.595641399434257,
+          "saturation": 21.198373801370032
+        },
+        "best_by_aicc": "power_law",
+        "best_parsimonious_1_or_2_param": "power_law"
+      }
+    }
+  },
+  "null_baselines": {
+    "baseline_1_common_linear_slope": {
+      "per_curve_rss": {
+        "formulation_1": 0.010720000000000106,
+        "formulation_2": 0.020669999999999994,
+        "formulation_3": 0.002763900000000003,
+        "formulation_4": 0.00016179099999999994
+      },
+      "per_curve_shared_slope": {
+        "formulation_1": {
+          "rss": 0.010719999999999973,
+          "slope": 2.38
+        },
+        "formulation_2": {
+          "rss": 0.02067000000000001,
+          "slope": 1.0210000000000001
+        },
+        "formulation_3": {
+          "rss": 0.0027643000000000004,
+          "slope": 0.1595
+        },
+        "formulation_4": {
+          "rss": 0.00016187199999999975,
+          "slope": 0.043500000000000004
+        }
+      },
+      "per_curve_rss_total": 0.0343156910000001,
+      "shared_slope_rss_total": 0.034316171999999985
+    },
+    "baseline_2_zero_slope": {
+      "rss_total": 204.99452717
+    },
+    "baseline_3_shared_shape_scaled": {
+      "scales": {
+        "formulation_1": 1.0,
+        "formulation_2": 0.4401407462826148,
+        "formulation_3": 0.06299378097821004,
+        "formulation_4": 0.017199102216403254
+      },
+      "rss_total": 0.033172975994575964
+    }
+  }
+}

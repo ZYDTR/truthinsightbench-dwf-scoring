@@ -1,0 +1,502 @@
+{
+  "file": "/data/user/conversations/conv-4ba01bd5-0b72-45b2-94f6-e776171d414a/project/data/observation_set_1.tsv",
+  "md5": "98af344bbb9b92636ce85c0226601792",
+  "shape": [
+    1430,
+    8
+  ],
+  "dtypes": {
+    "observation_index": "int64",
+    "numeric_feature_1": "int64",
+    "numeric_feature_2": "int64",
+    "numeric_feature_3": "int64",
+    "numeric_feature_4": "int64",
+    "numeric_feature_5": "int64",
+    "numeric_feature_6": "float64",
+    "numeric_feature_7": "float64"
+  },
+  "n_missing": 0,
+  "design": {
+    "n_levels": {
+      "numeric_feature_2": 10,
+      "numeric_feature_3": 13,
+      "numeric_feature_4": 11
+    },
+    "n_expected_cells": 1430,
+    "n_rows": 1430,
+    "n_distinct_cells": 1430,
+    "reps_per_cell_min": 1,
+    "reps_per_cell_max": 1,
+    "complete_factorial_all_cells_exactly_once": true,
+    "row_order_is_mixed_radix_full_factorial": false,
+    "factor_levels_exactly_0_to_k_minus_1": {
+      "numeric_feature_2": true,
+      "numeric_feature_3": true,
+      "numeric_feature_4": true
+    },
+    "response_columns_are_continuous_dup_counts": {
+      "numeric_feature_6": {
+        "n_unique": 1430,
+        "n_rows": 1430,
+        "is_continuous": true
+      },
+      "numeric_feature_7": {
+        "n_unique": 1430,
+        "n_rows": 1430,
+        "is_continuous": true
+      }
+    },
+    "other_column_nunique": {
+      "observation_index": 1430,
+      "numeric_feature_1": 1430,
+      "numeric_feature_2": 10,
+      "numeric_feature_3": 13,
+      "numeric_feature_4": 11,
+      "numeric_feature_5": 1430,
+      "numeric_feature_6": 1430,
+      "numeric_feature_7": 1430
+    }
+  },
+  "path_P1_closed_form_balanced_SS": {
+    "numeric_feature_6": {
+      "SS": {
+        "SS_main": 351.48421908855056,
+        "SS_two_way": 219.18702285154734,
+        "SS_three_way": 103.82638359029572,
+        "SS_residual": 1.2789769243681803e-13,
+        "SS_total": 674.4976255303937,
+        "SS_components": {
+          "A": 55.42734568946106,
+          "B": 101.2368749324812,
+          "C": 194.8199984666083,
+          "AB": 62.35137549282075,
+          "AC": 82.97879822708633,
+          "BC": 73.85684913164026,
+          "ABC": 103.82638359029572
+        },
+        "df": {
+          "A": 9,
+          "B": 12,
+          "C": 10,
+          "AB": 108,
+          "AC": 90,
+          "BC": 120,
+          "ABC": 1080,
+          "residual": 0
+        }
+      },
+      "eta2": {
+        "main": 0.521105198572285,
+        "two_way": 0.3249633720788695,
+        "three_way": 0.1539314293488453,
+        "residual": 1.8961918855718017e-16
+      }
+    },
+    "numeric_feature_7": {
+      "SS": {
+        "SS_main": 145.60435384294757,
+        "SS_two_way": 12.548715879686545,
+        "SS_three_way": 6.016842008627041,
+        "SS_residual": -8.881784197001252e-15,
+        "SS_total": 164.16991173126115,
+        "SS_components": {
+          "A": 1.699803356121561,
+          "B": 0.36995762266380067,
+          "C": 143.53459286416222,
+          "AB": 1.2018042635132866,
+          "AC": 8.89030878479285,
+          "BC": 2.4566028313804082,
+          "ABC": 6.016842008627041
+        },
+        "df": {
+          "A": 9,
+          "B": 12,
+          "C": 10,
+          "AB": 108,
+          "AC": 90,
+          "BC": 120,
+          "ABC": 1080,
+          "residual": 0
+        }
+      },
+      "eta2": {
+        "main": 0.8869125426667429,
+        "two_way": 0.07643736752583649,
+        "three_way": 0.03665008980742064,
+        "residual": -5.41011693515456e-17
+      }
+    }
+  },
+  "path_P2_effect_coding_QR": {
+    "numeric_feature_6": {
+      "SS": {
+        "SS_main": 351.4842190885506,
+        "SS_two_way": 219.18702285154737,
+        "SS_three_way": 103.82638359029568,
+        "SS_residual": 8.526512829121202e-14,
+        "SS_total": 674.4976255303937,
+        "SS_components": {
+          "A": 55.42734568946108,
+          "B": 101.23687493248117,
+          "C": 194.81999846660835,
+          "AB": 62.35137549282069,
+          "AC": 82.97879822708639,
+          "BC": 73.8568491316403,
+          "ABC": 103.82638359029568
+        },
+        "block_singular_max_abs": 0.5
+      },
+      "eta2": {
+        "main": 0.5211051985722851,
+        "two_way": 0.32496337207886955,
+        "three_way": 0.15393142934884524,
+        "residual": 1.2641279237145345e-16
+      }
+    },
+    "numeric_feature_7": {
+      "SS": {
+        "SS_main": 145.6043538429474,
+        "SS_two_way": 12.54871587968655,
+        "SS_three_way": 6.016842008627041,
+        "SS_residual": 1.5631940186722204e-13,
+        "SS_total": 164.16991173126115,
+        "SS_components": {
+          "A": 1.6998033561215613,
+          "B": 0.36995762266380045,
+          "C": 143.53459286416205,
+          "AB": 1.2018042635132873,
+          "AC": 8.890308784792856,
+          "BC": 2.4566028313804087,
+          "ABC": 6.016842008627041
+        },
+        "block_singular_max_abs": 0.5
+      },
+      "eta2": {
+        "main": 0.8869125426667419,
+        "two_way": 0.07643736752583653,
+        "three_way": 0.03665008980742064,
+        "residual": 9.521805805872025e-16
+      }
+    }
+  },
+  "effect_coding_design_orthogonal_max_abs_offdiag": 0.0,
+  "effect_coding_block_gram_offdiag_relative": 0.5,
+  "path_agreement_max_abs_eta2_diff": 1.006281749938748e-15,
+  "F_statistic_search": {
+    "numeric_feature_6": {
+      "A_MS3way_over_MS_pooled_all_other": 0.05879270080626411,
+      "B_MS3way_over_MS_2way": 0.13947496269259443,
+      "C_MS3way_over_MS_main": 0.008478906276165191,
+      "D_MS2way_plus_3way_over_MS_resid_style": null,
+      "E_tukey_1df_additive_model": {
+        "SS_nonadditivity": 114.11880702835491,
+        "SS_error": 208.8945994134881,
+        "df_error": 1397,
+        "F": 763.1790092526345,
+        "p": 2.1539445422699332e-134
+      },
+      "F_tukey_split_within_3way": {
+        "SS_3way_total": 103.82638359029572,
+        "SS_3way_nonadditivity_1df": 41.797606244637876,
+        "SS_3way_remainder": 62.02877734565784,
+        "df_3way_total": 1080,
+        "df_remainder": 1079,
+        "F": 727.0757069197874,
+        "p": 7.732794885121915e-123
+      },
+      "SS_ratio_3way_over_2way": 0.4736885525408867,
+      "SS_ratio_3way_over_main": 0.29539415413736797
+    },
+    "numeric_feature_7": {
+      "A_MS3way_over_MS_pooled_all_other": 0.012293984278634262,
+      "B_MS3way_over_MS_2way": 0.1411798401944883,
+      "C_MS3way_over_MS_main": 0.0011861297117111798,
+      "D_MS2way_plus_3way_over_MS_resid_style": null,
+      "E_tukey_1df_additive_model": {
+        "SS_nonadditivity": 0.13005120484601193,
+        "SS_error": 18.435506683467576,
+        "df_error": 1397,
+        "F": 9.854979105771221,
+        "p": 0.0017291844637100295
+      },
+      "F_tukey_split_within_3way": {
+        "SS_3way_total": 6.016842008627041,
+        "SS_3way_nonadditivity_1df": 0.0011017732313562615,
+        "SS_3way_remainder": 6.015740235395685,
+        "df_3way_total": 1080,
+        "df_remainder": 1079,
+        "F": 0.19761712941636217,
+        "p": 0.6567402937558504
+      },
+      "SS_ratio_3way_over_2way": 0.4794787025473188,
+      "SS_ratio_3way_over_main": 0.041323228666066913
+    }
+  },
+  "adversarial_robustness_eta2": {
+    "numeric_feature_6": {
+      "raw": {
+        "main": 0.521105198572285,
+        "two_way": 0.3249633720788695,
+        "three_way": 0.1539314293488453,
+        "residual": 1.8961918855718017e-16,
+        "SS_total": 674.4976255303937
+      },
+      "standardised_unit_variance": {
+        "main": 0.5211051985722851,
+        "two_way": 0.3249633720788696,
+        "three_way": 0.15393142934884535,
+        "residual": -3.9778459664666214e-17,
+        "SS_total": 1428.9999999999998
+      },
+      "winsorised_1_99pct": {
+        "main": 0.5471205661233568,
+        "two_way": 0.3019187823346383,
+        "three_way": 0.1509606515420048,
+        "residual": 9.988497981419747e-17,
+        "SS_total": 569.0887555520975
+      },
+      "rank_transformed": {
+        "main": 0.7064096811771,
+        "two_way": 0.18124463837299137,
+        "three_way": 0.11234568044990864,
+        "residual": 1.5287394306393777e-17,
+        "SS_total": 243683797.5
+      },
+      "rank_normal_scores": {
+        "main": 0.7017950321404742,
+        "two_way": 0.18731190083754268,
+        "three_way": 0.11089306702198316,
+        "residual": -7.974619859802058e-17,
+        "SS_total": 1425.6082386407056
+      },
+      "log_shifted_positive": {
+        "main": 0.6940248571791287,
+        "two_way": 0.185228037290217,
+        "three_way": 0.12074710553065414,
+        "residual": 2.499411386276238e-16,
+        "SS_total": 1933.1313883334758
+      }
+    },
+    "numeric_feature_7": {
+      "raw": {
+        "main": 0.8869125426667429,
+        "two_way": 0.07643736752583649,
+        "three_way": 0.03665008980742064,
+        "residual": -5.41011693515456e-17,
+        "SS_total": 164.16991173126115
+      },
+      "standardised_unit_variance": {
+        "main": 0.8869125426667429,
+        "two_way": 0.07643736752583653,
+        "three_way": 0.03665008980742064,
+        "residual": -4.475076712274949e-17,
+        "SS_total": 1429.0
+      },
+      "winsorised_1_99pct": {
+        "main": 0.8888775367509686,
+        "two_way": 0.07460573422666826,
+        "three_way": 0.036516729022363234,
+        "residual": -1.204126427557506e-16,
+        "SS_total": 162.27469795707628
+      },
+      "rank_transformed": {
+        "main": 0.8583805959424957,
+        "two_way": 0.08576729567704687,
+        "three_way": 0.055852108380457545,
+        "residual": -7.643697153196888e-17,
+        "SS_total": 243683797.5
+      },
+      "rank_normal_scores": {
+        "main": 0.8417093832381741,
+        "two_way": 0.10414605835878489,
+        "three_way": 0.054144558403040964,
+        "residual": 1.9936549649505145e-17,
+        "SS_total": 1425.6082386407056
+      },
+      "log_shifted_positive": {
+        "main": 0.7648619987051125,
+        "two_way": 0.14874348955665637,
+        "three_way": 0.0863945117382309,
+        "residual": 2.3234975189612596e-16,
+        "SS_total": 550.4533204494053
+      }
+    }
+  },
+  "adversarial_variant_details": {
+    "numeric_feature_6": {
+      "winsor_lo": 0.022889908341893164,
+      "winsor_hi": 3.3216325406678098,
+      "n_clipped": 30
+    },
+    "numeric_feature_7": {
+      "winsor_lo": -0.695202160409625,
+      "winsor_hi": 0.7410363504534673,
+      "n_clipped": 30
+    }
+  },
+  "saturated_model_reproduces_response_max_abs_err": {
+    "numeric_feature_6": 4.884981308350689e-15,
+    "numeric_feature_7": 1.582067810090848e-15
+  },
+  "rank_tie_info": {
+    "numeric_feature_6": {
+      "n_ties": 0
+    },
+    "numeric_feature_7": {
+      "n_ties": 0
+    }
+  },
+  "inference": {
+    "numeric_feature_6": {
+      "df": {
+        "main": 31,
+        "two_way": 318,
+        "three_way": 1080,
+        "pure_error": 0,
+        "residual_after_full_model": 0
+      },
+      "has_pure_error_replicate_variance": false,
+      "note": "Single replicate per cell: no pure-error stratum exists. The ONLY usable error stratum is the 3-way interaction (1080 df), which is exactly the effect D1 calls 'small but nonzero', so testing it against itself is impossible.",
+      "MS": {
+        "main": 11.338200615759696,
+        "two_way": 0.689267367457696,
+        "three_way": 0.09613554036138493
+      },
+      "F_main_over_MS3way": 117.93973980005784,
+      "p_main_over_MS3way": 0.0,
+      "F_two_way_over_MS3way": 7.169745599459451,
+      "p_two_way_over_MS3way": 9.359477726926257e-133,
+      "F_three_way_over_MS3way": 1.0,
+      "p_three_way_over_MS3way": 1.0,
+      "eta2_effect_size": {
+        "main": 0.521105198572285,
+        "two_way": 0.3249633720788695,
+        "three_way": 0.1539314293488453,
+        "residual": 1.8961918855718017e-16
+      },
+      "omega2_3way_vs_3way_stratum_UNUSABLE": null,
+      "cohens_f2_3way": 0.18193729762396912,
+      "tukey_1df_additive_model": {
+        "SS_nonadditivity": 114.11880702835491,
+        "SS_error": 208.8945994134881,
+        "df_error": 1397,
+        "F": 763.1790092526345,
+        "p": 2.1539445422699332e-134
+      },
+      "tukey_split_within_3way": {
+        "SS_3way_total": 103.82638359029572,
+        "SS_3way_nonadditivity_1df": 41.797606244637876,
+        "SS_3way_remainder": 62.02877734565784,
+        "df_3way_total": 1080,
+        "df_remainder": 1079,
+        "F": 727.0757069197874,
+        "p": 7.732794885121915e-123
+      },
+      "r_squared_full_model_saturated": 1.0
+    },
+    "numeric_feature_7": {
+      "df": {
+        "main": 31,
+        "two_way": 318,
+        "three_way": 1080,
+        "pure_error": 0,
+        "residual_after_full_model": 0
+      },
+      "has_pure_error_replicate_variance": false,
+      "note": "Single replicate per cell: no pure-error stratum exists. The ONLY usable error stratum is the 3-way interaction (1080 df), which is exactly the effect D1 calls 'small but nonzero', so testing it against itself is impossible.",
+      "MS": {
+        "main": 4.696914640095083,
+        "two_way": 0.039461370690838195,
+        "three_way": 0.005571150007988
+      },
+      "F_main_over_MS3way": 843.0781137396364,
+      "p_main_over_MS3way": 0.0,
+      "F_two_way_over_MS3way": 7.08316427205476,
+      "p_two_way_over_MS3way": 4.2921613195999666e-131,
+      "F_three_way_over_MS3way": 1.0,
+      "p_three_way_over_MS3way": 1.0,
+      "eta2_effect_size": {
+        "main": 0.8869125426667429,
+        "two_way": 0.07643736752583649,
+        "three_way": 0.03665008980742064,
+        "residual": -5.41011693515456e-17
+      },
+      "omega2_3way_vs_3way_stratum_UNUSABLE": null,
+      "cohens_f2_3way": 0.038044421263395425,
+      "tukey_1df_additive_model": {
+        "SS_nonadditivity": 0.13005120484601193,
+        "SS_error": 18.435506683467576,
+        "df_error": 1397,
+        "F": 9.854979105771221,
+        "p": 0.0017291844637100295
+      },
+      "tukey_split_within_3way": {
+        "SS_3way_total": 6.016842008627041,
+        "SS_3way_nonadditivity_1df": 0.0011017732313562615,
+        "SS_3way_remainder": 6.015740235395685,
+        "df_3way_total": 1080,
+        "df_remainder": 1079,
+        "F": 0.19761712941636217,
+        "p": 0.6567402937558504
+      },
+      "r_squared_full_model_saturated": 1.0
+    }
+  },
+  "permutation_reality_check": {
+    "numeric_feature_6": {
+      "observed_SS_3way": 103.82638359029572,
+      "permutation_SS_min": 103.8263835902957,
+      "permutation_SS_max": 103.82638359029573,
+      "permutation_SS_std": 1.1991132345047496e-14,
+      "degenerate": true,
+      "explanation": "Permuting the 3-way residual vector only relabels which cell holds which residual; the sum of squares is invariant. No design-based error term exists."
+    },
+    "numeric_feature_7": {
+      "observed_SS_3way": 6.016842008627041,
+      "permutation_SS_min": 6.01684200862704,
+      "permutation_SS_max": 6.016842008627042,
+      "permutation_SS_std": 9.340664650732511e-16,
+      "degenerate": true,
+      "explanation": "Permuting the 3-way residual vector only relabels which cell holds which residual; the sum of squares is invariant. No design-based error term exists."
+    }
+  },
+  "distribution_diagnostics": {
+    "numeric_feature_6": {
+      "mean": 0.5554833986513978,
+      "sd": 0.6870274636799613,
+      "min": 0.00164733715676,
+      "max": 5.662403575353499,
+      "range_over_sd": 8.23949046792938,
+      "skewness": 2.919081404529228,
+      "excess_kurtosis": 11.763807623308299,
+      "shapiro_W": 0.6931791794135564,
+      "shapiro_p": 4.1571145973222355e-45,
+      "max_abs_z": 7.43335666575487,
+      "n_abs_z_gt_3": 33,
+      "n_abs_z_gt_4": 15,
+      "iqr_over_sd": 0.8370578151654289,
+      "winsor_pull_l1_relative": 0.018985697138891342,
+      "cell_mean_sd": 0.6870274636799613,
+      "cell_mean_sd_over_sd": 1.0
+    },
+    "numeric_feature_7": {
+      "mean": -0.03343738958998238,
+      "sd": 0.33894612089537446,
+      "min": -0.7807014277274745,
+      "max": 0.9044897794991796,
+      "range_over_sd": 4.971855711978593,
+      "skewness": 0.26563894182834435,
+      "excess_kurtosis": -0.30588248754023395,
+      "shapiro_W": 0.9693811204521091,
+      "shapiro_p": 7.554113407667379e-17,
+      "max_abs_z": 2.7671866154169096,
+      "n_abs_z_gt_3": 0,
+      "n_abs_z_gt_4": 0,
+      "iqr_over_sd": 1.0671943846894127,
+      "winsor_pull_l1_relative": 0.003171039927917687,
+      "cell_mean_sd": 0.33894612089537446,
+      "cell_mean_sd_over_sd": 1.0
+    }
+  },
+  "runtime_sec": 315.6
+}

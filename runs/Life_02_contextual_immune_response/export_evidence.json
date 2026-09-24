@@ -1,0 +1,21 @@
+{
+  "task_id": "Life_02_contextual_immune_response",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260920T100629-a93c3b",
+  "source_run_json_sha256": "b2eda23b795c81c996bd7de6cacd356f23d4a0b7ea8e949a54ac4a541599cb4e",
+  "source_release_json_sha256": "152c1e759a63b647bd8e7ae877cdbdb5d7c1cc50855f1757f2f5195b429b6bda",
+  "source_latest_validation_sha256": "93b3a25e784561d1f2649b010f10c698cb22831864f15ad5b8565a15c4e5901d",
+  "source_snapshot_manifest_sha256": "e08460ff4a922e8d2a9430223a2b1745610d959fba8783e3e21ae0cafd9089fb",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 426
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": false
+  },
+  "registered_findings": 5,
+  "input_sha256": "df6d6667eeba8397ae2130a914f14970af0df145b8354925812374d1ff3b280a",
+  "output_sha256": "135e4f8f201e9ec29789ce827b861bf2709cb9eac1f19a4d4fd5f1fa6bdc00f8"
+}

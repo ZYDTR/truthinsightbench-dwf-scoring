@@ -1,0 +1,104 @@
+{
+  "decomposition_by_subset": {
+    "all_543": {
+      "label": "all 543",
+      "n": 543,
+      "sigma_ref": 2.8330381411671812,
+      "sigma_quantum_vs_truth": 1.0221133560215718,
+      "sigma_learned_vs_truth": 1.9982398368438834,
+      "oracle_floor_normality": 2.2604373930029427,
+      "oracle_floor_upper_bound": 2.8330381411671812,
+      "mae_quantum": 2.0978084714548806,
+      "mae_learned": 2.410699815837938,
+      "mae_reference": 5.48596685082873
+    },
+    "db_matched_331": {
+      "label": "exact DB row (331)",
+      "n": 331,
+      "sigma_ref": 2.5225811945305505,
+      "sigma_quantum_vs_truth": 0.8228720260930973,
+      "sigma_learned_vs_truth": 0.26357362631020687,
+      "oracle_floor_normality": 2.012728588487576,
+      "oracle_floor_upper_bound": 2.5225811945305505,
+      "mae_quantum": 1.8708459214501518,
+      "mae_learned": 1.8069486404833845,
+      "mae_reference": 5.024410876132931
+    },
+    "db_unmatched_212": {
+      "label": "no exact DB row (212)",
+      "n": 212,
+      "sigma_ref": 3.257740052472853,
+      "sigma_quantum_vs_truth": 1.2937250037112122,
+      "sigma_learned_vs_truth": 3.024949617617845,
+      "oracle_floor_normality": 2.599300490977206,
+      "oracle_floor_upper_bound": 3.257740052472853,
+      "mae_quantum": 2.4521698113207546,
+      "mae_learned": 3.353349056603773,
+      "mae_reference": 6.206603773584907
+    },
+    "C-H_302": {
+      "label": "C-H (302)",
+      "n": 302,
+      "sigma_ref": 2.363969151345166,
+      "sigma_quantum_vs_truth": 1.2097560227382602,
+      "sigma_learned_vs_truth": 2.437941782096194,
+      "oracle_floor_normality": 1.8861744880725604,
+      "oracle_floor_upper_bound": 2.363969151345166,
+      "mae_quantum": 1.9906622516556294,
+      "mae_learned": 2.5415894039735103,
+      "mae_reference": 5.710860927152317
+    },
+    "C-C_240": {
+      "label": "C-C (240)",
+      "n": 240,
+      "sigma_ref": 3.31176826869739,
+      "sigma_quantum_vs_truth": 0.40023699394854334,
+      "sigma_learned_vs_truth": 1.2858412626717954,
+      "oracle_floor_normality": 2.642408770550483,
+      "oracle_floor_upper_bound": 3.31176826869739,
+      "mae_quantum": 2.2344999999999997,
+      "mae_learned": 2.2365416666666667,
+      "mae_reference": 5.225
+    }
+  },
+  "matched_pair_normality": {
+    "n_pairs": 4751,
+    "sd": 3.870113026697738,
+    "skew": 0.3391689405800683,
+    "excess_kurtosis": 3.47968060391369,
+    "shapiro_W": 0.9472682662355524,
+    "shapiro_p": 2.9328624440892835e-38
+  },
+  "co_tight_pair_estimator": {
+    "n_pairs": 2282,
+    "sd_exp_diff": 3.194085180866838,
+    "sigma_ref": 2.258559291078401,
+    "median_abs": 1.4000000000000057,
+    "quantum_sd_of_diff": 0.26737980144752027,
+    "learned_sd_of_diff": 0.25445719050681803
+  },
+  "reference_lookup": {
+    "n_rows": 543,
+    "n_distinct_fragment_pairs": 539,
+    "n_distinct_reference_values": 290,
+    "n_pairs_with_more_than_one_distinct_ref": 0,
+    "n_pairs_with_more_than_one_row": 4,
+    "one_value_per_fragment_pair": true
+  },
+  "reference_error_matched331": {
+    "n": 331,
+    "mae": 5.024410876132931,
+    "rmse": 6.055621941609126,
+    "medae": 4.699999999999989,
+    "mean_signed": 0.8624773413897286,
+    "max_abs": 21.60000000000001
+  },
+  "reference_error_unmatched212": {
+    "n": 212,
+    "mae": 6.206603773584907,
+    "rmse": 7.73164899787976,
+    "medae": 5.350000000000001,
+    "mean_signed": 2.1839622641509435,
+    "max_abs": 33.4
+  }
+}

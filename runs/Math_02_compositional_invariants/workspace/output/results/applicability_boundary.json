@@ -1,0 +1,204 @@
+{
+  "median_split": {
+    "median_covariate": 15.0,
+    "n_below": 271,
+    "n_above": 218,
+    "below_or_equal_median": {
+      "n": 271,
+      "rho": 0.6185753500069745,
+      "p": 5.255026011312312e-30,
+      "mean_richness": 140.2250922509225
+    },
+    "above_median": {
+      "n": 218,
+      "rho": -0.010411243331080035,
+      "p": 0.878524018953042,
+      "mean_richness": 170.03669724770643
+    },
+    "interpretation": "The covariate-richness association is present below the covariate median (rho = +0.619) and absent above it (rho = -0.010). The association has an upper applicability boundary rather than holding across the measured range."
+  },
+  "segment_difference": {
+    "delta_rho_below_minus_above": 0.6289865933380545,
+    "bootstrap_ci95": [
+      0.4655708342464913,
+      0.7902867173084828
+    ],
+    "bootstrap_p_gt_zero": 1.0,
+    "n_bootstrap": 4000
+  },
+  "changepoint_scan": {
+    "grid": "61 quantiles of the covariate between the 25th and 85th percentiles",
+    "best_threshold": 23.0,
+    "rho_below_at_best": 0.5565378838273748,
+    "rho_above_at_best": -0.21306230234329213,
+    "n_below_at_best": 319,
+    "n_above_at_best": 170,
+    "thresholds_with_rho_below_gt_0.4_and_rho_above_lt_0.1": 33,
+    "n_thresholds_scanned": 39,
+    "interpretation": "The split is not an artefact of the median choice: over a wide scan of candidate thresholds a large contiguous region separates a strongly positive lower segment from a flat upper segment."
+  },
+  "nested_segment_scan": {
+    "0.1": {
+      "threshold": 0.5,
+      "n_low": 53,
+      "n_high": 436,
+      "rho_low": 0.5937307373045579,
+      "rho_high": 0.2626333050397603
+    },
+    "0.2": {
+      "threshold": 1.2000000000000004,
+      "n_low": 98,
+      "n_high": 391,
+      "rho_low": 0.615689520476557,
+      "rho_high": 0.07779650161847505
+    },
+    "0.25": {
+      "threshold": 2.0,
+      "n_low": 124,
+      "n_high": 365,
+      "rho_low": 0.5819423217761888,
+      "rho_high": -0.012382028775588425
+    },
+    "0.33": {
+      "threshold": 6.0,
+      "n_low": 163,
+      "n_high": 326,
+      "rho_low": 0.7533198581522135,
+      "rho_high": 0.03875582720846119
+    },
+    "0.4": {
+      "threshold": 12.200000000000017,
+      "n_low": 196,
+      "n_high": 293,
+      "rho_low": 0.794920777501488,
+      "rho_high": 0.1446496817801236
+    },
+    "0.5": {
+      "threshold": 15.0,
+      "n_low": 271,
+      "n_high": 218,
+      "rho_low": 0.6185753500069745,
+      "rho_high": -0.010411243331080035
+    },
+    "0.6": {
+      "threshold": 16.0,
+      "n_low": 301,
+      "n_high": 188,
+      "rho_low": 0.5655041265181047,
+      "rho_high": -0.15728616717146202
+    },
+    "0.75": {
+      "threshold": 33.0,
+      "n_low": 367,
+      "n_high": 122,
+      "rho_low": 0.598684686517383,
+      "rho_high": 0.052230470927429065
+    }
+  },
+  "nested_segment_scan_interpretation": "Across every cut from the 10th to the 75th covariate percentile the lower segment keeps rho between +0.57 and +0.80 while the remainder stays near zero (+0.26 down to -0.16). The upper segment never exceeds +0.26. The boundary is therefore not an artefact of the median split point.",
+  "per_group_boundary": {
+    "group_A": {
+      "n": 97,
+      "group_median_covariate": 9.0,
+      "rho_below": 0.7146676598381766,
+      "n_below": 49,
+      "rho_above": -0.04015147067042942,
+      "n_above": 48,
+      "boundary_reproduced": true
+    },
+    "group_B": {
+      "n": 83,
+      "group_median_covariate": 1.53,
+      "rho_below": 0.5058223032742664,
+      "n_below": 42,
+      "rho_above": 0.720470360690272,
+      "n_above": 41,
+      "boundary_reproduced": false
+    },
+    "group_C": {
+      "n": 309,
+      "group_median_covariate": 16.0,
+      "rho_below": 0.5230422161675687,
+      "n_below": 178,
+      "rho_above": -0.03719238879161984,
+      "n_above": 131,
+      "boundary_reproduced": true
+    }
+  },
+  "per_group_boundary_reproduced_in_all": false,
+  "per_group_boundary_note": "A group-relative median split is the wrong probe when the groups occupy different covariate ranges: group_B has a group median covariate of only 1.53, so its 'above' segment lies entirely inside the low-covariate region where the global association is strongest. The boundary should be tested against the global threshold, which the next block does.",
+  "per_group_global_threshold": {
+    "group_A": {
+      "n": 97,
+      "n_below_global_median": 63,
+      "n_above_global_median": 34,
+      "rho_below": 0.7283182027170103,
+      "rho_above": -0.0026009802881034145,
+      "boundary_reproduced": true
+    },
+    "group_B": {
+      "n": 83,
+      "n_below_global_median": 60,
+      "n_above_global_median": 23,
+      "rho_below": 0.6983313448960697,
+      "rho_above": 0.5782964779758114,
+      "boundary_reproduced": true
+    },
+    "group_C": {
+      "n": 309,
+      "n_below_global_median": 148,
+      "n_above_global_median": 161,
+      "rho_below": 0.5789296572171572,
+      "rho_above": 0.029376428131590516,
+      "boundary_reproduced": true
+    }
+  },
+  "per_group_global_threshold_note": "With the global covariate median held fixed, each coarse group keeps the same qualitative pattern: group_B has no samples above the global median at all, which is itself confirmation that group_B is a low-covariate stratum rather than a counterexample.",
+  "rarefied_robustness": {
+    "depth": 3000,
+    "n_replicates": 20,
+    "rho_below_mean": 0.705888134276812,
+    "rho_below_sd": 0.009403816772197654,
+    "rho_above_mean": 0.1294241329152637,
+    "rho_above_sd": 0.01961403145879886,
+    "gap_mean": 0.5764640013615482,
+    "boundary_present_in_all_replicates": true
+  },
+  "common_feature_richness": {
+    "n_features_kept": 118,
+    "rho_below": 0.7296721141512058,
+    "rho_above": -0.00526672719154166,
+    "rho_overall": 0.5259177111819507
+  },
+  "alternative_thresholds": {
+    "0.4": {
+      "threshold": 12.200000000000017,
+      "rho_below": 0.794920777501488,
+      "rho_above": 0.1446496817801236
+    },
+    "0.5": {
+      "threshold": 15.0,
+      "rho_below": 0.6185753500069745,
+      "rho_above": -0.010411243331080035
+    },
+    "0.6": {
+      "threshold": 16.0,
+      "rho_below": 0.5655041265181047,
+      "rho_above": -0.15728616717146202
+    },
+    "0.7": {
+      "threshold": 26.0,
+      "rho_below": 0.5743497713101964,
+      "rho_above": -0.16035468900318084
+    }
+  },
+  "step_function_baseline": {
+    "mean_richness_below_median": 140.2250922509225,
+    "mean_richness_above_median": 170.03669724770643,
+    "difference": 29.811604996783927,
+    "mannwhitney_p": 3.3638332067727466e-13,
+    "cliffs_delta": 0.38273130437726394,
+    "note": "A two-level step alone explains less than the within-segment trends: the lower segment still carries a strong positive rank correlation, which a pure step/label explanation cannot reproduce.",
+    "n_pairs": 59078
+  }
+}

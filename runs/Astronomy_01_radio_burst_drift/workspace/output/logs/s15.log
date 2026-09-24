@@ -1,0 +1,120 @@
+=== exact block -> normalized-series matches ===
+    sheet                    block_label  n   y_sum              exact_match
+Sheet_025 group_a (-35<s<-10), channel_l 26 10560.0 population_series_1|fast
+Sheet_027 group_a (-35<s<-10), channel_r 26 14492.0 population_series_2|fast
+Sheet_029 group_b (-35<s<-10), channel_l 24   357.0 population_series_3|fast
+Sheet_031 group_b (-35<s<-10), channel_r 21    52.0 population_series_4|fast
+Sheet_033 group_c (-35<s<-10), channel_l 24   429.0 population_series_5|fast
+Sheet_035 group_c (-35<s<-10), channel_r 25   664.0 population_series_6|fast
+
+=== aggregate reconstruction: 'slow' = union of two fine blocks ===
+{'population_series_id': 'population_series_1', 'workbook_blocks': 2, 'sheet': 'Sheet_024', 'labels': 'group_a(-10<s<0), channel_l + group_a(0<s<20), channel_l', 'n_recon': 137, 'n_norm': 137, 'sum_recon': 892.0, 'sum_norm': 892.0, 'max_abs_dx': 4.973799150320701e-14, 'max_abs_dy': 0.0, 'exact': True}
+{'population_series_id': 'population_series_2', 'workbook_blocks': 2, 'sheet': 'Sheet_026', 'labels': 'group_a(-10<s<0), channel_r + group_a(0<s<20), channel_r', 'n_recon': 131, 'n_norm': 131, 'sum_recon': 1303.0, 'sum_norm': 1303.0, 'max_abs_dx': 3.019806626980426e-14, 'max_abs_dy': 0.0, 'exact': True}
+{'population_series_id': 'population_series_3', 'workbook_blocks': 2, 'sheet': 'Sheet_028', 'labels': 'group_b(-10<s<0), channel_l + group_b(0<s<20), channel_l', 'n_recon': 139, 'n_norm': 139, 'sum_recon': 803.0, 'sum_norm': 803.0, 'max_abs_dx': 4.973799150320701e-14, 'max_abs_dy': 0.0, 'exact': True}
+{'population_series_id': 'population_series_4', 'workbook_blocks': 2, 'sheet': 'Sheet_030', 'labels': 'group_b(-10<s<0), channel_r + group_b(0<s<20), channel_r', 'n_recon': 132, 'n_norm': 132, 'sum_recon': 392.0, 'sum_norm': 392.0, 'max_abs_dx': 4.973799150320701e-14, 'max_abs_dy': 0.0, 'exact': True}
+{'population_series_id': 'population_series_5', 'workbook_blocks': 2, 'sheet': 'Sheet_032', 'labels': 'group_c(-10<s<0), channel_l + group_c(0<s<20), channel_l', 'n_recon': 127, 'n_norm': 127, 'sum_recon': 1092.0, 'sum_norm': 1092.0, 'max_abs_dx': 4.973799150320701e-14, 'max_abs_dy': 0.0, 'exact': True}
+{'population_series_id': 'population_series_6', 'workbook_blocks': 2, 'sheet': 'Sheet_034', 'labels': 'group_c(-10<s<0), channel_r + group_c(0<s<20), channel_r', 'n_recon': 136, 'n_norm': 136, 'sum_recon': 2201.0, 'sum_norm': 2201.0, 'max_abs_dx': 4.973799150320701e-14, 'max_abs_dy': 0.0, 'exact': True}
+
+=== aggregate reconstruction: orientation = 3 blocks, first point of each dropped ===
+{'orientation_series_id': 'orientation_series_1', 'sheet': 'Sheet_009', 'n_concat_kept': 52, 'n_norm': 52, 'sum_recon': 11240.0, 'sum_norm': 11240.0, 'sum_all_55': -385.0, 'max_abs_dx': 0.0, 'max_abs_dy': 0.0, 'exact': True, 'dropped_points': "[('group_a (-35<s<-10), channel_l', -34.0, 0.0), ('group_a(-10<s<0), channel_l', -9.0, 212.0), ('group_a(0<s<20), channel_l', 1.0, 0.0)]"}
+{'orientation_series_id': 'orientation_series_2', 'sheet': 'Sheet_010', 'n_concat_kept': 52, 'n_norm': 52, 'sum_recon': 15551.0, 'sum_norm': 15551.0, 'sum_all_55': -385.0, 'max_abs_dx': 0.0, 'max_abs_dy': 0.0, 'exact': True, 'dropped_points': "[('group_a (-35<s<-10), channel_r', -34.0, 0.0), ('group_a(-10<s<0), channel_r', -9.0, 244.0), ('group_a(0<s<20), channel_r', 1.0, 0.0)]"}
+{'orientation_series_id': 'orientation_series_3', 'sheet': 'Sheet_011', 'n_concat_kept': 52, 'n_norm': 52, 'sum_recon': 1151.0, 'sum_norm': 1151.0, 'sum_all_55': -385.0, 'max_abs_dx': 0.0, 'max_abs_dy': 0.0, 'exact': True, 'dropped_points': "[('group_b (-35<s<-10), channel_l', -34.0, 0.0), ('group_b(-10<s<0), channel_l', -9.0, 9.0), ('group_b(0<s<20), channel_l', 1.0, 0.0)]"}
+{'orientation_series_id': 'orientation_series_4', 'sheet': 'Sheet_012', 'n_concat_kept': 52, 'n_norm': 52, 'sum_recon': 444.0, 'sum_norm': 444.0, 'sum_all_55': -385.0, 'max_abs_dx': 0.0, 'max_abs_dy': 0.0, 'exact': True, 'dropped_points': "[('group_b (-35<s<-10), channel_r', -34.0, 0.0), ('group_b(-10<s<0), channel_r', -9.0, 0.0), ('group_b(0<s<20), channel_r', 1.0, 0.0)]"}
+{'orientation_series_id': 'orientation_series_5', 'sheet': 'Sheet_013', 'n_concat_kept': 52, 'n_norm': 52, 'sum_recon': 1503.0, 'sum_norm': 1503.0, 'sum_all_55': -385.0, 'max_abs_dx': 0.0, 'max_abs_dy': 0.0, 'exact': True, 'dropped_points': "[('group_c (-35<s<-10), channel_l', -34.0, 0.0), ('group_c(-10<s<0), channel_l', -9.0, 18.0), ('group_c(0<s<20), channel_l', 1.0, 0.0)]"}
+{'orientation_series_id': 'orientation_series_6', 'sheet': 'Sheet_014', 'n_concat_kept': 52, 'n_norm': 52, 'sum_recon': 2843.0, 'sum_norm': 2843.0, 'sum_all_55': -385.0, 'max_abs_dx': 0.0, 'max_abs_dy': 0.0, 'exact': True, 'dropped_points': "[('group_c (-35<s<-10), channel_r', -34.0, 0.0), ('group_c(-10<s<0), channel_r', -9.0, 22.0), ('group_c(0<s<20), channel_r', 1.0, 0.0)]"}
+
+=== coverage status counts ===
+status
+absent       68
+image        14
+aggregate    12
+exact         6
+empty         1
+
+=== ABSENT blocks (no normalized counterpart) ===
+    sheet                     block_label     n        y_sum closest_normalized_series  closest_maxdiff
+Sheet_001                  Gan(channel_l)  1207 4.026440e+05                                        NaN
+Sheet_001                  Gan(channel_r)   493 1.600374e+05                                        NaN
+Sheet_001             group_a (channel_l) 11517 1.581284e+06                                        NaN
+Sheet_001              group_a(channel_r) 15856 1.552303e+06                                        NaN
+Sheet_001             group_c (channel_l)  1656 4.023758e+05                                        NaN
+Sheet_001             group_c (channel_r)  2902 7.083391e+05                                        NaN
+Sheet_002              Ganymed(channel_l)  1207 2.910784e+05                                        NaN
+Sheet_002              group_a(channel_l) 11517 8.734031e+05                                        NaN
+Sheet_002              group_a(channel_r) 15856 1.377480e+06                                        NaN
+Sheet_002              group_b(channel_r)   493 1.178001e+05                                        NaN
+Sheet_002              group_c(channel_l)  1656 2.506769e+05                                        NaN
+Sheet_002              group_c(channel_r)  2902 4.481849e+05                                        NaN
+Sheet_009  group_a (-35<s<-10), channel_l    25 1.056000e+04                                        NaN
+Sheet_009     group_a(-10<s<0), channel_l    10 7.900000e+02                                        NaN
+Sheet_009      group_a(0<s<20), channel_l    20 1.020000e+02                                        NaN
+Sheet_010  group_a (-35<s<-10), channel_r    25 1.449200e+04                                        NaN
+Sheet_010     group_a(-10<s<0), channel_r    10 1.126000e+03                                        NaN
+Sheet_010      group_a(0<s<20), channel_r    20 1.770000e+02                                        NaN
+Sheet_011  group_b (-35<s<-10), channel_l    25 3.570000e+02                                        NaN
+Sheet_011     group_b(-10<s<0), channel_l    10 5.800000e+02                                        NaN
+Sheet_011      group_b(0<s<20), channel_l    20 2.230000e+02                                        NaN
+Sheet_012  group_b (-35<s<-10), channel_r    25 5.200000e+01                                        NaN
+Sheet_012     group_b(-10<s<0), channel_r    10 1.550000e+02                                        NaN
+Sheet_012      group_b(0<s<20), channel_r    20 2.370000e+02                                        NaN
+Sheet_013  group_c (-35<s<-10), channel_l    25 4.290000e+02                                        NaN
+Sheet_013     group_c(-10<s<0), channel_l    10 6.010000e+02                                        NaN
+Sheet_013      group_c(0<s<20), channel_l    20 4.910000e+02                                        NaN
+Sheet_014  group_c (-35<s<-10), channel_r    25 6.640000e+02                                        NaN
+Sheet_014     group_c(-10<s<0), channel_r    10 1.680000e+03                                        NaN
+Sheet_014      group_c(0<s<20), channel_r    20 5.210000e+02                                        NaN
+Sheet_019                  RD_box_of_ones  1336 6.371840e+05                                        NaN
+Sheet_019                          RD_raw   264 1.488884e+05                                        NaN
+Sheet_020                             Fit   178 3.225927e+01                                        NaN
+Sheet_020                         RD_corr   264 1.488884e+05                                        NaN
+Sheet_020                RD_corr_centered   178 3.225927e+01                                        NaN
+Sheet_020                          params     1 0.000000e+00                                        NaN
+Sheet_023                             Fit   178 7.738177e-01                                        NaN
+Sheet_023                         RD_corr   178 7.747382e-01                                        NaN
+Sheet_023                RD_corr_centered   178 7.747382e-01                                        NaN
+Sheet_023                          params     1 0.000000e+00                                        NaN
+Sheet_038                             Fit   178 2.457823e+00                                        NaN
+Sheet_038                         RD_corr   178 2.457806e+00                                        NaN
+Sheet_038                RD_corr_centered   178 2.457806e+00                                        NaN
+Sheet_038                          params     1 0.000000e+00                                        NaN
+Sheet_039  group_a (-35<s<-10), channel_l    20 1.057000e+04                                        NaN
+Sheet_039     group_a(-10<s<0), channel_l    20 8.090000e+02                                        NaN
+Sheet_039      group_a(0<s<20), channel_l    20 1.220000e+02                                        NaN
+Sheet_040  group_a (-35<s<-10), channel_r    20 1.449800e+04                                        NaN
+Sheet_040     group_a(-10<s<0), channel_r    20 1.144000e+03                                        NaN
+Sheet_040      group_a(0<s<20), channel_r    30 2.070000e+02                                        NaN
+Sheet_041  group_b (-35<s<-10), channel_l    20 3.520000e+02                                        NaN
+Sheet_041     group_b(-10<s<0), channel_l    20 5.790000e+02                                        NaN
+Sheet_041      group_b(0<s<20), channel_l    20 2.220000e+02                                        NaN
+Sheet_042  group_b (-35<s<-10), channel_r    20 5.100000e+01                                        NaN
+Sheet_042     group_b(-10<s<0), channel_r    20 1.480000e+02                                        NaN
+Sheet_042      group_b(0<s<20), channel_r    20 2.340000e+02                                        NaN
+Sheet_043  group_c (-35<s<-10), channel_l    20 4.230000e+02                                        NaN
+Sheet_043     group_c(-10<s<0), channel_l    20 5.960000e+02                                        NaN
+Sheet_043      group_c(0<s<20), channel_l    20 4.910000e+02                                        NaN
+Sheet_044  group_c (-35<s<-10), channel_r    20 6.630000e+02                                        NaN
+Sheet_044     group_c(-10<s<0), channel_r    20 1.671000e+03                                        NaN
+Sheet_044      group_c(0<s<20), channel_r    20 5.180000e+02                                        NaN
+Sheet_046   group_b C(-10<s<0), channel_l    20 5.620000e+02                                        NaN
+Sheet_046 group_b C(-35<s<-10), channel_l    25 3.350000e+02                                        NaN
+Sheet_046    group_b C(0<s<20), channel_l    20 1.800000e+02                                        NaN
+Sheet_047   group_b C(-10<s<0), channel_l    20 1.450000e+02                                        NaN
+Sheet_047 group_b C(-35<s<-10), channel_l    25 4.800000e+01                                        NaN
+Sheet_047    group_b C(0<s<20), channel_l    20 1.980000e+02                                        NaN
+
+absent blocks: 68, total events in absent blocks: 9168645
+
+=== event-total accounting ===
+  normalized_population_events: 33237
+  normalized_orientation_events: 32732
+  workbook_events_fast_blocks: 26554
+  workbook_events_fine_blocks: 6683
+  workbook_events_orient_blocks_all55: 33237
+  workbook_events_coarse_blocks: 33298
+  workbook_events_RD_blocks: 935035
+  workbook_events_46_47: 1468
+  workbook_events_angle_series_001_002: 8165607
+  workbook_image_sheets: 14
+
+=== fine-block totals vs slow series totals ===
+  Sheet_024: all-block total=892 slow series total=892 equal=True

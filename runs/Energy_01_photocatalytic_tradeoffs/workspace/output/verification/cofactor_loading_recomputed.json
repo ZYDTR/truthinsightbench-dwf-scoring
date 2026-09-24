@@ -1,0 +1,162 @@
+{
+  "conditions": [
+    0.2,
+    1.0,
+    3.0,
+    8.0
+  ],
+  "rates": [
+    1081.0,
+    1217.0,
+    470.0,
+    268.0
+  ],
+  "max_rate": 1217.0,
+  "max_rate_loading": 1.0,
+  "rate_at_8": 268.0,
+  "rate_at_0p2": 1081.0,
+  "pct_8_of_0p2": 24.79185938945421,
+  "spearman_rho": -0.7999999999999999,
+  "spearman_p_asymptotic": 0.2000000000000001,
+  "perm_n_orderings": 24,
+  "perm_n_at_least_as_extreme": 8,
+  "perm_p_two_sided": 0.3333333333333333,
+  "perm_rho_values": [
+    -1.0,
+    -0.8,
+    -0.8,
+    -0.8,
+    -0.6,
+    -0.4,
+    -0.4,
+    -0.4,
+    -0.4,
+    -0.2,
+    -0.2,
+    0.0,
+    0.0,
+    0.2,
+    0.2,
+    0.4,
+    0.4,
+    0.4,
+    0.4,
+    0.6,
+    0.8,
+    0.8,
+    0.8,
+    1.0
+  ],
+  "leave_one_out": {
+    "leave_out_0.2": {
+      "remaining_conditions": [
+        1.0,
+        3.0,
+        8.0
+      ],
+      "remaining_rates": [
+        1217.0,
+        470.0,
+        268.0
+      ],
+      "spearman_rho": -1.0,
+      "spearman_p_asymptotic": 0.0,
+      "strictly_decreasing": true
+    },
+    "leave_out_1.0": {
+      "remaining_conditions": [
+        0.2,
+        3.0,
+        8.0
+      ],
+      "remaining_rates": [
+        1081.0,
+        470.0,
+        268.0
+      ],
+      "spearman_rho": -1.0,
+      "spearman_p_asymptotic": 0.0,
+      "strictly_decreasing": true
+    },
+    "leave_out_3.0": {
+      "remaining_conditions": [
+        0.2,
+        1.0,
+        8.0
+      ],
+      "remaining_rates": [
+        1081.0,
+        1217.0,
+        268.0
+      ],
+      "spearman_rho": -0.5,
+      "spearman_p_asymptotic": 0.6666666666666666,
+      "strictly_decreasing": false
+    },
+    "leave_out_8.0": {
+      "remaining_conditions": [
+        0.2,
+        1.0,
+        3.0
+      ],
+      "remaining_rates": [
+        1081.0,
+        1217.0,
+        470.0
+      ],
+      "spearman_rho": -0.5,
+      "spearman_p_asymptotic": 0.6666666666666666,
+      "strictly_decreasing": false
+    }
+  },
+  "fit": {
+    "V": 17486.0151872141,
+    "K": 2.5989619012575993,
+    "Ki": 0.09228011056153167,
+    "ss_res": 6335.69196951165,
+    "ss_tot": 638050.0,
+    "R2": 0.9900702265190633,
+    "peak_loading_sqrt_K_Ki": 0.48972695616359513,
+    "predicted_rates": [
+      1081.9132085987717,
+      1211.317580921164,
+      508.66876839870963,
+      198.6653442821974
+    ],
+    "residuals": [
+      -0.9132085987716891,
+      5.682419078835892,
+      -38.66876839870963,
+      69.3346557178026
+    ],
+    "n_starts_used": 27,
+    "peak_loading_numeric": 0.48976,
+    "fit_at_analytic_peak": 1505.6080895962004,
+    "fit_at_4_loadings": [
+      1081.9132085987717,
+      1211.317580921164,
+      508.66876839870963,
+      198.6653442821974
+    ],
+    "predicted_at_analytic_peak_vs_grid_peak_diff": 3.304383640484465e-05,
+    "analytic_peak_value_formula": 1505.6080895962004
+  },
+  "exact_permutation": {
+    "n_orderings": 24,
+    "p_two_sided": 0.3333333333333333,
+    "p_one_sided_negative": 0.16666666666666666,
+    "n_at_least_as_extreme_two_sided": 8,
+    "min_attainable_two_sided_p_n4_perfect_monotone": 0.08333333333333333,
+    "min_attainable_one_sided_p_n4_perfect_monotone": 0.041666666666666664,
+    "interpretation": "With n=4 the smallest possible two-sided exact permutation p is 2/24 = 0.0833, attained only by a perfectly monotone ordering; no n=4 rank test can reach alpha=0.05 two-sided. The observed 8/24 = 0.3333 therefore provides essentially no support for a monotone decline claim, and a perfect monotone decline would itself be only borderline. One-sided, a perfect monotone decline gives 1/24 = 0.0417."
+  },
+  "notes": {
+    "n_units": 4,
+    "fit_df": "3 fitted parameters (V,K,Ki) to 4 points -> 1 residual degree of freedom; R2 is descriptive, no replicate/error estimate exists, so the parameter values and sqrt(K*Ki) are not uncertainty-quantified.",
+    "loading_axis": "loadings 0.2,1.0,3.0,8.0 have no ties so ranks=1..4 and Spearman rho is identical on a linear or log loading axis; the substrate-inhibition fit itself treats L on its raw linear scale, which gives the 1.0 and 3.0 points much more leverage than 0.2.",
+    "reported_vs_computed": {
+      "sqrt_K_Ki_reported": 0.49,
+      "sqrt_K_Ki_computed": 0.48972695616359513
+    }
+  }
+}

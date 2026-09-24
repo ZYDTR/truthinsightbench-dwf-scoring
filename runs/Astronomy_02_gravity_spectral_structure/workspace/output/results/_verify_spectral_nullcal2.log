@@ -1,0 +1,39 @@
+observed: {"A": {"stacked_peak_uhz": 489.0, "stacked_peak_power": 0.20010908235811223, "pass_peak_support_within_1res": 16, "n_pass_peaks_in_1res_of_stacked": 16}, "B": {"stacked_peak_uhz": 2474.0, "stacked_peak_power": 0.04038253752227731, "pass_peak_support_within_1res": 9, "n_pass_peaks_in_1res_of_stacked": 9}, "C": {"stacked_peak_uhz": 1706.0, "stacked_peak_power": 0.06682115502020337, "pass_peak_support_within_1res": 8, "n_pass_peaks_in_1res_of_stacked": 8}}
+  A rep 0 obs_max=0.1225 p_circ=0.00
+  A rep 1 obs_max=0.1374 p_circ=0.28
+  A rep 2 obs_max=0.1155 p_circ=0.42
+  A rep 3 obs_max=0.1321 p_circ=0.32
+  A rep 4 obs_max=0.1301 p_circ=0.48
+  A rep 5 obs_max=0.1265 p_circ=0.56
+  A rep 6 obs_max=0.1078 p_circ=0.32
+  A rep 7 obs_max=0.1203 p_circ=0.70
+  A rep 8 obs_max=0.1364 p_circ=0.64
+  A rep 9 obs_max=0.0893 p_circ=1.00
+  A rep 10 obs_max=0.1265 p_circ=0.90
+  A rep 11 obs_max=0.1036 p_circ=0.36
+  A rep 12 obs_max=0.1064 p_circ=0.56
+  A rep 13 obs_max=0.1402 p_circ=0.38
+  A rep 14 obs_max=0.1328 p_circ=0.00
+  A rep 15 obs_max=0.1391 p_circ=0.00
+  A rep 16 obs_max=0.1077 p_circ=0.56
+  A rep 17 obs_max=0.1226 p_circ=0.30
+  A rep 18 obs_max=0.1134 p_circ=0.72
+  A rep 19 obs_max=0.1206 p_circ=0.78
+A {
+ "calib_phaseRand_p_on_AR1_data_q2.5_q50_q97.5": [
+  0.0,
+  0.44999999999999996,
+  0.9524999999999999
+ ],
+ "calib_phaseRand_frac_p_lt_0.05_on_AR1_data": 0.15,
+ "calib_AR1null_p_on_AR1_data_q2.5_q50_q97.5": [
+  0.04,
+  0.31000000000000005,
+  0.8924999999999998
+ ],
+ "calib_AR1null_frac_p_lt_0.05_on_AR1_data": 0.1
+}
+  B rep 0 obs_max=0.0271 p_circ=0.28
+  B rep 1 obs_max=0.0238 p_circ=0.98
+  B rep 2 obs_max=0.0302 p_circ=0.86
+  B rep 3 obs_max=0.0277 p_circ=0.08

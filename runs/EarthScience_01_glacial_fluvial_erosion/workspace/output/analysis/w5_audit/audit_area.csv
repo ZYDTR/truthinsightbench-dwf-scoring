@@ -1,0 +1,428 @@
+row_index,Compilation,Reference,Locality,Methodology,Erosion rate (mm/yr),Time interval (yr),Area (km2),Latitude,Longitude,Precipitation (mm/yr),Slope (m/km),table
+0,"Amantov et al., 2011","Boulton et al., 1991",UK/Scotland,Volumetric,1.00000E+00,1.00000E+05,,53.34430,-1.87818,1291.20000,88.13203,glacial
+2,"Amantov et al., 2011","Faleide et al., 1996",Barents Sea-Svalbard continental margin,Volumetric,6.00000E-01,2.50000E+06,,67.18026,25.40585,783.50000,25.02615,glacial
+3,"Amantov et al., 2011","Solheim et al., 1996",Norwegian margin,Volumetric,4.00000E-01,2.50000E+06,,62.28011,8.68988,897.00000,138.70196,glacial
+8,"Antoniazza and Lane, 2021","Bratlie, 1994",Svalbard,Volumetric,1.90000E-01,1.17000E+04,,77.56008,15.48453,578.70000,128.63975,glacial
+11,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,3.00000E-02,2.19000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+12,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,5.00000E-02,2.00000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+13,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,5.00000E-02,2.02000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+14,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,6.00000E-02,2.00000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+15,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,6.00000E-02,2.13000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+16,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,1.00000E-01,8.70000E+01,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+17,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,1.20000E-01,2.02000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+18,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,1.30000E-01,8.70000E+01,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+19,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,1.60000E-01,2.13000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+20,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,1.60000E-01,2.13000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+21,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,5.20000E-01,2.17000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+22,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,1.04000E+00,2.20000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+23,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,1.09000E+00,2.22000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+24,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,1.26000E+00,2.16000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+25,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,1.26000E+00,2.17000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+26,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,1.28000E+00,1.85000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+27,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,1.40000E+00,2.22000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+28,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,1.76000E+00,2.22000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+29,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,1.91000E+00,2.13000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+30,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,2.01000E+00,2.16000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+31,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,2.09000E+00,1.85000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+32,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,5.70000E+00,2.22000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+33,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,6.24000E+00,2.16000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+34,"Balter-Kennedy et al., 2021","Balter-Kennedy et al., 2021",Ilulissat region,Cosmogenic surface,6.80000E+00,2.16000E+02,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+35,"Balter-Kennedy et al., 2021","Young et al., 2016",Ilulissat region,Cosmogenic surface,3.70000E-01,8.70000E+01,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+36,"Balter-Kennedy et al., 2021","Young et al., 2016",Ilulissat region,Cosmogenic surface,3.90000E-01,8.70000E+01,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+37,"Balter-Kennedy et al., 2021","Young et al., 2016",Ilulissat region,Cosmogenic surface,6.30000E-01,8.70000E+01,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+38,"Balter-Kennedy et al., 2021","Young et al., 2016",Ilulissat region,Cosmogenic surface,6.80000E-01,8.70000E+01,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+39,"Balter-Kennedy et al., 2021","Young et al., 2016",Ilulissat region,Cosmogenic surface,8.60000E-01,8.70000E+01,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+40,"Balter-Kennedy et al., 2021","Young et al., 2016",Ilulissat region,Cosmogenic surface,8.70000E-01,8.70000E+01,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+41,"Balter-Kennedy et al., 2021","Young et al., 2016",Ilulissat region,Cosmogenic surface,1.05000E+00,8.70000E+01,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+42,"Balter-Kennedy et al., 2021","Young et al., 2016",Ilulissat region,Cosmogenic surface,2.90000E+00,8.70000E+01,1.00000E-08,69.21670,-49.98570,569.00000,32.08894,glacial
+43,"Bell and Laine, 1985","Kaszycki and Shilts, 1980",Keewatin Peninsula Ontario,Volumetric,9.37500E-02,6.40000E+04,,49.75957,-94.55158,718.10000,16.50652,glacial
+50,"Burbank et al., 2000","Harrison et al., 1997",Nepalese Himalaya,Relief,4.50000E+00,4.00001E+06,,28.59419,83.98890,3579.00000,518.87749,glacial
+51,"Burbank et al., 2000","Zeitler et al., 2001","Nanga Parbat, Pakistan Himalaya",Relief,6.00000E+00,3.00000E+06,,35.23708,74.58927,1527.20000,546.04343,glacial
+61,"Geirsdóttir et al., 2007","Guðmundsson personal communication to Geirsdóttir et al., 2007",Iceland,Relief,1.00000E-01,1.00000E+06,,65.00000,-14.00000,1735.40000,243.90929,glacial
+62,"Geirsdóttir et al., 2007","Guðmundsson personal communication to Geirsdóttir et al., 2007",Iceland,Relief,5.00000E-01,4.00000E+05,,65.00000,-14.00000,1735.40000,243.90929,glacial
+63,"Geirsdóttir et al., 2007","Helgason and Duncan, 2001",Iceland,Relief,2.30000E-01,2.20000E+00,,64.50000,-16.00000,3064.90000,58.62299,glacial
+64,"Geirsdóttir et al., 2007","Helgason and Duncan, 2001",Iceland,Relief,1.75000E+00,8.00000E+05,,64.50000,-16.00000,3064.90000,58.62299,glacial
+65,"Hallet et al., 1996","Anderson, 1978","Baffin Island, Canada",Volumetric,3.00000E-02,2.00000E+02,,66.44895,-65.64205,914.20000,223.30873,glacial
+73,"Hallet et al., 1996","Bezinge, 1987",Switzerland,Volumetric,1.00000E+00,1.91781E-02,,46.60670,8.33110,1978.40000,417.66352,glacial
+74,"Hallet et al., 1996","Bezinge, 1987",Switzerland,Volumetric,1.30000E+00,1.91781E-02,,46.11670,7.38190,1544.60000,375.06253,glacial
+76,"Hallet et al., 1996","Bezinge, 1987",Switzerland,Volumetric,1.70000E+00,1.91781E-02,,46.10800,7.09210,882.30000,427.79172,glacial
+133,This study,"Andrews & LeMasurier, 1973","Mt Murphy, Marie Byrd Land",Volumetric,4.10000E-01,8.20000E+05,,-74.83860,-113.40060,1057.00000,13.26226,glacial
+143,This study,"Bell and Laine, 1985",Laurentia,Volumetric,5.55556E-02,2.70000E+06,,54.00000,-89.00000,609.40000,5.70302,glacial
+179,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,9.00000E-02,3.70000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+180,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,1.30000E-01,3.32000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+181,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,1.80000E-01,3.68000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+182,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,2.10000E-01,3.25000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+183,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,2.40000E-01,2.96000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+184,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,2.80000E-01,2.65000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+185,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,2.90000E-01,2.30000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+186,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,3.50000E-01,2.03000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+187,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,6.40000E-01,1.29000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+188,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,6.40000E-01,1.77000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+189,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,6.50000E-01,1.14000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+190,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,6.50000E-01,1.94000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+191,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,6.80000E-01,1.36000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+192,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,6.80000E-01,1.41000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+193,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,7.00000E-01,1.42000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+194,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,7.00000E-01,1.90000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+195,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,7.00000E-01,1.59000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+196,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,7.10000E-01,1.39000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+197,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,7.20000E-01,1.71000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+198,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,7.30000E-01,1.71000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+199,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,7.30000E-01,1.61000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+200,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,7.40000E-01,1.40000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+201,This study,"Briner and Swanson, 1998","Mt. Erie, Puget Lowland, Washington",Cosmogenic surface,7.90000E-01,1.85000E+04,1.00000E-08,49.03568,-122.71367,1470.20000,22.62337,glacial
+202,This study,"Colgan et al., 2002","Wisconsin, USA",Cosmogenic surface,1.30000E-01,1.40000E+04,1.00000E-08,43.78440,-88.78790,862.10000,7.61119,glacial
+205,This study,"Corbett et al., 2019","Mt. Mansfield, Vermont",Cosmogenic surface,1.00000E-01,2.00000E+04,1.00000E-08,44.54366,-72.83489,1642.70000,152.95245,glacial
+221,This study,"Darnault et al., 2012","Tinée Valley, France",Cosmogenic surface,4.00000E-01,1.80000E+03,1.00000E-08,44.11680,7.11299,1076.90000,382.80513,glacial
+222,This study,"Darnault et al., 2012","Tinée Valley, France",Cosmogenic surface,5.00000E-01,4.00000E+03,1.00000E-08,44.11680,7.11299,1076.90000,382.80513,glacial
+223,This study,"Darnault et al., 2012","Tinée Valley, France",Relief,1.80000E+00,1.05000E+05,,44.11680,7.11299,1076.90000,382.80513,glacial
+224,This study,"Darnault et al., 2012","Tinée Valley, France",Relief,2.50000E+00,8.00000E+04,,44.11680,7.11299,1076.90000,382.80513,glacial
+225,This study,"Davis et al., 2017","Baffin Island, Canada",Cosmogenic surface,1.00000E-01,5.45000E+03,1.00000E-08,70.94890,-71.15740,512.10000,239.30049,glacial
+232,This study,"Dühnforth et al., 2010","Yosemite, California",Cosmogenic surface,1.25000E-01,2.00000E+04,1.00000E-08,37.87077,-119.37766,1243.30000,180.31775,glacial
+240,This study,"Fame et al., 2019",New Hampshire,Cosmogenic surface,4.62963E-02,2.70000E+04,1.00000E-08,43.89452,-71.60311,1302.70000,132.87599,glacial
+278,This study,"Goehring et al., 2011",Swiss Alps,Cosmogenic surface,3.40000E-01,5.00000E+03,1.00000E-08,46.62160,8.40399,3001.40000,390.94872,glacial
+286,This study,"Hall et al., 2019","Forsmark/Uppland, Sweden",Cosmogenic detrital,3.14286E-02,3.50000E+04,,60.42660,18.18600,593.90000,8.17300,glacial
+287,This study,"Hall et al., 2020",Eastern Sweden,Volumetric,7.14286E-02,3.50000E+04,,63.74989,18.15440,868.50000,68.78277,glacial
+303,This study,"Kaplan et al., 2005",Argentina,Cosmogenic surface,1.40000E-03,1.90000E+05,1.00000E-08,-46.51339,-72.03758,697.30000,171.83356,glacial
+304,This study,"Koppes and Hallet, 2002","Glacier Bay, Alaska",Volumetric,3.70000E+01,7.90000E+01,,58.92690,-133.90810,3016.80000,315.93207,glacial
+333,This study,"Naylor et al., 2021",Laurentia,Volumetric,2.70000E-02,2.60000E+06,,54.00000,-89.00000,609.40000,5.70302,glacial
+349,This study,"Pedersen et al., 2021",Norway/Sweden,Volumetric,5.76000E-02,2.70000E+06,,67.18026,25.40585,783.50000,25.02615,glacial
+350,This study,"Pedersen et al., 2021",Norway/Sweden,Volumetric,8.22751E-02,1.89000E+06,,67.18026,25.40585,783.50000,25.02615,glacial
+351,This study,"Phillips et al., 2006","Cairngorm Mountains, Scotland",Cosmogenic surface,4.10000E-03,3.50000E+04,1.00000E-08,57.16010,-3.82319,1136.40000,118.26133,glacial
+352,This study,"Rand and Goehring, 2019",Norway,Cosmogenic surface,1.52500E+00,1.00000E+03,1.00000E-08,66.66613,13.89531,4853.60000,290.13908,glacial
+356,This study,"Ring, 2008",Rwenzori Mountains,Relief,2.75000E+00,3.00000E+05,,0.38540,29.87004,6860.90000,380.94346,glacial
+357,This study,"Rocchi et al., 2006","Dorrel Rock intrusive complex, Marie Byrd Land",Relief,5.00000E-01,6.00000E+06,,-75.00000,-111.00000,1651.70000,17.56546,glacial
+368,This study,"Ruszkiczay-Rüdiger et al., 2021","Carpathian Mountains, Romania",Cosmogenic surface,2.35000E-02,8.00000E+03,1.00000E-08,45.37070,22.90430,1379.50000,270.00180,glacial
+370,This study,"Schachtman et al., 2019","Little Lake, Coast Range, Oregon",Cosmogenic surface,2.20000E-01,1.50000E+04,1.00000E-08,44.16757,-123.58236,2150.70000,150.01632,glacial
+377,This study,"Smith et al., 2007",Antarctic Peninsula,Relief,1.00000E+03,6.00000E+00,,-79.00000,-80.00000,222.50000,10.41463,glacial
+378,This study,"Smith et al., 2012",Pine Island Glacier,Relief,6.48980E+02,4.90000E+01,,-75.25360,-100.87010,727.10000,7.89576,glacial
+381,This study,"Steinemann et al., 2020","Lapis de Tsanfleuron, Switzerland",Cosmogenic surface,5.00000E-03,9.70000E+03,1.00000E-08,46.31966,7.22648,2114.80000,378.17094,glacial
+382,This study,"Steinemann et al., 2020","Lapis de Tsanfleuron, Switzerland",Cosmogenic surface,5.00000E-03,5.70000E+03,1.00000E-08,46.31966,7.22648,2114.80000,378.17094,glacial
+383,This study,"Steinemann et al., 2020","Lapis de Tsanfleuron, Switzerland",Cosmogenic surface,5.00000E-03,5.40000E+03,1.00000E-08,46.31966,7.22648,2114.80000,378.17094,glacial
+384,This study,"Steinemann et al., 2020","Lapis de Tsanfleuron, Switzerland",Cosmogenic surface,5.00000E-03,5.60000E+03,1.00000E-08,46.31966,7.22648,2114.80000,378.17094,glacial
+385,This study,"Steinemann et al., 2020","Lapis de Tsanfleuron, Switzerland",Cosmogenic surface,1.00000E-02,8.90000E+03,1.00000E-08,46.31966,7.22648,2114.80000,378.17094,glacial
+386,This study,"Steinemann et al., 2020","Lapis de Tsanfleuron, Switzerland",Cosmogenic surface,1.00000E-02,1.01000E+04,1.00000E-08,46.31966,7.22648,2114.80000,378.17094,glacial
+387,This study,"Steinemann et al., 2020","Lapis de Tsanfleuron, Switzerland",Cosmogenic surface,1.00000E-02,5.00000E+03,1.00000E-08,46.31966,7.22648,2114.80000,378.17094,glacial
+388,This study,"Steinemann et al., 2020","Lapis de Tsanfleuron, Switzerland",Cosmogenic surface,1.50000E-02,8.80000E+03,1.00000E-08,46.31966,7.22648,2114.80000,378.17094,glacial
+389,This study,"Steinemann et al., 2020","Lapis de Tsanfleuron, Switzerland",Cosmogenic surface,2.00000E-02,8.40000E+03,1.00000E-08,46.31966,7.22648,2114.80000,378.17094,glacial
+390,This study,"Steinemann et al., 2020","Lapis de Tsanfleuron, Switzerland",Cosmogenic surface,4.00000E-02,9.80000E+03,1.00000E-08,46.31966,7.22648,2114.80000,378.17094,glacial
+391,This study,"Steinemann et al., 2020","Lapis de Tsanfleuron, Switzerland",Cosmogenic surface,6.50000E-02,8.80000E+03,1.00000E-08,46.31966,7.22648,2114.80000,378.17094,glacial
+392,This study,"Steinemann et al., 2020","Lapis de Tsanfleuron, Switzerland",Cosmogenic surface,6.50000E-02,7.40000E+03,1.00000E-08,46.31966,7.22648,2114.80000,378.17094,glacial
+393,This study,"Steinemann et al., 2020","Lapis de Tsanfleuron, Switzerland",Cosmogenic surface,7.00000E-02,7.20000E+03,1.00000E-08,46.31966,7.22648,2114.80000,378.17094,glacial
+394,This study,"Steinemann et al., 2021a",Swiss Alps,Cosmogenic surface,2.50000E-01,4.66000E+03,1.00000E-08,46.66460,8.37038,2672.30000,415.49618,glacial
+395,This study,"Steinemann et al., 2021a",Swiss Alps,Cosmogenic surface,2.50000E-01,3.07000E+03,1.00000E-08,46.66460,8.37038,2672.30000,415.49618,glacial
+396,This study,"Steinemann et al., 2021a",Swiss Alps,Cosmogenic surface,3.50000E-01,1.05000E+03,1.00000E-08,46.66460,8.37038,2672.30000,415.49618,glacial
+397,This study,"Steinemann et al., 2021a",Swiss Alps,Cosmogenic surface,3.50000E-01,8.40000E+02,1.00000E-08,46.66460,8.37038,2672.30000,415.49618,glacial
+398,This study,"Steinemann et al., 2021a",Swiss Alps,Cosmogenic surface,5.50000E-01,2.17000E+03,1.00000E-08,46.66460,8.37038,2672.30000,415.49618,glacial
+399,This study,"Steinemann et al., 2021a",Swiss Alps,Cosmogenic surface,6.00000E-01,4.00000E+02,1.00000E-08,46.66460,8.37038,2672.30000,415.49618,glacial
+400,This study,"Steinemann et al., 2021a",Swiss Alps,Cosmogenic surface,6.50000E-01,3.10000E+02,1.00000E-08,46.66460,8.37038,2672.30000,415.49618,glacial
+401,This study,"Steinemann et al., 2021a",Swiss Alps,Cosmogenic surface,6.50000E-01,1.25000E+03,1.00000E-08,46.66460,8.37038,2672.30000,415.49618,glacial
+402,This study,"Steinemann et al., 2021a",Swiss Alps,Cosmogenic surface,7.00000E-01,2.40000E+02,1.00000E-08,46.66460,8.37038,2672.30000,415.49618,glacial
+403,This study,"Steinemann et al., 2021a",Swiss Alps,Cosmogenic surface,7.50000E-01,2.20000E+02,1.00000E-08,46.66460,8.37038,2672.30000,415.49618,glacial
+404,This study,"Steinemann et al., 2021a",Swiss Alps,Cosmogenic surface,7.50000E-01,3.10000E+02,1.00000E-08,46.66460,8.37038,2672.30000,415.49618,glacial
+405,This study,"Steinemann et al., 2021a",Swiss Alps,Cosmogenic surface,9.00000E-01,1.40000E+02,1.00000E-08,46.66460,8.37038,2672.30000,415.49618,glacial
+406,This study,"Steinemann et al., 2021a",Swiss Alps,Cosmogenic surface,9.50000E-01,2.50000E+02,1.00000E-08,46.66460,8.37038,2672.30000,415.49618,glacial
+407,This study,"Steinemann et al., 2021a",Swiss Alps,Cosmogenic surface,9.50000E-01,2.40000E+02,1.00000E-08,46.66460,8.37038,2672.30000,415.49618,glacial
+408,This study,"Steinemann et al., 2021b",Swiss Alps,Cosmogenic surface,8.50000E-02,6.75000E+03,1.00000E-08,46.90655,9.15720,1640.00000,384.92038,glacial
+409,This study,"Stern et al., 2005",Transantarctic Mountains,Relief,6.74157E-02,4.45000E+07,,-83.74999,170.92619,274.80000,18.12792,glacial
+410,This study,"Strunk et al., 2017",W. Greenland,Cosmogenic surface,2.60000E-02,1.00000E+05,1.00000E-08,67.24603,-49.81962,395.00000,23.89921,glacial
+411,This study,"Sugden et al., 2014",Shackleton Range,Relief,5.71429E-02,1.40000E+07,,-80.50029,-25.00024,199.60000,9.72174,glacial
+413,This study,"Tîrlă et al., 2020","Carpathian Mountains, Romania",Relief,6.00000E-01,1.20000E+05,,45.57420,24.63862,1425.40000,323.25866,glacial
+415,This study,"Wellman & Tingey, 1981","Lambert trough, East Antarctica",Relief,5.00000E-02,3.00000E+07,,-71.00000,70.00000,94.90000,0.55520,glacial
+416,This study,"White, 1972",Laurentia,Relief,2.22222E-01,2.70000E+06,,54.00000,-89.00000,609.40000,5.70302,glacial
+417,This study,"Willenbring Staiger et al., 2006","Baffin Island, Canada",Cosmogenic detrital,4.00000E-04,3.00000E+06,1.00000E-08,72.11807,-76.80117,320.50000,159.57480,glacial
+418,This study,"Willenbring Staiger, 2005","Torngat Mountains, Labrador, Canada",Cosmogenic detrital,2.40310E-03,2.58000E+06,,59.56226,-64.38593,1506.00000,258.02331,glacial
+425,This study,"Young et al., 2016","Sermeq Kujalleq forefield, Greenland",Cosmogenic surface,7.20000E-01,7.43300E+03,1.00000E-08,72.50000,-38.45000,250.90000,1.80622,glacial
+426,This study,"Young et al., 2016","Sermeq Kujalleq forefield, Greenland",Cosmogenic surface,1.40000E+00,7.43300E+03,1.00000E-08,72.50000,-38.45000,250.90000,1.80622,glacial
+0,"Burbank et al., 2000","Amato et al., 1999",Zermatt-Saas ophiolite,Relief,3.00000E+00,2.00000E+07,,46.02065,7.74914,1210.70000,416.31849,nonglacial
+1,"Burbank et al., 2000","Amato et al., 1999",Zermatt-Saas,Relief,1.80000E+01,4.75000E+06,,46.02065,7.74914,1210.70000,416.31849,nonglacial
+2,"Burbank et al., 2000","Brandon et al., 1998","Ultrahigh-P rocks, Olympic Range, Washington",Thermochronometric,1.20000E+00,1.10000E+07,,47.75000,-123.50000,2995.50000,353.44546,nonglacial
+3,"Burbank et al., 2000","Foster and John, 1999","Chemehuevi Mountains, Basin and Range",Thermochronometric,3.00000E+00,4.00000E+06,,34.62437,-114.52653,164.90000,95.51125,nonglacial
+4,"Burbank et al., 2000","Hacker et al., 2003",Kokchetav Massif,Relief,2.00000E+01,7.00000E+06,,53.08000,70.18833,399.30000,56.48245,nonglacial
+5,"Burbank et al., 2000","Rubatto and Hermann, 2001",Dora Maira Massif,Relief,5.00000E+00,2.00000E+06,,44.89187,7.14142,1152.40000,365.48531,nonglacial
+6,"Burbank et al., 2000","Rubatto and Hermann, 2001",Dora Maira Massif,Relief,3.40000E+01,2.00000E+06,,44.89187,7.14142,1152.40000,365.48531,nonglacial
+7,"Burbank et al., 2000","Rubatto and Hermann, 2001",Dora Maira Massif,Relief,1.60000E+01,1.00000E+06,,44.89187,7.14142,1152.40000,365.48531,nonglacial
+8,"Burbank et al., 2000","Thomson et al., 1999","Lendas, Crete",Relief,6.00000E+00,4.00001E+06,,34.95586,24.91934,719.10000,153.34328,nonglacial
+9,"Burbank et al., 2000","Tippett and Kamp, 1995",Southern Alps,Thermochronometric,8.00000E+00,2.00000E+06,,-43.59499,170.14179,8646.00000,415.96643,nonglacial
+10,"Burbank et al., 2000","Weiland and Cloos, 1996","Gunung Bijih mining district, Irian Jaya",Thermochronometric,1.70000E+00,2.00000E+06,,-4.00000,140.00000,4663.50000,166.45891,nonglacial
+122,"Chen et al., 2022","Hinderer et al., 2013",Ammer Weilheim,Volumetric,7.10000E-02,5.00000E+00,,47.84753,11.13572,1127.10000,28.02955,nonglacial
+123,"Chen et al., 2022","Hinderer et al., 2013",Iller Krugzell,Volumetric,1.23000E-01,5.00000E+00,,47.79858,10.27068,1253.60000,46.49500,nonglacial
+124,"Chen et al., 2022","Hinderer et al., 2013",Iller Wiblingen,Volumetric,2.50000E-02,5.00000E+00,,48.36808,9.99286,839.80000,24.95741,nonglacial
+126,"Chen et al., 2022","Hinderer et al., 2013",Isar Munchen,Volumetric,1.80000E-02,5.00000E+00,,48.14610,11.59635,1003.20000,8.42547,nonglacial
+127,"Chen et al., 2022","Hinderer et al., 2013",Isar Plattling,Volumetric,1.20000E-02,5.00000E+00,,48.77053,12.88260,853.80000,17.02825,nonglacial
+128,"Chen et al., 2022","Hinderer et al., 2013",Kotlaine,Volumetric,1.02200E+00,5.00000E+00,,47.68412,11.44557,1629.70000,148.04737,nonglacial
+129,"Chen et al., 2022","Hinderer et al., 2013",Lainbach,Volumetric,3.27000E-01,5.00000E+00,,47.69806,11.42604,1514.50000,121.13690,nonglacial
+130,"Chen et al., 2022","Hinderer et al., 2013",Lech Feldheim,Volumetric,1.70000E-02,5.00000E+00,,48.72814,10.92143,783.80000,26.96784,nonglacial
+131,"Chen et al., 2022","Hinderer et al., 2013",Loisach Schlehdorf,Volumetric,4.10000E-02,5.00000E+00,,47.66809,11.32441,1411.50000,118.43503,nonglacial
+132,"Chen et al., 2022","Hinderer et al., 2013",Saalach Unterjettenburg,Volumetric,1.86000E-01,5.00000E+00,,47.68250,12.82050,1668.20000,315.39157,nonglacial
+133,"Chen et al., 2022","Hinderer et al., 2013",Tiroler Achen Staudach,Volumetric,1.13000E-01,5.00000E+00,,47.78111,12.46727,1546.40000,126.59930,nonglacial
+134,"Chen et al., 2022","Hinderer et al., 2013",Traun Altenmarkt/Stein,Volumetric,4.60000E-02,5.00000E+00,,47.99212,12.54144,1275.80000,24.52716,nonglacial
+135,"Chen et al., 2022","Hinderer et al., 2013",Weissach Tegernsee,Volumetric,5.00000E-02,5.00000E+00,,47.69227,11.74879,1469.60000,177.27423,nonglacial
+136,"Chen et al., 2022","Hinderer et al., 2013",Wertach Turkheim,Volumetric,2.20000E-02,5.00000E+00,,48.06286,10.65197,1033.50000,17.88831,nonglacial
+137,"Chen et al., 2022","Hinderer et al., 2013",Wertach Schwabmunchen,Volumetric,6.30000E-02,5.00000E+00,,48.17604,10.73082,961.30000,20.47284,nonglacial
+138,"Chen et al., 2022","Hinderer et al., 2013",Inn Kufstein,Volumetric,9.20000E-02,5.00000E+00,,47.58062,12.16534,1324.50000,227.61104,nonglacial
+139,"Chen et al., 2022","Hinderer et al., 2013",Inn Oberaudorf,Volumetric,7.40000E-02,5.00000E+00,,47.65117,12.19352,1374.70000,216.92177,nonglacial
+140,"Chen et al., 2022","Hinderer et al., 2013",Inn Rosenheim,Volumetric,8.40000E-02,5.00000E+00,,47.85084,12.13825,1466.80000,38.10952,nonglacial
+141,"Chen et al., 2022","Hinderer et al., 2013",Inn Wasserburg,Volumetric,9.60000E-02,5.00000E+00,,48.05901,12.23186,1093.20000,30.69448,nonglacial
+142,"Chen et al., 2022","Hinderer et al., 2013",Inn Neuotting,Volumetric,1.02000E-01,5.00000E+00,,48.25004,12.69174,900.30000,28.45850,nonglacial
+143,"Chen et al., 2022","Hinderer et al., 2013",Inn Passau,Volumetric,6.40000E-02,5.00000E+00,,48.57208,13.46722,944.00000,53.09257,nonglacial
+144,"Chen et al., 2022","Hinderer et al., 2013",Salzach Laufen,Volumetric,1.18000E-01,5.00000E+00,,47.94048,12.93180,1290.00000,30.19513,nonglacial
+145,"Chen et al., 2022","Hinderer et al., 2013",Salzach Burghausen,Volumetric,1.31000E-01,5.00000E+00,,48.15907,12.83486,996.90000,32.85050,nonglacial
+146,"Chen et al., 2022","Hinderer et al., 2013",Emme Wiler,Volumetric,2.10000E-02,5.00000E+00,,47.17702,7.56225,1177.70000,82.49326,nonglacial
+147,"Chen et al., 2022","Hinderer et al., 2013",Thur Halden,Volumetric,8.10000E-02,5.00000E+00,,47.50557,9.21139,1262.00000,47.70578,nonglacial
+148,"Chen et al., 2022","Hinderer et al., 2013",LArve Geneve,Volumetric,1.79000E-01,5.00000E+00,,46.18047,6.15918,1028.60000,79.78318,nonglacial
+149,"Chen et al., 2022","Hinderer et al., 2013",Dongia Valle di Blenio,Volumetric,2.00000E-02,5.00000E+00,,46.43128,8.97447,1469.50000,471.29150,nonglacial
+150,"Chen et al., 2022","Hinderer et al., 2013",Val Roseg Pontresina,Volumetric,1.84000E-01,5.00000E+00,,46.48673,9.90625,1144.30000,368.49168,nonglacial
+152,"Chen et al., 2022","Hinderer et al., 2013",Maggia Locarno,Volumetric,8.20000E-02,5.00000E+00,,46.16887,8.77283,1565.60000,340.18309,nonglacial
+153,"Chen et al., 2022","Hinderer et al., 2013",Moesa Lumino,Volumetric,3.50000E-02,5.00000E+00,,46.22309,9.05526,1617.80000,405.40846,nonglacial
+154,"Chen et al., 2022","Hinderer et al., 2013",Drau Rosegg,Volumetric,7.60000E-02,5.00000E+00,,46.58272,14.04108,1207.90000,162.46964,nonglacial
+155,"Chen et al., 2022","Hinderer et al., 2013",Enns Liezen,Volumetric,4.80000E-02,5.00000E+00,,47.55216,14.25056,1082.40000,293.75793,nonglacial
+156,"Chen et al., 2022","Hinderer et al., 2013",Enns Grobreifling,Volumetric,4.30000E-02,5.00000E+00,,47.66801,14.71376,1218.90000,322.94220,nonglacial
+157,"Chen et al., 2022","Hinderer et al., 2013",Gail Gailitz,Volumetric,9.00000E-02,5.00000E+00,,46.57082,13.72143,1330.30000,265.01619,nonglacial
+158,"Chen et al., 2022","Hinderer et al., 2013",Steyr Steyrdurchbruch,Volumetric,4.60000E-02,5.00000E+00,,47.86388,14.19713,1232.10000,222.32073,nonglacial
+159,"Chen et al., 2022","Hinderer et al., 2013",Rhone mouth Mediterranean,Volumetric,1.36000E-01,5.00000E+00,,43.42455,4.73994,567.90000,3.35758,nonglacial
+160,"Chen et al., 2022","Hinderer et al., 2013",Durance Mirabeau,Volumetric,4.40000E-01,5.00000E+00,,43.69313,5.67406,731.10000,71.00606,nonglacial
+161,"Chen et al., 2022","Hinderer et al., 2013",Isere,Volumetric,1.28000E-01,5.00000E+00,,45.19790,5.73317,1111.60000,200.11291,nonglacial
+162,"Chen et al., 2022","Hinderer et al., 2013",Asse,Volumetric,2.54000E-01,5.00000E+00,,43.87971,5.90294,740.30000,65.54545,nonglacial
+163,"Chen et al., 2022","Hinderer et al., 2013",Bleone,Volumetric,2.44000E-01,5.00000E+00,,44.04404,6.03538,821.00000,112.41678,nonglacial
+164,"Chen et al., 2022","Hinderer et al., 2013",Ferrand,Volumetric,1.37000E-01,5.00000E+00,,45.05326,6.14154,1557.00000,423.76563,nonglacial
+165,"Chen et al., 2022","Hinderer et al., 2013",Romanche,Volumetric,2.26000E-01,5.00000E+00,,45.03862,6.18352,1485.00000,428.00270,nonglacial
+166,"Chen et al., 2022","Hinderer et al., 2013",Adda Tirano,Volumetric,1.03000E-01,5.00000E+00,,46.21228,10.16625,826.10000,408.15610,nonglacial
+167,"Chen et al., 2022","Hinderer et al., 2013",Adda Pizzighettone,Volumetric,6.80000E-02,5.00000E+00,,45.18722,9.80180,778.80000,4.98426,nonglacial
+168,"Chen et al., 2022","Hinderer et al., 2013",Dora Baltea Tavagnasco,Volumetric,3.01000E-01,5.00000E+00,,45.54803,7.82809,872.70000,289.72200,nonglacial
+169,"Chen et al., 2022","Hinderer et al., 2013",Oglio Marcaria,Volumetric,1.80000E-02,5.00000E+00,,45.11301,10.52933,753.10000,2.60729,nonglacial
+170,"Chen et al., 2022","Hinderer et al., 2013",Po Casale Monferrato,Volumetric,2.00000E-02,5.00000E+00,,45.14280,8.45022,861.50000,17.69141,nonglacial
+171,"Chen et al., 2022","Hinderer et al., 2013",Po Becca,Volumetric,4.30000E-02,5.00000E+00,,45.13839,9.21871,719.00000,15.49753,nonglacial
+172,"Chen et al., 2022","Hinderer et al., 2013",Sesia Vercelli,Volumetric,4.00000E-02,5.00000E+00,,45.33265,8.44467,952.20000,3.54296,nonglacial
+173,"Chen et al., 2022","Hinderer et al., 2013",Brenta Bassano,Volumetric,2.50000E-02,5.00000E+00,,45.76464,11.72615,1191.20000,128.99685,nonglacial
+174,"Chen et al., 2022","Hinderer et al., 2013",Cismon Cismon,Volumetric,2.13000E-01,5.00000E+00,,45.93164,11.73794,1506.50000,321.12416,nonglacial
+175,"Chen et al., 2022","Hinderer et al., 2013",Etsch/Adige Trento,Volumetric,9.10000E-02,5.00000E+00,,46.07124,11.11614,858.40000,278.79622,nonglacial
+176,"Chen et al., 2022","Hinderer et al., 2013",Rio Cordon Dolomites,Volumetric,5.90000E-02,5.00000E+00,,46.45199,12.09640,1417.90000,342.58165,nonglacial
+177,"Chen et al., 2022","Hinderer et al., 2013",Sauglio Turin,Volumetric,6.30000E-02,5.00000E+00,,44.99317,7.74707,738.90000,40.92261,nonglacial
+178,"Chen et al., 2022","Hinderer et al., 2013",Sextenbach Dolomites,Volumetric,1.29000E-01,5.00000E+00,,46.71256,12.32437,840.20000,377.03149,nonglacial
+180,"Chen et al., 2022","Hinderer et al., 2013",Tanaro Clavesana,Volumetric,1.12000E-01,5.00000E+00,,44.48152,7.90059,764.80000,66.54079,nonglacial
+182,"Chen et al., 2022","Hinderer et al., 2013",Tanaro Alessandria,Volumetric,7.40000E-02,5.00000E+00,,44.91851,8.60888,726.10000,16.53520,nonglacial
+2589,"Marrero et al., 2018","Ackert et al., 2004","Dominion Range, Oliver Platform Moraine",Cosmogenic surface,1.10000E-04,,1.00000E-08,-85.16263,166.67475,34.90000,29.00570,nonglacial
+2590,"Marrero et al., 2018","Ackert et al., 2004","Dominion Range, Oliver Platform Moraine",Cosmogenic surface,2.30000E-04,,1.00000E-08,-85.15963,166.70480,34.90000,29.32399,nonglacial
+2591,"Marrero et al., 2018","Ackert et al., 2004","Dominion Range, Oliver Platform Moraine",Cosmogenic surface,1.20000E-04,,1.00000E-08,-85.15963,166.70480,34.90000,29.32399,nonglacial
+2592,"Marrero et al., 2018","Ackert et al., 2004","Dominion Range, Oliver Platform Moraine",Cosmogenic surface,1.10000E-04,,1.00000E-08,-85.16158,166.69162,34.90000,29.21665,nonglacial
+2593,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,2.60000E-04,,1.00000E-08,-71.89568,11.96102,373.60000,23.92550,nonglacial
+2594,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,3.60000E-04,,1.00000E-08,-71.89568,11.96102,373.60000,23.92550,nonglacial
+2595,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,1.00000E-04,,1.00000E-08,-71.88833,11.95833,382.10000,23.81264,nonglacial
+2596,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,2.10000E-04,,1.00000E-08,-71.88833,11.95833,382.10000,23.81264,nonglacial
+2597,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,3.10000E-04,,1.00000E-08,-71.87970,11.95607,387.00000,23.95836,nonglacial
+2598,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,4.80000E-04,,1.00000E-08,-71.87970,11.95607,387.00000,23.95836,nonglacial
+2599,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,4.30000E-04,,1.00000E-08,-71.87970,11.95607,387.00000,23.95836,nonglacial
+2600,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,0.00000E+00,,1.00000E-08,-71.83582,12.29557,444.40000,32.13354,nonglacial
+2601,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,8.00000E-05,,1.00000E-08,-71.83582,12.29557,444.40000,32.13354,nonglacial
+2602,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,6.00000E-05,,1.00000E-08,-72.13937,11.51602,228.80000,18.09449,nonglacial
+2603,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,1.23000E-03,,1.00000E-08,-71.85628,12.14960,480.50000,29.81087,nonglacial
+2604,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,5.50000E-04,,1.00000E-08,-71.85628,12.14960,480.50000,29.81087,nonglacial
+2605,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,1.60000E-04,,1.00000E-08,-71.41117,12.80322,476.90000,21.50344,nonglacial
+2606,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,1.00000E-05,,1.00000E-08,-71.43223,12.73133,394.40000,23.67396,nonglacial
+2607,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,9.00000E-05,,1.00000E-08,-71.43223,12.73133,394.40000,23.67396,nonglacial
+2608,"Marrero et al., 2018","Altmaier et al., 2010",Petermann Ketten,Cosmogenic surface,2.60000E-04,,1.00000E-08,-71.51275,12.57468,481.80000,27.91703,nonglacial
+2609,"Marrero et al., 2018",Balco and Shuster2009,"Arena Valley, Dry Valleys",Cosmogenic surface,1.67000E-03,,1.00000E-08,-77.85685,160.93025,138.80000,33.41040,nonglacial
+2610,"Marrero et al., 2018",Balco and Shuster2009,"Arena Valley, Dry Valleys",Cosmogenic surface,2.80000E-04,,1.00000E-08,-77.88060,160.82220,149.40000,29.89867,nonglacial
+2611,"Marrero et al., 2018",Balco and Shuster2009,"Arena Valley, Dry Valleys",Cosmogenic surface,6.20000E-04,,1.00000E-08,-77.88663,160.77358,153.20000,27.61278,nonglacial
+2612,"Marrero et al., 2018",Balco and Shuster2009,"Arena Valley, Dry Valleys",Cosmogenic surface,6.50000E-04,,1.00000E-08,-77.88823,160.80595,151.60000,28.98615,nonglacial
+2613,"Marrero et al., 2018",Balco and Shuster2009,"Arena Valley, Dry Valleys",Cosmogenic surface,2.90000E-04,,1.00000E-08,-77.87908,160.91833,148.10000,32.94611,nonglacial
+2614,"Marrero et al., 2018",Balco and Shuster2009,"East Groin, Asgard Range",Cosmogenic surface,4.20000E-04,,1.00000E-08,-77.64190,160.93990,130.60000,30.11489,nonglacial
+2615,"Marrero et al., 2018",Balco and Shuster2009,"East Groin, Asgard Range",Cosmogenic surface,8.80000E-04,,1.00000E-08,-77.64415,160.94463,131.60000,30.11265,nonglacial
+2616,"Marrero et al., 2018",Balco and Shuster2009,Western Olympus Range,Cosmogenic surface,1.10000E-04,,1.00000E-08,-77.50545,161.00313,118.00000,31.17609,nonglacial
+2617,"Marrero et al., 2018",Balco and Shuster2009,Western Olympus Range,Cosmogenic surface,1.30000E-04,,1.00000E-08,-77.50545,161.00313,118.00000,31.17609,nonglacial
+2618,"Marrero et al., 2018","Balco et al., 2014",Quartz Hills,Cosmogenic surface,4.00000E-05,,1.00000E-08,-85.90501,-132.80249,373.50000,49.30854,nonglacial
+2619,"Marrero et al., 2018","Balco et al., 2014",Quartz Hills,Cosmogenic surface,1.20000E-04,,1.00000E-08,-85.90501,-132.80249,373.50000,49.30854,nonglacial
+2620,"Marrero et al., 2018","Balco et al., 2014",Quartz Hills,Cosmogenic surface,1.00000E-05,,1.00000E-08,-85.90373,-132.81058,372.70000,48.42550,nonglacial
+2621,"Marrero et al., 2018","Balco et al., 2014",Quartz Hills,Cosmogenic surface,1.20000E-04,,1.00000E-08,-85.90373,-132.81058,372.70000,48.42550,nonglacial
+2622,"Marrero et al., 2018","Balco et al., 2014",Quartz Hills,Cosmogenic surface,6.00000E-05,,1.00000E-08,-85.90318,-132.81293,372.70000,48.42550,nonglacial
+2623,"Marrero et al., 2018","Balco et al., 2014",Quartz Hills,Cosmogenic surface,1.70000E-04,,1.00000E-08,-85.90318,-132.81293,372.70000,48.42550,nonglacial
+2624,"Marrero et al., 2018","Balco et al., 2014",Quartz Hills,Cosmogenic surface,1.00000E-05,,1.00000E-08,-85.90285,-132.81435,372.70000,48.42550,nonglacial
+2625,"Marrero et al., 2018","Balco et al., 2014",Quartz Hills,Cosmogenic surface,1.10000E-04,,1.00000E-08,-85.90285,-132.81435,372.70000,48.42550,nonglacial
+2626,"Marrero et al., 2018","Balco et al., 2014",Quartz Hills,Cosmogenic surface,4.00000E-05,,1.00000E-08,-85.90215,-132.81942,372.10000,48.23152,nonglacial
+2627,"Marrero et al., 2018","Balco et al., 2014",Quartz Hills,Cosmogenic surface,1.40000E-04,,1.00000E-08,-85.90215,-132.81942,372.10000,48.23152,nonglacial
+2628,"Marrero et al., 2018","Balco et al., 2014",Quartz Hills,Cosmogenic surface,1.00000E-05,,1.00000E-08,-85.90220,-132.85013,368.80000,49.54834,nonglacial
+2629,"Marrero et al., 2018","Balco et al., 2014",Quartz Hills,Cosmogenic surface,1.30000E-04,,1.00000E-08,-85.90220,-132.85013,368.80000,49.54834,nonglacial
+2630,"Marrero et al., 2018","Balco et al., 2014",Quartz Hills,Cosmogenic surface,7.00000E-05,,1.00000E-08,-85.90028,-132.83762,370.60000,48.60254,nonglacial
+2631,"Marrero et al., 2018","Balco et al., 2014",Quartz Hills,Cosmogenic surface,1.50000E-04,,1.00000E-08,-85.90028,-132.83762,370.60000,48.60254,nonglacial
+2632,"Marrero et al., 2018","Balco et al., 2014",Mount DeWitt,Cosmogenic surface,7.70000E-04,,1.00000E-08,-77.20457,159.84137,82.30000,20.73591,nonglacial
+2633,"Marrero et al., 2018","Balco et al., 2014",Mount DeWitt,Cosmogenic surface,6.90000E-04,,1.00000E-08,-77.20457,159.84137,82.30000,20.73591,nonglacial
+2634,"Marrero et al., 2018","Balco et al., 2014",Mount DeWitt,Cosmogenic surface,7.20000E-04,,1.00000E-08,-77.20123,159.84217,83.10000,20.75214,nonglacial
+2635,"Marrero et al., 2018","Balco et al., 2014",Mount DeWitt,Cosmogenic surface,6.90000E-04,,1.00000E-08,-77.20123,159.84217,83.10000,20.75214,nonglacial
+2636,"Marrero et al., 2018","Balco et al., 2014",Mount DeWitt,Cosmogenic surface,7.20000E-04,,1.00000E-08,-77.19872,159.84153,81.40000,20.75214,nonglacial
+2637,"Marrero et al., 2018","Balco et al., 2014",Mount DeWitt,Cosmogenic surface,6.10000E-04,,1.00000E-08,-77.19872,159.84153,81.40000,20.75214,nonglacial
+2638,"Marrero et al., 2018","Balco et al., 2014",Mount DeWitt,Cosmogenic surface,4.40000E-04,,1.00000E-08,-77.19622,159.84360,82.20000,20.71636,nonglacial
+2639,"Marrero et al., 2018","Balco et al., 2014",Mount DeWitt,Cosmogenic surface,4.80000E-04,,1.00000E-08,-77.19622,159.84360,82.20000,20.71636,nonglacial
+2640,"Marrero et al., 2018","Balco et al., 2014",Mount DeWitt,Cosmogenic surface,1.39000E-03,,1.00000E-08,-77.19492,159.84098,81.40000,20.71636,nonglacial
+2641,"Marrero et al., 2018","Balco et al., 2014",Mount DeWitt,Cosmogenic surface,1.11000E-03,,1.00000E-08,-77.19492,159.84098,81.40000,20.71636,nonglacial
+2642,"Marrero et al., 2018","Balco et al., 2014",Mount DeWitt,Cosmogenic surface,8.10000E-04,,1.00000E-08,-77.19385,159.84297,82.20000,20.71636,nonglacial
+2643,"Marrero et al., 2018","Balco et al., 2014",Mount DeWitt,Cosmogenic surface,7.50000E-04,,1.00000E-08,-77.19385,159.84297,82.20000,20.71636,nonglacial
+2644,"Marrero et al., 2018","Balco et al., 2014",East Groin,Cosmogenic surface,5.00000E-04,,1.00000E-08,-77.64190,160.93990,130.60000,30.11489,nonglacial
+2645,"Marrero et al., 2018","Balco et al., 2014",East Groin,Cosmogenic surface,8.20000E-04,,1.00000E-08,-77.64415,160.94463,131.60000,30.11265,nonglacial
+2646,"Marrero et al., 2018","Balco et al., 2014",East Groin,Cosmogenic surface,1.07000E-03,,1.00000E-08,-77.65335,160.95110,131.30000,30.08253,nonglacial
+2647,"Marrero et al., 2018","Balco et al., 2014",East Groin,Cosmogenic surface,1.00000E-03,,1.00000E-08,-77.65335,160.95110,131.30000,30.08253,nonglacial
+2648,"Marrero et al., 2018","Balco et al., 2014",East Groin,Cosmogenic surface,1.70000E-04,,1.00000E-08,-77.66108,160.94197,127.10000,29.89674,nonglacial
+2649,"Marrero et al., 2018","Balco et al., 2014",East Groin,Cosmogenic surface,2.70000E-04,,1.00000E-08,-77.66108,160.94197,127.10000,29.89674,nonglacial
+2650,"Marrero et al., 2018","Balco et al., 2014",East Groin,Cosmogenic surface,9.70000E-04,,1.00000E-08,-77.67195,160.96385,125.30000,29.74149,nonglacial
+2651,"Marrero et al., 2018","Balco et al., 2014",East Groin,Cosmogenic surface,6.70000E-04,,1.00000E-08,-77.67195,160.96385,125.30000,29.74149,nonglacial
+2652,"Marrero et al., 2018","Balco et al., 2014",East Groin,Cosmogenic surface,7.80000E-04,,1.00000E-08,-77.67195,160.96385,125.30000,29.74149,nonglacial
+2653,"Marrero et al., 2018","Balco et al., 2014",East Groin,Cosmogenic surface,4.10000E-04,,1.00000E-08,-77.67195,160.96385,125.30000,29.74149,nonglacial
+2654,"Marrero et al., 2018","Balco et al., 2014",East Groin,Cosmogenic surface,1.07000E-03,,1.00000E-08,-77.66492,160.94683,127.10000,29.92154,nonglacial
+2655,"Marrero et al., 2018","Balco et al., 2014",East Groin,Cosmogenic surface,8.70000E-04,,1.00000E-08,-77.66492,160.94683,127.10000,29.92154,nonglacial
+2656,"Marrero et al., 2018","Balco et al., 2014",East Groin,Cosmogenic surface,5.20000E-04,,1.00000E-08,-77.66498,160.93922,126.40000,30.09920,nonglacial
+2657,"Marrero et al., 2018","Balco et al., 2014",East Groin,Cosmogenic surface,4.90000E-04,,1.00000E-08,-77.66498,160.93922,126.40000,30.09920,nonglacial
+2658,"Marrero et al., 2018",Brook 1995,"Fleming, Sirius Group",Cosmogenic surface,8.00000E-05,3.50000E+06,1.00000E-08,-77.54131,160.15066,109.70000,25.83029,nonglacial
+2659,"Marrero et al., 2018",Brook 1995,"Fleming, Sirius Group",Cosmogenic surface,0.00000E+00,,1.00000E-08,-77.54131,160.15066,109.70000,25.83029,nonglacial
+2660,"Marrero et al., 2018",Brook 1995,"Arena Valley,  Altar Till (Beacon Valley)",Cosmogenic surface,1.00000E-05,,1.00000E-08,-77.88357,160.90868,151.40000,32.64912,nonglacial
+2661,"Marrero et al., 2018",Brook 1995,"Arena Valley,  Altar Till (Beacon Valley)",Cosmogenic surface,0.00000E+00,,1.00000E-08,-77.88357,160.90868,151.40000,32.64912,nonglacial
+2662,"Marrero et al., 2018",Brook 1995,"Arena Valley, Quatermain 1 till",Cosmogenic surface,4.00000E-05,,1.00000E-08,-77.86084,160.95688,140.60000,33.05974,nonglacial
+2663,"Marrero et al., 2018","Brown et al., 1991","Arena Valley, Taylor IVb",Cosmogenic surface,1.20000E-04,3.00000E+06,1.00000E-08,-77.84825,160.99200,134.10000,32.50104,nonglacial
+2664,"Marrero et al., 2018","Brown et al., 1991","Arena Valley, Taylor IVb",Cosmogenic surface,1.70000E-04,2.38000E+06,1.00000E-08,-77.84325,161.00440,133.70000,32.17893,nonglacial
+2665,"Marrero et al., 2018","Brown et al., 1991","Arena Valley, tor above Taylor IVb",Cosmogenic surface,1.50000E-04,2.58000E+06,1.00000E-08,-77.84274,161.00655,133.70000,32.06015,nonglacial
+2666,"Marrero et al., 2018","Brown et al., 1991","Arena Valley, Taylor IVb",Cosmogenic surface,1.10000E-04,3.30000E+06,1.00000E-08,-77.84955,160.98971,134.50000,32.50104,nonglacial
+2667,"Marrero et al., 2018","Brown et al., 1991","Arena Valley, Taylor IVb",Cosmogenic surface,2.40000E-04,,1.00000E-08,-77.84955,160.98971,134.50000,32.50104,nonglacial
+2668,"Marrero et al., 2018","Brown et al., 1991","Arena Valley, Taylor IVb",Cosmogenic surface,1.40000E-04,2.68000E+06,1.00000E-08,-77.85046,160.98811,136.80000,32.52114,nonglacial
+2669,"Marrero et al., 2018","Di Nicola et al., 2012","Mt Pollock, northern Victoria Land",Cosmogenic surface,2.00000E-05,,1.00000E-08,-73.69650,162.64567,191.40000,28.58605,nonglacial
+2670,"Marrero et al., 2018","Di Nicola et al., 2012","Mt Pollock, northern Victoria Land",Cosmogenic surface,1.40000E-04,,1.00000E-08,-73.69650,162.64567,191.40000,28.58605,nonglacial
+2671,"Marrero et al., 2018","Di Nicola et al., 2012","Mt Pollock, northern Victoria Land",Cosmogenic surface,4.00000E-05,,1.00000E-08,-73.74950,162.78117,159.00000,28.46025,nonglacial
+2672,"Marrero et al., 2018","Di Nicola et al., 2012","Mt Pollock, northern Victoria Land",Cosmogenic surface,1.30000E-04,,1.00000E-08,-73.74950,162.78117,159.00000,28.46025,nonglacial
+2673,"Marrero et al., 2018","Di Nicola et al., 2012","Mt Pollock, northern Victoria Land",Cosmogenic surface,5.00000E-05,,1.00000E-08,-73.74950,162.78117,159.00000,28.46025,nonglacial
+2674,"Marrero et al., 2018","Di Nicola et al., 2012","Mt Pollock, northern Victoria Land",Cosmogenic surface,1.10000E-04,,1.00000E-08,-73.74950,162.78117,159.00000,28.46025,nonglacial
+2675,"Marrero et al., 2018",Faure 1994,Mount Sirius,Cosmogenic surface,5.00000E-05,4.00000E+06,1.00000E-08,-84.13300,163.25000,86.80000,24.49438,nonglacial
+2676,"Marrero et al., 2018","Fink et al., 2006",McLeod Massif summit,Cosmogenic surface,1.00000E-04,3.20000E+06,1.00000E-08,-70.83775,67.75643,281.40000,34.31911,nonglacial
+2677,"Marrero et al., 2018","Fink et al., 2006",Fisher Massif summit,Cosmogenic surface,7.00000E-05,,1.00000E-08,-71.39617,67.95316,162.80000,21.18470,nonglacial
+2678,"Marrero et al., 2018","Fink et al., 2006",Fisher Massif summit,Cosmogenic surface,7.40000E-04,7.30000E+05,1.00000E-08,-71.39617,67.95316,162.80000,21.18470,nonglacial
+2679,"Marrero et al., 2018","Fink et al., 2006",Fisher Massif summit,Cosmogenic surface,7.10000E-04,7.60000E+05,1.00000E-08,-71.39617,67.95316,162.80000,21.18470,nonglacial
+2680,"Marrero et al., 2018",Hodgson 2012,"Dufek Massif, Weddell Sea embayment",Cosmogenic surface,3.40000E-04,,1.00000E-08,-82.48290,-50.94140,206.10000,13.78887,nonglacial
+2681,"Marrero et al., 2018",Hodgson 2012,"Dufek Massif, Weddell Sea embayment",Cosmogenic surface,3.90000E-04,,1.00000E-08,-82.48300,-50.94130,206.10000,13.78887,nonglacial
+2682,"Marrero et al., 2018","Ivy-Ochs et al., 1995",Table mountain,Cosmogenic surface,1.00000E-05,,1.00000E-08,-77.94406,162.00974,163.40000,41.12395,nonglacial
+2683,"Marrero et al., 2018","Ivy-Ochs et al., 1995",Table mountain,Cosmogenic surface,2.00000E-05,,1.00000E-08,-77.94406,162.00974,163.40000,41.12395,nonglacial
+2684,"Marrero et al., 2018","Ivy-Ochs et al., 1995",Table mountain,Cosmogenic surface,1.00000E-05,,1.00000E-08,-77.94406,162.00974,163.40000,41.12395,nonglacial
+2685,"Marrero et al., 2018","Lilly et al., 2010",Mt Harding,Cosmogenic surface,1.00000E-05,,1.00000E-08,-72.89490,75.04630,148.10000,11.45788,nonglacial
+2686,"Marrero et al., 2018","Lilly et al., 2010",Mt Harding,Cosmogenic surface,7.00000E-05,,1.00000E-08,-72.89630,75.04340,148.10000,11.41527,nonglacial
+2687,"Marrero et al., 2018","Lilly et al., 2010",Mt Harding,Cosmogenic surface,7.00000E-05,,1.00000E-08,-72.89880,75.03720,147.50000,11.43320,nonglacial
+2688,"Marrero et al., 2018","Margerison et al.,  2005",Coombs Hills,Cosmogenic surface,9.00000E-05,,1.00000E-08,-76.88330,161.18330,99.70000,26.60323,nonglacial
+2689,"Marrero et al., 2018","Margerison et al.,  2005",Coombs Hills,Cosmogenic surface,7.00000E-05,,1.00000E-08,-76.80000,160.01670,84.60000,21.52617,nonglacial
+2690,"Marrero et al., 2018","Margerison et al.,  2005",Coombs Hills,Cosmogenic surface,7.00000E-05,,1.00000E-08,-76.80000,160.01670,84.60000,21.52617,nonglacial
+2691,"Marrero et al., 2018","Margerison et al.,  2005",Robison Nunatak,Cosmogenic surface,2.50000E-04,,1.00000E-08,-77.11670,160.38330,73.60000,24.28190,nonglacial
+2692,"Marrero et al., 2018","Margerison et al.,  2005",Robison Nunatak,Cosmogenic surface,1.50000E-04,,1.00000E-08,-77.15000,160.31670,74.10000,23.73978,nonglacial
+2693,"Marrero et al., 2018","Margerison et al.,  2005",Detour Nunatak,Cosmogenic surface,4.30000E-04,,1.00000E-08,-77.11670,161.06670,84.40000,27.10930,nonglacial
+2694,"Marrero et al., 2018","Margerison et al.,  2005",Gateway Nunatak,Cosmogenic surface,2.00000E-04,,1.00000E-08,-77.00000,160.35000,79.80000,26.63910,nonglacial
+2695,"Marrero et al., 2018","Margerison et al.,  2005",Pegtop Nunatak,Cosmogenic surface,3.60000E-04,,1.00000E-08,-77.06670,161.25000,87.30000,33.02799,nonglacial
+2696,"Marrero et al., 2018","Margerison et al.,  2005",Battleship Promentary,Cosmogenic surface,1.60000E-04,,1.00000E-08,-76.91670,160.90000,101.00000,27.00000,nonglacial
+2697,"Marrero et al., 2018","Marrero et al., 2016","Marble Hills, Ellsworth Mtns",Cosmogenic surface,7.00000E-04,,1.00000E-08,-80.26309,-82.18705,304.60000,17.00400,nonglacial
+2698,"Marrero et al., 2018","Marrero et al., 2016","Marble Hills, Ellsworth Mtns",Cosmogenic surface,8.00000E-04,,1.00000E-08,-80.26309,-82.18705,304.60000,17.00400,nonglacial
+2699,"Marrero et al., 2018","Marrero et al., 2016","Marble Hills, Ellsworth Mtns",Cosmogenic surface,7.70000E-04,,1.00000E-08,-80.26309,-82.18705,304.60000,17.00400,nonglacial
+2700,"Marrero et al., 2018","Marrero et al., 2016","Marble Hills, Ellsworth Mtns",Cosmogenic surface,1.11000E-03,,1.00000E-08,-80.30576,-82.11405,297.70000,16.02409,nonglacial
+2701,"Marrero et al., 2018","Marrero et al., 2016","Marble Hills, Ellsworth Mtns",Cosmogenic surface,8.40000E-04,,1.00000E-08,-80.26334,-82.18677,304.60000,17.00400,nonglacial
+2702,"Marrero et al., 2018","Matsuoka et al., 2006",Sor Rondane,Cosmogenic surface,6.00000E-05,,1.00000E-08,-72.08056,24.28333,279.60000,25.61337,nonglacial
+2703,"Marrero et al., 2018","Matsuoka et al., 2006",Sor Rondane,Cosmogenic surface,3.60000E-04,1.27000E+06,1.00000E-08,-71.90833,24.23611,338.70000,20.92388,nonglacial
+2704,"Marrero et al., 2018","Matsuoka et al., 2006",Sor Rondane,Cosmogenic surface,5.00000E-04,9.60000E+05,1.00000E-08,-72.02222,24.35000,294.60000,25.02867,nonglacial
+2705,"Marrero et al., 2018","Middleton et al., 2012","Battleship Promontory, McMurdo Dry Valleys",Cosmogenic surface,1.10000E-03,,1.00000E-08,-76.90840,160.94100,98.90000,26.70491,nonglacial
+2706,"Marrero et al., 2018","Middleton et al., 2012","Battleship Promontory, McMurdo Dry Valleys",Cosmogenic surface,1.11000E-03,,1.00000E-08,-76.90840,160.94100,98.90000,26.70491,nonglacial
+2707,"Marrero et al., 2018","Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,5.20000E-04,,1.00000E-08,-77.61460,160.96390,114.20000,30.03153,nonglacial
+2708,"Marrero et al., 2018","Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,4.90000E-04,,1.00000E-08,-77.61460,160.96390,114.20000,30.03153,nonglacial
+2709,"Marrero et al., 2018","Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,2.09000E-03,,1.00000E-08,-77.61400,160.95390,113.30000,30.29214,nonglacial
+2710,"Marrero et al., 2018","Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,1.78000E-03,,1.00000E-08,-77.61400,160.95390,113.30000,30.29214,nonglacial
+2711,"Marrero et al., 2018","Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,2.85000E-03,,1.00000E-08,-77.60760,160.95030,105.80000,30.36458,nonglacial
+2712,"Marrero et al., 2018","Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,2.55000E-03,,1.00000E-08,-77.60760,160.95030,105.80000,30.36458,nonglacial
+2713,"Marrero et al., 2018","Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,7.30000E-04,,1.00000E-08,-77.60760,160.95160,105.80000,30.36458,nonglacial
+2714,"Marrero et al., 2018","Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,6.30000E-04,,1.00000E-08,-77.60760,160.95160,105.80000,30.36458,nonglacial
+2715,"Marrero et al., 2018","Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,1.03000E-03,,1.00000E-08,-77.60980,160.94690,112.10000,30.35239,nonglacial
+2716,"Marrero et al., 2018","Middleton et al., 2012","Sessrumnir Valley, Asgard Range",Cosmogenic surface,9.30000E-04,,1.00000E-08,-77.60980,160.94690,112.10000,30.35239,nonglacial
+2717,"Marrero et al., 2018","Mukhopadhyay et al., 2012","Ohio Range, Bennett-1",Cosmogenic surface,1.30000E-04,,1.00000E-08,-84.78717,-116.39930,435.10000,10.65794,nonglacial
+2718,"Marrero et al., 2018","Mukhopadhyay et al., 2012","Ohio Range, Bennett-1",Cosmogenic surface,2.10000E-04,,1.00000E-08,-84.78717,-116.39930,435.10000,10.65794,nonglacial
+2719,"Marrero et al., 2018","Mukhopadhyay et al., 2012","Ohio Range, Bennett-2",Cosmogenic surface,1.00000E-04,,1.00000E-08,-84.77997,-116.47117,421.30000,10.68741,nonglacial
+2720,"Marrero et al., 2018","Mukhopadhyay et al., 2012","Ohio Range, Bennett-2",Cosmogenic surface,2.10000E-04,,1.00000E-08,-84.77997,-116.47117,421.30000,10.68741,nonglacial
+2721,"Marrero et al., 2018","Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge upper bench",Cosmogenic surface,3.00000E-05,,1.00000E-08,-84.72887,-114.21930,427.00000,9.95819,nonglacial
+2722,"Marrero et al., 2018","Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge upper bench",Cosmogenic surface,1.10000E-04,,1.00000E-08,-84.72887,-114.21930,427.00000,9.95819,nonglacial
+2723,"Marrero et al., 2018","Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge upper bench",Cosmogenic surface,2.00000E-05,,1.00000E-08,-84.72887,-114.21930,427.00000,9.95819,nonglacial
+2724,"Marrero et al., 2018","Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge upper bench",Cosmogenic surface,1.20000E-04,,1.00000E-08,-84.72887,-114.21930,427.00000,9.95819,nonglacial
+2725,"Marrero et al., 2018","Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge upper bench",Cosmogenic surface,3.00000E-05,,1.00000E-08,-84.72887,-114.21930,427.00000,9.95819,nonglacial
+2726,"Marrero et al., 2018","Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge upper bench",Cosmogenic surface,1.20000E-04,,1.00000E-08,-84.72887,-114.21930,427.00000,9.95819,nonglacial
+2727,"Marrero et al., 2018","Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge lower bench",Cosmogenic surface,3.00000E-04,,1.00000E-08,-84.72805,-114.22602,425.90000,9.93623,nonglacial
+2728,"Marrero et al., 2018","Mukhopadhyay et al., 2012","Ohio Range, Discovery Ridge lower bench",Cosmogenic surface,3.50000E-04,,1.00000E-08,-84.72805,-114.22602,425.90000,9.93623,nonglacial
+2729,"Marrero et al., 2018","Mukhopadhyay et al., 2012","Ohio Range, Tuning",Cosmogenic surface,2.60000E-04,,1.00000E-08,-84.73133,-115.96477,402.80000,11.03005,nonglacial
+2730,"Marrero et al., 2018","Mukhopadhyay et al., 2012","Ohio Range, Tuning",Cosmogenic surface,3.20000E-04,,1.00000E-08,-84.73133,-115.96477,402.80000,11.03005,nonglacial
+2731,"Marrero et al., 2018","Nishiizumi et al., 1991","Allan Hills, ALH Quartzite",Cosmogenic surface,2.00000E-04,2.07000E+06,1.00000E-08,-76.69630,159.59620,81.60000,13.08739,nonglacial
+2732,"Marrero et al., 2018","Nishiizumi et al., 1991","Allan Hills, ALH Quartzite",Cosmogenic surface,1.90000E-04,,1.00000E-08,-76.69630,159.59620,81.60000,13.08739,nonglacial
+2733,"Marrero et al., 2018","Nishiizumi et al., 1991",Allan Hills,Cosmogenic surface,3.00000E-04,1.58000E+06,1.00000E-08,-76.70000,159.40000,81.90000,14.46973,nonglacial
+2734,"Marrero et al., 2018","Nishiizumi et al., 1991",Allan Hills,Cosmogenic surface,1.69000E-03,3.85000E+05,1.00000E-08,-76.70840,159.38430,82.10000,14.76623,nonglacial
+2735,"Marrero et al., 2018","Nishiizumi et al., 1991",Allan Hills,Cosmogenic surface,6.10000E-04,9.10000E+05,1.00000E-08,-76.73210,159.55300,83.60000,12.73624,nonglacial
+2736,"Marrero et al., 2018","Nishiizumi et al., 1991",Allan Hills,Cosmogenic surface,3.80000E-04,1.36000E+06,1.00000E-08,-76.69620,159.55680,83.70000,12.44303,nonglacial
+2737,"Marrero et al., 2018","Nishiizumi et al., 1991",Allan Hills,Cosmogenic surface,8.90000E-04,,1.00000E-08,-76.69620,159.55680,83.70000,12.44303,nonglacial
+2738,"Marrero et al., 2018","Nishiizumi et al., 1991",Allan Hills,Cosmogenic surface,5.70000E-04,1.00000E+06,1.00000E-08,-76.99990,159.66870,79.40000,15.34964,nonglacial
+2739,"Marrero et al., 2018","Nishiizumi et al., 1991",Allan Hills,Cosmogenic surface,8.10000E-04,7.50000E+05,1.00000E-08,-76.70330,159.66830,80.00000,15.01574,nonglacial
+2740,"Marrero et al., 2018","Nishiizumi et al., 1991",Allan Hills,Cosmogenic surface,9.60000E-04,6.50000E+05,1.00000E-08,-76.70890,159.67060,80.10000,15.17334,nonglacial
+2741,"Marrero et al., 2018","Nishiizumi et al., 1991",Allan Hills,Cosmogenic surface,1.12000E-03,6.00000E+05,1.00000E-08,-76.71070,159.67700,80.20000,15.35673,nonglacial
+2742,"Marrero et al., 2018","Nishiizumi et al., 1991",Allan Hills,Cosmogenic surface,7.10000E-04,8.40000E+05,1.00000E-08,-76.69840,159.67030,80.70000,15.22804,nonglacial
+2743,"Marrero et al., 2018","Nishiizumi et al., 1991",Wright Valley,Cosmogenic surface,7.60000E-04,7.80000E+05,1.00000E-08,-77.60000,161.10000,94.60000,29.81393,nonglacial
+2744,"Marrero et al., 2018","Nishiizumi et al., 1991",Wright Valley,Cosmogenic surface,1.83000E-03,3.60000E+05,1.00000E-08,-77.60000,161.30000,89.70000,24.95110,nonglacial
+2745,"Marrero et al., 2018","Nishiizumi et al., 1991",Wright Valley,Cosmogenic surface,1.28000E-03,5.08000E+05,1.00000E-08,-77.60000,161.40000,89.60000,24.92462,nonglacial
+2746,"Marrero et al., 2018","Nishiizumi et al., 1991",Wright Valley,Cosmogenic surface,1.43000E-03,4.53000E+05,1.00000E-08,-77.60000,161.10000,94.60000,29.81393,nonglacial
+2747,"Marrero et al., 2018","Nishiizumi et al., 1991",Tillite Glacier,Cosmogenic surface,3.50000E-04,1.40000E+06,1.00000E-08,-83.90000,166.30000,192.50000,51.25005,nonglacial
+2748,"Marrero et al., 2018","Nishiizumi et al., 1991",Tillite Glacier,Cosmogenic surface,1.20000E-04,,1.00000E-08,-83.90000,166.30000,192.50000,51.25005,nonglacial
+2749,"Marrero et al., 2018","Nishiizumi et al., 1991","Allan Hills, Manhaul Bay",Cosmogenic surface,7.10000E-04,8.50000E+05,1.00000E-08,-76.69620,159.73100,82.30000,17.43863,nonglacial
+2750,"Marrero et al., 2018","Nishiizumi et al., 1991","Allan Hills, Reckling Peak",Cosmogenic surface,1.82000E-03,,1.00000E-08,-76.26310,159.23140,105.20000,12.86915,nonglacial
+2751,"Marrero et al., 2018","Nishiizumi et al., 1991","Allan Hills, Reckling Peak",Cosmogenic surface,3.45000E-03,,1.00000E-08,-76.26310,159.23140,105.20000,12.86915,nonglacial
+2752,"Marrero et al., 2018","Nishiizumi et al., 1991",Sor Rondane,Cosmogenic surface,1.70000E-04,2.32000E+06,1.00000E-08,-71.82150,25.67720,436.80000,14.85005,nonglacial
+2753,"Marrero et al., 2018","Nishiizumi et al., 1991",Sor Rondane,Cosmogenic surface,4.80000E-04,1.03000E+06,1.00000E-08,-71.95540,25.38320,465.90000,33.75167,nonglacial
+2754,"Marrero et al., 2018","Nishiizumi et al., 1991",Sor Rondane,Cosmogenic surface,7.00000E-05,3.00000E+06,1.00000E-08,-72.10680,25.09270,406.30000,31.90693,nonglacial
+2755,"Marrero et al., 2018","Nishiizumi et al., 1991",Sor Rondane,Cosmogenic surface,5.00000E-05,4.50000E+06,1.00000E-08,-72.10060,25.14080,404.90000,33.48617,nonglacial
+2756,"Marrero et al., 2018","Nishiizumi et al., 1991",Sor Rondane,Cosmogenic surface,0.00000E+00,,1.00000E-08,-72.06300,25.07730,393.90000,32.07107,nonglacial
+2757,"Marrero et al., 2018","Nishiizumi et al., 1991",Sor Rondane,Cosmogenic surface,2.90000E-04,1.42000E+06,1.00000E-08,-71.94460,25.16100,451.50000,30.41712,nonglacial
+2758,"Marrero et al., 2018","Oberholzer et al.,  2003",Mt Kenaith,Cosmogenic surface,1.00000E-04,3.20000E+06,1.00000E-08,-74.54170,163.98341,343.40000,101.53724,nonglacial
+2759,"Marrero et al., 2018","Schaefer et al., 1999",Mt Fleming,Cosmogenic surface,7.00000E-05,,1.00000E-08,-77.55250,160.22747,112.70000,26.66313,nonglacial
+2760,"Marrero et al., 2018","Schaefer et al., 1999",Friise,Cosmogenic surface,2.50000E-04,,1.00000E-08,-77.75693,161.55480,98.20000,27.73569,nonglacial
+2761,"Marrero et al., 2018","Schaefer et al., 1999",Pandora,Cosmogenic surface,2.70000E-04,,1.00000E-08,-77.77925,161.30782,111.90000,26.49286,nonglacial
+2762,"Marrero et al., 2018","Schaefer et al., 1999",Dais,Cosmogenic surface,1.80000E-04,,1.00000E-08,-77.54568,161.29531,82.00000,24.57671,nonglacial
+2763,"Marrero et al., 2018","Schaefer et al., 1999",Dais,Cosmogenic surface,1.70000E-04,,1.00000E-08,-77.54568,161.29531,82.00000,24.57671,nonglacial
+2764,"Marrero et al., 2018","Schaefer et al., 1999",Labyrinth,Cosmogenic surface,4.20000E-04,,1.00000E-08,-77.57055,161.03756,83.90000,29.11786,nonglacial
+2765,"Marrero et al., 2018","Schaefer et al., 1999",Labyrinth,Cosmogenic surface,3.20000E-04,,1.00000E-08,-77.57055,161.03756,83.90000,29.11786,nonglacial
+2766,"Marrero et al., 2018","Schaefer et al., 1999",Insel,Cosmogenic surface,1.30000E-04,,1.00000E-08,-77.39693,161.43073,91.70000,24.59404,nonglacial
+2767,"Marrero et al., 2018","Schaefer et al., 1999",Insel,Cosmogenic surface,1.10000E-04,,1.00000E-08,-77.39693,161.43073,91.70000,24.59404,nonglacial
+2768,"Marrero et al., 2018","Schaefer et al., 1999",Feather,Cosmogenic surface,1.30000E-04,,1.00000E-08,-77.92029,160.33389,161.70000,23.67174,nonglacial
+2769,"Marrero et al., 2018","Summerfield et al., 1999",Lower Taylor Valley - rectilinear,Cosmogenic surface,6.50000E-04,,1.00000E-08,-77.69713,162.75011,94.40000,67.05324,nonglacial
+2770,"Marrero et al., 2018","Summerfield et al., 1999",Mt Fleming,Cosmogenic surface,1.60000E-04,,1.00000E-08,-77.53051,160.24058,107.50000,26.83270,nonglacial
+2771,"Marrero et al., 2018","Summerfield et al., 1999",Arena Valley - rectilinear,Cosmogenic surface,5.50000E-04,,1.00000E-08,-77.82658,161.03511,127.90000,31.07762,nonglacial
+2772,"Marrero et al., 2018","Summerfield et al., 1999",Arena Valley - rectilinear,Cosmogenic surface,3.20000E-04,,1.00000E-08,-77.82658,161.03511,127.90000,31.07762,nonglacial
+2773,"Marrero et al., 2018","Summerfield et al., 1999",Arena Valley - rectilinear,Cosmogenic surface,2.30000E-04,,1.00000E-08,-77.82658,161.03511,127.90000,31.07762,nonglacial
+2774,"Marrero et al., 2018","Summerfield et al., 1999",Beacon/Arena Interfluve,Cosmogenic surface,1.20000E-04,,1.00000E-08,-77.87118,160.67917,144.80000,25.09968,nonglacial
+2775,"Marrero et al., 2018","Summerfield et al., 1999",Beacon/Arena Interfluve,Cosmogenic surface,1.30000E-04,,1.00000E-08,-77.87118,160.67917,144.80000,25.09968,nonglacial
+2776,"Marrero et al., 2018","Summerfield et al., 1999",Mt Fleming,Cosmogenic surface,1.60000E-04,,1.00000E-08,-77.53051,160.24058,107.50000,26.83270,nonglacial
+2777,"Marrero et al., 2018","Swanger et al., 2011","Kennar Valley, near Beacon Valley",Cosmogenic surface,2.00000E-04,,1.00000E-08,-77.75000,160.38300,125.10000,22.60222,nonglacial
+2778,"Marrero et al., 2018","Swanger et al., 2011","Kennar Valley, near Beacon Valley",Cosmogenic surface,2.20000E-04,,1.00000E-08,-77.75100,160.34100,131.10000,22.96327,nonglacial
+2779,"Marrero et al., 2018","Swanger et al., 2011","Kennar Valley, near Beacon Valley",Cosmogenic surface,1.80000E-04,,1.00000E-08,-77.74900,160.38300,125.10000,22.60222,nonglacial
+2780,"Marrero et al., 2018","White et al., 2009",Rauer Group,Cosmogenic surface,6.04000E-03,,1.00000E-08,-68.81940,77.68526,257.50000,59.32722,nonglacial
+2781,"Marrero et al., 2018","White et al., 2009",Rauer Group,Cosmogenic surface,5.00000E-03,,1.00000E-08,-68.82566,77.66220,235.40000,62.85956,nonglacial
+2782,"Marrero et al., 2018","Willenbring Staiger et al., 2006","Vernier Valley, near Quartermain Mtns",Cosmogenic surface,1.50000E-04,,1.00000E-08,-77.97040,161.17510,180.90000,32.11436,nonglacial
+6241,This study,"Brook et al., 1995",Arena Valley,Cosmogenic surface,4.90000E-05,4.30000E+06,1.00000E-08,-77.90000,160.92000,156.50000,33.23461,nonglacial
+6242,This study,"Brook et al., 1995",Beardmore glacier,Cosmogenic surface,6.20000E-05,3.80000E+06,1.00000E-08,-77.54999,160.08970,101.50000,24.21150,nonglacial
+6243,This study,"Brook et al., 1995",Arena Valley,Cosmogenic surface,7.20000E-05,3.60000E+06,1.00000E-08,-77.90000,160.92000,156.50000,33.23461,nonglacial
+6244,This study,"Brook et al., 1995",Side lobe of the Taylor Glacier in Arena Valley,Cosmogenic surface,7.30000E-05,3.50000E+06,1.00000E-08,-77.85000,160.92000,136.10000,33.09785,nonglacial
+6245,This study,"Brook et al., 1995",Side lobe of the Taylor Glacier in Arena Valley,Cosmogenic surface,1.19000E-04,2.70000E+06,1.00000E-08,-77.85000,160.92000,136.10000,33.09785,nonglacial
+6246,This study,"Brook et al., 1995",Beardmore glacier,Cosmogenic surface,1.32000E-04,2.60000E+06,1.00000E-08,-77.54999,160.08970,101.50000,24.21150,nonglacial
+6247,This study,"Brook et al., 1995",Side lobe of the Taylor Glacier in Arena Valley,Cosmogenic surface,2.69000E-04,1.60000E+06,1.00000E-08,-77.85000,160.92000,136.10000,33.09785,nonglacial
+6265,This study,"Margerison et al., 2005",Mackay Glacier,Cosmogenic surface,5.00000E-05,1.04000E+07,1.00000E-08,-76.98366,161.52648,91.90000,38.56529,nonglacial
+6266,This study,"Margerison et al., 2005",Mackay Glacier,Cosmogenic surface,6.00000E-05,8.86000E+06,1.00000E-08,-76.98366,161.52648,91.90000,38.56529,nonglacial
+6267,This study,"Margerison et al., 2005",Mackay Glacier,Cosmogenic surface,6.00000E-05,8.63000E+06,1.00000E-08,-76.98366,161.52648,91.90000,38.56529,nonglacial
+6268,This study,"Margerison et al., 2005",Mackay Glacier,Cosmogenic surface,6.00000E-05,1.00600E+07,1.00000E-08,-76.98366,161.52648,91.90000,38.56529,nonglacial
+6269,This study,"Margerison et al., 2005",Mackay Glacier,Cosmogenic surface,1.10000E-04,4.90000E+06,1.00000E-08,-76.98366,161.52648,91.90000,38.56529,nonglacial
+6270,This study,"Margerison et al., 2005",Mackay Glacier,Cosmogenic surface,1.10000E-04,4.92000E+06,1.00000E-08,-76.98366,161.52648,91.90000,38.56529,nonglacial
+6271,This study,"Margerison et al., 2005",Mackay Glacier,Cosmogenic surface,1.20000E-04,4.29000E+06,1.00000E-08,-76.98366,161.52648,91.90000,38.56529,nonglacial
+6272,This study,"Margerison et al., 2005",Mackay Glacier,Cosmogenic surface,1.50000E-04,3.07000E+06,1.00000E-08,-76.98366,161.52648,91.90000,38.56529,nonglacial
+6273,This study,"Margerison et al., 2005",Mackay Glacier,Cosmogenic surface,2.70000E-04,2.08000E+06,1.00000E-08,-76.98366,161.52648,91.90000,38.56529,nonglacial
+6274,This study,"Margerison et al., 2005",Mackay Glacier,Cosmogenic surface,3.10000E-04,1.73000E+06,1.00000E-08,-76.98366,161.52648,91.90000,38.56529,nonglacial
+6275,This study,"Marrero et al., 2018",Ellsworth Mountains,Cosmogenic surface,2.69000E-04,9.90610E+05,1.00000E-08,-80.26309,-82.18705,304.60000,17.00400,nonglacial
+6276,This study,"Marrero et al., 2018",Ellsworth Mountains,Cosmogenic surface,4.53000E-04,6.51030E+05,1.00000E-08,-80.30576,-82.11405,297.70000,16.02409,nonglacial
+6277,This study,"Marrero et al., 2018",Ellsworth Mountains,Cosmogenic surface,4.26000E-04,7.16450E+05,1.00000E-08,-80.26309,-82.18705,304.60000,17.00400,nonglacial
+6278,This study,"Marrero et al., 2018",Ellsworth Mountains,Cosmogenic surface,3.77000E-04,7.61310E+05,1.00000E-08,-80.26309,-82.18705,304.60000,17.00400,nonglacial
+6279,This study,"Marrero et al., 2018",Ellsworth Mountains,Cosmogenic surface,4.81000E-04,9.27870E+05,1.00000E-08,-80.26309,-82.18705,304.60000,17.00400,nonglacial
+6280,This study,"Marrero et al., 2018",Ellsworth Mountains,Cosmogenic surface,8.09000E-04,7.31080E+05,1.00000E-08,-80.26334,-82.18677,304.60000,17.00400,nonglacial
+6281,This study,"Marrero et al., 2018",Ellsworth Mountains,Cosmogenic surface,4.45000E-04,5.67900E+04,1.00000E-08,-80.28305,-82.09793,291.80000,17.07171,nonglacial
+6282,This study,"Marrero et al., 2018",Ellsworth Mountains,Cosmogenic surface,7.06000E-04,5.40170E+05,1.00000E-08,-80.26420,-82.18933,304.60000,17.00400,nonglacial
+6283,This study,"Marrero et al., 2018",Ellsworth Mountains,Cosmogenic surface,2.42700E-03,6.27310E+05,1.00000E-08,-80.26735,-82.21628,316.10000,16.99567,nonglacial
+6284,This study,"Marrero et al., 2018",Ellsworth Mountains,Cosmogenic surface,1.20850E-02,5.33820E+05,1.00000E-08,-80.27371,-82.10712,293.30000,17.06605,nonglacial
+6285,This study,"Marrero et al., 2018",Ellsworth Mountains,Cosmogenic surface,5.72000E-04,2.23060E+05,1.00000E-08,-80.26105,-82.10672,291.60000,17.32978,nonglacial
+6286,This study,"Marrero et al., 2018",Ellsworth Mountains,Cosmogenic surface,1.08919E-01,7.13700E+04,1.00000E-08,-80.29905,-82.00345,278.10000,16.33611,nonglacial
+6287,This study,"Marrero et al., 2018",Ellsworth Mountains,Cosmogenic surface,9.32700E-03,7.76000E+03,1.00000E-08,-80.27940,-82.02958,279.90000,17.36719,nonglacial

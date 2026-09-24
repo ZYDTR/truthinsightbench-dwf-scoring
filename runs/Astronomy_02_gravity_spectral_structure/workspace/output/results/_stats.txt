@@ -1,0 +1,22 @@
+A mean RMS 0.03369 [95% CI 0.02620,0.04381] median 0.02781
+B mean RMS 0.02027 [95% CI 0.01346,0.03081] median 0.01338
+C mean RMS 0.02527 [95% CI 0.01804,0.03570] median 0.01874
+
+A-B: mean diff 0.01342 mm/s [95% CI 0.01040,0.01675]  #passes>0 22/22  median 0.01158
+A-C: mean diff 0.00842 mm/s [95% CI 0.00643,0.01069]  #passes>0 22/22  median 0.00826
+B-C: mean diff -0.00500 mm/s [95% CI -0.00668,-0.00351]  #passes>0 0/22  median -0.00426
+
+relative: (A-B)/A mean 0.442  (A-C)/A mean 0.286  (C-B)/C mean 0.231
+
+A LOSO mean range 0.02965..0.03459
+B LOSO mean range 0.01575..0.02087
+C LOSO mean range 0.02094..0.02592
+
+pass_01 dominance: RMS A 0.1185  B 0.1153  C 0.1161 ; share of total MS: 40.0%
+A per-pass band-mean LS power 0.0490 [95% CI 0.0392,0.0582] min 0.0096 max 0.0814
+B per-pass band-mean LS power 0.0039 [95% CI 0.0021,0.0062] min 0.0002 max 0.0213
+C per-pass band-mean LS power 0.0553 [95% CI 0.0380,0.0799] min 0.0057 max 0.2645
+
+band power C-A mean 0.0063 [-0.0097,0.0281] #passes>0 9/22
+band power B-A mean -0.0451 [-0.0550,-0.0351] #passes>0 1/22
+band power C-B mean 0.0514 [0.0339,0.0772] #passes>0 22/22

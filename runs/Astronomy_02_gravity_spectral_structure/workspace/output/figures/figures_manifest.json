@@ -1,0 +1,42 @@
+{
+  "generated_by": "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track5_figures.py",
+  "exact_command": "/usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track5_figures.py",
+  "python": "/usr/bin/python3",
+  "matplotlib_backend": "Agg",
+  "matplotlib_version": "3.11.2",
+  "numpy_version": "2.4.6",
+  "figure_dir": "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures",
+  "total_elapsed_s": 17.96,
+  "figures": [
+    {
+      "file": "fig1_residual_traces.png",
+      "path": "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig1_residual_traces.png",
+      "bytes": 1935225,
+      "command": "/usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track5_figures.py"
+    },
+    {
+      "file": "fig2_per_pass_rms.png",
+      "path": "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig2_per_pass_rms.png",
+      "bytes": 202690,
+      "command": "/usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track5_figures.py"
+    },
+    {
+      "file": "fig3_periodograms.png",
+      "path": "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig3_periodograms.png",
+      "bytes": 481309,
+      "command": "/usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track5_figures.py"
+    },
+    {
+      "file": "fig4_ic_surfaces.png",
+      "path": "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig4_ic_surfaces.png",
+      "bytes": 254273,
+      "command": "/usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track5_figures.py"
+    },
+    {
+      "file": "fig5_grid_coverage.png",
+      "path": "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig5_grid_coverage.png",
+      "bytes": 322619,
+      "command": "/usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track5_figures.py"
+    }
+  ]
+}

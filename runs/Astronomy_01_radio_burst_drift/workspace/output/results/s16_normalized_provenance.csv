@@ -1,0 +1,19 @@
+series,workbook_source,n,events
+population_series_1|fast,Sheet_025 (all 26 points),26,10560.0
+population_series_1|slow,Sheet_024 (union of its two blocks),137,892.0
+population_series_2|fast,Sheet_027 (all 26 points),26,14492.0
+population_series_2|slow,Sheet_026 (union of its two blocks),131,1303.0
+population_series_3|fast,Sheet_029 (all 24 points),24,357.0
+population_series_3|slow,Sheet_028 (union of its two blocks),139,803.0
+population_series_4|fast,Sheet_031 (all 21 points),21,52.0
+population_series_4|slow,Sheet_030 (union of its two blocks),132,392.0
+population_series_5|fast,Sheet_033 (all 24 points),24,429.0
+population_series_5|slow,Sheet_032 (union of its two blocks),127,1092.0
+population_series_6|fast,Sheet_035 (all 25 points),25,664.0
+population_series_6|slow,Sheet_034 (union of its two blocks),136,2201.0
+orientation_series_1,"Sheet_009 (3 blocks, first point dropped)",52,11240.0
+orientation_series_2,"Sheet_010 (3 blocks, first point dropped)",52,15551.0
+orientation_series_3,"Sheet_011 (3 blocks, first point dropped)",52,1151.0
+orientation_series_4,"Sheet_012 (3 blocks, first point dropped)",52,444.0
+orientation_series_5,"Sheet_013 (3 blocks, first point dropped)",52,1503.0
+orientation_series_6,"Sheet_014 (3 blocks, first point dropped)",52,2843.0

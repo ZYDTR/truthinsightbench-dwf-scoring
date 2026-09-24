@@ -1,0 +1,75 @@
+[artifact] results/G1_multicut_holdout.json
+[artifact] results/G2_whole_curve_holdout.json
+[artifact] results/G3_separation_boundary.json
+[artifact] results/G4_outlier_sensitivity.json
+[artifact] results/G5_alternative_sigmoids.json
+
+===== G1_multicut_holdout =====
+  main cut<=240: logistic>exp 7/8 (p=0.0352) | >persist 7/8 (p=0.0352)
+  main cut<=260: logistic>exp 8/8 (p=0.0039) | >persist 7/8 (p=0.0352)
+  main cut<=280: logistic>exp 8/8 (p=0.0039) | >persist 7/8 (p=0.0352)
+  main cut<=300: logistic>exp 8/8 (p=0.0039) | >persist 5/8 (p=0.3633)
+  check cut<=240: logistic>exp 4/4 (p=0.0625) | >persist 3/4 (p=0.3125)
+  check cut<=260: logistic>exp 4/4 (p=0.0625) | >persist 3/4 (p=0.3125)
+  check cut<=280: logistic>exp 4/4 (p=0.0625) | >persist 3/4 (p=0.3125)
+  check cut<=300: logistic>exp 4/4 (p=0.0625) | >persist 3/4 (p=0.3125)
+
+===== G2_whole_curve_holdout =====
+  main: logistic>exp 8/8 p=0.0039 meanRMSE transferred=0.165 vs exp=1.063
+  check: logistic>exp 4/4 p=0.0625 meanRMSE transferred=0.166 vs exp=0.812
+
+===== G3_separation_boundary =====
+  main adjacent rank stability:
+    120->140 rho=+0.595 p=0.18576591096912992
+    140->160 rho=+1.000 p=nan
+    160->180 rho=+0.976 p=0.004320536360083905
+    180->200 rho=+1.000 p=nan
+    200->220 rho=+0.976 p=0.004320536360083905
+    220->240 rho=+1.000 p=nan
+    240->260 rho=+0.976 p=0.004320536360083905
+    260->280 rho=+1.000 p=nan
+    280->300 rho=+1.000 p=nan
+    300->320 rho=+0.952 p=0.008893664163971393
+  main reversal census by lower bound:
+    T>=120: 12/28
+    T>=140: 4/28
+    T>=160: 4/28
+    T>=180: 4/28
+    T>=200: 4/28
+    T>=220: 3/28
+    T>=240: 3/28
+    T>=260: 2/28
+    T>=280: 2/28
+    T>=300: 2/28
+    T>=320: 0/28
+  check adjacent rank stability:
+    120->140 rho=+0.894 p=0.3856686309850492
+    140->160 rho=+1.000 p=nan
+    160->180 rho=+1.000 p=nan
+    180->200 rho=+1.000 p=nan
+    200->220 rho=+1.000 p=nan
+    220->240 rho=+1.000 p=nan
+    240->260 rho=+1.000 p=nan
+    260->280 rho=+1.000 p=nan
+    280->300 rho=+1.000 p=nan
+    300->320 rho=+0.800 p=0.47010768050422047
+  check reversal census by lower bound:
+    T>=120: 1/6
+    T>=140: 1/6
+    T>=160: 1/6
+    T>=180: 1/6
+    T>=200: 1/6
+    T>=220: 1/6
+    T>=240: 1/6
+    T>=260: 1/6
+    T>=280: 1/6
+    T>=300: 1/6
+    T>=320: 0/6
+
+===== G4_outlier_sensitivity =====
+  main: mean|dT50| drop120K=7.06 K max=14.70 K | mean|dw|=2.15 K
+  check: mean|dT50| drop120K=3.21 K max=10.60 K | mean|dw|=1.38 K
+
+===== G5_alternative_sigmoids =====
+  main: BIC wins {'logistic': 7, 'gompertz': 1} meanR2={'logistic': 0.9941262102371773, 'gompertz': 0.9756952292394862, 'hill': 0.8889748669765163}
+  check: BIC wins {'logistic': 3, 'gompertz': 1} meanR2={'logistic': 0.995182586814968, 'gompertz': 0.9635548596168888, 'hill': 0.8842360070479585}

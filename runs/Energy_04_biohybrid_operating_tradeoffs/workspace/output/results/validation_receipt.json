@@ -1,0 +1,409 @@
+{
+  "schema": "truthinsightbench-semantic-output-validation",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "output": "/data/user/conversations/conv-995a498d-d5c1-4e1e-99f5-01601e51abe5/project/output",
+  "authoritative_report": {
+    "path": "Result.md",
+    "bytes": 40083,
+    "sha256": "fbb9d5bb4754bdd1ea5573ef3b9825cd575e7882d672a516a65333b9f5532dda"
+  },
+  "registered_findings": {
+    "count": 5,
+    "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "markers": [
+      {
+        "finding_number": 1,
+        "line": 80,
+        "marker": "### Finding 1 — `time_response_curves.tsv` is three concatenated regimes, and the `time` column is a valid axis for only 2.6% of rows",
+        "heading_level": 3
+      },
+      {
+        "finding_number": 2,
+        "line": 170,
+        "marker": "### Finding 2 — The sweep regime shows path dependence (hysteresis) that is strongly channel-dependent and absent from one channel",
+        "heading_level": 3
+      },
+      {
+        "finding_number": 3,
+        "line": 252,
+        "marker": "### Finding 3 — The `condition_a`–`condition_b` coupling is regime-conditional: a genuine null in the baseline regime, and almost entirely a shared trajectory in the tail regime",
+        "heading_level": 3
+      },
+      {
+        "finding_number": 4,
+        "line": 338,
+        "marker": "### Finding 4 — The fitted columns are derived and strictly monotone; they are not independent observations and cannot be counted twice",
+        "heading_level": 3
+      },
+      {
+        "finding_number": 5,
+        "line": 430,
+        "marker": "### Finding 5 — The dose scan cannot identify an optimum (unresolved), while the perturbation trajectories give a clear, well-separated and control-stable response ordering",
+        "heading_level": 3
+      }
+    ],
+    "traceability": [
+      {
+        "finding_number": 1,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/analysis.py"
+        ],
+        "result_evidence": [
+          "figures/fig1_regime_structure.png",
+          "results/findings.json",
+          "results/table_regimes.tsv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 2,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/analysis.py"
+        ],
+        "result_evidence": [
+          "figures/fig1_regime_structure.png",
+          "figures/fig2_hysteresis.png",
+          "results/findings.json",
+          "results/table_matched_time_branches.tsv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 3,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/analysis.py"
+        ],
+        "result_evidence": [
+          "figures/fig3_coupling_by_regime.png",
+          "results/findings.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 4,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/analysis.py"
+        ],
+        "result_evidence": [
+          "figures/fig4_raw_vs_fitted.png",
+          "results/findings.json",
+          "results/table_fit_vs_raw.tsv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 5,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/analysis.py"
+        ],
+        "result_evidence": [
+          "figures/fig5_dose_perturbation.png",
+          "results/findings.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      }
+    ]
+  },
+  "reproduction": {
+    "mode": "companion_markdown",
+    "document": {
+      "path": "reproduce.md",
+      "bytes": 5166,
+      "sha256": "1506ed17129d842ab6fa4b161ff3de6894615ff5d960fc9d0cad1641f69fc1e2"
+    }
+  },
+  "analysis_sources": [
+    {
+      "path": "analysis/analysis.py",
+      "bytes": 50502,
+      "sha256": "a0035889a550e0a9b62f467c7b2e0734bfeeb2062fbd4181be7c655bb54769b5"
+    },
+    {
+      "path": "verification/independent_verifier.py",
+      "bytes": 22462,
+      "sha256": "c99b96e067c54ce33b961e9fcdba73d9799da0b05dd26c1675ed334ed5527447"
+    },
+    {
+      "path": "verification/independent_verifier2.py",
+      "bytes": 8473,
+      "sha256": "1d479ba14742db857ce5982594d84e776937bc286745aba72c08f0ffdac2319a"
+    },
+    {
+      "path": "verification/independent_verifier_finding4.py",
+      "bytes": 11529,
+      "sha256": "c29f6685be96e44917b3f0fbdc5ae1ebee77b3d5b0b16e117f0343b4f1f1df79"
+    },
+    {
+      "path": "verification/verifier_artifact_consistency.py",
+      "bytes": 66509,
+      "sha256": "565768b56440a36a2185ea8705597798947b070020430686a58ef1d0aba8c417"
+    },
+    {
+      "path": "verification/verifier_figures.py",
+      "bytes": 21269,
+      "sha256": "0acf496b683f2f29d8a9c0b0835eeaeeaa524200efe7fe3a2e862fa8635cc253"
+    },
+    {
+      "path": "verification/verifier_figures_pixels.py",
+      "bytes": 7817,
+      "sha256": "e0afae24da5b580806c55f57d8024211736cbcb4cbbf4269fb941f0869d0c2c4"
+    },
+    {
+      "path": "verification/verifier_figures_pixels2.py",
+      "bytes": 9071,
+      "sha256": "8c8bae316a147f5448e43110b86c7b6c1d5d171553ca640a48299248c7a2b0a3"
+    },
+    {
+      "path": "verification/verifier_figures_pixels3.py",
+      "bytes": 10160,
+      "sha256": "1e9a6dc3e2f7fb070066d830217d3ce43afcd3c1c8e127d22e43b9aafe87e48e"
+    },
+    {
+      "path": "verification/verifier_figures_pixels4.py",
+      "bytes": 9270,
+      "sha256": "ff4174e83183173c5f71526acef95eb8368c20fc942a97d79fa807a871067d6c"
+    },
+    {
+      "path": "verification/verifier_figures_pixels5.py",
+      "bytes": 9389,
+      "sha256": "e94311d1bc472d52bb7ee4fa4c836e3358760526aba2d341c38cb01e347c5c1a"
+    },
+    {
+      "path": "verification/verifier_figures_pixels6.py",
+      "bytes": 9924,
+      "sha256": "5c61261324f5ed2c65ff0d69cc1900d5f7e05dd1c9bfd49103923534e061bfa6"
+    },
+    {
+      "path": "verification/verifier_figures_pixels_final.py",
+      "bytes": 10230,
+      "sha256": "259b4c8c633fc31fab3c39845c165232fc136be1fafad54b08cb15999ab2b772"
+    },
+    {
+      "path": "verification/verifier_finding1.py",
+      "bytes": 10751,
+      "sha256": "20d5a8dca6b178d4e98c44c290928f29c009dad6325e680b5191e2b3d429a35b"
+    },
+    {
+      "path": "verification/verifier_finding1_extra.py",
+      "bytes": 6577,
+      "sha256": "a6f1d0c3e63ba9b397c1833d965d17c277e5d475104c1fe71c62f935f93f35f4"
+    },
+    {
+      "path": "verification/verifier_finding2.py",
+      "bytes": 12666,
+      "sha256": "07b9987fe89fdaa3f211a6903ffad59baa9b5b2bb26ed6927f5f3e5ac9b3b924"
+    },
+    {
+      "path": "verification/verifier_finding3.py",
+      "bytes": 16128,
+      "sha256": "2fb19aa7f5e60e0cc4f1c28bde2cf2a54f09aa534c51181eced7948f8e3437de"
+    },
+    {
+      "path": "verification/verifier_finding3_details.py",
+      "bytes": 12843,
+      "sha256": "2377dd700a1a3fb21674da685fc2fd744a58e46607de2136bf0fff788df50129"
+    },
+    {
+      "path": "verification/verifier_finding3_details2.py",
+      "bytes": 6946,
+      "sha256": "eef7a7cac8e3c49d143e4e8cd5f6a15fb5024d44c5610f08c42334531bf20b3a"
+    },
+    {
+      "path": "verification/verifier_finding3_leadlag.py",
+      "bytes": 2293,
+      "sha256": "195c366d4ae578b79ec5e890dda5e78b480383c120df58712740ada48547492d"
+    },
+    {
+      "path": "verification/verifier_finding3_mcpower.py",
+      "bytes": 1565,
+      "sha256": "66ef956e1659c7230fecc8f6fc2cb5950f9f28ac99684438c42e61f4323423dd"
+    },
+    {
+      "path": "verification/verifier_finding3_power.py",
+      "bytes": 2779,
+      "sha256": "157edf3a6a693915c7cae1bc0d20bcc7ff1d1b91933fa48fa960dc7af690e877"
+    },
+    {
+      "path": "verification/verifier_finding3_probes.py",
+      "bytes": 2651,
+      "sha256": "c7339d59aa5b23ff53258219a8be71a7c364e53070ab23aabda6a76b915b9705"
+    },
+    {
+      "path": "verification/verifier_finding3_robust.py",
+      "bytes": 5141,
+      "sha256": "8ed620efd4d7d8161840a3f64c210b27a77581d8b3be6dd3d39c8fdede88aab5"
+    },
+    {
+      "path": "verification/verifier_finding5.py",
+      "bytes": 20267,
+      "sha256": "d34dd0d4125e068090f74a9674940782d0696812718cfd22708138ae988013b1"
+    }
+  ],
+  "executed_notebooks": [],
+  "result_artifacts": [
+    {
+      "path": "figures/fig1_regime_structure.png",
+      "bytes": 151274,
+      "sha256": "b8f9012d2af7b02d5ba3081bbe0b743f8f6c1ae673f759311f75b3f2d141c507"
+    },
+    {
+      "path": "figures/fig2_hysteresis.png",
+      "bytes": 57845,
+      "sha256": "a0350456ba83c4a93ff04e9e7a50fdda7e4aff33e53c5217c047fc136e2a90e5"
+    },
+    {
+      "path": "figures/fig3_coupling_by_regime.png",
+      "bytes": 39181,
+      "sha256": "3f5d283da19d81c345146a3ba96ae061b8af582fc8b17d03b4bb1667d67287f7"
+    },
+    {
+      "path": "figures/fig4_raw_vs_fitted.png",
+      "bytes": 69119,
+      "sha256": "678a5ab924718634343f02db9e4bdc197acec7ecb4b12772f93c687da22110e2"
+    },
+    {
+      "path": "figures/fig5_dose_perturbation.png",
+      "bytes": 60419,
+      "sha256": "2f8068501fb97b02fb85933dc26282b0c1ed0989ef05f8f520f9ff42272b8719"
+    },
+    {
+      "path": "results/findings.json",
+      "bytes": 52471,
+      "sha256": "de410a430ddc235102c4a8d342dd3ab60b3da9b72d063c688b6d2eabccd720c9"
+    },
+    {
+      "path": "results/table_fit_vs_raw.tsv",
+      "bytes": 560,
+      "sha256": "8da74081ee954777e39c75495f13347cd78b4f94b07e7cd4daaa039b14683313"
+    },
+    {
+      "path": "results/table_headline_numbers.tsv",
+      "bytes": 364,
+      "sha256": "df3f7ea601835cf4ab5289c1e94ff5853275d14f1fe45ea0dbd2a046e026540c"
+    },
+    {
+      "path": "results/table_matched_time_branches.tsv",
+      "bytes": 538,
+      "sha256": "fa206cdb02cc62e420563ed1662adbfcb04cc297a3274267a9973b9dcc058520"
+    },
+    {
+      "path": "results/table_regimes.tsv",
+      "bytes": 456,
+      "sha256": "1c5af7e24c7590083295d3b26b4213f79b602009e12038c0a5228d9e271bbc77"
+    },
+    {
+      "path": "verification/fig3_bar_pixels.tsv",
+      "bytes": 1392,
+      "sha256": "639ad0d2a620e22b4ba4f0baab9b4c630136f20f1418c693b3bd3f1d02184e4c"
+    },
+    {
+      "path": "verification/fig5b_errorbar_pixels.tsv",
+      "bytes": 867,
+      "sha256": "4d232d59f55c3838ad7a82b2e7aad4ffdedb7619c66f2ccacdef8d6630ca4a88"
+    },
+    {
+      "path": "verification/verifier_artifact_consistency_results.json",
+      "bytes": 116216,
+      "sha256": "6ee15c48728ee4db9fd1a74cf874f06967b6934d6096fa8875a507ab54a04da2"
+    },
+    {
+      "path": "verification/verifier_figures_out.json",
+      "bytes": 15334,
+      "sha256": "bb1b769619fc3c4232c9fef0b41f770d62dd2fd6f636d7b53ff36eafff174111"
+    },
+    {
+      "path": "verification/verifier_finding1_extra_results.json",
+      "bytes": 3660,
+      "sha256": "ac65b15cb85ce4cd6c93e4e3a3751b34d9abae1ef625fab557752643150c3752"
+    },
+    {
+      "path": "verification/verifier_finding1_results.json",
+      "bytes": 10659,
+      "sha256": "5226065edebca541478991999c2195a1cd05920bed3124240b91e77e59376d41"
+    },
+    {
+      "path": "verification/verifier_finding3_results.json",
+      "bytes": 3280,
+      "sha256": "da22bef59e58727b138b40f8a82e40a326209308e627e8123df4d792a9b74a79"
+    },
+    {
+      "path": "verification/verifier_finding5_results.json",
+      "bytes": 11149,
+      "sha256": "9424e1e135e6e818ba262053d3251e98b957f0faa3378b6d33fe996343ebf760"
+    }
+  ],
+  "native_evidence_registry": {
+    "sources": [],
+    "resolved_ids": {}
+  },
+  "resolved_support_files": [
+    {
+      "path": "analysis/analysis.py",
+      "bytes": 50502,
+      "sha256": "a0035889a550e0a9b62f467c7b2e0734bfeeb2062fbd4181be7c655bb54769b5"
+    },
+    {
+      "path": "figures/fig1_regime_structure.png",
+      "bytes": 151274,
+      "sha256": "b8f9012d2af7b02d5ba3081bbe0b743f8f6c1ae673f759311f75b3f2d141c507"
+    },
+    {
+      "path": "figures/fig2_hysteresis.png",
+      "bytes": 57845,
+      "sha256": "a0350456ba83c4a93ff04e9e7a50fdda7e4aff33e53c5217c047fc136e2a90e5"
+    },
+    {
+      "path": "figures/fig3_coupling_by_regime.png",
+      "bytes": 39181,
+      "sha256": "3f5d283da19d81c345146a3ba96ae061b8af582fc8b17d03b4bb1667d67287f7"
+    },
+    {
+      "path": "figures/fig4_raw_vs_fitted.png",
+      "bytes": 69119,
+      "sha256": "678a5ab924718634343f02db9e4bdc197acec7ecb4b12772f93c687da22110e2"
+    },
+    {
+      "path": "figures/fig5_dose_perturbation.png",
+      "bytes": 60419,
+      "sha256": "2f8068501fb97b02fb85933dc26282b0c1ed0989ef05f8f520f9ff42272b8719"
+    },
+    {
+      "path": "results/findings.json",
+      "bytes": 52471,
+      "sha256": "de410a430ddc235102c4a8d342dd3ab60b3da9b72d063c688b6d2eabccd720c9"
+    },
+    {
+      "path": "results/table_fit_vs_raw.tsv",
+      "bytes": 560,
+      "sha256": "8da74081ee954777e39c75495f13347cd78b4f94b07e7cd4daaa039b14683313"
+    },
+    {
+      "path": "results/table_matched_time_branches.tsv",
+      "bytes": 538,
+      "sha256": "fa206cdb02cc62e420563ed1662adbfcb04cc297a3274267a9973b9dcc058520"
+    },
+    {
+      "path": "results/table_regimes.tsv",
+      "bytes": 456,
+      "sha256": "1c5af7e24c7590083295d3b26b4213f79b602009e12038c0a5228d9e271bbc77"
+    }
+  ]
+}

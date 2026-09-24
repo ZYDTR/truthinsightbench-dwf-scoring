@@ -1,0 +1,194 @@
+==============================================================================
+FINDING 5 INDEPENDENT VERIFICATION (v2, vectorised)
+==============================================================================
+rows=1931; reference=['reference_surface']; named=5; unidentified=9
+[sanity] hand-rolled 101-pt centered median == pandas rolling: True
+[timing] metric table (incl. 24x6000 vectorised bootstraps) took 1.1s
+
+==============================================================================
+1. RECOMPUTED MANN-WHITNEY COMPARISONS (scipy.stats.mannwhitneyu)
+==============================================================================
+c04_sulfate_ug_kg          medians    507.568 vs    300.762 ug/kg | U=  31 AUC=0.689 | p_exact=0.2977 (exact) | p_asym=0.2571 | p_asym+cc=0.2861
+excess_over_BG101          medians    411.310 vs    203.777 ug/kg | U=  32 AUC=0.711 | p_exact=0.2398 (exact) | p_asym=0.2053 | p_asym+cc=0.2301
+local_prominence_pm1       medians     91.367 vs     65.728 ug/kg | U=  33 AUC=0.733 | p_exact=0.1898 (exact) | p_asym=0.1615 | p_asym+cc=0.1824
+
+ALL discriminators, sorted by p_exact (Bonferroni factor = 24):
+  peak_to_bg_ratio           med       5.27 vs       3.10 | U=  35 AUC=0.778 | p_exact=0.1119 | p_bonf=1.000 | med_diff 95%CI [-0.48, 7.82]
+  excess_local_linear25      med     369.54 vs     182.73 | U=  34 AUC=0.756 | p_exact=0.1469 | p_bonf=1.000 | med_diff 95%CI [-68.82, 614.92]
+  local_prominence_pm1       med      91.37 vs      65.73 | U=  33 AUC=0.733 | p_exact=0.1898 | p_bonf=1.000 | med_diff 95%CI [-37.88, 170.14]
+  c03_samp_thick_cm          med       2.04 vs       2.00 | U=  34 AUC=0.744 | p_exact=0.1898 | p_bonf=1.000 | med_diff 95%CI [-0.08, 0.78]
+  excess_over_BG101          med     411.31 vs     203.78 | U=  32 AUC=0.711 | p_exact=0.2398 | p_bonf=1.000 | med_diff 95%CI [-72.48, 748.03]
+  excess_over_BG51           med     406.81 vs     202.73 | U=  32 AUC=0.711 | p_exact=0.2398 | p_bonf=1.000 | med_diff 95%CI [-74.48, 736.16]
+  rank_excess101_desc        med      12.00 vs      34.00 | U=  13 AUC=0.289 | p_exact=0.2398 | p_bonf=1.000 | med_diff 95%CI [-38.00, 18.00]
+  c04_sulfate_ug_kg          med     507.57 vs     300.76 | U=  31 AUC=0.689 | p_exact=0.2977 | p_bonf=1.000 | med_diff 95%CI [-73.48, 746.99]
+  excess_over_BG201          med     417.71 vs     208.57 | U=  31 AUC=0.689 | p_exact=0.2977 | p_bonf=1.000 | med_diff 95%CI [-70.40, 750.23]
+  rank_c04_desc              med      12.00 vs      35.00 | U=  14 AUC=0.311 | p_exact=0.2977 | p_bonf=1.000 | med_diff 95%CI [-36.00, 21.00]
+  width_excess101_gt200      med       6.00 vs       1.00 | U=  30 AUC=0.667 | p_exact=0.3636 | p_bonf=1.000 | med_diff 95%CI [-1.00, 8.00]
+  width_abs_gt300            med       6.00 vs       1.00 | U=  30 AUC=0.667 | p_exact=0.3636 | p_bonf=1.000 | med_diff 95%CI [-2.00, 8.00]
+  c08_age_a_ad_ce            med    1595.00 vs    1286.00 | U=  30 AUC=0.667 | p_exact=0.3636 | p_bonf=1.000 | med_diff 95%CI [-236.00, 705.00]
+  c06_depth_w_e_m            med      12.06 vs      21.86 | U=  15 AUC=0.333 | p_exact=0.3636 | p_bonf=1.000 | med_diff 95%CI [-21.08, 6.98]
+  c01_depth_top_m            med      23.31 vs      36.22 | U=  15 AUC=0.333 | p_exact=0.3636 | p_bonf=1.000 | med_diff 95%CI [-34.22, 10.30]
+  c05_density_g_cm_3         med       0.52 vs       0.60 | U=  15 AUC=0.333 | p_exact=0.3636 | p_bonf=1.000 | med_diff 95%CI [-0.21, 0.07]
+  local_prominence_pm5       med     418.39 vs     205.25 | U=  30 AUC=0.667 | p_exact=0.3636 | p_bonf=1.000 | med_diff 95%CI [-120.40, 731.73]
+  excess_mass_run_bg+50      med    2078.27 vs    1115.73 | U=  30 AUC=0.667 | p_exact=0.3636 | p_bonf=1.000 | med_diff 95%CI [-860.33, 5531.19]
+  width_abs_gt250            med       6.00 vs       2.00 | U=  29 AUC=0.644 | p_exact=0.4376 | p_bonf=1.000 | med_diff 95%CI [-3.00, 7.00]
+  width_abs_gt200            med       6.00 vs       5.00 | U=  28 AUC=0.622 | p_exact=0.5185 | p_bonf=1.000 | med_diff 95%CI [-4.00, 5.00]
+  width_excess101_gt150      med       6.00 vs       2.00 | U=  28 AUC=0.633 | p_exact=0.5185 | p_bonf=1.000 | med_diff 95%CI [-3.00, 7.00]
+  width_excess101_gt100      med       6.00 vs       6.00 | U=  28 AUC=0.611 | p_exact=0.6064 | p_bonf=1.000 | med_diff 95%CI [-5.00, 5.00]
+  width_abs_gt150            med       8.00 vs       9.00 | U=  19 AUC=0.422 | p_exact=0.6993 | p_bonf=1.000 | med_diff 95%CI [-8.00, 3.00]
+  fwhm_over_bg101            med       5.00 vs       5.00 | U=  24 AUC=0.544 | p_exact=0.8981 | p_bonf=1.000 | med_diff 95%CI [-4.00, 3.00]
+
+headline metrics, label-preserving bootstrap CIs:
+  c04_sulfate_ug_kg        medians [   239.46,   1047.75] vs [   259.76,    431.03] | diff    206.81 CI [   -73.48,    746.99]
+  excess_over_BG101        medians [   147.94,    951.81] vs [   152.65,    331.31] | diff    207.53 CI [   -72.48,    748.03]
+  local_prominence_pm1     medians [    38.61,    235.87] vs [    36.67,    124.07] | diff     25.64 CI [   -37.88,    170.14]
+  c01_depth_top_m          medians [     2.00,     37.28] vs [    18.90,     38.40] | diff    -12.91 CI [   -34.22,     10.30]
+  c05_density_g_cm_3       medians [     0.39,      0.61] vs [     0.49,      0.62] | diff     -0.09 CI [    -0.21,      0.07]
+  fwhm_over_bg101          medians [     1.00,      7.00] vs [     3.00,      6.00] | diff      0.00 CI [    -4.00,      3.00]
+  c03_samp_thick_cm        medians [     1.92,      2.78] vs [     1.85,      2.04] | diff      0.04 CI [    -0.08,      0.78]
+  excess_mass_run_bg+50    medians [   255.39,   6646.91] vs [   673.77,   1222.30] | diff    962.54 CI [  -860.33,   5531.19]
+
+[cross-check] Welch t on c05 density: t=-1.145, p=0.2902 (medians 0.5170 vs 0.6030, means 0.5054 vs 0.5570)
+[cross-check] Welch t on c04 sulfate: t=1.696, p=0.1620
+
+==============================================================================
+1b. PERMETRIC PERMUTATION p (all C(14,5)=2002 class splits) + FAMILY-WISE
+==============================================================================
+observed max |AUC-0.5| over 24 metrics = 0.278 (driver: peak_to_bg_ratio, AUC=0.778, permutation p=0.1119)
+smallest per-metric permutation p = 0.1119; family-wise permutation p = 0.5270
+
+per-metric permutation p (two-sided) vs scipy exact p:
+  peak_to_bg_ratio           AUC=0.778 p_perm=0.1119 p_exact=0.1119
+  excess_local_linear25      AUC=0.756 p_perm=0.1469 p_exact=0.1469
+  c03_samp_thick_cm          AUC=0.744 p_perm=0.1484 p_exact=0.1898
+  local_prominence_pm1       AUC=0.733 p_perm=0.1898 p_exact=0.1898
+  excess_over_BG101          AUC=0.711 p_perm=0.2398 p_exact=0.2398
+  excess_over_BG51           AUC=0.711 p_perm=0.2398 p_exact=0.2398
+  rank_excess101_desc        AUC=0.289 p_perm=0.2398 p_exact=0.2398
+  c04_sulfate_ug_kg          AUC=0.689 p_perm=0.2977 p_exact=0.2977
+  excess_over_BG201          AUC=0.689 p_perm=0.2977 p_exact=0.2977
+  rank_c04_desc              AUC=0.311 p_perm=0.2977 p_exact=0.2977
+  width_excess101_gt200      AUC=0.667 p_perm=0.3052 p_exact=0.3636
+  width_abs_gt300            AUC=0.667 p_perm=0.3561 p_exact=0.3636
+  c08_age_a_ad_ce            AUC=0.667 p_perm=0.3636 p_exact=0.3636
+  c06_depth_w_e_m            AUC=0.333 p_perm=0.3636 p_exact=0.3636
+  c01_depth_top_m            AUC=0.333 p_perm=0.3636 p_exact=0.3636
+  c05_density_g_cm_3         AUC=0.333 p_perm=0.3636 p_exact=0.3636
+  local_prominence_pm5       AUC=0.667 p_perm=0.3636 p_exact=0.3636
+  excess_mass_run_bg+50      AUC=0.667 p_perm=0.3636 p_exact=0.3636
+  width_abs_gt250            AUC=0.644 p_perm=0.4031 p_exact=0.4376
+  width_excess101_gt150      AUC=0.633 p_perm=0.4545 p_exact=0.5185
+  width_abs_gt200            AUC=0.622 p_perm=0.5030 p_exact=0.5185
+  width_excess101_gt100      AUC=0.611 p_perm=0.5300 p_exact=0.6064
+  width_abs_gt150            AUC=0.422 p_perm=0.6783 p_exact=0.6993
+  fwhm_over_bg101            AUC=0.544 p_perm=0.8187 p_exact=0.8981
+
+==============================================================================
+2. POSITIONS AND INTERLEAVING
+==============================================================================
+ row              label        class  depth_top_m  depth_w_e_m  age_ce  order
+  70           event_01        named         2.00         0.78  1991.0      1
+ 502           event_02        named        12.96         5.88  1816.0      2
+ 517 unidentified_event unidentified        13.27         6.04  1809.0      3
+ 796 unidentified_event unidentified        18.90         9.25  1695.0      4
+ 841 unidentified_event unidentified        19.85         9.83  1674.0      5
+ 907 unidentified_event unidentified        21.24        10.71  1643.0      6
+1012           event_03        named        23.31        12.06  1595.0      7
+1305           event_04        named        29.20        16.23  1459.0      8
+1640 unidentified_event unidentified        36.22        21.86  1286.0      9
+1660 unidentified_event unidentified        36.59        22.18  1277.0     10
+1674 unidentified_event unidentified        36.85        22.41  1269.0     11
+1696           event_05        named        37.28        22.78  1259.0     12
+1752 unidentified_event unidentified        38.40        23.77  1230.0     13
+1862 unidentified_event unidentified        40.59        25.76  1172.0     14
+
+named depths      : [2.0, 12.96, 23.31, 29.2, 37.28]
+unidentified depth: [13.27, 18.9, 19.85, 21.24, 36.22, 36.59, 36.85, 38.4, 40.59]
+named depth range [2.00, 37.28] m; unid [13.27, 40.59] m; overlap = [13.27, 37.28] m (overlap length 24.01 m of a total span 38.59 m)
+class runs in depth order = 6 (2 = perfectly separable, 14 = maximally mixed); Wald-Wolfowitz one-sided p = 0.3726
+fraction of named inside unid range = 0.60; fraction of unid inside named range = 0.78
+nearest unlike-class neighbour gap: median 1.59 m, max 11.27 m; 9/14 horizons have an unlike-class neighbour within 3 m
+
+single-feature threshold classifier, leave-one-out (baseline = 9/14 = 0.643):
+  c01_depth_top_m          LOOCV acc = 0.643  AUC = 0.333  p_exact = 0.3636  (depth uses the fixed direction named=shallower)
+  c06_depth_w_e_m          LOOCV acc = 0.643  AUC = 0.333  p_exact = 0.3636  (depth uses the fixed direction named=shallower)
+  c04_sulfate_ug_kg        LOOCV acc = 0.786  AUC = 0.689  p_exact = 0.2977  (depth uses the fixed direction named=shallower)
+  excess_over_BG101        LOOCV acc = 0.786  AUC = 0.711  p_exact = 0.2398  (depth uses the fixed direction named=shallower)
+  local_prominence_pm1     LOOCV acc = 0.500  AUC = 0.733  p_exact = 0.1898  (depth uses the fixed direction named=shallower)
+  c05_density_g_cm_3       LOOCV acc = 0.643  AUC = 0.333  p_exact = 0.3636  (depth uses the fixed direction named=shallower)
+  c03_samp_thick_cm        LOOCV acc = 0.643  AUC = 0.744  p_exact = 0.1898  (depth uses the fixed direction named=shallower)
+  fwhm_over_bg101          LOOCV acc = 0.643  AUC = 0.544  p_exact = 0.8981  (depth uses the fixed direction named=shallower)
+  excess_mass_run_bg+50    LOOCV acc = 0.714  AUC = 0.667  p_exact = 0.3636  (depth uses the fixed direction named=shallower)
+  c08_age_a_ad_ce          LOOCV acc = 0.643  AUC = 0.667  p_exact = 0.3636  (depth uses the fixed direction named=shallower)
+  excess_over_BG201        LOOCV acc = 0.786  AUC = 0.689  p_exact = 0.2977  (depth uses the fixed direction named=shallower)
+  local_prominence_pm5     LOOCV acc = 0.786  AUC = 0.667  p_exact = 0.3636  (depth uses the fixed direction named=shallower)
+
+outlier-rule accuracy (named iff depth < 13 m or depth > 37 m): 0.714
+depth LOOCV acc=0.643 vs sulfate LOOCV acc=0.786; discordant b01=3, b10=1; exact McNemar p=0.625
+
+==============================================================================
+2b. POSITION vs AMPLITUDE, SINGLE-THRESHOLD RULES
+==============================================================================
+  c01_depth_top_m        best cut =    13.115 (<)  in-sample acc = 0.786  exact perm p = 0.3566  LOOCV acc = 0.643
+      misclassified: [(23.31, 'named'), (29.2, 'named'), (37.28, 'named')]
+  c06_depth_w_e_m        best cut =     5.960 (<)  in-sample acc = 0.786  exact perm p = 0.3566  LOOCV acc = 0.643
+      misclassified: [(12.06, 'named'), (16.23, 'named'), (22.78, 'named')]
+  c04_sulfate_ug_kg      best cut =   472.296 (>)  in-sample acc = 0.857  exact perm p = 0.0909  LOOCV acc = 0.786
+      misclassified: [(283.69, 'named'), (239.46, 'named')]
+  excess_over_BG101      best cut =   373.038 (>)  in-sample acc = 0.857  exact perm p = 0.0909  LOOCV acc = 0.786
+      misclassified: [(197.26, 'named'), (147.94, 'named')]
+  peak_to_bg_ratio       best cut =     4.875 (>)  in-sample acc = 0.857  exact perm p = 0.0909  LOOCV acc = 0.786
+      misclassified: [(3.28, 'named'), (2.62, 'named')]
+
+family-wise permutation over best-cut accuracy across 8 metrics: observed max = 0.857, p = 0.3017
+
+L2-regularised logistic LOOCV (lambda=1, z-scored features; descriptive only):
+  sulfate only       LOOCV accuracy = 0.786
+  depth only         LOOCV accuracy = 0.571
+  sulfate + depth    LOOCV accuracy = 0.643
+
+==============================================================================
+3. POWER (two-sided Mann-Whitney, alpha=0.05, normal shift model)
+==============================================================================
+[timing] 21x4000 vectorised power sims took 1.4s
+minimum detectable standardised shift at 80% power: delta = 1.830 SD -> AUC = 0.902
+Wilson-95%-lower-bound >= 0.80 at AUC = 0.921
+  power at AUC 0.60: 0.082
+  power at AUC 0.70: 0.203
+  power at AUC 0.75: 0.312
+  power at AUC 0.80: 0.436
+  power at AUC 0.90: 0.784
+
+best raw discriminator: peak_to_bg_ratio (AUC=0.778, p_exact=0.1119)
+  c04_sulfate_ug_kg        AUC=0.689 -> achieved power 0.183
+  excess_over_BG101        AUC=0.711 -> achieved power 0.223
+  local_prominence_pm1     AUC=0.733 -> achieved power 0.273
+  c01_depth_top_m          AUC=0.333 -> achieved power 0.049
+  c05_density_g_cm_3       AUC=0.333 -> achieved power 0.049
+  fwhm_over_bg101          AUC=0.544 -> achieved power 0.049
+
+minimum detectable raw shift at 80% power vs observed median difference:
+  peak_to_bg_ratio           AUC=0.778 power=0.380 | min raw shift @80% =       3.9 vs observed diff       2.2 (pooled SD 2.1)
+  excess_local_linear25      AUC=0.756 power=0.325 | min raw shift @80% =     323.2 vs observed diff     186.8 (pooled SD 176.6)
+  c03_samp_thick_cm          AUC=0.744 power=0.299 | min raw shift @80% =       0.4 vs observed diff       0.0 (pooled SD 0.2)
+  local_prominence_pm1       AUC=0.733 power=0.273 | min raw shift @80% =      97.5 vs observed diff      25.6 (pooled SD 53.3)
+  excess_over_BG101          AUC=0.711 power=0.223 | min raw shift @80% =     389.7 vs observed diff     207.5 (pooled SD 212.9)
+  excess_over_BG51           AUC=0.711 power=0.223 | min raw shift @80% =     391.2 vs observed diff     204.1 (pooled SD 213.8)
+  c04_sulfate_ug_kg          AUC=0.689 power=0.183 | min raw shift @80% =     395.2 vs observed diff     206.8 (pooled SD 215.9)
+  excess_over_BG201          AUC=0.689 power=0.183 | min raw shift @80% =     394.4 vs observed diff     209.1 (pooled SD 215.5)
+  local_prominence_pm5       AUC=0.667 power=0.144 | min raw shift @80% =     400.8 vs observed diff     213.1 (pooled SD 219.0)
+  c08_age_a_ad_ce            AUC=0.667 power=0.144 | min raw shift @80% =     479.7 vs observed diff     309.0 (pooled SD 262.1)
+  width_abs_gt300            AUC=0.667 power=0.144 | min raw shift @80% =       5.3 vs observed diff       5.0 (pooled SD 2.9)
+  width_excess101_gt200      AUC=0.667 power=0.144 | min raw shift @80% =       5.3 vs observed diff       5.0 (pooled SD 2.9)
+  excess_mass_run_bg+50      AUC=0.667 power=0.144 | min raw shift @80% =    2756.6 vs observed diff     962.5 (pooled SD 1506.3)
+  width_abs_gt250            AUC=0.644 power=0.121 | min raw shift @80% =       5.1 vs observed diff       4.0 (pooled SD 2.8)
+  width_excess101_gt150      AUC=0.633 power=0.111 | min raw shift @80% =       5.0 vs observed diff       4.0 (pooled SD 2.7)
+  width_abs_gt200            AUC=0.622 power=0.101 | min raw shift @80% =       4.6 vs observed diff       1.0 (pooled SD 2.5)
+  width_excess101_gt100      AUC=0.611 power=0.090 | min raw shift @80% =       4.5 vs observed diff       0.0 (pooled SD 2.5)
+  fwhm_over_bg101            AUC=0.544 power=0.049 | min raw shift @80% =       3.2 vs observed diff       0.0 (pooled SD 1.8)
+  width_abs_gt150            AUC=0.422 power=0.000 | min raw shift @80% =       4.8 vs observed diff      -1.0 (pooled SD 2.6)
+  c05_density_g_cm_3         AUC=0.333 power=0.000 | min raw shift @80% =       0.1 vs observed diff      -0.1 (pooled SD 0.1)
+  c01_depth_top_m            AUC=0.333 power=0.000 | min raw shift @80% =      21.5 vs observed diff     -12.9 (pooled SD 11.7)
+  c06_depth_w_e_m            AUC=0.333 power=0.000 | min raw shift @80% =      14.7 vs observed diff      -9.8 (pooled SD 8.0)
+  rank_c04_desc              AUC=0.311 power=0.000 | min raw shift @80% =      28.5 vs observed diff     -23.0 (pooled SD 15.5)
+  rank_excess101_desc        AUC=0.289 power=0.000 | min raw shift @80% =      28.2 vs observed diff     -22.0 (pooled SD 15.4)

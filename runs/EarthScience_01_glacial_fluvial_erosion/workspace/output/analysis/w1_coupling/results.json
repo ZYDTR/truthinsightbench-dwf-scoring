@@ -1,0 +1,210 @@
+{
+  "A_unit_identity": {
+    "rows_with_both_columns": 92,
+    "rows_satisfying_identity": 28,
+    "fraction": 0.30434782608695654,
+    "by_stratum": [
+      {
+        "Process": "Glacial",
+        "Methodology": "Cosmogenic detrital",
+        "n_checked": 1,
+        "n_exact": 0,
+        "median_ratio": 0.0999999677419355,
+        "fraction_exact": 0.0
+      },
+      {
+        "Process": "Glacial",
+        "Methodology": "Cosmogenic surface",
+        "n_checked": 47,
+        "n_exact": 8,
+        "median_ratio": 1.0025402201524134,
+        "fraction_exact": 0.1702127659574468
+      },
+      {
+        "Process": "Glacial",
+        "Methodology": "Relief",
+        "n_checked": 10,
+        "n_exact": 8,
+        "median_ratio": 1.0,
+        "fraction_exact": 0.8
+      },
+      {
+        "Process": "Glacial",
+        "Methodology": "Thermochronometric",
+        "n_checked": 7,
+        "n_exact": 4,
+        "median_ratio": 1.0,
+        "fraction_exact": 0.5714285714285714
+      },
+      {
+        "Process": "Glacial",
+        "Methodology": "Volumetric",
+        "n_checked": 16,
+        "n_exact": 8,
+        "median_ratio": 0.9999990000000001,
+        "fraction_exact": 0.5
+      },
+      {
+        "Process": "Nonglacial",
+        "Methodology": "Relief",
+        "n_checked": 7,
+        "n_exact": 0,
+        "median_ratio": 960.0024,
+        "fraction_exact": 0.0
+      },
+      {
+        "Process": "Nonglacial",
+        "Methodology": "Thermochronometric",
+        "n_checked": 4,
+        "n_exact": 0,
+        "median_ratio": 1100.0,
+        "fraction_exact": 0.0
+      }
+    ]
+  },
+  "B_thickness_collapse": [
+    {
+      "Process": "Glacial",
+      "Methodology": "Cosmogenic detrital",
+      "n": 9,
+      "median_ET_mm": 5000.0,
+      "q25_mm": 1100.001,
+      "q75_mm": 7000.0,
+      "sd_log10_ET": 0.6061876441189781
+    },
+    {
+      "Process": "Glacial",
+      "Methodology": "Cosmogenic surface",
+      "n": 99,
+      "median_ET_mm": 392.0,
+      "q25_mm": 119.42,
+      "q75_mm": 3315.0,
+      "sd_log10_ET": 0.9362599515937468
+    },
+    {
+      "Process": "Glacial",
+      "Methodology": "Relief",
+      "n": 18,
+      "median_ET_mm": 700000.0,
+      "q25_mm": 122250.0,
+      "q75_mm": 1475000.0,
+      "sd_log10_ET": 1.6778075379835804
+    },
+    {
+      "Process": "Glacial",
+      "Methodology": "Thermochronometric",
+      "n": 68,
+      "median_ET_mm": 2020500.0,
+      "q25_mm": 780000.0,
+      "q75_mm": 3000000.0,
+      "sd_log10_ET": 0.5638376180422864
+    },
+    {
+      "Process": "Glacial",
+      "Methodology": "Volumetric",
+      "n": 233,
+      "median_ET_mm": 60.8,
+      "q25_mm": 1.2,
+      "q75_mm": 2500.0009999999997,
+      "sd_log10_ET": 2.298617192432155
+    },
+    {
+      "Process": "Nonglacial",
+      "Methodology": "Cosmogenic detrital",
+      "n": 3470,
+      "median_ET_mm": 650.446950942,
+      "q25_mm": 630.2507281635,
+      "q75_mm": 674.6566772325,
+      "sd_log10_ET": 0.034978787630507595
+    },
+    {
+      "Process": "Nonglacial",
+      "Methodology": "Cosmogenic surface",
+      "n": 64,
+      "median_ET_mm": 467.24999999999994,
+      "q25_mm": 320.0,
+      "q75_mm": 563.7,
+      "sd_log10_ET": 0.33096597353058393
+    },
+    {
+      "Process": "Nonglacial",
+      "Methodology": "Relief",
+      "n": 7,
+      "median_ET_mm": 60000000.0,
+      "q25_mm": 20000030.0,
+      "q75_mm": 76750000.0,
+      "sd_log10_ET": 0.42002383083471667
+    },
+    {
+      "Process": "Nonglacial",
+      "Methodology": "Thermochronometric",
+      "n": 4,
+      "median_ET_mm": 12600000.0,
+      "q25_mm": 9850000.0,
+      "q75_mm": 13900000.0,
+      "sd_log10_ET": 0.3060173967090473
+    },
+    {
+      "Process": "Nonglacial",
+      "Methodology": "Volumetric",
+      "n": 2583,
+      "median_ET_mm": 0.060764,
+      "q25_mm": 0.00021125906899999999,
+      "q75_mm": 0.6547525,
+      "sd_log10_ET": 1.928339857960918
+    }
+  ],
+  "C_reconstruction": {
+    "rows_pair_aligned": 3342,
+    "rows_with_product": 3221,
+    "median_ET_mm": 649.4927746168665,
+    "q25_ET_mm": 629.6205394625712,
+    "q75_ET_mm": 673.5847176393578,
+    "cv_ET": 0.05500298292397375,
+    "implied_Lambda_over_rho_cm": 64.94927746168665
+  },
+  "C_analytic_recovery": {
+    "n": 3221,
+    "slope": 1.008212024844344,
+    "se": 0.0008784570731841353,
+    "r2": 0.9975621987089145,
+    "spearman_rho": 0.9987833947241262
+  },
+  "C_coupled_slope": {
+    "n": 3470,
+    "observed_slope": -0.9950483209181564,
+    "observed_r2": 0.9978800785708096,
+    "mechanically_implied_slope": -1.0,
+    "mechanically_implied_r2_if_depth_fixed": 1.0
+  },
+  "D_free_stratum_slope": {
+    "stratum": "Volumetric (pooled processes)",
+    "n": 2816,
+    "slope": 0.13355165229569943,
+    "se": 0.008627422384733347,
+    "r2": 0.07847302070338502,
+    "sd_log10_ET": 2.200020729202617
+  },
+  "tables": [
+    {
+      "file": "table_A_unit_identity.csv",
+      "caption": "Rows where Erosion rate x Time interval reproduces Exhumation x 1000 exactly.",
+      "rows": 7
+    },
+    {
+      "file": "table_B_thickness_collapse.csv",
+      "caption": "Spread of implied eroded thickness per stratum; a collapsed spread flags a rate time-locked to its own interval.",
+      "rows": 10
+    },
+    {
+      "file": "table_C_density_sensitivity.csv",
+      "caption": "Reconstruction of the reported rate from raw nuclide columns under four assumed rock densities.",
+      "rows": 4
+    },
+    {
+      "file": "table_D_free_stratum_thickness.csv",
+      "caption": "Thickness spread in the Volumetric stratum, where rate and interval are free to vary independently.",
+      "rows": 2
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "task_id": "Energy_01_photocatalytic_tradeoffs",
+  "t0": "2022-01-01",
+  "analysis_unit": "One complete formulation time course, spectrum, transient trace, or loading condition; neighboring curve points are not independent replicates.",
+  "files": {
+    "conversion_timecourses": {
+      "rows": 20,
+      "columns": [
+        "formulation_id",
+        "illumination_time_h",
+        "gaseous_product_umol"
+      ],
+      "dtypes": {
+        "formulation_id": "str",
+        "illumination_time_h": "float64",
+        "gaseous_product_umol": "float64"
+      },
+      "missing_values": {
+        "formulation_id": 0,
+        "illumination_time_h": 0,
+        "gaseous_product_umol": 0
+      },
+      "sha256_verified": true,
+      "levels_formulation_id": [
+        "formulation_1",
+        "formulation_2",
+        "formulation_3",
+        "formulation_4"
+      ],
+      "n_levels_formulation_id": 4,
+      "range_illumination_time_h": [
+        0.0,
+        4.0
+      ],
+      "range_gaseous_product_umol": [
+        0.0,
+        9.48
+      ]
+    },
+    "optical_action_spectra": {
+      "rows": 907,
+      "columns": [
+        "measurement_role",
+        "wavelength_nm",
+        "response_au_or_percent"
+      ],
+      "dtypes": {
+        "measurement_role": "str",
+        "wavelength_nm": "float64",
+        "response_au_or_percent": "float64"
+      },
+      "missing_values": {
+        "measurement_role": 0,
+        "wavelength_nm": 0,
+        "response_au_or_percent": 0
+      },
+      "sha256_verified": true,
+      "levels_measurement_role": [
+        "absorption",
+        "action_response"
+      ],
+      "n_levels_measurement_role": 2,
+      "range_wavelength_nm": [
+        350.0,
+        800.0
+      ],
+      "range_response_au_or_percent": [
+        -0.009,
+        82.6
+      ]
+    },
+    "ultrafast_transient_traces": {
+      "rows": 196,
+      "columns": [
+        "formulation_id",
+        "delay_ps",
+        "normalized_transient_signal"
+      ],
+      "dtypes": {
+        "formulation_id": "str",
+        "delay_ps": "float64",
+        "normalized_transient_signal": "float64"
+      },
+      "missing_values": {
+        "formulation_id": 0,
+        "delay_ps": 0,
+        "normalized_transient_signal": 0
+      },
+      "sha256_verified": true,
+      "levels_formulation_id": [
+        "formulation_1",
+        "formulation_2"
+      ],
+      "n_levels_formulation_id": 2,
+      "range_delay_ps": [
+        0.000321615,
+        76.8937
+      ],
+      "range_normalized_transient_signal": [
+        -0.46059,
+        1.00077
+      ]
+    },
+    "cofactor_loading_response": {
+      "rows": 4,
+      "columns": [
+        "cofactor_loading_percent",
+        "product_evolution_rate_umol_h"
+      ],
+      "dtypes": {
+        "cofactor_loading_percent": "float64",
+        "product_evolution_rate_umol_h": "float64"
+      },
+      "missing_values": {
+        "cofactor_loading_percent": 0,
+        "product_evolution_rate_umol_h": 0
+      },
+      "sha256_verified": true,
+      "range_cofactor_loading_percent": [
+        0.2,
+        8.0
+      ],
+      "range_product_evolution_rate_umol_h": [
+        268.0,
+        1217.0
+      ]
+    }
+  },
+  "analysis_units": {
+    "time_courses": 4,
+    "spectra_profiles": 2,
+    "transient_traces": 2,
+    "loading_conditions": 4
+  },
+  "checks": {
+    "no_missing_values": true,
+    "transient_delay_grid_shared": true,
+    "absorption_grid_step_nm": 0.5,
+    "action_grid_step_nm": 50.0,
+    "absorption_points": 901,
+    "action_points": 6,
+    "all_curves_start_at_zero_product": true
+  }
+}

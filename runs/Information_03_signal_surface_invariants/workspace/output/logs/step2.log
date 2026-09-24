@@ -1,0 +1,12 @@
+loaded replicated_response_panel.tsv: shape=(8232, 6) sha256=410e51b559eb4d3416f131c2eb4d8f75995ff00d3b76af7b47a0ee8b1220533d
+loaded independent_response_panel.tsv: shape=(4116, 6) sha256=f85f73bbbf15535425752c6ca2ae65e523c8dd8c06a2d5de11bf1986aaa884a1
+loaded independent_fit_error.tsv: shape=(21, 3) sha256=57b739c708fb384f7a661d85e62b67f6c5f333cab170214d6f972ca067d2564a
+holdout table: (392, 7) (complete grid conditions x 7 output channels)
+holdout full a1 rows (rank1, vs per-channel mean): mean=0.7950 min=0.4033 ([0.4033, 0.4611, 0.8414, 0.9384, 0.9641, 0.9732, 0.9833])
+holdout full a2 columns (rank1, vs per-channel mean): mean=0.9636 min=0.9382 ([0.9874, 0.9689, 0.9725, 0.9665, 0.9538, 0.9582, 0.9382])
+holdout whole grid regions (rank1, vs per-channel mean): range 0.7262 - 0.9724 ; rank2 range 0.8779 - 0.9886
+holdout a1 rank2: {'0': 0.8985, '1': 0.7748, '2': 0.9419, '3': 0.9767, '4': 0.9837, '5': 0.9873, '6': 0.9894}
+held-out channel rank1 R2: {'0': 0.0011, '1': 0.0032, '2': 0.0799, '3': 0.4853, '4': 0.8856, '5': 0.9749, '6': 0.9472}
+cross-regime transfer R2: {'low_ch0_2_to_high': {'4': 0.0987, '5': 0.0253, '6': 0.0173}, 'high_ch4_6_to_low': {'0': 0.0018, '1': 0.0023, '2': 0.0763}, 'middle_ch3_to_low': {'0': 0.233, '1': 0.2993, '2': 0.5184}, 'middle_ch3_to_high': {'4': 0.6351, '5': 0.4892, '6': 0.4386}}
+amplification ratio ch6/ch0 under leave-one-out: full=29.2 ; drop-a2 range 25.9-34.1 ; drop-bin range 24.7-33.9
+rank-1 R2 stability: drop-bin range 0.9530-0.9572 ; drop-a1 range 0.9448-0.9642

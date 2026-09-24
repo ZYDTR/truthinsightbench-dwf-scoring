@@ -1,0 +1,57 @@
+sha256 verified vs manifest: True
+  angle_energy_observations_datasets.tsv          8493010 B  match=True
+  angular_coefficients_datasets.tsv                 45556 B  match=True
+  coordinate_definitions.json                         942 B  match=True
+  dipole_matrix_elements_datasets.tsv             9859272 B  match=True
+  phase_and_delay_curves_datasets.tsv               43302 B  match=True
+
+angle_energy_observations_datasets.tsv: 204011 rows, columns ['dataset_path', 'index_0', 'index_1', 'value']
+  experiment/delay                 rows=  49775 i0=275 i1=181 nonfinite=0 range=[-8530,8961] as (attoseconds)
+  experiment/magnitude             rows=  49956 i0=276 i1=181 nonfinite=0 range=[0.003062,1.782] dimensionless (amplitude, arbitrary normalization)
+  experiment/phase                 rows=  49956 i0=276 i1=181 nonfinite=0 range=[-6.465,4.882] rad (unwrapped phase)
+  experiment/photon_energy_eV      rows=    276 i0=276 i1=  0 nonfinite=0 range=[22.5,50] eV (photon energy)
+  experiment/photon_energy_eV_del  rows=    275 i0=275 i1=  0 nonfinite=0 range=[22.6,50] eV (photon energy, delay-array pairing)
+  theory/delay                     rows=  17738 i0= 98 i1=181 nonfinite=0 range=[-2623,5570] as (attoseconds)
+  theory/magnitude                 rows=  17919 i0= 99 i1=181 nonfinite=0 range=[0.01338,2.006] dimensionless (amplitude)
+  theory/phase                     rows=  17919 i0= 99 i1=181 nonfinite=0 range=[-7.043,5.78] rad (phase)
+  theory/photon_energy_eV          rows=     99 i0= 99 i1=  0 nonfinite=0 range=[23.25,41.84] eV (photon energy)
+  theory/photon_energy_eV_del      rows=     98 i0= 98 i1=  0 nonfinite=0 range=[23.44,41.84] eV (photon energy, delay-array pairing)
+
+angular_coefficients_datasets.tsv: 1287 rows, columns ['dataset_path', 'index_0', 'index_1', 'value']
+  CoefLeg_22.5eV                   rows=     99 i0=  9 i1= 11 nonfinite=0 range=[-0.02699,8] unknown
+  CoefLeg_23.25eV                  rows=     99 i0=  9 i1= 11 nonfinite=0 range=[-0.4159,8] unknown
+  CoefLeg_24.8eV                   rows=     99 i0=  9 i1= 11 nonfinite=0 range=[-0.5181,8] unknown
+  CoefLeg_26.35eV                  rows=     99 i0=  9 i1= 11 nonfinite=0 range=[-0.5948,8] unknown
+  CoefLeg_27.9eV                   rows=     99 i0=  9 i1= 11 nonfinite=0 range=[-0.7365,8] unknown
+  CoefLeg_29.45eV                  rows=     99 i0=  9 i1= 11 nonfinite=0 range=[-1.059,8] unknown
+  CoefLeg_31.0eV                   rows=     99 i0=  9 i1= 11 nonfinite=0 range=[-1.89,8] unknown
+  CoefLeg_32.55eV                  rows=     99 i0=  9 i1= 11 nonfinite=0 range=[-1.519,8] unknown
+  CoefLeg_34.1eV                   rows=     99 i0=  9 i1= 11 nonfinite=0 range=[-1.947,8] unknown
+  CoefLeg_35.65eV                  rows=     99 i0=  9 i1= 11 nonfinite=0 range=[-1.435,8] unknown
+  CoefLeg_37.2eV                   rows=     99 i0=  9 i1= 11 nonfinite=0 range=[-1.425,8] unknown
+  CoefLeg_38.75eV                  rows=     99 i0=  9 i1= 11 nonfinite=0 range=[-1.357,8] unknown
+  CoefLeg_48.4eV                   rows=     99 i0=  9 i1= 11 nonfinite=0 range=[-1.5,8] unknown
+
+dipole_matrix_elements_datasets.tsv: 341106 rows, columns ['dataset_path', 'index_0', 'index_1', 'value']
+  experiment/DME_22.5eV            rows=     42 i0=  7 i1=  6 nonfinite=0 range=[-0.4557,3] unknown
+  experiment/DME_23.25eV           rows=     42 i0=  7 i1=  6 nonfinite=0 range=[-0.3328,3] unknown
+  experiment/DME_24.8eV            rows=     42 i0=  7 i1=  6 nonfinite=0 range=[-0.252,3] unknown
+  experiment/DME_26.35eV           rows=     42 i0=  7 i1=  6 nonfinite=0 range=[-0.334,3] unknown
+  experiment/DME_27.9eV            rows=     42 i0=  7 i1=  6 nonfinite=0 range=[-0.4759,3] unknown
+  experiment/DME_29.45eV           rows=     42 i0=  7 i1=  6 nonfinite=0 range=[-0.3936,3] unknown
+  experiment/DME_31.0eV            rows=     42 i0=  7 i1=  6 nonfinite=0 range=[-0.2494,3] unknown
+  experiment/DME_32.55eV           rows=     42 i0=  7 i1=  6 nonfinite=0 range=[-0.2807,3] unknown
+  experiment/DME_34.1eV            rows=     42 i0=  7 i1=  6 nonfinite=0 range=[-0.3997,3] unknown
+  experiment/DME_35.65eV           rows=     42 i0=  7 i1=  6 nonfinite=0 range=[-0.4061,3] unknown
+  experiment/DME_37.2eV            rows=     42 i0=  7 i1=  6 nonfinite=0 range=[-0.2688,3] unknown
+  experiment/DME_38.75eV           rows=     42 i0=  7 i1=  6 nonfinite=0 range=[-0.1958,3] unknown
+  experiment/DME_48.4eV            rows=     42 i0=  7 i1=  6 nonfinite=0 range=[-0.1849,3] unknown
+  theory/DMEs                      rows= 340560 i0=34056 i1= 10 nonfinite=0 range=[-3,11] a.u. (Hartree) complex dipole matrix elements; IE and T_kin in a.u.
+
+phase_and_delay_curves_datasets.tsv: 1092 rows, columns ['dataset_path', 'index_0', 'index_1', 'value']
+  0.5_Wigner_delay                 rows=    592 i0=296 i1=  2 nonfinite=0 range=[-21.71,182.6] as vs eV electron kinetic energy (eKE)
+  angle_averaged_delay             rows=    400 i0=200 i1=  2 nonfinite=0 range=[-104.1,141.4] as vs eV electron kinetic energy (eKE)
+  eigenphase_sum                   rows=    100 i0= 50 i1=  2 nonfinite=0 range=[-1.113,30] rad vs eV electron kinetic energy (eKE)
+
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/d01_inventory.json
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/d01_inventory.png

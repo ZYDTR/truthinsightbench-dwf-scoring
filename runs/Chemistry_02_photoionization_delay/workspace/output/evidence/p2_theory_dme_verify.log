@@ -1,0 +1,210 @@
+==============================================================================
+p2_theory_dme INDEPENDENT VERIFY   (routes: chebfit / Legendre.fit / QR)
+==============================================================================
+Z_t shape (99, 181) ; photon energy 23.2490..41.8390 eV (99 pts)
+theory/DMEs (34056, 10) ; 99 unique T_kin
+hand-recurrence vs scipy.lpmv max deviation: 9.095e-13 (sanity gate)
+
+------------------------------------------------------------------------------
+CLAIM 1: no exact finite angular degree for Z_t
+------------------------------------------------------------------------------
+L   chebfit        Legendre.fit    hand-recur+QR
+ 0  1.951636e+00   1.951636e+00   1.951636e+00
+ 1  1.403981e+00   1.403981e+00   1.403981e+00
+ 2  9.580623e-01   9.580623e-01   9.580623e-01
+ 3  1.060294e-01   1.060294e-01   1.060294e-01
+ 4  2.608562e-02   2.608562e-02   2.608562e-02
+ 5  5.070888e-03   5.070888e-03   5.070888e-03
+ 6  7.769208e-04   7.769208e-04   7.769208e-04
+ 7  2.115011e-04   2.115011e-04   2.115011e-04
+ 8  4.077282e-05   4.077282e-05   4.077282e-05
+ 9  8.089942e-06   8.089942e-06   8.089942e-06
+10  7.735239e-06   7.735239e-06   7.735239e-06
+11  7.831712e-06   7.831712e-06   7.831712e-06
+12  7.840783e-06   7.840783e-06   7.840783e-06
+13  7.804007e-06   7.804007e-06   7.804007e-06
+14  7.753075e-06   7.753075e-06   7.753075e-06
+extended (chebfit): L=20 7.343e-06  L=30 6.828e-06  L=45 6.086e-06  L=60 5.364e-06  L=90 3.968e-06
+step ratios (chebfit): 0->1 1.390  1->2 1.465  2->3 9.036  3->4 4.065  4->5 5.144  5->6 6.527  6->7 3.673  7->8 5.187  8->9 5.040  9->10 1.046  10->11 0.988  11->12 0.999  12->13 1.005  13->14 1.007
+largest single-step ratio: 2->3 = 9.0358
+L=2 max|res| = 9.580623e-01 ; L=14 = 7.753075e-06 ; decay factor L2/L14 = 1.2357e+05 ; L2/L90 = 2.4142e+05
+theory/magnitude significant digits: median 15, p05 14, min 7
+=> L=14 residual floor is 7.753e-06, i.e. ~2e+01 x above the smallest stored half-step (5e-7 at 8 sig digits)
+CONTROL experiment panel ((276, 181)): L=2 5.327e-01  L=3 9.562e-05  L=4 9.502e-05  L=14 9.295e-05
+CONTROL collapse factor at its exact degree: L=2 -> L=3 = 5.5710e+03  (vs 9.036 for the theory panel)
+|Z|^2 max|residual| of a degree-L polynomial fit: L=10 1.382e-04  L=14 2.209e-07  L=20 8.365e-13  L=30 4.441e-14
+=> |Z|^2 is an exact low-degree polynomial (~L=20, 8.4e-13), while the complex amplitude is not finite-degree: |Z| = sqrt(poly) is not a polynomial.
+
+------------------------------------------------------------------------------
+CLAIM 2: no theory/DMEs selection reproduces the panel
+------------------------------------------------------------------------------
+channel keys (m_ini,m_final,mu,gauge): 24 ; per-energy candidate rows per energy: 48
+m relation holds: True
+primary family: 2772 candidate evaluations over 99 energies
+min over 99 energies of per-energy best rel-residual: 0.528406 at idx 9 (E=24.799 eV)
+  idx  0 (E=23.249 eV): best rr 0.5313 (ov 0.8472)  mi=-1.0 mf=-1.0 mu=0.0 g=1.0 m0=0 n=12
+  idx 49 (E=32.549 eV): best rr 0.8624 (ov 0.5063)  mi=-1.0 mf=-1.0 mu=1.0 g=2.0 m0=1 n=11
+  idx 98 (E=41.839 eV): best rr 0.7562 (ov 0.6543)  mi=-1.0 mf=1.0 mu=-1.0 g=2.0 m0=1 n=22
+n candidates with rel-residual < 0.02: 0 / 2772
+median per-energy best 0.7978 ; 10th percentile 0.5619
+extended coherent families (weights/cross-gauge): min over 99 energies = 0.4017 (idx 48)
+incoherent |A|^2 / sqrt(|A|^2) per-m sums: min = 0.2975 (idx 0)
+n extended-family candidates below 0.02: coherent 0, incoherent 0
+CAVEAT free 42-coefficient per-(l,|m|) projection (NOT a block selection, uses the block's own angular-pair set 42 pairs): max rel-residual over 99 energies = 1.985e-06
+cross-check of the best idx-0 candidate: direct-LS scale rel-residual 0.531343 vs sqrt(1-ov^2) 0.531343
+
+------------------------------------------------------------------------------
+CLAIM 3: DME T_kin axis is not the panel photon-energy axis
+------------------------------------------------------------------------------
+Hartree energy in eV from scipy.constants: 27.211386245981
+T_kin a.u. range 0.337523..1.216655  ->  9.1845..33.1069 eV
+panel photon energy range 23.2490..41.8390 eV
+difference E_panel - T_kin*Ha: 8.0935..14.0645 eV ; spread 5.9711 eV
+with ionisation energy IE=0.79745373 a.u. added: -13.6064..-7.6353 eV
+best affine map E = a*Tk*Ha + b : a=0.8090 b=13.6607, max|residual| = 2.1582 eV
+best pure scale E = a*Tk*Ha     : a=1.3494, max|residual| = 10.8559 eV
+Tk ascending: True ; E ascending: True
+
+verdict written to /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p2_theory_dme_verdict.json
+claim1 reproduced=True ; claim2 reproduced=True ; claim3 reproduced=True
+run complete in 54.5 s
+==============================================================================
+p2_theory_dme INDEPENDENT VERIFY   (routes: chebfit / Legendre.fit / QR)
+==============================================================================
+Z_t shape (99, 181) ; photon energy 23.2490..41.8390 eV (99 pts)
+theory/DMEs (34056, 10) ; 99 unique T_kin
+hand-recurrence vs scipy.lpmv max deviation: 9.095e-13 (sanity gate)
+
+------------------------------------------------------------------------------
+CLAIM 1: no exact finite angular degree for Z_t
+------------------------------------------------------------------------------
+L   chebfit        Legendre.fit    hand-recur+QR
+ 0  1.951636e+00   1.951636e+00   1.951636e+00
+ 1  1.403981e+00   1.403981e+00   1.403981e+00
+ 2  9.580623e-01   9.580623e-01   9.580623e-01
+ 3  1.060294e-01   1.060294e-01   1.060294e-01
+ 4  2.608562e-02   2.608562e-02   2.608562e-02
+ 5  5.070888e-03   5.070888e-03   5.070888e-03
+ 6  7.769208e-04   7.769208e-04   7.769208e-04
+ 7  2.115011e-04   2.115011e-04   2.115011e-04
+ 8  4.077282e-05   4.077282e-05   4.077282e-05
+ 9  8.089942e-06   8.089942e-06   8.089942e-06
+10  7.735239e-06   7.735239e-06   7.735239e-06
+11  7.831712e-06   7.831712e-06   7.831712e-06
+12  7.840783e-06   7.840783e-06   7.840783e-06
+13  7.804007e-06   7.804007e-06   7.804007e-06
+14  7.753075e-06   7.753075e-06   7.753075e-06
+extended (chebfit): L=20 7.343e-06  L=30 6.828e-06  L=45 6.086e-06  L=60 5.364e-06  L=90 3.968e-06
+step ratios (chebfit): 0->1 1.390  1->2 1.465  2->3 9.036  3->4 4.065  4->5 5.144  5->6 6.527  6->7 3.673  7->8 5.187  8->9 5.040  9->10 1.046  10->11 0.988  11->12 0.999  12->13 1.005  13->14 1.007
+largest single-step ratio: 2->3 = 9.0358
+L=2 max|res| = 9.580623e-01 ; L=14 = 7.753075e-06 ; decay factor L2/L14 = 1.2357e+05 ; L2/L90 = 2.4142e+05
+theory/magnitude significant digits: median 15, p05 14, min 7
+=> L=14 residual floor is 7.753e-06, i.e. ~2e+01 x above the smallest stored half-step (5e-7 at 8 sig digits)
+CONTROL experiment panel ((276, 181)): L=2 5.327e-01  L=3 9.562e-05  L=4 9.502e-05  L=14 9.295e-05
+CONTROL collapse factor at its exact degree: L=2 -> L=3 = 5.5710e+03  (vs 9.036 for the theory panel)
+|Z|^2 max|residual| of a degree-L polynomial fit: L=10 1.382e-04  L=14 2.209e-07  L=20 8.365e-13  L=30 4.441e-14
+=> |Z|^2 is an exact low-degree polynomial (~L=20, 8.4e-13), while the complex amplitude is not finite-degree: |Z| = sqrt(poly) is not a polynomial.
+
+------------------------------------------------------------------------------
+CLAIM 2: no theory/DMEs selection reproduces the panel
+------------------------------------------------------------------------------
+channel keys (m_ini,m_final,mu,gauge): 24 ; per-energy candidate rows per energy: 48
+m relation holds: True
+primary family: 2772 candidate evaluations over 99 energies
+min over 99 energies of per-energy best rel-residual: 0.528406 at idx 9 (E=24.799 eV)
+  idx  0 (E=23.249 eV): best rr 0.5313 (ov 0.8472)  mi=-1.0 mf=-1.0 mu=0.0 g=1.0 m0=0 n=12
+  idx 49 (E=32.549 eV): best rr 0.8624 (ov 0.5063)  mi=-1.0 mf=-1.0 mu=1.0 g=2.0 m0=1 n=11
+  idx 98 (E=41.839 eV): best rr 0.7562 (ov 0.6543)  mi=-1.0 mf=1.0 mu=-1.0 g=2.0 m0=1 n=22
+n candidates with rel-residual < 0.02: 0 / 2772
+median per-energy best 0.7978 ; 10th percentile 0.5619
+extended coherent families (weights/cross-gauge): min over 99 energies = 0.4017 (idx 48)
+incoherent |A|^2 / sqrt(|A|^2) per-m sums: min = 0.2975 (idx 0)
+n extended-family candidates below 0.02: coherent 0, incoherent 0
+CAVEAT free 42-coefficient per-(l,|m|) projection (NOT a block selection, uses the block's own angular-pair set 42 pairs): max rel-residual over 99 energies = 1.985e-06
+cross-check of the best idx-0 candidate: direct-LS scale rel-residual 0.531343 vs sqrt(1-ov^2) 0.531343
+
+------------------------------------------------------------------------------
+CLAIM 3: DME T_kin axis is not the panel photon-energy axis
+------------------------------------------------------------------------------
+Hartree energy in eV from scipy.constants: 27.211386245981
+T_kin a.u. range 0.337523..1.216655  ->  9.1845..33.1069 eV
+panel photon energy range 23.2490..41.8390 eV
+difference E_panel - T_kin*Ha: 8.0935..14.0645 eV ; spread 5.9711 eV
+with ionisation energy IE=0.79745373 a.u. added: -13.6064..-7.6353 eV
+best affine map E = a*Tk*Ha + b : a=0.8090 b=13.6607, max|residual| = 2.1582 eV
+best pure scale E = a*Tk*Ha     : a=1.3494, max|residual| = 10.8559 eV
+Tk ascending: True ; E ascending: True
+
+verdict written to /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p2_theory_dme_verdict.json
+claim1 reproduced=True ; claim2 reproduced=True ; claim3 reproduced=True
+run complete in 46.9 s
+==============================================================================
+p2_theory_dme INDEPENDENT VERIFY   (routes: chebfit / Legendre.fit / QR)
+==============================================================================
+Z_t shape (99, 181) ; photon energy 23.2490..41.8390 eV (99 pts)
+theory/DMEs (34056, 10) ; 99 unique T_kin
+hand-recurrence vs scipy.lpmv max deviation: 9.095e-13 (sanity gate)
+
+------------------------------------------------------------------------------
+CLAIM 1: no exact finite angular degree for Z_t
+------------------------------------------------------------------------------
+L   chebfit        Legendre.fit    hand-recur+QR
+ 0  1.951636e+00   1.951636e+00   1.951636e+00
+ 1  1.403981e+00   1.403981e+00   1.403981e+00
+ 2  9.580623e-01   9.580623e-01   9.580623e-01
+ 3  1.060294e-01   1.060294e-01   1.060294e-01
+ 4  2.608562e-02   2.608562e-02   2.608562e-02
+ 5  5.070888e-03   5.070888e-03   5.070888e-03
+ 6  7.769208e-04   7.769208e-04   7.769208e-04
+ 7  2.115011e-04   2.115011e-04   2.115011e-04
+ 8  4.077282e-05   4.077282e-05   4.077282e-05
+ 9  8.089942e-06   8.089942e-06   8.089942e-06
+10  7.735239e-06   7.735239e-06   7.735239e-06
+11  7.831712e-06   7.831712e-06   7.831712e-06
+12  7.840783e-06   7.840783e-06   7.840783e-06
+13  7.804007e-06   7.804007e-06   7.804007e-06
+14  7.753075e-06   7.753075e-06   7.753075e-06
+extended (chebfit): L=20 7.343e-06  L=30 6.828e-06  L=45 6.086e-06  L=60 5.364e-06  L=90 3.968e-06
+step ratios (chebfit): 0->1 1.390  1->2 1.465  2->3 9.036  3->4 4.065  4->5 5.144  5->6 6.527  6->7 3.673  7->8 5.187  8->9 5.040  9->10 1.046  10->11 0.988  11->12 0.999  12->13 1.005  13->14 1.007
+largest single-step ratio: 2->3 = 9.0358
+L=2 max|res| = 9.580623e-01 ; L=14 = 7.753075e-06 ; decay factor L2/L14 = 1.2357e+05 ; L2/L90 = 2.4142e+05
+theory/magnitude significant digits: median 15, p05 14, min 7
+=> L=14 residual floor is 7.753e-06, i.e. ~2e+01 x above the smallest stored half-step (5e-7 at 8 sig digits)
+CONTROL experiment panel ((276, 181)): L=2 5.327e-01  L=3 9.562e-05  L=4 9.502e-05  L=14 9.295e-05
+CONTROL collapse factor at its exact degree: L=2 -> L=3 = 5.5710e+03  (vs 9.036 for the theory panel)
+|Z|^2 max|residual| of a degree-L polynomial fit: L=10 1.382e-04  L=14 2.209e-07  L=20 8.365e-13  L=30 4.441e-14
+=> |Z|^2 is an exact low-degree polynomial (~L=20, 8.4e-13), while the complex amplitude is not finite-degree: |Z| = sqrt(poly) is not a polynomial.
+
+------------------------------------------------------------------------------
+CLAIM 2: no theory/DMEs selection reproduces the panel
+------------------------------------------------------------------------------
+channel keys (m_ini,m_final,mu,gauge): 24 ; per-energy candidate rows per energy: 48
+m relation holds: True
+primary family: 2772 candidate evaluations over 99 energies
+min over 99 energies of per-energy best rel-residual: 0.528406 at idx 9 (E=24.799 eV)
+  idx  0 (E=23.249 eV): best rr 0.5313 (ov 0.8472)  mi=-1.0 mf=-1.0 mu=0.0 g=1.0 m0=0 n=12
+  idx 49 (E=32.549 eV): best rr 0.8624 (ov 0.5063)  mi=-1.0 mf=-1.0 mu=1.0 g=2.0 m0=1 n=11
+  idx 98 (E=41.839 eV): best rr 0.7562 (ov 0.6543)  mi=-1.0 mf=1.0 mu=-1.0 g=2.0 m0=1 n=22
+n candidates with rel-residual < 0.02: 0 / 2772
+median per-energy best 0.7978 ; 10th percentile 0.5619
+extended coherent families (weights/cross-gauge): min over 99 energies = 0.4017 (idx 48)
+incoherent |A|^2 / sqrt(|A|^2) per-m sums: min = 0.2975 (idx 0)
+n extended-family candidates below 0.02: coherent 0, incoherent 0
+CAVEAT free 42-coefficient per-(l,|m|) projection (NOT a block selection, uses the block's own angular-pair set 42 pairs): max rel-residual over 99 energies = 1.985e-06
+cross-check of the best idx-0 candidate: direct-LS scale rel-residual 0.531343 vs sqrt(1-ov^2) 0.531343
+
+------------------------------------------------------------------------------
+CLAIM 3: DME T_kin axis is not the panel photon-energy axis
+------------------------------------------------------------------------------
+Hartree energy in eV from scipy.constants: 27.211386245981
+T_kin a.u. range 0.337523..1.216655  ->  9.1845..33.1069 eV
+panel photon energy range 23.2490..41.8390 eV
+difference E_panel - T_kin*Ha: 8.0935..14.0645 eV ; spread 5.9711 eV
+with ionisation energy IE=0.79745373 a.u. added: -13.6064..-7.6353 eV
+best affine map E = a*Tk*Ha + b : a=0.8090 b=13.6607, max|residual| = 2.1582 eV
+best pure scale E = a*Tk*Ha     : a=1.3494, max|residual| = 10.8559 eV
+Tk ascending: True ; E ascending: True
+
+verdict written to /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p2_theory_dme_verdict.json
+claim1 reproduced=True ; claim2 reproduced=True ; claim3 reproduced=True
+run complete in 55.1 s

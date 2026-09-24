@@ -1,0 +1,65 @@
+{
+  "condition_01": {
+    "n_points": 15000,
+    "mean_abs_error": 0.24027208375213552,
+    "median_abs_error": 0.19570619679938672,
+    "max_abs_error": 1.2489583106342912,
+    "mse": 0.09405895399939365,
+    "rmse": 0.30669032263733664,
+    "pearson_corr": 0.9594796364651916,
+    "nrmse_std": 0.28191022570300195,
+    "first_point": {
+      "reference_response": 0.0214806326512487,
+      "forecast_response": 0.0214806326512487,
+      "identical": true
+    },
+    "last_point": {
+      "reference_response": -0.9047626250726662,
+      "forecast_response": -0.6660993760175762
+    },
+    "first_time": 0.0,
+    "last_time": 37.4975
+  },
+  "condition_02": {
+    "n_points": 15000,
+    "mean_abs_error": 0.4857358303515811,
+    "median_abs_error": 0.4111222808832853,
+    "max_abs_error": 2.6922488449824744,
+    "mse": 0.3704304158153865,
+    "rmse": 0.6086299498179386,
+    "pearson_corr": 0.8594904360773019,
+    "nrmse_std": 0.5114505195970279,
+    "first_point": {
+      "reference_response": -0.1032328367437579,
+      "forecast_response": -0.1032328367437579,
+      "identical": true
+    },
+    "last_point": {
+      "reference_response": -1.587786725363331,
+      "forecast_response": -0.6403293910846046
+    },
+    "first_time": 0.0,
+    "last_time": 37.4975
+  },
+  "condition_03": {
+    "n_points": 15000,
+    "mean_abs_error": 0.8723436613904815,
+    "median_abs_error": 0.7414428687844077,
+    "max_abs_error": 4.756030700155878,
+    "mse": 1.189739516945024,
+    "rmse": 1.0907518127168179,
+    "pearson_corr": 0.6686789205409956,
+    "nrmse_std": 0.7436989628857458,
+    "first_point": {
+      "reference_response": -0.2591246734875162,
+      "forecast_response": -0.2591246734875162,
+      "identical": true
+    },
+    "last_point": {
+      "reference_response": -2.441566850726661,
+      "forecast_response": -0.3072909208676292
+    },
+    "first_time": 0.0,
+    "last_time": 37.4975
+  }
+}

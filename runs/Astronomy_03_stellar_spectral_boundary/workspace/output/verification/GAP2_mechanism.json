@@ -1,0 +1,537 @@
+{
+ "finding_id": "GAP2_mechanism",
+ "script": "/data/user/conversations/conv-b109a95b-77c2-4866-9c87-234d668cd900/project/output/verification/GAP2_mechanism.py",
+ "input_files": {
+  "photon_flux_grid.tsv": "d45e7e2b62621a70039b78e0f289865dea3306f13d04d5c8c2af298ca7b6e8f8",
+  "normalized_spectral_response.tsv": "1261f4dd43f004ce722e0106e49b9ccfb848d8c984ca98d9573fd5e1b9a5b468"
+ },
+ "target": "dev_k(wl) = response_level_k(wl)*wl / (c_k * F(5800K, M_k, wl)); c_k fitted on wl >= 400 nm only",
+ "registration": {
+  "grid_n": 176,
+  "response_n": 175,
+  "map": "response row i -> grid index i for i<=66; i+1 for i>=67",
+  "matches_nearest_grid_index": true,
+  "max_wavelength_mismatch_nm": 0.2300000000000182,
+  "optical_grid_step_nm": 5.0,
+  "grid_step_profile": {
+   "n_near_1nm": 21,
+   "n_near_2nm": 3,
+   "n_near_5nm": 104,
+   "min_nm": 0.9999999999999716,
+   "max_nm": 5.000000000000114
+  }
+ },
+ "metallicity_assignment": {
+  "recovered_from_data": {
+   "1": -0.9,
+   "2": -0.5,
+   "3": 0.0,
+   "4": 0.5,
+   "5": 0.9
+  },
+  "expected": {
+   "1": -0.9,
+   "2": -0.5,
+   "3": 0.0,
+   "4": 0.5,
+   "5": 0.9
+  },
+  "matches": true,
+  "median_abs_rel_score": {
+   "1": 0.0019053929514607493,
+   "2": 0.001984908042283684,
+   "3": 0.0018867249187064505,
+   "4": 0.001750151153678714,
+   "5": 0.0015957448137562391
+  }
+ },
+ "calibration": {
+  "band_nm": [
+   400.0,
+   849.77
+  ],
+  "c_per_level": {
+   "1": 3.9740505244825705e-13,
+   "2": 3.975145508372851e-13,
+   "3": 3.975117308181818e-13,
+   "4": 3.9743296776704746e-13,
+   "5": 3.9735011019230764e-13
+  },
+  "c_relative_spread_over_levels": 0.00041374660927185366
+ },
+ "deviation_curve": {
+  "n_uv_rows": 71,
+  "sampled_nm": {
+   "180": {
+    "wavelength_nm": 179.31,
+    "dev_median_over_levels": 3.1096599067376887,
+    "local_step_nm": 1.5999999999999943,
+    "predicted_5_over_step": 3.125000000000011
+   },
+   "200": {
+    "wavelength_nm": 200.95,
+    "dev_median_over_levels": 2.4758098725797013,
+    "local_step_nm": 2.0,
+    "predicted_5_over_step": 2.5
+   },
+   "220": {
+    "wavelength_nm": 220.93,
+    "dev_median_over_levels": 2.0495711922822655,
+    "local_step_nm": 2.450000000000003,
+    "predicted_5_over_step": 2.04081632653061
+   },
+   "240": {
+    "wavelength_nm": 239.46,
+    "dev_median_over_levels": 1.743711141983077,
+    "local_step_nm": 2.8500000000000085,
+    "predicted_5_over_step": 1.7543859649122755
+   },
+   "260": {
+    "wavelength_nm": 261.37,
+    "dev_median_over_levels": 1.4617576828517274,
+    "local_step_nm": 3.3999999999999773,
+    "predicted_5_over_step": 1.4705882352941275
+   },
+   "280": {
+    "wavelength_nm": 279.65,
+    "dev_median_over_levels": 1.2773046097617848,
+    "local_step_nm": 3.9000000000000057,
+    "predicted_5_over_step": 1.2820512820512802
+   },
+   "296": {
+    "wavelength_nm": 296.23,
+    "dev_median_over_levels": 1.1399692210639887,
+    "local_step_nm": 3.5,
+    "predicted_5_over_step": 1.4285714285714286
+   },
+   "299": {
+    "wavelength_nm": 298.92,
+    "dev_median_over_levels": 5.034370443139983,
+    "local_step_nm": 1.8499999999999943,
+    "predicted_5_over_step": 2.702702702702711
+   },
+   "300": {
+    "wavelength_nm": 299.91,
+    "dev_median_over_levels": 5.002346132878097,
+    "local_step_nm": 1.0,
+    "predicted_5_over_step": 5.0
+   },
+   "305": {
+    "wavelength_nm": 304.91,
+    "dev_median_over_levels": 5.005935633989748,
+    "local_step_nm": 1.0,
+    "predicted_5_over_step": 5.0
+   },
+   "310": {
+    "wavelength_nm": 309.91,
+    "dev_median_over_levels": 5.002319807907679,
+    "local_step_nm": 0.9999999999999716,
+    "predicted_5_over_step": 5.000000000000142
+   },
+   "315": {
+    "wavelength_nm": 314.91,
+    "dev_median_over_levels": 4.997328216845327,
+    "local_step_nm": 1.0000000000000568,
+    "predicted_5_over_step": 4.999999999999716
+   },
+   "320": {
+    "wavelength_nm": 319.91,
+    "dev_median_over_levels": 5.01056590884858,
+    "local_step_nm": 0.9999999999999716,
+    "predicted_5_over_step": 5.000000000000142
+   },
+   "322": {
+    "wavelength_nm": 322.41,
+    "dev_median_over_levels": 2.5035988671872285,
+    "local_step_nm": 1.7500000000000284,
+    "predicted_5_over_step": 2.8571428571428106
+   },
+   "324": {
+    "wavelength_nm": 324.41,
+    "dev_median_over_levels": 2.499453457432219,
+    "local_step_nm": 2.0000000000000284,
+    "predicted_5_over_step": 2.4999999999999645
+   },
+   "326": {
+    "wavelength_nm": 326.41,
+    "dev_median_over_levels": 2.5004992087110813,
+    "local_step_nm": 2.7499999999999716,
+    "predicted_5_over_step": 1.818181818181837
+   },
+   "330": {
+    "wavelength_nm": 329.91,
+    "dev_median_over_levels": 0.9997631882654998,
+    "local_step_nm": 4.25,
+    "predicted_5_over_step": 1.1764705882352942
+   },
+   "340": {
+    "wavelength_nm": 339.9,
+    "dev_median_over_levels": 0.9995519997226088,
+    "local_step_nm": 5.0,
+    "predicted_5_over_step": 1.0
+   },
+   "400": {
+    "wavelength_nm": 399.89,
+    "dev_median_over_levels": 0.9991044035081575,
+    "local_step_nm": 5.0,
+    "predicted_5_over_step": 1.0
+   },
+   "600": {
+    "wavelength_nm": 599.83,
+    "dev_median_over_levels": 1.0004575854449993,
+    "local_step_nm": 5.0,
+    "predicted_5_over_step": 1.0
+   },
+   "850": {
+    "wavelength_nm": 849.77,
+    "dev_median_over_levels": 0.9989033505434552,
+    "local_step_nm": 5.0,
+    "predicted_5_over_step": 1.0
+   }
+  }
+ },
+ "optical_band": {
+  "band_330_850nm": {
+   "n_points": 520,
+   "mean_dev": 0.9999623976991188,
+   "mean_abs_dev_minus_1": 0.001083474376042922,
+   "max_abs_dev_minus_1": 0.004479843783797177,
+   "mean_rel_half_step_from_quantisation": 0.002124062663344345,
+   "observed_over_quantisation": 0.5100952974414545
+  },
+  "band_400_850nm": {
+   "n_points": 450,
+   "mean_dev": 0.9999926351942167,
+   "mean_abs_dev_minus_1": 0.001065840676644956,
+   "max_abs_dev_minus_1": 0.002781717103785497
+  }
+ },
+ "normalisation_test": {
+  "definition": "resid = dev(wl) * local_step(wl), step = two_sided_avg",
+  "n_uv_wavelengths": 71,
+  "n_step_robust": 66,
+  "excluded_wavelength_nm": [
+   296.23,
+   298.92,
+   322.41,
+   326.41,
+   329.91
+  ],
+  "mean": 4.9999923671695825,
+  "median": 5.001077931109261,
+  "sd": 0.0362568184372751,
+  "iqr": [
+   4.991967370142154,
+   5.01400472805585
+  ],
+  "min": 4.88551165007299,
+  "max": 5.106158819217671,
+  "block_bootstrap_ci95_of_mean": [
+   4.994775857718759,
+   5.005923651116641
+  ],
+  "pearson_with_wavelength": 0.08237949033422545,
+  "spearman_with_wavelength": 0.001857843648888425,
+  "linear_slope_per_nm": 6.190057763941921e-05,
+  "linear_slope_block_bootstrap_ci95": [
+   -8.681067459417658e-05,
+   0.00015594499677649217
+  ],
+  "slope_drift_over_uv_span_nm": 0.008981773815479729,
+  "bands": [
+   {
+    "band_nm": [
+     179.0,
+     200.0
+    ],
+    "n": 12,
+    "mean_dev_times_step": 4.992395490481203,
+    "sd": 0.06142283942315533
+   },
+   {
+    "band_nm": [
+     200.0,
+     230.0
+    ],
+    "n": 13,
+    "mean_dev_times_step": 5.002381844576301,
+    "sd": 0.0473991238795611
+   },
+   {
+    "band_nm": [
+     230.0,
+     260.0
+    ],
+    "n": 10,
+    "mean_dev_times_step": 4.999296853297731,
+    "sd": 0.03312198592616318
+   },
+   {
+    "band_nm": [
+     260.0,
+     290.0
+    ],
+    "n": 8,
+    "mean_dev_times_step": 5.006240558032433,
+    "sd": 0.027905920069720112
+   },
+   {
+    "band_nm": [
+     290.0,
+     299.0
+    ],
+    "n": 1,
+    "mean_dev_times_step": 4.984949342817513,
+    "sd": null
+   },
+   {
+    "band_nm": [
+     299.0,
+     322.5
+    ],
+    "n": 21,
+    "mean_dev_times_step": 5.001573195857491,
+    "sd": 0.0038535613092465747
+   },
+   {
+    "band_nm": [
+     322.5,
+     331.0
+    ],
+    "n": 1,
+    "mean_dev_times_step": 4.998906914864509,
+    "sd": null
+   }
+  ]
+ },
+ "model_comparison_uv": {
+  "criterion": "mean and max absolute relative error vs dev_med on wl < 330 nm; fits use the exact minimiser of that criterion (weighted median)",
+  "n_points_all_uv": 71,
+  "n_points_step_robust": 66,
+  "models": {
+   "a_N_over_step_free_N": {
+    "params": {
+     "N_nm": 5.000682468657518
+    },
+    "error_all_uv": {
+     "mean_abs_rel": 0.022662259819767976,
+     "median_abs_rel": 0.003156125520648162,
+     "max_abs_rel": 0.4630765385246825
+    },
+    "error_step_robust_uv": {
+     "mean_abs_rel": 0.004568985121381982,
+     "max_abs_rel": 0.023573952296850546
+    }
+   },
+   "b_N_over_step_N_equals_5nm": {
+    "params": {
+     "N_nm": 5.0
+    },
+    "error_all_uv": {
+     "mean_abs_rel": 0.022671149642963264,
+     "median_abs_rel": 0.0030192196845835995,
+     "max_abs_rel": 0.463149815209663
+    },
+    "error_step_robust_uv": {
+     "mean_abs_rel": 0.004583319807792659,
+     "max_abs_rel": 0.023434259935763167
+    }
+   },
+   "c_constant_factor": {
+    "params": {
+     "C": 1.9574338558473812
+    },
+    "error_all_uv": {
+     "mean_abs_rel": 0.37776743347622543,
+     "median_abs_rel": 0.3390959930025095,
+     "max_abs_rel": 0.9578975089524497
+    },
+    "error_step_robust_uv": {
+     "mean_abs_rel": 0.36515115086587396,
+     "max_abs_rel": 0.668842211874792
+    }
+   },
+   "d_step_power_free_p": {
+    "params": {
+     "A_nm_to_the_p": 5.000682468657518,
+     "p": 1.0
+    },
+    "error_all_uv": {
+     "mean_abs_rel": 0.022662259819767976,
+     "median_abs_rel": 0.003156125520648162,
+     "max_abs_rel": 0.4630765385246825
+    },
+    "error_step_robust_uv": {
+     "mean_abs_rel": 0.00456898512138198,
+     "max_abs_rel": 0.023573952296850546
+    }
+   }
+  },
+  "ranking_by_mean_abs_rel_error": [
+   "a_N_over_step_free_N",
+   "d_step_power_free_p",
+   "b_N_over_step_N_equals_5nm",
+   "c_constant_factor"
+  ],
+  "winner": "a_N_over_step_free_N",
+  "runner_up": "d_step_power_free_p",
+  "winner_margin_mean_abs_rel": 0.0,
+  "winner_margin_relative_to_runner": 0.0,
+  "p_free_and_ci95": {
+   "p": 1.0,
+   "block_bootstrap_ci95": [
+    0.9964999999999999,
+    1.002
+   ],
+   "one_inside_ci": true
+  },
+  "nested_models_note": "(a) and (d) are the same one-parameter family: with p free the criterion selects p = 1.0000 and A = 5.0007 nm, so (d) collapses onto (a). (b) is the fixed-N member. The ranking between the three is therefore driven entirely by the exponent, not by the numerator.",
+  "a_vs_b_note": "The free numerator lands on N = 5.0007 nm, indistinguishable from 5.0 nm; the entire difference between (a) and (b) is 0.00001 mean relative error, i.e. the numerator is not what the fit measures.",
+  "plateau_check": {
+   "step_1nm_rows": 21,
+   "mean_dev_at_1nm": 5.001573195857491,
+   "dev_required_for_5nm": [
+    4.964,
+    5.036
+   ],
+   "step_2nm_rows": 3,
+   "mean_dev_at_2nm": 2.4995707943632257,
+   "dev_required_for_2.5nm": [
+    2.482,
+    2.518
+   ],
+   "ratio_2nm_over_1nm": 0.49975691577071657,
+   "expected_ratio_if_N_over_step": 0.5
+  },
+  "persisting_mismatch_rows": [
+   {
+    "wavelength_nm": 180.94,
+    "dev_measured": 3.05344478129563,
+    "pred_5_over_step": 3.125000000000011,
+    "local_step_nm": 1.5999999999999943,
+    "n_grid_nodes_in_[wl,wl+5nm)": 3,
+    "step_ambiguous": false
+   },
+   {
+    "wavelength_nm": 187.73,
+    "dev_measured": 2.8349288032281548,
+    "pred_5_over_step": 2.777777777777782,
+    "local_step_nm": 1.7999999999999972,
+    "n_grid_nodes_in_[wl,wl+5nm)": 3,
+    "step_ambiguous": false
+   },
+   {
+    "wavelength_nm": 205.07,
+    "dev_measured": 2.3749575903337945,
+    "pred_5_over_step": 2.325581395348831,
+    "local_step_nm": 2.1500000000000057,
+    "n_grid_nodes_in_[wl,wl+5nm)": 3,
+    "step_ambiguous": false
+   },
+   {
+    "wavelength_nm": 296.23,
+    "dev_measured": 1.1399692210639887,
+    "pred_5_over_step": 1.4285714285714286,
+    "local_step_nm": 3.5,
+    "n_grid_nodes_in_[wl,wl+5nm)": 4,
+    "step_ambiguous": true
+   },
+   {
+    "wavelength_nm": 298.92,
+    "dev_measured": 5.034370443139983,
+    "pred_5_over_step": 2.702702702702711,
+    "local_step_nm": 1.8499999999999943,
+    "n_grid_nodes_in_[wl,wl+5nm)": 5,
+    "step_ambiguous": true
+   },
+   {
+    "wavelength_nm": 322.41,
+    "dev_measured": 2.5035988671872285,
+    "pred_5_over_step": 2.8571428571428106,
+    "local_step_nm": 1.7500000000000284,
+    "n_grid_nodes_in_[wl,wl+5nm)": 3,
+    "step_ambiguous": true
+   },
+   {
+    "wavelength_nm": 326.41,
+    "dev_measured": 2.5004992087110813,
+    "pred_5_over_step": 1.818181818181837,
+    "local_step_nm": 2.7499999999999716,
+    "n_grid_nodes_in_[wl,wl+5nm)": 2,
+    "step_ambiguous": true
+   },
+   {
+    "wavelength_nm": 329.91,
+    "dev_measured": 0.9997631882654998,
+    "pred_5_over_step": 1.1764705882352942,
+    "local_step_nm": 4.25,
+    "n_grid_nodes_in_[wl,wl+5nm)": 1,
+    "step_ambiguous": true
+   }
+  ]
+ },
+ "free_N": {
+  "N_hat_nm": 5.001077931109261,
+  "N_hat_block_bootstrap_sd_nm": 0.002214159321993196,
+  "N_hat_block_bootstrap_ci95_nm": [
+   4.998882720356035,
+   5.0084162317285
+  ],
+  "N_by_step_convention_nm": {
+   "two_sided_avg": 4.9999923671695825,
+   "left_edge": 5.037432266433565,
+   "central_diff": 4.9999923671695825
+  },
+  "step_convention_systematic_nm": 0.03743989926398239,
+  "N_hat_quantisation_monte_carlo_sd_nm": 0.0006982012180976994,
+  "N_hat_quantisation_monte_carlo_ci95_nm": [
+   4.999243116240646,
+   5.002051002383046
+  ],
+  "N_hat_combined_sd_nm": 0.0188504380778659,
+  "N_hat_combined_ci95_nm": [
+   4.964131072476644,
+   5.038024789741878
+  ],
+  "difference_from_5nm_nm": 0.0010779311092612431,
+  "difference_over_combined_sd": 0.05718334527869382,
+  "distinguishable_from_5nm": false,
+  "quantisation_floor_note": "photon_flux_cm2 is given to 3 significant figures; perturbing every flux by its rounding half-step and refitting moves N by sd 0.0007 nm, so a fitted N within ~0.0014 nm of 5.0 is not resolvable."
+ },
+ "mechanism": {
+  "hypothesis": "response_level_k(wl) * wl / (c_k * F) = (5 nm)/(local grid step), i.e. the response series carries one 5 nm bin-sum of the grid.",
+  "literal_node_count_model": {
+   "definition": "number of grid nodes in [wl, wl+5 nm)",
+   "mean_abs_rel_error_step_robust": 0.1738402158817022
+  },
+  "width_model": {
+   "definition": "5 nm / local step",
+   "mean_abs_rel_error_step_robust": 0.004583319807792659
+  },
+  "count_model_contradicted_at_nm": [
+   180.94,
+   187.73,
+   205.07
+  ],
+  "note": "The literal bin-count reading is contradicted where it is testable: at 322.41 nm three grid nodes lie in [wl, wl+5) so a bin sum predicts 3.00, while the measured value is 2.504 and 5/step gives 2.857; at 326.41 nm two nodes predict 2.00 against 2.500 measured; at 318.91 and 319.91 nm only four nodes lie in the window yet the measured value is 5.01; and the exact 1 nm step plateau rows measure 5.0016 where the node count gives 5, but the exact 2 nm rows measure 4.9991 where the node count in a 5 nm window gives 3 (2.5 in units of 2 nm).  The 1/step WIDTH ratio tracks all of these; the node count does not (mean |rel| 0.1738 vs 0.0046).",
+  "mechanism_identified": false,
+  "functional_form_identified": true,
+  "what_is_determined": [
+   "the deviation is flat at 1.0 for wl >= 330 nm (mean 0.99996, scatter at the 3-sig-fig quantisation floor)",
+   "in the UV it scales as the inverse of the local inter-node grid step; the free exponent is p = 1.0000 with 1 inside the bootstrap CI",
+   "one single numerator serves all five composition levels",
+   "the numerator is 5.0 nm: the exact 1 nm and 2 nm plateau rows give 5.0016 and 4.9991: i.e. dev*step is 5.0016 and 4.9991 on those rows, a ratio of 0.9995 where a literal node-count (bin-sum) reading requires 3 nodes/5 nodes = 0.6"
+  ],
+  "what_is_NOT_determined": [
+   "why the numerator numerically equals the optical 5 nm sampling step: neither table contains a binning, resampling or integration operation, so the equality N = optical grid step is consistent with the data but not forced by them",
+   "any physical interpretation of the constant (it only fixes the units of a per-step rate); two tables cannot separate an arithmetic artefact of whichever resampling produced normalized_spectral_response.tsv from a physical detector response"
+  ]
+ },
+ "critic": {
+  "objection": "N = 5.0 nm was read off the optical grid step, so dev = (optical step)/(local step) and dev = (any constant)/(local step) cannot be told apart by the original fit.",
+  "answer_part_1_conceded": "Correct about the numerator. Fitted on the UV alone, N = 5.0011 nm with a combined uncertainty of 0.0189 nm; it is not statistically distinguishable from 5.0 nm (difference 0.06 combined sd), and under 3-significant-figure flux quantisation alone N wanders by sd 0.0007 nm. The data pin the FORM and fix the numerator's scale only to a few tenths of a nm, so the numerical equality N = 5 nm is not an inference.",
+  "answer_part_2_rejected": "Wrong that nothing is pinned. The numerator is not free once the exact-plateau rows are used: 1 nm and 2 nm steps measure 5.0016 and 4.9991, a ratio of 0.9995 where a literal node-count reading requires 0.6 and any step-invariant rescaled constant gives 1.0. The 1/step form beats the best constant by 94% in mean absolute relative error (0.02267 vs 0.37777), and its free exponent is p = 1.0000 with 1 inside the bootstrap CI.",
+  "exponent_note": "the exact 1 nm and 2 nm plateau rows give dev*step = 5.0016 and 4.9991, a ratio of 0.4998; the free exponent's block-bootstrap CI95 is [0.9965, 1.0020], with p = 1 inside it.",
+  "verdict": "FUNCTIONAL FORM IDENTIFIED, MECHANISM NOT IDENTIFIED. The data determine that the UV deviation is one constant divided by the local grid step (exponent 1, a single numerator, equal for all five composition levels). They do not determine that the constant IS the optical 5 nm sampling step, and they contradict the literal bin-count reading of that mechanism."
+ }
+}

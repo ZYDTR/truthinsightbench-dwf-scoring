@@ -1,0 +1,101 @@
+{
+  "dynamic_spectrum_event_metadata": {
+    "n_rows": 5,
+    "columns": [
+      "event_id",
+      "time_min_s",
+      "time_max_s",
+      "frequency_min_MHz",
+      "frequency_max_MHz",
+      "reported_event_drift_rate_MHz_s",
+      "frequency_bins",
+      "time_bins"
+    ],
+    "event_ids": [
+      "event_1",
+      "event_2",
+      "event_3",
+      "event_4",
+      "event_5"
+    ]
+  },
+  "drift_population_series": {
+    "n_rows": 948,
+    "columns": [
+      "population_series_id",
+      "anonymous_source_group",
+      "polarization_channel",
+      "drift_regime",
+      "distribution_bin_center",
+      "event_count"
+    ],
+    "n_series": 6,
+    "series": [
+      "population_series_1",
+      "population_series_2",
+      "population_series_3",
+      "population_series_4",
+      "population_series_5",
+      "population_series_6"
+    ],
+    "groups": [
+      "anonymous_group_1",
+      "anonymous_group_2",
+      "anonymous_group_3"
+    ],
+    "channels": [
+      "channel_l",
+      "channel_r"
+    ],
+    "regimes": [
+      "fast",
+      "slow"
+    ],
+    "total_events": 33237.0
+  },
+  "orientation_count_series": {
+    "n_rows": 312,
+    "columns": [
+      "orientation_series_id",
+      "relative_coordinate",
+      "event_count"
+    ],
+    "n_series": 6,
+    "series": [
+      "orientation_series_1",
+      "orientation_series_2",
+      "orientation_series_3",
+      "orientation_series_4",
+      "orientation_series_5",
+      "orientation_series_6"
+    ],
+    "total_events": 32732.0
+  },
+  "dynamic_spectra": [
+    {
+      "file": "event_1_dynamic_spectrum.tsv",
+      "n_freq_rows": null,
+      "n_time_cols": 425
+    },
+    {
+      "file": "event_2_dynamic_spectrum.tsv",
+      "n_freq_rows": null,
+      "n_time_cols": 425
+    },
+    {
+      "file": "event_3_dynamic_spectrum.tsv",
+      "n_freq_rows": null,
+      "n_time_cols": 425
+    },
+    {
+      "file": "event_4_dynamic_spectrum.tsv",
+      "n_freq_rows": null,
+      "n_time_cols": 425
+    },
+    {
+      "file": "event_5_dynamic_spectrum.tsv",
+      "n_freq_rows": null,
+      "n_time_cols": 425
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "decimal_places": {
+    "experimental": {
+      "1": 542,
+      "2": 1
+    },
+    "reference": {
+      "1": 543
+    },
+    "quantum": {
+      "1": 60,
+      "2": 483
+    },
+    "learned": {
+      "1": 58,
+      "2": 485
+    }
+  },
+  "ref_exact_equals_experimental_same_row": 1,
+  "ref_value_in_experimental_value_set": 313,
+  "reference_error_all543": {
+    "mae": 5.48596685082873,
+    "rmse": 6.75961553714002,
+    "median_abs": 4.8999999999999915,
+    "mean_signed": 1.3784162062615106,
+    "sd": 6.623682412727947,
+    "max_abs": 33.4,
+    "frac_within_0.001": 0.001841620626151013,
+    "n_within_0.001": 1,
+    "frac_within_0.01": 0.001841620626151013,
+    "n_within_0.01": 1,
+    "frac_within_0.1": 0.003683241252302026,
+    "n_within_0.1": 2
+  },
+  "reference_keying_candidates": {
+    "fragment_pair": {
+      "n_groups": 539,
+      "n_groups_with_multi_ref": 0,
+      "n_groups_total": 539,
+      "frac_groups_single_ref": 1.0
+    },
+    "fragment_pair_sorted": {
+      "n_groups": 539,
+      "n_groups_with_multi_ref": 0,
+      "n_groups_total": 539,
+      "frac_groups_single_ref": 1.0
+    },
+    "parent_molecule": {
+      "n_groups": 419,
+      "n_groups_with_multi_ref": 86,
+      "n_groups_total": 419,
+      "frac_groups_single_ref": 0.7947494033412887
+    },
+    "fragment_a": {
+      "n_groups": 52,
+      "n_groups_with_multi_ref": 33,
+      "n_groups_total": 52,
+      "frac_groups_single_ref": 0.36538461538461536
+    },
+    "fragment_b": {
+      "n_groups": 328,
+      "n_groups_with_multi_ref": 42,
+      "n_groups_total": 328,
+      "frac_groups_single_ref": 0.8719512195121951
+    }
+  },
+  "n_pairs_539": 539,
+  "n_distinct_ref": 290,
+  "ref_value_multiplicity": {
+    "n_ref_values_used_by_1_pair": 166,
+    "n_ref_values_used_by_>1_pair": 124,
+    "max_pairs_per_ref_value": 22
+  }
+}

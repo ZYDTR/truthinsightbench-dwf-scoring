@@ -1,0 +1,21 @@
+{
+  "task_id": "EarthScience_03_ice_core_event_structure",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260919T152450-2dffdd",
+  "source_run_json_sha256": "7bad274ce83f08ac36bcfe489786301b327ece255754f080ed80934ccca40098",
+  "source_release_json_sha256": "4e5e79e30b7c02ba744e81ed6fe0ee163d8ea9f69a59b6003e53c0b55de2b3f6",
+  "source_latest_validation_sha256": "b8d04e493a120d29ea7b793dba5a967060fc1ce089c195d351ec071dd60e54a7",
+  "source_snapshot_manifest_sha256": "429f12d5cf6a2fa170a935a03b15279996d2cca82c30ebbc62d597f5a7c15014",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 806
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "e4592d139a5687c9a8af3570fe9e572597cc0857eca2457655796bd3bc1e8c80",
+  "output_sha256": "9e1a3efbbc2abefd728787042919d3a2e6bddd6a17c8829313c5d7787796fbc1"
+}

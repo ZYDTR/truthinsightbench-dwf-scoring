@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Physics_01_dynamic_nuclear_polarization_echoes",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "1b2bfcf6c57dffb8df8516a91896f84dc641998562a437f2ef2279d502090bc5",
+  "workspace_input_file_count": 21,
+  "workspace_input_bytes": 8311546,
+  "output_tree_sha256": "40b20670720871945246ddaee7bbdb315bf02552275dc443b783ff1d5f820d20",
+  "output_file_count": 24,
+  "output_bytes": 337825
+}

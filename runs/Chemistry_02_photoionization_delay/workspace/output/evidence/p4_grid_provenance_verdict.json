@@ -1,0 +1,49 @@
+{
+ "package": "p4_grid_provenance",
+ "verify_script": "/data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/analysis/p4_grid_provenance_verify.py",
+ "verdicts": [
+  {
+   "claim": "Only 7 of the 13 measured energies lie exactly on the dense 0.1 eV grid; the other 6 are offset by exactly +-0.05 eV.",
+   "reproduced": true,
+   "my_value": "on-grid 7/13 = [22.5, 24.8, 27.9, 31.0, 34.1, 37.2, 48.4]; off-grid 6/13 with offsets [0.05, -0.05, 0.05, 0.05, 0.05, 0.05] eV (all exact multiples of 0.05 eV; largest |offset-0.05| = 2.8e-15 eV)",
+   "method": "exact-decimal grid test (m*10 integral) + nearest-density-row offset, evaluated on the experiment magnitude/phase axis and cross-checked on the 275-row delay axis (Ed == E[1:] to 0e+00 eV)",
+   "comment": "Independent of the package: my own grid test, and I also verified the delay axis is the identical 0.1 eV mesh shifted by one row, so the same 7/6 split holds there."
+  },
+  {
+   "claim": "The full dense experiment grid is NOT reproducible from the 13 measured rows by standard interpolation (natural/not-a-knot cubic spline, PCHIP, linear): best whole-grid max residual 0.193 for magnitude, which is 1.9e4 times the stored quantum of 1e-05.",
+   "reproduced": true,
+   "my_value": "hand-rolled natural cubic 0.19317, not-a-knot 0.25326, hand-rolled PCHIP 0.25573, hand-rolled linear 0.26853, scipy Akima(makima) 0.20355 (magnitude, whole grid) -> best 0.19317 = 1.93e+04 x 1e-5 (= 1.93e+05 x the strict 1e-6 quantum of the 13 measured rows). Harsher variants: optimal piecewise-constant on the 13-node Voronoi cells 0.2249, optimal piecewise-linear with 13 breaks 0.0926 (interior 0.0714), and a free-node 13-knot natural-spline refit (optimal node values) 0.1740 overall / 0.0843 interior.",
+   "method": "my own natural-cubic (validated vs scipy to 7e-14), my own Fritsch-Carlson PCHIP (validated vs scipy to 6e-14), my own linear, scipy Akima; plus optimal-piecewise-constant/linear and free-node refit bounds",
+   "comment": "Values match the package's natural-spline number 0.19317 to all printed digits; the extended search does not find any standard-ish construction anywhere near 1e-5."
+  },
+  {
+   "claim": "Interpolating the 4 lowest Legendre coefficients instead of the raw arrays does not rescue it (best max residual 0.222).",
+   "reproduced": true,
+   "my_value": "own Legendre-recurrence + own splines on the 4 complex coefficients: natural 0.24332, not-a-knot 0.85811, PCHIP 0.31854, linear 0.22198 -> best 0.22198 (linear) = 2.22e+04 x 1e-5; using 5 or 7 coefficients instead: best 0.22198 / 0.22198",
+   "method": "hand-built Legendre basis via the three-term recurrence + lstsq (not legfit/legval), own spline implementations",
+   "comment": "Best is the linear route at 0.22198, exactly the package's 0.222; adding coefficients (5 or 7) leaves the residual essentially unchanged, so it is not a truncation artefact."
+  },
+  {
+   "claim": "The 38.75..48.4 eV gap is NOT a straight interpolation of the two endpoint measurements: max deviation from the endpoint chord is 0.268 (magnitude) and 1.381 rad (phase).",
+   "reproduced": true,
+   "my_value": "magnitude max|dev from chord| = 0.26841 (at 43.60 eV, 72 deg, rms 0.09431); phase = 1.38066 rad (at 44.00 eV, 72 deg, rms 0.36556); complex |Z| = 0.22211; delay array = 8872.664 as",
+   "method": "explicit chord between the 38.7 eV and 48.4 eV dense rows (96 interior rows 38.8..48.3 eV), deviation max over energy and all 181 angles; own spline used only as a reference curve",
+   "comment": "Matches to the quoted digits; deviations exceed the storage quantum by ~2.7e4 (magnitude) and ~1.4e5 (phase)."
+  },
+  {
+   "claim": "The theory photon-energy axis maps to the DME kinetic-energy axis by E_eV = round(21.699 + 13.6058 * T_kin_au^2, 3), i.e. T_kin is a momentum-like coordinate, not (E-IE) in a.u.; the relation holds to <1e-6 eV.",
+   "reproduced": true,
+   "my_value": "identity E == round(21.699 + 13.6058*T_kin^2, 3) holds for 99/99 points (0 mismatches); max|E - unrounded formula| = 8.636e-06 eV; free 2-parameter fit E = 27.2116095*(T^2/2) + 21.6990001 eV with max residual 1.709e-06 eV (i.e. 7.1e-07 eV above 1e-6); a free LINEAR T_kin(E) instead misses by 0.107 a.u. and a linear E(T_kin) by 2.16 eV",
+   "method": "exact rounded-identity test on all 99 unique T_kin; free lstsq quadratic in T_kin^2 (no constants imposed); linear controls in both directions",
+   "comment": "Form of the mapping (quadratic in T_kin, constant 21.699 eV approximately the stored IE*c = 21.69982 eV) is confirmed and the linear alternatives are decisively excluded. Nuance: the literal <1e-6 eV bound is not met by the unrounded relation (8.6e-6 eV) nor by the free fit (1.7e-6 eV); it is met only in the rounded-identity sense (0/99 mismatches, bound 5e-4 eV)."
+  },
+  {
+   "claim": "11 of the 13 measured energies have a theory photon energy within 1 meV; 22.5 and 48.4 eV have no theory counterpart (nearest differ by 0.749 and 6.561 eV).",
+   "reproduced": true,
+   "my_value": "11/13 within 1 meV (all 11 at |diff| = 0.001000 eV); 22.5 eV -> 23.249 eV (0.7490 eV), 48.4 eV -> 41.839 eV (6.5610 eV); theory grid spans 23.249..41.839 eV",
+   "method": "nearest-point search of each measured energy in the 99-point theory photon-energy axis",
+   "comment": "Note the 1 meV matches are exactly the theory grid's own 1 meV rounding offset (theory energies sit 0.001 eV below the measured values)."
+  }
+ ],
+ "residual_doubt": "1) The package's reference 'stored quantum' 1e-5 is generous: the 13 measured magnitude rows are themselves exact multiples of 1e-6 (2 of 13 rows need 1e-6 decimals), so residuals should be divided by 1e-6 for a harsher ratio; the qualitative verdict is unchanged. 2) Claim 5's literal '<1e-6 eV' bound is only met by the rounded identity (0/99 mismatches); the unrounded formula deviates by 8.6e-6 eV and the best free fit by 1.7e-6 eV. 3) My extended piecewise-constant/linear bounds and the free-node refit are diagnostics of the 'no standard interpolation works' claim, not themselves standard interpolation schemes; the four enumerated standard methods are what the claim literally asserts and they are reproduced to the printed digits. 4) All comparisons use the same pivoted dense arrays as the package (index_0/index_1 pivot) but with independently implemented splines; my natural-cubic and PCHIP implementations agree with scipy to 7.1e-14 and 5.7e-14, so the route is independent in code, not in mathematics."
+}

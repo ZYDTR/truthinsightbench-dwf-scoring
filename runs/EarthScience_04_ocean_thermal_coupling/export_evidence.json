@@ -1,0 +1,21 @@
+{
+  "task_id": "EarthScience_04_ocean_thermal_coupling",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260919T160231-b22001",
+  "source_run_json_sha256": "a857a081e97420254ad598d268de74dbba2510ea440f599f1bff537746f3177f",
+  "source_release_json_sha256": "1310c1ef6b4ecd273756042184bdad99f5c86853c4f024dedd9701c67087b4b9",
+  "source_latest_validation_sha256": "95052953a76abebabe2c23c92d2b3356a11dcfee67be556dbd3b3ad1dbe129bf",
+  "source_snapshot_manifest_sha256": "72b1089f25b6e448ae88148ec302586202b989109c538b69aadd6471947288f8",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 919
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "fcd2df7bcbd6b9d1356945e52a77d792dca4a07bf117f3ae6c37e0382d08e2ac",
+  "output_sha256": "926980155f300d054c5d2af9fd146d633408eba3ea7252f3e0a002d95584eaa4"
+}

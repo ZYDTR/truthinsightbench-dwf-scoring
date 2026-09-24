@@ -1,0 +1,99 @@
+=== coverage status counts (per workbook block) ===
+status
+absent       50
+aggregate    30
+image        14
+exact         6
+empty         1
+
+=== status x sheet ===
+status     absent  aggregate  empty  exact  image
+sheet                                            
+Sheet_001       6          0      0      0      0
+Sheet_002       6          0      0      0      0
+Sheet_003       0          0      0      0      1
+Sheet_004       0          0      0      0      1
+Sheet_005       0          0      0      0      1
+Sheet_006       0          0      0      0      1
+Sheet_007       0          0      0      0      1
+Sheet_008       0          0      0      0      1
+Sheet_009       0          3      0      0      0
+Sheet_010       0          3      0      0      0
+Sheet_011       0          3      0      0      0
+Sheet_012       0          3      0      0      0
+Sheet_013       0          3      0      0      0
+Sheet_014       0          3      0      0      0
+Sheet_015       0          0      0      0      1
+Sheet_016       0          0      0      0      1
+Sheet_017       0          0      0      0      1
+Sheet_018       0          0      0      0      1
+Sheet_019       2          0      0      0      0
+Sheet_020       4          0      0      0      0
+Sheet_021       0          0      0      0      1
+Sheet_022       0          0      0      0      1
+Sheet_023       4          0      0      0      0
+Sheet_024       0          2      0      0      0
+Sheet_025       0          0      0      1      0
+Sheet_026       0          2      0      0      0
+Sheet_027       0          0      0      1      0
+Sheet_028       0          2      0      0      0
+Sheet_029       0          0      0      1      0
+Sheet_030       0          2      0      0      0
+Sheet_031       0          0      0      1      0
+Sheet_032       0          2      0      0      0
+Sheet_033       0          0      0      1      0
+Sheet_034       0          2      0      0      0
+Sheet_035       0          0      0      1      0
+Sheet_036       0          0      0      0      1
+Sheet_037       0          0      0      0      1
+Sheet_038       4          0      0      0      0
+Sheet_039       3          0      0      0      0
+Sheet_040       3          0      0      0      0
+Sheet_041       3          0      0      0      0
+Sheet_042       3          0      0      0      0
+Sheet_043       3          0      0      0      0
+Sheet_044       3          0      0      0      0
+Sheet_045       0          0      1      0      0
+Sheet_046       3          0      0      0      0
+Sheet_047       3          0      0      0      0
+
+=== normalized series provenance ===
+                  series                           workbook_source   n  events
+population_series_1|fast                 Sheet_025 (all 26 points)  26 10560.0
+population_series_1|slow       Sheet_024 (union of its two blocks) 137   892.0
+population_series_2|fast                 Sheet_027 (all 26 points)  26 14492.0
+population_series_2|slow       Sheet_026 (union of its two blocks) 131  1303.0
+population_series_3|fast                 Sheet_029 (all 24 points)  24   357.0
+population_series_3|slow       Sheet_028 (union of its two blocks) 139   803.0
+population_series_4|fast                 Sheet_031 (all 21 points)  21    52.0
+population_series_4|slow       Sheet_030 (union of its two blocks) 132   392.0
+population_series_5|fast                 Sheet_033 (all 24 points)  24   429.0
+population_series_5|slow       Sheet_032 (union of its two blocks) 127  1092.0
+population_series_6|fast                 Sheet_035 (all 25 points)  25   664.0
+population_series_6|slow       Sheet_034 (union of its two blocks) 136  2201.0
+    orientation_series_1 Sheet_009 (3 blocks, first point dropped)  52 11240.0
+    orientation_series_2 Sheet_010 (3 blocks, first point dropped)  52 15551.0
+    orientation_series_3 Sheet_011 (3 blocks, first point dropped)  52  1151.0
+    orientation_series_4 Sheet_012 (3 blocks, first point dropped)  52   444.0
+    orientation_series_5 Sheet_013 (3 blocks, first point dropped)  52  1503.0
+    orientation_series_6 Sheet_014 (3 blocks, first point dropped)  52  2843.0
+
+=== COVERAGE BOUNDARY: 50 blocks with no normalized counterpart ===
+  Sheet_001: blocks=6 rows=33631 total_counts=4806983  [table]
+  Sheet_002: blocks=6 rows=33631 total_counts=3358624  [table]
+  Sheet_019: blocks=2 rows=1600 total_counts=786072  [table]
+  Sheet_020: blocks=4 rows=621 total_counts=148953  [table]
+  Sheet_023: blocks=4 rows=535 total_counts=2  [table]
+  Sheet_038: blocks=4 rows=535 total_counts=7  [table]
+  Sheet_039: blocks=3 rows=60 total_counts=11501  [table]
+  Sheet_040: blocks=3 rows=70 total_counts=15849  [table]
+  Sheet_041: blocks=3 rows=60 total_counts=1153  [table]
+  Sheet_042: blocks=3 rows=60 total_counts=433  [table]
+  Sheet_043: blocks=3 rows=60 total_counts=1510  [table]
+  Sheet_044: blocks=3 rows=60 total_counts=2852  [table]
+  Sheet_046: blocks=3 rows=65 total_counts=1077  [table]
+  Sheet_047: blocks=3 rows=65 total_counts=391  [table]
+
+  TOTAL absent: blocks=50 rows=71053 counts=9135408
+
+wrote s16_coverage_block.csv / s16_normalized_provenance.csv / s16_coverage_summary.json

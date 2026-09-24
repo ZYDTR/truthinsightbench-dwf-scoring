@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "mean_amplitude_dff0": 1.54,
+    "mean_time_to_peak_s": 160.253,
+    "mean_peak_width_s": 9.45,
+    "mean_peak_prominence_dff0": 0.639,
+    "mean_peak_frequency_hz": 0.006,
+    "mean_auc_au": 302.217
+  },
+  "neural_activity_blocked": {
+    "mean_amplitude_dff0": 1.51,
+    "mean_time_to_peak_s": 172.592,
+    "mean_peak_width_s": 7.164,
+    "mean_peak_prominence_dff0": 0.599,
+    "mean_peak_frequency_hz": 0.008,
+    "mean_auc_au": 302.716
+  },
+  "receptor_stimulated": {
+    "mean_amplitude_dff0": 1.913,
+    "mean_time_to_peak_s": 124.568,
+    "mean_peak_width_s": 38.367,
+    "mean_peak_prominence_dff0": 0.696,
+    "mean_peak_frequency_hz": 0.007,
+    "mean_auc_au": 394.656
+  }
+}

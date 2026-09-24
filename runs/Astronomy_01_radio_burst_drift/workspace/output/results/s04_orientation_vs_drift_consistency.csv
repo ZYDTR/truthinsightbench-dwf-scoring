@@ -1,0 +1,7 @@
+orientation_series_id,population_series_id,orientation_fast_region_s_le_-10,drift_regime_fast_total,fast_equal,orientation_slow_region_s_gt_-10,workbook_dropped_boundary_bins,slow_reconstructed,drift_regime_slow_total,slow_equal
+orientation_series_1,population_series_1,10560.0,10560.0,True,680.0,212.0,892.0,892.0,True
+orientation_series_2,population_series_2,14492.0,14492.0,True,1059.0,244.0,1303.0,1303.0,True
+orientation_series_3,population_series_3,357.0,357.0,True,794.0,9.0,803.0,803.0,True
+orientation_series_4,population_series_4,52.0,52.0,True,392.0,0.0,392.0,392.0,True
+orientation_series_5,population_series_5,429.0,429.0,True,1074.0,18.0,1092.0,1092.0,True
+orientation_series_6,population_series_6,664.0,664.0,True,2179.0,22.0,2201.0,2201.0,True

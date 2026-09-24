@@ -1,0 +1,27 @@
+Compilation,n_rows,share_of_total,table
+This study,294,0.68852,glacial
+"Hallet et al., 1996",62,0.1452,glacial
+"Balter-Kennedy et al., 2021",32,0.07494,glacial
+"Geirsdóttir et al., 2007",7,0.01639,glacial
+"Faleide et al., 1996",6,0.01405,glacial
+"Amantov et al., 2011",4,0.00937,glacial
+"Anderson, 2005",4,0.00937,glacial
+"Björnsson, 1979",4,0.00937,glacial
+"Burbank et al., 2000",4,0.00937,glacial
+"Lliboutry, 1994",4,0.00937,glacial
+OCTOPUS,3457,0.54978,nonglacial
+"Chen et al., 2022",1521,0.24189,nonglacial
+GloRiSe,1057,0.1681,nonglacial
+"Marrero et al., 2018",194,0.03085,nonglacial
+This study,48,0.00763,nonglacial
+"Burbank et al., 2000",11,0.00175,nonglacial
+OCTOPUS,3457,0.51482,pooled
+"Chen et al., 2022",1521,0.22651,pooled
+GloRiSe,1057,0.15741,pooled
+This study,342,0.05093,pooled
+"Marrero et al., 2018",194,0.02889,pooled
+"Hallet et al., 1996",62,0.00923,pooled
+"Balter-Kennedy et al., 2021",32,0.00477,pooled
+"Burbank et al., 2000",15,0.00223,pooled
+"Geirsdóttir et al., 2007",7,0.00104,pooled
+"Faleide et al., 1996",6,0.00089,pooled

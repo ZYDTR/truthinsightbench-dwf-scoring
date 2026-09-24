@@ -1,0 +1,93 @@
+{
+  "design": {
+    "unit_session_rows": 134,
+    "unit_session_animals": 13,
+    "unit_session_conditions": {
+      "matrix_perturbed": 62,
+      "reference": 72
+    },
+    "per_condition_animals": {
+      "matrix_perturbed": [
+        "animal_02",
+        "animal_03",
+        "animal_04",
+        "animal_07",
+        "animal_08",
+        "animal_09",
+        "animal_10"
+      ],
+      "reference": [
+        "animal_01",
+        "animal_05",
+        "animal_06",
+        "animal_11",
+        "animal_12",
+        "animal_13"
+      ]
+    },
+    "tracked_rows": 32,
+    "tracked_animals": 10,
+    "tracked_conditions": {
+      "matrix_perturbed": 16,
+      "reference": 16
+    }
+  },
+  "animal_level_key": {
+    "information_rate": {
+      "metric": "information_rate",
+      "ref_n_animals": 6,
+      "pert_n_animals": 7,
+      "ref_animal_mean": 0.5351588222790474,
+      "pert_animal_mean": 0.3087163738957966,
+      "diff_pert_minus_ref": -0.22644244838325084,
+      "t": 2.1418797866132118,
+      "p_welch": 0.07378432844100469,
+      "p_perm": 0.042195780421957804,
+      "cohens_d": -1.2680587423375997,
+      "ci_lo": -0.4821844006825753,
+      "ci_hi": 0.02929950391607361
+    },
+    "spatial_regularity_score": {
+      "metric": "spatial_regularity_score",
+      "ref_n_animals": 6,
+      "pert_n_animals": 7,
+      "ref_animal_mean": 0.6229674654789599,
+      "pert_animal_mean": 0.6091076873084903,
+      "diff_pert_minus_ref": -0.013859778170469572,
+      "t": 0.1732485621124764,
+      "p_welch": 0.8675622056446277,
+      "p_perm": 0.8587141285871412,
+      "cohens_d": -0.10193932885784925,
+      "ci_lo": -0.20466846197332603,
+      "ci_hi": 0.17694890563238688
+    },
+    "average_rate_hz": {
+      "metric": "average_rate_hz",
+      "ref_n_animals": 6,
+      "pert_n_animals": 7,
+      "ref_animal_mean": 1.8641835055131715,
+      "pert_animal_mean": 1.7927828134718309,
+      "diff_pert_minus_ref": -0.07140069204134059,
+      "t": 0.2802169551086494,
+      "p_welch": 0.7852033795577842,
+      "p_perm": 0.7989201079892011,
+      "cohens_d": -0.14930853924653167,
+      "ci_lo": -0.641633064209908,
+      "ci_hi": 0.4988316801272268
+    },
+    "orientation": {
+      "metric": "orientation",
+      "ref_n_animals": 6,
+      "pert_n_animals": 7,
+      "ref_animal_mean": 24.76465756692441,
+      "pert_animal_mean": 37.87796389021173,
+      "diff_pert_minus_ref": 13.113306323287322,
+      "t": -1.3937831668298428,
+      "p_welch": 0.1946816010105624,
+      "p_perm": 0.18418158184181582,
+      "cohens_d": 0.7893059028504197,
+      "ci_lo": -7.956999854272183,
+      "ci_hi": 34.18361250084683
+    }
+  }
+}

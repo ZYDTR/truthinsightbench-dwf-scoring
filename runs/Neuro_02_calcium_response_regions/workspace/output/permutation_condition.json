@@ -1,0 +1,76 @@
+{
+  "method": "permute condition labels within (region,batch,slice) strata; refit measure ~ region+condition+batch each time; receptor-vs-baseline coeff; two-sided empirical p and 95% CI",
+  "n_perms": 1000,
+  "seed": 42,
+  "n_cells": 580,
+  "observed_contrast": {
+    "mean_amplitude_dff0": 0.3378,
+    "mean_time_to_peak_s": -29.2926,
+    "mean_peak_width_s": 30.8473,
+    "mean_peak_prominence_dff0": 0.0673,
+    "mean_peak_frequency_hz": 0.0008,
+    "mean_auc_au": 87.9347
+  },
+  "per_measure": {
+    "mean_amplitude_dff0": {
+      "observed_contrast": 0.3378,
+      "null_median": 0.0689,
+      "null_std": 0.045,
+      "empirical_p_two_sided": 0.0,
+      "empirical_ci95": [
+        -0.0192,
+        0.1545
+      ]
+    },
+    "mean_time_to_peak_s": {
+      "observed_contrast": -29.2926,
+      "null_median": 1.7905,
+      "null_std": 7.3114,
+      "empirical_p_two_sided": 0.0,
+      "empirical_ci95": [
+        -13.3489,
+        15.2082
+      ]
+    },
+    "mean_peak_width_s": {
+      "observed_contrast": 30.8473,
+      "null_median": 5.2041,
+      "null_std": 2.7953,
+      "empirical_p_two_sided": 0.0,
+      "empirical_ci95": [
+        -0.6101,
+        10.4454
+      ]
+    },
+    "mean_peak_prominence_dff0": {
+      "observed_contrast": 0.0673,
+      "null_median": 0.0226,
+      "null_std": 0.0345,
+      "empirical_p_two_sided": 0.112,
+      "empirical_ci95": [
+        -0.044,
+        0.0886
+      ]
+    },
+    "mean_peak_frequency_hz": {
+      "observed_contrast": 0.0008,
+      "null_median": -0.001,
+      "null_std": 0.0009,
+      "empirical_p_two_sided": 0.584,
+      "empirical_ci95": [
+        -0.0029,
+        0.0006
+      ]
+    },
+    "mean_auc_au": {
+      "observed_contrast": 87.9347,
+      "null_median": 8.0947,
+      "null_std": 7.5242,
+      "empirical_p_two_sided": 0.0,
+      "empirical_ci95": [
+        -6.6124,
+        23.2261
+      ]
+    }
+  }
+}

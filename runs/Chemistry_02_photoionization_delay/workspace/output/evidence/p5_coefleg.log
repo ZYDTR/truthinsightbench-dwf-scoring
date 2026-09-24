@@ -1,0 +1,341 @@
+==============================================================================
+p5_coefleg: CoefLeg blocks -- structure, dense-panel reconstruction, DME link
+==============================================================================
+sha256 a47e1e06130ec2a0dc8e3a4b2b45233828b37e6ff31101dbefebfd8b9d0ac411  angular_coefficients_datasets.tsv
+sha256 55a1d9621c0e386fb44a63764a97cf81491d2bd7af0209c74e212329172df396  angle_energy_observations_datasets.tsv
+sha256 df51186c5de242e7b6d7aa51b30f2b75411bbea139507a3061273c23f2c01762  dipole_matrix_elements_datasets.tsv
+sha256 349bbd36f9de8dd1805b280c0f08270e3d1c75992efd76aa8effb603adbec23b  coordinate_definitions.json
+coordinate_definitions: angle step 1 deg, hbar_as_eV=658.2119569
+
+CoefLeg groups (13):
+  energies eV: [22.5, 23.25, 24.8, 26.35, 27.9, 29.45, 31.0, 32.55, 34.1, 35.65, 37.2, 38.75, 48.4]
+CoefLeg energies exactly on the dense 0.1 eV grid (7): [22.5, 24.8, 27.9, 31.0, 34.1, 37.2, 48.4]
+CoefLeg energies NOT on the grid (6): [23.25, 26.35, 29.45, 32.55, 35.65, 38.75]
+
+------------------------------------------------------------------------------
+(a) STRUCTURAL CHARACTERISATION
+------------------------------------------------------------------------------
+stacked shape (13, 9, 11)
+exact-zero entries (identical across all 13 energies), by column:
+   col  0 (order rows [0])
+   col  1 (order rows [])
+   col  2 (order rows [])
+   col  3 (order rows [])
+   col  4 (order rows [])
+   col  5 (order rows [0])
+   col  6 (order rows [0])
+   col  7 (order rows [0, 1])
+   col  8 (order rows [0, 1])
+   col  9 (order rows [0])
+   col 10 (order rows [0])
+   F00: value always zero at orders [] ; error always zero at orders []
+   F20: value always zero at orders [] ; error always zero at orders []
+   F21: value always zero at orders [0] ; error always zero at orders [0]
+   F22: value always zero at orders [0, 1] ; error always zero at orders [0, 1]
+   F11: value always zero at orders [0] ; error always zero at orders [0]
+F00 at order 0 takes values [1.0, 1.00001, 1.00002, 1.00003, 1.00004]  (i.e. pinned to 1.0 +- 4e-5)
+
+error-column scaling (errF20/errF00 is order independent?):
+   E= 22.50  mean=5.05576  spread=3.38e-05
+   E= 23.25  mean=4.95336  spread=3.25e-05
+   E= 24.80  mean=5.28999  spread=2.78e-05
+   E= 26.35  mean=5.63053  spread=3.28e-05
+   E= 27.90  mean=4.77503  spread=3.27e-05
+   E= 29.45  mean=4.65046  spread=2.27e-05
+   E= 31.00  mean=5.16592  spread=3.68e-05
+   E= 32.55  mean=5.05048  spread=2.00e-05
+   E= 34.10  mean=4.89405  spread=2.69e-05
+   E= 35.65  mean=4.34612  spread=2.47e-05
+   E= 37.20  mean=4.84916  spread=2.59e-05
+   E= 38.75  mean=5.48280  spread=2.22e-05
+   E= 48.40  mean=5.09083  spread=3.59e-04
+   E= 22.50  errF00 vs errF00(0)*sqrt(2k+1): max rel dev = 0.00156
+   E= 23.25  errF00 vs errF00(0)*sqrt(2k+1): max rel dev = 0.001559
+   E= 24.80  errF00 vs errF00(0)*sqrt(2k+1): max rel dev = 0.001559
+   E= 26.35  errF00 vs errF00(0)*sqrt(2k+1): max rel dev = 0.001558
+   E= 27.90  errF00 vs errF00(0)*sqrt(2k+1): max rel dev = 0.001555
+   E= 29.45  errF00 vs errF00(0)*sqrt(2k+1): max rel dev = 0.001557
+   E= 31.00  errF00 vs errF00(0)*sqrt(2k+1): max rel dev = 0.001558
+   E= 32.55  errF00 vs errF00(0)*sqrt(2k+1): max rel dev = 0.001555
+   E= 34.10  errF00 vs errF00(0)*sqrt(2k+1): max rel dev = 0.001558
+   E= 35.65  errF00 vs errF00(0)*sqrt(2k+1): max rel dev = 0.001559
+   E= 37.20  errF00 vs errF00(0)*sqrt(2k+1): max rel dev = 0.001556
+   E= 38.75  errF00 vs errF00(0)*sqrt(2k+1): max rel dev = 0.001557
+   E= 48.40  errF00 vs errF00(0)*sqrt(2k+1): max rel dev = 0.0252
+
+family magnitude (sum over the 9 order rows):
+   E= 22.50  F00=  2.4085  F20=  5.5011  |F21|= 0.4644  |F22|= 0.0833  |F11|= 1.1349
+   E= 23.25  F00=  1.8956  F20=  3.7091  |F21|= 0.5272  |F22|= 0.0663  |F11|= 1.1752
+   E= 24.80  F00=  1.4702  F20=  2.3190  |F21|= 0.6117  |F22|= 0.0743  |F11|= 1.3170
+   E= 26.35  F00=  1.1151  F20=  1.9091  |F21|= 0.4855  |F22|= 0.0655  |F11|= 1.4974
+   E= 27.90  F00=  0.6816  F20=  1.1883  |F21|= 0.3180  |F22|= 0.0394  |F11|= 1.4375
+   E= 29.45  F00=  0.4266  F20=  0.7970  |F21|= 0.5757  |F22|= 0.0370  |F11|= 1.3939
+   E= 31.00  F00=  0.3612  F20=  0.5262  |F21|= 0.6545  |F22|= 0.0527  |F11|= 1.3211
+   E= 32.55  F00=  0.3912  F20=  0.4450  |F21|= 0.7226  |F22|= 0.0736  |F11|= 1.4469
+   E= 34.10  F00=  0.3188  F20=  0.1774  |F21|= 0.7794  |F22|= 0.0815  |F11|= 1.5793
+   E= 35.65  F00=  0.5056  F20=  0.0234  |F21|= 0.8914  |F22|= 0.1026  |F11|= 1.7762
+   E= 37.20  F00=  0.6110  F20=  0.5882  |F21|= 0.7996  |F22|= 0.1162  |F11|= 1.3490
+   E= 38.75  F00=  0.4795  F20=  0.5331  |F21|= 1.0453  |F22|= 0.1451  |F11|= 1.6930
+   E= 48.40  F00=  0.4336  F20=  0.4125  |F21|= 1.4022  |F22|= 0.1874  |F11|= 1.7600
+
+order-0 family values across energy:
+   E= 22.50  F00(0)=1.00002  F20(0)=  1.32127  F21(0)= 0.00000  F22(0)= 0.00000  F11(0)= 0.00000
+   E= 23.25  F00(0)=1.00001  F20(0)=  1.06797  F21(0)= 0.00000  F22(0)= 0.00000  F11(0)= 0.00000
+   E= 24.80  F00(0)=1.00001  F20(0)=  0.34635  F21(0)= 0.00000  F22(0)= 0.00000  F11(0)= 0.00000
+   E= 26.35  F00(0)=1.00001  F20(0)=  1.05409  F21(0)= 0.00000  F22(0)= 0.00000  F11(0)= 0.00000
+   E= 27.90  F00(0)=1.00002  F20(0)=  1.43546  F21(0)= 0.00000  F22(0)= 0.00000  F11(0)= 0.00000
+   E= 29.45  F00(0)=1.00003  F20(0)=  1.31538  F21(0)= 0.00000  F22(0)= 0.00000  F11(0)= 0.00000
+   E= 31.00  F00(0)=1.00004  F20(0)=  1.42947  F21(0)= 0.00000  F22(0)= 0.00000  F11(0)= 0.00000
+   E= 32.55  F00(0)=1.00002  F20(0)=  1.20370  F21(0)= 0.00000  F22(0)= 0.00000  F11(0)= 0.00000
+   E= 34.10  F00(0)=1.00003  F20(0)=  1.14462  F21(0)= 0.00000  F22(0)= 0.00000  F11(0)= 0.00000
+   E= 35.65  F00(0)=1.00002  F20(0)=  0.49819  F21(0)= 0.00000  F22(0)= 0.00000  F11(0)= 0.00000
+   E= 37.20  F00(0)=1.00001  F20(0)=  0.78528  F21(0)= 0.00000  F22(0)= 0.00000  F11(0)= 0.00000
+   E= 38.75  F00(0)=1.00001  F20(0)=  0.32599  F21(0)= 0.00000  F22(0)= 0.00000  F11(0)= 0.00000
+   E= 48.40  F00(0)=1.00000  F20(0)=  0.26214  F21(0)= 0.00000  F22(0)= 0.00000  F11(0)= 0.00000
+
+mean error magnitude per order (averaged over 13 energies):
+   errF00: [0.00416 0.0072  0.00929 0.011   0.01248 0.0138  0.01501 0.01614 0.0172 ]
+   errF20: [0.02078 0.03599 0.04646 0.05498 0.06236 0.06898 0.07504 0.08068 0.08599]
+   errF21: [0.      0.01291 0.00963 0.00805 0.00707 0.00638 0.00586 0.00545 0.00512]
+   errF22: [0.      0.      0.00259 0.00137 0.0009  0.00065 0.0005  0.0004  0.00033]
+   errF11: [0.      0.00691 0.00515 0.00431 0.00378 0.00341 0.00313 0.00291 0.00273]
+
+order-0 signal-to-noise per family (per energy):
+   E= 22.50  {'F00': 264.62, 'F20': 69.16}
+   E= 23.25  {'F00': 351.14, 'F20': 75.71}
+   E= 24.80  {'F00': 302.92, 'F20': 19.83}
+   E= 26.35  {'F00': 388.1, 'F20': 72.65}
+   E= 27.90  {'F00': 236.9, 'F20': 71.21}
+   E= 29.45  {'F00': 211.29, 'F20': 59.76}
+   E= 31.00  {'F00': 208.04, 'F20': 57.56}
+   E= 32.55  {'F00': 215.88, 'F20': 51.45}
+   E= 34.10  {'F00': 178.79, 'F20': 41.81}
+   E= 35.65  {'F00': 254.83, 'F20': 29.21}
+   E= 37.20  {'F00': 247.69, 'F20': 40.11}
+   E= 38.75  {'F00': 224.8, 'F20': 13.37}
+   E= 48.40  {'F00': 194.97, 'F20': 10.04}
+
+------------------------------------------------------------------------------
+(b) RECONSTRUCTION OF I(theta) FROM THE CoefLeg BLOCK
+------------------------------------------------------------------------------
+Convention grid: Condon-Shortley phase on/off x Y-normalised/unnormalised x sqrt(2) m>0 factor on/off
+Reading A: I(theta)=sum_{k=0..8} [F00_k Y00 + F20_k ReY20 + F21_k ReY21 + F22_k ReY22 + F11_k ReY11]
+Reading B: I(theta)=sum_{k=0..8} [F00_k Y_k0 + F20_k Y_k0 + F21_k ReY_k1 + F22_k ReY_k2 + F11_k ReY_k1]
+
+Reading A, affine-R2 (best scale+offset per energy) and corr:
+convention               meanR2    minR2    maxR2 meanCorr   meanFixRelRMS    scale
+CS1_norm1_sq21           0.2546   0.0052   0.5348   0.4285         1.7184  -0.0441
+CS1_norm1_sq20           0.2517   0.0042   0.5398   0.4224         1.5919   0.2131
+CS1_norm0_sq21           0.2456   0.0085   0.5223   0.4317         2.8360   0.0265
+CS1_norm0_sq20           0.2469   0.0065   0.5212   0.4282         2.5464   0.1879
+CS0_norm1_sq21           0.1269   0.0000   0.3931  -0.1282         1.2805   0.7533
+CS0_norm1_sq20           0.1433   0.0000   0.3916   0.0294         1.2402   0.9213
+CS0_norm0_sq21           0.2417   0.0039   0.5161  -0.3294         3.8078   0.2478
+CS0_norm0_sq20           0.1983   0.0004   0.4880  -0.2607         3.2292   0.3121
+
+Reading B, affine-R2 (best scale+offset per energy) and corr:
+CS1_norm1_sq21           0.8972   0.7179   0.9672   0.9464         2.7497   0.2387
+CS1_norm1_sq20           0.9078   0.7680   0.9679   0.9522         2.7183   0.2559
+CS1_norm0_sq21           0.8039   0.5121   0.9522   0.8928         4.5689   0.1814
+CS1_norm0_sq20           0.8561   0.6189   0.9640   0.9234         4.6584   0.1857
+CS0_norm1_sq21           0.9260   0.8775   0.9724   0.9621         2.8622   0.2740
+CS0_norm1_sq20           0.9307   0.8845   0.9791   0.9646         2.7958   0.2778
+CS0_norm0_sq21           0.7778   0.2830   0.9870   0.8702         6.7943   0.1393
+CS0_norm0_sq20           0.8512   0.5060   0.9885   0.9186         6.2559   0.1500
+
+Baseline / ceiling: dense magnitude panel fitted by its OWN 9 Legendre terms P_0..P_8
+   dense panel self-fit: mean R2=0.99771  mean relRMS=0.01576
+   null (500 label shuffles of the 22.5 eV panel vs reading-B record CS0_norm1_sq20): mean=0.0064 95pct=0.0256  true=0.9199
+
+Correlation of the reading-B reconstruction with magnitude and with magnitude^2:
+   E= 22.50  corr(rec,mag)=+0.9591  corr(rec,mag^2)=+0.9875  best-scale relRMS: mag=0.5070  mag^2=0.3072
+   E= 23.25  corr(rec,mag)=+0.9895  corr(rec,mag^2)=+0.9973  best-scale relRMS: mag=0.4735  mag^2=0.2860
+   E= 24.80  corr(rec,mag)=+0.9405  corr(rec,mag^2)=+0.9637  best-scale relRMS: mag=0.5094  mag^2=0.3837
+   E= 26.35  corr(rec,mag)=+0.9480  corr(rec,mag^2)=+0.9555  best-scale relRMS: mag=0.3907  mag^2=0.2986
+   E= 27.90  corr(rec,mag)=+0.9645  corr(rec,mag^2)=+0.9658  best-scale relRMS: mag=0.5088  mag^2=0.3676
+   E= 29.45  corr(rec,mag)=+0.9554  corr(rec,mag^2)=+0.9755  best-scale relRMS: mag=0.6146  mag^2=0.3999
+   E= 31.00  corr(rec,mag)=+0.9486  corr(rec,mag^2)=+0.9839  best-scale relRMS: mag=0.6346  mag^2=0.3697
+   E= 32.55  corr(rec,mag)=+0.9793  corr(rec,mag^2)=+0.9954  best-scale relRMS: mag=0.5547  mag^2=0.2062
+   E= 34.10  corr(rec,mag)=+0.9829  corr(rec,mag^2)=+0.9910  best-scale relRMS: mag=0.6189  mag^2=0.3146
+   E= 35.65  corr(rec,mag)=+0.9802  corr(rec,mag^2)=+0.9910  best-scale relRMS: mag=0.5722  mag^2=0.2544
+   E= 37.20  corr(rec,mag)=+0.9743  corr(rec,mag^2)=+0.9933  best-scale relRMS: mag=0.5270  mag^2=0.1920
+   E= 38.75  corr(rec,mag)=+0.9617  corr(rec,mag^2)=+0.9883  best-scale relRMS: mag=0.5353  mag^2=0.2407
+   E= 48.40  corr(rec,mag)=+0.9557  corr(rec,mag^2)=+0.9827  best-scale relRMS: mag=0.5406  mag^2=0.2852
+
+Row-0-only reconstruction I = F00(0) + F20(0)*P2(cos theta) vs dense magnitude:
+   E= 22.50  F00(0)=1.0000 F20(0)=  1.3213  corr=+0.5732  affineR2=0.3285  best_scale=0.311
+   E= 23.25  F00(0)=1.0000 F20(0)=  1.0680  corr=+0.4690  affineR2=0.2199  best_scale=0.325
+   E= 24.80  F00(0)=1.0000 F20(0)=  0.3463  corr=+0.0450  affineR2=0.0020  best_scale=0.416
+   E= 26.35  F00(0)=1.0000 F20(0)=  1.0541  corr=-0.1722  affineR2=0.0296  best_scale=0.333
+   E= 27.90  F00(0)=1.0000 F20(0)=  1.4355  corr=+0.0577  affineR2=0.0033  best_scale=0.335
+   E= 29.45  F00(0)=1.0000 F20(0)=  1.3154  corr=+0.1831  affineR2=0.0335  best_scale=0.422
+   E= 31.00  F00(0)=1.0000 F20(0)=  1.4295  corr=+0.2294  affineR2=0.0526  best_scale=0.443
+   E= 32.55  F00(0)=1.0000 F20(0)=  1.2037  corr=+0.3579  affineR2=0.1281  best_scale=0.499
+   E= 34.10  F00(0)=1.0000 F20(0)=  1.1446  corr=+0.5151  affineR2=0.2653  best_scale=0.485
+   E= 35.65  F00(0)=1.0000 F20(0)=  0.4982  corr=+0.5958  affineR2=0.3550  best_scale=0.536
+   E= 37.20  F00(0)=1.0000 F20(0)=  0.7853  corr=+0.6649  affineR2=0.4421  best_scale=0.440
+   E= 38.75  F00(0)=1.0000 F20(0)=  0.3260  corr=+0.7118  affineR2=0.5067  best_scale=0.449
+   E= 48.40  F00(0)=1.0000 F20(0)=  0.2621  corr=+0.7080  affineR2=0.5013  best_scale=0.337
+
+Dense-panel Legendre content (c_L from a 9-term fit), and comparison with
+the CoefLeg columns under the 'order = degree' reading B:
+   E= 22.50  magLeg c_0..c_8 = [ 4.420e-01 -1.180e-02  4.090e-02 -3.000e-04  2.695e-01  1.321e-01
+ -5.200e-03 -2.560e-02 -2.940e-02]
+   E= 48.40  magLeg c_0..c_8 = [ 0.2668 -0.0787  0.265  -0.2473  0.1053  0.0554 -0.075  -0.0036  0.0351]
+   corr(CoefLeg col at order k, magLegend c_k) across the 13 energies:
+     k=0  {'F00': 0.864, 'F20': 0.766, 'F21': nan, 'F22': nan, 'F11': nan}
+     k=1  {'F00': 0.561, 'F20': 0.904, 'F21': -0.825, 'F22': nan, 'F11': 0.115}
+     k=2  {'F00': 0.988, 'F20': 0.954, 'F21': 0.812, 'F22': 0.807, 'F11': 0.439}
+     k=3  {'F00': 0.968, 'F20': 0.951, 'F21': 0.586, 'F22': 0.606, 'F11': -0.805}
+     k=4  {'F00': 0.854, 'F20': 0.851, 'F21': 0.497, 'F22': 0.342, 'F11': -0.299}
+     k=5  {'F00': 0.969, 'F20': 0.914, 'F21': 0.737, 'F22': 0.39, 'F11': -0.298}
+     k=6  {'F00': 0.926, 'F20': 0.913, 'F21': 0.781, 'F22': -0.448, 'F11': 0.183}
+     k=7  {'F00': 0.793, 'F20': -0.025, 'F21': 0.119, 'F22': 0.106, 'F11': -0.016}
+     k=8  {'F00': 0.409, 'F20': -0.236, 'F21': -0.046, 'F22': -0.374, 'F11': -0.275}
+
+Anisotropy cross-check: beta of a 1+beta*P2 fit to the dense panel
+   vs F20(0)/F00(0) from the CoefLeg row 0:
+   E= 22.50  beta_dense= +0.3268   F20(0)/F00(0)=  1.3212   F20(0)=  1.3213
+   E= 23.25  beta_dense= +0.2335   F20(0)/F00(0)=  1.0680   F20(0)=  1.0680
+   E= 24.80  beta_dense= +0.0157   F20(0)/F00(0)=  0.3463   F20(0)=  0.3463
+   E= 26.35  beta_dense= -0.0449   F20(0)/F00(0)=  1.0541   F20(0)=  1.0541
+   E= 27.90  beta_dense= +0.0214   F20(0)/F00(0)=  1.4354   F20(0)=  1.4355
+   E= 29.45  beta_dense= +0.1130   F20(0)/F00(0)=  1.3153   F20(0)=  1.3154
+   E= 31.00  beta_dense= +0.2016   F20(0)/F00(0)=  1.4294   F20(0)=  1.4295
+   E= 32.55  beta_dense= +0.3723   F20(0)/F00(0)=  1.2037   F20(0)=  1.2037
+   E= 34.10  beta_dense= +0.5562   F20(0)/F00(0)=  1.1446   F20(0)=  1.1446
+   E= 35.65  beta_dense= +0.7122   F20(0)/F00(0)=  0.4982   F20(0)=  0.4982
+   E= 37.20  beta_dense= +0.8701   F20(0)/F00(0)=  0.7853   F20(0)=  0.7853
+   E= 38.75  beta_dense= +1.1046   F20(0)/F00(0)=  0.3260   F20(0)=  0.3260
+   E= 48.40  beta_dense= +1.0991   F20(0)/F00(0)=  0.2621   F20(0)=  0.2621
+   corr(F20(0)/F00(0), beta_dense) = -0.6356
+
+------------------------------------------------------------------------------
+(c) PREDICTABILITY OF THE CoefLeg FAMILIES FROM THE EXPERIMENT DME BLOCK
+------------------------------------------------------------------------------
+DME rows: (l,m) = [(0, 0), (1, 0), (2, 0), (3, 0), (1, 1), (2, 1), (3, 1)]
+The experiment DME block contains only m in {0,1}; the l=1,2,3 channels for m=0 and m=1.
+candidate dictionary: all 105 products of one DME Re/Im entry with another, per energy
+  F00: in-sample R2(full 105-feature dict, rank 13)=1.0000 [SATURATED: rank = n_energies] | LOO R2(1 feat)=0.2699 (2 feat)=0.3440 | LOO2 perm-null mean=-1.009 95pct=-0.066 p=0.000 | best single: d[l3,m0].Re*d[l2,m1].Re r=0.109 R2=0.012 perm-p=0.920 (null95 max|r|=0.276)
+  F20: in-sample R2(full 105-feature dict, rank 13)=1.0000 [SATURATED: rank = n_energies] | LOO R2(1 feat)=-0.2817 (2 feat)=0.0671 | LOO2 perm-null mean=-1.108 95pct=-0.179 p=0.005 | best single: d[l2,m0].Re*d[l1,m1].Im r=0.142 R2=0.020 perm-p=0.770 (null95 max|r|=0.269)
+  F21: in-sample R2(full 105-feature dict, rank 13)=1.0000 [SATURATED: rank = n_energies] | LOO R2(1 feat)=-0.0877 (2 feat)=0.0349 | LOO2 perm-null mean=-1.018 95pct=-0.241 p=0.020 | best single: d[l3,m1].Im^2 r=-0.082 R2=0.007 perm-p=0.985 (null95 max|r|=0.286)
+  F22: in-sample R2(full 105-feature dict, rank 13)=1.0000 [SATURATED: rank = n_energies] | LOO R2(1 feat)=-0.0909 (2 feat)=-0.2003 | LOO2 perm-null mean=-1.368 95pct=0.051 p=0.090 | best single: d[l3,m0].Im^2 r=-0.095 R2=0.009 perm-p=0.975 (null95 max|r|=0.291)
+  F11: in-sample R2(full 105-feature dict, rank 13)=1.0000 [SATURATED: rank = n_energies] | LOO R2(1 feat)=-0.2637 (2 feat)=0.0880 | LOO2 perm-null mean=-1.154 95pct=-0.018 p=0.035 | best single: d[l3,m1].Re^2 r=0.015 R2=0.000 perm-p=1.000 (null95 max|r|=0.291)
+
+Baseline for (c): predicting a family with its 13-energy mean gives R2 = 0 by
+construction; the LOO numbers above are the honest generalisation estimate.
+The full-dictionary in-sample R2 is saturated (13 energies, rank-13 design) and is
+reported only to show that; the greedy-LOO R2 against its own permutation null is
+the load-bearing statistic.
+
+COMPETING BASELINE for (c): predict each family value at energy E by linear
+interpolation in photon energy from the other 12 energies (no DME at all).
+   F00: energy-only LOO R2=-0.0039 (perm-null mean=-0.323, 95pct=-0.084)   vs DME-dict 2-feature LOO R2=0.3440
+   F20: energy-only LOO R2=-0.0168 (perm-null mean=-0.309, 95pct=-0.082)   vs DME-dict 2-feature LOO R2=0.0671
+   F21: energy-only LOO R2=-0.1083 (perm-null mean=-0.336, 95pct=-0.107)   vs DME-dict 2-feature LOO R2=0.0349
+   F22: energy-only LOO R2=0.5156 (perm-null mean=-0.312, 95pct=-0.011)   vs DME-dict 2-feature LOO R2=-0.2003
+   F11: energy-only LOO R2=0.3026 (perm-null mean=-0.340, 95pct=-0.086)   vs DME-dict 2-feature LOO R2=0.0880
+
+------------------------------------------------------------------------------
+(d) ALTERNATIVE READING: order index 0..8 IS the Legendre degree
+    I(theta) = sum_k F_family(k) * P_k(cos theta), one family at a time
+------------------------------------------------------------------------------
+  F00: corr  mean=+0.909 min=+0.726 max=+0.986 | affineR2 mean=+0.833
+      per-energy affineR2: [0.767 0.846 0.628 0.527 0.853 0.961 0.952 0.972 0.965 0.917 0.869 0.84
+ 0.729]
+  F20: corr  mean=+0.967 min=+0.883 max=+0.992 | affineR2 mean=+0.936
+      per-energy affineR2: [0.946 0.966 0.78  0.929 0.985 0.957 0.931 0.966 0.982 0.972 0.959 0.932
+ 0.869]
+  F21: corr  mean=+0.460 min=-0.405 max=+0.974 | affineR2 mean=+0.446
+      per-energy affineR2: [0.916 0.83  0.209 0.447 0.438 0.065 0.164 0.015 0.008 0.244 0.686 0.828
+ 0.948]
+  F22: corr  mean=+0.531 min=-0.064 max=+0.897 | affineR2 mean=+0.364
+      per-energy affineR2: [0.561 0.433 0.038 0.004 0.055 0.102 0.154 0.216 0.43  0.533 0.649 0.746
+ 0.805]
+  F11: corr  mean=-0.496 min=-0.823 max=+0.115 | affineR2 mean=+0.369
+      per-energy affineR2: [0.013 0.007 0.009 0.069 0.427 0.579 0.677 0.625 0.547 0.464 0.385 0.426
+ 0.567]
+
+  upper bound for (d): 5 independent scales (one per family), per energy:
+      R2: [0.9721 0.9895 0.9878 0.8586 0.6988 0.7164 0.9085 0.976  0.9239 0.955
+ 0.9648 0.9684 0.9707]   mean=0.9147
+
+  reading C: c_k = F00(k)+F20(k)+F21(k)+F22(k)+F11(k), I = sum_k c_k P_k:
+      affineR2: [0.7571 0.8238 0.4943 0.1804 0.5231 0.7329 0.8116 0.8695 0.962  0.9569
+ 0.9713 0.9593 0.9564]  mean=0.7691
+  reading C2: c_k = F00(k)+F20(k) only:
+      affineR2: [0.9212 0.9737 0.8235 0.9579 0.9696 0.9689 0.9413 0.9722 0.9808 0.9656
+ 0.9423 0.9401 0.9365]  mean=0.9457
+
+  family-subset comparison, each with a free scale+offset (2 params):
+     F00 only       mean affineR2=0.8329  min=0.5273  max=0.9717
+     F20 only       mean affineR2=0.9364  min=0.7801  max=0.9849
+     F21 only       mean affineR2=0.4460  min=0.0085  max=0.9480
+     F22 only       mean affineR2=0.3636  min=0.0041  max=0.8051
+     F11 only       mean affineR2=0.3688  min=0.0071  max=0.6772
+     F00+F20        mean affineR2=0.9457  min=0.8235  max=0.9808
+     F00+F20+F21    mean affineR2=0.9451  min=0.7948  max=0.9840
+     all5           mean affineR2=0.7691  min=0.1804  max=0.9713
+
+  corr(F00 column+F20 column, dense panel's own Legendre coeff vector) per energy:
+     [0.932 0.924 0.862 0.94  0.935 0.881 0.858 0.908 0.895 0.905 0.929 0.922
+ 0.896]  mean=0.9067
+
+------------------------------------------------------------------------------
+(e) ROBUSTNESS: restrict to the energies exactly on the dense 0.1 eV grid
+------------------------------------------------------------------------------
+on-grid energies: [22.5, 24.8, 27.9, 31.0, 34.1, 37.2, 48.4]
+off-grid energies: [23.25, 26.35, 29.45, 32.55, 35.65, 38.75]
+
+reading-B affine R2, all 13 energies vs the 7 on-grid energies only:
+   CS0_norm0_sq20   all13=0.8512   on_grid7=0.8422
+   CS0_norm0_sq21   all13=0.7778   on_grid7=0.7709
+   CS0_norm1_sq20   all13=0.9307   on_grid7=0.9233
+   CS0_norm1_sq21   all13=0.9260   on_grid7=0.9193
+   CS1_norm0_sq20   all13=0.8561   on_grid7=0.8638
+   CS1_norm0_sq21   all13=0.8039   on_grid7=0.8189
+   CS1_norm1_sq20   all13=0.9078   on_grid7=0.9084
+   CS1_norm1_sq21   all13=0.8972   on_grid7=0.9005
+
+reading-A affine R2, all 13 energies vs the 7 on-grid energies only:
+   CS0_norm0_sq20   all13=0.1983   on_grid7=0.1993
+   CS0_norm0_sq21   all13=0.2417   on_grid7=0.2462
+   CS0_norm1_sq20   all13=0.1433   on_grid7=0.1582
+   CS0_norm1_sq21   all13=0.1269   on_grid7=0.1106
+   CS1_norm0_sq20   all13=0.2469   on_grid7=0.2603
+   CS1_norm0_sq21   all13=0.2456   on_grid7=0.2594
+   CS1_norm1_sq20   all13=0.2517   on_grid7=0.2597
+   CS1_norm1_sq21   all13=0.2546   on_grid7=0.2628
+
+(c) robustness on the 7 on-grid energies: greedy 1-2 feature LOO
+   F00: on-grid7 LOO R2 1feat=0.1920 2feat=-0.6865 | perm-null mean=-27.793 95pct=-0.569 p=0.065
+   F20: on-grid7 LOO R2 1feat=-0.5372 2feat=-0.5376 | perm-null mean=-23.557 95pct=-0.590 p=0.045
+   F21: on-grid7 LOO R2 1feat=-2.7227 2feat=-2.9111 | perm-null mean=-24.787 95pct=-0.726 p=0.410
+   F22: on-grid7 LOO R2 1feat=-7.3903 2feat=-7.6129 | perm-null mean=-32.346 95pct=-0.447 p=0.765
+   F11: on-grid7 LOO R2 1feat=-13.4055 2feat=-11.1393 | perm-null mean=-19.725 95pct=-0.539 p=0.880
+
+Leave-one-out stability of the reading-B affine R2 (best convention CS0_norm1_sq20):
+   drop E= 22.50 -> mean affineR2 = 0.9316
+   drop E= 23.25 -> mean affineR2 = 0.9266
+   drop E= 24.80 -> mean affineR2 = 0.9345
+   drop E= 26.35 -> mean affineR2 = 0.9333
+   drop E= 27.90 -> mean affineR2 = 0.9307
+   drop E= 29.45 -> mean affineR2 = 0.9321
+   drop E= 31.00 -> mean affineR2 = 0.9332
+   drop E= 32.55 -> mean affineR2 = 0.9283
+   drop E= 34.10 -> mean affineR2 = 0.9277
+   drop E= 35.65 -> mean affineR2 = 0.9281
+   drop E= 37.20 -> mean affineR2 = 0.9291
+   drop E= 38.75 -> mean affineR2 = 0.9311
+   drop E= 48.40 -> mean affineR2 = 0.9321
+   spread = 0.0079
+
+------------------------------------------------------------------------------
+(f) WRITING SUMMARY TABLE -> /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p5_coefleg_summary.csv
+------------------------------------------------------------------------------
+wrote 65 rows
+
+wrote figure /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p5_coefleg.png
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p5_coefleg.json
+runtime 491.3 s
+==============================================================================

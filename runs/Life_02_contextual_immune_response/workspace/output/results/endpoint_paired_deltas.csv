@@ -1,0 +1,10 @@
+assay_id,compartment_id,fc_count,fc_fraction,delta_log2fc_count_minus_fraction
+assay_1,compartment_1,2.14067,1.90777,0.166176
+assay_1,compartment_2,1.71773,1.5682,0.131389
+assay_1,compartment_3,1.53689,1.65595,-0.107651
+assay_2,compartment_1,1.9836,1.82842,0.117524
+assay_2,compartment_2,1.55152,1.49954,0.0491638
+assay_2,compartment_3,1.55871,1.3824,0.173177
+assay_3,compartment_1,2.53122,2.00398,0.336966
+assay_3,compartment_2,2.3427,2.00874,0.221884
+assay_3,compartment_3,2.00569,2.14069,-0.0939765

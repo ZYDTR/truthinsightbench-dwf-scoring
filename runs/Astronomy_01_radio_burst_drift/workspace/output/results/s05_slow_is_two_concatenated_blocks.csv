@@ -1,0 +1,7 @@
+population_series_id,n_slow_bins,single_negative_jump,first_block_bins,first_block_events,second_block_bins,second_block_events
+population_series_1,137,True,29,790.0,108,102.0
+population_series_2,131,True,29,1126.0,102,177.0
+population_series_3,139,True,24,580.0,115,223.0
+population_series_4,132,True,17,155.0,115,237.0
+population_series_5,127,True,26,601.0,101,491.0
+population_series_6,136,True,28,1680.0,108,521.0

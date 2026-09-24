@@ -1,0 +1,262 @@
+==============================================================================
+PART A  descriptive facts
+==============================================================================
+  n_rows                                               = 621
+  n_rows_absdiff_gt_0                                  = 52
+  n_rows_absdiff_gt_1e_9                               = 52
+  n_rows_absdiff_gt_0p005                              = 52
+  n_rows_absdiff_exactly_0                             = 569
+  n_rows_absdiff_in_open_0_0p005                       = 0
+  differing_rows_equal_the_set_depth_le_0p55m          = True
+  diff_rows_depth_min_m                                = 0.03
+  diff_rows_depth_max_m                                = 0.55
+  max_abs_diff_ka                                      = 1.629999999999999
+  max_abs_diff_depth_m                                 = 0.31
+  max_abs_diff_signed_ka                               = -1.629999999999999
+  max_abs_diff_deeper_than_0p55m_ka                    = 0.0
+  n_rows_deeper_than_0p55m                             = 569
+  n_agree_rows                                         = 569
+  frac_rows_differing                                  = 0.08373590982286634
+  frac_depth_span_top_0p55m                            = 0.08771929824561404
+  frac_age_span_top_interval_age1                      = 0.08394590651478592
+  age1_span_ka                                         = 356.42
+  age2_span_ka                                         = 357.2
+  age_span_rel_diff                                    = 0.0021884293810672034
+  top_of_core_age1_ka                                  = 2.76
+  top_of_core_age2_ka                                  = 1.98
+  top_of_core_offset_ka                                = 0.7799999999999998
+  top_interval_age_span_age1_ka                        = 29.92
+  top_interval_age_span_age2_ka                        = 30.599999999999998
+  max_abs_diff_as_pct_of_record_span                   = 0.4573256270691877
+  max_abs_diff_in_median_age_steps                     = 3.5434782608695627
+
+==============================================================================
+PART B  record-wide fits
+==============================================================================
+  age1_period_ka                                       = 108.82750000000227
+  age1_r2_full                                         = 0.42734753690254035
+  age1_amp                                             = 0.3854404721778206
+  age1_phase_deg                                       = 96.43851610604248
+  age2_period_ka                                       = 108.79750000000213
+  age2_r2_full                                         = 0.43196586049219177
+  age2_amp                                             = 0.3872082096876409
+  age2_phase_deg                                       = 96.44034793441544
+  rows_where_coords_agree_period_ka                    = 104.47250000000177
+  rows_where_coords_agree_r2_full                      = 0.4998684522976409
+  rows_where_coords_agree_amp                          = 0.3944491513674798
+  rows_where_coords_agree_phase_deg                    = 141.02580028211352
+  top52_age1_period_ka                                 = 39.6
+  top52_age1_r2_full                                   = 0.880514408817976
+  top52_age1_amp                                       = 0.6167443468496604
+  top52_age1_phase_deg                                 = -52.26735739935869
+  top52_age2_period_ka                                 = 300.3919999999813
+  top52_age2_r2_full                                   = 0.8795892214727734
+  top52_age2_amp                                       = 4807.647897217848
+  top52_age2_phase_deg                                 = -98.00709773964306
+  n_complete_rows                                      = 593
+  n_rows_where_coords_agree                            = 569
+  n_agree_and_complete                                 = 541
+  t_span_complete_rows_ka                              = 356.42
+  period_resolution_rayleigh_P2_over_T_ka              = 33.22884449876689
+  one_over_T_per_ka                                    = 0.002805678693676
+  period_shift_age1_vs_age2_ka                         = 0.030000000000143245
+  period_shift_age1_vs_age2_in_rayleigh                = 0.0009028300698586295
+  period_shift_age1_vs_age2_pct                        = 0.027566561760715463
+  period_shift_age1_vs_agree_rows_ka                   = 4.355000000000501
+  period_shift_age1_vs_agree_rows_in_rayleigh          = 0.13106083180720032
+  r2_shift_age1_vs_age2                                = 0.0046183235896514185
+  amp_shift_age1_vs_age2                               = 0.0017677375098202885
+  amp_rel_shift_age1_vs_age2                           = 0.004586278913141103
+  phase_shift_age1_vs_age2_deg                         = 0.0018318283729613478
+  full_record_corr_age1                                = -0.014261269871115721
+  full_record_corr_age2                                = -0.014012256605293684
+  top52_corr_age1                                      = 0.7471429489786702
+  top52_corr_age2                                      = 0.77339236098866
+  fit_fast_vs_exact_period_error_ka                    = 0.0002816707985857647
+  full_record_corr_abs_shift                           = 0.0002490132658220373
+  top52_corr_abs_shift                                 = 0.02624941200998987
+  depth_domain_best_r2_same_grid                       = {'grid_m': [0.5, 40.0], 'max_r2': 0.4468234789082841, 'at_period_m': 1.9000000000000012, 'note': "depth-domain scan is a conditioning contrast only; it is not the task's age-domain target"}
+  age_resampled_uniform_400pt_series                   = {'corr_between_the_two_resampled_series': 0.9934800439853559, 'max_abs_dR2': 0.004342561439396153, 'best_period_age1_resampled_ka': 109.5, 'best_period_age2_resampled_ka': 109.5}
+
+  broadband worst case: {
+    "grid_ka": [
+        5.0,
+        400.0
+    ],
+    "step_ka": 0.5,
+    "global_max_abs_dR2": 0.006450048088497584,
+    "global_max_abs_dR2_period_ka": 26.0,
+    "r2_at_that_period_age1": 0.04543663742079851,
+    "global_max_rel_amp_change": 1.9751737709832837,
+    "global_max_rel_amp_period_ka": 9.5,
+    "r2_at_max_rel_amp_period_age1": 0.0015785927502730557,
+    "global_max_abs_dphase_deg": 41.75108149170102,
+    "global_max_dphase_period_ka": 5.5,
+    "r2_at_max_dphase_period_age1": 0.0012128971059960358,
+    "bands": {
+        "r2_ge_0.00": {
+            "n_grid_pts": 791,
+            "period_lo_ka": 5.0,
+            "period_hi_ka": 400.0,
+            "max_abs_dR2": 0.006450048088497584,
+            "max_rel_amp_change": 1.9751737709832837,
+            "max_rel_amp_change_period_ka": 9.5,
+            "r2_at_that_period_age1": 0.0015785927502730557,
+            "max_abs_dphase_deg": 41.75108149170102,
+            "max_dphase_period_ka": 5.5
+        },
+        "r2_ge_0.05": {
+            "n_grid_pts": 689,
+            "period_lo_ka": 22.5,
+            "period_hi_ka": 400.0,
+            "max_abs_dR2": 0.0053002021580217384,
+            "max_rel_amp_change": 0.05379556941154435,
+            "max_rel_amp_change_period_ka": 45.0,
+            "r2_at_that_period_age1": 0.05137053593468821,
+            "max_abs_dphase_deg": 2.697380618453801,
+            "max_dphase_period_ka": 45.0
+        },
+        "r2_ge_0.10": {
+            "n_grid_pts": 298,
+            "period_lo_ka": 23.0,
+            "period_hi_ka": 264.0,
+            "max_abs_dR2": 0.0053002021580217384,
+            "max_rel_amp_change": 0.02742798489994776,
+            "max_rel_amp_change_period_ka": 29.0,
+            "r2_at_that_period_age1": 0.12123742508904678,
+            "max_abs_dphase_deg": 1.368365561845368,
+            "max_dphase_period_ka": 223.5
+        },
+        "r2_ge_0.20": {
+            "n_grid_pts": 195,
+            "period_lo_ka": 40.0,
+            "period_hi_ka": 247.0,
+            "max_abs_dR2": 0.004708891162929607,
+            "max_rel_amp_change": 0.020825152496567117,
+            "max_rel_amp_change_period_ka": 214.5,
+            "r2_at_that_period_age1": 0.409466756748319,
+            "max_abs_dphase_deg": 1.368365561845368,
+            "max_dphase_period_ka": 223.5
+        },
+        "r2_ge_0.30": {
+            "n_grid_pts": 113,
+            "period_lo_ka": 100.0,
+            "period_hi_ka": 236.0,
+            "max_abs_dR2": 0.004708891162929607,
+            "max_rel_amp_change": 0.020825152496567117,
+            "max_rel_amp_change_period_ka": 214.5,
+            "r2_at_that_period_age1": 0.409466756748319,
+            "max_abs_dphase_deg": 1.368365561845368,
+            "max_dphase_period_ka": 223.5
+        }
+    }
+}
+
+  lambda scan (age = age2 + lam*(age1-age2)):
+     lam  max top disc ka   period ka        r2  dP vs age1 ka  /Rayleigh
+    0.00            0.000    108.7975    0.4320         0.0300     0.0009
+    0.50            0.815    108.8135    0.4297         0.0140     0.0004
+    1.00            1.630    108.8275    0.4273         0.0000     0.0000
+    1.50            2.445    108.8385    0.4249         0.0110     0.0003
+    2.00            3.260    108.8470    0.4225         0.0195     0.0006
+    3.00            4.890    108.8530    0.4174         0.0255     0.0008
+    5.00            8.150    108.8065    0.4070         0.0210     0.0006
+    8.00           13.040    108.4935    0.3924         0.3340     0.0101
+   11.00           17.930    214.3365    0.3848       105.5090     3.1752
+   12.00           19.560    213.8045    0.3836       104.9770     3.1592
+   20.00           32.600    104.8130    0.3928         4.0145     0.1208
+   40.00           65.200    209.0315    0.4281       100.2040     3.0156
+   80.00          130.400    209.9110    0.3868       101.0835     3.0420
+  smallest lam with period shift > 1 Rayleigh: 11.0
+
+  top-52 monotone warp:
+    amp ka  det(exact)   med rand        q90        max   med/Ray  frac>Ray
+      0.00      0.0300     0.0301     0.0301     0.0301    0.0009     0.000
+      0.50      0.0795     0.0188     0.0796     0.0796    0.0006     0.000
+      1.00      0.1295     0.0673     0.1295     0.1295    0.0020     0.000
+      1.63      0.1930     0.1928     0.1928     0.1928    0.0058     0.000
+      3.00      0.3325     0.2946     0.3324     0.3324    0.0089     0.000
+      6.00      0.6485     0.5889     0.6484     0.6484    0.0177     0.000
+     12.00      1.3085     1.3073     1.3073     1.3073    0.0393     0.000
+     25.00      2.6215     2.0436     2.6200     2.6200    0.0615     0.000
+     50.00      2.0825    58.0212   113.9606   113.9606    1.7461     0.500
+     90.00      3.0780    91.0696    91.0696    91.0696    2.7407     0.530
+    150.00      5.8565     5.8533   101.5172   101.5172    0.1762     0.430
+    250.00      5.1945   102.7999   102.7999   102.7999    3.0937     0.570
+    500.00    101.9605   101.9609   101.9609   101.9609    3.0684     0.510
+  smallest amp with deterministic (exact-fit) shift > Rayleigh: 500.0
+  smallest amp with median random shift > Rayleigh: 50.0
+  shipped max top-52 discrepancy: 1.630 ka
+
+  block-bootstrap null for the dominant peak: {
+    "n_iter": 200,
+    "block_rows": 60,
+    "observed_max_r2_age1": 0.4272698533518944,
+    "observed_max_r2_age2": 0.4318565951387946,
+    "null_max_r2_age1_q95": 0.6544030685931994,
+    "null_max_r2_age2_q95": 0.6559709152965663,
+    "p_value_age1": 0.915,
+    "p_value_age2": 0.9,
+    "p_value_abs_difference": 0.015000000000000013,
+    "age1_vs_age2_period_diff_median_ka": 0.05569690877951672,
+    "age1_vs_age2_period_diff_q95_ka": 0.3918456659557929,
+    "observed_period_diff_ka": 0.030000000000143245,
+    "observed_period_diff_percentile": 0.405
+}
+
+  adversarial coordinates:
+    age1_shipped                       P= 108.8275 R2=0.4273 amp=0.3854 dP=   0.0000 ka ( 0.000 Rayleigh)
+    age2_shipped                       P= 108.7975 R2=0.4320 amp=0.3872 dP=   0.0300 ka ( 0.001 Rayleigh)
+    uniform_rate_age2_span             P= 107.0090 R2=0.4505 amp=0.3747 dP=   1.8185 ka ( 0.055 Rayleigh)
+    uniform_rate_age1_span             P= 106.7750 R2=0.4505 amp=0.3747 dP=   2.0525 ka ( 0.062 Rayleigh)
+    age2_translated_to_age1_top        P= 108.7975 R2=0.4320 amp=0.3872 dP=   0.0300 ka ( 0.001 Rayleigh)
+
+==============================================================================
+PART H  sedimentation rate / axis spacing
+==============================================================================
+  max_lsr_age1_m_per_ka                                = 0.05000000000000455
+  max_lsr_age2_m_per_ka                                = 0.05000000000000455
+  argmax_lsr_idx_age1                                  = 413
+  argmax_lsr_idx_age2                                  = 413
+  argmax_lsr_row_identical                             = True
+  max_lsr_rows_identical                               = True
+  argmax_lsr_depth_m                                   = 4.23
+  argmax_lsr_age_ka                                    = 241.07
+  min_lsr_row_identical                                = True
+  max_abs_lsr_diff_m_per_ka                            = 0.013497652582159726
+  max_abs_lsr_diff_below_0p55m_m_per_ka                = 0.0005602868668758334
+  mean_lsr_age1_m_per_ka                               = 0.01759160540934852
+  mean_lsr_age2_m_per_ka                               = 0.017553191489361703
+  median_age_step_age1_ka                              = 0.45999999999997954
+  median_age_step_age2_ka                              = 0.45999999999997954
+  max_age_step_age1_ka                                 = 3.030000000000001
+  max_age_step_age2_ka                                 = 3.030000000000001
+  median_depth_step_m                                  = 0.010000000000000009
+  mean_lsr_rel_diff                                    = 0.0021836506159013222
+  median_age_step_rel_diff                             = 0.0
+
+==============================================================================
+PER-METRIC MOVES UNDER SHIPPED PAIR
+==============================================================================
+  period_gt_rayleigh                                   = False
+  r2_gt_0p01                                           = False
+  amp_rel_gt_5pct                                      = False
+  phase_gt_5deg                                        = False
+  full_corr_gt_0p01                                    = False
+  uniform_coord_period_gt_rayleigh                     = False
+  translated_age2_period_gt_rayleigh                   = False
+  resampled_series_best_period_moves                   = False
+  block_null_pvalue_diff_gt_0p05                       = False
+
+==============================================================================
+VERDICT INPUTS
+==============================================================================
+  descriptive_facts_reproduced                         = True
+  any_record_wide_scientific_metric_moves              = False
+  lam_needed_for_rayleigh_period_shift                 = 11.0
+  top52_amp_needed_for_rayleigh_shift_exact            = 500.0
+  top52_amp_needed_for_rayleigh_shift_random_median    = 50.0
+  shipped_max_top52_discrepancy_ka                     = 1.629999999999999
+  period_resolution_rayleigh_ka                        = 33.22884449876689
+
+wrote /data/user/conversations/conv-715fe573-e9f2-40bc-ac27-f8ef02db9d25/project/output/results/verify_C4.json

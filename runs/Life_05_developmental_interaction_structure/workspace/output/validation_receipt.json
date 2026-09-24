@@ -1,0 +1,421 @@
+{
+  "schema": "truthinsightbench-semantic-output-validation",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "output": "/data/user/conversations/conv-9877e7dd-aaaa-49c9-a430-e071a69303ee/project/output",
+  "authoritative_report": {
+    "path": "Result.md",
+    "bytes": 29775,
+    "sha256": "a2cb0008553d647a091615b8ab474710ae517f1f150cd55b45bd1b4e5b12f94f"
+  },
+  "registered_findings": {
+    "count": 5,
+    "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "markers": [
+      {
+        "finding_number": 1,
+        "line": 69,
+        "marker": "## Finding 1 — Interaction strength rises across ordered stages, and the trend transports to held-out families",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 2,
+        "line": 141,
+        "marker": "## Finding 2 — Interaction identity, not stage, carries most of the structure",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 3,
+        "line": 204,
+        "marker": "## Finding 3 — The association-evidence column is a coarse floor/non-floor tier, not a graded strength readout (null / boundary result)",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 4,
+        "line": 265,
+        "marker": "## Finding 4 — A large share of individual units is transient, and the stage trend's transport is heterogeneous across families (conditional conflict / applicability boundary)",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 5,
+        "line": 332,
+        "marker": "## Finding 5 — The evidence verdict is labile for the same unit across stages, even where strength is stable",
+        "heading_level": 2
+      }
+    ],
+    "traceability": [
+      {
+        "finding_number": 1,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/02_stage_trend.py",
+          "analysis/04_trajectories_holdout.py",
+          "analysis/05_structure_decomposition.py",
+          "analysis/12_robustness_variants.py",
+          "analysis/13_holdout_replication.py"
+        ],
+        "result_evidence": [
+          "figures/F1_stage_trend_and_distribution.png",
+          "figures/F4_holdout_transport.png",
+          "results/holdout_replication.json",
+          "results/stage_trend.json",
+          "results/structure_decomposition.json",
+          "results/trajectories_holdout.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 2,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/01_data_audit.py",
+          "analysis/05_structure_decomposition.py",
+          "analysis/10_block_structure.py"
+        ],
+        "result_evidence": [
+          "figures/F1_stage_trend_and_distribution.png",
+          "results/block_structure.json",
+          "results/data_audit.json",
+          "results/structure_decomposition.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 3,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/03_evidence_coupling.py",
+          "analysis/11_evidence_tier.py"
+        ],
+        "result_evidence": [
+          "figures/F2_evidence_tier.png",
+          "results/evidence_coupling.json",
+          "results/evidence_tier.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 4,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/04_trajectories_holdout.py",
+          "analysis/05_structure_decomposition.py"
+        ],
+        "result_evidence": [
+          "figures/F3_trajectory_taxonomy.png",
+          "figures/F4_holdout_transport.png",
+          "results/family_holdout_annotated.tsv",
+          "results/stage_trend.json",
+          "results/structure_decomposition.json",
+          "results/trajectories_holdout.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 5,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/03_evidence_coupling.py",
+          "analysis/11_evidence_tier.py"
+        ],
+        "result_evidence": [
+          "figures/F2_evidence_tier.png",
+          "results/evidence_coupling.json",
+          "results/evidence_tier.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      }
+    ]
+  },
+  "reproduction": {
+    "mode": "companion_markdown",
+    "document": {
+      "path": "reproduce.md",
+      "bytes": 10166,
+      "sha256": "4e159556d3d60a7efa57ec13d82c6ae49770e4a869f721788440291c6d876acf"
+    }
+  },
+  "analysis_sources": [
+    {
+      "path": "analysis/01_data_audit.py",
+      "bytes": 6835,
+      "sha256": "e73a5d0e6fb5d8d12cc997c03fd95df62f49adbe64e207c64829e40e9735392b"
+    },
+    {
+      "path": "analysis/02_stage_trend.py",
+      "bytes": 7753,
+      "sha256": "a6072e96f34043656d4704d13bb217c19456942f5df4b0053282a1371fb42e29"
+    },
+    {
+      "path": "analysis/03_evidence_coupling.py",
+      "bytes": 6952,
+      "sha256": "b0c22ab01a3762dfc111fcf26704fec70723d1ec8b652d7fbe91e0a8502c2284"
+    },
+    {
+      "path": "analysis/04_trajectories_holdout.py",
+      "bytes": 8992,
+      "sha256": "84997bbcd5b4f79f6d025af8ec295d1ad129a5b486ee2819deb21661a2555393"
+    },
+    {
+      "path": "analysis/05_structure_decomposition.py",
+      "bytes": 9449,
+      "sha256": "97b2cd169f725f31da16ed3faef2c72423101ecdce6aeb1325fd828f6f1fcf61"
+    },
+    {
+      "path": "analysis/06_figures.py",
+      "bytes": 6778,
+      "sha256": "16cc242ac7491ddfa9b598bea853c23b1cf31fb9a488134291262fa3604a3c1c"
+    },
+    {
+      "path": "analysis/10_block_structure.py",
+      "bytes": 30525,
+      "sha256": "67d05f5dcf1f0c5b7a6e2e9b6bb6c1b5209e65ff5a4e32abc0ab21304b1a4682"
+    },
+    {
+      "path": "analysis/11_evidence_tier.py",
+      "bytes": 45155,
+      "sha256": "c16260d15a92d08ca14dcc6fa34792eb3b2e2cfd1b9dfe19c6ed2ebec2abe0c7"
+    },
+    {
+      "path": "analysis/12_robustness_variants.py",
+      "bytes": 25813,
+      "sha256": "00cfa039858c1c9d532c90a55238ec3aeef176f76dc2a6da83dd4887ebd772a8"
+    },
+    {
+      "path": "analysis/13_holdout_replication.py",
+      "bytes": 22926,
+      "sha256": "6ba6f0d39c92a63da4498df829d051e6558c4eb9a0472a2b355e20e74c408d5c"
+    },
+    {
+      "path": "analysis/independent_rederr.py",
+      "bytes": 20603,
+      "sha256": "0877e250d5bc0e21de806b48ff254ecd72d3bf188f654e67a07c2a316b13d78d"
+    }
+  ],
+  "executed_notebooks": [],
+  "result_artifacts": [
+    {
+      "path": "figures/F1_stage_trend_and_distribution.png",
+      "bytes": 165680,
+      "sha256": "a1eabb6e3d7cf0f3a39b3d564b78fc63e62815b11247f6582e9106d72e4fe507"
+    },
+    {
+      "path": "figures/F2_evidence_tier.png",
+      "bytes": 139022,
+      "sha256": "cf163bd000753f69a1a75816cdb9daedc544f5d30669f20cc4c241343bd3b68e"
+    },
+    {
+      "path": "figures/F3_trajectory_taxonomy.png",
+      "bytes": 151123,
+      "sha256": "2540e97cd1c9cf0d31f13b2d7d1d0d0899218858312c4407a00fb19a21c20882"
+    },
+    {
+      "path": "figures/F4_holdout_transport.png",
+      "bytes": 134233,
+      "sha256": "eef190d8c303783a7ab0d87250fa4d53e1e5183ba087d5e28a8b404ff87deaef"
+    },
+    {
+      "path": "results/analysis_table.tsv",
+      "bytes": 538660,
+      "sha256": "86854e34cb9a881cefe452dbbb1ea20d843c828da70ed42834eb38bac12debb6"
+    },
+    {
+      "path": "results/block_structure.json",
+      "bytes": 14013,
+      "sha256": "772eccede853934b7fa0db7c164119f450a78194709e5a29c609df43cdf00b31"
+    },
+    {
+      "path": "results/data_audit.json",
+      "bytes": 2721,
+      "sha256": "950ba2d1c12dee3e211700cadfc1c9dd27772371ea913efe2a7976e8960ed7a3"
+    },
+    {
+      "path": "results/evidence_audit.json",
+      "bytes": 35323,
+      "sha256": "a511f4d2c8ce7b9d430b531b7dfea234b5159ce8e16bd264265ecbd81f7aee59"
+    },
+    {
+      "path": "results/evidence_coupling.json",
+      "bytes": 2504,
+      "sha256": "c1925ea83f98fffbd1ee1aec8c16fa191a1c47b929c669ab04ede8492101f9d7"
+    },
+    {
+      "path": "results/evidence_tier.json",
+      "bytes": 29693,
+      "sha256": "b19d15250ab84010604740971c84b33ed8093a92158400f954a5e74f3440bdc9"
+    },
+    {
+      "path": "results/family_holdout_annotated.tsv",
+      "bytes": 9759,
+      "sha256": "253638c61c3547794cb1b80a4f713e2f0a39dde25ac43f94c6f62275212fe538"
+    },
+    {
+      "path": "results/family_holdout_per_family.tsv",
+      "bytes": 13685,
+      "sha256": "1d365749bfe0b72ff77dbb6d63dd03b80a681101583ccb06abf91fba6224e5e5"
+    },
+    {
+      "path": "results/holdout_replication.json",
+      "bytes": 109654,
+      "sha256": "c7ab40f66c2a0c053b637efa7f2e892371e22e1fc1eb2f21bbb98233008f3958"
+    },
+    {
+      "path": "results/independent_rederr.json",
+      "bytes": 6385,
+      "sha256": "b30787607e6935879ab0bec5f43e68a9a11c319abfbfe34b89330e8a8fb10090"
+    },
+    {
+      "path": "results/robustness_variants.json",
+      "bytes": 30686,
+      "sha256": "a617a94a432fd28867c7cd904c30ea5ff6d11c4bee0bf88647872f4be27dc0a9"
+    },
+    {
+      "path": "results/stage_delta_offsets.tsv",
+      "bytes": 445,
+      "sha256": "cfbdc04f0978bd0d70c31c3ed105929ab404e190737bbc104712101f3a2bcfb0"
+    },
+    {
+      "path": "results/stage_trend.json",
+      "bytes": 3991,
+      "sha256": "74b64881d0c1422950eb741eb08063c111bc39cc4bb3477441b04a20d81b766b"
+    },
+    {
+      "path": "results/structure_decomposition.json",
+      "bytes": 2885,
+      "sha256": "c7085e8f702d2c5b7e55102dd47d0a3db543caf45189a6762e15d71a25de72a2"
+    },
+    {
+      "path": "results/trajectories_holdout.json",
+      "bytes": 4857,
+      "sha256": "fdf74c8f275c3b76c69a67e040ff3c8ce8ad6a326b30a1d98d9051dd40fd46c4"
+    }
+  ],
+  "native_evidence_registry": {
+    "sources": [],
+    "resolved_ids": {}
+  },
+  "resolved_support_files": [
+    {
+      "path": "analysis/01_data_audit.py",
+      "bytes": 6835,
+      "sha256": "e73a5d0e6fb5d8d12cc997c03fd95df62f49adbe64e207c64829e40e9735392b"
+    },
+    {
+      "path": "analysis/02_stage_trend.py",
+      "bytes": 7753,
+      "sha256": "a6072e96f34043656d4704d13bb217c19456942f5df4b0053282a1371fb42e29"
+    },
+    {
+      "path": "analysis/03_evidence_coupling.py",
+      "bytes": 6952,
+      "sha256": "b0c22ab01a3762dfc111fcf26704fec70723d1ec8b652d7fbe91e0a8502c2284"
+    },
+    {
+      "path": "analysis/04_trajectories_holdout.py",
+      "bytes": 8992,
+      "sha256": "84997bbcd5b4f79f6d025af8ec295d1ad129a5b486ee2819deb21661a2555393"
+    },
+    {
+      "path": "analysis/05_structure_decomposition.py",
+      "bytes": 9449,
+      "sha256": "97b2cd169f725f31da16ed3faef2c72423101ecdce6aeb1325fd828f6f1fcf61"
+    },
+    {
+      "path": "analysis/10_block_structure.py",
+      "bytes": 30525,
+      "sha256": "67d05f5dcf1f0c5b7a6e2e9b6bb6c1b5209e65ff5a4e32abc0ab21304b1a4682"
+    },
+    {
+      "path": "analysis/11_evidence_tier.py",
+      "bytes": 45155,
+      "sha256": "c16260d15a92d08ca14dcc6fa34792eb3b2e2cfd1b9dfe19c6ed2ebec2abe0c7"
+    },
+    {
+      "path": "analysis/12_robustness_variants.py",
+      "bytes": 25813,
+      "sha256": "00cfa039858c1c9d532c90a55238ec3aeef176f76dc2a6da83dd4887ebd772a8"
+    },
+    {
+      "path": "analysis/13_holdout_replication.py",
+      "bytes": 22926,
+      "sha256": "6ba6f0d39c92a63da4498df829d051e6558c4eb9a0472a2b355e20e74c408d5c"
+    },
+    {
+      "path": "figures/F1_stage_trend_and_distribution.png",
+      "bytes": 165680,
+      "sha256": "a1eabb6e3d7cf0f3a39b3d564b78fc63e62815b11247f6582e9106d72e4fe507"
+    },
+    {
+      "path": "figures/F2_evidence_tier.png",
+      "bytes": 139022,
+      "sha256": "cf163bd000753f69a1a75816cdb9daedc544f5d30669f20cc4c241343bd3b68e"
+    },
+    {
+      "path": "figures/F3_trajectory_taxonomy.png",
+      "bytes": 151123,
+      "sha256": "2540e97cd1c9cf0d31f13b2d7d1d0d0899218858312c4407a00fb19a21c20882"
+    },
+    {
+      "path": "figures/F4_holdout_transport.png",
+      "bytes": 134233,
+      "sha256": "eef190d8c303783a7ab0d87250fa4d53e1e5183ba087d5e28a8b404ff87deaef"
+    },
+    {
+      "path": "results/block_structure.json",
+      "bytes": 14013,
+      "sha256": "772eccede853934b7fa0db7c164119f450a78194709e5a29c609df43cdf00b31"
+    },
+    {
+      "path": "results/data_audit.json",
+      "bytes": 2721,
+      "sha256": "950ba2d1c12dee3e211700cadfc1c9dd27772371ea913efe2a7976e8960ed7a3"
+    },
+    {
+      "path": "results/evidence_coupling.json",
+      "bytes": 2504,
+      "sha256": "c1925ea83f98fffbd1ee1aec8c16fa191a1c47b929c669ab04ede8492101f9d7"
+    },
+    {
+      "path": "results/evidence_tier.json",
+      "bytes": 29693,
+      "sha256": "b19d15250ab84010604740971c84b33ed8093a92158400f954a5e74f3440bdc9"
+    },
+    {
+      "path": "results/family_holdout_annotated.tsv",
+      "bytes": 9759,
+      "sha256": "253638c61c3547794cb1b80a4f713e2f0a39dde25ac43f94c6f62275212fe538"
+    },
+    {
+      "path": "results/holdout_replication.json",
+      "bytes": 109654,
+      "sha256": "c7ab40f66c2a0c053b637efa7f2e892371e22e1fc1eb2f21bbb98233008f3958"
+    },
+    {
+      "path": "results/stage_trend.json",
+      "bytes": 3991,
+      "sha256": "74b64881d0c1422950eb741eb08063c111bc39cc4bb3477441b04a20d81b766b"
+    },
+    {
+      "path": "results/structure_decomposition.json",
+      "bytes": 2885,
+      "sha256": "c7085e8f702d2c5b7e55102dd47d0a3db543caf45189a6762e15d71a25de72a2"
+    },
+    {
+      "path": "results/trajectories_holdout.json",
+      "bytes": 4857,
+      "sha256": "fdf74c8f275c3b76c69a67e040ff3c8ce8ad6a326b30a1d98d9051dd40fd46c4"
+    }
+  ]
+}

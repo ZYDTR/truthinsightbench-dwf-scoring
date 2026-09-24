@@ -1,0 +1,208 @@
+{
+  "partA_taxonomy": {
+    "n_units_taxonomised": 579,
+    "min_stages_required": 3,
+    "slope_threshold": 0.15,
+    "flat_sd_threshold": 0.5,
+    "class_counts": {
+      "persistent_level": 239,
+      "transient_sign_reversing": 210,
+      "unresolved_flat": 66,
+      "emerging": 49,
+      "declining": 15
+    },
+    "class_shares": {
+      "persistent_level": 0.4128,
+      "transient_sign_reversing": 0.3627,
+      "unresolved_flat": 0.114,
+      "emerging": 0.0846,
+      "declining": 0.0259
+    }
+  },
+  "partA_threshold_sensitivity": [
+    {
+      "slope_threshold": 0.1,
+      "flat_sd_threshold": 0.3,
+      "transient_sign_reversing": 210,
+      "emerging": 90,
+      "declining": 29,
+      "persistent_level": 104,
+      "unresolved_flat": 146
+    },
+    {
+      "slope_threshold": 0.1,
+      "flat_sd_threshold": 0.5,
+      "transient_sign_reversing": 210,
+      "emerging": 90,
+      "declining": 29,
+      "persistent_level": 210,
+      "unresolved_flat": 40
+    },
+    {
+      "slope_threshold": 0.1,
+      "flat_sd_threshold": 0.75,
+      "transient_sign_reversing": 210,
+      "emerging": 90,
+      "declining": 29,
+      "persistent_level": 246,
+      "unresolved_flat": 4
+    },
+    {
+      "slope_threshold": 0.15,
+      "flat_sd_threshold": 0.3,
+      "transient_sign_reversing": 210,
+      "emerging": 49,
+      "declining": 15,
+      "persistent_level": 121,
+      "unresolved_flat": 184
+    },
+    {
+      "slope_threshold": 0.15,
+      "flat_sd_threshold": 0.5,
+      "transient_sign_reversing": 210,
+      "emerging": 49,
+      "declining": 15,
+      "persistent_level": 239,
+      "unresolved_flat": 66
+    },
+    {
+      "slope_threshold": 0.15,
+      "flat_sd_threshold": 0.75,
+      "transient_sign_reversing": 210,
+      "emerging": 49,
+      "declining": 15,
+      "persistent_level": 290,
+      "unresolved_flat": 15
+    },
+    {
+      "slope_threshold": 0.2,
+      "flat_sd_threshold": 0.3,
+      "transient_sign_reversing": 210,
+      "emerging": 12,
+      "declining": 9,
+      "persistent_level": 124,
+      "unresolved_flat": 224
+    },
+    {
+      "slope_threshold": 0.2,
+      "flat_sd_threshold": 0.5,
+      "transient_sign_reversing": 210,
+      "emerging": 12,
+      "declining": 9,
+      "persistent_level": 248,
+      "unresolved_flat": 100
+    },
+    {
+      "slope_threshold": 0.2,
+      "flat_sd_threshold": 0.75,
+      "transient_sign_reversing": 210,
+      "emerging": 12,
+      "declining": 9,
+      "persistent_level": 309,
+      "unresolved_flat": 39
+    },
+    {
+      "slope_threshold": 0.3,
+      "flat_sd_threshold": 0.3,
+      "transient_sign_reversing": 210,
+      "emerging": 4,
+      "declining": 4,
+      "persistent_level": 125,
+      "unresolved_flat": 236
+    },
+    {
+      "slope_threshold": 0.3,
+      "flat_sd_threshold": 0.5,
+      "transient_sign_reversing": 210,
+      "emerging": 4,
+      "declining": 4,
+      "persistent_level": 255,
+      "unresolved_flat": 106
+    },
+    {
+      "slope_threshold": 0.3,
+      "flat_sd_threshold": 0.75,
+      "transient_sign_reversing": 210,
+      "emerging": 4,
+      "declining": 4,
+      "persistent_level": 319,
+      "unresolved_flat": 42
+    }
+  ],
+  "partA_transient_stage_profile": {
+    "n_records": 2187,
+    "stage_share_of_transient_vs_all": {
+      "0": 0.1706,
+      "1": 0.321,
+      "2": 0.2868,
+      "3": 0.3127,
+      "4": 0.3896,
+      "5": 0.3848,
+      "6": 0.4452,
+      "7": 0.4717,
+      "8": 0.4186,
+      "9": 0.3704,
+      "10": 0.4149,
+      "11": 0.449,
+      "12": 0.4081,
+      "13": 0.4407,
+      "14": 0.3787,
+      "15": 0.3785,
+      "16": 0.3072,
+      "17": 0.3404
+    }
+  },
+  "partB_family_holdout": {
+    "n_heldout_observations": 5533,
+    "n_heldout_families": 214,
+    "n_units": 718,
+    "null_unit_mean_only": {
+      "mae": 0.46805,
+      "rmse": 0.64496
+    },
+    "stage_trend_added": {
+      "mae": 0.42894,
+      "rmse": 0.58557
+    },
+    "shuffled_stage_control": {
+      "mae": 0.46819,
+      "rmse": 0.64441
+    },
+    "mae_improvement_abs": 0.03911,
+    "mae_improvement_pct": 8.36,
+    "families_improved": 109,
+    "families_improved_share": 0.5093,
+    "n_families_improved_significant": null,
+    "sign_test_families": {
+      "n_improved": 109,
+      "n_worse": 105,
+      "pvalue_two_sided": 0.8375731060432176
+    },
+    "ribbon": {
+      "per_family_mae_null_min": 0.0078,
+      "per_family_mae_null_max": 2.0964,
+      "per_family_mae_trend_min": 0.1041,
+      "per_family_mae_trend_max": 1.7798
+    }
+  },
+  "partB_all_family_delta": {
+    "0": -0.59736,
+    "1": -0.33222,
+    "2": -0.51284,
+    "3": -0.37853,
+    "4": -0.14676,
+    "5": -0.14692,
+    "6": 0.03862,
+    "7": 0.12122,
+    "8": 0.08136,
+    "9": 0.02496,
+    "10": 0.17974,
+    "11": 0.17439,
+    "12": 0.06217,
+    "13": 0.18878,
+    "14": 0.14599,
+    "15": 0.27168,
+    "16": 0.2054,
+    "17": 0.35104
+  }
+}

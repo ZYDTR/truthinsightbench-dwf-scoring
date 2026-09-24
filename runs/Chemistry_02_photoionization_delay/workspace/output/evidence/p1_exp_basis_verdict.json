@@ -1,0 +1,172 @@
+{
+ "claim1_degree_scan": {
+  "scan": {
+   "0": {
+    "max_abs_residual": 1.648411209881218,
+    "median_row_max_residual": 0.8491118970813074,
+    "median_top_coefficient_magnitude": 0.1948085042085012
+   },
+   "1": {
+    "max_abs_residual": 1.2146221954547818,
+    "median_row_max_residual": 0.6902553590796474,
+    "median_top_coefficient_magnitude": 0.36721546756905465
+   },
+   "2": {
+    "max_abs_residual": 0.5326909079171054,
+    "median_row_max_residual": 0.1949349312151244,
+    "median_top_coefficient_magnitude": 0.6972248358415596
+   },
+   "3": {
+    "max_abs_residual": 9.561835397762475e-05,
+    "median_row_max_residual": 4.8273142251791947e-05,
+    "median_top_coefficient_magnitude": 0.3101836671748237
+   },
+   "4": {
+    "max_abs_residual": 9.501906730750403e-05,
+    "median_row_max_residual": 4.828830006123867e-05,
+    "median_top_coefficient_magnitude": 1.8540642764721412e-06
+   },
+   "5": {
+    "max_abs_residual": 9.455110378728416e-05,
+    "median_row_max_residual": 4.823620094882598e-05,
+    "median_top_coefficient_magnitude": 2.09873652808005e-06
+   },
+   "6": {
+    "max_abs_residual": 9.385794731990823e-05,
+    "median_row_max_residual": 4.8186772306450795e-05,
+    "median_top_coefficient_magnitude": 2.1739381395884232e-06
+   },
+   "7": {
+    "max_abs_residual": 9.507898126138505e-05,
+    "median_row_max_residual": 4.855013724226203e-05,
+    "median_top_coefficient_magnitude": 2.3550817877487198e-06
+   },
+   "8": {
+    "max_abs_residual": 9.432509454762001e-05,
+    "median_row_max_residual": 4.822562046076861e-05,
+    "median_top_coefficient_magnitude": 2.488148427947155e-06
+   },
+   "9": {
+    "max_abs_residual": 9.354043104845378e-05,
+    "median_row_max_residual": 4.833452310345548e-05,
+    "median_top_coefficient_magnitude": 2.6372033200785785e-06
+   },
+   "10": {
+    "max_abs_residual": 9.439623076903772e-05,
+    "median_row_max_residual": 4.775647130692211e-05,
+    "median_top_coefficient_magnitude": 2.8992818111110876e-06
+   },
+   "11": {
+    "max_abs_residual": 9.467696459578256e-05,
+    "median_row_max_residual": 4.763530281310425e-05,
+    "median_top_coefficient_magnitude": 2.755210375814111e-06
+   },
+   "12": {
+    "max_abs_residual": 9.32895308553376e-05,
+    "median_row_max_residual": 4.7454379089231506e-05,
+    "median_top_coefficient_magnitude": 3.1489946427211847e-06
+   }
+  },
+  "residual_L2": 0.5326909079171054,
+  "residual_L3": 9.561835397762475e-05,
+  "collapse_ratio_L2_over_L3": 5571.011063856612,
+  "plateau_spread_L3_to_L12": 1.0249633919362122,
+  "top_coefficient_magnitude_L3": 0.3101836671748237,
+  "top_coefficient_magnitude_L4": 1.8540642764721412e-06,
+  "verdict": "degree 3 confirmed if the L=3 residual is far below L=2 and the L>=3 top coefficient is negligible"
+ },
+ "claim2_precision": {
+  "digits": {
+   "experiment/magnitude": {
+    "n": 49955,
+    "raw_decimals_mode": 17,
+    "min_significant_decimals_mode": 5,
+    "min_significant_decimals_p95": 6.0,
+    "min_significant_decimals_max": 7
+   },
+   "experiment/phase": {
+    "n": 49953,
+    "raw_decimals_mode": 16,
+    "min_significant_decimals_mode": 4,
+    "min_significant_decimals_p95": 5.0,
+    "min_significant_decimals_max": 9
+   }
+  },
+  "measured_row_precision_used": "5 significant decimals, both amplitude and phase",
+  "implied_quantum_of_Z_median": 7.338375000000001e-06,
+  "implied_quantum_of_Z_max": 1.391e-05,
+  "residual_floor_max": 9.561835397762475e-05,
+  "floor_below_5sig_quantum_max": false,
+  "floor_over_5sig_quantum_median": 13.029908389476518,
+  "float64_quantum_of_Z": 3.956834859764058e-16,
+  "floor_over_float64_quantum": 241653638239.84906,
+  "interpretation": "the floor sits at the 5-significant-decimal level of the MEASURED source values used to build the spline; the derived rows themselves are stored in full float64, so against float64 the floor is not round-off but residual quantization of the spline construction"
+ },
+ "claim3_null": {
+  "Lmax0_max_abs_residual": 1.648411209881218,
+  "Lmax2_max_abs_residual": 0.5326909079171054,
+  "improvement_L2_over_L3": 5571.011063856612,
+  "variance_captured_l_le_0": 0.0,
+  "variance_captured_l_le_2": 0.8561598972370267,
+  "variance_captured_l_le_3": 0.999999999441371,
+  "variance_captured_l_le_4": 0.9999999994446411
+ },
+ "claim4_basis_and_subset": {
+  "fourier_scan": {
+   "0": 1.648411209881218,
+   "1": 0.7717456413242583,
+   "2": 0.2783363734932529,
+   "3": 8.949839916115734e-05,
+   "4": 8.789300502364096e-05,
+   "5": 7.670699311343839e-05,
+   "6": 6.714596597313133e-05
+  },
+  "fourier_collapse_ratio_K2_over_K3": 3109.959240634686,
+  "subset_every_4th_angle_max_coef_diff": 1.6070926986096018e-05,
+  "coef_scale": 1.1063592232381563,
+  "relative_coef_diff": 1.4525957436372879e-05,
+  "residual_L3": 9.561835397762475e-05
+ },
+ "claim5_delay_panel": {
+  "2": 8933.420191411482,
+  "3": 8856.753985718786,
+  "4": 8911.916971296749,
+  "6": 8836.36426275003,
+  "8": 8799.404504645021,
+  "12": 8852.52913978319
+ },
+ "claim5_note": "a low finite degree would show a collapse like claim 1; scan above shows none",
+ "package": "p1_exp_basis",
+ "verdicts": [
+  {
+   "claim": "dense experiment complex amplitude has exact angular degree 3",
+   "reproduced": true,
+   "my_value": "L2 residual 5.3269e-01 -> L3 9.5618e-05; collapse 5.571e+03; |c_3|=3.10e-01, |c_4|=1.85e-06",
+   "method": "numpy.polynomial.legendre.legfit/legval, complex coefficients fit separately on real/imag"
+  },
+  {
+   "claim": "residual floor at L>=3 is at or below the stored-precision quantization",
+   "reproduced": false,
+   "my_value": "floor 9.562e-05 vs max 5-significant-decimal quantum 1.391e-05 (floor is 6.87x LARGER, not below); float64 quantum is 3.96e-16, so the floor is 241653638240x round-off. Refuted as literally stated; the defensible form is 'exact to within a small multiple of the measured source precision'.",
+   "method": "csv-module re-read of the raw TSV strings plus a minimal-significant-decimals test per value"
+  },
+  {
+   "claim": "L<=2-only null leaves residual 5571x the degree-3 floor and captures 85.6% of variance",
+   "reproduced": true,
+   "my_value": "improvement 5571.0; variance captured l<=2 0.85616, l<=3 1.00000000",
+   "method": "legfit residual + variance decomposition on the same arrays"
+  },
+  {
+   "claim": "degree is basis independent (Legendre=Fourier=3) and stable under angular subsampling",
+   "reproduced": true,
+   "my_value": "Fourier collapse K2/K3 = 3110.0 (Legendre collapse 5571.0, same location m=3); every-4th-angle coef diff 1.61e-05 (rel 1.45e-05)",
+   "method": "complex Fourier basis in theta; coefficient refit on a 46-point angular subset"
+  },
+  {
+   "claim": "the real-valued experiment/delay panel does NOT have a low finite angular degree",
+   "reproduced": true,
+   "my_value": "delay residuals L2=8.933e+03, L3=8.857e+03, L4=8.912e+03, L6=8.836e+03, L8=8.799e+03, L12=8.853e+03",
+   "method": "same Legendre machinery applied to the delay panel"
+  }
+ ]
+}

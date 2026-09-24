@@ -1,0 +1,88 @@
+{
+  "schema": "life04-checks",
+  "seed": 20200104,
+  "G1_drop_eight_row_units": {
+    "dropped_units": [
+      "unit_01",
+      "unit_02",
+      "unit_03",
+      "unit_30"
+    ],
+    "n_dropped": 4,
+    "n_remaining": 26,
+    "positivity_dropped": 0.75,
+    "positivity_remaining": 0.5384615384615384,
+    "full_sample": {
+      "n": 30,
+      "n_pos": 17,
+      "linear_rho_direction_coef": -0.13196550839250046,
+      "threshold_2x2": {
+        "table": [
+          [
+            8,
+            9
+          ],
+          [
+            0,
+            13
+          ]
+        ],
+        "p_two_sided": 0.0043733688711199955,
+        "p_greater": 0.004153478816147482,
+        "odds_ratio": Infinity,
+        "rate_below": 1.0,
+        "rate_above": 0.4090909090909091
+      }
+    },
+    "without_eight_row_units": {
+      "n": 26,
+      "n_pos": 14,
+      "linear_rho_direction_coef": -0.09965379887215477,
+      "threshold_2x2": {
+        "table": [
+          [
+            6,
+            8
+          ],
+          [
+            0,
+            12
+          ]
+        ],
+        "p_two_sided": 0.01705685618729097,
+        "p_greater": 0.013043478260869565,
+        "odds_ratio": Infinity,
+        "rate_below": 1.0,
+        "rate_above": 0.4
+      }
+    }
+  },
+  "G2_containment": {
+    "full_table_pos_by_surface": [
+      [
+        13,
+        4
+      ],
+      [
+        0,
+        13
+      ]
+    ],
+    "env_pos_surface_zero_units": [
+      "unit_07",
+      "unit_13",
+      "unit_23",
+      "unit_29"
+    ],
+    "converse_cell_surface_pos_env_neg_is_zero": true,
+    "note": "the asymmetry is a single zero cell; it is not an average over units"
+  },
+  "G3_low_assay_cluster": {
+    "cut": 24.16,
+    "k_positive": 8,
+    "n_below": 8,
+    "base_rate": 0.5666666666666667,
+    "exact_binom_p_upper": 0.010632155831428134,
+    "expected_positive_if_base_rate": 4.533333333333333
+  }
+}

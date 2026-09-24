@@ -1,0 +1,1264 @@
+{
+ "schema": "tib-inventory-v1",
+ "workspace": "/data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project",
+ "files": {
+  "angle_energy_observations_datasets.tsv": {
+   "bytes": 8493010,
+   "sha256": "55a1d9621c0e386fb44a63764a97cf81491d2bd7af0209c74e212329172df396",
+   "manifest_sha256": "55a1d9621c0e386fb44a63764a97cf81491d2bd7af0209c74e212329172df396",
+   "matches_manifest": true
+  },
+  "angular_coefficients_datasets.tsv": {
+   "bytes": 45556,
+   "sha256": "a47e1e06130ec2a0dc8e3a4b2b45233828b37e6ff31101dbefebfd8b9d0ac411",
+   "manifest_sha256": "a47e1e06130ec2a0dc8e3a4b2b45233828b37e6ff31101dbefebfd8b9d0ac411",
+   "matches_manifest": true
+  },
+  "coordinate_definitions.json": {
+   "bytes": 942,
+   "sha256": "349bbd36f9de8dd1805b280c0f08270e3d1c75992efd76aa8effb603adbec23b",
+   "manifest_sha256": "349bbd36f9de8dd1805b280c0f08270e3d1c75992efd76aa8effb603adbec23b",
+   "matches_manifest": true
+  },
+  "dipole_matrix_elements_datasets.tsv": {
+   "bytes": 9859272,
+   "sha256": "df51186c5de242e7b6d7aa51b30f2b75411bbea139507a3061273c23f2c01762",
+   "manifest_sha256": "df51186c5de242e7b6d7aa51b30f2b75411bbea139507a3061273c23f2c01762",
+   "matches_manifest": true
+  },
+  "phase_and_delay_curves_datasets.tsv": {
+   "bytes": 43302,
+   "sha256": "10b077ae335ce79515d03341dbf924a4143b78c310676c89dc8e56af5d6c044c",
+   "manifest_sha256": "10b077ae335ce79515d03341dbf924a4143b78c310676c89dc8e56af5d6c044c",
+   "matches_manifest": true
+  }
+ },
+ "groups": {
+  "experiment/delay": {
+   "table": "angle_energy_observations_datasets.tsv",
+   "n_rows": 49775,
+   "index_0": {
+    "n": 275,
+    "min": 0.0,
+    "max": 274.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 181,
+    "min": 0.0,
+    "max": 180.0,
+    "meaning": "emission angle (deg), 1 deg step, per coordinate_definitions.json"
+   },
+   "n_finite": 49775,
+   "n_nonfinite": 0,
+   "value_min": -8530.0,
+   "value_max": 8961.2,
+   "unit": "as (attoseconds)",
+   "expected_from_manifest": {
+    "table": "angle_energy_observations_datasets.tsv",
+    "shape": [
+     275,
+     181
+    ],
+    "value_count": 49775,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/magnitude": {
+   "table": "angle_energy_observations_datasets.tsv",
+   "n_rows": 49956,
+   "index_0": {
+    "n": 276,
+    "min": 0.0,
+    "max": 275.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 181,
+    "min": 0.0,
+    "max": 180.0,
+    "meaning": "emission angle (deg), 1 deg step, per coordinate_definitions.json"
+   },
+   "n_finite": 49956,
+   "n_nonfinite": 0,
+   "value_min": 0.0030615999999999,
+   "value_max": 1.782,
+   "unit": "dimensionless (amplitude, arbitrary normalization)",
+   "expected_from_manifest": {
+    "table": "angle_energy_observations_datasets.tsv",
+    "shape": [
+     276,
+     181
+    ],
+    "value_count": 49956,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/phase": {
+   "table": "angle_energy_observations_datasets.tsv",
+   "n_rows": 49956,
+   "index_0": {
+    "n": 276,
+    "min": 0.0,
+    "max": 275.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 181,
+    "min": 0.0,
+    "max": 180.0,
+    "meaning": "emission angle (deg), 1 deg step, per coordinate_definitions.json"
+   },
+   "n_finite": 49956,
+   "n_nonfinite": 0,
+   "value_min": -6.465,
+   "value_max": 4.8821,
+   "unit": "rad (unwrapped phase)",
+   "expected_from_manifest": {
+    "table": "angle_energy_observations_datasets.tsv",
+    "shape": [
+     276,
+     181
+    ],
+    "value_count": 49956,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/photon_energy_eV": {
+   "table": "angle_energy_observations_datasets.tsv",
+   "n_rows": 276,
+   "index_0": {
+    "n": 276,
+    "min": 0.0,
+    "max": 275.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 0,
+    "min": null,
+    "max": null
+   },
+   "n_finite": 276,
+   "n_nonfinite": 0,
+   "value_min": 22.5,
+   "value_max": 50.0,
+   "unit": "eV (photon energy)",
+   "expected_from_manifest": {
+    "table": "angle_energy_observations_datasets.tsv",
+    "shape": [
+     276
+    ],
+    "value_count": 276,
+    "shape_matches": false,
+    "count_matches": true
+   }
+  },
+  "experiment/photon_energy_eV_del": {
+   "table": "angle_energy_observations_datasets.tsv",
+   "n_rows": 275,
+   "index_0": {
+    "n": 275,
+    "min": 0.0,
+    "max": 274.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 0,
+    "min": null,
+    "max": null
+   },
+   "n_finite": 275,
+   "n_nonfinite": 0,
+   "value_min": 22.6,
+   "value_max": 50.0,
+   "unit": "eV (photon energy, delay-array pairing)",
+   "expected_from_manifest": {
+    "table": "angle_energy_observations_datasets.tsv",
+    "shape": [
+     275
+    ],
+    "value_count": 275,
+    "shape_matches": false,
+    "count_matches": true
+   }
+  },
+  "theory/delay": {
+   "table": "angle_energy_observations_datasets.tsv",
+   "n_rows": 17738,
+   "index_0": {
+    "n": 98,
+    "min": 0.0,
+    "max": 97.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 181,
+    "min": 0.0,
+    "max": 180.0,
+    "meaning": "emission angle (deg), 1 deg step, per coordinate_definitions.json"
+   },
+   "n_finite": 17738,
+   "n_nonfinite": 0,
+   "value_min": -2622.74904488798,
+   "value_max": 5569.72701495654,
+   "unit": "as (attoseconds)",
+   "expected_from_manifest": {
+    "table": "angle_energy_observations_datasets.tsv",
+    "shape": [
+     98,
+     181
+    ],
+    "value_count": 17738,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "theory/magnitude": {
+   "table": "angle_energy_observations_datasets.tsv",
+   "n_rows": 17919,
+   "index_0": {
+    "n": 99,
+    "min": 0.0,
+    "max": 98.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 181,
+    "min": 0.0,
+    "max": 180.0,
+    "meaning": "emission angle (deg), 1 deg step, per coordinate_definitions.json"
+   },
+   "n_finite": 17919,
+   "n_nonfinite": 0,
+   "value_min": 0.0133819907581109,
+   "value_max": 2.00618860846826,
+   "unit": "dimensionless (amplitude)",
+   "expected_from_manifest": {
+    "table": "angle_energy_observations_datasets.tsv",
+    "shape": [
+     99,
+     181
+    ],
+    "value_count": 17919,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "theory/phase": {
+   "table": "angle_energy_observations_datasets.tsv",
+   "n_rows": 17919,
+   "index_0": {
+    "n": 99,
+    "min": 0.0,
+    "max": 98.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 181,
+    "min": 0.0,
+    "max": 180.0,
+    "meaning": "emission angle (deg), 1 deg step, per coordinate_definitions.json"
+   },
+   "n_finite": 17919,
+   "n_nonfinite": 0,
+   "value_min": -7.043389056580089,
+   "value_max": 5.77999424059769,
+   "unit": "rad (phase)",
+   "expected_from_manifest": {
+    "table": "angle_energy_observations_datasets.tsv",
+    "shape": [
+     99,
+     181
+    ],
+    "value_count": 17919,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "theory/photon_energy_eV": {
+   "table": "angle_energy_observations_datasets.tsv",
+   "n_rows": 99,
+   "index_0": {
+    "n": 99,
+    "min": 0.0,
+    "max": 98.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 0,
+    "min": null,
+    "max": null
+   },
+   "n_finite": 99,
+   "n_nonfinite": 0,
+   "value_min": 23.249,
+   "value_max": 41.839,
+   "unit": "eV (photon energy)",
+   "expected_from_manifest": {
+    "table": "angle_energy_observations_datasets.tsv",
+    "shape": [
+     99
+    ],
+    "value_count": 99,
+    "shape_matches": false,
+    "count_matches": true
+   }
+  },
+  "theory/photon_energy_eV_del": {
+   "table": "angle_energy_observations_datasets.tsv",
+   "n_rows": 98,
+   "index_0": {
+    "n": 98,
+    "min": 0.0,
+    "max": 97.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 0,
+    "min": null,
+    "max": null
+   },
+   "n_finite": 98,
+   "n_nonfinite": 0,
+   "value_min": 23.4404206880312,
+   "value_max": 41.840434827895,
+   "unit": "eV (photon energy, delay-array pairing)",
+   "expected_from_manifest": {
+    "table": "angle_energy_observations_datasets.tsv",
+    "shape": [
+     98
+    ],
+    "value_count": 98,
+    "shape_matches": false,
+    "count_matches": true
+   }
+  },
+  "CoefLeg_22.5eV": {
+   "table": "angular_coefficients_datasets.tsv",
+   "n_rows": 99,
+   "index_0": {
+    "n": 9,
+    "min": 0.0,
+    "max": 8.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 11,
+    "min": 0.0,
+    "max": 10.0
+   },
+   "n_finite": 99,
+   "n_nonfinite": 0,
+   "value_min": -0.0269931999999999,
+   "value_max": 8.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "angular_coefficients_datasets.tsv",
+    "shape": [
+     9,
+     11
+    ],
+    "value_count": 99,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "CoefLeg_23.25eV": {
+   "table": "angular_coefficients_datasets.tsv",
+   "n_rows": 99,
+   "index_0": {
+    "n": 9,
+    "min": 0.0,
+    "max": 8.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 11,
+    "min": 0.0,
+    "max": 10.0
+   },
+   "n_finite": 99,
+   "n_nonfinite": 0,
+   "value_min": -0.4159109999999999,
+   "value_max": 8.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "angular_coefficients_datasets.tsv",
+    "shape": [
+     9,
+     11
+    ],
+    "value_count": 99,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "CoefLeg_24.8eV": {
+   "table": "angular_coefficients_datasets.tsv",
+   "n_rows": 99,
+   "index_0": {
+    "n": 9,
+    "min": 0.0,
+    "max": 8.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 11,
+    "min": 0.0,
+    "max": 10.0
+   },
+   "n_finite": 99,
+   "n_nonfinite": 0,
+   "value_min": -0.5181369999999998,
+   "value_max": 8.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "angular_coefficients_datasets.tsv",
+    "shape": [
+     9,
+     11
+    ],
+    "value_count": 99,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "CoefLeg_26.35eV": {
+   "table": "angular_coefficients_datasets.tsv",
+   "n_rows": 99,
+   "index_0": {
+    "n": 9,
+    "min": 0.0,
+    "max": 8.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 11,
+    "min": 0.0,
+    "max": 10.0
+   },
+   "n_finite": 99,
+   "n_nonfinite": 0,
+   "value_min": -0.594824,
+   "value_max": 8.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "angular_coefficients_datasets.tsv",
+    "shape": [
+     9,
+     11
+    ],
+    "value_count": 99,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "CoefLeg_27.9eV": {
+   "table": "angular_coefficients_datasets.tsv",
+   "n_rows": 99,
+   "index_0": {
+    "n": 9,
+    "min": 0.0,
+    "max": 8.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 11,
+    "min": 0.0,
+    "max": 10.0
+   },
+   "n_finite": 99,
+   "n_nonfinite": 0,
+   "value_min": -0.736511,
+   "value_max": 8.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "angular_coefficients_datasets.tsv",
+    "shape": [
+     9,
+     11
+    ],
+    "value_count": 99,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "CoefLeg_29.45eV": {
+   "table": "angular_coefficients_datasets.tsv",
+   "n_rows": 99,
+   "index_0": {
+    "n": 9,
+    "min": 0.0,
+    "max": 8.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 11,
+    "min": 0.0,
+    "max": 10.0
+   },
+   "n_finite": 99,
+   "n_nonfinite": 0,
+   "value_min": -1.05876,
+   "value_max": 8.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "angular_coefficients_datasets.tsv",
+    "shape": [
+     9,
+     11
+    ],
+    "value_count": 99,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "CoefLeg_31.0eV": {
+   "table": "angular_coefficients_datasets.tsv",
+   "n_rows": 99,
+   "index_0": {
+    "n": 9,
+    "min": 0.0,
+    "max": 8.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 11,
+    "min": 0.0,
+    "max": 10.0
+   },
+   "n_finite": 99,
+   "n_nonfinite": 0,
+   "value_min": -1.88977,
+   "value_max": 8.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "angular_coefficients_datasets.tsv",
+    "shape": [
+     9,
+     11
+    ],
+    "value_count": 99,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "CoefLeg_32.55eV": {
+   "table": "angular_coefficients_datasets.tsv",
+   "n_rows": 99,
+   "index_0": {
+    "n": 9,
+    "min": 0.0,
+    "max": 8.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 11,
+    "min": 0.0,
+    "max": 10.0
+   },
+   "n_finite": 99,
+   "n_nonfinite": 0,
+   "value_min": -1.5191,
+   "value_max": 8.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "angular_coefficients_datasets.tsv",
+    "shape": [
+     9,
+     11
+    ],
+    "value_count": 99,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "CoefLeg_34.1eV": {
+   "table": "angular_coefficients_datasets.tsv",
+   "n_rows": 99,
+   "index_0": {
+    "n": 9,
+    "min": 0.0,
+    "max": 8.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 11,
+    "min": 0.0,
+    "max": 10.0
+   },
+   "n_finite": 99,
+   "n_nonfinite": 0,
+   "value_min": -1.94742,
+   "value_max": 8.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "angular_coefficients_datasets.tsv",
+    "shape": [
+     9,
+     11
+    ],
+    "value_count": 99,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "CoefLeg_35.65eV": {
+   "table": "angular_coefficients_datasets.tsv",
+   "n_rows": 99,
+   "index_0": {
+    "n": 9,
+    "min": 0.0,
+    "max": 8.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 11,
+    "min": 0.0,
+    "max": 10.0
+   },
+   "n_finite": 99,
+   "n_nonfinite": 0,
+   "value_min": -1.43479,
+   "value_max": 8.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "angular_coefficients_datasets.tsv",
+    "shape": [
+     9,
+     11
+    ],
+    "value_count": 99,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "CoefLeg_37.2eV": {
+   "table": "angular_coefficients_datasets.tsv",
+   "n_rows": 99,
+   "index_0": {
+    "n": 9,
+    "min": 0.0,
+    "max": 8.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 11,
+    "min": 0.0,
+    "max": 10.0
+   },
+   "n_finite": 99,
+   "n_nonfinite": 0,
+   "value_min": -1.42486,
+   "value_max": 8.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "angular_coefficients_datasets.tsv",
+    "shape": [
+     9,
+     11
+    ],
+    "value_count": 99,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "CoefLeg_38.75eV": {
+   "table": "angular_coefficients_datasets.tsv",
+   "n_rows": 99,
+   "index_0": {
+    "n": 9,
+    "min": 0.0,
+    "max": 8.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 11,
+    "min": 0.0,
+    "max": 10.0
+   },
+   "n_finite": 99,
+   "n_nonfinite": 0,
+   "value_min": -1.35712,
+   "value_max": 8.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "angular_coefficients_datasets.tsv",
+    "shape": [
+     9,
+     11
+    ],
+    "value_count": 99,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "CoefLeg_48.4eV": {
+   "table": "angular_coefficients_datasets.tsv",
+   "n_rows": 99,
+   "index_0": {
+    "n": 9,
+    "min": 0.0,
+    "max": 8.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 11,
+    "min": 0.0,
+    "max": 10.0
+   },
+   "n_finite": 99,
+   "n_nonfinite": 0,
+   "value_min": -1.5005,
+   "value_max": 8.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "angular_coefficients_datasets.tsv",
+    "shape": [
+     9,
+     11
+    ],
+    "value_count": 99,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/DME_22.5eV": {
+   "table": "dipole_matrix_elements_datasets.tsv",
+   "n_rows": 42,
+   "index_0": {
+    "n": 7,
+    "min": 0.0,
+    "max": 6.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 6,
+    "min": 0.0,
+    "max": 5.0
+   },
+   "n_finite": 42,
+   "n_nonfinite": 0,
+   "value_min": -0.4557399999999999,
+   "value_max": 3.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "dipole_matrix_elements_datasets.tsv",
+    "shape": [
+     7,
+     6
+    ],
+    "value_count": 42,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/DME_23.25eV": {
+   "table": "dipole_matrix_elements_datasets.tsv",
+   "n_rows": 42,
+   "index_0": {
+    "n": 7,
+    "min": 0.0,
+    "max": 6.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 6,
+    "min": 0.0,
+    "max": 5.0
+   },
+   "n_finite": 42,
+   "n_nonfinite": 0,
+   "value_min": -0.33282,
+   "value_max": 3.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "dipole_matrix_elements_datasets.tsv",
+    "shape": [
+     7,
+     6
+    ],
+    "value_count": 42,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/DME_24.8eV": {
+   "table": "dipole_matrix_elements_datasets.tsv",
+   "n_rows": 42,
+   "index_0": {
+    "n": 7,
+    "min": 0.0,
+    "max": 6.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 6,
+    "min": 0.0,
+    "max": 5.0
+   },
+   "n_finite": 42,
+   "n_nonfinite": 0,
+   "value_min": -0.25195,
+   "value_max": 3.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "dipole_matrix_elements_datasets.tsv",
+    "shape": [
+     7,
+     6
+    ],
+    "value_count": 42,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/DME_26.35eV": {
+   "table": "dipole_matrix_elements_datasets.tsv",
+   "n_rows": 42,
+   "index_0": {
+    "n": 7,
+    "min": 0.0,
+    "max": 6.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 6,
+    "min": 0.0,
+    "max": 5.0
+   },
+   "n_finite": 42,
+   "n_nonfinite": 0,
+   "value_min": -0.3339599999999999,
+   "value_max": 3.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "dipole_matrix_elements_datasets.tsv",
+    "shape": [
+     7,
+     6
+    ],
+    "value_count": 42,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/DME_27.9eV": {
+   "table": "dipole_matrix_elements_datasets.tsv",
+   "n_rows": 42,
+   "index_0": {
+    "n": 7,
+    "min": 0.0,
+    "max": 6.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 6,
+    "min": 0.0,
+    "max": 5.0
+   },
+   "n_finite": 42,
+   "n_nonfinite": 0,
+   "value_min": -0.47592,
+   "value_max": 3.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "dipole_matrix_elements_datasets.tsv",
+    "shape": [
+     7,
+     6
+    ],
+    "value_count": 42,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/DME_29.45eV": {
+   "table": "dipole_matrix_elements_datasets.tsv",
+   "n_rows": 42,
+   "index_0": {
+    "n": 7,
+    "min": 0.0,
+    "max": 6.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 6,
+    "min": 0.0,
+    "max": 5.0
+   },
+   "n_finite": 42,
+   "n_nonfinite": 0,
+   "value_min": -0.39361,
+   "value_max": 3.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "dipole_matrix_elements_datasets.tsv",
+    "shape": [
+     7,
+     6
+    ],
+    "value_count": 42,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/DME_31.0eV": {
+   "table": "dipole_matrix_elements_datasets.tsv",
+   "n_rows": 42,
+   "index_0": {
+    "n": 7,
+    "min": 0.0,
+    "max": 6.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 6,
+    "min": 0.0,
+    "max": 5.0
+   },
+   "n_finite": 42,
+   "n_nonfinite": 0,
+   "value_min": -0.24939,
+   "value_max": 3.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "dipole_matrix_elements_datasets.tsv",
+    "shape": [
+     7,
+     6
+    ],
+    "value_count": 42,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/DME_32.55eV": {
+   "table": "dipole_matrix_elements_datasets.tsv",
+   "n_rows": 42,
+   "index_0": {
+    "n": 7,
+    "min": 0.0,
+    "max": 6.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 6,
+    "min": 0.0,
+    "max": 5.0
+   },
+   "n_finite": 42,
+   "n_nonfinite": 0,
+   "value_min": -0.2807399999999999,
+   "value_max": 3.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "dipole_matrix_elements_datasets.tsv",
+    "shape": [
+     7,
+     6
+    ],
+    "value_count": 42,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/DME_34.1eV": {
+   "table": "dipole_matrix_elements_datasets.tsv",
+   "n_rows": 42,
+   "index_0": {
+    "n": 7,
+    "min": 0.0,
+    "max": 6.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 6,
+    "min": 0.0,
+    "max": 5.0
+   },
+   "n_finite": 42,
+   "n_nonfinite": 0,
+   "value_min": -0.39967,
+   "value_max": 3.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "dipole_matrix_elements_datasets.tsv",
+    "shape": [
+     7,
+     6
+    ],
+    "value_count": 42,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/DME_35.65eV": {
+   "table": "dipole_matrix_elements_datasets.tsv",
+   "n_rows": 42,
+   "index_0": {
+    "n": 7,
+    "min": 0.0,
+    "max": 6.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 6,
+    "min": 0.0,
+    "max": 5.0
+   },
+   "n_finite": 42,
+   "n_nonfinite": 0,
+   "value_min": -0.40609,
+   "value_max": 3.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "dipole_matrix_elements_datasets.tsv",
+    "shape": [
+     7,
+     6
+    ],
+    "value_count": 42,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/DME_37.2eV": {
+   "table": "dipole_matrix_elements_datasets.tsv",
+   "n_rows": 42,
+   "index_0": {
+    "n": 7,
+    "min": 0.0,
+    "max": 6.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 6,
+    "min": 0.0,
+    "max": 5.0
+   },
+   "n_finite": 42,
+   "n_nonfinite": 0,
+   "value_min": -0.2688099999999999,
+   "value_max": 3.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "dipole_matrix_elements_datasets.tsv",
+    "shape": [
+     7,
+     6
+    ],
+    "value_count": 42,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/DME_38.75eV": {
+   "table": "dipole_matrix_elements_datasets.tsv",
+   "n_rows": 42,
+   "index_0": {
+    "n": 7,
+    "min": 0.0,
+    "max": 6.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 6,
+    "min": 0.0,
+    "max": 5.0
+   },
+   "n_finite": 42,
+   "n_nonfinite": 0,
+   "value_min": -0.19581,
+   "value_max": 3.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "dipole_matrix_elements_datasets.tsv",
+    "shape": [
+     7,
+     6
+    ],
+    "value_count": 42,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "experiment/DME_48.4eV": {
+   "table": "dipole_matrix_elements_datasets.tsv",
+   "n_rows": 42,
+   "index_0": {
+    "n": 7,
+    "min": 0.0,
+    "max": 6.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 6,
+    "min": 0.0,
+    "max": 5.0
+   },
+   "n_finite": 42,
+   "n_nonfinite": 0,
+   "value_min": -0.18486,
+   "value_max": 3.0,
+   "unit": "unknown",
+   "expected_from_manifest": {
+    "table": "dipole_matrix_elements_datasets.tsv",
+    "shape": [
+     7,
+     6
+    ],
+    "value_count": 42,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "theory/DMEs": {
+   "table": "dipole_matrix_elements_datasets.tsv",
+   "n_rows": 340560,
+   "index_0": {
+    "n": 34056,
+    "min": 0.0,
+    "max": 34055.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 10,
+    "min": 0.0,
+    "max": 9.0
+   },
+   "n_finite": 340560,
+   "n_nonfinite": 0,
+   "value_min": -3.0,
+   "value_max": 11.0,
+   "unit": "a.u. (Hartree) complex dipole matrix elements; IE and T_kin in a.u.",
+   "expected_from_manifest": {
+    "table": "dipole_matrix_elements_datasets.tsv",
+    "shape": [
+     34056,
+     10
+    ],
+    "value_count": 340560,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "0.5_Wigner_delay": {
+   "table": "phase_and_delay_curves_datasets.tsv",
+   "n_rows": 592,
+   "index_0": {
+    "n": 296,
+    "min": 0.0,
+    "max": 295.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 2,
+    "min": 0.0,
+    "max": 1.0
+   },
+   "n_finite": 592,
+   "n_nonfinite": 0,
+   "value_min": -21.70982148,
+   "value_max": 182.5622401,
+   "unit": "as vs eV electron kinetic energy (eKE)",
+   "expected_from_manifest": {
+    "table": "phase_and_delay_curves_datasets.tsv",
+    "shape": [
+     296,
+     2
+    ],
+    "value_count": 592,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "angle_averaged_delay": {
+   "table": "phase_and_delay_curves_datasets.tsv",
+   "n_rows": 400,
+   "index_0": {
+    "n": 200,
+    "min": 0.0,
+    "max": 199.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 2,
+    "min": 0.0,
+    "max": 1.0
+   },
+   "n_finite": 400,
+   "n_nonfinite": 0,
+   "value_min": -104.0881949,
+   "value_max": 141.3611415,
+   "unit": "as vs eV electron kinetic energy (eKE)",
+   "expected_from_manifest": {
+    "table": "phase_and_delay_curves_datasets.tsv",
+    "shape": [
+     200,
+     2
+    ],
+    "value_count": 400,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  },
+  "eigenphase_sum": {
+   "table": "phase_and_delay_curves_datasets.tsv",
+   "n_rows": 100,
+   "index_0": {
+    "n": 50,
+    "min": 0.0,
+    "max": 49.0,
+    "contiguous_0_based": true
+   },
+   "index_1": {
+    "n": 2,
+    "min": 0.0,
+    "max": 1.0
+   },
+   "n_finite": 100,
+   "n_nonfinite": 0,
+   "value_min": -1.112878,
+   "value_max": 30.0,
+   "unit": "rad vs eV electron kinetic energy (eKE)",
+   "expected_from_manifest": {
+    "table": "phase_and_delay_curves_datasets.tsv",
+    "shape": [
+     50,
+     2
+    ],
+    "value_count": 100,
+    "shape_matches": true,
+    "count_matches": true
+   }
+  }
+ },
+ "missingness": {
+  "declared": "No curator-imposed row deletion, random subsampling, or imputation is applied within the frozen task boundary.",
+  "observed_nonfinite_rows": {},
+  "curator_row_deletion_detected": false,
+  "note": "No non-finite values in any group; every declared dataset group is present with the value count recorded in data_manifest.json."
+ },
+ "analysis_units": {
+  "declared": "One measured dipole-matrix energy block or one complete theory calculation block. The dense experiment-like phase/delay grid is a spline-derived representation of 13 measured energy blocks, so its cells are correlated derived values rather than independent observations.",
+  "independent_units_available": {
+   "experiment_dipole_matrix_energy_blocks": 13,
+   "theory_DME_calculation_blocks": 1,
+   "measured_angular_coefficient_blocks": 13
+  },
+  "dependent_derived_units": {
+   "experiment/phase": "276x181 dense spline-derived grid (correlated cells)",
+   "experiment/magnitude": "276x181 dense spline-derived grid (correlated cells)",
+   "experiment/delay": "275x181 dense spline-derived grid (correlated cells)",
+   "theory/phase": "99x181 grid",
+   "theory/magnitude": "99x181 grid",
+   "theory/delay": "98x181 grid"
+  },
+  "repeated_measure_structure": "Angle (index_1, 0..180 deg) is the within-block repeated axis for every energy-angle array; energy (index_0) indexes blocks.  The 13 experiment energies are the only independent experiment blocks; the 181 angles inside a block are correlated angular channels of one measured matrix element set, not independent replicates."
+ },
+ "data_manifest_sha256": "1b138df1597512de5b3423a814f15f29bf14b6821c4aeaa80bcba65d36f6fce1"
+}

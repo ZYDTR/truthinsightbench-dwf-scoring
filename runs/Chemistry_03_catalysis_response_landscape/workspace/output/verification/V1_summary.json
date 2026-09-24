@@ -1,0 +1,57 @@
+{
+  "design_complete_factorial": true,
+  "n_cells_row_order_contiguous": false,
+  "eta2_y6": {
+    "main": 0.5211,
+    "two_way": 0.325,
+    "three_way": 0.1539
+  },
+  "eta2_y7": {
+    "main": 0.8869,
+    "two_way": 0.0764,
+    "three_way": 0.0367
+  },
+  "eta2_y6_cells": {
+    "A": 55.4273,
+    "B": 101.2369,
+    "C": 194.82,
+    "AB": 62.3514,
+    "AC": 82.9788,
+    "BC": 73.8568,
+    "ABC": 103.8264
+  },
+  "eta2_y7_cells": {
+    "A": 1.6998,
+    "B": 0.37,
+    "C": 143.5346,
+    "AB": 1.2018,
+    "AC": 8.8903,
+    "BC": 2.4566,
+    "ABC": 6.0168
+  },
+  "eta2_y7_dominant_main_effects": {
+    "A": 0.0104,
+    "B": 0.0023,
+    "C": 0.8743
+  },
+  "eta2_y6_dominant_main_effects": {
+    "A": 0.0822,
+    "B": 0.1501,
+    "C": 0.2888
+  },
+  "F_claim_match": true,
+  "F_y6_tukey_1df": 763.179,
+  "F_y7_tukey_1df": 9.855,
+  "p_y7_tukey_1df": 0.0017291844637100295,
+  "tukey_error_df_stratum": {
+    "main": 31,
+    "two_way": 318,
+    "three_way": 1080,
+    "pure_error": 0,
+    "residual_after_full_model": 0
+  },
+  "tukey_error_is_pooled_2way_plus_3way": true,
+  "permutation_test_degenerate_no_pure_error": true,
+  "path_agreement_max_abs_eta2_diff": 1.006281749938748e-15,
+  "gamma2_A_times_eta2_A": 0.25625000000000003
+}

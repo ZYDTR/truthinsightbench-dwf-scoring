@@ -1,0 +1,193 @@
+{
+  "C-H": {
+    "hac_ge_10": {
+      "label": "C-H HAC>=10",
+      "n": 146,
+      "learned_mae": 3.2458219178082186,
+      "quantum_mae": 2.201643835616439,
+      "reference_mae": 5.7390410958904114,
+      "learned_rmse": 4.299461339309747,
+      "quantum_rmse": 2.878535348649493
+    },
+    "hac_le_5": {
+      "label": "C-H HAC<=5",
+      "n": 52,
+      "learned_mae": 1.7303846153846156,
+      "quantum_mae": 1.7571153846153846,
+      "reference_mae": 6.197692307692307,
+      "learned_rmse": 2.5297848798784335,
+      "quantum_rmse": 2.5304716039626967
+    },
+    "all": {
+      "label": "C-H all",
+      "n": 302,
+      "learned_mae": 2.5415894039735103,
+      "quantum_mae": 1.9906622516556294,
+      "reference_mae": 5.710860927152317,
+      "learned_rmse": 3.5155186705774737,
+      "quantum_rmse": 2.653420134580279
+    }
+  },
+  "all_classes": {
+    "hac_ge_10": {
+      "label": "all HAC>=10",
+      "n": 193,
+      "learned_mae": 3.498549222797928,
+      "quantum_mae": 2.585336787564767,
+      "reference_mae": 6.192746113989639,
+      "learned_rmse": 4.917734323937092,
+      "quantum_rmse": 3.6172619393436016
+    },
+    "hac_le_5": {
+      "label": "all HAC<=5",
+      "n": 113,
+      "learned_mae": 1.5779646017699123,
+      "quantum_mae": 1.6762831858407086,
+      "reference_mae": 5.221061946902655,
+      "learned_rmse": 2.276884418425156,
+      "quantum_rmse": 2.370895055212664
+    },
+    "all": {
+      "label": "all",
+      "n": 543,
+      "learned_mae": 2.410699815837938,
+      "quantum_mae": 2.0978084714548806,
+      "reference_mae": 5.48596685082873,
+      "learned_rmse": 3.627796539885696,
+      "quantum_rmse": 3.0595296584807596
+    }
+  },
+  "C-H_H_included": {
+    "hac_ge_10": {
+      "label": "C-H HAC_H>=10",
+      "n": 289,
+      "learned_mae": 2.588685121107266,
+      "quantum_mae": 2.005259515570934,
+      "reference_mae": 5.6522491349480966,
+      "learned_rmse": 3.5725678687004097,
+      "quantum_rmse": 2.676715308786248
+    },
+    "hac_le_5": {
+      "label": "C-H HAC_H<=5",
+      "n": 2,
+      "learned_mae": 1.8199999999999932,
+      "quantum_mae": 1.4499999999999886,
+      "reference_mae": 3.989999999999995,
+      "learned_rmse": 1.8270194306574778,
+      "quantum_rmse": 1.4787156589418948
+    },
+    "all": {
+      "label": "C-H all",
+      "n": 302,
+      "learned_mae": 2.5415894039735103,
+      "quantum_mae": 1.9906622516556294,
+      "reference_mae": 5.710860927152317,
+      "learned_rmse": 3.5155186705774737,
+      "quantum_rmse": 2.653420134580279
+    }
+  },
+  "C-H_fragsum": {
+    "hac_ge_10": {
+      "label": "C-H fragsum>=10",
+      "n": 146,
+      "learned_mae": 3.2458219178082186,
+      "quantum_mae": 2.201643835616439,
+      "reference_mae": 5.7390410958904114,
+      "learned_rmse": 4.299461339309747,
+      "quantum_rmse": 2.878535348649493
+    },
+    "hac_le_5": {
+      "label": "C-H fragsum<=5",
+      "n": 52,
+      "learned_mae": 1.7303846153846156,
+      "quantum_mae": 1.7571153846153846,
+      "reference_mae": 6.197692307692307,
+      "learned_rmse": 2.5297848798784335,
+      "quantum_rmse": 2.5304716039626967
+    }
+  },
+  "overall_edge": {
+    "learned_mae_all": 2.410699815837938,
+    "quantum_mae_all": 2.0978084714548806,
+    "edge_learned_minus_quantum": 0.3128913443830572
+  },
+  "overall_edge_C_H": {
+    "learned_mae": 2.5415894039735103,
+    "quantum_mae": 1.9906622516556294,
+    "edge": 0.5509271523178809
+  },
+  "C-H_bins": [
+    {
+      "bin": "0-3",
+      "n": 13,
+      "learned": 1.4700000000000022,
+      "quantum": 1.5276923076923077
+    },
+    {
+      "bin": "4-5",
+      "n": 39,
+      "learned": 1.8171794871794869,
+      "quantum": 1.8335897435897437
+    },
+    {
+      "bin": "6-7",
+      "n": 47,
+      "learned": 1.6763829787234052,
+      "quantum": 1.4089361702127674
+    },
+    {
+      "bin": "8-9",
+      "n": 57,
+      "learned": 2.1912280701754394,
+      "quantum": 2.14298245614035
+    },
+    {
+      "bin": "10-12",
+      "n": 53,
+      "learned": 2.3209433962264145,
+      "quantum": 2.1641509433962276
+    },
+    {
+      "bin": "13-20",
+      "n": 76,
+      "learned": 3.491842105263157,
+      "quantum": 2.2425
+    },
+    {
+      "bin": "21-100",
+      "n": 17,
+      "learned": 5.029411764705882,
+      "quantum": 2.1358823529411772
+    }
+  ],
+  "C-H_hac_ge_10_paired_t": {
+    "t": 4.364741548000845,
+    "p": 2.4049137913406565e-05,
+    "n": 146
+  },
+  "C-H_hac_le_5_paired_t": {
+    "t": -0.5804775608616008,
+    "p": 0.5641488315910065,
+    "n": 52
+  },
+  "dedup_one_row_per_molecule_C-H": {
+    "hac_ge_10": {
+      "label": "C-H HAC>=10 dedup mol",
+      "n": 134,
+      "learned_mae": 3.392686567164178,
+      "quantum_mae": 2.223283582089553,
+      "reference_mae": 5.837313432835821,
+      "learned_rmse": 4.445624882625042,
+      "quantum_rmse": 2.9211549545781916
+    },
+    "hac_le_5": {
+      "label": "C-H HAC<=5 dedup mol",
+      "n": 21,
+      "learned_mae": 2.157142857142857,
+      "quantum_mae": 2.189999999999999,
+      "reference_mae": 8.394285714285713,
+      "learned_rmse": 3.3238474550980692,
+      "quantum_rmse": 3.301838593153533
+    }
+  }
+}

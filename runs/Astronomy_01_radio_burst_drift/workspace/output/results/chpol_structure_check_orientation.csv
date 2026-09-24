@@ -1,0 +1,7 @@
+orientation_series_id,sheet,view_n,workbook_n,dropped_bins,x_equal,y_equal,total_view,total_workbook
+orientation_series_1,Sheet_009,52,55,3,True,True,11240.0,11452.0
+orientation_series_2,Sheet_010,52,55,3,True,True,15551.0,15795.0
+orientation_series_3,Sheet_011,52,55,3,True,True,1151.0,1160.0
+orientation_series_4,Sheet_012,52,55,3,True,True,444.0,444.0
+orientation_series_5,Sheet_013,52,55,3,True,True,1503.0,1521.0
+orientation_series_6,Sheet_014,52,55,3,True,True,2843.0,2865.0

@@ -1,0 +1,8 @@
+Process,Methodology,n_identity_checked,n_identity_exact,median_ratio,fraction_exact
+Glacial,Cosmogenic detrital,1,False,0.0999999677419355,0.0
+Glacial,Cosmogenic surface,47,8,1.0025402201524134,0.1702127659574468
+Glacial,Relief,10,8,1.0,0.8
+Glacial,Thermochronometric,7,4,1.0,0.5714285714285714
+Glacial,Volumetric,16,8,0.999999,0.5
+Nonglacial,Relief,7,0,960.0024,0.0
+Nonglacial,Thermochronometric,4,0,1100.0,0.0

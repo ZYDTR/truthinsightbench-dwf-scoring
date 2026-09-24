@@ -1,0 +1,22 @@
+{
+  "task_id": "Energy_03_interface_response_boundaries",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260922T095030-03d744",
+  "source_run_json_sha256": "3162b2b535b9fda02f716fdc8104d526ad222290e15b27f3ef3fa154d66fc7e8",
+  "source_release_json_sha256": "a10bbf619600caba0cdf7173aa2f7f7e12718489e8d83c4dea2dda01766b1c9f",
+  "source_latest_validation_sha256": "d9b909ae31a10b3ebb17a43721100f34324913e8e3b713e8e6ef490592391b32",
+  "source_snapshot_manifest_sha256": "0bbb4176632623e1e8376995cac0d0e9a3f193c968ff42e927ec8ebe2f167b33",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 15,
+    "deepseek-v4.1-flash-max": 1663
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "e9c05e732db2e6a3c73a26d1a2dde20f89c3323990c3066ec159d751209850d5",
+  "output_sha256": "cf68144f76151729bf353eb66183961d86ffb7a512d3e3f1da0d1f32ec2cf518"
+}

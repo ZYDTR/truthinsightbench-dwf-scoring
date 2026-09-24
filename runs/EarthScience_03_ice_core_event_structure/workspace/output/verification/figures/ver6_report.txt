@@ -1,0 +1,197 @@
+=== 0. Load / audit ===
+rows=1931 columns=['c01_depth_top_m', 'c02_depth_ice_snow_m', 'c03_samp_thick_cm', 'c04_sulfate_ug_kg', 'c05_density_ice_g_cm_3', 'c06_depth_w_e_m', 'c07_signal', 'c08_age_a_ad_ce', 'c09_age_ka_bp']
+dated rows: 15 (indices [0, 70, 502, 517, 796, 841, 907, 1012, 1305, 1640, 1660, 1674, 1696, 1752, 1862])
+signal rows: 15
+dated set == signal set: True
+c09 = -0.0010000000*c08 + 1.950000 ; R2=1.000000000000 ; max|resid|=2.498e-16 (deterministic linear recode)
+  check (age_ce-1950)/1000 == -c09 : max|diff|=0.000e+00
+max|c06 - c01*c05| = 0.030320 m  (c06 is essentially the product)
+c05 monotone increasing in row order: True ; range 0.379..0.644
+rank corr of c05 vs c01 (Spearman): 0.999993
+depth jumps >0.5 m at rows [105] : c01 2.97 -> 4.00 (delta 1.030 m), c03 at row 105 = 2.38 cm
+c01 - cumsum(c03)/100 : max=1.0207 m; mean before step=-0.0015, after=1.0065
+raw jump = 1.0300 m ; nominal sample step at break = 0.0238 m ; excess = 1.0062 m (rounds to 1.008 m)
+STEP value used = 1.006200 m ; c01_nostep range 0.00..40.97
+dated horizons (row, c01, c03cum, c06, age):
+  row    0  c01=   0.00  c03cum=   0.00  c06=   0.00  age= 2018.0 CE
+  row   70  c01=   2.00  c03cum=   2.00  c06=   0.78  age= 1991.0 CE
+  row  502  c01=  12.96  c03cum=  11.95  c06=   5.88  age= 1816.0 CE
+  row  517  c01=  13.27  c03cum=  12.26  c06=   6.04  age= 1809.0 CE
+  row  796  c01=  18.90  c03cum=  17.90  c06=   9.25  age= 1695.0 CE
+  row  841  c01=  19.85  c03cum=  18.85  c06=   9.83  age= 1674.0 CE
+  row  907  c01=  21.24  c03cum=  20.24  c06=  10.71  age= 1643.0 CE
+  row 1012  c01=  23.31  c03cum=  22.30  c06=  12.06  age= 1595.0 CE
+  row 1305  c01=  29.20  c03cum=  28.20  c06=  16.23  age= 1459.0 CE
+  row 1640  c01=  36.22  c03cum=  35.21  c06=  21.86  age= 1286.0 CE
+  row 1660  c01=  36.59  c03cum=  35.58  c06=  22.18  age= 1277.0 CE
+  row 1674  c01=  36.85  c03cum=  35.84  c06=  22.41  age= 1269.0 CE
+  row 1696  c01=  37.28  c03cum=  36.27  c06=  22.78  age= 1259.0 CE
+  row 1752  c01=  38.40  c03cum=  37.39  c06=  23.77  age= 1230.0 CE
+  row 1862  c01=  40.59  c03cum=  39.58  c06=  25.76  age= 1172.0 CE
+
+=== 1/2. Headline linear fits and LOO ===
+c01 depth (as reported)      slope=-21.42567  R2=0.99138  resid_sd(13df)= 27.730 yr  RMS= 25.816 yr  LOO_MAE= 27.652 yr  LOO_max= 74.746 yr
+c03 cumulative thickness     slope=-21.87125  R2=0.99434  resid_sd(13df)= 22.474 yr  RMS= 20.922 yr  LOO_MAE= 22.109 yr  LOO_max= 62.173 yr
+c06 water-equivalent depth   slope=-32.90775  R2=0.99905  resid_sd(13df)=  9.206 yr  RMS=  8.570 yr  LOO_MAE=  8.207 yr  LOO_max= 17.183 yr
+c01 minus 1.008 m step       slope=-21.86593  R2=0.99436  resid_sd(13df)= 22.430 yr  RMS= 20.881 yr  LOO_MAE= 22.062 yr  LOO_max= 62.057 yr
+c06 from step-corrected c01  slope=-33.56138  R2=0.99833  resid_sd(13df)= 12.198 yr  RMS= 11.356 yr  LOO_MAE= 10.822 yr  LOO_max= 25.475 yr
+c06 beats c01 in LOO absolute error for 15/15 horizons
+exact sign test (15/15): one-sided p=3.05176e-05 ; two-sided p=6.10352e-05
+NOTE independence caveat: LOO errors share 14/15 training points, so the 15
+     signs are NOT independent Bernoulli draws. Correlation-robust block
+     version: blocks of 3 consecutive horizons (by depth) -> see below.
+blocks (of 3) where c06 wins: 5/5 ; exact sign p(5/5, two-sided)=0.0625
+block-bootstrap MAE(c01)-MAE(c06): median 19.29 yr, 2.5-97.5% [10.98, 30.17]
+excluding the row-0 reference surface: c01 LOO_MAE=24.29 , c06 LOO_MAE=7.64 , c06 wins 14/14
+
+=== (i) Fairness: other smooth monotone transforms of depth ===
+TRUE water-equivalent (cumulative-mass) coordinate: W(41.98 m)=21.222 m vs c06(41.98 m)=27.060 m ; max|c06-W|=5.838 m
+c05 vs c01 (all 1931 rows): c05 = 0.372136 + 6.343e-03*c01 ; R2=0.998565 (density is a near-linear ramp in depth)
+=> c06 = c01*c05 ~ 0.372136*c01 + 6.343e-03*c01^2 : linear-in-c06 is (almost) no-intercept quadratic-in-c01.
+curvature control, same 2 free params as c06-linear:
+  age ~ a6 + b*c01 + c*c01^2 (intercept pinned to c06-linear intercept 2005.90 CE):
+     R2=0.999515  LOO_MAE=5.231 yr   VS   age ~ a + b*c06: R2=0.999050  LOO_MAE=8.207 yr
+  -> equal-parameter-count curvature in c01 (5.23 yr) beats linear-in-c06 (8.21 yr): the c06
+     advantage is curvature absorption, not the water-equivalent coordinate per se.
+     also: the pinned quadratic beats c06-linear on 11/15 held-out horizons.
+q-free family c01*c05^q: q_hat=0.74 (c06 uses q=1); LOO_MAE with q refit in each fold = 3.500 yr
+                                    model  nparam     r2  resid_sd  loo_mae  loo_max     aicc                                        note  beats_c06_linear_loo
+                           c01 poly deg 3       4 1.0000    1.2879   1.2988   4.0154  14.9369                                                              True
+                           c01 poly deg 4       5 1.0000    1.1062   1.4155   5.4175  13.6129                                                              True
+                                 c01^1.25       2 0.9999    2.1391   1.6202   8.1670  25.6648                                                              True
+             fitted power c01^p (p=1.265)       3 1.0000    1.7945   1.7586   8.0057  23.5777                p selected on training folds                  True
+             c01 hinge spline k=3 (4 par)       4 1.0000    2.3980   2.0938   6.1904  32.1566            knots at c01=16.09,23.31,36.72 m                  True
+                    c01 minus step (quad)       3 0.9999    2.2170   2.2157   7.6156  28.7191                                                              True
+                           c06 poly deg 3       4 1.0000    2.0701   2.2420   8.6483  29.1750                                                              True
+                           c06 poly deg 2       3 0.9999    2.9807   2.6396   6.8277  37.5994                                                              True
+                    c06 hinge k=2 (3 par)       3 0.9999    3.4670   3.0954   7.9887  40.8280                                                              True
+                c01*c05^q, q=0.74 (3 par)       3 0.9998    3.7038   3.1083   7.9565  45.3161 q chosen on all 15 (optimistic); q=1 is c06                  True
+                           c01 poly deg 2       3 0.9999    3.5300   3.1327   7.4709  42.6733                                                              True
+                  c01^1.25 (step removed)       2 0.9998    4.0914   3.5744  13.8456  45.1200                                                              True
+                    W=cumsum(rho*dz) quad       3 0.9998    4.5474   4.2023  10.0376  50.2711                                                              True
+             c01 hinge spline k=2 (3 par)       3 0.9996    6.8337   5.2792  16.2231  61.1855                  knots at c01=19.53,36.34 m                  True
+W=cumsum(rho*dz) linear (TRUE mass coord)       2 0.9994    7.2201   6.3851  20.7203  62.1594                                                              True
+                    c06 = c01*c05 (2 par)       2 0.9990    9.2060   8.2073  17.1826  69.4491                                reported c06                 False
+              c06 step-corrected (linear)       2 0.9983   12.1979  10.8217  25.4755  77.8913                                                             False
+                                  c01^1.5       2 0.9955   20.0659  18.2520  57.2596  92.8241                                                             False
+                  c01 minus step (linear)       2 0.9944   22.4297  22.0617  62.0574  96.1651                                                             False
+                                 c06^0.75       2 0.9919   26.7993  25.5940  88.8821 101.5048                                                             False
+                               c01 linear       2 0.9914   27.7304  27.6522  74.7458 102.5293                                                             False
+                                 c06^1.25       2 0.9873   33.7243  29.1672  84.3675 108.4000                                                             False
+                                    c01^2       2 0.9706   51.2294  43.1093 132.7916 120.9429                                                             False
+                                 c01^0.75       2 0.9577   61.4304  63.0571 189.4750 126.3906                                                             False
+                              exp(c01/10)       2 0.8905   98.8227  86.0152 220.8781 140.6533                                                             False
+                                sqrt(c01)       2 0.8734  106.2514 110.8449 397.1138 142.8277                                                             False
+                               log(1+c01)       2 0.7318  154.6761 166.6953 560.5481 154.0935                                                             False
+c06-linear LOO MAE = 8.2073 yr ; models with lower (better) LOO MAE:
+   c01 poly deg 3
+   c01 poly deg 4
+   c01^1.25
+   fitted power c01^p (p=1.265)
+   c01 hinge spline k=3 (4 par)
+   c01 minus step (quad)
+   c06 poly deg 3
+   c06 poly deg 2
+   c06 hinge k=2 (3 par)
+   c01*c05^q, q=0.74 (3 par)
+   c01 poly deg 2
+   c01^1.25 (step removed)
+   W=cumsum(rho*dz) quad
+   c01 hinge spline k=2 (3 par)
+   W=cumsum(rho*dz) linear (TRUE mass coord)
+monotone over [0.00,40.59] m for c01 poly deg 2         : True (dage/ddepth range -27.90..-14.12 yr/m, sign negative)
+monotone over [0.00,40.59] m for c01 poly deg 3         : True (dage/ddepth range -25.55..-12.02 yr/m, sign negative)
+monotone over [0.00,40.59] m for fitted power p=1.265   : True (dage/ddepth range -26.21..-4.24 yr/m, sign negative)
+monotone over [0.00,40.59] m for c01 hinge k=2          : True (dage/ddepth range -26.17..-17.25 yr/m, sign negative)
+
+=== (iii) Quadratic age ~ a + b*c01 + c*c01^2 ===
+coeffs: a=2020.9583 (se 2.6150, t=772.83), b=-14.09843 (se 0.27003, t=-52.21), c=-0.170232 (se 0.006056, t=-28.11)
+quadratic R2=0.999871  resid_sd=3.530 yr  LOO_MAE=3.133 yr  LOO_max=7.471 yr
+d(age)/d(c01) at 0 m = -14.10 yr/m ; at 40.6 m = -27.92 yr/m ; ratio 1.98
+RESOLUTION: c01-quadratic LOO_MAE=3.133 vs c06-linear LOO_MAE=8.207 -> quadratic WINS
+sign test c01-quad vs c06-linear LOO: quad beats c06 on 11/15 (exact two-sided p=0.1185)
+c06-quadratic: R2=0.999908  resid_sd=2.981 yr  LOO_MAE=2.640 yr
+AICc (lower=better):
+   c01 linear           AICc=  102.53
+   c01 quadratic        AICc=   42.67
+   c06 linear           AICc=   69.45
+   c06 quadratic        AICc=   37.60
+   c01 power p=1.265    AICc=   23.58
+linear c01 R2=0.99138 -> non-linearity accounts for 0.849% of total variance
+
+=== (ii) Age-free checks and the 1.008 m depth step ===
+Internal consistency checks on the age column that do NOT assume depth->age:
+ a) strictly increasing age with depth? [True, True, True]
+ b) no age inversions in any of the three coordinates (same as (a)).
+ c) the only other age-like column, c09_age_ka_bp, is an exact recode of c08:
+    c09 = -(c08-1950)/1000 (max |residual| 2.50e-16) -> zero independent information.
+ d) the 15 dated rows are exactly the 15 event-labelled rows -> date and event
+    annotations are co-located; neither verifies the other.
+ e) named events are in age order (event_01..05 sorted by age, no interleaving):
+    reference_surface@2018.0, event_01@1991.0, event_02@1816.0, event_03@1595.0, event_04@1459.0, event_05@1259.0
+ => No internal evidence establishes the age scale beyond (i) monotonicity with
+    depth and (ii) smoothness. Both are satisfied by EVERY candidate coordinate,
+    so the column cannot arbitrate between them.
+
+depth step: c01 2.97 -> 4.00 m between rows 105 and 106 (raw delta 1.030 m);
+nominal sample thickness at the step row = 2.38 cm; excess over one nominal step = 1.0062 m
+under the sample-thickness column, the 2.97-4.00 m interval contains (2.78+2.38)/100 = 0.052 m of core,
+while reported depth says it spans 1.030 m -> discrepancy 0.978 m.
+dated horizons above the step: rows [0, 70] ; below: rows [502, 517, 796, 841, 907, 1012, 1305, 1640, 1660, 1674, 1696, 1752, 1862]
+so the step sits in the 2.00-12.96 m interval bracketed only by the 1991 and
+1816 CE horizons; nothing dates the step itself.
+linear fit on c01: slope -21.4257, intercept 2069.93, LOO_MAE 27.65
+linear fit on c01 minus step: slope -21.8659, intercept 2061.62, LOO_MAE 22.06
+age assigned to the two sides of the jump (reported depth): 2006.3 -> 1984.2 CE (22.1 yr across 1.01 m)
+age assigned to the same two sides if the step is removed:  1996.7 -> 1996.2 CE (0.5 yr across 0.02 m of core)
+=> the reported-depth chronology forces 22 yr into a 1.01 m interval that the sample-
+   thickness column says contains 2.4 cm of core. The dating cannot decide whether
+   that 1.008 m is real missing core (a gap: depth correct, c03cum wrong) or a depth-
+   scale artefact (c03cum right). Both readings fit the 15 dates equally; the c06
+   coordinate inherits the same ambiguity because c06 = c01*c05.
+step effect on the ranking: c01 linear R2 0.99138 -> 0.99436 (step removed); c06 R2 0.99905
+LOO_MAE  c01 step-removed = 22.06 ; c06 step-corrected = 10.82 ; c06 unscaled = 8.21 (all 15)
+
+per-horizon LOO table:
+ row  c01_m  c03cum_m  c06_m   age_ce  loo_abs_err_c01_linear  loo_abs_err_c06_linear  loo_abs_err_c01_quad  loo_abs_err_c06_quad  loo_abs_err_c01_power
+   0  0.000     0.000  0.000 2018.000                  74.746                  16.114                 6.556                 6.355                  8.006
+  70  2.000     2.002  0.780 1991.000                  49.274                  13.972                 1.778                 2.724                  7.305
+ 502 12.960    11.954  5.880 1816.000                  26.965                   4.126                 7.471                 6.828                  1.008
+ 517 13.270    12.263  6.040 1809.000                  26.474                   2.131                 6.009                 5.216                  0.466
+ 796 18.900    17.897  9.250 1695.000                  32.589                   7.126                 1.565                 1.703                  1.577
+ 841 19.850    18.845  9.830 1674.000                  31.755                   9.175                 0.035                 0.202                  1.003
+ 907 21.240    20.236 10.710 1643.000                  30.296                  11.325                 2.038                 1.305                  0.143
+1012 23.310    22.302 12.060 1595.000                  26.268                  15.089                 5.710                 4.718                  1.982
+1305 29.200    28.196 16.230 1459.000                  15.904                  13.792                 5.810                 4.317                  0.347
+1640 36.220    35.208 21.860 1286.000                   8.988                   0.612                 1.131                 0.753                  0.484
+1660 36.590    35.578 22.180 1277.000                  10.251                   1.143                 0.214                 0.079                  0.974
+1674 36.850    35.837 22.410 1269.000                  13.067                   0.650                 1.473                 1.109                  0.755
+1696 37.280    36.265 22.780 1259.000                  14.040                   3.182                 0.257                 0.266                  0.569
+1752 38.400    37.385 23.770 1230.000                  20.084                   7.490                 1.754                 1.181                  0.368
+1862 40.590    39.576 25.760 1172.000                  34.081                  17.183                 5.189                 2.840                  1.391
+
+=== (iv) Mechanism: why c06 = c01*c05 improves a LINEAR fit ===
+c05 ~ poly(c01, 1): residual variance fraction = 1.435e-03  (coeffs descending: [0.006343 0.372136])
+c05 ~ poly(c01, 2): residual variance fraction = 1.527e-05  (coeffs descending: [2.190075e-05 5.390834e-03 3.795015e-01])
+c05 ~ poly(c01, 3): residual variance fraction = 1.527e-05  (coeffs descending: [9.269460e-11 2.189481e-05 5.390937e-03 3.795011e-01])
+=> density carries essentially NO information beyond a quadratic in depth (residual 1.5e-5).
+   Therefore c06 = c01*c05 ~ a0*c01 + a1*c01^2 + a2*c01^3 is a CONSTRAINED CUBIC in c01,
+   and 'linear in c06' is a 2-parameter constrained cubic in c01. The improvement from
+   R2 0.99138 (linear c01) to 0.99905 is curvature, delivered by the fixed shape of the
+   density ramp, not by new chronological information in the density column.
+
+=== (v) Claim vs independent recomputation ===
+  c01_linear     R2        claimed    0.99138   recomputed    0.99138   match=True
+  c01_resid_sd   RMS resid claimed   25.82000   recomputed   25.81555   match=True
+  c01_loo        LOO MAE   claimed   27.65000   recomputed   27.65222   match=True
+  c03_linear     R2        claimed    0.99434   recomputed    0.99434   match=True
+  c03_resid_sd   RMS resid claimed   20.92000   recomputed   20.92250   match=True
+  c03_loo        LOO MAE   claimed   22.11000   recomputed   22.10923   match=True
+  c06_linear     R2        claimed    0.99905   recomputed    0.99905   match=True
+  c06_resid_sd   RMS resid claimed    8.57000   recomputed    8.57032   match=True
+  c06_loo        LOO MAE   claimed    8.21000   recomputed    8.20728   match=True
+  dated_rows     n         claimed   15.00000   recomputed   15.00000   match=True
+  sign test  claimed p=0.0001 ; recomputed two-sided p=6.1e-05, one-sided p=3.05e-05
+  NOTE: the claim's 'residual sd' is the RMS residual (SSE/n); the 13-df residual standard
+        error is larger: c01 27.73, c03 22.47, c06 9.21 yr.
+  NOTE: the claim's sign-test p overstates evidence: LOO errors share 14/15 training points.

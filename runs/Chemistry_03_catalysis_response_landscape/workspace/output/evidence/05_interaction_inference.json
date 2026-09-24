@@ -1,0 +1,243 @@
+{
+  "tukey_and_bootstrap": {
+    "numeric_feature_6": {
+      "decomposition": {
+        "ss_total": 674.4976255303937,
+        "ss_main": 351.4842190885506,
+        "ss_2way": 219.18702285154734,
+        "ss_3way": 103.82638359029579
+      },
+      "eta2": {
+        "ss_main": 0.5211051985722851,
+        "ss_2way": 0.3249633720788695,
+        "ss_3way": 0.1539314293488454
+      },
+      "tukey_nonadditivity": {
+        "ss_nonadditivity": 114.11880702835495,
+        "df_resid": 1398,
+        "ms_resid": 0.1494238908537111,
+        "F": 763.7253077560367,
+        "p": 0.0,
+        "note": "1-df test for departure from additivity using the residual after the three main effects; the remaining 1410 residual df are used as error."
+      },
+      "bootstrap_eta2": {
+        "eta2_2way_ci95": [
+          0.35445867155784316,
+          0.5157462502436512
+        ],
+        "eta2_3way_ci95": [
+          -0.05822041651905325,
+          0.11306437989551073
+        ],
+        "n_boot": 300
+      }
+    },
+    "numeric_feature_7": {
+      "decomposition": {
+        "ss_total": 164.16991173126115,
+        "ss_main": 145.60435384294757,
+        "ss_2way": 12.54871587968654,
+        "ss_3way": 6.016842008627037
+      },
+      "eta2": {
+        "ss_main": 0.8869125426667429,
+        "ss_2way": 0.07643736752583646,
+        "ss_3way": 0.03665008980742062
+      },
+      "tukey_nonadditivity": {
+        "ss_nonadditivity": 0.13005120484601188,
+        "df_resid": 1398,
+        "ms_resid": 0.013187057713496124,
+        "F": 9.862033493105338,
+        "p": 0.0017225880370925761,
+        "note": "1-df test for departure from additivity using the residual after the three main effects; the remaining 1410 residual df are used as error."
+      },
+      "bootstrap_eta2": {
+        "eta2_2way_ci95": [
+          0.11817239440682899,
+          0.17978360959842402
+        ],
+        "eta2_3way_ci95": [
+          -0.07585250660528689,
+          -0.03196916002108702
+        ],
+        "n_boot": 300
+      }
+    }
+  },
+  "lenth_scan": {
+    "numeric_feature_6": {
+      "A+B": {
+        "label": "A+B",
+        "n": 108,
+        "pseudo_sd_s0": 0.05041200545541106,
+        "margin_ME_2.5s": 0.12603001363852764,
+        "median_abs_effect": 0.033608003636940706,
+        "iqr_abs_effect": 0.06024579458208331,
+        "n_flagged_beyond_margin": 12,
+        "max_abs_effect": 0.31692796375443916,
+        "ratio_max_to_pseudo_sd": 6.286755722002747,
+        "p_hat_lenth": 0.09364652144420083
+      },
+      "A+C": {
+        "label": "A+C",
+        "n": 90,
+        "pseudo_sd_s0": 0.06394175110775009,
+        "margin_ME_2.5s": 0.15985437776937522,
+        "median_abs_effect": 0.0426278340718334,
+        "iqr_abs_effect": 0.0695832733400707,
+        "n_flagged_beyond_margin": 5,
+        "max_abs_effect": 0.24262931787316536,
+        "ratio_max_to_pseudo_sd": 3.7945366473355366,
+        "p_hat_lenth": 0.31159713574809667
+      },
+      "B+C": {
+        "label": "B+C",
+        "n": 120,
+        "pseudo_sd_s0": 0.09785908999082589,
+        "margin_ME_2.5s": 0.24464772497706472,
+        "median_abs_effect": 0.06523939332721726,
+        "iqr_abs_effect": 0.06566084301123525,
+        "n_flagged_beyond_margin": 0,
+        "max_abs_effect": 0.24161153760945717,
+        "ratio_max_to_pseudo_sd": 2.46897388512511,
+        "p_hat_lenth": 0.510285609094574
+      },
+      "A+B+C": {
+        "label": "A+B+C",
+        "n": 1080,
+        "pseudo_sd_s0": 0.09062462449981892,
+        "margin_ME_2.5s": 0.2265615612495473,
+        "median_abs_effect": 0.06041641633321262,
+        "iqr_abs_effect": 0.07197606902516271,
+        "n_flagged_beyond_margin": 31,
+        "max_abs_effect": 0.42546083104791366,
+        "ratio_max_to_pseudo_sd": 4.694759657169821,
+        "p_hat_lenth": 0.21059321887436044
+      },
+      "cell_residual": {
+        "label": "cell_residual",
+        "pseudo_sd": 0.0,
+        "n_flagged": 0
+      }
+    },
+    "numeric_feature_7": {
+      "A+B": {
+        "label": "A+B",
+        "n": 108,
+        "pseudo_sd_s0": 0.013042591216009695,
+        "margin_ME_2.5s": 0.03260647804002424,
+        "median_abs_effect": 0.00869506081067313,
+        "iqr_abs_effect": 0.009528483159485082,
+        "n_flagged_beyond_margin": 4,
+        "max_abs_effect": 0.05756871073105825,
+        "ratio_max_to_pseudo_sd": 4.413901331231867,
+        "p_hat_lenth": 0.23917939954883494
+      },
+      "A+C": {
+        "label": "A+C",
+        "n": 90,
+        "pseudo_sd_s0": 0.04281869068672843,
+        "margin_ME_2.5s": 0.10704672671682108,
+        "median_abs_effect": 0.02854579379115229,
+        "iqr_abs_effect": 0.033234109555264915,
+        "n_flagged_beyond_margin": 0,
+        "max_abs_effect": 0.09241857411992535,
+        "ratio_max_to_pseudo_sd": 2.1583699229871667,
+        "p_hat_lenth": 0.5649090324967307
+      },
+      "B+C": {
+        "label": "B+C",
+        "n": 120,
+        "pseudo_sd_s0": 0.01076325359885488,
+        "margin_ME_2.5s": 0.0269081339971372,
+        "median_abs_effect": 0.007175502399236587,
+        "iqr_abs_effect": 0.012800306619164854,
+        "n_flagged_beyond_margin": 11,
+        "max_abs_effect": 0.05247857613883568,
+        "ratio_max_to_pseudo_sd": 4.875716776237527,
+        "p_hat_lenth": 0.1935354664116251
+      },
+      "A+B+C": {
+        "label": "A+B+C",
+        "n": 1080,
+        "pseudo_sd_s0": 0.014021518908594098,
+        "margin_ME_2.5s": 0.03505379727148524,
+        "median_abs_effect": 0.009347679272396065,
+        "iqr_abs_effect": 0.01318738010597242,
+        "n_flagged_beyond_margin": 39,
+        "max_abs_effect": 0.08473688307712082,
+        "ratio_max_to_pseudo_sd": 6.043345491277962,
+        "p_hat_lenth": 0.10705798270625655
+      },
+      "cell_residual": {
+        "label": "cell_residual",
+        "pseudo_sd": 0.0,
+        "n_flagged": 0
+      }
+    }
+  },
+  "failed_test_preserved": {
+    "test": "within-(A,B)-cell permutation null for the 3-way interaction SS",
+    "why_invalid": "Reshuffling the response within each (A,B) block does not preserve the distribution of the cell variances, so the induced 3-way SS is far LARGER (f6: null mean 378.2 vs observed 103.8) than the observed value for any data of this shape. The test therefore has no power to reject non-additivity and is not used as evidence. It is retained here because the contract requires reporting failed tests that bear on a submitted claim.",
+    "observed_3way_ss": {
+      "numeric_feature_6": 103.82638359029579,
+      "numeric_feature_7": 6.016842008627037
+    },
+    "null_mean_3way_ss": {
+      "numeric_feature_6": 378.1840570824998,
+      "numeric_feature_7": 133.69172197489172
+    },
+    "verdict": "invalid; superseded by Tukey 1-df and Lenth-style contrast scans"
+  },
+  "cell_interaction_sparsity": {
+    "numeric_feature_6:AxB": {
+      "n_cells": 130,
+      "sd_of_cell_interactions": 0.20961956797718923,
+      "max_abs_cell_interaction": 0.8116772175119255,
+      "median_abs_cell_interaction": 0.08717337743058412,
+      "ratio_max_to_median": 9.311067684147737,
+      "n_cells_beyond_2x_median": 38
+    },
+    "numeric_feature_6:AxC": {
+      "n_cells": 110,
+      "sd_of_cell_interactions": 0.24199068294686152,
+      "max_abs_cell_interaction": 1.1322064485893528,
+      "median_abs_cell_interaction": 0.11379690568556372,
+      "ratio_max_to_median": 9.949360589098905,
+      "n_cells_beyond_2x_median": 24
+    },
+    "numeric_feature_6:BxC": {
+      "n_cells": 143,
+      "sd_of_cell_interactions": 0.22806110055347484,
+      "max_abs_cell_interaction": 0.8520808549476655,
+      "median_abs_cell_interaction": 0.1357386735697828,
+      "ratio_max_to_median": 6.277362468181285,
+      "n_cells_beyond_2x_median": 30
+    },
+    "numeric_feature_7:AxB": {
+      "n_cells": 130,
+      "sd_of_cell_interactions": 0.029102190046077343,
+      "max_abs_cell_interaction": 0.1359630036805649,
+      "median_abs_cell_interaction": 0.016503634447326908,
+      "ratio_max_to_median": 8.238367379894726,
+      "n_cells_beyond_2x_median": 28
+    },
+    "numeric_feature_7:AxC": {
+      "n_cells": 110,
+      "sd_of_cell_interactions": 0.0792088116288599,
+      "max_abs_cell_interaction": 0.31069338811796626,
+      "median_abs_cell_interaction": 0.04147762509288072,
+      "ratio_max_to_median": 7.49062626951836,
+      "n_cells_beyond_2x_median": 24
+    },
+    "numeric_feature_7:BxC": {
+      "n_cells": 143,
+      "sd_of_cell_interactions": 0.041593292655545615,
+      "max_abs_cell_interaction": 0.14414109431312677,
+      "median_abs_cell_interaction": 0.02455123500605467,
+      "ratio_max_to_median": 5.871032323937253,
+      "n_cells_beyond_2x_median": 31
+    }
+  }
+}

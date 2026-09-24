@@ -1,0 +1,54 @@
+mv log10IC ~ log vmax only: R2=0.0006 RMSE=0.5620 dex
+mv log10IC ~ log vmin only: R2=0.5800 RMSE=0.3644 dex
+mv log10IC ~ log vmax + log vmin (additive): R2=0.7585 RMSE=0.2763 dex
+mv log10IC ~ log vmax * log vmin (interaction): R2=0.7808 RMSE=0.2632 dex
+mv log10IC ~ log ratio vmin/vmax only: R2=0.6090 RMSE=0.3516 dex
+mv log10IC ~ log vmax + log ratio: R2=0.7585 RMSE=0.2763 dex
+mv log10IC ~ log vmax + log vmin + quad: R2=0.7767 RMSE=0.2657 dex
+mv log10IC ~ log vmax + log vmin + quad + interact: R2=0.7841 RMSE=0.2613 dex
+--- curvature in vmin at fixed vmax (mv family) ---
+vmax 10.0 vmin* 0.05 ic* 389.8 ic@0.01 533.8 ic@max 6654.9 dIC(edge-best) 143.99999999999994
+vmax 20.0 vmin* 0.03 ic* 122.3 ic@0.01 167.6 ic@max 7786.7 dIC(edge-best) 45.3
+vmax 30.0 vmin* 0.03 ic* 50.7 ic@0.01 81.0 ic@max 8435.6 dIC(edge-best) 30.299999999999997
+vmax 50.0 vmin* 0.03 ic* 65.1 ic@0.01 88.2 ic@max 9289.5 dIC(edge-best) 23.10000000000001
+vmax 100.0 vmin* 0.05 ic* 167.3 ic@0.01 190.4 ic@max 10500.1 dIC(edge-best) 23.099999999999994
+--- truncated ranked-grid slice (vmin>0, n=188) ---
+log vmax: R2=0.0020
+log vmin: R2=0.0033
+log vmax + log vmin: R2=0.0051
+f: R2=0.0069
+w: R2=0.0001
+log vmax+log vmin+f+w: R2=0.0236
+log(vmax*vmin)+f+w: R2=0.0192
+log(vmax/vmin)+f+w: R2=0.0080
+top-30 distinct (vmax,vmin) pairs: {(20, 0.0): 2, (20, 0.01): 2, (20, 0.02): 2, (20, 0.0299999999999999): 3, (20, 0.05): 4, (30, 0.02): 4, (30, 0.0299999999999999): 7, (30, 0.05): 5, (50, 0.05): 1}
+top-30 distinct (f,w) pairs: {(1010, 250): 1, (1010, 275): 4, (1010, 300): 4, (1060, 275): 1, (1060, 300): 6, (1060, 325): 1, (1110, 275): 4, (1110, 300): 6, (1110, 325): 1, (1160, 300): 2}
+top-10 cells:
+ vmax  vmin    f   w   ic
+   30  0.05 1010 275  0.0
+   20  0.05 1060 300  2.0
+   20  0.03 1060 300  5.7
+   30  0.03 1060 275  9.4
+   30  0.03 1010 275 11.9
+   20  0.05 1110 300 16.4
+   30  0.03 1010 250 17.1
+   30  0.05 1160 300 18.5
+   20  0.00 1060 325 19.3
+   30  0.03 1160 300 21.0
+ledger: lattice cells known (candidate file): 105 in table: 29 known & ic<137.2: 28 known & ic<137.2 but absent: 0 in table but not known from candidate file: 221
+table census: 250 cells = 29 whose ic is independently recoverable from the candidate file + 221 whose ic is known only from the ranked table itself
+ranked rows outside the declared 2240 lattice: 221
+outside rows ic range: 0.0 136.7
+ vmax  vmin    f   w   ic
+   30  0.05 1010 275  0.0
+   20  0.05 1060 300  2.0
+   20  0.03 1060 300  5.7
+   30  0.03 1060 275  9.4
+   30  0.03 1010 275 11.9
+   20  0.05 1110 300 16.4
+   30  0.03 1010 250 17.1
+   30  0.05 1160 300 18.5
+   20  0.00 1060 325 19.3
+   30  0.03 1160 300 21.0
+   30  0.05 1110 300 22.1
+   20  0.03 1110 300 22.3

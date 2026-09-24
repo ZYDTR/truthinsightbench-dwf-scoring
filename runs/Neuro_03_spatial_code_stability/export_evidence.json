@@ -1,0 +1,21 @@
+{
+  "task_id": "Neuro_03_spatial_code_stability",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260922T201836-18d832",
+  "source_run_json_sha256": "220d24a9af903b34835e192d1e14c7522ca858af26eff81fdc212e8c4ff3aee7",
+  "source_release_json_sha256": "a3e6212e4b19e97fd17d50e7ec43460bb42fe243ff8add9ea6cdc6db3e3fddfd",
+  "source_latest_validation_sha256": "40a7a123085ef7c36690ebfb077513bbfea8adbcea2af4e9b9ddaa01bd8a35f6",
+  "source_snapshot_manifest_sha256": "2f6088f9afcc980e0c586d408797328f165befe7774ad85f7af1de44aea27530",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 241
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 4,
+  "input_sha256": "941a2b5262fd5bafa59b560bd59f6e047a8936964a3e9e676ce8b7a3b2c9ca39",
+  "output_sha256": "3ecb79b7ef4cb50f66f3504c082a065a19d352aedfc8fc530ab34f0dc227d817"
+}

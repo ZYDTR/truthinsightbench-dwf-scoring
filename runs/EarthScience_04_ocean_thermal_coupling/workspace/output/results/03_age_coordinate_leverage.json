@@ -1,0 +1,102 @@
+{
+  "step": "03_age_coordinate_leverage",
+  "n_rows_differing": 52,
+  "depth_range_differing_m": [
+    0.03,
+    0.55
+  ],
+  "age_range_differing_ka": [
+    1.98,
+    32.68
+  ],
+  "age_range_differing_ka_age1": [
+    2.76,
+    32.68
+  ],
+  "age_range_differing_ka_age2": [
+    1.98,
+    32.58
+  ],
+  "max_abs_diff_ka": 1.629999999999999,
+  "signed_diff_min_ka": -1.629999999999999,
+  "signed_diff_max_ka": 0.7799999999999998,
+  "frac_depth_span_affected": 0.08293460925039874,
+  "frac_rows_affected": 0.08373590982286634,
+  "n_d18o_rows_in_divergent_interval": 52,
+  "n_rows_identical_beyond_divergent_interval": 569,
+  "max_abs_diff_ka_beyond_divergent_interval": 0.0,
+  "period_age1_ka": 108.83499999999759,
+  "period_age2_ka": 108.7699999999976,
+  "r2_age1": 0.42734738144875317,
+  "r2_age2": 0.43196388363621563,
+  "amp_age1": 0.3854705605339446,
+  "amp_age2": 0.38709624643940255,
+  "phase_age1_rad": -2.5854889122344735,
+  "phase_age2_rad": -2.5923080762416775,
+  "period_uniform_lsr_ka": 84.06999999999846,
+  "r2_uniform_lsr": 0.45051727926653506,
+  "amp_uniform_lsr": 0.37472898352917544,
+  "phase_uniform_lsr_rad": -2.693441637184563,
+  "mean_lsr_m_per_ka_age1": 0.022345267313946957,
+  "mean_lsr_m_per_ka_age2": 0.02227776566925661,
+  "max_abs_gradient_difference_between_coords": 0.013486474401967291,
+  "max_abs_gradient_difference_interior": 0.0,
+  "gradient_arrays_identical_interior": true,
+  "n_interior_rows": 568,
+  "interior_definition_depth_m": 0.56,
+  "max_abs_gradient_difference_below_last_divergent_row": 0.00046262639007993434,
+  "n_rows_below_last_divergent_row": 569,
+  "gradient_difference_depth_range_m": [
+    0.03,
+    0.56
+  ],
+  "coordinate_choice_changes_record_wide_result": false,
+  "serial_correlation": {
+    "lag1_rho_at_median_step": 0.9171340219894106,
+    "median_age_step_ka": 0.45999999999997954,
+    "n_effective": 25.631763036205154,
+    "note": "record treated as one continuous serially-correlated series"
+  },
+  "period_scan": {
+    "grid_ka": [
+      40.0,
+      300.0
+    ],
+    "step_ka": 0.065,
+    "n_grid_points": 4001,
+    "design": "[1, t, cos(wt), sin(wt), cos(2wt), sin(2wt)], w = 2*pi/P",
+    "r2_definition": "full 6-column design; fundamental amp/phase from cos/sin columns"
+  },
+  "robustness": {
+    "r2_fundamental_only_age1": 0.4067867602980134,
+    "r2_fundamental_only_age2": 0.4101224513145245,
+    "r2_fundamental_only_uniform": 0.430995020842066,
+    "uniform_coord_mean_lsr_from_age2": {
+      "period_ka": 84.32999999999845,
+      "r2": 0.450516752259534,
+      "amp": 0.37475288267065715
+    },
+    "r2_uniform_coord_at_shipped_optimum_108_835ka": 0.07295811229083526,
+    "mean_lsr_m_per_ka": 0.022345267313946957,
+    "span_matched_lsr_m_per_ka": 0.01759160540934852,
+    "identical_subrecord_depth_gt_0_56m": {
+      "n": 540,
+      "period_ka_age1": 104.34999999999775,
+      "period_ka_age2": 104.34999999999775,
+      "r2_age1": 0.5006662161357851,
+      "r2_age2": 0.5006662161357851,
+      "amp_age1": 0.3938397296674955,
+      "amp_age2": 0.3938397296674955
+    },
+    "divergent_interval_only_depth_le_0_55m": {
+      "n": 52,
+      "period_ka_age1": 40.0,
+      "period_ka_age2": 299.9999999999909,
+      "r2_age1": 0.8804447776656099,
+      "r2_age2": 0.8795890625886308,
+      "amp_age1": 0.6280715976004637,
+      "amp_age2": 4776.432081112793
+    }
+  },
+  "explanation": "The two shipped age models differ on exactly 52 of 621 rows, all in the top 0.55 m (8.29% of the 6.27 m depth span, 8.37% of rows, ages 1.98-32.68 ka); every one of those rows carries d18O, and the two coordinates agree to <= 0.005 ka on all 569 other rows (max |diff| below 0.55 m = 0.0000 ka). The record-wide dominant sinusoid is therefore the same feature under either coordinate: best period 108.835 ka (age_1) vs 108.770 ka (age_2), a shift of 0.065 ka << the ~14 ka age spacing of the ~26 effective samples implied by rho = 0.92; R^2 differs by 0.0046 (0.4273 vs 0.4320) and the fundamental amplitude by 0.0016 per mille, i.e. 0.42% of the amplitude. The constant-rate synthetic coordinate (age = depth/mean_LSR, mean LSR = 0.022345 m/ka) peaks at 84.070 ka with R^2 = 0.4505 and explains only R^2 = 0.0730 at the shipped-coordinate optimum 108.8 ka, so a deliberately uniform age model would relocate the peak to a different period; that is a genuine sensitivity to the age-depth warp as a whole, but it is NOT the choice between the two shipped coordinates, which share 91.7% of their rows and differ only in the top 8% of the depth span. np.gradient LSR is bit-identical between the two coordinates for every row deeper than 0.56 m (array_equal = True, n = 568 rows); the only nonzero gradient differences (max 0.0135 m/ka) are confined to the top 0.56 m, i.e. the divergent interval plus the single-row np.gradient stencil guard. Conclusion: the choice of shipped age coordinate cannot change the record-wide spectral result; it perturbs only the top ~8% of the record locally."
+}

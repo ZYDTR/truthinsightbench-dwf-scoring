@@ -1,0 +1,43 @@
+candidate-file rows inside declared lattice: 105
+{'frequency_amplitude_scan': 70, 'minimum_velocity_scan': 35}
+of those, present in ranked table: 29
+          count    min     max
+in_table                      
+False        76  139.9  4559.2
+True         29   43.9   137.2
+rule ic<137.2: TP=28 FP=0 FN=1
+max ic among candidate-file lattice cells NOT in table: 139.9
+cells with ic<137.2 in table but NOT from candidate file (uncovered): 222
+4D linear R2 = 0.023554221594099145 RMSE = 33.38227631311512
+ridge a, b = 709.2857688037109 0.1213663690718669
+ridge-function (u,u^2) R2 = 0.11811452863981653 RMSE = 31.724732982284298
+f-only quadratic R2 = 0.14505911373841762
+best single-combination quadratic model: R2=0.1844 a=400 b=-0.20
+   pass    T_s   invT_uhz  peakpow  fwhm_uhz
+pass_01 4740.0 210.970464 0.038576     250.0
+pass_02 4740.0 210.970464 0.042572     729.0
+pass_03 4740.0 210.970464 0.081185     209.0
+pass_04 4740.0 210.970464 0.032268     686.0
+pass_05 4740.0 210.970464 0.153882     754.0
+pass_06 4740.0 210.970464 0.147755     526.0
+pass_07 4740.0 210.970464 0.086309     423.0
+pass_08 4740.0 210.970464 0.124117     640.0
+pass_09 4740.0 210.970464 0.147358     720.0
+pass_10 4740.0 210.970464 0.037123     181.0
+pass_11 4320.0 231.481481 0.078211     246.0
+pass_12 4740.0 210.970464 0.126848     913.0
+pass_13 3600.0 277.777778 0.079337    1202.0
+pass_14 4740.0 210.970464 0.163063     657.0
+pass_15 4740.0 210.970464 0.031139     601.0
+pass_16 4740.0 210.970464 0.080984     783.0
+pass_17 4740.0 210.970464 0.156291     557.0
+pass_18 4740.0 210.970464 0.138788     565.0
+pass_19 4320.0 231.481481 0.063260     320.0
+pass_20 4740.0 210.970464 0.119802     737.0
+pass_21 4740.0 210.970464 0.085973     296.0
+pass_22 4740.0 210.970464 0.093893     347.0
+median invT 210.9704641350211 median fwhm 583.0 IQR fwhm 326.75 726.75
+model B / C too:
+A median fwhm 583.0 min 181.0 max 1202.0
+B median fwhm 168.5 min 107.0 max 1624.0
+C median fwhm 364.5 min 170.0 max 1283.0

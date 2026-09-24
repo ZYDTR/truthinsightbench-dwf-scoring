@@ -1,0 +1,307 @@
+{
+  "schema": "truthinsightbench-native-artifact-registry",
+  "task_id": "Energy_02_flow_battery_operating_boundary",
+  "note": "Maps F0xx artifact IDs used in output/Result.md to real files under output/.",
+  "files": [
+    {
+      "id": "F001",
+      "relative_path": "Result.md",
+      "bytes": 58508,
+      "sha256": "ac5446df3737a88218ad2ab9951f9297fa08cdebb3bc7162e215b8368a7e22e6"
+    },
+    {
+      "id": "F002",
+      "relative_path": "analysis/robustness_checks.py",
+      "bytes": 15393,
+      "sha256": "4118508b0eefc1df81b63622fe87fb027a52520eaf6553f4a0833ec09fc70114"
+    },
+    {
+      "id": "F003",
+      "relative_path": "analysis/run_analysis.py",
+      "bytes": 50731,
+      "sha256": "2ebd13b7ee24d1bacbe9135ea6dad416c0786dbe4651523219485ba348ee8f07"
+    },
+    {
+      "id": "F004",
+      "relative_path": "analysis/verify_claims.py",
+      "bytes": 20039,
+      "sha256": "bd72ce10550263bb8763e04d77cda05a6b6e19b09b78c04efec17b197a0aa186"
+    },
+    {
+      "id": "F005",
+      "relative_path": "figures/fig1_rate_voltage_family.png",
+      "bytes": 171737,
+      "sha256": "1f228278bdaee1e7f81405210895d033884231548450af069b37de2e0bd81a31"
+    },
+    {
+      "id": "F006",
+      "relative_path": "figures/fig2_ordering_and_gap.png",
+      "bytes": 110960,
+      "sha256": "4998bd947c5e7671f199dfb5be0ae83b145a50fa5ea910927e44446ce639af1b"
+    },
+    {
+      "id": "F007",
+      "relative_path": "figures/fig3_summary_linkage_and_power.png",
+      "bytes": 103902,
+      "sha256": "51e7d6281a61ea1744f024b170451a93bea9ce79fc5a0cf143b1ad9c0132f74b"
+    },
+    {
+      "id": "F008",
+      "relative_path": "figures/fig4_cycling.png",
+      "bytes": 137876,
+      "sha256": "7893953bf683c38a7b3a6faf057df77a6eb2d934e42d052e37a3b670ce6b533e"
+    },
+    {
+      "id": "F009",
+      "relative_path": "file_registry.json",
+      "bytes": 10321,
+      "sha256": "8341253c26efc3e1d377c6f6761101335833f19bd4d63c97e51ad6748890761b"
+    },
+    {
+      "id": "F010",
+      "relative_path": "reproduce.md",
+      "bytes": 15019,
+      "sha256": "90784094b3a244c134b0e357e3dce01edf6617482d53ec64849c3dadd55f2d69"
+    },
+    {
+      "id": "F011",
+      "relative_path": "results/affine_family_tests.csv",
+      "bytes": 5736,
+      "sha256": "520eaeafb148a88cfcaf1b9734441d7032a26c46db9807d5ff2cfd82e4f37634"
+    },
+    {
+      "id": "F012",
+      "relative_path": "results/boundary_checks.json",
+      "bytes": 2212,
+      "sha256": "6dd46001434620cf30b0f54f046b870c1d611781d54e9dfe0c36d396a3692832"
+    },
+    {
+      "id": "F013",
+      "relative_path": "results/curve_inventory.csv",
+      "bytes": 1185,
+      "sha256": "fac29cff7fe43bc9b23d23c7db6f457d6d78d51aa86adcee4905cdcda0f25abd"
+    },
+    {
+      "id": "F014",
+      "relative_path": "results/curve_metrics.csv",
+      "bytes": 1167,
+      "sha256": "cb305f66bdcd965def95ac079dec87d1957e7a62378376cc68071ad21e9aea3b"
+    },
+    {
+      "id": "F015",
+      "relative_path": "results/cycling_analysis.json",
+      "bytes": 4910,
+      "sha256": "ad6623a3cc430fd90edc8a5ee0f1a143027fb9aaa29ae60c8b71b9163552d6c5"
+    },
+    {
+      "id": "F016",
+      "relative_path": "results/cycling_resolution.csv",
+      "bytes": 544,
+      "sha256": "70595330f200736518820c2d3d6126b4f14be9aab094868f94ce0b900cde67d8"
+    },
+    {
+      "id": "F017",
+      "relative_path": "results/cycling_segments.csv",
+      "bytes": 1434,
+      "sha256": "41ead661820e3c9b599b77c7e672516b31a83efa17bd22f4cb5115d4ae75a1e4"
+    },
+    {
+      "id": "F018",
+      "relative_path": "results/efficiency_leave_one_out.csv",
+      "bytes": 357,
+      "sha256": "a8ad3cebd689f779d086759d036d0c1bb6afa65c15a162f9088e5d9a11b9fa9b"
+    },
+    {
+      "id": "F019",
+      "relative_path": "results/efficiency_local_slopes.csv",
+      "bytes": 227,
+      "sha256": "adf2db7bd9e1040c39b728f87fc3cb1e7b7a2f266680568b4bc35b55ce170471"
+    },
+    {
+      "id": "F020",
+      "relative_path": "results/efficiency_models.json",
+      "bytes": 3124,
+      "sha256": "42e4d253ebd1ee1ed2d16506f1916b4cee74c5a4e464bd2b45ea9313bbf95156"
+    },
+    {
+      "id": "F021",
+      "relative_path": "results/grid_sharing.csv",
+      "bytes": 1170,
+      "sha256": "fa3e9ae952a37512c7b8f3064e466c5317aaf6bbe80bdb268c770ee386290feb"
+    },
+    {
+      "id": "F022",
+      "relative_path": "results/key_results.json",
+      "bytes": 24843,
+      "sha256": "6c89c5f1607852798b5ebc270060c128e05c25071b372afea2b1441d92478788"
+    },
+    {
+      "id": "F023",
+      "relative_path": "results/linkage_leave_one_out.csv",
+      "bytes": 381,
+      "sha256": "1c90651042e51b1a2f1bed420f1a4a4aafeeeabfa96c2e27379b0f0735a67142"
+    },
+    {
+      "id": "F024",
+      "relative_path": "results/linkage_permutation.json",
+      "bytes": 644,
+      "sha256": "938a6e80672ddfd56b1ece22daa2c237e3aa3aab4e988197dd0c91efe54188ac"
+    },
+    {
+      "id": "F025",
+      "relative_path": "results/offset_tests.csv",
+      "bytes": 138,
+      "sha256": "db1f05c4ffb33f85d54ba8a517099bd2a511ce1ee7c0dc9632380f5deae3d2cd"
+    },
+    {
+      "id": "F026",
+      "relative_path": "results/ordering_dense_sweep.csv",
+      "bytes": 51536,
+      "sha256": "9d5a18800875d7a8921c38e0bbac4341162cf084ca8e6dafee455dba4d1c24e5"
+    },
+    {
+      "id": "F027",
+      "relative_path": "results/ordering_robustness_soc.csv",
+      "bytes": 923,
+      "sha256": "0e0095868936c13ab4b6c7bdd24f3922b8ca19bc9cc34f5cc0f44eafa5c5f22c"
+    },
+    {
+      "id": "F028",
+      "relative_path": "results/power_turnover.csv",
+      "bytes": 448,
+      "sha256": "9e65f705e5a50970d60d817ac3dd3281b06134d46dff68aaf793448be4862843"
+    },
+    {
+      "id": "F029",
+      "relative_path": "results/power_turnover.json",
+      "bytes": 1511,
+      "sha256": "988fcdb71f26b9c1050550dabc84871f58a34a778065c7595fca5c53c8182375"
+    },
+    {
+      "id": "F030",
+      "relative_path": "results/robustness_cycling_variants.csv",
+      "bytes": 841,
+      "sha256": "ae183628baaafc5b59df46a80ada096698b594ef0ecb3a1c50f0242f76b97a3b"
+    },
+    {
+      "id": "F031",
+      "relative_path": "results/robustness_leave_one_setting_out.csv",
+      "bytes": 1757,
+      "sha256": "c71808d246fb981cf23e3c773276fb7a5f144ac4bd3097c47218fa6b2ed1dd3a"
+    },
+    {
+      "id": "F032",
+      "relative_path": "results/robustness_linkage_leave_one_rate_out.csv",
+      "bytes": 677,
+      "sha256": "23c2328bc36a5211449654ba0bdb62ec1c7cfa5a5b6d86c4996f1b0c211a4bad"
+    },
+    {
+      "id": "F033",
+      "relative_path": "results/robustness_power_peak_definitions.csv",
+      "bytes": 170,
+      "sha256": "dace5ce280cfde81d1495450ae4097882d1a423368fb33845e3a07a923d122a3"
+    },
+    {
+      "id": "F034",
+      "relative_path": "results/robustness_soc_optimum_fine.csv",
+      "bytes": 31291,
+      "sha256": "9207a013b1a289644ecd9ff538288c8068d7db794bdaf83405486e4afac66cbd"
+    },
+    {
+      "id": "F035",
+      "relative_path": "results/robustness_summary.json",
+      "bytes": 3763,
+      "sha256": "05775206d761eb43a2bece03fb28512a0d9fbf859d910ca3a9e3cfee1bb576a7"
+    },
+    {
+      "id": "F036",
+      "relative_path": "results/soc_reduction_scan.csv",
+      "bytes": 13153,
+      "sha256": "87421386244387427b4095179cc0300c612c86a69cbb06c21d51d2e54633cb3d"
+    },
+    {
+      "id": "F037",
+      "relative_path": "results/summary_linkage.csv",
+      "bytes": 1091,
+      "sha256": "1a88ae6bc7f809d9c231ce1c9530733f2d0d52aa980ebbee75e134bb9faba9f5"
+    },
+    {
+      "id": "F038",
+      "relative_path": "results/verification_summary.json",
+      "bytes": 2135,
+      "sha256": "572493934fcd8d43ba9de0a04fbbf93e44c7a250901e65897a7f6ac39b42b95c"
+    },
+    {
+      "id": "F039",
+      "relative_path": "results/verify_efficiency_forms.tsv",
+      "bytes": 441,
+      "sha256": "4cfff88578bb6500081c04f9102c8870fbe43fba307684d98d30344633c4acbb"
+    },
+    {
+      "id": "F040",
+      "relative_path": "results/verify_power_window.tsv",
+      "bytes": 299,
+      "sha256": "b411c16d5dafe5a8eb9a3b1593fc597f3e9026a620b7ba653a9bd828171986fa"
+    },
+    {
+      "id": "F041",
+      "relative_path": "verification/raw_wf_60f65a1b-1f1_agent-a1e903b1cd75d6faa.jsonl.md",
+      "bytes": 4507,
+      "sha256": "e4fd445b99d191dd2183120446ac904a7864e4bb5cbb3110a6b6d7d3e9f34cb7"
+    },
+    {
+      "id": "F042",
+      "relative_path": "verification/raw_wf_60f65a1b-1f1_agent-a6131a68cf6b862c7.jsonl.md",
+      "bytes": 8888,
+      "sha256": "c94cdc3433154c6f397c6cbd1e9116cc5b769c2ed1e053473405a2f4a264a0c6"
+    },
+    {
+      "id": "F043",
+      "relative_path": "verification/raw_wf_60f65a1b-1f1_agent-a67746b4e4843e9fb.jsonl.md",
+      "bytes": 4585,
+      "sha256": "f578e37e6961e0b856f6f55a40bf148d444b20abfe609a50d4c99e00299cdb6f"
+    },
+    {
+      "id": "F044",
+      "relative_path": "verification/raw_wf_60f65a1b-1f1_agent-a7f30a7cfbc765148.jsonl.md",
+      "bytes": 4583,
+      "sha256": "d300ffba58929b954f5cf4e52797c382bad39d311b1ce9d8f6ab51d52a1596ec"
+    },
+    {
+      "id": "F045",
+      "relative_path": "verification/verdict_01_Finding_3:_power-density_turnover,_impli.json",
+      "bytes": 7519,
+      "sha256": "b3aa8821bef48408e92c549b76819546a97585ebe283b0c1d9669f3a25d25f6c"
+    },
+    {
+      "id": "F046",
+      "relative_path": "verification/verdict_02_Finding_1_rate-family_monotonicity,_SoC_.json",
+      "bytes": 5667,
+      "sha256": "3cb30a934174732ee3cfc2a95b84161610dc17dc3c551485f170c26a7ef35b59"
+    },
+    {
+      "id": "F047",
+      "relative_path": "verification/verdict_03_Finding_2:_mid-SoC_reduction_of_rate_sum.json",
+      "bytes": 10037,
+      "sha256": "7b41974851ea1cf7bf2118be3e8b7f9b3ce974899bc28ae6fd5fe1ba0cf86534"
+    },
+    {
+      "id": "F048",
+      "relative_path": "verification/verdict_04_Finding_4_\u2014_efficiency_decay_convexity_i.json",
+      "bytes": 10372,
+      "sha256": "6422b50fa58bd02c33facc14be20edb4d04cfe421d6da368b601c70cf8e5fb46"
+    },
+    {
+      "id": "F049",
+      "relative_path": "verification/verdict_05_dataset_structural-integrity_claims_and_.json",
+      "bytes": 7054,
+      "sha256": "9250daad2da2e5f9b81eb8ac53a3643198884add70949362fa90d6afa7a65dfa"
+    },
+    {
+      "id": "F050",
+      "relative_path": "verification/verdict_06_transcription_accuracy_of_output-Result..json",
+      "bytes": 9279,
+      "sha256": "0c91ae0e0f6c038ace788c80a71377c4045c56e265bd25888e35fe9bb235aebb"
+    }
+  ]
+}

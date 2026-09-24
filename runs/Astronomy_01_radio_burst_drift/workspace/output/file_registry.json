@@ -1,0 +1,270 @@
+{
+  "schema": "truthinsightbench-native-artifact-registry",
+  "description": "Maps the registered findings of output/Result.md to the analysis source and result evidence that support them.",
+  "files": [
+    {
+      "id": "F001",
+      "path": "output/analysis/s10_drift_rederive.py",
+      "relative_path": "output/analysis/s10_drift_rederive.py",
+      "exists": true
+    },
+    {
+      "id": "F002",
+      "path": "output/results/s10_drift_rederived_per_event.csv",
+      "relative_path": "output/results/s10_drift_rederived_per_event.csv",
+      "exists": true
+    },
+    {
+      "id": "F003",
+      "path": "output/analysis/s20_symmetric_decisive.py",
+      "relative_path": "output/analysis/s20_symmetric_decisive.py",
+      "exists": true
+    },
+    {
+      "id": "F004",
+      "path": "output/results/s20_symmetric_summary.json",
+      "relative_path": "output/results/s20_symmetric_summary.json",
+      "exists": true
+    },
+    {
+      "id": "F005",
+      "path": "output/analysis/s19_surrogate_null.py",
+      "relative_path": "output/analysis/s19_surrogate_null.py",
+      "exists": true
+    },
+    {
+      "id": "F006",
+      "path": "output/results/s19_surrogate_summary.json",
+      "relative_path": "output/results/s19_surrogate_summary.json",
+      "exists": true
+    },
+    {
+      "id": "F007",
+      "path": "output/analysis/s17_robustness_scan.py",
+      "relative_path": "output/analysis/s17_robustness_scan.py",
+      "exists": true
+    },
+    {
+      "id": "F008",
+      "path": "output/results/s17_robustness_summary.json",
+      "relative_path": "output/results/s17_robustness_summary.json",
+      "exists": true
+    },
+    {
+      "id": "F009",
+      "path": "output/analysis/s22_structure_addendum.py",
+      "relative_path": "output/analysis/s22_structure_addendum.py",
+      "exists": true
+    },
+    {
+      "id": "F010",
+      "path": "output/results/s22_mask_diffuseness.csv",
+      "relative_path": "output/results/s22_mask_diffuseness.csv",
+      "exists": true
+    },
+    {
+      "id": "F011",
+      "path": "output/analysis/s05_rb_binning.py",
+      "relative_path": "output/analysis/s05_rb_binning.py",
+      "exists": true
+    },
+    {
+      "id": "F012",
+      "path": "output/results/s05_binning_grid_sensitivity.csv",
+      "relative_path": "output/results/s05_binning_grid_sensitivity.csv",
+      "exists": true
+    },
+    {
+      "id": "F013",
+      "path": "output/analysis/driftpop_s01_binning_structure.py",
+      "relative_path": "output/analysis/driftpop_s01_binning_structure.py",
+      "exists": true
+    },
+    {
+      "id": "F014",
+      "path": "output/results/driftpop_s01_binning_structure.csv",
+      "relative_path": "output/results/driftpop_s01_binning_structure.csv",
+      "exists": true
+    },
+    {
+      "id": "F015",
+      "path": "output/analysis/s15_reconcile_coverage.py",
+      "relative_path": "output/analysis/s15_reconcile_coverage.py",
+      "exists": true
+    },
+    {
+      "id": "F016",
+      "path": "output/results/s15_slow_reconstruction.csv",
+      "relative_path": "output/results/s15_slow_reconstruction.csv",
+      "exists": true
+    },
+    {
+      "id": "F017",
+      "path": "output/results/s15_orientation_reconstruction.csv",
+      "relative_path": "output/results/s15_orientation_reconstruction.csv",
+      "exists": true
+    },
+    {
+      "id": "F018",
+      "path": "output/analysis/s16_coverage_matrix.py",
+      "relative_path": "output/analysis/s16_coverage_matrix.py",
+      "exists": true
+    },
+    {
+      "id": "F019",
+      "path": "output/results/s16_coverage_summary.json",
+      "relative_path": "output/results/s16_coverage_summary.json",
+      "exists": true
+    },
+    {
+      "id": "F020",
+      "path": "output/results/s16_normalized_provenance.csv",
+      "relative_path": "output/results/s16_normalized_provenance.csv",
+      "exists": true
+    },
+    {
+      "id": "F021",
+      "path": "output/analysis/polc_s01_channel_shape.py",
+      "relative_path": "output/analysis/polc_s01_channel_shape.py",
+      "exists": true
+    },
+    {
+      "id": "F022",
+      "path": "output/results/polc_s03_channel_contrast.csv",
+      "relative_path": "output/results/polc_s03_channel_contrast.csv",
+      "exists": true
+    },
+    {
+      "id": "F023",
+      "path": "output/results/polc_s04_group2_fast_test.json",
+      "relative_path": "output/results/polc_s04_group2_fast_test.json",
+      "exists": true
+    },
+    {
+      "id": "F024",
+      "path": "output/analysis/covx_s02_absent_families.py",
+      "relative_path": "output/analysis/covx_s02_absent_families.py",
+      "exists": true
+    },
+    {
+      "id": "F025",
+      "path": "output/results/covx_coverage_final.json",
+      "relative_path": "output/results/covx_coverage_final.json",
+      "exists": true
+    },
+    {
+      "id": "F026",
+      "path": "output/results/covx_coarse_shape_similarity.csv",
+      "relative_path": "output/results/covx_coarse_shape_similarity.csv",
+      "exists": true
+    },
+    {
+      "id": "F027",
+      "path": "output/results/covx_image_model_tests.csv",
+      "relative_path": "output/results/covx_image_model_tests.csv",
+      "exists": true
+    },
+    {
+      "id": "F028",
+      "path": "output/results/covx_unrepresented_images.csv",
+      "relative_path": "output/results/covx_unrepresented_images.csv",
+      "exists": true
+    },
+    {
+      "id": "F029",
+      "path": "output/analysis/s14_images_effective.py",
+      "relative_path": "output/analysis/s14_images_effective.py",
+      "exists": true
+    },
+    {
+      "id": "F030",
+      "path": "output/results/s14_event_match.csv",
+      "relative_path": "output/results/s14_event_match.csv",
+      "exists": true
+    },
+    {
+      "id": "F031",
+      "path": "output/analysis/s23_final_consolidation.py",
+      "relative_path": "output/analysis/s23_final_consolidation.py",
+      "exists": true
+    },
+    {
+      "id": "F032",
+      "path": "output/results/s23_final_consolidation.json",
+      "relative_path": "output/results/s23_final_consolidation.json",
+      "exists": true
+    },
+    {
+      "id": "F033",
+      "path": "output/results/s23_key_numbers.csv",
+      "relative_path": "output/results/s23_key_numbers.csv",
+      "exists": true
+    },
+    {
+      "id": "F034",
+      "path": "output/results/figures/s20_symmetric_decisive.png",
+      "relative_path": "output/results/figures/s20_symmetric_decisive.png",
+      "exists": true
+    },
+    {
+      "id": "F035",
+      "path": "output/results/figures/s17_slope_scan_null.png",
+      "relative_path": "output/results/figures/s17_slope_scan_null.png",
+      "exists": true
+    },
+    {
+      "id": "F036",
+      "path": "output/results/figures/polc_fig1_channel_profiles.png",
+      "relative_path": "output/results/figures/polc_fig1_channel_profiles.png",
+      "exists": true
+    },
+    {
+      "id": "F037",
+      "path": "output/results/figures/covx_unrepresented_images_montage.png",
+      "relative_path": "output/results/figures/covx_unrepresented_images_montage.png",
+      "exists": true
+    },
+    {
+      "id": "F038",
+      "path": "output/analysis/s01_inventory.py",
+      "relative_path": "output/analysis/s01_inventory.py",
+      "exists": true
+    },
+    {
+      "id": "F039",
+      "path": "output/results/s01_file_hashes.json",
+      "relative_path": "output/results/s01_file_hashes.json",
+      "exists": true
+    },
+    {
+      "id": "F040",
+      "path": "output/results/s04_fit_crosscheck.csv",
+      "relative_path": "output/results/s04_fit_crosscheck.csv",
+      "exists": true
+    },
+    {
+      "id": "F041",
+      "path": "output/results/chpol_structure_check.csv",
+      "relative_path": "output/results/chpol_structure_check.csv",
+      "exists": true
+    },
+    {
+      "id": "F042",
+      "path": "output/results/s21_consolidated_leave_one_out.csv",
+      "relative_path": "output/results/s21_consolidated_leave_one_out.csv",
+      "exists": true
+    },
+    {
+      "id": "F043",
+      "path": "output/results/s04_orientation_series_stats.csv",
+      "relative_path": "output/results/s04_orientation_series_stats.csv",
+      "exists": true
+    },
+    {
+      "id": "F044",
+      "path": "output/results/covx_question_availability.csv",
+      "relative_path": "output/results/covx_question_availability.csv",
+      "exists": true
+    }
+  ]
+}

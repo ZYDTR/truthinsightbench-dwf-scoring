@@ -1,0 +1,301 @@
+{
+  "task": "t22_domain_boundary",
+  "t0": "2022-01-01",
+  "purpose": "Quantify how much of the apparent cross-panel disagreement can be caused by the domain mismatch alone. The independent panel is a strict sub-domain of the replicated panel: bins 0..6 and channels 0..3 versus bins 0..7 and channels 0..6.",
+  "domain": {
+    "replicated_bins": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "replicated_channels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "independent_bins": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "independent_channels": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "shared_bins": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "shared_channels": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "replicated_only_bins": [
+      7
+    ],
+    "replicated_only_channels": [
+      4,
+      5,
+      6
+    ],
+    "independent_only_bins": [],
+    "independent_only_channels": [],
+    "independent_is_subdomain_of_replicated": true
+  },
+  "variance_inside_outside_shared_region": {
+    "definition": "cell = replicate-averaged log response; deviations from that panel's own grand mean over its own full domain; SS shares therefore sum to 1 within a panel. The independent panel has no outside region (its domain is a strict subset of the replicated domain).",
+    "replicated": {
+      "total_ss_log": 6361.129537616343,
+      "n_cells": 2744,
+      "shared_ss": 1191.2188916284363,
+      "outside_ss": 5169.910645987908,
+      "shared_cells": 1372,
+      "outside_cells": 1372,
+      "shared_ss_share": 0.18726530949954723,
+      "outside_ss_share": 0.8127346905004529,
+      "bin_marginal_ss_share_bin7": 0.027336955551617644,
+      "chan_marginal_ss_share_ch4_6": 0.6751884007540381,
+      "grand_mean_log": 10.419816191493307
+    },
+    "independent": {
+      "total_ss_log": 2486.117087369491,
+      "n_cells": 1372,
+      "shared_ss": 2486.117087369491,
+      "outside_ss": 0.0,
+      "shared_cells": 1372,
+      "outside_cells": 0,
+      "shared_ss_share": 1.0,
+      "outside_ss_share": 0.0,
+      "bin_marginal_ss_share_bin7": null,
+      "chan_marginal_ss_share_ch4_6": null,
+      "grand_mean_log": 10.217854850177902
+    },
+    "replicated_outside_region": "signal_bin_index == 7 OR output_channel_index in {4,5,6}"
+  },
+  "panel_levels_inside_outside": {
+    "replicated": {
+      "inside_shared_region": {
+        "n_rows": 4116,
+        "mean_log": 9.56690822648478,
+        "sd_log": 0.46899789181051943,
+        "min_raw": 2447.825646514574,
+        "max_raw": 98839.33924790096
+      },
+      "outside_shared_region": {
+        "n_rows": 4116,
+        "mean_log": 11.272724156501836,
+        "sd_log": 1.7678321171492284,
+        "min_raw": 4224.597320700655,
+        "max_raw": 29337190.4085409
+      },
+      "whole_panel": {
+        "n_rows": 8232,
+        "mean_log": 10.41981619149331,
+        "sd_log": 1.5491713520605275,
+        "min_raw": 2447.825646514574,
+        "max_raw": 29337190.4085409
+      }
+    },
+    "independent": {
+      "inside_shared_region": {
+        "n_rows": 4116,
+        "mean_log": 10.217854850177902,
+        "sd_log": 1.360288317554837,
+        "min_raw": 4741.764279452172,
+        "max_raw": 9785051.558853354
+      },
+      "outside_shared_region": null,
+      "whole_panel": {
+        "n_rows": 4116,
+        "mean_log": 10.217854850177902,
+        "sd_log": 1.360288317554837,
+        "min_raw": 4741.764279452172,
+        "max_raw": 9785051.558853354
+      }
+    }
+  },
+  "cross_panel_comparison": {
+    "A_common_domain_only": {
+      "definition": "both panels restricted to bins 0..6 x channels 0..3 (the 1372 common cells); this is the same restriction used by t11/t12/t14/t16",
+      "n_cells": 1372,
+      "cell_pearson": 0.01676817822716671,
+      "cell_spearman": 0.03242767140167187,
+      "rep_log_mean": 9.566908226484781,
+      "ind_log_mean": 10.217854850177902,
+      "rep_log_sd": 0.3753478834240615,
+      "ind_log_sd": 1.3466107027127254,
+      "mean_level_offset_ind_minus_rep": 0.6509466236931214
+    },
+    "B_marginal_collapsed_shared": {
+      "definition": "both panels collapsed over their shared bin x channel structure to the 49 (a1,a2) cells; the bin/channel mismatch is averaged away rather than compared",
+      "n_cells": 49,
+      "pearson": 0.286206272270261,
+      "spearman": 0.40928571428571425,
+      "rep_mean_level": 9.566908226484783,
+      "ind_mean_level": 10.217854850177902
+    },
+    "B2_marginal_collapsed_unrestricted": {
+      "definition": "each panel collapsed over its OWN full bin x channel structure to the 49 (a1,a2) cells; this uses the replicated panel's bins 0..7 and channels 0..6 and the independent panel's bins 0..6 and channels 0..3",
+      "n_cells": 49,
+      "pearson": -0.1655884015980907,
+      "spearman": -0.10336734693877549,
+      "rep_mean_level": 10.419816191493307,
+      "ind_mean_level": 10.217854850177902
+    },
+    "marginal_plane_bin_x_chan": {
+      "definition": "the 28 shared (bin,chan) marginal means of each panel, centred; this is where the two panels differ most (replicated channel main effect 58.9% vs independent 0.18%)",
+      "n_cells": 28,
+      "pearson": -0.07892045969910645,
+      "spearman": -0.06513409961685823,
+      "rep_marginal_sd": 0.3105683704907927,
+      "ind_marginal_sd": 0.9396139798762576
+    },
+    "C_marginal_removed": {
+      "definition": "common cells with each panel's own (bin,chan) marginal removed (interaction only); a non-zero value here means the two panels share cell-level structure beyond their marginals (but see t11: this is also where the replicate dispersion covariance lives)",
+      "n_cells": 1372,
+      "cell_pearson": 0.14319116310997904,
+      "cell_spearman": 0.2386049263847247,
+      "rep_log_mean": 1.3982983866999057e-16,
+      "ind_log_mean": 0.0,
+      "rep_log_sd": 0.2186554848824138,
+      "ind_log_sd": 0.9805081427660319,
+      "mean_level_offset_ind_minus_rep": -1.3982983866999057e-16
+    }
+  },
+  "shared_domain_feature_recheck": {
+    "bin0_notch_replicated_common_bins": {
+      "n_bins": 7,
+      "bin0_observed": 9.721314411955658,
+      "trend_predicted": 9.441352762351885,
+      "excess": 0.27996164960377357
+    },
+    "bin0_notch_independent": {
+      "n_bins": 7,
+      "bin0_observed": 8.932441476602571,
+      "trend_predicted": 9.386351169377871,
+      "excess": -0.4539096927752997
+    },
+    "note": "the notch is a bin-local feature; it is unchanged by the channel restriction and is the one feature that keeps its sign in the shared domain (t19).",
+    "replicated_a1_slopes": {
+      "full_domain_channels_0_6": [
+        0.016601207032329902,
+        0.030423422549814134,
+        0.05708794165809766,
+        0.09491058679090343,
+        0.20637568696994754,
+        0.3887905359981807,
+        0.48458760330427747
+      ],
+      "shared_domain_channels_0_3": [
+        0.01619014936153234,
+        0.031122226164595427,
+        0.05628708325565314,
+        0.09455259153214449
+      ],
+      "ratio_shared_ch3_over_ch0": 5.840130898162105,
+      "ratio_full_ch6_over_ch0": 29.189901816209556
+    },
+    "independent_a1_slopes_channels_0_3": [
+      0.18653025823081387,
+      0.20261171344973286,
+      0.0169320488450258,
+      0.1456937749087372
+    ]
+  },
+  "marginal_collapsed_axes": {
+    "definition": "each panel collapsed over its own bin x channel structure; the only remaining axes are (a1,a2). This is the domain-free comparison: it uses the replicated panel's bins 0..7 and channels 0..6 and the independent panel's bins 0..6 and channels 0..3.",
+    "replicated_binchan_collapsed": {
+      "label": "replicated, all 8 bins x all 7 channels",
+      "n_cells": 49,
+      "a1_slope": 0.1826824263290787,
+      "a2_slope": -0.10871607519206332,
+      "a1_level_mean": [
+        9.769007228903169,
+        10.04862534391654,
+        10.261200259731867,
+        10.536426875831259,
+        10.698834002848713,
+        10.792112319024863,
+        10.832507310196748
+      ],
+      "grand_mean_log": 10.419816191493307,
+      "sd_log": 0.48708647063734933
+    },
+    "independent_binchan_collapsed": {
+      "label": "independent, all 7 bins x all 4 channels",
+      "n_cells": 49,
+      "a1_slope": 0.1379419488585773,
+      "a2_slope": 0.3063396332594089,
+      "a1_level_mean": [
+        9.668599878867337,
+        9.918018522865927,
+        10.124554707936399,
+        10.357235551735045,
+        10.500437908999897,
+        10.540084093211574,
+        10.416053287629138
+      ],
+      "grand_mean_log": 10.217854850177902,
+      "sd_log": 0.8148773714089824
+    },
+    "replicated_common_domain_collapsed": {
+      "label": "replicated, bins 0..6 x channels 0..3",
+      "n_cells": 49,
+      "a1_slope": 0.04953801257848167,
+      "a2_slope": 0.017737710511250317,
+      "a1_level_mean": [
+        9.236221211833628,
+        9.551305773662076,
+        9.621350535447936,
+        9.647122999666635,
+        9.639853955664806,
+        9.637673212549462,
+        9.634829896568917
+      ],
+      "grand_mean_log": 9.566908226484783,
+      "sd_log": 0.17445900528481406
+    }
+  },
+  "variance_concentration_check": {
+    "definition": "per-channel variance of the log cell means in the replicated panel; the panel's outside share is concentrated in the high-gain channels 4-6 and in bin 7",
+    "per_channel_var_replicated": {
+      "0": 0.02022577174768093,
+      "1": 0.04017943591966266,
+      "2": 0.057068056985597804,
+      "3": 0.10297720253522023,
+      "4": 0.5970102538662968,
+      "5": 2.2578716772793106,
+      "6": 3.2719073495831554
+    },
+    "outside_share_of_total_ss": 0.8127346905004529,
+    "outside_share_excluding_chan4_6": 0.024372711601249975,
+    "outside_share_excluding_bin7": 0.6703284742532698
+  },
+  "verdict": {
+    "domain_mismatch_alone_cannot_explain_the_disagreement": true,
+    "reason": "the entire disagreement is already measured inside the shared region: the bin-0 notch is opposite in sign within bins 0..6, and the cross-panel cell correlation on the 1372 common cells is ~0. Restricting or expanding the domain cannot remove those facts.",
+    "what_the_domain_mismatch_DOES_bound": "the replicated panel's channel-amplification law (channels 0-6) and its peak channel 6, and its bin-7 level, are outside the independent panel's domain and are unsupported by it. The outside region carries 0.8127 of the replicated panel's cell-level SS, concentrated in channels 4-6; every cross-panel statement is therefore a statement about the low-gain, shared corner of the replicated surface."
+  }
+}

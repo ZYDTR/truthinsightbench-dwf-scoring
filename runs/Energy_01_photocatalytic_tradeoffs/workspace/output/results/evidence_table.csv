@@ -1,0 +1,13 @@
+analysis_unit,modality,n_points,final_product_4h_umol,mean_rate_umol_h,best_aicc_model,aicc_delta_runner_up,power_law_exponent_b,segment_rate_ratio_last_over_first,peak_delay_ps,peak_value,late_ge30ps_mean,late_ge30ps_ci_low,late_ge30ps_ci_high,late_ge30ps_fraction_positive,peak_nm,half_max_red_edge_nm,absorption_limited_rmse,loading_percent,rate_umol_h
+formulation_1,conversion_timecourses,5,9.48,2.37,saturation,1.4988648116129824,0.984435864552447,0.9333333333333335,,,,,,,,,,,
+formulation_2,conversion_timecourses,5,4.13,1.0325,power_law,4.682552004093324,0.9063008776661079,0.8016528925619832,,,,,,,,,,,
+formulation_3,conversion_timecourses,5,0.636,0.159,power_law,6.789383805838732,1.248881085126458,1.5403225806451613,,,,,,,,,,,
+formulation_4,conversion_timecourses,5,0.173,0.04325,power_law,11.69393058515881,1.2303311194811994,1.5805471124620059,,,,,,,,,,,
+formulation_1,ultrafast_transient_traces,98,,,rise_then_biexponential_decay,,,,1.13634,0.99928,-0.25021764705882354,-0.34047701470588243,-0.1562004117647059,0.0,,,,,
+formulation_2,ultrafast_transient_traces,98,,,rise_then_stretched_decay,,,,2.24169,1.00077,0.18816117647058822,0.12308463235294116,0.24811588235294119,0.9411764705882353,,,,,
+absorption_profile,optical_action_spectra,901,,,,,,,,0.898,,,,,357.5,580.75,,,
+action_profile,optical_action_spectra,6,,,M1_action_proportional_to_A,,,,,,,,,,,565.1470588235294,8.871782958448726,,
+loading_0.2pct,cofactor_loading_response,1,,,,,,,,,,,,,,,,0.2,1081.0
+loading_1pct,cofactor_loading_response,1,,,,,,,,,,,,,,,,1.0,1217.0
+loading_3pct,cofactor_loading_response,1,,,,,,,,,,,,,,,,3.0,470.0
+loading_8pct,cofactor_loading_response,1,,,,,,,,,,,,,,,,8.0,268.0

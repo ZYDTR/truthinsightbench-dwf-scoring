@@ -1,0 +1,18 @@
+{
+  "acf_lag1_log_sulfate": 0.7178530759097588,
+  "effective_sample_size": 317.1550105527629,
+  "shallow_deep_log_contrast_dex": -0.01279353579261766,
+  "shallow_deep_block_ci": [
+    -0.06534745319456207,
+    0.028972341025910817
+  ],
+  "shallow_deep_p_positive": 0.2535,
+  "age_depth_r2_as_reported": 0.9913794731900764,
+  "age_depth_slope_as_reported": -21.42567073730834,
+  "age_depth_r2_step_corrected": 0.9913467173922825,
+  "age_depth_slope_step_corrected": -21.42990235519782,
+  "age_depth_r2_c06": 0.9990499096803452,
+  "loo_slope_min": -22.155241707064192,
+  "loo_slope_max": -21.205943131969715,
+  "trend_intervals_all_span_zero": true
+}

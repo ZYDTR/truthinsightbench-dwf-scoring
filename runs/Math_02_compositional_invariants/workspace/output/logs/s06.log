@@ -1,0 +1,7 @@
+stage 6 ok
+  sample holdout sign agreement : 1.0
+  transfer ss->hv oos R2        : -1.6028
+  transfer hv->ss oos R2        : -2.6841
+  hv zero-indicator pb rho      : 0.4785 (mw p=3.21e-23)
+  CV R2 linear/isotonic/binned  : 0.1334 / 0.4312 / 0.4093
+  lower/upper octile monotone   : False / False

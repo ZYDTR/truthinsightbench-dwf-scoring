@@ -1,0 +1,520 @@
+{
+  "manifest_hash_check": [
+    {
+      "path": "particle_composition_profiles.tsv",
+      "manifest_sha256": "c8c8dbe2b0518e2f24f2d709ba6ffaf6991349ee4e354427f50a9c89553c3ebf",
+      "computed_sha256": "c8c8dbe2b0518e2f24f2d709ba6ffaf6991349ee4e354427f50a9c89553c3ebf",
+      "match": true,
+      "bytes": 14421,
+      "manifest_bytes": 14421
+    },
+    {
+      "path": "sample_environment_profiles.tsv",
+      "manifest_sha256": "2e371aa337c1a076c8055a1f4c7b4390a7a8bcec16561dc671ee1e0f660f33a8",
+      "computed_sha256": "2e371aa337c1a076c8055a1f4c7b4390a7a8bcec16561dc671ee1e0f660f33a8",
+      "match": true,
+      "bytes": 3134,
+      "manifest_bytes": 3134
+    }
+  ],
+  "row_counts": {
+    "particle_composition_profiles.tsv": 30,
+    "sample_environment_profiles.tsv": 30
+  },
+  "column_counts": {
+    "composition": 83,
+    "environment": 15
+  },
+  "sample_id_sets_identical": true,
+  "collection_groups": {
+    "group_01": {
+      "n_intervals": 5,
+      "lat": null,
+      "regime": null,
+      "depth_min": 0.0,
+      "depth_max": 1.16,
+      "latitude_deg": 78.7667,
+      "longitude_deg": -8.77,
+      "ice_regime": "Landfast ice",
+      "internal_lat_unique": true,
+      "internal_regime_unique": true
+    },
+    "group_02": {
+      "n_intervals": 7,
+      "lat": null,
+      "regime": null,
+      "depth_min": 0.0,
+      "depth_max": 1.66,
+      "latitude_deg": 79.7362,
+      "longitude_deg": 4.2855,
+      "ice_regime": "Pack ice",
+      "internal_lat_unique": true,
+      "internal_regime_unique": true
+    },
+    "group_03": {
+      "n_intervals": 7,
+      "lat": null,
+      "regime": null,
+      "depth_min": 0.0,
+      "depth_max": 1.32,
+      "latitude_deg": 81.229,
+      "longitude_deg": 19.445,
+      "ice_regime": "Pack ice",
+      "internal_lat_unique": true,
+      "internal_regime_unique": true
+    },
+    "group_04": {
+      "n_intervals": 5,
+      "lat": null,
+      "regime": null,
+      "depth_min": 0.0,
+      "depth_max": 1.13,
+      "latitude_deg": 81.9372,
+      "longitude_deg": 13.57,
+      "ice_regime": "Pack ice",
+      "internal_lat_unique": true,
+      "internal_regime_unique": true
+    },
+    "group_05": {
+      "n_intervals": 6,
+      "lat": null,
+      "regime": null,
+      "depth_min": 0.0,
+      "depth_max": 1.67,
+      "latitude_deg": 85.0852,
+      "longitude_deg": 42.6175,
+      "ice_regime": "Pack ice",
+      "internal_lat_unique": true,
+      "internal_regime_unique": true
+    }
+  },
+  "missingness": {
+    "environment:temperature_C": {
+      "n_missing": 2,
+      "samples": [
+        "sample_023",
+        "sample_024"
+      ]
+    }
+  },
+  "cross_file_total_agreement": {
+    "identical": true,
+    "max_abs_diff": 0.0
+  },
+  "cross_file_depth_agreement": {
+    "depth_min_identical": true,
+    "depth_max_identical": true
+  },
+  "depth_contiguity": {
+    "group_01": {
+      "n": 5,
+      "max_gap_m": 0.010000000000000009,
+      "min_gap_m": 0.009999999999999953,
+      "top_starts_at_0": true,
+      "thickness_m": [
+        0.28,
+        0.19,
+        0.22999999999999998,
+        0.18000000000000005,
+        0.23999999999999988
+      ]
+    },
+    "group_02": {
+      "n": 7,
+      "max_gap_m": 0.010000000000000009,
+      "min_gap_m": 0.010000000000000009,
+      "top_starts_at_0": true,
+      "thickness_m": [
+        0.18,
+        0.22999999999999998,
+        0.23000000000000004,
+        0.17999999999999994,
+        0.18000000000000005,
+        0.33999999999999986,
+        0.26
+      ]
+    },
+    "group_03": {
+      "n": 7,
+      "max_gap_m": 0.010000000000000009,
+      "min_gap_m": -0.0050000000000000044,
+      "top_starts_at_0": true,
+      "thickness_m": [
+        0.26,
+        0.21499999999999997,
+        0.16500000000000004,
+        0.17999999999999994,
+        0.14500000000000002,
+        0.21999999999999997,
+        0.10000000000000009
+      ]
+    },
+    "group_04": {
+      "n": 5,
+      "max_gap_m": 0.010000000000000009,
+      "min_gap_m": 0.009999999999999981,
+      "top_starts_at_0": true,
+      "thickness_m": [
+        0.23,
+        0.18,
+        0.18,
+        0.245,
+        0.2549999999999999
+      ]
+    },
+    "group_05": {
+      "n": 6,
+      "max_gap_m": 0.010000000000000009,
+      "min_gap_m": 0.009999999999999787,
+      "top_starts_at_0": true,
+      "thickness_m": [
+        0.29,
+        0.2,
+        0.32999999999999996,
+        0.27000000000000013,
+        0.27,
+        0.26
+      ]
+    }
+  },
+  "polymer_percent_sum": {
+    "min": 99.98,
+    "max": 100.02000000000001,
+    "all_within_0p05_of_100": true
+  },
+  "polymer_count_equals_percent_x_total": {
+    "max_abs_residual_per_L": 3.3197999999974854,
+    "counts_all_integers": false
+  },
+  "polymer_count_sum_vs_total": {
+    "ratio_min": 0.9980597014925372,
+    "ratio_max": 1.0127272727272727,
+    "identical": false,
+    "mean_abs_diff": 0.25380000000038927
+  },
+  "size_percent_sum": {
+    "min": 99.99,
+    "max": 100.01,
+    "all_within_0p05_of_100": true
+  },
+  "size_count_equals_percent_x_total": {
+    "max_abs_residual_per_L": 3.9583000000056927
+  },
+  "size_count_sum_vs_total": {
+    "ratio_min": 0.9980597014925372,
+    "ratio_max": 1.0127272727272727,
+    "mean_abs_diff": 0.2542666666670622
+  },
+  "size_mass_balance": [
+    {
+      "sample_id": "sample_001",
+      "group": "group_01",
+      "total_per_L": 260.0,
+      "size_count_sum": 259.75,
+      "polymer_count_sum": 259.74999999999994,
+      "unclassified_by_size_per_L": 0.25
+    },
+    {
+      "sample_id": "sample_002",
+      "group": "group_01",
+      "total_per_L": 8774.0,
+      "size_count_sum": 8773.75,
+      "polymer_count_sum": 8773.749999999998,
+      "unclassified_by_size_per_L": 0.25
+    },
+    {
+      "sample_id": "sample_003",
+      "group": "group_01",
+      "total_per_L": 4156.0,
+      "size_count_sum": 4155.72,
+      "polymer_count_sum": 4155.720000000001,
+      "unclassified_by_size_per_L": 0.27999999999974534
+    },
+    {
+      "sample_id": "sample_004",
+      "group": "group_01",
+      "total_per_L": 7017.0,
+      "size_count_sum": 7017.320000000001,
+      "polymer_count_sum": 7017.32,
+      "unclassified_by_size_per_L": -0.32000000000061846
+    },
+    {
+      "sample_id": "sample_005",
+      "group": "group_01",
+      "total_per_L": 2665.0,
+      "size_count_sum": 2664.59,
+      "polymer_count_sum": 2664.6,
+      "unclassified_by_size_per_L": 0.4099999999998545
+    },
+    {
+      "sample_id": "sample_006",
+      "group": "group_02",
+      "total_per_L": 75143.0,
+      "size_count_sum": 75142.63999999998,
+      "polymer_count_sum": 75142.62999999999,
+      "unclassified_by_size_per_L": 0.360000000015134
+    },
+    {
+      "sample_id": "sample_007",
+      "group": "group_02",
+      "total_per_L": 14558.0,
+      "size_count_sum": 14557.68,
+      "polymer_count_sum": 14557.679999999998,
+      "unclassified_by_size_per_L": 0.31999999999970896
+    },
+    {
+      "sample_id": "sample_008",
+      "group": "group_02",
+      "total_per_L": 3710.0,
+      "size_count_sum": 3709.85,
+      "polymer_count_sum": 3709.8500000000004,
+      "unclassified_by_size_per_L": 0.15000000000009095
+    },
+    {
+      "sample_id": "sample_009",
+      "group": "group_02",
+      "total_per_L": 9857.0,
+      "size_count_sum": 9857.489999999998,
+      "polymer_count_sum": 9857.49,
+      "unclassified_by_size_per_L": -0.48999999999796273
+    },
+    {
+      "sample_id": "sample_010",
+      "group": "group_02",
+      "total_per_L": 4530.0,
+      "size_count_sum": 4530.37,
+      "polymer_count_sum": 4530.37,
+      "unclassified_by_size_per_L": -0.36999999999989086
+    },
+    {
+      "sample_id": "sample_011",
+      "group": "group_02",
+      "total_per_L": 41.0,
+      "size_count_sum": 41.128,
+      "polymer_count_sum": 41.144,
+      "unclassified_by_size_per_L": -0.1280000000000001
+    },
+    {
+      "sample_id": "sample_012",
+      "group": "group_02",
+      "total_per_L": 67.0,
+      "size_count_sum": 66.86999999999999,
+      "polymer_count_sum": 66.86999999999999,
+      "unclassified_by_size_per_L": 0.13000000000000966
+    },
+    {
+      "sample_id": "sample_013",
+      "group": "group_04",
+      "total_per_L": 992.0,
+      "size_count_sum": 991.8399999999999,
+      "polymer_count_sum": 991.8499999999999,
+      "unclassified_by_size_per_L": 0.16000000000008185
+    },
+    {
+      "sample_id": "sample_014",
+      "group": "group_04",
+      "total_per_L": 186.0,
+      "size_count_sum": 186.06000000000003,
+      "polymer_count_sum": 186.04999999999998,
+      "unclassified_by_size_per_L": -0.060000000000030695
+    },
+    {
+      "sample_id": "sample_015",
+      "group": "group_04",
+      "total_per_L": 4159.0,
+      "size_count_sum": 4159.509999999999,
+      "polymer_count_sum": 4159.490000000001,
+      "unclassified_by_size_per_L": -0.5099999999993088
+    },
+    {
+      "sample_id": "sample_016",
+      "group": "group_04",
+      "total_per_L": 430.0,
+      "size_count_sum": 429.65,
+      "polymer_count_sum": 429.66,
+      "unclassified_by_size_per_L": 0.35000000000002274
+    },
+    {
+      "sample_id": "sample_017",
+      "group": "group_04",
+      "total_per_L": 456.0,
+      "size_count_sum": 456.10999999999996,
+      "polymer_count_sum": 456.10999999999996,
+      "unclassified_by_size_per_L": -0.1099999999999568
+    },
+    {
+      "sample_id": "sample_018",
+      "group": "group_03",
+      "total_per_L": 144.0,
+      "size_count_sum": 143.82,
+      "polymer_count_sum": 143.82999999999998,
+      "unclassified_by_size_per_L": 0.18000000000000682
+    },
+    {
+      "sample_id": "sample_019",
+      "group": "group_03",
+      "total_per_L": 13794.0,
+      "size_count_sum": 13794.14,
+      "polymer_count_sum": 13794.14,
+      "unclassified_by_size_per_L": -0.13999999999941792
+    },
+    {
+      "sample_id": "sample_020",
+      "group": "group_03",
+      "total_per_L": 90.0,
+      "size_count_sum": 89.92,
+      "polymer_count_sum": 89.91999999999999,
+      "unclassified_by_size_per_L": 0.0799999999999983
+    },
+    {
+      "sample_id": "sample_021",
+      "group": "group_03",
+      "total_per_L": 2303.0,
+      "size_count_sum": 2302.59,
+      "polymer_count_sum": 2302.580000000001,
+      "unclassified_by_size_per_L": 0.4099999999998545
+    },
+    {
+      "sample_id": "sample_022",
+      "group": "group_03",
+      "total_per_L": 423.0,
+      "size_count_sum": 423.06,
+      "polymer_count_sum": 423.07000000000005,
+      "unclassified_by_size_per_L": -0.060000000000002274
+    },
+    {
+      "sample_id": "sample_023",
+      "group": "group_03",
+      "total_per_L": 270.0,
+      "size_count_sum": 269.66,
+      "polymer_count_sum": 269.66,
+      "unclassified_by_size_per_L": 0.339999999999975
+    },
+    {
+      "sample_id": "sample_024",
+      "group": "group_03",
+      "total_per_L": 33.0,
+      "size_count_sum": 33.42,
+      "polymer_count_sum": 33.42,
+      "unclassified_by_size_per_L": -0.4200000000000017
+    },
+    {
+      "sample_id": "sample_025",
+      "group": "group_05",
+      "total_per_L": 6421.0,
+      "size_count_sum": 6420.84,
+      "polymer_count_sum": 6420.84,
+      "unclassified_by_size_per_L": 0.15999999999985448
+    },
+    {
+      "sample_id": "sample_026",
+      "group": "group_05",
+      "total_per_L": 557.0,
+      "size_count_sum": 556.8,
+      "polymer_count_sum": 556.7999999999998,
+      "unclassified_by_size_per_L": 0.20000000000004547
+    },
+    {
+      "sample_id": "sample_027",
+      "group": "group_05",
+      "total_per_L": 1454.0,
+      "size_count_sum": 1454.44,
+      "polymer_count_sum": 1454.45,
+      "unclassified_by_size_per_L": -0.44000000000005457
+    },
+    {
+      "sample_id": "sample_028",
+      "group": "group_05",
+      "total_per_L": 791.0,
+      "size_count_sum": 790.67,
+      "polymer_count_sum": 790.6800000000001,
+      "unclassified_by_size_per_L": 0.3300000000000409
+    },
+    {
+      "sample_id": "sample_029",
+      "group": "group_05",
+      "total_per_L": 351.0,
+      "size_count_sum": 351.17,
+      "polymer_count_sum": 351.18,
+      "unclassified_by_size_per_L": -0.17000000000001592
+    },
+    {
+      "sample_id": "sample_030",
+      "group": "group_05",
+      "total_per_L": 4437.0,
+      "size_count_sum": 4436.95,
+      "polymer_count_sum": 4436.949999999999,
+      "unclassified_by_size_per_L": 0.0500000000001819
+    }
+  ],
+  "total_concentration_range": {
+    "min": 33.0,
+    "max": 75143.0,
+    "median": 1223.0,
+    "n_below_100_per_L": 4,
+    "smallest_quantum_percent_at_min_total": 3.0303030303030303
+  },
+  "percent_rounding_vs_integer_count": {
+    "max_abs_deviation_percent": 0.5169696969697029,
+    "note": "percent column reproduces integer count / total to <=0.05 pp"
+  },
+  "environment_summary": {
+    "latitude_deg": {
+      "min": 78.7667,
+      "max": 85.0852
+    },
+    "longitude_deg": {
+      "min": -8.77,
+      "max": 42.6175
+    },
+    "n_latitude_levels": 5,
+    "ice_regime_levels": [
+      "Landfast ice",
+      "Pack ice"
+    ],
+    "ice_regime_by_group": {
+      "group_01": "Landfast ice",
+      "group_02": "Pack ice",
+      "group_03": "Pack ice",
+      "group_04": "Pack ice",
+      "group_05": "Pack ice"
+    },
+    "temperature_C": {
+      "n_valid": 28,
+      "min": -2.6,
+      "max": -0.3
+    },
+    "salinity_PSU": {
+      "min": 0.43,
+      "max": 6.93
+    },
+    "chlorophyll_a_ug_L": {
+      "min": 0.02,
+      "max": 6.64
+    },
+    "particulate_organic_carbon_mg_L": {
+      "min": 0.08,
+      "max": 1.34
+    },
+    "carbon_to_nitrogen_ratio": {
+      "min": 5.41,
+      "max": 9.4
+    },
+    "uncertainty": {
+      "n_valid": 30,
+      "min": 16.0,
+      "max": 72193.0
+    }
+  },
+  "design_boundary": {
+    "ice_regime_is_nested_in_group": true,
+    "regimes_per_group": {
+      "group_01": "Landfast ice",
+      "group_02": "Pack ice",
+      "group_03": "Pack ice",
+      "group_04": "Pack ice",
+      "group_05": "Pack ice"
+    },
+    "note": "ice_regime has only two levels and no within-group variation; lat/lon are constant within group, so lat/lon/regime carry no within-group replicate variation and cannot be separated from station identity."
+  }
+}

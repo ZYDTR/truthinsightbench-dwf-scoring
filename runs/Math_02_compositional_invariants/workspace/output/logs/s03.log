@@ -1,0 +1,7 @@
+stage 3 ok
+  n joined                 : 489
+  raw rich~cov rho         : 0.4598 p=5.90e-27
+  partial rich~cov | lib   : 0.532 p=4.36e-37
+  raw lib~cov rho          : -0.2834
+  rarefied rich~cov        : 0.5621
+  LOOG directions          : {'group_A': True, 'group_B': True, 'group_C': True}

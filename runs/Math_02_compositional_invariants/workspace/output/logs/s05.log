@@ -1,0 +1,8 @@
+/data/user/conversations/conv-2333dd05-7160-499e-ae21-1a07e4fd79a2/project/output/analysis/s05_figures.py:225: UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
+  fig.savefig(FIG / "F4_zero_driven_coupling.png", dpi=170)
+stage 5 ok - figures written:
+   F1_scale_dependence.png 163618 bytes
+   F2_covariate_association.png 282657 bytes
+   F3_bias_conditions.png 209505 bytes
+   F4_zero_driven_coupling.png 229036 bytes
+   F5_applicability_boundary.png 216179 bytes

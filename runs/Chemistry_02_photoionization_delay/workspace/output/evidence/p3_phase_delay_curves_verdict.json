@@ -1,0 +1,339 @@
+{
+  "verdicts": [
+    {
+      "claim": "experiment/delay equals hbar * forward energy-difference of experiment/phase (hbar=658.2119569 as*eV): median |diff| 0.0504 as, max 0.656 as over 49775 cells, median ratio 0.999999",
+      "reproduced": true,
+      "my_value": "median 0.05043 as, max 0.65552 as, n=49775, median ratio 0.99999937; integration route max phase err 1.05e-04 rad",
+      "method": "numpy raw-shift forward difference on the 0.1 eV grid; reversed-direction check by cumsum(delay*dE/hbar) vs stored phase; L1 scale by bounded median-abs optimisation",
+      "comment": "Ed[i]==E[i+1] to 0.0e+00 eV; worst cell 0.7 as at Ed=36.80 eV/angle 88; phase quantization (5e-6 rad) alone would give <= 0.033 as per cell"
+    },
+    {
+      "claim": "the phase->delay relation is rejected against a constant-delay null (median |diff| 51.5 as) and an angle-permuted null (median 72.8 as)",
+      "reproduced": true,
+      "my_value": "constant null 51.5025 as (factor 1021), angle-permuted null 72.77 as (seed 0) / 59.24 as (seed 20260919), row-shuffle null 72.2 as; off-by-one pairing 2.76 as",
+      "method": "same residual statistic under three nulls: best constant, column permutation of the delay panel (package seed 0 repeated for the quoted 72.8 as), independent seed, and a harsher per-column row shuffle; plus a pairing-shift scan",
+      "comment": "true relation is ~1000x tighter than every null; the seed-0 permutation reproduces the quoted 72.8 as exactly, so that number is arithmetic, not luck"
+    },
+    {
+      "claim": "theory/delay equals hbar * forward difference of theory/phase on its non-uniform grid: median |diff| 0.0445 as, max 15.35 as",
+      "reproduced": true,
+      "my_value": "median 0.04453 as, max 15.3451 as at Ed=37.7752 eV/angle 132 (step 0.1930 eV); integration route max phase err 2.65e-03 rad",
+      "method": "numpy forward difference with the actual non-uniform steps; reversed-direction cumsum integration; off-by-one pairing scan added for the theory panel",
+      "comment": "median ratio 0.99998816, R2-like agreement; off-by-one pairing degrades the median to 4.91 as, so the alignment is specific"
+    },
+    {
+      "claim": "0.5_Wigner_delay equals hbar * d(eigenphase_sum)/dE with factor 1, NOT factor 2: median |diff| ~1.12 as for F=1 versus ~15.34 as for F=2",
+      "reproduced": true,
+      "my_value": "node 5-pt stencil: F=1 median 0.951 as vs F=2 32.398 as; PCHIP on 0.1 eV grid: F=1 0.955 as vs F=2 11.856 as (interior 1.5-20 eV: 0.998 vs 29.436); integration factor 0.9980; LSQ-implied factor 0.9988",
+      "method": "5-point 4th-order stencil at the uniform 0.5 eV eigenphase nodes (Wigner curve sampled at the same nodes); PCHIP (shape-preserving) derivative on the 0.1 eV Wigner grid, full and interior-only; independent factor from integrating the Wigner curve back into eigenphase (slope + lstsq fit) and a median/rms objective factor scan",
+      "comment": "F=2 is excluded by a factor 34.1 in median (node stencil) and 12.4 (PCHIP); best-fit factor 0.9988; note the package's quoted F=1 median ~1.12 as is stencil-dependent (mine 0.951 as with the 5-pt stencil, 0.955 as with PCHIP), but F=1 still wins by a wide margin"
+    },
+    {
+      "claim": "angle_averaged_delay is NOT the angular average of the experiment delay panel: best ionization-energy offset scan gives rms 48.2 as with correlation -0.475, worse than the constant-residual null (21.8 as)",
+      "reproduced": true,
+      "my_value": "package window [12,22.5] eV reproduced: best IE 12.06 eV, rms 48.22 as, corr -0.475, const null 21.83 as; my [0,25] eV PCHIP scan: best rms 35.44 as at IE 6.910 eV (corr -0.454), no IE beats the local null (min ratio 1.58); sanity: a synthetic curve built AS the exp-panel mean at +21 eV is recovered at rms 0.00 as/IE 21.00 eV, while the real curve never gets below 48.2 as",
+      "method": "offset scan replicated with np.interp on the package grid, then redone with PCHIP on [0,25] eV x 0.005 eV, plus derivative-correlation, z-scored shape and per-angle tests; positive-identification sanity: the same machinery recovers the theory panel mean and a delayed copy of the experiment panel mean at <2 as",
+      "comment": "the experiment panel angular average is anti-correlated with the curve at its best offset, never beats a constant, and unlike the two positive controls cannot be aligned at all; not an angular average of this panel"
+    },
+    {
+      "claim": "0.5_Wigner_delay and angle_averaged_delay have shape correlation 0.923 but median absolute difference 26.2 as, diverging most at low eKE",
+      "reproduced": true,
+      "my_value": "corr 0.9230 on the aa grid (0.9246 on the Wigner grid, Spearman 0.9560); median |diff| 26.22 as; max gap 85.0 as at eKE 0.90 eV; low-eKE median 19.6 as vs high-eKE 27.0 as",
+      "method": "both interpolation directions, Spearman rank correlation and per-band median gaps",
+      "comment": "shape agreement is real but the absolute scale differs; the gap concentrates below ~5 eV as claimed"
+    }
+  ],
+  "raw": {
+    "hbar_as_eV": 658.2119569,
+    "shapes": {
+      "ph_e": [
+        276,
+        181
+      ],
+      "dl_e": [
+        275,
+        181
+      ],
+      "ph_t": [
+        99,
+        181
+      ],
+      "dl_t": [
+        98,
+        181
+      ]
+    },
+    "claim1": {
+      "align_Ed_vs_Eshift_max_eV": 0.0,
+      "median_abs_as": 0.05043372961907977,
+      "p95_abs_as": 0.4557531317080826,
+      "max_abs_as": 0.6555217239984827,
+      "rms_as": 0.20028480297623452,
+      "median_ratio": 0.9999993744459512,
+      "corr": 0.999999285217562,
+      "n_cells": 49775,
+      "frac_cells_lt_1as": 1.0,
+      "n_cells_ge_1as": 0,
+      "l1_optimal_scale": 1.000006122600862,
+      "worst_cells_Ed_angle_as": [
+        [
+          36.8,
+          88,
+          0.6555217239984827
+        ],
+        [
+          37.8,
+          117,
+          0.6534945428976826
+        ],
+        [
+          46.8,
+          47,
+          0.6515381997161853
+        ],
+        [
+          28.7,
+          101,
+          0.6506467849031878
+        ],
+        [
+          30.2,
+          134,
+          0.650494542899061
+        ]
+      ],
+      "integration_route_median_phase_err_rad": 1.3100749947980717e-05,
+      "integration_route_max_phase_err_rad": 0.0001046765047778564,
+      "integration_route_max_phase_err_as_equiv": 0.6889932705128505,
+      "phase_quantization_bound_as": 0.032910597845,
+      "null_constant_median_as": 51.5025,
+      "null_constant_rms_as": 167.57583205712555,
+      "null_angleperm_pkgseed_median_as": 72.76679078904903,
+      "null_angleperm_myseed_median_as": 59.241048939904815,
+      "null_angleperm_myseed_rms_as": 224.68303181926936,
+      "null_rowshuffle_per_column_median_as": 72.22774459510454,
+      "pairing_shift_scan_median_abs_as": {
+        "-2": 5.505805338783375,
+        "-1": 2.7555244699500214,
+        "0": 0.05043372961907977,
+        "1": 2.756763051799662,
+        "2": 5.503766353899536
+      }
+    },
+    "claim2": {
+      "median_true_relation_as": 0.05043372961907977,
+      "constant_null_median_as": 51.5025,
+      "angleperm_pkgseed_median_as": 72.76679078904903,
+      "angleperm_myseed_median_as": 59.241048939904815,
+      "rowshuffle_null_median_as": 72.22774459510454,
+      "factor_const": 1021.1915793060027,
+      "factor_perm_pkgseed": 1442.8199409135182,
+      "factor_rowshuffle": 1432.1317328825864,
+      "pairing_shift_scan": {
+        "-2": 5.505805338783375,
+        "-1": 2.7555244699500214,
+        "0": 0.05043372961907977,
+        "1": 2.756763051799662,
+        "2": 5.503766353899536
+      },
+      "best_off_by_one_factor": 1.0
+    },
+    "claim3": {
+      "align_Edt_vs_Et_shift_max_eV": 0.001533812019999914,
+      "median_abs_as": 0.04453044080258195,
+      "p95_abs_as": 0.6885238746699611,
+      "max_abs_as": 15.345051356187241,
+      "rms_as": 0.3902122237782424,
+      "median_ratio": 0.9999881559950212,
+      "corr": 0.9999960240159842,
+      "n_cells": 17738,
+      "worst_cell": {
+        "Ed_eV": 37.7752489795,
+        "angle_deg": 132,
+        "abs_diff_as": 15.345051356187241,
+        "step_eV": 0.19299999999999784
+      },
+      "integration_route_median_phase_err_rad": 1.8383138669531007e-05,
+      "integration_route_max_phase_err_rad": 0.0026534449123074566,
+      "null_constant_median_as": 60.25874097271976,
+      "null_angleperm_median_as": 65.72893057622812,
+      "pairing_shift_scan_median_abs_as": {
+        "-2": 7.91007298276026,
+        "-1": 4.910464144100445,
+        "0": 0.04453044080258195,
+        "1": 4.968836142483937,
+        "2": 7.872874601280941
+      },
+      "frac_cells_lt_1as": 0.9725448190325854,
+      "energy_grid": {
+        "min_step_eV": 0.01600000000000179,
+        "max_step_eV": 0.19900000000000517,
+        "mean_step_eV": 0.1896938775510204
+      }
+    },
+    "claim4": {
+      "n_wigner": 296,
+      "n_eig_nodes": 50,
+      "wigner_std_as": 58.571464897652326,
+      "stencil5_F1_median_as": 0.951391159390685,
+      "stencil5_F2_median_as": 32.397623505076226,
+      "stencil3_F1_median_as": 1.1360532768642493,
+      "stencil3_F2_median_as": 27.6310703917256,
+      "pchip_F1": {
+        "median_abs": 0.9554270665791219,
+        "p95_abs": 2.3264827046007,
+        "max_abs": 4.116265227610586,
+        "rms": 1.244854858449782,
+        "median_ratio": 0.9907539500044129,
+        "frac_pred_gt_1as": 0.9797297297297297,
+        "lsq_multiplier": 0.9988247886863653,
+        "implied_F": 0.9988247886863653
+      },
+      "pchip_F2": {
+        "median_abs": 11.856066561281008,
+        "p95_abs": 170.58677641987958,
+        "max_abs": 184.7281269086324,
+        "rms": 66.26457118585832,
+        "median_ratio": 0.4953152173899473,
+        "frac_pred_gt_1as": 0.9898648648648649,
+        "lsq_multiplier": 0.49941239434318263,
+        "implied_F": 0.9988247886863653
+      },
+      "pchip_interior_F1": {
+        "median_abs": 0.9975290712095326,
+        "p95_abs": 2.1895670480862166,
+        "max_abs": 4.116265227610586,
+        "rms": 1.2536569580938972,
+        "median_ratio": 0.9965282636318824,
+        "frac_pred_gt_1as": 0.967741935483871,
+        "lsq_multiplier": 0.9995394745812178,
+        "implied_F": 0.9995394745812178
+      },
+      "pchip_interior_F2": {
+        "median_abs": 29.436279297833693,
+        "p95_abs": 176.73176450441133,
+        "max_abs": 184.7281269086324,
+        "rms": 83.10677205723564,
+        "median_ratio": 0.49824851450056673,
+        "frac_pred_gt_1as": 0.9838709677419355,
+        "lsq_multiplier": 0.4997697372906089,
+        "implied_F": 0.9995394745812178
+      },
+      "integration_slope_Sstored_on_Srec": 1.0020002911954276,
+      "factor_from_integration": 0.9980037019819215,
+      "integration_fit_resid_rad": 0.005285793771438182,
+      "best_factor_median_objective": 0.995,
+      "best_factor_rms_objective": 1.0,
+      "lsq_factor_W_on_gp": 0.9988247886863653
+    },
+    "claim5": {
+      "pkg_window_best": {
+        "IE_eV": 12.059999999999999,
+        "n_points": 128,
+        "rms_as": 48.22481740551818,
+        "median_abs_as": 20.40805634600557,
+        "corr": -0.4749572603013477,
+        "const_null_rms_as": 21.826195700302993,
+        "rms_over_const_null": 2.2094925779873185
+      },
+      "my_wide_scan_best": {
+        "IE_eV": 6.91,
+        "n_points": 90,
+        "rms_as": 35.44003471456134,
+        "median_abs_as": 21.128088718411334,
+        "corr": -0.45418732903351167,
+        "const_null_rms_as": 4.420459153434692,
+        "rms_over_const_null": 8.017274560047563
+      },
+      "my_wide_scan_best_corr": {
+        "IE_eV": 21.705000000000002,
+        "corr": -0.041929198396209275,
+        "rms_as": 70.17268395454404
+      },
+      "n_IE_beating_const_null_0.8": 0,
+      "min_rms_over_const_null": 1.581878678664149,
+      "IE_of_min_ratio": 21.705000000000002,
+      "derivative_corr_at_best_IE": -0.39358928500236245,
+      "zshape_corr_at_best_IE": -0.4749572603013478,
+      "offset0_alternative": {
+        "n_points": 40,
+        "rms_as": 42.546479900327355,
+        "median_abs_as": 42.69296204627957,
+        "corr": -0.9146692124276264
+      },
+      "theory_best": {
+        "IE_eV": 0.0,
+        "rms_as": 13.401318848744651,
+        "corr": 0.6242067389386258,
+        "const_null_rms_as": 0.8357357750474322
+      },
+      "positive_identification_sanity": {
+        "synthetic_aa_of_exp_panel_mean": {
+          "true_IE_eV": 21.0,
+          "n_points": 194,
+          "recovered_IE_eV": 20.999999999999808,
+          "rms_as": 7.915419912650988e-12,
+          "corr": 0.9999999999999996
+        },
+        "aa_vs_theory_panel_mean": {
+          "best_IE_eV": 0.0,
+          "rms_as": 13.33564292151037,
+          "corr": 0.6238766246699267,
+          "note": "theory panel mean does not reproduce the curve exactly either (rms 13.3 as)"
+        }
+      },
+      "per_angle_best_rms_min_median_max": [
+        39.61051458630913,
+        74.37617542816571,
+        167.99115213183276
+      ],
+      "aa_std_as": 44.36034501318575
+    },
+    "claim6": {
+      "corr_on_aa_grid": 0.923027902144935,
+      "median_abs_diff_on_aa_grid_as": 26.221466789548366,
+      "max_abs_diff_as": 84.98762455,
+      "max_abs_diff_eKE_eV": 0.9,
+      "corr_on_wigner_grid": 0.924649792550789,
+      "median_abs_diff_on_wigner_grid_as": 26.243980440157564,
+      "spearman_on_aa_grid": 0.9559738993474838,
+      "spearman_on_wigner_grid": 0.9568937845512283,
+      "bands_median_abs_as_and_corr": {
+        "0.9_2.0": {
+          "median_abs_as": 43.873306353795996,
+          "corr": 0.9992821332274197,
+          "n": 9
+        },
+        "2.0_5.0": {
+          "median_abs_as": 15.365723414819099,
+          "corr": 0.6224887646457965,
+          "n": 22
+        },
+        "5.0_10.0": {
+          "median_abs_as": 12.392499423290033,
+          "corr": 0.9729172773342025,
+          "n": 37
+        },
+        "10.0_20.0": {
+          "median_abs_as": 25.59730719738819,
+          "corr": 0.9984686917649782,
+          "n": 73
+        },
+        "20.0_27.9": {
+          "median_abs_as": 28.2593204380086,
+          "corr": 0.2162624146226227,
+          "n": 59
+        }
+      },
+      "wigner_std_as": 58.571464897652326,
+      "aa_std_as": 44.36034501318575,
+      "median_abs_diff_lt_5_ge_10_eV": [
+        19.600193489368003,
+        27.019022997737164
+      ]
+    }
+  },
+  "package": "p3_phase_delay_curves",
+  "verify_script": "/data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/analysis/p3_phase_delay_curves_verify.py",
+  "residual_doubt": "Cross-checked only against the same data files the package used (SHA-256 of the three inputs matches the package's recorded hashes is not re-verified here, only values are used). Claims 2, 4, 5, 6 involve estimator choices (permutation seed, derivative stencil, IE scan range, interpolation grid); each verdict lists the value produced by MY route, and where the package's exact number is seed- or grid-dependent it is reproduced explicitly and labelled as such. The 15.35 as theory outlier and the ~1 as Wigner floor could not be driven to zero by any route tried, so they look like genuine data properties, not estimator artefacts."
+}

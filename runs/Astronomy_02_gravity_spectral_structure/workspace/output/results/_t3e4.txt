@@ -1,0 +1,66 @@
+ranked rows total 250 matched 29
+     candidate_rank  vmax  vmin     f    w     ic  ic_full        offset          candidate_family
+39               40    20  0.00  1010  300   43.9     43.9  0.000000e+00  frequency_amplitude_scan
+45               46    30  0.00  1010  300   47.2     47.2  0.000000e+00  frequency_amplitude_scan
+47               48    30  0.03  1210  300   50.7     50.7  0.000000e+00     minimum_velocity_scan
+59               60    20  0.00  1060  300   56.7     56.7  0.000000e+00  frequency_amplitude_scan
+62               63    30  0.00  1060  300   57.3     57.3  0.000000e+00  frequency_amplitude_scan
+64               65    20  0.00   960  300   58.0     58.0  0.000000e+00  frequency_amplitude_scan
+66               67    30  0.05  1210  300   58.1     58.1  0.000000e+00     minimum_velocity_scan
+73               74    30  0.02  1210  300   61.6     61.6  0.000000e+00     minimum_velocity_scan
+79               80    50  0.03  1210  300   65.1     65.1  0.000000e+00     minimum_velocity_scan
+83               84    50  0.05  1210  300   68.3     68.3  0.000000e+00     minimum_velocity_scan
+93               94    30  0.00   960  300   72.5     72.5  0.000000e+00  frequency_amplitude_scan
+96               97    50  0.02  1210  300   73.3     73.3  1.421085e-14     minimum_velocity_scan
+102             103    30  0.00  1110  300   76.0     76.0  0.000000e+00  frequency_amplitude_scan
+112             113    30  0.00  1160  300   80.5     80.5  0.000000e+00  frequency_amplitude_scan
+113             114    30  0.01  1210  300   81.0     81.0  0.000000e+00     minimum_velocity_scan
+131             132    50  0.01  1210  300   88.2     88.2  0.000000e+00     minimum_velocity_scan
+149             150    20  0.00  1110  300   93.5     93.5  0.000000e+00  frequency_amplitude_scan
+178             179    10  0.00   960  300  106.2    106.2  0.000000e+00  frequency_amplitude_scan
+185             186    50  0.00  1110  300  109.7    109.7  0.000000e+00  frequency_amplitude_scan
+189             190    50  0.00  1160  300  110.8    110.8  0.000000e+00  frequency_amplitude_scan
+193             194    10  0.00   910  300  111.5    111.5  0.000000e+00  frequency_amplitude_scan
+197             198    50  0.00  1210  300  113.6    113.6  0.000000e+00  frequency_amplitude_scan
+199             200    20  0.00   910  300  114.7    114.7  0.000000e+00  frequency_amplitude_scan
+211             212    30  0.00  1210  300  120.7    120.7  0.000000e+00  frequency_amplitude_scan
+215             216    20  0.03  1210  300  122.3    122.3  0.000000e+00     minimum_velocity_scan
+230             231    20  0.05  1210  300  129.6    129.6  0.000000e+00     minimum_velocity_scan
+233             234    50  0.00  1060  300  130.3    130.3  0.000000e+00  frequency_amplitude_scan
+239             240    50  0.00  1260  300  132.9    132.9  0.000000e+00  frequency_amplitude_scan
+249             250    20  0.02  1210  300  137.2    137.2  0.000000e+00     minimum_velocity_scan
+matched family counts {'frequency_amplitude_scan': 18, 'minimum_velocity_scan': 11}
+matched w values {300: 29}
+fa rows in candidate file 304
+how many fa rows have vmax in ranked axis set and f in ranked axis set and w in 250..325: 133
+grid coverage: 250 of 2240 = 0.11160714285714286
+per-axis row counts (fraction of 250):
+vmax {1.0: 2, 3.0: 4, 10.0: 21, 20.0: 60, 30.0: 99, 50.0: 59, 100.0: 5}
+vmin {0.0: 62, 0.001: 13, 0.003: 13, 0.01: 46, 0.02: 27, 0.0299999999999999: 46, 0.05: 21, 0.1: 22}
+f {860.0: 2, 910.0: 20, 960.0: 25, 1010.0: 57, 1060.0: 35, 1110.0: 50, 1160.0: 22, 1210.0: 30, 1260.0: 2, 1310.0: 7}
+w {250.0: 26, 275.0: 84, 300.0: 108, 325.0: 32}
+expected per level (uniform):
+vmax 250/7 = 35.714285714285715  vmin 250/8 = 31.25  f 250/10 = 25.0  w 250/4 = 62.5
+--- per-pass time structure ---
+pass_01 n 80 t0 -39.03 t1 39.97 span_min 79.0 median_dt_s 60.0
+pass_02 n 72 t0 -39.21 t1 39.79 span_min 79.0 median_dt_s 60.0
+pass_03 n 70 t0 -39.23 t1 39.77 span_min 79.0 median_dt_s 60.0
+pass_04 n 80 t0 -39.28 t1 39.72 span_min 79.0 median_dt_s 60.0
+pass_05 n 80 t0 -39.79 t1 39.21 span_min 79.0 median_dt_s 60.0
+pass_06 n 80 t0 -39.43 t1 39.57 span_min 79.0 median_dt_s 60.0
+pass_07 n 80 t0 -39.25 t1 39.75 span_min 79.0 median_dt_s 60.0
+pass_08 n 80 t0 -39.9 t1 39.1 span_min 79.0 median_dt_s 60.0
+pass_09 n 79 t0 -39.87 t1 39.13 span_min 79.0 median_dt_s 60.0
+pass_10 n 79 t0 -39.2 t1 39.8 span_min 79.0 median_dt_s 60.0
+pass_11 n 73 t0 -39.41 t1 32.59 span_min 72.0 median_dt_s 60.0
+pass_12 n 80 t0 -39.87 t1 39.13 span_min 79.0 median_dt_s 60.0
+pass_13 n 61 t0 -39.21 t1 20.79 span_min 60.0 median_dt_s 60.0
+pass_14 n 80 t0 -39.38 t1 39.62 span_min 79.0 median_dt_s 60.0
+pass_15 n 78 t0 -39.4 t1 39.6 span_min 79.0 median_dt_s 60.0
+pass_16 n 80 t0 -39.27 t1 39.73 span_min 79.0 median_dt_s 60.0
+pass_17 n 80 t0 -39.23 t1 39.77 span_min 79.0 median_dt_s 60.0
+pass_18 n 77 t0 -39.8 t1 39.2 span_min 79.0 median_dt_s 60.0
+pass_19 n 69 t0 -32.94 t1 39.06 span_min 72.0 median_dt_s 60.0
+pass_20 n 80 t0 -39.65 t1 39.35 span_min 79.0 median_dt_s 60.0
+pass_21 n 80 t0 -39.08 t1 39.92 span_min 79.0 median_dt_s 60.0
+pass_22 n 80 t0 -39.22 t1 39.78 span_min 79.0 median_dt_s 60.0

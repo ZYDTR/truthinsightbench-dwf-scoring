@@ -1,0 +1,8 @@
+event_1: 425/425 cols with signal; runs/col mean 78.4 median 78; median column span 8.906 MHz = 99.3% of the band; mean signal bins/col 174.2
+event_2: 425/425 cols with signal; runs/col mean 79.8 median 80; median column span 8.885 MHz = 99.1% of the band; mean signal bins/col 176.1
+event_3: 425/425 cols with signal; runs/col mean 84.1 median 85; median column span 8.906 MHz = 99.3% of the band; mean signal bins/col 172.1
+event_4: 425/425 cols with signal; runs/col mean 80.4 median 80; median column span 8.906 MHz = 99.3% of the band; mean signal bins/col 172.4
+event_5: 425/425 cols with signal; runs/col mean 82.2 median 82; median column span 8.906 MHz = 99.3% of the band; mean signal bins/col 168.0
+LOO mean_runs_per_col: full 80.4188 range [80.1141,81.2988] width 1.1847
+LOO median_col_span_frac_of_band: full 0.9929 range [0.9929,0.9929] width 0.0000
+saved s22_mask_diffuseness.csv/.json/.csv(loo)

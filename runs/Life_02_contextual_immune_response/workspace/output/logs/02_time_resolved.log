@@ -1,0 +1,80 @@
+==============================================================================
+T1  Time-resolved response: design
+==============================================================================
+rows=56  times=[np.float64(3.0), np.float64(6.0), np.float64(9.0), np.float64(12.0), np.float64(15.0), np.float64(18.0), np.float64(21.0)]  roles=['baseline', 'perturbation']
+replicates per role x time: [np.int64(4)] (balanced = True)
+paired rows available at every time point: True (28 pairs)
+
+   per-time-point means (percent of the common normalization reference):
+    time   baseline  perturbation  difference
+       3    100.793       100.276      -0.517
+       6    102.860       102.339      -0.522
+       9    101.749       102.744      +0.996
+      12    106.030       104.947      -1.083
+      15    108.716       108.912      +0.196
+      18    111.953       109.570      -2.382
+      21    115.902       112.845      -3.057
+
+==============================================================================
+T2  Per-time-point role contrast (paired by replicate_id, n = 4 pairs)
+==============================================================================
+   t=    3  diff = -0.517 [-8.991, +7.958]  paired t = -0.194 (p = 0.8585)  TOST vs +/-3pp: p = 0.2099 equivalent=False
+   t=    6  diff = -0.522 [-9.721, +8.677]  paired t = -0.181 (p = 0.8683)  TOST vs +/-3pp: p = 0.2271 equivalent=False
+   t=    9  diff = +0.996 [-7.655, +9.647]  paired t = +0.366 (p = 0.7385)  TOST vs +/-3pp: p = 0.2572 equivalent=False
+   t=   12  diff = -1.083 [-16.960, +14.795]  paired t = -0.217 (p = 0.8421)  TOST vs +/-3pp: p = 0.3632 equivalent=False
+   t=   15  diff = +0.196 [-17.166, +17.558]  paired t = +0.036 (p = 0.9736)  TOST vs +/-3pp: p = 0.3214 equivalent=False
+   t=   18  diff = -2.382 [-12.443, +7.679]  paired t = -0.754 (p = 0.5059)  TOST vs +/-3pp: p = 0.4288 equivalent=False
+   t=   21  diff = -3.057 [-16.305, +10.190]  paired t = -0.734 (p = 0.5159)  TOST vs +/-3pp: p = 0.5051 equivalent=False
+   time points with p < 0.05: 0/7 -> []
+   early window (t <= 15) all non-significant: True
+   early window equivalent within +/-3pp: [False, False, False, False, False]
+
+==============================================================================
+T3  Time x role interaction
+==============================================================================
+   mixed model response ~ time_units * C(condition_role); random intercept for replicate_id
+   time x role interaction coef = -0.1446 percent per time unit (p = 0.4304)
+   baseline time slope = +0.8390; perturbation slope = +0.6945
+   variance: replicate = 1.3957, residual = 16.9428
+   difference-series OLS: slope = -0.1446 percent per time unit (SE 0.2214, p = 0.5195, R2 = 0.016)
+
+==============================================================================
+T4  Kinetic boundary: segmented slopes and crossover
+==============================================================================
+   early_3_to_12  baseline      slope = +0.4866 percent/unit (SE 0.2994, p = 0.1264, R2 = 0.159)
+   early_3_to_12  perturbation  slope = +0.4806 percent/unit (SE 0.2207, p = 0.0470, R2 = 0.253)
+   early_3_to_12  slope difference (perturbation - baseline) = -0.0060
+   late_15_to_21  baseline      slope = +1.1978 percent/unit (SE 0.6913, p = 0.1138, R2 = 0.231)
+   late_15_to_21  perturbation  slope = +0.6556 percent/unit (SE 0.5308, p = 0.2450, R2 = 0.132)
+   late_15_to_21  slope difference (perturbation - baseline) = -0.5422
+
+   per-replicate slope of (perturbation - baseline) over time:
+      replicate_1: slope = -0.0977 (p = 0.3943)
+      replicate_2: slope = -0.7866 (p = 0.0213)
+      replicate_3: slope = +0.0917 (p = 0.7620)
+      replicate_4: slope = +0.2144 (p = 0.2210)
+   one-sample t on the 4 replicate slopes vs 0: t = -0.647, p = 0.5637
+   first time point with a significant paired contrast: None
+   late window mean divergence: -2.720 percentage points (baseline arm mean 113.928)
+
+==============================================================================
+T5  Robustness of the kinetic boundary
+==============================================================================
+   (a) Welch unpaired tests vs the paired tests:
+      t=    3  Welch p = 0.7951  paired p = 0.8585
+      t=    6  Welch p = 0.8289  paired p = 0.8683
+      t=    9  Welch p = 0.6392  paired p = 0.7385
+      t=   12  Welch p = 0.7854  paired p = 0.8421
+      t=   15  Welch p = 0.9657  paired p = 0.9736
+      t=   18  Welch p = 0.4768  paired p = 0.5059
+      t=   21  Welch p = 0.4876  paired p = 0.5159
+      same significance calls: True
+   (b) leave-one-replicate-out difference-series slope:
+      omit replicate_1: slope = -0.1602 (p = 0.5867)
+      omit replicate_2: slope = +0.0695 (p = 0.7900)
+      omit replicate_3: slope = -0.2233 (p = 0.1078)
+      omit replicate_4: slope = -0.2642 (p = 0.3500)
+      slope range across folds: -0.2642 to +0.0695
+   (c) alternative contrast (ratio perturbation/baseline): slope = -0.00115 per time unit, p = 0.5911
+      ratio by time: {3: 0.9958, 6: 0.9965, 9: 1.011, 12: 0.9939, 15: 1.0064, 18: 0.9796, 21: 0.9765}
+   (d) Spearman(difference, time) = -0.117 (p = 0.5527)

@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "EarthScience_02_ice_particle_composition",
+  "model": "deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "e05f2d215f222c030f6fe5413f51e293db70326efe733dd1ea75ebabd0d4ac44",
+  "workspace_input_file_count": 9,
+  "workspace_input_bytes": 61129,
+  "output_tree_sha256": "414fbe1269c823b08c0736d42c09401bab8e5c9332d01140e409a1ffd2f4d36e",
+  "output_file_count": 53,
+  "output_bytes": 2028153
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Energy_04_biohybrid_operating_tradeoffs",
+  "model": "deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "5ac9cbeeffcf5993fa6dc8ccd33319795f791f998c266b776da7bf7b1a0df115",
+  "workspace_input_file_count": 10,
+  "workspace_input_bytes": 83915,
+  "output_tree_sha256": "3a73b9308adaaf2f682a9a27c761be4385ad22b806b61f0bf7f4bb95a9c5d18f",
+  "output_file_count": 47,
+  "output_bytes": 1012285
+}

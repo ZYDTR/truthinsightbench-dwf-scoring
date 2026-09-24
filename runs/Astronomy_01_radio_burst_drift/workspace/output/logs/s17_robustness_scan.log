@@ -1,0 +1,152 @@
+========================================================================================
+s17-v2  ROBUSTNESS + DECISIVE REPORTED-SLOPE RECOVERY TEST (Radon/Hough)
+ANALYSIS UNIT = one complete dynamic-spectrum event (n_events = 5)
+========================================================================================
+event_id   time_min_s   time_max_s  frequency_min_MHz  frequency_max_MHz  reported_event_drift_rate_MHz_s  frequency_bins  time_bins
+ event_1 18243.385215 18244.483660           8.001709          16.970825                       -12.777653             425        425
+ event_2 20263.296528 20264.394893           8.001709          16.970825                       -12.452023             425        425
+ event_3 30069.745812 30070.844176           8.001709          16.970825                        -3.361425             425        425
+ event_4 30353.805023 30354.903428           8.001709          16.970825                       -16.867298             425        425
+ event_5 16717.864904 16718.963268           8.001709          16.970825                        -4.055995             425        425
+
+########################################################################################
+### event_1  grid 425x425  f 8.0017..16.9708 MHz (Df=8.9691)  t 18243.3852..18244.4837 s (Dt=1.0984)
+### reported drift -12.7777 MHz/s -> implied ridge displacement |m|*Dt = 14.036 MHz = 156.5% of the total band; implied band-crossing time 0.702 s = 63.9% of the window
+----------------------------------------------------------------------------------------
+[event_1 | thr>1.0100] mask 87098px=48.22%  cols 425/425  components 1557  multirun 425/425  centroid range 1.6516 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  +0.4449 +- 0.0387 MHz/s (p=1.34e-30); reported -12.7777; diff +13.2225; relerr -1.035; Spearman rho +0.5072
+   RADON/HOUGH: H at the node nearest the reported slope (-12.80 vs -12.7777 MHz/s) = 0.07079; percentile among 327 slopes = 58.26   (length-matched pct 55.36, n=84)
+      argmax H at +1.80 MHz/s (H=0.23169); phase support at best 100% of columns; anchor-phase value 0.05226 over 64% cols
+----------------------------------------------------------------------------------------
+[event_1 | thr>1.0500] mask 74044px=40.99%  cols 425/425  components 3404  multirun 425/425  centroid range 1.6744 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  +0.4548 +- 0.0392 MHz/s (p=4.40e-31); reported -12.7777; diff +13.2325; relerr -1.036; Spearman rho +0.5066
+   RADON/HOUGH: H at the node nearest the reported slope (-12.80 vs -12.7777 MHz/s) = 0.06993; percentile among 327 slopes = 58.26   (length-matched pct 55.36, n=84)
+      argmax H at +1.80 MHz/s (H=0.23073); phase support at best 100% of columns; anchor-phase value 0.05076 over 64% cols
+----------------------------------------------------------------------------------------
+[event_1 | thr>1.2000] mask 36569px=20.25%  cols 425/425  components 9802  multirun 425/425  centroid range 2.2653 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  +0.5449 +- 0.0518 MHz/s (p=7.43e-26); reported -12.7777; diff +13.3225; relerr -1.043; Spearman rho +0.4821
+   RADON/HOUGH: H at the node nearest the reported slope (-12.80 vs -12.7777 MHz/s) = 0.05816; percentile among 327 slopes = 58.87   (length-matched pct 57.74, n=84)
+      argmax H at +1.80 MHz/s (H=0.21274); phase support at best 100% of columns; anchor-phase value 0.03461 over 64% cols
+   INJECT ridge amp 0.02 at reported slope -> recovered  +0.3603 MHz/s, radon pct of reported 60.09, radon argmax +1.80
+   INJECT ridge amp 0.05 at reported slope -> recovered  +0.2416 MHz/s, radon pct of reported 70.80, radon argmax +1.80
+   INJECT ridge amp 0.10 at reported slope -> recovered  +0.0541 MHz/s, radon pct of reported 79.36, radon argmax +1.80
+   INJECT ridge amp 0.25 at reported slope -> recovered  -0.4441 MHz/s, radon pct of reported 95.26, radon argmax +1.80
+########################################################################################
+### event_2  grid 425x425  f 8.0017..16.9708 MHz (Df=8.9691)  t 20263.2965..20264.3949 s (Dt=1.0984)
+### reported drift -12.4520 MHz/s -> implied ridge displacement |m|*Dt = 13.677 MHz = 152.5% of the total band; implied band-crossing time 0.720 s = 65.6% of the window
+----------------------------------------------------------------------------------------
+[event_2 | thr>1.0100] mask 86873px=48.10%  cols 425/425  components 1749  multirun 425/425  centroid range 1.6872 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  +0.3307 +- 0.0472 MHz/s (p=2.34e-12); reported -12.4520; diff +12.7827; relerr -1.027; Spearman rho +0.3266
+   RADON/HOUGH: H at the node nearest the reported slope (-12.40 vs -12.4520 MHz/s) = 0.07103; percentile among 327 slopes = 56.12   (length-matched pct 40.85, n=82)
+      argmax H at +0.40 MHz/s (H=0.28158); phase support at best 100% of columns; anchor-phase value 0.05777 over 66% cols
+----------------------------------------------------------------------------------------
+[event_2 | thr>1.0500] mask 74830px=41.43%  cols 425/425  components 3526  multirun 425/425  centroid range 1.7241 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  +0.3320 +- 0.0481 MHz/s (p=5.20e-12); reported -12.4520; diff +12.7840; relerr -1.027; Spearman rho +0.3218
+   RADON/HOUGH: H at the node nearest the reported slope (-12.40 vs -12.4520 MHz/s) = 0.07025; percentile among 327 slopes = 56.12   (length-matched pct 40.85, n=82)
+      argmax H at +0.40 MHz/s (H=0.28103); phase support at best 100% of columns; anchor-phase value 0.05597 over 66% cols
+----------------------------------------------------------------------------------------
+[event_2 | thr>1.2000] mask 39795px=22.03%  cols 425/425  components 9155  multirun 425/425  centroid range 2.3711 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  +0.3708 +- 0.0565 MHz/s (p=5.10e-11); reported -12.4520; diff +12.8228; relerr -1.030; Spearman rho +0.3107
+   RADON/HOUGH: H at the node nearest the reported slope (-12.40 vs -12.4520 MHz/s) = 0.06545; percentile among 327 slopes = 59.48   (length-matched pct 54.27, n=82)
+      argmax H at +0.40 MHz/s (H=0.27351); phase support at best 100% of columns; anchor-phase value 0.04248 over 66% cols
+   INJECT ridge amp 0.02 at reported slope -> recovered  +0.2510 MHz/s, radon pct of reported 58.26, radon argmax +0.40
+   INJECT ridge amp 0.05 at reported slope -> recovered  +0.1407 MHz/s, radon pct of reported 61.93, radon argmax +0.40
+   INJECT ridge amp 0.10 at reported slope -> recovered  -0.0334 MHz/s, radon pct of reported 73.24, radon argmax +0.40
+   INJECT ridge amp 0.25 at reported slope -> recovered  -0.5326 MHz/s, radon pct of reported 93.43, radon argmax +0.40
+########################################################################################
+### event_3  grid 425x425  f 8.0017..16.9708 MHz (Df=8.9691)  t 30069.7458..30070.8442 s (Dt=1.0984)
+### reported drift -3.3614 MHz/s -> implied ridge displacement |m|*Dt = 3.692 MHz = 41.2% of the total band; implied band-crossing time 2.668 s = 100.0% of the window
+----------------------------------------------------------------------------------------
+[event_3 | thr>1.0100] mask 85967px=47.59%  cols 425/425  components 1795  multirun 425/425  centroid range 2.3958 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  -0.1863 +- 0.0415 MHz/s (p=7.21e-06); reported -3.3614; diff +3.1751; relerr -0.945; Spearman rho -0.2045
+   RADON/HOUGH: H at the node nearest the reported slope (-3.40 vs -3.3614 MHz/s) = 0.14523; percentile among 327 slopes = 92.81   (length-matched pct 79.91, n=117)
+      argmax H at +0.00 MHz/s (H=0.23388); phase support at best 100% of columns; anchor-phase value 0.10077 over 100% cols
+----------------------------------------------------------------------------------------
+[event_3 | thr>1.0500] mask 73122px=40.48%  cols 425/425  components 3805  multirun 425/425  centroid range 2.4287 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  -0.1924 +- 0.0426 MHz/s (p=6.34e-06); reported -3.3614; diff +3.1691; relerr -0.943; Spearman rho -0.2081
+   RADON/HOUGH: H at the node nearest the reported slope (-3.40 vs -3.3614 MHz/s) = 0.14340; percentile among 327 slopes = 92.81   (length-matched pct 79.91, n=117)
+      argmax H at +0.00 MHz/s (H=0.23370); phase support at best 100% of columns; anchor-phase value 0.09924 over 100% cols
+----------------------------------------------------------------------------------------
+[event_3 | thr>1.2000] mask 35466px=19.64%  cols 425/425  components 10068  multirun 425/425  centroid range 3.0135 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  -0.2927 +- 0.0559 MHz/s (p=1.64e-07); reported -3.3614; diff +3.0687; relerr -0.913; Spearman rho -0.2403
+   RADON/HOUGH: H at the node nearest the reported slope (-3.40 vs -3.3614 MHz/s) = 0.12218; percentile among 327 slopes = 93.43   (length-matched pct 81.62, n=117)
+      argmax H at +0.00 MHz/s (H=0.23228); phase support at best 100% of columns; anchor-phase value 0.06998 over 100% cols
+   INJECT ridge amp 0.02 at reported slope -> recovered  -0.2398 MHz/s, radon pct of reported 92.51, radon argmax +0.00
+   INJECT ridge amp 0.05 at reported slope -> recovered  -0.3133 MHz/s, radon pct of reported 94.95, radon argmax +0.00
+   INJECT ridge amp 0.10 at reported slope -> recovered  -0.4304 MHz/s, radon pct of reported 98.93, radon argmax +0.00
+   INJECT ridge amp 0.25 at reported slope -> recovered  -0.7393 MHz/s, radon pct of reported 99.54, radon argmax -3.20
+########################################################################################
+### event_4  grid 425x425  f 8.0017..16.9708 MHz (Df=8.9691)  t 30353.8050..30354.9034 s (Dt=1.0984)
+### reported drift -16.8673 MHz/s -> implied ridge displacement |m|*Dt = 18.527 MHz = 206.6% of the total band; implied band-crossing time 0.532 s = 48.4% of the window
+----------------------------------------------------------------------------------------
+[event_4 | thr>1.0100] mask 86033px=47.63%  cols 425/425  components 1379  multirun 425/425  centroid range 1.3712 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  -0.1555 +- 0.0488 MHz/s (p=1.42e-03); reported -16.8673; diff +16.7118; relerr -0.991; Spearman rho -0.1478
+   RADON/HOUGH: H at the node nearest the reported slope (-16.80 vs -16.8673 MHz/s) = 0.06027; percentile among 327 slopes = 50.61   (length-matched pct 70.98, n=112)
+      argmax H at -0.40 MHz/s (H=0.22801); phase support at best 100% of columns; anchor-phase value 0.04820 over 49% cols
+----------------------------------------------------------------------------------------
+[event_4 | thr>1.0500] mask 73287px=40.57%  cols 425/425  components 3177  multirun 425/425  centroid range 1.3800 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  -0.1587 +- 0.0507 MHz/s (p=1.77e-03); reported -16.8673; diff +16.7086; relerr -0.991; Spearman rho -0.1443
+   RADON/HOUGH: H at the node nearest the reported slope (-16.80 vs -16.8673 MHz/s) = 0.05908; percentile among 327 slopes = 50.61   (length-matched pct 70.98, n=112)
+      argmax H at -0.40 MHz/s (H=0.22723); phase support at best 100% of columns; anchor-phase value 0.04722 over 49% cols
+----------------------------------------------------------------------------------------
+[event_4 | thr>1.2000] mask 36565px=20.24%  cols 425/425  components 9816  multirun 425/425  centroid range 2.0837 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  -0.1999 +- 0.0643 MHz/s (p=1.86e-03); reported -16.8673; diff +16.6674; relerr -0.988; Spearman rho -0.1429
+   RADON/HOUGH: H at the node nearest the reported slope (-16.80 vs -16.8673 MHz/s) = 0.04785; percentile among 327 slopes = 51.22   (length-matched pct 72.77, n=112)
+      argmax H at -0.40 MHz/s (H=0.21275); phase support at best 100% of columns; anchor-phase value 0.03664 over 49% cols
+   INJECT ridge amp 0.02 at reported slope -> recovered  -0.2054 MHz/s, radon pct of reported 53.98, radon argmax -0.40
+   INJECT ridge amp 0.05 at reported slope -> recovered  -0.2667 MHz/s, radon pct of reported 58.87, radon argmax -0.40
+   INJECT ridge amp 0.10 at reported slope -> recovered  -0.3492 MHz/s, radon pct of reported 66.82, radon argmax -0.40
+   INJECT ridge amp 0.25 at reported slope -> recovered  -0.5129 MHz/s, radon pct of reported 89.45, radon argmax -0.40
+########################################################################################
+### event_5  grid 425x425  f 8.0017..16.9708 MHz (Df=8.9691)  t 16717.8649..16718.9633 s (Dt=1.0984)
+### reported drift -4.0560 MHz/s -> implied ridge displacement |m|*Dt = 4.455 MHz = 49.7% of the total band; implied band-crossing time 2.211 s = 100.0% of the window
+----------------------------------------------------------------------------------------
+[event_5 | thr>1.0100] mask 85402px=47.28%  cols 425/425  components 1437  multirun 425/425  centroid range 1.5695 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  +0.3772 +- 0.0389 MHz/s (p=3.19e-22); reported -4.0560; diff +4.4332; relerr -1.093; Spearman rho +0.4187
+   RADON/HOUGH: H at the node nearest the reported slope (-4.00 vs -4.0560 MHz/s) = 0.11919; percentile among 327 slopes = 86.39   (length-matched pct 61.97, n=117)
+      argmax H at +4.00 MHz/s (H=0.13796); phase support at best 100% of columns; anchor-phase value 0.08550 over 100% cols
+----------------------------------------------------------------------------------------
+[event_5 | thr>1.0500] mask 71396px=39.53%  cols 425/425  components 3583  multirun 425/425  centroid range 1.6025 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  +0.3884 +- 0.0408 MHz/s (p=1.92e-21); reported -4.0560; diff +4.4444; relerr -1.096; Spearman rho +0.4156
+   RADON/HOUGH: H at the node nearest the reported slope (-4.00 vs -4.0560 MHz/s) = 0.11748; percentile among 327 slopes = 86.39   (length-matched pct 61.97, n=117)
+      argmax H at +4.60 MHz/s (H=0.13572); phase support at best 100% of columns; anchor-phase value 0.08279 over 100% cols
+----------------------------------------------------------------------------------------
+[event_5 | thr>1.2000] mask 31085px=17.21%  cols 425/425  components 10751  multirun 425/425  centroid range 2.2457 MHz
+   FITTED rate (weighted centroid, Theil-Sen) =  +0.5294 +- 0.0585 MHz/s (p=1.38e-19); reported -4.0560; diff +4.5854; relerr -1.131; Spearman rho +0.4003
+   RADON/HOUGH: H at the node nearest the reported slope (-4.00 vs -4.0560 MHz/s) = 0.09219; percentile among 327 slopes = 88.23   (length-matched pct 67.09, n=117)
+      argmax H at +4.60 MHz/s (H=0.10959); phase support at best 100% of columns; anchor-phase value 0.05450 over 100% cols
+   INJECT ridge amp 0.02 at reported slope -> recovered  +0.2767 MHz/s, radon pct of reported 86.39, radon argmax +4.00
+   INJECT ridge amp 0.05 at reported slope -> recovered  +0.1381 MHz/s, radon pct of reported 97.71, radon argmax -3.60
+   INJECT ridge amp 0.10 at reported slope -> recovered  -0.0763 MHz/s, radon pct of reported 99.54, radon argmax -3.60
+   INJECT ridge amp 0.25 at reported slope -> recovered  -0.6044 MHz/s, radon pct of reported 99.85, radon argmax -4.00
+
+========================================================================================
+FULL LEAVE-ONE-OUT over the 5 events (5 folds) for every event-level stat
+========================================================================================
+median_fitted_rate_theilsen              full=    +0.332009 MHz/s          LOO [    +0.086679,    +0.360216] width 0.273537  stable
+median_abs_bias_vs_reported              full=   +12.784032 MHz/s          LOO [    +8.614224,   +13.008246] width 4.394021  stable
+median_fitted_over_reported_ratio        full=    -0.026663                LOO [    -0.031128,    -0.008629] width 0.022500  stable
+n_events_same_sign_as_reported           full=    +2.000000 count/5        LOO [    +1.000000,    +2.000000] width 1.000000  stable
+frac_events_same_sign_as_reported        full=    +0.400000 fraction       LOO [    +0.250000,    +0.500000] width 0.250000  stable
+median_radon_pct_of_reported             full=   +58.256881 pct            LOO [   +57.186544,   +72.324159] width 15.137615  stable
+median_radon_pct_matched                 full=   +61.965812 pct            LOO [   +58.661477,   +66.473977] width 7.812500  stable
+n_events_radon_pct_extreme_p10           full=    +1.000000 count/5        LOO [    +0.000000,    +1.000000] width 1.000000  FLAGGED: sign flip
+n_events_radon_pct_extreme_p05           full=    +0.000000 count/5        LOO [    +0.000000,    +0.000000] width 0.000000  stable
+median_radon_argmax_slope                full=    +0.400000 MHz/s          LOO [    +0.200000,    +1.100000] width 0.900000  stable
+median_observed_centroid_range           full=    +1.674420 MHz            LOO [    +1.638437,    +1.699249] width 0.060812  stable
+median_implied_ridge_displacement        full=   +13.676861 MHz            LOO [    +9.065911,   +13.856206] width 4.790295  stable
+median_displacement_ratio_implied_over_observed full=    +7.932851                LOO [    +5.356469,    +8.157594] width 2.801125  stable
+n_events_implied_exceedsWholeBand        full=    +3.000000 count/5        LOO [    +2.000000,    +3.000000] width 1.000000  FLAGGED: crosses boundary 2.50
+frac_events_implied_displacement_gt_band full=    +1.212752 fraction       LOO [    +0.999526,    +1.413029] width 0.413504  FLAGGED: crosses boundary 1.00
+median_mask_fraction                     full=    +0.405741 frac           LOO [    +0.405284,    +0.407837] width 0.002552  stable
+median_pca_elongation                    full=   +64.750068 ratio          LOO [   +63.507190,   +65.047699] width 1.540509  stable
+median_n_components                      full= +3526.000000 count          LOO [ +3465.000000, +3554.500000] width 89.500000  stable
+median_frac_multirun_columns             full=    +1.000000 frac           LOO [    +1.000000,    +1.000000] width 0.000000  stable
+median_injection_pct_at_amp_0.10         full=   +79.357798 pct            LOO [   +76.299694,   +89.143731] width 12.844037  stable
+median_injection_pct_at_amp_0.02         full=   +60.091743 pct            LOO [   +59.174312,   +73.241590] width 14.067278  stable
+median_injection_pct_at_amp_0.05         full=   +70.795107 pct            LOO [   +66.360856,   +82.874618] width 16.513761  stable
+median_injection_pct_at_amp_0.25         full=   +95.259939 pct            LOO [   +94.342508,   +97.400612] width 3.058104  stable
+min_amp_with_median_pct_ge90             full=    +0.250000 amplitude      LOO [    +0.250000,    +0.250000] width 0.000000  stable
+
+FIGURES
+saved s17_*.csv/json + 4 figures; errors: none

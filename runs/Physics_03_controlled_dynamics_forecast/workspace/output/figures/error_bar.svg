@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" font-family="Helvetica, Arial, sans-serif">
+<title>Error Metrics</title>
+<rect width="760" height="520" fill="#FFFFFF"/>
+<text x="380" y="26" text-anchor="middle" font-size="18" font-weight="bold" fill="#000000">Error Metrics</text>
+<text x="380" y="44" text-anchor="middle" font-size="12" fill="#333333">Frequency mean_abs_error (blue) and trajectory rmse (orange) per condition</text>
+<rect x="70" y="60" width="660" height="425" fill="#FFFFFF" stroke="#555555" stroke-width="1"/>
+<line x1="70" y1="60.0" x2="730" y2="60.0" stroke="#E6E6E6" stroke-width="0.5"/>
+<text x="62" y="63.0" text-anchor="end" font-size="10" fill="#000000">0.00</text>
+<line x1="70" y1="145.0" x2="730" y2="145.0" stroke="#E6E6E6" stroke-width="0.5"/>
+<text x="62" y="148.0" text-anchor="end" font-size="10" fill="#000000">0.25</text>
+<line x1="70" y1="230.0" x2="730" y2="230.0" stroke="#E6E6E6" stroke-width="0.5"/>
+<text x="62" y="233.0" text-anchor="end" font-size="10" fill="#000000">0.50</text>
+<line x1="70" y1="315.0" x2="730" y2="315.0" stroke="#E6E6E6" stroke-width="0.5"/>
+<text x="62" y="318.0" text-anchor="end" font-size="10" fill="#000000">0.75</text>
+<line x1="70" y1="400.0" x2="730" y2="400.0" stroke="#E6E6E6" stroke-width="0.5"/>
+<text x="62" y="403.0" text-anchor="end" font-size="10" fill="#000000">1.00</text>
+<line x1="70" y1="485.0" x2="730" y2="485.0" stroke="#E6E6E6" stroke-width="0.5"/>
+<text x="62" y="488.0" text-anchor="end" font-size="10" fill="#000000">1.25</text>
+<rect x="92.0" y="469.2440028017283" width="66.0" height="15.755997198271723" fill="#2C7BB6"/>
+<text x="125.0" y="464.2440028017283" text-anchor="middle" font-size="10" fill="#000000">0.047</text>
+<rect x="202.0" y="451.9124058836294" width="66.0" height="33.08759411637062" fill="#2C7BB6"/>
+<text x="235.0" y="446.9124058836294" text-anchor="middle" font-size="10" fill="#000000">0.098</text>
+<rect x="312.0" y="480.03686088254443" width="66.0" height="4.963139117455592" fill="#2C7BB6"/>
+<text x="345.0" y="475.03686088254443" text-anchor="middle" font-size="10" fill="#000000">0.015</text>
+<rect x="422.0" y="381.08811607200823" width="66.0" height="103.91188392799177" fill="#E67E22"/>
+<text x="455.0" y="376.08811607200823" text-anchor="middle" font-size="10" fill="#000000">0.307</text>
+<rect x="532.0" y="278.78584835437596" width="66.0" height="206.214151645624" fill="#E67E22"/>
+<text x="565.0" y="273.78584835437596" text-anchor="middle" font-size="10" fill="#000000">0.609</text>
+<rect x="642.0" y="115.43478260869563" width="66.0" height="369.5652173913044" fill="#E67E22"/>
+<text x="675.0" y="110.43478260869563" text-anchor="middle" font-size="10" fill="#000000">1.091</text>
+<text x="125.0" y="501" text-anchor="middle" font-size="11" fill="#000000">control_a</text>
+<text x="235.0" y="501" text-anchor="middle" font-size="11" fill="#000000">control_b</text>
+<text x="345.0" y="501" text-anchor="middle" font-size="11" fill="#000000">signed_control</text>
+<text x="455.0" y="501" text-anchor="middle" font-size="11" fill="#000000">condition_01</text>
+<text x="565.0" y="501" text-anchor="middle" font-size="11" fill="#000000">condition_02</text>
+<text x="675.0" y="501" text-anchor="middle" font-size="11" fill="#000000">condition_03</text>
+<text x="400.0" y="527" text-anchor="middle" font-size="12" fill="#000000">Condition</text>
+<rect x="560" y="72" width="14" height="14" fill="#2C7BB6"/>
+<text x="580" y="82" font-size="10" fill="#000000">Frequency MAE</text>
+<rect x="560" y="94" width="14" height="14" fill="#E67E22"/>
+<text x="580" y="102" font-size="10" fill="#000000">Trajectory RMSE</text>
+</svg>

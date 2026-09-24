@@ -1,0 +1,55 @@
+=== PART A: energy-scramble null (is the agreement energy specific?) ===
+  exp E |   phase r phase med_other  phase frac>= |    mag r  mag med_other  mag frac>=
+  23.25 |    0.9986          0.7128         0.102 |   0.8723         0.2149       0.051
+  24.80 |    0.9987          0.7146         0.031 |   0.7612         0.0103       0.194
+  26.35 |    0.9888          0.7476         0.173 |   0.7948         0.3804       0.163
+  27.90 |    0.4386          0.7769         0.776 |   0.3891         0.7490       0.908
+  29.45 |    0.6313          0.7966         0.694 |   0.7331         0.8928       0.663
+  31.00 |    0.7635          0.8381         0.612 |   0.8731         0.9209       0.582
+  32.55 |    0.8865          0.9023         0.531 |   0.9341         0.9336       0.500
+  34.10 |    0.9263          0.9052         0.316 |   0.9349         0.8992       0.418
+  35.65 |    0.9413          0.8942         0.194 |   0.9145         0.8506       0.337
+  37.20 |    0.9420          0.8812         0.112 |   0.8810         0.7909       0.255
+  38.75 |   -0.4983          0.8752         0.827 |   0.8653         0.7543       0.173
+
+A: matched pair beats >=95% of mismatched theory energies in only 1/11 (phase) and 0/11 (magnitude) cases.
+A: a high matched-pair correlation is therefore NOT by itself evidence of energy-matched agreement;
+   the panels share a common angular baseline that all energies reproduce.
+
+=== PART B: CoefLeg versus the dense panel, order by order ===
+  (the intensity basis has exact degree 6, so it carries 7 coefficients; the complex
+   amplitude has degree 3, so only its k=0..6 entries are informative — k>=4 is round-off.)
+  dense basis complex Z (deg 3)     : mean|diag(k=0..8)|=0.363  mean|off|=0.330
+                                 diag by order = [-0.063 -0.79  -0.161 -0.3   -0.338 -0.3    0.622 -0.201  0.492]
+  dense basis intensity |Z|^2 (deg 6): mean|diag(k=0..6)|=0.808  mean|off|=0.412
+                                 diag by order = [ 0.703 -0.941  0.864 -0.897  0.694 -0.649  0.91 ]
+  dense basis real magnitude        : mean|diag(k=0..8)|=0.609  mean|off|=0.390
+                                 diag by order = [ 0.766 -0.904  0.854 -0.951  0.851 -0.379  0.668 -0.036 -0.07 ]
+
+  permutation test on the ENERGY labelling (intensity basis, k=0..6): p = 0.00000 (n=50000)
+  max|r| over the 7x9 grid: observed 0.941; chance median 0.683; p=0.00033
+
+  corr( sum(F20 orders<=n) / sum(F00 orders<=n),  dense beta ) by truncation n:
+    n=0: pearson -0.6010   spearman -0.4451
+    n=1: pearson -0.8780   spearman -0.8132
+    n=2: pearson +0.6096   spearman +0.6319
+    n=3: pearson -0.0252   spearman -0.1154
+    n=4: pearson +0.7203   spearman +0.7747
+    n=5: pearson -0.1311   spearman -0.4066
+    n=6: pearson -0.7554   spearman -0.7253
+    n=7: pearson -0.6288   spearman -0.6978
+    n=8: pearson -0.6964   spearman -0.7198
+  -> the sign of the 'cross-representation conflict' is set by the truncation order, so the
+     literal all-order summed ratio of p7 is an artefact of the summation convention.
+
+  order-consistent ratio F20(k)/F00(k) versus the dense same-order ratio c_k/c_0:
+    k=1: r=-0.4027
+    k=2: r=+0.3163
+    k=3: r=+0.4132
+    k=4: r=-0.1234
+    k=5: r=+0.2409
+    k=6: r=+0.1254
+  wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/d02_cross_representation.csv
+
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/d02_cross_representation.json
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/d02_cross_representation.png

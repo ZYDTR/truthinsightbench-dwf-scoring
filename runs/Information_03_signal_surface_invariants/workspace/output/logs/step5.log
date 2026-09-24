@@ -1,0 +1,36 @@
+loaded replicated_response_panel.tsv: shape=(8232, 6) sha256=410e51b559eb4d3416f131c2eb4d8f75995ff00d3b76af7b47a0ee8b1220533d
+loaded independent_response_panel.tsv: shape=(4116, 6) sha256=f85f73bbbf15535425752c6ca2ae65e523c8dd8c06a2d5de11bf1986aaa884a1
+loaded independent_fit_error.tsv: shape=(21, 3) sha256=57b739c708fb384f7a661d85e62b67f6c5f333cab170214d6f972ca067d2564a
+baseline: 49x7 log surface rank1 R2=0.954983 rank2=0.990196 ; a1 slopes ch0=0.016601 ch6=0.484588 ratio=29.1899 ; peak/subgrid ratio (ch6/ch5)=1.2464
+normalisation battery: preserve R2>=0.9 -> ['linear', 'natural_log', 'log10', 'sqrt'] ; destroy -> ['rank', 'per_channel_zscore', 'per_channel_minmax', 'rank_within_channel']
+  linear               rank1 R2=0.9987 rank2=1.0000 loading_match=0.798
+  natural_log          rank1 R2=0.9550 rank2=0.9902 loading_match=1.000
+  log10                rank1 R2=0.9565 rank2=0.9856 loading_match=1.000
+  sqrt                 rank1 R2=0.9938 rank2=0.9987 loading_match=0.903
+  rank                 rank1 R2=0.5688 rank2=0.8979 loading_match=0.538
+  per_channel_zscore   rank1 R2=0.5681 rank2=0.9723 loading_match=0.272
+  per_channel_minmax   rank1 R2=0.5588 rank2=0.9733 loading_match=0.794
+  rank_within_channel  rank1 R2=0.5841 rank2=0.9306 loading_match=0.478
+outlier battery (rank1 R2 / chan6-chan0 ratio / peak-subgrid ratio):
+  baseline                       R2=0.9550 ratio=29.1899 peak/sub=1.2464
+  drop_top1pct_cv_cells          R2=0.9541 ratio=29.7716 peak/sub=1.2653
+  winsorise_p1_p99_within_channel R2=0.9560 ratio=29.5719 peak/sub=1.2463
+  drop_global_minmax_per_channel R2=0.9553 ratio=29.4635 peak/sub=1.2472
+channel-block partitions: best = cut=3 [0-2 | 3-6] gap=0.5644 p=0.02685 ; nominal ch0-2|ch3-6 gap=0.5644 p=0.02685
+  second best = cut=4 [0-3 | 4-6] gap=0.4849 p=0.05580 ; gap span across all 63 = 0.7947 ; vectorised vs common.block_permutation observed-gap match = True
+   top8: cut=3 [0-2 | 3-6]                      gap=0.5644 p=0.02685 (null sd=0.1613)
+   top8: cut=4 [0-3 | 4-6]                      gap=0.4849 p=0.05580 (null sd=0.1610)
+   top8: cut=2 [0-1 | 2-6]                      gap=0.4003 p=0.04755 (null sd=0.1451)
+   top8: blocks [0, 1, 3] | [2, 4, 5, 6]        gap=0.2375 p=0.08320 (null sd=0.1613)
+   top8: blocks [0, 2] | [1, 3, 4, 5, 6]        gap=0.2296 p=0.09370 (null sd=0.1457)
+   top8: cut=5 [0-4 | 5-6]                      gap=0.2190 p=0.14110 (null sd=0.1455)
+   top8: cut=1 [0-0 | 1-6]                      gap=0.2188 p=0.14295 (null sd=0.1393)
+   top8: blocks [0, 1, 2, 4] | [3, 5, 6]        gap=0.1819 p=0.11395 (null sd=0.1623)
+bootstrap (4000 resamples of 49 complete conditions): rank1 R2 = 0.9556 [0.9387, 0.9682] (observed 0.9550)
+  ratio ch6/ch0 = 36.331 [-264.057, 312.766] (observed 29.190) ; fraction of resamples with slope_ch0<=0 = 0.0750
+  peak/subgrid ratio ch6/ch5 = 1.250 [1.156, 1.379] ; a1-slope ordering strictly increasing in 0.9912 of resamples, ch6 is the max in 1.0000
+leave-one-replicate rank1 R2 (392x7 / 49x7): r1=0.9570/0.9614 ; r2=0.9412/0.9412 ; r3=0.9494/0.9553
+leave-one-channel R2: ch0=0.0190 ; ch1=0.0030 ; ch2=0.0226 ; ch3=0.3855 ; ch4=0.8949 ; ch5=0.9821 ; ch6=0.9616
+  held-out channel mean R2=0.4670 range [0.0030, 0.9821]
+null simulation (500 surfaces): null rank1 R2 mean=0.5589 sd=0.0202 range [0.5412, 0.7122]; observed 0.9550 ; n_null>=observed = 0 -> empirical p = 0.0000 (resolution 0.0020)
+total runtime 23.6 s

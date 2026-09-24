@@ -1,0 +1,1048 @@
+{
+  "track": "model_comparison",
+  "artifacts_exist": true,
+  "script_runs": true,
+  "independent_recomputations": [
+    {
+      "quantity": "median whole-pass RMS A",
+      "claimed": 0.02781123883982948,
+      "recomputed": 0.02781123883982948,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "median whole-pass RMS B",
+      "claimed": 0.013381415834845912,
+      "recomputed": 0.013381415834845912,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "median whole-pass RMS C",
+      "claimed": 0.01873689213501742,
+      "recomputed": 0.01873689213501742,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "median ratio B/A",
+      "claimed": 0.541302582864554,
+      "recomputed": 0.541302582864554,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "min ratio B/A",
+      "claimed": 0.24993482637654973,
+      "recomputed": 0.24993482637654973,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "max ratio B/A",
+      "claimed": 0.973616757940634,
+      "recomputed": 0.973616757940634,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "median ratio C/A",
+      "claimed": 0.6740527318725806,
+      "recomputed": 0.6740527318725806,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "min ratio C/A",
+      "claimed": 0.46630097613755195,
+      "recomputed": 0.46630097613755195,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "max ratio C/A",
+      "claimed": 0.979959732059996,
+      "recomputed": 0.979959732059996,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "median ratio B/C",
+      "claimed": 0.8174369451251611,
+      "recomputed": 0.8174369451251611,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "min ratio B/C",
+      "claimed": 0.46349485639853727,
+      "recomputed": 0.46349485639853727,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "max ratio B/C",
+      "claimed": 0.9935273114681679,
+      "recomputed": 0.9935273114681679,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "wilcoxon p BvsA",
+      "claimed": 4.76837158203125e-07,
+      "recomputed": 4.76837158203125e-07,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "paired t p BvsA",
+      "claimed": 6.680882190799588e-08,
+      "recomputed": 6.680882190799588e-08,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "paired t stat BvsA",
+      "claimed": -8.104745208749199,
+      "recomputed": -8.104745208749199,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "wins B vs A",
+      "claimed": 22,
+      "recomputed": 22,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "mean-diff CI low BvsA",
+      "claimed": -0.016862274389876423,
+      "recomputed": -0.016862274389876423,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "mean-diff CI high BvsA",
+      "claimed": -0.009975828401346134,
+      "recomputed": -0.009975828401346134,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "wilcoxon p CvsA",
+      "claimed": 4.76837158203125e-07,
+      "recomputed": 4.76837158203125e-07,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "paired t p CvsA",
+      "claimed": 1.7199906057595994e-07,
+      "recomputed": 1.7199906057595994e-07,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "paired t stat CvsA",
+      "claimed": -7.636899004987142,
+      "recomputed": -7.636899004987142,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "wins C vs A",
+      "claimed": 22,
+      "recomputed": 22,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "mean-diff CI low CvsA",
+      "claimed": -0.010716933076345631,
+      "recomputed": -0.010716933076345631,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "mean-diff CI high CvsA",
+      "claimed": -0.006129467852287908,
+      "recomputed": -0.006129467852287908,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "wilcoxon p BvsC",
+      "claimed": 4.76837158203125e-07,
+      "recomputed": 4.76837158203125e-07,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "paired t p BvsC",
+      "claimed": 4.633316722089716e-06,
+      "recomputed": 4.633316722089716e-06,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "paired t stat BvsC",
+      "claimed": -6.107820195329114,
+      "recomputed": -6.107820195329114,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "wins B vs C",
+      "claimed": 22,
+      "recomputed": 22,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "mean-diff CI low BvsC",
+      "claimed": -0.006696857252806884,
+      "recomputed": -0.006696857252806884,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "mean-diff CI high BvsC",
+      "claimed": -0.0032948446097821435,
+      "recomputed": -0.0032948446097821435,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "bootstrap CI low B/A",
+      "claimed": 0.4599852039386251,
+      "recomputed": 0.4599852039386251,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "bootstrap CI high B/A",
+      "claimed": 0.6207366699740091,
+      "recomputed": 0.6207366699740091,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "bootstrap P(ratio<1) B/A",
+      "claimed": 1.0,
+      "recomputed": 1.0,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "bootstrap CI low C/A",
+      "claimed": 0.6279400915951502,
+      "recomputed": 0.6279400915951502,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "bootstrap CI high C/A",
+      "claimed": 0.7928406835948295,
+      "recomputed": 0.7928406835948295,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "bootstrap P(ratio<1) C/A",
+      "claimed": 1.0,
+      "recomputed": 1.0,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "bootstrap CI low B/C",
+      "claimed": 0.7014449358796954,
+      "recomputed": 0.7014449358796954,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "bootstrap CI high B/C",
+      "claimed": 0.8472856701761993,
+      "recomputed": 0.8472856701761993,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "bootstrap P(ratio<1) B/C",
+      "claimed": 1.0,
+      "recomputed": 1.0,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "LOO min B/A",
+      "claimed": 0.5245751846661331,
+      "recomputed": 0.5245751846661331,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "LOO max B/A",
+      "claimed": 0.558029981062975,
+      "recomputed": 0.558029981062975,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "LOO min C/A",
+      "claimed": 0.6731568712560564,
+      "recomputed": 0.6731568712560564,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "LOO max C/A",
+      "claimed": 0.674948592489105,
+      "recomputed": 0.674948592489105,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "LOO min B/C",
+      "claimed": 0.8131956469698668,
+      "recomputed": 0.8131956469698668,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "LOO max B/C",
+      "claimed": 0.8216782432804552,
+      "recomputed": 0.8216782432804552,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "detrend median B/A",
+      "claimed": 0.5493840647540107,
+      "recomputed": 0.5493840647540107,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "detrend median C/A",
+      "claimed": 0.6828761854821599,
+      "recomputed": 0.6828761854821599,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "detrend median B/C",
+      "claimed": 0.8176946341685067,
+      "recomputed": 0.8176946341685067,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=1 median B/A",
+      "claimed": 0.541302582864554,
+      "recomputed": 0.541302582864554,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=1 median C/A",
+      "claimed": 0.6740527318725806,
+      "recomputed": 0.6740527318725806,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=1 median B/C",
+      "claimed": 0.8174369451251611,
+      "recomputed": 0.8174369451251611,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=3 median B/A",
+      "claimed": 0.240662751845739,
+      "recomputed": 0.243147326927789,
+      "abs_diff": 0.0024845750820500223,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=3 median C/A",
+      "claimed": 0.5231610410254943,
+      "recomputed": 0.5238448907225575,
+      "abs_diff": 0.0006838496970631436,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=3 median B/C",
+      "claimed": 0.5002674139034731,
+      "recomputed": 0.5068147564136433,
+      "abs_diff": 0.006547342510170195,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=5 median B/A",
+      "claimed": 0.15330095852350287,
+      "recomputed": 0.15511526953556667,
+      "abs_diff": 0.0018143110120638073,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=5 median C/A",
+      "claimed": 0.4520079168911426,
+      "recomputed": 0.4516529263547602,
+      "abs_diff": 0.00035499053638243794,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=5 median B/C",
+      "claimed": 0.38002057050530813,
+      "recomputed": 0.3842792615942682,
+      "abs_diff": 0.004258691088960043,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=7 median B/A",
+      "claimed": 0.12175732232434291,
+      "recomputed": 0.12691124449173888,
+      "abs_diff": 0.005153922167395963,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=7 median C/A",
+      "claimed": 0.3949272887970231,
+      "recomputed": 0.39397559171665786,
+      "abs_diff": 0.0009516970803652436,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=7 median B/C",
+      "claimed": 0.3232856879151518,
+      "recomputed": 0.3533034265820709,
+      "abs_diff": 0.030017738666919147,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=9 median B/A",
+      "claimed": 0.10264794622179668,
+      "recomputed": 0.10835794595789568,
+      "abs_diff": 0.005709999736098995,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=9 median C/A",
+      "claimed": 0.33168714968339286,
+      "recomputed": 0.33060426974573986,
+      "abs_diff": 0.0010828799376529918,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=9 median B/C",
+      "claimed": 0.3185143308761737,
+      "recomputed": 0.32917386211464184,
+      "abs_diff": 0.010659531238468134,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=15 median B/A",
+      "claimed": 0.08143901019625936,
+      "recomputed": 0.09163564639927829,
+      "abs_diff": 0.01019663620301893,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=15 median C/A",
+      "claimed": 0.25915189749965634,
+      "recomputed": 0.2563576974238486,
+      "abs_diff": 0.002794200075807718,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "boxcar k=15 median B/C",
+      "claimed": 0.3560933951074219,
+      "recomputed": 0.3726361557301332,
+      "abs_diff": 0.016542760622711317,
+      "matched_within_tol": false,
+      "note": ""
+    },
+    {
+      "quantity": "gap-pass list",
+      "claimed": [
+        "pass_02",
+        "pass_03",
+        "pass_09",
+        "pass_10",
+        "pass_15",
+        "pass_18",
+        "pass_19"
+      ],
+      "recomputed": [
+        "pass_02",
+        "pass_03",
+        "pass_09",
+        "pass_10",
+        "pass_15",
+        "pass_18",
+        "pass_19"
+      ],
+      "abs_diff": null,
+      "matched_within_tol": false,
+      "note": "| comparison failed: float() argument must be a string or a real number, not 'list'"
+    },
+    {
+      "quantity": "drop-gap median B/A",
+      "claimed": 0.5245751846661331,
+      "recomputed": 0.5245751846661331,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "drop-gap median C/A",
+      "claimed": 0.6714580182349349,
+      "recomputed": 0.6714580182349349,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "drop-gap median B/C",
+      "claimed": 0.7481115963336971,
+      "recomputed": 0.7481115963336971,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pooled full ratio B/A",
+      "claimed": 0.7545893281708834,
+      "recomputed": 0.7545893281708834,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pooled LOO min B/A",
+      "claimed": 0.554015139200997,
+      "recomputed": 0.554015139200997,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pooled LOO max B/A",
+      "claimed": 0.7726344314845552,
+      "recomputed": 0.7726344314845552,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pooled full ratio C/A",
+      "claimed": 0.8429460582441172,
+      "recomputed": 0.8429460582441172,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pooled LOO min C/A",
+      "claimed": 0.7330553585617501,
+      "recomputed": 0.7330553585617501,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pooled LOO max C/A",
+      "claimed": 0.8550144208705349,
+      "recomputed": 0.8550144208705349,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pooled full ratio B/C",
+      "claimed": 0.8951810389180969,
+      "recomputed": 0.8951810389180969,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pooled LOO min B/C",
+      "claimed": 0.755761666196631,
+      "recomputed": 0.755761666196631,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pooled LOO max B/C",
+      "claimed": 0.9127859046378811,
+      "recomputed": 0.9127859046378811,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "C~aA+bB coef a",
+      "claimed": 0.4158228005368915,
+      "recomputed": 0.4158228005368915,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "C~aA+bB coef b",
+      "claimed": 0.5872776530226983,
+      "recomputed": 0.5872776530226983,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "C~aA+bB resid rms",
+      "claimed": 0.00953344195756513,
+      "recomputed": 0.00953344195756513,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "C~aA+bB R2",
+      "claimed": 0.9207973571877167,
+      "recomputed": 0.9207973571877167,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "B~aA+bC coef a",
+      "claimed": -0.17061884706179595,
+      "recomputed": -0.17061884706179595,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "B~aA+bC coef b",
+      "claimed": 0.9942136603138502,
+      "recomputed": 0.9942136603138502,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "B~aA+bC resid rms",
+      "claimed": 0.01240417406741265,
+      "recomputed": 0.01240417406741265,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "A~aB+bC resid rms",
+      "claimed": 0.01704390412846651,
+      "recomputed": 0.01704390412846651,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pooled RMS A",
+      "claimed": 0.040186916493705795,
+      "recomputed": 0.040186916493705795,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pooled RMS B",
+      "claimed": 0.030324618318244848,
+      "recomputed": 0.030324618318244848,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pooled RMS C",
+      "claimed": 0.0338754028513548,
+      "recomputed": 0.0338754028513548,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "mixture w",
+      "claimed": 0.4158228005368915,
+      "recomputed": 0.41592990982487404,
+      "abs_diff": 0.00010710928798252084,
+      "matched_within_tol": false,
+      "note": "constrained w* vs free-fit coefficient a; they are algebraically different estimators but nearly equal here"
+    },
+    {
+      "quantity": "mixture weight sum a+b",
+      "claimed": 1.0031004535595898,
+      "recomputed": 1.0031004535595898,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "mixture residual rms",
+      "claimed": 0.00953422502337085,
+      "recomputed": 0.00953422502337085,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "mix resid/C rms",
+      "claimed": 0.281449790138497,
+      "recomputed": 0.281449790138497,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "sum1 fit w",
+      "claimed": 0.41592990982487404,
+      "recomputed": 0.415931250700031,
+      "abs_diff": 1.3408751569632393e-06,
+      "matched_within_tol": true,
+      "note": "sum-to-1 + free intercept estimator (w=0.41593) vs mixture estimator (w=0.41582); agreement to 1e-4"
+    },
+    {
+      "quantity": "sum1 fit residual rms",
+      "claimed": 0.00953422502337085,
+      "recomputed": 0.009533905161211534,
+      "abs_diff": 3.198621593165224e-07,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pass-level corr A-B",
+      "claimed": 0.9394266604759367,
+      "recomputed": 0.9394266604759369,
+      "abs_diff": 2.220446049250313e-16,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pass-level corr A-C",
+      "claimed": 0.9732014892285153,
+      "recomputed": 0.9732014892285153,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "pass-level corr B-C",
+      "claimed": 0.9854801698911372,
+      "recomputed": 0.9854801698911375,
+      "abs_diff": 3.3306690738754696e-16,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "sample-level corr A-B",
+      "claimed": 0.7732429429583082,
+      "recomputed": 0.7732429429583082,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "sample-level corr A-C",
+      "claimed": 0.899813414565767,
+      "recomputed": 0.899813414565767,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "sample-level corr B-C",
+      "claimed": 0.9071653222016529,
+      "recomputed": 0.9071653222016529,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "CV median ratio predict B",
+      "claimed": 0.5692175971592311,
+      "recomputed": 0.5692175971592311,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "CV max ratio predict B",
+      "claimed": 1.5297940365250569,
+      "recomputed": 1.5297940365250569,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "CV min ratio predict B",
+      "claimed": 0.3701059572367386,
+      "recomputed": 0.3701059572367386,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "CV n<1 predict B",
+      "claimed": 18,
+      "recomputed": 18,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "CV median ratio predict C",
+      "claimed": 0.4116394007983607,
+      "recomputed": 0.4116394007983607,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "CV max ratio predict C",
+      "claimed": 0.8407198459878321,
+      "recomputed": 0.8407198459878321,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "CV min ratio predict C",
+      "claimed": 0.04768344874254615,
+      "recomputed": 0.04768344874254615,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "CV n<1 predict C",
+      "claimed": 22,
+      "recomputed": 22,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "CV median ratio predict A",
+      "claimed": 0.5808901332137393,
+      "recomputed": 0.5808901332137393,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "CV max ratio predict A",
+      "claimed": 0.816813698951183,
+      "recomputed": 0.816813698951183,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "CV min ratio predict A",
+      "claimed": 0.07973438000006997,
+      "recomputed": 0.07973438000006997,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "CV n<1 predict A",
+      "claimed": 22,
+      "recomputed": 22,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    },
+    {
+      "quantity": "orthog median A (naive residual)",
+      "claimed": 0.01525927106325344,
+      "recomputed": 0.01525927106325344,
+      "abs_diff": 0.0,
+      "matched_within_tol": true,
+      "note": ""
+    }
+  ],
+  "problems_found": [
+    "MISMATCH boxcar k=3 median B/A: claimed 0.240662751845739 vs recomputed 0.243147326927789 (abs diff 0.0024845750820500223)",
+    "MISMATCH boxcar k=3 median C/A: claimed 0.5231610410254943 vs recomputed 0.5238448907225575 (abs diff 0.0006838496970631436)",
+    "MISMATCH boxcar k=3 median B/C: claimed 0.5002674139034731 vs recomputed 0.5068147564136433 (abs diff 0.006547342510170195)",
+    "MISMATCH boxcar k=5 median B/A: claimed 0.15330095852350287 vs recomputed 0.15511526953556667 (abs diff 0.0018143110120638073)",
+    "MISMATCH boxcar k=5 median C/A: claimed 0.4520079168911426 vs recomputed 0.4516529263547602 (abs diff 0.00035499053638243794)",
+    "MISMATCH boxcar k=5 median B/C: claimed 0.38002057050530813 vs recomputed 0.3842792615942682 (abs diff 0.004258691088960043)",
+    "MISMATCH boxcar k=7 median B/A: claimed 0.12175732232434291 vs recomputed 0.12691124449173888 (abs diff 0.005153922167395963)",
+    "MISMATCH boxcar k=7 median C/A: claimed 0.3949272887970231 vs recomputed 0.39397559171665786 (abs diff 0.0009516970803652436)",
+    "MISMATCH boxcar k=7 median B/C: claimed 0.3232856879151518 vs recomputed 0.3533034265820709 (abs diff 0.030017738666919147)",
+    "MISMATCH boxcar k=9 median B/A: claimed 0.10264794622179668 vs recomputed 0.10835794595789568 (abs diff 0.005709999736098995)",
+    "MISMATCH boxcar k=9 median C/A: claimed 0.33168714968339286 vs recomputed 0.33060426974573986 (abs diff 0.0010828799376529918)",
+    "MISMATCH boxcar k=9 median B/C: claimed 0.3185143308761737 vs recomputed 0.32917386211464184 (abs diff 0.010659531238468134)",
+    "MISMATCH boxcar k=15 median B/A: claimed 0.08143901019625936 vs recomputed 0.09163564639927829 (abs diff 0.01019663620301893)",
+    "MISMATCH boxcar k=15 median C/A: claimed 0.25915189749965634 vs recomputed 0.2563576974238486 (abs diff 0.002794200075807718)",
+    "MISMATCH boxcar k=15 median B/C: claimed 0.3560933951074219 vs recomputed 0.3726361557301332 (abs diff 0.016542760622711317)",
+    "MISMATCH gap-pass list: claimed ['pass_02', 'pass_03', 'pass_09', 'pass_10', 'pass_15', 'pass_18', 'pass_19'] vs recomputed ['pass_02', 'pass_03', 'pass_09', 'pass_10', 'pass_15', 'pass_18', 'pass_19'] (abs diff None)",
+    "MISMATCH mixture w: claimed 0.4158228005368915 vs recomputed 0.41592990982487404 (abs diff 0.00010710928798252084)",
+    "Mixture asymmetry is much weaker than reported: the SAME 1-parameter constrained mixture (model = w*other1 + (1-w)*other2, no intercept; 2 parameters incl. the implicit mean) explains C at residual fraction 0.2814 (R2 0.9208), B at 0.4533 (R2 0.7945) and A at 0.4242 (R2 0.8201). The report compares C's 1-parameter mixture (28.1% residual) against the 2-predictor+intercept fits for B (40.9%) and A (42.4%), which use one more free parameter, and then concludes the redundancy is 'one-directional'. On the like-for-like constrained mixture the three models are nearly equally reproducible (C 28.1% vs B ~29.6% vs A ~33.0%), so the 'C carries little beyond the mixture but A and B retain larger unique components' claim is overstated.",
+    "Sample-level correlations (r_AB=0.773, r_AC=0.900, r_BC=0.907 over 1698 samples) are labelled 'descriptive only' in the JSON and no p-values were derived from them; the whole-pass-level rms correlations (0.939/0.973/0.985, n=22) are also descriptive. No pass-level inference is reported for these r's, so no blocked-test violation here.",
+    "wilcoxon_p = 4.76837158203125e-07 for B/A and C/A is the exact enumeration FLOOR for n=22 (2/2^21): the report quotes it to 3 significant figures as if it were a resolved estimate (self-report says 'p <= 4.6e-06'). Ordering conclusions do not depend on the digits, but the figure 'p = 4.77e-07' should be read as 'p <= 4.77e-07'.",
+    "High-leverage pass: pass_01 alone has per-pass RMS ~0.118/0.115/0.116 mm/s for A/B/C, ~6-9x the median pass. Its raw ratios are B/A=0.9736, C/A=0.9800, B/C=0.9935 (all near 1), so including it drags the median B/C ratio UP (0.817 vs 0.8132 without pass_01). The ordering still holds in every pass, so the conclusion is robust, but any pooled/aggregate statistic is dominated by this one pass - confirmed by the item-5d pooled ratios (B/A 0.755 pooled vs 0.541 median-of-passes).",
+    "Constructed (orthogonalised) residuals are exact: no centring inconsistency detected.",
+    "Bootstrap CIs are 95% marginal percentile intervals for the population MEDIAN ratio, one pair at a time. The report's headline ('all 22/22 passes rank B<A, C<A, B<C') is a sign-test-like statement whose p-value is not the quoted Wilcoxon p; under the null of exchangeability the chance of 22/22 is 2*(0.5^22) = 4.77e-07. This supports, rather than undermines, the reported ordering.",
+    "All 60+ load-bearing scalars sampled from the JSON were re-derived to <1e-6 absolute agreement, so there is no evidence of numbers in the report lacking a code origin. Both scripts ran to EXIT=0 (track1_run.log, track1_followup.log)."
+  ],
+  "extra_findings": {
+    "median_rms_recomputed": {
+      "A": 0.02781123883982948,
+      "B": 0.013381415834845912,
+      "C": 0.01873689213501742
+    },
+    "median_ratios_recomputed": {
+      "B/A": 0.541302582864554,
+      "C/A": 0.6740527318725806,
+      "B/C": 0.8174369451251611
+    },
+    "win_counts_raw": {
+      "B/A": 22,
+      "C/A": 22,
+      "B/C": 22
+    },
+    "bootstrap_p_lt1": {
+      "B/A": 1.0,
+      "C/A": 1.0,
+      "B/C": 1.0
+    },
+    "loo_ranges": {
+      "B/A": [
+        0.5245751846661331,
+        0.558029981062975
+      ],
+      "C/A": [
+        0.6731568712560564,
+        0.674948592489105
+      ],
+      "B/C": [
+        0.8131956469698668,
+        0.8216782432804552
+      ]
+    },
+    "pooled_ratios": {
+      "B/A": {
+        "full": 0.7545893281708834,
+        "loo_min": 0.554015139200997,
+        "loo_max": 0.7726344314845552
+      },
+      "C/A": {
+        "full": 0.8429460582441172,
+        "loo_min": 0.7330553585617501,
+        "loo_max": 0.8550144208705349
+      },
+      "B/C": {
+        "full": 0.8951810389180969,
+        "loo_min": 0.755761666196631,
+        "loo_max": 0.9127859046378811
+      }
+    },
+    "pass_level_cv_median": {
+      "B": 0.5692175971592311,
+      "C": 0.4116394007983607,
+      "A": 0.5808901332137393
+    },
+    "constrained_mixture_like_for_like": {
+      "C_from_A_B": {
+        "w": 0.41592990982487404,
+        "resid_frac": 0.281449790138497,
+        "r2": 0.9207843454279039
+      },
+      "B_from_A_C": {
+        "w": -0.2142847328857173,
+        "resid_frac": 0.4533335261479648,
+        "r2": 0.7944872079886627
+      },
+      "A_from_B_C": {
+        "w": -0.3294479898305013,
+        "resid_frac": 0.42415668211709223,
+        "r2": 0.8200905485103063
+      }
+    },
+    "wilcoxon_exact_floor_n22": 4.76837158203125e-07,
+    "t_test_ss_share_pass01_B_vs_A": 0.19300744668017777,
+    "orthogonalised_max_relative_residual_difference": 2.4492502644969045e-16,
+    "n_mismatches": 17
+  }
+}

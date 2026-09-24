@@ -1,0 +1,12 @@
+rows=543 unique parents=419 unique frag pairs=543
+max rows per parent: 6  n parents with >1 row: 86
+
+=== PARENT-LEVEL re-test of weak-bond overshoot (one median err per parent) ===
+ exp<80: 147 rows across 147 parents
+   quantum    parents npos=107 nneg=40 binom_p=3.04e-08  mean_of_parent_means=+1.741
+   learned    parents npos=123 nneg=24 binom_p=3.177e-17  mean_of_parent_means=+3.123
+   reference  parents npos=85 nneg=61 binom_p=0.0566  mean_of_parent_means=+1.047
+ exp<70: 18 rows across 18 parents
+   quantum    parents npos=14 nneg=4 binom_p=0.03088  mean_of_parent_means=+4.566
+   learned    parents npos=16 nneg=2 binom_p=0.001312  mean_of_parent_means=+6.868
+   reference  parents npos=7 nneg=11 binom_p=0.4807  mean_of_parent_means=-2.750

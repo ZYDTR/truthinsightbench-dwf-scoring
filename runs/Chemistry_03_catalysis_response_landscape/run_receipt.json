@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Chemistry_03_catalysis_response_landscape",
+  "model": "deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "dcfec5e879758b5f02cb5d3359ebc89272dcdb491aa6b956417b3da11c863e05",
+  "workspace_input_file_count": 11,
+  "workspace_input_bytes": 140732,
+  "output_tree_sha256": "062753430a2716ae6ccbde35f00223a7406c59d5c94ab13e91592ecceea6a8f8",
+  "output_file_count": 66,
+  "output_bytes": 1433343
+}

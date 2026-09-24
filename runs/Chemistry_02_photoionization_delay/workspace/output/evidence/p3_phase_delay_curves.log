@@ -1,0 +1,733 @@
+### loading data
+hbar_as_eV = 658.2119569  (from coordinate_definitions.json)
+experiment: phase (276, 181) delay (275, 181)  E 276 Ed 275
+theory    : phase (99, 181) delay (98, 181)  E 99 Ed 98
+Wigner 296 pts 0.50..30.00 | angle_averaged 200 pts 0.9000..27.8999 | eigenphase 50 pts 0.50..30.00
+grid checks: max|Ed_e-E_e[1:]| = 0.000e+00 ; max|Ed_t-E_t[1:]| = 1.534e-03
+
+==============================================================================
+SECTION a_experiment_fd
+==============================================================================
+/data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/analysis/p3_phase_delay_curves.py:100: RuntimeWarning: divide by zero encountered in divide
+  "median_ratio_obs_over_pred": float(np.median(obs / pred)),
+{
+  "scheme": "2-point forward difference on the 0.1 eV grid, evaluated at Ed[i]=E[i+1]",
+  "label": "experiment delay vs hbar*dphase/dE",
+  "median_abs_as": 0.05043372961907977,
+  "p95_abs_as": 0.4557531317080826,
+  "max_abs_as": 0.6555217239984827,
+  "rms_as": 0.20028480297623452,
+  "median_ratio_obs_over_pred": 0.9999992656860907,
+  "median_ratio_pred_gt_1as": 0.9999993744459512,
+  "frac_cells_abs_pred_gt_1as": 0.9925062782521346,
+  "lsq_scale_on_pred_gt_1as": 0.9999989611197718,
+  "R2_vs_zero": 0.9999985704344102,
+  "frac_cells_abs_diff_lt_1as": 1.0,
+  "frac_rows_with_max_abs_diff_gt_1as": 0.0,
+  "delay_median_abs_as": 62.261,
+  "delay_std_as": 167.51201182988655,
+  "delay_range_as": [
+    -8530.0,
+    8961.2
+  ],
+  "n_cells": 49775,
+  "null_constant": {
+    "median_abs_as": 51.5025,
+    "rms_as": 167.57583205712555
+  },
+  "null_angle_permuted_delay": {
+    "median_abs_as": 72.76679078904903,
+    "p95_abs_as": 394.551397165851,
+    "rms_as": 229.64689230512954
+  },
+  "null_rejected": true,
+  "verdict": "null rejected: median |delay - hbar*dphi/dE| = 0.0504 as vs 51.50 as for the constant null (factor 1021 smaller) and 72.77 as for the angle-permuted null; median ratio 0.9999993",
+  "robust_trim_top1pct": {
+    "median_abs_as": 0.04943688555299275,
+    "max_abs_as": 0.5722499826008409,
+    "threshold_as": 0.5722683642638211
+  },
+  "robust_exclude_43-44_48.6-49.6eV": {
+    "rows_excluded": 22,
+    "median_abs_as": 0.05177987484990609,
+    "p95_abs_as": 0.45767283977966633,
+    "max_abs_as": 0.6555217239984827
+  },
+  "per_angle_median_abs_as": {
+    "min": 0.0135673687611515,
+    "median": 0.06763037880041622,
+    "max": 0.22486958639834143
+  },
+  "pairing_shift_scan_median_abs_as": {
+    "-2": 5.505805338781016,
+    "-1": 2.755524469950352,
+    "0": 0.05043372961991821,
+    "1": 2.7567630517998665,
+    "2": 5.503766353900744
+  }
+}
+[a_experiment_fd] done
+
+==============================================================================
+SECTION b_improved_derivative_experiment
+==============================================================================
+{
+  "schemes": {
+    "2pt_forward_at_Ed": {
+      "label": "2pt forward",
+      "median_abs_as": 0.05043372961991821,
+      "p95_abs_as": 0.4557531317099793,
+      "max_abs_as": 0.655521723999982,
+      "rms_as": 0.20028480297620876,
+      "median_ratio_obs_over_pred": 0.9999992656860764,
+      "median_ratio_pred_gt_1as": 0.999999374445937,
+      "frac_cells_abs_pred_gt_1as": 0.9925062782521346,
+      "lsq_scale_on_pred_gt_1as": 0.9999989611197689
+    },
+    "local_quadratic_win5_at_midpoint": {
+      "label": "quad5 midpoint",
+      "median_abs_as": 0.11569188376400064,
+      "p95_abs_as": 0.7159058982575227,
+      "max_abs_as": 3458.307617594125,
+      "rms_as": 29.00759510097554,
+      "median_ratio_obs_over_pred": 1.000528440277103,
+      "median_ratio_pred_gt_1as": 1.0005283873753483,
+      "frac_cells_abs_pred_gt_1as": 0.9926670015067806,
+      "lsq_scale_on_pred_gt_1as": 1.0274381403562305
+    },
+    "local_quadratic_win5_at_Ed": {
+      "label": "quad5 Ed",
+      "median_abs_as": 1.3849549044843386,
+      "p95_abs_as": 7.7771395031494315,
+      "max_abs_as": 4264.589055731797,
+      "rms_as": 39.87028742150496,
+      "median_ratio_obs_over_pred": 0.998635838647695,
+      "median_ratio_pred_gt_1as": 0.9986583697786309,
+      "frac_cells_abs_pred_gt_1as": 0.9924660974384731,
+      "lsq_scale_on_pred_gt_1as": 1.021793973059944
+    },
+    "cubic_spline_at_midpoint": {
+      "label": "spline midpoint",
+      "median_abs_as": 0.07612987159252782,
+      "p95_abs_as": 0.6201820734043878,
+      "max_abs_as": 856.0008771697558,
+      "rms_as": 7.196595776202809,
+      "median_ratio_obs_over_pred": 0.9999523795261158,
+      "median_ratio_pred_gt_1as": 0.999954898831386,
+      "frac_cells_abs_pred_gt_1as": 0.9925464590657961,
+      "lsq_scale_on_pred_gt_1as": 0.9886660371372533
+    },
+    "cubic_spline_at_Ed": {
+      "label": "spline Ed",
+      "median_abs_as": 1.3848484880861562,
+      "p95_abs_as": 7.746510722222899,
+      "max_abs_as": 3918.813676459993,
+      "rms_as": 36.35967526883027,
+      "median_ratio_obs_over_pred": 0.9971741513062119,
+      "median_ratio_pred_gt_1as": 0.9971981067267338,
+      "frac_cells_abs_pred_gt_1as": 0.9924660974384731,
+      "lsq_scale_on_pred_gt_1as": 0.9745818056060169
+    },
+    "5pt_4thorder_at_E[i+2]_rows1_272": {
+      "label": "5pt stencil",
+      "median_abs_as": 1.3818144036324007,
+      "p95_abs_as": 7.746394569453282,
+      "max_abs_as": 3778.21190305018,
+      "rms_as": 35.00969147468796,
+      "median_ratio_obs_over_pred": 0.9971366455184141,
+      "median_ratio_pred_gt_1as": 0.9971596101315041,
+      "frac_cells_abs_pred_gt_1as": 0.992281442963926,
+      "lsq_scale_on_pred_gt_1as": 0.9818561326303701
+    },
+    "savgol_filter_win5_deg2_at_Ed": {
+      "label": "savgol at Ed",
+      "median_abs_as": 1.3866522451216952,
+      "p95_abs_as": 7.772922974723922,
+      "max_abs_as": 4264.589055700923,
+      "rms_as": 39.872524776541525,
+      "median_ratio_obs_over_pred": 0.9986426017945932,
+      "median_ratio_pred_gt_1as": 0.9986651358160833,
+      "frac_cells_abs_pred_gt_1as": 0.9924861878453038,
+      "lsq_scale_on_pred_gt_1as": 1.021802427267384
+    }
+  },
+  "best": "2pt_forward_at_Ed",
+  "best_median_abs_as": 0.05043372961991821,
+  "ratio_worst_to_best_median": 27.49454096637051,
+  "note": "the 2-point difference that matches the row alignment is already the best predictor, so the derivative is NOT improved by a smoother local model; quadratic/spline derivatives are worse in median and catastrophically worse in max because they inject curvature from the coarse (0.1 eV) sampled phase",
+  "implied_phase_noise_from_residual": {
+    "std_rad": 3.226256013229661e-05,
+    "max_abs_rad": 0.00010467650477580919,
+    "phase_quantization_5th_decimal_std_rad": 2.8867513459481293e-06,
+    "ratio_std_to_quantization": 11.176078666276759,
+    "note": "phase is stored to 5 decimals (+-5e-6); residual implies ~10x that, i.e. delay and phase are separately stored real-valued series, not one derived from the other verbatim"
+  },
+  "robust_exclude_kinks": {
+    "local_quadratic_win5_at_midpoint": {
+      "median_abs_as": 0.11769830281543392,
+      "p95_abs_as": 0.642477977743022,
+      "max_abs_as": 69.8980547793858
+    },
+    "cubic_spline_at_midpoint": {
+      "median_abs_as": 0.07765511281461102,
+      "p95_abs_as": 0.6108809815171783,
+      "max_abs_as": 6.561109339055065
+    },
+    "2pt_forward_at_Ed": {
+      "median_abs_as": 0.051779874849501084,
+      "p95_abs_as": 0.45767283978000667,
+      "max_abs_as": 0.655521723999982
+    }
+  }
+}
+[b_improved_derivative_experiment] done
+
+==============================================================================
+SECTION c_theory_fd
+==============================================================================
+{
+  "scheme": "2-point forward difference on the non-uniform theory grid, evaluated at Ed_t[i]",
+  "label": "theory delay vs hbar*dphase/dE",
+  "median_abs_as": 0.04453044080258195,
+  "p95_abs_as": 0.6885238746699611,
+  "max_abs_as": 15.345051356187241,
+  "rms_as": 0.3902122237782424,
+  "median_ratio_obs_over_pred": 0.9999981690392127,
+  "median_ratio_pred_gt_1as": 0.9999881559950212,
+  "frac_cells_abs_pred_gt_1as": 0.9909234411996843,
+  "lsq_scale_on_pred_gt_1as": 1.0000128917201423,
+  "R2_vs_zero": 0.999992046491458,
+  "frac_cells_abs_diff_lt_1as": 0.9725448190325854,
+  "delay_median_abs_as": 73.00020697983624,
+  "delay_range_as": [
+    -2622.74904488798,
+    5569.72701495654
+  ],
+  "n_cells": 17738,
+  "worst_cell": {
+    "Ed_eV": 37.7752489795,
+    "angle_deg": 132,
+    "abs_diff_as": 15.345051356187241
+  },
+  "energy_grid": {
+    "min_eV": 23.249,
+    "max_eV": 41.839,
+    "mean_step_eV": 0.1896938775510204,
+    "min_step_eV": 0.01600000000000179,
+    "max_step_eV": 0.19900000000000517
+  },
+  "null_constant": {
+    "median_abs_as": 60.25874097271976,
+    "rms_as": 139.66212312981497
+  },
+  "null_angle_permuted_delay": {
+    "median_abs_as": 59.19673632657171,
+    "rms_as": 171.5894406865957
+  },
+  "null_rejected": true,
+  "verdict": "null rejected on the non-uniform grid: median |delay - hbar*dphi/dE| = 0.0445 as vs 60.26 as for the constant null (factor 1353 smaller) and 59.20 as for the angle-permuted null",
+  "derivative_variants": {
+    "2pt_forward_at_Ed": {
+      "label": "2pt",
+      "median_abs_as": 0.04453044080258195,
+      "p95_abs_as": 0.6885238746699611,
+      "max_abs_as": 15.345051356187241,
+      "rms_as": 0.3902122237782424,
+      "median_ratio_obs_over_pred": 0.9999981690392127,
+      "median_ratio_pred_gt_1as": 0.9999881559950212,
+      "frac_cells_abs_pred_gt_1as": 0.9909234411996843,
+      "lsq_scale_on_pred_gt_1as": 1.0000128917201423
+    },
+    "local_quadratic_win5_at_Ed": {
+      "label": "quad5",
+      "median_abs_as": 2.634832389097447,
+      "p95_abs_as": 15.295690135537503,
+      "max_abs_as": 2828.583641010801,
+      "rms_as": 29.976839901153333,
+      "median_ratio_obs_over_pred": 1.007544887030662,
+      "median_ratio_pred_gt_1as": 1.007454563811266,
+      "frac_cells_abs_pred_gt_1as": 0.9906415604915999,
+      "lsq_scale_on_pred_gt_1as": 1.014322558595872
+    },
+    "local_quadratic_win5_at_midpoint": {
+      "label": "quad5 mid",
+      "median_abs_as": 1.0686996412903653,
+      "p95_abs_as": 8.518125302126439,
+      "max_abs_as": 2403.0249705348874,
+      "rms_as": 22.452697337231864,
+      "median_ratio_obs_over_pred": 1.0002560218427399,
+      "median_ratio_pred_gt_1as": 1.0002780251121577,
+      "frac_cells_abs_pred_gt_1as": 0.9915999548990867,
+      "lsq_scale_on_pred_gt_1as": 1.017553347625401
+    },
+    "cubic_spline_at_Ed": {
+      "label": "spline",
+      "median_abs_as": 2.438926614127965,
+      "p95_abs_as": 14.595281633544243,
+      "max_abs_as": 2532.5663642984973,
+      "rms_as": 27.84260677724924,
+      "median_ratio_obs_over_pred": 1.0051399825741871,
+      "median_ratio_pred_gt_1as": 1.0051357510570282,
+      "frac_cells_abs_pred_gt_1as": 0.9895704138008795,
+      "lsq_scale_on_pred_gt_1as": 0.9837881597238366
+    },
+    "cubic_spline_at_midpoint": {
+      "label": "spline mid",
+      "median_abs_as": 0.3915692782205742,
+      "p95_abs_as": 2.931666658351999,
+      "max_abs_as": 608.9233915265831,
+      "rms_as": 6.178632552907552,
+      "median_ratio_obs_over_pred": 0.9997290033670327,
+      "median_ratio_pred_gt_1as": 0.9997281962134862,
+      "frac_cells_abs_pred_gt_1as": 0.9901341752170482,
+      "lsq_scale_on_pred_gt_1as": 0.9917550839533724
+    },
+    "5pt_4thorder_interior_only": {
+      "label": "5pt 4th order, interior",
+      "median_abs_as": 65.91097425786816,
+      "p95_abs_as": 240.4589660449171,
+      "max_abs_as": 4768.430662269464,
+      "rms_as": 135.05293111566226,
+      "n_cells": 15928
+    },
+    "2pt_forward_interior_only": {
+      "label": "2pt forward, same interior cells",
+      "median_abs_as": 0.044537547038117964,
+      "p95_abs_as": 0.6705273865957245,
+      "max_abs_as": 15.345051356187241,
+      "rms_as": 0.38540485741470826
+    }
+  },
+  "best_scheme": "2pt_forward_at_Ed"
+}
+[c_theory_fd] done
+
+==============================================================================
+SECTION d_eigenphase_vs_wigner
+==============================================================================
+{
+  "relation": "0.5_Wigner_delay (as) ?= F * hbar * d(eigenphase_sum)/dE, F in {1,2}",
+  "n_wigner_points": 296,
+  "n_eigenphase_nodes": 50,
+  "wigner_std_as": 58.571464897652326,
+  "null_constant_wigner": {
+    "rms_as": 58.571464897652326,
+    "median_abs_as": 7.948484188
+  },
+  "variants": {
+    "factor_1_fd_on_0.5eV_interp_to_0.1eV": {
+      "label": "F=1 FD",
+      "median_abs_as": 1.1220128196381154,
+      "p95_abs_as": 2.3897311115573143,
+      "max_abs_as": 2.9792509499508526,
+      "rms_as": 1.2887159453797676,
+      "median_ratio_obs_over_pred": 0.9873380863389714,
+      "median_ratio_pred_gt_1as": 0.9870116704386926,
+      "frac_cells_abs_pred_gt_1as": 0.9797297297297297,
+      "lsq_scale_on_pred_gt_1as": 1.004332493607548
+    },
+    "factor_1_spline_deriv_on_0.1eV": {
+      "label": "F=1 spline",
+      "median_abs_as": 0.9249551392350641,
+      "p95_abs_as": 1.9995954842068404,
+      "max_abs_as": 2.6717598941839267,
+      "rms_as": 1.171439854502988,
+      "median_ratio_obs_over_pred": 0.9913431929943931,
+      "median_ratio_pred_gt_1as": 0.9915344855757586,
+      "frac_cells_abs_pred_gt_1as": 0.9797297297297297,
+      "lsq_scale_on_pred_gt_1as": 0.9984614920475134
+    },
+    "factor_1_fd_nodes_only": {
+      "label": "F=1 FD nodes",
+      "median_abs_as": 1.1145698902396064,
+      "p95_abs_as": 1.724557628508617,
+      "max_abs_as": 2.8216183678175035,
+      "rms_as": 1.2202188434594357,
+      "median_ratio_obs_over_pred": 0.994300314848147,
+      "median_ratio_pred_gt_1as": 0.9917312187707665,
+      "frac_cells_abs_pred_gt_1as": 0.98,
+      "lsq_scale_on_pred_gt_1as": 1.0027393087227214
+    },
+    "factor_1_spline_nodes_only": {
+      "label": "F=1 spline nodes",
+      "median_abs_as": 0.9375278608748541,
+      "p95_abs_as": 1.8780194824495713,
+      "max_abs_as": 2.6717598941839267,
+      "rms_as": 1.1739855799302568,
+      "median_ratio_obs_over_pred": 0.9926657943722605,
+      "median_ratio_pred_gt_1as": 0.9923096721712548,
+      "frac_cells_abs_pred_gt_1as": 0.98,
+      "lsq_scale_on_pred_gt_1as": 0.9986857953500207
+    },
+    "factor_2_fd_on_0.5eV_interp_to_0.1eV": {
+      "label": "F=2 FD",
+      "median_abs_as": 11.823883447168367,
+      "p95_abs_as": 165.56018575751094,
+      "max_abs_as": 179.21052742089472,
+      "rms_as": 65.53876164766113,
+      "median_ratio_obs_over_pred": 0.4936690431694857,
+      "median_ratio_pred_gt_1as": 0.49357655468434763,
+      "frac_cells_abs_pred_gt_1as": 0.9898648648648649,
+      "lsq_scale_on_pred_gt_1as": 0.5021666202393977
+    },
+    "factor_2_spline_deriv_on_0.1eV": {
+      "label": "F=2 spline",
+      "median_abs_as": 11.865403161104197,
+      "p95_abs_as": 169.63546421279545,
+      "max_abs_as": 183.3397898317192,
+      "rms_as": 66.31279853929404,
+      "median_ratio_obs_over_pred": 0.49567159649719655,
+      "median_ratio_pred_gt_1as": 0.49570659830781616,
+      "frac_cells_abs_pred_gt_1as": 0.9898648648648649,
+      "lsq_scale_on_pred_gt_1as": 0.49923043428214253
+    },
+    "factor_2_fd_nodes_only": {
+      "label": "F=2 FD nodes",
+      "median_abs_as": 15.337506775335346,
+      "p95_abs_as": 167.8992418040485,
+      "max_abs_as": 179.21052742089472,
+      "rms_as": 71.4629651340013,
+      "median_ratio_obs_over_pred": 0.4971501574240735,
+      "median_ratio_pred_gt_1as": 0.49586560938538327,
+      "frac_cells_abs_pred_gt_1as": 0.98,
+      "lsq_scale_on_pred_gt_1as": 0.5013696543613607
+    },
+    "factor_2_spline_nodes_only": {
+      "label": "F=2 spline nodes",
+      "median_abs_as": 15.585785649867567,
+      "p95_abs_as": 170.6328117255295,
+      "max_abs_as": 183.1309809903231,
+      "rms_as": 72.04448662832957,
+      "median_ratio_obs_over_pred": 0.4963328971861303,
+      "median_ratio_pred_gt_1as": 0.4961548360856274,
+      "frac_cells_abs_pred_gt_1as": 0.98,
+      "lsq_scale_on_pred_gt_1as": 0.49934289767501033
+    }
+  },
+  "best_fit_factor": {
+    "factor": 0.981,
+    "median_abs_as": 1.0328805139292099
+  },
+  "factor_range_with_median_lt_2as": [
+    0.819,
+    1.065
+  ],
+  "factor_2_excluded": true,
+  "support": "factor 1 supported: median |diff| 1.122 as vs 11.824 as for factor 2, median ratio 0.9873 (factor 1) vs 0.4937 (factor 2)",
+  "context_corr_eigenphase_vs_panel_mean_phase": {
+    "experiment": -0.03874072247940257,
+    "theory": 0.20574101153568505,
+    "median_abs_eigenphase_vs_experiment_mean_phase_rad": 0.3570749999999999
+  }
+}
+[d_eigenphase_vs_wigner] done
+
+==============================================================================
+SECTION e_offset_scan
+==============================================================================
+{
+  "experiment": {
+    "scan_range_eV": [
+      12.0,
+      22.5
+    ],
+    "scan_step_eV": 0.01,
+    "best": {
+      "IE_eV": 12.059999999999999,
+      "n_points": 128,
+      "rms_as": 48.22481740551818,
+      "median_abs_as": 20.40805634600557,
+      "corr": -0.4749572603013477,
+      "median_ratio_aa_over_panel": 0.5654890997965566,
+      "best_linear_slope_aa_on_panel": -0.35605627009610613,
+      "rms_after_best_scale_offset_as": 19.207245685754508,
+      "constant_residual_null_rms_as": 21.826195700302993,
+      "eKE_window_eV": [
+        10.668816,
+        27.899922
+      ]
+    },
+    "corr_scan_max": {
+      "IE_eV": 21.709999999999795,
+      "corr": -0.04248520411600906
+    },
+    "alternatives": {
+      "offset_0": {
+        "IE_eV": 0.0,
+        "n_points": 40,
+        "rms_as": 42.546479900327355,
+        "median_abs_as": 42.69296204627957,
+        "corr": -0.9146692124276264,
+        "median_ratio_aa_over_panel": -0.44701519762530123,
+        "best_linear_slope_aa_on_panel": -0.026107290278144485,
+        "rms_after_best_scale_offset_as": 0.4484473025624203,
+        "constant_residual_null_rms_as": 1.109460033402588,
+        "eKE_window_eV": [
+          22.60848,
+          27.899922
+        ]
+      },
+      "offset_ranges_just_overlap": {
+        "IE_eV": 21.700000000000003,
+        "n_points": 200,
+        "rms_as": 70.13211066446799,
+        "median_abs_as": 48.10154487209114,
+        "corr": -0.04139523603292811,
+        "median_ratio_aa_over_panel": 0.7052694556456927,
+        "best_linear_slope_aa_on_panel": -0.03511756326278615,
+        "rms_after_best_scale_offset_as": 44.322321537411874,
+        "constant_residual_null_rms_as": 44.36034501318575,
+        "eKE_window_eV": [
+          0.9,
+          27.899922
+        ]
+      }
+    }
+  },
+  "theory": {
+    "scan_range_eV": [
+      12.0,
+      22.5
+    ],
+    "scan_step_eV": 0.01,
+    "best": {
+      "IE_eV": 21.85999999999979,
+      "n_points": 135,
+      "rms_as": 30.49773931528057,
+      "median_abs_as": 26.60426383226416,
+      "corr": 0.9505827990926747,
+      "median_ratio_aa_over_panel": 0.7198276967615549,
+      "best_linear_slope_aa_on_panel": 0.7055940660434369,
+      "rms_after_best_scale_offset_as": 13.032642418982995,
+      "constant_residual_null_rms_as": 41.97698220881329,
+      "eKE_window_eV": [
+        1.714068,
+        19.89492
+      ]
+    },
+    "corr_scan_max": {
+      "IE_eV": 21.85999999999979,
+      "corr": 0.9505827990926747
+    },
+    "alternatives": {
+      "offset_0": {
+        "IE_eV": 0.0,
+        "n_points": 33,
+        "rms_as": 13.33564292151037,
+        "median_abs_as": 11.628181093132563,
+        "corr": 0.6238766246699267,
+        "median_ratio_aa_over_panel": 0.6633340248268724,
+        "best_linear_slope_aa_on_panel": 0.0432404206416416,
+        "rms_after_best_scale_offset_as": 0.6531466005478278,
+        "constant_residual_null_rms_as": 0.8357357750474322,
+        "eKE_window_eV": [
+          23.558226,
+          27.899922
+        ]
+      },
+      "offset_ranges_just_overlap": {
+        "IE_eV": 22.5404206880312,
+        "n_points": 136,
+        "rms_as": 38.71253449023193,
+        "median_abs_as": 19.440428766849102,
+        "corr": 0.8635953837254863,
+        "median_ratio_aa_over_panel": 0.7412096616938908,
+        "best_linear_slope_aa_on_panel": 0.7623887979244894,
+        "rms_after_best_scale_offset_as": 25.197818572022914,
+        "constant_residual_null_rms_as": 49.977277866692695,
+        "eKE_window_eV": [
+          0.9,
+          19.21653
+        ]
+      }
+    }
+  },
+  "curve_own_scale": {
+    "angle_averaged_std_as": 44.36034501318575,
+    "angle_averaged_range_as": [
+      -104.0881949,
+      141.3611415
+    ],
+    "angle_averaged_median_abs_consecutive_diff_as": 0.6667927399999982,
+    "panel_delay_angle_dependence_mean_row_range_as": 748.0080778181818
+  },
+  "robustness": {
+    "spline_interpolation_experiment": {
+      "IE_eV": 12.059999999999999,
+      "rms_as": 48.23134647316049,
+      "corr": -0.4748723120003817,
+      "n_points": 128
+    },
+    "spline_interpolation_theory": {
+      "IE_eV": 21.79999999999979,
+      "rms_as": 30.496943163580283,
+      "corr": 0.950092233200523,
+      "n_points": 136
+    },
+    "median_abs_objective_experiment": {
+      "IE_eV": 12.369999999999992,
+      "median_abs_as": 19.864103589878773,
+      "n_points": 131
+    },
+    "median_abs_objective_theory": {
+      "IE_eV": 22.499999999999776,
+      "median_abs_as": 20.302686094011776,
+      "n_points": 135
+    },
+    "sin_weighted_experiment": {
+      "best_IE_eV": 12.059999999999999,
+      "rms_as": 50.63781340617815,
+      "corr": -0.4436558892028152,
+      "n_points": 128
+    },
+    "cross_section_weighted_experiment": {
+      "best_IE_eV": 20.88999999999981,
+      "rms_as": 48.709228031689356,
+      "corr": 0.22443493455300845,
+      "n_points": 194
+    },
+    "sin_weighted_theory": {
+      "best_IE_eV": 21.789999999999793,
+      "rms_as": 20.673483297721386,
+      "corr": 0.9642900658015403,
+      "n_points": 136
+    },
+    "cross_section_weighted_theory": {
+      "best_IE_eV": 21.719999999999793,
+      "rms_as": 15.632019248977523,
+      "corr": 0.9841302587935844,
+      "n_points": 135
+    },
+    "fixed_window_2_19eV_theory": {
+      "IE_eV": 22.059999999999786,
+      "rms_as": 30.24673735700704,
+      "corr": 0.9634323662426346,
+      "fixed_window_eV": [
+        2,
+        19
+      ],
+      "constant_residual_null_rms_as": 40.64878645439095,
+      "beats_constant_null": false
+    },
+    "fixed_window_12_27eV_experiment": {
+      "IE_eV": 14.83999999999994,
+      "rms_as": 19.154018898469044,
+      "corr": 0.6499301058717586,
+      "fixed_window_eV": [
+        12,
+        27
+      ],
+      "constant_residual_null_rms_as": 14.442136501057336,
+      "beats_constant_null": false
+    },
+    "extended_scan_experiment": {
+      "floor_2.0": {
+        "best_IE_eV": 6.909999999999895,
+        "rms_as": 35.43039967517779,
+        "corr": -0.4542878367279085,
+        "n_points": 90
+      },
+      "floor_6.0": {
+        "best_IE_eV": 6.909999999999981,
+        "rms_as": 35.43039967517731,
+        "corr": -0.45428783672788964,
+        "n_points": 90
+      },
+      "floor_10.0": {
+        "best_IE_eV": 10.03,
+        "rms_as": 39.74856564670743,
+        "corr": -0.4242737637971356,
+        "n_points": 113
+      }
+    },
+    "per_angle_best_match_experiment": {
+      "angles_scanned": [
+        0,
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45,
+        50,
+        55,
+        60,
+        65,
+        70,
+        75,
+        80,
+        85,
+        90,
+        95,
+        100,
+        105,
+        110,
+        115,
+        120,
+        125,
+        130,
+        135,
+        140,
+        145,
+        150,
+        155,
+        160,
+        165,
+        170,
+        175,
+        180
+      ],
+      "min_rms_as": 39.61051458630913,
+      "median_rms_as": 74.37617542816571,
+      "max_rms_as": 167.99115213183276,
+      "max_corr": 0.5747632386358957,
+      "angles_rms_lt_10as": []
+    }
+  },
+  "verdict_experiment": "best-fit IE 12.06 eV: rms 48.22 as (corr -0.475) vs curve own scale (std) 44.36 as; range-overlap-fixed IE 21.70 eV gives rms 70.13 as (corr -0.041); offset 0 gives rms 42.55 as; agreement within own scale: no",
+  "verdict_theory": "best-fit IE 21.86 eV: rms 30.50 as (corr 0.951) vs curve own scale (std) 44.36 as; range-overlap-fixed IE 22.54 eV gives rms 38.71 as (corr 0.864); offset 0 gives rms 13.34 as; agreement within own scale: yes"
+}
+[e_offset_scan] done
+
+==============================================================================
+SECTION f_shape_comparison
+==============================================================================
+{
+  "corr_wigner_vs_angle_averaged_on_aa_grid": 0.923027902144935,
+  "corr_on_full_wigner_grid_overlap": 0.924649792550789,
+  "median_abs_diff_as": 26.221466789548366,
+  "max_abs_diff_as": 84.98762455,
+  "max_abs_diff_eKE_eV": 0.9,
+  "sign_of_diff_at_max": "wigner_above",
+  "band_corr": {
+    "eKE_0.9_5": 0.7448547229960144,
+    "eKE_5_10": 0.9729172773342025,
+    "eKE_10_20": 0.9984686917649782,
+    "eKE_20_27.9": 0.2162624146226227
+  },
+  "where_diverge_most": "largest gap 85.0 as at eKE 0.9 eV (wigner above); median gap 26.2 as",
+  "note": "both curves are compressed onto the 200-point angle_averaged eKE grid (0.9-27.899 eV)."
+}
+[f_shape_comparison] done
+
+==============================================================================
+SECTION g_aligned_csv
+==============================================================================
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p3_aligned_curves.csv (296 rows, 11 cols)
+ eKE_eV  eigenphase_sum_rad_interp  wigner_delay_as  wigner_pred_factor1_as  wigner_pred_factor2_as  wigner_pred_factor1_spline_as  angle_averaged_delay_as  angle_averaged_vs_panel_exp_IE12.06_eV  angle_averaged_vs_panel_theory_IE21.86_eV  wigner_deriv_fd_as_per_eV  wigner_deriv_spline_as_per_eV
+    0.5                  -1.062154       -21.709821              -20.935090              -41.870179                     -22.307935                      NaN                                     NaN                                        NaN                  -0.031806                      -0.033892
+    0.6                  -1.065335       -21.081597              -20.623492              -41.246984                     -21.784717                      NaN                                     NaN                                        NaN                  -0.031333                      -0.033097
+    0.7                  -1.068515       -20.437727              -20.311894              -40.623789                     -21.239281                      NaN                                     NaN                                        NaN                  -0.030859                      -0.032268
+    0.8                  -1.071696       -19.777599              -20.000297              -40.000594                     -20.671629                      NaN                                     NaN                                        NaN                  -0.030386                      -0.031406
+    0.9                  -1.074876       -19.100570              -19.688699              -39.377399                     -20.081760              -104.088195                                     NaN                                        NaN                  -0.029912                      -0.030510
+    1.0                  -1.078057       -18.405971              -19.377102              -38.754204                     -19.469673               -95.937024                                     NaN                                        NaN                  -0.029439                      -0.029580
+    1.1                  -1.080764       -17.693099              -18.693878              -37.387756                     -18.835369               -87.739322                                     NaN                                        NaN                  -0.028401                      -0.028616
+    1.2                  -1.083471       -16.961218              -18.010654              -36.021308                     -18.178849               -79.487553                                     NaN                                        NaN                  -0.027363                      -0.027619
+[g_aligned_csv] done
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p3_phase_delay_curves.png
+
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p3_phase_delay_curves.json
+FAILURES: 0

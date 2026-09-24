@@ -1,0 +1,123 @@
+{
+  "positive_control_simulation": {
+    "setup": "y = x + N(0,s_e) with true slope exactly 1; x-noise and y-noise equal; interval [min,max](b_OLS,b_RMA) recomputed per replicate. NSIM=2000, seed 12345.",
+    "results": {
+      "noise_frac_0.0": {
+        "x_noise_sd": 0.0,
+        "frac_sim_interval_contains_1": 1.0,
+        "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.0
+      },
+      "noise_frac_0.001": {
+        "x_noise_sd": 0.04735985711781141,
+        "frac_sim_interval_contains_1": 0.004,
+        "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.498
+      },
+      "noise_frac_0.002": {
+        "x_noise_sd": 0.09471971423562282,
+        "frac_sim_interval_contains_1": 0.008,
+        "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.4865
+      },
+      "noise_frac_0.003": {
+        "x_noise_sd": 0.14207957135343424,
+        "frac_sim_interval_contains_1": 0.0095,
+        "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.462
+      },
+      "noise_frac_0.005": {
+        "x_noise_sd": 0.23679928558905705,
+        "frac_sim_interval_contains_1": 0.0195,
+        "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.5045
+      },
+      "noise_frac_0.01": {
+        "x_noise_sd": 0.4735985711781141,
+        "frac_sim_interval_contains_1": 0.0315,
+        "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.4905
+      },
+      "noise_frac_0.02": {
+        "x_noise_sd": 0.9471971423562282,
+        "frac_sim_interval_contains_1": 0.062,
+        "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.477
+      },
+      "noise_frac_0.05": {
+        "x_noise_sd": 2.3679928558905705,
+        "frac_sim_interval_contains_1": 0.153,
+        "frac_sim_upper_bound_below_1_FALSE_POSITIVE": 0.399
+      }
+    },
+    "observed_data_upper_bound": 0.9781436781685312,
+    "observed_data_upper_bound_below_1": true,
+    "implied_x_noise_from_lattice": 2.483369854792168,
+    "implied_x_noise_frac_of_sd": 0.05243617709011638,
+    "reading": "IMPORTANT CAVEAT: at any noise level the raw [min,max](b_OLS,b_RMA) interval rejects a TRUE slope of 1 about half the time, so the bare interval test is NOT calibrated and on its own proves little. The endpoint b_RMA is a ratio of two noisy variances. This is why V5d calibrates the statistics properly instead of relying on the interval alone."
+  },
+  "drift_of_difference_on_f1": {
+    "definition": "d = numeric_feature_2 - numeric_feature_1",
+    "slope": -0.024842185962351073,
+    "se": 0.008640525771757963,
+    "ci95": [
+      -0.04231929898522953,
+      -0.0073650729394726215
+    ],
+    "p_vs_0": 0.006511298957014432,
+    "p_vs_minus_1_hats_and_should_equal_1_by_construction": true,
+    "relationship": "slope_of_f2_on_f1 = 1 + slope_of_d_on_f1  (exact algebraic identity)",
+    "implied_slope_f2_on_f1": 0.9751578140376489,
+    "ols_expected": 0.9751578140376487,
+    "matches": true,
+    "intercept": -0.09053984642476422
+  },
+  "mean_difference_exact": {
+    "mean": -0.4834705195121954,
+    "sd": 2.813360059605582,
+    "se": 0.43937302405575673,
+    "ci95": [
+      -1.3714765255957313,
+      0.4045354865713406
+    ],
+    "ci_contains_0": true,
+    "t": -1.1003645946430307,
+    "p": 0.27775145291730874,
+    "sign_test_n_positive": 15,
+    "n_negative": 26,
+    "sign_test_p": 0.11727520595741225,
+    "wilcoxon_stat": 318.0,
+    "wilcoxon_p": 0.1480435673665852,
+    "sd_of_x_for_scale": 47.35985711781141,
+    "mean_diff_as_fraction_of_sd_x": -0.010208445483894178
+  },
+  "lattice_block_eiv_span": {
+    "b_OLS": 0.9615788341071428,
+    "b_RMA": 0.9627159741288654,
+    "attainable_interval": [
+      0.9615788341071428,
+      0.9627159741288654
+    ],
+    "upper_bound_below_1": true,
+    "pearson_r": 0.9994092359313296,
+    "max_correction_factor_1_over_r2": 1.0011825759692166,
+    "note": "in this block reading 1 is an exact design setting, so no x-noise exists at all and OLS is the correct estimator; correction would only push toward 1 by <=1/r^2."
+  },
+  "whole_data_max_correction_factor_1_over_r2": {
+    "pearson_r": 0.9984725422598203,
+    "one_over_r_squared": 1.0030619291440834,
+    "b_OLS": 0.9751578140376487,
+    "b_OLS_times_factor": 0.9781436781685312,
+    "b_RMA": 0.9781436781685312,
+    "identity_check_matches_RMA": true
+  },
+  "resolution_audit": {
+    "decimals": {
+      "numeric_feature_1": {
+        "max_decimals": 2,
+        "n_with_2_decimals": 30
+      },
+      "numeric_feature_2": {
+        "max_decimals": 7,
+        "n_with_2_decimals": 30
+      }
+    },
+    "rounding_sd_if_2dp": 0.002886751345948129,
+    "rounding_sd_as_pct_of_resid_sd": 0.11296229097820894,
+    "could_rounding_explain_compression": false,
+    "reason": "rounding to 2dp adds <=0.003 units of noise; the observed compression is a 2.5% systematic scale change over a 165-unit range (~4 units), far larger."
+  }
+}

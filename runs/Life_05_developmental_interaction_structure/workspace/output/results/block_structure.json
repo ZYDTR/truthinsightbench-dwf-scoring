@@ -1,0 +1,366 @@
+{
+  "part1_family_means_and_icc": {
+    "n_records": 5920,
+    "n_families": 285,
+    "n_cell_pairs": 9,
+    "n_units": 1105,
+    "n_stages": 18,
+    "family_size_distribution": {
+      "min": 1,
+      "q25": 3.0,
+      "median": 10.0,
+      "q75": 23.0,
+      "max": 130,
+      "mean": 20.771929824561404,
+      "sd": 27.98642625204682,
+      "families_with_1_record": 26,
+      "families_with_all_9_pairs": 18
+    },
+    "family_mean_distribution": {
+      "mean": -0.3672339268197111,
+      "sd": 1.4336515269941612,
+      "variance": 2.0553567008526903,
+      "min": -2.8713853185197666,
+      "q05": -2.154794971776599,
+      "q25": -1.380029722898255,
+      "median": -0.688160195852995,
+      "q75": 0.24411846958571123,
+      "q95": 2.3868071895923286,
+      "max": 4.756937457924762,
+      "range": 7.628322776444529,
+      "histogram": {
+        "bin_edges": [
+          -2.8714,
+          -2.2357,
+          -1.6,
+          -0.9643,
+          -0.3286,
+          0.3071,
+          0.9428,
+          1.5785,
+          2.2142,
+          2.8499,
+          3.4856,
+          4.1212,
+          4.7569
+        ],
+        "counts": [
+          10,
+          41,
+          57,
+          60,
+          50,
+          20,
+          15,
+          11,
+          12,
+          3,
+          4,
+          2
+        ]
+      }
+    },
+    "icc_record_level_share_of_total_variance_explained": {
+      "interaction_family_eta2": 0.836154879971811,
+      "unit_id_eta2": 0.9006166085022724,
+      "cell_pair_eta2_marginal": 0.04025158238164723,
+      "stage_index_eta2": 0.08337605659392547,
+      "total_ss": 18098.64134497118
+    },
+    "icc_random_effects_family": {
+      "ms_between": 53.2861523994973,
+      "ms_within": 0.5262420698338858,
+      "mean_group_size_n0": 20.639625761324705,
+      "icc_random_effects": 0.8292799597840739,
+      "sigma2_between": 2.556243554983777,
+      "sigma2_within": 0.5262420698338858
+    },
+    "icc_random_effects_unit": {
+      "ms_between": 14.764435676274411,
+      "ms_within": 0.37356269124906133,
+      "mean_group_size_n0": 5.352746768507638,
+      "icc_random_effects": 0.8780030241581569,
+      "sigma2_between": 2.6885024843119134,
+      "sigma2_within": 0.37356269124906133
+    },
+    "family_mean_vs_family_size": {
+      "pearson_r_mean_vs_n_records": 0.5298665034647946,
+      "spearman_rho_mean_vs_n_records": 0.5103294457943731,
+      "pearson_r_mean_vs_n_stages": 0.5758600968283698,
+      "spearman_rho_mean_vs_n_stages": 0.5752539774055749,
+      "note": "sizes range 1..max, means of small families are noisier; the permutation null in part 2 preserves this size distribution"
+    }
+  },
+  "part2_family_permutation": {
+    "statistic": "variance (ddof=1) of the 285 family means of interaction_strength_like_value",
+    "observed_family_mean_variance": 2.0553567008526903,
+    "null_label_shuffle_across_records_preserving_family_sizes": {
+      "n_perm": 500,
+      "null_mean": 0.7179712767433551,
+      "null_sd": 0.08826525715031014,
+      "null_q50": 0.7145143370990952,
+      "null_q95": 0.8669586684972801,
+      "null_q99": 0.9275221472219163,
+      "null_max": 1.0630429723566917,
+      "observed": 2.0553567008526903,
+      "z_vs_null": 15.151889512221693,
+      "p_raw": 0.0,
+      "p_corrected": 0.001996007984031936,
+      "fold_over_null_mean": 2.8627283116054163
+    },
+    "null_label_shuffle_within_stage_control": {
+      "n_perm": 500,
+      "null_mean": 0.866192192654127,
+      "null_sd": 0.0943118133317974,
+      "null_q50": 0.8569602588873164,
+      "null_q95": 1.0456062650686342,
+      "null_q99": 1.130460124380513,
+      "null_max": 1.1898040928361127,
+      "observed": 2.0553567008526903,
+      "z_vs_null": 12.608860610228923,
+      "p_raw": 0.0,
+      "p_corrected": 0.001996007984031936,
+      "fold_over_null_mean": 2.3728644962208754
+    },
+    "stage_adjusted_family_effect": {
+      "definition": "family mean of the stage-centred values (value - stage mean), i.e. the record-weighted two-way family+stage adjusted effect; the quantity that isolates family differences from the stage window a family happens to occupy",
+      "observed_variance": 1.749142677059355,
+      "null_value_shuffle_within_stage_preserves_occupancy": {
+        "n_perm": 500,
+        "null_mean": 0.6080205418090713,
+        "null_sd": 0.0780684104308159,
+        "null_q50": 0.5986333921992095,
+        "null_q95": 0.7528451325640537,
+        "null_q99": 0.8211844039113236,
+        "null_max": 0.880949296355014,
+        "observed": 1.749142677059355,
+        "z_vs_null": 14.616951068339533,
+        "p_raw": 0.0,
+        "p_corrected": 0.001996007984031936,
+        "fold_over_null_mean": 2.8767822084679096
+      }
+    },
+    "interpretation": "if family identity truly organises strength, shuffling family labels (which preserves every family's size) must destroy most of the between-family variance"
+  },
+  "part3_cellpair_and_unit_permutation": {
+    "cell_pair_id": {
+      "statistic": "variance (ddof=1) of the 9 cell-pair means (record level)",
+      "observed": 0.17763187686855356,
+      "null_label_shuffle_across_records": {
+        "n_perm": 500,
+        "null_mean": 0.005557977691576277,
+        "null_sd": 0.002980860773246556,
+        "null_q50": 0.0051455947394028565,
+        "null_q95": 0.01117908719549283,
+        "null_q99": 0.014529497035269602,
+        "null_max": 0.020765744928004162,
+        "observed": 0.17763187686855356,
+        "z_vs_null": 57.72624495627341,
+        "p_raw": 0.0,
+        "p_corrected": 0.001996007984031936,
+        "fold_over_null_mean": 31.95980385775461
+      },
+      "null_label_shuffle_within_stage_control": {
+        "n_perm": 500,
+        "null_mean": 0.020932760013411496,
+        "null_sd": 0.008347196271240585,
+        "null_q50": 0.0202977036705832,
+        "null_q95": 0.0360702611279795,
+        "null_q99": 0.04394680879775066,
+        "null_max": 0.05569968027985786,
+        "observed": 0.17763187686855356,
+        "z_vs_null": 18.772664708392316,
+        "p_raw": 0.0,
+        "p_corrected": 0.001996007984031936,
+        "fold_over_null_mean": 8.485831622525929
+      },
+      "record_count_per_pair": {
+        "cell_pair_0001": 656,
+        "cell_pair_0002": 561,
+        "cell_pair_0003": 771,
+        "cell_pair_0004": 921,
+        "cell_pair_0005": 433,
+        "cell_pair_0006": 1004,
+        "cell_pair_0007": 677,
+        "cell_pair_0008": 644,
+        "cell_pair_0009": 253
+      },
+      "unit_mean_level_statistic": "variance of cell-pair means of unit means",
+      "unit_mean_level_observed": 0.13900124079493797,
+      "unit_mean_level_null": {
+        "n_perm": 500,
+        "null_mean": 0.021619462956169167,
+        "null_sd": 0.010970847890419851,
+        "null_q50": 0.01990287666275628,
+        "null_q95": 0.04267701477294743,
+        "null_q99": 0.05554584955135208,
+        "null_max": 0.06189136245196809,
+        "observed": 0.13900124079493797,
+        "z_vs_null": 10.699426244098317,
+        "p_raw": 0.0,
+        "p_corrected": 0.001996007984031936,
+        "fold_over_null_mean": 6.4294492919063755
+      }
+    },
+    "unit_id": {
+      "statistic": "variance (ddof=1) of the 1105 unit means (record level)",
+      "observed": 2.550057039633768,
+      "null_label_shuffle_across_records_preserving_unit_sizes": {
+        "n_perm": 500,
+        "null_mean": 1.5094016291661483,
+        "null_sd": 0.08045258292794123,
+        "null_q50": 1.5081739616443754,
+        "null_q95": 1.646042516686058,
+        "null_q99": 1.6917182716749133,
+        "null_max": 1.7747704643059699,
+        "observed": 2.550057039633768,
+        "z_vs_null": 12.935015540765187,
+        "p_raw": 0.0,
+        "p_corrected": 0.001996007984031936,
+        "fold_over_null_mean": 1.6894489778989559
+      },
+      "record_count_per_unit_min_median_max": [
+        1,
+        3.0,
+        18
+      ]
+    }
+  },
+  "part4_unequal_sampling_adjustment": {
+    "raw_between_family_mean_variance": 2.0553567008526903,
+    "stage_composition_component": {
+      "definition": "family mean of its records' stage means; variance across families = between-family variance attributable to families occupying different stages",
+      "variance": 0.2604803608345033,
+      "share_of_raw": 0.12673243565286735,
+      "cov_with_raw_family_mean": 0.2833471923139193
+    },
+    "stage_adjusted_family_effect": {
+      "definition": "family mean of the stage-centred values (value - stage mean); a record-weighted version of the two-way family+stage adjusted effect",
+      "variance": 1.749142677059355,
+      "share_of_raw": 0.8510166027793139,
+      "cov_with_composition": 0.022866831479415956
+    },
+    "identity_check": {
+      "raw_equals_adj_plus_comp_plus_2cov": 0.0
+    },
+    "regression_family_mean_on_n_stages_present": {
+      "slope_per_extra_stage": 0.13463433200789535,
+      "intercept": -1.4263573386151545,
+      "r2": 0.33161485111917943,
+      "p_value": 1.424353956301788e-26,
+      "residual_variance": 1.3737698945026167,
+      "residual_share_of_raw": 0.6683851488808201
+    },
+    "regression_family_mean_on_n_records": {
+      "slope_per_extra_record": 0.027143298503137823,
+      "r2": 0.28075851149400716,
+      "p_value": 4.959648007949115e-22,
+      "residual_variance": 1.478297812932055
+    },
+    "regression_stage_adjusted_effect_on_n_stages": {
+      "slope": 0.09445164401498143,
+      "r2": 0.1917800123521693,
+      "p_value": 8.780032846899479e-15,
+      "residual_variance": 1.413692072847205
+    },
+    "common_stage_windows": {
+      "stages_0_5": {
+        "n_records": 2045,
+        "n_families": 241,
+        "family_mean_variance_within_window": 1.8965900904580537,
+        "family_eta2_within_window": 0.8521325392710422
+      },
+      "stages_6_11": {
+        "n_records": 1930,
+        "n_families": 156,
+        "family_mean_variance_within_window": 2.46582443992745,
+        "family_eta2_within_window": 0.9292795100872395
+      },
+      "stages_12_17": {
+        "n_records": 1945,
+        "n_families": 205,
+        "family_mean_variance_within_window": 2.571643646065512,
+        "family_eta2_within_window": 0.9369790214958117
+      },
+      "complete_panel_all_18_stages": {
+        "n_families": 27,
+        "family_mean_variance": 1.9671897069828255
+      }
+    },
+    "split_half_reliability_of_family_effects": {
+      "n_families_in_both_halves": 180,
+      "pearson_r": 0.8337481310277062,
+      "spearman_rho": 0.8161789027331671,
+      "early_var": 1.957941673742761,
+      "late_var": 2.502804302272454
+    },
+    "interpretation": "if the family signal were purely unequal sampling (families measured at different, stage-shifted windows) the stage-adjusted variance and the split-half correlation would collapse"
+  },
+  "part5_cellpair_increment_beyond_family": {
+    "level": "analysis unit (unit mean), 1105 units",
+    "method": "exact least squares, Frisch-Waugh residualisation; the family block is saturated so the pair increment is the fit of 9 residualised dummies",
+    "ss_total_unit_means": 2815.26297175568,
+    "ss_family_only": 2476.7433989877054,
+    "r2_family_only": 0.8797556121171642,
+    "r2_family_plus_cellpair_additive": 0.8893646848070471,
+    "incremental_ss_from_cellpair": 27.05206653673565,
+    "incremental_share_of_total": 0.009609072689882748,
+    "incremental_share_of_residual_after_family": 0.07991285796427923,
+    "F_statistic_df8_resid": 8.815637902979676,
+    "F_p_value": 1.2989084394532653e-11,
+    "null_permutation_increment": {
+      "n_perm": 500,
+      "null_mean": 3.3362924416826725,
+      "null_sd": 1.6377065117002028,
+      "null_q50": 3.0490026983736698,
+      "null_q95": 6.557600045026103,
+      "null_q99": 7.993914473292468,
+      "null_max": 10.88673660388946,
+      "observed": 27.05206653673565,
+      "z_vs_null": 14.481089209587493,
+      "p_raw": 0.0,
+      "p_corrected": 0.001996007984031936,
+      "fold_over_null_mean": 8.10842185138058
+    },
+    "cell_pair_effects_additive_fit": {
+      "cell_pair_0002": -0.2087,
+      "cell_pair_0001": -0.2505,
+      "cell_pair_0007": 0.3705,
+      "cell_pair_0009": 0.2167,
+      "cell_pair_0003": -0.0142,
+      "cell_pair_0004": -0.0223,
+      "cell_pair_0006": 0.0131,
+      "cell_pair_0008": -0.0119,
+      "cell_pair_0005": -0.0927
+    },
+    "split_half_consistency_of_pair_effects": {
+      "n_cell_pairs_compared": 9,
+      "pearson_r_early_vs_late_pair_effect": 0.5565188388796022,
+      "spearman_rho_early_vs_late_pair_effect": 0.35
+    },
+    "degenerate_note": "family x cell_pair saturates the unit table (each unit is one family-pair combination), so only the additive increment is evidence"
+  },
+  "verdict": {
+    "family_identity_organises_strength": true,
+    "family_mean_variance_observed": 2.0553567008526903,
+    "family_mean_variance_expected_under_label_shuffle": 0.7179712767433551,
+    "family_signal_survives_stage_composition_adjustment": true,
+    "stage_adjusted_family_variance_share_of_raw": 0.8510166027793139,
+    "split_half_family_reliability_r": 0.8337481310277062,
+    "cellpair_adds_information_beyond_family": true,
+    "summary": "Family identity is a strong, reproducible organiser of interaction_strength_like_value: family labels explain 0.836 of record-level variance; shuffling family labels (keeping family sizes) collapses the between-family variance from 2.055 to about 0.718 (p<=0.002). The signal is not an artefact of unequal stage occupancy: the stage-adjusted family variance retains 85% of the raw between-family variance; nor of family size. Cell-pair identity adds only a small but detectable increment (8.0% of the residual after family), so families behave as near-blocks that differ between cell pairs only modestly."
+  },
+  "provenance": {
+    "script": "output/analysis/10_block_structure.py",
+    "input": "output/results/analysis_table.tsv",
+    "n_records": 5920,
+    "n_permutations": 500,
+    "seed": 20260920,
+    "software": {
+      "python": "3.11.2",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "scipy": "1.17.1"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+event_1: grid=(425, 425) dt=0.002591s df=-0.021154MHz  reported_drift=-12.7777 img[min=1.0000 max=1.5000 med=1.0009]
+event_2: grid=(425, 425) dt=0.002590s df=-0.021154MHz  reported_drift=-12.4520 img[min=1.0000 max=1.5000 med=1.0000]
+event_3: grid=(425, 425) dt=0.002590s df=-0.021154MHz  reported_drift=-3.3614 img[min=1.0000 max=1.5000 med=1.0000]
+event_4: grid=(425, 425) dt=0.002591s df=-0.021154MHz  reported_drift=-16.8673 img[min=1.0000 max=1.5000 med=1.0000]
+event_5: grid=(425, 425) dt=0.002590s df=-0.021154MHz  reported_drift=-4.0560 img[min=1.0000 max=1.5000 med=1.0000]
+
+=== drift_population_series ===
+                                                                               n_bins   bin_min    bin_max  events
+population_series_id anonymous_source_group polarization_channel drift_regime                                     
+population_series_1  anonymous_group_1      channel_l            fast              26  1.929282  27.811098   10560
+                                                                 slow             137  0.158985  10.985917     892
+population_series_2  anonymous_group_1      channel_r            fast              26  2.224652  27.811098   14492
+                                                                 slow             131  0.146297  10.299575    1303
+population_series_3  anonymous_group_2      channel_l            fast              24  4.468763  27.811098     357
+                                                                 slow             139  0.244159  11.735270     803
+population_series_4  anonymous_group_2      channel_r            fast              21  7.784072  27.811098      52
+                                                                 slow             132  0.244159  11.735270     392
+population_series_5  anonymous_group_3      channel_l            fast              24  4.013369  27.811098     429
+                                                                 slow             127  0.243917  10.299575    1092
+population_series_6  anonymous_group_3      channel_r            fast              25  3.417966  27.811098     664
+                                                                 slow             136  0.243754  10.985917    2201
+
+=== orientation_count_series ===
+                        n  cmin  cmax   events  zero_frac
+orientation_series_id                                    
+orientation_series_1   52 -33.0  20.0  11240.0   0.250000
+orientation_series_2   52 -33.0  20.0  15551.0   0.230769
+orientation_series_3   52 -33.0  20.0   1151.0   0.326923
+orientation_series_4   52 -33.0  20.0    444.0   0.519231
+orientation_series_5   52 -33.0  20.0   1503.0   0.326923
+orientation_series_6   52 -33.0  20.0   2843.0   0.250000
+Traceback (most recent call last):
+  File "/data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/analysis/s02_explore.py", line 182, in <module>
+    main()
+  File "/data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/analysis/s02_explore.py", line 134, in main
+    img_sheets = [s for s in wb.sheetnames if wb[s].max_col > 100]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/analysis/s02_explore.py", line 134, in <listcomp>
+    img_sheets = [s for s in wb.sheetnames if wb[s].max_col > 100]
+                                              ^^^^^^^^^^^^^
+AttributeError: 'ReadOnlyWorksheet' object has no attribute 'max_col'. Did you mean: 'max_row'?

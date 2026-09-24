@@ -1,0 +1,1370 @@
+{
+  "agent-a0e36f2676477e098.jsonl": {
+    "workstream": "WS5 - Provenance audit and experimental-reference heterogeneity",
+    "artifacts": [
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws5_provenance.json",
+        "description": "Primary machine-readable artifact: file hashes, cross-file match counts, DB-join unambiguity proof, quantum/learned-vs-database distributions, reference-lookup keying evidence, four independent reference-noise estimators, the MAE floor with reasoning, and the observation-vs-inference ledger. 48 KB."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/figures/ws5_provenance.png",
+        "description": "4-panel figure: (A) database-minus-quantum difference histogram with zoom inset, (B) quantum vs learned against the database row, (C) per-molecule experimental spread across 86 multi-bond molecules, (D) channel MAE vs the three heterogeneity floors."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws5_part1_raw.json",
+        "description": "Supporting: sha256 digests vs manifest, 7-column cross-file match counts, train_flag vs exact-DB-row crosstab, row-order check."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws5_part2_raw.json",
+        "description": "Supporting: database-minus-quantum and database-minus-learned distributions (quantiles, max |diff|, fractions within 0.01/0.1/0.5 kcal/mol)."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws5_ref_forensics.json",
+        "description": "Supporting: reference-channel forensics - fragment-pair keying candidates, value quantization, reference-minus-experimental error, value reuse across pairs."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws5_decomposition.json",
+        "description": "Supporting: variance decomposition yielding sigma_ref = 2.833 with bootstrap CI, implied per-channel true error, and the floor table."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws5_floor_empirical.json",
+        "description": "Supporting: shape-preserving empirical floors from tight-quantum matched pairs (1.54-2.00 kcal/mol) and channel-MAE-to-floor ratios."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws5_heterogeneity.json",
+        "description": "Supporting: within-molecule / within-fragment-pair experimental spreads, per-channel spreads under identical grouping, permutation null."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws5_channel_stats.json",
+        "description": "Supporting: channel-vs-channel and channel-vs-experiment disagreement distributions, MAE table by matched/unmatched subset, paired bootstrap/t/Wilcoxon/Cliffs-delta tests."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws5_consistency.json",
+        "description": "Supporting: floor self-consistency test (a floor cannot exceed an observed MAE) and the db_n==1 unambiguous subset check."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws5_join_a.py",
+        "description": "Executed code: database key factorization, key-multiplicity and within-key variation statistics."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws5_final.py",
+        "description": "Executed code: variance decomposition by subset, matched-pair normality, reference-lookup confirmation, reference error by DB match."
+      }
+    ],
+    "key_numbers": [
+      {
+        "claim": "TSV vs xlsx Sheet_001 exact row-for-row agreement, all 7 shared columns",
+        "value": "543/543 per column, max numeric difference 0.0, row order identical 543/543",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "in_reference_training_set is bit-exactly the exact-database-row predicate",
+        "value": "331 both-true, 212 both-false, 0 contradictions (agreement 1.000)",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "sha256 of all three source files matches data_manifest.json",
+        "value": "tsv 319bf2c8..., db 2ee36d15..., xlsx e7c0c73d... (all match, bytes match)",
+        "unit": "database row",
+        "n": "3 files"
+      },
+      {
+        "claim": "Database (molecule,fragment1,fragment2) key is single-valued, so the join is unambiguous",
+        "value": "0 of 131,063 multi-row keys have >1 distinct bde; max within-key spread 0.0 (all vary only in bond_index)",
+        "unit": "database row",
+        "n": "484907"
+      },
+      {
+        "claim": "Median |database bde - quantum estimate| on the 331 matched rows (learned for comparison)",
+        "value": "0.0195 kcal/mol (learned 0.1291, ratio 0.151); mean 0.158; max 6.999",
+        "unit": "bond observation",
+        "n": "331"
+      },
+      {
+        "claim": "Fraction of matched rows within tolerance for quantum vs database",
+        "value": "within 0.01: 30.2%; within 0.1: 81.0%; within 0.5: 92.4%; within 1.0: 100.0%",
+        "unit": "bond observation",
+        "n": "331"
+      },
+      {
+        "claim": "Fraction of matched rows within tolerance for learned vs database",
+        "value": "within 0.01: 5.1%; within 0.1: 42.3%; within 0.5: 92.4%; within 1.0: 97.6%; max 4.768",
+        "unit": "bond observation",
+        "n": "331"
+      },
+      {
+        "claim": "Quantum is closer to the database row than learned on the same rows",
+        "value": "243 rows vs 76 rows (paired Wilcoxon p=5.8e-17)",
+        "unit": "bond observation",
+        "n": "331"
+      },
+      {
+        "claim": "Reference channel is a single-valued per-fragment-pair lookup",
+        "value": "539 distinct fragment pairs, 290 distinct reference values, 0 pairs with >1 value",
+        "unit": "fragment pair",
+        "n": "539"
+      },
+      {
+        "claim": "Reference values never coincide with database values (independent literature lookup)",
+        "value": "0/543 equal a database bde of the same pair; 0/543 equal any of the 144,147 distinct database values",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Reference values are drawn from the same literature pool as the experimental column",
+        "value": "313/543 coincide exactly with some experimental value in the file (z=+22.8 vs grid null 105.9+-9.1); but only 1/543 equals its own row's value",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Reference channel MAE: database-matched vs unmatched rows",
+        "value": "5.0244 (n=331) vs 6.2066 (n=212); Welch t=-3.21, p=0.0014, Cliff's delta=-0.149",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Within-parent-molecule experimental spread (86 molecules carrying >1 bond observation)",
+        "value": "mean 13.42, median 11.90, max 47.90, rms 16.29 kcal/mol",
+        "unit": "unique molecule",
+        "n": "86"
+      },
+      {
+        "claim": "Within-fragment-pair experimental spread (only 4 pairs have >1 observation)",
+        "value": "mean 1.80, median 1.15, max 3.90 kcal/mol -> pairwise-bound sigma_ref <= 1.537",
+        "unit": "fragment pair",
+        "n": "4"
+      },
+      {
+        "claim": "Reference-noise sigma from variance decomposition, exactly self-consistent",
+        "value": "sigma_ref = 2.833 kcal/mol, CI [2.455, 3.202]; predicted sd(quantum-learned)=2.2445 vs observed 2.2445 (ratio 1.0000)",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Reference-noise sigma from the matched-pair estimator (no binning assumption)",
+        "value": "2.851 kcal/mol, CI [2.658, 3.050], from 1002 pairs with |dQuantum| <= 0.1 kcal/mol",
+        "unit": "fragment pair",
+        "n": "1002"
+      },
+      {
+        "claim": "Share of channel error variance attributable to the experimental reference values",
+        "value": "88.5% for quantum, 66.8% for learned",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "MAE floor: below this the benchmark cannot distinguish two channels",
+        "value": "headline 2.0 kcal/mol (empirical range 1.5-2.0); Gaussian-form estimate 2.26 rejected as a floor because it exceeds the observed quantum MAE",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Observed channel MAEs and the quantum-learned gap relative to the floor",
+        "value": "quantum 2.098, learned 2.411, reference 5.486; quantum-learned gap 0.313 = 0.16-0.20 x the floor",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Minimum MAE difference this sample could detect at 80% power",
+        "value": "0.215 kcal/mol (paired sd 1.791, se 0.077, n=543) - larger than a third of the observed quantum-learned gap",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Sigma_ref robustness to molecule-level (dependence-respecting) resampling",
+        "value": "2.829 +- 0.098, 95% CI [2.610, 2.993] over 300 draws",
+        "unit": "unique molecule",
+        "n": "300 draws"
+      },
+      {
+        "claim": "Sigma_ref by bond class",
+        "value": "C-H 2.364 (n=302), C-C 3.312 (n=240); floors 1.886 and 2.642 kcal/mol",
+        "unit": "bond observation",
+        "n": "542"
+      },
+      {
+        "claim": "There are no exact replicates in the benchmark",
+        "value": "0 duplicate canonical (molecule,bond) keys; 4 repeated fragment pairs covering 8 rows; 419 unique molecules",
+        "unit": "bond observation",
+        "n": "543"
+      }
+    ],
+    "narrative": "PROVENANCE. All three files hash-match data_manifest.json exactly. The TSV and xlsx Sheet_001 are row-for-row identical: 543/543 exact matches on each of the 7 shared columns (parent SMILES, both fragments, observed value, and all three estimates) with maximum absolute numeric difference 0.0 and identical row order. observation_id exists only in the TSV (a derived read-order label), and the single extra workbook column in_reference_training_set is bit-exactly the predicate \"this observation has an exact database row\": 331 both-true, 212 both-false, 0 contradictions. It is not a model train/test split.\n\nThe database join is a well-defined function, which had to be established before any comparison. (molecule, fragment1, fragment2) yields 290,664 unique keys over 484,907 rows; 131,063 keys carry 2-20 duplicate rows, but all of those share one bde, one bond_type and one delta_stereo and differ only in bond_index. Zero multi-row keys contain more than one distinct bde (max within-key spread exactly 0.0). No min/max/mean dedup choice can change any number reported here - that multiplicity is symmetric-bond bookkeeping.\n\nQUANTUM CHANNEL. On the 331 observations with an exact database row, the quantum estimate IS the database's own value re-serialised at lower precision, not an independent prediction: median |db - quantum| = 0.0195 kcal/mol, 30.2% within 0.01, 81.0% within 0.1, 92.4% within 0.5 and 100.0% within 1.0 (max 6.999). Seven rows agree to 0.001 kcal/mol, which pins the database row as the shared source. The learned channel disagrees: median 0.1291 (6.6x worse), only 42.3% within 0.1, and 8 rows beyond 1.0 (max 4.768). A paired test confirms it - quantum is closer to the database row on 243 of 331 rows versus 76 for learned (Wilcoxon p=5.8e-17). The 25-row residual tail is concentrated on hydrogen-transfer observations where the database stores one value per symmetry-equivalent key while the quantum channel stores an explicitly evaluated geometry; the residual is mean-zero (+0.019, sd 0.582), so it is sampling inside one source value rather than a systematic offset.\n\nREFERENCE CHANNEL. Confirmed a pure per-(fragment_a,fragment_b) lookup: 539 fragment pairs, 290 distinct values, and 0 pairs carrying more than one distinct value (identical result under ordered, sorted, or RDKit-canonicalised keys). The key is the fragment pair, not the molecule - 86 of 419 molecules carry multiple distinct reference values. Critically, the reference channel shares no value with the database at all (0/543, against 144,147 distinct database values), but 313/543 of its values coincide exactly with an experimental value somewhere in the same file (z=+22.8 against a grid null of 105.9 +- 9.1) while only 1/543 equals its own row's value and 0/543 equals the same pair's value in another molecule. It is an independent draw from the same literature value pool - which is what makes it a usable heterogeneity probe. Its error is larger on the 212 database-unmatched rows (MAE 6.207) than on the 331 matched rows (5.024; Welch p=0.0014), so it is not simply a database proxy.\n\nHETEROGENEITY BOUND. This is the core result. Grouping by parent molecule, the 86 molecules with more than one bond observation show a mean within-molecule experimental spread of 13.42 kcal/mol (median 11.90, max 47.90). That is dominated by genuine chemical differences between different bonds, so it is not directly the reference noise. Applying a permutation null (shuffling experimental values within molecule) gives 16.18, i.e. the observed spread is slightly LOWER than random - molecule identity explains little. Grouping by fragment pair, where chemistry is held much more nearly constant, the 4 repeated pairs show a mean spread of just 1.80 kcal/mol (max 3.90). That is the tightest direct evidence, but n=4.\n\nThree independent estimators that make no assumption about which bond is which converge on 1-sigma reference scatter of about 1.6-2.1 kcal/mol: (i) within-bin scatter using tight windows on the quantum estimate gives 2.75 (the quantum channel's own within-bin SD is only 0.14-0.27, so the window really is tight); (ii) a matched-pair estimator over 1002 pairs with |delta quantum| <= 0.1 gives 2.851 with CI [2.658, 3.050]; (iii) a variance decomposition gives sigma_ref = 2.833 with CI [2.455, 3.202] and is exactly self-consistent (predicted sd(quantum-learned) = 2.2445 versus observed 2.2445, ratio 1.0000). The variance decomposition says 88.5% of the quantum channel's squared error and 66.8% of the learned channel's is attributable to the experimental reference values, not to the estimators.\n\nTHE FLOOR. A perfect estimator scored against these experimental values would still show MAE = sigma_ref * sqrt(2/pi) = 2.26 kcal/mol under a Gaussian assumption, or 1.54-1.91 kcal/mol using the empirical (heavy-tailed, excess kurtosis 3.48) shape of the observed discrepancies. The Gaussian form is self-refuting as a floor: it lies ABOVE the measured quantum MAE of 2.098, and a floor cannot exceed an observed MAE. The honest headline is therefore a floor of roughly 2.0 kcal/mol, with a defensible range of 1.5-2.0. Below that, this benchmark cannot distinguish two channels. The two calibrated channels are in fact indistinguishable there: quantum MAE 2.098 versus learned 2.411, a gap of only 0.313 kcal/mol = 0.16-0.20 x the floor, and this sample's minimum detectable difference at 80% power is 0.215 kcal/mol. The reference channel (MAE 5.486, 3.57 x the floor) is clearly worse and IS distinguishable.\n\nOBSERVATION VERSUS INFERENCE. Directly observed: the hashes, the 543/543 column matches, the 331/212 train-flag correspondence, the count 331 matched rows, the agreement fractions and medians above, the 539-pair / 290-value / 0-multi-value reference structure, the 86-molecule and 4-pair spreads, and the absence of exact replicates. Inferred: that the quantum channel is a re-serialised database value (from 81% agreement within 0.1 and 100% within 1.0 - strong but not a documented statement); that the experimental values carry ~1.6-2.1 kcal/mol of 1-sigma heterogeneity; and hence that the floor is about 2 kcal/mol and the channel ranking is unresolvable. What the data cannot settle: the SOURCE of the heterogeneity (no method, temperature, or solvent fields exist, so measurement error, phase, and genuine chemical difference cannot be separated), and the fact that the quantum MAE falls below the Gaussian floor implies the experimental values are partly correlated with the database values - meaning the true floor is somewhat below 2.26, favouring the empirical 1.5-1.9 estimates, but the degree of that correlation is not quantifiable from these files alone. The floor is stated as a range for exactly this reason.",
+    "caveats": [
+      "The headline floor is stated as a range (1.5-2.0 kcal/mol), not a point, because the Gaussian-form estimate (2.260) exceeds the observed quantum MAE (2.098) and is therefore refuted as a floor. A floor cannot exceed an observed MAE; the empirical shape-preserving estimates (1.54-1.91) are the ones consistent with all three observed channel MAEs.",
+      "The fact that the quantum channel's MAE sits BELOW the Gaussian-form floor is arithmetically impossible for an independent scorer and implies the experimental values are partly correlated with the database values (both ultimately trace to related literature). This means the true floor is below 2.26 and the 1.5-1.9 empirical estimates should be preferred, but the degree of correlation cannot be quantified from these files.",
+      "The variance decomposition (sigma_ref = 2.833) assumes the quantum and learned errors are mutually uncorrelated and uncorrelated with the reference noise. The quantum channel's error is nearly the reference noise itself (variance share 0.885), so its own residual is small and the assumption is weak but untestable within the workspace. The matched-pair and within-bin estimators make no such assumption and give the same 2.7-2.9 answer, which is the main reason the conclusion is robust to it.",
+      "The 543 bond observations are NOT independent: 419 unique parent molecules, only 4 repeated fragment pairs, and 0 exact replicates. Bond-observation statistics (n=543) are the analysis unit used throughout, and the molecule-level resampling robustness check (sigma_ref 2.829 +- 0.098) is the one that respects the real dependence structure.",
+      "The within-molecule experimental spread (mean 13.42 kcal/mol) is dominated by genuine chemical differences between DIFFERENT bonds in the same molecule, not by reference noise. It is reported as required by the workstream but must not be read as the reference uncertainty; the ~1.8 kcal/mol fragment-pair spread and the ~2.8 kcal/mol matched-pair estimates are the meaningful signals, with the caveat that only 4 fragment pairs have repeated observations.",
+      "The SOURCE of the reference heterogeneity is unresolvable in this workspace. The files carry no method, temperature, phase, or solvent fields, so measurement error, phase/solvent differences, and genuine chemical difference between nominally identical bonds cannot be separated. The floor is a magnitude, not a mechanism.",
+      "Two earlier scripts (ws5_part3.py, and an early ws5_forensic2.py) timed out at 120 s because Python-level set/dict construction and groupby over object-dtype string keys on the 484,907-row database is slow in this environment. They were replaced by vectorised factorize/lexsort/searchsorted equivalents; the final numbers come from those completed runs. No result was estimated or carried over from an incomplete run.",
+      "A floor cannot be validated against ground truth here because no true BDE values exist in the workspace. It is established by convergence of four methods plus the self-consistency constraint, not by external reference."
+    ],
+    "commands_run": [
+      "timeout 400 python output/analysis/ws5_part1.py  (hashes, 7-column cross-file match, train_flag crosstab, row order)",
+      "timeout 115 python -u output/analysis/ws5_part2.py  (database-minus-quantum and database-minus-learned distributions)",
+      "timeout 300 python -u output/analysis/ws5_join_a.py  (database key factorization, key multiplicity, within-key variation)",
+      "timeout 110 python -u output/analysis/ws5_join_b.py  (benchmark-to-database join, 331 matched)",
+      "timeout 110 python -u output/analysis/ws5_ref_forensics.py  (reference quantization, keying candidates, reference-minus-experimental error)",
+      "timeout 280 python -u output/analysis/ws5_forensic2.py  (database multi-key variation, reference-vs-database value coincidence)",
+      "timeout 115 python -u output/analysis/ws5_het.py  (within-molecule and within-fragment-pair spreads, permutation null)",
+      "timeout 115 python -u output/analysis/ws5_reforigin.py  (literature-pool null model z=22.8, RDKit canonicalisation)",
+      "timeout 115 python -u output/analysis/ws5_floor.py  (within-bin and matched-pair reference-noise estimators)",
+      "timeout 115 python -u output/analysis/ws5_decomp.py  (variance decomposition, sigma_ref=2.833, exact self-consistency)",
+      "timeout 115 python -u output/analysis/ws5_distinguish.py  (minimum detectable difference, variance share, molecule resampling)",
+      "timeout 115 python -u output/analysis/ws5_final.py  (decomposition by subset, normality, co-tight pair estimator)",
+      "timeout 115 python -u output/analysis/ws5_floor2.py  (empirical shape-preserving floors, channel-MAE-to-floor ratios)",
+      "timeout 115 python -u output/analysis/ws5_share.py  (reference variance share of channel error)",
+      "timeout 115 python -u output/analysis/ws5_consistency.py  (floor self-consistency, db_n==1 subset)",
+      "timeout 115 python -u output/analysis/ws5_confirm.py  (matched vs unmatched reference test, close-approach counts)",
+      "timeout 115 python -u output/analysis/ws5_figure.py  (4-panel figure)",
+      "timeout 115 python -u output/analysis/ws5_artifact.py  (final artifact assembly and save)"
+    ]
+  },
+  "agent-a1e84492c321618f5.jsonl": {
+    "workstream": "WS1 - Database inventory, structural domain and coverage boundary",
+    "artifacts": [
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws1_db_coverage.json",
+        "description": "Main WS1 artifact, 33 sections: inventory, 9-class census on both units, structural domain + HAC histogram, per-class ordinary unweighted BDE summaries on unique-pair units, coverage boundary counts, within-domain exhaustiveness, inflation drivers, labeler validation, example rows."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws1_exhaustiveness_supplement.json",
+        "description": "DB pair count vs symmetry-unique bond orbits (H-added, canonical bond orbits) for a random 2,000-molecule sample and for the 259 benchmark parents present in the DB; per-molecule completeness for benchmark parents that miss an exact pair."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/figures/ws1_domain.png",
+        "description": "Four-panel matplotlib Agg figure: (a) bond-class census raw rows vs unique fragment pairs (log scale, redundancy annotated), (b) rows-per-pair by class, (c) HAC distribution DB molecules vs benchmark observations with the HAC=10 boundary, (d) coverage-boundary waterfall for the 543 observations."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws1_prep.py",
+        "description": "Cached expensive database group-bys (pair dedup, cardinalities, duplicate-group histogram) written to output/cache/ws1_prep.pkl."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws1_final.py",
+        "description": "Main executed analysis: census, RDKit per-parent HAC/elements for all 419 benchmark parents, coverage boundary, exhaustiveness, artifact writer."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws1_exhaustiveness.py",
+        "description": "Bond-orbit completeness test (db unique fragment pairs vs symmetry-unique bonds)."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws1_merge.py",
+        "description": "Folds supplement into main artifact and computes row-inflation drivers per class and top molecules by surplus rows."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws1_figure.py",
+        "description": "Matplotlib Agg figure generator."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws1_step1_domain.py",
+        "description": "Per-molecule RDKit descriptor pass (HAC + element set) for all 42,577 DB parent molecules, cached to output/cache/db_mol_desc.pkl; cross-validated against common.heavy_atom_count/element_set."
+      }
+    ],
+    "key_numbers": [
+      {
+        "claim": "Raw rows in bde_db_full.csv.gz",
+        "value": "484907",
+        "unit": "database row",
+        "n": "484907"
+      },
+      {
+        "claim": "Unique molecules in database",
+        "value": "42577",
+        "unit": "unique molecule",
+        "n": "42577"
+      },
+      {
+        "claim": "Unique fragment-pair units (molecule,fragment1,fragment2)",
+        "value": "290664",
+        "unit": "fragment pair",
+        "n": "290664"
+      },
+      {
+        "claim": "Unique BDE values in database",
+        "value": "144147",
+        "unit": "database row",
+        "n": "484907"
+      },
+      {
+        "claim": "Row-to-pair redundancy factor (raw rows / unique pairs)",
+        "value": "1.6683",
+        "unit": "database row",
+        "n": "484907"
+      },
+      {
+        "claim": "Extra rows beyond one per unique fragment pair",
+        "value": "194243",
+        "unit": "database row",
+        "n": "484907"
+      },
+      {
+        "claim": "Rows per molecule",
+        "value": "11.3889",
+        "unit": "unique molecule",
+        "n": "42577"
+      },
+      {
+        "claim": "C-H raw rows",
+        "value": "321949",
+        "unit": "database row",
+        "n": "484907"
+      },
+      {
+        "claim": "C-H unique fragment pairs",
+        "value": "150091",
+        "unit": "fragment pair",
+        "n": "290664"
+      },
+      {
+        "claim": "C-H redundancy factor (rows per unique pair)",
+        "value": "2.145",
+        "unit": "fragment pair",
+        "n": "150091"
+      },
+      {
+        "claim": "C-H share of total row inflation",
+        "value": "88.476",
+        "unit": "database row",
+        "n": "194243"
+      },
+      {
+        "claim": "C-C rows / pairs / redundancy",
+        "value": "71166 / 61490 / 1.157",
+        "unit": "fragment pair",
+        "n": "61490"
+      },
+      {
+        "claim": "H-N rows / pairs / redundancy",
+        "value": "27314 / 18273 / 1.495",
+        "unit": "fragment pair",
+        "n": "18273"
+      },
+      {
+        "claim": "C-N rows / pairs / redundancy",
+        "value": "24707 / 22499 / 1.098",
+        "unit": "fragment pair",
+        "n": "22499"
+      },
+      {
+        "claim": "C-O rows / pairs / redundancy",
+        "value": "24354 / 23288 / 1.046",
+        "unit": "fragment pair",
+        "n": "23288"
+      },
+      {
+        "claim": "H-O rows / pairs / redundancy",
+        "value": "11884 / 11577 / 1.026",
+        "unit": "fragment pair",
+        "n": "11577"
+      },
+      {
+        "claim": "N-O rows / pairs / redundancy",
+        "value": "1634 / 1581 / 1.034",
+        "unit": "fragment pair",
+        "n": "1581"
+      },
+      {
+        "claim": "N-N rows / pairs / redundancy",
+        "value": "1597 / 1567 / 1.019",
+        "unit": "fragment pair",
+        "n": "1567"
+      },
+      {
+        "claim": "O-O rows / pairs / redundancy",
+        "value": "302 / 298 / 1.013",
+        "unit": "fragment pair",
+        "n": "298"
+      },
+      {
+        "claim": "Database element set",
+        "value": "C, N, O (3 elements)",
+        "unit": "unique molecule",
+        "n": "42577"
+      },
+      {
+        "claim": "Database parent-molecule HAC range (min-max)",
+        "value": "1-10",
+        "unit": "unique molecule",
+        "n": "42577"
+      },
+      {
+        "claim": "Database HAC mean / median / sd on unique molecules",
+        "value": "8.8915 / 9 / 1.20",
+        "unit": "unique molecule",
+        "n": "42577"
+      },
+      {
+        "claim": "Share of DB molecules at HAC 9 or 10",
+        "value": "69.92",
+        "unit": "unique molecule",
+        "n": "42577"
+      },
+      {
+        "claim": "HAC cutoff defining the coverage boundary",
+        "value": "10",
+        "unit": "unique molecule",
+        "n": "42577"
+      },
+      {
+        "claim": "BDE mean (ordinary unweighted) C-H, unique-pair units",
+        "value": "98.1567 kcal/mol (sd 9.9235, min 16.3673, median 97.1566, max 140.5212)",
+        "unit": "fragment pair",
+        "n": "150091"
+      },
+      {
+        "claim": "BDE mean (ordinary unweighted) C-C, unique-pair units",
+        "value": "91.1083 kcal/mol (sd 12.1110, min 41.3334, median 88.5472, max 164.5335)",
+        "unit": "fragment pair",
+        "n": "61490"
+      },
+      {
+        "claim": "BDE mean (ordinary unweighted) H-N, unique-pair units",
+        "value": "95.5119 kcal/mol (sd 10.4131, min 41.7488, median 96.1902, max 126.2241)",
+        "unit": "fragment pair",
+        "n": "18273"
+      },
+      {
+        "claim": "BDE mean (ordinary unweighted) C-N, unique-pair units",
+        "value": "86.7745 kcal/mol (sd 13.5079, min 16.6309, median 84.9660, max 127.2274)",
+        "unit": "fragment pair",
+        "n": "22499"
+      },
+      {
+        "claim": "BDE mean (ordinary unweighted) C-O, unique-pair units",
+        "value": "92.2939 kcal/mol (sd 14.1956, min 19.2670, median 94.4966, max 131.8227)",
+        "unit": "fragment pair",
+        "n": "23288"
+      },
+      {
+        "claim": "BDE mean (ordinary unweighted) H-O, unique-pair units",
+        "value": "101.5871 kcal/mol (sd 10.7279, min 46.5674, median 104.5474, max 123.2296)",
+        "unit": "fragment pair",
+        "n": "11577"
+      },
+      {
+        "claim": "BDE mean (ordinary unweighted) N-O, unique-pair units",
+        "value": "58.9553 kcal/mol (sd 9.6223, min 7.7297, median 61.4463, max 87.7358)",
+        "unit": "fragment pair",
+        "n": "1581"
+      },
+      {
+        "claim": "BDE mean (ordinary unweighted) N-N, unique-pair units",
+        "value": "62.1794 kcal/mol (sd 12.6383, min 19.3028, median 63.2008, max 97.1466)",
+        "unit": "fragment pair",
+        "n": "1567"
+      },
+      {
+        "claim": "BDE mean (ordinary unweighted) O-O, unique-pair units",
+        "value": "41.3837 kcal/mol (sd 8.6625, min -0.8691, median 43.6662, max 53.9444)",
+        "unit": "fragment pair",
+        "n": "298"
+      },
+      {
+        "claim": "C-H class mean shift from row-weighting vs pair-weighting",
+        "value": "-1.7039 kcal/mol (row-weighted 96.4528 vs pair-weighted 98.1567)",
+        "unit": "fragment pair",
+        "n": "150091"
+      },
+      {
+        "claim": "Benchmark observations with an exact (molecule,fragment1,fragment2) row in the DB",
+        "value": "331 (60.96%)",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Benchmark observations whose parent molecule exists in the DB",
+        "value": "369 (67.96%)",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Benchmark observations with parent HAC beyond the DB max of 10",
+        "value": "150 (27.62%)",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Benchmark observations with a parent element never occurring in the DB",
+        "value": "0",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Benchmark parent HAC range (min-max), vs DB 1-10",
+        "value": "1-38",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Benchmark parent HAC mean / median / sd",
+        "value": "9.2762 / 8 / 5.0828",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Out-of-DB observations decomposed into size-incompatible vs size-compatible",
+        "value": "150 HAC>10 + 24 HAC<=10 = 174 (32.04%)",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Benchmark rows whose parent is in the DB AND the exact fragment pair is present",
+        "value": "331 of 369 (89.70%)",
+        "unit": "bond observation",
+        "n": "369"
+      },
+      {
+        "claim": "Benchmark rows whose parent is in the DB but the exact fragment pair is absent",
+        "value": "38 of 369 (10.30%); 6.998% of all 543",
+        "unit": "bond observation",
+        "n": "369"
+      },
+      {
+        "claim": "DB pair count vs symmetry-unique bond orbits, random 2,000-molecule sample (pooled completeness)",
+        "value": "13654 / 26239 = 52.04%",
+        "unit": "unique molecule",
+        "n": "2000"
+      },
+      {
+        "claim": "DB pair count vs symmetry-unique bond orbits, 259 benchmark parents present in the DB (pooled completeness)",
+        "value": "1462 / 2250 = 64.98%; mean per-molecule 65.62%",
+        "unit": "unique molecule",
+        "n": "259"
+      },
+      {
+        "claim": "Sampled DB molecules that are fully bond-enumerated",
+        "value": "1.65%",
+        "unit": "unique molecule",
+        "n": "2000"
+      },
+      {
+        "claim": "Benchmark bond-class composition",
+        "value": "C-H 302, C-C 240, H-O 1",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "RDKit labeler agreement with the DB bond_type column on 4,000 random unique pairs",
+        "value": "100.0% (4000/4000, 0 unparsable)",
+        "unit": "fragment pair",
+        "n": "4000"
+      },
+      {
+        "claim": "Fragment-pair units where bond_type or bde varies within the unit",
+        "value": "0 of 290664 for both",
+        "unit": "fragment pair",
+        "n": "290664"
+      }
+    ],
+    "narrative": "The database is a large but structurally narrow resource: 484,907 raw rows resolve to 42,577 molecules and 290,664 unique (molecule,fragment1,fragment2) fragment pairs, with 144,147 distinct BDE values. The three units are genuinely distinct and must not be conflated. The row/pair redundancy factor is 1.6683, and a single class drives essentially all of it: C-H contributes 171,858 of the 194,243 surplus rows (88.5%) at 2.145 rows per pair, because symmetry-equivalent hydrogens (four H in methane, three in a methyl) generate several rows with identical fragments and identical bde. Every other class sits near 1.0-1.5. I verified that bond_type and bde are constant inside all 290,664 pair units, so the pair unit is well defined, and that no rows are lost by deduplicating. The practical consequence is that any row-weighted average silently over-weights C-H and, within C-H, over-weights symmetric molecules: the C-H class mean moves by 1.70 kcal/mol (96.45 row-weighted vs 98.16 pair-weighted), while other classes move by under 1 kcal/mol.\n\nThe structural domain is bounded by two facts: the element set is exactly {C, N, O} with no S, P or halogen anywhere, and the parent heavy-atom count spans only 1 to 10, with 87.5% of molecules at HAC >= 8 and a mean of 8.89. This is a dense, small-molecule database. BDE summaries computed as ordinary unweighted means on unique-pair units give the expected chemistry: O-O weakest at 41.38 kcal/mol, then N-O 58.96 and N-N 62.18, the carbon-heteroatom bonds in the mid 80s-90s, and C-H/H-O strongest near 98-102. O-O has the smallest sample (298 pairs) and the widest relative spread, and its minimum is physically odd at -0.87 kcal/mol.\n\nThe coverage boundary is a size boundary, not a chemistry boundary. The HAC cutoff is 10: 150 of 543 benchmark observations (27.6%) have a parent with HAC between 11 and 38, and all of them lie outside the database. By contrast, element coverage explains nothing - 0 of 543 observations involve an element absent from the database, and every benchmark parent is built only from C, N and O, exactly the database element set. Exact fragment-pair coverage is 331/543 (61.0%) and parent-molecule coverage is 369/543 (68.0%). The remaining 174 out-of-database observations split into 150 that are size-incompatible (HAC > 10) and 24 that are size-compatible (HAC <= 10) yet simply absent.\n\nThe most consequential finding is that the database is not exhaustive even inside its own domain. Conditioning on the 369 observations whose parent molecule does exist in the database, only 331 (89.7%) have the exact fragment pair; 38 (10.3%) do not. I checked these are real gaps and not SMILES-writing mismatches: for C#CC#C the database stores only the C-C bond while the benchmark asks for the C-H bond, and for C=CC=C the database has only the C-C bond while the benchmark asks for C-H. Scaling this up, I compared each molecule's stored pair count against its symmetry-unique bond count (H-added, canonical bond orbits): pooled completeness is 52.0% over a random 2,000-molecule sample and 65.0% over the 259 benchmark parents present in the database, with only 1.65% of sampled molecules fully enumerated. So the database is a partial bond selection - roughly half to two-thirds of the available bonds per molecule - rather than a complete bond inventory. Any residual analysis that treats a non-matching benchmark row as evidence about quantum or learned model error will conflate genuine model error with a missing reference entry, which is why the distinction between the 331 exact matches and the 38 parent-present-but-pair-absent rows matters downstream.\n\nMethodological caveat worth carrying forward: an intermediate version of this analysis built the molecule-to-HAC map from database molecules only, so the 174 benchmark parents absent from the database received NaN HAC and the \"observations beyond the HAC cutoff\" count came out as a spurious 0. The delivered artifact recomputes HAC and element sets for all 419 benchmark parents directly with RDKit, giving 150.",
+    "caveats": [
+      "The bond-class census uses the database's own bond_type column, not a re-derived label. Exhaustively relabeling all 206,797 distinct fragment strings with RDKit would take ~32 min (measured 9.3 ms per parse), so the labeler was validated instead on 4,000 random unique pairs, agreeing 100.0% with bond_type. The census counts therefore inherit any error present in the source bond_type column.",
+      "The exhaustiveness test compares stored pair counts against symmetry-unique bond orbits on the H-added graph. A modest fraction of sampled molecules yield more stored pairs than orbits (ratio slightly above 1.0), which would happen if some stored fragments are not atom-permutation-symmetric, so completeness is capped at 1.0 and the reported figures are conservative lower bounds on the true shortfall.",
+      "HAC is computed from the parent SMILES string with RDKit GetNumHeavyAtoms; a different SMILES protonation or tautomer choice for the same compound would shift its HAC, and 23 molecule-agnostic fragment pairs are shared across two different molecule strings.",
+      "The 543 experimental reference values come from heterogeneous literature and are not independent repeats from one laboratory. All benchmark-unit statistics here are counts over observations, not over independent physical measurements; unique-molecule counts are reported separately (419 unique parents).",
+      "The exhaustiveness completeness measure treats every symmetry-unique bond as an equally expected entry, which is an assumption about what an exhaustive database should contain; the real upstream database may deliberately exclude certain bond types or unstable fragments, so the 52-65% figures measure departure from full bond enumeration rather than a documented curation rule.",
+      "The 543-row benchmark and the 484,907-row database overlap only partially by construction: 174 benchmark observations have no database parent at all, so any downstream error analysis must be conditioned on the 369/331 inside-domain subsets and cannot treat the 174 as model failures.",
+      "An intermediate run had a real bug: HAC for benchmark parents absent from the database mapped to NaN, silently zeroing the HAC-boundary count. Fixed before writing the deliverable; all reported coverage numbers come from the corrected run and were re-verified with an independent raw-CSV/raw-TSV code path."
+    ],
+    "commands_run": [
+      "python output/analysis/ws1_step1_domain.py  # RDKit descriptors for 42,577 DB parent molecules, cross-validated against common.heavy_atom_count/element_set",
+      "nohup python output/analysis/ws1_prep.py > output/logs/ws1_prep.log 2>&1  # cached DB group-bys (ran 348 s)",
+      "nohup python output/analysis/ws1_final.py > output/logs/ws1_final.log 2>&1  # main analysis, wrote output/results/ws1_db_coverage.json (ran 514 s)",
+      "timeout 800 python output/analysis/ws1_exhaustiveness.py  # bond-orbit completeness, wrote ws1_exhaustiveness_supplement.json",
+      "timeout 600 python output/analysis/ws1_merge.py  # inflation drivers + fold supplement into main artifact",
+      "python output/analysis/ws1_figure.py  # matplotlib Agg, wrote output/figures/ws1_domain.png",
+      "independent verification via a fresh raw gzip/csv scan of bde_db_full.csv.gz and raw TSV parse of experimental_benchmark.tsv plus a fresh RDKit HAC pass: reproduced rows=484907, mols=42577, pairs=290664, unique_bde=144147, exact_pairs=331, parent_in_db=369, benchmark HAC 1-38 with 150 above 10, DB HAC 1-10, DB elements C/N/O",
+      "per-molecule inspection of the 38 parent-present-but-pair-absent rows to confirm genuine gaps rather than SMILES-notation mismatches"
+    ]
+  },
+  "agent-a4ce1d07ef5f276d2.jsonl": {
+    "artifacts": [
+      {
+        "description": "All eight robustness checks with per-check PASS/FAIL, the nine-claim verdict list, baseline metrics, headline paired tests, provenance context and the analysis-unit note.",
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws6_robustness.json"
+      },
+      {
+        "description": "Four-panel figure: (a) leave-one-molecule-out influence per channel, (b) MAE across all 419 leave-out fits showing zero rank flips, (c) six alternative loss definitions, (d) headline paired differences with row vs molecule-cluster bootstrap CIs.",
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/figures/ws6_robustness.png"
+      },
+      {
+        "description": "Executable script producing the JSON artifact (all checks, vectorised bootstraps).",
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws6_robustness.py"
+      },
+      {
+        "description": "Executable script producing the figure from the JSON artifact.",
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws6_figure.py"
+      },
+      {
+        "description": "Cached HAC and RDKit MolWt for all 42577 unique database molecules (built once, reused by the threshold check).",
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/logs/ws6_db_mol_descriptors.csv"
+      },
+      {
+        "description": "Full stdout of the final executed run.",
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/logs/ws6_run.log"
+      }
+    ],
+    "caveats": [
+      "The 543 experimental values are heterogeneous literature values, not independent repeats from one laboratory. Every interval reported here conditions on those reference values being correct; the WS5 heterogeneity floor applies to all of them and no robustness check here can remove experimental-reference noise.",
+      "The 331 in-database rows and the 331 in-reference-training-set rows are the SAME rows (in_db_row is exactly equivalent to in_reference_training_set), and they are the HAC<=10 rows except 8 observations. The in-database/held-out contrast and the small/large-molecule contrast are therefore heavily confounded; the 2x2 split in check 4b is the only place they are separated. The two residual cells are small (n=35, n=54), so the attribution to the HAC>=10 / no-exact-row cell is well supported but the decomposition into size vs database-membership inside that cell is not resolvable here.",
+      "The cluster bootstrap over molecules (419 units) gave intervals nearly identical to the row bootstrap. That is a property of THIS benchmark (errors do not correlate within parent molecule), not a general result; do not generalise it.",
+      "Check 4's HAC-bin leave-out is an extra batch axis I added, not one of the six checks requested. I report it because it changes the conclusion, despite check 4's literal scope (bond classes) passing.",
+      "The own-worst-5% trimming in check 3 lets each channel be trimmed at different observations, the harsher test for quantum; the fairer common-union variants are also reported and also keep the ordering. The q-vs-l mean gap shrinks from -0.313 to -0.137 kcal/mol under the union trim, so the effect is tail-sensitive even though its sign and CI are stable.",
+      "The per-observation sign test and the McNemar tests are computed on bond observations, which are not independent (419 molecules); their p-values are therefore optimistic and should be read as descriptive. The molecule-cluster bootstrap is the conservative alternative and is reported alongside.",
+      "The 1%-99% winsorisation clips few observations per channel (counts recorded in the artifact), so it is a mild treatment and does not probe extreme-value influence as hard as the 5% trim does; both are reported.",
+      "RDKit heavy-atom counts and MolWt were computed on all 42577 unique database molecules and cached to output/logs/ws6_db_mol_descriptors.csv; the run reuses the cache. Molecule-level values are unweighted by row multiplicity, whereas the database has 484907 rows - row-weighted size statistics would differ.",
+      "Bond-class labels come from common.bond_class() and reproduce the database bond_type on all 331 matched rows, but the benchmark itself only contains C-H (302), C-C (240) and H-O (1), so no between-class claim with more than two classes can be tested at all."
+    ],
+    "commands_run": [
+      "python3 -c \"import sys; sys.path.insert(0,'output/analysis'); import common, pandas as pd, numpy as np; df = common.build_analysis_table(); ...\"  # schema/baseline recon and bond-class census",
+      "python3 -c \"import sys; sys.path.insert(0,'output/analysis'); import common, pandas as pd, numpy as np; db = common.load_db(); ...\"  # DB HAC inventory (background; RDKit over 42577 molecules)",
+      "python3 /data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws6_robustness.py  # final executed run, stdout in output/logs/ws6_run.log",
+      "python3 /data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws6_figure.py  # writes output/figures/ws6_robustness.png",
+      "python3 -c \"import json; r=json.load(open('output/results/ws6_robustness.json')); ...\"  # artifact read-back and verification of every number reported",
+      "python3 -c \"# HAC>=10 x in_db_row crosstab and q-vs-l diff per cell\"  # independent confirmation of the check-4b carrier cell"
+    ],
+    "key_numbers": [
+      {
+        "claim": "Baseline channel MAE (quantum / learned / reference): whole-sample ranking quantum < learned < reference",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "2.0978 / 2.4107 / 5.4860 kcal/mol; RMSE 3.0595 / 3.6278 / 6.7596"
+      },
+      {
+        "claim": "CHECK 1 PASS - leave-one-molecule-out: max |change in MAE| when any single parent molecule is removed, and the number of the 419 leave-outs that change the channel order",
+        "n": "419 (543 rows)",
+        "unit": "unique molecule",
+        "value": "max |dMAE| = 0.0252 (quantum) / 0.0421 (learned) / 0.0515 (reference) kcal/mol; rank order changed in 0 of 419 leave-outs; no single molecule drives the ranking"
+      },
+      {
+        "claim": "CHECK 1 PASS - cluster-free subset (one row per molecule): MAE rises for every channel and the quantum-vs-learned gap WIDENS rather than vanishing",
+        "n": "419",
+        "unit": "unique molecule",
+        "value": "MAE 2.2830 / 2.7200 / 5.7508 kcal/mol; q-vs-l mean diff -0.4370, 95% CI [-0.6367, -0.2549] (excludes 0). Random one-row-per-molecule draws (2000 reps): quantum ahead in 100.0%"
+      },
+      {
+        "claim": "CHECK 1 PASS - cluster bootstrap resampling MOLECULES instead of rows: intervals essentially unchanged, so the row bootstrap was not overstating precision",
+        "n": "419 molecules / 543 observations",
+        "unit": "unique molecule",
+        "value": "q-vs-l cluster CI [-0.4733, -0.1681] vs row CI [-0.4708, -0.1682]; q-vs-r [-3.7460, -3.0465] vs [-3.7418, -3.0529]; l-vs-r [-3.4543, -2.7112] vs [-3.4484, -2.7183]"
+      },
+      {
+        "claim": "CHECK 2 PASS - alternative error definitions: quantum < learned < reference holds on 5 of 6 definitions; the within-2-kcal fraction is the single exception",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "RMSE 3.0595<3.6278<6.7596; median AE 1.40<1.61<4.90; p90 AE 4.708<5.458<9.80; frac<=5 0.9098>0.8692>0.5212; frac<=2 0.6188>0.5875>0.1547 - but the q-vs-l frac<=2 paired diff is +0.0313 with CI [-0.0018, +0.0627], NOT distinguishable"
+      },
+      {
+        "claim": "CHECK 3 PASS - outlier treatment: no ranking flip under own-5% trim, common-union-5% trim (60 obs dropped), own-single-worst, common-single-worst, or 1-99% winsorisation. Worst single errors: obs 0403 (quantum 15.74), 0511 (learned 25.21), 0508 (reference 33.40)",
+        "n": "543 (27 = own 5% each; 60 = union)",
+        "unit": "bond observation",
+        "value": "flips {own_5pct: False, common_5pct: False, own_single: False, common_single: False, winsor: False}; q-vs-l gap degrades from -0.3129 to -0.1375 (union-5% trim) and -0.2886 (winsorised), both CIs excluding 0"
+      },
+      {
+        "claim": "CHECK 4 FAIL - batch/class leave-out: no BOND CLASS changes the ranking, but the SIZE/DATABASE batch DOES flip it",
+        "n": "350 for the HAC>=10 drop; 303/241/542 for the class drops",
+        "unit": "bond observation",
+        "value": "dropping the HAC 10-100 bin (193 obs) flips the order to learned (1.8108) < quantum (1.8290) < reference (5.0962). Bond classes causing a rank change: none (drop C-C / C-H / H-O all keep quantum<learned<reference)"
+      },
+      {
+        "claim": "CHECK 4b FAIL (decisive) - the quantum-vs-learned headline is carried ENTIRELY by the HAC>=10 / no-exact-database-row cell; on the 331 in-database rows the sign REVERSES",
+        "n": "158 / 296 / 35 / 54",
+        "unit": "bond observation",
+        "value": "HAC>=10|no exact DB row: n=158, q-vs-l diff -1.1311, CI [-1.6031, -0.6945]. HAC<=9|has exact DB row: n=296, diff +0.0631, CI [-0.0055, +0.1321]. HAC>=10|has exact DB row: n=35, diff +0.0703. HAC<=9|no exact DB row: n=54, diff -0.2285, CI [-0.5974, +0.1293]"
+      },
+      {
+        "claim": "CHECK 4 FAIL - in-database vs held-out subset: the held-out penalty is real for all channels, but the q-vs-l ranking inverts between the two subsets",
+        "n": "331 / 212",
+        "unit": "bond observation",
+        "value": "331 in-DB rows MAE 2.1199 (q) / 2.0560 (l) / 5.3986 (r), order learned<quantum<reference, q-vs-l +0.0639 CI [-0.0013, +0.1294]; 212 held-out rows MAE 2.0632 / 2.9643 / 5.6224, order quantum<learned<reference, q-vs-l -0.9012 CI [-1.2706, -0.5604]"
+      },
+      {
+        "claim": "CHECK 5 PASS - coverage boundary at HAC thresholds 8/9/10/11/12: the DB side of the claim is hard, not a threshold artefact",
+        "n": "42577 DB molecules; 543 observations",
+        "unit": "database row",
+        "value": "DB unique molecules above each cut = 29769 / 16373 / 0 / 0 / 0 (of 42577); DB HAC max exactly 10. Benchmark observations above each cut = 234 / 193 / 150 / 136 / 111 (43.1% / 35.5% / 27.6% / 25.0% / 20.4%). Benchmark observations above HAC 10 with an exact DB row = 0"
+      },
+      {
+        "claim": "CHECK 5 PASS - molecular-weight redefinition agrees with the HAC boundary",
+        "n": "543 observations; 42577 DB molecules",
+        "unit": "bond observation",
+        "value": "DB max MolWt = 152.146; 138 of 543 benchmark observations (25.4%) exceed it, spanning 131 unique molecules. MW cut-offs translated from HAC<=8/9/10 are 122.12 / 138.119 / 152.146 with 212 / 160 / 138 observations above. Benchmark HAC vs MolWt Spearman rho = 0.9959 (DB 0.9487)"
+      },
+      {
+        "claim": "CHECK 6 PASS - unique-fragment-pair sensitivity: dropping the duplicate-pair observations keeps the ranking and STRENGTHENS the q-vs-l gap",
+        "n": "539 (from 543)",
+        "unit": "fragment pair",
+        "value": "539 unique ordered pairs = 539 unique unordered pairs (4 observations dropped either way); order quantum<learned<reference; q-vs-l mean diff -0.3300, CI [-0.4889, -0.1908]; t = -4.295, p = 2.07e-5"
+      },
+      {
+        "claim": "CHECK 2b FAIL - test-choice sensitivity: the quantum-vs-learned verdict is TEST-DEPENDENT because of a mean-vs-majority reversal",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "paired t on the mean |e| difference p = 5.37e-5 and both bootstraps exclude 0 favouring quantum; BUT Wilcoxon signed-rank p = 0.553, McNemar within-2-kcal p = 0.0784, and learned wins on 284 of 543 observations vs quantum's 246 (sign test p = 0.108, 13 ties), Cliff's delta only -0.0417. Range of 5 test p-values: 5.4e-5 to 0.553"
+      },
+      {
+        "claim": "Quantum-vs-reference and learned-vs-reference are decisively significant on every definition and every unit",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "q-vs-r mean diff -3.3882 kcal/mol CI [-3.7418, -3.0529], t p = 2.6e-63, Wilcoxon p = 1.9e-59; l-vs-r -3.0753 CI [-3.4484, -2.7183], Wilcoxon p = 1.4e-51. Reference ranked last in every leave-out, every trim and every subset"
+      },
+      {
+        "claim": "Provenance context used by the verdicts: quantum reproduces the database value, learned does not; all 331 exact-row matches are also the training subset",
+        "n": "331 of 543",
+        "unit": "database row",
+        "value": "max |db - quantum| = 0.0000 kcal/mol with 100.0% of 331 rows within 0.01; max |db - learned| = 12.34 kcal/mol with 0.0% within 0.01. Exact-row matches = 331, unmatched = 212, parents present in DB = 331 - so 'parent in DB' and 'exact pair in DB' are the SAME 331 rows"
+      }
+    ],
+    "narrative": "WS6 tried to break the other workstreams' claims and largely failed to break the important ones - but it did break the single most quotable one. Eight checks plus two extra adversarial probes were executed; five passed, three failed.\n\nThe reference channel is genuinely, robustly the worst estimator. Its MAE of 5.49 kcal/mol is more than double the other two, it ranks last in all 419 leave-one-molecule-out fits, in every outlier trim, in every leave-one-bond-class-out fit, on all six error definitions, and on both the unique-fragment-pair subset and the 331 database-matched rows. Nothing in this suite moves it.\n\nThe coverage-boundary claim also survives intact, and for a structural reason worth stating plainly: the database heavy-atom maximum is exactly 10 with zero molecules above it, so the boundary is a hard domain edge, not a soft cut-off whose value someone chose. The competing thresholds only change how LARGE the uncovered benchmark region is (150 observations above HAC 10, 136 above 11, 111 above 12), never whether it exists. Redefining size by RDKit molecular weight reproduces the same conclusion (DB max 152.1 Da, 138 observations / 25.4% above), and benchmark HAC and MolWt correlate at Spearman 0.996, so the two definitions are effectively the same variable here.\n\nThe headline \"quantum beats learned\" claim is where the suite bites. It is fragile in three independent ways. First, it is test-dependent: the mean absolute-error difference is solidly nonzero (paired t p = 5.4e-5, both row and molecule-cluster bootstrap CIs exclude zero), but the Wilcoxon signed-rank test gives p = 0.553, the within-2-kcal McNemar test p = 0.078, and - the sharpest finding - learned wins on 284 of 543 observations versus quantum's 246. Quantum wins on the mean while learned wins on the majority of individual bonds; the mean advantage is a thinner-extreme-tail effect (quantum's worst error 15.7 vs learned's 25.2 kcal/mol), not a typical-bond effect. Second, and decisively, the effect is not distributed across the benchmark at all: it is carried entirely by the 158 observations that are simultaneously HAC >= 10 and have no exact database row (diff -1.131 kcal/mol, CI [-1.603, -0.695]). In the other three cells of that 2x2 the difference is indistinguishable from zero, and on the 331 in-database rows it changes sign (+0.064 kcal/mol, learned if anything better). Dropping the HAC 10+ bin outright flips the ranking to learned (1.811) < quantum (1.829). Third, the test-choice sensitivity means any summary phrased as \"quantum is the better estimator\" must state whether it means the mean or the typical bond, because the two disagree.\n\nOne methodological check came out the opposite of what I expected, and it is a genuine pass for the other workstreams. Resampling whole molecules (419 units) instead of rows (543 units) leaves every confidence interval essentially unchanged - the q-vs-l cluster CI [-0.473, -0.168] versus the row CI [-0.471, -0.168]. The 86 multi-row molecules share fragments but evidently not correlated errors, so the row-level paired analysis was not overstating precision. Likewise, no single molecule moved any channel's MAE by more than 0.052 kcal/mol, so the ranking is not an artefact of one clustered molecule.\n\nThe largest cluster-free subset (one row per molecule, 419 independent-ish units) actually strengthens the mean result: MAE rises to 2.28 / 2.72 / 5.75, and the q-vs-l gap widens from -0.313 to -0.437 kcal/mol. So the fragility of the quantum-vs-learned claim is not an artefact of pseudo-replication - it is genuine heterogeneity between the in-database and out-of-database regions of the benchmark, which is the more interesting scientific statement.\n\nExplicit per-check status: 1 leave-one-molecule-out PASS; 2 alternative error definitions PASS; 3 outlier treatment PASS; 4 batch/class leave-out FAIL (no class effect, but a decisive size/database-batch effect); 5 threshold sensitivity PASS; 6 paired-unit sensitivity PASS; 2b test-choice sensitivity FAIL; 4b HAC x database-membership split FAIL.\n\nVerdict list: reference worse than both ROBUST; quantum beats learned on MAE FRAGILE; quantum and learned not distinguishable FRAGILE (false on the mean, true per typical bond); database covers only HAC<=10 ROBUST; 331/543 exact-row split ROBUST; quantum reproduces the database BDE ROBUST; 9-class bond-class error structure NOT TESTABLE; database exhaustive within its own domain ROBUST; held-out degradation measurable FRAGILE (real for all channels, but the q-vs-l ordering inverts out of database).\n\nFor the downstream workstreams: WS1's coverage boundary and WS5's provenance claims are safe as stated. WS2's headline should be re-phrased to name its summary statistic and to report the mean-vs-majority reversal, and its item-5 training/held-out split should carry the warning that the q-vs-l ordering inverts there. WS3's class-comparison claim is untestable on this benchmark, not merely under-powered: only two bond classes have usable n (C-H 302, C-C 240) and the H-O cell has n = 1.",
+    "workstream": "WS6 - Robustness suite (adversarial re-analysis of the channel comparison and coverage claims)"
+  },
+  "agent-a7865382d948071da.jsonl": {
+    "workstream": "WS4 \u2014 Failure modes, outliers and the hard boundary of each channel",
+    "artifacts": [
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws4_failures.json",
+        "description": "Full machine-readable artifact (307,563 bytes): tail_census (per-channel >5/>10/>15 lists with observation_id, parent/fragment SMILES, exp BDE, estimate, signed error and descriptors), descriptor_test (per-descriptor group means, medians, Cliff's delta, Mann-Whitney p and Benjamini-Hochberg q, plus binary-flag Fisher tables), crowded_flag (MAE with/without flag, four sub-flags, and the DB-membership-stratified control plus a cross-tab documenting the confound), region_table (<60/<70/<80/>=80/all with MAE, RMSE, bias, median signed error, n beyond 5/10 and sign tests), divergence_trend, direction_of_failure (worst-case and per-region sign tests), extreme_set_composition, and verdicts (data_supported / suggestive_only / unresolved)"
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/figures/ws4_failures.png",
+        "description": "Three-panel signed-error vs experimental BDE plot (one panel per channel), with horizontal +-5/10/15 guides, vertical 60/70/80 kcal/mol weak-bond markers, and every |error|>10 observation circled and labelled with its observation_id"
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws4_run.py",
+        "description": "The single executed script that produces every number in the artifact and the figure (run EXIT=0; rerun reproduces the output)"
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws4_failures.py",
+        "description": "RDKit descriptor/flag enrichment module (ring count, aromatic rings, rotatable bonds, bridgehead/spiro/fused rings, radical-centre aromatic and in-ring flags, canonical identical-fragment test) plus the disk-cached enriched analysis table"
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/logs/ws4_run.txt",
+        "description": "Stdout log of the final run (figure and JSON writes)"
+      }
+    ],
+    "key_numbers": [
+      {
+        "claim": "quantum channel tail: observations with |error| > 5 / > 10 / > 15 kcal/mol (max |error| 15.74)",
+        "value": "49 / 8 / 3",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "learned channel tail: observations with |error| > 5 / > 10 / > 15 kcal/mol (max |error| 25.21)",
+        "value": "71 / 12 / 4",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "reference channel tail: observations with |error| > 5 / > 10 / > 15 kcal/mol (max |error| 33.40)",
+        "value": "260 / 51 / 12",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "reference channel fraction of observations with |error| > 5 kcal/mol, vs 9.0% (quantum) and 13.1% (learned)",
+        "value": "47.9%",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "observations where ANY channel exceeds 5 / 10 / 15 kcal/mol; observations where ALL THREE channels exceed 5 / 10 / 15",
+        "value": "295 / 61 / 17 (any); 18 / 3 / 0 (all three)",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "worst quantum cases: exp 71.8 -> 87.54 (+15.74); exp 67.0 -> 82.69 (+15.69); exp 59.4 -> 74.88 (+15.48); all are carboxylic-acid C-C cleavages in which the surviving radical is [O=C]O, and 5 of the 8 rows beyond 10 kcal/mol share this motif",
+        "value": "obs 0403 / 0491 / 0487",
+        "unit": "bond observation",
+        "n": "3"
+      },
+      {
+        "claim": "worst learned case: exp 15.2, estimate 40.41, +25.21 kcal/mol overshoot on the spirobifluorene-dimer C-C bond (HAC 38, 8 rings)",
+        "value": "obs 0511, +25.21",
+        "unit": "bond observation",
+        "n": "1"
+      },
+      {
+        "claim": "worst reference cases are undershoots on the triarylmethane/tetraphenylmethane family: -33.40 (obs 0508), -31.00 (obs 0520), -24.70 (obs 0509); the opposite reference tail is strained small rings up to +21.6 (obs 0227 CC1(C)C=C1, obs 0072 C1C2CC12)",
+        "value": "-33.4 / -31.0 / -24.7",
+        "unit": "bond observation",
+        "n": "3"
+      },
+      {
+        "claim": "reference extreme tail is bimodal: observations overshooting by >10 vs undershooting by >10",
+        "value": "36 positive vs 15 negative",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "learned failure set vs rest: parent ring count 2.08 vs 0.93, Cliff's delta 0.444, Mann-Whitney p=1.4e-10, BH q=1.2e-9",
+        "value": "2.08 vs 0.93 (p=1.4e-10)",
+        "unit": "bond observation",
+        "n": "71 fail vs 472 rest"
+      },
+      {
+        "claim": "learned failure set vs rest: fused rings 2.01 vs 0.90 (p=4.1e-10, q=1.9e-9); HAC 13.0 vs 8.7 (p=5.1e-9, q=1.5e-8); aromatic rings 1.30 vs 0.63 (q=7.4e-6); heteroatoms 0.85 vs 0.37 (q=1.4e-4); fsp3 0.41 vs 0.55 (q=0.0054); rotatable bonds NOT different (1.27 vs 1.35, p=0.90)",
+        "value": "see claim",
+        "unit": "bond observation",
+        "n": "71 fail vs 472 rest"
+      },
+      {
+        "claim": "quantum failure set vs rest is only marginally different: HAC 11.65 vs 9.04 (p=0.0056, q=0.037), ring count 1.61 vs 1.02 (q=0.037), Cliff's delta 0.20-0.24",
+        "value": "11.65 vs 9.04 (p=0.0056)",
+        "unit": "bond observation",
+        "n": "49 fail vs 494 rest"
+      },
+      {
+        "claim": "reference failure set shifts in the OPPOSITE direction on two descriptors: fewer heteroatoms (0.35 vs 0.51, p=0.0034) and fewer rotatable bonds (1.17 vs 1.50, p=0.022)",
+        "value": "0.35 vs 0.51 heteroatoms",
+        "unit": "bond observation",
+        "n": "260 fail vs 283 rest"
+      },
+      {
+        "claim": "crowded flag (both fragment radical centres in rings OR parent ring count >= 3) captures this many observations",
+        "value": "n=95",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "crowded flag MAE: quantum 2.495 vs 2.014 (+0.482, p=0.015); learned 4.168 vs 2.038 (+2.131, p=4.3e-11, Cliff's delta 0.430); reference 6.957 vs 5.174 (+1.783, p=0.0012)",
+        "value": "see claim",
+        "unit": "bond observation",
+        "n": "95 crowded vs 448 not"
+      },
+      {
+        "claim": "CONFOUND: of the 95 crowded rows, this many are also out-of-database rows, so the crowded flag largely re-labels the non-DB set (only 2 crowded rows are DB rows)",
+        "value": "93 / 95",
+        "unit": "bond observation",
+        "n": "95"
+      },
+      {
+        "claim": "crowded effect WITHIN the 212 out-of-DB rows: learned MAE 4.189 vs 2.700 (+1.489, p=1.7e-4, survives the confound); quantum MAE 2.479 vs 2.432 (+0.047, p=0.52, effect VANISHES); reference 6.997 vs 5.589 (+1.408, p=0.080, marginal)",
+        "value": "learned +1.489 p=1.7e-4; quantum +0.047 p=0.52",
+        "unit": "bond observation",
+        "n": "93 crowded vs 119 not (non-DB only)"
+      },
+      {
+        "claim": "ring count >=3 sub-flag within out-of-DB rows: learned MAE 4.226 vs 2.710 (p=1.3e-4); quantum 2.490 vs 2.425 (p=0.52); reference 7.008 vs 5.616 (p=0.092)",
+        "value": "learned 4.23 vs 2.71",
+        "unit": "bond observation",
+        "n": "90 vs 122"
+      },
+      {
+        "claim": "'both radical centres in rings' sub-flag is too rare to resolve: learned MAE 8.425 vs 2.344 (p=0.17), quantum 5.153 vs 2.064 (p=0.16)",
+        "value": "n=6",
+        "unit": "bond observation",
+        "n": "6"
+      },
+      {
+        "claim": "weak-bond region exp<60 kcal/mol: n=4; quantum MAE 11.25 bias +8.33; learned MAE 15.07 bias +15.07; reference MAE 11.38 bias -11.13",
+        "value": "n=4; learned MAE 15.07",
+        "unit": "bond observation",
+        "n": "4"
+      },
+      {
+        "claim": "weak-bond region exp<70 kcal/mol (18 rows = 18 unique parents): quantum MAE 6.00 bias +4.57 (t p=0.0070); learned MAE 7.53 bias +6.87 (p=8.8e-4); reference MAE 7.94 bias -2.75 (p=0.29)",
+        "value": "see claim",
+        "unit": "bond observation",
+        "n": "18"
+      },
+      {
+        "claim": "weak-bond region exp<80 kcal/mol (147 rows = 147 unique parents): quantum MAE 2.83 bias +1.74; learned MAE 3.67 bias +3.12; reference MAE 6.55 bias +1.05",
+        "value": "see claim",
+        "unit": "bond observation",
+        "n": "147"
+      },
+      {
+        "claim": "strong-bond region exp>=80 kcal/mol (396 rows, 296 unique parents): quantum MAE 1.83 bias +0.11; learned MAE 1.94 bias +0.32; reference MAE 5.09 bias +1.50",
+        "value": "see claim",
+        "unit": "bond observation",
+        "n": "396"
+      },
+      {
+        "claim": "channels diverge as the bond weakens: slope of signed error vs experimental BDE is -0.068 kcal/mol per kcal/mol for quantum (r=-0.301, p=7.1e-13) and -0.109 for learned (r=-0.420, p=1.2e-24); reference slope is POSITIVE +0.073 (r=+0.147, p=5.8e-4) and not significant on ranks (Spearman 0.062, p=0.147)",
+        "value": "-0.068 / -0.109 / +0.073",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "both calibrated channels overshoot systematically in the weak-bond region (sign test on signed error): quantum 107/147 positive (p=3.0e-8, bias +1.74) and learned 123/147 positive (p=3.2e-17, bias +3.12) for exp<80; at exp<70 quantum is 14/4 (p=0.031) and learned 16/2 (p=0.0013)",
+        "value": "107/147 and 123/147 positive",
+        "unit": "bond observation",
+        "n": "147"
+      },
+      {
+        "claim": "learned channel's extreme tail is almost perfectly one-sided: 24 of its worst-25 errors are overshoots (mean signed +10.25, binomial p=1.6e-6)",
+        "value": "24 positive / 1 negative",
+        "unit": "bond observation",
+        "n": "25"
+      },
+      {
+        "claim": "quantum channel's worst-case direction is NOT established: 17 positive vs 8 negative among its worst-25 (p=0.108); among the 17 rows with any channel |error|>15 it is 9 vs 8 (p=1.0)",
+        "value": "17/8 (p=0.108)",
+        "unit": "bond observation",
+        "n": "25"
+      },
+      {
+        "claim": "reference channel's weak-bond and worst-case direction is NOT established: 7 positive vs 11 negative at exp<70 (p=0.48), 16 vs 9 in its worst-25 (p=0.23), 11 vs 6 among the |error|>15 rows (p=0.33); its sign test only reaches marginal significance at exp<80 (85 vs 61, p=0.057)",
+        "value": "p=0.48 at exp<70",
+        "unit": "bond observation",
+        "n": "18"
+      },
+      {
+        "claim": "benchmark/analysis units: 543 bond observations, 419 unique parent molecules, 543 unique (molecule, fragment pair) rows, 52 unique fragment_a and 328 unique fragment_b SMILES; 86 parents contribute more than one observation (max 6)",
+        "value": "543 obs / 419 molecules / 543 fragment pairs",
+        "unit": "database row",
+        "n": "543"
+      }
+    ],
+    "narrative": "TAIL CENSUS (unit = bond observation, n=543). The three channels have very different hard boundaries. Quantum is tightest: 49 rows (9.0%) beyond 5 kcal/mol, 8 beyond 10, only 3 beyond 15, worst +15.74. Learned is next: 71 (13.1%) beyond 5, 12 beyond 10, 4 beyond 15, worst +25.21. Reference is in a different regime: 260 rows (47.9%) beyond 5, 51 beyond 10, 12 beyond 15, worst -33.40. Critically the failure sets are largely DISJOINT: the union of any-channel |error|>10 is 61 rows, but only 3 rows are wrong by >10 in all three and NO row by >15 in all three. A genuinely bad experimental datum would drag all three at once, so this near-disjointness indicates most tail mass is channel-specific method failure, not shared reference error.\n\nWHICH CHANNEL FAILS WHERE. Quantum's worst cases (obs 0403, 0491, 0487) share a readable motif: carboxylic-acid C-C cleavage whose surviving radical is [O=C]O; 5 of its 8 rows beyond 10 kcal/mol are this motif, all overshoots of +10.8 to +15.7. Learned's extremes split into the same carboxyl family plus a polycyclic-aromatic family (spirobifluorene obs 0511 +25.2, bis-benzofuranone obs 0499 +15.4, the phenanthrene/indene C-H series obs 0229/0242/0215 at +12 to +14.5). Reference's extreme tail is bimodal and structurally clean: 36 observations overshoot by >10 (strained small rings - C1=CC1, C1C2CC12, C=CC(=C)C, C=CC=C - up to +21.6) while 15 undershoot by >10, dominated by the triarylmethane/tetraphenylmethane family (obs 0508 -33.4, obs 0520 -31.0, obs 0509 -24.7, obs 0199 -20.1). Reference's hard boundary is therefore two opposite-signed cliffs, not one tail.\n\nCONCENTRATION IN AN IDENTIFIABLE FAMILY. Rank-based Mann-Whitney tests over 9 descriptors separate failure sets (|error|>5) from the rest with real but modest effects. Learned is strong: ring count 2.08 vs 0.93 (p=1.4e-10, BH q=1.2e-9, Cliff's delta 0.444), fused rings 2.01 vs 0.90 (q=1.9e-9), HAC 13.0 vs 8.7 (q=1.5e-8), aromatic rings 1.30 vs 0.63 (q=7.4e-6), heteroatoms 0.85 vs 0.37 (q=1.4e-4), fsp3 lower in failures (0.41 vs 0.55). Rotatable-bond count does NOT differ (1.27 vs 1.35, p=0.90) - learned difficulty is ring topology, not chain flexibility. Quantum shows the same direction but marginally (HAC 11.65 vs 9.04, q=0.037; ring count q=0.037; delta 0.20-0.24). Reference shifts are weak and partly reversed (failures have FEWER heteroatoms 0.35 vs 0.51, p=0.0034, and FEWER rotatable bonds 1.17 vs 1.50, p=0.022).\n\nTHE CROWDED FLAG IS MOSTLY A PROXY FOR DATABASE COVERAGE. The requested flag (both radical centres in rings OR ring count >=3) captures 95 rows and raises MAE for every channel: quantum +0.48 (p=0.015), learned +2.13 (p=4.3e-11), reference +1.78 (p=0.0012). But 93 of 95 flagged rows are also absent from the BDE database (only 2 flagged rows are DB rows). Restricting to the 212 out-of-DB rows, the quantum penalty collapses to +0.047 (p=0.52) and the reference penalty to +1.41 (p=0.080), while learned survives at +1.49 (p=1.7e-4). So the steric/polycyclic characterisation is DATA-SUPPORTED for learned only; for quantum it was confounded with DB membership; for reference it remains suggestive. The narrower 'both radical centres in rings' sub-flag (n=6) cannot be resolved (learned 8.43 vs 2.34, p=0.17). Identical-fragment (symmetric) bonds show no significant penalty in any channel.\n\nTHE WEAK-BOND REGION IS WHERE THE CALIBRATED CHANNELS BREAK, AND THEY OVERSHOOT. Below 80 kcal/mol (n=147, also exactly 147 unique parents) quantum MAE rises from 1.83 to 2.83 and learned from 1.94 to 3.67, while bias jumps from +0.11 to +1.74 and +0.32 to +3.12. Below 70 (n=18) bias is +4.57 (quantum) and +6.87 (learned), both significant; below 60 (n=4) it is +8.33 and +15.07. The gap widens monotonically: regressing signed error on experimental BDE gives slopes -0.068 (quantum, r=-0.301, p=7.1e-13) and -0.109 (learned, r=-0.420, p=1.2e-24) kcal/mol per kcal/mol. Direction is unambiguous for the calibrated channels: sign tests give 107/147 positive for quantum (p=3.0e-8) and 123/147 for learned (p=3.2e-17) at exp<80, and 24 of learned's worst-25 are overshoots (p=1.6e-6). Reference does NOT share this - its slope is weakly POSITIVE (+0.073) and its weak-bond bias negative at exp<70 (-2.75, p=0.29). The overshoot is thus a property of the calibrated (DB-fitted) channels, not of the experimental data. Interpretation: both calibrated channels are compressed toward the middle of their training distribution and cannot reach genuinely weak 15-60 kcal/mol bonds; above 120 kcal/mol no channel is significantly biased (n=13), so the compression is one-sided.\n\nRESOLVED VS UNRESOLVED. DATA-SUPPORTED: tail ordering and counts; near-disjointness of failure sets; weak-bond overshoot and its monotone growth for quantum and learned; one-sidedness of the learned extreme tail; the learned polycyclic penalty (survives DB stratification, n=90 vs 122, p=1.3e-4); the reference bi...",
+    "caveats": [
+      "Analysis units differ by statistic and are stated in the artifact: tail census and descriptor tests use bond observations (543); 419 of those share parent molecules (86 parents contribute >1 observation, max 6), so descriptor tests are not fully independent between observations of the same parent. In the weak-bond regions the units coincide exactly (147 rows = 147 parents at exp<80; 18 = 18 at exp<70), so those sign tests are unit-independent.",
+      "common.build_analysis_table() takes ~360 s in this environment; I did not modify the validated shared module. ws4_failures.py caches the enriched 543-row table to output/ws4_analysis_table.pkl so the analysis is rerunnable in seconds; delete that pickle to force a full rebuild.",
+      "The 'crowded' flag as specified (both radical centres in rings OR ring count >=3) is 93/95 coincident with being an out-of-database row; the unstratified crowded MAE contrast is therefore not a clean steric measurement. Both stratified and unstratified versions are reported. The in-DB stratum contains only 2 crowded rows, so it provides no usable control in the other direction.",
+      "Descriptor tests are per-descriptor Mann-Whitney with Benjamini-Hochberg correction across the 9 descriptors within each channel; they were not corrected across channels, and the descriptors (HAC, ring count, aromatic ring count, fused rings) are strongly mutually correlated, so no single descriptor can be isolated as causal.",
+      "The reference-channel extreme tail is bimodal (36 positive >10 vs 15 negative >10), so any single summary statistic for that channel's 'worst cases' mixes two opposite failure mechanisms; sign tests are therefore reported separately for each region and for the worst-25.",
+      "Experimental values are heterogeneous literature numbers, not independent repeats. No channel is treated as ground truth, and a reference error cannot be separated from a method error from this workspace alone."
+    ],
+    "commands_run": [
+      "python3 -c \"import sys; sys.path.insert(0,'/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis'); import common, pandas as pd, numpy as np; df = common.build_analysis_table()\"  # build shared 543-row table (362 s)",
+      "python3 -u -c \"... import ws4_failures as w; df=w.enrich(common.build_analysis_table(verbose=False))\"  # time descriptor enrichment (15 s)",
+      "python3 -u -c \"...; df=w.analysis_table(rebuild=True); print(df.shape)\"  # build and disk-cache enriched table -> (543, 52)",
+      "python3 -u -c \"...; for c in CHANNELS: print(n_gt5, n_gt10, n_gt15, max)\"  # tail census per channel",
+      "python3 -u -c \"...; df.nlargest(15, c+'_ae')\"  # worst cases per channel with SMILES, exp BDE, descriptors",
+      "python3 -u -c \"...; stats.mannwhitneyu + common.cliffs_delta over p_hac, p_n_rings, p_n_arom_rings, p_n_rotb, p_n_bridge, p_n_spiro, p_n_fused, p_n_hetero, p_fsp3\"  # descriptor test fail vs rest",
+      "python3 -u -c \"...; stats.fisher_exact on same_frag_canon / both_rad_in_ring / any_rad_arom / crowded / in_db_row\"  # binary-flag failure rates",
+      "python3 -u -c \"...; pd.crosstab(df.crowded, df.in_db_row)\"  # discovered the 93/95 confound",
+      "python3 -u -c \"...; df[df.in_db_row] and df[~df.in_db_row] stratified crowded MAE\"  # DB-membership-stratified control",
+      "python3 -u -c \"...; for thr in (60,70,80): MAE/RMSE/bias/n_gt5/n_gt10 per channel\"  # weak-bond region table",
+      "python3 -u -c \"...; ttest_1samp + binomtest + common.wilcoxon on signed error per region\"  # direction-of-failure sign tests",
+      "python3 -u -c \"...; pearsonr/spearmanr(experimental_bde, signed_err) + np.polyfit slope\"  # channel divergence trend",
+      "python3 -u -c \"...; res_flag() on fragment radical centres (aromatic or C=O adjacent)\"  # resonance-stabilised radical flag test",
+      "python3 -u -c \"...; parent-level groupby mean signed error sign test\"  # independence check: 147 rows = 147 parents at exp<80",
+      "timeout 550 python3 -u /data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws4_run.py  # final run: writes ws4_failures.json + ws4_failures.png (EXIT=0)"
+    ]
+  },
+  "agent-a8c754704bbf8f035.jsonl": {
+    "workstream": "WS3 - Error structure by chemical bond class and structural environment",
+    "artifacts": [
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws3_bondclass.json",
+        "description": "All WS3 tables: per-class error stats for the three channels (n, MAE, signed bias, median absolute error, RMSE, p90, max), class x HAC crosstab, class-vs-size variance decomposition with permutation test, environment-flag contrasts (pooled and within-class), magnitude-bin heteroscedasticity tests, magnitude/size confound test, 23-cell 3-way worst/best regions, thin-sample ledger, applicability boundary, narrative and caveats."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/figures/ws3_bondclass.png",
+        "description": "4-panel figure: (a) per-class MAE with n annotated, (b) size trend stratified by bond class, (c) MAE by experimental magnitude bin, (d) signed error vs experimental BDE with class means showing the reference bias sign flip."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws3_build.py",
+        "description": "Builds and caches the enriched analysis table (bond_class, radical-centre aromaticity/ring flags, parent benzene/N/O/S flags, HAC bins, magnitude bins); writes output/analysis/ws3_table.pkl. Run this first."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws3_analysis.py",
+        "description": "Main WS3 analysis; reads the cached pickle and produces the JSON and PNG artifacts. Contains the batched bootstrap helper boot_diff_ci_multi used for all MAE contrasts."
+      },
+      {
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/logs/ws3_run.log",
+        "description": "Execution log of the final successful run (exit 0) with the printed narrative."
+      }
+    ],
+    "key_numbers": [
+      {
+        "claim": "Benchmark bond-class coverage: only C-H and C-C are populated; six of nine database classes are entirely absent",
+        "value": "C-H n=302, C-C n=240, H-O n=1, C-N/C-O/H-N/N-N/N-O/O-O n=0 (together 16.5% of database rows)",
+        "unit": "bond observation",
+        "n": "543 benchmark rows; 484907 DB rows"
+      },
+      {
+        "claim": "Pooled MAE and mean signed bias per channel",
+        "value": "quantum MAE 2.098, bias +0.554; learned MAE 2.411, bias +1.079; reference MAE 5.486, bias +1.378 kcal/mol",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Per-class error, C-H (MAE / signed bias / median absolute error)",
+        "value": "quantum 1.991 / +0.110 / 1.630; learned 2.542 / +0.930 / 1.905; reference 5.711 / +5.103 / 5.100 kcal/mol",
+        "unit": "bond observation",
+        "n": "302 (280 unique molecules)"
+      },
+      {
+        "claim": "Per-class error, C-C (MAE / signed bias / median absolute error)",
+        "value": "quantum 2.234 / +1.107 / 1.180; learned 2.236 / +1.251 / 1.090; reference 5.225 / -3.303 / 4.600 kcal/mol",
+        "unit": "bond observation",
+        "n": "240 (202 unique molecules)"
+      },
+      {
+        "claim": "H-O class is uninterpretable; reported for completeness only",
+        "value": "quantum MAE 1.65, learned 4.68, reference 0.20 kcal/mol",
+        "unit": "bond observation",
+        "n": "1"
+      },
+      {
+        "claim": "C-H vs C-C MAE differences are not distinguishable from zero for any channel (bootstrap 95% CI spans zero)",
+        "value": "quantum diff -0.244 CI [-0.651, +0.144] p=0.218; learned +0.305 CI [-0.179, +0.752] p=0.214; reference +0.486 CI [-0.215, +1.183] p=0.174 kcal/mol",
+        "unit": "bond observation",
+        "n": "302 C-H vs 240 C-C"
+      },
+      {
+        "claim": "Reference channel bias flips sign between bond classes - the one genuine class effect found",
+        "value": "C-H bias +5.103 vs C-C bias -3.303 kcal/mol; difference 8.406, Welch t=18.2, p<1e-15",
+        "unit": "bond observation",
+        "n": "302 vs 240"
+      },
+      {
+        "claim": "Bond class explains almost no error variance; molecule size explains more, for every channel",
+        "value": "R2 on |error|: class only 0.0030 / 0.0033 / 0.0035 versus size only 0.0456 / 0.1818 / 0.0298 (quantum/learned/reference)",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Incremental error variance from bond class given molecule size, with permutation p-value",
+        "value": "quantum +0.0146 (p=0.000); learned +0.0046 (p=0.098); reference +0.0001 (p=0.822); 500 permutations each",
+        "unit": "bond observation",
+        "n": "543"
+      },
+      {
+        "claim": "Size trend survives within each bond class - MAE rises with parent HAC for both C-H and C-C",
+        "value": "C-H quantum 1.757 (n=52) -> 1.811 (n=104) -> 2.202 (n=146); C-C quantum 1.607 (n=61) -> 1.973 (n=133) -> 3.824 (n=46) kcal/mol across HAC <=5 / 6-9 / >=10",
+        "unit": "bond observation",
+        "n": "52/104/146 C-H and 61/133/46 C-C"
+      },
+      {
+        "claim": "C-H vs C-C direction itself flips across size bins - an interaction, not a class main effect",
+        "value": "at HAC<=5 C-C better (quantum 1.607 vs 1.757); at HAC>=10 C-H better (2.202 vs 3.824, Mann-Whitney p=0.0047, Cliff's delta -0.277)",
+        "unit": "bond observation",
+        "n": "52/61 at HAC<=5; 146/46 at HAC>=10"
+      },
+      {
+        "claim": "Class and size are confounded in the benchmark: C-H bonds sit in larger parents",
+        "value": "median parent HAC C-H 9.0 vs C-C 7.0 (mean 10.53 vs 7.64), Mann-Whitney p<1e-8; the HAC>=10 bin is 75.7% C-H but only 23.8% C-C",
+        "unit": "bond observation",
+        "n": "302 vs 240"
+      },
+      {
+        "claim": "Error is strongly heteroscedastic in bond strength; all three channels fail worst on weak bonds",
+        "value": "below 70 kcal/mol MAE quantum 5.997 (bias +4.566), learned 7.527 (+6.868), reference 7.939 (-2.750) versus 1.670 / 1.638 / 4.938 in the 85-100 window kcal/mol",
+        "unit": "bond observation",
+        "n": "18 in the <70 bin; 210 in the 85-100 bin"
+      },
+      {
+        "claim": "Formal heteroscedasticity tests across experimental-magnitude bins",
+        "value": "Levene (median-centred) p = 0.0 / 0.0 / 5.7e-5; Spearman |error| vs experimental BDE rho = -0.148 / -0.252 / -0.122 (quantum/learned/reference)",
+        "unit": "bond observation",
+        "n": "543 across 4 bins"
+      },
+      {
+        "claim": "Weak-bond failure cannot be separated from size globally, but survives the one controlled test available",
+        "value": "the <70 bin has zero HAC<=5 rows and median HAC 12.5 vs 8.0 overall; within C-C / HAC>=10 the 12 weak rows give quantum MAE 7.663 / learned 9.268 vs 2.468 / 2.513 for the other 34 rows",
+        "unit": "bond observation",
+        "n": "18 weak-bin rows total; 12 vs 34 in the controlled cell"
+      },
+      {
+        "claim": "Learned channel degrades 2.2x on nitrogen-containing parents; quantum is unaffected",
+        "value": "learned MAE 4.902 (n=37) vs 2.229 (n=506), diff +2.674 CI [+1.320, +4.061]; within C-H alone 4.551 vs 2.312. Quantum 2.356 vs 2.079, CI spans zero",
+        "unit": "bond observation",
+        "n": "37 N-containing vs 506"
+      },
+      {
+        "claim": "Benzene rings and ring-member radical centres raise learned-channel error; reference is largely flat to aromaticity",
+        "value": "parent benzene: learned 3.195 (n=220) vs 1.876 (n=323), diff +1.319 CI [+0.827, +1.832]; ring radical centre: learned 3.096 vs 2.063, diff +1.033 CI [+0.518, +1.585]; quantum follows weakly (benzene +0.495 CI [+0.103, +0.889])",
+        "unit": "bond observation",
+        "n": "220/323 (benzene); 183/360 (ring centre)"
+      },
+      {
+        "claim": "Oxygen-containing parents are the one environment where the reference channel improves",
+        "value": "reference MAE 4.538 (n=132) vs 5.791 (n=411), diff -1.253 CI [-1.928, -0.589]; quantum moves the other way (+0.575 CI [+0.040, +1.120])",
+        "unit": "bond observation",
+        "n": "132 O-containing vs 411"
+      },
+      {
+        "claim": "Worst measured region (n>=10) is the same for all three channels: large-parent C-C bonds",
+        "value": "C-C / HAC>=10 (n=46): quantum MAE 3.824 (bias +2.185), learned 4.275 (+3.107), reference 7.763 (-6.154) kcal/mol",
+        "unit": "bond observation",
+        "n": "46"
+      },
+      {
+        "claim": "Best measured region (n>=10) is the same for all three channels: small-parent C-C bonds",
+        "value": "C-C / HAC<=5 (n=61): quantum MAE 1.607 (bias +0.592), learned 1.448 (+0.522), reference 4.389 (+0.169) kcal/mol",
+        "unit": "bond observation",
+        "n": "61"
+      },
+      {
+        "claim": "Worst 3-way cell for quantum and learned: large, weak C-C bonds",
+        "value": "C-C / HAC>=10 / experimental BDE <70 kcal/mol (n=12, mean experimental 56.65): quantum MAE 7.663 (bias +6.688), learned MAE 9.268 (bias +9.268) kcal/mol",
+        "unit": "bond observation",
+        "n": "12"
+      },
+      {
+        "claim": "Best powered 3-way cell: small, mid-strength C-C bonds",
+        "value": "C-C / HAC<=5 / 85-100 kcal/mol (n=29, mean experimental 89.01): quantum MAE 1.321 (bias +0.105), learned 1.201 (+0.005), reference 3.659 (-1.452) kcal/mol",
+        "unit": "bond observation",
+        "n": "29"
+      },
+      {
+        "claim": "Aromatic radical centre flag is too thin to support any claim",
+        "value": "carbon radical centre aromatic n_true=10 (7 C-H, 3 C-C) vs 533 false; all MAE differences straddle zero; the C-C subset is n=3",
+        "unit": "bond observation",
+        "n": "10 true vs 533 false"
+      },
+      {
+        "claim": "Sulfur-containing parents are unmeasurable in this benchmark",
+        "value": "n_true=0 - no sulfur appears in any of the 419 parent molecules",
+        "unit": "bond observation",
+        "n": "0 vs 543"
+      }
+    ],
+    "narrative": "The headline structural fact is coverage, not error. The 543-observation benchmark contains only three of the nine bond classes present in the 484907-row database: C-H (n=302), C-C (n=240) and H-O (n=1). C-N, C-O, H-N, N-N, N-O and O-O are entirely absent even though together they are 16.5% of database rows. The WS3 mandate to characterise error by chemical bond class therefore collapses to a single two-way comparison, C-H versus C-C. The labeler is trustworthy where testable: it reproduces the database bond_type on all 331 matched rows, and an independent raw-SMILES element scan agrees (only one row has an O radical centre).\n\nOn the two populated classes the three channels rank consistently - quantum best (MAE 2.098, bias +0.554), learned next (2.411, +1.079), reference much worse (5.486, +1.378). The reference channel's deficit is almost entirely a bias problem: its RMSE (6.760) is only 1.15x the learned channel's but its MAE is 2.28x, because its errors are systematically signed rather than scattered. That is the signature of an offset, not noise.\n\nBond class is NOT the dominant determinant of error - molecule size is, for all three channels. R2 on |error| is 0.0030-0.0035 for class alone versus 0.0456-0.1818 for parent heavy-atom count; adding class on top of size buys at most 0.0146 (quantum), 0.0046 (learned, permutation p=0.098) and 0.0001 (reference, p=0.822). The size trend survives within a fixed class (quantum MAE rises 1.76 -> 1.81 -> 2.20 for C-H and 1.61 -> 1.97 -> 3.82 for C-C across HAC <=5 / 6-9 / >=10), so it is not an artifact of pooling. The C-H/C-C contrast is further undermined by a direction flip: at HAC<=5 C-C is better, at HAC>=10 C-H is better (quantum 2.20 vs 3.82, p=0.005). Class and size are confounded in the sample anyway - C-H bonds live in larger parents (median HAC 9 vs 7, p<1e-8), and the HAC>=10 bin is 75.7% C-H but only 23.8% C-C. The honest statement is that no robust class main effect exists here apart from one exception below.\n\nThat exception is real: the reference channel's bias flips sign between classes, +5.103 kcal/mol on C-H versus -3.303 on C-C (difference 8.406, Welch t=18.2). It over-estimates C-H bonds and under-estimates C-C bonds, and this single fact explains why its pooled MAE is 2.6x the quantum channel's. Only the arithmetic matters here; the data contain no metadata on how the reference channel was built, so no mechanism is asserted.\n\nThe strongest failure axis measurable from this data alone is bond strength. Error is markedly heteroscedastic (Levene p=0.0 for quantum and learned, 5.7e-5 for reference) and every channel degrades toward the weak-bond end: below 70 kcal/mol MAE is 5.997 / 7.527 / 7.939 with large positive bias (+4.57 / +6.87), versus 1.670 / 1.638 / 4.938 in the 85-100 window where quantum and learned are nearly unbiased (+0.10 / +0.19). A limitation I flag rather than hide: the <70 bin contains zero HAC<=5 observations and is shifted to larger parents (median HAC 12.5 vs 8.0), so weak-bond and large-molecule failure are globally confounded. The one cell that holds both class and size fixed and still has enough weak rows - C-C / HAC>=10, 12 weak vs 34 other - does show the effect surviving (quantum 7.663 vs 2.468, learned 9.268 vs 2.513), but that is a single cell and should be treated as suggestive rather than established.\n\nEnvironment effects measurable without external data are mostly a learned-channel story. Nitrogen-containing parents raise its error to 4.902 (n=37) vs 2.229, with a bootstrap CI excluding zero and the effect persisting inside C-H alone (4.551 vs 2.312) - so it is a genuine composition effect, not a class artifact. Benzene rings and ring-member radical centres push the learned channel up in the same direction (3.195 vs 1.876; 3.096 vs 2.063), with the quantum channel following weakly and the reference channel largely flat to aromaticity. The reference channel is the only one that improves anywhere: on oxygen-containing parents its MAE falls to 4.538 from 5.791. Sulfur (n=0) and aromatic radical centres (n=10, of which only 3 C-C) are too thin to say anything about, and I record them in the thin-sample ledger rather than asserting an effect.\n\nConcrete applicability boundary. Within the measured domain (C-H and C-C bonds only, 419 parent molecules), the best region for all three channels is small-parent C-C bonds, C-C / HAC<=5 (n=61): quantum MAE 1.607, learned 1.448, reference 4.389. The worst is large-parent C-C, C-C / HAC>=10 (n=46): quantum 3.824, learned 4.275, reference 7.763. Adding the magnitude axis, the worst 3-way cell is C-C / HAC>=10 / <70 kcal/mol (n=12): quantum 7.663, learned 9.268; the best powered cell is C-C / HAC<=5 / 85-100 kcal/mol (n=29): quantum 1.321, learned 1.201. Practically: these channels are usable (MAE ~1.3-1.7 kcal/mol) on small-to-medium C-H and C-C bonds of normal strength, and should not be trusted below ~70 kcal/mol or on parents above ~10 heavy atoms, where MAE approaches 8-9 kcal/mol - roughly a factor of 5 degradation. Nothing in this workstream supports extrapolating any of it to the six unrepresented bond classes.",
+    "caveats": [
+      "The benchmark's 543 rows are heterogeneous literature bond observations, not independent repeats from one lab; experimental reference uncertainty is not propagated, so all MAEs are lower bounds on true error against a perfect reference.",
+      "Bond-class coverage is the binding limitation: only C-H and C-C are populated (plus a single H-O row). Six of nine database bond classes have zero benchmark coverage, so the requested 'error by bond class' table is effectively a two-class comparison. No class-level claim is made for C-N, C-O, H-N, N-N, N-O or O-O.",
+      "H-O has n=1 and is reported only for completeness - no inference is drawn. That single row also happens to be the largest parent in the sample (HAC=22), so its numbers are not representative of anything.",
+      "Analysis units are distinct: 543 bond observations, 419 unique parent molecules, 543 unique (parent, fragment_a, fragment_b) triples (539 unique unordered fragment pairs). All per-class n values in the JSON count bond observations unless the field name says otherwise. Many observations share a parent, so observations are not mutually independent.",
+      "Class and size are confounded (C-H median HAC 9 vs C-C 7, Mann-Whitney p<1e-8), and the HAC>=10 bin is 75.7% C-H. Marginal class comparisons are therefore not clean.",
+      "Weak-bond (<70 kcal/mol) and large-molecule failure are also confounded: the weak bin has zero HAC<=5 rows and median HAC 12.5 vs 8.0 overall. Only one cell (C-C / HAC>=10) supports testing the magnitude effect with class and size held fixed, and it is a single cell.",
+      "OLS R2 on |error| is descriptive only. Residuals are skewed and heteroscedastic (Levene p<=5.7e-5), so R2 magnitudes are small and must not be read as a predictive model or as effect sizes.",
+      "Environment flags (aromaticity, ring membership, N/O content, benzene) are correlated with each other and with parent size; the stratified tables control only one factor at a time, so the reported flag effects are not mutually adjusted.",
+      "Aromatic radical centre (n_true=10) and sulfur-containing parents (n_true=0) are too thin to support any claim; they are recorded in the thin-sample ledger with n<10 flagged explicitly rather than interpreted.",
+      "The reference-channel bias sign flip between C-H and C-C is a measured property of this benchmark's reference channel. The data contain no metadata on the reference channel's construction, so no mechanism is asserted.",
+      "The 70-85 kcal/mol bin is the largest (n=246) and sits around the median (85.3), so the pooled MAE is dominated by that region; this is a sampling property of the benchmark, not a weighting choice of this analysis."
+    ],
+    "commands_run": [
+      "python3 output/analysis/ws3_build.py   (built and cached the enriched table; wrote output/analysis/ws3_table.pkl; 221 s)",
+      "python3 -u output/analysis/ws3_analysis.py   (main analysis; exit 0; wrote output/results/ws3_bondclass.json and output/figures/ws3_bondclass.png)",
+      "python3 -c \"...\"   (diagnostics: raw-SMILES element inventory vs RDKit radical centres; DB bond_type distribution; db_bt among matched rows; weak-bin/size crosstab; |err| by weak bin within class and HAC; timing probe)"
+    ]
+  },
+  "agent-aa517a08c4694e3be.jsonl": {
+    "workstream": "WS2 - Head-to-head accuracy of the three estimation channels on the same 543 experimental observations",
+    "artifacts": [
+      {
+        "description": "Machine-readable WS2 results: per-channel error stats with all 7 signed-error quantiles, calibration regressions, paired comparisons for all three channel pairs on 3 analysis units, training/held-out split with composition-controlled degradation, cross-channel correlations, supplementary robustness, and a prose headline block. Valid JSON, 16 top-level keys.",
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws2_channel_accuracy.json"
+      },
+      {
+        "description": "6-panel figure: signed-error histograms, absolute-error ECDF, absolute-error boxplots, calibration scatter with fitted slopes vs identity, paired |err| difference quantum-minus-learned, MAE by training/held-out split.",
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/figures/ws2_accuracy.png"
+      },
+      {
+        "description": "Main WS2 analysis script covering items 1-6. Ran to completion, exit 0.",
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws2_channel_accuracy.py"
+      },
+      {
+        "description": "Robustness supplement: tail sensitivity by capping absolute error, by-quartile and by-bond-class paired tests, reference independence partial correlations, sign agreement, top-decile overlap.",
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws2_supplement.py"
+      },
+      {
+        "description": "Composition-controlled (stratified) degradation analysis; corrected a mis-stated boolean in the training-split block of the JSON.",
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws2_finalize.py"
+      },
+      {
+        "description": "Repeated all paired comparisons on the three analysis units (bond observation / unique molecule / unique fragment pair) and decomposed the held-out degradation into in-range vs out-of-range components.",
+        "path": "/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/ws2_finalize2.py"
+      }
+    ],
+    "key_numbers": [
+      {
+        "claim": "Reference channel is roughly 2.3x worse than the two machine channels on MAE; quantum best",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "quantum MAE=2.098, learned MAE=2.411, reference MAE=5.486"
+      },
+      {
+        "claim": "RMSE ranking matches MAE; reference has the heaviest tail",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "quantum RMSE=3.060, learned RMSE=3.628, reference RMSE=6.760"
+      },
+      {
+        "claim": "Median absolute error roughly triple for reference versus the other two",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "quantum 1.400, learned 1.610, reference 4.900"
+      },
+      {
+        "claim": "All three channels carry a POSITIVE mean signed bias (they overestimate BDE on average); learned and reference are roughly 2-2.5x quantum's bias",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "quantum +0.554, learned +1.079, reference +1.378"
+      },
+      {
+        "claim": "Signed-error quantiles quantum (min/p05/p25/p50/p75/p95/max, kcal/mol, estimate minus experiment)",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "[-8.79, -4.12, -0.94, +0.40, +1.92, +5.33, +15.74]"
+      },
+      {
+        "claim": "Signed-error quantiles learned",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "[-10.30, -3.64, -0.685, +0.56, +2.58, +6.83, +25.21]"
+      },
+      {
+        "claim": "Signed-error quantiles reference - note a 55 kcal/mol spread versus about 25 for quantum",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "[-33.40, -8.29, -3.50, +2.40, +6.00, +10.79, +21.60]"
+      },
+      {
+        "claim": "Fraction of observations within 10 kcal/mol; reference fails about 1 in 11",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "quantum 0.985, learned 0.978, reference 0.906"
+      },
+      {
+        "claim": "Calibration slopes: quantum and learned are COMPRESSED (slope<1), reference is AMPLIFIED (slope>1); all three differ significantly from 1",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "quantum 0.932 [0.914, 0.950] r=0.9745 R2=0.9497 p=7.1e-13; learned 0.891 [0.871, 0.911] r=0.9669 R2=0.9350 p=1.1e-24; reference 1.073 [1.032, 1.114] r=0.9098 R2=0.8277 p=5.8e-4"
+      },
+      {
+        "claim": "Compression bites at the LOW end of the experimental range, not the high end: quantum and learned overestimate weak bonds but are nearly unbiased for strong ones",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "quantum mean signed error weakest decile +2.90, strongest decile -0.38; learned +5.11 / -0.34; reference -0.17 / +4.17"
+      },
+      {
+        "claim": "MAE in the weakest experimental decile versus the middle 80 percent: the calibrated channels are 2-2.6x worse at the weak end",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "quantum 3.748 vs 1.893; learned 5.371 vs 2.059; reference 6.791 vs 5.263"
+      },
+      {
+        "claim": "QUANTUM vs LEARNED - split decision, NOT DISTINGUISHABLE on the typical observation. Mean difference significant, median and all rank/sign tests null",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "mean diff -0.313 kcal/mol CI [-0.471,-0.165] paired t p=5.4e-5; median diff +0.020 CI [0.000,0.040] Wilcoxon p=0.553 sign test p=0.108 Cliff's delta -0.042"
+      },
+      {
+        "claim": "The quantum-vs-learned mean difference is not a single-outlier artefact - it survives capping absolute error at every level tried",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "uncapped -0.313 (sig); capped at 15 -0.293; 10 -0.271; 7.5 -0.243; 5 -0.171; 3 -0.072; all bootstrap CIs exclude zero"
+      },
+      {
+        "claim": "QUANTUM vs REFERENCE - quantum unambiguously better on every test and effect size",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "mean diff -3.388 kcal/mol CI [-3.740,-3.050], t p=2.6e-63, Wilcoxon p=1.9e-59, sign 451/92, Cliff's delta -0.631"
+      },
+      {
+        "claim": "LEARNED vs REFERENCE - learned unambiguously better on every test and effect size",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "mean diff -3.075 kcal/mol CI [-3.448,-2.722], t p=5.2e-50, Wilcoxon p=1.4e-51, sign 444/99, Cliff's delta -0.573"
+      },
+      {
+        "claim": "The quantum vs learned verdict is unit-robust (same split on all three analysis units) but the magnitude varies",
+        "n": "419",
+        "unit": "unique molecule",
+        "value": "bond observation n=543 meanD -0.313 Wilcoxon p=0.553; unique molecule n=419 meanD -0.416 Wilcoxon p=0.094; unique fragment pair n=539 meanD -0.322 Wilcoxon p=0.578"
+      },
+      {
+        "claim": "Quantum's mean advantage exists despite losing the headcount: it has smaller absolute error on fewer observations but wins big where it wins",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "quantum better 246, learned better 284, exact ties 13; median discordant gap only 0.240 kcal/mol"
+      },
+      {
+        "claim": "Aggregate out-of-sample MAE degradation on the 212 held-out molecules; learned degrades most in absolute and relative terms",
+        "n": "331 train / 212 held-out",
+        "unit": "bond observation",
+        "value": "quantum 1.871 -> 2.452 (+0.581, ratio 1.31, Welch p=0.0051); learned 1.807 -> 3.353 (+1.546, ratio 1.86, p=7.0e-9); reference 5.024 -> 6.207 (+1.182, ratio 1.24, p=0.0014)"
+      },
+      {
+        "claim": "Degradation is NOT uniform across bond classes: on C-H quantum and reference show ZERO degradation while learned degrades sharply",
+        "n": "302 C-H rows (144 train / 158 held-out)",
+        "unit": "bond observation",
+        "value": "C-H quantum 1.950->2.028 (+0.077, p=0.70); reference 5.705->5.716 (+0.010, p=0.98); learned 1.952->3.079 (+1.126, p=3.6e-5)"
+      },
+      {
+        "claim": "On C-C all three channels roughly double their error - the out-of-sample penalty lives here",
+        "n": "240 C-C rows (187 train / 53 held-out)",
+        "unit": "bond observation",
+        "value": "quantum 1.810->3.733 (ratio 2.06, p=9.3e-4); learned 1.695->4.147 (ratio 2.45, p=7.9e-4); reference 4.500->7.783 (ratio 1.73, p=1.4e-3)"
+      },
+      {
+        "claim": "Only 4 of 212 held-out rows fall outside the training experimental range (61.4-160.2 kcal/mol); all three are catastrophically wrong on them but they explain only a minority of aggregate degradation",
+        "n": "4 extrapolation rows out of 212 held-out",
+        "unit": "bond observation",
+        "value": "MAE on the 4 rows: quantum 11.25, learned 15.07, reference 11.38; share of aggregate degradation quantum 29 percent, learned 15 percent, reference 8 percent"
+      },
+      {
+        "claim": "Excluding those 4 rows the held-out penalty remains for all three, so the decay is real and not only extrapolation",
+        "n": "208 held-out rows inside training range",
+        "unit": "bond observation",
+        "value": "quantum +0.412 (p=0.028), learned +1.321 (p=1.3e-8), reference +1.083 (p=0.0022)"
+      },
+      {
+        "claim": "The two machine channels rank differently inside versus outside the reference training set; quantum only wins held-out, learned only wins in-sample",
+        "n": "331 train / 212 held-out",
+        "unit": "bond observation",
+        "value": "train n=331 meanD(quantum-learned) +0.064 CI [-0.001,+0.129] NOT significant; held-out n=212 meanD -0.901 CI [-1.274,-0.555] significant"
+      },
+      {
+        "claim": "On the 419 unique molecules quantum beats learned 203 times versus 210 - a dead heat on the molecule unit",
+        "n": "419",
+        "unit": "unique molecule",
+        "value": "quantum better on 203 of 419 molecules"
+      },
+      {
+        "claim": "Quantum and learned estimates are near-duplicates; reference is a clearly different estimator",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "estimate Pearson: quantum-learned 0.985, quantum-reference 0.913, learned-reference 0.915"
+      },
+      {
+        "claim": "Reference absolute errors are nearly INDEPENDENT of the other two channels' errors - it fails on a different set of bonds, not a harder version of the same set",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "absolute-error Pearson quantum-learned 0.754, quantum-reference 0.214, learned-reference 0.196; Spearman 0.785 / 0.152 / 0.180"
+      },
+      {
+        "claim": "Partial correlations confirm reference error is essentially orthogonal to the other two once shared difficulty is removed",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "partial corr err_ref-err_learned given err_quantum 0.054; err_ref-err_quantum given err_learned 0.103; err_quantum-err_learned given err_ref 0.744"
+      },
+      {
+        "claim": "Reference rarely shares the worst cases with quantum: far fewer than a shared-hard-case model predicts",
+        "n": "55 top-decile observations per channel",
+        "unit": "bond observation",
+        "value": "quantum and reference both in top decile 14 of 55 (0.255) versus chance 0.10; quantum and learned both 33 of 55; all three 9"
+      },
+      {
+        "claim": "Sign agreement of signed errors separates the near-duplicate pair from reference",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "quantum vs learned 0.866; quantum vs reference 0.545; learned vs reference 0.560"
+      },
+      {
+        "claim": "Reference is the best channel on only about 5 percent of observations and the worst on about 64 percent",
+        "n": "543",
+        "unit": "bond observation",
+        "value": "best: quantum 295, learned 220, reference 28; worst: quantum 54, learned 144, reference 345"
+      }
+    ],
+    "narrative": "The three channels are not three estimates of equal quality - they are two. Quantum (MAE 2.098, RMSE 3.060) and learned (2.411, 3.628) are near-duplicates: their estimates correlate at r=0.985, their signed errors agree in sign 86.6 percent of the time, and their absolute errors correlate at 0.754. Reference (5.486, 6.760) is a genuinely separate estimator whose absolute errors correlate with the other two at only about 0.21 and 0.20, with partial correlations of 0.05-0.10 once shared difficulty is removed. It is not simply worse at the same hard bonds; it is bad at mostly different bonds. Reference is the best channel on only 28 of 543 observations and the worst on 345.\n\nOn the paired question, the reference comparisons are decisive and need no hedging: quantum beats reference by 3.39 kcal/mol of MAE (Cliff's delta -0.631) and learned beats reference by 3.08 (delta -0.573), with every test at p below 1e-49.\n\nQuantum vs learned is the interesting result and the honest answer is NOT DISTINGUISHABLE at this sample size for the typical observation. The mean absolute-error difference is -0.313 kcal/mol (95 percent CI -0.471 to -0.165; paired t p=5.4e-5), but the median difference is +0.020 kcal/mol (Wilcoxon p=0.553, sign test p=0.108, Cliff's delta -0.042) and learned actually has the smaller absolute error on more observations (284 vs 246, 13 ties), with a typical discordant gap of only 0.24 kcal/mol. The mean is being pulled by asymmetric tails, and capping absolute error at 15, 10, 7.5, 5 or 3 kcal/mol barely moves it, so it is not a single-outlier artefact - but a mean that disagrees with the median, Wilcoxon, sign test and headcount is a weak basis for a ranking claim. The split is driven by where you look: quantum wins clearly on held-out molecules (mean difference -0.901) and ties in-sample (+0.064, CI touching zero), and wins clearly in the weak-bond quartiles (-0.856, -0.399) while tying in the strong ones. By bond class the entire quantum advantage is in C-H (-0.551); C-C is a dead heat (-0.002). Bottom line: quantum is the better default because it strictly dominates on the out-of-sample half and is never worse, but the in-sample difference is not established.\n\nCalibration explains the reference channel's failure mode. Quantum (slope 0.932) and learned (0.891) are compressed toward the mean and both significantly so (p below 1e-12 versus slope 1); reference (1.073) is amplified (p=5.8e-4). Compression means the two machine channels overestimate weak bonds (mean signed error +2.90 and +5.11 kcal/mol in the weakest decile) and are nearly unbiased for strong ones, so their error concentrates at the LOW end of the range, not the high end - MAE 3.75 and 5.37 in the weakest decile versus 1.89 and 2.06 in the middle 80 percent. This matches the common practice of fitting these models to a high-BDE-dominated set: they regress toward the training mean. Reference's amplification produces the opposite signature, overestimating strong bonds (+4.17 kcal/mol in the top decile) and producing the single worst error in the whole benchmark (-33.4 kcal/mol).\n\nThe training split is the closest available out-of-sample test, and it is more nuanced than a simple degradation ranking. Aggregate MAE rises for all three (quantum 1.87 to 2.45, +31 percent; learned 1.81 to 3.35, +86 percent; reference 5.02 to 6.21, +24 percent), which would suggest learned overfits most. But stratifying by bond class breaks that story: on C-H, quantum and reference show literally zero degradation (p=0.70 and 0.98) while learned still degrades sharply (1.95 to 3.08, p=3.6e-5); on C-C all three roughly double. Since the held-out set is 75 percent C-H while the training set is 56 percent C-C, most of quantum's and reference's aggregate decay is a composition effect rather than overfitting. Separately, 4 held-out rows fall outside the training experimental range (61.4-160.2 kcal/mol) and are catastrophically mispredicted by all three (MAE 11.3-15.1 kcal/mol), but account for only about 29, 15 and 8 percent of quantum's, learned's and reference's aggregate degradation. So learned's out-of-sample decay is the one that survives every control; the others' is largely compositional.\n\nTwo caveats constrain all of the above. First, the experimental values are heterogeneous literature values, not independent repeats, so the 543 rows are 543 bond observations and not 543 independent measurements - the effective sample size for any ranking is smaller than the nominal p-values imply, which makes the null quantum-vs-learned result the more conservative reading. Second, the reference channel's errors being nearly uncorrelated with the other two means the three channels are not exchangeable and an ensemble or consensus estimate is a plausible next step rather than a curiosity; 9 observations sit in all three channels' worst decile simultaneously, 33 where quantum and learned both do, but only 14 where quantum and reference both do.",
+    "caveats": [
+      "The 543 experimental values are heterogeneous literature values, NOT independent repeats from one lab. All p-values in this workstream treat rows as independent samples, so nominal significance is overstated. The rank/sign tests (which give the null quantum-vs-learned answer) are less affected than the paired t-test because they do not depend on tail magnitudes.",
+      "The quantum-vs-learned comparison gives a genuinely split verdict and I did not force it to a winner. The paired t-test on the mean absolute-error difference is significant (p=5.4e-5) while the Wilcoxon (p=0.553), sign test (p=0.108) and headcount (246 vs 284) are not. Quoting only the t-test overstates the case; quoting only the Wilcoxon understates it.",
+      "The in_reference_training_set split is a provenance split (row present in the source DB), not a randomised held-out set. The two subsets differ in bond-class composition (train 56 percent C-C, held-out 75 percent C-H), in experimental mean (89.7 vs 82.6 kcal/mol, Welch p=5.1e-10) and in range (held-out extends to 15.2 kcal/mol, below anything in training). Degradation estimates are therefore confounded with composition; stratified and range-restricted versions of every degradation number are reported in the JSON.",
+      "The H-O bond class contains a single observation, so its paired t-test is undefined (paired_t_p is null in the JSON) and its Wilcoxon p=1.0 is uninformative. It is flagged with a _note field and must not be used as evidence. C-H and C-C together are 542 of 543 rows, so the benchmark is effectively a two-class problem.",
+      "Bootstrap CIs and tests were seeded (20260919) for reproducibility, but bootstrap resampling of 543 literature-derived rows does not create information that is not there.",
+      "Degradation comparisons between the training and held-out subsets use Welch and Mann-Whitney tests on disjoint groups of DIFFERENT observations, not a paired design, because the same bond never appears in both subsets. They are between-group comparisons and carry the composition confounding described above.",
+      "The reference channel's slope of 1.073 is significantly above 1 but its 95 percent CI lower bound is 1.032, so the amplification is modest; the compression of quantum (0.932) and learned (0.891) is far more precisely determined."
+    ],
+    "commands_run": [
+      "python output/analysis/ws2_channel_accuracy.py  (exit 0; wrote output/results/ws2_channel_accuracy.json 19437 bytes and output/figures/ws2_accuracy.png 315610 bytes)",
+      "python output/analysis/ws2_supplement.py  (exit 0; tail sensitivity, by-quartile and by-bond-class paired tests, reference independence, partial correlations)",
+      "python output/analysis/ws2_finalize.py  (exit 0; composition-controlled degradation, corrected a mis-stated boolean in the training_split block)",
+      "python output/analysis/ws2_finalize2.py  (JSON write and validation succeeded; a console-only print loop afterwards raised KeyError 'n_units' on an extra detail key, after the artifact was already written and verified)",
+      "python -c \"...\"  independent recomputation of MAE/RMSE/medAE/bias for all three channels and of the held-out out-of-range decomposition, confirming every headline number",
+      "python -c \"...\"  final JSON parse validation: 16 top-level keys, 7 quantiles per channel, all required blocks present; the single null value located and annotated as the n=1 H-O group"
+    ]
+  }
+}

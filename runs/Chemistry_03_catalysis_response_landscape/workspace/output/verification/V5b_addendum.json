@@ -1,0 +1,205 @@
+{
+  "deming_orientation_check": {
+    "note": "lambda = var(err_y)/var(err_x); lam->0 gives Syy/Sxy, lam->inf gives Sxy/Sxx",
+    "Sxx": 2242.956066219512,
+    "Syy": 2139.4311976396793,
+    "Sxy": 2187.236134517103,
+    "Sxy_over_Sxx_OLS": 0.9751578140376487,
+    "Syy_over_Sxy_RMA": 0.9781436781685312,
+    "deming_lam_1e-12": 0.9781436781685281,
+    "deming_lam_1e12": 0.9751461976787866,
+    "deming_lam_1": 0.9766143112901082,
+    "limits_match_OLS_and_RMA": false
+  },
+  "attainable_slope_interval_over_ALL_noise_ratios": {
+    "min": 0.9751578131982032,
+    "max": 0.9781436781372275,
+    "interval": [
+      0.9751578140376487,
+      0.9781436781685312
+    ],
+    "monotone_decreasing_in_lambda": false,
+    "b_OLS": 0.9751578140376487,
+    "b_RMA": 0.9781436781685312,
+    "gap_between_OLS_and_RMA": 0.0029858641308825318,
+    "max_attainable_slope": 0.9781436781685312,
+    "max_attainable_below_1_by": 0.021856321831468795,
+    "headline": "No choice whatsoever of noise ratio can push the corrected slope above 0.97814; the EIV correction can move the slope by at most 0.00299."
+  },
+  "bootstrap_bounds_of_attainable_interval": {
+    "B": 20000,
+    "seed": 7,
+    "method": "nonparametric case resampling, max(b_OLS,b_RMA) per replicate",
+    "b_OLS_ci95": [
+      0.9544876717793406,
+      0.9957131247637238
+    ],
+    "b_RMA_ci95": [
+      0.9575225347112196,
+      0.998424930294016
+    ],
+    "upper_bound_stat_ci95": [
+      0.9575225347112196,
+      0.998424930294016
+    ],
+    "upper_bound_ci_excludes_1": true,
+    "upper_bound_ci_upper_endpoint": 0.998424930294016,
+    "frac_replicates_upper_bound_at_or_above_1": 0.01785,
+    "tls_lam1_ci95": [
+      0.9559611649422848,
+      0.9970737820185195
+    ],
+    "tls_lam1_ci_excludes_1": true,
+    "tls_lam1_frac_below_1": 0.9875
+  },
+  "fits_with_H0_slope_eq_1": {
+    "all_41_rows": {
+      "n": 41,
+      "slope": 0.9751578140376491,
+      "intercept": -0.0905398464247695,
+      "se_slope": 0.008640525771757963,
+      "ci95": [
+        0.9576807010147707,
+        0.9926349270605276
+      ],
+      "ci_excludes_1": true,
+      "t_vs_0": 112.85861992623255,
+      "p_vs_0": 1.1357157802034584e-50,
+      "t_vs_1": -2.875078047165711,
+      "df": 39,
+      "p_vs_1": 0.006511298957014809,
+      "p_vs_1_lt_0.05": true,
+      "r2": 0.9969474176467894
+    },
+    "lattice_8_rows": {
+      "n": 8,
+      "slope": 0.9615788341071428,
+      "intercept": 1.4739252464285606,
+      "se_slope": 0.013499689973628909,
+      "ci95": [
+        0.9285462827238872,
+        0.9946113854903985
+      ],
+      "ci_excludes_1": true,
+      "t_vs_0": 71.22969756976254,
+      "p_vs_0": 5.152165239651408e-10,
+      "t_vs_1": -2.8460776482949854,
+      "df": 6,
+      "p_vs_1": 0.02933211177326745,
+      "p_vs_1_lt_0.05": true,
+      "r2": 0.9988188208648437
+    },
+    "irregular_33_rows": {
+      "n": 33,
+      "slope": 0.9794389120478905,
+      "intercept": -0.510637015128046,
+      "se_slope": 0.009846430034082526,
+      "ci95": [
+        0.9593569855943778,
+        0.9995208385014032
+      ],
+      "ci_excludes_1": true,
+      "t_vs_0": 99.47147429653705,
+      "p_vs_0": 2.0882828353395953e-40,
+      "t_vs_1": -2.0881769210708034,
+      "df": 31,
+      "p_vs_1": 0.04508934491257535,
+      "p_vs_1_lt_0.05": true,
+      "r2": 0.9968767549988214
+    },
+    "all_40_excluding_idx19": {
+      "n": 40,
+      "slope": 0.9789546607670019,
+      "intercept": -0.030257407367826117,
+      "se_slope": 0.00860643502736297,
+      "ci95": [
+        0.9615318439255207,
+        0.996377477608483
+      ],
+      "ci_excludes_1": true,
+      "t_vs_0": 113.74682521329109,
+      "p_vs_0": 9.457849725565752e-50,
+      "t_vs_1": -2.445302749174004,
+      "df": 38,
+      "p_vs_1": 0.019218370200435177,
+      "p_vs_1_lt_0.05": true,
+      "r2": 0.9970715934324077
+    },
+    "all_39_excluding_idx19_20": {
+      "n": 39,
+      "slope": 0.9831586266520691,
+      "intercept": 0.03844128499328737,
+      "se_slope": 0.008525438592511788,
+      "ci95": [
+        0.9658844472319043,
+        1.000432806072234
+      ],
+      "ci_excludes_1": false,
+      "t_vs_0": 115.32059212949046,
+      "p_vs_0": 6.521282589241475e-49,
+      "t_vs_1": -1.9754260341190315,
+      "df": 37,
+      "p_vs_1": 0.05571473448376886,
+      "p_vs_1_lt_0.05": false,
+      "r2": 0.9972255213874627
+    }
+  },
+  "discordance_counts": {
+    "all_41_rows": {
+      "pairs": 820,
+      "concordant": 788,
+      "discordant": 32,
+      "tied": 0
+    },
+    "irregular_33_rows": {
+      "pairs": 528,
+      "concordant": 506,
+      "discordant": 22,
+      "tied": 0
+    },
+    "lattice_8_rows": {
+      "pairs": 28,
+      "concordant": 28,
+      "discordant": 0,
+      "tied": 0
+    },
+    "claim_22_of_528": {
+      "whole_file_would_be_820_pairs": true,
+      "irregular_subset_is_528_pairs": true,
+      "irregular_subset_discordant_equals_22": true,
+      "whole_file_discordant_equals_22": false,
+      "verdict": "reconciles as the 33 irregular rows only"
+    },
+    "spearman_from_irregular_concordance": 0.9166666666666666
+  },
+  "log_space_multiplicative_check": {
+    "n_pairs_used": 34,
+    "slope_OLS_in_logs": 0.9328294979369706,
+    "se": 0.04429657172967031,
+    "ci95": [
+      0.842600333979833,
+      1.0230586618941082
+    ],
+    "ci_excludes_1": false,
+    "p_vs_1": 0.13924035529328632,
+    "interpretation": "scale-free (multiplicative) compression: a power law y ~ x^0.98 fits better than slope 1"
+  },
+  "heteroscedasticity_absresid_on_absx": {
+    "slope": 0.010536492869794113,
+    "p": 0.1927312877402967,
+    "resid_sd_at_x0": 2.180085982149302,
+    "resid_sd_at_x80": 2.9476385241353933
+  },
+  "reverse_regression": {
+    "slope_x_on_y": 1.022344694669389,
+    "implied_y_on_x": 0.978143678168531,
+    "note": "1/(slope of x on y) is the lambda->0 Deming endpoint; both bracket OLS"
+  },
+  "ratio_check_same_sign_only": {
+    "n": 34,
+    "mean_ratio": 1.0218236032568617,
+    "p_ratio_eq_1": 0.7533791055669635,
+    "median_ratio": 0.9840923972579179,
+    "frac_below_1": 0.6470588235294118
+  }
+}

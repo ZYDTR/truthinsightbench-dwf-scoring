@@ -1,0 +1,294 @@
+{
+  "condition_ordering": {
+    "n_cells": 1000,
+    "frac_c3_gt_c2": 0.995,
+    "frac_c3_ge_c2": 0.995,
+    "n_violations": 5,
+    "violation_rows": [
+      {
+        "scenario_id": "high_variance",
+        "metric_id": "metric_117",
+        "condition_2": 0.396963123644252,
+        "condition_3": 0.3475
+      },
+      {
+        "scenario_id": "high_variance",
+        "metric_id": "metric_160",
+        "condition_2": 0.409090909090909,
+        "condition_3": 0.2925
+      },
+      {
+        "scenario_id": "high_variance",
+        "metric_id": "metric_185",
+        "condition_2": 0.371428571428571,
+        "condition_3": 0.33
+      },
+      {
+        "scenario_id": "high_variance",
+        "metric_id": "metric_367",
+        "condition_2": 0.272727272727273,
+        "condition_3": 0.17
+      },
+      {
+        "scenario_id": "small_sample",
+        "metric_id": "metric_160",
+        "condition_2": 0.6031746031746031,
+        "condition_3": 0.5725190839694656
+      }
+    ],
+    "global_min_c3": 0.1475,
+    "global_max_c2": 0.6633064516129032,
+    "global_ranges_overlap": true,
+    "per_scenario": {
+      "high_variance": {
+        "n": 400,
+        "frac_c3_gt_c2": 0.99,
+        "n_violations": 4,
+        "min_c3": 0.1475,
+        "max_c2": 0.464114832535885,
+        "max_c3": 0.843333333333333
+      },
+      "small_sample": {
+        "n": 600,
+        "frac_c3_gt_c2": 0.9983333333333333,
+        "n_violations": 1,
+        "min_c3": 0.4020356234096692,
+        "max_c2": 0.6633064516129032,
+        "max_c3": 0.9414225941422594
+      }
+    },
+    "interpretation": "Across both scenarios condition_3 exceeds condition_2 in 99.5% of cells, but the two ranges overlap and the predicate is not a hard invariant; its exception rate is itself structured by scenario, so the ordering must be reported with its exceptions rather than as a strict law."
+  },
+  "zero_structure": {
+    "high_variance": {
+      "n_c2_zero": 186,
+      "frac_c2_zero": 0.465,
+      "c3_mean_when_c2_zero": 0.48833565368359044,
+      "c3_min_when_c2_zero": 0.1475,
+      "c3_max_when_c2_zero": 0.821666666666667,
+      "frac_c3_zero": 0.0
+    },
+    "small_sample": {
+      "n_c2_zero": 83,
+      "frac_c2_zero": 0.13833333333333334,
+      "c3_mean_when_c2_zero": 0.7297707092193443,
+      "c3_min_when_c2_zero": 0.4113110539845758,
+      "c3_max_when_c2_zero": 0.9121338912133892,
+      "frac_c3_zero": 0.0
+    }
+  },
+  "violation_anatomy": {
+    "n_violations": 5,
+    "n_with_c3_zero_or_absent": 0,
+    "note": "No violation involves a zero in condition_3 or condition_2; all five are ordinary interior cells that happen to fall on the wrong side of the line."
+  },
+  "paired_scenario_effect": {
+    "n_shared_metric_ids": 400,
+    "conditions": {
+      "condition_2": {
+        "mean_high_variance": 0.07648354855936139,
+        "mean_small_sample": 0.06017721300093259,
+        "mean_paired_difference": 0.016306335558428798,
+        "median_high_variance": 0.0025286430361618,
+        "median_small_sample": 0.0193236714975845,
+        "wilcoxon_statistic": 32711.0,
+        "wilcoxon_p": 0.7336078314395156,
+        "paired_t": 2.073229522758513,
+        "paired_t_p": 0.03879220144163933,
+        "cliffs_delta_paired": -0.18750000000000006,
+        "frac_hv_lt_ss": 0.55
+      },
+      "condition_3": {
+        "mean_high_variance": 0.5656583706295362,
+        "mean_small_sample": 0.7570039583213961,
+        "mean_paired_difference": -0.19134558769185986,
+        "median_high_variance": 0.578125,
+        "median_small_sample": 0.7993902439024391,
+        "wilcoxon_statistic": 7854.0,
+        "wilcoxon_p": 3.785390032220266e-44,
+        "paired_t": -19.23615216381509,
+        "paired_t_p": 8.0785479202563e-59,
+        "cliffs_delta_paired": -0.69,
+        "frac_hv_lt_ss": 0.845
+      }
+    },
+    "interpretation": "The scenario change moves condition_3 downward almost everywhere (paired Cliff's delta strongly negative) while leaving condition_2 essentially unchanged in central tendency. The two conditions therefore respond to the scenario manipulation differently, which is what makes the condition_2 -> condition_3 relation scenario-dependent."
+  },
+  "condition_coupling": {
+    "all_metrics": {
+      "high_variance": {
+        "n": 400,
+        "n_c2_zero": 186,
+        "spearman": 0.45857206950755597,
+        "spearman_p": 3.408576300346025e-22,
+        "kendall_tau": 0.33098070982249417,
+        "kendall_p": 2.797114696036415e-20,
+        "spearman_excluding_c2_zero": 0.03394798027275318,
+        "spearman_p_excluding_c2_zero": 0.62141218873585,
+        "n_nonzero": 214
+      },
+      "small_sample": {
+        "n": 600,
+        "n_c2_zero": 83,
+        "spearman": -0.14408246695659876,
+        "spearman_p": 0.0003994980862396788,
+        "kendall_tau": -0.09974924658869509,
+        "kendall_p": 0.0002914697969992267,
+        "spearman_excluding_c2_zero": -0.12875582220013262,
+        "spearman_p_excluding_c2_zero": 0.003359931787910145,
+        "n_nonzero": 517
+      }
+    },
+    "shared_metric_ids_only": {
+      "small_sample": {
+        "n": 400,
+        "n_c2_zero": 78,
+        "spearman": 0.10240202090811334,
+        "spearman_p": 0.04065660781882992,
+        "kendall_tau": 0.061649932942081875,
+        "kendall_p": 0.06997008449361707,
+        "spearman_excluding_c2_zero": 0.06471007347679987,
+        "spearman_p_excluding_c2_zero": 0.24691345408657583,
+        "n_nonzero": 322
+      },
+      "high_variance": {
+        "n": 400,
+        "n_c2_zero": 186,
+        "spearman": 0.45857206950755597,
+        "spearman_p": 3.408576300346025e-22,
+        "kendall_tau": 0.33098070982249417,
+        "kendall_p": 2.797114696036415e-20,
+        "spearman_excluding_c2_zero": 0.03394798027275318,
+        "spearman_p_excluding_c2_zero": 0.62141218873585,
+        "n_nonzero": 214
+      }
+    },
+    "non_zero_only": {
+      "small_sample": {
+        "n": 322,
+        "n_c2_zero": 0,
+        "spearman": 0.06471007347679987,
+        "spearman_p": 0.24691345408657583,
+        "kendall_tau": 0.03489238968335435,
+        "kendall_p": 0.35058574296509293,
+        "spearman_excluding_c2_zero": 0.06471007347679987,
+        "spearman_p_excluding_c2_zero": 0.24691345408657583,
+        "n_nonzero": 322
+      },
+      "high_variance": {
+        "n": 214,
+        "n_c2_zero": 0,
+        "spearman": 0.03394798027275318,
+        "spearman_p": 0.62141218873585,
+        "kendall_tau": 0.02091068050592444,
+        "kendall_p": 0.6494080700615694,
+        "spearman_excluding_c2_zero": 0.03394798027275318,
+        "spearman_p_excluding_c2_zero": 0.62141218873585,
+        "n_nonzero": 214
+      }
+    },
+    "interpretation": "The apparent condition_2/condition_3 association is carried almost entirely by the cells where condition_2 is exactly zero: excluding them collapses the rank correlation towards zero in both scenarios, and the association is stronger where the zero rate is higher."
+  },
+  "conditional_conflict": {
+    "delta_spearman_hv_minus_ss": 0.3561700485994426,
+    "bootstrap_ci95": [
+      0.23183579200387439,
+      0.47293932540287237
+    ],
+    "bootstrap_p_gt_zero": 1.0,
+    "n_bootstrap": 4000,
+    "permutation_nulls": {
+      "small_sample": {
+        "observed_rho": 0.10240202090811334,
+        "permutation_p": 0.03725
+      },
+      "high_variance": {
+        "observed_rho": 0.45857206950755597,
+        "permutation_p": 0.0
+      }
+    }
+  },
+  "rational_structure": {
+    "high_variance": {
+      "n_resolved_exactly": 400,
+      "n": 400,
+      "n_distinct_denominators": 29,
+      "denominator_min": 3,
+      "denominator_max": 800,
+      "denominator_multiple_of_4_frac": 0.825,
+      "denominator_distribution_top": {
+        "800": 76,
+        "600": 48,
+        "200": 44,
+        "400": 41,
+        "300": 28,
+        "100": 25,
+        "150": 21,
+        "160": 18
+      }
+    },
+    "small_sample": {
+      "n_resolved_exactly": 600,
+      "n": 600,
+      "n_distinct_denominators": 201,
+      "denominator_min": 2,
+      "denominator_max": 400,
+      "denominator_multiple_of_4_frac": 0.3433333333333333,
+      "denominator_distribution_top": {
+        "400": 31,
+        "320": 23,
+        "200": 17,
+        "239": 15,
+        "79": 13,
+        "240": 12,
+        "233": 11,
+        "160": 11
+      }
+    },
+    "interpretation": "Every stored metric value is an exact rational with a small denominator, and the denominator ranges differ by scenario (small_sample denominators at most 400, high_variance up to 800 with 92% divisible by 2). The metric values are therefore computed as ratios over a scenario-specific number of replicates, and the denominator is a scenario property rather than a per-metric one."
+  },
+  "variance_decomposition": {
+    "variance_shares": {
+      "condition": 0.8151220710944967,
+      "scenario_id": 0.01775509600512025,
+      "metric_number": 0.03891689240869913,
+      "metric_x_condition": 0.8828935015809246
+    },
+    "interpretation": "Condition identity dominates (about 82% of variance); metric identity contributes little on its own, and the metric x condition interaction explains nearly everything, so the two conditions are not two measurement channels of one latent metric quantity."
+  },
+  "feature_metric_id_correspondence": {
+    "high_variance": {
+      "condition_2": {
+        "spearman_vs_n_present": -0.08888855096291531,
+        "spearman_vs_mean_abundance": -0.08426263982692717
+      },
+      "condition_3": {
+        "spearman_vs_n_present": -0.022205179143369218,
+        "spearman_vs_mean_abundance": -0.028924196479608793
+      },
+      "c2_zero_rate_by_prevalence_quartile": {
+        "Q1_rarest": 0.42,
+        "Q2": 0.42574257425742573,
+        "Q3": 0.5151515151515151,
+        "Q4_commonest": 0.5
+      }
+    },
+    "small_sample": {
+      "condition_2": {
+        "spearman_vs_n_present": 0.02597752527089533,
+        "spearman_vs_mean_abundance": 0.009691535605642405
+      },
+      "condition_3": {
+        "spearman_vs_n_present": -0.027130895546145322,
+        "spearman_vs_mean_abundance": -0.01124722517249676
+      },
+      "c2_zero_rate_by_prevalence_quartile": {
+        "Q1_rarest": 0.09433962264150944,
+        "Q2": 0.0392156862745098,
+        "Q3": 0.0196078431372549,
+        "Q4_commonest": 0.1111111111111111
+      }
+    },
+    "interpretation": "Metric values are uncorrelated with the composition feature that shares the same numeric index, and the condition_2 zero rate does not follow the corresponding feature's prevalence. The shared 1..600 id space is a naming coincidence, not a join key; no row-level linkage between the count table and the scenario table is supported by the data."
+  }
+}

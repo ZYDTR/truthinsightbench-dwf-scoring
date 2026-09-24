@@ -1,0 +1,55 @@
+{
+  "discharge_soc_extent": {
+    "values": [
+      97.01375,
+      97.99842,
+      98.00051,
+      97.99824,
+      97.99939,
+      97.99954,
+      97.99769
+    ],
+    "min": 97.01375,
+    "max": 98.00051,
+    "range": 0.9867600000000039,
+    "all_above_97": true
+  },
+  "charge_soc_extent": {
+    "values": [
+      99.88829,
+      99.84767,
+      99.86126,
+      99.86688,
+      99.88389,
+      99.90269,
+      99.90269
+    ],
+    "min": 99.84767,
+    "max": 99.90269,
+    "range": 0.05502000000001317
+  },
+  "cycling_rate_linkage": {
+    "shared_key_with_rate_files": false,
+    "cycle_index_range": [
+      1,
+      600
+    ],
+    "conclusion": "long_cycle_capacity.tsv carries no rate label and no shared identifier with the rate files; no cross-link is testable"
+  },
+  "affine_family": {
+    "n_pairs": 42,
+    "tolerance_on_scale": 0.05,
+    "grid_points": 300,
+    "n_scaled_pairs_affine_r2_gt_097": 13,
+    "n_affine_pairs_r2_gt_097_any_scale": 18,
+    "n_scaled_pairs_no_tolerance_tol0": 18,
+    "n_scaled_pairs_tol_0p01": 16,
+    "grid_and_tolerance_sensitive": true,
+    "conclusion": "the rate family is not a single pure additive shift for the majority of high-R2 pairs, i.e. the polarization changes shape with rate; but the count is sensitive to the unstated tolerance and grid, and for several excluded pairs a pure offset also reaches R2 > 0.97"
+  },
+  "linkage_interpretation": {
+    "alternative": "the summary series may have been computed as a mid-SoC reduction of the same curves, in which case the agreement is definitional rather than an independent physical law",
+    "discriminating_evidence": "the single-SoC reduction (RMSE 0.1837 pp at SoC=50) is much tighter than an energy-weighted branch ratio computed over an explicit 2-96 % window (RMSE 2.8664 pp); the energy-weighted value is definition/window dependent (2.8-4.9 pp across defensible windows)",
+    "permutation_test_is_non_evidential": "the 5040-permutation identity rank of 1 is guaranteed by the rearrangement inequality whenever both series are monotone in the same direction, so it carries no evidence of shared construction; only the magnitude gap between the identity RMSE and the runner-up RMSE is informative"
+  }
+}

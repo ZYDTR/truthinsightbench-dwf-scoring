@@ -1,0 +1,277 @@
+{
+  "shape_contrast": {
+    "within": {
+      "coarse_fast": {
+        "n": 6,
+        "median_pairwise_r": 0.8852727346153265,
+        "min_r": 0.6583602166093148,
+        "max_r": 0.9959259291534424,
+        "frac_above_0_9": 0.4666666666666667
+      },
+      "fine_fast": {
+        "n": 6,
+        "median_pairwise_r": 0.20345914441609342,
+        "min_r": -0.2389205219792437,
+        "max_r": 0.840807538203455,
+        "frac_above_0_9": 0.0
+      },
+      "coarse_slow": {
+        "n": 12,
+        "median_pairwise_r": 0.9772760487734664,
+        "min_r": 0.28884229448384174,
+        "max_r": 0.9975665484153042,
+        "frac_above_0_9": 0.7575757575757576
+      },
+      "fine_slow": {
+        "n": 12,
+        "median_pairwise_r": 0.9934135637897192,
+        "min_r": 0.8783988717872702,
+        "max_r": 0.9997305501593814,
+        "frac_above_0_9": 0.8939393939393939
+      }
+    },
+    "cross": {
+      "coarse_fast_vs_fine_fast": 0.3240047732854474,
+      "coarse_slow_vs_fine_slow": -0.054184042203056886,
+      "coarse_fast_vs_coarse_slow": 0.846381467061916,
+      "fine_fast_vs_fine_slow": -0.09365736427391763
+    },
+    "own_pair_r_median": -0.048592660499468004,
+    "pairing": [
+      {
+        "coarse_sheet": "Sheet_039",
+        "label": "group_a (-35<s<-10), channel_l",
+        "tag": "fast",
+        "r": 0.5616676961285296
+      },
+      {
+        "coarse_sheet": "Sheet_039",
+        "label": "group_a(-10<s<0), channel_l",
+        "tag": "slow",
+        "r": -0.08609751126390276
+      },
+      {
+        "coarse_sheet": "Sheet_039",
+        "label": "group_a(0<s<20), channel_l",
+        "tag": "slow",
+        "r": -0.003748063605692091
+      },
+      {
+        "coarse_sheet": "Sheet_040",
+        "label": "group_a (-35<s<-10), channel_r",
+        "tag": "fast",
+        "r": 0.6547115121073034
+      },
+      {
+        "coarse_sheet": "Sheet_040",
+        "label": "group_a(-10<s<0), channel_r",
+        "tag": "slow",
+        "r": -0.09006898256649291
+      },
+      {
+        "coarse_sheet": "Sheet_040",
+        "label": "group_a(0<s<20), channel_r",
+        "tag": "slow",
+        "r": -0.04914300308122741
+      },
+      {
+        "coarse_sheet": "Sheet_041",
+        "label": "group_b (-35<s<-10), channel_l",
+        "tag": "fast",
+        "r": 0.1085267843440705
+      },
+      {
+        "coarse_sheet": "Sheet_041",
+        "label": "group_b(-10<s<0), channel_l",
+        "tag": "slow",
+        "r": -0.05131780276418578
+      },
+      {
+        "coarse_sheet": "Sheet_041",
+        "label": "group_b(0<s<20), channel_l",
+        "tag": "slow",
+        "r": -0.021944773332453173
+      },
+      {
+        "coarse_sheet": "Sheet_042",
+        "label": "group_b (-35<s<-10), channel_r",
+        "tag": "fast",
+        "r": -0.1694857062345617
+      },
+      {
+        "coarse_sheet": "Sheet_042",
+        "label": "group_b(-10<s<0), channel_r",
+        "tag": "slow",
+        "r": -0.06006243217408207
+      },
+      {
+        "coarse_sheet": "Sheet_042",
+        "label": "group_b(0<s<20), channel_r",
+        "tag": "slow",
+        "r": -0.05163945541775052
+      },
+      {
+        "coarse_sheet": "Sheet_043",
+        "label": "group_c (-35<s<-10), channel_l",
+        "tag": "fast",
+        "r": 0.43326499833484866
+      },
+      {
+        "coarse_sheet": "Sheet_043",
+        "label": "group_c(-10<s<0), channel_l",
+        "tag": "slow",
+        "r": -0.05438740585812751
+      },
+      {
+        "coarse_sheet": "Sheet_043",
+        "label": "group_c(0<s<20), channel_l",
+        "tag": "slow",
+        "r": -0.04804231791770859
+      },
+      {
+        "coarse_sheet": "Sheet_044",
+        "label": "group_c (-35<s<-10), channel_r",
+        "tag": "fast",
+        "r": 0.02207714706619158
+      },
+      {
+        "coarse_sheet": "Sheet_044",
+        "label": "group_c(-10<s<0), channel_r",
+        "tag": "slow",
+        "r": -0.06384616720364902
+      },
+      {
+        "coarse_sheet": "Sheet_044",
+        "label": "group_c(0<s<20), channel_r",
+        "tag": "slow",
+        "r": -0.04727850378788513
+      }
+    ]
+  },
+  "s001_s002_exact": {
+    "n": 1207,
+    "slope": 0.24665562694271287,
+    "intercept": 158.87653104138,
+    "resid_sd": 0.0012337345626595594,
+    "resid_maxabs": 0.005449011639512946,
+    "x_grid_identical": true,
+    "interpretation": "Sheet_002 y is an affine map of Sheet_001 y with a shared slope 0.24665563 for the Gan/group_b pair only"
+  },
+  "coverage": {
+    "sheets": 47,
+    "blocks": 101,
+    "blocks_by_status": {
+      "absent": 50,
+      "image": 14,
+      "aggregate": 30,
+      "exact": 6,
+      "empty": 1
+    },
+    "rows_by_status": {
+      "absent": 71053,
+      "image": 0,
+      "aggregate": 1132,
+      "exact": 146,
+      "empty": 0
+    },
+    "ysum_by_status": {
+      "absent": 9135408.201141449,
+      "image": 0.0,
+      "aggregate": 39920.0,
+      "exact": 26554.0,
+      "empty": 0.0
+    },
+    "absent_content_split": {
+      "angle_series_rows": 67262,
+      "angle_series_ysum_degrees": 8165607.0,
+      "count_block_rows": 3791,
+      "count_block_ysum_counts": 969801.0,
+      "note": "Sheet_001/002 y-sum is in DEGREES not counts"
+    },
+    "normalized_events": {
+      "drift_population": 33237.0,
+      "orientation": 32732.0,
+      "sum": 65969.0
+    },
+    "absent_counts_as_frac_of_all_counts": 0.936309219228207,
+    "orientation_dropped_counts_total": 505,
+    "orientation_dropped_counts_by_series": {
+      "orientation_series_1": 212,
+      "orientation_series_2": 244,
+      "orientation_series_3": 9,
+      "orientation_series_4": 0,
+      "orientation_series_5": 18,
+      "orientation_series_6": 22
+    },
+    "orientation_dropped_coords": [
+      -34.0,
+      -9.0,
+      1.0
+    ]
+  },
+  "question_availability": [
+    {
+      "question": "event drift rate per complete dynamic-spectrum event",
+      "available_from_normalized": "YES - 5 events, metadata + pixel grids",
+      "needs_workbook": "no",
+      "note": "but re-derived rates disagree with the reported column (see s10)"
+    },
+    {
+      "question": "drift-rate distribution shape per source group x polarisation",
+      "available_from_normalized": "YES - 6 slow + 6 fast series (948 rows)",
+      "needs_workbook": "no",
+      "note": "30 aggregate blocks exactly reconstruct the 12 series"
+    },
+    {
+      "question": "directional/orientation count distribution per group x channel",
+      "available_from_normalized": "PARTIAL - 52 of 55 raw coordinates; x=-34,-9,1 dropped",
+      "needs_workbook": "yes (Sheet_009..014 to recover the 3 dropped points)",
+      "note": "x=-9 drops 212 real counts for orientation_series_1"
+    },
+    {
+      "question": "absolute event totals per group x channel x drift regime",
+      "available_from_normalized": "YES - the 12 series' y-sums",
+      "needs_workbook": "no",
+      "note": ""
+    },
+    {
+      "question": "per-substride (substride) decomposition of the drift population",
+      "available_from_normalized": "NO - the slow series merges two substrata into one monotone-ordered array",
+      "needs_workbook": "yes (Sheet_024/026/028/030/032/034)",
+      "note": "the junction is detectable as the single non-monotone step in each slow series"
+    },
+    {
+      "question": "CML-angle vs phase-angle relationship",
+      "available_from_normalized": "NO - absent entirely",
+      "needs_workbook": "yes (Sheet_001/002)",
+      "note": "67k angle pairs, 0-360 deg"
+    },
+    {
+      "question": "radial-distance / SNR profile of the burst emission",
+      "available_from_normalized": "NO",
+      "needs_workbook": "yes (Sheet_019/020/023/038)",
+      "note": "4 sheets, 4 distinct SNR scalar values"
+    },
+    {
+      "question": "whether the coarse 1.75 MHz/s histograms corroborate the fine ones",
+      "available_from_normalized": "NO - not present",
+      "needs_workbook": "yes (Sheet_039..044)",
+      "note": "coarse totals match the fine totals to 0.0-4.5% but the shapes do NOT match at zero shift (r<=+0.23 for 11 of 18)"
+    },
+    {
+      "question": "second ('C' variant) orientation count family",
+      "available_from_normalized": "NO",
+      "needs_workbook": "yes (Sheet_046/047)",
+      "note": "near-identical shapes to the base group_b blocks, totals 0.81-0.97"
+    },
+    {
+      "question": "drift rates of the 9 unrepresented dynamic-spectrum images",
+      "available_from_normalized": "NO",
+      "needs_workbook": "yes (Sheet_008/015..018/021/022/036/037)",
+      "note": "4 sheets carry a Bounds drift value; the other 5 have a blank drift cell"
+    }
+  ],
+  "figures": [
+    "/data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/figures/covx_coverage_boundary.png"
+  ]
+}

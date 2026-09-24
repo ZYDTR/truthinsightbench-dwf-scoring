@@ -1,0 +1,64 @@
+{
+  "per_pass_linear_detrend": {
+    "A": {
+      "detrended_stacked_peak_uhz": 515.0,
+      "detrended_peak_power": 0.20271891914254467,
+      "detrended_power_489": 0.20061669962375747,
+      "detrended_median_low_200_700": 0.16322542016199337
+    },
+    "B": {
+      "detrended_stacked_peak_uhz": 2473.0,
+      "detrended_peak_power": 0.040242666811393095,
+      "detrended_power_489": 0.0022050214795065206,
+      "detrended_median_low_200_700": 0.0027029547283018017
+    },
+    "C": {
+      "detrended_stacked_peak_uhz": 1711.0,
+      "detrended_peak_power": 0.06651351698333473,
+      "detrended_power_489": 0.015690987131044488,
+      "detrended_median_low_200_700": 0.011549774805132522
+    }
+  },
+  "band_limited_matched_null": {
+    "A": {
+      "observed_band_stacked_peak_uhz": 860.0,
+      "observed_band_stacked_peak_power": 0.08276383496333926,
+      "matched_AR1_null_q50_q95_q99_max": [
+        0.07409271848123423,
+        0.09576586768496748,
+        0.10468979909348634,
+        0.10981224989140478
+      ],
+      "p_matched_AR1_band_peak": 0.185,
+      "track_reported_band_peak_uhz": 860.0,
+      "track_reported_p_vs_matched_ar1": 1.0
+    },
+    "B": {
+      "observed_band_stacked_peak_uhz": 1310.0,
+      "observed_band_stacked_peak_power": 0.005559585327242117,
+      "matched_AR1_null_q50_q95_q99_max": [
+        0.020413306947418122,
+        0.02663969045103304,
+        0.029294484189111125,
+        0.03177249032163479
+      ],
+      "p_matched_AR1_band_peak": 1.0,
+      "track_reported_band_peak_uhz": 1310.0,
+      "track_reported_p_vs_matched_ar1": 1.0
+    },
+    "C": {
+      "observed_band_stacked_peak_uhz": 1228.0,
+      "observed_band_stacked_peak_power": 0.057442055911169916,
+      "matched_AR1_null_q50_q95_q99_max": [
+        0.04580778064886061,
+        0.05806986153430114,
+        0.06570859634732072,
+        0.07506395820446693
+      ],
+      "p_matched_AR1_band_peak": 0.065,
+      "track_reported_band_peak_uhz": 1228.0,
+      "track_reported_p_vs_matched_ar1": 0.994
+    }
+  },
+  "runtime_sec": 289.0
+}

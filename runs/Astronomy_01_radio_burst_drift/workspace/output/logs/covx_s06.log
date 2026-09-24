@@ -1,0 +1,34 @@
+==============================================================================
+1  SHAPE CONTRAST: coarse family vs fine family (0.875 MHz/s common grid)
+  coarse_fast    n= 6 pairwise shape r: median=+0.885 range=[+0.658,+0.996] frac>0.9=0.47
+  fine_fast      n= 6 pairwise shape r: median=+0.203 range=[-0.239,+0.841] frac>0.9=0.00
+  coarse_slow    n=12 pairwise shape r: median=+0.977 range=[+0.289,+0.998] frac>0.9=0.76
+  fine_slow      n=12 pairwise shape r: median=+0.993 range=[+0.878,+1.000] frac>0.9=0.89
+  cross coarse_fast  x fine_fast   : median r=+0.324 (n=36)
+  cross coarse_slow  x fine_slow   : median r=-0.054 (n=144)
+  cross coarse_fast  x coarse_slow : median r=+0.846 (n=72)
+  cross fine_fast    x fine_slow   : median r=-0.094 (n=72)
+  own-pair r (coarse_k vs its OWN fine_k): [0.562, -0.086, -0.004, 0.655, -0.09, -0.049, 0.109, -0.051, -0.022, -0.169, -0.06, -0.052, 0.433, -0.054, -0.048, 0.022, -0.064, -0.047]
+  median own-pair r = -0.049
+==============================================================================
+2  Sheet_001 -> Sheet_002: exact affine relation for the Gan/group_b pair
+  n=1207  slope=0.24665563  intercept=158.876531  resid sd=1.23e-03  max|resid|=5.45e-03
+==============================================================================
+3  FINAL COVERAGE BOUNDARY
+  workbook sheets=47 blocks=101
+  blocks: {'absent': 50, 'image': 14, 'aggregate': 30, 'exact': 6, 'empty': 1}
+  rows:   {'absent': 71053, 'image': 0, 'aggregate': 1132, 'exact': 146, 'empty': 0}   (table rows only; image sheets carry 425x425 each)
+  y-sum:  {'absent': 9135408.2, 'image': 0.0, 'aggregate': 39920.0, 'exact': 26554.0, 'empty': 0.0}
+  wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/figures/covx_coverage_boundary.png
+  question availability table written
+    event drift rate per complete dynamic-spectrum event         normalized: YES - 5 events, metadata + pixel grids
+    drift-rate distribution shape per source group x polarisatio normalized: YES - 6 slow + 6 fast series (948 rows)
+    directional/orientation count distribution per group x chann normalized: PARTIAL - 52 of 55 raw coordinates; x=-3
+    absolute event totals per group x channel x drift regime     normalized: YES - the 12 series' y-sums
+    per-substride (substride) decomposition of the drift populat normalized: NO - the slow series merges two substrat
+    CML-angle vs phase-angle relationship                        normalized: NO - absent entirely
+    radial-distance / SNR profile of the burst emission          normalized: NO
+    whether the coarse 1.75 MHz/s histograms corroborate the fin normalized: NO - not present
+    second ('C' variant) orientation count family                normalized: NO
+    drift rates of the 9 unrepresented dynamic-spectrum images   normalized: NO
+wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/covx_final.json

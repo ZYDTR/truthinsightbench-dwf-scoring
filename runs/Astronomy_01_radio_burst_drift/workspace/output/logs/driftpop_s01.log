@@ -1,0 +1,99 @@
+=== binning structure per (population_series_id, drift_regime) ===
+population_series_id drift_regime  n_bins  bin_width_median  n_distinct_widths  center_min  center_max  n_empty  frac_empty  total_events  max_bin_count  max_bin_center   gini  frac_top1_bin  frac_top5_bins  frac_in_5pct_bins
+ population_series_1         fast      26            1.0353                  1      1.9293     27.8111        4      0.1538         10560           2251          5.0351 0.6695         0.2132          0.6460             0.2132
+ population_series_1         slow     137            0.0815                 58      0.1590     10.9859       93      0.6788           892             62          0.3610 0.8283         0.0695          0.3016             0.3969
+ population_series_2         fast      26            1.0235                  1      2.2247     27.8111        5      0.1923         14492           2042          5.2950 0.6665         0.1409          0.6440             0.1409
+ population_series_2         slow     131            0.0795                 58      0.1463     10.2996       81      0.6183          1303             99          0.4507 0.8116         0.0760          0.3101             0.3952
+ population_series_3         fast      24            1.0149                  1      4.4688     27.8111        5      0.2083           357             62         10.5581 0.5587         0.1737          0.5882             0.1737
+ population_series_3         slow     139            0.0868                 49      0.2442     11.7353      113      0.8129           803            202          0.2585 0.9496         0.2516          0.8169             0.9016
+ population_series_4         fast      21            1.0014                  1      7.7841     27.8111        9      0.4286            52              9         25.8084 0.6227         0.1731          0.6731             0.1731
+ population_series_4         slow     132            0.0923                 35      0.2442     11.7353      110      0.8333           392            148          0.2442 0.9580         0.3776          0.8546             0.9005
+ population_series_5         fast      24            1.0347                  1      4.0134     27.8111        5      0.2083           429             76          5.0481 0.6137         0.1772          0.6690             0.1772
+ population_series_5         slow     127            0.0819                 53      0.2439     10.2996       90      0.7087          1092            275          0.2439 0.9254         0.2518          0.7262             0.7628
+ population_series_6         fast      25            1.0164                  1      3.4180     27.8111        6      0.2400           664            177          6.4671 0.7313         0.2666          0.7846             0.2666
+ population_series_6         slow     136            0.0818                 57      0.2438     10.9859       87      0.6397          2201            365          0.4604 0.8972         0.1658          0.6088             0.6924
+
+=== why min inter-center spacing is NOT the bin width (ps1 slow) ===
+first 8 centers: [0.158985 0.219728 0.259985 0.320347 0.360986 0.420965 0.461986 0.521584]
+first 7 spacings: [0.060743 0.040257 0.060362 0.040639 0.05998  0.041021 0.059598]
+two interleaved 0.10-wide grids offset by ~0.05 -> alternating spacing;
+legitimate resolution of the merged series is ~0.10 MHz/s, not 0.04.
+
+=== provenance: which workbook blocks compose each series ===
+population_series_id drift_regime      source_group   channel     sheet                                                    labels  n_blocks  concat_exact    block_events    n_bins                                  bin_width
+ population_series_1         fast anonymous_group_1 channel_l Sheet_025                            group_a (-35<s<-10), channel_l         1          True       [10560.0]      [26]                       [1.0352726503763812]
+ population_series_1         slow anonymous_group_1 channel_l Sheet_024 group_a(-10<s<0), channel_l || group_a(0<s<20), channel_l         2          True  [790.0, 102.0] [29, 108] [0.10100039164463695, 0.10061858251028966]
+ population_series_2         fast anonymous_group_1 channel_r Sheet_027                            group_a (-35<s<-10), channel_r         1          True       [14492.0]      [26]                       [1.0234578623432924]
+ population_series_2         slow anonymous_group_1 channel_r Sheet_026 group_a(-10<s<0), channel_r || group_a(0<s<20), channel_r         2          True [1126.0, 177.0] [29, 102] [0.10145352177869205, 0.10008822832567876]
+ population_series_3         fast anonymous_group_2 channel_l Sheet_029                            group_b (-35<s<-10), channel_l         1          True         [357.0]      [24]                       [1.0148841265133335]
+ population_series_3         slow anonymous_group_2 channel_l Sheet_028 group_b(-10<s<0), channel_l || group_b(0<s<20), channel_l         2          True  [580.0, 223.0] [24, 115]  [0.10130597330756863, 0.1007992183073032]
+ population_series_4         fast anonymous_group_2 channel_r Sheet_031                            group_b (-35<s<-10), channel_r         1          True          [52.0]      [21]                        [1.001351324718816]
+ population_series_4         slow anonymous_group_2 channel_r Sheet_030 group_b(-10<s<0), channel_r || group_b(0<s<20), channel_r         2          True  [155.0, 237.0] [17, 115]  [0.10547577826719406, 0.1007992183073032]
+ population_series_5         fast anonymous_group_3 channel_l Sheet_033                            group_c (-35<s<-10), channel_l         1          True         [429.0]      [24]                       [1.0346838883292007]
+ population_series_5         slow anonymous_group_3 channel_l Sheet_032 group_c(-10<s<0), channel_l || group_c(0<s<20), channel_l         2          True  [601.0, 491.0] [26, 101] [0.10346290960033788, 0.10055657990486777]
+ population_series_6         fast anonymous_group_3 channel_r Sheet_035                            group_c (-35<s<-10), channel_r         1          True         [664.0]      [25]                        [1.016380517341542]
+ population_series_6         slow anonymous_group_3 channel_r Sheet_034 group_c(-10<s<0), channel_r || group_c(0<s<20), channel_r         2          True [1680.0, 521.0] [28, 108] [0.10106351231505462, 0.10039404191570789]
+
+All 12 series are EXACT re-expressions of workbook blocks (fast = 1 block, slow = concatenation of 2 blocks).
+
+=== orientation block totals by group x channel x sub-range ===
+  ('anonymous_group_1', 'channel_l', 'group_a (-35<s<-10), channel_l'): 10560
+  ('anonymous_group_1', 'channel_l', 'group_a(-10<s<0), channel_l'): 790
+  ('anonymous_group_1', 'channel_l', 'group_a(0<s<20), channel_l'): 102
+  ('anonymous_group_1', 'channel_r', 'group_a (-35<s<-10), channel_r'): 14492
+  ('anonymous_group_1', 'channel_r', 'group_a(-10<s<0), channel_r'): 1126
+  ('anonymous_group_1', 'channel_r', 'group_a(0<s<20), channel_r'): 177
+  ('anonymous_group_2', 'channel_l', 'group_b (-35<s<-10), channel_l'): 357
+  ('anonymous_group_2', 'channel_l', 'group_b(-10<s<0), channel_l'): 580
+  ('anonymous_group_2', 'channel_l', 'group_b(0<s<20), channel_l'): 223
+  ('anonymous_group_2', 'channel_r', 'group_b (-35<s<-10), channel_r'): 52
+  ('anonymous_group_2', 'channel_r', 'group_b(-10<s<0), channel_r'): 155
+  ('anonymous_group_2', 'channel_r', 'group_b(0<s<20), channel_r'): 237
+  ('anonymous_group_3', 'channel_l', 'group_c (-35<s<-10), channel_l'): 429
+  ('anonymous_group_3', 'channel_l', 'group_c(-10<s<0), channel_l'): 601
+  ('anonymous_group_3', 'channel_l', 'group_c(0<s<20), channel_l'): 491
+  ('anonymous_group_3', 'channel_r', 'group_c (-35<s<-10), channel_r'): 664
+  ('anonymous_group_3', 'channel_r', 'group_c(-10<s<0), channel_r'): 1680
+  ('anonymous_group_3', 'channel_r', 'group_c(0<s<20), channel_r'): 521
+
+=== regime label <-> orientation sub-range (sum matching) ===
+population_series_id             group   channel  fast_block_sum  orient_m35_m10  fast_matches_orient_m35_m10  slow_blockA_sum  orient_m10_0  slowA_matches_orient_m10_0  slow_blockB_sum  orient_0_20  slowB_matches_orient_0_20
+ population_series_1 anonymous_group_1 channel_l         10560.0         10560.0                         True            790.0         790.0                        True            102.0        102.0                       True
+ population_series_2 anonymous_group_1 channel_r         14492.0         14492.0                         True           1126.0        1126.0                        True            177.0        177.0                       True
+ population_series_3 anonymous_group_2 channel_l           357.0           357.0                         True            580.0         580.0                        True            223.0        223.0                       True
+ population_series_4 anonymous_group_2 channel_r            52.0            52.0                         True            155.0         155.0                        True            237.0        237.0                       True
+ population_series_5 anonymous_group_3 channel_l           429.0           429.0                         True            601.0         601.0                        True            491.0        491.0                       True
+ population_series_6 anonymous_group_3 channel_r           664.0           664.0                         True           1680.0        1680.0                        True            521.0        521.0                       True
+
+ALL fast sums match -35<s<-10: True
+ALL slow block A sums match -10<s<0: True
+ALL slow block B sums match 0<s<20: True
+
+INTERPRETATION: 'fast' = orientation sub-range -35<s<-10 (1.0 MHz/s bins);
+'slow' = merged (-10<s<0) and (0<s<20) sub-ranges (0.10 MHz/s bins).
+The regime split is a design partition of the source data, not a
+data-driven separation of drift rates.
+
+=== fast/slow center range overlap ===
+population_series_id  fast_min  fast_max  slow_min  slow_max  overlap_lo  overlap_hi  overlap_width  fast_bins_in_overlap  slow_bins_in_overlap
+ population_series_1     1.929    27.811     0.159    10.986       1.929      10.986          9.057                     9                   102
+ population_series_2     2.225    27.811     0.146    10.300       2.225      10.300          8.075                     8                    89
+ population_series_3     4.469    27.811     0.244    11.735       4.469      11.735          7.267                     8                    73
+ population_series_4     7.784    27.811     0.244    11.735       7.784      11.735          3.951                     4                    40
+ population_series_5     4.013    27.811     0.244    10.300       4.013      10.300          6.286                     7                    63
+ population_series_6     3.418    27.811     0.244    10.986       3.418      10.986          7.568                     8                    76
+
+=== total events per regime (all 6 series) ===
+{'fast': 26554, 'slow': 6683}
+drift_regime           fast  slow
+population_series_id             
+population_series_1   10560   892
+population_series_2   14492  1303
+population_series_3     357   803
+population_series_4      52   392
+population_series_5     429  1092
+population_series_6     664  2201
+
+effective independent units: 6 source-group x channel series (and 5 complete dynamic-spectrum events in the sibling data family).
+
+wrote: /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/driftpop_s01_binning_structure.csv and .json

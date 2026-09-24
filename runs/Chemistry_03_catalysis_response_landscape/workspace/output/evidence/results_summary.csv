@@ -1,0 +1,10 @@
+finding,panel,quantity,value,robustness
+D1,observation_set_1,"eta2_main / eta2_2way / eta2_3way, numeric_feature_6",0.5211 / 0.3250 / 0.1539,103.83 SS on 1080 df; Tukey F=763.7
+D1,observation_set_1,"eta2_main / eta2_2way / eta2_3way, numeric_feature_7",0.8869 / 0.0764 / 0.0367,"6.02 SS on 1080 df; Tukey F=9.86, p=0.0017"
+D2,observation_set_1,"factor numeric_feature_4 level means, numeric_feature_7",range=1.0457,linear R2=0.00551; split-half r=0.9992
+D3,observation_set_3,max |R - (B-A)/(A+B)|,0.0 (104/104 exact),alternatives: A/B R2=0.9978 with max resid 0.0176
+D3,observation_set_4,max |R - (B-A)/(A+B)|,1.11e-16 (91/91 exact),single float rounding unit
+D4,cross-panel,P1 factor B (13) vs P4 condition mean response,rho=+0.8626,perm p=0.00028
+D4,cross-panel,P1 factor B (13) vs P3 condition mean response,rho=+0.3187,perm p=0.2796
+D4,cross-panel,"P3 vs P4 matched cells, response Pearson",-0.0865,magnitude B between-condition Pearson +0.912
+D5,observation_set_2,OLS slope of reading 2 on reading 1,0.9752,"CI95 [0.9577, 0.9926]; LOO all 41 below 1"

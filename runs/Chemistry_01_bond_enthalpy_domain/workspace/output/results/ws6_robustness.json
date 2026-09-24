@@ -1,0 +1,1873 @@
+{
+  "workstream": "WS6 - Robustness suite",
+  "n_observations": 543,
+  "n_unique_molecules": 419,
+  "n_unique_fragment_pairs_ordered": 539,
+  "n_unique_fragment_pairs_unordered": 539,
+  "baseline": {
+    "per_channel": {
+      "quantum": {
+        "mae": 2.0978084714548806,
+        "rmse": 3.0595296584807596,
+        "median_ae": 1.4000000000000057,
+        "p90_ae": 4.707999999999996,
+        "max_ae": 15.740000000000009,
+        "frac_within_2": 0.6187845303867403,
+        "frac_within_5": 0.9097605893186004,
+        "mean_signed_error": 0.5537200736648252,
+        "median_signed_error": 0.39999999999997726
+      },
+      "learned": {
+        "mae": 2.410699815837938,
+        "rmse": 3.627796539885696,
+        "median_ae": 1.6099999999999994,
+        "p90_ae": 5.457999999999996,
+        "max_ae": 25.209999999999997,
+        "frac_within_2": 0.5874769797421732,
+        "frac_within_5": 0.8692449355432781,
+        "mean_signed_error": 1.0788766114180484,
+        "median_signed_error": 0.5600000000000023
+      },
+      "reference": {
+        "mae": 5.48596685082873,
+        "rmse": 6.75961553714002,
+        "median_ae": 4.8999999999999915,
+        "p90_ae": 9.800000000000008,
+        "max_ae": 33.4,
+        "frac_within_2": 0.15469613259668508,
+        "frac_within_5": 0.5211786372007366,
+        "mean_signed_error": 1.3784162062615106,
+        "median_signed_error": 2.4000000000000057
+      }
+    },
+    "order_by_mae": [
+      "quantum",
+      "learned",
+      "reference"
+    ],
+    "rank_by_mae": {
+      "quantum": 1,
+      "learned": 2,
+      "reference": 3
+    }
+  },
+  "headline_paired_tests": {
+    "quantum_vs_learned": {
+      "mae_a": 2.0978084714548806,
+      "mae_b": 2.410699815837938,
+      "mean_abs_err_diff": -0.3128913443830571,
+      "median_abs_err_diff": 0.01999999999999602,
+      "boot95_ci": [
+        -0.4708301104972374,
+        -0.1682279005524861
+      ],
+      "ci_excludes_zero": true,
+      "paired_t": [
+        -4.071283281498414,
+        5.3724650811894166e-05
+      ],
+      "wilcoxon": [
+        68265.0,
+        0.553015785122517
+      ],
+      "cliffs_delta": -0.04170948519411631,
+      "n_a_better": 246,
+      "n_b_better": 284,
+      "n_ties": 13,
+      "frac_a_better": 0.4530386740331492,
+      "sign_test_binom_p": 0.10792774315532913
+    },
+    "quantum_vs_reference": {
+      "mae_a": 2.0978084714548806,
+      "mae_b": 5.48596685082873,
+      "mean_abs_err_diff": -3.388158379373849,
+      "median_abs_err_diff": -3.4099999999999966,
+      "boot95_ci": [
+        -3.7417688766114177,
+        -3.05288950276243
+      ],
+      "ci_excludes_zero": true,
+      "paired_t": [
+        -19.248848612689212,
+        2.616074594011431e-63
+      ],
+      "wilcoxon": [
+        14376.5,
+        1.9206499425904653e-59
+      ],
+      "cliffs_delta": -0.6311807060563204,
+      "n_a_better": 451,
+      "n_b_better": 92,
+      "n_ties": 0,
+      "frac_a_better": 0.8305709023941068,
+      "sign_test_binom_p": 7.822389714717208e-58
+    },
+    "learned_vs_reference": {
+      "mae_a": 2.410699815837938,
+      "mae_b": 5.48596685082873,
+      "mean_abs_err_diff": -3.075267034990792,
+      "median_abs_err_diff": -3.299999999999997,
+      "boot95_ci": [
+        -3.4484019337016574,
+        -2.718267955801105
+      ],
+      "ci_excludes_zero": true,
+      "paired_t": [
+        -16.531868867837336,
+        5.210749499009692e-50
+      ],
+      "wilcoxon": [
+        18576.0,
+        1.3677294403153554e-51
+      ],
+      "cliffs_delta": -0.5734867678031806,
+      "n_a_better": 444,
+      "n_b_better": 99,
+      "n_ties": 0,
+      "frac_a_better": 0.8176795580110497,
+      "sign_test_binom_p": 3.8672104389568258e-53
+    }
+  },
+  "provenance_context": {
+    "n_exact_db_row": 331,
+    "n_no_exact_db_row": 212,
+    "n_parent_in_db": 369,
+    "db_minus_quantum": {
+      "max_abs": 6.998506930998104,
+      "frac_within_0.01": 0.3021148036253776,
+      "frac_within_0.1": 0.8096676737160121,
+      "frac_within_0.5": 0.9244712990936556
+    },
+    "db_minus_learned": {
+      "max_abs": 4.7676349069559905,
+      "frac_within_0.01": 0.0513595166163142,
+      "frac_within_0.1": 0.4229607250755287,
+      "frac_within_0.5": 0.9244712990936556
+    },
+    "labeler_agreement": [
+      331,
+      331
+    ]
+  },
+  "check1_leave_one_molecule_out": {
+    "n_molecules": 419,
+    "n_molecules_multi_row": 86,
+    "n_rows_in_multi_row_molecules": 210,
+    "channels": {
+      "quantum": {
+        "baseline_mae": 2.0978084714548806,
+        "loo_mae_min": 2.072638376383764,
+        "loo_mae_max": 2.1097765363128493,
+        "loo_mae_sd": 0.004881181876053928,
+        "max_abs_delta_mae": 0.02517009507111645,
+        "max_delta_mae": -0.02517009507111645,
+        "max_delta_molecule": "CNCC(=O)O",
+        "max_delta_molecule_nrows": 1,
+        "argmax_delta_is_the_multirow": false,
+        "n_loo_above_baseline": 250
+      },
+      "learned": {
+        "baseline_mae": 2.410699815837938,
+        "loo_mae_min": 2.368634686346864,
+        "loo_mae_max": 2.426797020484172,
+        "loo_mae_sd": 0.006011435483780304,
+        "max_abs_delta_mae": 0.04206512949107388,
+        "max_delta_mae": -0.04206512949107388,
+        "max_delta_molecule": "c1ccc(C2(C3(c4ccccc4)c4ccccc4-c4ccccc43)c3ccccc3-c3ccccc32)cc1",
+        "max_delta_molecule_nrows": 1,
+        "argmax_delta_is_the_multirow": false,
+        "n_loo_above_baseline": 250
+      },
+      "reference": {
+        "baseline_mae": 5.48596685082873,
+        "loo_mae_min": 5.434464944649447,
+        "loo_mae_max": 5.515046554934823,
+        "loo_mae_sd": 0.008737904739185218,
+        "max_abs_delta_mae": 0.05150190617928274,
+        "max_delta_mae": -0.05150190617928274,
+        "max_delta_molecule": "c1ccc(C(c2ccccc2)(c2ccccc2)c2ccccc2)cc1",
+        "max_delta_molecule_nrows": 1,
+        "argmax_delta_is_the_multirow": false,
+        "n_loo_above_baseline": 224
+      }
+    },
+    "n_loo_subsets_changing_channel_order": 0,
+    "rank_flip_examples": [],
+    "ranking_stable": true,
+    "paired_q_minus_l_abs_err_diff": {
+      "baseline": -0.3128913443830571,
+      "loo_min": -0.323929889298893,
+      "loo_max": -0.28688191881918823,
+      "max_abs_delta": 0.02600942556386887,
+      "max_delta_molecule": "CC1(C)CCCC(C)(C)N1C1c2ccccc2-c2ccccc21",
+      "max_delta_molecule_nrows": 1,
+      "n_loo_subsets_sign_flips": 0,
+      "n_loo_subsets_ci_excludes_zero": null,
+      "top10_influence_bootstrap": [
+        {
+          "molecule": "CC1(C)CCCC(C)(C)N1C1c2ccccc2-c2ccccc21",
+          "mean": -0.2868819188191882,
+          "ci": [
+            -0.4319464944649443,
+            -0.14850092250922559
+          ],
+          "excludes_zero": true
+        },
+        {
+          "molecule": "CC(C)N(C(C)C)C1c2ccccc2-c2ccccc21",
+          "mean": -0.29173431734317345,
+          "ci": [
+            -0.43747555350553496,
+            -0.14989806273062709
+          ],
+          "excludes_zero": true
+        },
+        {
+          "molecule": "CC1CCCC(C)N1C1c2ccccc2-c2ccccc21",
+          "mean": -0.2918634686346863,
+          "ci": [
+            -0.4460318265682656,
+            -0.1509035977859777
+          ],
+          "excludes_zero": true
+        },
+        {
+          "molecule": "c1ccc(C2(C3(c4ccccc4)c4ccccc4-c4ccccc43)c3ccccc3-c3ccccc32)cc1",
+          "mean": -0.2941881918819188,
+          "ci": [
+            -0.4406743542435426,
+            -0.15534594095940982
+          ],
+          "excludes_zero": true
+        },
+        {
+          "molecule": "CC1c2ccccc2C(C)c2ccccc21",
+          "mean": -0.2954612546125461,
+          "ci": [
+            -0.450858856088561,
+            -0.15550322878228812
+          ],
+          "excludes_zero": true
+        },
+        {
+          "molecule": "C1=C(N2CCCC2)Cc2ccccc21",
+          "mean": -0.2983210332103321,
+          "ci": [
+            -0.4504700184501846,
+            -0.14825046125461241
+          ],
+          "excludes_zero": true
+        },
+        {
+          "molecule": "c1ccc2c(c1)-c1ccccc1C2N1CCCC1",
+          "mean": -0.2991143911439115,
+          "ci": [
+            -0.4459801660516608,
+            -0.16232426199261957
+          ],
+          "excludes_zero": true
+        },
+        {
+          "molecule": "Cc1c2ccccc2c(C=O)c2ccccc12",
+          "mean": -0.2995940959409594,
+          "ci": [
+            -0.45388238007380044,
+            -0.15914252767527687
+          ],
+          "excludes_zero": true
+        },
+        {
+          "molecule": "COCc1c2ccccc2c(C#N)c2ccccc12",
+          "mean": -0.2995940959409594,
+          "ci": [
+            -0.4541042435424351,
+            -0.1625719557195572
+          ],
+          "excludes_zero": true
+        },
+        {
+          "molecule": "O=C1Oc2ccccc2C1(c1ccccc1)C1(c2ccccc2)C(=O)Oc2ccccc21",
+          "mean": -0.30153136531365315,
+          "ci": [
+            -0.452352398523985,
+            -0.15379151291512907
+          ],
+          "excludes_zero": true
+        }
+      ]
+    },
+    "cluster_free_subset_first_row_per_molecule": {
+      "n": 419,
+      "per_channel": {
+        "quantum": {
+          "mae": 2.2829594272076372,
+          "rmse": 3.3156190723506764,
+          "median_ae": 1.6099999999999994,
+          "p90_ae": 5.229999999999998,
+          "frac_within_2": 0.5894988066825776,
+          "frac_within_5": 0.8902147971360382
+        },
+        "learned": {
+          "mae": 2.72,
+          "rmse": 4.001961571535605,
+          "median_ae": 1.9000000000000057,
+          "p90_ae": 6.108000000000007,
+          "frac_within_2": 0.5393794749403341,
+          "frac_within_5": 0.837708830548926
+        },
+        "reference": {
+          "mae": 5.750787589498806,
+          "rmse": 7.151227743114479,
+          "median_ae": 5.199999999999989,
+          "p90_ae": 10.520000000000001,
+          "frac_within_2": 0.15990453460620524,
+          "frac_within_5": 0.48448687350835323
+        }
+      },
+      "order": [
+        "quantum",
+        "learned",
+        "reference"
+      ],
+      "paired_q_vs_l": {
+        "mean_diff": -0.4370405727923628,
+        "boot95_ci": [
+          -0.6366861575178997,
+          -0.25489081145584724
+        ],
+        "ci_excludes_zero": true,
+        "t": -4.451342135454427,
+        "p": 1.0961459342839319e-05
+      },
+      "paired_q_vs_r": {
+        "mean_diff": -3.4678281622911693,
+        "boot95_ci": [
+          -3.902819809069212,
+          -3.0534791169451077
+        ],
+        "ci_excludes_zero": true,
+        "t": -15.9926023679253,
+        "p": 2.934642489489097e-45
+      }
+    },
+    "cluster_free_random_choice_sensitivity": {
+      "n_reps": 2000,
+      "per_channel": {
+        "quantum": {
+          "mean": 2.279156742243437,
+          "sd": 0.02290602725519529,
+          "p2.5": 2.2356974940334133,
+          "p97.5": 2.32521539379475
+        },
+        "learned": {
+          "mean": 2.696816324582339,
+          "sd": 0.02428692276118656,
+          "p2.5": 2.650378281622912,
+          "p97.5": 2.746275059665871
+        },
+        "reference": {
+          "mean": 5.755565751789976,
+          "sd": 0.052881878922867935,
+          "p2.5": 5.658657517899761,
+          "p97.5": 5.857708830548926
+        }
+      },
+      "frac_reps_quantum_beats_learned": 1.0,
+      "frac_reps_learned_beats_reference": 1.0,
+      "frac_reps_quantum_beats_reference": 1.0
+    },
+    "cluster_bootstrap_over_molecules": {
+      "quantum_vs_learned": {
+        "mean_diff": -0.3128913443830571,
+        "cluster_boot95_ci": [
+          -0.473285845498359,
+          -0.16814731481962394
+        ],
+        "ci_excludes_zero": true,
+        "row_boot95_ci": [
+          -0.4708301104972374,
+          -0.1682279005524861
+        ],
+        "ci_width_ratio_cluster_over_row": 1.0083816993089603
+      },
+      "quantum_vs_reference": {
+        "mean_diff": -3.388158379373849,
+        "cluster_boot95_ci": [
+          -3.7459968526644727,
+          -3.046460307205173
+        ],
+        "ci_excludes_zero": true,
+        "row_boot95_ci": [
+          -3.7417688766114177,
+          -3.05288950276243
+        ],
+        "ci_width_ratio_cluster_over_row": 1.015470301499618
+      },
+      "learned_vs_reference": {
+        "mean_diff": -3.075267034990792,
+        "cluster_boot95_ci": [
+          -3.454252170834897,
+          -2.7111941482843136
+        ],
+        "ci_excludes_zero": true,
+        "row_boot95_ci": [
+          -3.4484019337016574,
+          -2.718267955801105
+        ],
+        "ci_width_ratio_cluster_over_row": 1.017700922078977
+      }
+    },
+    "verdict": "PARTIAL/FAIL"
+  },
+  "check2_alternative_error_definitions": {
+    "metrics": {
+      "mae": {
+        "per_channel": {
+          "quantum": 2.0978084714548806,
+          "learned": 2.410699815837938,
+          "reference": 5.48596685082873
+        },
+        "order_best_to_worst": [
+          "quantum",
+          "learned",
+          "reference"
+        ],
+        "better": "lower"
+      },
+      "rmse": {
+        "per_channel": {
+          "quantum": 3.0595296584807596,
+          "learned": 3.627796539885696,
+          "reference": 6.75961553714002
+        },
+        "order_best_to_worst": [
+          "quantum",
+          "learned",
+          "reference"
+        ],
+        "better": "lower"
+      },
+      "median_ae": {
+        "per_channel": {
+          "quantum": 1.4000000000000057,
+          "learned": 1.6099999999999994,
+          "reference": 4.8999999999999915
+        },
+        "order_best_to_worst": [
+          "quantum",
+          "learned",
+          "reference"
+        ],
+        "better": "lower"
+      },
+      "p90_ae": {
+        "per_channel": {
+          "quantum": 4.707999999999996,
+          "learned": 5.457999999999996,
+          "reference": 9.800000000000008
+        },
+        "order_best_to_worst": [
+          "quantum",
+          "learned",
+          "reference"
+        ],
+        "better": "lower"
+      },
+      "frac_within_2": {
+        "per_channel": {
+          "quantum": 0.6187845303867403,
+          "learned": 0.5874769797421732,
+          "reference": 0.15469613259668508
+        },
+        "order_best_to_worst": [
+          "quantum",
+          "learned",
+          "reference"
+        ],
+        "better": "higher"
+      },
+      "frac_within_5": {
+        "per_channel": {
+          "quantum": 0.9097605893186004,
+          "learned": 0.8692449355432781,
+          "reference": 0.5211786372007366
+        },
+        "order_best_to_worst": [
+          "quantum",
+          "learned",
+          "reference"
+        ],
+        "better": "higher"
+      }
+    },
+    "paired_tests": {
+      "quantum_vs_learned": {
+        "mae": {
+          "diff_a_minus_b": -0.3128913443830572,
+          "boot95_ci": [
+            -0.4708301104972375,
+            -0.16822790055248615
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "quantum"
+        },
+        "rmse": {
+          "diff_a_minus_b": -0.5682668814049365,
+          "boot95_ci": [
+            -0.883088641165434,
+            -0.2720874877793374
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "quantum"
+        },
+        "median_ae": {
+          "diff_a_minus_b": -0.20999999999999375,
+          "boot95_ci": [
+            -0.39000000000000057,
+            -0.04000000000003432
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "quantum"
+        },
+        "p90_ae": {
+          "diff_a_minus_b": -0.75,
+          "boot95_ci": [
+            -1.326,
+            -0.19799999999999862
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "quantum"
+        },
+        "frac_within_2": {
+          "diff_a_minus_b": 0.03130755064456714,
+          "boot95_ci": [
+            -0.0018416206261510082,
+            0.0626611418047876
+          ],
+          "ci_excludes_zero": false,
+          "better_channel": "not_distinguishable"
+        },
+        "frac_within_5": {
+          "diff_a_minus_b": 0.04051565377532229,
+          "boot95_ci": [
+            0.016574585635359185,
+            0.0644567219152854
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "quantum"
+        },
+        "mcnemar_within_2": {
+          "a_only_within": 50,
+          "b_only_within": 33,
+          "n_discordant": 83,
+          "binom_p_two_sided": 0.07841962481580764
+        },
+        "mcnemar_within_5": {
+          "a_only_within": 32,
+          "b_only_within": 10,
+          "n_discordant": 42,
+          "binom_p_two_sided": 0.0009406740282429382
+        }
+      },
+      "quantum_vs_reference": {
+        "mae": {
+          "diff_a_minus_b": -3.388158379373849,
+          "boot95_ci": [
+            -3.7417688766114177,
+            -3.0528895027624303
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "quantum"
+        },
+        "rmse": {
+          "diff_a_minus_b": -3.70008587865926,
+          "boot95_ci": [
+            -4.287653223999095,
+            -3.139788609847404
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "quantum"
+        },
+        "median_ae": {
+          "diff_a_minus_b": -3.499999999999986,
+          "boot95_ci": [
+            -3.8300000000000125,
+            -3.049999999999997
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "quantum"
+        },
+        "p90_ae": {
+          "diff_a_minus_b": -5.092000000000012,
+          "boot95_ci": [
+            -6.073999999999995,
+            -4.189999999999994
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "quantum"
+        },
+        "frac_within_2": {
+          "diff_a_minus_b": 0.46408839779005523,
+          "boot95_ci": [
+            0.41436464088397795,
+            0.5138121546961325
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "quantum"
+        },
+        "frac_within_5": {
+          "diff_a_minus_b": 0.3885819521178637,
+          "boot95_ci": [
+            0.3406998158379374,
+            0.43646408839779005
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "quantum"
+        },
+        "mcnemar_within_2": {
+          "a_only_within": 278,
+          "b_only_within": 26,
+          "n_discordant": 304,
+          "binom_p_two_sided": 2.0019289572585627e-54
+        },
+        "mcnemar_within_5": {
+          "a_only_within": 236,
+          "b_only_within": 25,
+          "n_discordant": 261,
+          "binom_p_two_sided": 3.0912389490303406e-44
+        }
+      },
+      "learned_vs_reference": {
+        "mae": {
+          "diff_a_minus_b": -3.075267034990792,
+          "boot95_ci": [
+            -3.448401933701657,
+            -2.718267955801106
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "learned"
+        },
+        "rmse": {
+          "diff_a_minus_b": -3.1318189972543236,
+          "boot95_ci": [
+            -3.8088061344362534,
+            -2.489696406597912
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "learned"
+        },
+        "median_ae": {
+          "diff_a_minus_b": -3.289999999999992,
+          "boot95_ci": [
+            -3.6200000000000045,
+            -2.8500000000000085
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "learned"
+        },
+        "p90_ae": {
+          "diff_a_minus_b": -4.342000000000012,
+          "boot95_ci": [
+            -5.29,
+            -3.5559500000000024
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "learned"
+        },
+        "frac_within_2": {
+          "diff_a_minus_b": 0.4327808471454881,
+          "boot95_ci": [
+            0.3830570902394107,
+            0.4825046040515654
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "learned"
+        },
+        "frac_within_5": {
+          "diff_a_minus_b": 0.34806629834254144,
+          "boot95_ci": [
+            0.3001381215469613,
+            0.39779005524861877
+          ],
+          "ci_excludes_zero": true,
+          "better_channel": "learned"
+        },
+        "mcnemar_within_2": {
+          "a_only_within": 269,
+          "b_only_within": 34,
+          "n_discordant": 303,
+          "binom_p_two_sided": 1.6236986946160992e-46
+        },
+        "mcnemar_within_5": {
+          "a_only_within": 220,
+          "b_only_within": 31,
+          "n_discordant": 251,
+          "binom_p_two_sided": 2.7751837285032762e-36
+        }
+      }
+    },
+    "stability": {
+      "quantum_vs_learned": {
+        "winners_per_metric": {
+          "rmse": "quantum",
+          "median_ae": "quantum",
+          "p90_ae": "quantum",
+          "frac_within_2": "not_distinguishable",
+          "frac_within_5": "quantum"
+        },
+        "significant_per_metric": {
+          "rmse": true,
+          "median_ae": true,
+          "p90_ae": true,
+          "frac_within_2": false,
+          "frac_within_5": true
+        },
+        "consistent_direction": true
+      },
+      "quantum_vs_reference": {
+        "winners_per_metric": {
+          "rmse": "quantum",
+          "median_ae": "quantum",
+          "p90_ae": "quantum",
+          "frac_within_2": "quantum",
+          "frac_within_5": "quantum"
+        },
+        "significant_per_metric": {
+          "rmse": true,
+          "median_ae": true,
+          "p90_ae": true,
+          "frac_within_2": true,
+          "frac_within_5": true
+        },
+        "consistent_direction": true
+      },
+      "learned_vs_reference": {
+        "winners_per_metric": {
+          "rmse": "learned",
+          "median_ae": "learned",
+          "p90_ae": "learned",
+          "frac_within_2": "learned",
+          "frac_within_5": "learned"
+        },
+        "significant_per_metric": {
+          "rmse": true,
+          "median_ae": true,
+          "p90_ae": true,
+          "frac_within_2": true,
+          "frac_within_5": true
+        },
+        "consistent_direction": true
+      }
+    },
+    "verdict": "PASS"
+  },
+  "check3_outlier_treatment": {
+    "k_worst_5pct": 27,
+    "n_union_5pct": 60,
+    "worst_single_observation_ids": {
+      "quantum": "bond_observation_0403",
+      "learned": "bond_observation_0511",
+      "reference": "bond_observation_0508"
+    },
+    "worst_single_ae": {
+      "quantum": 15.740000000000009,
+      "learned": 25.209999999999997,
+      "reference": 33.4
+    },
+    "worst_single_experimental": {
+      "quantum": 71.8,
+      "learned": 15.2,
+      "reference": 77.5
+    },
+    "a_own_worst_5pct_removed": {
+      "per_channel": {
+        "quantum": {
+          "mae": 1.7371705426356592,
+          "rmse": 2.258083069173236,
+          "median_ae": 1.2849999999999966,
+          "p90_ae": 3.9150000000000027,
+          "frac_within_2": 0.6511627906976745,
+          "frac_within_5": 0.9573643410852714
+        },
+        "learned": {
+          "mae": 1.9715891472868217,
+          "rmse": 2.6288843538155944,
+          "median_ae": 1.5,
+          "p90_ae": 4.775000000000006,
+          "frac_within_2": 0.6182170542635659,
+          "frac_within_5": 0.9147286821705426
+        },
+        "reference": {
+          "mae": 4.888914728682171,
+          "rmse": 5.625753076203986,
+          "median_ae": 4.699999999999989,
+          "p90_ae": 8.75,
+          "frac_within_2": 0.16279069767441862,
+          "frac_within_5": 0.5484496124031008
+        }
+      },
+      "n_kept": 516,
+      "order_by_mae": [
+        "quantum",
+        "learned",
+        "reference"
+      ],
+      "order_by_rmse": [
+        "quantum",
+        "learned",
+        "reference"
+      ]
+    },
+    "a_common_worst_5pct_union_removed": {
+      "per_channel": {
+        "quantum": {
+          "mae": 1.6830848861283645,
+          "rmse": 2.1875988235589356,
+          "median_ae": 1.2000000000000028,
+          "p90_ae": 3.8880000000000026,
+          "frac_within_2": 0.6708074534161491,
+          "frac_within_5": 0.9627329192546584
+        },
+        "learned": {
+          "mae": 1.820579710144928,
+          "rmse": 2.422221060395692,
+          "median_ae": 1.3400000000000034,
+          "p90_ae": 4.536,
+          "frac_within_2": 0.6480331262939959,
+          "frac_within_5": 0.9358178053830227
+        },
+        "reference": {
+          "mae": 4.823146997929607,
+          "rmse": 5.518619790240487,
+          "median_ae": 4.699999999999989,
+          "p90_ae": 8.5,
+          "frac_within_2": 0.16149068322981366,
+          "frac_within_5": 0.5527950310559007
+        }
+      },
+      "n_kept": 483,
+      "dropped_observation_ids": [
+        "bond_observation_0021",
+        "bond_observation_0033",
+        "bond_observation_0035",
+        "bond_observation_0038",
+        "bond_observation_0044",
+        "bond_observation_0049",
+        "bond_observation_0054",
+        "bond_observation_0062",
+        "bond_observation_0072",
+        "bond_observation_0074",
+        "bond_observation_0099",
+        "bond_observation_0102",
+        "bond_observation_0113",
+        "bond_observation_0121",
+        "bond_observation_0123",
+        "bond_observation_0149",
+        "bond_observation_0150",
+        "bond_observation_0152",
+        "bond_observation_0185",
+        "bond_observation_0186",
+        "bond_observation_0199",
+        "bond_observation_0215",
+        "bond_observation_0221",
+        "bond_observation_0222",
+        "bond_observation_0224",
+        "bond_observation_0227",
+        "bond_observation_0229",
+        "bond_observation_0232",
+        "bond_observation_0240",
+        "bond_observation_0241",
+        "bond_observation_0242",
+        "bond_observation_0250",
+        "bond_observation_0251",
+        "bond_observation_0254",
+        "bond_observation_0346",
+        "bond_observation_0403",
+        "bond_observation_0417",
+        "bond_observation_0434",
+        "bond_observation_0436",
+        "bond_observation_0437",
+        "bond_observation_0440",
+        "bond_observation_0451",
+        "bond_observation_0482",
+        "bond_observation_0484",
+        "bond_observation_0486",
+        "bond_observation_0487",
+        "bond_observation_0488",
+        "bond_observation_0491",
+        "bond_observation_0499",
+        "bond_observation_0502",
+        "bond_observation_0503",
+        "bond_observation_0508",
+        "bond_observation_0509",
+        "bond_observation_0511",
+        "bond_observation_0512",
+        "bond_observation_0515",
+        "bond_observation_0520",
+        "bond_observation_0528",
+        "bond_observation_0531",
+        "bond_observation_0538"
+      ],
+      "order_by_mae": [
+        "quantum",
+        "learned",
+        "reference"
+      ],
+      "order_by_rmse": [
+        "quantum",
+        "learned",
+        "reference"
+      ],
+      "paired_q_vs_l_mae_diff": {
+        "mean_diff": -0.1374948240165632,
+        "boot95_ci": [
+          -0.2342241200828162,
+          -0.04302277432712204
+        ],
+        "ci_excludes_zero": true
+      }
+    },
+    "b_own_single_worst_removed": {
+      "per_channel": {
+        "quantum": {
+          "mae": 2.0726383763837646,
+          "rmse": 2.9867864909356054,
+          "median_ae": 1.3999999999999986,
+          "p90_ae": 4.700000000000003,
+          "frac_within_2": 0.6199261992619927,
+          "frac_within_5": 0.9114391143911439
+        },
+        "learned": {
+          "mae": 2.368634686346864,
+          "rmse": 3.4659196848733553,
+          "median_ae": 1.6099999999999994,
+          "p90_ae": 5.444000000000004,
+          "frac_within_2": 0.5885608856088561,
+          "frac_within_5": 0.8708487084870848
+        },
+        "reference": {
+          "mae": 5.434464944649447,
+          "rmse": 6.61199491475663,
+          "median_ae": 4.849999999999994,
+          "p90_ae": 9.780000000000005,
+          "frac_within_2": 0.15498154981549817,
+          "frac_within_5": 0.522140221402214
+        }
+      },
+      "order_by_mae": [
+        "quantum",
+        "learned",
+        "reference"
+      ]
+    },
+    "b_common_single_worst_union_removed": {
+      "per_channel": {
+        "quantum": {
+          "mae": 2.04212962962963,
+          "rmse": 2.913228799294185,
+          "median_ae": 1.394999999999996,
+          "p90_ae": 4.690999999999998,
+          "frac_within_2": 0.6222222222222222,
+          "frac_within_5": 0.9148148148148149
+        },
+        "learned": {
+          "mae": 2.34862962962963,
+          "rmse": 3.421256754144269,
+          "median_ae": 1.605000000000004,
+          "p90_ae": 5.396000000000003,
+          "frac_within_2": 0.5888888888888889,
+          "frac_within_5": 0.8722222222222222
+        },
+        "reference": {
+          "mae": 5.411814814814815,
+          "rmse": 6.586811233231314,
+          "median_ae": 4.799999999999997,
+          "p90_ae": 9.599999999999994,
+          "frac_within_2": 0.15555555555555556,
+          "frac_within_5": 0.524074074074074
+        }
+      },
+      "n_kept": 540,
+      "dropped_observation_ids": [
+        "bond_observation_0403",
+        "bond_observation_0508",
+        "bond_observation_0511"
+      ],
+      "order_by_mae": [
+        "quantum",
+        "learned",
+        "reference"
+      ]
+    },
+    "c_winsorised_estimates_1_99": {
+      "per_channel": {
+        "quantum": {
+          "p01": 65.0372,
+          "p99": 131.5858,
+          "n_clipped_low": 6,
+          "n_clipped_high": 6,
+          "metrics": {
+            "mae": 2.3026364640883976,
+            "rmse": 4.2842073760964965,
+            "median_ae": 1.4000000000000057,
+            "p90_ae": 4.875999999999997,
+            "frac_within_2": 0.6151012891344383,
+            "frac_within_5": 0.9042357274401474
+          }
+        },
+        "learned": {
+          "p01": 65.6734,
+          "p99": 131.47920000000002,
+          "n_clipped_low": 6,
+          "n_clipped_high": 6,
+          "metrics": {
+            "mae": 2.5912405156537752,
+            "rmse": 4.623099380755968,
+            "median_ae": 1.6300000000000097,
+            "p90_ae": 5.516000000000004,
+            "frac_within_2": 0.585635359116022,
+            "frac_within_5": 0.8637200736648251
+          }
+        },
+        "reference": {
+          "p01": 55.452,
+          "p99": 134.43200000000002,
+          "n_clipped_low": 6,
+          "n_clipped_high": 6,
+          "metrics": {
+            "mae": 5.545863720073665,
+            "rmse": 6.950659134847556,
+            "median_ae": 4.8999999999999915,
+            "p90_ae": 9.960000000000004,
+            "frac_within_2": 0.15653775322283608,
+            "frac_within_5": 0.5211786372007366
+          }
+        }
+      },
+      "order_by_mae": [
+        "quantum",
+        "learned",
+        "reference"
+      ],
+      "order_by_rmse": [
+        "quantum",
+        "learned",
+        "reference"
+      ],
+      "paired_q_vs_l_mae_diff": {
+        "mean_diff": -0.2886040515653774,
+        "boot95_ci": [
+          -0.4397558195211785,
+          -0.15030686924493558
+        ],
+        "ci_excludes_zero": true
+      }
+    },
+    "ranking_used": {
+      "baseline_order_by_mae": [
+        "quantum",
+        "learned",
+        "reference"
+      ],
+      "a_own_5pct_order_by_mae": [
+        "quantum",
+        "learned",
+        "reference"
+      ],
+      "a_common_5pct_order_by_mae": [
+        "quantum",
+        "learned",
+        "reference"
+      ],
+      "b_own_single_order_by_mae": [
+        "quantum",
+        "learned",
+        "reference"
+      ],
+      "b_common_single_order_by_mae": [
+        "quantum",
+        "learned",
+        "reference"
+      ],
+      "c_winsor_order_by_mae": [
+        "quantum",
+        "learned",
+        "reference"
+      ]
+    },
+    "note_about_ordering": "The A/B/C variants use each channel's own metric after its own trimming, so a channel with a fatter tail can be trimmed harder. The common-union variants (a_common_5pct, b_common_single) remove the same observations for all three channels and are the fairer test; both keep the ordering.",
+    "ranking_flips": {
+      "a_own_5pct": false,
+      "a_common_5pct": false,
+      "b_own_single": false,
+      "b_common_single": false,
+      "c_winsor": false
+    },
+    "verdict": "PASS"
+  },
+  "check4_class_leave_out": {
+    "leave_one_bond_class_out": {
+      "C-C": {
+        "n_removed": 240,
+        "n_kept": 303,
+        "per_channel": {
+          "quantum": {
+            "mae": 1.9895379537953801,
+            "rmse": 2.6507333190483107,
+            "median_ae": 1.6400000000000006,
+            "p90_ae": 4.151999999999998,
+            "frac_within_2": 0.5907590759075908,
+            "frac_within_5": 0.9372937293729373
+          },
+          "learned": {
+            "mae": 2.548646864686469,
+            "rmse": 3.519995499547078,
+            "median_ae": 1.9099999999999966,
+            "p90_ae": 5.700000000000001,
+            "frac_within_2": 0.5379537953795379,
+            "frac_within_5": 0.858085808580858
+          },
+          "reference": {
+            "mae": 5.692673267326733,
+            "rmse": 6.705195857329487,
+            "median_ae": 5.099999999999994,
+            "p90_ae": 10.380000000000004,
+            "frac_within_2": 0.12211221122112212,
+            "frac_within_5": 0.49834983498349833
+          }
+        },
+        "order_by_mae": [
+          "quantum",
+          "learned",
+          "reference"
+        ],
+        "same_as_baseline_order": true
+      },
+      "C-H": {
+        "n_removed": 302,
+        "n_kept": 241,
+        "per_channel": {
+          "quantum": {
+            "mae": 2.232074688796681,
+            "rmse": 3.5025770595507657,
+            "median_ae": 1.1800000000000068,
+            "p90_ae": 5.439999999999998,
+            "frac_within_2": 0.6556016597510373,
+            "frac_within_5": 0.8755186721991701
+          },
+          "learned": {
+            "mae": 2.246680497925311,
+            "rmse": 3.763767920934499,
+            "median_ae": 1.0999999999999943,
+            "p90_ae": 5.1299999999999955,
+            "frac_within_2": 0.6473029045643154,
+            "frac_within_5": 0.8838174273858921
+          },
+          "reference": {
+            "mae": 5.204149377593361,
+            "rmse": 6.813533031045291,
+            "median_ae": 4.599999999999994,
+            "p90_ae": 9.0,
+            "frac_within_2": 0.1991701244813278,
+            "frac_within_5": 0.5518672199170125
+          }
+        },
+        "order_by_mae": [
+          "quantum",
+          "learned",
+          "reference"
+        ],
+        "same_as_baseline_order": true
+      },
+      "H-O": {
+        "n_removed": 1,
+        "n_kept": 542,
+        "per_channel": {
+          "quantum": {
+            "mae": 2.0986346863468635,
+            "rmse": 3.061530560470323,
+            "median_ae": 1.3999999999999986,
+            "p90_ae": 4.708999999999995,
+            "frac_within_2": 0.6180811808118081,
+            "frac_within_5": 0.9095940959409594
+          },
+          "learned": {
+            "mae": 2.4065129151291513,
+            "rmse": 3.6255729919966035,
+            "median_ae": 1.6099999999999994,
+            "p90_ae": 5.458999999999995,
+            "frac_within_2": 0.5885608856088561,
+            "frac_within_5": 0.8690036900369004
+          },
+          "reference": {
+            "mae": 5.495719557195572,
+            "rmse": 6.765843017268235,
+            "median_ae": 4.899999999999999,
+            "p90_ae": 9.80000000000001,
+            "frac_within_2": 0.15313653136531366,
+            "frac_within_5": 0.5202952029520295
+          }
+        },
+        "order_by_mae": [
+          "quantum",
+          "learned",
+          "reference"
+        ],
+        "same_as_baseline_order": true
+      }
+    },
+    "baseline_order": [
+      "quantum",
+      "learned",
+      "reference"
+    ],
+    "classes_causing_rank_change": [],
+    "extra_batch_leaveout": {
+      "only_training_rows_in_db_331": {
+        "n_kept": 331,
+        "per_channel": {
+          "quantum": {
+            "mae": 1.8708459214501518,
+            "rmse": 2.7015974350199454,
+            "median_ae": 1.1600000000000108,
+            "p90_ae": 4.469999999999999,
+            "frac_within_2": 0.676737160120846,
+            "frac_within_5": 0.9214501510574018
+          },
+          "learned": {
+            "mae": 1.8069486404833845,
+            "rmse": 2.595350246171433,
+            "median_ae": 1.1500000000000057,
+            "p90_ae": 4.769999999999996,
+            "frac_within_2": 0.6978851963746223,
+            "frac_within_5": 0.9214501510574018
+          },
+          "reference": {
+            "mae": 5.024410876132931,
+            "rmse": 6.055621941609126,
+            "median_ae": 4.699999999999989,
+            "p90_ae": 8.5,
+            "frac_within_2": 0.1691842900302115,
+            "frac_within_5": 0.5558912386706949
+          }
+        },
+        "order_by_mae": [
+          "learned",
+          "quantum",
+          "reference"
+        ],
+        "paired_q_vs_l": {
+          "mean_diff": 0.0638972809667673,
+          "boot95_ci": [
+            -0.0012998489425983385,
+            0.12937009063444085
+          ],
+          "ci_excludes_zero": false
+        }
+      },
+      "only_heldout_rows_not_in_db_212": {
+        "n_kept": 212,
+        "per_channel": {
+          "quantum": {
+            "mae": 2.4521698113207546,
+            "rmse": 3.5468733241206247,
+            "median_ae": 1.8200000000000003,
+            "p90_ae": 5.245999999999998,
+            "frac_within_2": 0.5283018867924528,
+            "frac_within_5": 0.8915094339622641
+          },
+          "learned": {
+            "mae": 3.353349056603773,
+            "rmse": 4.815858678503839,
+            "median_ae": 2.289999999999999,
+            "p90_ae": 7.525000000000002,
+            "frac_within_2": 0.41509433962264153,
+            "frac_within_5": 0.7877358490566038
+          },
+          "reference": {
+            "mae": 6.206603773584907,
+            "rmse": 7.73164899787976,
+            "median_ae": 5.350000000000001,
+            "p90_ae": 11.400000000000006,
+            "frac_within_2": 0.1320754716981132,
+            "frac_within_5": 0.4669811320754717
+          }
+        },
+        "order_by_mae": [
+          "quantum",
+          "learned",
+          "reference"
+        ],
+        "paired_q_vs_l": {
+          "mean_diff": -0.9011792452830186,
+          "boot95_ci": [
+            -1.2706155660377343,
+            -0.5603738207547165
+          ],
+          "ci_excludes_zero": true
+        }
+      },
+      "label_correction": "in_db_row==True selects the 331 rows that DO have an exact database row (identical to in_reference_training_set True); in_db_row==False selects the 212 held-out rows."
+    },
+    "hac_bin_leaveout": {
+      "drop_HAC_0_5": {
+        "n_removed": 113,
+        "per_channel_mae": {
+          "quantum": 2.2085813953488374,
+          "learned": 2.62953488372093,
+          "reference": 5.555581395348837
+        },
+        "order_by_mae": [
+          "quantum",
+          "learned",
+          "reference"
+        ]
+      },
+      "drop_HAC_6_9": {
+        "n_removed": 237,
+        "per_channel_mae": {
+          "quantum": 2.249640522875817,
+          "learned": 2.7893137254901963,
+          "reference": 5.833921568627451
+        },
+        "order_by_mae": [
+          "quantum",
+          "learned",
+          "reference"
+        ]
+      },
+      "drop_HAC_10_100": {
+        "n_removed": 193,
+        "per_channel_mae": {
+          "quantum": 1.828971428571429,
+          "learned": 1.810828571428572,
+          "reference": 5.096228571428572
+        },
+        "order_by_mae": [
+          "learned",
+          "quantum",
+          "reference"
+        ]
+      }
+    },
+    "verdict": "PASS"
+  },
+  "check5_threshold_sensitivity": {
+    "db": {
+      "n_unique_molecules": 42577,
+      "hac_min": 1.0,
+      "hac_max": 10.0,
+      "hac_mean": 8.891514197806327,
+      "mw_min": 16.043,
+      "mw_max": 152.146,
+      "mw_mean": 125.4689382060737,
+      "n_molecules_hac_gt_10": 0
+    },
+    "benchmark": {
+      "n_obs": 543,
+      "n_unique_molecules": 419,
+      "hac_min": 1.0,
+      "hac_max": 38.0,
+      "hac_mean": 9.276243093922652,
+      "mw_min": 16.043,
+      "mw_max": 482.62600000000015,
+      "mw_mean": 125.3165506445672
+    },
+    "threshold_table": {
+      "HAC>8": {
+        "n_db_molecules_above": 29769,
+        "frac_db_molecules_above": 0.6991803086173286,
+        "n_bench_obs_above": 234,
+        "frac_bench_obs_above": 0.430939226519337,
+        "n_bench_obs_above_with_parent_in_db": 78,
+        "n_bench_obs_above_with_exact_db_row": 72,
+        "n_bench_unique_molecules_above": 207
+      },
+      "HAC>9": {
+        "n_db_molecules_above": 16373,
+        "frac_db_molecules_above": 0.38455034408248584,
+        "n_bench_obs_above": 193,
+        "frac_bench_obs_above": 0.35543278084714547,
+        "n_bench_obs_above_with_parent_in_db": 39,
+        "n_bench_obs_above_with_exact_db_row": 35,
+        "n_bench_unique_molecules_above": 178
+      },
+      "HAC>10": {
+        "n_db_molecules_above": 0,
+        "frac_db_molecules_above": 0.0,
+        "n_bench_obs_above": 150,
+        "frac_bench_obs_above": 0.27624309392265195,
+        "n_bench_obs_above_with_parent_in_db": 0,
+        "n_bench_obs_above_with_exact_db_row": 0,
+        "n_bench_unique_molecules_above": 141
+      },
+      "HAC>11": {
+        "n_db_molecules_above": 0,
+        "frac_db_molecules_above": 0.0,
+        "n_bench_obs_above": 136,
+        "frac_bench_obs_above": 0.2504604051565378,
+        "n_bench_obs_above_with_parent_in_db": 0,
+        "n_bench_obs_above_with_exact_db_row": 0,
+        "n_bench_unique_molecules_above": 129
+      },
+      "HAC>12": {
+        "n_db_molecules_above": 0,
+        "frac_db_molecules_above": 0.0,
+        "n_bench_obs_above": 111,
+        "frac_bench_obs_above": 0.20441988950276244,
+        "n_bench_obs_above_with_parent_in_db": 0,
+        "n_bench_obs_above_with_exact_db_row": 0,
+        "n_bench_unique_molecules_above": 107
+      }
+    },
+    "mw_equivalent_boundary": {
+      "db_mw_max": 152.146,
+      "n_bench_obs_above_db_mw_max": 138,
+      "frac_bench_obs_above_db_mw_max": 0.2541436464088398,
+      "mw_translated_thresholds": {
+        "HAC<=8->DB_MW_max": {
+          "mw_cutoff": 122.12,
+          "n_bench_obs_above_this_mw": 212,
+          "frac_bench_obs_above_this_mw": 0.39042357274401474,
+          "n_bench_unique_molecules_above": 193
+        },
+        "HAC<=9->DB_MW_max": {
+          "mw_cutoff": 138.119,
+          "n_bench_obs_above_this_mw": 160,
+          "frac_bench_obs_above_this_mw": 0.2946593001841621,
+          "n_bench_unique_molecules_above": 151
+        },
+        "HAC<=10->DB_MW_max": {
+          "mw_cutoff": 152.146,
+          "n_bench_obs_above_this_mw": 138,
+          "frac_bench_obs_above_this_mw": 0.2541436464088398,
+          "n_bench_unique_molecules_above": 131
+        },
+        "HAC<=11->DB_MW_max": {
+          "mw_cutoff": 152.146,
+          "n_bench_obs_above_this_mw": 138,
+          "frac_bench_obs_above_this_mw": 0.2541436464088398,
+          "n_bench_unique_molecules_above": 131
+        },
+        "HAC<=12->DB_MW_max": {
+          "mw_cutoff": 152.146,
+          "n_bench_obs_above_this_mw": 138,
+          "frac_bench_obs_above_this_mw": 0.2541436464088398,
+          "n_bench_unique_molecules_above": 131
+        }
+      }
+    },
+    "benchmark_hac_mw_spearman": 0.9958613878172338,
+    "db_hac_mw_spearman": 0.9487077139223019,
+    "threshold_trend": {
+      "db_molecules_above_by_threshold": {
+        "8": 29769,
+        "9": 16373,
+        "10": 0,
+        "11": 0,
+        "12": 0
+      },
+      "bench_obs_above_by_threshold": {
+        "8": 234,
+        "9": 193,
+        "10": 150,
+        "11": 136,
+        "12": 111
+      },
+      "db_excess_is_zero_for_every_threshold_ge_10": true,
+      "bench_molecules_above_boundary_is_nonzero_at_every_threshold_le_10": true,
+      "note": "the claim 'the database covers only small molecules' is decided by the DB side, whose molecule count above the boundary is 0 for every threshold >= 10 and 70% of the DB for a threshold of 8; the benchmark side above the boundary falls monotonically from 234 obs (HAC>8) to 63 obs (HAC>12) but never reaches 0."
+    },
+    "verdict_note": "DB HAC max is exactly 10 with 0 molecules above; benchmark observations above each threshold are reported; conclusion is threshold-insensitive in the sense that no DB molecule exceeds HAC 10 under any threshold >= 10, while the benchmark tail above the boundary shrinks monotonically with the threshold."
+  },
+  "check6_paired_unit_sensitivity": {
+    "unique_ordered_fragment_pairs": {
+      "label": "unique (frag_a,frag_b)",
+      "n_kept": 539,
+      "n_dropped": 4,
+      "per_channel": {
+        "quantum": {
+          "mae": 2.0761410018552877,
+          "rmse": 3.033556911031592,
+          "median_ae": 1.3900000000000006,
+          "p90_ae": 4.700000000000003,
+          "frac_within_2": 0.6233766233766234,
+          "frac_within_5": 0.9109461966604824
+        },
+        "learned": {
+          "mae": 2.4061038961038963,
+          "rmse": 3.629992129074505,
+          "median_ae": 1.6099999999999994,
+          "p90_ae": 5.459999999999994,
+          "frac_within_2": 0.5899814471243042,
+          "frac_within_5": 0.8682745825602969
+        },
+        "reference": {
+          "mae": 5.466382189239332,
+          "rmse": 6.738484219265032,
+          "median_ae": 4.799999999999997,
+          "p90_ae": 9.8,
+          "frac_within_2": 0.15584415584415584,
+          "frac_within_5": 0.5231910946196661
+        }
+      },
+      "order_by_mae": [
+        "quantum",
+        "learned",
+        "reference"
+      ],
+      "pairs": {
+        "quantum_vs_learned": {
+          "mean_diff": -0.32996289424860853,
+          "boot95_ci": [
+            -0.48885343228200384,
+            -0.1908116883116883
+          ],
+          "ci_excludes_zero": true,
+          "t": -4.294912367336662,
+          "p": 2.0738010948069295e-05,
+          "n_a_better": 246,
+          "n_b_better": 280
+        },
+        "quantum_vs_reference": {
+          "mean_diff": -3.3902411873840443,
+          "boot95_ci": [
+            -3.7381270871985164,
+            -3.0482968460111315
+          ],
+          "ci_excludes_zero": true,
+          "t": -19.179453629013818,
+          "p": 7.294164326437659e-63,
+          "n_a_better": 448,
+          "n_b_better": 91
+        },
+        "learned_vs_reference": {
+          "mean_diff": -3.0602782931354358,
+          "boot95_ci": [
+            -3.4282935992578847,
+            -2.7004053803339514
+          ],
+          "ci_excludes_zero": true,
+          "t": -16.381828588455843,
+          "p": 3.1417103739995347e-49,
+          "n_a_better": 440,
+          "n_b_better": 99
+        }
+      }
+    },
+    "unique_unordered_fragment_pairs": {
+      "label": "unique {frag_a,frag_b}",
+      "n_kept": 539,
+      "n_dropped": 4,
+      "per_channel": {
+        "quantum": {
+          "mae": 2.0761410018552877,
+          "rmse": 3.033556911031592,
+          "median_ae": 1.3900000000000006,
+          "p90_ae": 4.700000000000003,
+          "frac_within_2": 0.6233766233766234,
+          "frac_within_5": 0.9109461966604824
+        },
+        "learned": {
+          "mae": 2.4061038961038963,
+          "rmse": 3.629992129074505,
+          "median_ae": 1.6099999999999994,
+          "p90_ae": 5.459999999999994,
+          "frac_within_2": 0.5899814471243042,
+          "frac_within_5": 0.8682745825602969
+        },
+        "reference": {
+          "mae": 5.466382189239332,
+          "rmse": 6.738484219265032,
+          "median_ae": 4.799999999999997,
+          "p90_ae": 9.8,
+          "frac_within_2": 0.15584415584415584,
+          "frac_within_5": 0.5231910946196661
+        }
+      },
+      "order_by_mae": [
+        "quantum",
+        "learned",
+        "reference"
+      ],
+      "pairs": {
+        "quantum_vs_learned": {
+          "mean_diff": -0.32996289424860853,
+          "boot95_ci": [
+            -0.48885343228200384,
+            -0.1908116883116883
+          ],
+          "ci_excludes_zero": true,
+          "t": -4.294912367336662,
+          "p": 2.0738010948069295e-05,
+          "n_a_better": 246,
+          "n_b_better": 280
+        },
+        "quantum_vs_reference": {
+          "mean_diff": -3.3902411873840443,
+          "boot95_ci": [
+            -3.7381270871985164,
+            -3.0482968460111315
+          ],
+          "ci_excludes_zero": true,
+          "t": -19.179453629013818,
+          "p": 7.294164326437659e-63,
+          "n_a_better": 448,
+          "n_b_better": 91
+        },
+        "learned_vs_reference": {
+          "mean_diff": -3.0602782931354358,
+          "boot95_ci": [
+            -3.4282935992578847,
+            -2.7004053803339514
+          ],
+          "ci_excludes_zero": true,
+          "t": -16.381828588455843,
+          "p": 3.1417103739995347e-49,
+          "n_a_better": 440,
+          "n_b_better": 99
+        }
+      }
+    },
+    "baseline_order": [
+      "quantum",
+      "learned",
+      "reference"
+    ],
+    "dropped_observation_ids_ordered": [
+      "bond_observation_0034",
+      "bond_observation_0035",
+      "bond_observation_0036",
+      "bond_observation_0102"
+    ],
+    "dropped_observation_ids_unordered": [
+      "bond_observation_0034",
+      "bond_observation_0035",
+      "bond_observation_0036",
+      "bond_observation_0102"
+    ],
+    "verdict": "PASS"
+  },
+  "check2b_test_choice_sensitivity": {
+    "paired_t_on_mean_abs_err_diff": [
+      -4.071283281498414,
+      5.3724650811894166e-05
+    ],
+    "wilcoxon_signed_rank": [
+      68265.0,
+      0.553015785122517
+    ],
+    "sign_test_per_observation_superiority": {
+      "n_quantum_better": 246,
+      "n_learned_better": 284,
+      "p": 0.10792774315532913
+    },
+    "mcnemar_within_2": {
+      "a_only_within": 50,
+      "b_only_within": 33,
+      "n_discordant": 83,
+      "binom_p_two_sided": 0.07841962481580764
+    },
+    "mcnemar_within_5": {
+      "a_only_within": 32,
+      "b_only_within": 10,
+      "n_discordant": 42,
+      "binom_p_two_sided": 0.0009406740282429382
+    },
+    "cliffs_delta": -0.04170948519411631,
+    "paired_bootstrap_ci_cluster": {
+      "ci": [
+        -0.473285845498359,
+        -0.16814731481962394
+      ],
+      "ci_excludes_zero": true
+    },
+    "n_boot_lower_than_observed_quantum_mae": {
+      "frac_boot_quantum_mae_better": 1.0,
+      "frac_boot_learned_mae_better": 0.0
+    },
+    "range_of_test_p_values": {
+      "min": 5.3724650811894166e-05,
+      "max": 0.553015785122517,
+      "n_tests_above_0.05": 3,
+      "n_tests": 5
+    },
+    "mean_vs_majority_reversal": {
+      "quantum_wins_on_mean_abs_error": true,
+      "learned_wins_on_majority_of_observations": true,
+      "n_observations_quantum_better": 246,
+      "n_observations_learned_better": 284,
+      "mean_abs_err_diff": -0.3128913443830572,
+      "median_abs_err_diff": 0.01999999999999602,
+      "interpretation": "quantum wins on the MEAN absolute error but learned wins on the MAJORITY of individual observations; the mean advantage comes from quantum's thinner extreme tail, not from being better on a typical bond. Any claim phrased as 'quantum is the better estimator' must say which summary it refers to."
+    },
+    "verdict": "PARTIAL - TEST-DEPENDENT. The mean-difference tests (paired t p=5.37e-05, row and cluster bootstrap CIs) and 4 of the 5 alternative loss metrics favour quantum. But the Wilcoxon signed-rank test (p=0.553) and the within-2-kcal McNemar test (p=0.0784) do NOT reject, and the per-observation win count favours LEARNED (284 vs 246 observations, sign test p=0.108). There is a mean-vs-majority reversal: the mean gap is a tail-effect, not a typical-bond effect."
+  },
+  "check4b_domain_split": {
+    "cells": {
+      "HAC<=9|has_exact_db_row": {
+        "n": 296,
+        "mae": {
+          "quantum": 1.8032094594594599,
+          "learned": 1.740067567567568,
+          "reference": 4.996216216216217
+        },
+        "q_minus_l_mean_diff": 0.06314189189189165,
+        "boot95_ci": [
+          -0.005474662162162273,
+          0.13209628378378402
+        ],
+        "ci_excludes_zero": false,
+        "n_q_better": 106,
+        "n_l_better": 179
+      },
+      "HAC<=9|no_exact_db_row": {
+        "n": 54,
+        "mae": {
+          "quantum": 1.9701851851851844,
+          "learned": 2.198703703703704,
+          "reference": 5.644444444444445
+        },
+        "q_minus_l_mean_diff": -0.22851851851851937,
+        "boot95_ci": [
+          -0.5974120370370377,
+          0.12926388888888934
+        ],
+        "ci_excludes_zero": false,
+        "n_q_better": 27,
+        "n_l_better": 27
+      },
+      "HAC>=10|has_exact_db_row": {
+        "n": 35,
+        "mae": {
+          "quantum": 2.4428571428571457,
+          "learned": 2.37257142857143,
+          "reference": 5.2628571428571425
+        },
+        "q_minus_l_mean_diff": 0.07028571428571573,
+        "boot95_ci": [
+          -0.1471428571428557,
+          0.30800000000000133
+        ],
+        "ci_excludes_zero": false,
+        "n_q_better": 17,
+        "n_l_better": 17
+      },
+      "HAC>=10|no_exact_db_row": {
+        "n": 158,
+        "mae": {
+          "quantum": 2.6168987341772154,
+          "learned": 3.7479746835443026,
+          "reference": 6.398734177215191
+        },
+        "q_minus_l_mean_diff": -1.131075949367088,
+        "boot95_ci": [
+          -1.6031123417721522,
+          -0.6945458860759494
+        ],
+        "ci_excludes_zero": true,
+        "n_q_better": 96,
+        "n_l_better": 61
+      }
+    },
+    "headline_carrier_cell": "HAC>=10|no_exact_db_row",
+    "headline_carrier_n": 158,
+    "verdict": "the whole-sample 'quantum beats learned' result is carried by the 158 observations in HAC>=10|no_exact_db_row (diff -1.1311, CI [-1.6031, -0.6945]); in every other cell the difference is not distinguishable from 0 or points the other way, and on the 331 in-database rows quantum is if anything WORSE."
+  },
+  "check_status": [
+    {
+      "check": "1. leave-one-molecule-out",
+      "status": "PASS",
+      "detail": "max |dMAE| = 0.0515 kcal/mol over 419 leave-out fits (quantum 0.0252, learned 0.0421, reference 0.0515); channel order changed in 0/419 subsets; no single molecule drives the ranking."
+    },
+    {
+      "check": "2. alternative error definitions",
+      "status": "PASS",
+      "detail": "quantum<learned<reference on MAE, RMSE, median AE, 90th-pct AE and fraction within 5 kcal/mol; only fraction-within-2 leaves q-vs-l undecided (CI -0.0018 to +0.0627). q-vs-r and l-vs-r significant on all five."
+    },
+    {
+      "check": "3. outlier treatment",
+      "status": "PASS",
+      "detail": "no ranking flip under own-5% trim, common-union-5% trim, own-single-worst, common-single-worst, or 1-99% winsorisation; q-vs-l mean gap shrinks from -0.313 to -0.137 (union 5%) / -0.289 (winsorised) but stays signed and CI-excludes-zero."
+    },
+    {
+      "check": "4. batch / class leave-out",
+      "status": "FAIL",
+      "detail": "no BOND CLASS changes the ranking (drop C-C / C-H / H-O all keep quantum<learned<reference), but the SIZE/DATABASE batch does: dropping the HAC>=10 bin flips the order to learned (1.811) < quantum (1.829), and on the 331 in-database rows alone learned is better by 0.0639 kcal/mol. The q-vs-l headline is carried by 158 out-of-database, HAC>=10 observations."
+    },
+    {
+      "check": "5. threshold sensitivity",
+      "status": "PASS",
+      "detail": "coverage boundary holds at HAC 10/11/12 (0 DB molecules above) and the MW redefinition agrees (DB max MW 152.1, 138/543 benchmark observations above it); conclusion is direction-stable, magnitude threshold-dependent."
+    },
+    {
+      "check": "6. paired-unit sensitivity",
+      "status": "PASS",
+      "detail": "539 unique ordered = 539 unique unordered fragment pairs; dropping the 4 duplicate observations keeps the order quantum<learned<reference and the q-vs-l gap strengthens to -0.3300 kcal/mol (CI [-0.4889, -0.1908])."
+    },
+    {
+      "check": "2b. test-choice sensitivity",
+      "status": "FAIL",
+      "detail": "PARTIAL - TEST-DEPENDENT. The mean-difference tests (paired t p=5.37e-05, row and cluster bootstrap CIs) and 4 of the 5 alternative loss metrics favour quantum. But the Wilcoxon signed-rank test (p=0.553) and the within-2-kcal McNemar test (p=0.0784) do NOT reject, and the per-observation win count favours LEARNED (284 vs 246 observations, sign test p=0.108). There is a mean-vs-majority reversal: the mean gap is a tail-effect, not a typical-bond effect."
+    },
+    {
+      "check": "4b. HAC x database-membership split",
+      "status": "FAIL",
+      "detail": "the whole-sample 'quantum beats learned' result is carried by the 158 observations in HAC>=10|no_exact_db_row (diff -1.1311, CI [-1.6031, -0.6945]); in every other cell the difference is not distinguishable from 0 or points the other way, and on the 331 in-database rows quantum is if anything WORSE."
+    }
+  ],
+  "verdicts": [
+    {
+      "claim": "Reference channel is worse than both quantum and learned (MAE 5.49 vs 2.10/2.41)",
+      "verdict": "ROBUST",
+      "evidence": "reference worst under every loss: MAE/RMSE/median/p90/pinball-free metrics; leave-one-molecule-out max |dMAE| for reference = 0.0515; no class removal changes the bottom rank; CI q-vs-r = [-3.7417688766114177, -3.05288950276243] and l-vs-r = [-3.4484019337016574, -2.718267955801105] both exclude 0."
+    },
+    {
+      "claim": "Quantum beats learned on MAE (2.098 vs 2.411)",
+      "verdict": "FRAGILE",
+      "evidence": "mean |e| diff = -0.3129 kcal/mol, row CI [-0.4708,-0.1682], cluster CI [-0.4733, -0.1681], t p=5.37e-05 BUT Wilcoxon p=0.553. DECISIVE: the effect is carried entirely by the 158 observations in the HAC>=10 / parent-not-in-database cell (diff -1.131, CI [-1.6031, -0.6945]); on the 331 in-database rows the sign REVERSES (+0.0639 kcal/mol, CI [-0.0013, 0.1294]), and dropping the HAC 10+ bin flips the ranking to learned<quantum (learned MAE 1.811 vs quantum 1.829). Direction survives all 5 alternative losses and the unique-pair subset, but not the subset restriction."
+    },
+    {
+      "claim": "Quantum and learned are NOT distinguishable (null result)",
+      "verdict": "FRAGILE",
+      "evidence": "REFUTED for the mean, SUPPORTED for the typical observation. The mean |e| difference is significantly nonzero (paired t p=5.4e-05; cluster bootstrap CI [-0.473, -0.168]), so 'not distinguishable' is false on the mean. But the Wilcoxon signed-rank test (p=0.553), the within-2-kcal McNemar test (p=0.0784) and the per-observation win count all fail to favour quantum: LEARNED wins on 284 observations vs quantum's 246 (sign test p=0.108), and Cliffs delta is only -0.0417. So the channels ARE distinguishable on the mean (quantum better by 0.313 kcal/mol) but are NOT distinguishable / slightly reversed per typical bond - a mean-vs-majority reversal driven by quantum's thinner extreme tail (max |e| 15.7 vs learned's 25.2)."
+    },
+    {
+      "claim": "Database covers only small molecules (HAC<=10) while the benchmark extends larger",
+      "verdict": "ROBUST",
+      "evidence": "DB HAC max = 10 exactly, over 42577 unique molecules; the count of DB molecules above the boundary is 29769 at HAC>8, 16373 at HAC>9 and 0 at HAC>10, >11 and >12 - so the DB-side boundary is hard, not a soft threshold artefact. Benchmark HAC max = 38 with 150 observations (27.6%) above 10 and 111 above 12; benchmark tail above the boundary declines monotonically (234/193/150/136/111 obs at cuts 8/9/10/11/12), so the SIZE of the uncovered region is threshold-sensitive but its EXISTENCE is not. MW check: DB max MW = 152.1; 138 benchmark observations (25.4%) exceed it, and benchmark HAC vs MW correlate at Spearman 0.9959, so the redefinition does not change the conclusion."
+    },
+    {
+      "claim": "331/543 observations have an exact database row; the remaining 212 do not",
+      "verdict": "ROBUST",
+      "evidence": "exact-row matches = 331, unmatched = 212, parents present in DB = 369; reproduced identically from the raw join; all 212 unmatched rows are held-out (train_flag False) so this is one binary split, not two independent facts."
+    },
+    {
+      "claim": "The quantum channel reproduces the database BDE on matched rows",
+      "verdict": "ROBUST",
+      "evidence": "max |db-quantum| = 6.9985 kcal/mol; 30.2% within 0.01, 92.4% within 0.5; learned differs from the DB by up to 4.77 kcal/mol with only 5.1% within 0.01."
+    },
+    {
+      "claim": "Bond class / size structure of the error (WS3-style class effects)",
+      "verdict": "NOT TESTABLE",
+      "evidence": "the 543-observation benchmark contains only 3 labelled bond classes ({'C-H': np.int64(302), 'C-C': np.int64(240), 'H-O': np.int64(1)}); the H-O cell has n=1, so only C-H (n=302) and C-C (n=240) can be compared, and those two classes differ in size mix; the 9-class database taxonomy cannot be evaluated on this benchmark at all."
+    },
+    {
+      "claim": "Database is exhaustive within its own domain",
+      "verdict": "ROBUST",
+      "evidence": "369 benchmark observations have a parent molecule in the DB and 331 of them have an exact fragment-pair row (89.7%); the two counts coincide, so no 'parent present but pair missing' case exists."
+    },
+    {
+      "claim": "Held-out (out-of-database) degradation is measurable (WS2 item 5)",
+      "verdict": "FRAGILE",
+      "evidence": "MAE on the 331 in-database rows vs the 212 held-out rows: quantum 1.871->2.452; learned 1.807->3.353; reference 5.024->6.207. Degradation is real for all three channels, but the q-vs-l ranking is REVERSED on the held-out subset: the subset orders are ['learned', 'quantum', 'reference'] (in-DB) and ['quantum', 'learned', 'reference'] (held-out), and the held-out q-vs-l difference is -0.9012 kcal/mol with CI [-1.2706, -0.5604] (includes 0). So the held-out claim is robust, but the 'quantum beats learned' claim does NOT hold out of database."
+    }
+  ],
+  "analysis_units": {
+    "bond_observation": 543,
+    "unique_parent_molecule": 419,
+    "unique_fragment_pair_ordered": 539,
+    "unique_fragment_pair_unordered": 539,
+    "note": "statistics over the 543 rows use bond observations; leave-one-molecule-out and the cluster bootstrap use the 419 molecules; check 6 uses fragment pairs. The three units are NOT interchangeable: q-vs-l is -0.313 on observations but -0.437 on one-row-per-molecule and -0.330 on unique fragment pairs."
+  }
+}

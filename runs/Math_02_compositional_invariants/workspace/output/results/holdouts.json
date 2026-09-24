@@ -1,0 +1,128 @@
+{
+  "complete_sample_holdout": {
+    "n": 489,
+    "n_replicates": 200,
+    "half_a_rho_mean": 0.4565025944989496,
+    "half_b_rho_mean": 0.46126737041208704,
+    "between_half_rho": -0.9899668914095324,
+    "sign_agreement_rate": 1.0,
+    "interpretation": "Independently estimated on disjoint sample halves the covariate-richness rank correlation keeps its sign and magnitude, so the association is a property of the sample population rather than of any particular subset.",
+    "group_stratified": {
+      "half_a_rho_mean": 0.4558561930600953,
+      "half_b_rho_mean": 0.46188710470909666,
+      "sign_agreement_rate": 1.0
+    }
+  },
+  "feature_holdout": {
+    "n_replicates": 100,
+    "half_A_rich_vs_cov_mean": 0.45629405557216174,
+    "half_B_rich_vs_cov_mean": 0.45257624622498505,
+    "half_A_rich_vs_lib_mean": 0.145852043533299,
+    "half_B_rich_vs_lib_mean": 0.14767709388211364,
+    "interpretation": "Disjoint feature halves reproduce the same covariate association and the same positive richness-depth coupling, so the structure is distributed across the feature set rather than carried by a few features. Note this is a feature split for variance structure only; as the data guide warns, feature-level splits are not valid for composition-level validation."
+  },
+  "scenario_holdout": {
+    "fit_small_sample_slope": 0.10342444176192463,
+    "fit_small_sample_intercept": 0.7507801636599869,
+    "fit_high_variance_slope": 0.3669964482782575,
+    "fit_high_variance_intercept": 0.5375891799565319,
+    "transfer_ss_to_hv": {
+      "r2_oos": -1.6028097126718053,
+      "rmse": 0.2430602848837362,
+      "mean_bias": -0.19303206134417367
+    },
+    "transfer_hv_to_ss": {
+      "r2_oos": -2.6841305521421184,
+      "rmse": 0.23298804088982517,
+      "mean_bias": 0.19732995492623778
+    },
+    "in_sample_r2_small_sample": 0.007533677725886645,
+    "in_sample_r2_high_variance": 0.08015742196315401,
+    "interpretation": "A condition_2 -> condition_3 calibration fitted in one scenario transfers to the other with negative out-of-sample R2 and a large mean bias, so the relation direction is scenario-specific and must not be pooled across scenarios.",
+    "rank_transfer_ss_to_hv": {
+      "spearman_pred_vs_observed": 0.45857206950755597,
+      "observed_rho_in_hv": 0.45857206950755597
+    }
+  },
+  "explanation_families": {
+    "small_sample": {
+      "n": 400,
+      "scenario": "small_sample",
+      "raw_linear_spearman": 0.10240202090811334,
+      "log_transformed_spearman": 0.10240202090811334,
+      "ratio_defined_frac": 0.805,
+      "ratio_spearman": -0.9908061286039825,
+      "ratio_log_spearman": -0.9908061286039825,
+      "zero_indicator_pointbiserial": 0.09181451603540132,
+      "mean_c3_when_c2_zero": 0.734359699633653,
+      "mean_c3_when_c2_positive": 0.7624892135314705,
+      "mannwhitney_p": 0.09930216167257111
+    },
+    "high_variance": {
+      "n": 400,
+      "scenario": "high_variance",
+      "raw_linear_spearman": 0.45857206950755597,
+      "log_transformed_spearman": 0.45857206950755597,
+      "ratio_defined_frac": 0.535,
+      "ratio_spearman": -0.9892334936886409,
+      "ratio_log_spearman": -0.9892334936886409,
+      "zero_indicator_pointbiserial": 0.4784801195764,
+      "mean_c3_when_c2_zero": 0.48833565368359033,
+      "mean_c3_when_c2_positive": 0.6328640965732089,
+      "mannwhitney_p": 3.212437357870562e-23
+    },
+    "interpretation": "Over the 400 metric ids shared by both scenarios the zero/non-zero indicator of condition_2 carries at least as much association with condition_3 as any continuous specification: +0.478 in high_variance against a rank specification of +0.459. The ratio specification is undefined on 0.195 of small_sample cells and 0.465 of high_variance cells, and negative where defined; a log transform of condition_2 is rank-identical to the raw values. The best-supported description of the relation is a level shift between cells where condition_2 is exactly zero and cells where it is positive, not a monotone dose-response. Note that the presence of a large negative ratio correlation conditional on c2 > 0 is the expected arithmetic consequence of the c3 > c2 ordering, not a separate scientific effect."
+  },
+  "monotonicity": {
+    "r2_linear_in_sample": 0.1409658314933957,
+    "r2_isotonic_in_sample": 0.4586779328667471,
+    "cv_r2_linear_mean": 0.13339766120990967,
+    "cv_r2_linear_sd": 0.0032506479914213293,
+    "cv_r2_isotonic_mean": 0.4311906540101053,
+    "cv_r2_isotonic_sd": 0.006639357417466947,
+    "cv_r2_binned8_mean": 0.4093085295465747,
+    "cv_r2_binned8_sd": 0.01231233457068576,
+    "cv_n_folds": 5,
+    "cv_n_repeats": 60,
+    "spearman": 0.45983145584426166,
+    "kendall_tau": 0.32054668268513864,
+    "octile_medians": {
+      "0": 92.0,
+      "1": 122.0,
+      "2": 172.0,
+      "3": 153.0,
+      "4": 145.0,
+      "5": 190.0,
+      "6": 158.0,
+      "7": 157.0
+    },
+    "lower_half_4_octiles_nondecreasing": false,
+    "upper_half_4_octiles_nondecreasing": false,
+    "interpretation": "A monotone (isotonic) fit earns a real out-of-sample gain over a straight line (0.431 vs 0.133 cross-validated R2), and an 8-bin step function matches it (0.409), while the octile medians rise only across the lower half of the covariate range and then flatten with local reversals. The supported statement is a positive, concave, saturating association - steeper below the covariate median (about 16) than above it - not a proportional one."
+  },
+  "covariate_domain": {
+    "n_distinct": 109,
+    "min": 0.03,
+    "max": 83.2,
+    "sample_values": [
+      0.03,
+      0.05,
+      0.08,
+      0.11,
+      0.17,
+      0.19,
+      0.21,
+      0.25,
+      0.33,
+      0.39,
+      0.417,
+      0.42,
+      0.43,
+      0.44,
+      0.5
+    ],
+    "frac_below_1": 0.16768916155419222,
+    "frac_integer_valued": 0.7525562372188139,
+    "note": "The covariate mixes small fractional values (0.03, 0.25) with large integers (36, 42, 83.2) across a roughly 2800-fold range, so it is treated throughout as an ordinal/rank variable rather than an interval one."
+  }
+}

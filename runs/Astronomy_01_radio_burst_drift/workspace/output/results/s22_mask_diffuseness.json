@@ -1,0 +1,91 @@
+{
+ "analysis_unit": "one complete dynamic-spectrum event (n=5)",
+ "threshold": 1.05,
+ "per_event": [
+  {
+   "event_id": "event_1",
+   "threshold": 1.05,
+   "n_time_cols": 425,
+   "n_cols_with_signal": 425,
+   "mean_runs_per_col": 78.3788235294,
+   "median_runs_per_col": 78.0,
+   "mean_signal_bins_per_col": 174.2211764706,
+   "median_col_span_MHz": 8.905655483,
+   "mean_col_span_MHz": 8.8888321685,
+   "band_MHz": 8.9691162109,
+   "median_col_span_frac_of_band": 0.9929245283
+  },
+  {
+   "event_id": "event_2",
+   "threshold": 1.05,
+   "n_time_cols": 425,
+   "n_cols_with_signal": 425,
+   "mean_runs_per_col": 79.8094117647,
+   "median_runs_per_col": 80.0,
+   "mean_signal_bins_per_col": 176.0705882353,
+   "median_col_span_MHz": 8.8845019071,
+   "mean_col_span_MHz": 8.8719093077,
+   "band_MHz": 8.9691162109,
+   "median_col_span_frac_of_band": 0.9905660377
+  },
+  {
+   "event_id": "event_3",
+   "threshold": 1.05,
+   "n_time_cols": 425,
+   "n_cols_with_signal": 425,
+   "mean_runs_per_col": 84.0964705882,
+   "median_runs_per_col": 85.0,
+   "mean_signal_bins_per_col": 172.0517647059,
+   "median_col_span_MHz": 8.905655483,
+   "mean_col_span_MHz": 8.8875878405,
+   "band_MHz": 8.9691162109,
+   "median_col_span_frac_of_band": 0.9929245283
+  },
+  {
+   "event_id": "event_4",
+   "threshold": 1.05,
+   "n_time_cols": 425,
+   "n_cols_with_signal": 425,
+   "mean_runs_per_col": 80.4188235294,
+   "median_runs_per_col": 80.0,
+   "mean_signal_bins_per_col": 172.44,
+   "median_col_span_MHz": 8.905655483,
+   "mean_col_span_MHz": 8.8888321685,
+   "band_MHz": 8.9691162109,
+   "median_col_span_frac_of_band": 0.9929245283
+  },
+  {
+   "event_id": "event_5",
+   "threshold": 1.05,
+   "n_time_cols": 425,
+   "n_cols_with_signal": 425,
+   "mean_runs_per_col": 82.1788235294,
+   "median_runs_per_col": 82.0,
+   "mean_signal_bins_per_col": 167.9905882353,
+   "median_col_span_MHz": 8.905655483,
+   "mean_col_span_MHz": 8.8877371599,
+   "band_MHz": 8.9691162109,
+   "median_col_span_frac_of_band": 0.9929245283
+  }
+ ],
+ "leave_one_out": [
+  {
+   "statistic": "mean_runs_per_col",
+   "unit": "runs",
+   "full_sample": 80.41882352941177,
+   "loo_min": 80.11411764705883,
+   "loo_max": 81.29882352941176,
+   "loo_range": 1.1847058823529295,
+   "fold_values": "[81.298824, 81.298824, 80.114118, 80.994118, 80.114118]"
+  },
+  {
+   "statistic": "median_col_span_frac_of_band",
+   "unit": "fraction",
+   "full_sample": 0.9929245283018867,
+   "loo_min": 0.9929245283018867,
+   "loo_max": 0.9929245283018868,
+   "loo_range": 1.1102230246251565e-16,
+   "fold_values": "[0.992925, 0.992925, 0.992925, 0.992925, 0.992925]"
+  }
+ ]
+}

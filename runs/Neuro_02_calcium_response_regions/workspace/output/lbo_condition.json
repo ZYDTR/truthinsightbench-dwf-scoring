@@ -1,0 +1,53 @@
+{
+  "mean_amplitude_dff0": {
+    "n_batches_tested": 9,
+    "all_significant": true,
+    "max_p": 0.0,
+    "min_p": 0.0,
+    "vals": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "mean_auc_au": {
+    "n_batches_tested": 9,
+    "all_significant": true,
+    "max_p": 0.0,
+    "min_p": 0.0,
+    "vals": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "mean_peak_width_s": {
+    "n_batches_tested": 9,
+    "all_significant": true,
+    "max_p": 0.0,
+    "min_p": 0.0,
+    "vals": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+}

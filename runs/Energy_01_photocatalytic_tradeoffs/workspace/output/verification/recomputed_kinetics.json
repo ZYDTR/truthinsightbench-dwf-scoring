@@ -1,0 +1,392 @@
+{
+  "formulation_1": {
+    "times": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "y": [
+      0.0,
+      2.4,
+      4.8,
+      7.24,
+      9.48
+    ],
+    "final_product_4h": 9.48,
+    "mean_rate_over_4h": 2.37,
+    "segment_rates": [
+      2.4,
+      2.4,
+      2.4400000000000004,
+      2.24
+    ],
+    "ratio_last_first": 0.9333333333333335,
+    "models": {
+      "power_law": {
+        "params": {
+          "a": 2.431526936453912,
+          "b": 0.9844358588257776
+        },
+        "R2": 0.9998699550759028,
+        "RMSE": 0.03838660902489194,
+        "RSS": 0.007367658762149576,
+        "AICc": -2.600466035166747
+      },
+      "linear": {
+        "params": {
+          "slope": 2.3800000000000003,
+          "intercept": 0.024000000000000684
+        },
+        "R2": 0.9998107836381506,
+        "RMSE": 0.04630334761116096,
+        "RSS": 0.010720000000000025,
+        "AICc": -0.7254101788678966
+      },
+      "quadratic": {
+        "params": {
+          "a2": -0.01999999999999989,
+          "a1": 2.459999999999999,
+          "a0": -0.01600000000000117
+        },
+        "R2": 0.9999096280062808,
+        "RMSE": 0.03199999999999981,
+        "RSS": 0.00511999999999994,
+        "AICc": Infinity
+      },
+      "saturation": {
+        "params": {
+          "A": 168.20811424564198,
+          "k": 0.014543241262030018
+        },
+        "R2": 0.9999037459995914,
+        "RMSE": 0.0330249706798507,
+        "RSS": 0.005453243442024992,
+        "AICc": -4.104913163909259
+      }
+    },
+    "best_model_by_AICc": "saturation"
+  },
+  "formulation_2": {
+    "times": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "y": [
+      0.0,
+      1.21,
+      2.16,
+      3.16,
+      4.13
+    ],
+    "final_product_4h": 4.13,
+    "mean_rate_over_4h": 1.0325,
+    "segment_rates": [
+      1.21,
+      0.9500000000000002,
+      1.0,
+      0.9699999999999998
+    ],
+    "ratio_last_first": 0.8016528925619832,
+    "models": {
+      "power_law": {
+        "params": {
+          "a": 1.171279656629921,
+          "b": 0.9063008741223544
+        },
+        "R2": 0.9997044246358041,
+        "RMSE": 0.02484877592580617,
+        "RSS": 0.0030873083250546212,
+        "AICc": -6.949467861716066
+      },
+      "linear": {
+        "params": {
+          "slope": 1.0210000000000001,
+          "intercept": 0.09000000000000015
+        },
+        "R2": 0.9980210778663255,
+        "RMSE": 0.06429618962271401,
+        "RSS": 0.020669999999999987,
+        "AICc": 2.5574509113871926
+      },
+      "quadratic": {
+        "params": {
+          "a2": -0.030714285714285812,
+          "a1": 1.1438571428571433,
+          "a0": 0.028571428571428255
+        },
+        "R2": 0.9992855146018166,
+        "RMSE": 0.038633811986023704,
+        "RSS": 0.007462857142857145,
+        "AICc": Infinity
+      },
+      "saturation": {
+        "params": {
+          "A": 16.846462997984222,
+          "k": 0.06989886450346162
+        },
+        "R2": 0.9992459734778549,
+        "RMSE": 0.03968845511210373,
+        "RSS": 0.007875867345927361,
+        "AICc": -2.266949368020171
+      }
+    },
+    "best_model_by_AICc": "power_law"
+  },
+  "formulation_3": {
+    "times": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "y": [
+      0.0,
+      0.124,
+      0.256,
+      0.445,
+      0.636
+    ],
+    "final_product_4h": 0.636,
+    "mean_rate_over_4h": 0.159,
+    "segment_rates": [
+      0.124,
+      0.132,
+      0.189,
+      0.191
+    ],
+    "ratio_last_first": 1.5403225806451613,
+    "models": {
+      "power_law": {
+        "params": {
+          "a": 0.11237488180438344,
+          "b": 1.2488811014721557
+        },
+        "R2": 0.9989756531101556,
+        "RMSE": 0.007249475545658779,
+        "RSS": 0.0002627744784355232,
+        "AICc": -19.268261512619347
+      },
+      "linear": {
+        "params": {
+          "slope": 0.15930000000000002,
+          "intercept": -0.02639999999999992
+        },
+        "R2": 0.9892257711414859,
+        "RMSE": 0.02351127389147597,
+        "RSS": 0.002763899999999998,
+        "AICc": -7.502752328076895
+      },
+      "quadratic": {
+        "params": {
+          "a2": 0.013642857142857167,
+          "a1": 0.10472857142857135,
+          "a0": 0.0008857142857143874
+        },
+        "R2": 0.9993836392416201,
+        "RMSE": 0.0056234204131344456,
+        "RSS": 0.0001581142857142859,
+        "AICc": Infinity
+      },
+      "saturation": {
+        "params": {
+          "A": 309851.28210844577,
+          "k": 4.857167792777184e-07
+        },
+        "R2": 0.9846975450778755,
+        "RMSE": 0.02801970877160104,
+        "RSS": 0.003925520398226682,
+        "AICc": -5.748471317175458
+      }
+    },
+    "best_model_by_AICc": "power_law"
+  },
+  "formulation_4": {
+    "times": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "y": [
+      0.0,
+      0.0329,
+      0.0724,
+      0.121,
+      0.173
+    ],
+    "final_product_4h": 0.173,
+    "mean_rate_over_4h": 0.04325,
+    "segment_rates": [
+      0.0329,
+      0.03950000000000001,
+      0.04859999999999999,
+      0.05199999999999999
+    ],
+    "ratio_last_first": 1.5805471124620059,
+    "models": {
+      "power_law": {
+        "params": {
+          "a": 0.031363396759240256,
+          "b": 1.2303311205750125
+        },
+        "R2": 0.9997935261291696,
+        "RMSE": 0.0008859184223302066,
+        "RSS": 3.924257255120211e-06,
+        "AICc": -40.28885685717681
+      },
+      "linear": {
+        "params": {
+          "slope": 0.04341,
+          "intercept": -0.006959999999999976
+        },
+        "R2": 0.9914874046567855,
+        "RMSE": 0.005688426847556353,
+        "RSS": 0.00016179099999999954,
+        "AICc": -21.69321545774256
+      },
+      "quadratic": {
+        "params": {
+          "a2": 0.0033785714285714283,
+          "a1": 0.029895714285714286,
+          "a0": -0.00020285714285715379
+        },
+        "R2": 0.9998955822418977,
+        "RMSE": 0.0006300113377664613,
+        "RSS": 1.9845714285714306e-06,
+        "AICc": Infinity
+      },
+      "saturation": {
+        "params": {
+          "A": 90033.68737677962,
+          "k": 4.5638463245353483e-07
+        },
+        "R2": 0.9872394294865425,
+        "RMSE": 0.006964600806074248,
+        "RSS": 0.00024252832193985034,
+        "AICc": -19.669149876679484
+      }
+    },
+    "best_model_by_AICc": "power_law"
+  },
+  "reported_comparison": {
+    "formulation_1": {
+      "b_recomputed": 0.984436,
+      "b_reported": 0.9844,
+      "b_match": true,
+      "final_4h_recomputed": 9.48,
+      "final_4h_reported": 9.48,
+      "final_4h_match": true,
+      "mean_rate_over_4h_recomputed": 2.37,
+      "segment_rates_recomputed": [
+        2.4,
+        2.4,
+        2.44,
+        2.24
+      ],
+      "ratio_recomputed": 0.933333,
+      "ratio_reported": 0.9333,
+      "ratio_match": true,
+      "best_model_recomputed": "saturation",
+      "best_model_reported": "saturation",
+      "best_model_match": true,
+      "AICc": {
+        "power_law": -2.6005,
+        "linear": -0.7254,
+        "quadratic": null,
+        "saturation": -4.1049
+      },
+      "note": "quadratic AICc undefined/infinite (n-k-1=0 for k_params=4, n=5) so quadratic can never be best"
+    },
+    "formulation_2": {
+      "b_recomputed": 0.906301,
+      "b_reported": 0.9063,
+      "b_match": true,
+      "final_4h_recomputed": 4.13,
+      "final_4h_reported": 4.13,
+      "final_4h_match": true,
+      "mean_rate_over_4h_recomputed": 1.0325,
+      "segment_rates_recomputed": [
+        1.21,
+        0.95,
+        1.0,
+        0.97
+      ],
+      "ratio_recomputed": 0.801653,
+      "ratio_reported": 0.8017,
+      "ratio_match": true,
+      "best_model_recomputed": "power_law",
+      "best_model_reported": "power_law",
+      "best_model_match": true,
+      "AICc": {
+        "power_law": -6.9495,
+        "linear": 2.5575,
+        "quadratic": null,
+        "saturation": -2.2669
+      },
+      "note": "quadratic AICc undefined/infinite (n-k-1=0 for k_params=4, n=5) so quadratic can never be best"
+    },
+    "formulation_3": {
+      "b_recomputed": 1.248881,
+      "b_reported": 1.2489,
+      "b_match": true,
+      "final_4h_recomputed": 0.636,
+      "final_4h_reported": 0.636,
+      "final_4h_match": true,
+      "mean_rate_over_4h_recomputed": 0.159,
+      "segment_rates_recomputed": [
+        0.124,
+        0.132,
+        0.189,
+        0.191
+      ],
+      "ratio_recomputed": 1.540323,
+      "ratio_reported": 1.5403,
+      "ratio_match": true,
+      "best_model_recomputed": "power_law",
+      "best_model_reported": "power_law",
+      "best_model_match": true,
+      "AICc": {
+        "power_law": -19.2683,
+        "linear": -7.5028,
+        "quadratic": null,
+        "saturation": -5.7485
+      },
+      "note": "quadratic AICc undefined/infinite (n-k-1=0 for k_params=4, n=5) so quadratic can never be best"
+    },
+    "formulation_4": {
+      "b_recomputed": 1.230331,
+      "b_reported": 1.2303,
+      "b_match": true,
+      "final_4h_recomputed": 0.173,
+      "final_4h_reported": 0.173,
+      "final_4h_match": true,
+      "mean_rate_over_4h_recomputed": 0.04325,
+      "segment_rates_recomputed": [
+        0.0329,
+        0.0395,
+        0.0486,
+        0.052
+      ],
+      "ratio_recomputed": 1.580547,
+      "ratio_reported": 1.5805,
+      "ratio_match": true,
+      "best_model_recomputed": "power_law",
+      "best_model_reported": "power_law",
+      "best_model_match": true,
+      "AICc": {
+        "power_law": -40.2889,
+        "linear": -21.6932,
+        "quadratic": null,
+        "saturation": -19.6691
+      },
+      "note": "quadratic AICc undefined/infinite (n-k-1=0 for k_params=4, n=5) so quadratic can never be best"
+    }
+  }
+}

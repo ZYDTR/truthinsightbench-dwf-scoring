@@ -1,0 +1,21 @@
+{
+  "task_id": "Chemistry_02_photoionization_delay",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260919T182922-9438ca",
+  "source_run_json_sha256": "2a889b5718e98a7c4b455afc3a6c0b204a97dfa4d6b8ba67263c5aa73ffca2db",
+  "source_release_json_sha256": "67ae05da8cb1a15c700f50d2cd3dfcfe078486f5b9b41f468a79421122acead5",
+  "source_latest_validation_sha256": "1214f72008e696c34a0c61e28839fac823917f6a9ced7ea488a5bcede34cc96d",
+  "source_snapshot_manifest_sha256": "67fefb21801ad51301450e93c89a691572955e5268b7235ec92f33253620a24e",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 2063
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "b3aab9119fa27ba0ade46f8bad578083ff5cb0cc4561fa20785654261a384621",
+  "output_sha256": "5a8d0dcf263fb43ba99fe9fd5170d42d8b795fce9faa36961049e83208c7bbd3"
+}

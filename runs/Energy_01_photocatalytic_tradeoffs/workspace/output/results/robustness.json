@@ -1,0 +1,217 @@
+{
+  "R1_action_spectrum": {
+    "unit_free_normalised": {
+      "nm": [
+        400.0,
+        450.0,
+        500.0,
+        550.0,
+        600.0,
+        650.0
+      ],
+      "action": [
+        0.9842615012106538,
+        1.0,
+        0.9806295399515739,
+        0.6246973365617434,
+        0.21307506053268768,
+        0.05084745762711865
+      ],
+      "absorption": [
+        0.9932810750279956,
+        0.9641657334826428,
+        0.9518477043673012,
+        0.6550951847704367,
+        0.4076147816349384,
+        0.22508398656215006
+      ],
+      "ratio": [
+        0.9909194144093729,
+        1.0371660859465737,
+        1.0302378578550064,
+        0.9535978146147639,
+        0.5227363435595882,
+        0.2259043764229699
+      ]
+    },
+    "interpolation_free_ratios": {
+      "action_R_450_over_400": 1.015990159901599,
+      "action_R_650_over_450": 0.05084745762711865,
+      "absorption_R_450_over_400": 0.9706877113866967,
+      "absorption_R_650_over_450": 0.2334494773519164,
+      "blue_ratio_statistic": 1.0466704667046671,
+      "red_ratio_statistic": 0.2178092587907918
+    },
+    "window_sensitivity_pairs": [
+      {
+        "reference_nm": 400.0,
+        "probe_nm": 450.0,
+        "span_nm": 50.0,
+        "action_ratio": 1.015990159901599,
+        "absorption_ratio": 0.9706877113866967,
+        "ratio_statistic": 1.0466704667046671
+      },
+      {
+        "reference_nm": 400.0,
+        "probe_nm": 500.0,
+        "span_nm": 100.0,
+        "action_ratio": 0.996309963099631,
+        "absorption_ratio": 0.9582863585118376,
+        "ratio_statistic": 1.039678749728674
+      },
+      {
+        "reference_nm": 400.0,
+        "probe_nm": 550.0,
+        "span_nm": 150.0,
+        "action_ratio": 0.6346863468634687,
+        "absorption_ratio": 0.6595264937993235,
+        "ratio_statistic": 0.9623363925946954
+      },
+      {
+        "reference_nm": 400.0,
+        "probe_nm": 600.0,
+        "span_nm": 200.0,
+        "action_ratio": 0.21648216482164825,
+        "absorption_ratio": 0.41037204058624577,
+        "ratio_statistic": 0.5275265939472582
+      },
+      {
+        "reference_nm": 400.0,
+        "probe_nm": 650.0,
+        "span_nm": 250.0,
+        "action_ratio": 0.05166051660516605,
+        "absorption_ratio": 0.2266065388951522,
+        "ratio_statistic": 0.22797451855115566
+      },
+      {
+        "reference_nm": 450.0,
+        "probe_nm": 500.0,
+        "span_nm": 50.0,
+        "action_ratio": 0.9806295399515739,
+        "absorption_ratio": 0.9872241579558653,
+        "ratio_statistic": 0.993320039880359
+      },
+      {
+        "reference_nm": 450.0,
+        "probe_nm": 550.0,
+        "span_nm": 100.0,
+        "action_ratio": 0.6246973365617434,
+        "absorption_ratio": 0.6794425087108014,
+        "ratio_statistic": 0.9194263363754891
+      },
+      {
+        "reference_nm": 450.0,
+        "probe_nm": 600.0,
+        "span_nm": 150.0,
+        "action_ratio": 0.21307506053268768,
+        "absorption_ratio": 0.4227642276422764,
+        "ratio_statistic": 0.5040044701061651
+      },
+      {
+        "reference_nm": 450.0,
+        "probe_nm": 650.0,
+        "span_nm": 200.0,
+        "action_ratio": 0.05084745762711865,
+        "absorption_ratio": 0.2334494773519164,
+        "ratio_statistic": 0.2178092587907918
+      },
+      {
+        "reference_nm": 500.0,
+        "probe_nm": 550.0,
+        "span_nm": 50.0,
+        "action_ratio": 0.6370370370370371,
+        "absorption_ratio": 0.6882352941176471,
+        "ratio_statistic": 0.9256093700538145
+      },
+      {
+        "reference_nm": 500.0,
+        "probe_nm": 600.0,
+        "span_nm": 100.0,
+        "action_ratio": 0.21728395061728398,
+        "absorption_ratio": 0.42823529411764705,
+        "ratio_statistic": 0.5073938407271741
+      },
+      {
+        "reference_nm": 500.0,
+        "probe_nm": 650.0,
+        "span_nm": 150.0,
+        "action_ratio": 0.05185185185185186,
+        "absorption_ratio": 0.23647058823529413,
+        "ratio_statistic": 0.21927400036852773
+      },
+      {
+        "reference_nm": 550.0,
+        "probe_nm": 600.0,
+        "span_nm": 50.0,
+        "action_ratio": 0.34108527131782945,
+        "absorption_ratio": 0.6222222222222222,
+        "ratio_statistic": 0.5481727574750831
+      },
+      {
+        "reference_nm": 550.0,
+        "probe_nm": 650.0,
+        "span_nm": 100.0,
+        "action_ratio": 0.08139534883720931,
+        "absorption_ratio": 0.34358974358974365,
+        "ratio_statistic": 0.23689691079486289
+      },
+      {
+        "reference_nm": 600.0,
+        "probe_nm": 650.0,
+        "span_nm": 50.0,
+        "action_ratio": 0.23863636363636362,
+        "absorption_ratio": 0.5521978021978022,
+        "ratio_statistic": 0.43215739484396193
+      }
+    ],
+    "blue_end_claim_supported": false,
+    "red_end_claim_supported": true,
+    "saturating_absorption_null": {
+      "a": 90288.72024354545,
+      "b": 1000.0,
+      "rss": 473.1147386942655,
+      "r2": 0.9224096158084842,
+      "rmse": 8.879890565150241,
+      "aicc": 44.20547079820558,
+      "better_than_linear_in_A_by_rmse": false
+    }
+  },
+  "R2_shared_shape_null": {
+    "best_time_scale": 2.021045728328044,
+    "best_amplitude": 1.2582424730199129,
+    "r2_overlap": 0.5915889950818521,
+    "n_points_used": 97,
+    "late_window_contrast": {
+      "f1_late_mean": -0.25021764705882354,
+      "f2_late_mean": 0.18816117647058822,
+      "single_shape_predicted_f2_late_mean": 0.03925381762014955,
+      "single_shape_predicts_sign": "positive",
+      "observed_f2_sign": "positive"
+    }
+  },
+  "R3_loading_optimum": {
+    "inhibitor_fit": {
+      "V": 17486.004697317745,
+      "K": 2.5989602399199265,
+      "Ki": 0.09228016959110744,
+      "analytic_peak_percent": 0.48972695627293794,
+      "r2": 0.990070226519063,
+      "rmse": 39.798530027853595
+    },
+    "bootstrap_peak": {
+      "n_successful": 3660,
+      "median_percent": 0.4897793754420505,
+      "ci95_percent": [
+        0.45347549376889157,
+        0.5245903226840603
+      ],
+      "fraction_below_3_percent": 1.0
+    },
+    "alternative_plateau_description": {
+      "plateau_rate_umol_h": 1149.0,
+      "plateau_upper_loading_percent": 1.0,
+      "low_pair_relative_difference": 0.12580943570767808,
+      "drop_to_3pct_relative": 0.6138044371405095
+    }
+  }
+}

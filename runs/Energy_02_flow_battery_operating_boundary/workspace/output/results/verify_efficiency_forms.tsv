@@ -1,0 +1,6 @@
+form	rmse_pp	max_abs_res_pp
+Vdis(nearest measured x)/Vch(interp at x)  [mismatched abscissa]	0.07789521472582574	0.17068983440746877
+Vdis(interp at x)/Vch(interp at x)  [the headline form]	0.18367276459256257	0.2631670605829868
+Vdis(x)/Vch(100-x)  [DoD pairing; degenerate at x=50]	0.18367276459256257	0.2631670605829868
+2Vdis/(Vch+Vdis) at x	8.049377338508473	13.00627484995455
+mean(Vdis)/mean(Vch) full	6.018906179927751	8.386541219538415

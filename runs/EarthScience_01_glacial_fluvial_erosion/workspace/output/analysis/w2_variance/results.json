@@ -1,0 +1,1719 @@
+{
+  "samples": {
+    "full_logER": 6711,
+    "logTI_subset": 6555,
+    "common_nested": 6450
+  },
+  "unit_identity": {
+    "rows_with_exhumation_and_ER_and_TI": 92,
+    "glacial_rows": 81,
+    "nonglacial_rows": 11,
+    "ERxTI_eq_Exhumation_x1000_rtol1e-6": 20,
+    "ERxTI_eq_Exhumation_x1000_rtol1e-3": 28,
+    "glacial_rtol1e-3": 28,
+    "nonglacial_rtol1e-3": 0,
+    "max_relative_error_glacial": 9.000003225807491,
+    "median_relative_error_all": 0.008086761061506145,
+    "median_relative_error_glacial": 0.00289575289575264,
+    "median_relative_error_nonglacial": 0.999,
+    "unit_identity": "ER(mm/yr)*TI(yr) = mm of erosion; Exhumation(m)*1000 = mm",
+    "implied_mechanism": "a near-1:1 identity means measured thickness / time span, i.e. mechanical ER~TI coupling"
+  },
+  "model_tables": {
+    "full_logER": [
+      {
+        "sample": "full_logER",
+        "model": "null",
+        "formula": "logER ~ 1",
+        "n": 6711,
+        "k_params": 1,
+        "r2": -2.220446049250313e-16,
+        "adj_r2": -2.220446049250313e-16,
+        "aic": 17992.60329554326,
+        "bic": 17999.41479879342,
+        "ssr": 5735.267095434256,
+        "sigma": 0.9245184105364816
+      },
+      {
+        "sample": "full_logER",
+        "model": "proc",
+        "formula": "logER ~ C(Process)",
+        "n": 6711,
+        "k_params": 2,
+        "r2": 0.06488299739617132,
+        "adj_r2": 0.06474361492447589,
+        "aic": 17544.40511469226,
+        "bic": 17558.028121192576,
+        "ssr": 5363.145775414846,
+        "sigma": 0.8940893152221441
+      },
+      {
+        "sample": "full_logER",
+        "model": "method",
+        "formula": "logER ~ C(Methodology)",
+        "n": 6711,
+        "k_params": 5,
+        "r2": 0.14948457436211016,
+        "adj_r2": 0.14897725827166108,
+        "aic": 16914.006963370237,
+        "bic": 16948.06447962103,
+        "ssr": 4877.933134820249,
+        "sigma": 0.8528764975858141
+      },
+      {
+        "sample": "full_logER",
+        "model": "ti",
+        "formula": "logER ~ logTI",
+        "n": 6555,
+        "k_params": 2,
+        "r2": 0.004424205811281778,
+        "adj_r2": 0.004272279091582676,
+        "aic": 16448.66096805798,
+        "bic": 16462.236934850374,
+        "ssr": 4716.520094233762,
+        "sigma": 0.8483806618063553
+      },
+      {
+        "sample": "full_logER",
+        "model": "comp",
+        "formula": "logER ~ C(Compilation)",
+        "n": 6711,
+        "k_params": 17,
+        "r2": 0.26721694381244365,
+        "adj_r2": 0.2654654456201818,
+        "aic": 15938.115895117287,
+        "bic": 16053.911450369978,
+        "ssr": 4202.706550244242,
+        "sigma": 0.7923584238600623
+      },
+      {
+        "sample": "full_logER",
+        "model": "ref",
+        "formula": "logER ~ C(Reference)",
+        "n": 6711,
+        "k_params": 417,
+        "r2": 0.7397040117842375,
+        "adj_r2": 0.7224998282606028,
+        "aic": 9792.02760985286,
+        "bic": 12632.424465168846,
+        "ssr": 1492.8670162874046,
+        "sigma": 0.48702044378121573
+      },
+      {
+        "sample": "full_logER",
+        "model": "ti_plus_method",
+        "formula": "logER ~ logTI + C(Methodology)",
+        "n": 6555,
+        "k_params": 6,
+        "r2": 0.06745204841487562,
+        "adj_r2": 0.06674007105070934,
+        "aic": 16027.959480484906,
+        "bic": 16068.687380862093,
+        "ssr": 4417.9269706652085,
+        "sigma": 0.8213377252877114
+      },
+      {
+        "sample": "full_logER",
+        "model": "ti_x_method",
+        "formula": "logER ~ logTI * C(Methodology)",
+        "n": 6555,
+        "k_params": 10,
+        "r2": 0.5665848564904583,
+        "adj_r2": 0.565988869280132,
+        "aic": 11013.357600264324,
+        "bic": 11081.237434226303,
+        "ssr": 2053.2954351042295,
+        "sigma": 0.5601068646131223
+      },
+      {
+        "sample": "full_logER",
+        "model": "ti_plus_method_proc",
+        "formula": "logER ~ logTI + C(Methodology) + C(Process)",
+        "n": 6555,
+        "k_params": 7,
+        "r2": 0.1782168616892773,
+        "adj_r2": 0.17746385331574888,
+        "aic": 15201.118833913593,
+        "bic": 15248.634717686979,
+        "ssr": 3893.1809185894017,
+        "sigma": 0.7710773705213283
+      },
+      {
+        "sample": "full_logER",
+        "model": "ti_x_method_proc",
+        "formula": "logER ~ logTI * C(Methodology) + C(Process)",
+        "n": 6555,
+        "k_params": 11,
+        "r2": 0.5887718555665136,
+        "adj_r2": 0.5881434507003255,
+        "aic": 10670.906291149575,
+        "bic": 10745.57410850775,
+        "ssr": 1948.1849778353937,
+        "sigma": 0.545623980775982
+      },
+      {
+        "sample": "full_logER",
+        "model": "method_x_proc",
+        "formula": "logER ~ C(Methodology) + C(Process) + C(Methodology):C(Process)",
+        "n": 6711,
+        "k_params": 10,
+        "r2": 0.2931959444486548,
+        "adj_r2": 0.29224664785113774,
+        "aic": 15681.874211395012,
+        "bic": 15749.989243896594,
+        "ssr": 4053.7100427231144,
+        "sigma": 0.7777795702830758
+      },
+      {
+        "sample": "full_logER",
+        "model": "geology",
+        "formula": "logER ~ logS + logP + logA + Latitude",
+        "n": 6606,
+        "k_params": 5,
+        "r2": 0.3227840668840193,
+        "adj_r2": 0.32237369516269465,
+        "aic": 15090.07247788952,
+        "bic": 15124.051145919273,
+        "ssr": 3791.9692247931935,
+        "sigma": 0.757927274339616
+      },
+      {
+        "sample": "full_logER",
+        "model": "combined",
+        "formula": "logER ~ logTI + logS + logP + logA + C(Methodology)",
+        "n": 6450,
+        "k_params": 9,
+        "r2": 0.24678472073357605,
+        "adj_r2": 0.2458491948472027,
+        "aic": 14325.913065794872,
+        "bic": 14386.85958448298,
+        "ssr": 3471.14378217885,
+        "sigma": 0.7341074849351401
+      }
+    ],
+    "logTI_subset": [
+      {
+        "sample": "logTI_subset",
+        "model": "null",
+        "formula": "logER ~ 1",
+        "n": 6555,
+        "k_params": 1,
+        "r2": -2.220446049250313e-16,
+        "adj_r2": -2.220446049250313e-16,
+        "aic": 16475.725979461182,
+        "bic": 16482.513962857378,
+        "ssr": 4737.479679362026,
+        "sigma": 0.8501987488979929
+      },
+      {
+        "sample": "logTI_subset",
+        "model": "proc",
+        "formula": "logER ~ C(Process)",
+        "n": 6555,
+        "k_params": 2,
+        "r2": 0.06891256908346954,
+        "adj_r2": 0.06877048340806646,
+        "aic": 16009.685244405777,
+        "bic": 16023.261211198173,
+        "ssr": 4411.007783676457,
+        "sigma": 0.8204437823218765
+      },
+      {
+        "sample": "logTI_subset",
+        "model": "method",
+        "formula": "logER ~ C(Methodology)",
+        "n": 6555,
+        "k_params": 5,
+        "r2": 0.042002887628034835,
+        "adj_r2": 0.04141785122353292,
+        "aic": 16202.447552054291,
+        "bic": 16236.38746903528,
+        "ssr": 4538.491852749684,
+        "sigma": 0.8324058622473586
+      },
+      {
+        "sample": "logTI_subset",
+        "model": "ti",
+        "formula": "logER ~ logTI",
+        "n": 6555,
+        "k_params": 2,
+        "r2": 0.004424205811281778,
+        "adj_r2": 0.004272279091582676,
+        "aic": 16448.66096805798,
+        "bic": 16462.236934850374,
+        "ssr": 4716.520094233762,
+        "sigma": 0.8483806618063553
+      },
+      {
+        "sample": "logTI_subset",
+        "model": "comp",
+        "formula": "logER ~ C(Compilation)",
+        "n": 6555,
+        "k_params": 17,
+        "r2": 0.12406525722188,
+        "adj_r2": 0.12192164206671785,
+        "aic": 15639.426521886217,
+        "bic": 15754.822239621579,
+        "ssr": 4149.723044358546,
+        "sigma": 0.7966858398214837
+      },
+      {
+        "sample": "logTI_subset",
+        "model": "ref",
+        "formula": "logER ~ C(Reference)",
+        "n": 6555,
+        "k_params": 401,
+        "r2": 0.6906905360981921,
+        "adj_r2": 0.6705859235598881,
+        "aic": 9584.003751666576,
+        "bic": 12305.985093541894,
+        "ssr": 1465.3472998691766,
+        "sigma": 0.48796821966615417
+      },
+      {
+        "sample": "logTI_subset",
+        "model": "ti_plus_method",
+        "formula": "logER ~ logTI + C(Methodology)",
+        "n": 6555,
+        "k_params": 6,
+        "r2": 0.06745204841487562,
+        "adj_r2": 0.06674007105070934,
+        "aic": 16027.959480484906,
+        "bic": 16068.687380862093,
+        "ssr": 4417.9269706652085,
+        "sigma": 0.8213377252877114
+      },
+      {
+        "sample": "logTI_subset",
+        "model": "ti_x_method",
+        "formula": "logER ~ logTI * C(Methodology)",
+        "n": 6555,
+        "k_params": 10,
+        "r2": 0.5665848564904583,
+        "adj_r2": 0.565988869280132,
+        "aic": 11013.357600264324,
+        "bic": 11081.237434226303,
+        "ssr": 2053.2954351042295,
+        "sigma": 0.5601068646131223
+      },
+      {
+        "sample": "logTI_subset",
+        "model": "ti_plus_method_proc",
+        "formula": "logER ~ logTI + C(Methodology) + C(Process)",
+        "n": 6555,
+        "k_params": 7,
+        "r2": 0.1782168616892773,
+        "adj_r2": 0.17746385331574888,
+        "aic": 15201.118833913593,
+        "bic": 15248.634717686979,
+        "ssr": 3893.1809185894017,
+        "sigma": 0.7710773705213283
+      },
+      {
+        "sample": "logTI_subset",
+        "model": "ti_x_method_proc",
+        "formula": "logER ~ logTI * C(Methodology) + C(Process)",
+        "n": 6555,
+        "k_params": 11,
+        "r2": 0.5887718555665136,
+        "adj_r2": 0.5881434507003255,
+        "aic": 10670.906291149575,
+        "bic": 10745.57410850775,
+        "ssr": 1948.1849778353937,
+        "sigma": 0.545623980775982
+      },
+      {
+        "sample": "logTI_subset",
+        "model": "method_x_proc",
+        "formula": "logER ~ C(Methodology) + C(Process) + C(Methodology):C(Process)",
+        "n": 6555,
+        "k_params": 10,
+        "r2": 0.1555613585809924,
+        "adj_r2": 0.15440017481127954,
+        "aic": 15385.385589883459,
+        "bic": 15453.265423845438,
+        "ssr": 4000.5109041906244,
+        "sigma": 0.7818130291558033
+      },
+      {
+        "sample": "logTI_subset",
+        "model": "geology",
+        "formula": "logER ~ logS + logP + logA + Latitude",
+        "n": 6450,
+        "k_params": 5,
+        "r2": 0.21272240368185058,
+        "adj_r2": 0.21223379074387183,
+        "aic": 14603.19547612539,
+        "bic": 14637.054653174338,
+        "ssr": 3628.1177619895807,
+        "sigma": 0.7502901183886673
+      },
+      {
+        "sample": "logTI_subset",
+        "model": "combined",
+        "formula": "logER ~ logTI + logS + logP + logA + C(Methodology)",
+        "n": 6450,
+        "k_params": 9,
+        "r2": 0.24678472073357605,
+        "adj_r2": 0.2458491948472027,
+        "aic": 14325.913065794872,
+        "bic": 14386.85958448298,
+        "ssr": 3471.14378217885,
+        "sigma": 0.7341074849351401
+      }
+    ],
+    "common_nested": [
+      {
+        "sample": "common_nested",
+        "model": "null",
+        "formula": "logER ~ 1",
+        "n": 6450,
+        "k_params": 1,
+        "r2": 0.0,
+        "adj_r2": 0.0,
+        "aic": 16137.870133880475,
+        "bic": 16144.641969290265,
+        "ssr": 4608.43516817594,
+        "sigma": 0.8453383126279699
+      },
+      {
+        "sample": "common_nested",
+        "model": "proc",
+        "formula": "logER ~ C(Process)",
+        "n": 6450,
+        "k_params": 2,
+        "r2": 0.06525298648628464,
+        "adj_r2": 0.06510801951768752,
+        "aic": 15704.62826131763,
+        "bic": 15718.17193213721,
+        "ssr": 4307.721010424037,
+        "sigma": 0.8173560278767493
+      },
+      {
+        "sample": "common_nested",
+        "model": "method",
+        "formula": "logER ~ C(Methodology)",
+        "n": 6450,
+        "k_params": 5,
+        "r2": 0.0296544223075057,
+        "adj_r2": 0.02905219076200216,
+        "aic": 15951.705749889714,
+        "bic": 15985.564926938663,
+        "ssr": 4471.774685522089,
+        "sigma": 0.8329683417878528
+      },
+      {
+        "sample": "common_nested",
+        "model": "ti",
+        "formula": "logER ~ logTI",
+        "n": 6450,
+        "k_params": 2,
+        "r2": 0.00598774116623535,
+        "adj_r2": 0.0058335829375080195,
+        "aic": 16101.13311364841,
+        "bic": 16114.676784467989,
+        "ssr": 4580.841051207526,
+        "sigma": 0.8428690305917614
+      },
+      {
+        "sample": "common_nested",
+        "model": "comp",
+        "formula": "logER ~ C(Compilation)",
+        "n": 6450,
+        "k_params": 16,
+        "r2": 0.11338612965313777,
+        "adj_r2": 0.11131910943939771,
+        "aic": 15391.640289100791,
+        "bic": 15499.989655657428,
+        "ssr": 4085.902540699063,
+        "sigma": 0.7968993515005436
+      },
+      {
+        "sample": "common_nested",
+        "model": "ref",
+        "formula": "logER ~ C(Reference)",
+        "n": 6450,
+        "k_params": 365,
+        "r2": 0.6843564272954549,
+        "adj_r2": 0.6654748725765635,
+        "aic": 9428.106578640296,
+        "bic": 11899.826503213579,
+        "ssr": 1454.6229410603248,
+        "sigma": 0.48892801779347356
+      },
+      {
+        "sample": "common_nested",
+        "model": "ti_plus_method",
+        "formula": "logER ~ logTI + C(Methodology)",
+        "n": 6450,
+        "k_params": 6,
+        "r2": 0.05802934031015483,
+        "adj_r2": 0.057298450599036044,
+        "aic": 15762.281705306385,
+        "bic": 15802.912717765123,
+        "ssr": 4341.0107155045725,
+        "sigma": 0.8207627974972551
+      },
+      {
+        "sample": "common_nested",
+        "model": "ti_x_method",
+        "formula": "logER ~ logTI * C(Methodology)",
+        "n": 6450,
+        "k_params": 9,
+        "r2": 0.5670226699194794,
+        "adj_r2": 0.5664848933877848,
+        "aic": 10754.769228425468,
+        "bic": 10815.715747113576,
+        "ssr": 1995.3479549659935,
+        "sigma": 0.5565865028547381
+      },
+      {
+        "sample": "common_nested",
+        "model": "ti_plus_method_proc",
+        "formula": "logER ~ logTI + C(Methodology) + C(Process)",
+        "n": 6450,
+        "k_params": 7,
+        "r2": 0.17838665963081413,
+        "adj_r2": 0.17762153778660883,
+        "aic": 14882.539410700418,
+        "bic": 14929.942258568946,
+        "ssr": 3786.3518123998647,
+        "sigma": 0.7665957664436105
+      },
+      {
+        "sample": "common_nested",
+        "model": "ti_x_method_proc",
+        "formula": "logER ~ logTI * C(Methodology) + C(Process)",
+        "n": 6450,
+        "k_params": 10,
+        "r2": 0.5933978572010146,
+        "adj_r2": 0.5928296243927551,
+        "aic": 10351.385438828454,
+        "bic": 10419.103792926353,
+        "ssr": 1873.79961433054,
+        "sigma": 0.5394095596415515
+      },
+      {
+        "sample": "common_nested",
+        "model": "method_x_proc",
+        "formula": "logER ~ C(Methodology) + C(Process) + C(Methodology):C(Process)",
+        "n": 6450,
+        "k_params": 8,
+        "r2": 0.14386888362203676,
+        "adj_r2": 0.14293859523106411,
+        "aic": 15149.980402937357,
+        "bic": 15204.155086215676,
+        "ssr": 3945.424745285934,
+        "sigma": 0.7825940142066109
+      },
+      {
+        "sample": "common_nested",
+        "model": "geology",
+        "formula": "logER ~ logS + logP + logA + Latitude",
+        "n": 6450,
+        "k_params": 5,
+        "r2": 0.21272240368185058,
+        "adj_r2": 0.21223379074387183,
+        "aic": 14603.19547612539,
+        "bic": 14637.054653174338,
+        "ssr": 3628.1177619895807,
+        "sigma": 0.7502901183886673
+      },
+      {
+        "sample": "common_nested",
+        "model": "combined",
+        "formula": "logER ~ logTI + logS + logP + logA + C(Methodology)",
+        "n": 6450,
+        "k_params": 9,
+        "r2": 0.24678472073357605,
+        "adj_r2": 0.2458491948472027,
+        "aic": 14325.913065794872,
+        "bic": 14386.85958448298,
+        "ssr": 3471.14378217885,
+        "sigma": 0.7341074849351401
+      }
+    ]
+  },
+  "interaction_and_nested_tests": {
+    "full_logER|ti_x_method_vs_ti_plus_method (equal slope across methods)": {
+      "F": 1884.3505342256055,
+      "df1": 4,
+      "df2": 6545,
+      "p": 0.0,
+      "delta_r2": 0.4991328080755827
+    },
+    "full_logER|method_x_proc_vs_method_plus_proc (proc effect varies by method)": {
+      "F": 108.11824154666046,
+      "df1": 4,
+      "df2": 6701,
+      "p": 2.0212668574017296e-89,
+      "delta_r2": 0.04561612392434533
+    },
+    "full_logER|ti_x_method_proc_vs_method_plus_proc": {
+      "F": 1590.2598330582641,
+      "df1": 5,
+      "df2": 6544,
+      "p": 0.0,
+      "delta_r2": 0.3411920350422041
+    },
+    "full_logER|ti_vs_null": {
+      "F": 1415.4183519812566,
+      "df1": 1,
+      "df2": 6553,
+      "p": 1.2276568430851141e-280,
+      "delta_r2": 0.004424205811282
+    },
+    "full_logER|ti_overall_F": {
+      "F": 29.120656458863287,
+      "df1": 1,
+      "df2": 6553,
+      "p": 7.039125873969068e-08,
+      "r2": 0.004424205811281778
+    },
+    "full_logER|method_vs_null": {
+      "F": 294.6576644745968,
+      "df1": 4,
+      "df2": 6706,
+      "p": 8.419658844650484e-234,
+      "delta_r2": 0.14948457436211038
+    },
+    "full_logER|method_overall_F": {
+      "F": 294.6576644745962,
+      "df1": 4,
+      "df2": 6706,
+      "p": 8.419658844661524e-234,
+      "r2": 0.14948457436211016
+    },
+    "full_logER|proc_vs_null": {
+      "F": 465.5032774709741,
+      "df1": 1,
+      "df2": 6709,
+      "p": 7.103019349896891e-100,
+      "delta_r2": 0.06488299739617154
+    },
+    "full_logER|proc_overall_F": {
+      "F": 465.50327747097185,
+      "df1": 1,
+      "df2": 6709,
+      "p": 7.103019349904099e-100,
+      "r2": 0.06488299739617132
+    },
+    "full_logER|geology_vs_null": {
+      "F": 845.7155427468725,
+      "df1": 4,
+      "df2": 6601,
+      "p": 0.0,
+      "delta_r2": 0.3227840668840195
+    },
+    "full_logER|geology_overall_F": {
+      "F": 786.5650826087792,
+      "df1": 4,
+      "df2": 6601,
+      "p": 0.0,
+      "r2": 0.3227840668840193
+    },
+    "full_logER|comp_vs_null": {
+      "F": 152.5647842475724,
+      "df1": 16,
+      "df2": 6694,
+      "p": 0.0,
+      "delta_r2": 0.2672169438124439
+    },
+    "full_logER|comp_overall_F": {
+      "F": 152.5647842475722,
+      "df1": 16,
+      "df2": 6694,
+      "p": 0.0,
+      "r2": 0.26721694381244365
+    },
+    "full_logER|ref_vs_null": {
+      "F": 42.99558946043836,
+      "df1": 416,
+      "df2": 6294,
+      "p": 0.0,
+      "delta_r2": 0.7397040117842377
+    },
+    "full_logER|ref_overall_F": {
+      "F": 42.995589460438346,
+      "df1": 416,
+      "df2": 6294,
+      "p": 0.0,
+      "r2": 0.7397040117842375
+    },
+    "full_logER|ti_plus_method_vs_null": {
+      "F": 390.55695281506576,
+      "df1": 5,
+      "df2": 6549,
+      "p": 0.0,
+      "delta_r2": 0.06745204841487584
+    },
+    "full_logER|ti_plus_method_overall_F": {
+      "F": 94.73903498863619,
+      "df1": 5,
+      "df2": 6549,
+      "p": 1.2128960428724575e-96,
+      "r2": 0.06745204841487562
+    },
+    "full_logER|ti_plus_method_proc_vs_null": {
+      "F": 516.3721105444399,
+      "df1": 6,
+      "df2": 6548,
+      "p": 0.0,
+      "delta_r2": 0.17821686168927753
+    },
+    "full_logER|ti_plus_method_proc_overall_F": {
+      "F": 236.6731472774814,
+      "df1": 6,
+      "df2": 6548,
+      "p": 1.4054118318764848e-274,
+      "r2": 0.1782168616892773
+    },
+    "full_logER|combined_vs_null": {
+      "F": 525.1589668926119,
+      "df1": 8,
+      "df2": 6441,
+      "p": 0.0,
+      "delta_r2": 0.24678472073357627
+    },
+    "full_logER|combined_overall_F": {
+      "F": 263.79250892803486,
+      "df1": 8,
+      "df2": 6441,
+      "p": 0.0,
+      "r2": 0.24678472073357605
+    },
+    "logTI_subset|ti_x_method_vs_ti_plus_method (equal slope across methods)": {
+      "F": 1884.3505342256055,
+      "df1": 4,
+      "df2": 6545,
+      "p": 0.0,
+      "delta_r2": 0.4991328080755827
+    },
+    "logTI_subset|method_x_proc_vs_method_plus_proc (proc effect varies by method)": {
+      "F": 66.304131680332,
+      "df1": 4,
+      "df2": 6545,
+      "p": 4.507489387481428e-55,
+      "delta_r2": 0.03421834736538221
+    },
+    "logTI_subset|ti_x_method_proc_vs_method_plus_proc": {
+      "F": 1487.6678062228607,
+      "df1": 5,
+      "df2": 6544,
+      "p": 0.0,
+      "delta_r2": 0.46742884435090337
+    },
+    "logTI_subset|ti_vs_null": {
+      "F": 29.120656458864552,
+      "df1": 1,
+      "df2": 6553,
+      "p": 7.039125873964514e-08,
+      "delta_r2": 0.004424205811282
+    },
+    "logTI_subset|ti_overall_F": {
+      "F": 29.120656458863287,
+      "df1": 1,
+      "df2": 6553,
+      "p": 7.039125873969068e-08,
+      "r2": 0.004424205811281778
+    },
+    "logTI_subset|method_vs_null": {
+      "F": 71.7953400930523,
+      "df1": 4,
+      "df2": 6550,
+      "p": 1.2864449960492702e-59,
+      "delta_r2": 0.04200288762803506
+    },
+    "logTI_subset|method_overall_F": {
+      "F": 71.79534009305198,
+      "df1": 4,
+      "df2": 6550,
+      "p": 1.286444996049753e-59,
+      "r2": 0.042002887628034835
+    },
+    "logTI_subset|proc_vs_null": {
+      "F": 485.00715422552014,
+      "df1": 1,
+      "df2": 6553,
+      "p": 9.352309121086804e-104,
+      "delta_r2": 0.06891256908346977
+    },
+    "logTI_subset|proc_overall_F": {
+      "F": 485.0071542255188,
+      "df1": 1,
+      "df2": 6553,
+      "p": 9.352309121092406e-104,
+      "r2": 0.06891256908346954
+    },
+    "logTI_subset|geology_vs_null": {
+      "F": 492.66851481307737,
+      "df1": 4,
+      "df2": 6445,
+      "p": 0.0,
+      "delta_r2": 0.2127224036818508
+    },
+    "logTI_subset|geology_overall_F": {
+      "F": 435.35974418084703,
+      "df1": 4,
+      "df2": 6445,
+      "p": 0.0,
+      "r2": 0.21272240368185058
+    },
+    "logTI_subset|comp_vs_null": {
+      "F": 57.87664680533454,
+      "df1": 16,
+      "df2": 6538,
+      "p": 3.195215216510264e-174,
+      "delta_r2": 0.12406525722188022
+    },
+    "logTI_subset|comp_overall_F": {
+      "F": 57.87664680533445,
+      "df1": 16,
+      "df2": 6538,
+      "p": 3.1952152165128805e-174,
+      "r2": 0.12406525722188
+    },
+    "logTI_subset|ref_vs_null": {
+      "F": 34.354829509012575,
+      "df1": 400,
+      "df2": 6154,
+      "p": 0.0,
+      "delta_r2": 0.6906905360981923
+    },
+    "logTI_subset|ref_overall_F": {
+      "F": 34.35482950901257,
+      "df1": 400,
+      "df2": 6154,
+      "p": 0.0,
+      "r2": 0.6906905360981921
+    },
+    "logTI_subset|ti_plus_method_vs_null": {
+      "F": 94.73903498863646,
+      "df1": 5,
+      "df2": 6549,
+      "p": 1.2128960428716697e-96,
+      "delta_r2": 0.06745204841487584
+    },
+    "logTI_subset|ti_plus_method_overall_F": {
+      "F": 94.73903498863619,
+      "df1": 5,
+      "df2": 6549,
+      "p": 1.2128960428724575e-96,
+      "r2": 0.06745204841487562
+    },
+    "logTI_subset|ti_plus_method_proc_vs_null": {
+      "F": 236.6731472774817,
+      "df1": 6,
+      "df2": 6548,
+      "p": 1.4054118318752447e-274,
+      "delta_r2": 0.17821686168927753
+    },
+    "logTI_subset|ti_plus_method_proc_overall_F": {
+      "F": 236.6731472774814,
+      "df1": 6,
+      "df2": 6548,
+      "p": 1.4054118318764848e-274,
+      "r2": 0.1782168616892773
+    },
+    "logTI_subset|combined_vs_null": {
+      "F": 293.7241304880848,
+      "df1": 8,
+      "df2": 6441,
+      "p": 0.0,
+      "delta_r2": 0.24678472073357627
+    },
+    "logTI_subset|combined_overall_F": {
+      "F": 263.79250892803486,
+      "df1": 8,
+      "df2": 6441,
+      "p": 0.0,
+      "r2": 0.24678472073357605
+    },
+    "common_nested|ti_x_method_vs_ti_plus_method (equal slope across methods)": {
+      "F": 2523.9397140445913,
+      "df1": 3,
+      "df2": 6441,
+      "p": 0.0,
+      "delta_r2": 0.5089933296093245
+    },
+    "common_nested|method_x_proc_vs_method_plus_proc (proc effect varies by method)": {
+      "F": 96.65127344509844,
+      "df1": 2,
+      "df2": 6442,
+      "p": 4.3886344600434805e-42,
+      "delta_r2": 0.02568958790248488
+    },
+    "common_nested|ti_x_method_proc_vs_method_plus_proc": {
+      "F": 1881.6966352373686,
+      "df1": 4,
+      "df2": 6440,
+      "p": 0.0,
+      "delta_r2": 0.4752185614814627
+    },
+    "common_nested|ti_vs_null": {
+      "F": 38.841528056388256,
+      "df1": 1,
+      "df2": 6448,
+      "p": 4.886681825278619e-10,
+      "delta_r2": 0.00598774116623535
+    },
+    "common_nested|ti_overall_F": {
+      "F": 38.841528056388256,
+      "df1": 1,
+      "df2": 6448,
+      "p": 4.886681825278619e-10,
+      "r2": 0.00598774116623535
+    },
+    "common_nested|method_vs_null": {
+      "F": 49.24089833705664,
+      "df1": 4,
+      "df2": 6445,
+      "p": 7.165179807813951e-41,
+      "delta_r2": 0.0296544223075057
+    },
+    "common_nested|method_overall_F": {
+      "F": 49.24089833705664,
+      "df1": 4,
+      "df2": 6445,
+      "p": 7.165179807813951e-41,
+      "r2": 0.0296544223075057
+    },
+    "common_nested|proc_vs_null": {
+      "F": 450.1231357583678,
+      "df1": 1,
+      "df2": 6448,
+      "p": 1.2784549007349183e-96,
+      "delta_r2": 0.06525298648628464
+    },
+    "common_nested|proc_overall_F": {
+      "F": 450.1231357583678,
+      "df1": 1,
+      "df2": 6448,
+      "p": 1.2784549007349183e-96,
+      "r2": 0.06525298648628464
+    },
+    "common_nested|geology_vs_null": {
+      "F": 435.35974418084703,
+      "df1": 4,
+      "df2": 6445,
+      "p": 0.0,
+      "delta_r2": 0.21272240368185058
+    },
+    "common_nested|geology_overall_F": {
+      "F": 435.35974418084703,
+      "df1": 4,
+      "df2": 6445,
+      "p": 0.0,
+      "r2": 0.21272240368185058
+    },
+    "common_nested|comp_vs_null": {
+      "F": 54.854872196911145,
+      "df1": 15,
+      "df2": 6434,
+      "p": 1.7909298048363777e-155,
+      "delta_r2": 0.11338612965313777
+    },
+    "common_nested|comp_overall_F": {
+      "F": 54.854872196911145,
+      "df1": 15,
+      "df2": 6434,
+      "p": 1.7909298048363777e-155,
+      "r2": 0.11338612965313777
+    },
+    "common_nested|ref_vs_null": {
+      "F": 36.2447074663158,
+      "df1": 364,
+      "df2": 6085,
+      "p": 0.0,
+      "delta_r2": 0.6843564272954549
+    },
+    "common_nested|ref_overall_F": {
+      "F": 36.2447074663158,
+      "df1": 364,
+      "df2": 6085,
+      "p": 0.0,
+      "r2": 0.6843564272954549
+    },
+    "common_nested|ti_plus_method_vs_null": {
+      "F": 79.3954811887161,
+      "df1": 5,
+      "df2": 6444,
+      "p": 4.324914596732145e-81,
+      "delta_r2": 0.05802934031015483
+    },
+    "common_nested|ti_plus_method_overall_F": {
+      "F": 79.3954811887161,
+      "df1": 5,
+      "df2": 6444,
+      "p": 4.324914596732145e-81,
+      "r2": 0.05802934031015483
+    },
+    "common_nested|ti_plus_method_proc_vs_null": {
+      "F": 233.1480416901227,
+      "df1": 6,
+      "df2": 6443,
+      "p": 2.0929106685395677e-270,
+      "delta_r2": 0.17838665963081413
+    },
+    "common_nested|ti_plus_method_proc_overall_F": {
+      "F": 233.1480416901227,
+      "df1": 6,
+      "df2": 6443,
+      "p": 2.0929106685395677e-270,
+      "r2": 0.17838665963081413
+    },
+    "common_nested|combined_vs_null": {
+      "F": 263.79250892803486,
+      "df1": 8,
+      "df2": 6441,
+      "p": 0.0,
+      "delta_r2": 0.24678472073357605
+    },
+    "common_nested|combined_overall_F": {
+      "F": 263.79250892803486,
+      "df1": 8,
+      "df2": 6441,
+      "p": 0.0,
+      "r2": 0.24678472073357605
+    }
+  },
+  "incremental_r2": {
+    "common_nested|logTI added last after method": {
+      "F": 194.11217295162444,
+      "df1": 1,
+      "df2": 6444,
+      "p": 1.7123669027339115e-43,
+      "delta_r2": 0.02837491800264913
+    },
+    "common_nested|logTI added last after method+proc": {
+      "F": 472.13941962767507,
+      "df1": 1,
+      "df2": 6443,
+      "p": 4.345250765047775e-101,
+      "delta_r2": 0.060207363911262246
+    },
+    "common_nested|logTI added last after method+proc+method:proc (saturated cells)": {
+      "F": 345.05401444852146,
+      "df1": 1,
+      "df2": 6441,
+      "p": 4.504105824104376e-75,
+      "delta_r2": 0.04353214371290526
+    },
+    "common_nested|logTI added last after method*proc interaction": {
+      "F": 3559.949991802946,
+      "df1": 2,
+      "df2": 6440,
+      "p": 0.0,
+      "delta_r2": 0.4495289735789778
+    },
+    "common_nested|logTI*method added last after method+proc": {
+      "F": 1881.6966352373686,
+      "df1": 4,
+      "df2": 6440,
+      "p": 0.0,
+      "delta_r2": 0.4752185614814627
+    },
+    "common_nested|logTI added last after geology": {
+      "F": 206.64158824903674,
+      "df1": 1,
+      "df2": 6444,
+      "p": 3.8183647124882336e-46,
+      "delta_r2": 0.02446144341675427
+    },
+    "common_nested|logTI added last after geology(S,P,A)+method": {
+      "error": "not a valid nested pair",
+      "delta_k": 0,
+      "df2": 6441,
+      "delta_r2": 0.012389490050352059
+    },
+    "common_nested|logTI added last after geology(S,P,A,Lat)+method": {
+      "F": 146.6824001615794,
+      "df1": 1,
+      "df2": 6440,
+      "p": 2.120111202096349e-33,
+      "delta_r2": 0.017049667543676095
+    },
+    "common_nested|Latitude added last after ti+method+geology": {
+      "F": 40.09263043684853,
+      "df1": 1,
+      "df2": 6440,
+      "p": 2.585219851548126e-10,
+      "delta_r2": 0.004660177493324036
+    },
+    "common_nested|process added last after method": {
+      "F": 646.9050698154191,
+      "df1": 1,
+      "df2": 6444,
+      "p": 4.5179971642537675e-136,
+      "delta_r2": 0.08852487341204618
+    },
+    "common_nested|process added last after method+logTI": {
+      "F": 943.8286481991148,
+      "df1": 1,
+      "df2": 6443,
+      "p": 1.5261278407028752e-193,
+      "delta_r2": 0.1203573193206593
+    },
+    "common_nested|process added last after method*logTI": {
+      "F": 417.7454770007436,
+      "df1": 1,
+      "df2": 6440,
+      "p": 5.1592664806398434e-90,
+      "delta_r2": 0.026375187281535206
+    },
+    "common_nested|method added last after logTI": {
+      "F": 89.00385097818155,
+      "df1": 4,
+      "df2": 6444,
+      "p": 9.591535130357339e-74,
+      "delta_r2": 0.05204159914391948
+    },
+    "common_nested|method added last after logTI+proc": {
+      "F": 201.68162467033446,
+      "df1": 4,
+      "df2": 6443,
+      "p": 3.2135120425226625e-163,
+      "delta_r2": 0.10287401107339922
+    },
+    "common_nested|method added last after logTI+geology": {
+      "F": 27.366778478470152,
+      "df1": 3,
+      "df2": 6441,
+      "p": 1.400913812772852e-17,
+      "delta_r2": 0.009600873634971197
+    },
+    "common_nested|geology added last after logTI+method": {
+      "F": 538.0371494372451,
+      "df1": 3,
+      "df2": 6441,
+      "p": 4.87520044319e-312,
+      "delta_r2": 0.18875538042342122
+    }
+  },
+  "sequential_ladder_common_nested": [
+    {
+      "step": "null",
+      "formula": "logER ~ 1",
+      "n": 6450,
+      "k_params": 1,
+      "r2": -2.220446049250313e-16,
+      "adj_r2": -2.220446049250313e-16,
+      "aic": 16137.870133880475,
+      "bic": 16144.641969290265,
+      "delta_r2_vs_previous": null
+    },
+    {
+      "step": "method",
+      "formula": "logER ~ C(Methodology)",
+      "n": 6450,
+      "k_params": 5,
+      "r2": 0.0296544223075067,
+      "adj_r2": 0.02905219076200327,
+      "aic": 15951.70574988971,
+      "bic": 15985.56492693866,
+      "delta_r2_vs_previous": 0.029654422307506922
+    },
+    {
+      "step": "method+ti",
+      "formula": "logER ~ C(Methodology) + logTI",
+      "n": 6450,
+      "k_params": 6,
+      "r2": 0.0580293403101545,
+      "adj_r2": 0.05729845059903582,
+      "aic": 15762.281705306385,
+      "bic": 15802.912717765123,
+      "delta_r2_vs_previous": 0.028374918002647798
+    },
+    {
+      "step": "method+ti+proc",
+      "formula": "logER ~ C(Methodology) + logTI + C(Process)",
+      "n": 6450,
+      "k_params": 7,
+      "r2": 0.17838665963081435,
+      "adj_r2": 0.17762153778660905,
+      "aic": 14882.539410700418,
+      "bic": 14929.942258568946,
+      "delta_r2_vs_previous": 0.12035731932065985
+    },
+    {
+      "step": "method*ti+proc",
+      "formula": "logER ~ C(Methodology) * logTI + C(Process)",
+      "n": 6450,
+      "k_params": 11,
+      "r2": 0.5933978572010148,
+      "adj_r2": 0.5928296243927553,
+      "aic": 10351.385438828454,
+      "bic": 10419.103792926353,
+      "delta_r2_vs_previous": 0.41501119757020044
+    },
+    {
+      "step": "ti+method+geology",
+      "formula": "logER ~ logTI + C(Methodology) + logS + logP + logA",
+      "n": 6450,
+      "k_params": 9,
+      "r2": 0.24678472073357616,
+      "adj_r2": 0.2458491948472027,
+      "aic": 14325.913065794872,
+      "bic": 14386.85958448298,
+      "delta_r2_vs_previous": -0.34661313646743863
+    }
+  ],
+  "no_stable_relation_baseline": {
+    "pooled_logER_on_logTI": {
+      "n": 6555,
+      "slope_dex_per_dex": -0.022131191014996388,
+      "se": 0.004101136328020638,
+      "ci95": [
+        -0.030170755447895638,
+        -0.014091626582097137
+      ],
+      "t": -5.396355849910927,
+      "p_slope_eq_0": 7.039125873952463e-08,
+      "r2": 0.004424205811281778,
+      "adj_r2": 0.004272279091582676,
+      "intercept": -1.0936909234199543,
+      "p_slope_eq_minus1_fixed_thickness": 0.0,
+      "note": "pooled slope tests whether a single stable ER~TI relation exists; slope=-1 is the ER*TI=const mechanical-coupling reference"
+    },
+    "method_stratified_slopes": [
+      {
+        "methodology": "Cosmogenic detrital",
+        "n": 3479,
+        "slope": -0.993851874100871,
+        "se": 0.0012506530059723762,
+        "ci95": [
+          -0.9963039625314543,
+          -0.9913997856702876
+        ],
+        "p": 0.0,
+        "r2": 0.9945241647741785
+      },
+      {
+        "methodology": "Cosmogenic surface",
+        "n": 163,
+        "slope": -0.8771843981426788,
+        "se": 0.03596255867667915,
+        "ci95": [
+          -0.9482035500174832,
+          -0.8061652462678743
+        ],
+        "p": 6.024506966658768e-56,
+        "r2": 0.7870230135154408
+      },
+      {
+        "methodology": "Relief",
+        "n": 25,
+        "slope": -0.2738400775789522,
+        "se": 0.10971482098003812,
+        "ci95": [
+          -0.5008024769750715,
+          -0.04687767818283281
+        ],
+        "p": 0.020174539435680164,
+        "r2": 0.21312767826963575
+      },
+      {
+        "methodology": "Thermochronometric",
+        "n": 72,
+        "slope": -0.6141398973036879,
+        "se": 0.1146023971894474,
+        "ci95": [
+          -0.8427071713562637,
+          -0.38557262325111213
+        ],
+        "p": 1.016105335853491e-06,
+        "r2": 0.29090614808874893
+      },
+      {
+        "methodology": "Volumetric",
+        "n": 2816,
+        "slope": 0.1335516522956954,
+        "se": 0.008627422384733087,
+        "ci95": [
+          0.11663493893673893,
+          0.15046836565465188
+        ],
+        "p": 6.179015410126821e-52,
+        "r2": 0.0784730207033848
+      }
+    ],
+    "process_stratified_slopes": [
+      {
+        "process": "Glacial",
+        "n": 427,
+        "slope": -0.05665968463207187,
+        "se": 0.0177315285397117,
+        "ci95": [
+          -0.09151209373591704,
+          -0.0218072755282267
+        ],
+        "p": 0.001500384798958993,
+        "r2": 0.02346153270147966
+      },
+      {
+        "process": "Nonglacial",
+        "n": 6128,
+        "slope": -0.030504260107066812,
+        "se": 0.004068313101752631,
+        "ci95": [
+          -0.038479583009819615,
+          -0.022528937204314013
+        ],
+        "p": 7.399026085312852e-14,
+        "r2": 0.009093849944237897
+      }
+    ],
+    "F_equal_slopes_across_methods": {
+      "F": 1884.3505342256055,
+      "df1": 4,
+      "df2": 6545,
+      "p": 0.0,
+      "delta_r2": 0.4991328080755827
+    },
+    "F_equal_slopes_across_processes": {
+      "F": 1015.8902825095191,
+      "df1": 8,
+      "df2": 6544,
+      "p": 0.0,
+      "delta_r2": 0.5107123176337405
+    },
+    "sensitivity_excluding_degenerate_compilation": {
+      "pooled_slope_excluding_Chen2022": {
+        "n": 5034,
+        "slope": -0.018247550453308364,
+        "se": 0.004307845467223136,
+        "ci95": [
+          -0.02669280377826006,
+          -0.009802297128356667
+        ],
+        "p": 2.31716197367439e-05,
+        "r2": 0.003553059337797926
+      },
+      "conditional_slope_excluding_Chen2022": {
+        "n": 5034,
+        "slope": -0.993851874100908,
+        "se": 0.009590668871772175,
+        "ci95": [
+          -1.0126537693461963,
+          -0.9750499788556197
+        ],
+        "p": 0.0,
+        "r2": 0.7427603544391717
+      }
+    }
+  },
+  "mechanical_coupling_diagnostics": {
+    "rationale": "If erosion rate is computed as thickness/interval, logER = log(thickness) - logTI, so the within-stratum slope is -1 by construction (mathematical coupling). A slope near 0 implies a scale-independent rate; intermediate values mix both.",
+    "slope_minus1_reference": -1.0,
+    "process_x_method_strata_slopes": [
+      {
+        "process": "Glacial",
+        "methodology": "Cosmogenic detrital",
+        "n": 9,
+        "note": "n<10, not fitted"
+      },
+      {
+        "process": "Glacial",
+        "methodology": "Cosmogenic surface",
+        "n": 99,
+        "slope": -0.3421028614739966,
+        "se": 0.07427490120736416,
+        "ci95": [
+          -0.4895179800391503,
+          -0.1946877429088429
+        ],
+        "p": 1.2479729799118075e-05,
+        "r2": 0.17945647623501992
+      },
+      {
+        "process": "Glacial",
+        "methodology": "Relief",
+        "n": 18,
+        "slope": -0.36992488940113794,
+        "se": 0.10599759784389924,
+        "ci95": [
+          -0.5946297587751433,
+          -0.1452200200271325
+        ],
+        "p": 0.003027209859186557,
+        "r2": 0.4322145231497858
+      },
+      {
+        "process": "Glacial",
+        "methodology": "Thermochronometric",
+        "n": 68,
+        "slope": -0.6515564543513739,
+        "se": 0.1140793161572845,
+        "ci95": [
+          -0.8793231579294196,
+          -0.42378975077332814
+        ],
+        "p": 2.901989712923309e-07,
+        "r2": 0.33076777595296747
+      },
+      {
+        "process": "Glacial",
+        "methodology": "Volumetric",
+        "n": 233,
+        "slope": -0.07285174868267262,
+        "se": 0.025335400445189504,
+        "ci95": [
+          -0.1227697501874167,
+          -0.022933747177928537
+        ],
+        "p": 0.0044109238900945525,
+        "r2": 0.03455723357614249
+      },
+      {
+        "process": "Nonglacial",
+        "methodology": "Cosmogenic detrital",
+        "n": 3470,
+        "slope": -0.9950483209181255,
+        "se": 0.0007787989063537213,
+        "ci95": [
+          -0.9965752716428038,
+          -0.9935213701934471
+        ],
+        "p": 0.0,
+        "r2": 0.9978800785708096
+      },
+      {
+        "process": "Nonglacial",
+        "methodology": "Cosmogenic surface",
+        "n": 64,
+        "slope": -0.9817671004221249,
+        "se": 0.07820464119976586,
+        "ci95": [
+          -1.138095950680272,
+          -0.8254382501639779
+        ],
+        "p": 1.1143887334439754e-18,
+        "r2": 0.7176664727837463
+      },
+      {
+        "process": "Nonglacial",
+        "methodology": "Relief",
+        "n": 7,
+        "note": "n<10, not fitted"
+      },
+      {
+        "process": "Nonglacial",
+        "methodology": "Thermochronometric",
+        "n": 4,
+        "note": "n<10, not fitted"
+      },
+      {
+        "process": "Nonglacial",
+        "methodology": "Volumetric",
+        "n": 2583,
+        "slope": 0.11740599746583384,
+        "se": 0.009803130018743627,
+        "ci95": [
+          0.09818320119993487,
+          0.1366287937317328
+        ],
+        "p": 3.3172669192914446e-32,
+        "r2": 0.05264714255078251
+      }
+    ],
+    "compilation_slopes_n_ge30": [
+      {
+        "compilation": "Balter-Kennedy et al., 2021",
+        "n": 32,
+        "slope": 0.16650193921960146,
+        "se": 0.6617506929380383,
+        "ci95": [
+          -1.1849732739060124,
+          1.5179771523452152
+        ],
+        "p": 0.803059502815714,
+        "r2": 0.0021057801857435887
+      },
+      {
+        "compilation": "Chen et al., 2022",
+        "n": 1521,
+        "logTI_var": 1.2334060822791519e-32,
+        "note": "logTI has zero variance in compilation; slope not identified"
+      },
+      {
+        "compilation": "GloRiSe",
+        "n": 1057,
+        "slope": -0.08315164204661456,
+        "se": 0.030294841943155897,
+        "ci95": [
+          -0.1425966389933926,
+          -0.023706645099836533
+        ],
+        "p": 0.006158590602855368,
+        "r2": 0.007090250729314462
+      },
+      {
+        "compilation": "Hallet et al., 1996",
+        "n": 62,
+        "slope": -0.05620342355341269,
+        "se": 0.0852524028599741,
+        "ci95": [
+          -0.22673361931570113,
+          0.11432677220887576
+        ],
+        "p": 0.5122518118565111,
+        "r2": 0.007191615674885354
+      },
+      {
+        "compilation": "Marrero et al., 2018",
+        "n": 34,
+        "slope": -1.4190407553016184,
+        "se": 0.03306854665130188,
+        "ci95": [
+          -1.486399180595421,
+          -1.3516823300078158
+        ],
+        "p": 7.40669531055109e-30,
+        "r2": 0.9829191973553443
+      },
+      {
+        "compilation": "OCTOPUS",
+        "n": 3457,
+        "slope": -0.9952218319986843,
+        "se": 0.0007390067252794984,
+        "ci95": [
+          -0.99667076615596,
+          -0.9937728978414087
+        ],
+        "p": 0.0,
+        "r2": 0.9980985781467365
+      },
+      {
+        "compilation": "This study",
+        "n": 342,
+        "slope": -0.15650173219134045,
+        "se": 0.028015273285637448,
+        "ci95": [
+          -0.21160681477533627,
+          -0.10139664960734464
+        ],
+        "p": 4.7577575159666344e-08,
+        "r2": 0.0840683848429945
+      }
+    ],
+    "zero_variance_logTI_compilations": [
+      {
+        "compilation": "Bj\u00f6rnsson, 1979",
+        "n": 4,
+        "share_of_logER_rows": 0.0005960363582178513
+      },
+      {
+        "compilation": "Chen et al., 2022",
+        "n": 1521,
+        "share_of_logER_rows": 0.22664282521233794
+      }
+    ],
+    "exhumation_identity_share_rtol1e-3": 0.30434782608695654
+  },
+  "simpson_reversal_check": {
+    "n": 6555,
+    "marginal_pooled_logTI_slope": {
+      "estimate": -0.022131191014996388,
+      "se_classical": 0.004101136328020638,
+      "ci95_classical": [
+        -0.030170755447895638,
+        -0.014091626582097137
+      ],
+      "p_classical": 7.039125873952463e-08,
+      "se_clustered_by_Reference": 0.023197034793560525,
+      "ci95_clustered": [
+        -0.06759654375849651,
+        0.023334161728505807
+      ],
+      "p_clustered": 0.34005702508321345,
+      "r2": 0.004424205811281778
+    },
+    "conditional_on_method_logTI_slope": {
+      "estimate": -0.10168954801354992,
+      "se_classical": 0.007606549139521577,
+      "ci95_classical": [
+        -0.1166008662259019,
+        -0.08677822980119793
+      ],
+      "p_classical": 3.0936161794824296e-40,
+      "se_clustered_by_Reference": 0.044659188425970685,
+      "ci95_clustered": [
+        -0.18921994890723542,
+        -0.014159147119854276
+      ],
+      "p_clustered": 0.02278545547688021,
+      "r2": 0.06745204841487562
+    },
+    "sign_flip": false,
+    "r2_gain_from_conditioning": 0.06302784260359384,
+    "method_means_logER": {
+      "Cosmogenic detrital": -1.1447795261808338,
+      "Cosmogenic surface": -1.7345177921703714,
+      "Relief": 0.3159084682849802,
+      "Thermochronometric": -0.03280607533179542,
+      "Volumetric": -1.1444580108843658
+    },
+    "method_means_logTI": {
+      "Cosmogenic detrital": 3.962870563548179,
+      "Cosmogenic surface": 4.413293792158781,
+      "Relief": 5.702393695873477,
+      "Thermochronometric": 6.2578542188087996,
+      "Volumetric": -0.3311454338460465
+    },
+    "note": "Simpson check: within-method slopes vs the pooled slope"
+  },
+  "clustering": {
+    "rows_logER": 6711,
+    "unique_Reference": 417,
+    "unique_Compilation": 17,
+    "unique_Locality": 1938,
+    "unique_LatLon_pairs": 5114,
+    "unique_LatLon_pairs_round3": 5052,
+    "unique_Reference_logTI_subset": 401,
+    "unique_Locality_logTI_subset": 1896,
+    "icc_logER_by_Reference": {
+      "n": 6711,
+      "n_groups": 417,
+      "mean_cluster_size": 16.093525179856115,
+      "n0_effective_cluster_size": 15.876731514276218,
+      "msb": 10.198077113333774,
+      "msw": 0.2371889126608523,
+      "icc": 0.7256593264816001,
+      "between_cluster_r2": 0.7397040117842376,
+      "design_effect_mbar": 11.952757316247462,
+      "design_effect_n0": 11.795438970897276,
+      "effective_n_mbar": 561.4604080413892,
+      "effective_n_n0": 568.9487281107517,
+      "se_inflation_factor": 3.457275996539394
+    },
+    "icc_logER_by_Compilation": {
+      "n": 6711,
+      "n_groups": 17,
+      "mean_cluster_size": 394.7647058823529,
+      "n0_effective_cluster_size": 274.7137349128297,
+      "msb": 95.78503407437576,
+      "msw": 0.6278318718620021,
+      "icc": 0.35555341739033486,
+      "between_cluster_r2": 0.2672169438124437,
+      "design_effect_mbar": 141.00438682417067,
+      "design_effect_n0": 98.31985383492881,
+      "effective_n_mbar": 47.594263917252924,
+      "effective_n_n0": 68.25681424697024,
+      "se_inflation_factor": 11.874526804221324
+    },
+    "icc_logER_by_Locality": {
+      "n": 6711,
+      "n_groups": 1938,
+      "mean_cluster_size": 3.4628482972136223,
+      "n0_effective_cluster_size": 3.4479614025686334,
+      "msb": 2.5978964780288942,
+      "msw": 0.14731649224644572,
+      "icc": 0.8283123620814877,
+      "between_cluster_r2": 0.8774003711087763,
+      "design_effect_mbar": 3.0400076905133853,
+      "design_effect_n0": 3.0276766916459366,
+      "effective_n_mbar": 2207.560204844966,
+      "effective_n_n0": 2216.5510665379857,
+      "se_inflation_factor": 1.7435617828208398
+    },
+    "icc_resid_of_pooled_logTI_model_by_Reference": {
+      "n": 6555,
+      "n_groups": 401,
+      "mean_cluster_size": 16.346633416458854,
+      "n0_effective_cluster_size": 16.11657284515637,
+      "msb": 8.172887834335425,
+      "msw": 0.2351909263080258,
+      "icc": 0.6768061728798715,
+      "between_cluster_r2": 0.6931286347599613,
+      "design_effect_mbar": 11.386696229183865,
+      "design_effect_n0": 11.230989814390073,
+      "effective_n_mbar": 575.6718075256695,
+      "effective_n_n0": 583.6529200303603,
+      "se_inflation_factor": 3.374417909682182
+    },
+    "icc_resid_of_pooled_logTI_model_by_Locality": {
+      "n": 6555,
+      "n_groups": 1896,
+      "mean_cluster_size": 3.4572784810126582,
+      "n0_effective_cluster_size": 3.4417479053835116,
+      "msb": 2.1346687154190787,
+      "msw": 0.1440916244933691,
+      "icc": 0.8005524948612068,
+      "between_cluster_r2": 0.8576656379911665,
+      "design_effect_mbar": 2.9671804185434403,
+      "design_effect_n0": 2.954747377476896,
+      "effective_n_mbar": 2209.1679895952484,
+      "effective_n_n0": 2218.463767822146,
+      "se_inflation_factor": 1.7225505561647356
+    },
+    "icc_resid_of_method_conditional_model_by_Reference": {
+      "n": 6555,
+      "n_groups": 401,
+      "mean_cluster_size": 16.346633416458854,
+      "n0_effective_cluster_size": 16.11657284515637,
+      "msb": 7.541433252280261,
+      "msw": 0.2277142784779179,
+      "icc": 0.665870682389984,
+      "between_cluster_r2": 0.6828028894415828,
+      "design_effect_mbar": 11.218873265406389,
+      "design_effect_n0": 11.065682675802174,
+      "effective_n_mbar": 584.2832738125734,
+      "effective_n_n0": 592.3719477637031,
+      "se_inflation_factor": 3.3494586525894583
+    },
+    "icc_ml_cross_check_logER_by_Reference": {
+      "reml": {
+        "var_between": 1.3157975292846724,
+        "var_within": 0.23742171903336087,
+        "icc": 0.8471421730766839,
+        "converged": true,
+        "n_groups": 417
+      },
+      "ml": {
+        "var_between": 1.3123383349825852,
+        "var_within": 0.23742279856231702,
+        "icc": 0.8468003917356998,
+        "converged": true,
+        "n_groups": 417
+      }
+    },
+    "reference_size_distribution": {
+      "max": 512,
+      "singletons": 120,
+      "mean": 16.093525179856115,
+      "p50": 7.0,
+      "p90": 37.0,
+      "top10": {
+        "Milliman and Farnsworth 2013": 512,
+        "USGS": 448,
+        "Milliman and Syvitski 1992": 181,
+        "Van der Perck and Espinosa Vilches 2020, van der Weijden and Middelburg 1989": 154,
+        "Stirton, 2016": 96,
+        "Krickov et al., 2019": 90,
+        "Matmon, 2003": 89,
+        "Reuter, 2005": 88,
+        "Mandal, 2015": 79,
+        "Bierman, 2005": 74
+      }
+    },
+    "locality_size_distribution": {
+      "max": 154,
+      "singletons": 1604,
+      "p50": 1.0
+    }
+  },
+  "filter_rules": {
+    "logER": "log10(Erosion rate (mm/yr)) where rate>0; rate<=0 or blank dropped",
+    "logTI": "log10(Time interval (yr)) where interval>0",
+    "logA/logS/logP": "log10 of Area (km2)/Slope (m/km)/Precipitation (mm/yr) where value>0",
+    "Latitude": "raw numeric Latitude in degrees (not logged, no abs)",
+    "Process": "row-set label: Glacial vs Nonglacial (source file)",
+    "full_logER": "all rows with logER non-missing (n=6711); each model uses its own available-case n",
+    "logTI_subset": "rows with logER and logTI non-missing (n=6555)",
+    "common_nested": "rows with logER, logTI, logS, logP, logA, Latitude, Methodology, Process all non-missing (n=6450); used for AIC/BIC, F-tests, incremental R^2",
+    "aic_bic": "Gaussian OLS llf = -n/2*(log(2pi)+log(SSR/n)+1); AIC=-2llf+2k; BIC=-2llf+log(n)*k; comparable only within the same sample",
+    "estimator": "explicit design-matrix OLS (normal equations); asserted against statsmodels and one-way ANOVA in-script",
+    "cluster_se": "statsmodels cov_type='cluster' with groups=Reference (CR0-style)",
+    "icc": "one-way random-effects ANOVA estimator with n0 (Kish) correction: ICC=(MSB-MSW)/(MSB+(n0-1)MSW), design effect 1+(mbar-1)*ICC"
+  }
+}

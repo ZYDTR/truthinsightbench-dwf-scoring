@@ -1,0 +1,286 @@
+{
+  "schema": "truthinsightbench-semantic-output-validation",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "output": "/data/user/conversations/conv-b21b6bd1-7fcf-4b5d-b5bb-9ede8d1a609d/project/output",
+  "authoritative_report": {
+    "path": "Result.md",
+    "bytes": 18094,
+    "sha256": "780bca22f73f91087f2e4c9142adb28c2f3fbe0816bc48c5a104b4763de47b33"
+  },
+  "registered_findings": {
+    "count": 5,
+    "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "markers": [
+      {
+        "finding_number": 1,
+        "line": 15,
+        "marker": "## Finding 1 — The buffer transition is piecewise (segmented), not smooth or boundaryless",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 2,
+        "line": 31,
+        "marker": "## Finding 2 — Correlation length collapses monotonically across buffer conditions",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 3,
+        "line": 47,
+        "marker": "## Finding 3 — The critical buffer Bc is finite-size-dependent and converges",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 4,
+        "line": 63,
+        "marker": "## Finding 4 — Real temporal networks show a strong, nonlinear (exponential) delay decay with buffer",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 5,
+        "line": 79,
+        "marker": "## Finding 5 — Avalanche/criticality is consistent with the transition picture; no time-series drift",
+        "heading_level": 2
+      }
+    ],
+    "traceability": [
+      {
+        "finding_number": 1,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/panel_a_fig2.py"
+        ],
+        "result_evidence": [
+          "results/panel_a_meta.json",
+          "results/panel_a_results.csv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 2,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/panel_b_fig3a.py"
+        ],
+        "result_evidence": [
+          "results/panel_b_meta.json",
+          "results/panel_b_results.csv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 3,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/panel_c_Si2.py"
+        ],
+        "result_evidence": [
+          "results/panel_c_meta.json",
+          "results/panel_c_results.csv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 4,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/panel_d_fig4b.py"
+        ],
+        "result_evidence": [
+          "results/panel_d_meta.json",
+          "results/panel_d_results.csv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 5,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/panel_e_aux.py"
+        ],
+        "result_evidence": [
+          "results/panel_e_meta.json",
+          "results/panel_e_results.csv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      }
+    ]
+  },
+  "reproduction": {
+    "mode": "section_in_authoritative_report",
+    "document": null
+  },
+  "analysis_sources": [
+    {
+      "path": "analysis/panel_a_fig2.py",
+      "bytes": 9268,
+      "sha256": "017a16c23a7ed181b8fc3da83d2e8dc673fb3cd19d4dd88ab7207540f921bbed"
+    },
+    {
+      "path": "analysis/panel_b_fig3a.py",
+      "bytes": 10193,
+      "sha256": "e6732cb596c7c9dc3c4554dcadcf63202280bc832269276e8971dbd632e17041"
+    },
+    {
+      "path": "analysis/panel_c_Si2.py",
+      "bytes": 9506,
+      "sha256": "92d628b0ed6ae0d5287a6089b63a6f84284609e2fb33f23e867980b3e61be05c"
+    },
+    {
+      "path": "analysis/panel_d_fig4b.py",
+      "bytes": 7597,
+      "sha256": "cbc953e625d6fe9ba17cf77ed326efbfc8b9e7d2532c0eedfa9314e949d6bd9c"
+    },
+    {
+      "path": "analysis/panel_e_aux.py",
+      "bytes": 11508,
+      "sha256": "fb91c41b638545772ceb7c28e8a9ecc6461eb233c0127288a115a6ba8e5393bd"
+    }
+  ],
+  "executed_notebooks": [],
+  "result_artifacts": [
+    {
+      "path": "results/panel_a_meta.json",
+      "bytes": 3908,
+      "sha256": "850e2d63b6e4bb5779efcee0e9d1a81e0e5d28bb0a5481c196d2d6bb676b6345"
+    },
+    {
+      "path": "results/panel_a_results.csv",
+      "bytes": 2909,
+      "sha256": "43d6c2cd0377c8d6a5f28c0080d88aaf5138dce13b360c59a3b110311996fcfa"
+    },
+    {
+      "path": "results/panel_b_meta.json",
+      "bytes": 243700,
+      "sha256": "9550f63cdb9da1eae567d2e6533ab7c1a19c919f4b83d37607f8241b0e6d5d7a"
+    },
+    {
+      "path": "results/panel_b_results.csv",
+      "bytes": 413,
+      "sha256": "a015738fda53b995a628771d7acb2e9ca67f441981b94da001ec7f6e653dfa5d"
+    },
+    {
+      "path": "results/panel_c_meta.json",
+      "bytes": 5546,
+      "sha256": "65537e5e4af6bfbdc8caffd17c23dad17f9717b13cdbe22a7a47f582077fb526"
+    },
+    {
+      "path": "results/panel_c_results.csv",
+      "bytes": 1443,
+      "sha256": "b161d97eec9077ab22b7cb325bc6bf88e47706f3285a356cfe2cdbd27f16c67e"
+    },
+    {
+      "path": "results/panel_d_meta.json",
+      "bytes": 1040,
+      "sha256": "38f1a6a36ed21b60ddb30f10a17228be024ffc1266bc456c97168af59d600a6a"
+    },
+    {
+      "path": "results/panel_d_results.csv",
+      "bytes": 2068,
+      "sha256": "c21b17753f756a83aad35994c0a307e5c241d264740658e8488b009c10a1b71b"
+    },
+    {
+      "path": "results/panel_e_meta.json",
+      "bytes": 5351,
+      "sha256": "30671a64131cd8c0c7c5f019835e34a9cc1596ffc940e185c10ffb9a02bf794c"
+    },
+    {
+      "path": "results/panel_e_results.csv",
+      "bytes": 2367,
+      "sha256": "227f1f813451eeee866662a37c4aaa1addd7a77d494c9e9aa4bc4163234e2433"
+    }
+  ],
+  "native_evidence_registry": {
+    "sources": [],
+    "resolved_ids": {}
+  },
+  "resolved_support_files": [
+    {
+      "path": "analysis/panel_a_fig2.py",
+      "bytes": 9268,
+      "sha256": "017a16c23a7ed181b8fc3da83d2e8dc673fb3cd19d4dd88ab7207540f921bbed"
+    },
+    {
+      "path": "analysis/panel_b_fig3a.py",
+      "bytes": 10193,
+      "sha256": "e6732cb596c7c9dc3c4554dcadcf63202280bc832269276e8971dbd632e17041"
+    },
+    {
+      "path": "analysis/panel_c_Si2.py",
+      "bytes": 9506,
+      "sha256": "92d628b0ed6ae0d5287a6089b63a6f84284609e2fb33f23e867980b3e61be05c"
+    },
+    {
+      "path": "analysis/panel_d_fig4b.py",
+      "bytes": 7597,
+      "sha256": "cbc953e625d6fe9ba17cf77ed326efbfc8b9e7d2532c0eedfa9314e949d6bd9c"
+    },
+    {
+      "path": "analysis/panel_e_aux.py",
+      "bytes": 11508,
+      "sha256": "fb91c41b638545772ceb7c28e8a9ecc6461eb233c0127288a115a6ba8e5393bd"
+    },
+    {
+      "path": "results/panel_a_meta.json",
+      "bytes": 3908,
+      "sha256": "850e2d63b6e4bb5779efcee0e9d1a81e0e5d28bb0a5481c196d2d6bb676b6345"
+    },
+    {
+      "path": "results/panel_a_results.csv",
+      "bytes": 2909,
+      "sha256": "43d6c2cd0377c8d6a5f28c0080d88aaf5138dce13b360c59a3b110311996fcfa"
+    },
+    {
+      "path": "results/panel_b_meta.json",
+      "bytes": 243700,
+      "sha256": "9550f63cdb9da1eae567d2e6533ab7c1a19c919f4b83d37607f8241b0e6d5d7a"
+    },
+    {
+      "path": "results/panel_b_results.csv",
+      "bytes": 413,
+      "sha256": "a015738fda53b995a628771d7acb2e9ca67f441981b94da001ec7f6e653dfa5d"
+    },
+    {
+      "path": "results/panel_c_meta.json",
+      "bytes": 5546,
+      "sha256": "65537e5e4af6bfbdc8caffd17c23dad17f9717b13cdbe22a7a47f582077fb526"
+    },
+    {
+      "path": "results/panel_c_results.csv",
+      "bytes": 1443,
+      "sha256": "b161d97eec9077ab22b7cb325bc6bf88e47706f3285a356cfe2cdbd27f16c67e"
+    },
+    {
+      "path": "results/panel_d_meta.json",
+      "bytes": 1040,
+      "sha256": "38f1a6a36ed21b60ddb30f10a17228be024ffc1266bc456c97168af59d600a6a"
+    },
+    {
+      "path": "results/panel_d_results.csv",
+      "bytes": 2068,
+      "sha256": "c21b17753f756a83aad35994c0a307e5c241d264740658e8488b009c10a1b71b"
+    },
+    {
+      "path": "results/panel_e_meta.json",
+      "bytes": 5351,
+      "sha256": "30671a64131cd8c0c7c5f019835e34a9cc1596ffc940e185c10ffb9a02bf794c"
+    },
+    {
+      "path": "results/panel_e_results.csv",
+      "bytes": 2367,
+      "sha256": "227f1f813451eeee866662a37c4aaa1addd7a77d494c9e9aa4bc4163234e2433"
+    }
+  ]
+}

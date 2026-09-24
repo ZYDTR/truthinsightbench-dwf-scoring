@@ -1,0 +1,44 @@
+{
+  "dimension": "Finding 1 rate-family monotonicity, SoC sweep, exact offset and pair taxonomy",
+  "verdict": "refuted",
+  "discrepancies": [
+    {
+      "claim": "the discharge_like branch shifts DOWN at every probe",
+      "claimed_value": "strictly decreasing at every SoC probe",
+      "recomputed_value": "fails over SoC 77.847-97.014% (pair 1->2, max reversal +0.04405 V at 97.0138), 84.604-97.998% (pair 2->3, +0.03103 V), and 0.087-0.401% (pair 5->6, +0.04364 V); 73 consecutive 0.25-pp steps violated (364 at 0.05-pp)",
+      "severity": "critical",
+      "note": "Exact piecewise-linear breakpoint analysis (1354 breakpoints) shows a genuine contiguous violation region, not an interpolation artifact; pairs 3->4 and 4->5 never violate."
+    },
+    {
+      "claim": "the ordering has a stated boundary, read as holding over roughly SoC <= 80%",
+      "claimed_value": "~80%",
+      "recomputed_value": "onset at SoC 77.847 (pair 1->2) and 84.604 (pair 2->3)",
+      "severity": "minor",
+      "note": "The report's own 14-probe grid (5-pp spacing above 50) cannot resolve the onset; the stated boundary is ~2 pp optimistic."
+    },
+    {
+      "claim": "13 pairs need a scale factor != 1 to reach R2 > 0.97",
+      "claimed_value": "13 of 42",
+      "recomputed_value": "13 with the report's own unstated rule (|a-1|>0.05 and affine R2>0.97); 12 with a 100-point grid or a 0.01 tolerance; for 5 of the 13 the pure-offset model also reaches R2>0.97 (discharge 2->3: 0.9938 pure-offset vs 0.9976 affine)",
+      "severity": "moderate",
+      "note": "Tolerance |a-1|>0.05 and grid density (300 points) are never stated; 'needs a scale factor' is too strong. R2 of this test is grid-density dependent (discharge 2->5: 0.9673 at 100 points, 0.9707 at 300)."
+    },
+    {
+      "claim": "identical abscissa and EXACT constant offset +0.041520 V (spread ~4.4e-16)",
+      "claimed_value": "+0.041520 V, spread 4.4e-16 V",
+      "recomputed_value": "mean +0.041520000000, spread 4.441e-16 V, values take exactly 3 distinct doubles spaced 2.2e-16 (not bitwise constant)",
+      "severity": "minor",
+      "note": "Confirms the claim as stated; VERIFY 5 tests this with np.allclose (rtol=1e-5) rather than bitwise equality, and its discharge 6/7 first-difference comparison is length-misaligned (55 of 64/55 diffs)."
+    }
+  ],
+  "method_concerns": [
+    "Linear interpolation at SoC=50 spans up to 36.83 pp (charge rate_setting_1 brackets 21.650-58.480) and 18.30 pp for setting 2, so the headline probe values are largely extrapolated between widely spaced measured points; a PCHIP re-interpolation gives gaps 0.1194-0.6893 V and growth factor 5.772 (vs 5.750), so the conclusion survives but the sensitivity is never reported.",
+    "np.interp silently clamps below/above each curve's own abscissa range; probes at SoC=0 return the first measured value for 6 of 7 charge curves and manufacture the only charge/gap ordering 'failures' (charge 2->3 = -0.0069 V, charge 5->6 = -0.0935 V, gap 5->6 = -0.0938 V at SoC=0.00). Any probe-grid sweep must exclude SoC below max(first measured abscissa).",
+    "The 14-probe robustness grid (10,15,25,30,40,45,50,55,60,70,75,85,90,95) is too coarse to support the stated ~80% boundary and cannot detect the 77.85% onset or the 0.087-0.40% low-SoC sliver.",
+    "The 42-pair affine test interpolates onto a 300-point common grid even where the curves are coarsely sampled, so its R2 and the 'n_scaled' count are grid-density artifacts; the |a-1|>0.05 tolerance is undocumented.",
+    "Independence: the charge 6/7 pair is a deterministic template copy (bit-identical abscissa, constant +0.041520 V), so the '7 independent rate levels' framing is violated for that pair; the report discloses this, but any downstream statistic treating 7 levels as independent inherits it. Cross-branch gap statistics pair charge/discharge curves by anonymous label with no verification they share a cell or state; no remaining statistic in Finding 1 silently counts SoC points as replicates.",
+    "Voltages are quantized to 1e-5 V (not 2 dp as the claim text implies); all quoted 4-dp values are therefore safe, and the minimum gap step (0.0377 V) is ~9200x the quantization step.",
+    "VERIFY 5 in verify_claims.py compares leading first differences after truncating both arrays to a fixed length taken from the shorter curve's diff, so it prints 'compared 55 of 64/55' and is not a valid profile-equality test; np.allclose without atol works here only because max |x| is ~100."
+  ],
+  "summary": "Every number in the claim set reproduced exactly from the raw TSV, including the SoC=50 table, the 5.74969 growth factor, the charge/discharge contributions, the exact +0.041520 V template-copy pair, the 11/14 and 21/21 robustness counts, and the 0.987 pp discharge extent. However, the central universal direction claim is refuted: my 0.25-pp and exact breakpoint sweeps show the discharge_like branch ceases to be strictly decreasing above SoC 77.847 (pair 1->2) and 84.604 (pair 2->3), with reversals up to +0.0441 V persisting to the end of the sampled window, plus a low-SoC violation at 0.087-0.40% (pair 5->6); only the charge and gap orderings hold on the measured support, and even those fail in the SoC=0 interpolation-clamp sliver. The claim set's 'shifts DOWN at every probe' is therefore false, and the report's ~80% boundary understates the onset by ~2 pp. The supporting pair-taxonomy statistics (13 scaled pairs, exactly one pure offset) are reproducible only under the report's unstated tolerance and grid choices, and 'needs a scale factor' is overstated for 5 of the 13 pairs, where a pure offset also reaches R2>0.97."
+}

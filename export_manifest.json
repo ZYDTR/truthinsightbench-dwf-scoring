@@ -1,0 +1,40 @@
+{
+  "schema": "tib-dwf-scoring-export",
+  "created_at": "2026-09-24T05:40:05.534223+00:00",
+  "task_count": 27,
+  "registered_finding_count": 128,
+  "tasks": [
+    "Astronomy_01_radio_burst_drift",
+    "Astronomy_02_gravity_spectral_structure",
+    "Astronomy_03_stellar_spectral_boundary",
+    "Chemistry_01_bond_enthalpy_domain",
+    "Chemistry_02_photoionization_delay",
+    "Chemistry_03_catalysis_response_landscape",
+    "EarthScience_01_glacial_fluvial_erosion",
+    "EarthScience_02_ice_particle_composition",
+    "EarthScience_03_ice_core_event_structure",
+    "EarthScience_04_ocean_thermal_coupling",
+    "Energy_01_photocatalytic_tradeoffs",
+    "Energy_02_flow_battery_operating_boundary",
+    "Energy_03_interface_response_boundaries",
+    "Energy_04_biohybrid_operating_tradeoffs",
+    "Information_03_signal_surface_invariants",
+    "Life_02_contextual_immune_response",
+    "Life_04_environmental_transfer_boundary",
+    "Life_05_developmental_interaction_structure",
+    "Math_02_compositional_invariants",
+    "Neuro_02_calcium_response_regions",
+    "Neuro_03_spatial_code_stability",
+    "Neuro_04_temporal_geometry",
+    "Physics_01_dynamic_nuclear_polarization_echoes",
+    "Physics_02_multiorbital_transition",
+    "Physics_03_controlled_dynamics_forecast",
+    "Physics_04_temporal_delay_transition",
+    "Physics_05_variational_circuit_simulation"
+  ],
+  "scoring_assets_sha256": "157eb63e27668a6412d4895b28ca9ad6d0da9f75887c9b15b79bff7ae027dd95",
+  "models": [
+    "bonsai2-27b-pq2",
+    "deepseek-v4.1-flash-max"
+  ]
+}

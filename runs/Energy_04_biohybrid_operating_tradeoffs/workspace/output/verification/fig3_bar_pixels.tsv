@@ -1,0 +1,25 @@
+panel	pair	regime	px_value	recomputed	diff	run	col
+levels	prom|a	A_baseline	0.1115	0.1095	0.002	[189, 206]	105
+levels	prom|a	B_sweep	0.9973	0.9967	0.0007	[46, 206]	211
+levels	prom|a	C_tail	0.985	0.9834	0.0016	[48, 206]	317
+levels	prom|a	WHOLE	0.985	0.9835	0.0015	[48, 206]	423
+levels	prom|b	A_baseline	-0.0372	-0.0474	0.0103	[208, 213]	133
+levels	prom|b	B_sweep	0.415	0.4151	-0.0	[140, 206]	239
+levels	prom|b	C_tail	0.9912	0.9899	0.0012	[47, 206]	345
+levels	prom|b	WHOLE	0.731	0.7301	0.0009	[89, 206]	451
+levels	a|b	A_baseline	0.0062	0.0062	0.0	[206, 206]	161
+levels	a|b	B_sweep	0.3965	0.3938	0.0027	[143, 206]	267
+levels	a|b	C_tail	0.954	0.9523	0.0017	[53, 206]	373
+levels	a|b	WHOLE	0.6814	0.6789	0.0025	[97, 206]	479
+diffs	prom|a	A_baseline	0.0681	0.063	0.0051	[196, 206]	617
+diffs	prom|a	B_sweep	0.9788	0.9761	0.0027	[49, 206]	723
+diffs	prom|a	C_tail	0.2602	0.2569	0.0033	[165, 206]	829
+diffs	prom|a	WHOLE	0.9416	0.9387	0.0029	[55, 206]	935
+diffs	prom|b	A_baseline	-0.0867	-0.0984	0.0117	[208, 221]	645
+diffs	prom|b	B_sweep	0.4894	0.4883	0.001	[128, 206]	751
+diffs	prom|b	C_tail	0.2602	0.2609	-0.0007	[165, 206]	857
+diffs	prom|b	WHOLE	0.477	0.4779	-0.0009	[130, 206]	963
+diffs	a|b	A_baseline	0.0124	0.0097	0.0027	[205, 206]	673
+diffs	a|b	B_sweep	0.5265	0.5227	0.0038	[122, 206]	779
+diffs	a|b	C_tail	0.1549	0.1551	-0.0002	[182, 206]	885
+diffs	a|b	WHOLE	0.4956	0.5033	-0.0078	[127, 206]	991

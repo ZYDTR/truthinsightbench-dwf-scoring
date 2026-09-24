@@ -1,0 +1,36 @@
+{
+  "schema": "life02-run-manifest",
+  "task_id": "Life_02_contextual_immune_response",
+  "t0": "2020-01-01",
+  "inputs": {
+    "compartment_response_replicates.tsv": "14bbd80334110ebc626ea7e50f034f036d1a1233bd00f5bc27785ae92ec08445",
+    "mechanistic_intervention_replicates.tsv": "0cb191790d1ba5e7170be3d9fc7c3e165b9c90da8431ee9fde0c5963ba9ab48a",
+    "multi_condition_response_replicates.tsv": "dedc97fccac59313d65ccc7137b90c053848bad88d5c746c120a9a821388a95f",
+    "time_resolved_response.tsv": "61bdd83c9105c33317d9a60f998226050184f1f206432f1771bfe4375f6ed36f"
+  },
+  "input_bytes": {
+    "compartment_response_replicates.tsv": 10161,
+    "mechanistic_intervention_replicates.tsv": 2342,
+    "multi_condition_response_replicates.tsv": 1371,
+    "time_resolved_response.tsv": 2154
+  },
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Linux-7.0.5-orbstack-00330-ge3df4e19b0a0-dirty-aarch64-with-glibc2.36"
+  },
+  "script_order": [
+    "analysis/common.py",
+    "analysis/01_compartment_intervention.py",
+    "analysis/02_time_resolved.py",
+    "analysis/03_robustness.py",
+    "analysis/04_figures.py",
+    "analysis/05_verification_compartment.py",
+    "analysis/05_verification_intervention.py",
+    "analysis/05_verification_time.py",
+    "analysis/06_sensitivity.py",
+    "analysis/07_registry_and_delivery.py"
+  ],
+  "external_data_used": false,
+  "network_access_used": false,
+  "artifact_count": 56
+}

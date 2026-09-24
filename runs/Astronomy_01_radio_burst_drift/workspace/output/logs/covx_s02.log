@@ -1,0 +1,114 @@
+==============================================================================
+FAMILY A  Sheet_001 / Sheet_002  'cml angle' vs phase-angle series
+  blocks: Sheet_001=6  Sheet_002=6
+  labels S001: ['group_a (channel_l)', 'group_a(channel_r)', 'Gan(channel_l)', 'Gan(channel_r)', 'group_c (channel_l)', 'group_c (channel_r)']
+  labels S002: ['group_a(channel_l)', 'group_a(channel_r)', 'Ganymed(channel_l)', 'group_b(channel_r)', 'group_c(channel_l)', 'group_c(channel_r)']
+  group_a (channel_l)    n= 11517 x=[0.102,359.947]  y1=[64.7524,251.0190]  y2=[41.2993,97.9157]  sameX=True  r=-0.9728  rho=-0.3573
+  group_a(channel_r)     n= 15856 x=[0.279,359.780]  y1=[64.7419,250.8207]  y2=[41.3031,97.9157]  sameX=True  r=-0.9176  rho=0.4336
+  Gan(channel_l)         n=  1207 x=[0.486,359.889]  y1=[139.5724,357.5994]  y2=[193.3061,247.0771]  sameX=True  r=1.0000  rho=1.0000
+  Gan(channel_r)         n=   493 x=[0.111,359.867]  y1=[139.5516,357.5579]  y2=[193.3010,247.0669]  sameX=True  r=1.0000  rho=1.0000
+  group_c (channel_l)    n=  1656 x=[45.507,341.414]  y1=[71.9556,334.6564]  y2=[41.6239,241.4235]  sameX=True  r=0.3428  rho=0.5547
+  group_c (channel_r)    n=  2902 x=[45.629,341.414]  y1=[71.9399,334.6771]  y2=[41.6310,241.4286]  sameX=True  r=0.7203  rho=0.9168
+  TOTAL rows S001=33631 S002=33631  x in [0.102,359.947] y1 in [64.7419,357.5994] y2 in [41.2993,247.0771]
+  wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/figures/covx_s001_vs_s002.png
+==============================================================================
+FAMILY B  Sheet_019/020/023/038  radial-distance / SNR blocks
+  SNR header (row 3 'SNR' label -> col D): {}
+  'params' block value:                   {'Sheet_020': 12.29617514059528, 'Sheet_023': 2.386328283127918, 'Sheet_038': 7.361634178967267}
+  SNR row (row 3, col C): {}
+  Sheet_019 RD_box_of_ones       n= 1336 x=[0.000,179.865] y=[425,601.041] sum=637184 SNR_header=nan params=nan
+  Sheet_019 RD_raw               n=  264 x=[0.000,180.000] y=[190.422,1279.14] sum=148888 SNR_header=nan params=nan
+  Sheet_020 RD_corr              n=  264 x=[0.000,180.000] y=[190.422,1279.14] sum=148888 SNR_header=nan params=12.2962
+  Sheet_020 RD_corr_centered     n=  178 x=[0.000,119.326] y=[-0.240746,1.02809] sum=32.2593 SNR_header=nan params=12.2962
+  Sheet_020 Fit                  n=  178 x=[0.000,119.326] y=[-0.0304385,0.995304] sum=32.2593 SNR_header=nan params=12.2962
+  Sheet_023 RD_corr              n=  178 x=[0.000,119.326] y=[-0.0437724,0.0556054] sum=0.774738 SNR_header=nan params=2.38633
+  Sheet_023 RD_corr_centered     n=  178 x=[0.000,119.326] y=[-0.0437724,0.0556054] sum=0.774738 SNR_header=nan params=2.38633
+  Sheet_023 Fit                  n=  178 x=[0.000,119.326] y=[0.000800364,0.0511431] sum=0.773818 SNR_header=nan params=2.38633
+  Sheet_038 RD_corr              n=  178 x=[0.000,119.326] y=[-0.0362315,0.10183] sum=2.45781 SNR_header=nan params=7.36163
+  Sheet_038 RD_corr_centered     n=  178 x=[0.000,119.326] y=[-0.0362315,0.10183] sum=2.45781 SNR_header=nan params=7.36163
+  Sheet_038 Fit                  n=  178 x=[0.000,119.326] y=[-0.00785303,0.085966] sum=2.45782 SNR_header=nan params=7.36163
+  RD_corr cross-sheet comparison (common x grid?):
+    Sheet_019:RD_raw       vs Sheet_020:RD_corr      n= 264 sameX=True r=1.0000 max|dy|=0.0004942 scale=1.000
+    Sheet_019:RD_raw       vs Sheet_023:RD_corr      n= 178 sameX=False r=-0.0638 max|dy|=1012 scale=0.000
+    Sheet_019:RD_raw       vs Sheet_038:RD_corr      n= 178 sameX=False r=0.1219 max|dy|=1012 scale=0.000
+    Sheet_020:RD_corr      vs Sheet_023:RD_corr      n= 178 sameX=False r=-0.0638 max|dy|=1012 scale=0.000
+    Sheet_020:RD_corr      vs Sheet_038:RD_corr      n= 178 sameX=False r=0.1219 max|dy|=1012 scale=0.000
+    Sheet_023:RD_corr      vs Sheet_038:RD_corr      n= 178 sameX=True r=0.0123 max|dy|=0.1183 scale=1.159
+==============================================================================
+FAMILY C  Sheet_039..044  1.75 MHz/s coarse drift histograms
+  Sheet_039 group_a (-35<s<-10), channel_l   coarse_total=  10570.0 fine_total=  10560.0 diff=   +10.0 rel=+0.0009 L1rebin/fine=0.490 shape_r=0.833 both_nonzero=16/20 exactmultiset=False
+  Sheet_039 group_a(-10<s<0), channel_l      coarse_total=    809.0 fine_total=    790.0 diff=   +19.0 rel=+0.0241 L1rebin/fine=1.969 shape_r=-0.198 both_nonzero=3/20 exactmultiset=False
+  Sheet_039 group_a(0<s<20), channel_l       coarse_total=    122.0 fine_total=    102.0 diff=   +20.0 rel=+0.1961 L1rebin/fine=1.574 shape_r=-0.073 both_nonzero=6/20 exactmultiset=False
+  Sheet_040 group_a (-35<s<-10), channel_r   coarse_total=  14498.0 fine_total=  14492.0 diff=    +6.0 rel=+0.0004 L1rebin/fine=0.393 shape_r=0.906 both_nonzero=16/20 exactmultiset=False
+  Sheet_040 group_a(-10<s<0), channel_r      coarse_total=   1144.0 fine_total=   1126.0 diff=   +18.0 rel=+0.0160 L1rebin/fine=1.979 shape_r=-0.214 both_nonzero=3/20 exactmultiset=False
+  Sheet_040 group_a(0<s<20), channel_r       coarse_total=    207.0 fine_total=    177.0 diff=   +30.0 rel=+0.1695 L1rebin/fine=2.037 shape_r=-0.135 both_nonzero=5/20 exactmultiset=False
+  Sheet_041 group_b (-35<s<-10), channel_l   coarse_total=    352.0 fine_total=    357.0 diff=    -5.0 rel=-0.0140 L1rebin/fine=0.989 shape_r=0.355 both_nonzero=11/20 exactmultiset=False
+  Sheet_041 group_b(-10<s<0), channel_l      coarse_total=    579.0 fine_total=    580.0 diff=    -1.0 rel=-0.0017 L1rebin/fine=2.002 shape_r=-0.108 both_nonzero=0/20 exactmultiset=False
+  Sheet_041 group_b(0<s<20), channel_l       coarse_total=    222.0 fine_total=    223.0 diff=    -1.0 rel=-0.0045 L1rebin/fine=1.860 shape_r=-0.082 both_nonzero=4/20 exactmultiset=False
+  Sheet_042 group_b (-35<s<-10), channel_r   coarse_total=     51.0 fine_total=     52.0 diff=    -1.0 rel=-0.0192 L1rebin/fine=1.732 shape_r=-0.246 both_nonzero=5/20 exactmultiset=False
+  Sheet_042 group_b(-10<s<0), channel_r      coarse_total=    148.0 fine_total=    155.0 diff=    -7.0 rel=-0.0452 L1rebin/fine=2.047 shape_r=-0.135 both_nonzero=0/20 exactmultiset=False
+  Sheet_042 group_b(0<s<20), channel_r       coarse_total=    234.0 fine_total=    237.0 diff=    -3.0 rel=-0.0127 L1rebin/fine=1.953 shape_r=-0.104 both_nonzero=4/20 exactmultiset=False
+  Sheet_043 group_c (-35<s<-10), channel_l   coarse_total=    423.0 fine_total=    429.0 diff=    -6.0 rel=-0.0140 L1rebin/fine=0.608 shape_r=0.830 both_nonzero=12/20 exactmultiset=False
+  Sheet_043 group_c(-10<s<0), channel_l      coarse_total=    596.0 fine_total=    601.0 diff=    -5.0 rel=-0.0083 L1rebin/fine=2.008 shape_r=-0.120 both_nonzero=0/20 exactmultiset=False
+  Sheet_043 group_c(0<s<20), channel_l       coarse_total=    491.0 fine_total=    491.0 diff=    +0.0 rel=+0.0000 L1rebin/fine=1.971 shape_r=-0.101 both_nonzero=3/20 exactmultiset=False
+  Sheet_044 group_c (-35<s<-10), channel_r   coarse_total=    663.0 fine_total=    664.0 diff=    -1.0 rel=-0.0015 L1rebin/fine=1.003 shape_r=0.558 both_nonzero=13/20 exactmultiset=False
+  Sheet_044 group_c(-10<s<0), channel_r      coarse_total=   1671.0 fine_total=   1680.0 diff=    -9.0 rel=-0.0054 L1rebin/fine=2.005 shape_r=-0.148 both_nonzero=0/20 exactmultiset=False
+  Sheet_044 group_c(0<s<20), channel_r       coarse_total=    518.0 fine_total=    521.0 diff=    -3.0 rel=-0.0058 L1rebin/fine=1.940 shape_r=-0.107 both_nonzero=3/20 exactmultiset=False
+  wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/figures/covx_coarse_vs_fine.png
+==============================================================================
+FAMILY D  Sheet_046/047  'group_b C' variants vs base group_b blocks
+  base Sheet_011 blocks: [('group_b (-35<s<-10), channel_l', 25, 357.0), ('group_b(-10<s<0), channel_l', 10, 580.0), ('group_b(0<s<20), channel_l', 20, 223.0)]
+  base Sheet_012 blocks: [('group_b (-35<s<-10), channel_r', 25, 52.0), ('group_b(-10<s<0), channel_r', 10, 155.0), ('group_b(0<s<20), channel_r', 20, 237.0)]
+  Sheet_046 blk group_b C(-35<s<-10), chan vs channel_l(base Sheet_011) ratio=0.9384 r=0.99459 L1rel=0.062 sameX=True chi2_bin/dof=6.63 chi2_scaled/dof=0.44
+  Sheet_046 blk group_b C(-35<s<-10), chan vs channel_r(base Sheet_012) ratio=6.4423 r=-0.04797 L1rel=5.865 sameX=True chi2_bin/dof=1012775591715976.38 chi2_scaled/dof=4.69
+  Sheet_046 blk group_b C(-10<s<0), channe vs channel_l(base Sheet_011) ratio=0.9690 r=0.79239 L1rel=0.786 sameX=False chi2_bin/dof=474.19 chi2_scaled/dof=15.19
+  Sheet_046 blk group_b C(-10<s<0), channe vs channel_r(base Sheet_012) ratio=3.6258 r=0.59394 L1rel=2.781 sameX=False chi2_bin/dof=9323884356573014.00 chi2_scaled/dof=10.64
+  Sheet_046 blk group_b C(0<s<20), channel vs channel_l(base Sheet_011) ratio=0.8072 r=0.99912 L1rel=0.193 sameX=True chi2_bin/dof=2.82 chi2_scaled/dof=0.67
+  Sheet_046 blk group_b C(0<s<20), channel vs channel_r(base Sheet_012) ratio=0.7595 r=0.99846 L1rel=0.333 sameX=True chi2_bin/dof=31.79 chi2_scaled/dof=10.07
+  Sheet_047 blk group_b C(-35<s<-10), chan vs channel_l(base Sheet_011) ratio=0.1345 r=0.03042 L1rel=0.899 sameX=True chi2_bin/dof=15.42 chi2_scaled/dof=99.28
+  Sheet_047 blk group_b C(-35<s<-10), chan vs channel_r(base Sheet_012) ratio=0.9231 r=0.98706 L1rel=0.077 sameX=True chi2_bin/dof=1.28 chi2_scaled/dof=0.11
+  Sheet_047 blk group_b C(-10<s<0), channe vs channel_l(base Sheet_011) ratio=0.2500 r=0.68233 L1rel=0.936 sameX=False chi2_bin/dof=27.71 chi2_scaled/dof=83.14
+  Sheet_047 blk group_b C(-10<s<0), channe vs channel_r(base Sheet_012) ratio=0.9355 r=0.80980 L1rel=0.697 sameX=False chi2_bin/dof=59.02 chi2_scaled/dof=4.07
+  Sheet_047 blk group_b C(0<s<20), channel vs channel_l(base Sheet_011) ratio=0.8879 r=0.99744 L1rel=0.157 sameX=True chi2_bin/dof=19.31 chi2_scaled/dof=2.44
+  Sheet_047 blk group_b C(0<s<20), channel vs channel_r(base Sheet_012) ratio=0.8354 r=0.99712 L1rel=0.165 sameX=True chi2_bin/dof=3.28 chi2_scaled/dof=0.65
+  Sheet_046: total=1077  channel_l=1160 (r=0.9284)  channel_r=444 (r=2.4257)  -> closer to channel_l
+  Sheet_047: total=391  channel_l=1160 (r=0.3371)  channel_r=444 (r=0.8806)  -> closer to channel_r
+==============================================================================
+FAMILY E  Sheet_008/015/016/017/018/021/022/036/037  unrepresented images
+  Sheet_008  in_norm=False  range=[1,1.5] mean=1.1001 sum=198697.9 #eq1=92861 #gt1=87764 #lt0=0  best_known=event_3(r=0.0029)  closest_diff=event_1-event_2(2)
+  Sheet_015  in_norm=False  range=[4.28,7.442] mean=5.2131 sum=941624.5 #eq1=0 #gt1=180625 #lt0=0  best_known=event_2(r=0.0802)  closest_diff=event_1-event_5(7.699)
+  Sheet_016  in_norm=False  range=[1,1.5] mean=1.0903 sum=196940.5 #eq1=90455 #gt1=90170 #lt0=0  best_known=event_1(r=0.0098)  closest_diff=event_1-event_2(2)
+  Sheet_017  in_norm=False  range=[-8.962,2.647] mean=-4.2231 sum=-762790.6 #eq1=0 #gt1=1 #lt0=180623  best_known=event_4(r=0.0058)  closest_diff=event_1-event_5(8.834)
+  Sheet_018  in_norm=False  range=[-4.952,1.36] mean=-0.2838 sum=-51252.4 #eq1=0 #gt1=125 #lt0=118042  best_known=event_2(r=0.0139)  closest_diff=event_3-event_5(4.723)
+  Sheet_021  in_norm=False  range=[1,1.5] mean=1.0834 sum=195683.4 #eq1=91495 #gt1=89130 #lt0=0  best_known=event_1(r=0.0043)  closest_diff=event_1-event_2(2)
+  Sheet_022  in_norm=False  range=[-7.28,1.618] mean=-0.2484 sum=-44866.3 #eq1=0 #gt1=13 #lt0=114250  best_known=event_4(r=0.0032)  closest_diff=event_1-event_2(7.162)
+  Sheet_036  in_norm=False  range=[1,1.5] mean=1.0893 sum=196748.0 #eq1=91526 #gt1=89099 #lt0=0  best_known=event_5(r=0.0111)  closest_diff=event_1-event_2(2)
+  Sheet_037  in_norm=False  range=[-5.581,1.381] mean=-0.2578 sum=-46561.9 #eq1=0 #gt1=33 #lt0=114872  best_known=event_1(r=0.0037)  closest_diff=event_1-event_2(5.38)
+  Sheet_003  in_norm=True  range=[1,1.5] mean=1.0995 sum=198605.4 #eq1=90012 #gt1=90613 #lt0=0  best_known=event_1(r=1.0000)  closest_diff=event_1-event_2(1.5)
+  Sheet_004  in_norm=True  range=[1,1.5] mean=1.1070 sum=199948.6 #eq1=90678 #gt1=89947 #lt0=0  best_known=event_2(r=1.0000)  closest_diff=event_2-event_1(1.5)
+  Sheet_005  in_norm=True  range=[1,1.5] mean=1.0953 sum=197843.4 #eq1=91395 #gt1=89230 #lt0=0  best_known=event_3(r=1.0000)  closest_diff=event_3-event_1(1.5)
+  Sheet_006  in_norm=True  range=[1,1.5] mean=1.0985 sum=198425.2 #eq1=91344 #gt1=89281 #lt0=0  best_known=event_4(r=1.0000)  closest_diff=event_4-event_1(1.5)
+  Sheet_007  in_norm=True  range=[1,1.5] mean=1.0854 sum=196044.0 #eq1=91531 #gt1=89094 #lt0=0  best_known=event_5(r=1.0000)  closest_diff=event_5-event_1(1.5)
+    classify Sheet_008: positive-unit-capped spectrum (same encoding as normalized events)   best-event r=0.0029  best diff maxabs=2
+    classify Sheet_015: positive uncapped image, >4x the unit ceiling   best-event r=0.0802  best diff maxabs=7.699
+    classify Sheet_016: positive-unit-capped spectrum (same encoding as normalized events)   best-event r=0.0098  best diff maxabs=2
+    classify Sheet_017: signed residual / difference image   best-event r=0.0058  best diff maxabs=8.834
+    classify Sheet_018: signed residual / difference image   best-event r=0.0139  best diff maxabs=4.723
+    classify Sheet_021: positive-unit-capped spectrum (same encoding as normalized events)   best-event r=0.0043  best diff maxabs=2
+    classify Sheet_022: signed residual / difference image   best-event r=0.0032  best diff maxabs=7.162
+    classify Sheet_036: positive-unit-capped spectrum (same encoding as normalized events)   best-event r=0.0111  best diff maxabs=2
+    classify Sheet_037: signed residual / difference image   best-event r=0.0037  best diff maxabs=5.38
+    classify Sheet_003: positive-unit-capped spectrum (same encoding as normalized events)   best-event r=1.0000  best diff maxabs=1.5
+    classify Sheet_004: positive-unit-capped spectrum (same encoding as normalized events)   best-event r=1.0000  best diff maxabs=1.5
+    classify Sheet_005: positive-unit-capped spectrum (same encoding as normalized events)   best-event r=1.0000  best diff maxabs=1.5
+    classify Sheet_006: positive-unit-capped spectrum (same encoding as normalized events)   best-event r=1.0000  best diff maxabs=1.5
+    classify Sheet_007: positive-unit-capped spectrum (same encoding as normalized events)   best-event r=1.0000  best diff maxabs=1.5
+  wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/figures/covx_unrepresented_images_montage.png
+==============================================================================
+COVERAGE TABLE
+  blocks by status: {'absent': 50, 'image': 14, 'aggregate': 30, 'exact': 6, 'empty': 1}
+  rows   by status: {'absent': 71053, 'image': 0, 'aggregate': 1132, 'exact': 146, 'empty': 0}
+  y_sum  by status: {'absent': 9135408.2, 'image': 0.0, 'aggregate': 39920.0, 'exact': 26554.0, 'empty': 0.0}
+  normalized views: {'population_rows': 948, 'population_events': 33237.0, 'population_series': ['population_series_1', 'population_series_2', 'population_series_3', 'population_series_4', 'population_series_5', 'population_series_6'], 'orientation_rows': 312, 'orientation_events': 32732.0, 'orientation_series': ['orientation_series_1', 'orientation_series_2', 'orientation_series_3', 'orientation_series_4', 'orientation_series_5', 'orientation_series_6']}
+  wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/figures/covx_coverage_summary.png
+wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/covx_summary.json

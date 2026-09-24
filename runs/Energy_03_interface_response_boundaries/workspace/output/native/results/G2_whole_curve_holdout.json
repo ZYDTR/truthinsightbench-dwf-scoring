@@ -1,0 +1,142 @@
+{
+  "main": {
+    "protocol": "shared ymax+w from all OTHER curves; held-out curve's own T50 from T<=260 only; predict T=280,300,320",
+    "n_curves": 8,
+    "n_logistic_better": 8,
+    "sign_test_p": 0.00390625,
+    "mean_rmse_log_transferred": 0.16503981627948433,
+    "mean_rmse_log_exponential": 1.0631702654859079,
+    "per_curve": [
+      {
+        "held_out_curve": "condition_block1_1",
+        "n_train_curves": 7,
+        "shared_ymax_from_train": 86.09907937118037,
+        "shared_w_from_train": 27.97689401969622,
+        "own_T50_from_T<=260": 302.28056069712017,
+        "rmse_log_transferred_shape": 0.25136395661374217,
+        "rmse_log_exponential": 0.8083228882651712,
+        "logistic_better": true
+      },
+      {
+        "held_out_curve": "condition_block1_2",
+        "n_train_curves": 7,
+        "shared_ymax_from_train": 80.27924809161081,
+        "shared_w_from_train": 28.196445522879596,
+        "own_T50_from_T<=260": 225.18052124732034,
+        "rmse_log_transferred_shape": 0.16551929235597965,
+        "rmse_log_exponential": 1.4883346965772444,
+        "logistic_better": true
+      },
+      {
+        "held_out_curve": "condition_block1_3",
+        "n_train_curves": 7,
+        "shared_ymax_from_train": 84.48969544471835,
+        "shared_w_from_train": 27.098107033349404,
+        "own_T50_from_T<=260": 274.4346106734042,
+        "rmse_log_transferred_shape": 0.21608686100925223,
+        "rmse_log_exponential": 0.8930432452348899,
+        "logistic_better": true
+      },
+      {
+        "held_out_curve": "condition_block1_4",
+        "n_train_curves": 7,
+        "shared_ymax_from_train": 84.58291084332316,
+        "shared_w_from_train": 26.77367893809166,
+        "own_T50_from_T<=260": 308.129552498468,
+        "rmse_log_transferred_shape": 0.11943027558156258,
+        "rmse_log_exponential": 0.5494972437284146,
+        "logistic_better": true
+      },
+      {
+        "held_out_curve": "condition_block2_1",
+        "n_train_curves": 7,
+        "shared_ymax_from_train": 74.87618132549628,
+        "shared_w_from_train": 26.819772128941516,
+        "own_T50_from_T<=260": 304.5942443820111,
+        "rmse_log_transferred_shape": 0.18747063079786558,
+        "rmse_log_exponential": 0.30294407014529673,
+        "logistic_better": true
+      },
+      {
+        "held_out_curve": "condition_block2_2",
+        "n_train_curves": 7,
+        "shared_ymax_from_train": 81.0253927854676,
+        "shared_w_from_train": 28.976973490454675,
+        "own_T50_from_T<=260": 205.1869682004399,
+        "rmse_log_transferred_shape": 0.16764138494360248,
+        "rmse_log_exponential": 1.913101549070903,
+        "logistic_better": true
+      },
+      {
+        "held_out_curve": "condition_block2_3",
+        "n_train_curves": 7,
+        "shared_ymax_from_train": 80.17296671127875,
+        "shared_w_from_train": 28.011978765265162,
+        "own_T50_from_T<=260": 230.66043642032082,
+        "rmse_log_transferred_shape": 0.1392436814764475,
+        "rmse_log_exponential": 1.41960713080935,
+        "logistic_better": true
+      },
+      {
+        "held_out_curve": "condition_block2_4",
+        "n_train_curves": 7,
+        "shared_ymax_from_train": 83.15315856862124,
+        "shared_w_from_train": 27.915471112267053,
+        "own_T50_from_T<=260": 260.29400044127675,
+        "rmse_log_transferred_shape": 0.07356244745742259,
+        "rmse_log_exponential": 1.1305113000559937,
+        "logistic_better": true
+      }
+    ]
+  },
+  "check": {
+    "protocol": "shared ymax+w from all OTHER curves; held-out curve's own T50 from T<=260 only; predict T=280,300,320",
+    "n_curves": 4,
+    "n_logistic_better": 4,
+    "sign_test_p": 0.0625,
+    "mean_rmse_log_transferred": 0.16585796012888826,
+    "mean_rmse_log_exponential": 0.8122095740402664,
+    "per_curve": [
+      {
+        "held_out_curve": "condition_block1_1",
+        "n_train_curves": 3,
+        "shared_ymax_from_train": 94.29405166728685,
+        "shared_w_from_train": 28.381317813347916,
+        "own_T50_from_T<=260": 326.9604631910384,
+        "rmse_log_transferred_shape": 0.2106447444022382,
+        "rmse_log_exponential": 0.24484259987081014,
+        "logistic_better": true
+      },
+      {
+        "held_out_curve": "condition_block1_2",
+        "n_train_curves": 3,
+        "shared_ymax_from_train": 111.2601316208043,
+        "shared_w_from_train": 29.634508645652787,
+        "own_T50_from_T<=260": 297.73739765103335,
+        "rmse_log_transferred_shape": 0.2711847927828542,
+        "rmse_log_exponential": 0.787950077074056,
+        "logistic_better": true
+      },
+      {
+        "held_out_curve": "condition_block1_4",
+        "n_train_curves": 3,
+        "shared_ymax_from_train": 89.35697949813495,
+        "shared_w_from_train": 29.01838019417673,
+        "own_T50_from_T<=260": 311.8877866614891,
+        "rmse_log_transferred_shape": 0.13997855200020923,
+        "rmse_log_exponential": 0.30294407014529673,
+        "logistic_better": true
+      },
+      {
+        "held_out_curve": "condition_block1_5",
+        "n_train_curves": 3,
+        "shared_ymax_from_train": 103.7051395714014,
+        "shared_w_from_train": 34.05185003770744,
+        "own_T50_from_T<=260": 215.42593581587371,
+        "rmse_log_transferred_shape": 0.04162375133025141,
+        "rmse_log_exponential": 1.913101549070903,
+        "logistic_better": true
+      }
+    ]
+  }
+}

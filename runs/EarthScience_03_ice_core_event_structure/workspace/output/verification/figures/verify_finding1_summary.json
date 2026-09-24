@@ -1,0 +1,17 @@
+{
+ "lattices": "c01 mm-grid ok, c02 mm-grid ok, c03 0.01cm-grid ok, c05 0.001 g/cm3 grid ok, c06 cm-grid ok",
+ "a": "delta=20mm rows=130 c01 range=[0.11, 41.24] first three c01=[0.11, 0.14, 0.17]",
+ "b": "residual (1950-c08)/1000 - c09: max|.|=0.000e+00 over 15 rows",
+ "c": "slope fixed to 1: step=1.015495 m intercept=-0.029791 m max|res|=0.017304 m",
+ "c-alt": "gap explained by piecewise-linear continuous, knot at bp 2.99 m : max|res|=0.934596 m R2=0.75526190",
+ "c-rev": "100*diff(c01)-c03 in 0.01cm units: distinct values/counts = {-96: 6, -92: 8, -86: 10, -85: 8, -78: 8, -44: 46, -38: 51, -22: 140, -17: 38, -13: 123, -8: 176, -4: 517, 0: 250, 4: 147, 8: 96, 14: 59, 15: 46, 22: 28, 56: 36, 62: 32, 78: 40, 83: 8, 87: 18, 92: 16, 96: 22, 10062: 1}",
+ "c-round": "no exact mm-rounding offset for rows <106; best a=-333 gives 0.1321 agreement",
+ "d": "for c01>=5m (n=1783): |c06/c01 - c05| max=0.002749  frac<=0.0005: 0.7179",
+ "d-gen": "round(c01*c05,2) (banker)  exact=767/1931 (0.3972)  max|err|=0.030000",
+ "e": "c05 ~ poly3(c01): max|res|=0.000549434 ; rounding-consistent frac (|res|<=5e-4): 0.9912",
+ "d-gen2": "NOTE: c06 on 1-cm grid: max dev=2.27e-13",
+ "c-alt2": "band [35,40) n= 253 median(c01-cum)=+0.9947  half-range=0.0071",
+ "t1": "c08 monotonically non-increasing in c01 on dated rows: True",
+ "t3": "rows where c01*c05 < c06-0.005: 976 ; max deficit=0.0303",
+ "figure": "wrote verify_finding1.png"
+}

@@ -1,0 +1,395 @@
+{
+  "workstream": "ADVERSARIAL-weak-bond-overshoot",
+  "competing_explanations": {
+    "O1_genuine_bias": "channels are genuinely too high for weak bonds",
+    "O2_selection_regression_to_mean": "E = truth + noise; conditioning on low E manufactures apparent overshoot even for an unbiased estimator"
+  },
+  "test1_overshoot_by_experimental_bin": {
+    "quantum": [
+      {
+        "bin": "[0,60)",
+        "n": 4,
+        "mean_experimental": 38.575,
+        "bias_pred_minus_exp": 8.327499999999999,
+        "n_overestimate": 3,
+        "n_underestimate": 1,
+        "sign_test_p": 0.625
+      },
+      {
+        "bin": "[60,70)",
+        "n": 14,
+        "mean_experimental": 66.00714285714285,
+        "bias_pred_minus_exp": 3.4907142857142843,
+        "n_overestimate": 11,
+        "n_underestimate": 3,
+        "sign_test_p": 0.057373046875
+      },
+      {
+        "bin": "[70,80)",
+        "n": 129,
+        "mean_experimental": 75.4906976744186,
+        "bias_pred_minus_exp": 1.3466666666666676,
+        "n_overestimate": 93,
+        "n_underestimate": 36,
+        "sign_test_p": 5.432420732076601e-07
+      },
+      {
+        "bin": "[80,90)",
+        "n": 238,
+        "mean_experimental": 84.92310924369747,
+        "bias_pred_minus_exp": 0.45067226890756307,
+        "n_overestimate": 149,
+        "n_underestimate": 88,
+        "sign_test_p": 8.953546878907074e-05
+      },
+      {
+        "bin": "[90,100)",
+        "n": 89,
+        "mean_experimental": 95.26741573033706,
+        "bias_pred_minus_exp": -0.3169662921348314,
+        "n_overestimate": 32,
+        "n_underestimate": 57,
+        "sign_test_p": 0.010546897231105523
+      },
+      {
+        "bin": "[100,110)",
+        "n": 38,
+        "mean_experimental": 103.22105263157896,
+        "bias_pred_minus_exp": -0.1844736842105257,
+        "n_overestimate": 18,
+        "n_underestimate": 20,
+        "sign_test_p": 0.8714146793645341
+      },
+      {
+        "bin": "[110,200)",
+        "n": 31,
+        "mean_experimental": 121.97806451612905,
+        "bias_pred_minus_exp": -0.879677419354839,
+        "n_overestimate": 9,
+        "n_underestimate": 22,
+        "sign_test_p": 0.029449373483657837
+      }
+    ],
+    "learned": [
+      {
+        "bin": "[0,60)",
+        "n": 4,
+        "mean_experimental": 38.575,
+        "bias_pred_minus_exp": 15.065,
+        "n_overestimate": 4,
+        "n_underestimate": 0,
+        "sign_test_p": 0.125
+      },
+      {
+        "bin": "[60,70)",
+        "n": 14,
+        "mean_experimental": 66.00714285714285,
+        "bias_pred_minus_exp": 4.525714285714285,
+        "n_overestimate": 12,
+        "n_underestimate": 2,
+        "sign_test_p": 0.012939453125
+      },
+      {
+        "bin": "[70,80)",
+        "n": 129,
+        "mean_experimental": 75.4906976744186,
+        "bias_pred_minus_exp": 2.601007751937985,
+        "n_overestimate": 107,
+        "n_underestimate": 22,
+        "sign_test_p": 1.3271277571530207e-14
+      },
+      {
+        "bin": "[80,90)",
+        "n": 238,
+        "mean_experimental": 84.92310924369747,
+        "bias_pred_minus_exp": 0.7105882352941184,
+        "n_overestimate": 159,
+        "n_underestimate": 79,
+        "sign_test_p": 2.3668561590006199e-07
+      },
+      {
+        "bin": "[90,100)",
+        "n": 89,
+        "mean_experimental": 95.26741573033706,
+        "bias_pred_minus_exp": -0.16606741573033693,
+        "n_overestimate": 34,
+        "n_underestimate": 55,
+        "sign_test_p": 0.03341672160209761
+      },
+      {
+        "bin": "[100,110)",
+        "n": 38,
+        "mean_experimental": 103.22105263157896,
+        "bias_pred_minus_exp": 0.14131578947368434,
+        "n_overestimate": 17,
+        "n_underestimate": 20,
+        "sign_test_p": 0.7428293587290682
+      },
+      {
+        "bin": "[110,200)",
+        "n": 31,
+        "mean_experimental": 121.97806451612905,
+        "bias_pred_minus_exp": -1.065483870967741,
+        "n_overestimate": 7,
+        "n_underestimate": 24,
+        "sign_test_p": 0.003326892852783203
+      }
+    ],
+    "reference": [
+      {
+        "bin": "[0,60)",
+        "n": 4,
+        "mean_experimental": 38.575,
+        "bias_pred_minus_exp": -11.125,
+        "n_overestimate": 1,
+        "n_underestimate": 3,
+        "sign_test_p": 0.625
+      },
+      {
+        "bin": "[60,70)",
+        "n": 14,
+        "mean_experimental": 66.00714285714285,
+        "bias_pred_minus_exp": -0.35714285714285865,
+        "n_overestimate": 6,
+        "n_underestimate": 8,
+        "sign_test_p": 0.79052734375
+      },
+      {
+        "bin": "[70,80)",
+        "n": 129,
+        "mean_experimental": 75.4906976744186,
+        "bias_pred_minus_exp": 1.576744186046512,
+        "n_overestimate": 78,
+        "n_underestimate": 50,
+        "sign_test_p": 0.016670734269697344
+      },
+      {
+        "bin": "[80,90)",
+        "n": 238,
+        "mean_experimental": 84.92310924369747,
+        "bias_pred_minus_exp": 0.41512605042016826,
+        "n_overestimate": 121,
+        "n_underestimate": 117,
+        "sign_test_p": 0.8458664528291988
+      },
+      {
+        "bin": "[90,100)",
+        "n": 89,
+        "mean_experimental": 95.26741573033706,
+        "bias_pred_minus_exp": 3.1224719101123606,
+        "n_overestimate": 67,
+        "n_underestimate": 22,
+        "sign_test_p": 1.899849174722082e-06
+      },
+      {
+        "bin": "[100,110)",
+        "n": 38,
+        "mean_experimental": 103.22105263157896,
+        "bias_pred_minus_exp": 2.105263157894737,
+        "n_overestimate": 23,
+        "n_underestimate": 15,
+        "sign_test_p": 0.2558750795433298
+      },
+      {
+        "bin": "[110,200)",
+        "n": 31,
+        "mean_experimental": 121.97806451612905,
+        "bias_pred_minus_exp": 4.4477419354838705,
+        "n_overestimate": 27,
+        "n_underestimate": 4,
+        "sign_test_p": 3.39532271027565e-05
+      }
+    ]
+  },
+  "test2_bias_conditioned_on_estimate": {
+    "quantum": {
+      "conditioning_variable": "quantum",
+      "bins": [
+        {
+          "predicted_bin": "[60,70)",
+          "n": 12,
+          "mean_exp_minus_pred": 1.7966666666666662,
+          "t": 1.4959860469690547,
+          "p": 0.1627857972603354,
+          "reject_unbiased": false
+        },
+        {
+          "predicted_bin": "[70,80)",
+          "n": 124,
+          "mean_exp_minus_pred": -0.5835483870967743,
+          "t": -2.060112133675053,
+          "p": 0.04149693860002298,
+          "reject_unbiased": true
+        },
+        {
+          "predicted_bin": "[80,90)",
+          "n": 238,
+          "mean_exp_minus_pred": -0.9757983193277311,
+          "t": -5.557335397727127,
+          "p": 7.348975554373226e-08,
+          "reject_unbiased": true
+        },
+        {
+          "predicted_bin": "[90,100)",
+          "n": 99,
+          "mean_exp_minus_pred": 0.05484848484848449,
+          "t": 0.18498684604881815,
+          "p": 0.8536216509814313,
+          "reject_unbiased": false
+        },
+        {
+          "predicted_bin": "[100,110)",
+          "n": 35,
+          "mean_exp_minus_pred": -0.4548571428571425,
+          "t": -1.1421323662190543,
+          "p": 0.26137879071941994,
+          "reject_unbiased": false
+        },
+        {
+          "predicted_bin": "[110,1000000000.0)",
+          "n": 32,
+          "mean_exp_minus_pred": 0.3340624999999995,
+          "t": 0.682503387575577,
+          "p": 0.49998935040768316,
+          "reject_unbiased": false
+        }
+      ]
+    },
+    "learned": {
+      "conditioning_variable": "learned",
+      "bins": [
+        {
+          "predicted_bin": "[60,70)",
+          "n": 6,
+          "mean_exp_minus_pred": -1.7200000000000024,
+          "t": -1.0407004073694581,
+          "p": 0.34569752485122895,
+          "reject_unbiased": false
+        },
+        {
+          "predicted_bin": "[70,80)",
+          "n": 118,
+          "mean_exp_minus_pred": -1.1846610169491523,
+          "t": -3.558003574364098,
+          "p": 0.0005408106335954494,
+          "reject_unbiased": true
+        },
+        {
+          "predicted_bin": "[80,90)",
+          "n": 251,
+          "mean_exp_minus_pred": -1.5315139442231083,
+          "t": -7.322799338279206,
+          "p": 3.326045972928125e-12,
+          "reject_unbiased": true
+        },
+        {
+          "predicted_bin": "[90,100)",
+          "n": 97,
+          "mean_exp_minus_pred": -0.06268041237113385,
+          "t": -0.2393397490125023,
+          "p": 0.8113523907271807,
+          "reject_unbiased": false
+        },
+        {
+          "predicted_bin": "[100,110)",
+          "n": 37,
+          "mean_exp_minus_pred": -0.635945945945946,
+          "t": -1.518289476272116,
+          "p": 0.13767544214840027,
+          "reject_unbiased": false
+        },
+        {
+          "predicted_bin": "[110,1000000000.0)",
+          "n": 31,
+          "mean_exp_minus_pred": 0.4441935483870953,
+          "t": 0.9040072928982622,
+          "p": 0.3731939719454812,
+          "reject_unbiased": false
+        }
+      ]
+    },
+    "reference": {
+      "conditioning_variable": "reference",
+      "bins": [
+        {
+          "predicted_bin": "[40,60)",
+          "n": 8,
+          "mean_exp_minus_pred": 12.2375,
+          "t": 3.2261073403883835,
+          "p": 0.014529891164078285,
+          "reject_unbiased": true
+        },
+        {
+          "predicted_bin": "[60,70)",
+          "n": 33,
+          "mean_exp_minus_pred": 6.96060606060606,
+          "t": 8.244687060500612,
+          "p": 2.0326405953379384e-09,
+          "reject_unbiased": true
+        },
+        {
+          "predicted_bin": "[70,80)",
+          "n": 102,
+          "mean_exp_minus_pred": 1.9666666666666675,
+          "t": 3.803241030143107,
+          "p": 0.00024471663059948454,
+          "reject_unbiased": true
+        },
+        {
+          "predicted_bin": "[80,90)",
+          "n": 180,
+          "mean_exp_minus_pred": -1.5327777777777787,
+          "t": -4.008772232353969,
+          "p": 8.947605446659074e-05,
+          "reject_unbiased": true
+        },
+        {
+          "predicted_bin": "[90,100)",
+          "n": 109,
+          "mean_exp_minus_pred": -4.219266055045872,
+          "t": -8.207667281994098,
+          "p": 5.220538652506601e-13,
+          "reject_unbiased": true
+        },
+        {
+          "predicted_bin": "[100,110)",
+          "n": 68,
+          "mean_exp_minus_pred": -4.707352941176473,
+          "t": -10.466024800676525,
+          "p": 9.808473203593759e-16,
+          "reject_unbiased": true
+        },
+        {
+          "predicted_bin": "[110,1000000000.0)",
+          "n": 40,
+          "mean_exp_minus_pred": -6.644499999999999,
+          "t": -6.14791524916531,
+          "p": 3.226907058788515e-07,
+          "reject_unbiased": true
+        }
+      ]
+    }
+  },
+  "test3_quantum_overshoot_on_db_matched": {
+    "[0,70)": {
+      "n": 6,
+      "bias_quantum_minus_exp": 2.2133333333333347,
+      "mean_db_bde": 66.25323689866369,
+      "bias_db_minus_exp": 2.186570231997017
+    },
+    "[70,80)": {
+      "n": 52,
+      "bias_quantum_minus_exp": 2.1903846153846165,
+      "mean_db_bde": 77.40317481259966,
+      "bias_db_minus_exp": 2.191636351061209
+    },
+    "[80,1000000000.0)": {
+      "n": 273,
+      "bias_quantum_minus_exp": 0.17498168498168523,
+      "mean_db_bde": 93.24296903347594,
+      "bias_db_minus_exp": 0.19857342908032868
+    }
+  },
+  "test4_selection_prediction": "Under the selection explanation the overshoot in the lowest bin should be bounded by roughly the reference sigma; observed learned overshoot is 15.06 kcal/mol against sigma_ref=2.84.",
+  "sigma_ref_used": 2.843664070054576
+}

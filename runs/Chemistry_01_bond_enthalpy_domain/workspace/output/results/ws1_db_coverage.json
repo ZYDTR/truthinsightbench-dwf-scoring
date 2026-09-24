@@ -1,0 +1,2164 @@
+{
+  "workstream": "WS1",
+  "title": "Database inventory, structural domain and coverage boundary",
+  "generated_by": "output/analysis/ws1_prep.py + output/analysis/ws1_final.py",
+  "units": {
+    "raw_row": "one row of bde_db_full.csv.gz (one bond instance in one molecule)",
+    "unique_molecule": "distinct parent molecule SMILES",
+    "unique_fragment_pair": "distinct (molecule, fragment1, fragment2); bond_type and bde are constant inside a unit",
+    "benchmark_observation": "one of the 543 experimental rows (error-analysis unit)"
+  },
+  "1_inventory": {
+    "raw_rows": 484907,
+    "unique_molecules": 42577,
+    "unique_fragment_pairs_mol_f1_f2": 290664,
+    "unique_global_fragment_pairs_f1_f2": 290641,
+    "unique_bde_values": 144147,
+    "unique_bond_types": 9,
+    "unique_bond_index_values": 31,
+    "row_vs_pair_redundancy_factor": 1.6683,
+    "rows_per_molecule": 11.3889,
+    "pair_units_with_bond_type_varying": 0,
+    "pair_units_with_bde_varying": 0,
+    "extra_rows_beyond_one_per_pair": 194243,
+    "distinct_fragment_strings": 206797,
+    "duplicate_tuple_group_size_histogram": {
+      "1": 159601,
+      "2": 87217,
+      "3": 35700,
+      "4": 4195,
+      "6": 2930,
+      "8": 83,
+      "9": 864,
+      "10": 1,
+      "12": 58,
+      "14": 1,
+      "16": 1,
+      "18": 12,
+      "20": 1
+    }
+  },
+  "1_inventory_table": [
+    {
+      "unit": "raw rows",
+      "value": 484907
+    },
+    {
+      "unit": "unique molecules",
+      "value": 42577
+    },
+    {
+      "unit": "unique (molecule,fragment1,fragment2) fragment pairs",
+      "value": 290664
+    },
+    {
+      "unit": "unique (fragment1,fragment2) pairs, molecule-agnostic",
+      "value": 290641
+    },
+    {
+      "unit": "unique bde values",
+      "value": 144147
+    }
+  ],
+  "1_duplicate_tuple_group_size_histogram": {
+    "1": 159601,
+    "2": 87217,
+    "3": 35700,
+    "4": 4195,
+    "6": 2930,
+    "8": 83,
+    "9": 864,
+    "10": 1,
+    "12": 58,
+    "14": 1,
+    "16": 1,
+    "18": 12,
+    "20": 1
+  },
+  "2_bond_class_census": [
+    {
+      "bond_class": "C-H",
+      "raw_rows": 321949,
+      "unique_fragment_pairs": 150091,
+      "n_unique_molecules_with_class": 40852,
+      "raw_rows_pct": 66.394,
+      "unique_pairs_pct": 51.6373,
+      "redundancy_rows_per_pair": 2.145,
+      "mean_rows_per_molecule": 7.881,
+      "mean_bde_unique_pairs": 98.1567,
+      "sd_bde_unique_pairs": 9.9235,
+      "min_bde_unique_pairs": 16.3673,
+      "median_bde_unique_pairs": 97.1566,
+      "max_bde_unique_pairs": 140.5212,
+      "mean_bde_row_weighted": 96.4528,
+      "share_of_row_inflation_pct": 88.476,
+      "mean_bde_row_minus_pair": -1.7039
+    },
+    {
+      "bond_class": "C-C",
+      "raw_rows": 71166,
+      "unique_fragment_pairs": 61490,
+      "n_unique_molecules_with_class": 29938,
+      "raw_rows_pct": 14.6762,
+      "unique_pairs_pct": 21.155,
+      "redundancy_rows_per_pair": 1.1574,
+      "mean_rows_per_molecule": 2.377,
+      "mean_bde_unique_pairs": 91.1083,
+      "sd_bde_unique_pairs": 12.111,
+      "min_bde_unique_pairs": 41.3334,
+      "median_bde_unique_pairs": 88.5472,
+      "max_bde_unique_pairs": 164.5335,
+      "mean_bde_row_weighted": 90.1745,
+      "share_of_row_inflation_pct": 4.981,
+      "mean_bde_row_minus_pair": -0.9338
+    },
+    {
+      "bond_class": "H-N",
+      "raw_rows": 27314,
+      "unique_fragment_pairs": 18273,
+      "n_unique_molecules_with_class": 14876,
+      "raw_rows_pct": 5.6328,
+      "unique_pairs_pct": 6.2866,
+      "redundancy_rows_per_pair": 1.4948,
+      "mean_rows_per_molecule": 1.836,
+      "mean_bde_unique_pairs": 95.5119,
+      "sd_bde_unique_pairs": 10.4131,
+      "min_bde_unique_pairs": 41.7488,
+      "median_bde_unique_pairs": 96.1902,
+      "max_bde_unique_pairs": 126.2241,
+      "mean_bde_row_weighted": 96.0035,
+      "share_of_row_inflation_pct": 4.654,
+      "mean_bde_row_minus_pair": 0.4916
+    },
+    {
+      "bond_class": "C-N",
+      "raw_rows": 24707,
+      "unique_fragment_pairs": 22499,
+      "n_unique_molecules_with_class": 14981,
+      "raw_rows_pct": 5.0952,
+      "unique_pairs_pct": 7.7406,
+      "redundancy_rows_per_pair": 1.0981,
+      "mean_rows_per_molecule": 1.649,
+      "mean_bde_unique_pairs": 86.7745,
+      "sd_bde_unique_pairs": 13.5079,
+      "min_bde_unique_pairs": 16.6309,
+      "median_bde_unique_pairs": 84.966,
+      "max_bde_unique_pairs": 127.2274,
+      "mean_bde_row_weighted": 86.2097,
+      "share_of_row_inflation_pct": 1.137,
+      "mean_bde_row_minus_pair": -0.5648
+    },
+    {
+      "bond_class": "C-O",
+      "raw_rows": 24354,
+      "unique_fragment_pairs": 23288,
+      "n_unique_molecules_with_class": 15345,
+      "raw_rows_pct": 5.0224,
+      "unique_pairs_pct": 8.012,
+      "redundancy_rows_per_pair": 1.0458,
+      "mean_rows_per_molecule": 1.587,
+      "mean_bde_unique_pairs": 92.2939,
+      "sd_bde_unique_pairs": 14.1956,
+      "min_bde_unique_pairs": 19.267,
+      "median_bde_unique_pairs": 94.4966,
+      "max_bde_unique_pairs": 131.8227,
+      "mean_bde_row_weighted": 92.1618,
+      "share_of_row_inflation_pct": 0.549,
+      "mean_bde_row_minus_pair": -0.1321
+    },
+    {
+      "bond_class": "H-O",
+      "raw_rows": 11884,
+      "unique_fragment_pairs": 11577,
+      "n_unique_molecules_with_class": 10239,
+      "raw_rows_pct": 2.4508,
+      "unique_pairs_pct": 3.9829,
+      "redundancy_rows_per_pair": 1.0265,
+      "mean_rows_per_molecule": 1.161,
+      "mean_bde_unique_pairs": 101.5871,
+      "sd_bde_unique_pairs": 10.7279,
+      "min_bde_unique_pairs": 46.5674,
+      "median_bde_unique_pairs": 104.5474,
+      "max_bde_unique_pairs": 123.2296,
+      "mean_bde_row_weighted": 101.5172,
+      "share_of_row_inflation_pct": 0.158,
+      "mean_bde_row_minus_pair": -0.0699
+    },
+    {
+      "bond_class": "N-O",
+      "raw_rows": 1634,
+      "unique_fragment_pairs": 1581,
+      "n_unique_molecules_with_class": 1554,
+      "raw_rows_pct": 0.337,
+      "unique_pairs_pct": 0.5439,
+      "redundancy_rows_per_pair": 1.0335,
+      "mean_rows_per_molecule": 1.051,
+      "mean_bde_unique_pairs": 58.9553,
+      "sd_bde_unique_pairs": 9.6223,
+      "min_bde_unique_pairs": 7.7297,
+      "median_bde_unique_pairs": 61.4463,
+      "max_bde_unique_pairs": 87.7358,
+      "mean_bde_row_weighted": 58.851,
+      "share_of_row_inflation_pct": 0.027,
+      "mean_bde_row_minus_pair": -0.1043
+    },
+    {
+      "bond_class": "N-N",
+      "raw_rows": 1597,
+      "unique_fragment_pairs": 1567,
+      "n_unique_molecules_with_class": 1544,
+      "raw_rows_pct": 0.3293,
+      "unique_pairs_pct": 0.5391,
+      "redundancy_rows_per_pair": 1.0191,
+      "mean_rows_per_molecule": 1.034,
+      "mean_bde_unique_pairs": 62.1794,
+      "sd_bde_unique_pairs": 12.6383,
+      "min_bde_unique_pairs": 19.3028,
+      "median_bde_unique_pairs": 63.2008,
+      "max_bde_unique_pairs": 97.1466,
+      "mean_bde_row_weighted": 62.2204,
+      "share_of_row_inflation_pct": 0.015,
+      "mean_bde_row_minus_pair": 0.041
+    },
+    {
+      "bond_class": "O-O",
+      "raw_rows": 302,
+      "unique_fragment_pairs": 298,
+      "n_unique_molecules_with_class": 298,
+      "raw_rows_pct": 0.0623,
+      "unique_pairs_pct": 0.1025,
+      "redundancy_rows_per_pair": 1.0134,
+      "mean_rows_per_molecule": 1.013,
+      "mean_bde_unique_pairs": 41.3837,
+      "sd_bde_unique_pairs": 8.6625,
+      "min_bde_unique_pairs": -0.8691,
+      "median_bde_unique_pairs": 43.6662,
+      "max_bde_unique_pairs": 53.9444,
+      "mean_bde_row_weighted": 41.4179,
+      "share_of_row_inflation_pct": 0.002,
+      "mean_bde_row_minus_pair": 0.0342
+    }
+  ],
+  "2_row_inflation_total": 194243,
+  "2_census_csv": "bond_class,raw_rows,unique_fragment_pairs,n_unique_molecules_with_class,raw_rows_pct,unique_pairs_pct,redundancy_rows_per_pair,mean_rows_per_molecule,mean_bde_unique_pairs,sd_bde_unique_pairs,min_bde_unique_pairs,median_bde_unique_pairs,max_bde_unique_pairs,mean_bde_row_weighted,share_of_row_inflation_pct,mean_bde_row_minus_pair\nC-H,321949,150091,40852,66.394,51.6373,2.145,7.881,98.1567,9.9235,16.3673,97.1566,140.5212,96.4528,88.476,-1.7039\nC-C,71166,61490,29938,14.6762,21.155,1.1574,2.377,91.1083,12.111,41.3334,88.5472,164.5335,90.1745,4.981,-0.9338\nH-N,27314,18273,14876,5.6328,6.2866,1.4948,1.836,95.5119,10.4131,41.7488,96.1902,126.2241,96.0035,4.654,0.4916\nC-N,24707,22499,14981,5.0952,7.7406,1.0981,1.649,86.7745,13.5079,16.6309,84.966,127.2274,86.2097,1.137,-0.5648\nC-O,24354,23288,15345,5.0224,8.012,1.0458,1.587,92.2939,14.1956,19.267,94.4966,131.8227,92.1618,0.549,-0.1321\nH-O,11884,11577,10239,2.4508,3.9829,1.0265,1.161,101.5871,10.7279,46.5674,104.5474,123.2296,101.5172,0.158,-0.0699\nN-O,1634,1581,1554,0.337,0.5439,1.0335,1.051,58.9553,9.6223,7.7297,61.4463,87.7358,58.851,0.027,-0.1043\nN-N,1597,1567,1544,0.3293,0.5391,1.0191,1.034,62.1794,12.6383,19.3028,63.2008,97.1466,62.2204,0.015,0.041\nO-O,302,298,298,0.0623,0.1025,1.0134,1.013,41.3837,8.6625,-0.8691,43.6662,53.9444,41.4179,0.002,0.0342",
+  "2_labeler_validation": {
+    "n_sampled_unique_pairs": 4000,
+    "n_labeler_unparsable": 0,
+    "labeler_agreement_with_db_bond_type": 4000,
+    "labeler_agreement_pct": 100.0,
+    "benchmark_labeler_agreement": 331,
+    "benchmark_labeler_compared": 331,
+    "disagreement_examples": []
+  },
+  "3_structural_domain": {
+    "database_element_set": [
+      "C",
+      "N",
+      "O"
+    ],
+    "database_n_elements": 3,
+    "database_hac_min": 1,
+    "database_hac_max": 10,
+    "database_hac_mean_unique_molecules": 8.8915,
+    "database_hac_median_unique_molecules": 9.0,
+    "database_hac_sd_unique_molecules": 1.2,
+    "database_hac_mean_unique_pairs": 9.0253,
+    "database_hac_median_unique_pairs": 9.0,
+    "database_hac_mean_weighted_by_raw_rows": 9.0147,
+    "unparsable_db_molecules": 0,
+    "hac_definition": "heavy-atom count of parent SMILES, RDKit GetNumHeavyAtoms",
+    "pct_molecules_hac_ge_8": 87.4557,
+    "pct_molecules_hac_le_6": 4.5799
+  },
+  "3_hac_distribution": [
+    {
+      "hac": 1,
+      "n_unique_molecules": 1,
+      "n_unique_fragment_pairs": 1,
+      "pct_unique_molecules": 0.0023,
+      "cum_pct_unique_molecules": 0.0023
+    },
+    {
+      "hac": 2,
+      "n_unique_molecules": 7,
+      "n_unique_fragment_pairs": 13,
+      "pct_unique_molecules": 0.0164,
+      "cum_pct_unique_molecules": 0.0187
+    },
+    {
+      "hac": 3,
+      "n_unique_molecules": 36,
+      "n_unique_fragment_pairs": 92,
+      "pct_unique_molecules": 0.0846,
+      "cum_pct_unique_molecules": 0.1033
+    },
+    {
+      "hac": 4,
+      "n_unique_molecules": 143,
+      "n_unique_fragment_pairs": 431,
+      "pct_unique_molecules": 0.3359,
+      "cum_pct_unique_molecules": 0.4392
+    },
+    {
+      "hac": 5,
+      "n_unique_molecules": 466,
+      "n_unique_fragment_pairs": 1814,
+      "pct_unique_molecules": 1.0945,
+      "cum_pct_unique_molecules": 1.5337
+    },
+    {
+      "hac": 6,
+      "n_unique_molecules": 1297,
+      "n_unique_fragment_pairs": 6085,
+      "pct_unique_molecules": 3.0462,
+      "cum_pct_unique_molecules": 4.5799
+    },
+    {
+      "hac": 7,
+      "n_unique_molecules": 3391,
+      "n_unique_fragment_pairs": 19101,
+      "pct_unique_molecules": 7.9644,
+      "cum_pct_unique_molecules": 12.5443
+    },
+    {
+      "hac": 8,
+      "n_unique_molecules": 7467,
+      "n_unique_fragment_pairs": 47265,
+      "pct_unique_molecules": 17.5376,
+      "cum_pct_unique_molecules": 30.0819
+    },
+    {
+      "hac": 9,
+      "n_unique_molecules": 13396,
+      "n_unique_fragment_pairs": 94712,
+      "pct_unique_molecules": 31.463,
+      "cum_pct_unique_molecules": 61.5449
+    },
+    {
+      "hac": 10,
+      "n_unique_molecules": 16373,
+      "n_unique_fragment_pairs": 121150,
+      "pct_unique_molecules": 38.455,
+      "cum_pct_unique_molecules": 99.9999
+    }
+  ],
+  "3_molecules_per_element_set": [
+    {
+      "element_set": "C|N|O",
+      "n_unique_molecules": 17925
+    },
+    {
+      "element_set": "C|O",
+      "n_unique_molecules": 13633
+    },
+    {
+      "element_set": "C|N",
+      "n_unique_molecules": 8586
+    },
+    {
+      "element_set": "C",
+      "n_unique_molecules": 2433
+    }
+  ],
+  "3_ols_bde_summary_unique_pairs": [
+    {
+      "bond_class": "C-H",
+      "unit": "unique_fragment_pair",
+      "n": 150091,
+      "mean": 98.1567,
+      "sd": 9.9235,
+      "min": 16.3673,
+      "median": 97.1566,
+      "max": 140.5212,
+      "mean_row_weighted": 96.4528,
+      "mean_minus_row_weighted": 1.7039
+    },
+    {
+      "bond_class": "C-C",
+      "unit": "unique_fragment_pair",
+      "n": 61490,
+      "mean": 91.1083,
+      "sd": 12.111,
+      "min": 41.3334,
+      "median": 88.5472,
+      "max": 164.5335,
+      "mean_row_weighted": 90.1745,
+      "mean_minus_row_weighted": 0.9338
+    },
+    {
+      "bond_class": "H-N",
+      "unit": "unique_fragment_pair",
+      "n": 18273,
+      "mean": 95.5119,
+      "sd": 10.4131,
+      "min": 41.7488,
+      "median": 96.1902,
+      "max": 126.2241,
+      "mean_row_weighted": 96.0035,
+      "mean_minus_row_weighted": -0.4916
+    },
+    {
+      "bond_class": "C-N",
+      "unit": "unique_fragment_pair",
+      "n": 22499,
+      "mean": 86.7745,
+      "sd": 13.5079,
+      "min": 16.6309,
+      "median": 84.966,
+      "max": 127.2274,
+      "mean_row_weighted": 86.2097,
+      "mean_minus_row_weighted": 0.5648
+    },
+    {
+      "bond_class": "C-O",
+      "unit": "unique_fragment_pair",
+      "n": 23288,
+      "mean": 92.2939,
+      "sd": 14.1956,
+      "min": 19.267,
+      "median": 94.4966,
+      "max": 131.8227,
+      "mean_row_weighted": 92.1618,
+      "mean_minus_row_weighted": 0.1321
+    },
+    {
+      "bond_class": "H-O",
+      "unit": "unique_fragment_pair",
+      "n": 11577,
+      "mean": 101.5871,
+      "sd": 10.7279,
+      "min": 46.5674,
+      "median": 104.5474,
+      "max": 123.2296,
+      "mean_row_weighted": 101.5172,
+      "mean_minus_row_weighted": 0.0699
+    },
+    {
+      "bond_class": "N-O",
+      "unit": "unique_fragment_pair",
+      "n": 1581,
+      "mean": 58.9553,
+      "sd": 9.6223,
+      "min": 7.7297,
+      "median": 61.4463,
+      "max": 87.7358,
+      "mean_row_weighted": 58.851,
+      "mean_minus_row_weighted": 0.1043
+    },
+    {
+      "bond_class": "N-N",
+      "unit": "unique_fragment_pair",
+      "n": 1567,
+      "mean": 62.1794,
+      "sd": 12.6383,
+      "min": 19.3028,
+      "median": 63.2008,
+      "max": 97.1466,
+      "mean_row_weighted": 62.2204,
+      "mean_minus_row_weighted": -0.041
+    },
+    {
+      "bond_class": "O-O",
+      "unit": "unique_fragment_pair",
+      "n": 298,
+      "mean": 41.3837,
+      "sd": 8.6625,
+      "min": -0.8691,
+      "median": 43.6662,
+      "max": 53.9444,
+      "mean_row_weighted": 41.4179,
+      "mean_minus_row_weighted": -0.0342
+    }
+  ],
+  "4_coverage_boundary": {
+    "benchmark_observations": 543,
+    "benchmark_unique_molecules": 419,
+    "benchmark_unique_fragment_pairs": 543,
+    "a_exact_fragment_pair_in_db": 331,
+    "a_exact_fragment_pair_in_db_pct": 60.9576,
+    "a_exact_pair_any_fragment_order": 331,
+    "b_parent_molecule_in_db": 369,
+    "b_parent_molecule_in_db_pct": 67.9558,
+    "b_parent_molecule_absent": 174,
+    "c_parent_hac_beyond_db_max": 150,
+    "c_parent_hac_beyond_db_max_pct": 27.6243,
+    "c_parent_hac_at_or_below_db_max": 393,
+    "parent_hac_missing_unparsable": 0,
+    "d_parent_with_elements_never_in_db": 0,
+    "d_parent_with_elements_never_in_db_pct": 0.0,
+    "d_foreign_element_counts": {},
+    "db_hac_max": 10,
+    "hac_cutoff_defining_boundary": 10,
+    "benchmark_hac_min": 1,
+    "benchmark_hac_max": 38,
+    "benchmark_hac_mean": 9.2762,
+    "benchmark_hac_median": 8.0,
+    "benchmark_hac_sd": 5.0828,
+    "inside_db_by_parent": 369,
+    "inside_db_by_exact_pair": 331,
+    "outside_db_by_any_criterion": 174,
+    "outside_by_hac_only": 174
+  },
+  "4_hac_db_vs_benchmark": [
+    {
+      "hac": 1,
+      "db_unique_molecules": 1,
+      "benchmark_observations": 1,
+      "benchmark_inside_db": 1,
+      "benchmark_outside_db": 0,
+      "benchmark_hac_gt_db_max": 0
+    },
+    {
+      "hac": 2,
+      "db_unique_molecules": 7,
+      "benchmark_observations": 4,
+      "benchmark_inside_db": 4,
+      "benchmark_outside_db": 0,
+      "benchmark_hac_gt_db_max": 0
+    },
+    {
+      "hac": 3,
+      "db_unique_molecules": 36,
+      "benchmark_observations": 14,
+      "benchmark_inside_db": 13,
+      "benchmark_outside_db": 1,
+      "benchmark_hac_gt_db_max": 0
+    },
+    {
+      "hac": 4,
+      "db_unique_molecules": 143,
+      "benchmark_observations": 40,
+      "benchmark_inside_db": 40,
+      "benchmark_outside_db": 0,
+      "benchmark_hac_gt_db_max": 0
+    },
+    {
+      "hac": 5,
+      "db_unique_molecules": 466,
+      "benchmark_observations": 54,
+      "benchmark_inside_db": 53,
+      "benchmark_outside_db": 1,
+      "benchmark_hac_gt_db_max": 0
+    },
+    {
+      "hac": 6,
+      "db_unique_molecules": 1297,
+      "benchmark_observations": 76,
+      "benchmark_inside_db": 70,
+      "benchmark_outside_db": 6,
+      "benchmark_hac_gt_db_max": 0
+    },
+    {
+      "hac": 7,
+      "db_unique_molecules": 3391,
+      "benchmark_observations": 55,
+      "benchmark_inside_db": 48,
+      "benchmark_outside_db": 7,
+      "benchmark_hac_gt_db_max": 0
+    },
+    {
+      "hac": 8,
+      "db_unique_molecules": 7467,
+      "benchmark_observations": 65,
+      "benchmark_inside_db": 62,
+      "benchmark_outside_db": 3,
+      "benchmark_hac_gt_db_max": 0
+    },
+    {
+      "hac": 9,
+      "db_unique_molecules": 13396,
+      "benchmark_observations": 41,
+      "benchmark_inside_db": 39,
+      "benchmark_outside_db": 2,
+      "benchmark_hac_gt_db_max": 0
+    },
+    {
+      "hac": 10,
+      "db_unique_molecules": 16373,
+      "benchmark_observations": 43,
+      "benchmark_inside_db": 39,
+      "benchmark_outside_db": 4,
+      "benchmark_hac_gt_db_max": 0
+    },
+    {
+      "hac": 11,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 14,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 14,
+      "benchmark_hac_gt_db_max": 14
+    },
+    {
+      "hac": 12,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 25,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 25,
+      "benchmark_hac_gt_db_max": 25
+    },
+    {
+      "hac": 13,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 14,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 14,
+      "benchmark_hac_gt_db_max": 14
+    },
+    {
+      "hac": 14,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 13,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 13,
+      "benchmark_hac_gt_db_max": 13
+    },
+    {
+      "hac": 15,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 18,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 18,
+      "benchmark_hac_gt_db_max": 18
+    },
+    {
+      "hac": 16,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 12,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 12,
+      "benchmark_hac_gt_db_max": 12
+    },
+    {
+      "hac": 17,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 13,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 13,
+      "benchmark_hac_gt_db_max": 13
+    },
+    {
+      "hac": 18,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 5,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 5,
+      "benchmark_hac_gt_db_max": 5
+    },
+    {
+      "hac": 19,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 9,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 9,
+      "benchmark_hac_gt_db_max": 9
+    },
+    {
+      "hac": 20,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 5,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 5,
+      "benchmark_hac_gt_db_max": 5
+    },
+    {
+      "hac": 21,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 6,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 6,
+      "benchmark_hac_gt_db_max": 6
+    },
+    {
+      "hac": 22,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 5,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 5,
+      "benchmark_hac_gt_db_max": 5
+    },
+    {
+      "hac": 23,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 4,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 4,
+      "benchmark_hac_gt_db_max": 4
+    },
+    {
+      "hac": 25,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 3,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 3,
+      "benchmark_hac_gt_db_max": 3
+    },
+    {
+      "hac": 26,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 1,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 1,
+      "benchmark_hac_gt_db_max": 1
+    },
+    {
+      "hac": 32,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 1,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 1,
+      "benchmark_hac_gt_db_max": 1
+    },
+    {
+      "hac": 35,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 1,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 1,
+      "benchmark_hac_gt_db_max": 1
+    },
+    {
+      "hac": 38,
+      "db_unique_molecules": 0,
+      "benchmark_observations": 1,
+      "benchmark_inside_db": 0,
+      "benchmark_outside_db": 1,
+      "benchmark_hac_gt_db_max": 1
+    }
+  ],
+  "4_outside_examples": [
+    {
+      "observation_id": "bond_observation_0008",
+      "parent_structure_smiles": "C#CC#CC#C",
+      "bond_class": "C-H",
+      "hac_parent": 6,
+      "experimental_bde_kcal_mol": 129.8
+    },
+    {
+      "observation_id": "bond_observation_0030",
+      "parent_structure_smiles": "C/C=C/CCCC/C=C/CC",
+      "bond_class": "C-H",
+      "hac_parent": 11,
+      "experimental_bde_kcal_mol": 81.6
+    },
+    {
+      "observation_id": "bond_observation_0038",
+      "parent_structure_smiles": "C1=C(N2CCCC2)Cc2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 14,
+      "experimental_bde_kcal_mol": 83.5
+    },
+    {
+      "observation_id": "bond_observation_0039",
+      "parent_structure_smiles": "C1=C(N2CCCC2)c2ccccc2C1",
+      "bond_class": "C-H",
+      "hac_parent": 14,
+      "experimental_bde_kcal_mol": 70.3
+    },
+    {
+      "observation_id": "bond_observation_0040",
+      "parent_structure_smiles": "C1=C(N2CCCCC2)Cc2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 15,
+      "experimental_bde_kcal_mol": 82.5
+    },
+    {
+      "observation_id": "bond_observation_0041",
+      "parent_structure_smiles": "C1=C(N2CCCCC2)c2ccccc2C1",
+      "bond_class": "C-H",
+      "hac_parent": 15,
+      "experimental_bde_kcal_mol": 72.3
+    },
+    {
+      "observation_id": "bond_observation_0042",
+      "parent_structure_smiles": "C1=C(N2CCOCC2)Cc2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 15,
+      "experimental_bde_kcal_mol": 82.8
+    },
+    {
+      "observation_id": "bond_observation_0043",
+      "parent_structure_smiles": "C1=C(N2CCOCC2)c2ccccc2C1",
+      "bond_class": "C-H",
+      "hac_parent": 15,
+      "experimental_bde_kcal_mol": 73.4
+    },
+    {
+      "observation_id": "bond_observation_0046",
+      "parent_structure_smiles": "C1=C(c2ccccc2)Cc2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 15,
+      "experimental_bde_kcal_mol": 79.3
+    },
+    {
+      "observation_id": "bond_observation_0047",
+      "parent_structure_smiles": "C1=C(c2ccccc2)c2ccccc2C1",
+      "bond_class": "C-H",
+      "hac_parent": 15,
+      "experimental_bde_kcal_mol": 75.3
+    },
+    {
+      "observation_id": "bond_observation_0048",
+      "parent_structure_smiles": "C1=CC(c2ccccc2)C=C1c1ccccc1",
+      "bond_class": "C-H",
+      "hac_parent": 17,
+      "experimental_bde_kcal_mol": 75.0
+    },
+    {
+      "observation_id": "bond_observation_0051",
+      "parent_structure_smiles": "C1=CC2CCCC3=C2C(=C1)CC3",
+      "bond_class": "C-H",
+      "hac_parent": 12,
+      "experimental_bde_kcal_mol": 78.8
+    },
+    {
+      "observation_id": "bond_observation_0060",
+      "parent_structure_smiles": "C1=CCCCC=C1",
+      "bond_class": "C-H",
+      "hac_parent": 7,
+      "experimental_bde_kcal_mol": 83.0
+    },
+    {
+      "observation_id": "bond_observation_0066",
+      "parent_structure_smiles": "C1=Cc2cccc3cccc1c23",
+      "bond_class": "C-H",
+      "hac_parent": 12,
+      "experimental_bde_kcal_mol": 117.0
+    },
+    {
+      "observation_id": "bond_observation_0070",
+      "parent_structure_smiles": "C1C2C3C2C2C1C32",
+      "bond_class": "C-H",
+      "hac_parent": 7,
+      "experimental_bde_kcal_mol": 111.5
+    },
+    {
+      "observation_id": "bond_observation_0071",
+      "parent_structure_smiles": "C1C2C3C2C2C1C32",
+      "bond_class": "C-H",
+      "hac_parent": 7,
+      "experimental_bde_kcal_mol": 109.4
+    },
+    {
+      "observation_id": "bond_observation_0077",
+      "parent_structure_smiles": "C1CC2CCC1CC2",
+      "bond_class": "C-H",
+      "hac_parent": 8,
+      "experimental_bde_kcal_mol": 102.9
+    },
+    {
+      "observation_id": "bond_observation_0078",
+      "parent_structure_smiles": "C1CCC(C2CCCC2)C1",
+      "bond_class": "C-H",
+      "hac_parent": 10,
+      "experimental_bde_kcal_mol": 91.3
+    },
+    {
+      "observation_id": "bond_observation_0079",
+      "parent_structure_smiles": "C1CCC(C2CCCCC2)CC1",
+      "bond_class": "C-C",
+      "hac_parent": 12,
+      "experimental_bde_kcal_mol": 88.2
+    },
+    {
+      "observation_id": "bond_observation_0080",
+      "parent_structure_smiles": "C1CCC(C2CCCCC2)CC1",
+      "bond_class": "C-H",
+      "hac_parent": 12,
+      "experimental_bde_kcal_mol": 92.3
+    },
+    {
+      "observation_id": "bond_observation_0082",
+      "parent_structure_smiles": "C1CCCC1",
+      "bond_class": "C-H",
+      "hac_parent": 5,
+      "experimental_bde_kcal_mol": 95.6
+    },
+    {
+      "observation_id": "bond_observation_0087",
+      "parent_structure_smiles": "C1CCCCCCCCCC1",
+      "bond_class": "C-H",
+      "hac_parent": 11,
+      "experimental_bde_kcal_mol": 96.7
+    },
+    {
+      "observation_id": "bond_observation_0088",
+      "parent_structure_smiles": "C1CCCCCCCCCCC1",
+      "bond_class": "C-H",
+      "hac_parent": 12,
+      "experimental_bde_kcal_mol": 98.0
+    },
+    {
+      "observation_id": "bond_observation_0092",
+      "parent_structure_smiles": "C=C(C)C(C)C",
+      "bond_class": "C-C",
+      "hac_parent": 6,
+      "experimental_bde_kcal_mol": 92.0
+    },
+    {
+      "observation_id": "bond_observation_0093",
+      "parent_structure_smiles": "C=C(C)C(C)C",
+      "bond_class": "C-H",
+      "hac_parent": 6,
+      "experimental_bde_kcal_mol": 83.9
+    },
+    {
+      "observation_id": "bond_observation_0104",
+      "parent_structure_smiles": "C=C1C=CCc2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 11,
+      "experimental_bde_kcal_mol": 69.0
+    },
+    {
+      "observation_id": "bond_observation_0105",
+      "parent_structure_smiles": "C=C1CC(=C)C1",
+      "bond_class": "C-H",
+      "hac_parent": 6,
+      "experimental_bde_kcal_mol": 79.3
+    },
+    {
+      "observation_id": "bond_observation_0106",
+      "parent_structure_smiles": "C=C1c2ccccc2Cc2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 15,
+      "experimental_bde_kcal_mol": 77.0
+    },
+    {
+      "observation_id": "bond_observation_0107",
+      "parent_structure_smiles": "C=C=C",
+      "bond_class": "C-H",
+      "hac_parent": 3,
+      "experimental_bde_kcal_mol": 88.7
+    },
+    {
+      "observation_id": "bond_observation_0157",
+      "parent_structure_smiles": "CC#CC(C)(C)C",
+      "bond_class": "C-C",
+      "hac_parent": 7,
+      "experimental_bde_kcal_mol": 72.5
+    },
+    {
+      "observation_id": "bond_observation_0158",
+      "parent_structure_smiles": "CC#CC(C)C",
+      "bond_class": "C-C",
+      "hac_parent": 6,
+      "experimental_bde_kcal_mol": 76.7
+    },
+    {
+      "observation_id": "bond_observation_0159",
+      "parent_structure_smiles": "CC#CC(C)C",
+      "bond_class": "C-H",
+      "hac_parent": 6,
+      "experimental_bde_kcal_mol": 82.3
+    },
+    {
+      "observation_id": "bond_observation_0175",
+      "parent_structure_smiles": "CC(C)(C)C1=CCc2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 13,
+      "experimental_bde_kcal_mol": 78.5
+    },
+    {
+      "observation_id": "bond_observation_0176",
+      "parent_structure_smiles": "CC(C)(C)C1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 17,
+      "experimental_bde_kcal_mol": 79.9
+    },
+    {
+      "observation_id": "bond_observation_0178",
+      "parent_structure_smiles": "CC(C)(C)CC1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 18,
+      "experimental_bde_kcal_mol": 73.6
+    },
+    {
+      "observation_id": "bond_observation_0180",
+      "parent_structure_smiles": "CC(C)(C)OC1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 18,
+      "experimental_bde_kcal_mol": 74.0
+    },
+    {
+      "observation_id": "bond_observation_0181",
+      "parent_structure_smiles": "CC(C)(C)c1cccc(-c2cccc(C(C)(C)C)c2O)c1O",
+      "bond_class": "H-O",
+      "hac_parent": 22,
+      "experimental_bde_kcal_mol": 83.1
+    },
+    {
+      "observation_id": "bond_observation_0185",
+      "parent_structure_smiles": "CC(C)(c1ccccc1)C1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 22,
+      "experimental_bde_kcal_mol": 73.8
+    },
+    {
+      "observation_id": "bond_observation_0186",
+      "parent_structure_smiles": "CC(C)(c1ccccc1)c1ccccc1",
+      "bond_class": "C-C",
+      "hac_parent": 15,
+      "experimental_bde_kcal_mol": 69.5
+    },
+    {
+      "observation_id": "bond_observation_0199",
+      "parent_structure_smiles": "CC(C)C(c1ccccc1)c1ccccc1",
+      "bond_class": "C-C",
+      "hac_parent": 16,
+      "experimental_bde_kcal_mol": 73.6
+    },
+    {
+      "observation_id": "bond_observation_0200",
+      "parent_structure_smiles": "CC(C)C1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 16,
+      "experimental_bde_kcal_mol": 77.3
+    },
+    {
+      "observation_id": "bond_observation_0215",
+      "parent_structure_smiles": "CC(C)N(C(C)C)C1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 20,
+      "experimental_bde_kcal_mol": 73.0
+    },
+    {
+      "observation_id": "bond_observation_0216",
+      "parent_structure_smiles": "CC(C)OC1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 17,
+      "experimental_bde_kcal_mol": 72.7
+    },
+    {
+      "observation_id": "bond_observation_0217",
+      "parent_structure_smiles": "CC(C)c1ccc(C(C)(C)C)cc1",
+      "bond_class": "C-H",
+      "hac_parent": 13,
+      "experimental_bde_kcal_mol": 83.5
+    },
+    {
+      "observation_id": "bond_observation_0224",
+      "parent_structure_smiles": "CC(c1ccccc1)c1ccccc1",
+      "bond_class": "C-C",
+      "hac_parent": 14,
+      "experimental_bde_kcal_mol": 75.5
+    },
+    {
+      "observation_id": "bond_observation_0225",
+      "parent_structure_smiles": "CC(c1ccccc1)c1ccccc1",
+      "bond_class": "C-H",
+      "hac_parent": 14,
+      "experimental_bde_kcal_mol": 82.8
+    },
+    {
+      "observation_id": "bond_observation_0228",
+      "parent_structure_smiles": "CC1(C)CC(C)(C)N1C1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 21,
+      "experimental_bde_kcal_mol": 71.0
+    },
+    {
+      "observation_id": "bond_observation_0229",
+      "parent_structure_smiles": "CC1(C)CCCC(C)(C)N1C1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 23,
+      "experimental_bde_kcal_mol": 71.0
+    },
+    {
+      "observation_id": "bond_observation_0230",
+      "parent_structure_smiles": "CC1=C(C)C(C)C(C)=C1C",
+      "bond_class": "C-H",
+      "hac_parent": 10,
+      "experimental_bde_kcal_mol": 77.0
+    },
+    {
+      "observation_id": "bond_observation_0238",
+      "parent_structure_smiles": "CC1CC(C)N1C1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 19,
+      "experimental_bde_kcal_mol": 72.0
+    },
+    {
+      "observation_id": "bond_observation_0242",
+      "parent_structure_smiles": "CC1CCCC(C)N1C1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 21,
+      "experimental_bde_kcal_mol": 72.0
+    },
+    {
+      "observation_id": "bond_observation_0250",
+      "parent_structure_smiles": "CC1CCCc2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 11,
+      "experimental_bde_kcal_mol": 80.4
+    },
+    {
+      "observation_id": "bond_observation_0251",
+      "parent_structure_smiles": "CC1CCc2ccccc2C1C",
+      "bond_class": "C-H",
+      "hac_parent": 12,
+      "experimental_bde_kcal_mol": 80.5
+    },
+    {
+      "observation_id": "bond_observation_0253",
+      "parent_structure_smiles": "CC1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 14,
+      "experimental_bde_kcal_mol": 78.5
+    },
+    {
+      "observation_id": "bond_observation_0254",
+      "parent_structure_smiles": "CC1c2ccccc2C(C)c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 16,
+      "experimental_bde_kcal_mol": 78.1
+    },
+    {
+      "observation_id": "bond_observation_0283",
+      "parent_structure_smiles": "CCC(C)C1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 17,
+      "experimental_bde_kcal_mol": 75.1
+    },
+    {
+      "observation_id": "bond_observation_0300",
+      "parent_structure_smiles": "CCC1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 15,
+      "experimental_bde_kcal_mol": 76.2
+    },
+    {
+      "observation_id": "bond_observation_0323",
+      "parent_structure_smiles": "CCCC1c2ccccc2-c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 16,
+      "experimental_bde_kcal_mol": 76.1
+    },
+    {
+      "observation_id": "bond_observation_0366",
+      "parent_structure_smiles": "CCCCCCCCCCCC",
+      "bond_class": "C-C",
+      "hac_parent": 12,
+      "experimental_bde_kcal_mol": 85.0
+    },
+    {
+      "observation_id": "bond_observation_0381",
+      "parent_structure_smiles": "CCOC(=O)c1ccc(C)cc1",
+      "bond_class": "C-H",
+      "hac_parent": 12,
+      "experimental_bde_kcal_mol": 89.4
+    }
+  ],
+  "4_foreign_element_examples": [],
+  "5_within_domain_exhaustiveness": {
+    "benchmark_parent_in_db": 369,
+    "of_those_exact_fragment_pair_present": 331,
+    "of_those_exact_fragment_pair_absent": 38,
+    "pct_exact_when_parent_present": 89.7019,
+    "pct_pair_absent_when_parent_present": 10.2981,
+    "parent_present_pair_absent_pct_of_all_benchmark": 6.9982,
+    "combined_exact_coverage_of_benchmark_pct": 60.9576
+  },
+  "5_missing_pair_examples": [
+    {
+      "observation_id": "bond_observation_0007",
+      "parent_structure_smiles": "C#CC#C",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "[C]#CC#C",
+      "bond_class": "C-H",
+      "hac_parent": 4,
+      "db_pairs_for_parent": 1,
+      "experimental_bde_kcal_mol": 128.8
+    },
+    {
+      "observation_id": "bond_observation_0075",
+      "parent_structure_smiles": "C1CC2CCC1C2",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "[CH]1CC2CCC1C2",
+      "bond_class": "C-H",
+      "hac_parent": 7,
+      "db_pairs_for_parent": 2,
+      "experimental_bde_kcal_mol": 99.1
+    },
+    {
+      "observation_id": "bond_observation_0108",
+      "parent_structure_smiles": "C=C=CC",
+      "fragment_a_smiles": "[CH3]",
+      "fragment_b_smiles": "[CH]=C=C",
+      "bond_class": "C-C",
+      "hac_parent": 4,
+      "db_pairs_for_parent": 2,
+      "experimental_bde_kcal_mol": 86.0
+    },
+    {
+      "observation_id": "bond_observation_0119",
+      "parent_structure_smiles": "C=CC(C)C=C",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "C=C[C](C)C=C",
+      "bond_class": "C-H",
+      "hac_parent": 6,
+      "db_pairs_for_parent": 3,
+      "experimental_bde_kcal_mol": 76.6
+    },
+    {
+      "observation_id": "bond_observation_0120",
+      "parent_structure_smiles": "C=CC(C)CC",
+      "fragment_a_smiles": "C=C[CH]C",
+      "fragment_b_smiles": "[CH2]C",
+      "bond_class": "C-C",
+      "hac_parent": 6,
+      "db_pairs_for_parent": 5,
+      "experimental_bde_kcal_mol": 70.8
+    },
+    {
+      "observation_id": "bond_observation_0124",
+      "parent_structure_smiles": "C=CC=C",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "C=[C]C=C",
+      "bond_class": "C-H",
+      "hac_parent": 4,
+      "db_pairs_for_parent": 1,
+      "experimental_bde_kcal_mol": 102.2
+    },
+    {
+      "observation_id": "bond_observation_0170",
+      "parent_structure_smiles": "CC(C(=O)O)C(C)C(=O)O",
+      "fragment_a_smiles": "C[CH]C(=O)O",
+      "fragment_b_smiles": "C[CH]C(=O)O",
+      "bond_class": "C-C",
+      "hac_parent": 10,
+      "db_pairs_for_parent": 3,
+      "experimental_bde_kcal_mol": 66.7
+    },
+    {
+      "observation_id": "bond_observation_0189",
+      "parent_structure_smiles": "CC(C)=C1C=CC=C1",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "[CH2]C(C)=C1C=CC=C1",
+      "bond_class": "C-H",
+      "hac_parent": 8,
+      "db_pairs_for_parent": 3,
+      "experimental_bde_kcal_mol": 84.5
+    },
+    {
+      "observation_id": "bond_observation_0198",
+      "parent_structure_smiles": "CC(C)C(C)O",
+      "fragment_a_smiles": "C[CH]O",
+      "fragment_b_smiles": "C[CH]C",
+      "bond_class": "C-C",
+      "hac_parent": 6,
+      "db_pairs_for_parent": 3,
+      "experimental_bde_kcal_mol": 83.9
+    },
+    {
+      "observation_id": "bond_observation_0221",
+      "parent_structure_smiles": "CC(N)C(=O)O",
+      "fragment_a_smiles": "O=[C]O",
+      "fragment_b_smiles": "C[CH]N",
+      "bond_class": "C-C",
+      "hac_parent": 6,
+      "db_pairs_for_parent": 3,
+      "experimental_bde_kcal_mol": 79.2
+    },
+    {
+      "observation_id": "bond_observation_0222",
+      "parent_structure_smiles": "CC(O)C(C)O",
+      "fragment_a_smiles": "C[CH]O",
+      "fragment_b_smiles": "C[CH]O",
+      "bond_class": "C-C",
+      "hac_parent": 6,
+      "db_pairs_for_parent": 2,
+      "experimental_bde_kcal_mol": 90.5
+    },
+    {
+      "observation_id": "bond_observation_0223",
+      "parent_structure_smiles": "CC(O)CO",
+      "fragment_a_smiles": "C[CH]O",
+      "fragment_b_smiles": "[CH2]O",
+      "bond_class": "C-C",
+      "hac_parent": 5,
+      "db_pairs_for_parent": 5,
+      "experimental_bde_kcal_mol": 86.2
+    },
+    {
+      "observation_id": "bond_observation_0235",
+      "parent_structure_smiles": "CC1C=CCC1",
+      "fragment_a_smiles": "[CH3]",
+      "fragment_b_smiles": "[CH]1C=CCC1",
+      "bond_class": "C-C",
+      "hac_parent": 6,
+      "db_pairs_for_parent": 5,
+      "experimental_bde_kcal_mol": 71.5
+    },
+    {
+      "observation_id": "bond_observation_0236",
+      "parent_structure_smiles": "CC1C=CCCC1",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "C[C]1C=CCCC1",
+      "bond_class": "C-H",
+      "hac_parent": 7,
+      "db_pairs_for_parent": 6,
+      "experimental_bde_kcal_mol": 79.5
+    },
+    {
+      "observation_id": "bond_observation_0237",
+      "parent_structure_smiles": "CC1C=Cc2ccccc21",
+      "fragment_a_smiles": "[CH3]",
+      "fragment_b_smiles": "[CH]1C=Cc2ccccc21",
+      "bond_class": "C-C",
+      "hac_parent": 10,
+      "db_pairs_for_parent": 7,
+      "experimental_bde_kcal_mol": 72.4
+    },
+    {
+      "observation_id": "bond_observation_0239",
+      "parent_structure_smiles": "CC1CC1",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "[CH2]C1CC1",
+      "bond_class": "C-H",
+      "hac_parent": 4,
+      "db_pairs_for_parent": 2,
+      "experimental_bde_kcal_mol": 97.4
+    },
+    {
+      "observation_id": "bond_observation_0241",
+      "parent_structure_smiles": "CC1CCC2CC1C2(C)C",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "C[C]1CCC2CC1C2(C)C",
+      "bond_class": "C-H",
+      "hac_parent": 10,
+      "db_pairs_for_parent": 5,
+      "experimental_bde_kcal_mol": 90.2
+    },
+    {
+      "observation_id": "bond_observation_0248",
+      "parent_structure_smiles": "CC1CCCCCCC1",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "C[C]1CCCCCCC1",
+      "bond_class": "C-H",
+      "hac_parent": 9,
+      "db_pairs_for_parent": 3,
+      "experimental_bde_kcal_mol": 94.4
+    },
+    {
+      "observation_id": "bond_observation_0252",
+      "parent_structure_smiles": "CC1CO1",
+      "fragment_a_smiles": "[CH3]",
+      "fragment_b_smiles": "[CH]1CO1",
+      "bond_class": "C-C",
+      "hac_parent": 4,
+      "db_pairs_for_parent": 2,
+      "experimental_bde_kcal_mol": 93.5
+    },
+    {
+      "observation_id": "bond_observation_0256",
+      "parent_structure_smiles": "CC=C=O",
+      "fragment_a_smiles": "[CH3]",
+      "fragment_b_smiles": "[CH]=C=O",
+      "bond_class": "C-C",
+      "hac_parent": 4,
+      "db_pairs_for_parent": 1,
+      "experimental_bde_kcal_mol": 93.3
+    },
+    {
+      "observation_id": "bond_observation_0280",
+      "parent_structure_smiles": "CCC(C)C(C)(C)C",
+      "fragment_a_smiles": "C[C](C)C",
+      "fragment_b_smiles": "C[CH]CC",
+      "bond_class": "C-C",
+      "hac_parent": 8,
+      "db_pairs_for_parent": 6,
+      "experimental_bde_kcal_mol": 80.4
+    },
+    {
+      "observation_id": "bond_observation_0281",
+      "parent_structure_smiles": "CCC(C)C(C)C",
+      "fragment_a_smiles": "C[CH]CC",
+      "fragment_b_smiles": "C[CH]C",
+      "bond_class": "C-C",
+      "hac_parent": 7,
+      "db_pairs_for_parent": 6,
+      "experimental_bde_kcal_mol": 84.7
+    },
+    {
+      "observation_id": "bond_observation_0282",
+      "parent_structure_smiles": "CCC(C)C(C)CC",
+      "fragment_a_smiles": "C[CH]CC",
+      "fragment_b_smiles": "C[CH]CC",
+      "bond_class": "C-C",
+      "hac_parent": 8,
+      "db_pairs_for_parent": 3,
+      "experimental_bde_kcal_mol": 83.3
+    },
+    {
+      "observation_id": "bond_observation_0287",
+      "parent_structure_smiles": "CCC(C)CC(C)C",
+      "fragment_a_smiles": "C[CH]CC",
+      "fragment_b_smiles": "[CH2]C(C)C",
+      "bond_class": "C-C",
+      "hac_parent": 8,
+      "db_pairs_for_parent": 8,
+      "experimental_bde_kcal_mol": 85.3
+    },
+    {
+      "observation_id": "bond_observation_0288",
+      "parent_structure_smiles": "CCC(C)CO",
+      "fragment_a_smiles": "[CH2]O",
+      "fragment_b_smiles": "C[CH]CC",
+      "bond_class": "C-C",
+      "hac_parent": 6,
+      "db_pairs_for_parent": 7,
+      "experimental_bde_kcal_mol": 84.3
+    },
+    {
+      "observation_id": "bond_observation_0289",
+      "parent_structure_smiles": "CCC(C)O",
+      "fragment_a_smiles": "C[CH]O",
+      "fragment_b_smiles": "[CH2]C",
+      "bond_class": "C-C",
+      "hac_parent": 5,
+      "db_pairs_for_parent": 5,
+      "experimental_bde_kcal_mol": 86.0
+    },
+    {
+      "observation_id": "bond_observation_0290",
+      "parent_structure_smiles": "CCC(C)c1ccccc1",
+      "fragment_a_smiles": "[CH2]C",
+      "fragment_b_smiles": "C[CH]c1ccccc1",
+      "bond_class": "C-C",
+      "hac_parent": 10,
+      "db_pairs_for_parent": 7,
+      "experimental_bde_kcal_mol": 74.6
+    },
+    {
+      "observation_id": "bond_observation_0315",
+      "parent_structure_smiles": "CCCC(C)C(C)C",
+      "fragment_a_smiles": "C[CH]CCC",
+      "fragment_b_smiles": "C[CH]C",
+      "bond_class": "C-C",
+      "hac_parent": 8,
+      "db_pairs_for_parent": 8,
+      "experimental_bde_kcal_mol": 84.1
+    },
+    {
+      "observation_id": "bond_observation_0317",
+      "parent_structure_smiles": "CCCC(C)CC",
+      "fragment_a_smiles": "C[CH]CC",
+      "fragment_b_smiles": "[CH2]CC",
+      "bond_class": "C-C",
+      "hac_parent": 7,
+      "db_pairs_for_parent": 9,
+      "experimental_bde_kcal_mol": 85.7
+    },
+    {
+      "observation_id": "bond_observation_0318",
+      "parent_structure_smiles": "CCCC(C)CC",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "CCC[C](C)CC",
+      "bond_class": "C-H",
+      "hac_parent": 7,
+      "db_pairs_for_parent": 9,
+      "experimental_bde_kcal_mol": 94.9
+    },
+    {
+      "observation_id": "bond_observation_0319",
+      "parent_structure_smiles": "CCCC(C)O",
+      "fragment_a_smiles": "C[CH]O",
+      "fragment_b_smiles": "[CH2]CC",
+      "bond_class": "C-C",
+      "hac_parent": 6,
+      "db_pairs_for_parent": 7,
+      "experimental_bde_kcal_mol": 86.1
+    },
+    {
+      "observation_id": "bond_observation_0350",
+      "parent_structure_smiles": "CCCCCC(C)CC",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "CCCCC[C](C)CC",
+      "bond_class": "C-H",
+      "hac_parent": 9,
+      "db_pairs_for_parent": 13,
+      "experimental_bde_kcal_mol": 94.8
+    },
+    {
+      "observation_id": "bond_observation_0429",
+      "parent_structure_smiles": "C[C@@H]1CCC[C@@H](C)C1",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "C[C]1CCC[C@@H](C)C1",
+      "bond_class": "C-H",
+      "hac_parent": 8,
+      "db_pairs_for_parent": 4,
+      "experimental_bde_kcal_mol": 93.3
+    },
+    {
+      "observation_id": "bond_observation_0430",
+      "parent_structure_smiles": "C[C@H]1CCCC[C@@H]1C",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "C[C]1CCCC[C@@H]1C",
+      "bond_class": "C-H",
+      "hac_parent": 8,
+      "db_pairs_for_parent": 3,
+      "experimental_bde_kcal_mol": 97.4
+    },
+    {
+      "observation_id": "bond_observation_0431",
+      "parent_structure_smiles": "C[C@H]1CCCC[C@H]1C",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "C[C]1CCCC[C@H]1C",
+      "bond_class": "C-H",
+      "hac_parent": 8,
+      "db_pairs_for_parent": 6,
+      "experimental_bde_kcal_mol": 93.9
+    },
+    {
+      "observation_id": "bond_observation_0432",
+      "parent_structure_smiles": "C[C@H]1CCC[C@@H](C)C1",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "C[C]1CCC[C@H](C)C1",
+      "bond_class": "C-H",
+      "hac_parent": 8,
+      "db_pairs_for_parent": 6,
+      "experimental_bde_kcal_mol": 93.9
+    },
+    {
+      "observation_id": "bond_observation_0488",
+      "parent_structure_smiles": "O=C(O)C1CCCN1",
+      "fragment_a_smiles": "O=[C]O",
+      "fragment_b_smiles": "[CH]1CCCN1",
+      "bond_class": "C-C",
+      "hac_parent": 8,
+      "db_pairs_for_parent": 5,
+      "experimental_bde_kcal_mol": 74.6
+    },
+    {
+      "observation_id": "bond_observation_0530",
+      "parent_structure_smiles": "c1ccc2c(c1)C2",
+      "fragment_a_smiles": "[H]",
+      "fragment_b_smiles": "[CH]1c2ccccc21",
+      "bond_class": "C-H",
+      "hac_parent": 7,
+      "db_pairs_for_parent": 2,
+      "experimental_bde_kcal_mol": 91.1
+    }
+  ],
+  "5_missing_pair_db_pairs_per_parent": [
+    {
+      "db_fragment_pairs_for_parent": 1,
+      "n_benchmark_observations": 3
+    },
+    {
+      "db_fragment_pairs_for_parent": 2,
+      "n_benchmark_observations": 6
+    },
+    {
+      "db_fragment_pairs_for_parent": 3,
+      "n_benchmark_observations": 8
+    },
+    {
+      "db_fragment_pairs_for_parent": 4,
+      "n_benchmark_observations": 1
+    },
+    {
+      "db_fragment_pairs_for_parent": 5,
+      "n_benchmark_observations": 6
+    },
+    {
+      "db_fragment_pairs_for_parent": 6,
+      "n_benchmark_observations": 5
+    },
+    {
+      "db_fragment_pairs_for_parent": 7,
+      "n_benchmark_observations": 4
+    },
+    {
+      "db_fragment_pairs_for_parent": 8,
+      "n_benchmark_observations": 2
+    },
+    {
+      "db_fragment_pairs_for_parent": 9,
+      "n_benchmark_observations": 2
+    },
+    {
+      "db_fragment_pairs_for_parent": 13,
+      "n_benchmark_observations": 1
+    }
+  ],
+  "5_missing_pair_hac_counts": [
+    {
+      "hac": 4,
+      "n": 6
+    },
+    {
+      "hac": 5,
+      "n": 2
+    },
+    {
+      "hac": 6,
+      "n": 8
+    },
+    {
+      "hac": 7,
+      "n": 6
+    },
+    {
+      "hac": 8,
+      "n": 10
+    },
+    {
+      "hac": 9,
+      "n": 2
+    },
+    {
+      "hac": 10,
+      "n": 4
+    }
+  ],
+  "5_missing_pair_bond_class_counts": [
+    {
+      "bond_class": "C-C",
+      "n": 22
+    },
+    {
+      "bond_class": "C-H",
+      "n": 16
+    }
+  ],
+  "benchmark_bond_class_counts": [
+    {
+      "bond_class": "C-H",
+      "n_observations": 302
+    },
+    {
+      "bond_class": "C-C",
+      "n_observations": 240
+    },
+    {
+      "bond_class": "H-O",
+      "n_observations": 1
+    }
+  ],
+  "benchmark_parent_elements": [
+    "C",
+    "N",
+    "O"
+  ],
+  "db_bond_class_row_counts": [
+    {
+      "bond_class": "C-H",
+      "raw_rows": 321949
+    },
+    {
+      "bond_class": "C-C",
+      "raw_rows": 71166
+    },
+    {
+      "bond_class": "H-N",
+      "raw_rows": 27314
+    },
+    {
+      "bond_class": "C-N",
+      "raw_rows": 24707
+    },
+    {
+      "bond_class": "C-O",
+      "raw_rows": 24354
+    },
+    {
+      "bond_class": "H-O",
+      "raw_rows": 11884
+    },
+    {
+      "bond_class": "N-O",
+      "raw_rows": 1634
+    },
+    {
+      "bond_class": "N-N",
+      "raw_rows": 1597
+    },
+    {
+      "bond_class": "O-O",
+      "raw_rows": 302
+    }
+  ],
+  "5_exhaustiveness_supplement": {
+    "exhaustiveness_random_sample": {
+      "subset": "random_2000_db_molecules",
+      "n_molecules": 2000,
+      "mean_db_pairs": 6.827,
+      "mean_unique_bonds": 13.12,
+      "mean_completeness": 0.5213,
+      "median_completeness": 0.5,
+      "pct_molecules_fully_enumerated": 1.65,
+      "pct_molecules_under_half": 46.4,
+      "total_db_pairs": 13654,
+      "total_unique_bonds": 26239,
+      "pooled_completeness": 0.5204,
+      "completeness_histogram": {
+        "(0.0, 0.25]": 150,
+        "(0.25, 0.5]": 937,
+        "(0.5, 0.75]": 637,
+        "(0.75, 0.999]": 243,
+        "(0.999, 1.0]": 33
+      }
+    },
+    "exhaustiveness_benchmark_parents_in_db": {
+      "subset": "benchmark_parents_in_db",
+      "n_molecules": 259,
+      "mean_db_pairs": 5.645,
+      "mean_unique_bonds": 8.687,
+      "mean_completeness": 0.6562,
+      "median_completeness": 0.6667,
+      "pct_molecules_fully_enumerated": 10.4247,
+      "pct_molecules_under_half": 24.3243,
+      "total_db_pairs": 1462,
+      "total_unique_bonds": 2250,
+      "pooled_completeness": 0.6498,
+      "completeness_histogram": {
+        "(0.0, 0.25]": 8,
+        "(0.25, 0.5]": 80,
+        "(0.5, 0.75]": 77,
+        "(0.75, 0.999]": 67,
+        "(0.999, 1.0]": 27
+      }
+    },
+    "note": "completeness = db unique fragment pairs / symmetry-unique bonds (capped at 1.0)",
+    "benchmark_missing_pair_parent_completeness": [
+      {
+        "molecule": "C#CC#C",
+        "db_pairs": 1,
+        "unique_bonds": 3,
+        "completeness": 0.3333333333
+      },
+      {
+        "molecule": "C1CC2CCC1C2",
+        "db_pairs": 2,
+        "unique_bonds": 6,
+        "completeness": 0.3333333333
+      },
+      {
+        "molecule": "C=C=CC",
+        "db_pairs": 2,
+        "unique_bonds": 6,
+        "completeness": 0.3333333333
+      },
+      {
+        "molecule": "C=CC(C)C=C",
+        "db_pairs": 3,
+        "unique_bonds": 7,
+        "completeness": 0.4285714286
+      },
+      {
+        "molecule": "C=CC(C)CC",
+        "db_pairs": 5,
+        "unique_bonds": 11,
+        "completeness": 0.4545454545
+      },
+      {
+        "molecule": "C=CC=C",
+        "db_pairs": 1,
+        "unique_bonds": 4,
+        "completeness": 0.25
+      },
+      {
+        "molecule": "CC(C(=O)O)C(C)C(=O)O",
+        "db_pairs": 3,
+        "unique_bonds": 8,
+        "completeness": 0.375
+      },
+      {
+        "molecule": "CC(C)=C1C=CC=C1",
+        "db_pairs": 3,
+        "unique_bonds": 8,
+        "completeness": 0.375
+      },
+      {
+        "molecule": "CC(C)C(C)O",
+        "db_pairs": 3,
+        "unique_bonds": 9,
+        "completeness": 0.3333333333
+      },
+      {
+        "molecule": "CC(N)C(=O)O",
+        "db_pairs": 3,
+        "unique_bonds": 9,
+        "completeness": 0.3333333333
+      },
+      {
+        "molecule": "CC(O)C(C)O",
+        "db_pairs": 2,
+        "unique_bonds": 6,
+        "completeness": 0.3333333333
+      },
+      {
+        "molecule": "CC(O)CO",
+        "db_pairs": 5,
+        "unique_bonds": 9,
+        "completeness": 0.5555555556
+      },
+      {
+        "molecule": "CC1C=CCC1",
+        "db_pairs": 5,
+        "unique_bonds": 12,
+        "completeness": 0.4166666667
+      },
+      {
+        "molecule": "CC1C=CCCC1",
+        "db_pairs": 6,
+        "unique_bonds": 14,
+        "completeness": 0.4285714286
+      },
+      {
+        "molecule": "CC1C=Cc2ccccc21",
+        "db_pairs": 7,
+        "unique_bonds": 19,
+        "completeness": 0.3684210526
+      },
+      {
+        "molecule": "CC1CC1",
+        "db_pairs": 2,
+        "unique_bonds": 6,
+        "completeness": 0.3333333333
+      },
+      {
+        "molecule": "CC1CCC2CC1C2(C)C",
+        "db_pairs": 5,
+        "unique_bonds": 18,
+        "completeness": 0.2777777778
+      },
+      {
+        "molecule": "CC1CCCCCCC1",
+        "db_pairs": 3,
+        "unique_bonds": 11,
+        "completeness": 0.2727272727
+      },
+      {
+        "molecule": "CC1CO1",
+        "db_pairs": 2,
+        "unique_bonds": 7,
+        "completeness": 0.2857142857
+      },
+      {
+        "molecule": "CC=C=O",
+        "db_pairs": 1,
+        "unique_bonds": 5,
+        "completeness": 0.2
+      },
+      {
+        "molecule": "CCC(C)C(C)(C)C",
+        "db_pairs": 6,
+        "unique_bonds": 10,
+        "completeness": 0.6
+      },
+      {
+        "molecule": "CCC(C)C(C)C",
+        "db_pairs": 6,
+        "unique_bonds": 11,
+        "completeness": 0.5454545455
+      },
+      {
+        "molecule": "CCC(C)C(C)CC",
+        "db_pairs": 3,
+        "unique_bonds": 8,
+        "completeness": 0.375
+      },
+      {
+        "molecule": "CCC(C)CC(C)C",
+        "db_pairs": 8,
+        "unique_bonds": 13,
+        "completeness": 0.6153846154
+      },
+      {
+        "molecule": "CCC(C)CO",
+        "db_pairs": 7,
+        "unique_bonds": 11,
+        "completeness": 0.6363636364
+      },
+      {
+        "molecule": "CCC(C)O",
+        "db_pairs": 5,
+        "unique_bonds": 9,
+        "completeness": 0.5555555556
+      },
+      {
+        "molecule": "CCC(C)c1ccccc1",
+        "db_pairs": 7,
+        "unique_bonds": 14,
+        "completeness": 0.5
+      },
+      {
+        "molecule": "CCCC(C)C(C)C",
+        "db_pairs": 8,
+        "unique_bonds": 13,
+        "completeness": 0.6153846154
+      },
+      {
+        "molecule": "CCCC(C)CC",
+        "db_pairs": 9,
+        "unique_bonds": 13,
+        "completeness": 0.6923076923
+      },
+      {
+        "molecule": "CCCC(C)O",
+        "db_pairs": 7,
+        "unique_bonds": 11,
+        "completeness": 0.6363636364
+      },
+      {
+        "molecule": "CCCCCC(C)CC",
+        "db_pairs": 13,
+        "unique_bonds": 17,
+        "completeness": 0.7647058824
+      },
+      {
+        "molecule": "C[C@@H]1CCC[C@@H](C)C1",
+        "db_pairs": 4,
+        "unique_bonds": 9,
+        "completeness": 0.4444444444
+      },
+      {
+        "molecule": "C[C@H]1CCCC[C@@H]1C",
+        "db_pairs": 3,
+        "unique_bonds": 9,
+        "completeness": 0.3333333333
+      },
+      {
+        "molecule": "C[C@H]1CCCC[C@H]1C",
+        "db_pairs": 6,
+        "unique_bonds": 16,
+        "completeness": 0.375
+      },
+      {
+        "molecule": "C[C@H]1CCC[C@@H](C)C1",
+        "db_pairs": 6,
+        "unique_bonds": 16,
+        "completeness": 0.375
+      },
+      {
+        "molecule": "O=C(O)C1CCCN1",
+        "db_pairs": 5,
+        "unique_bonds": 14,
+        "completeness": 0.3571428571
+      },
+      {
+        "molecule": "c1ccc2c(c1)C2",
+        "db_pairs": 2,
+        "unique_bonds": 8,
+        "completeness": 0.25
+      }
+    ]
+  },
+  "2_inflation_drivers_by_class": [
+    {
+      "bond_class": "C-H",
+      "extra_rows": 171858,
+      "share_pct": 88.476
+    },
+    {
+      "bond_class": "C-C",
+      "extra_rows": 9676,
+      "share_pct": 4.981
+    },
+    {
+      "bond_class": "H-N",
+      "extra_rows": 9041,
+      "share_pct": 4.654
+    },
+    {
+      "bond_class": "C-N",
+      "extra_rows": 2208,
+      "share_pct": 1.137
+    },
+    {
+      "bond_class": "C-O",
+      "extra_rows": 1066,
+      "share_pct": 0.549
+    },
+    {
+      "bond_class": "H-O",
+      "extra_rows": 307,
+      "share_pct": 0.158
+    },
+    {
+      "bond_class": "N-O",
+      "extra_rows": 53,
+      "share_pct": 0.027
+    },
+    {
+      "bond_class": "N-N",
+      "extra_rows": 30,
+      "share_pct": 0.015
+    },
+    {
+      "bond_class": "O-O",
+      "extra_rows": 4,
+      "share_pct": 0.002
+    }
+  ],
+  "2_top_molecules_by_extra_rows": [
+    {
+      "molecule": "CCC(CC)=C(CC)CC",
+      "extra_rows": 24,
+      "db_rows": 28
+    },
+    {
+      "molecule": "CCCC(CCC)CCC",
+      "extra_rows": 24,
+      "db_rows": 31
+    },
+    {
+      "molecule": "C=C(C(C)(C)C)C(C)(C)C",
+      "extra_rows": 24,
+      "db_rows": 28
+    },
+    {
+      "molecule": "CCCN(CCC)CCC",
+      "extra_rows": 24,
+      "db_rows": 30
+    },
+    {
+      "molecule": "CN(C)C(N(C)C)N(C)C",
+      "extra_rows": 24,
+      "db_rows": 27
+    },
+    {
+      "molecule": "CC(C)(C)/C=C/C(C)(C)C",
+      "extra_rows": 24,
+      "db_rows": 28
+    },
+    {
+      "molecule": "CCN(CC)N(CC)CC",
+      "extra_rows": 24,
+      "db_rows": 29
+    },
+    {
+      "molecule": "CC(C)(C)N(O)C(C)(C)C",
+      "extra_rows": 23,
+      "db_rows": 28
+    },
+    {
+      "molecule": "CC(C)(C)OOC(C)(C)C",
+      "extra_rows": 23,
+      "db_rows": 27
+    },
+    {
+      "molecule": "CC(C)(C)C#CC(C)(C)C",
+      "extra_rows": 23,
+      "db_rows": 26
+    },
+    {
+      "molecule": "CC(C)(C)NC(C)(C)C",
+      "extra_rows": 23,
+      "db_rows": 27
+    },
+    {
+      "molecule": "CC(C)(C)C(=O)C(C)(C)C",
+      "extra_rows": 23,
+      "db_rows": 26
+    },
+    {
+      "molecule": "CC(C)(C)CC(C)(C)C",
+      "extra_rows": 23,
+      "db_rows": 26
+    },
+    {
+      "molecule": "CC(C)(C)C(=N)C(C)(C)C",
+      "extra_rows": 23,
+      "db_rows": 27
+    },
+    {
+      "molecule": "CN(C)CCCCN(C)C",
+      "extra_rows": 22,
+      "db_rows": 29
+    }
+  ],
+  "2_inflation_note": "A (molecule,fragment1,fragment2) unit is stored once per equivalent bond instance: symmetry-equivalent atoms (e.g. the four H of methane) yield several rows with identical fragments and identical bde. C-H has 2.145 rows per pair because methyl/methylene H atoms are numerous and symmetry-equivalent; O-O/H-O/N-N have essentially one row per pair.",
+  "4_hac_support_gap": {
+    "db_hac_values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "benchmark_hac_values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      26,
+      32,
+      35,
+      38
+    ],
+    "hac_values_only_in_benchmark": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      26,
+      32,
+      35,
+      38
+    ],
+    "benchmark_obs_above_db_max": 150,
+    "db_molecules_above_benchmark_max": 0
+  },
+  "4_out_of_db_decomposition": {
+    "total_out_of_db_observations": 174,
+    "out_of_db_unique_molecules": 160,
+    "size_incompatible_hac_gt_10": 150,
+    "size_compatible_hac_le_10_but_absent": 24,
+    "out_of_db_hac_mean": 14.7759,
+    "out_of_db_hac_median": 14.0,
+    "inside_db_hac_mean": 6.6829,
+    "inside_db_hac_median": 7.0,
+    "out_of_db_bond_class_counts": [
+      {
+        "bond_class": "C-H",
+        "n": 142
+      },
+      {
+        "bond_class": "C-C",
+        "n": 31
+      },
+      {
+        "bond_class": "H-O",
+        "n": 1
+      }
+    ],
+    "interpretation": "The benchmark extends past the database in molecular size: 150/543 observations (27.6%) have a parent with HAC 11-38 while the database stops at HAC 10. Element coverage does NOT explain any gap: every benchmark parent contains only C/N/O, which is exactly the database element set. A further 24 observations have HAC <= 10 but their parent is simply not in the database."
+  }
+}

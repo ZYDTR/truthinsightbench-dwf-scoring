@@ -1,0 +1,4 @@
+definition,peak_rate,peak_power_density
+raw argmax (all 9 points),300.0,330.0
+exclude rate 300,200.0,280.3
+implied-voltage intersection with 0.99 V floor,300.0,330.0

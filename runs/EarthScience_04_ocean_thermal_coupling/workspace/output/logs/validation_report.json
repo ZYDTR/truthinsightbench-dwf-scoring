@@ -1,0 +1,589 @@
+{
+  "schema": "truthinsightbench-semantic-output-validation",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "output": "/data/user/conversations/conv-715fe573-e9f2-40bc-ac27-f8ef02db9d25/project/output",
+  "authoritative_report": {
+    "path": "Result.md",
+    "bytes": 38773,
+    "sha256": "fe5094d14ff1b18aa99cffc7b3356cd7f249d622cdb23059a7e83a0942d0054b"
+  },
+  "registered_findings": {
+    "count": 5,
+    "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "markers": [
+      {
+        "finding_number": 1,
+        "line": 27,
+        "marker": "## Finding 1 — A single ~108.8 ka oscillation dominates the δ¹⁸O record, and it is a property of the proxy rather than of the age axis",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 2,
+        "line": 69,
+        "marker": "## Finding 2 — The oscillation's phase is stable, its period is only weakly resolved, and its amplitude is not constant",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 3,
+        "line": 100,
+        "marker": "## Finding 3 — The dual age coordinates differ only over the top 8.3% of the core and the divergence does not propagate into any record-wide result",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 4,
+        "line": 133,
+        "marker": "## Finding 4 — The ~241 ka accumulation-rate maximum is a real feature of the supplied depth-age model, but it is not evidence for a sedimentation event",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 5,
+        "line": 167,
+        "marker": "## Finding 5 — The proxy-variability/accumulation coupling is an arithmetic artefact, but accumulation rate and proxy *level* are genuinely coupled at block scale",
+        "heading_level": 2
+      }
+    ],
+    "traceability": [
+      {
+        "finding_number": 1,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/02_spectral_phase.py",
+          "analysis/04_depth_domain_spectrum.py",
+          "analysis/09_confirmations.py"
+        ],
+        "result_evidence": [
+          "figures/fig2_spectra_and_null.png",
+          "figures/fig3_phase_and_holdout.png",
+          "results/02_block_holdout.csv",
+          "results/02_periodogram.csv",
+          "results/02_spectral_phase.json",
+          "results/04_depth_domain_spectrum.json",
+          "results/04_spectra.csv",
+          "results/08_smoothing_sensitivity.json",
+          "results/09_confirmations.json",
+          "results/verify_C1.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 2,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/02_spectral_phase.py"
+        ],
+        "result_evidence": [
+          "figures/fig3_phase_and_holdout.png",
+          "results/02_sliding_window.csv",
+          "results/02_spectral_phase.json",
+          "results/verify_C1.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 3,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/01_data_profile.py",
+          "analysis/03_age_coordinate_leverage.py",
+          "analysis/09_confirmations.py",
+          "analysis/verify_C4.py"
+        ],
+        "result_evidence": [
+          "results/01_data_profile.json",
+          "results/03_age_coordinate_leverage.json",
+          "results/09_confirmations.json",
+          "results/verify_C4.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 4,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/05_lsr_excursion.py",
+          "analysis/09_confirmations.py",
+          "analysis/verify_C3.py"
+        ],
+        "result_evidence": [
+          "figures/fig1_record_and_ages.png",
+          "figures/fig4_lsr_and_change_point.png",
+          "results/05_lsr_excursion.json",
+          "results/07_coupling_scale.json",
+          "results/09_confirmations.json",
+          "results/verify_C2.json",
+          "results/verify_C3.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 5,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/07_coupling_scale.py",
+          "analysis/09_confirmations.py",
+          "analysis/11_shared_denominator_adjudication.py"
+        ],
+        "result_evidence": [
+          "figures/fig4_lsr_and_change_point.png",
+          "results/07_block_means.csv",
+          "results/07_coupling_scale.json",
+          "results/09_confirmations.json",
+          "results/11_shared_denominator_adjudication.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      }
+    ]
+  },
+  "reproduction": {
+    "mode": "companion_markdown",
+    "document": {
+      "path": "reproduce.md",
+      "bytes": 9085,
+      "sha256": "fbb9713468c757c34bc4a5c45f69e273384a269aba78800309d0ff5419811bcd"
+    }
+  },
+  "analysis_sources": [
+    {
+      "path": "analysis/01_data_profile.py",
+      "bytes": 6809,
+      "sha256": "07c89da5423b9f1dca54b30dec52be384db5ed12731c2df4d40884d140c6f913"
+    },
+    {
+      "path": "analysis/02_spectral_phase.py",
+      "bytes": 11199,
+      "sha256": "7de6eb5a122ef0763f0e0d44f4cec5d47f6981ea9c4f9a7c6d7383f8dfd715c9"
+    },
+    {
+      "path": "analysis/03_age_coordinate_leverage.py",
+      "bytes": 15195,
+      "sha256": "f98ae432fe0ae854c2dd65a8468f9754c881c4700568f5ed62f144f760035162"
+    },
+    {
+      "path": "analysis/04_depth_domain_spectrum.py",
+      "bytes": 21604,
+      "sha256": "8ebe3726a69b7f1676131ed76951b6f6c2d20276890c823d34bd55f8853ec341"
+    },
+    {
+      "path": "analysis/05_lsr_excursion.py",
+      "bytes": 16014,
+      "sha256": "b684ff369afb74eae4734201ff31ba98fee00184e819a7fb0931e3dc65452210"
+    },
+    {
+      "path": "analysis/06_transition_structure.py",
+      "bytes": 18437,
+      "sha256": "acfb5be41cb84127a0bad3ef4ff8c212e3d6e9795c489c60ac0905ba5b70579b"
+    },
+    {
+      "path": "analysis/07_coupling_scale.py",
+      "bytes": 26355,
+      "sha256": "5ef5a46437db3cdcbfca5f80b77584bd28a774bb68ab3151da6b8221b29009c2"
+    },
+    {
+      "path": "analysis/08_smoothing_sensitivity.py",
+      "bytes": 23610,
+      "sha256": "a737c121c6a38b58da01601383b39855837297daecf242d863b1ae38dff182a8"
+    },
+    {
+      "path": "analysis/09_confirmations.py",
+      "bytes": 15830,
+      "sha256": "2c14a26f87a3d8ba3d5f5719a367e044fde60fe384a2820e51e2dcb3bd7bc14a"
+    },
+    {
+      "path": "analysis/10_figures.py",
+      "bytes": 7972,
+      "sha256": "8d81cc03f96790129542fea86bfc08a8ad4a6868593408b8f4b90da9f29315be"
+    },
+    {
+      "path": "analysis/11_shared_denominator_adjudication.py",
+      "bytes": 6335,
+      "sha256": "9b5d74540029e3ad396ab5f9ee169ef4fabaeb324a726d68d2fe68f34f01920b"
+    },
+    {
+      "path": "analysis/verify_C1.py",
+      "bytes": 26087,
+      "sha256": "c29860ab0ad5c3f182bf72b2d15a3cc12e2f1e796ad2960b5b03449bc1a99855"
+    },
+    {
+      "path": "analysis/verify_C2.py",
+      "bytes": 17200,
+      "sha256": "ab15dca9257e18342ab4092bca57eb9b9bfa18086ddd6159a55da16e26da7a99"
+    },
+    {
+      "path": "analysis/verify_C3.py",
+      "bytes": 14701,
+      "sha256": "ff0138e29670fcc56fa1cc834cb2b979bcd274093ceaaa380e67545f6a4c4c15"
+    },
+    {
+      "path": "analysis/verify_C4.py",
+      "bytes": 25810,
+      "sha256": "31aa511635af8bb4f3dc90ec102a786e53e7a9d65f6d04122073f7ed8e624b42"
+    },
+    {
+      "path": "analysis/verify_C5.py",
+      "bytes": 20415,
+      "sha256": "a71cf36a274c79db28de23f5a807b6a14c5e01d29bcda229ee38c99279e81863"
+    }
+  ],
+  "executed_notebooks": [],
+  "result_artifacts": [
+    {
+      "path": "figures/fig1_record_and_ages.png",
+      "bytes": 229596,
+      "sha256": "df426065874dbed4766960d9ec7cf73c4b56033415f50e787179e497a9f548d1"
+    },
+    {
+      "path": "figures/fig2_spectra_and_null.png",
+      "bytes": 151532,
+      "sha256": "65bdf481f38f6303f70ad669d0b51bb890875096263809a3183482708ff19ec3"
+    },
+    {
+      "path": "figures/fig3_phase_and_holdout.png",
+      "bytes": 125937,
+      "sha256": "de19c4fe2ed8ed17172adf8327896a9db67acde69e1a1728a3d8371949ab99e5"
+    },
+    {
+      "path": "figures/fig4_lsr_and_change_point.png",
+      "bytes": 178108,
+      "sha256": "b24e8bf567fe1564f40c726e51f1382c774314a47f33bdc6e420cc9e4ab5c3c6"
+    },
+    {
+      "path": "results/01_data_profile.json",
+      "bytes": 3641,
+      "sha256": "c6a83accee751d784fe7ad94ee31ed2b065fa0104f34253416c34e0942f28f98"
+    },
+    {
+      "path": "results/01_depth_series.csv",
+      "bytes": 14156,
+      "sha256": "837fba91173998026d2c83b94b5df5a1f8b0517404c5374601dd4119c9482929"
+    },
+    {
+      "path": "results/02_block_holdout.csv",
+      "bytes": 871,
+      "sha256": "d45a7e8ce6ad528b6095903ac33534e85dc91cdc44190aabd17861bced130f1c"
+    },
+    {
+      "path": "results/02_periodogram.csv",
+      "bytes": 316330,
+      "sha256": "d568a496b35dbfca0b96138ed47f894a4e6825301ac7e2354a4a23dd084b6edb"
+    },
+    {
+      "path": "results/02_sliding_window.csv",
+      "bytes": 2483,
+      "sha256": "b599935f20c8f7e7f5ed8ceb3bcaf1d6ca80a0b59f256368bb6d0166dddbbf3e"
+    },
+    {
+      "path": "results/02_spectral_phase.json",
+      "bytes": 4450,
+      "sha256": "f155aadfa34e7e3e8b908ea1f34c2718e99546ad86a96e1f69ad9cd2a8d76953"
+    },
+    {
+      "path": "results/03_age_coordinate_leverage.json",
+      "bytes": 4953,
+      "sha256": "49ea9d47a3cfae27eff954393cfbce1192b7aa310dbb953ef8e7865d44121fc8"
+    },
+    {
+      "path": "results/04_depth_domain_spectrum.json",
+      "bytes": 5691,
+      "sha256": "ef2f93f3b5d4372164b83c4a33ad24c935f4bfe64b9e741b6a49b7b3149987df"
+    },
+    {
+      "path": "results/04_spectra.csv",
+      "bytes": 517736,
+      "sha256": "17d970f81f0a1967a8c28475c359894b62f684a4e95cffa81a9d21433548fa16"
+    },
+    {
+      "path": "results/05_lsr_excursion.json",
+      "bytes": 16998,
+      "sha256": "0b7cd1dc31ee4f5ba50f77f6dfc07d128fd6747efaadcae6840d30e75efb71f6"
+    },
+    {
+      "path": "results/06_transition_structure.json",
+      "bytes": 7538,
+      "sha256": "b8432031caf642d745558504d2dbe916effac0e0e40a13218fb68d42b11abb33"
+    },
+    {
+      "path": "results/07_block_means.csv",
+      "bytes": 20998,
+      "sha256": "9e453034ea58f6def10de2d2e4dc63dd568091b1940ddbe13102ef2fd80a09ae"
+    },
+    {
+      "path": "results/07_coupling_scale.json",
+      "bytes": 25290,
+      "sha256": "57aeae4ccbaf704662cc0afde29a2c4a5a9fc7c6884b3fdd5a958399c75277ed"
+    },
+    {
+      "path": "results/08_scan_curves.csv",
+      "bytes": 2764272,
+      "sha256": "0a12e9503aa81c80dc1a7d3fb06e2089d56689e7c2d41c76e642e610278db6b7"
+    },
+    {
+      "path": "results/08_smoothing_sensitivity.json",
+      "bytes": 18570,
+      "sha256": "376c5bd7d0a68278f4555181ab963e14cf61fa1b586922df3995311cb26149b7"
+    },
+    {
+      "path": "results/09_confirmations.json",
+      "bytes": 9295,
+      "sha256": "f6328e26ff61b5cb5299f44e5732d2984faa30f7dfd7cd4d377ad38ede124e75"
+    },
+    {
+      "path": "results/11_shared_denominator_adjudication.json",
+      "bytes": 2685,
+      "sha256": "99276114db1c195b8bc3971e62ba5220c2649930eb442e818d2bb64e7db782ef"
+    },
+    {
+      "path": "results/verify_C1.json",
+      "bytes": 22075,
+      "sha256": "2b7afcbf7e75189e367857f3672d08728a407767d4a3c89bf370c1bf6f3bc0ee"
+    },
+    {
+      "path": "results/verify_C1_windows_W100_step10.csv",
+      "bytes": 2218,
+      "sha256": "7ba971f864539763b82def485b5057e0bcf2b4c04e74e7589b162d85fa8a490e"
+    },
+    {
+      "path": "results/verify_C1_windows_W120_step10.csv",
+      "bytes": 2054,
+      "sha256": "748a1e449e4fb8efc38d038a6b60b54cd9a2848a5bf219b242d19ec0bbdfcd60"
+    },
+    {
+      "path": "results/verify_C1_windows_W120_step20.csv",
+      "bytes": 1077,
+      "sha256": "562cf904f2abb4b91f2093a734c4e5f7efcef59217e41224239cd7c7e6c61dce"
+    },
+    {
+      "path": "results/verify_C1_windows_W150_step10.csv",
+      "bytes": 1811,
+      "sha256": "e1540b851c180d3e63ae61c49dd0d5a93f245e764ef94b4cb2d720005d24f01a"
+    },
+    {
+      "path": "results/verify_C1_windows_W150_step20.csv",
+      "bytes": 991,
+      "sha256": "f815eb8bdcfe01f30e7c16805ed433028cbfe6d6bbe4de63756e80a2ca715f41"
+    },
+    {
+      "path": "results/verify_C1_windows_W180_step10.csv",
+      "bytes": 1560,
+      "sha256": "ea1834d91f304d46dc789f3f27b82cbc6682a88c090a725aa9f80fb465498d67"
+    },
+    {
+      "path": "results/verify_C1_windows_W180_step20.csv",
+      "bytes": 826,
+      "sha256": "0a2c0f6f6c5d40de9582858995e9c3814f80130fef16852c4fe27cf9ac24aaf9"
+    },
+    {
+      "path": "results/verify_C1_windows_W210_step10.csv",
+      "bytes": 1316,
+      "sha256": "257b1275d89c8da636d913e461a58918926fe2187f89bd6ce8de7b2f8fb4fb10"
+    },
+    {
+      "path": "results/verify_C1_windows_W250_step10.csv",
+      "bytes": 982,
+      "sha256": "7c1750887db97430238d78d7886c88cf012c83343eda5dc9239a6d60d0821199"
+    },
+    {
+      "path": "results/verify_C2.json",
+      "bytes": 8403,
+      "sha256": "11685b4030233cb81718c9cf4cc7635bb43051ffb848cf66fea849d589f302c1"
+    },
+    {
+      "path": "results/verify_C3.json",
+      "bytes": 15914,
+      "sha256": "1c0caab7f11a2a5bcfe63fc41edd8359e39a4fc4dcac3fd1da46c338881adf3f"
+    },
+    {
+      "path": "results/verify_C3_lsr.csv",
+      "bytes": 76498,
+      "sha256": "2659926cee3fe713a3a6e9d59e5283ed35b44e8f1308ebb90da5bedeb096ac85"
+    },
+    {
+      "path": "results/verify_C4.json",
+      "bytes": 22691,
+      "sha256": "0a2f4d1140ece8024543f325f2a49c8f44c32578ddc90eed6ecadf5ff527110a"
+    },
+    {
+      "path": "results/verify_C5.json",
+      "bytes": 8589,
+      "sha256": "03a22ac5885ea5dc339597bc273e5dcfc1fc40038d2651205b0fafefa7321095"
+    }
+  ],
+  "native_evidence_registry": {
+    "sources": [],
+    "resolved_ids": {}
+  },
+  "resolved_support_files": [
+    {
+      "path": "analysis/01_data_profile.py",
+      "bytes": 6809,
+      "sha256": "07c89da5423b9f1dca54b30dec52be384db5ed12731c2df4d40884d140c6f913"
+    },
+    {
+      "path": "analysis/02_spectral_phase.py",
+      "bytes": 11199,
+      "sha256": "7de6eb5a122ef0763f0e0d44f4cec5d47f6981ea9c4f9a7c6d7383f8dfd715c9"
+    },
+    {
+      "path": "analysis/03_age_coordinate_leverage.py",
+      "bytes": 15195,
+      "sha256": "f98ae432fe0ae854c2dd65a8468f9754c881c4700568f5ed62f144f760035162"
+    },
+    {
+      "path": "analysis/04_depth_domain_spectrum.py",
+      "bytes": 21604,
+      "sha256": "8ebe3726a69b7f1676131ed76951b6f6c2d20276890c823d34bd55f8853ec341"
+    },
+    {
+      "path": "analysis/05_lsr_excursion.py",
+      "bytes": 16014,
+      "sha256": "b684ff369afb74eae4734201ff31ba98fee00184e819a7fb0931e3dc65452210"
+    },
+    {
+      "path": "analysis/07_coupling_scale.py",
+      "bytes": 26355,
+      "sha256": "5ef5a46437db3cdcbfca5f80b77584bd28a774bb68ab3151da6b8221b29009c2"
+    },
+    {
+      "path": "analysis/09_confirmations.py",
+      "bytes": 15830,
+      "sha256": "2c14a26f87a3d8ba3d5f5719a367e044fde60fe384a2820e51e2dcb3bd7bc14a"
+    },
+    {
+      "path": "analysis/11_shared_denominator_adjudication.py",
+      "bytes": 6335,
+      "sha256": "9b5d74540029e3ad396ab5f9ee169ef4fabaeb324a726d68d2fe68f34f01920b"
+    },
+    {
+      "path": "analysis/verify_C3.py",
+      "bytes": 14701,
+      "sha256": "ff0138e29670fcc56fa1cc834cb2b979bcd274093ceaaa380e67545f6a4c4c15"
+    },
+    {
+      "path": "analysis/verify_C4.py",
+      "bytes": 25810,
+      "sha256": "31aa511635af8bb4f3dc90ec102a786e53e7a9d65f6d04122073f7ed8e624b42"
+    },
+    {
+      "path": "figures/fig1_record_and_ages.png",
+      "bytes": 229596,
+      "sha256": "df426065874dbed4766960d9ec7cf73c4b56033415f50e787179e497a9f548d1"
+    },
+    {
+      "path": "figures/fig2_spectra_and_null.png",
+      "bytes": 151532,
+      "sha256": "65bdf481f38f6303f70ad669d0b51bb890875096263809a3183482708ff19ec3"
+    },
+    {
+      "path": "figures/fig3_phase_and_holdout.png",
+      "bytes": 125937,
+      "sha256": "de19c4fe2ed8ed17172adf8327896a9db67acde69e1a1728a3d8371949ab99e5"
+    },
+    {
+      "path": "figures/fig4_lsr_and_change_point.png",
+      "bytes": 178108,
+      "sha256": "b24e8bf567fe1564f40c726e51f1382c774314a47f33bdc6e420cc9e4ab5c3c6"
+    },
+    {
+      "path": "results/01_data_profile.json",
+      "bytes": 3641,
+      "sha256": "c6a83accee751d784fe7ad94ee31ed2b065fa0104f34253416c34e0942f28f98"
+    },
+    {
+      "path": "results/02_block_holdout.csv",
+      "bytes": 871,
+      "sha256": "d45a7e8ce6ad528b6095903ac33534e85dc91cdc44190aabd17861bced130f1c"
+    },
+    {
+      "path": "results/02_periodogram.csv",
+      "bytes": 316330,
+      "sha256": "d568a496b35dbfca0b96138ed47f894a4e6825301ac7e2354a4a23dd084b6edb"
+    },
+    {
+      "path": "results/02_sliding_window.csv",
+      "bytes": 2483,
+      "sha256": "b599935f20c8f7e7f5ed8ceb3bcaf1d6ca80a0b59f256368bb6d0166dddbbf3e"
+    },
+    {
+      "path": "results/02_spectral_phase.json",
+      "bytes": 4450,
+      "sha256": "f155aadfa34e7e3e8b908ea1f34c2718e99546ad86a96e1f69ad9cd2a8d76953"
+    },
+    {
+      "path": "results/03_age_coordinate_leverage.json",
+      "bytes": 4953,
+      "sha256": "49ea9d47a3cfae27eff954393cfbce1192b7aa310dbb953ef8e7865d44121fc8"
+    },
+    {
+      "path": "results/04_depth_domain_spectrum.json",
+      "bytes": 5691,
+      "sha256": "ef2f93f3b5d4372164b83c4a33ad24c935f4bfe64b9e741b6a49b7b3149987df"
+    },
+    {
+      "path": "results/04_spectra.csv",
+      "bytes": 517736,
+      "sha256": "17d970f81f0a1967a8c28475c359894b62f684a4e95cffa81a9d21433548fa16"
+    },
+    {
+      "path": "results/05_lsr_excursion.json",
+      "bytes": 16998,
+      "sha256": "0b7cd1dc31ee4f5ba50f77f6dfc07d128fd6747efaadcae6840d30e75efb71f6"
+    },
+    {
+      "path": "results/07_block_means.csv",
+      "bytes": 20998,
+      "sha256": "9e453034ea58f6def10de2d2e4dc63dd568091b1940ddbe13102ef2fd80a09ae"
+    },
+    {
+      "path": "results/07_coupling_scale.json",
+      "bytes": 25290,
+      "sha256": "57aeae4ccbaf704662cc0afde29a2c4a5a9fc7c6884b3fdd5a958399c75277ed"
+    },
+    {
+      "path": "results/08_smoothing_sensitivity.json",
+      "bytes": 18570,
+      "sha256": "376c5bd7d0a68278f4555181ab963e14cf61fa1b586922df3995311cb26149b7"
+    },
+    {
+      "path": "results/09_confirmations.json",
+      "bytes": 9295,
+      "sha256": "f6328e26ff61b5cb5299f44e5732d2984faa30f7dfd7cd4d377ad38ede124e75"
+    },
+    {
+      "path": "results/11_shared_denominator_adjudication.json",
+      "bytes": 2685,
+      "sha256": "99276114db1c195b8bc3971e62ba5220c2649930eb442e818d2bb64e7db782ef"
+    },
+    {
+      "path": "results/verify_C1.json",
+      "bytes": 22075,
+      "sha256": "2b7afcbf7e75189e367857f3672d08728a407767d4a3c89bf370c1bf6f3bc0ee"
+    },
+    {
+      "path": "results/verify_C2.json",
+      "bytes": 8403,
+      "sha256": "11685b4030233cb81718c9cf4cc7635bb43051ffb848cf66fea849d589f302c1"
+    },
+    {
+      "path": "results/verify_C3.json",
+      "bytes": 15914,
+      "sha256": "1c0caab7f11a2a5bcfe63fc41edd8359e39a4fc4dcac3fd1da46c338881adf3f"
+    },
+    {
+      "path": "results/verify_C4.json",
+      "bytes": 22691,
+      "sha256": "0a2f4d1140ece8024543f325f2a49c8f44c32578ddc90eed6ecadf5ff527110a"
+    }
+  ]
+}

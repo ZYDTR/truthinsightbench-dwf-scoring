@@ -1,0 +1,77 @@
+{
+  "data_sha256": "5ac24d314d68196e470235dc728ed233a6d299b508b2eb6ff0d094463d4fb94d",
+  "rows": 1931,
+  "columns": 9,
+  "missing_counts": {
+    "c01_depth_top_m": 0,
+    "c02_depth_ice_snow_m": 0,
+    "c03_samp_thick_cm": 0,
+    "c04_sulfate_ug_kg": 1,
+    "c05_density_ice_g_cm_3": 0,
+    "c06_depth_w_e_m": 0,
+    "c08_age_a_ad_ce": 1916,
+    "c09_age_ka_bp": 1916,
+    "c07_signal": 1916
+  },
+  "c02_minus_c01": {
+    "min": 0.0,
+    "max": 0.020000000000003126,
+    "mean": 0.010616261004660798,
+    "n_exact_zero": 11,
+    "n_within_1cm": 1801,
+    "n_within_2cm": 1931,
+    "distinct_rounded_mm": [
+      0,
+      10,
+      20
+    ]
+  },
+  "depth_vs_cum_thickness": {
+    "breakpoint_row": 106,
+    "breakpoint_depth_m": 2.97,
+    "step_size_m": 1.0079783737399128,
+    "residual_no_step_max_abs_m": 1.0207000000000264,
+    "residual_with_step_max_abs_m": 0.016278373739925467,
+    "residual_with_step_sd_m": 0.00619053316753669,
+    "span_m": 41.98
+  },
+  "water_equivalent": {
+    "product_max_abs_residual_m": 0.03031999999999968,
+    "product_max_relative_error_pct": 43.0,
+    "density_integral_max_abs_residual_m": 5.838229999999985,
+    "density_integral_final_value_m": 21.221770000000014,
+    "reported_final_c06_m": 27.06,
+    "product_final_value_m": 27.03512
+  },
+  "age": {
+    "n_dated_rows": 15,
+    "n_rows_total": 1931,
+    "dated_share_pct": 0.7767995857068877,
+    "c08_plus_1000_c09_unique": [
+      1950.0
+    ],
+    "c09_equals_1950_minus_c08_over_1000": true,
+    "age_min_ce": 1172.0,
+    "age_max_ce": 2018.0,
+    "dated_rows_equal_annotated_rows": true
+  },
+  "density": {
+    "monotone_nondecreasing": true,
+    "n_increments": 261,
+    "step_values": [
+      0.001,
+      0.005
+    ],
+    "n_step_0p001": 260,
+    "n_step_0p005": 1,
+    "min": 0.379,
+    "max": 0.644,
+    "quadratic_fit_max_abs_residual": 0.0005494709532476438,
+    "linear_fit_max_abs_residual": 0.007673699596493833
+  },
+  "n_independent_columns": 2,
+  "independent_columns": [
+    "c04_sulfate_ug_kg",
+    "c07_signal"
+  ]
+}

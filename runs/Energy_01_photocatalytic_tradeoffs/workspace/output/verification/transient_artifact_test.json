@@ -1,0 +1,323 @@
+{
+  "source_file": "/data/user/conversations/conv-f64cb198-aadc-4b6c-a8d3-7f7608a4e4ea/project/data/ultrafast_transient_traces.tsv",
+  "n_points_per_trace": 98,
+  "comment": "All numbers recomputed from raw TSV; late window = delay >= 30 ps (17 pts).",
+  "late_window": {
+    "definition": "delay >= 30.0 ps",
+    "n_points_each": 17,
+    "f1_mean": -0.25021764705882354,
+    "f1_positive": 0,
+    "f1_final": -0.37602,
+    "f1_sd": 0.13100836364185933,
+    "f2_mean": 0.18816117647058822,
+    "f2_positive": 16,
+    "f2_final": 0.1403,
+    "f2_sd": 0.11144031468023326,
+    "mean_difference_f1_minus_f2": -0.43837882352941177,
+    "bootstrap_95CI_difference": [
+      -0.5155395882352941,
+      -0.3590011617647059
+    ],
+    "fisher_exact_p": 1.5426767246103757e-08,
+    "welch_t_p": 8.965875758595645e-12,
+    "paired_f2_minus_f1_late_window": {
+      "mean": 0.43837882352941177,
+      "sd": 0.11533944158885723,
+      "min": 0.28498999999999997,
+      "max": 0.65036,
+      "fraction_of_late_pairs_f2_above_f1": 1.0,
+      "welch_satterthwaite_dof": 31.19758932133529
+    }
+  },
+  "pre_rise_baseline": {
+    "f1_mean_t_lt_0.1ps": -0.011928,
+    "f2_mean_t_lt_0.1ps": -0.035704,
+    "f1_peak_value": 0.99928,
+    "f1_peak_time_ps": 1.13634,
+    "f2_peak_value": 1.00077,
+    "f2_peak_time_ps": 2.24169,
+    "f1_last_10_mean": -0.32922100000000004,
+    "f2_last_10_mean": 0.130701
+  },
+  "H1_shared_shape_plus_offset": {
+    "model": "y_i(t) = c_i + A*(exp(-t/td)-exp(-t/tr))  (A,td,tr shared; c1,c2 free)",
+    "independent_model": "y_i(t) = c_i + A_i*(exp(-t/td_i)-exp(-t/tr_i))  (independent per trace)",
+    "n_total_points": 196,
+    "shared_shape": {
+      "k": 5,
+      "rss": 6.633389065428436,
+      "rmse": 0.18396690398653226,
+      "aicc": -653.339978144814,
+      "A": 0.9037914802283175,
+      "tau_decay_ps": 23.366116795701167,
+      "tau_rise_ps": 0.8966281135772738,
+      "c1_offset": -0.27170837019870814,
+      "c2_offset": -0.07335377836197349,
+      "offset_difference_f2_minus_f1": 0.19835459183673465
+    },
+    "independent_shapes": {
+      "k": 10,
+      "rss": 4.539342283343615,
+      "rmse": 0.15218380205822168,
+      "aicc": -716.815986530555,
+      "f1": {
+        "c": -0.37102153449937614,
+        "A": 0.97309172024382,
+        "B": 0.7994661137031084,
+        "tau_decay_ps": 22.86171868677084,
+        "tau_rise_ps": 0.5797261995735186,
+        "rss": 2.4662794788948745
+      },
+      "f2": {
+        "c": 0.17557181655701581,
+        "A": 0.9848271859492261,
+        "B": 1.3681974404041408,
+        "tau_decay_ps": 10.602723998892639,
+        "tau_rise_ps": 1.4917339282613866,
+        "rss": 2.0730628044487394
+      }
+    },
+    "delta_aicc_shared_minus_independent": 63.47600838574101,
+    "F_stat": 17.16075489160434,
+    "F_pvalue": 6.033023178867279e-14,
+    "fitted_offset_difference_vs_observed_late_mean_difference": {
+      "c2_minus_c1_fitted": 0.19835459183673465,
+      "observed_late_mean_f2_minus_f1": 0.43837882352941177,
+      "ratio_fitted_over_observed": 0.45247302376463133
+    },
+    "H1_verdict": "NOT SUPPORTED (independent shapes decisively better)",
+    "UNRESOLVED": false
+  },
+  "H1_late_window_only": {
+    "note": "same comparison on delay >= 30 ps only (34 pts), where the sign contrast lives",
+    "n_points": 34,
+    "shared": {
+      "k": 5,
+      "rss": 0.30026902557642854,
+      "rmse": 0.09397575181246749,
+      "aicc": -148.65800013846638,
+      "c1": 0.2148279503413343,
+      "c2": 0.6605832422969423,
+      "A": 0.5197278653201917,
+      "tau_decay_ps": 21.243459338174326,
+      "tau_rise_ps": 442413.3920089205
+    },
+    "independent": {
+      "k": 10,
+      "rss": 0.1424199195551297,
+      "rmse": 0.06472110292158322,
+      "aicc": -156.5962042248533
+    },
+    "delta_aicc_shared_minus_independent": 7.938204086386918
+  },
+  "H2_linear_drift_late_window": {
+    "window": "delay >= 30.0 ps, n=17 per trace",
+    "per_trace_ols": {
+      "formulation_1": {
+        "slope_per_ps": -0.008261748940453582,
+        "slope_stderr": 0.0010136617890065002,
+        "slope_95CI": [
+          -0.010248526046906323,
+          -0.006274971834000841
+        ],
+        "slope_pvalue": 6.840743661843413e-07,
+        "intercept_at_t0": 0.1711212946159183,
+        "r_squared": 0.8157904850067607,
+        "spearman_rho": -0.928921568627451,
+        "spearman_p": 7.287799106752726e-08,
+        "raw_late_mean": -0.25021764705882354,
+        "mean_of_detrended_residuals_ols": 6.612357720193947e-17,
+        "mean_after_removing_slope_anchored_at_first_point": -0.08794732395924891,
+        "sign_after_removing_slope": "negative",
+        "raw_sign": "negative"
+      },
+      "formulation_2": {
+        "slope_per_ps": -0.0048590707853132815,
+        "slope_stderr": 0.0015690923566856094,
+        "slope_95CI": [
+          -0.007934491804417076,
+          -0.001783649766209487
+        ],
+        "slope_pvalue": 0.007366119795242712,
+        "intercept_at_t0": 0.4359677555572379,
+        "r_squared": 0.38999091046902085,
+        "spearman_rho": -0.6495098039215687,
+        "spearman_p": 0.004776085665557089,
+        "raw_late_mean": 0.18816117647058822,
+        "mean_of_detrended_residuals_ols": 5.306212985340822e-17,
+        "mean_after_removing_slope_anchored_at_first_point": 0.2835989574996982,
+        "sign_after_removing_slope": "positive",
+        "raw_sign": "positive"
+      }
+    },
+    "slope_difference_f1_minus_f2": -0.003402678155140301,
+    "slope_difference_t": -1.8215264118946506,
+    "slope_difference_p": 0.06852687556965208,
+    "line_levels_at_first_late_point": {
+      "f1": 0.1711212946159183,
+      "f2": 0.4359677555572379,
+      "difference": -0.2648464609413196
+    },
+    "H2_verdict": "NOT SUPPORTED (drift does not flip both late means)",
+    "UNRESOLVED": false
+  },
+  "H3_rise_decay_with_free_offset": {
+    "model": "y(t) = c + A*exp(-t/td) - B*exp(-t/tr)   (98 pts per trace, 5 free params)",
+    "per_trace": {
+      "formulation_1": {
+        "fitted_c": -0.37102122540119825,
+        "c_stderr_asymptotic": 0.0891719954868098,
+        "c_95CI": [
+          -0.5457983365553455,
+          -0.19624411424705104
+        ],
+        "c_sign": "negative",
+        "A": 0.9730777312056067,
+        "B": 0.799469366387192,
+        "tau_decay_ps": 22.862205291354897,
+        "tau_rise_ps": 0.5796789534306018,
+        "rss_all98": 2.4662794693484273,
+        "rmse_all98": 0.1586383214553395,
+        "aicc": -350.20898771785573,
+        "rss_c0_constrained": 3.3719884675158904,
+        "aicc_c0_constrained": -321.7774486168203,
+        "delta_aicc_c0_minus_free_c": 28.431539101035412,
+        "observed_late_window_mean": -0.25021764705882354,
+        "c_minus_late_mean": -0.1208035783423747,
+        "late_window_slope_per_ps": -0.008261748940453582,
+        "late_window_slope_p": 6.840743661843413e-07
+      },
+      "formulation_2": {
+        "fitted_c": 0.1755549640413831,
+        "c_stderr_asymptotic": 0.043841291922178956,
+        "c_95CI": [
+          0.08962603187391235,
+          0.2614838962088538
+        ],
+        "c_sign": "positive",
+        "A": 0.9847561025098323,
+        "B": 1.3681101336799497,
+        "tau_decay_ps": 10.60429618756238,
+        "tau_rise_ps": 1.4916539761774947,
+        "rss_all98": 2.0730628056954803,
+        "rmse_all98": 0.1454431232438766,
+        "aicc": -367.22998025650764,
+        "rss_c0_constrained": 2.2142230489042656,
+        "aicc_c0_constrained": -362.99635113332613,
+        "delta_aicc_c0_minus_free_c": 4.233629123181515,
+        "observed_late_window_mean": 0.18816117647058822,
+        "c_minus_late_mean": -0.012606212429205121,
+        "late_window_slope_per_ps": -0.0048590707853132815,
+        "late_window_slope_p": 0.007366119795242712
+      }
+    },
+    "note": "dAICc(c=0 constrained minus free c) > 0 means the free asymptotic offset c is required; fitted c vs observed late mean tests whether the late sign is a genuine property of the fitted kinetics.",
+    "UNRESOLVED": false
+  },
+  "H3_c_summary": {
+    "c1": -0.37102122540119825,
+    "c2": 0.1755549640413831,
+    "c1_sign": "negative",
+    "c2_sign": "positive",
+    "c1_95CI": [
+      -0.5457983365553455,
+      -0.19624411424705104
+    ],
+    "c2_95CI": [
+      0.08962603187391235,
+      0.2614838962088538
+    ],
+    "observed_late_mean_f1": -0.25021764705882354,
+    "observed_late_mean_f2": 0.18816117647058822,
+    "fitted_c_diff_f1_minus_f2": -0.5465761894425814
+  },
+  "supplementary_checks": {
+    "formulation_1": {
+      "c0_model_A": 1.01558577209096,
+      "c0_model_B": 1.2196872014000402,
+      "c0_model_tau_decay_ps": 4.942748122708805,
+      "c0_model_tau_rise_ps": 0.8421025620381499,
+      "c0_model_late_window_mean": 0.00031384498834017264,
+      "c0_model_late_window_min": 1.780134968974782e-07,
+      "c0_model_late_window_max": 0.0017843564026790014,
+      "observed_late_window_mean": -0.25021764705882354
+    },
+    "formulation_2": {
+      "c0_model_A": 0.9072328153243813,
+      "c0_model_B": 1.1182115283952343,
+      "c0_model_tau_decay_ps": 23.593207967200787,
+      "c0_model_tau_rise_ps": 1.2288697707766163,
+      "c0_model_late_window_mean": 0.12236822109174135,
+      "c0_model_late_window_min": 0.034856983402513406,
+      "c0_model_late_window_max": 0.24015984662923107,
+      "observed_late_window_mean": 0.18816117647058822
+    },
+    "formulation_1_fulltrace_detrend": {
+      "full_slope_per_ps": -0.010730382148536517,
+      "full_slope_p": 8.523528211842752e-14,
+      "late_mean_of_fulltrace_detrended": -0.01791037068817154,
+      "sign": "negative"
+    },
+    "formulation_2_fulltrace_detrend": {
+      "full_slope_per_ps": -0.003476148714001823,
+      "full_slope_p": 0.03208994411514809,
+      "late_mean_of_fulltrace_detrended": -0.04520528972653537,
+      "sign": "negative"
+    },
+    "summary": {
+      "c0_model_late_means_f1_f2": [
+        0.00031384498834017264,
+        0.12236822109174135
+      ],
+      "c0_zero_asymptote_model_late_mean_is_effectively_zero_f1": true,
+      "fulltrace_detrend_not_interpretable": "A single straight line over 4 decades of a peak-and-decay trace is not a valid baseline model; both detrended late means end up near zero (f1 -0.018, f2 -0.045) so this check neither supports nor refutes H2. The interpretable drift test is the H2 late-window detrend (>=30 ps), which does not flip the signs.",
+      "note": "(a) a decay with asymptote forced to 0 reproduces the observed late plateau for neither trace (f1 late mean ~0, f2 +0.122 vs observed -0.250/+0.188) - a free signed offset is required. (b) is reported for completeness only and is not used in the verdict."
+    }
+  },
+  "verdict_inputs": {
+    "H1_delta_aicc_full_trace": 63.47600838574101,
+    "H1_F_pvalue_full_trace": 6.033023178867279e-14,
+    "H1_delta_aicc_late_only": 7.938204086386918,
+    "H1_fitted_offset_diff_over_observed_late_diff": 0.45247302376463133,
+    "H2_f1_slope_p": 6.840743661843413e-07,
+    "H2_f2_slope_p": 0.007366119795242712,
+    "H2_slope_difference_p": 0.06852687556965208,
+    "H2_f1_mean_after_removing_slope": -0.08794732395924891,
+    "H2_f2_mean_after_removing_slope": 0.2835989574996982,
+    "H3_c1": -0.37102122540119825,
+    "H3_c2": 0.1755549640413831,
+    "H3_c1_minus_late_mean_f1": -0.1208035783423747,
+    "H3_c2_minus_late_mean_f2": -0.012606212429205121,
+    "H3_delta_aicc_free_c_vs_c0_f1": 28.431539101035412,
+    "H3_delta_aicc_free_c_vs_c0_f2": 4.233629123181515
+  },
+  "H3_verdict": "SUPPORTED",
+  "overall_verdict": {
+    "verdict": "H3 (genuine kinetic difference), H1 and H2 refuted",
+    "one_line": "H3 is supported: independent rise-decay fits give asymptotic offsets c1=-0.371 and c2=+0.176 (both 95% CIs exclude 0, signs matching the observed late means -0.250 and +0.188, and c=0 is rejected by dAICc=+28.4/+4.2), while H1 fails (dAICc=+63.5 full trace, +7.9 late-only, F p=6e-14; the shared-shape offset 0.198 only explains 45% of the observed 0.438 level gap) and H2 fails (both late windows drift negative at p=7e-7 and p=0.007, but f2's detrended late mean stays +0.284 and f1's stays -0.088, so detrending never flips f2 to negative).",
+    "key_numbers": {
+      "f1_c": -0.37102122540119825,
+      "f2_c": 0.1755549640413831,
+      "f1_c_95CI": [
+        -0.5457983365553455,
+        -0.19624411424705104
+      ],
+      "f2_c_95CI": [
+        0.08962603187391235,
+        0.2614838962088538
+      ],
+      "dAICc_H1_full_trace": 63.47600838574101,
+      "dAICc_H1_late_only": 7.938204086386918,
+      "H1_F_p": 6.033023178867279e-14,
+      "H1_offset_ratio": 0.45247302376463133,
+      "H2_detrended_late_mean_f1": -0.08794732395924891,
+      "H2_detrended_late_mean_f2": 0.2835989574996982,
+      "H2_f1_slope_p": 6.840743661843413e-07,
+      "H2_f2_slope_p": 0.007366119795242712,
+      "c0_model_late_means": [
+        0.00031384498834017264,
+        0.12236822109174135
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+==============================================================================
+COARSE vs FINE rebinning sweep (18 pairs, shifts in 0.875 MHz/s units)
+  Sheet_039 group_a (-35<s<-10), channel_l   ratio=1.0009 r(0-shift)=+0.704 -> best r=+0.900 at centre shift=+1.750 MHz/s (fine frac inside window 1.000)
+  Sheet_039 group_a(-10<s<0), channel_l      ratio=1.0241 r(0-shift)=-0.197 -> best r=+0.972 at centre shift=+5.250 MHz/s (fine frac inside window 1.000)
+  Sheet_039 group_a(0<s<20), channel_l       ratio=1.1961 r(0-shift)=-0.073 -> best r=+0.817 at centre shift=+5.250 MHz/s (fine frac inside window 1.000)
+  Sheet_040 group_a (-35<s<-10), channel_r   ratio=1.0004 r(0-shift)=+0.895 -> best r=+0.935 at centre shift=+0.875 MHz/s (fine frac inside window 1.000)
+  Sheet_040 group_a(-10<s<0), channel_r      ratio=1.0160 r(0-shift)=-0.214 -> best r=+0.880 at centre shift=+5.250 MHz/s (fine frac inside window 1.000)
+  Sheet_040 group_a(0<s<20), channel_r       ratio=1.1695 r(0-shift)=-0.079 -> best r=+0.846 at centre shift=+8.750 MHz/s (fine frac inside window 1.000)
+  Sheet_041 group_b (-35<s<-10), channel_l   ratio=0.9860 r(0-shift)=+0.429 -> best r=+0.888 at centre shift=-3.500 MHz/s (fine frac inside window 1.000)
+  Sheet_041 group_b(-10<s<0), channel_l      ratio=0.9983 r(0-shift)=-0.107 -> best r=+0.716 at centre shift=+5.250 MHz/s (fine frac inside window 1.000)
+  Sheet_041 group_b(0<s<20), channel_l       ratio=0.9955 r(0-shift)=-0.081 -> best r=+0.809 at centre shift=-1.750 MHz/s (fine frac inside window 0.081)
+  Sheet_042 group_b (-35<s<-10), channel_r   ratio=0.9808 r(0-shift)=-0.207 -> best r=+0.841 at centre shift=-14.000 MHz/s (fine frac inside window 0.827)
+  Sheet_042 group_b(-10<s<0), channel_r      ratio=0.9548 r(0-shift)=-0.135 -> best r=+0.768 at centre shift=+5.250 MHz/s (fine frac inside window 1.000)
+  Sheet_042 group_b(0<s<20), channel_r       ratio=0.9873 r(0-shift)=-0.104 -> best r=+0.881 at centre shift=-5.250 MHz/s (fine frac inside window 0.030)
+  Sheet_043 group_c (-35<s<-10), channel_l   ratio=0.9860 r(0-shift)=+0.714 -> best r=+0.926 at centre shift=+0.875 MHz/s (fine frac inside window 1.000)
+  Sheet_043 group_c(-10<s<0), channel_l      ratio=0.9917 r(0-shift)=-0.120 -> best r=+0.888 at centre shift=+5.250 MHz/s (fine frac inside window 1.000)
+  Sheet_043 group_c(0<s<20), channel_l       ratio=1.0000 r(0-shift)=-0.101 -> best r=+0.963 at centre shift=-2.625 MHz/s (fine frac inside window 0.014)
+  Sheet_044 group_c (-35<s<-10), channel_r   ratio=0.9985 r(0-shift)=+0.591 -> best r=+0.668 at centre shift=+1.750 MHz/s (fine frac inside window 1.000)
+  Sheet_044 group_c(-10<s<0), channel_r      ratio=0.9946 r(0-shift)=-0.147 -> best r=+0.855 at centre shift=+5.250 MHz/s (fine frac inside window 1.000)
+  Sheet_044 group_c(0<s<20), channel_r       ratio=0.9942 r(0-shift)=-0.107 -> best r=+0.850 at centre shift=+5.250 MHz/s (fine frac inside window 1.000)
+==============================================================================
+IMAGE SHEETS vs explicit model families
+  Sheet_008: best single event event_3 r=+0.0192 | best combination |event_3-event_5| r=+0.0261 | range[1,1.5] mean=+1.1001
+  Sheet_015: best single event event_2 r=+0.0875 | best combination sum_of_5 r=+0.1051 | range[4.28,7.44] mean=+5.2131
+  Sheet_016: best single event event_4 r=+0.0159 | best combination |event_3-event_4| r=+0.0222 | range[1,1.5] mean=+1.0903
+  Sheet_017: best single event event_1 r=-0.0206 | best combination |event_2-event_3| r=+0.0296 | range[-8.96,2.65] mean=-4.2231
+  Sheet_018: best single event event_2 r=+0.0378 | best combination |event_2-event_3| r=+0.0456 | range[-4.95,1.36] mean=-0.2838
+  Sheet_021: best single event event_2 r=+0.0191 | best combination |event_2-event_4| r=+0.0262 | range[1,1.5] mean=+1.0834
+  Sheet_022: best single event event_3 r=+0.0103 | best combination |event_4-event_5| r=+0.0182 | range[-7.28,1.62] mean=-0.2484
+  Sheet_036: best single event event_5 r=+0.0188 | best combination event_4-event_5 r=-0.0258 | range[1,1.5] mean=+1.0893
+  Sheet_037: best single event event_4 r=-0.0224 | best combination |event_3-event_4| r=-0.0286 | range[-5.58,1.38] mean=-0.2578
+  pairwise |r| among the 9 unrepresented image sheets (subsampled 5x5):
+    Sheet_017 Sheet_018 r=+0.8883 mae=3.9539
+    Sheet_015 Sheet_016 r=+0.2210 mae=4.0979
+    Sheet_015 Sheet_017 r=+0.0692 mae=9.4337
+    Sheet_008 Sheet_017 r=+0.0434 mae=5.3439
+    Sheet_015 Sheet_036 r=-0.0314 mae=4.0975
+    Sheet_018 Sheet_037 r=+0.0270 mae=0.6155
+    Sheet_008 Sheet_016 r=-0.0170 mae=0.1391
+    Sheet_018 Sheet_022 r=-0.0160 mae=0.6220
+wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/covx_rebin_and_models.json

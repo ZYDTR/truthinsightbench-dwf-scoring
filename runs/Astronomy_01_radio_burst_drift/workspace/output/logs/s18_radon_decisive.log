@@ -1,0 +1,247 @@
+==========================================================================================
+s18  DECISIVE COVERAGE-MATCHED SLOPE RECOVERY TEST
+ANALYSIS UNIT = one complete dynamic-spectrum event (n_events = 5)
+==========================================================================================
+##########################################################################################
+### event_1: reported -12.7777 MHz/s; |m|*Dt = 14.036 MHz = 156.5% of the 8.969 MHz band; geometric in-band time coverage of a line at the reported slope = 63.9% of the 1.0984 s window
+------------------------------------------------------------------------------------------
+[event_1 thr>1.01] mask 48.2% grid; scan coverage at reported slope 63.8%
+   L_band(reported) = 0.08612   L_band(mirror +12.8) = 0.10392   ratio = 0.8287
+   percentile in null: all slopes 7.36, length-matched 4.17 (n=84);   percentile of the MIRROR slope 35.04
+   single-bin variant: L=0.08195, pct all 6.86, matched 7.74
+   argmax of L_band at +2.20 MHz/s (Lmax=0.16910 = 196% of L(reported))
+   nearest local max to the reported slope: 0.78 MHz/s (band), 0.22 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (271 cols in band) = +0.8758 +- 0.0672 MHz/s vs reported -12.7777 (diff +13.6535)
+   INJECT amp 0.02: L(reported) 0.10395 vs mirror 0.10493; ratio 0.991; pct all 30.05; argmax +2.20
+   INJECT amp 0.05: L(reported) 0.13057 vs mirror 0.10663; ratio 1.225; pct all 93.89; argmax +2.20
+   INJECT amp 0.10: L(reported) 0.17494 vs mirror 0.10943; ratio 1.599; pct all 99.63; argmax +2.20
+   INJECT amp 0.25: L(reported) 0.30804 vs mirror 0.11782; ratio 2.614; pct all 99.88; argmax -12.80
+------------------------------------------------------------------------------------------
+[event_1 thr>1.05] mask 41.0% grid; scan coverage at reported slope 63.8%
+   L_band(reported) = 0.08399   L_band(mirror +12.8) = 0.10194   ratio = 0.8239
+   percentile in null: all slopes 7.61, length-matched 4.17 (n=84);   percentile of the MIRROR slope 35.29
+   single-bin variant: L=0.07961, pct all 7.61, matched 6.55
+   argmax of L_band at +2.20 MHz/s (Lmax=0.16742 = 199% of L(reported))
+   nearest local max to the reported slope: 0.78 MHz/s (band), 0.22 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (271 cols in band) = +0.8898 +- 0.0689 MHz/s vs reported -12.7777 (diff +13.6674)
+   INJECT amp 0.02: L(reported) 0.09265 vs mirror 0.10255; ratio 0.903; pct all 13.09; argmax +2.20
+   INJECT amp 0.05: L(reported) 0.10680 vs mirror 0.10350; ratio 1.032; pct all 40.02; argmax +2.20
+   INJECT amp 0.10: L(reported) 0.17494 vs mirror 0.10710; ratio 1.633; pct all 99.88; argmax -12.80
+   INJECT amp 0.25: L(reported) 0.30804 vs mirror 0.11566; ratio 2.663; pct all 99.88; argmax -12.80
+------------------------------------------------------------------------------------------
+[event_1 thr>1.2] mask 20.2% grid; scan coverage at reported slope 63.8%
+   L_band(reported) = 0.05873   L_band(mirror +12.8) = 0.07686   ratio = 0.7641
+   percentile in null: all slopes 7.86, length-matched 4.17 (n=84);   percentile of the MIRROR slope 35.54
+   single-bin variant: L=0.05428, pct all 6.86, matched 4.17
+   argmax of L_band at +2.20 MHz/s (Lmax=0.14618 = 249% of L(reported))
+   nearest local max to the reported slope: 0.78 MHz/s (band), 0.22 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (271 cols in band) = +1.0544 +- 0.0927 MHz/s vs reported -12.7777 (diff +13.8320)
+   INJECT amp 0.02: L(reported) 0.06594 vs mirror 0.07732; ratio 0.853; pct all 12.34; argmax +2.20
+   INJECT amp 0.05: L(reported) 0.07768 vs mirror 0.07802; ratio 0.996; pct all 30.80; argmax +2.20
+   INJECT amp 0.10: L(reported) 0.10161 vs mirror 0.07979; ratio 1.274; pct all 91.40; argmax +2.20
+   INJECT amp 0.25: L(reported) 0.28461 vs mirror 0.08885; ratio 3.203; pct all 99.88; argmax -12.80
+##########################################################################################
+### event_2: reported -12.4520 MHz/s; |m|*Dt = 13.677 MHz = 152.5% of the 8.969 MHz band; geometric in-band time coverage of a line at the reported slope = 65.6% of the 1.0984 s window
+------------------------------------------------------------------------------------------
+[event_2 thr>1.01] mask 48.1% grid; scan coverage at reported slope 65.9%
+   L_band(reported) = 0.08808   L_band(mirror +12.4) = 0.11593   ratio = 0.7598
+   percentile in null: all slopes 6.61, length-matched 9.15 (n=82);   percentile of the MIRROR slope 52.99
+   single-bin variant: L=0.08769, pct all 8.10, matched 10.37
+   argmax of L_band at +2.20 MHz/s (Lmax=0.18612 = 211% of L(reported))
+   nearest local max to the reported slope: 1.85 MHz/s (band), 0.15 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (279 cols in band) = +0.8536 +- 0.0891 MHz/s vs reported -12.4520 (diff +13.3056)
+   INJECT amp 0.02: L(reported) 0.10588 vs mirror 0.11694; ratio 0.905; pct all 18.58; argmax +2.20
+   INJECT amp 0.05: L(reported) 0.13246 vs mirror 0.11862; ratio 1.117; pct all 84.41; argmax +2.20
+   INJECT amp 0.10: L(reported) 0.17674 vs mirror 0.12140; ratio 1.456; pct all 98.88; argmax +2.20
+   INJECT amp 0.25: L(reported) 0.30960 vs mirror 0.12973; ratio 2.386; pct all 99.88; argmax -12.40
+------------------------------------------------------------------------------------------
+[event_2 thr>1.05] mask 41.4% grid; scan coverage at reported slope 65.9%
+   L_band(reported) = 0.08609   L_band(mirror +12.4) = 0.11411   ratio = 0.7544
+   percentile in null: all slopes 6.86, length-matched 9.15 (n=82);   percentile of the MIRROR slope 52.99
+   single-bin variant: L=0.08495, pct all 8.10, matched 10.37
+   argmax of L_band at +2.20 MHz/s (Lmax=0.18474 = 215% of L(reported))
+   nearest local max to the reported slope: 1.85 MHz/s (band), 0.15 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (279 cols in band) = +0.8538 +- 0.0885 MHz/s vs reported -12.4520 (diff +13.3058)
+   INJECT amp 0.02: L(reported) 0.09450 vs mirror 0.11472; ratio 0.824; pct all 10.60; argmax +2.20
+   INJECT amp 0.05: L(reported) 0.10819 vs mirror 0.11570; ratio 0.935; pct all 26.56; argmax +2.20
+   INJECT amp 0.10: L(reported) 0.17674 vs mirror 0.11928; ratio 1.482; pct all 98.88; argmax +2.20
+   INJECT amp 0.25: L(reported) 0.30960 vs mirror 0.12770; ratio 2.425; pct all 99.88; argmax -12.40
+------------------------------------------------------------------------------------------
+[event_2 thr>1.2] mask 22.0% grid; scan coverage at reported slope 65.9%
+   L_band(reported) = 0.06358   L_band(mirror +12.4) = 0.08984   ratio = 0.7077
+   percentile in null: all slopes 8.85, length-matched 7.93 (n=82);   percentile of the MIRROR slope 52.74
+   single-bin variant: L=0.06448, pct all 10.85, matched 15.24
+   argmax of L_band at +2.20 MHz/s (Lmax=0.16812 = 264% of L(reported))
+   nearest local max to the reported slope: 1.85 MHz/s (band), 0.25 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (279 cols in band) = +0.9185 +- 0.1051 MHz/s vs reported -12.4520 (diff +13.3705)
+   INJECT amp 0.02: L(reported) 0.07053 vs mirror 0.09039; ratio 0.780; pct all 10.35; argmax +2.20
+   INJECT amp 0.05: L(reported) 0.08131 vs mirror 0.09120; ratio 0.892; pct all 19.08; argmax +2.20
+   INJECT amp 0.10: L(reported) 0.10389 vs mirror 0.09276; ratio 1.120; pct all 73.94; argmax +2.20
+   INJECT amp 0.25: L(reported) 0.28456 vs mirror 0.10200; ratio 2.790; pct all 99.88; argmax -12.40
+##########################################################################################
+### event_3: reported -3.3614 MHz/s; |m|*Dt = 3.692 MHz = 41.2% of the 8.969 MHz band; geometric in-band time coverage of a line at the reported slope = 100.0% of the 1.0984 s window
+------------------------------------------------------------------------------------------
+[event_3 thr>1.01] mask 47.6% grid; scan coverage at reported slope 100.0%
+   L_band(reported) = 0.09614   L_band(mirror +3.4) = 0.08292   ratio = 1.1595
+   percentile in null: all slopes 33.04, length-matched 78.21 (n=117);   percentile of the MIRROR slope 3.12
+   single-bin variant: L=0.10077, pct all 53.49, matched 80.77
+   argmax of L_band at +40.00 MHz/s (Lmax=0.12593 = 131% of L(reported))
+   nearest local max to the reported slope: 0.24 MHz/s (band), 0.04 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (425 cols in band) = -0.1863 +- 0.0415 MHz/s vs reported -3.3614 (diff +3.1751)
+   INJECT amp 0.02: L(reported) 0.11396 vs mirror 0.08292; ratio 1.374; pct all 84.91; argmax +40.00
+   INJECT amp 0.05: L(reported) 0.14055 vs mirror 0.08292; ratio 1.695; pct all 99.88; argmax -3.40
+   INJECT amp 0.10: L(reported) 0.18486 vs mirror 0.08292; ratio 2.229; pct all 99.88; argmax -3.40
+   INJECT amp 0.25: L(reported) 0.31779 vs mirror 0.08293; ratio 3.832; pct all 99.88; argmax -3.40
+------------------------------------------------------------------------------------------
+[event_3 thr>1.05] mask 40.5% grid; scan coverage at reported slope 100.0%
+   L_band(reported) = 0.09410   L_band(mirror +3.4) = 0.08071   ratio = 1.1659
+   percentile in null: all slopes 33.04, length-matched 78.21 (n=117);   percentile of the MIRROR slope 3.37
+   single-bin variant: L=0.09924, pct all 55.24, matched 83.33
+   argmax of L_band at +40.00 MHz/s (Lmax=0.12379 = 132% of L(reported))
+   nearest local max to the reported slope: 0.24 MHz/s (band), 0.04 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (425 cols in band) = -0.1924 +- 0.0426 MHz/s vs reported -3.3614 (diff +3.1691)
+   INJECT amp 0.02: L(reported) 0.10309 vs mirror 0.08071; ratio 1.277; pct all 62.72; argmax +40.00
+   INJECT amp 0.05: L(reported) 0.11779 vs mirror 0.08071; ratio 1.459; pct all 88.90; argmax +40.00
+   INJECT amp 0.10: L(reported) 0.18486 vs mirror 0.08071; ratio 2.290; pct all 99.88; argmax -3.40
+   INJECT amp 0.25: L(reported) 0.31779 vs mirror 0.08071; ratio 3.937; pct all 99.88; argmax -3.40
+------------------------------------------------------------------------------------------
+[event_3 thr>1.2] mask 19.6% grid; scan coverage at reported slope 100.0%
+   L_band(reported) = 0.06910   L_band(mirror +3.4) = 0.05722   ratio = 1.2076
+   percentile in null: all slopes 36.03, length-matched 79.06 (n=117);   percentile of the MIRROR slope 4.61
+   single-bin variant: L=0.06998, pct all 45.26, matched 66.24
+   argmax of L_band at +1.40 MHz/s (Lmax=0.09909 = 143% of L(reported))
+   nearest local max to the reported slope: 0.24 MHz/s (band), 0.04 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (425 cols in band) = -0.2927 +- 0.0559 MHz/s vs reported -3.3614 (diff +3.0687)
+   INJECT amp 0.02: L(reported) 0.07627 vs mirror 0.05722; ratio 1.333; pct all 63.47; argmax +1.40
+   INJECT amp 0.05: L(reported) 0.08899 vs mirror 0.05722; ratio 1.555; pct all 88.40; argmax +1.40
+   INJECT amp 0.10: L(reported) 0.11397 vs mirror 0.05722; ratio 1.992; pct all 99.88; argmax -3.40
+   INJECT amp 0.25: L(reported) 0.29445 vs mirror 0.05722; ratio 5.146; pct all 99.88; argmax -3.40
+##########################################################################################
+### event_4: reported -16.8673 MHz/s; |m|*Dt = 18.527 MHz = 206.6% of the 8.969 MHz band; geometric in-band time coverage of a line at the reported slope = 48.4% of the 1.0984 s window
+------------------------------------------------------------------------------------------
+[event_4 thr>1.01] mask 47.6% grid; scan coverage at reported slope 48.7%
+   L_band(reported) = 0.09748   L_band(mirror +16.8) = 0.09302   ratio = 1.0479
+   percentile in null: all slopes 67.71, length-matched 61.16 (n=112);   percentile of the MIRROR slope 48.25
+   single-bin variant: L=0.09897, pct all 60.22, matched 58.48
+   argmax of L_band at +2.60 MHz/s (Lmax=0.13778 = 141% of L(reported))
+   nearest local max to the reported slope: 0.73 MHz/s (band), 0.33 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (206 cols in band) = -0.2387 +- 0.1252 MHz/s vs reported -16.8673 (diff +16.6286)
+   INJECT amp 0.02: L(reported) 0.11529 vs mirror 0.09404; ratio 1.226; pct all 96.13; argmax +2.60
+   INJECT amp 0.05: L(reported) 0.14186 vs mirror 0.09574; ratio 1.482; pct all 98.88; argmax -17.40
+   INJECT amp 0.10: L(reported) 0.18615 vs mirror 0.09853; ratio 1.889; pct all 99.13; argmax -17.20
+   INJECT amp 0.25: L(reported) 0.31902 vs mirror 0.10691; ratio 2.984; pct all 99.63; argmax -17.00
+------------------------------------------------------------------------------------------
+[event_4 thr>1.05] mask 40.6% grid; scan coverage at reported slope 48.7%
+   L_band(reported) = 0.09544   L_band(mirror +16.8) = 0.09088   ratio = 1.0502
+   percentile in null: all slopes 68.20, length-matched 62.05 (n=112);   percentile of the MIRROR slope 48.25
+   single-bin variant: L=0.09694, pct all 61.22, matched 62.05
+   argmax of L_band at +2.60 MHz/s (Lmax=0.13592 = 142% of L(reported))
+   nearest local max to the reported slope: 0.73 MHz/s (band), 0.33 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (206 cols in band) = -0.2311 +- 0.1302 MHz/s vs reported -16.8673 (diff +16.6362)
+   INJECT amp 0.02: L(reported) 0.10448 vs mirror 0.09142; ratio 1.143; pct all 86.41; argmax +2.60
+   INJECT amp 0.05: L(reported) 0.11918 vs mirror 0.09233; ratio 1.291; pct all 97.13; argmax +2.60
+   INJECT amp 0.10: L(reported) 0.18615 vs mirror 0.09604; ratio 1.938; pct all 99.13; argmax -17.00
+   INJECT amp 0.25: L(reported) 0.31902 vs mirror 0.10455; ratio 3.051; pct all 99.63; argmax -17.00
+------------------------------------------------------------------------------------------
+[event_4 thr>1.2] mask 20.2% grid; scan coverage at reported slope 48.7%
+   L_band(reported) = 0.06972   L_band(mirror +16.8) = 0.06707   ratio = 1.0396
+   percentile in null: all slopes 62.72, length-matched 54.02 (n=112);   percentile of the MIRROR slope 45.51
+   single-bin variant: L=0.07522, pct all 66.96, matched 62.95
+   argmax of L_band at +2.60 MHz/s (Lmax=0.11503 = 165% of L(reported))
+   nearest local max to the reported slope: 0.73 MHz/s (band), 0.33 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (206 cols in band) = -0.2864 +- 0.1679 MHz/s vs reported -16.8673 (diff +16.5808)
+   INJECT amp 0.02: L(reported) 0.07780 vs mirror 0.06750; ratio 1.152; pct all 83.67; argmax +2.60
+   INJECT amp 0.05: L(reported) 0.09082 vs mirror 0.06830; ratio 1.330; pct all 96.13; argmax +2.60
+   INJECT amp 0.10: L(reported) 0.11519 vs mirror 0.06956; ratio 1.656; pct all 98.13; argmax -17.40
+   INJECT amp 0.25: L(reported) 0.29612 vs mirror 0.07887; ratio 3.754; pct all 99.63; argmax -17.00
+##########################################################################################
+### event_5: reported -4.0560 MHz/s; |m|*Dt = 4.455 MHz = 49.7% of the 8.969 MHz band; geometric in-band time coverage of a line at the reported slope = 100.0% of the 1.0984 s window
+------------------------------------------------------------------------------------------
+[event_5 thr>1.01] mask 47.3% grid; scan coverage at reported slope 100.0%
+   L_band(reported) = 0.08384   L_band(mirror +4.0) = 0.09340   ratio = 0.8977
+   percentile in null: all slopes 58.48, length-matched 45.73 (n=117);   percentile of the MIRROR slope 99.63
+   single-bin variant: L=0.08550, pct all 59.73, matched 56.84
+   argmax of L_band at +4.20 MHz/s (Lmax=0.09535 = 114% of L(reported))
+   nearest local max to the reported slope: 0.74 MHz/s (band), 0.06 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (425 cols in band) = +0.3772 +- 0.0389 MHz/s vs reported -4.0560 (diff +4.4332)
+   INJECT amp 0.02: L(reported) 0.10164 vs mirror 0.09420; ratio 1.079; pct all 99.88; argmax -4.00
+   INJECT amp 0.05: L(reported) 0.12818 vs mirror 0.09559; ratio 1.341; pct all 99.88; argmax -4.00
+   INJECT amp 0.10: L(reported) 0.17241 vs mirror 0.09787; ratio 1.762; pct all 99.88; argmax -4.00
+   INJECT amp 0.25: L(reported) 0.30512 vs mirror 0.10472; ratio 2.914; pct all 99.88; argmax -4.00
+------------------------------------------------------------------------------------------
+[event_5 thr>1.05] mask 39.5% grid; scan coverage at reported slope 100.0%
+   L_band(reported) = 0.08141   L_band(mirror +4.0) = 0.09118   ratio = 0.8928
+   percentile in null: all slopes 57.23, length-matched 44.87 (n=117);   percentile of the MIRROR slope 99.63
+   single-bin variant: L=0.08279, pct all 57.23, matched 54.27
+   argmax of L_band at +4.20 MHz/s (Lmax=0.09314 = 114% of L(reported))
+   nearest local max to the reported slope: 0.74 MHz/s (band), 0.06 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (425 cols in band) = +0.3884 +- 0.0408 MHz/s vs reported -4.0560 (diff +4.4444)
+   INJECT amp 0.02: L(reported) 0.09060 vs mirror 0.09172; ratio 0.988; pct all 97.38; argmax +4.20
+   INJECT amp 0.05: L(reported) 0.10534 vs mirror 0.09260; ratio 1.138; pct all 99.88; argmax -4.00
+   INJECT amp 0.10: L(reported) 0.17241 vs mirror 0.09529; ratio 1.809; pct all 99.88; argmax -4.00
+   INJECT amp 0.25: L(reported) 0.30512 vs mirror 0.10227; ratio 2.983; pct all 99.88; argmax -4.00
+------------------------------------------------------------------------------------------
+[event_5 thr>1.2] mask 17.2% grid; scan coverage at reported slope 100.0%
+   L_band(reported) = 0.05445   L_band(mirror +4.0) = 0.06579   ratio = 0.8277
+   percentile in null: all slopes 53.49, length-matched 45.73 (n=117);   percentile of the MIRROR slope 99.63
+   single-bin variant: L=0.05450, pct all 44.76, matched 42.31
+   argmax of L_band at +4.20 MHz/s (Lmax=0.06784 = 125% of L(reported))
+   nearest local max to the reported slope: 0.46 MHz/s (band), 0.46 MHz/s (single); argmax within +-5 MHz/s at the reported slope? band=False single=False
+   coverage-restricted centroid fit (425 cols in band) = +0.5294 +- 0.0585 MHz/s vs reported -4.0560 (diff +4.5854)
+   INJECT amp 0.02: L(reported) 0.06165 vs mirror 0.06624; ratio 0.931; pct all 91.15; argmax +4.20
+   INJECT amp 0.05: L(reported) 0.07379 vs mirror 0.06697; ratio 1.102; pct all 99.88; argmax -4.00
+   INJECT amp 0.10: L(reported) 0.09815 vs mirror 0.06858; ratio 1.431; pct all 99.88; argmax -4.00
+   INJECT amp 0.25: L(reported) 0.28189 vs mirror 0.07595; ratio 3.712; pct all 99.88; argmax -4.00
+
+s18 LEAVE-ONE-OUT of the decisive statistics
+threshold                      statistic  full_sample   loo_min   loo_max  loo_range  crosses_boundary
+     1.01                   pct_all_band    33.042394 20.199501 45.760599  25.561097             False
+     1.01               pct_matched_band    45.726496 27.436419 53.443605  26.007186              True
+     1.01     ratio_reported_over_mirror     0.897690  0.863179  0.972819   0.109640             False
+     1.01 n_events_same_sign_as_reported     1.000000  1.000000  1.000000   0.000000             False
+     1.05                   pct_all_band    33.042394 20.324190 45.137157  24.812968             False
+     1.05               pct_matched_band    44.871795 27.009068 53.462683  26.453615              True
+     1.05     ratio_reported_over_mirror     0.892849  0.858392  0.971520   0.113129             False
+     1.05 n_events_same_sign_as_reported     1.000000  1.000000  1.000000   0.000000             False
+     1.20                   pct_all_band    36.034913 22.443890 44.763092  22.319202             False
+     1.20               pct_matched_band    45.726496 26.826662 49.872176  23.045514             False
+     1.20     ratio_reported_over_mirror     0.827728  0.795904  0.933641   0.137737             False
+     1.20 n_events_same_sign_as_reported     1.000000  1.000000  1.000000   0.000000             False
+
+s18 HEADLINE per threshold:
+{
+ "1.01": {
+  "n_events_extreme_p05": 0,
+  "n_events_extreme_p10": 2,
+  "n_events_reported_above_mirror": 2,
+  "median_ratio_reported_over_mirror": 0.8976902740924525,
+  "median_pct_all": 33.042394014962596,
+  "median_pct_matched": 45.72649572649573,
+  "median_Lmax_over_Lreported": 141.34094441672116,
+  "n_events_argmax_near_reported": 0,
+  "n_events_same_sign_covrestricted": 2
+ },
+ "1.05": {
+  "n_events_extreme_p05": 0,
+  "n_events_extreme_p10": 2,
+  "n_events_reported_above_mirror": 2,
+  "median_ratio_reported_over_mirror": 0.8928493877023947,
+  "median_pct_all": 33.042394014962596,
+  "median_pct_matched": 44.87179487179487,
+  "median_Lmax_over_Lreported": 142.41369801768394,
+  "n_events_argmax_near_reported": 0,
+  "n_events_same_sign_covrestricted": 2
+ },
+ "1.20": {
+  "n_events_extreme_p05": 0,
+  "n_events_extreme_p10": 2,
+  "n_events_reported_above_mirror": 2,
+  "median_ratio_reported_over_mirror": 0.8277275600031682,
+  "median_pct_all": 36.03491271820449,
+  "median_pct_matched": 45.72649572649573,
+  "median_Lmax_over_Lreported": 164.97667077734192,
+  "n_events_argmax_near_reported": 0,
+  "n_events_same_sign_covrestricted": 2
+ }
+}
+s18 saved: s18_decisive_scan.csv, s18_injection_control.csv, s18_leave_one_out.csv, s18_decisive_summary.json + 3 figures

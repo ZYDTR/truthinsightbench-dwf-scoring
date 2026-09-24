@@ -1,0 +1,155 @@
+[lattices] c01 mm-grid ok, c02 mm-grid ok, c03 0.01cm-grid ok, c05 0.001 g/cm3 grid ok, c06 cm-grid ok
+[a] c02-c01 in mm units: values=[0, 10, 20] counts=[11, 1790, 130] ; max=20 mm ; n>20mm=0
+[a] float (c02-c01) max = 0.020000000000003126 (0.02 in float = 0.02)
+[a] delta=0mm rows=11 c01 range=[18.12, 39.75] first three c01=[18.12, 18.62, 22.75]
+[a] delta=10mm rows=1790 c01 range=[0.00, 41.98] first three c01=[0.0, 0.03, 0.06]
+[a] delta=20mm rows=130 c01 range=[0.11, 41.24] first three c01=[0.11, 0.14, 0.17]
+[b] non-null: c08=15 c09=15 identical mask=True
+[b] c08 integer years? max dev=0.0e+00 ; c09 0.001-ka lattice? max dev=0.0e+00
+[b] exact integer identity c8_i + c9_mka == 1950 : True ; unique c08+c09*1000 = [1950]
+[b] residual (1950-c08)/1000 - c09: max|.|=0.000e+00 over 15 rows
+[c] exact integer R_i = c01(0.1mm) - cumsum(c03)(0.1mm): min=-350 max=10007 distinct=312
+[c] dR=dc01-c03 in 0.1mm units: values={-96: 6, -92: 8, -86: 10, -85: 8, -78: 8, -44: 46, -38: 51, -22: 140, -17: 38, -13: 123, -8: 176, -4: 517, 0: 250, 4: 147, 8: 96, 14: 59, 15: 46, 22: 28, 56: 36, 62: 32, 78: 40, 83: 8, 87: 18, 92: 16, 96: 22, 10062: 1} (n rows each)
+[c] largest dR at row->row 105->106 : value=10062 units = 1.0062 m ; c01[105]=2.970 c01[106]=4.000 c03[106]=2.3800
+[c] c03 distinct (0.01cm ints) = [185, 192, 196, 200, 204, 208, 213, 217, 222, 238, 244, 278, 286]
+[c] dc01 in mm: distinct=[10, 20, 30, 1030] counts_top={10: 22, 20: 1648, 30: 259, 1030: 1}
+[c] before jump rows [0,105]: R range=[-350,-244] units (0.0106 m), sd=0.002943 m
+[c] after jump rows [106,1930]: R range=[9684,10007] units (0.0323 m), sd=0.007078 m
+[c] free breakpoint scan rows 50..159: best bp=106 max|res|=0.009339 m coef(slope,step,intercept)=(1.000587629, 1.003241627, -0.030686743)
+[c] bp=106 fixed, free slope/step/int: max|res|=0.009339 sd=0.003082 coef=(1.000587629,1.003241627,-0.030686743)
+[c] slope fixed to 1: step=1.015495 m intercept=-0.029791 m max|res|=0.017304 m
+[c-alt] gap explained by const only                                 : max|res|=0.964960 m R2=0.00000000
+[c-alt] gap explained by linear in c01                              : max|res|=0.792774 m R2=0.20363435
+[c-alt] gap explained by quadratic in c01                           : max|res|=0.589816 m R2=0.46807111
+[c-alt] gap explained by cubic in c01                               : max|res|=0.464238 m R2=0.70510061
+[c-alt] gap explained by piecewise-linear continuous, knot at bp 2.99 m : max|res|=0.934596 m R2=0.75526190
+[c-rev] 100*diff(c01) in 0.01cm units: distinct=[100, 200, 300, 10300]
+[c-rev] 100*diff(c01) vs c03[1:]: n exact=250/1930 (0.1295); incl. jump row max dev=10062 units (100.6200 cm); excl. jump row max dev=96 units
+[c-rev] 100*diff(c01)-c03 in 0.01cm units: distinct values/counts = {-96: 6, -92: 8, -86: 10, -85: 8, -78: 8, -44: 46, -38: 51, -22: 140, -17: 38, -13: 123, -8: 176, -4: 517, 0: 250, 4: 147, 8: 96, 14: 59, 15: 46, 22: 28, 56: 36, 62: 32, 78: 40, 83: 8, 87: 18, 92: 16, 96: 22, 10062: 1}
+[c-round] no exact mm-rounding offset for rows <106; best a=-333 gives 0.1321 agreement
+[d] c06 - c01*c05: max|.|=0.030320  min=-0.016550  mean=+0.005501  sd=0.007931  n_exact=8
+[d] span c01 = 41.98 m ; max rel resid (c06>0) = 0.4300
+[d-gen] round(c01*c05,2)           exact=767/1931 (0.3972)  max|err|=0.030000
+[d-gen] round(c01*c05,3)           exact=78/1931 (0.0404)  max|err|=0.030000
+[d-gen] round(c02*c05,2)           exact=1033/1931 (0.5350)  max|err|=0.020000
+[d-gen] floor(c01*c05*100)/100     exact=393/1931 (0.2035)  max|err|=0.040000
+[d-gen] round(c01*c05,2) (banker)  exact=767/1931 (0.3972)  max|err|=0.030000
+[d] corr(r6, c01)=+0.0756 ; corr(r6, c05)=+0.0742
+[d] quantization bound if c06=round(c01*rho_true,2) and c05=round(rho_true,3): 0.005+41.98*0.0005=0.0260 ; observed max 0.0303
+[d] for c01>=5m (n=1783): |c06/c01 - c05| max=0.002749  frac<=0.0005: 0.7179
+[e] c05 distinct=262 min=0.379 max=0.644 ; increments distinct=[1, 1, 1, '...'] counts={1: 260, 5: 1}
+[e] lattice check: u5 sorted, first/last=379/644 ; missing lattice values between: 4 of 266
+[e] distinct c01=1931 ; equal-c01->equal-c05 violations=0 (test is VACUOUS: every c01 distinct)
+[e] c05 non-increasing events when sorted by c01: 0 ; equal-c05 adjacent pairs: 1669
+[e] c05 levels replicated: max multiplicity=9, median=7; range of c01 within a level > 1mm for 260 levels
+[e] c05 ~ poly1(c01): max|res|=0.007673700 ; rounding-consistent frac (|res|<=5e-4): 0.0937
+[e] c05 ~ poly2(c01): max|res|=0.000549471 ; rounding-consistent frac (|res|<=5e-4): 0.9912
+[e] quadratic->round(3dp) exactly equals c05: 1914/1931 (0.9912)
+[e] c05 ~ poly3(c01): max|res|=0.000549434 ; rounding-consistent frac (|res|<=5e-4): 0.9912
+[d-gen2] == generator grid for c06 (base depth x c05, rounding rule) ==
+[d-gen2] base=c01         rule=none     exact=  10/1931 (0.0052) max|err|=0.0303 rms=0.0097
+[d-gen2] base=c01         rule=floor.01 exact= 393/1931 (0.2035) max|err|=0.0400 rms=0.0133
+[d-gen2] base=c01         rule=round.01 exact= 767/1931 (0.3972) max|err|=0.0300 rms=0.0102
+[d-gen2] base=c01         rule=round.03 exact=  78/1931 (0.0404) max|err|=0.0300 rms=0.0097
+[d-gen2] base=c02         rule=none     exact=   4/1931 (0.0021) max|err|=0.0240 rms=0.0078
+[d-gen2] base=c02         rule=floor.01 exact= 763/1931 (0.3951) max|err|=0.0300 rms=0.0099
+[d-gen2] base=c02         rule=round.01 exact=1033/1931 (0.5350) max|err|=0.0200 rms=0.0082
+[d-gen2] base=c02         rule=round.03 exact= 118/1931 (0.0611) max|err|=0.0240 rms=0.0078
+[d-gen2] base=mean(c01,c02) rule=none     exact=   4/1931 (0.0021) max|err|=0.0271 rms=0.0083
+[d-gen2] base=mean(c01,c02) rule=floor.01 exact= 565/1931 (0.2926) max|err|=0.0300 rms=0.0115
+[d-gen2] base=mean(c01,c02) rule=round.01 exact= 923/1931 (0.4780) max|err|=0.0300 rms=0.0087
+[d-gen2] base=mean(c01,c02) rule=round.03 exact= 112/1931 (0.0580) max|err|=0.0270 rms=0.0084
+[d-gen2] NOTE: c06 on 1-cm grid: max dev=2.27e-13
+[c-alt2] == segment-wise fit of c01 = a*cum + b (no step), per 5 m depth band ==
+[c-alt2] band [0,5) n= 148 slope=1.296271 intercept=-0.364146 max|res|=0.558297
+[c-alt2] band [5,10) n= 220 slope=1.000492 intercept=+0.971567 max|res|=0.006530
+[c-alt2] band [10,15) n= 234 slope=1.001604 intercept=+0.961314 max|res|=0.005685
+[c-alt2] band [15,20) n= 246 slope=1.000743 intercept=+0.972204 max|res|=0.006778
+[c-alt2] band [20,25) n= 251 slope=1.000794 intercept=+0.968309 max|res|=0.005740
+[c-alt2] band [25,30) n= 245 slope=1.000512 intercept=+0.973922 max|res|=0.005094
+[c-alt2] band [30,35) n= 236 slope=1.000342 intercept=+0.979440 max|res|=0.008151
+[c-alt2] band [35,40) n= 253 slope=1.000508 intercept=+0.975983 max|res|=0.006831
+[c-alt2] == same, per 5 m band, slope fixed to 1 ==
+[c-alt2] band [0,5) n= 148 median(c01-cum)=-0.0277  half-range=0.5067
+[c-alt2] band [5,10) n= 220 median(c01-cum)=+0.9748  half-range=0.0063
+[c-alt2] band [10,15) n= 234 median(c01-cum)=+0.9799  half-range=0.0078
+[c-alt2] band [15,20) n= 246 median(c01-cum)=+0.9835  half-range=0.0072
+[c-alt2] band [20,25) n= 251 median(c01-cum)=+0.9845  half-range=0.0068
+[c-alt2] band [25,30) n= 245 median(c01-cum)=+0.9873  half-range=0.0058
+[c-alt2] band [30,35) n= 236 median(c01-cum)=+0.9909  half-range=0.0070
+[c-alt2] band [35,40) n= 253 median(c01-cum)=+0.9947  half-range=0.0071
+[t1] 
+[t1] == exhaustive pair scan (8 numeric cols; c07 handled separately) ==
+[t1] c01_depth_top_m        c02_depth_ice_snow_m   sv_min/sv_max=3.37e-05  max|aA+bB+c|=0.0001828
+[t1] c01_depth_top_m        c03_samp_thick_cm      sv_min/sv_max=2.61e-02  max|aA+bB+c|=0.1748
+[t1] c01_depth_top_m        c04_sulfate_ug_kg      sv_min/sv_max=6.45e-02  max|aA+bB+c|=0.9248
+[t1] c01_depth_top_m        c05_density_ice_g_cm_3 sv_min/sv_max=2.34e-03  max|aA+bB+c|=0.01452
+[t1] c01_depth_top_m        c06_depth_w_e_m        sv_min/sv_max=1.81e-02  max|aA+bB+c|=0.05918
+[t1] c01_depth_top_m        c08_age_a_ad_ce        n=15 skip
+[t1] c01_depth_top_m        c09_age_ka_bp          n=15 skip
+[t1] c02_depth_ice_snow_m   c03_samp_thick_cm      sv_min/sv_max=2.61e-02  max|aA+bB+c|=0.1748
+[t1] c02_depth_ice_snow_m   c04_sulfate_ug_kg      sv_min/sv_max=6.45e-02  max|aA+bB+c|=0.9248
+[t1] c02_depth_ice_snow_m   c05_density_ice_g_cm_3 sv_min/sv_max=2.34e-03  max|aA+bB+c|=0.01454
+[t1] c02_depth_ice_snow_m   c06_depth_w_e_m        sv_min/sv_max=1.81e-02  max|aA+bB+c|=0.05921
+[t1] c02_depth_ice_snow_m   c08_age_a_ad_ce        n=15 skip
+[t1] c02_depth_ice_snow_m   c09_age_ka_bp          n=15 skip
+[t1] c03_samp_thick_cm      c04_sulfate_ug_kg      sv_min/sv_max=3.07e-02  max|aA+bB+c|=0.8624
+[t1] c03_samp_thick_cm      c05_density_ice_g_cm_3 sv_min/sv_max=1.62e-02  max|aA+bB+c|=0.1375
+[t1] c03_samp_thick_cm      c06_depth_w_e_m        sv_min/sv_max=2.86e-02  max|aA+bB+c|=0.1913
+[t1] c03_samp_thick_cm      c08_age_a_ad_ce        n=15 skip
+[t1] c03_samp_thick_cm      c09_age_ka_bp          n=15 skip
+[t1] c04_sulfate_ug_kg      c05_density_ice_g_cm_3 sv_min/sv_max=3.36e-02  max|aA+bB+c|=0.9215
+[t1] c04_sulfate_ug_kg      c06_depth_w_e_m        sv_min/sv_max=6.65e-02  max|aA+bB+c|=0.925
+[t1] c04_sulfate_ug_kg      c08_age_a_ad_ce        n=15 skip
+[t1] c04_sulfate_ug_kg      c09_age_ka_bp          n=15 skip
+[t1] c05_density_ice_g_cm_3 c06_depth_w_e_m        sv_min/sv_max=4.62e-03  max|aA+bB+c|=0.02853
+[t1] c05_density_ice_g_cm_3 c08_age_a_ad_ce        n=15 skip
+[t1] c05_density_ice_g_cm_3 c09_age_ka_bp          n=15 skip
+[t1] c06_depth_w_e_m        c08_age_a_ad_ce        n=15 skip
+[t1] c06_depth_w_e_m        c09_age_ka_bp          n=15 skip
+[t1] c08_age_a_ad_ce        c09_age_ka_bp          n=15 skip
+[t1] c04 within equal-c06 groups: 19 groups mult>1, 18 of them have >1 distinct c04
+[t1] c04 within equal-c01 groups: 0 groups mult>1, 0 of them have >1 distinct c04
+[t1] c04 within equal-c05 groups: 260 groups mult>1, 260 of them have >1 distinct c04
+[t1] c04 within equal-c03 groups: 13 groups mult>1, 13 of them have >1 distinct c04
+[t1] c04 within equal-c02 groups: 0 groups mult>1, 0 of them have >1 distinct c04
+[t1] column c01: distinct=1931 max multiplicity=1
+[t1] column c02: distinct=1931 max multiplicity=1
+[t1] column c06: distinct=1912 max multiplicity=2
+[t1] pearson c04 vs c01_depth_top_m        r=+0.0489 (n=1930)
+[t1] pearson c04 vs c02_depth_ice_snow_m   r=+0.0489 (n=1930)
+[t1] pearson c04 vs c03_samp_thick_cm      r=-0.0756 (n=1930)
+[t1] pearson c04 vs c05_density_ice_g_cm_3 r=+0.0493 (n=1930)
+[t1] pearson c04 vs c06_depth_w_e_m        r=+0.0495 (n=1930)
+[t1] pearson c04 vs c08_age_a_ad_ce        r=-0.0847 (n=15)
+[t1] pearson c04 vs c09_age_ka_bp          r=+0.0847 (n=15)
+[t1] c04 n=1930 distinct=1908 lattice0.001 maxdev=0.00e+00
+[t1] -- c07 --
+[t1] c07 non-empty rows=15 ; labels={'unidentified_event': 9, 'reference_surface': 1, 'event_01': 1, 'event_02': 1, 'event_03': 1, 'event_04': 1, 'event_05': 1} ; same rows as c08/c09 non-null: True
+[t1] signal rows (idx, c01, c04, c06, c09): [(0, 0.0, 116.396, 0.0, -0.068), (70, 2.0, 283.693, 0.78, -0.041), (502, 12.96, 1047.754, 5.88, 0.134), (517, 13.27, 431.026, 6.04, 0.141), (796, 18.9, 300.762, 9.25, 0.255), (841, 19.85, 243.178, 9.83, 0.276), (907, 21.24, 252.461, 10.71, 0.307), (1012, 23.31, 239.459, 12.06, 0.355), (1305, 29.2, 507.568, 16.23, 0.491), (1640, 36.22, 325.436, 21.86, 0.664), (1660, 36.59, 281.287, 22.18, 0.673), (1674, 36.85, 437.023, 22.41, 0.681), (1696, 37.28, 880.932, 22.78, 0.691), (1752, 38.4, 312.942, 23.77, 0.72), (1862, 40.59, 259.762, 25.76, 0.778)]
+[t1] c04 percentile of signal rows: [0.805, 0.982, 1.0, 0.992, 0.982, 0.976, 0.977, 0.974, 0.994, 0.985, 0.981, 0.993, 0.997, 0.985, 0.979]
+[t1] label event_01             n=1 c01=[2.0] c04=[283.693]
+[t1] label event_02             n=1 c01=[12.96] c04=[1047.754]
+[t1] label event_03             n=1 c01=[23.31] c04=[239.459]
+[t1] label event_04             n=1 c01=[29.2] c04=[507.568]
+[t1] label event_05             n=1 c01=[37.28] c04=[880.932]
+[t1] label reference_surface    n=1 c01=[0.0] c04=[116.396]
+[t1] label unidentified_event   n=9 c01=[13.27, 18.9, 19.85, 21.24, 36.22, 36.59, 36.85, 38.4, 40.59] c04=[431.026, 300.762, 243.178, 252.461, 325.436, 281.287, 437.023, 312.942, 259.762]
+[t1] c08 ~ poly1(c01) on 15 dated rows: max|res|=51.93 a (range 846 a)
+[t1] c08 ~ poly2(c01) on 15 dated rows: max|res|=6.35 a (range 846 a)
+[t1] c08 ~ poly3(c01) on 15 dated rows: max|res|=2.36 a (range 846 a)
+[t1] c08 ~ poly4(c01) on 15 dated rows: max|res|=1.92 a (range 846 a)
+[t1] c08 ~ poly5(c01) on 15 dated rows: max|res|=1.23 a (range 846 a)
+[t1] c08 monotonically non-increasing in c01 on dated rows: True
+[t3] 
+[t3] == direction test c05<->c06 ==
+[t3] c05 - round(c06/c01,3)     frac|.|<=5e-4 = 0.6751 (1303/1931) ; frac exact = 0.6751 ; max|.|=0.287
+[t3] c06 - round(c01*c05,3)     frac|.|<=5e-4 = 0.0404 (78/1931) ; frac exact = 0.0404 ; max|.|=0.03
+[t3] c06 - round(c01*c05,2)     frac|.|<=5e-4 = 0.3972 (767/1931) ; frac exact = 0.3972 ; max|.|=0.03
+[t3] reverse-model failures: 627 rows ; their c01: min=0.030 max=41.980 median=12.300
+[t3] reverse-model failures for c01>=1 m: 595/1896 (0.3138) ; for c01<1 m: 32/35 (0.9143)
+[t3] ratio c06/c01 non-increasing events when sorted by c01: 613 (c05 itself has 0)
+[t3] mean overshoot r6 = c06 - c01*c05 is +0.005501 m -> c05 < c06/c01 on average (consistent with c05=round down / c06 rounded up?)
+[t3] rows where c01*c05 > c06+0.005 (would falsify c06=round(c01*c05,2) unless rho>c05): 182 ; max excess=0.0165
+[t3] rows where c01*c05 < c06-0.005: 976 ; max deficit=0.0303
+[figure] wrote verify_finding1.png

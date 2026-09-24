@@ -1,0 +1,26 @@
+{
+  "mean_amplitude_dff0": {
+    "coef_region2": 0.311571,
+    "p_region2": 0.0
+  },
+  "mean_time_to_peak_s": {
+    "coef_region2": -25.172435,
+    "p_region2": 0.0
+  },
+  "mean_peak_width_s": {
+    "coef_region2": 10.722365,
+    "p_region2": 0.0
+  },
+  "mean_peak_prominence_dff0": {
+    "coef_region2": 0.321881,
+    "p_region2": 0.0
+  },
+  "mean_peak_frequency_hz": {
+    "coef_region2": -0.00377,
+    "p_region2": 0.0
+  },
+  "mean_auc_au": {
+    "coef_region2": 1.399777,
+    "p_region2": 0.73789
+  }
+}

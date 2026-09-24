@@ -1,0 +1,192 @@
+{
+  "panel": "panel_e",
+  "description": "Auxiliary alternative-explanation analysis",
+  "rows": [
+    {
+      "panel": "fig3b",
+      "metric": "inset_fit",
+      "r2": 1.0,
+      "Bc0": 0.013934673366834169,
+      "beta": 0.4376721174850714,
+      "a": 7.223844856546665
+    },
+    {
+      "panel": "fig3b",
+      "metric": "B1_loglog",
+      "slope": -1.5126011553378202,
+      "intercept": -0.15596264128835724,
+      "r2": 0.98867276701595,
+      "n": 158
+    },
+    {
+      "panel": "fig3b",
+      "metric": "B2_loglog",
+      "slope": -1.576021233795972,
+      "intercept": -0.4154925915311307,
+      "r2": 0.9827362707692402,
+      "n": 144
+    },
+    {
+      "panel": "fig3b",
+      "metric": "B3_loglog",
+      "slope": -1.7005006853095004,
+      "intercept": -0.7865950778138235,
+      "r2": 0.9665350483356683,
+      "n": 134
+    },
+    {
+      "panel": "fig3b",
+      "metric": "B4_loglog",
+      "slope": -1.8301914678563271,
+      "intercept": -1.036227547108193,
+      "r2": 0.9435134879213132,
+      "n": 121
+    },
+    {
+      "panel": "fig3b",
+      "metric": "B5_loglog",
+      "slope": -2.0273268296642337,
+      "intercept": -1.2895812070223673,
+      "r2": 0.9358012299568023,
+      "n": 114
+    },
+    {
+      "panel": "fig3c",
+      "metric": "ax2_fit",
+      "r2": 1.0,
+      "Bc0": 0.013934673366834169,
+      "beta": 0.8233401191739456,
+      "a": 5.751261437441253
+    },
+    {
+      "panel": "fig3c",
+      "metric": "ax1_B1",
+      "total_mass": 0.999999544,
+      "slope": 0.12138917384514403,
+      "r2": 0.11764723921081344,
+      "n": 907
+    },
+    {
+      "panel": "fig3c",
+      "metric": "ax1_B2",
+      "total_mass": 0.9999998160000001,
+      "slope": 0.1542344397211015,
+      "r2": 0.1599078697642876,
+      "n": 896
+    },
+    {
+      "panel": "fig3c",
+      "metric": "ax1_B3",
+      "total_mass": 0.9999998620000001,
+      "slope": 0.20042719478538173,
+      "r2": 0.22926775620567774,
+      "n": 870
+    },
+    {
+      "panel": "fig3c",
+      "metric": "ax1_B4",
+      "total_mass": 0.9999998790000001,
+      "slope": 0.2255120998271119,
+      "r2": 0.2535861676138498,
+      "n": 852
+    },
+    {
+      "panel": "fig3c",
+      "metric": "ax1_B5",
+      "total_mass": 1.000000018,
+      "slope": 0.2309866533765351,
+      "r2": 0.2468941190470203,
+      "n": 840
+    },
+    {
+      "panel": "SI.3",
+      "metric": "spectra_slope",
+      "slope": -1.0572269856991903,
+      "r2": 0.9448000858517767
+    },
+    {
+      "panel": "SI.3",
+      "metric": "spectra_slope",
+      "slope": -1.154968615785432,
+      "r2": 0.9682513558680277
+    },
+    {
+      "panel": "SI.3",
+      "metric": "spectra_slope",
+      "slope": -1.1511141956084028,
+      "r2": 0.966440228740746
+    },
+    {
+      "panel": "SI.3",
+      "metric": "spectra_slope",
+      "slope": -1.1764757445893763,
+      "r2": 0.9712555562695545
+    },
+    {
+      "panel": "SI.3",
+      "metric": "spectra_slope",
+      "slope": -1.1846639088883013,
+      "r2": 0.9723675607682989
+    },
+    {
+      "panel": "SI.3",
+      "metric": "slope_summary",
+      "mean": -1.1448898901141407,
+      "std": 0.045617422708622686,
+      "min": -1.1846639088883013,
+      "max": -1.0572269856991903
+    },
+    {
+      "panel": "SI.3",
+      "metric": "variogram_loaded",
+      "rows": 39
+    },
+    {
+      "panel": "SI.5a",
+      "metric": "homogeneous_V",
+      "loglog_slope": -5.056685600932571,
+      "r2_loglog": 0.5148087273506017,
+      "linear_slope": -0.3450005424683855,
+      "r2_lin": 0.6135161382307206
+    },
+    {
+      "panel": "SI.5a",
+      "metric": "bufheterogeneous_V",
+      "loglog_slope": -5.019949741013164,
+      "r2_loglog": 0.5714527449408837,
+      "linear_slope": -0.3267520499025965,
+      "r2_lin": 0.5882956351545099
+    },
+    {
+      "panel": "SI.5b",
+      "metric": "sparsity_01_V",
+      "linear_slope": -0.010378128236629218,
+      "r2": 0.49733025603692627
+    },
+    {
+      "panel": "SI.5b",
+      "metric": "sparsity_30_V",
+      "linear_slope": -0.1954111536213258,
+      "r2": 0.6422695148590267
+    },
+    {
+      "panel": "SI.5b",
+      "metric": "sparsity_50_V",
+      "linear_slope": -0.24713221326399112,
+      "r2": 0.5791742829558796
+    },
+    {
+      "panel": "Extended_data_fig1",
+      "metric": "delay_time",
+      "slope": -0.0006494546616417113,
+      "r2": 0.019199518702701757,
+      "mean_delay": 67.96056817655972,
+      "std_delay": 36.53431217294034
+    }
+  ],
+  "finding": "The auxiliary panels are consistent with the buffer-transition picture and do not contradict it: (1) the fig3b inset persistence and (2) the fig3c ax2 average mass both show power-law-like divergence as (B-Bc)->0; (3) the SI.3 noise spectra share a common log-log slope across the 5 buffer conditions; (4) the SI.5a heterogeneous RW curve is shifted relative to the homogeneous curve; (5) the Extended_data_fig1 mean-delay time series shows no strong linear trend. None of these support a null effect or a reverse relationship; they support the same critical-slowing-down / avalanche picture implied by the core panels.",
+  "caveats": [
+    "Some ax1 probability distributions have very small values near zero; log-log tail slopes are sensitive to the zero-floor.",
+    "The extended_data_fig1 delay time series is very short (27k time points) and the R2 for a linear trend is low, indicating no strong trend."
+  ]
+}

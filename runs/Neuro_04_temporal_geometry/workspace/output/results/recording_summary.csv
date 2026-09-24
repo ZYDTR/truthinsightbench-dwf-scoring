@@ -1,0 +1,3 @@
+recording,n_events,event_index_min,event_index_max,index_contiguous,relative_time_mean,relative_time_median,relative_time_sd,relative_time_iqr,relative_time_range,negative_time_frac,signal_mean,signal_median,signal_sd
+set_a,35,1,35,True,34.97571428571428,35.15,29.734977352459182,40.925,124.8,0.14285714285714285,0.04035428571428569,-0.3628,2.2315018958939183
+set_b,556,1,556,True,32.80521582733813,30.275,27.749100297860508,32.7125,137.4,0.10611510791366907,0.4851306257194245,0.19835,2.536096632439013

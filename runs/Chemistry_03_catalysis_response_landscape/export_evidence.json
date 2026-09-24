@@ -1,0 +1,21 @@
+{
+  "task_id": "Chemistry_03_catalysis_response_landscape",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260919T165851-6d9ec9",
+  "source_run_json_sha256": "6406320ecbad2ed6e5d151871c0048160931573112dc095c8c2415dc1fa5bbdb",
+  "source_release_json_sha256": "9d4895a2a0407bac5829d365b9fc348953283bfc48ec044429f442bd5710b822",
+  "source_latest_validation_sha256": "9cafd8469b5b20c29258308dcbcd9f11d9afe331907c48d4709e7e9eb9f10a43",
+  "source_snapshot_manifest_sha256": "d5b8fd21f1c6b594770c273e94dfb4aea365e22c87ecf225f5ad3de7830be9ce",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 758
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "dcfec5e879758b5f02cb5d3359ebc89272dcdb491aa6b956417b3da11c863e05",
+  "output_sha256": "062753430a2716ae6ccbde35f00223a7406c59d5c94ab13e91592ecceea6a8f8"
+}

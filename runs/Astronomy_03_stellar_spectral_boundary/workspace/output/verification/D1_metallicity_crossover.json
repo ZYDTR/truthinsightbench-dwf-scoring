@@ -1,0 +1,857 @@
+{
+  "finding_id": "D1",
+  "datafile": "/data/user/conversations/conv-b109a95b-77c2-4866-9c87-234d668cd900/project/data/photon_flux_grid.tsv",
+  "method": "OLS slope of natural-log photon_flux_cm2 on metallicity_index per (T, wavelength); crossover = first sign change, linearly interpolated between bracketing wavelengths",
+  "n_wavelengths": 176,
+  "n_rows": 18480,
+  "primary_M_le_0.50": {
+    "T5300": {
+      "w_cross_nm": 448.66546164914007,
+      "bracket_nm": [
+        445.0,
+        450.0
+      ],
+      "bracket_slopes": [
+        -0.04853535622894118,
+        0.01767097857247185
+      ],
+      "slope_at_179.4nm": -1.9952453926170945,
+      "slope_at_850nm": 0.030479176537829326,
+      "slope_500nm": -0.012928287829026424,
+      "median_slope_wl_ge_500nm": 0.04425007381634378,
+      "min_slope": -2.092680057995154,
+      "min_slope_wl": 205.1,
+      "max_slope": 0.07733212837181141,
+      "max_slope_wl": 605.0,
+      "all_slopes_below_bracket_negative": true,
+      "all_slopes_above_bracket_positive": false,
+      "n_negative_slopes": 100,
+      "n_positive_slopes": 76
+    },
+    "T5800": {
+      "w_cross_nm": 445.8248474583345,
+      "bracket_nm": [
+        445.0,
+        450.0
+      ],
+      "bracket_slopes": [
+        -0.009867614150947923,
+        0.049947167668666366
+      ],
+      "slope_at_179.4nm": -2.996413392315502,
+      "slope_at_850nm": 0.040826842999539925,
+      "slope_500nm": 0.022589754951307685,
+      "median_slope_wl_ge_500nm": 0.06049095433571672,
+      "min_slope": -2.996413392315502,
+      "min_slope_wl": 179.4,
+      "max_slope": 0.09010957955450535,
+      "max_slope_wl": 605.0,
+      "all_slopes_below_bracket_negative": true,
+      "all_slopes_above_bracket_positive": true,
+      "n_negative_slopes": 95,
+      "n_positive_slopes": 81
+    },
+    "T6300": {
+      "w_cross_nm": 409.8714474115438,
+      "bracket_nm": [
+        405.0,
+        410.0
+      ],
+      "bracket_slopes": [
+        -0.0423426401384873,
+        0.0011173796065155244
+      ],
+      "slope_at_179.4nm": -2.755841671850651,
+      "slope_at_850nm": 0.04874820900056837,
+      "slope_500nm": 0.04633374017888855,
+      "median_slope_wl_ge_500nm": 0.07161532395465951,
+      "min_slope": -2.7581921954570827,
+      "min_slope_wl": 181.0,
+      "max_slope": 0.09632417512970837,
+      "max_slope_wl": 595.0,
+      "all_slopes_below_bracket_negative": true,
+      "all_slopes_above_bracket_positive": false,
+      "n_negative_slopes": 90,
+      "n_positive_slopes": 86
+    }
+  },
+  "endpoint_fluxes_and_ratios": {
+    "T5300_179.4nm": {
+      "flux_M_minus1": 153000000000.0,
+      "flux_M_plus0.5": 6240000000.0,
+      "ratio_M0.5_over_Mm1": 0.0407843137254902,
+      "log10_ratio": -1.3895068411351748,
+      "pct_change": -95.92156862745098
+    },
+    "T5300_850.0nm": {
+      "flux_M_minus1": 2220000000000000.0,
+      "flux_M_plus0.5": 2320000000000000.0,
+      "ratio_M0.5_over_Mm1": 1.045045045045045,
+      "log10_ratio": 0.019135010440261037,
+      "pct_change": 4.504504504504503
+    },
+    "T5800_179.4nm": {
+      "flux_M_minus1": 4590000000000.0,
+      "flux_M_plus0.5": 67200000000.0,
+      "ratio_M0.5_over_Mm1": 0.014640522875816993,
+      "log10_ratio": -1.834443412483436,
+      "pct_change": -98.5359477124183
+    },
+    "T5800_850.0nm": {
+      "flux_M_minus1": 2070000000000000.0,
+      "flux_M_plus0.5": 2200000000000000.0,
+      "ratio_M0.5_over_Mm1": 1.0628019323671498,
+      "log10_ratio": 0.026452335365288505,
+      "pct_change": 6.2801932367149815
+    },
+    "T6300_179.4nm": {
+      "flux_M_minus1": 28000000000000.0,
+      "flux_M_plus0.5": 533000000000.0,
+      "ratio_M0.5_over_Mm1": 0.019035714285714284,
+      "log10_ratio": -1.720430822315647,
+      "pct_change": -98.09642857142858
+    },
+    "T6300_850.0nm": {
+      "flux_M_minus1": 1900000000000000.0,
+      "flux_M_plus0.5": 2040000000000000.0,
+      "ratio_M0.5_over_Mm1": 1.0736842105263158,
+      "log10_ratio": 0.0308765664730698,
+      "pct_change": 7.36842105263158
+    }
+  },
+  "full_ladder_M_le_0.90_crossing_nm": {
+    "T5300": {
+      "w_cross_nm": 449.469639955687
+    },
+    "T5800": {
+      "w_cross_nm": 446.56736314995754
+    },
+    "T6300": {
+      "w_cross_nm": 434.6773436152278
+    }
+  },
+  "robustness_a_spearman_rank": {
+    "T5300": {
+      "w_cross_nm": 447.7811313755604,
+      "bracket_nm": [
+        445.0,
+        450.0
+      ],
+      "rho_at_179.4nm": -1.0,
+      "rho_at_850nm": 0.9945415542981633,
+      "median_rho_wl_ge_500nm": 0.9981838346426651
+    },
+    "T5800": {
+      "w_cross_nm": 446.86660093109134,
+      "bracket_nm": [
+        445.0,
+        450.0
+      ],
+      "rho_at_179.4nm": -1.0,
+      "rho_at_850nm": 0.9974766550748718,
+      "median_rho_wl_ge_500nm": 0.9990923300030722
+    },
+    "T6300": {
+      "w_cross_nm": 409.4090515720404,
+      "bracket_nm": [
+        405.0,
+        410.0
+      ],
+      "rho_at_179.4nm": -1.0,
+      "rho_at_850nm": 0.9977797934058557,
+      "median_rho_wl_ge_500nm": 0.9994958406536122
+    }
+  },
+  "robustness_b_leave_one_temperature_out_pooled": {
+    "drop_T5300": {
+      "w_cross_nm": 443.01207768432505,
+      "bracket_nm": [
+        440.0,
+        445.0
+      ]
+    },
+    "drop_T5800": {
+      "w_cross_nm": 434.87825049728957,
+      "bracket_nm": [
+        430.0,
+        435.0
+      ]
+    },
+    "drop_T6300": {
+      "w_cross_nm": 447.31718984666355,
+      "bracket_nm": [
+        445.0,
+        450.0
+      ]
+    }
+  },
+  "crossing_spread_nm": {
+    "per_slice": {
+      "T5300": 448.66546164914007,
+      "T5800": 445.8248474583345,
+      "T6300": 409.8714474115438
+    },
+    "min": 409.8714474115438,
+    "max": 448.66546164914007,
+    "range": 38.794014237596286
+  },
+  "robustness_c_metallicity_window": {
+    "M<=0.0": {
+      "T5300": {
+        "w_cross_nm": 447.55544011025097,
+        "bracket_nm": [
+          445.0,
+          450.0
+        ],
+        "median_slope_wl_ge_500nm": 0.038423798861465276
+      },
+      "T5800": {
+        "w_cross_nm": 444.5705999241702,
+        "bracket_nm": [
+          440.0,
+          445.0
+        ],
+        "median_slope_wl_ge_500nm": 0.05610492393335466
+      },
+      "T6300": {
+        "w_cross_nm": 407.34659961855994,
+        "bracket_nm": [
+          405.0,
+          410.0
+        ],
+        "median_slope_wl_ge_500nm": 0.06810462274886127
+      }
+    },
+    "M<=0.25": {
+      "T5300": {
+        "w_cross_nm": 448.080970648241,
+        "bracket_nm": [
+          445.0,
+          450.0
+        ],
+        "median_slope_wl_ge_500nm": 0.04150801468572631
+      },
+      "T5800": {
+        "w_cross_nm": 445.26920043839783,
+        "bracket_nm": [
+          445.0,
+          450.0
+        ],
+        "median_slope_wl_ge_500nm": 0.05801960933000742
+      },
+      "T6300": {
+        "w_cross_nm": 408.6132724197274,
+        "bracket_nm": [
+          405.0,
+          410.0
+        ],
+        "median_slope_wl_ge_500nm": 0.07087787841922638
+      }
+    },
+    "M<=0.5": {
+      "T5300": {
+        "w_cross_nm": 448.66546164914007,
+        "bracket_nm": [
+          445.0,
+          450.0
+        ],
+        "median_slope_wl_ge_500nm": 0.04425007381634378
+      },
+      "T5800": {
+        "w_cross_nm": 445.8248474583345,
+        "bracket_nm": [
+          445.0,
+          450.0
+        ],
+        "median_slope_wl_ge_500nm": 0.06049095433571672
+      },
+      "T6300": {
+        "w_cross_nm": 409.8714474115438,
+        "bracket_nm": [
+          405.0,
+          410.0
+        ],
+        "median_slope_wl_ge_500nm": 0.07161532395465951
+      }
+    }
+  },
+  "robustness_d_bracket_sensitivity": {
+    "T5300": {
+      "last_negative_node_nm": 445.0,
+      "first_positive_node_nm": 450.0,
+      "interpolated_nm": 448.66546164914007,
+      "midpoint_nm": 447.5,
+      "slope_last_negative": -0.04853535622894118,
+      "slope_first_positive": 0.01767097857247185,
+      "node_spacing_nm": 5.0,
+      "interp_if_slope_before_x1.2": 448.83610949023387,
+      "interp_if_slope_after_x1.2": 448.4797094221896,
+      "slopes_3_before": [
+        -0.007558982365430145,
+        -0.029189758668237448,
+        -0.04853535622894118
+      ],
+      "slopes_3_after": [
+        0.01767097857247185,
+        0.0014619991701720551,
+        0.014102226045297482
+      ]
+    },
+    "T5800": {
+      "last_negative_node_nm": 445.0,
+      "first_positive_node_nm": 450.0,
+      "interpolated_nm": 445.8248474583345,
+      "midpoint_nm": 447.5,
+      "slope_last_negative": -0.009867614150947923,
+      "slope_first_positive": 0.049947167668666366,
+      "node_spacing_nm": 5.0,
+      "interp_if_slope_before_x1.2": 445.95820212645816,
+      "interp_if_slope_after_x1.2": 445.7068064658415,
+      "slopes_3_before": [
+        -0.015675664594998615,
+        -0.024302040888104684,
+        -0.009867614150947923
+      ],
+      "slopes_3_after": [
+        0.049947167668666366,
+        0.039798917180339496,
+        0.0453395237316418
+      ]
+    },
+    "T6300": {
+      "last_negative_node_nm": 405.0,
+      "first_positive_node_nm": 410.0,
+      "interpolated_nm": 409.8714474115438,
+      "midpoint_nm": 407.5,
+      "slope_last_negative": -0.0423426401384873,
+      "slope_first_positive": 0.0011173796065155244,
+      "node_spacing_nm": 5.0,
+      "interp_if_slope_before_x1.2": 409.8924118183117,
+      "interp_if_slope_after_x1.2": 409.84652607267725,
+      "slopes_3_before": [
+        -0.30024842291765563,
+        -0.0538378776948109,
+        -0.0423426401384873
+      ],
+      "slopes_3_after": [
+        0.0011173796065155244,
+        0.0011577562818927251,
+        -0.002362753405805395
+      ]
+    }
+  },
+  "boundary_in_claimed_420_470_window": {
+    "T5300": true,
+    "T5800": true,
+    "T6300": false
+  },
+  "boundary_consistent_across_T": false,
+  "sign_pattern_counts": {
+    "T5300": {
+      "n_neg_blueward_of_cross": 95,
+      "n_wl_blueward": 95,
+      "n_pos_redward_of_cross": 76,
+      "n_wl_redward": 81,
+      "blueward_all_negative": true,
+      "redward_all_positive": false
+    },
+    "T5800": {
+      "n_neg_blueward_of_cross": 95,
+      "n_wl_blueward": 95,
+      "n_pos_redward_of_cross": 81,
+      "n_wl_redward": 81,
+      "blueward_all_negative": true,
+      "redward_all_positive": true
+    },
+    "T6300": {
+      "n_neg_blueward_of_cross": 87,
+      "n_wl_blueward": 87,
+      "n_pos_redward_of_cross": 86,
+      "n_wl_redward": 89,
+      "blueward_all_negative": true,
+      "redward_all_positive": false
+    }
+  },
+  "orders_of_magnitude_179.4nm": {
+    "T5300": -1.3895068411351748,
+    "T5800": -1.834443412483436,
+    "T6300": -1.720430822315647
+  },
+  "pct_change_850nm": {
+    "T5300": 4.504504504504503,
+    "T5800": 6.2801932367149815,
+    "T6300": 7.36842105263158
+  },
+  "crossing_definition_variants": {
+    "T5300": {
+      "first_sign_change_nm": 448.66546164914007,
+      "last_sign_change_persistent_nm": 525.917949462769,
+      "first_sign_change_after_3pt_median_smooth_nm": 449.76151462864226,
+      "first_sign_change_quartile_trend_nm": 448.6785949845363,
+      "n_sign_changes": 5,
+      "sign_changes_nm": [
+        [
+          445.0,
+          450.0
+        ],
+        [
+          495.0,
+          500.0
+        ],
+        [
+          500.0,
+          505.0
+        ],
+        [
+          505.0,
+          510.0
+        ],
+        [
+          525.0,
+          530.0
+        ]
+      ]
+    },
+    "T5800": {
+      "first_sign_change_nm": 445.8248474583345,
+      "last_sign_change_persistent_nm": 445.8248474583345,
+      "first_sign_change_after_3pt_median_smooth_nm": 445.9933866817806,
+      "first_sign_change_quartile_trend_nm": 445.84254055059074,
+      "n_sign_changes": 1,
+      "sign_changes_nm": [
+        [
+          445.0,
+          450.0
+        ]
+      ]
+    },
+    "T6300": {
+      "first_sign_change_nm": 409.8714474115438,
+      "last_sign_change_persistent_nm": 434.38135714515533,
+      "first_sign_change_after_3pt_median_smooth_nm": 409.8714474115438,
+      "first_sign_change_quartile_trend_nm": 409.8877547464031,
+      "n_sign_changes": 3,
+      "sign_changes_nm": [
+        [
+          405.0,
+          410.0
+        ],
+        [
+          415.0,
+          420.0
+        ],
+        [
+          430.0,
+          435.0
+        ]
+      ]
+    }
+  },
+  "moving_average_crossing": {
+    "T5300": {
+      "MA5_nm": 456.34187865033556,
+      "MA9_nm": 457.0342034882691,
+      "MA15_nm": 461.01202448896925,
+      "MA9_profile_min": -1.9646677330316955
+    },
+    "T5800": {
+      "MA5_nm": 443.3118794158156,
+      "MA9_nm": 445.87889940475804,
+      "MA15_nm": 447.56177058482024,
+      "MA9_profile_min": -2.6401748110583316
+    },
+    "T6300": {
+      "MA5_nm": 438.23303280232204,
+      "MA9_nm": 429.57007782765766,
+      "MA15_nm": 432.7107475648637,
+      "MA9_profile_min": -2.5673860753240456
+    }
+  },
+  "moving_average_crossing_summary": {
+    "MA5": {
+      "T5300": 456.34187865033556,
+      "T5800": 443.3118794158156,
+      "T6300": 438.23303280232204
+    },
+    "MA9": {
+      "T5300": 457.0342034882691,
+      "T5800": 445.87889940475804,
+      "T6300": 429.57007782765766
+    },
+    "MA15": {
+      "T5300": 461.01202448896925,
+      "T5800": 447.56177058482024,
+      "T6300": 432.7107475648637
+    },
+    "MA9_min": 429.57007782765766,
+    "MA9_max": 457.0342034882691,
+    "MA9_range_nm": 27.464125660611444,
+    "MA9_all_in_420_470": true
+  },
+  "persistent_crossing": {
+    "per_slice": {
+      "T5300": 525.917949462769,
+      "T5800": 445.8248474583345,
+      "T6300": 434.38135714515533
+    },
+    "min": 434.38135714515533,
+    "max": 525.917949462769,
+    "range": 91.53659231761367,
+    "all_in_420_470": false
+  },
+  "redward_statistics": {
+    "T5300": {
+      "n_nodes_wl_ge_500": 71,
+      "n_positive_slopes_wl_ge_500": 66,
+      "frac_positive_wl_ge_500": 0.9295774647887324,
+      "n_negative_slopes_wl_ge_500": 5,
+      "median_slope_wl_ge_500": 0.04425007381634378,
+      "min_slope_wl_ge_500": -0.053026383331251405,
+      "max_slope_wl_ge_500": 0.07733212837181141,
+      "median_pct_flux_change_over_Mspan_1.5_Mm1_to_Mp0.5": 6.8627495627266555,
+      "median_pct_flux_change_over_Mspan_1.9_full_ladder": 8.771062158744414,
+      "empirical_pct_change": {
+        "500nm": {
+          "Mm1_to_Mp0.5_pct": -1.851851851851849,
+          "Mm1_to_Mp0.9_pct": -4.629629629629628
+        },
+        "600nm": {
+          "Mm1_to_Mp0.5_pct": 10.080645161290324,
+          "Mm1_to_Mp0.9_pct": 14.11290322580645
+        },
+        "700nm": {
+          "Mm1_to_Mp0.5_pct": 6.882591093117418,
+          "Mm1_to_Mp0.9_pct": 9.31174089068827
+        },
+        "850nm": {
+          "Mm1_to_Mp0.5_pct": 4.504504504504503,
+          "Mm1_to_Mp0.9_pct": 7.2072072072072
+        }
+      }
+    },
+    "T5800": {
+      "n_nodes_wl_ge_500": 71,
+      "n_positive_slopes_wl_ge_500": 71,
+      "frac_positive_wl_ge_500": 1.0,
+      "n_negative_slopes_wl_ge_500": 0,
+      "median_slope_wl_ge_500": 0.06049095433571672,
+      "min_slope_wl_ge_500": 0.0030445351184885485,
+      "max_slope_wl_ge_500": 0.09010957955450535,
+      "median_pct_flux_change_over_Mspan_1.5_Mm1_to_Mp0.5": 9.498036489349303,
+      "median_pct_flux_change_over_Mspan_1.9_full_ladder": 12.179806506018487,
+      "empirical_pct_change": {
+        "500nm": {
+          "Mm1_to_Mp0.5_pct": 3.347280334728042,
+          "Mm1_to_Mp0.9_pct": 2.5104602510460206
+        },
+        "600nm": {
+          "Mm1_to_Mp0.5_pct": 12.204724409448819,
+          "Mm1_to_Mp0.9_pct": 16.929133858267708
+        },
+        "700nm": {
+          "Mm1_to_Mp0.5_pct": 9.543568464730301,
+          "Mm1_to_Mp0.9_pct": 13.278008298755184
+        },
+        "850nm": {
+          "Mm1_to_Mp0.5_pct": 6.2801932367149815,
+          "Mm1_to_Mp0.9_pct": 9.661835748792269
+        }
+      }
+    },
+    "T6300": {
+      "n_nodes_wl_ge_500": 71,
+      "n_positive_slopes_wl_ge_500": 71,
+      "frac_positive_wl_ge_500": 1.0,
+      "n_negative_slopes_wl_ge_500": 0,
+      "median_slope_wl_ge_500": 0.07161532395465951,
+      "min_slope_wl_ge_500": 0.038292152323139594,
+      "max_slope_wl_ge_500": 0.09632417512970837,
+      "median_pct_flux_change_over_Mspan_1.5_Mm1_to_Mp0.5": 11.340510958772242,
+      "median_pct_flux_change_over_Mspan_1.9_full_ladder": 14.576108072414783,
+      "empirical_pct_change": {
+        "500nm": {
+          "Mm1_to_Mp0.5_pct": 6.666666666666665,
+          "Mm1_to_Mp0.9_pct": 7.058823529411762
+        },
+        "600nm": {
+          "Mm1_to_Mp0.5_pct": 13.888888888888884,
+          "Mm1_to_Mp0.9_pct": 19.047619047619047
+        },
+        "700nm": {
+          "Mm1_to_Mp0.5_pct": 11.739130434782608,
+          "Mm1_to_Mp0.9_pct": 15.652173913043477
+        },
+        "850nm": {
+          "Mm1_to_Mp0.5_pct": 7.36842105263158,
+          "Mm1_to_Mp0.9_pct": 10.526315789473696
+        }
+      }
+    }
+  },
+  "blueward_amplitude_179.4nm": {
+    "T5300_full_ladder_Mm1_to_Mp0.9": {
+      "log10_ratio": -1.9318383998377056,
+      "factor": 0.011699346405228758
+    },
+    "T5300_Mm1_to_Mp0.5": {
+      "log10_ratio": -1.3895068411351748,
+      "factor": 0.0407843137254902
+    },
+    "T5300_max_over_min_any_M": {
+      "log10_ratio": 1.9318383998377056,
+      "factor": 85.47486033519553
+    },
+    "T5800_full_ladder_Mm1_to_Mp0.9": {
+      "log10_ratio": -2.183246189943418,
+      "factor": 0.006557734204793028
+    },
+    "T5800_Mm1_to_Mp0.5": {
+      "log10_ratio": -1.834443412483436,
+      "factor": 0.014640522875816993
+    },
+    "T5800_max_over_min_any_M": {
+      "log10_ratio": 2.183246189943418,
+      "factor": 152.49169435215947
+    },
+    "T6300_full_ladder_Mm1_to_Mp0.9": {
+      "log10_ratio": -2.1187784279034814,
+      "factor": 0.0076071428571428575
+    },
+    "T6300_Mm1_to_Mp0.5": {
+      "log10_ratio": -1.720430822315647,
+      "factor": 0.019035714285714284
+    },
+    "T6300_max_over_min_any_M": {
+      "log10_ratio": 2.1187784279034814,
+      "factor": 131.45539906103286
+    }
+  },
+  "joint_cross_temperature_consistency": {
+    "last_wavelength_all_three_slices_negative": 430.0,
+    "first_wavelength_all_three_slices_positive": 450.0,
+    "n_wavelengths_all_three_negative": 90,
+    "n_wavelengths_all_three_positive": 76,
+    "joint_bracket_nm": [
+      430.0,
+      450.0
+    ],
+    "n_wavelengths_with_mixed_sign_across_slices": 10,
+    "mixed_sign_bands_nm": [
+      [
+        410.0,
+        415.0
+      ],
+      [
+        435.0,
+        445.0
+      ],
+      [
+        500.0,
+        500.0
+      ],
+      [
+        510.0,
+        525.0
+      ]
+    ]
+  },
+  "fit_quality_endpoints": {
+    "T5300": {
+      "179.4nm": {
+        "slope": -1.9952453926170945,
+        "r2": 0.9967046185979217,
+        "spearman_rho": -1.0,
+        "strictly_monotone_decreasing": true,
+        "strictly_monotone_increasing": false
+      },
+      "850.0nm": {
+        "slope": 0.030479176537829326,
+        "r2": 0.9643553147578044,
+        "spearman_rho": 0.9945415542981633,
+        "strictly_monotone_decreasing": false,
+        "strictly_monotone_increasing": false
+      }
+    },
+    "T5800": {
+      "179.4nm": {
+        "slope": -2.996413392315502,
+        "r2": 0.9911662281801468,
+        "spearman_rho": -1.0,
+        "strictly_monotone_decreasing": true,
+        "strictly_monotone_increasing": false
+      },
+      "850.0nm": {
+        "slope": 0.040826842999539925,
+        "r2": 0.9873273876269483,
+        "spearman_rho": 0.9974766550748718,
+        "strictly_monotone_decreasing": false,
+        "strictly_monotone_increasing": false
+      }
+    },
+    "T6300": {
+      "179.4nm": {
+        "slope": -2.755841671850651,
+        "r2": 0.9733765185848342,
+        "spearman_rho": -1.0,
+        "strictly_monotone_decreasing": true,
+        "strictly_monotone_increasing": false
+      },
+      "850.0nm": {
+        "slope": 0.04874820900056837,
+        "r2": 0.9896909017434736,
+        "spearman_rho": 0.9977797934058557,
+        "strictly_monotone_decreasing": false,
+        "strictly_monotone_increasing": false
+      }
+    }
+  },
+  "model_free_flux_ratio_crossing": {
+    "T5300": {
+      "all_R1_crossings_nm": [
+        448.6949,
+        464.0155,
+        467.5239,
+        498.8769,
+        504.0182,
+        507.5113,
+        525.8251
+      ],
+      "crossings_380_600nm": [
+        448.6949,
+        464.0155,
+        467.5239,
+        498.8769,
+        504.0182,
+        507.5113,
+        525.8251
+      ],
+      "R_at_400nm": 0.8156028368794326,
+      "R_at_450nm": 1.0255102040816326,
+      "R_at_500nm": 0.9814814814814815,
+      "R_at_850nm": 1.045045045045045
+    },
+    "T5800": {
+      "all_R1_crossings_nm": [
+        445.9878
+      ],
+      "crossings_380_600nm": [
+        445.9878
+      ],
+      "R_at_400nm": 0.8641304347826086,
+      "R_at_450nm": 1.075221238938053,
+      "R_at_500nm": 1.0334728033472804,
+      "R_at_850nm": 1.0628019323671498
+    },
+    "T6300": {
+      "all_R1_crossings_nm": [
+        434.4276
+      ],
+      "crossings_380_600nm": [
+        434.4276
+      ],
+      "R_at_400nm": 0.918918918918919,
+      "R_at_450nm": 1.1075697211155378,
+      "R_at_500nm": 1.0666666666666667,
+      "R_at_850nm": 1.0736842105263158
+    }
+  },
+  "verdict": {
+    "claimed_boundary_window_nm": [
+      420,
+      470
+    ],
+    "my_per_slice_boundary_naive_first_sign_change_nm": {
+      "T5300": 448.66546164914007,
+      "T5800": 445.8248474583345,
+      "T6300": 409.8714474115438
+    },
+    "my_per_slice_boundary_robust_persistent_nm": {
+      "T5300": 525.917949462769,
+      "T5800": 445.8248474583345,
+      "T6300": 434.38135714515533
+    },
+    "my_per_slice_boundary_model_free_ratio_nm": {
+      "T5300": 448.6949,
+      "T5800": 445.9878,
+      "T6300": 434.4276
+    },
+    "n_slices_inside_window_naive": 2,
+    "robust_definitions_per_slice_nm": {
+      "T5300": {
+        "MA9_rolling_mean": 457.034,
+        "model_free_ratio": 448.6949,
+        "both_in_420_470": true
+      },
+      "T5800": {
+        "MA9_rolling_mean": 445.879,
+        "model_free_ratio": 445.9878,
+        "both_in_420_470": true
+      },
+      "T6300": {
+        "MA9_rolling_mean": 429.57,
+        "model_free_ratio": 434.4276,
+        "both_in_420_470": true
+      }
+    },
+    "n_slices_inside_window_robust": 3,
+    "spread_naive_nm": 38.794014237596286,
+    "spread_robust_nm": 27.464125660611444,
+    "spread_model_free_nm": 14.267300000000034,
+    "blueward_orders_of_magnitude_179.4nm_full_ladder": {
+      "T5300": -1.9318383998377056,
+      "T5800": -2.183246189943418,
+      "T6300": -2.1187784279034814
+    },
+    "redward_pct_change_850nm_full_ladder": {
+      "T5300": 7.2072072072072,
+      "T5800": 9.661835748792269,
+      "T6300": 10.526315789473696
+    },
+    "discrepancies": [
+      "DIRECTION + BOUNDARY: confirmed. Raising the metallicity index lowers flux blueward of ~435-449 nm and raises it redward; the crossover is 448.7 (5300K), 445.8 (5800K) under the literal first-sign-change rule and the same for the persistent/model-free definitions; the model-free flux-ratio test (flux(M=+0.5)/flux(M=-1.0)=1) gives 448.69 / 445.99 / 434.43 nm.",
+      "T=6300K EXCEPTION (definitional fragility): the literal 'first sign change' rule gives 409.87 nm for the 6300K slice, just BELOW the claimed 420 nm window edge. That value is not robust: the 6300K slope profile has 3 sign changes (405-410, 415-420, 430-435) and the fluxes at 410-420 nm vary by only ~1-2% over the whole ladder (slopes +0.0011, +0.0012, -0.0024), i.e. a null band, not a real reversal. The persistent-last-crossing and model-free definitions both give 434.4 nm for this slice, inside the window.",
+      "MAGNITUDE, blueward: 'several orders of magnitude at 180 nm' is an overstatement. Over the full ladder M=-1.00 -> +0.90 the 179.4 nm flux falls by a factor of 85-152, i.e. 1.93-2.18 dex = about TWO orders of magnitude (1.39-1.83 dex over the evenly sampled M<=+0.50 sub-ladder).",
+      "MAGNITUDE, redward: 'a few percent near 500-850 nm' understates it. Over the full ladder (M=-1 -> +0.9) the empirical change is +7.2/+9.7/+10.5% at 850 nm, +9.3/+13.3/+15.7% at 700 nm and +14.1/+16.9/+19.0% at 600 nm for T=5300/5800/6300 K; the median log-slope for wl>=500 nm is 0.044/0.060/0.072 per unit M (+6.8/+9.5/+11.4% over the M<=0.5 ladder). So the right description is 'weak but ~5-15%', and 'weak' is accurate at 850 nm where it is ~7-10%.",
+      "REDWARD NOT UNIFORMLY POSITIVE: at T=5300K the slopes at 500-525 nm are locally negative (min -0.053 at 515 nm; empirical M=-1 -> +0.9 change at 500 nm is -4.6%), so 93.0% of nodes with wl>=500 nm are positive there (100% for the other two slices).",
+      "CROSS-TEMPERATURE 'SAME': supported. The two most defensible definitions both put all three slices inside 420-470 nm and agree to within ~27 nm (model-free flux-ratio: 448.69 / 445.99 / 434.43 nm, range 14.3 nm; 9-node rolling-mean slope: 457.0 / 445.9 / 429.6 nm, range 27.5 nm = 6.2% of the mean). Both show a systematic trend to bluer crossover at higher T, so 'essentially the same' is fair but not exact. The literal first-sign-change rule gives a 38.8 nm range because of the 6300K null band above."
+    ],
+    "crossing_definition_sensitivity_nm": {
+      "T5300": {
+        "naive_first": 448.66546164914007,
+        "persistent": 525.917949462769,
+        "rolling_mean_MA9": 457.034,
+        "model_free": 448.6949,
+        "bracket": [
+          445.0,
+          450.0
+        ]
+      },
+      "T5800": {
+        "naive_first": 445.8248474583345,
+        "persistent": 445.8248474583345,
+        "rolling_mean_MA9": 445.879,
+        "model_free": 445.9878,
+        "bracket": [
+          445.0,
+          450.0
+        ]
+      },
+      "T6300": {
+        "naive_first": 409.8714474115438,
+        "persistent": 434.38135714515533,
+        "rolling_mean_MA9": 429.57,
+        "model_free": 434.4276,
+        "bracket": [
+          405.0,
+          410.0
+        ]
+      }
+    }
+  },
+  "commands": {
+    "run": "python3 /data/user/conversations/conv-b109a95b-77c2-4866-9c87-234d668cd900/project/output/verification/D1_verify.py",
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "script": "/data/user/conversations/conv-b109a95b-77c2-4866-9c87-234d668cd900/project/output/verification/D1_verify.py"
+  },
+  "reproduce_from_raw_data": true
+}

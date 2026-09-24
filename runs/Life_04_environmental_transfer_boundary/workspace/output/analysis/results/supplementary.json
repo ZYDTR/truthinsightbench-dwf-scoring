@@ -1,0 +1,457 @@
+{
+  "schema": "life04-supplementary",
+  "seed": 20200103,
+  "changepoint_grid": {
+    "n_candidate_cuts": 28,
+    "null_neg_ll": 20.526952953909007,
+    "linear_neg_ll": 18.226739444622577,
+    "best_cut": {
+      "cut": 24.16,
+      "coef_below": 28.47946370149843,
+      "loglik": -14.883571130861945,
+      "neg_ll": 14.883571130861945,
+      "rate_below": 1.0,
+      "n_below": 8.0,
+      "rate_above": 0.4090909090909091,
+      "n_above": 22.0
+    },
+    "best_cut_neg_ll": 14.883571130861945,
+    "delta_negll_best_vs_null": 5.643381823047061,
+    "delta_negll_best_vs_linear": 3.343168313760632,
+    "aic_null": 43.05390590781801,
+    "aic_linear": 40.453478889245154,
+    "aic_best_cut": 33.76714226172389,
+    "all_cuts": [
+      {
+        "cut": 18.1,
+        "coef_below": 27.32808917722452,
+        "loglik": -19.94581786677237,
+        "neg_ll": 19.94581786677237,
+        "rate_below": 1.0,
+        "n_below": 1,
+        "rate_above": 0.5517241379310345,
+        "n_above": 29
+      },
+      {
+        "cut": 18.45,
+        "coef_below": 27.68059520986069,
+        "loglik": -19.336631621374224,
+        "neg_ll": 19.336631621374224,
+        "rate_below": 1.0,
+        "n_below": 2,
+        "rate_above": 0.5357142857142857,
+        "n_above": 28
+      },
+      {
+        "cut": 20.11,
+        "coef_below": 27.86770499627081,
+        "loglik": -18.696451120505483,
+        "neg_ll": 18.696451120505483,
+        "rate_below": 1.0,
+        "n_below": 3,
+        "rate_above": 0.5185185185185185,
+        "n_above": 27
+      },
+      {
+        "cut": 20.37,
+        "coef_below": 28.00645627058962,
+        "loglik": -18.02182669456132,
+        "neg_ll": 18.02182669456132,
+        "rate_below": 1.0,
+        "n_below": 4,
+        "rate_above": 0.5,
+        "n_above": 26
+      },
+      {
+        "cut": 21.1,
+        "coef_below": 28.127280028173086,
+        "loglik": -17.30867417725234,
+        "neg_ll": 17.30867417725234,
+        "rate_below": 1.0,
+        "n_below": 5,
+        "rate_above": 0.48,
+        "n_above": 25
+      },
+      {
+        "cut": 22.04,
+        "coef_below": 28.242438593182644,
+        "loglik": -16.55210228057249,
+        "neg_ll": 16.55210228057249,
+        "rate_below": 1.0,
+        "n_below": 6,
+        "rate_above": 0.4583333333333333,
+        "n_above": 24
+      },
+      {
+        "cut": 22.92,
+        "coef_below": 28.358351020493075,
+        "loglik": -15.746174389434408,
+        "neg_ll": 15.746174389434408,
+        "rate_below": 1.0,
+        "n_below": 7,
+        "rate_above": 0.43478260869565216,
+        "n_above": 23
+      },
+      {
+        "cut": 24.16,
+        "coef_below": 28.47946370149843,
+        "loglik": -14.883571130861945,
+        "neg_ll": 14.883571130861945,
+        "rate_below": 1.0,
+        "n_below": 8,
+        "rate_above": 0.4090909090909091,
+        "n_above": 22
+      },
+      {
+        "cut": 25.69,
+        "coef_below": 2.3671236141316174,
+        "loglik": -17.480559061297196,
+        "neg_ll": 17.480559061297196,
+        "rate_below": 0.8888888888888888,
+        "n_below": 9,
+        "rate_above": 0.42857142857142855,
+        "n_above": 21
+      },
+      {
+        "cut": 26.33,
+        "coef_below": 2.602689685444385,
+        "loglik": -16.711063074099613,
+        "neg_ll": 16.711063074099613,
+        "rate_below": 0.9,
+        "n_below": 10,
+        "rate_above": 0.4,
+        "n_above": 20
+      },
+      {
+        "cut": 27.14,
+        "coef_below": 1.8225311278948086,
+        "loglik": -18.147492713577815,
+        "neg_ll": 18.147492713577815,
+        "rate_below": 0.8181818181818182,
+        "n_below": 11,
+        "rate_above": 0.42105263157894735,
+        "n_above": 19
+      },
+      {
+        "cut": 28.09,
+        "coef_below": 2.0614230361771577,
+        "loglik": -17.43520710435735,
+        "neg_ll": 17.43520710435735,
+        "rate_below": 0.8333333333333334,
+        "n_below": 12,
+        "rate_above": 0.3888888888888889,
+        "n_above": 18
+      },
+      {
+        "cut": 28.45,
+        "coef_below": 1.5606477482646686,
+        "loglik": -18.54005872668321,
+        "neg_ll": 18.54005872668321,
+        "rate_below": 0.7692307692307693,
+        "n_below": 13,
+        "rate_above": 0.4117647058823529,
+        "n_above": 17
+      },
+      {
+        "cut": 29.48,
+        "coef_below": 1.1676051601550612,
+        "loglik": -19.340801556616928,
+        "neg_ll": 19.340801556616928,
+        "rate_below": 0.7142857142857143,
+        "n_below": 14,
+        "rate_above": 0.4375,
+        "n_above": 16
+      },
+      {
+        "cut": 30.4,
+        "coef_below": 0.826678573184468,
+        "loglik": -19.91156216412946,
+        "neg_ll": 19.91156216412946,
+        "rate_below": 0.6666666666666666,
+        "n_below": 15,
+        "rate_above": 0.4666666666666667,
+        "n_above": 15
+      },
+      {
+        "cut": 32.66,
+        "coef_below": 0.5108256237659907,
+        "loglik": -20.289072338366942,
+        "neg_ll": 20.289072338366942,
+        "rate_below": 0.625,
+        "n_below": 16,
+        "rate_above": 0.5,
+        "n_above": 14
+      },
+      {
+        "cut": 33.04,
+        "coef_below": 0.7602864833975743,
+        "loglik": -20.009635821049727,
+        "neg_ll": 20.009635821049727,
+        "rate_below": 0.6470588235294118,
+        "n_below": 17,
+        "rate_above": 0.46153846153846156,
+        "n_above": 13
+      },
+      {
+        "cut": 33.22,
+        "coef_below": 0.45198512374305744,
+        "loglik": -20.346238764681033,
+        "neg_ll": 20.346238764681033,
+        "rate_below": 0.6111111111111112,
+        "n_below": 18,
+        "rate_above": 0.5,
+        "n_above": 12
+      },
+      {
+        "cut": 33.28,
+        "coef_below": 0.13613217432458072,
+        "loglik": -20.511061893184845,
+        "neg_ll": 20.511061893184845,
+        "rate_below": 0.5789473684210527,
+        "n_below": 19,
+        "rate_above": 0.5454545454545454,
+        "n_above": 11
+      },
+      {
+        "cut": 34.48,
+        "coef_below": 0.40546510810816466,
+        "loglik": -20.391705145784588,
+        "neg_ll": 20.391705145784588,
+        "rate_below": 0.6,
+        "n_below": 20,
+        "rate_above": 0.5,
+        "n_above": 10
+      },
+      {
+        "cut": 35.09,
+        "coef_below": 0.708651367095911,
+        "loglik": -20.137751401129126,
+        "neg_ll": 20.137751401129126,
+        "rate_below": 0.6190476190476191,
+        "n_below": 21,
+        "rate_above": 0.4444444444444444,
+        "n_above": 9
+      },
+      {
+        "cut": 35.24,
+        "coef_below": 0.36772478012531845,
+        "loglik": -20.428748575336563,
+        "neg_ll": 20.428748575336563,
+        "rate_below": 0.5909090909090909,
+        "n_below": 22,
+        "rate_above": 0.5,
+        "n_above": 8
+      },
+      {
+        "cut": 35.66,
+        "coef_below": 0.7295148247308199,
+        "loglik": -20.174899888634148,
+        "neg_ll": 20.174899888634148,
+        "rate_below": 0.6086956521739131,
+        "n_below": 23,
+        "rate_above": 0.42857142857142855,
+        "n_above": 7
+      },
+      {
+        "cut": 35.98,
+        "coef_below": 0.33647223662121195,
+        "loglik": -20.459521467156286,
+        "neg_ll": 20.459521467156286,
+        "rate_below": 0.5833333333333334,
+        "n_below": 24,
+        "rate_above": 0.5,
+        "n_above": 6
+      },
+      {
+        "cut": 36.0,
+        "coef_below": 0.8109302162163289,
+        "loglik": -20.190350010277683,
+        "neg_ll": 20.190350010277683,
+        "rate_below": 0.6,
+        "n_below": 25,
+        "rate_above": 0.4,
+        "n_above": 5
+      },
+      {
+        "cut": 36.34,
+        "coef_below": 1.5686159179138455,
+        "loglik": -19.572580081256813,
+        "neg_ll": 19.572580081256813,
+        "rate_below": 0.6153846153846154,
+        "n_below": 26,
+        "rate_above": 0.25,
+        "n_above": 4
+      },
+      {
+        "cut": 36.75,
+        "coef_below": 1.0678406300013559,
+        "loglik": -20.158870330382747,
+        "neg_ll": 20.158870330382747,
+        "rate_below": 0.5925925925925926,
+        "n_below": 27,
+        "rate_above": 0.3333333333333333,
+        "n_above": 3
+      },
+      {
+        "cut": 37.63,
+        "coef_below": 27.971036358916855,
+        "loglik": -18.760251435170158,
+        "neg_ll": 18.760251435170158,
+        "rate_below": 0.6071428571428571,
+        "n_below": 28,
+        "rate_above": 0.0,
+        "n_above": 2
+      }
+    ],
+    "best_cut_improvement_permutation": {
+      "observed": 5.643381823047061,
+      "p_perm": 4.999750012499375e-05,
+      "n_perm": 20000,
+      "null_q95": -4.276225826150963,
+      "note": "the null search re-optimises the cut on every permutation, so it accounts for the selection of the best cut"
+    },
+    "saturated_cell_warning": {
+      "rate_below_best_cut": 1.0,
+      "n_below_best_cut": 8,
+      "note": "the best cut produces a saturated low-assay cell (all units positive), so the likelihood improvement is driven by perfect separation, not by a graded effect"
+    }
+  },
+  "best_cut_2x2": {
+    "cut": 24.16,
+    "table_pos_by_below": [
+      [
+        8,
+        9
+      ],
+      [
+        0,
+        13
+      ]
+    ],
+    "table": [
+      [
+        8,
+        9
+      ],
+      [
+        0,
+        13
+      ]
+    ],
+    "p_two_sided": 0.0043733688711199955,
+    "p_greater": 0.004153478816147482,
+    "odds_ratio": Infinity,
+    "rate_below": 1.0,
+    "rate_above": 0.4090909090909091
+  },
+  "covariate_correlation_matrix_spearman": {
+    "illness_day": {
+      "illness_day": null,
+      "stay_day": 0.7876354256633867,
+      "assay": 0.5009573824082091,
+      "symptom_present": -0.37986422523982394,
+      "surface_percent": -0.36740097323816767,
+      "env_positive": -0.2539103826896004
+    },
+    "stay_day": {
+      "illness_day": 0.7876354256633867,
+      "stay_day": null,
+      "assay": 0.4092878550286681,
+      "symptom_present": -0.5046779478755807,
+      "surface_percent": -0.09248324206354372,
+      "env_positive": -0.011855664106263694
+    },
+    "assay": {
+      "illness_day": 0.5009573824082091,
+      "stay_day": 0.4092878550286681,
+      "assay": null,
+      "symptom_present": -0.1775548135041082,
+      "surface_percent": -0.6020605341967593,
+      "env_positive": -0.35361122028608793
+    },
+    "symptom_present": {
+      "illness_day": -0.37986422523982394,
+      "stay_day": -0.5046779478755806,
+      "assay": -0.1775548135041082,
+      "symptom_present": null,
+      "surface_percent": 0.03530305360916646,
+      "env_positive": -0.16434353297215168
+    },
+    "surface_percent": {
+      "illness_day": -0.36740097323816767,
+      "stay_day": -0.09248324206354372,
+      "assay": -0.6020605341967593,
+      "symptom_present": 0.03530305360916646,
+      "surface_percent": null,
+      "env_positive": 0.7274744384724616
+    },
+    "env_positive": {
+      "illness_day": -0.2539103826896005,
+      "stay_day": -0.011855664106263694,
+      "assay": -0.35361122028608793,
+      "symptom_present": -0.16434353297215168,
+      "surface_percent": 0.7274744384724616,
+      "env_positive": null
+    }
+  },
+  "adjusted_models": {
+    "assay_only": {
+      "coef": [
+        4.17630429338347,
+        -0.13196550839250046
+      ]
+    },
+    "assay_plus_symptom_plus_day": {
+      "coef": [
+        6.4001689463143325,
+        -0.12917163346193006,
+        -2.0209272063722787,
+        -0.07080633757178056
+      ],
+      "loglik": -16.49625084692141
+    },
+    "assay_plus_symptom": {
+      "coef": [
+        6.284112648651704,
+        -0.16377561243900216,
+        -1.5237318907287773
+      ]
+    },
+    "assay_plus_day": {
+      "coef": [
+        3.9643847377239303,
+        -0.11573006268919188,
+        -0.024384072562613858
+      ]
+    },
+    "assay_coef_after_adjustment_permutation": {
+      "observed": -0.12917163346193006,
+      "p_perm_lower_tail": 0.02824858757062147,
+      "p_perm_two_sided": 0.05649717514124294,
+      "n_perm": 20000
+    }
+  },
+  "low_assay_cluster_composition": {
+    "cut": 24.16,
+    "n_below": 8,
+    "n_below_positive": 8,
+    "median_illness_day_below": 4.5,
+    "median_illness_day_above": 11.0,
+    "median_stay_day_below": 3.0,
+    "median_stay_day_above": 6.0,
+    "symptom_rate_below": 0.875,
+    "symptom_rate_above": 0.7272727272727273,
+    "assay_at_or_below_22_92_units": [
+      "unit_02",
+      "unit_03",
+      "unit_14",
+      "unit_17",
+      "unit_20",
+      "unit_26",
+      "unit_27",
+      "unit_28"
+    ],
+    "assay_at_or_below_22_92_positivity": 1.0,
+    "assay_above_22_92_positivity": 0.4090909090909091
+  }
+}

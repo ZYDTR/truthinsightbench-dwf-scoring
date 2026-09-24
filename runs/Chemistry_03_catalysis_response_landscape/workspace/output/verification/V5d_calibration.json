@@ -1,0 +1,79 @@
+{
+  "worldA_x_exact_design_true_slope_1": {
+    "n": 41,
+    "nsim": 4000,
+    "y_noise_sd": 2.5880969981075927,
+    "statistic": "OLS slope of y on x",
+    "observed_slope": 0.9751578140376491,
+    "sim_mean": 0.999697186393104,
+    "sim_sd": 0.008660615006776914,
+    "sim_pct2.5": 0.9826673732635827,
+    "sim_pct97.5": 1.0165019922105971,
+    "calibrated_one_sided_p_for_observed": 0.003,
+    "simulated_ci95_coverage_of_1": 0.95125,
+    "sim_frac_ci_excludes_1_low_side_TYPE_I": 0.026,
+    "sim_frac_ci_excludes_1_high_side": 0.02275,
+    "observed_ci_lo": 0.9576807010147707,
+    "observed_ci_hi": 0.9926349270605276,
+    "interpretation": "if x carries no noise this is the honest test; observed p is the calibrated p"
+  },
+  "worldB_eiv_equal_noise_true_slope_1": {
+    "n": 41,
+    "nsim": 4000,
+    "lambda": 1.0,
+    "y_noise_sd": 1.830060937730426,
+    "x_noise_sd": 1.830060937730426,
+    "note": "x simulated as the observed x plus independent noise; both readings equally noisy; TRUE slope 1",
+    "deming1_observed": 0.9766143112901082,
+    "sim_mean_deming1": 1.0001576094051297,
+    "sim_sd_deming1": 0.00850249589153079,
+    "sim_pct2.5_deming1": 0.9834897302449462,
+    "calibrated_one_sided_p_deming1": 0.00375,
+    "b_rma_observed": 0.9781436781685312,
+    "sim_mean_b_rma": 1.0016146811607078,
+    "sim_sd_b_rma": 0.008500703286392491,
+    "calibrated_one_sided_p_b_rma": 0.004,
+    "sim_mean_b_ols": 0.9987023423827336,
+    "sim_sd_b_ols": 0.008492497612861211,
+    "observed_b_ols": 0.9751578140376491,
+    "calibrated_one_sided_p_b_ols": 0.00375,
+    "interpretation": "how unusual the observed compressed slope is if the two readings really are equally-noisy measurements of the same quantity with true slope 1"
+  },
+  "worldC_lattice_block_x_exact_true_slope_1": {
+    "n": 8,
+    "nsim": 4000,
+    "y_noise_sd": 2.483369854792168,
+    "statistic": "OLS slope of y on x (lattice rows only; x is an exact design setting)",
+    "observed_slope": 0.9615788341071428,
+    "sim_mean": 1.0000369440943269,
+    "sim_sd": 0.019240233930445952,
+    "calibrated_one_sided_p_for_observed": 0.01875,
+    "simulated_ci95_coverage_of_1": 0.9515,
+    "sim_frac_ci_excludes_1_low_side_TYPE_I": 0.02225,
+    "observed_ci_lo": 0.9285462827238872,
+    "observed_ci_hi": 0.9946113854903985,
+    "interpretation": "this block is EIV-free by construction (x = -60..80 exact); its p-value needs no attenuation correction"
+  },
+  "worldC_sensitivity_to_y_noise": {
+    "note": "same lattice test but with y-noise set to the larger irregular-block value",
+    "y_noise_sd": 2.9,
+    "n": 8,
+    "nsim": 4000,
+    "calibrated_one_sided_p_for_observed": 0.04625,
+    "ci95_coverage_of_1": 0.993
+  },
+  "union_of_corrected_point_estimates": {
+    "min_over_lambda": 0.9751578131982032,
+    "max_over_lambda": 0.9781436781372275,
+    "covers_the_interval": [
+      0.9751578140376491,
+      0.9781436781685312
+    ],
+    "observed_ols": 0.9751578140376491,
+    "shortfall_from_1_of_best_case": 0.021856321862772532,
+    "total_eiv_correction_budget": 0.0029858649390243075,
+    "ratio_shortfall_to_budget": 7.319929839128803,
+    "best_case_95pct_upper_limit_v5b": 0.998424930294016,
+    "best_case_upper_limit_below_1": true
+  }
+}

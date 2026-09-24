@@ -1,0 +1,22 @@
+{
+  "F1_scale_dependence.png": {
+    "path": "figures/F1_scale_dependence.png",
+    "caption": "Left: observed richness against library size on log-log axes with fitted slope 0.071. Right: rarefied richness against common rarefaction depth, unsaturating and rising past the raw mean richness at the largest attainable depth."
+  },
+  "F2_covariate_association.png": {
+    "path": "figures/F2_covariate_association.png",
+    "caption": "Richness rises and library size falls with the continuous covariate; the opposed signs are visible within every coarse group and survive depth rarefaction."
+  },
+  "F3_bias_conditions.png": {
+    "path": "figures/F3_bias_conditions.png",
+    "caption": "Condition ordering on the shared 400 metric ids, its empirical CDF including the five exceptions, and the scenario-dependent zero rate in condition_2."
+  },
+  "F4_zero_driven_coupling.png": {
+    "path": "figures/F4_zero_driven_coupling.png",
+    "caption": "Condition coupling before and after excluding cells where condition_2 equals zero; the residual association in high_variance is the scenario contrast, not a metric-level law."
+  },
+  "F5_applicability_boundary.png": {
+    "path": "figures/F5_applicability_boundary.png",
+    "caption": "The covariate-richness association is confined to the lower half of the covariate range; the same split reappears inside each coarse group when the global median is held fixed."
+  }
+}

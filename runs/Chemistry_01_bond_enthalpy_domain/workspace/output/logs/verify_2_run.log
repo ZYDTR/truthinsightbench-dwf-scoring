@@ -1,0 +1,26 @@
+[    7.2s] benchmark rows=543
+[    7.3s] db rows=484907 cols=['rid', 'molecule', 'bond_index', 'fragment1', 'fragment2', 'bde', 'bond_type', 'delta_stereo']
+[    7.8s] db unique molecule strings = 42577  (claim: 42577)
+[   18.0s]   parsed 20000/42577 db molecules
+[   31.0s]   parsed 40000/42577 db molecules
+[   33.2s] parsed all db molecules; unparsable = 0
+[   33.6s] DB UNIQUE-MOLECULE HAC: min=1 max=10 mean=8.8915 median=9.0 n=42577
+[   34.3s] elements over unique molecules = {'C': 42577, 'N': 26511, 'O': 31558}
+[   42.7s] db unique (molecule,f1,f2) pairs = 290664; their unique parents = 42577
+[   43.0s] elements over unique pairs = {'C': 42577, 'N': 26511, 'O': 31558}; pair-parent HAC max = 10
+[   44.7s] elements row-weighted over raw DB rows (parent molecule) = {'C': 484907, 'N': 296833, 'O': 351132}
+[  284.6s] elements row-weighted over raw DB row FRAGMENTS = {'C': 589912, 'H': 361147, 'N': 310725, 'O': 376485}
+[  308.4s] elements over 206797 unique fragments = {'C': 206779, 'H': 1, 'N': 128325, 'O': 149841}
+[  320.4s] db duplicate raw rows for same (molecule,f1,f2) = 194243
+[  320.9s] BENCHMARK exact (molecule,fragment1,fragment2) = 331/543
+[  320.9s]   extra if fragment order swapped = 0 (any order total 331)
+[  341.8s] BENCHMARK parent molecule present in db = 369/543
+[  343.3s] benchmark unique molecules=419 HAC min=1 max=38 mean=9.2762 median=8.0 sd=5.0828 unparsable=0
+[  343.3s] cutoff = db HAC max = 10; BENCHMARK HAC > 10 = 150 (27.6243%)
+[  343.4s]   [sens] benchmark HAC > c: 6:354, 7:299, 8:234, 9:193, 10:150, 11:136, 12:111, 13:97, 14:84
+[  343.4s] inside by exact-row=331  by parent=369  by HAC<=10=393
+[  343.4s] exact & parent=331  exact & HAC-ok=331  parent & HAC-ok=369  exact without parent=0
+[  349.7s] of the 150 HAC>10 rows: parent present=0, exact row present=0
+[  350.8s] benchmark parent elements = {'C': 419, 'N': 37, 'O': 120}
+[  350.8s] benchmark fragment elements = {'C': 330, 'H': 1, 'N': 35, 'O': 61}
+[  351.5s] wrote /data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/analysis/verify_2_coverage.json

@@ -1,0 +1,162 @@
+==============================================================================
+p1_exp_basis :: angular basis structure of experiment-like phase/magnitude
+==============================================================================
+start 2026-09-19 14:25:30
+sha256 55a1d9621c0e386fb44a63764a97cf81491d2bd7af0209c74e212329172df396  angle_energy_observations_datasets.tsv
+sha256 349bbd36f9de8dd1805b280c0f08270e3d1c75992efd76aa8effb603adbec23b  coordinate_definitions.json
+coordinate_definitions: angle = emission_angle_deg = index_1 [0, 180] step 1
+magnitude (276, 181) phase (276, 181) delay (275, 181)
+E276 (276,) 22.5 .. 50.0
+E275 (275,) 22.6 .. 50.0
+Z = magnitude * exp(i*phase); |Z| range [0.003062, 1.782]
+
+------------------------------------------------------------------------------
+(c) stored precision of the TSV values (effective decimals actually present;
+    the raw text carries a float64 round-trip tail that is not real precision)
+------------------------------------------------------------------------------
+experiment/delay       n=49775  text decimals median=3 (mode=3 p05=2 p95=4)  text significant digits median=3 (p95=5)
+    fraction unchanged after rounding to s sig digits: 4:0.101195, 5:1.000000, 6:1.000000, 7:1.000000
+    fraction on 10^-d lattice: 3:0.929543, 4:0.993330, 5:0.999277, 6:0.999980, 7:1.000000
+experiment/magnitude   n=49956  text decimals median=5 (mode=5 p05=4 p95=6)  text significant digits median=6 (p95=7)
+    fraction unchanged after rounding to s sig digits: 4:0.099147, 5:1.000000, 6:1.000000, 7:1.000000
+    fraction on 10^-d lattice: 3:0.017035, 4:0.164605, 5:0.949175, 6:0.999780, 7:1.000000
+experiment/phase       n=49956  text decimals median=4 (mode=4 p05=3 p95=5)  text significant digits median=5 (p95=6)
+    fraction unchanged after rounding to s sig digits: 4:0.099688, 5:1.000000, 6:1.000000, 7:1.000000
+    fraction on 10^-d lattice: 3:0.059072, 4:0.600809, 5:0.973076, 6:0.997338, 7:0.999720
+
+implied per-value quantization of Z (from 5-significant-digit storage of mag & phase):
+  magnitude half-step: min 5.000e-08 median 5.000e-06 max 5.000e-05
+  phase     half-step: min 5.000e-10 median 5.000e-05 max 5.000e-05
+  |dZ| worst-case:     median 1.558e-05  max 1.391e-04
+  |dZ| uniform-rms:    median 6.757e-06  max 5.899e-05
+  median relative quantization of |Z|: 5.718e-05
+
+------------------------------------------------------------------------------
+(b) Legendre Lmax scan on Z = magnitude*exp(i*phase), 276 energies x 181 angles
+------------------------------------------------------------------------------
+  Lmax= 0  max over energies of max|residual| = 1.648411e+00   (row-median 8.491e-01, rms 5.472e-01)
+  Lmax= 1  max over energies of max|residual| = 1.214622e+00   (row-median 6.903e-01, rms 4.478e-01)
+  Lmax= 2  max over energies of max|residual| = 5.326909e-01   (row-median 1.949e-01, rms 2.075e-01)
+  Lmax= 3  max over energies of max|residual| = 9.561835e-05   (row-median 4.827e-05, rms 1.293e-05)
+  Lmax= 4  max over energies of max|residual| = 9.501907e-05   (row-median 4.829e-05, rms 1.290e-05)
+  Lmax= 5  max over energies of max|residual| = 9.455110e-05   (row-median 4.824e-05, rms 1.286e-05)
+  Lmax= 6  max over energies of max|residual| = 9.385795e-05   (row-median 4.819e-05, rms 1.282e-05)
+  Lmax= 7  max over energies of max|residual| = 9.507898e-05   (row-median 4.855e-05, rms 1.278e-05)
+  Lmax= 8  max over energies of max|residual| = 9.432509e-05   (row-median 4.823e-05, rms 1.275e-05)
+  Lmax= 9  max over energies of max|residual| = 9.354043e-05   (row-median 4.833e-05, rms 1.271e-05)
+  Lmax=10  max over energies of max|residual| = 9.439623e-05   (row-median 4.776e-05, rms 1.267e-05)
+  Lmax=11  max over energies of max|residual| = 9.467696e-05   (row-median 4.764e-05, rms 1.263e-05)
+  Lmax=12  max over energies of max|residual| = 9.328953e-05   (row-median 4.745e-05, rms 1.259e-05)
+  -> Legendre residual collapses between L=2 and L=3 (collapse factor L0/floor = 17669.8)
+  -> identified exact angular degree L* = 3
+  -> residual floor for L*..12: max 9.561835e-05  median 9.447367e-05  spread(relative) 2.466e-02
+
+(c) residual floor vs stored precision:
+  residual floor (max |residual|, L*=3):        9.561835e-05
+  residual floor (rms over all cells):          1.293357e-05
+  implied Z quantization, worst-case median:    1.558100e-05
+  implied Z quantization, worst-case max:       1.391000e-04
+  ratio floor(max) / quantization(worst-case max): 0.687
+  Monte-Carlo-free check: round an exact degree-3 model to 5 sig digits,
+    simulated rms residual  median 1.069727e-05  max 2.036690e-05
+    observed  rms residual  median 1.114857e-05  max 2.064121e-05
+    ratio observed/simulated (median): 1.042  -> floor is at the quantization level
+  CONCLUSION INPUTS: floor(max)=9.562e-05 ; quantization(max)=1.391e-04 ; floor<=quantization? True
+
+------------------------------------------------------------------------------
+(d) null baselines: isotropic Lmax=0, Lmax=2 only, and variance capture
+------------------------------------------------------------------------------
+  Lmax=0 (isotropic): max over energies of max|residual| = 1.648411e+00
+  Lmax=2            : max over energies of max|residual| = 5.326909e-01
+  Lmax=3 (identified): max over energies of max|residual| = 9.561835e-05
+  improvement L2 -> L3: factor 5571.0
+  L2 residual / L0 residual: 0.3232
+  variance of Z captured by l<=0: 0.0000000000
+  variance of Z captured by l<=2: 0.8561598972
+  variance of Z captured by l<=3: 0.9999999994
+  variance of Z captured by l<=4: 0.9999999994
+  first four terms l=0..3 capture 0.9999999994 of the row variance
+
+------------------------------------------------------------------------------
+(e) robustness: every 3rd angle (61 points) vs full 181-point grid
+------------------------------------------------------------------------------
+  max |c_l(full) - c_l(3x-subsampled)| = 1.033710e-05  (max |c_l| = 1.1064 -> relative 9.343e-06)
+  per-l max deviation: l=0:4.186e-06, l=1:7.608e-06, l=2:7.514e-06, l=3:1.034e-05
+  quantization level of the coefficient scale: ~1.391e-04 ; agreement within quantization? True
+  leave-one-angle-out max |c_l - c_l(full)| = 1.728854e-06
+
+(e) alternative bases for the same Lmax scan
+------------------------------------------------------------------------------
+  Fourier exp(i*m*theta), m=-0..0 ( 1 terms): max|residual| = 1.648411e+00
+  Fourier exp(i*m*theta), m=-1..1 ( 3 terms): max|residual| = 7.717456e-01
+  Fourier exp(i*m*theta), m=-2..2 ( 5 terms): max|residual| = 2.783364e-01
+  Fourier exp(i*m*theta), m=-3..3 ( 7 terms): max|residual| = 8.949840e-05
+  Fourier exp(i*m*theta), m=-4..4 ( 9 terms): max|residual| = 8.789301e-05
+  Fourier exp(i*m*theta), m=-5..5 (11 terms): max|residual| = 7.670699e-05
+  Fourier exp(i*m*theta), m=-6..6 (13 terms): max|residual| = 6.714597e-05
+  -> exponential-basis collapse at m_max = 3 (2*3+1 = 7 terms), collapse factor 24549.7
+  Chebyshev T_L(theta in rad), L= 0: max|residual| = 1.648411e+00
+  Chebyshev T_L(theta in rad), L= 2: max|residual| = 7.478005e-01
+  Chebyshev T_L(theta in rad), L= 3: max|residual| = 7.332870e-01
+  Chebyshev T_L(theta in rad), L= 4: max|residual| = 4.321432e-01
+  Chebyshev T_L(theta in rad), L= 6: max|residual| = 8.383490e-02
+  Chebyshev T_L(theta in rad), L= 8: max|residual| = 7.907613e-03
+  Chebyshev T_L(theta in rad), L=10: max|residual| = 4.849223e-04
+  Chebyshev T_L(theta in rad), L=11: max|residual| = 8.033674e-05
+  Chebyshev T_L(theta in rad), L=12: max|residual| = 9.543798e-05
+  -> Chebyshev-in-theta reaches the same floor only near L = 11 (collapse factor 20518.8): the theta-basis needs a much higher order than the cos(theta) basis because P_3(cos theta) is not a low-order polynomial in theta
+  -> the identified degree is unchanged by the change of basis (Legendre 3, Fourier m_max 3); the Chebyshev scan just re-expresses the same function at higher order
+  Fourier m=-4..4: max |c_m| over odd m = 0.3571 ; over even m = 0.4148
+  => the panel is NOT parity-symmetric in cos(theta): odd-l terms are required.
+
+------------------------------------------------------------------------------
+(f) Lmax scan for the real experiment/delay panel (275 x 181)
+------------------------------------------------------------------------------
+  Lmax= 0  max|residual| = 8.879611e+03   row-median 2.169e+02   row-median relative 1.0015e+00
+  Lmax= 1  max|residual| = 8.842911e+03   row-median 1.657e+02   row-median relative 8.1103e-01
+  Lmax= 2  max|residual| = 8.933420e+03   row-median 1.602e+02   row-median relative 7.8531e-01
+  Lmax= 3  max|residual| = 8.856754e+03   row-median 1.487e+02   row-median relative 7.5300e-01
+  Lmax= 4  max|residual| = 8.911917e+03   row-median 1.142e+02   row-median relative 5.7809e-01
+  Lmax= 5  max|residual| = 8.889930e+03   row-median 8.022e+01   row-median relative 5.0631e-01
+  Lmax= 6  max|residual| = 8.836364e+03   row-median 7.795e+01   row-median relative 4.7754e-01
+  Lmax= 7  max|residual| = 8.888873e+03   row-median 6.556e+01   row-median relative 3.7725e-01
+  Lmax= 8  max|residual| = 8.799405e+03   row-median 5.422e+01   row-median relative 3.1503e-01
+  Lmax= 9  max|residual| = 8.840400e+03   row-median 4.736e+01   row-median relative 2.8035e-01
+  Lmax=10  max|residual| = 8.828556e+03   row-median 4.091e+01   row-median relative 2.6120e-01
+  Lmax=11  max|residual| = 8.782002e+03   row-median 3.368e+01   row-median relative 2.0061e-01
+  Lmax=12  max|residual| = 8.852529e+03   row-median 2.933e+01   row-median relative 1.7134e-01
+  -> collapse factor L0/floor = 1.01 (needs >= 10 to claim a degree); identified degree = None
+  -> NO angular degree is identifiable in 0..12 for the raw delay panel; relative floor at L=12 = 1.7134e-01
+  delay |values|: median 62.261  max 8961.200 ; dynamic range 6.4 decades
+
+  diagnostic: weight the delay by |Z|^2 (|Z|^2 is itself degree-6 in cos theta)
+  |Z|^2 * delay, Lmax= 0: row-median relative residual = 8.3164e-01 (max 1.2533e+00)
+  |Z|^2 * delay, Lmax= 2: row-median relative residual = 3.5329e-01 (max 8.6879e-01)
+  |Z|^2 * delay, Lmax= 4: row-median relative residual = 1.2516e-01 (max 4.8592e-01)
+  |Z|^2 * delay, Lmax= 5: row-median relative residual = 2.3045e-02 (max 3.3711e-01)
+  |Z|^2 * delay, Lmax= 6: row-median relative residual = 2.3198e-03 (max 8.3774e-03)
+  |Z|^2 * delay, Lmax= 7: row-median relative residual = 2.0874e-03 (max 7.7802e-03)
+  |Z|^2 * delay, Lmax= 8: row-median relative residual = 1.8050e-03 (max 8.1063e-03)
+  |Z|^2 * delay, Lmax=10: row-median relative residual = 1.2605e-03 (max 6.9012e-03)
+  |Z|^2 * delay, Lmax=12: row-median relative residual = 9.8931e-04 (max 6.8338e-03)
+  -> |Z|^2 * delay collapses at L = 6 (collapse factor 840.6) with relative floor 2.3198e-03
+
+  why the raw delay scan is flat: 590 cells exceed 500 as across 85 energies and 50 angles;
+    median magnitude at those cells = 0.0436 vs 0.4677 for the whole panel (global min 0.00306);
+    correlation of |delay| with 1/|Z|^2 = 0.582 -> the delay panel carries the pole structure
+    of the underlying amplitude, so it is NOT a degree-<=12 polynomial in cos(theta).
+  diagnostic: delay vs hbar*d(unwrapped->wrapped phase)/dE at 0.1 eV steps:
+    median |err| = 0.05044 as ; fraction of cells within 0.5 as = 0.9682
+
+------------------------------------------------------------------------------
+(g) exporting per-energy Legendre coefficients for L*=3 and |c_l|(E)
+------------------------------------------------------------------------------
+  wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p1_exp_basis_coefficients.csv  (276 rows x 14 cols)
+  |c_0| vs E: min 0.1132 max 0.1805 median 0.1485
+  |c_1| vs E: min 0.2323 max 0.7264 median 0.4405
+  |c_2| vs E: min 0.4179 max 1.1064 median 0.6972
+  |c_3| vs E: min 0.0600 max 0.8476 median 0.3102
+  median fractional coefficient power by l: l=0:0.0304, l=1:0.2320, l=2:0.5789, l=3:0.1260
+  wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p1_exp_basis.png
+  wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p1_exp_basis.json
+done in 66.3 s

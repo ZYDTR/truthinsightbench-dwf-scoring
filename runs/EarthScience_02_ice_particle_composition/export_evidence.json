@@ -1,0 +1,21 @@
+{
+  "task_id": "EarthScience_02_ice_particle_composition",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260919T155707-14ecfa",
+  "source_run_json_sha256": "a4750a0ccdaa5493722495a2245706552f596dc7efc57412f62515a8c90c00a8",
+  "source_release_json_sha256": "2d64e23dfa3fe07b0420da7ace7cb9c84ad041595fc5d4cad0fb6acccd90a8fe",
+  "source_latest_validation_sha256": "6d68a3a92e28528b02a815917c02d179969750a676205139f846db5ecf45d39c",
+  "source_snapshot_manifest_sha256": "a2033cdd264afb64c346dafb18f8e287e0b97bb42baedd6113262a95b5a10430",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 1016
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "e05f2d215f222c030f6fe5413f51e293db70326efe733dd1ea75ebabd0d4ac44",
+  "output_sha256": "414fbe1269c823b08c0736d42c09401bab8e5c9332d01140e409a1ffd2f4d36e"
+}

@@ -1,0 +1,17 @@
+step7 domain boundary - shared-domain audit of the two panels
+loaded replicated_response_panel.tsv: shape=(8232, 6) sha256=410e51b559eb4d3416f131c2eb4d8f75995ff00d3b76af7b47a0ee8b1220533d
+loaded independent_response_panel.tsv: shape=(4116, 6) sha256=f85f73bbbf15535425752c6ca2ae65e523c8dd8c06a2d5de11bf1986aaa884a1
+loaded independent_fit_error.tsv: shape=(21, 3) sha256=57b739c708fb384f7a661d85e62b67f6c5f333cab170214d6f972ca067d2564a
+domains: replicated bins [0, 1, 2, 3, 4, 5, 6, 7] x channels [0, 1, 2, 3, 4, 5, 6] ; independent bins [0, 1, 2, 3, 4, 5, 6] x channels [0, 1, 2, 3]
+shared bins [0, 1, 2, 3, 4, 5, 6] ; shared channels [0, 1, 2, 3] ; independent is a strict sub-domain: True
+replicated cells inside shared region 1372 / 2744 (0.1873) ; outside 1372 / 2744 (0.8127)
+replicated outside SS share = 0.8127 (bin-7 marginal share 0.0273 of bin marginal SS; ch4-6 marginal share 0.6752 of chan marginal SS)
+independent cells outside shared region: 0 / 1372 (0.0000)
+log-response mean/sd: replicated inside 9.5669/0.4690 ; replicated outside 11.2727/1.7678 ; independent (all shared) 10.2179/1.3603
+cross-panel cell correlation on the common domain: pearson=+0.0168 spearman=+0.0324 (n=1372 cells)
+cross-panel (bin,chan) marginal plane correlation: pearson=-0.0789 spearman=-0.0651 (n=28)
+cross-panel after removing each panel's own (bin,chan) marginal: pearson=+0.1432 spearman=+0.2386
+cross-panel (a1,a2)-collapsed: shared domain pearson=+0.2862 ; each panel's own full domain pearson=-0.1656
+marginal-collapsed a1/a2 slopes: replicated +0.1827/-0.1087 ; independent +0.1379/+0.3063
+shared-domain a1 slopes over channels 0..3: replicated [0.0162, 0.0311, 0.0563, 0.0946] ; independent [0.1865, 0.2026, 0.0169, 0.1457]
+bin0 notch: replicated (shared bins) observed=9.7213 trend=9.4414 excess=+0.2800 ; independent observed=8.9324 trend=9.3864 excess=-0.4539

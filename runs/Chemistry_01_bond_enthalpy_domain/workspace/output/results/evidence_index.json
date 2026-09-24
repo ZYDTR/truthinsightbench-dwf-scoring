@@ -1,0 +1,273 @@
+{
+  "schema": "bde-domain-finding-to-evidence",
+  "authoritative_report": "output/Result.md",
+  "note": "Every registered finding resolves to executed analysis sources and machine-readable result artifacts under output/. Paths are relative to the project root. Hashes are the first 16 hex characters of sha256.",
+  "findings": [
+    {
+      "finding": 1,
+      "short_label": "Database domain ceiling and benchmark coverage gap",
+      "analysis_sources": [
+        {
+          "path": "output/analysis/common.py",
+          "bytes": 12217,
+          "sha256": "0a3e79daa030fc71"
+        },
+        {
+          "path": "output/analysis/finding1_coverage.py",
+          "bytes": 8905,
+          "sha256": "39114dd38ae871ef"
+        }
+      ],
+      "result_evidence": [
+        {
+          "path": "output/results/f1_coverage_boundary.json",
+          "bytes": 3506,
+          "sha256": "ff0d0076714679f4"
+        },
+        {
+          "path": "output/results/ws1_db_coverage.json",
+          "bytes": 59591,
+          "sha256": "8aa6fdfbd66c5b6a"
+        },
+        {
+          "path": "output/results/ws4_failures.json",
+          "bytes": 307563,
+          "sha256": "36e9b019f492f2a4"
+        }
+      ],
+      "figures": [
+        {
+          "path": "output/figures/summary_findings.png",
+          "bytes": 198734,
+          "sha256": "744c4be5fd40aefa"
+        }
+      ],
+      "verification": [
+        {
+          "path": "output/results/verify_2_coverage.json",
+          "bytes": 4663,
+          "sha256": "af528b0ebfadf6e9"
+        },
+        {
+          "path": "output/results/verify_1_db_scale.json",
+          "bytes": 4129,
+          "sha256": "8efb4fa0e9da4593"
+        },
+        {
+          "path": "output/results/verify_8_bondclass_coverage.json",
+          "bytes": 3049,
+          "sha256": "a45b9e1789a04c86"
+        }
+      ]
+    },
+    {
+      "finding": 2,
+      "short_label": "Channel ranking reverses between small-molecule and large/extrapolated regions",
+      "analysis_sources": [
+        {
+          "path": "output/analysis/common.py",
+          "bytes": 12217,
+          "sha256": "0a3e79daa030fc71"
+        },
+        {
+          "path": "output/analysis/size_interaction_test.py",
+          "bytes": 8734,
+          "sha256": "78b9f1082356dbf5"
+        }
+      ],
+      "result_evidence": [
+        {
+          "path": "output/results/size_interaction_test.json",
+          "bytes": 7607,
+          "sha256": "7b818efae4523eca"
+        },
+        {
+          "path": "output/results/ws2_channel_accuracy.json",
+          "bytes": 47071,
+          "sha256": "19db8dec6ce0332e"
+        },
+        {
+          "path": "output/results/ws6_robustness.json",
+          "bytes": 62274,
+          "sha256": "7bad69e6895594db"
+        }
+      ],
+      "figures": [
+        {
+          "path": "output/figures/summary_findings.png",
+          "bytes": 198734,
+          "sha256": "744c4be5fd40aefa"
+        }
+      ],
+      "verification": [
+        {
+          "path": "output/results/verify_9_size_interaction.json",
+          "bytes": 6293,
+          "sha256": "0cda769e5c344ed5"
+        },
+        {
+          "path": "output/results/verify_4_paired.json",
+          "bytes": 4162,
+          "sha256": "6c61e74d64256066"
+        }
+      ]
+    },
+    {
+      "finding": 3,
+      "short_label": "Experimental reference noise floor",
+      "analysis_sources": [
+        {
+          "path": "output/analysis/common.py",
+          "bytes": 12217,
+          "sha256": "0a3e79daa030fc71"
+        },
+        {
+          "path": "output/analysis/headline_noise_floor.py",
+          "bytes": 14401,
+          "sha256": "dd70346b52d27bec"
+        }
+      ],
+      "result_evidence": [
+        {
+          "path": "output/results/headline_noise_floor.json",
+          "bytes": 8975,
+          "sha256": "e792874379d13cdd"
+        },
+        {
+          "path": "output/results/ws5_decomposition.json",
+          "bytes": 1678,
+          "sha256": "6926cc9a97bcdfa0"
+        },
+        {
+          "path": "output/results/ws5_provenance.json",
+          "bytes": 48423,
+          "sha256": "16c8c0d6ae191640"
+        }
+      ],
+      "figures": [
+        {
+          "path": "output/figures/summary_findings.png",
+          "bytes": 198734,
+          "sha256": "744c4be5fd40aefa"
+        }
+      ],
+      "verification": [
+        {
+          "path": "output/results/verify_5_floor.json",
+          "bytes": 4595,
+          "sha256": "df76f99779c2bf56"
+        },
+        {
+          "path": "output/results/verify_6_floor_implication.json",
+          "bytes": 6395,
+          "sha256": "46235cbcabb4e6bd"
+        }
+      ]
+    },
+    {
+      "finding": 4,
+      "short_label": "Reference channel is genuinely worse, with bimodal signed error",
+      "analysis_sources": [
+        {
+          "path": "output/analysis/common.py",
+          "bytes": 12217,
+          "sha256": "0a3e79daa030fc71"
+        },
+        {
+          "path": "output/analysis/finding4_reference_channel.py",
+          "bytes": 8137,
+          "sha256": "21fc021895ce23c0"
+        }
+      ],
+      "result_evidence": [
+        {
+          "path": "output/results/f4_reference_channel.json",
+          "bytes": 6693,
+          "sha256": "4ab2cadc92fc1091"
+        },
+        {
+          "path": "output/results/ws3_bondclass.json",
+          "bytes": 103469,
+          "sha256": "3a4fb4ab471f65cd"
+        },
+        {
+          "path": "output/results/ws4_failures.json",
+          "bytes": 307563,
+          "sha256": "36e9b019f492f2a4"
+        }
+      ],
+      "figures": [
+        {
+          "path": "output/figures/summary_findings.png",
+          "bytes": 198734,
+          "sha256": "744c4be5fd40aefa"
+        },
+        {
+          "path": "output/figures/error_vs_bond_strength.png",
+          "bytes": 103786,
+          "sha256": "8d3b5d835006b4e5"
+        }
+      ],
+      "verification": [
+        {
+          "path": "output/results/verify_3_channel_accuracy.json",
+          "bytes": 4244,
+          "sha256": "0721c90f01931f8d"
+        },
+        {
+          "path": "output/results/verify_12_reference_structure.json",
+          "bytes": 4514,
+          "sha256": "cbbf158fe34e701a"
+        }
+      ]
+    },
+    {
+      "finding": 5,
+      "short_label": "Weak-bond overshoot: bounded residual bias, direction unresolved",
+      "analysis_sources": [
+        {
+          "path": "output/analysis/common.py",
+          "bytes": 12217,
+          "sha256": "0a3e79daa030fc71"
+        },
+        {
+          "path": "output/analysis/weak_bond_overshoot_test.py",
+          "bytes": 7550,
+          "sha256": "551e0bc9d5b1eebc"
+        }
+      ],
+      "result_evidence": [
+        {
+          "path": "output/results/weak_bond_overshoot_test.json",
+          "bytes": 11578,
+          "sha256": "f7139f84b0d1f164"
+        },
+        {
+          "path": "output/results/ws4_failures.json",
+          "bytes": 307563,
+          "sha256": "36e9b019f492f2a4"
+        }
+      ],
+      "figures": [
+        {
+          "path": "output/figures/summary_findings.png",
+          "bytes": 198734,
+          "sha256": "744c4be5fd40aefa"
+        },
+        {
+          "path": "output/figures/error_vs_bond_strength.png",
+          "bytes": 103786,
+          "sha256": "8d3b5d835006b4e5"
+        }
+      ],
+      "verification": [
+        {
+          "path": "output/results/verify_10_weakbond.json",
+          "bytes": 4155,
+          "sha256": "992465bf04b1e32a"
+        }
+      ]
+    }
+  ],
+  "unresolved_references": []
+}

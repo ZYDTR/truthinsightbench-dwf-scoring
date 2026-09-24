@@ -1,0 +1,38 @@
+{
+  "Thiers13": {
+    "network": "Thiers13",
+    "scan": "linear",
+    "n_full": 55,
+    "buf_min": 0.0,
+    "buf_max": 3.49996,
+    "delay_min": 8.181762969030342e-06,
+    "delay_max": 0.1094931766055988,
+    "delay_at_buf0": 0.1094931766055988,
+    "delay_first_point": 0.1094931766055988,
+    "frac_decreasing": 0.777778,
+    "frac_increasing": 0.222222,
+    "n_increases": 12,
+    "drop_min_to_max": 0.109485,
+    "per_unit_slope": -0.031282,
+    "buf_at_half_delay": 0.9,
+    "delay_at_max_buffer": 8.18e-06
+  },
+  "Workplace15": {
+    "network": "Workplace15",
+    "scan": "log",
+    "n_full": 63,
+    "buf_min": 0.0,
+    "buf_max": 3.49994,
+    "delay_min": 2.8229326006553296e-05,
+    "delay_max": 0.1241267465046859,
+    "delay_at_buf0": 0.1241267465046859,
+    "delay_first_point": 0.1241267465046859,
+    "frac_decreasing": 0.822581,
+    "frac_increasing": 0.177419,
+    "n_increases": 11,
+    "drop_min_to_max": 0.124093,
+    "per_unit_slope": -0.035456,
+    "buf_at_half_delay": 0.55,
+    "delay_at_max_buffer": 3.419e-05
+  }
+}

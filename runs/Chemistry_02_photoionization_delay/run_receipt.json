@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Chemistry_02_photoionization_delay",
+  "model": "deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "b3aab9119fa27ba0ade46f8bad578083ff5cb0cc4561fa20785654261a384621",
+  "workspace_input_file_count": 12,
+  "workspace_input_bytes": 18507161,
+  "output_tree_sha256": "5a8d0dcf263fb43ba99fe9fd5170d42d8b795fce9faa36961049e83208c7bbd3",
+  "output_file_count": 76,
+  "output_bytes": 4714151
+}

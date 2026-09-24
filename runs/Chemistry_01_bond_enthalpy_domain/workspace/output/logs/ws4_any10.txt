@@ -1,0 +1,72 @@
+--- obs with ANY channel |err|>10 ---
+n rows any>10: 61
+            observation_id                                         parent_structure_smiles  experimental_bde_kcal_mol  quantum_err  learned_err  reference_err bond_class  p_hac  p_n_rings  same_frag_canon  crowded  train_flag
+510  bond_observation_0511  c1ccc(C2(C3(c4ccccc4)c4ccccc4-c4ccccc43)c3ccccc3-c3ccccc32)cc1                       15.2        14.76        25.21          -11.8        C-C     38          8             True     True       False
+498  bond_observation_0499            O=C1Oc2ccccc2C1(c1ccccc1)C1(c2ccccc2)C(=O)Oc2ccccc21                       23.6         8.92        15.39           -2.2        C-C     32          6             True     True       False
+519  bond_observation_0520                        c1ccc(CC(c2ccccc2)(c2ccccc2)c2ccccc2)cc1                       56.1        -5.85         4.23          -31.0        C-C     26          4            False     True       False
+486  bond_observation_0487                                       O=C(O)C(c1ccccc1)c1ccccc1                       59.4        15.48        15.43            0.5        C-C     16          2            False    False       False
+490  bond_observation_0491                                                 O=C(O)Cc1ccccc1                       67.0        15.69        16.58           10.0        C-C     10          1            False    False       False
+527  bond_observation_0528                                   c1ccc2c(c1)-c1ccccc1C2N1CCCC1                       68.0         0.38         8.16           10.8        C-H     18          4            False     True       False
+481  bond_observation_0482                                      O=C(C(=O)c1ccccc1)c1ccccc1                       68.9         2.94         3.91          -13.7        C-C     16          2             True    False       False
+103  bond_observation_0104                                               C=C1C=CCc2ccccc21                       69.0        -2.71         1.42           11.8        C-H     11          2            False    False       False
+185  bond_observation_0186                                         CC(C)(c1ccccc1)c1ccccc1                       69.5         2.47         3.11          -13.6        C-C     15          2            False    False       False
+38   bond_observation_0039                                         C1=C(N2CCCC2)c2ccccc2C1                       70.3         0.77         4.55           10.9        C-H     14          3            False     True       False
+53   bond_observation_0054                                                C1=CCC2(C=C1)CC2                       70.7         0.19        -0.15           17.1        C-H      8          2            False    False        True
+228  bond_observation_0229                          CC1(C)CCCC(C)(C)N1C1c2ccccc2-c2ccccc21                       71.0         0.10        14.51            3.8        C-H     23          4            False     True       False
+402  bond_observation_0403                                                       CNCC(=O)O                       71.8        15.74        13.66           11.3        C-C      6          0            False    False        True
+241  bond_observation_0242                                CC1CCCC(C)N1C1c2ccccc2-c2ccccc21                       72.0         0.75        12.46            3.7        C-H     21          4            False     True       False
+214  bond_observation_0215                               CC(C)N(C(C)C)C1c2ccccc2-c2ccccc21                       73.0        -0.52        12.30            2.1        C-H     20          3            False     True       False
+198  bond_observation_0199                                        CC(C)C(c1ccccc1)c1ccccc1                       73.6        -5.93        -4.96          -20.1        C-C     16          2            False    False       False
+416  bond_observation_0417                                    COCc1c2ccccc2c(C#N)c2ccccc12                       73.7         1.62         9.14           13.3        C-H     19          3            False     True       False
+184  bond_observation_0185                             CC(C)(c1ccccc1)C1c2ccccc2-c2ccccc21                       73.8         7.36         7.57           12.0        C-H     22          4            False     True       False
+487  bond_observation_0488                                                   O=C(O)C1CCCN1                       74.6        13.27        12.96            6.8        C-C      8          1            False    False       False
+282  bond_observation_0283                                      CCC(C)C1c2ccccc2-c2ccccc21                       75.1         3.64         3.21           10.6        C-H     17          3            False     True       False
+223  bond_observation_0224                                            CC(c1ccccc1)c1ccccc1                       75.5        -3.07        -2.73          -13.9        C-C     14          2            False    False       False
+299  bond_observation_0300                                          CCC1c2ccccc2-c2ccccc21                       76.2         2.66         3.01           10.2        C-H     15          3            False     True       False
+157  bond_observation_0158                                                       CC#CC(C)C                       76.7         0.73         0.67          -10.8        C-C      6          0            False    False       False
+507  bond_observation_0508                         c1ccc(C(c2ccccc2)(c2ccccc2)c2ccccc2)cc1                       77.5        -5.86         1.88          -33.4        C-C     25          4            False     True       False
+239  bond_observation_0240                                                     CC1CC=CCC1C                       78.0         5.77         5.72           12.6        C-H      8          1            False    False        True
+511  bond_observation_0512       c1ccc(C2=C(c3ccccc3)C(c3ccccc3)C(c3ccccc3)=C2c2ccccc2)cc1                       78.0        -4.56        -6.99          -13.7        C-H     35          6            False     True       False
+435  bond_observation_0436                                        Cc1c2ccccc2c(C)c2ccccc12                       78.1         3.84         9.29           13.8        C-H     16          3            False     True       False
+253  bond_observation_0254                                        CC1c2ccccc2C(C)c2ccccc21                       78.1        -0.52        10.28            6.3        C-H     16          3            False     True       False
+32   bond_observation_0033                                                  C/C=C/c1ccccc1                       78.9         3.82         4.11           12.7        C-H      9          1            False    False        True
+300  bond_observation_0301                                                       CCC=C(C)C                       79.3         2.99         3.20           10.4        C-H      6          0            False    False        True
+530  bond_observation_0531                                           c1ccc2c(c1)CC1CCCCC21                       79.3        10.69         8.07           14.8        C-H     13          3            False     True       False
+62   bond_observation_0063                                                C1=C\CC/C=C\CC/1                       79.3         4.45         6.02           11.1        C-H      8          1            False    False        True
+235  bond_observation_0236                                                      CC1C=CCCC1                       79.5         1.38         5.13           11.9        C-H      7          1            False    False       False
+485  bond_observation_0486                                                    O=C(O)C(=O)O                       80.0        10.79         7.50            6.6        C-C      6          0             True    False        True
+433  bond_observation_0434                                      Cc1c2ccccc2c(C#N)c2ccccc12                       80.0         2.17         7.75           11.9        C-H     17          3            False     True       False
+436  bond_observation_0437                                      Cc1c2ccccc2c(C=O)c2ccccc12                       80.4        -0.01         7.53           11.5        C-H     17          3            False     True       False
+249  bond_observation_0250                                                 CC1CCCc2ccccc21                       80.4         2.93         8.85           12.5        C-H     11          2            False    False       False
+250  bond_observation_0251                                                CC1CCc2ccccc2C1C                       80.5         3.38         9.24           11.4        C-H     12          2            False    False       False
+419  bond_observation_0420                                       COc1c2ccccc2c(C)c2ccccc12                       81.4         1.15         5.34           10.5        C-H     17          3            False     True       False
+514  bond_observation_0515                                               c1ccc(C2CCCC2)cc1                       81.9        -0.03         1.29           13.3        C-H     11          2            False    False       False
+266  bond_observation_0267                                                 CCC(=O)c1ccccc1                       82.2         1.81         1.54          -11.9        C-C     10          1            False    False        True
+37   bond_observation_0038                                         C1=C(N2CCCC2)Cc2ccccc21                       83.5         2.09       -10.30           -1.5        C-H     14          3            False     True       False
+508  bond_observation_0509                                   c1ccc(C(c2ccccc2)c2ccccc2)cc1                       86.3        -2.71        -2.80          -24.7        C-C     19          3            False     True       False
+78   bond_observation_0079                                              C1CCC(C2CCCCC2)CC1                       88.2        -4.31        -7.22          -11.4        C-C     12          2             True     True       False
+106  bond_observation_0107                                                           C=C=C                       88.7         2.43         1.23           10.7        C-H      3          0            False    False       False
+240  bond_observation_0241                                                CC1CCC2CC1C2(C)C                       90.2         2.95         4.12           12.5        C-H     10          3            False     True       False
+221  bond_observation_0222                                                      CC(O)C(C)O                       90.5        -6.69        -7.32          -14.3        C-C      6          0             True    False       False
+77   bond_observation_0078                                                C1CCC(C2CCCC2)C1                       91.3         1.64         2.59           10.3        C-H     10          2            False    False       False
+523  bond_observation_0524                                             c1ccc(Cc2ccccc2)cc1                       91.7        -1.55        -0.64          -10.5        C-C     13          2            False    False       False
+294  bond_observation_0295                                                       CCC1CCCC1                       93.7        -0.26        -0.44           10.7        C-H      7          1            False    False        True
+151  bond_observation_0152                                                     C=Cc1ccccc1                       98.4         3.15         3.24           14.0        C-H      8          1            False    False        True
+73   bond_observation_0074                                                       C1CC12CC2                       98.8         6.99         7.06           15.6        C-H      5          2            False    False        True
+71   bond_observation_0072                                                        C1C2CC12                      102.0        10.43        10.68           21.5        C-H      4          2            False    False        True
+49   bond_observation_0050                                                          C1=CC1                      104.4        -5.21        -4.78          -10.4        C-H      3          1            False    False        True
+226  bond_observation_0227                                                      CC1(C)C=C1                      106.7        -0.33        -0.43           21.6        C-H      5          1            False    False        True
+112  bond_observation_0113                                                       C=CC(=C)C                      108.8         2.75         2.64           18.6        C-C      5          0            False    False        True
+70   bond_observation_0071                                                 C1C2C3C2C2C1C32                      109.4         0.06        -0.14           10.6        C-H      7          5            False     True       False
+48   bond_observation_0049                                                          C1=CC1                      110.4        -0.58        -0.42           16.9        C-H      3          1            False    False        True
+122  bond_observation_0123                                                          C=CC=C                      116.9        -2.55        -2.19           17.7        C-C      4          0             True    False        True
+98   bond_observation_0099                                                       C=C/C=C/C                      117.2        -1.95        -2.06           15.3        C-C      5          0            False    False        True
+101  bond_observation_0102                                                       C=C/C=C\C                      118.5        -4.71        -3.36           14.0        C-C      5          0            False    False        True
+
+union of any>5: 295
+union of any>10: 61
+union of any>15: 17
+
+all 3 channels agree >5: 18
+all 3 channels agree >10: 3
+all 3 agree >15: 0

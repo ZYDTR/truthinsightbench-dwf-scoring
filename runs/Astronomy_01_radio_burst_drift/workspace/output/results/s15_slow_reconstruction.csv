@@ -1,0 +1,7 @@
+population_series_id,workbook_blocks,sheet,labels,n_recon,n_norm,sum_recon,sum_norm,max_abs_dx,max_abs_dy,exact
+population_series_1,2,Sheet_024,"group_a(-10<s<0), channel_l + group_a(0<s<20), channel_l",137,137,892.0,892.0,4.973799150320701e-14,0.0,True
+population_series_2,2,Sheet_026,"group_a(-10<s<0), channel_r + group_a(0<s<20), channel_r",131,131,1303.0,1303.0,3.019806626980426e-14,0.0,True
+population_series_3,2,Sheet_028,"group_b(-10<s<0), channel_l + group_b(0<s<20), channel_l",139,139,803.0,803.0,4.973799150320701e-14,0.0,True
+population_series_4,2,Sheet_030,"group_b(-10<s<0), channel_r + group_b(0<s<20), channel_r",132,132,392.0,392.0,4.973799150320701e-14,0.0,True
+population_series_5,2,Sheet_032,"group_c(-10<s<0), channel_l + group_c(0<s<20), channel_l",127,127,1092.0,1092.0,4.973799150320701e-14,0.0,True
+population_series_6,2,Sheet_034,"group_c(-10<s<0), channel_r + group_c(0<s<20), channel_r",136,136,2201.0,2201.0,4.973799150320701e-14,0.0,True

@@ -1,0 +1,161 @@
+TruthInsightBench run log - Chemistry_03_catalysis_response_landscape
+Workspace: /data/user/conversations/conv-4ba01bd5-0b72-45b2-94f6-e776171d414a/project
+Contract T0: 2023-01-01. No external source was consulted or used anywhere in this run;
+every number in Result.md is produced by the executed scripts listed below.
+
+ENVIRONMENT
+  python3 3.11; numpy 2.4.6 and pandas 3.0.5 preinstalled.
+  scipy, scikit-learn, matplotlib, statsmodels were ABSENT and were installed with
+  `python3 -m pip install scipy scikit-learn matplotlib statsmodels`
+  (scipy 1.17.1, scikit-learn 1.9.1, matplotlib 3.11.2, statsmodels 0.15.0).
+
+DATA INTEGRITY
+  All four sha256 digests recomputed in analysis/01_profile.py match data_manifest.json
+  exactly (observation_set_1 10c16e25..., _2 b8147b97..., _3 8b221b18..., _4 1ba40d1f...).
+
+EXECUTED STEPS
+  01_profile.py              -> evidence/01_profile.json, evidence/01_column_profile.csv
+  02_structure.py            -> evidence/02_structure.json
+  03_core.py                 -> evidence/03_core.json
+  04_robustness.py           -> evidence/04_robustness.json
+  05_interaction_inference.py-> evidence/05_interaction_inference.json
+  06_crosspanel.py           -> evidence/06_crosspanel.json
+  07_transfer_boundary.py    -> evidence/07_transfer_boundary.json
+  08_artifacts.py            -> evidence/results.json, evidence/results_summary.csv,
+                                evidence/fig_findings_1_2_3.png, fig_finding_4.png, fig_finding_5.png
+  09_transfer_confound.py    -> evidence/09_transfer_confound.json
+  10_figures.py              -> evidence/fig_diagnostics.png
+  verification workflow      -> verification/verification_registry.json (6 parallel workers)
+
+REAL ERRORS ENCOUNTERED AND HOW THEY WERE HANDLED
+  E1. 03_core.py first run raised KeyError('series') when the two transfer frames were
+      merged with overlapping key names. Fixed by renaming the join key to '_k' before
+      the merge.
+  E2. 03_core.py's first SS implementation omitted the grand-mean offset, giving
+      eta^2 values above 1 (main eta^2 = 1.175) and a negative residual. Detected because
+      the three terms failed to sum to 1. Fixed by computing the modelled deviation as
+      (X @ beta) directly under sum-to-zero coding, which is only valid for a balanced
+      design. Residual after the 3-way term then fell to ~1e-12 and the terms sum to 1.0.
+  E3. A permutation null that reshuffled the response within (A,B) cells was applied to
+      the 3-way interaction SS and returned a null mean (378.2 for f6) far ABOVE the
+      observed value (103.8), i.e. p = 1.0 in the wrong direction. This is an invalid
+      null for an unreplicated factorial: reshuffling changes the cell variances rather
+      than testing sparsity of interactions. The test was NOT silently dropped; it is
+      preserved verbatim in evidence/05_interaction_inference.json under
+      "failed_test_preserved" and reported in Result.md. It was superseded by Tukey's
+      1-df non-additivity test and a Lenth-style contrast scan.
+  E4. Full contrast-matrix regression on the 1430-row factorial exhausted the 120 s
+      foreground timeout (the 3-way contrast block alone is 1080 columns). Replaced with
+      the closed-form balanced-factorial SS identity. The replacement was validated
+      against the regression result before use: closed form gives eta^2
+      0.521105/0.324963/0.153931 for numeric_feature_6 versus the regression's
+      0.5211/0.3250/0.1539, an exact match.
+  E5. 04_robustness.py raised KeyError('series') twice on the transfer frame after the
+      join key rename; the leave-one-series-out loop still referenced the old name.
+      Fixed by using '_k' consistently.
+  E6. 07_transfer_boundary.py timed out computing 50000 scipy Spearman permutations one
+      at a time (37 s per 20k for one pair, 28 pairs). Replaced with the mathematically
+      equivalent Pearson-on-ranks form vectorised as a single matrix product per pair
+      (8 s per 20k), which completed all 28 pairs.
+  E7. 08_artifacts.py raised KeyError('numeric_feature_5') because the panel-3/panel-4
+      merge produced suffixed column names (_3/_4). Fixed by renaming columns before the
+      merge.
+  E8. 09_transfer_confound.py built a column name 'numeric_feature_R' by string
+      substitution for the within-condition dispersion. Fixed by passing the real column
+      names explicitly.
+  E9. 10_figures.py raised a shape mismatch (7 vs 8) plotting the panel-4 rank block,
+      which has 8 present rows but only 7 series. Fixed by slicing to the 7 shared series.
+  E10. A background `until [ -s ... ]` waiter and a background pip install were left
+      running past their windows; the waiter was superseded by a direct poll of the
+      artifact file. No scientific step depended on either.
+
+NEGATIVE AND UNRESOLVED RESULTS RETAINED
+  - The panel-3 <-> panel-4 response does not transfer at cell level (Pearson -0.086).
+  - The panel-1 factor-B level profile does not transfer to panel 3 (rho +0.319, p 0.28).
+  - observation_set_4.numeric_feature_10 and the empty columns numeric_feature_7/8/9
+    (set 4) and numeric_feature_7 (set 3) remain unresolved.
+  - The exact response identity E3 is a property of this frozen projection; it cannot be
+    attributed to upstream measurement design from anonymous data.
+
+=== POST-ANALYSIS: INDEPENDENT ADVERSARIAL VERIFICATION ===
+Six general-purpose verification workers were launched in parallel with the Workflow tool
+(run id wf_6a7c8750-95f), one per registered finding plus a fresh-eyes structural audit of
+all four panels. Each wrote and executed its own code against ./data and was instructed not
+to read the other workers' outputs or the main agent's artifacts.
+
+VERDICTS: V1 confirmed, V2 confirmed, V3 confirmed, V4 partially_confirmed,
+          V5 partially_confirmed, V6 partially_confirmed. None refuted.
+Registry: output/verification/verification_registry.json
+
+CORRECTIONS THE WORKERS FORCED (all applied to Result.md; see its section 10):
+  C1 (V6) panel-1 numeric_feature_5 is NOT a row counter. It is a mixed-radix cell
+          identifier f5 = 11*(f3 + 13*f2) + f4, decoding exactly to the (f2,f3,f4) cell.
+          Verified by round trip over all 1430 rows.
+  C2 (V5) the errors-in-variables bound used in the first Finding-5 draft was INVALID.
+          Positive control: with a true slope of exactly 1 and equal noise on both axes,
+          the claimed interval [0.97516, 0.97814] contains 1 in only 4-20% of replicates.
+          Withdrawn; replaced by de-attenuation b_OLS/r^2 = 0.978144 and a calibrated
+          lattice-block test (analysis/11_eiv_correction.py, p = 0.022).
+  C3 (V5) rank-inversion count scope: 32 of 820 over all 41 rows; 22 of 528 is the
+          33-irregular-row subset. The subset figure had been quoted unlabelled.
+  C4 (V1) the Finding-1 eta^2 contrast is partly distributional: under rank transformation
+          the main shares move to 0.706/0.858 and the 3-way gap halves. Disclosed.
+  C5 (V4) the Finding-4 correspondence loses significance under JOINT control of both
+          panel-4 magnitudes (rho 0.534, p 0.091). Claim restated as a contrast.
+  C6 (V2) the isotonic R^2 for Finding 2 (0.098) is BELOW its permutation null mean
+          (0.201, p = 0.589). Added; strengthens the negative claim.
+  C7 (V3) a second duplicate column pair exists in panel 3 (f19/f20), and the canonical
+          form of the identity is exactly 0.0 on both panels (the 1.1e-16 quoted for
+          panel 4 is an algebraically equivalent form's residual).
+
+ADDITIONAL STRUCTURE RESOLVED BY THE AUDIT
+  - observation_set_4.numeric_feature_10 (previously listed unresolved) is a 1-based copy
+    of the series-label tags: equals numeric_feature_1 + 1 on rows 0..6, then a single 0.
+  - panel 4's supplied rank block is built in FILE ROW ORDER, not printed-label order
+    (13/13 columns match under row order, 0/13 under label order).
+  - panel 1's run order is not row order: factors are encountered in the cyclic convention
+    f2: 0,2,3,...,9,1  f3: 0,5,6,...,12,1,2,3,4  f4: 0,3,4,...,10,1,2.
+
+FINAL VALIDATION
+  `python3 validate_output.py output` -> passed = true, errors = [], warnings = []
+  5 findings registered and traceable; 29 analysis sources; 32 result artifacts.
+  Receipt: output/validation_report.json
+
+=== WORKFLOW PROVENANCE FAILURE (discovered after the fact; see Result.md section 8) ===
+The verification workflow (run id wf_6a7c8750-95f) reported:
+  agents_launched 6, agents_done 6, agents_error 0, agents_empty_result 6
+  failure: parallel[0..5] failed: agent({schema}): subagent completed without calling
+           StructuredOutput (after in-conversation nudge)
+  journal "result" lines: 0
+  subagent_tokens 414940, tool_uses 311
+
+All six subagents DID the work -- they wrote and executed their own scripts and payloads,
+which are the real artifacts under output/verification/ -- but none of them called the
+StructuredOutput tool, so the workflow's structured return was EMPTY and the orchestrator
+received no verdicts.
+
+CONSEQUENCE AND DISCLOSURE:
+  - output/verification/verification_registry.json was assembled by the MAIN AGENT from the
+    workers' on-disk artifacts. It is not a verbatim workflow return.
+  - Verdict attribution is mixed and is stated per worker in the registry:
+      V2, V3, V4, V6 wrote explicit verdict fields into their payloads (quoted verbatim
+        under 'worker_own_verdict');
+      V1 and V5 have no verdict field, so their verdict labels were assigned by the main
+        agent by reading their computed numbers against the claim.
+  - This is disclosed in Result.md section 8 rather than presented as independent verdicts.
+
+FURTHER CORRECTION FORCED BY THIS REVIEW:
+  C8 (V2) V2 explicitly marked Finding 2's wording "REFUTED as stated": 'not a gradient'
+          understates the case, and the isotonic R2 had been used as supporting evidence when
+          it is ~18x BELOW the null mean. Finding 2 was renamed to 'the numeric level order is
+          not monotone' and the isotonic figure is now reported only as a null calibration.
+          V2's own counter-proposal ('a weak but real orderable component') did NOT survive
+          re-check: the main agent re-ran the calibration (20000 relabellings, null mean
+          0.2041, sd 0.1974, p95 0.5986) and the observed 0.0977 sits at the 41st percentile,
+          p = 0.587. Both quantities in the '18x' ratio are below chance, so the ratio is not
+          evidence of orderable structure. The worker's separate point stands: 'rugged' is not
+          falsifiable by relabelling, since any 11 numbers are monotone in their own sorted
+          order (max isotonic R2 over 20000 relabellings = 0.9712).
+
+Corrected copy with the provenance disclosure: Result.md section 8 and section 10;
+evidence/results.json corrections_log.

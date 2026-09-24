@@ -1,0 +1,86 @@
+{
+  "mean_amplitude_dff0": {
+    "n": 580,
+    "r2": 0.5502,
+    "terms": {
+      "C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": {
+        "coef": -0.012923,
+        "p": 0.808476
+      },
+      "C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": {
+        "coef": 0.337815,
+        "p": 0.0
+      }
+    }
+  },
+  "mean_time_to_peak_s": {
+    "n": 580,
+    "r2": 0.2376,
+    "terms": {
+      "C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": {
+        "coef": 27.189634,
+        "p": 0.00072
+      },
+      "C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": {
+        "coef": -29.292629,
+        "p": 1.3e-05
+      }
+    }
+  },
+  "mean_peak_width_s": {
+    "n": 580,
+    "r2": 0.4221,
+    "terms": {
+      "C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": {
+        "coef": 1.159042,
+        "p": 0.71942
+      },
+      "C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": {
+        "coef": 30.847322,
+        "p": 0.0
+      }
+    }
+  },
+  "mean_peak_prominence_dff0": {
+    "n": 580,
+    "r2": 0.5628,
+    "terms": {
+      "C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": {
+        "coef": -0.028869,
+        "p": 0.526354
+      },
+      "C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": {
+        "coef": 0.067321,
+        "p": 0.076645
+      }
+    }
+  },
+  "mean_peak_frequency_hz": {
+    "n": 580,
+    "r2": 0.1802,
+    "terms": {
+      "C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": {
+        "coef": 0.001906,
+        "p": 0.09317
+      },
+      "C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": {
+        "coef": 0.000806,
+        "p": 0.393807
+      }
+    }
+  },
+  "mean_auc_au": {
+    "n": 580,
+    "r2": 0.458,
+    "terms": {
+      "C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": {
+        "coef": -1.395331,
+        "p": 0.859636
+      },
+      "C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": {
+        "coef": 87.934699,
+        "p": 0.0
+      }
+    }
+  }
+}

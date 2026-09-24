@@ -1,0 +1,14 @@
+{
+  "file": "unit_distance_latency_variability.tsv",
+  "n_units": 41,
+  "pearson": {
+    "r": 0.06556760460405084,
+    "p": 0.6837930365733388
+  },
+  "spearman": {
+    "rho": -0.020052317995818594,
+    "p": 0.9009675826100705
+  },
+  "zero_sd_count": 5,
+  "perm_p": 0.8985507246376812
+}

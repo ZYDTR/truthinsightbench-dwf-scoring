@@ -1,0 +1,170 @@
+[
+  {
+    "case_index": 1,
+    "graph_seed": 12345,
+    "stochastic_seed": 20210813,
+    "qaoa_optimizer_step_count": 67,
+    "p1_final_fidelity": 0.9892774281295591,
+    "p2_final_fidelity": 0.9756043403530013,
+    "p2_minus_p1": -0.013673087776557846,
+    "compression_exact_fidelity": 0.9995464024328914,
+    "compression_terminal_estimated_fidelity": 0.9996195947652939,
+    "min_gate_terminal_fidelity": 0.996852259370526,
+    "optimized_exact_cost": -7.034330773959219,
+    "passed_frozen_thresholds": true,
+    "initial_angles": [
+      0.25076480061730955,
+      0.38064116905898393,
+      -0.607303030161062,
+      -0.4217043908635955
+    ],
+    "optimized_angles": [
+      0.25076480061730955,
+      0.38064116905898393,
+      -0.607303030161062,
+      -0.4217043908635955
+    ],
+    "angle_deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "threshold_checks": [
+      {
+        "threshold": "compression_fidelity",
+        "value": 0.9995464024328914,
+        "threshold_value": 0.95,
+        "margin": 0.049546402432891434,
+        "passed": true
+      },
+      {
+        "threshold": "p1_final_fidelity",
+        "value": 0.9892774281295591,
+        "threshold_value": 0.94,
+        "margin": 0.04927742812955915,
+        "passed": true
+      },
+      {
+        "threshold": "p2_final_fidelity",
+        "value": 0.9756043403530013,
+        "threshold_value": 0.92,
+        "margin": 0.055604340353001214,
+        "passed": true
+      }
+    ],
+    "all_thresholds_passed": true
+  },
+  {
+    "case_index": 2,
+    "graph_seed": 24680,
+    "stochastic_seed": 20210814,
+    "qaoa_optimizer_step_count": 74,
+    "p1_final_fidelity": 0.990358773974237,
+    "p2_final_fidelity": 0.9815851170054515,
+    "p2_minus_p1": -0.008773656968785515,
+    "compression_exact_fidelity": 0.9995392572316039,
+    "compression_terminal_estimated_fidelity": 1.000127030100402,
+    "min_gate_terminal_fidelity": 0.9934816062547616,
+    "optimized_exact_cost": -4.205598642026452,
+    "passed_frozen_thresholds": true,
+    "initial_angles": [
+      0.25051492093070155,
+      0.45970174434394767,
+      -0.47811389266251086,
+      -0.2888374241870769
+    ],
+    "optimized_angles": [
+      0.25051492093070155,
+      0.45970174434394767,
+      -0.47811389266251086,
+      -0.2888374241870769
+    ],
+    "angle_deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "threshold_checks": [
+      {
+        "threshold": "compression_fidelity",
+        "value": 0.9995392572316039,
+        "threshold_value": 0.95,
+        "margin": 0.049539257231603906,
+        "passed": true
+      },
+      {
+        "threshold": "p1_final_fidelity",
+        "value": 0.990358773974237,
+        "threshold_value": 0.94,
+        "margin": 0.05035877397423705,
+        "passed": true
+      },
+      {
+        "threshold": "p2_final_fidelity",
+        "value": 0.9815851170054515,
+        "threshold_value": 0.92,
+        "margin": 0.06158511700545144,
+        "passed": true
+      }
+    ],
+    "all_thresholds_passed": true
+  },
+  {
+    "case_index": 3,
+    "graph_seed": 97531,
+    "stochastic_seed": 20210815,
+    "qaoa_optimizer_step_count": 74,
+    "p1_final_fidelity": 0.9805953975270472,
+    "p2_final_fidelity": 0.9774953129837863,
+    "p2_minus_p1": -0.003100084543260828,
+    "compression_exact_fidelity": 0.9991800836013702,
+    "compression_terminal_estimated_fidelity": 0.9985108701831229,
+    "min_gate_terminal_fidelity": 0.9904045325288312,
+    "optimized_exact_cost": -4.205598642026351,
+    "passed_frozen_thresholds": true,
+    "initial_angles": [
+      0.2505149209294045,
+      0.4597017443423358,
+      -0.4781138926653155,
+      -0.28883742418883823
+    ],
+    "optimized_angles": [
+      0.2505149209294045,
+      0.4597017443423358,
+      -0.4781138926653155,
+      -0.28883742418883823
+    ],
+    "angle_deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "threshold_checks": [
+      {
+        "threshold": "compression_fidelity",
+        "value": 0.9991800836013702,
+        "threshold_value": 0.95,
+        "margin": 0.04918008360137027,
+        "passed": true
+      },
+      {
+        "threshold": "p1_final_fidelity",
+        "value": 0.9805953975270472,
+        "threshold_value": 0.94,
+        "margin": 0.04059539752704722,
+        "passed": true
+      },
+      {
+        "threshold": "p2_final_fidelity",
+        "value": 0.9774953129837863,
+        "threshold_value": 0.92,
+        "margin": 0.057495312983786295,
+        "passed": true
+      }
+    ],
+    "all_thresholds_passed": true
+  }
+]

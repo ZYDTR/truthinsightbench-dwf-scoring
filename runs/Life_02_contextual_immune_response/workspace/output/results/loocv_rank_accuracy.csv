@@ -1,0 +1,7 @@
+held_out_assay,endpoint_type,n_compartments,spearman_rank_transfer,spearman_level_transfer
+assay_1,endpoint_count,3,1,1
+assay_1,endpoint_fraction,3,0.5,0.5
+assay_2,endpoint_count,3,0.5,0.5
+assay_2,endpoint_fraction,3,-0.5,-0.5
+assay_3,endpoint_count,3,1,1
+assay_3,endpoint_fraction,3,-1,-1

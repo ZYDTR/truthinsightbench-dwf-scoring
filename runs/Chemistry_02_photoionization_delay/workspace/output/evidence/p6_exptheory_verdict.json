@@ -1,0 +1,35 @@
+{
+ "package": "p6_exptheory",
+ "verify_script": "/data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/analysis/p6_exptheory_verify.py",
+ "verdicts": [
+  {
+   "claim": "The theory grid contains a point within 1 meV of 12 of the 13 measured energies (all except 48.4 eV).",
+   "reproduced": false,
+   "my_value": "11/13 measured energies have a theory grid point within 1.000 meV (matched: [23.25, 24.8, 26.35, 27.9, 29.45, 31.0, 32.55, 34.1, 35.65, 37.2, 38.75]); 8/13 on the separate theory/delay energy grid; 11/13 within the package's 5 meV tolerance. Unmatched: 22.50 eV (nearest theory point +749.0 meV), 48.40 eV (nearest theory point -6561.0 meV)",
+   "method": "csv-module loader (no pandas); nearest-point search on theory/photon_energy_eV and theory/photon_energy_eV_del; distance in meV",
+   "comment": "Refuted as stated. Only 11/13 measured energies have a theory grid point within 1 meV (all 11 at exactly -1.000 meV relative to the measured value, hence the borderline tolerance; the literal count is 5/13 if the <= 1.0 meV test is applied without tolerance on the floating-point offset). 22.5 eV is a second unmatched energy with nearest theory point 23.249 eV, 749 meV away, so the parenthetical 'all except 48.4 eV' is wrong. The claim would hold at 11/13 if re-phrased."
+  },
+  {
+   "claim": "At matched energies the experiment and theory phase panels agree to high angular correlation after removing a single constant offset: unwrapped-phase Pearson r ~0.9986 and residual drops from ~0.285 rad to ~0.107 rad at 23.25 eV.",
+   "reproduced": true,
+   "my_value": "23.25 eV: r=0.998578 (linear interp) / 0.998576 (cubic spline) / 0.998597 (nearest node); residual before 0.2852 rad -> after best analytic circular-mean offset 0.1072 rad (cubic 0.1073, nearest node 0.1070, median-offset variant 0.1135); offset +15.147 deg. Over the 11 matched energies: median r=0.926335, residual 0.6607 -> 0.6488 rad",
+   "method": "hand-rolled modulo unwrap of the angular axis (independently validated against numpy.unwrap to 1e-14 and checked for steps near pi); scipy.stats.pearsonr on the unwrapped panels; constant offset obtained analytically from the circular mean of the wrapped difference (package used a 20001-point grid search); three exp-panel conditioning variants",
+   "comment": "Headline numbers reproduced. The residual is computed from wrapped (mod 2pi) differences, so it is invariant to per-row 2pi branch choices, and Pearson r is invariant to any constant offset. The drop is genuine at 23.25 eV (and the offset reported by the package, +15.138 deg, agrees with my circular mean +15.14 deg)."
+  },
+  {
+   "claim": "The magnitude panels agree less well than the phase panels, and the delay panels disagree substantially: delay rms ~82 as at 23.25 eV with normalized rms ~1.49.",
+   "reproduced": true,
+   "my_value": "23.25 eV: mag nrms 0.562 (r=0.869) vs phase nrms 0.060 (r=0.9986); delay rms 82.12 as, nrms 1.486 by exp std / 1.086 by theory std; nearest-node route 82.9 as; independent central-difference phase-derived route 81.9 as. Over the 11 matched energies: medians mag nrms 0.579 / phase nrms 0.341 / delay nrms 2.049; medians r: mag 0.869, phase 0.9263, delay 0.342; mag nrms > phase nrms at 10/11, mag r < phase r at 6/11 energies",
+   "method": "magnitude/phase/delay rows compared at matched theory energies using scipy pearsonr, plain RMS and std-normalised RMS; delay also rebuilt from a central difference of the energy-unwrapped phase panel with the documented hbar_as_eV conversion",
+   "comment": "Confirmed. At 23.25 eV the delay RMS reproduces to <0.1 as and the normalized RMS to ~0.3%, and the delay is the worst of the three quantities at that energy on every metric. Across the other matched energies the magnitude panel is worse than the phase panel by normalized RMS at 10/11 energies (median 0.579 vs 0.341) and by angular correlation at 6/11 (median r 0.869 vs 0.9263); the ordering is clearest at the low-energy-end headline point 23.25 eV. The occasional phase blow-up (38.75 eV) makes the rank-based comparison less than unanimous."
+  },
+  {
+   "claim": "Agreement improves with photon energy for magnitude but not significantly for delay.",
+   "reproduced": true,
+   "my_value": "11 matched energies: mag nrms vs E spearman rho=-0.573 (p=0.0655), mag r vs E rho=+0.527 (p=0.0956); delay rms vs E rho=+0.209 (p=0.5372), delay r vs E rho=-0.282 (p=0.4011). Full 99-row theory grid: mag nrms rho=-0.657 (p=0.0000), delay rms rho=+0.132 (p=0.1966)",
+   "method": "scipy spearmanr / kendalltau / linregress, run on the 11 matched energies and on the full 99-row theory grid with interpolated experiment rows",
+   "comment": "Direction confirmed on both sample sizes: magnitude agreement trends better with energy (negative rho for nrms, p=0.066 at n=11 and p<1e-4 on the full grid) while the delay RMS trend is weak (p>0.07 at n=11, p=0.20 full grid). Two honest caveats: (i) at n=11 even the magnitude trend is only p~0.07-0.28 depending on metric, so 'improves' is directional rather than significant on the primary metric; (ii) on the full 99-row grid the delay normalized RMS does drift down weakly with energy (rho=-0.267, p=0.0078) and delay r drifts down too (rho=-0.291, p=0.0036), so 'not significantly for delay' is cleanest on the 11 exactly matched energies and weaker on the non-independent dense grid."
+  }
+ ],
+ "residual_doubt": "Claim 1 is refuted as literally stated: 11/13, not 12/13, because 22.5 eV also has no theory grid point within 1 meV (nor within 5 meV, the package's own tolerance). The 11 matches sit at exactly -1.000 meV, which is why a naive float comparison at 1 meV is borderline. The separate theory delay energy grid (upper edge of each phase step) gives only 8/13 within 1 meV, so the count depends on which theory grid the claim refers to, but neither grid gives 12. Claim 2 was reproduced as a physical statement: the unwrapped-phase r and the mod-2pi residual before/after a single constant offset agree on three independent interpolation routes, and the residual metric is invariant to the unwrap branch convention. Claim 3 holds for delay (the only quantity with a numeric target). The magnitude-vs-phase ordering is supported by angular correlation on 10/11 energies but is mixed by normalized RMS, so it should be read as 'less correlated', not 'uniformly worse'. Claim 4 is directional only: the magnitude trend is not significant at p<0.05 on the 11 matched energies, while the delay trend is non-significant there too (p>0.4). On the full dense theory grid the delay normalized RMS does drift weakly downward with energy (rho=-0.267, p=0.008) as well, so 'not significantly for delay' is cleanest on the 11 exactly matched energies. Finally, the dense experiment phase/delay grid is documented as a derived spline grid over 13 measured DME blocks, so the 11 matched points are not independent samples and all trend p-values are optimistic."
+}

@@ -1,0 +1,19 @@
+group,regime,channel,coarse_sheet,fine_sheet,label,best_translation_MHz_s,min_L1,KS_at_best,L1_at_zero_offset,n_offsets_tested,L1_below_0p10_offsets
+anonymous_group_1,fast,channel_l,Sheet_039,Sheet_025,"group_a (-35<s<-10), channel_l",-1.2500000000000098,0.15329263931396214,0.07272172817651014,0.48934494278843504,161,0
+anonymous_group_1,fast,channel_r,Sheet_040,Sheet_027,"group_a (-35<s<-10), channel_r",-1.1500000000000101,0.16208621170587917,0.04923881191568877,0.3925868597134311,161,0
+anonymous_group_1,slow,channel_l,Sheet_039,Sheet_024,"group_a(-10<s<0), channel_l",-4.0,0.7703632897396137,0.32591399296721846,1.992583436341162,161,0
+anonymous_group_1,slow,channel_l,Sheet_039,Sheet_024,"group_a(0<s<20), channel_l",3.899999999999972,0.7172131147540984,0.6556372549019608,1.7087753134040495,161,0
+anonymous_group_1,slow,channel_r,Sheet_040,Sheet_026,"group_a(-10<s<0), channel_r",3.9499999999999718,0.9999999999999999,,1.9947552447552446,161,0
+anonymous_group_1,slow,channel_r,Sheet_040,Sheet_026,"group_a(0<s<20), channel_r",-4.0,1.5273207182376272,0.23121392805809976,1.9048554818635886,161,0
+anonymous_group_2,fast,channel_l,Sheet_041,Sheet_029,"group_b (-35<s<-10), channel_l",3.7999999999999723,0.5576001507174854,0.07675431665523738,0.9788874486958231,161,0
+anonymous_group_2,fast,channel_r,Sheet_042,Sheet_031,"group_b (-35<s<-10), channel_r",2.749999999999976,1.500000000000001,0.10338358448261986,1.7137550847499772,161,0
+anonymous_group_2,slow,channel_l,Sheet_041,Sheet_028,"group_b(-10<s<0), channel_l",3.549999999999973,1.0,,2.0,161,0
+anonymous_group_2,slow,channel_l,Sheet_041,Sheet_028,"group_b(0<s<20), channel_l",2.0999999999999783,0.4678247379195295,0.9282511210762332,1.8565022421524666,161,0
+anonymous_group_2,slow,channel_r,Sheet_042,Sheet_030,"group_b(-10<s<0), channel_r",2.8999999999999755,1.0,,2.0,161,0
+anonymous_group_2,slow,channel_r,Sheet_042,Sheet_030,"group_b(0<s<20), channel_r",3.1999999999999744,1.264957264957265,0.6704641350210965,1.9409282700421944,161,0
+anonymous_group_3,fast,channel_l,Sheet_043,Sheet_033,"group_c (-35<s<-10), channel_l",-0.8500000000000112,0.3771436306209775,0.06332581775242127,0.6042082017168711,161,0
+anonymous_group_3,fast,channel_r,Sheet_044,Sheet_035,"group_c (-35<s<-10), channel_r",-2.300000000000006,0.681633523390811,0.0982605799516032,1.002175722842693,161,0
+anonymous_group_3,slow,channel_l,Sheet_043,Sheet_032,"group_c(-10<s<0), channel_l",3.7999999999999723,0.9999999999999999,,2.0,161,0
+anonymous_group_3,slow,channel_l,Sheet_043,Sheet_032,"group_c(0<s<20), channel_l",2.449999999999977,0.382232972134343,0.8845015825151776,1.971486761710794,161,0
+anonymous_group_3,slow,channel_r,Sheet_044,Sheet_034,"group_c(-10<s<0), channel_r",3.9499999999999718,1.0,,2.0,161,0
+anonymous_group_3,slow,channel_r,Sheet_044,Sheet_034,"group_c(0<s<20), channel_r",3.0999999999999748,0.8428571428571416,0.8173704414587326,1.9347408829174666,161,0

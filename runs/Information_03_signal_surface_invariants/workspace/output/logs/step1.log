@@ -1,0 +1,11 @@
+loaded replicated_response_panel.tsv: shape=(8232, 6) sha256=410e51b559eb4d3416f131c2eb4d8f75995ff00d3b76af7b47a0ee8b1220533d
+loaded independent_response_panel.tsv: shape=(4116, 6) sha256=f85f73bbbf15535425752c6ca2ae65e523c8dd8c06a2d5de11bf1986aaa884a1
+loaded independent_fit_error.tsv: shape=(21, 3) sha256=57b739c708fb384f7a661d85e62b67f6c5f333cab170214d6f972ca067d2564a
+replicated panel complete 7x7x8x7x3 = True
+independent panel complete 7x7x7x4x3 = True
+variance decomposition (log scale): chan main 58.92%, input main 11.75%, two-way 18.91%, three-way 6.00%, replicate error 3.39%
+rank-1 gain axis: (a1,a2)x7ch R2=0.9550 rank2=0.9902 ; (a1,a2,bin)x7ch R2=0.9556 rank2=0.9829
+channel amplification: a1 slope ch0=0.0166 -> ch6=0.4846 (x29.2); grid sd ch0=0.1259 -> ch6=1.4579 (x11.6); a2 slope changes sign (ch0=+0.0223 -> ch6=-0.4243)
+normalisation perturbation of rank-1 R2: linear=0.9987, log=0.9550, linear/chan-mean=0.9341, log z-scored=0.5681
+bin0 notch: observed=11.1171 vs quadratic trend=10.1689, excess=+0.9482 (x2.58); positive in 100% of the 49 grid cells
+channel block structure: best 2-block cut at ch<3, gap=0.5644, permutation p=0.02770

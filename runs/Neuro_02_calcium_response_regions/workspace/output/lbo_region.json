@@ -1,0 +1,381 @@
+{
+  "method": "leave-one-batch-out on balanced region_1/2 subset; refit measure ~ region+condition+batch; region_2-vs-region_1 coeff; report per-batch coeff, sign stability, and p-value",
+  "seed": 42,
+  "n_batches": 9,
+  "observed_full": {
+    "mean_amplitude_dff0": 0.3116,
+    "mean_time_to_peak_s": -25.1724,
+    "mean_peak_width_s": 10.7224,
+    "mean_peak_prominence_dff0": 0.3219,
+    "mean_peak_frequency_hz": -0.0038,
+    "mean_auc_au": 1.3998
+  },
+  "per_measure": {
+    "mean_amplitude_dff0": {
+      "n_batches_tested": 9,
+      "all_same_sign_as_full": true,
+      "n_significant": 9,
+      "batch_coefs": [
+        {
+          "batch": "recording_batch_01",
+          "n_cells": 576,
+          "coef": 0.3116,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_02",
+          "n_cells": 503,
+          "coef": 0.2803,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_03",
+          "n_cells": 486,
+          "coef": 0.3408,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_04",
+          "n_cells": 506,
+          "coef": 0.2832,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_05",
+          "n_cells": 558,
+          "coef": 0.3116,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_06",
+          "n_cells": 537,
+          "coef": 0.3205,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_07",
+          "n_cells": 501,
+          "coef": 0.3286,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_08",
+          "n_cells": 495,
+          "coef": 0.3005,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_09",
+          "n_cells": 478,
+          "coef": 0.3256,
+          "p": 0.0
+        }
+      ]
+    },
+    "mean_time_to_peak_s": {
+      "n_batches_tested": 9,
+      "all_same_sign_as_full": true,
+      "n_significant": 9,
+      "batch_coefs": [
+        {
+          "batch": "recording_batch_01",
+          "n_cells": 576,
+          "coef": -25.1724,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_02",
+          "n_cells": 503,
+          "coef": -29.3636,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_03",
+          "n_cells": 486,
+          "coef": -23.2896,
+          "p": 1e-06
+        },
+        {
+          "batch": "recording_batch_04",
+          "n_cells": 506,
+          "coef": -27.9476,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_05",
+          "n_cells": 558,
+          "coef": -25.1724,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_06",
+          "n_cells": 537,
+          "coef": -18.0024,
+          "p": 3.3e-05
+        },
+        {
+          "batch": "recording_batch_07",
+          "n_cells": 501,
+          "coef": -25.5787,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_08",
+          "n_cells": 495,
+          "coef": -26.3645,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_09",
+          "n_cells": 478,
+          "coef": -26.472,
+          "p": 0.0
+        }
+      ]
+    },
+    "mean_peak_width_s": {
+      "n_batches_tested": 9,
+      "all_same_sign_as_full": true,
+      "n_significant": 9,
+      "batch_coefs": [
+        {
+          "batch": "recording_batch_01",
+          "n_cells": 576,
+          "coef": 10.7224,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_02",
+          "n_cells": 503,
+          "coef": 13.3442,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_03",
+          "n_cells": 486,
+          "coef": 11.3817,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_04",
+          "n_cells": 506,
+          "coef": 8.6919,
+          "p": 5e-06
+        },
+        {
+          "batch": "recording_batch_05",
+          "n_cells": 558,
+          "coef": 10.7224,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_06",
+          "n_cells": 537,
+          "coef": 10.1028,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_07",
+          "n_cells": 501,
+          "coef": 11.5329,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_08",
+          "n_cells": 495,
+          "coef": 9.3046,
+          "p": 1e-06
+        },
+        {
+          "batch": "recording_batch_09",
+          "n_cells": 478,
+          "coef": 11.141,
+          "p": 0.0
+        }
+      ]
+    },
+    "mean_peak_prominence_dff0": {
+      "n_batches_tested": 9,
+      "all_same_sign_as_full": true,
+      "n_significant": 9,
+      "batch_coefs": [
+        {
+          "batch": "recording_batch_01",
+          "n_cells": 576,
+          "coef": 0.3219,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_02",
+          "n_cells": 503,
+          "coef": 0.3427,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_03",
+          "n_cells": 486,
+          "coef": 0.3308,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_04",
+          "n_cells": 506,
+          "coef": 0.3149,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_05",
+          "n_cells": 558,
+          "coef": 0.3219,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_06",
+          "n_cells": 537,
+          "coef": 0.3107,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_07",
+          "n_cells": 501,
+          "coef": 0.3262,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_08",
+          "n_cells": 495,
+          "coef": 0.3021,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_09",
+          "n_cells": 478,
+          "coef": 0.3265,
+          "p": 0.0
+        }
+      ]
+    },
+    "mean_peak_frequency_hz": {
+      "n_batches_tested": 9,
+      "all_same_sign_as_full": true,
+      "n_significant": 9,
+      "batch_coefs": [
+        {
+          "batch": "recording_batch_01",
+          "n_cells": 576,
+          "coef": -0.0038,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_02",
+          "n_cells": 503,
+          "coef": -0.0033,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_03",
+          "n_cells": 486,
+          "coef": -0.0042,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_04",
+          "n_cells": 506,
+          "coef": -0.0036,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_05",
+          "n_cells": 558,
+          "coef": -0.0038,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_06",
+          "n_cells": 537,
+          "coef": -0.0041,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_07",
+          "n_cells": 501,
+          "coef": -0.0044,
+          "p": 0.0
+        },
+        {
+          "batch": "recording_batch_08",
+          "n_cells": 495,
+          "coef": -0.0027,
+          "p": 1e-05
+        },
+        {
+          "batch": "recording_batch_09",
+          "n_cells": 478,
+          "coef": -0.0041,
+          "p": 0.0
+        }
+      ]
+    },
+    "mean_auc_au": {
+      "n_batches_tested": 9,
+      "all_same_sign_as_full": false,
+      "n_significant": 1,
+      "batch_coefs": [
+        {
+          "batch": "recording_batch_01",
+          "n_cells": 576,
+          "coef": 1.3998,
+          "p": 0.736933
+        },
+        {
+          "batch": "recording_batch_02",
+          "n_cells": 503,
+          "coef": -5.4264,
+          "p": 0.213782
+        },
+        {
+          "batch": "recording_batch_03",
+          "n_cells": 486,
+          "coef": 3.4003,
+          "p": 0.470523
+        },
+        {
+          "batch": "recording_batch_04",
+          "n_cells": 506,
+          "coef": -7.3901,
+          "p": 0.097033
+        },
+        {
+          "batch": "recording_batch_05",
+          "n_cells": 558,
+          "coef": 1.3998,
+          "p": 0.73833
+        },
+        {
+          "batch": "recording_batch_06",
+          "n_cells": 537,
+          "coef": 0.5985,
+          "p": 0.892628
+        },
+        {
+          "batch": "recording_batch_07",
+          "n_cells": 501,
+          "coef": 15.5,
+          "p": 0.000136
+        },
+        {
+          "batch": "recording_batch_08",
+          "n_cells": 495,
+          "coef": 1.1796,
+          "p": 0.802203
+        },
+        {
+          "batch": "recording_batch_09",
+          "n_cells": 478,
+          "coef": 1.4402,
+          "p": 0.767125
+        }
+      ]
+    }
+  }
+}

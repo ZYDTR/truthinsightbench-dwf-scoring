@@ -1,0 +1,57 @@
+{
+  "a1_forward__a2_forward": {
+    "n": 1372,
+    "pearson": 0.01676817822716671,
+    "spearman": 0.03242767140167187
+  },
+  "SWAP_a1_forward__a2_forward": {
+    "n": 1372,
+    "pearson": 0.01676817822716671,
+    "spearman": 0.03242767140167187
+  },
+  "a1_forward__a2_reversed": {
+    "n": 1372,
+    "pearson": -0.040507828011553434,
+    "spearman": -0.02282587128653991
+  },
+  "SWAP_a1_forward__a2_reversed": {
+    "n": 1372,
+    "pearson": -0.04404887725442561,
+    "spearman": -0.024771381491039718
+  },
+  "a1_reversed__a2_forward": {
+    "n": 1372,
+    "pearson": -0.04404887725442561,
+    "spearman": -0.024771381491039718
+  },
+  "SWAP_a1_reversed__a2_forward": {
+    "n": 1372,
+    "pearson": -0.040507828011553434,
+    "spearman": -0.02282587128653991
+  },
+  "a1_reversed__a2_reversed": {
+    "n": 1372,
+    "pearson": -0.15790819356439342,
+    "spearman": -0.11285282953225305
+  },
+  "SWAP_a1_reversed__a2_reversed": {
+    "n": 1372,
+    "pearson": -0.15790819356439342,
+    "spearman": -0.11285282953225305
+  },
+  "_best_abs": {
+    "label": "a1_reversed__a2_reversed",
+    "n": 1372,
+    "pearson": -0.15790819356439342,
+    "spearman": -0.11285282953225305
+  },
+  "_best_channel_permutation": {
+    "perm": [
+      3,
+      2,
+      0,
+      1
+    ],
+    "pearson": 0.07049380297953851
+  }
+}

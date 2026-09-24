@@ -1,0 +1,6 @@
+process,methodology,n_references,n_refs_n_ge3,n_refs_n_ge3_and_uniqueTI_ge3,share_refs_fittable
+Nonglacial,Cosmogenic detrital,166,155,154,0.927710843373494
+Nonglacial,Volumetric,64,53,0,0.0
+Glacial,Volumetric,98,25,15,0.15306122448979592
+Glacial,Cosmogenic surface,19,5,4,0.21052631578947367
+Glacial,Thermochronometric,18,3,1,0.05555555555555555

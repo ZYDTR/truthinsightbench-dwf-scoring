@@ -1,0 +1,1715 @@
+{
+  "schema": "life04-analysis-results",
+  "seed": 20200101,
+  "task_id": "Life_04_environmental_transfer_boundary",
+  "payload": {
+    "files": {
+      "site_level_observations.tsv": {
+        "bytes": 3868,
+        "sha256": "1e9eecdea9b80ee30440ce02d9cfa57a93be758bf5feb2c20869858b74fc4827"
+      },
+      "symptom_assay_surface_summary.tsv": {
+        "bytes": 737,
+        "sha256": "e342263ddb037ffcb480a822ef8f48728660bdcd0bc78ad7c683485f9a479cea"
+      },
+      "unit_level_observations.tsv": {
+        "bytes": 723,
+        "sha256": "4a5bc4c28cfbc165f6d2587f727cf7304926dd167a09fed9fc0371f781e7a3bb"
+      }
+    },
+    "shapes": {
+      "unit_level_observations": [
+        30,
+        5
+      ],
+      "site_level_observations": [
+        212,
+        3
+      ],
+      "symptom_assay_surface_summary": [
+        30,
+        5
+      ]
+    },
+    "n_units": 30,
+    "n_site_rows": 212,
+    "unit_ids_identical_across_files": true,
+    "unit_id_overlap_with_site": [
+      "unit_01",
+      "unit_02",
+      "unit_03",
+      "unit_04",
+      "unit_05",
+      "unit_06",
+      "unit_07",
+      "unit_08",
+      "unit_09",
+      "unit_10",
+      "unit_11",
+      "unit_12",
+      "unit_13",
+      "unit_14",
+      "unit_15",
+      "unit_16",
+      "unit_17",
+      "unit_18",
+      "unit_19",
+      "unit_20",
+      "unit_21",
+      "unit_22",
+      "unit_23",
+      "unit_24",
+      "unit_25",
+      "unit_26",
+      "unit_27",
+      "unit_28",
+      "unit_29",
+      "unit_30"
+    ],
+    "missing_cells": {
+      "unit_level": 0,
+      "site_level": 0,
+      "symptom_summary": 0
+    },
+    "day_columns_identical_between_files": true,
+    "assay_identical_between_files": true
+  },
+  "site_label_structure": {
+    "n_site_rows": 212,
+    "n_distinct_site_role_ids": 10,
+    "rows_per_site_role_id": {
+      "site_1": 22,
+      "site_10": 21,
+      "site_2": 22,
+      "site_3": 21,
+      "site_4": 21,
+      "site_5": 21,
+      "site_6": 21,
+      "site_7": 21,
+      "site_8": 21,
+      "site_9": 21
+    },
+    "rows_per_unit": {
+      "unit_01": 8,
+      "unit_02": 8,
+      "unit_03": 8,
+      "unit_04": 6,
+      "unit_05": 6,
+      "unit_06": 7,
+      "unit_07": 7,
+      "unit_08": 7,
+      "unit_09": 7,
+      "unit_10": 7,
+      "unit_11": 7,
+      "unit_12": 7,
+      "unit_13": 7,
+      "unit_14": 7,
+      "unit_15": 7,
+      "unit_16": 7,
+      "unit_17": 7,
+      "unit_18": 7,
+      "unit_19": 7,
+      "unit_20": 7,
+      "unit_21": 7,
+      "unit_22": 7,
+      "unit_23": 7,
+      "unit_24": 7,
+      "unit_25": 7,
+      "unit_26": 7,
+      "unit_27": 7,
+      "unit_28": 7,
+      "unit_29": 7,
+      "unit_30": 8
+    },
+    "role_id_sequence_is_rotation_by_5": false,
+    "positivity_by_role_label": {
+      "site_1": {
+        "sum": 5,
+        "n": 22,
+        "mean": 0.22727272727272727
+      },
+      "site_10": {
+        "sum": 6,
+        "n": 21,
+        "mean": 0.2857142857142857
+      },
+      "site_2": {
+        "sum": 4,
+        "n": 22,
+        "mean": 0.18181818181818182
+      },
+      "site_3": {
+        "sum": 6,
+        "n": 21,
+        "mean": 0.2857142857142857
+      },
+      "site_4": {
+        "sum": 5,
+        "n": 21,
+        "mean": 0.23809523809523808
+      },
+      "site_5": {
+        "sum": 6,
+        "n": 21,
+        "mean": 0.2857142857142857
+      },
+      "site_6": {
+        "sum": 9,
+        "n": 21,
+        "mean": 0.42857142857142855
+      },
+      "site_7": {
+        "sum": 5,
+        "n": 21,
+        "mean": 0.23809523809523808
+      },
+      "site_8": {
+        "sum": 6,
+        "n": 21,
+        "mean": 0.2857142857142857
+      },
+      "site_9": {
+        "sum": 4,
+        "n": 21,
+        "mean": 0.19047619047619047
+      }
+    },
+    "positivity_by_position_in_unit": {
+      "-8": {
+        "sum": 0,
+        "n": 2,
+        "mean": 0.0
+      },
+      "-7": {
+        "sum": 2,
+        "n": 5,
+        "mean": 0.4
+      },
+      "-6": {
+        "sum": 2,
+        "n": 8,
+        "mean": 0.25
+      },
+      "-5": {
+        "sum": 3,
+        "n": 12,
+        "mean": 0.25
+      },
+      "-4": {
+        "sum": 2,
+        "n": 14,
+        "mean": 0.14285714285714285
+      },
+      "-3": {
+        "sum": 3,
+        "n": 17,
+        "mean": 0.17647058823529413
+      },
+      "-2": {
+        "sum": 3,
+        "n": 3,
+        "mean": 1.0
+      },
+      "1": {
+        "sum": 11,
+        "n": 30,
+        "mean": 0.36666666666666664
+      },
+      "2": {
+        "sum": 10,
+        "n": 28,
+        "mean": 0.35714285714285715
+      },
+      "3": {
+        "sum": 6,
+        "n": 25,
+        "mean": 0.24
+      },
+      "4": {
+        "sum": 5,
+        "n": 22,
+        "mean": 0.22727272727272727
+      },
+      "5": {
+        "sum": 3,
+        "n": 18,
+        "mean": 0.16666666666666666
+      },
+      "6": {
+        "sum": 4,
+        "n": 16,
+        "mean": 0.25
+      },
+      "7": {
+        "sum": 2,
+        "n": 11,
+        "mean": 0.18181818181818182
+      },
+      "8": {
+        "sum": 0,
+        "n": 1,
+        "mean": 0.0
+      }
+    },
+    "observed_max_label_mean_spread": 0.24675324675324672,
+    "permutation_p_label_spread": 0.3771081144594277,
+    "n_perm": 200000
+  },
+  "within_unit_positivity": {
+    "n_units": 30,
+    "per_unit": {
+      "unit_01": {
+        "n_sites": 8,
+        "n_positive": 0,
+        "prop": 0.0
+      },
+      "unit_02": {
+        "n_sites": 8,
+        "n_positive": 8,
+        "prop": 1.0
+      },
+      "unit_03": {
+        "n_sites": 8,
+        "n_positive": 5,
+        "prop": 0.625
+      },
+      "unit_04": {
+        "n_sites": 6,
+        "n_positive": 0,
+        "prop": 0.0
+      },
+      "unit_05": {
+        "n_sites": 6,
+        "n_positive": 0,
+        "prop": 0.0
+      },
+      "unit_06": {
+        "n_sites": 7,
+        "n_positive": 0,
+        "prop": 0.0
+      },
+      "unit_07": {
+        "n_sites": 7,
+        "n_positive": 1,
+        "prop": 0.14285714285714285
+      },
+      "unit_08": {
+        "n_sites": 7,
+        "n_positive": 0,
+        "prop": 0.0
+      },
+      "unit_09": {
+        "n_sites": 7,
+        "n_positive": 0,
+        "prop": 0.0
+      },
+      "unit_10": {
+        "n_sites": 7,
+        "n_positive": 0,
+        "prop": 0.0
+      },
+      "unit_11": {
+        "n_sites": 7,
+        "n_positive": 2,
+        "prop": 0.2857142857142857
+      },
+      "unit_12": {
+        "n_sites": 7,
+        "n_positive": 2,
+        "prop": 0.2857142857142857
+      },
+      "unit_13": {
+        "n_sites": 7,
+        "n_positive": 1,
+        "prop": 0.14285714285714285
+      },
+      "unit_14": {
+        "n_sites": 7,
+        "n_positive": 2,
+        "prop": 0.2857142857142857
+      },
+      "unit_15": {
+        "n_sites": 7,
+        "n_positive": 0,
+        "prop": 0.0
+      },
+      "unit_16": {
+        "n_sites": 7,
+        "n_positive": 0,
+        "prop": 0.0
+      },
+      "unit_17": {
+        "n_sites": 7,
+        "n_positive": 7,
+        "prop": 1.0
+      },
+      "unit_18": {
+        "n_sites": 7,
+        "n_positive": 0,
+        "prop": 0.0
+      },
+      "unit_19": {
+        "n_sites": 7,
+        "n_positive": 0,
+        "prop": 0.0
+      },
+      "unit_20": {
+        "n_sites": 7,
+        "n_positive": 5,
+        "prop": 0.7142857142857143
+      },
+      "unit_21": {
+        "n_sites": 7,
+        "n_positive": 1,
+        "prop": 0.14285714285714285
+      },
+      "unit_22": {
+        "n_sites": 7,
+        "n_positive": 2,
+        "prop": 0.2857142857142857
+      },
+      "unit_23": {
+        "n_sites": 7,
+        "n_positive": 1,
+        "prop": 0.14285714285714285
+      },
+      "unit_24": {
+        "n_sites": 7,
+        "n_positive": 0,
+        "prop": 0.0
+      },
+      "unit_25": {
+        "n_sites": 7,
+        "n_positive": 0,
+        "prop": 0.0
+      },
+      "unit_26": {
+        "n_sites": 7,
+        "n_positive": 3,
+        "prop": 0.42857142857142855
+      },
+      "unit_27": {
+        "n_sites": 7,
+        "n_positive": 4,
+        "prop": 0.5714285714285714
+      },
+      "unit_28": {
+        "n_sites": 7,
+        "n_positive": 3,
+        "prop": 0.42857142857142855
+      },
+      "unit_29": {
+        "n_sites": 7,
+        "n_positive": 1,
+        "prop": 0.14285714285714285
+      },
+      "unit_30": {
+        "n_sites": 8,
+        "n_positive": 8,
+        "prop": 1.0
+      }
+    },
+    "distribution_of_per_unit_proportions": {
+      "0.0": 13,
+      "0.14285714285714285": 5,
+      "0.2857142857142857": 4,
+      "0.42857142857142855": 2,
+      "0.5714285714285714": 1,
+      "0.625": 1,
+      "0.7142857142857143": 1,
+      "1.0": 3
+    },
+    "n_unanimous_positive": 3,
+    "n_unanimous_negative": 13,
+    "share_unanimous": 0.5333333333333333
+  },
+  "design_effect_sites": {
+    "icc": 0.48834491663629515,
+    "ms_between": 0.7848661585649225,
+    "ms_within": 0.10135400313971743,
+    "mean_cluster_size": 7.066666666666666,
+    "adjusted_k0": 7.065712426805465,
+    "design_effect": 3.9621598294080544,
+    "effective_n_sites": 53.50617065633941,
+    "n_sites": 212,
+    "n_clusters": 30
+  },
+  "naive_vs_blocked": {
+    "threshold_illness_day": 15,
+    "naive_site_level": {
+      "table_pos_by_late": [
+        [
+          6,
+          62
+        ],
+        [
+          50,
+          94
+        ]
+      ],
+      "table": [
+        [
+          6,
+          62
+        ],
+        [
+          50,
+          94
+        ]
+      ],
+      "p_two_sided": 4.539620147471098e-05,
+      "p_greater": 0.999995817709625,
+      "odds_ratio": 0.18193548387096775,
+      "risk_ratio": {
+        "risk_ratio": 0.25411764705882356,
+        "ci_low": 0.11461936661261135,
+        "ci_high": 0.563393259404102
+      },
+      "n_rows": 212
+    },
+    "unit_blocked": {
+      "table_pos_by_late": [
+        [
+          4,
+          13
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "table": [
+        [
+          4,
+          13
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "p_two_sided": 0.2552866423930892,
+      "p_greater": 0.9549225387306346,
+      "odds_ratio": 0.358974358974359,
+      "risk_ratio": {
+        "risk_ratio": 0.5098039215686274,
+        "ci_low": 0.1804056959052138,
+        "ci_high": 1.440642088059704
+      },
+      "n_units": 30
+    },
+    "inflation_factor_p_to_effective_n": {
+      "site_rows": 212,
+      "effective_n_units": 53.50617065633941
+    }
+  },
+  "overdispersion_positive_counts": {
+    "observed_variance_of_counts": 6.119540229885056,
+    "binomial_variance_of_counts": 1.3735849056603777,
+    "variance_ratio": 4.455159782745987,
+    "p_overdispersed": 4.999750012499375e-05,
+    "n_rep": 20000
+  },
+  "F_day": {
+    "metric": "Spearman rho(any_environment_positive, illness_day)",
+    "rho": -0.2539103826896005,
+    "rho_squared": 0.06447048243757937,
+    "p_perm_montecarlo": 0.9145504272478637,
+    "n_perm_montecarlo": 200000,
+    "p_exact_all_assignments": 0.9145714945367751,
+    "n_exact_assignments": 119759850,
+    "exact_method": "DP over exact Wilcoxon rank-sum null (equivalent to all C(30,14) label assignments)",
+    "median_illness_day_positive": 5.0,
+    "median_illness_day_negative": 13.0,
+    "mean_illness_day_positive": 8.823529411764707,
+    "mean_illness_day_negative": 13.307692307692308,
+    "auc_lower_positive_has_lower_day": 0.6470588235294118,
+    "auc_interpretation": "AUC<0.5 => positives occur on EARLIER illness days",
+    "rho_stay_day": -0.011855664106263694,
+    "pearson_stay_vs_illness_day": 0.9012235623653656,
+    "stay_day_ratio_stats": {
+      "median_ratio_stay_over_illness": 0.6666666666666666,
+      "mean_ratio": 0.6198915501857745
+    },
+    "threshold_late_sensitivity_unit_blocked": [
+      {
+        "threshold": 3,
+        "table": [
+          [
+            16,
+            1
+          ],
+          [
+            13,
+            0
+          ]
+        ],
+        "p_two_sided": 1.0,
+        "p_greater": 1.0,
+        "risk_ratio": 0.9411764705882353,
+        "rr_ci_low": 0.8357172888234026,
+        "rr_ci_high": 1.0599435486563333
+      },
+      {
+        "threshold": 4,
+        "table": [
+          [
+            14,
+            3
+          ],
+          [
+            10,
+            3
+          ]
+        ],
+        "p_two_sided": 1.0,
+        "p_greater": 0.5310344827586206,
+        "risk_ratio": 1.0705882352941176,
+        "rr_ci_low": 0.7393214386087629,
+        "rr_ci_high": 1.5502853152844958
+      },
+      {
+        "threshold": 5,
+        "table": [
+          [
+            12,
+            5
+          ],
+          [
+            10,
+            3
+          ]
+        ],
+        "p_two_sided": 1.0,
+        "p_greater": 0.7877194735965349,
+        "risk_ratio": 0.9176470588235294,
+        "rr_ci_low": 0.5983996339005111,
+        "rr_ci_high": 1.407213635941957
+      },
+      {
+        "threshold": 6,
+        "table": [
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            4
+          ]
+        ],
+        "p_two_sided": 0.28275666677939226,
+        "p_greater": 0.9448038720823382,
+        "risk_ratio": 0.6797385620915033,
+        "rr_ci_low": 0.36532401075747134,
+        "rr_ci_high": 1.2647526556938062
+      },
+      {
+        "threshold": 7,
+        "table": [
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            4
+          ]
+        ],
+        "p_two_sided": 0.28275666677939226,
+        "p_greater": 0.9448038720823382,
+        "risk_ratio": 0.6797385620915033,
+        "rr_ci_low": 0.36532401075747134,
+        "rr_ci_high": 1.2647526556938062
+      },
+      {
+        "threshold": 8,
+        "table": [
+          [
+            6,
+            11
+          ],
+          [
+            9,
+            4
+          ]
+        ],
+        "p_two_sided": 0.13941976380230936,
+        "p_greater": 0.987336156483162,
+        "risk_ratio": 0.5098039215686275,
+        "rr_ci_low": 0.24356262672227658,
+        "rr_ci_high": 1.0670768415677483
+      },
+      {
+        "threshold": 9,
+        "table": [
+          [
+            5,
+            12
+          ],
+          [
+            9,
+            4
+          ]
+        ],
+        "p_two_sided": 0.06335837928988722,
+        "p_greater": 0.994942294934404,
+        "risk_ratio": 0.4248366013071896,
+        "rr_ci_low": 0.18696836306891967,
+        "rr_ci_high": 0.9653298282539584
+      },
+      {
+        "threshold": 10,
+        "table": [
+          [
+            4,
+            13
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "p_two_sided": 0.13221960448347256,
+        "p_greater": 0.9821089455272364,
+        "risk_ratio": 0.4369747899159664,
+        "rr_ci_low": 0.16175046804767226,
+        "rr_ci_high": 1.1805033353339398
+      },
+      {
+        "threshold": 11,
+        "table": [
+          [
+            4,
+            13
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "p_two_sided": 0.13221960448347256,
+        "p_greater": 0.9821089455272364,
+        "risk_ratio": 0.4369747899159664,
+        "rr_ci_low": 0.16175046804767226,
+        "rr_ci_high": 1.1805033353339398
+      },
+      {
+        "threshold": 12,
+        "table": [
+          [
+            4,
+            13
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "p_two_sided": 0.13221960448347256,
+        "p_greater": 0.9821089455272364,
+        "risk_ratio": 0.4369747899159664,
+        "rr_ci_low": 0.16175046804767226,
+        "rr_ci_high": 1.1805033353339398
+      },
+      {
+        "threshold": 13,
+        "table": [
+          [
+            4,
+            13
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "p_two_sided": 0.13221960448347256,
+        "p_greater": 0.9821089455272364,
+        "risk_ratio": 0.4369747899159664,
+        "rr_ci_low": 0.16175046804767226,
+        "rr_ci_high": 1.1805033353339398
+      },
+      {
+        "threshold": 14,
+        "table": [
+          [
+            4,
+            13
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "p_two_sided": 0.2552866423930892,
+        "p_greater": 0.9549225387306346,
+        "risk_ratio": 0.5098039215686274,
+        "rr_ci_low": 0.1804056959052138,
+        "rr_ci_high": 1.440642088059704
+      },
+      {
+        "threshold": 15,
+        "table": [
+          [
+            4,
+            13
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "p_two_sided": 0.2552866423930892,
+        "p_greater": 0.9549225387306346,
+        "risk_ratio": 0.5098039215686274,
+        "rr_ci_low": 0.1804056959052138,
+        "rr_ci_high": 1.440642088059704
+      },
+      {
+        "threshold": 16,
+        "table": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "p_two_sided": 0.4433583208395802,
+        "p_greater": 0.9005497251374313,
+        "risk_ratio": 0.6117647058823529,
+        "rr_ci_low": 0.2038990638880737,
+        "rr_ci_high": 1.835496682656484
+      },
+      {
+        "threshold": 17,
+        "table": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "p_two_sided": 0.4433583208395802,
+        "p_greater": 0.9005497251374313,
+        "risk_ratio": 0.6117647058823529,
+        "rr_ci_low": 0.2038990638880737,
+        "rr_ci_high": 1.835496682656484
+      },
+      {
+        "threshold": 18,
+        "table": [
+          [
+            2,
+            15
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "p_two_sided": 0.18973180076628351,
+        "p_greater": 0.9848275862068965,
+        "risk_ratio": 0.30588235294117644,
+        "rr_ci_low": 0.07017122280397657,
+        "rr_ci_high": 1.3333672993301209
+      },
+      {
+        "threshold": 19,
+        "table": [
+          [
+            2,
+            15
+          ],
+          [
+            4,
+            9
+          ]
+        ],
+        "p_two_sided": 0.3598248494800219,
+        "p_greater": 0.9602627257799671,
+        "risk_ratio": 0.38235294117647056,
+        "rr_ci_low": 0.08228885494890452,
+        "rr_ci_high": 1.7765926104704386
+      },
+      {
+        "threshold": 20,
+        "table": [
+          [
+            1,
+            16
+          ],
+          [
+            4,
+            9
+          ]
+        ],
+        "p_two_sided": 0.13774858602444812,
+        "p_greater": 0.9909688013136289,
+        "risk_ratio": 0.19117647058823528,
+        "rr_ci_low": 0.024150237045875177,
+        "rr_ci_high": 1.5133782263564488
+      },
+      {
+        "threshold": 21,
+        "table": [
+          [
+            1,
+            16
+          ],
+          [
+            3,
+            10
+          ]
+        ],
+        "p_two_sided": 0.2903484765553731,
+        "p_greater": 0.9739098704615946,
+        "risk_ratio": 0.2549019607843137,
+        "rr_ci_low": 0.029844662831349584,
+        "rr_ci_high": 2.1771065057379846
+      },
+      {
+        "threshold": 22,
+        "table": [
+          [
+            1,
+            16
+          ],
+          [
+            2,
+            11
+          ]
+        ],
+        "p_two_sided": 0.5645320197044335,
+        "p_greater": 0.9295566502463054,
+        "risk_ratio": 0.38235294117647056,
+        "rr_ci_low": 0.038748091983070436,
+        "rr_ci_high": 3.7729282693499218
+      },
+      {
+        "threshold": 23,
+        "table": [
+          [
+            1,
+            16
+          ],
+          [
+            2,
+            11
+          ]
+        ],
+        "p_two_sided": 0.5645320197044335,
+        "p_greater": 0.9295566502463054,
+        "risk_ratio": 0.38235294117647056,
+        "rr_ci_low": 0.038748091983070436,
+        "rr_ci_high": 3.7729282693499218
+      },
+      {
+        "threshold": 24,
+        "table": [
+          [
+            1,
+            16
+          ],
+          [
+            2,
+            11
+          ]
+        ],
+        "p_two_sided": 0.5645320197044335,
+        "p_greater": 0.9295566502463054,
+        "risk_ratio": 0.38235294117647056,
+        "rr_ci_low": 0.038748091983070436,
+        "rr_ci_high": 3.7729282693499218
+      },
+      {
+        "threshold": 25,
+        "table": [
+          [
+            1,
+            16
+          ],
+          [
+            2,
+            11
+          ]
+        ],
+        "p_two_sided": 0.5645320197044335,
+        "p_greater": 0.9295566502463054,
+        "risk_ratio": 0.38235294117647056,
+        "rr_ci_low": 0.038748091983070436,
+        "rr_ci_high": 3.7729282693499218
+      },
+      {
+        "threshold": 26,
+        "table": [
+          [
+            1,
+            16
+          ],
+          [
+            1,
+            12
+          ]
+        ],
+        "p_two_sided": 1.0,
+        "p_greater": 0.8206896551724138,
+        "risk_ratio": 0.7647058823529411,
+        "rr_ci_low": 0.05263610201274879,
+        "rr_ci_high": 11.1097718893309
+      },
+      {
+        "threshold": 27,
+        "table": [
+          [
+            1,
+            16
+          ],
+          [
+            1,
+            12
+          ]
+        ],
+        "p_two_sided": 1.0,
+        "p_greater": 0.8206896551724138,
+        "risk_ratio": 0.7647058823529411,
+        "rr_ci_low": 0.05263610201274879,
+        "rr_ci_high": 11.1097718893309
+      },
+      {
+        "threshold": 28,
+        "table": [
+          [
+            1,
+            16
+          ],
+          [
+            1,
+            12
+          ]
+        ],
+        "p_two_sided": 1.0,
+        "p_greater": 0.8206896551724138,
+        "risk_ratio": 0.7647058823529411,
+        "rr_ci_low": 0.05263610201274879,
+        "rr_ci_high": 11.1097718893309
+      },
+      {
+        "threshold": 29,
+        "table": [
+          [
+            1,
+            16
+          ],
+          [
+            1,
+            12
+          ]
+        ],
+        "p_two_sided": 1.0,
+        "p_greater": 0.8206896551724138,
+        "risk_ratio": 0.7647058823529411,
+        "rr_ci_low": 0.05263610201274879,
+        "rr_ci_high": 11.1097718893309
+      },
+      {
+        "threshold": 30,
+        "table": [
+          [
+            1,
+            16
+          ],
+          [
+            0,
+            13
+          ]
+        ],
+        "p_two_sided": 1.0,
+        "p_greater": 0.5666666666666667,
+        "risk_ratio": NaN,
+        "rr_ci_low": NaN,
+        "rr_ci_high": NaN
+      }
+    ],
+    "stay_day_spearman": {
+      "rho": -0.011855664106263692,
+      "p_perm_montecarlo": 0.524922375388123,
+      "auc_lower_positive_has_lower_stay_day": 0.5067873303167421,
+      "median_stay_day_positive": 3.0,
+      "median_stay_day_negative": 4.0,
+      "n_perm": 200000
+    }
+  },
+  "F_assay": {
+    "metric": "Spearman rho(any_environment_positive, quantitative_assay_value)",
+    "rho": -0.3536112202860879,
+    "p_perm_montecarlo": 0.9728701356493218,
+    "p_perm_for_negative_direction": 0.02790486047569762,
+    "n_perm": 200000,
+    "auc_lower_positive_has_lower_assay": 0.7058823529411765,
+    "mean_assay_positive": 26.960588235294118,
+    "mean_assay_negative": 31.968461538461536,
+    "sd_assay_positive": 7.306564232411355,
+    "sd_assay_negative": 4.462237566800328,
+    "mann_whitney_U_positive_lower": 156.0,
+    "U_null_mean": 110.5,
+    "assay_range": [
+      18.02,
+      37.7
+    ],
+    "assay_mean": 29.130666666666666,
+    "assay_sd": 6.638082364001246,
+    "assay_cv_percent": 22.787265530029906,
+    "separation_gap_means_over_pooled_sd": 0.7544156623192027,
+    "site_level_assay_logistic": {
+      "coef_assay": -0.19397652669069995,
+      "coef_assay_rank_deficient_qr_warning": "site-level positivity is constant within unit; assay varies within unit, so any apparent effect is a within-unit artefact",
+      "se_model": 0.03046154470829744,
+      "se_cluster_robust": 0.03937711408824168,
+      "note": "SEs are unstable because the site-level design is degenerate (see within_unit_positivity)"
+    }
+  },
+  "F_symptom": {
+    "env_positive_by_symptom_present": {
+      "table": [
+        [
+          12,
+          5
+        ],
+        [
+          11,
+          2
+        ]
+      ],
+      "p_two_sided": 0.4268199233716475,
+      "p_greater": 0.9114176245210727,
+      "odds_ratio": 0.43636363636363634,
+      "risk_ratio": {
+        "risk_ratio": 0.8342245989304814,
+        "ci_low": 0.5679031270419538,
+        "ci_high": 1.2254390728320657
+      },
+      "prevalence_pos_units_symptomatic": 0.7058823529411765,
+      "prevalence_pos_units_asymptomatic": 0.8461538461538461
+    },
+    "env_positive_by_any_surface_positive": {
+      "table": [
+        [
+          13,
+          4
+        ],
+        [
+          0,
+          13
+        ]
+      ],
+      "p_two_sided": 2.1726814120091167e-05,
+      "p_greater": 1.9873104383480776e-05,
+      "odds_ratio": Infinity,
+      "risk_ratio": {
+        "risk_ratio": NaN,
+        "ci_low": NaN,
+        "ci_high": NaN
+      }
+    },
+    "env_positive_vs_surface_positive_percent": {
+      "rho": 0.7274744384724616,
+      "p_perm_montecarlo": 1.9999900000499998e-05,
+      "n_perm": 200000,
+      "mean_surface_percent_positive_units": 43.529411764705884,
+      "mean_surface_percent_negative_units": 0.0
+    },
+    "symptom_cells": 23,
+    "asymptomatic_units": [
+      "unit_03",
+      "unit_07",
+      "unit_08",
+      "unit_11",
+      "unit_12",
+      "unit_16",
+      "unit_29"
+    ],
+    "asymptomatic_unit_positivity": {
+      "unit_03": 1,
+      "unit_07": 1,
+      "unit_08": 0,
+      "unit_11": 1,
+      "unit_12": 1,
+      "unit_16": 0,
+      "unit_29": 1
+    }
+  },
+  "models_unit_level": {
+    "n_units": 30,
+    "n_pos": 17,
+    "specification_note": "cluster-robust SEs equal model SEs here because each unit is one row; both are reported",
+    "models": {
+      "null": {
+        "coef": [
+          0.2682639865946797
+        ],
+        "se_cluster_robust": [
+          0.3684380630918059
+        ],
+        "z": [
+          0.7281114886542946
+        ],
+        "p_cluster_robust": [
+          0.46654534165266454
+        ],
+        "loglik": -20.526952953909007,
+        "converged": true,
+        "n_params": 1,
+        "loo_loglik": -21.57331818556737
+      },
+      "illness_day": {
+        "coef": [
+          1.027125233271357,
+          -0.06970289465450884
+        ],
+        "se_cluster_robust": [
+          0.6648078880374078,
+          0.0518335229688715
+        ],
+        "z": [
+          1.5449955569924918,
+          -1.3447454593500956
+        ],
+        "p_cluster_robust": [
+          0.1223473380558262,
+          0.17870744875480496
+        ],
+        "loglik": -19.401722255620108,
+        "converged": true,
+        "n_params": 2,
+        "loo_loglik": -22.000913152875732
+      },
+      "assay": {
+        "coef": [
+          4.17630429338347,
+          -0.13196550839250046
+        ],
+        "se_cluster_robust": [
+          1.5981162558490796,
+          0.05466725996923134
+        ],
+        "z": [
+          2.6132668872481988,
+          -2.4139770031784162
+        ],
+        "p_cluster_robust": [
+          0.008968123979218562,
+          0.015779458263772986
+        ],
+        "loglik": -18.226739444622577,
+        "converged": true,
+        "n_params": 2,
+        "loo_loglik": -19.99263080642454
+      },
+      "day_plus_assay": {
+        "coef": [
+          3.9643847377239285,
+          -0.024384072562613882,
+          -0.11573006268919181
+        ],
+        "se_cluster_robust": [
+          1.6359299123351896,
+          0.06138049554831067,
+          0.06475075395625345
+        ],
+        "z": [
+          2.423321872062974,
+          -0.3972609270223624,
+          -1.7873160638002876
+        ],
+        "p_cluster_robust": [
+          0.015379293475818753,
+          0.6911750574196728,
+          0.07388641915257747
+        ],
+        "loglik": -18.130403964518667,
+        "converged": true,
+        "n_params": 3,
+        "loo_loglik": -21.624839756978936
+      }
+    },
+    "loo_note": "All LOO log-likelihoods use the same weak ridge (0.05), because illness_day separates positivity under leave-one-out; without the ridge those fits are infinite",
+    "mcfadden_pseudo_r2": {
+      "illness_day": 0.054817229854595584,
+      "assay": 0.11205820534841693,
+      "day_plus_assay": 0.11675132664704424
+    },
+    "firth_day_model": [
+      0.9484056788876513,
+      -0.06280006415888584
+    ],
+    "logistic_saturation": {
+      "possible_distinct_predicted_values": 4,
+      "n_units": 30,
+      "distinct_illness_day_values": 17
+    },
+    "loo_increment_day_over_null": {
+      "observed_increment": -0.42759496730836233,
+      "p_perm": 0.1928071928071928,
+      "n_rep": 1000,
+      "null_quantiles": {
+        "q50": -1.0819918243771944,
+        "q95": 0.878494834019972
+      }
+    },
+    "loo_increment_assay_over_null": {
+      "observed_increment": 1.5806873791428302,
+      "p_perm": 0.030969030969030968,
+      "n_rep": 1000,
+      "null_quantiles": {
+        "q50": -0.8300209343034517,
+        "q95": 0.9315455795223028
+      }
+    }
+  },
+  "robustness_whole_unit_holdouts": {
+    "leave_one_unit_out": {
+      "summary": {
+        "n_holdout_units": 30,
+        "mean_delta_day_minus_null": -0.014253165576945791,
+        "min_delta_day_minus_null": -1.5903803108134111,
+        "max_delta_day_minus_null": 0.47241427502990957,
+        "share_delta_day_positive": 0.6666666666666666,
+        "mean_delta_assay_minus_null": 0.05268957930476047,
+        "share_delta_assay_positive": 0.6333333333333333
+      },
+      "rows": [
+        {
+          "holdout_unit": "unit_01",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.8809491801064051,
+          "illness_day_holdout_loglik": -0.9650570050810595,
+          "assay_holdout_loglik": -0.6577266032960446,
+          "delta_day_minus_null": -0.08410782497465441,
+          "delta_assay_minus_null": 0.2232225768103605
+        },
+        {
+          "holdout_unit": "unit_02",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.44252908787238293,
+          "assay_holdout_loglik": -0.23273797578071778,
+          "delta_day_minus_null": 0.15282260884432858,
+          "delta_assay_minus_null": 0.36261372093599376
+        },
+        {
+          "holdout_unit": "unit_03",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.44252908787238293,
+          "assay_holdout_loglik": -0.2709006217547756,
+          "delta_day_minus_null": 0.15282260884432858,
+          "delta_assay_minus_null": 0.3244510749619359
+        },
+        {
+          "holdout_unit": "unit_04",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.8809491801064051,
+          "illness_day_holdout_loglik": -0.40853490507649554,
+          "assay_holdout_loglik": -0.5463011272706884,
+          "delta_day_minus_null": 0.47241427502990957,
+          "delta_assay_minus_null": 0.33464805283571675
+        },
+        {
+          "holdout_unit": "unit_05",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.8809491801064051,
+          "illness_day_holdout_loglik": -0.6432767761991276,
+          "assay_holdout_loglik": -0.9469571553299918,
+          "delta_day_minus_null": 0.2376724039072775,
+          "delta_assay_minus_null": -0.0660079752235867
+        },
+        {
+          "holdout_unit": "unit_06",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.8809491801064051,
+          "illness_day_holdout_loglik": -1.1857912032516253,
+          "assay_holdout_loglik": -0.8744121392544837,
+          "delta_day_minus_null": -0.30484202314522024,
+          "delta_assay_minus_null": 0.006537040851921416
+        },
+        {
+          "holdout_unit": "unit_07",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -2.1857320075301225,
+          "assay_holdout_loglik": -1.0761130283847147,
+          "delta_day_minus_null": -1.5903803108134111,
+          "delta_assay_minus_null": -0.48076133166800317
+        },
+        {
+          "holdout_unit": "unit_08",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.8809491801064051,
+          "illness_day_holdout_loglik": -0.4822882677339646,
+          "assay_holdout_loglik": -0.9739070583505942,
+          "delta_day_minus_null": 0.3986609123724405,
+          "delta_assay_minus_null": -0.09295787824418911
+        },
+        {
+          "holdout_unit": "unit_09",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.8809491801064051,
+          "illness_day_holdout_loglik": -0.5679985740007847,
+          "assay_holdout_loglik": -0.4690488733062647,
+          "delta_day_minus_null": 0.3129506061056204,
+          "delta_assay_minus_null": 0.4119003068001404
+        },
+        {
+          "holdout_unit": "unit_10",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.8809491801064051,
+          "illness_day_holdout_loglik": -0.5918761389127495,
+          "assay_holdout_loglik": -0.5184858067748949,
+          "delta_day_minus_null": 0.2890730411936556,
+          "delta_assay_minus_null": 0.36246337333151024
+        },
+        {
+          "holdout_unit": "unit_11",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.8517249063410242,
+          "assay_holdout_loglik": -0.9396429428321896,
+          "delta_day_minus_null": -0.25637320962431265,
+          "delta_assay_minus_null": -0.3442912461154781
+        },
+        {
+          "holdout_unit": "unit_12",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.8517249063410242,
+          "assay_holdout_loglik": -0.8446345326651944,
+          "delta_day_minus_null": -0.25637320962431265,
+          "delta_assay_minus_null": -0.24928283594848288
+        },
+        {
+          "holdout_unit": "unit_13",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.966752344149344,
+          "assay_holdout_loglik": -1.0780797071879016,
+          "delta_day_minus_null": -0.37140064743263246,
+          "delta_assay_minus_null": -0.48272801047119007
+        },
+        {
+          "holdout_unit": "unit_14",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.38080902409474526,
+          "assay_holdout_loglik": -0.27732277501694014,
+          "delta_day_minus_null": 0.21454267262196625,
+          "delta_assay_minus_null": 0.31802892169977137
+        },
+        {
+          "holdout_unit": "unit_15",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.8809491801064051,
+          "illness_day_holdout_loglik": -0.7314270482442092,
+          "assay_holdout_loglik": -0.6667569460138312,
+          "delta_day_minus_null": 0.14952213186219587,
+          "delta_assay_minus_null": 0.21419223409257393
+        },
+        {
+          "holdout_unit": "unit_16",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.8809491801064051,
+          "illness_day_holdout_loglik": -0.7994076079152397,
+          "assay_holdout_loglik": -0.570632463547698,
+          "delta_day_minus_null": 0.08154157219116542,
+          "delta_assay_minus_null": 0.3103167165587071
+        },
+        {
+          "holdout_unit": "unit_17",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.4897284499552377,
+          "assay_holdout_loglik": -0.32170509097352756,
+          "delta_day_minus_null": 0.10562324676147383,
+          "delta_assay_minus_null": 0.27364660574318395
+        },
+        {
+          "holdout_unit": "unit_18",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.8809491801064051,
+          "illness_day_holdout_loglik": -0.9650570050810595,
+          "assay_holdout_loglik": -1.1191004947943763,
+          "delta_day_minus_null": -0.08410782497465441,
+          "delta_assay_minus_null": -0.23815131468797124
+        },
+        {
+          "holdout_unit": "unit_19",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.8809491801064051,
+          "illness_day_holdout_loglik": -1.324339763665197,
+          "assay_holdout_loglik": -0.8148361521791329,
+          "delta_day_minus_null": -0.4433905835587919,
+          "delta_assay_minus_null": 0.06611302792727225
+        },
+        {
+          "holdout_unit": "unit_20",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.4003158029022014,
+          "assay_holdout_loglik": -0.22528751401818242,
+          "delta_day_minus_null": 0.1950358938145101,
+          "delta_assay_minus_null": 0.3700641826985291
+        },
+        {
+          "holdout_unit": "unit_21",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.5429940666668842,
+          "assay_holdout_loglik": -0.49859958792300335,
+          "delta_day_minus_null": 0.0523576300498273,
+          "delta_assay_minus_null": 0.09675210879370816
+        },
+        {
+          "holdout_unit": "unit_22",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.44252908787238293,
+          "assay_holdout_loglik": -1.1548547300336591,
+          "delta_day_minus_null": 0.15282260884432858,
+          "delta_assay_minus_null": -0.5595030333169476
+        },
+        {
+          "holdout_unit": "unit_23",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.4003158029022014,
+          "assay_holdout_loglik": -0.7998718126475192,
+          "delta_day_minus_null": 0.1950358938145101,
+          "delta_assay_minus_null": -0.20452011593080766
+        },
+        {
+          "holdout_unit": "unit_24",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.8809491801064049,
+          "illness_day_holdout_loglik": -1.324339763665197,
+          "assay_holdout_loglik": -0.466483124637453,
+          "delta_day_minus_null": -0.44339058355879213,
+          "delta_assay_minus_null": 0.4144660554689519
+        },
+        {
+          "holdout_unit": "unit_25",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.8809491801064049,
+          "illness_day_holdout_loglik": -1.324339763665197,
+          "assay_holdout_loglik": -1.3341605134153351,
+          "delta_day_minus_null": -0.44339058355879213,
+          "delta_assay_minus_null": -0.45321133330893026
+        },
+        {
+          "holdout_unit": "unit_26",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.42085653607101825,
+          "assay_holdout_loglik": -0.29603972263949335,
+          "delta_day_minus_null": 0.17449516064569326,
+          "delta_assay_minus_null": 0.29931197407721816
+        },
+        {
+          "holdout_unit": "unit_27",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.42085653607101825,
+          "assay_holdout_loglik": -0.34744108644596544,
+          "delta_day_minus_null": 0.17449516064569326,
+          "delta_assay_minus_null": 0.24791061027074607
+        },
+        {
+          "holdout_unit": "unit_28",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.48972844995523745,
+          "assay_holdout_loglik": -0.22361239835662974,
+          "delta_day_minus_null": 0.10562324676147405,
+          "delta_assay_minus_null": 0.3717392983600818
+        },
+        {
+          "holdout_unit": "unit_29",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.5155241459142387,
+          "assay_holdout_loglik": -1.00614156118582,
+          "delta_day_minus_null": 0.07982755080247284,
+          "delta_assay_minus_null": -0.4107898644691085
+        },
+        {
+          "holdout_unit": "unit_30",
+          "n_holdout": 1,
+          "null_holdout_loglik": -0.5953516967167115,
+          "illness_day_holdout_loglik": -0.44252908787238276,
+          "assay_holdout_loglik": -0.4408372604075249,
+          "delta_day_minus_null": 0.15282260884432874,
+          "delta_assay_minus_null": 0.1545144363091866
+        }
+      ]
+    },
+    "leave_two_units_out": {
+      "summary": {
+        "n_holdout_units": 435,
+        "mean_delta_day_minus_null": -0.031112016001767526,
+        "min_delta_day_minus_null": -3.0566835701198176,
+        "max_delta_day_minus_null": 0.6841247169474083,
+        "share_delta_day_positive": 0.5793103448275863,
+        "mean_delta_assay_minus_null": 0.10446675425212797,
+        "share_delta_assay_positive": 0.6229885057471264
+      }
+    },
+    "contiguous_5_unit_blocks": {
+      "summary": {
+        "n_holdout_units": 6,
+        "mean_delta_day_minus_null": 0.05398947203512661,
+        "min_delta_day_minus_null": -0.7728349115738089,
+        "max_delta_day_minus_null": 0.6346898599903228,
+        "share_delta_day_positive": 0.5,
+        "mean_delta_assay_minus_null": 0.2650067809594636,
+        "share_delta_assay_positive": 0.6666666666666666
+      },
+      "rows": [
+        {
+          "holdout_unit": "block_1",
+          "n_holdout": 5,
+          "null_holdout_loglik": -3.767180336344027,
+          "illness_day_holdout_loglik": -3.1327391031557728,
+          "assay_holdout_loglik": -2.8794691283716873,
+          "delta_day_minus_null": 0.6344412331882543,
+          "delta_assay_minus_null": 0.8877112079723397
+        },
+        {
+          "holdout_unit": "block_2",
+          "n_holdout": 5,
+          "null_holdout_loglik": -4.522020364086641,
+          "illness_day_holdout_loglik": -4.1229003482690345,
+          "assay_holdout_loglik": -3.9213054138013863,
+          "delta_day_minus_null": 0.3991200158176067,
+          "delta_assay_minus_null": 0.6007149502852549
+        },
+        {
+          "holdout_unit": "block_3",
+          "n_holdout": 5,
+          "null_holdout_loglik": -3.35056606345759,
+          "illness_day_holdout_loglik": -4.123400975031399,
+          "assay_holdout_loglik": -4.103886420522403,
+          "delta_day_minus_null": -0.7728349115738089,
+          "delta_assay_minus_null": -0.7533203570648128
+        },
+        {
+          "holdout_unit": "block_4",
+          "n_holdout": 5,
+          "null_holdout_loglik": -3.767180336344027,
+          "illness_day_holdout_loglik": -3.939860882816935,
+          "assay_holdout_loglik": -3.1372830670880036,
+          "delta_day_minus_null": -0.17268054647290798,
+          "delta_assay_minus_null": 0.6298972692560234
+        },
+        {
+          "holdout_unit": "block_5",
+          "n_holdout": 5,
+          "null_holdout_loglik": -3.3818072119857963,
+          "illness_day_holdout_loglik": -3.7806060307245035,
+          "assay_holdout_loglik": -4.072159643616526,
+          "delta_day_minus_null": -0.39879881873870726,
+          "delta_assay_minus_null": -0.6903524316307301
+        },
+        {
+          "holdout_unit": "block_6",
+          "n_holdout": 5,
+          "null_holdout_loglik": -3.6681918480503994,
+          "illness_day_holdout_loglik": -3.0335019880600766,
+          "assay_holdout_loglik": -2.752801801111693,
+          "delta_day_minus_null": 0.6346898599903228,
+          "delta_assay_minus_null": 0.9153900469387066
+        }
+      ]
+    },
+    "random_5_unit_blocks": {
+      "summary": {
+        "n_holdout_units": 200,
+        "mean_delta_day_minus_null": -0.06160847473681889,
+        "min_delta_day_minus_null": -3.3330259677452587,
+        "max_delta_day_minus_null": 0.6896412584061089,
+        "share_delta_day_positive": 0.6,
+        "mean_delta_assay_minus_null": 0.31712451567298344,
+        "share_delta_assay_positive": 0.765
+      }
+    }
+  },
+  "counterevidence_within_unit_permutation": {
+    "label": "variance of per-unit positive counts (within-unit label shuffling)",
+    "observed": 6.119540229885056,
+    "p_perm": 1.0,
+    "n_rep": 20000,
+    "interpretation": "Within-unit shuffling preserves each unit's positive count, so a non-significant result confirms that no site-level structure beyond the unit total is detectable.",
+    "between_unit_variance_is_the_signal": 6.119540229885056
+  },
+  "extras": {
+    "env_positive_counts": {
+      "positive_units": 17,
+      "negative_units": 13
+    },
+    "illness_day_structure": {
+      "n_distinct_values": 17,
+      "duplicate_day_groups": {
+        "5": [
+          "unit_02",
+          "unit_03",
+          "unit_06",
+          "unit_22",
+          "unit_30"
+        ],
+        "3": [
+          "unit_19",
+          "unit_20",
+          "unit_23",
+          "unit_24",
+          "unit_25"
+        ],
+        "9": [
+          "unit_01",
+          "unit_18",
+          "unit_21"
+        ],
+        "17": [
+          "unit_11",
+          "unit_12"
+        ],
+        "7": [
+          "unit_17",
+          "unit_28"
+        ],
+        "4": [
+          "unit_26",
+          "unit_27"
+        ]
+      },
+      "min": 2,
+      "max": 30
+    },
+    "assay_distribution": {
+      "min": 18.02,
+      "max": 37.7,
+      "q25": 23.23,
+      "median": 29.939999999999998,
+      "q75": 35.2025
+    },
+    "symptom_surface_crosstab_all_units": {
+      "symptomatic_and_surface_positive": 10,
+      "symptomatic_and_surface_zero": 13,
+      "asymptomatic_and_surface_positive": 3,
+      "asymptomatic_and_surface_zero": 4
+    }
+  }
+}

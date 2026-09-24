@@ -1,0 +1,110 @@
+[
+  {
+    "graph": "cycle_5",
+    "gamma": -0.63,
+    "nodes": 5,
+    "edges": 5,
+    "rbm_hidden_units_after_cost_layer": 6,
+    "exact_state_fidelity": 1.0000000000000009,
+    "defect": 8.881784197001252e-16
+  },
+  {
+    "graph": "cycle_5",
+    "gamma": 0.23,
+    "nodes": 5,
+    "edges": 5,
+    "rbm_hidden_units_after_cost_layer": 6,
+    "exact_state_fidelity": 1.0000000000000004,
+    "defect": 4.440892098500626e-16
+  },
+  {
+    "graph": "cycle_5",
+    "gamma": 0.71,
+    "nodes": 5,
+    "edges": 5,
+    "rbm_hidden_units_after_cost_layer": 6,
+    "exact_state_fidelity": 1.0000000000000004,
+    "defect": 4.440892098500626e-16
+  },
+  {
+    "graph": "complete_4",
+    "gamma": -0.63,
+    "nodes": 4,
+    "edges": 6,
+    "rbm_hidden_units_after_cost_layer": 7,
+    "exact_state_fidelity": 1.0,
+    "defect": 0.0
+  },
+  {
+    "graph": "complete_4",
+    "gamma": 0.23,
+    "nodes": 4,
+    "edges": 6,
+    "rbm_hidden_units_after_cost_layer": 7,
+    "exact_state_fidelity": 1.0000000000000004,
+    "defect": 4.440892098500626e-16
+  },
+  {
+    "graph": "complete_4",
+    "gamma": 0.71,
+    "nodes": 4,
+    "edges": 6,
+    "rbm_hidden_units_after_cost_layer": 7,
+    "exact_state_fidelity": 0.9999999999999998,
+    "defect": 2.220446049250313e-16
+  },
+  {
+    "graph": "random_regular_3_6_seed123",
+    "gamma": -0.63,
+    "nodes": 6,
+    "edges": 9,
+    "rbm_hidden_units_after_cost_layer": 10,
+    "exact_state_fidelity": 1.0000000000000004,
+    "defect": 4.440892098500626e-16
+  },
+  {
+    "graph": "random_regular_3_6_seed123",
+    "gamma": 0.23,
+    "nodes": 6,
+    "edges": 9,
+    "rbm_hidden_units_after_cost_layer": 10,
+    "exact_state_fidelity": 0.9999999999999996,
+    "defect": 4.440892098500626e-16
+  },
+  {
+    "graph": "random_regular_3_6_seed123",
+    "gamma": 0.71,
+    "nodes": 6,
+    "edges": 9,
+    "rbm_hidden_units_after_cost_layer": 10,
+    "exact_state_fidelity": 1.0,
+    "defect": 0.0
+  },
+  {
+    "graph": "barbell_3_0",
+    "gamma": -0.63,
+    "nodes": 6,
+    "edges": 7,
+    "rbm_hidden_units_after_cost_layer": 8,
+    "exact_state_fidelity": 1.0000000000000022,
+    "defect": 2.220446049250313e-15
+  },
+  {
+    "graph": "barbell_3_0",
+    "gamma": 0.23,
+    "nodes": 6,
+    "edges": 7,
+    "rbm_hidden_units_after_cost_layer": 8,
+    "exact_state_fidelity": 1.0000000000000009,
+    "defect": 8.881784197001252e-16
+  },
+  {
+    "graph": "barbell_3_0",
+    "gamma": 0.71,
+    "nodes": 6,
+    "edges": 7,
+    "rbm_hidden_units_after_cost_layer": 8,
+    "exact_state_fidelity": 1.0000000000000013,
+    "defect": 1.3322676295501878e-15
+  }
+]

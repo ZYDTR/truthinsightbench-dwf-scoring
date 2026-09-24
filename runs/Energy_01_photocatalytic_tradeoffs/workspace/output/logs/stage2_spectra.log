@@ -1,0 +1,49 @@
+
+==============================================================================
+STAGE 2  action-vs-absorption model comparison (n = 6 shared wavelengths)
+==============================================================================
+             M1_action_proportional_to_A  k=2  R2=0.92255  RMSE=8.872  AICc=34.19  dAICc=0.00   <-- best
+     M2_action_proportional_to_A_power_p  k=3  R2=0.98373  RMSE=4.066  AICc=34.83  dAICc=0.64
+                           M3_onset_step  k=2  R2=0.83512  RMSE=12.944  AICc=38.73  dAICc=4.53
+                      M0_constant_action  k=2  R2=0.00000  RMSE=31.879  AICc=49.54  dAICc=15.35
+         M4_absorption_times_exp_rolloff  k=4  R2=0.99850  RMSE=1.234  AICc=50.53  dAICc=16.33
+  M2 best exponent p = 1.546;  M3 best cut-off = 550.0 nm; M4 l0 = 545.0 nm, w = 80.0 nm
+
+------------------------------------------------------------------------------
+Relative efficiency ratio q(lambda) = action / absorption
+------------------------------------------------------------------------------
+  wavelength : q (relative efficiency)
+       400 nm : 0.955
+       450 nm : 1.000
+       500 nm : 0.993
+       550 nm : 0.919
+       600 nm : 0.504
+       650 nm : 0.218
+  Spearman rho(q vs wavelength) = -0.829, p = 0.0416, permutation p = 0.0586
+
+------------------------------------------------------------------------------
+Spectral-window holdout for the absorption-limited null
+------------------------------------------------------------------------------
+  fit_400_500_predict_550_650: scale=94.2
+        550 nm observed= 51.60 absorption-limited-pred= 55.13 rel.err=-0.068
+        600 nm observed= 17.60 absorption-limited-pred= 34.30 rel.err=-0.949
+        650 nm observed=  4.20 absorption-limited-pred= 18.94 rel.err=-3.510
+  fit_400_550_predict_600_650: scale=93.4
+        600 nm observed= 17.60 absorption-limited-pred= 34.01 rel.err=-0.932
+        650 nm observed=  4.20 absorption-limited-pred= 18.78 rel.err=-3.472
+  fit_450_600_predict_400_650: scale=91.1
+        400 nm observed= 81.30 absorption-limited-pred= 80.79 rel.err=+0.006
+        650 nm observed=  4.20 absorption-limited-pred= 18.31 rel.err=-3.359
+
+spectral descriptors:
+  absorption_global_max: {'nm': 357.5, 'value': 0.898}
+  absorption_visible_max_400_800: {'nm': 408.0, 'value': 0.893}
+  absorption_half_max_crossing_nm_400_800: 580.75
+  action_half_max_crossing_nm: 565.1470588235294
+  n_local_maxima: 8
+  absorption_at_800nm: 0.0
+  slow_band_425_800: {'band_lo_nm': 425.0, 'band_hi_nm': 800.0, 'peak_nm_smoothed_5nm': 428.5, 'peak_value_smoothed_5nm': 0.8729090909090909, 'subset_max_nm_raw': 427.0, 'subset_max_value_raw': 0.875, 'area_nm_units': 151.43725, 'tail_value_at_hi_nm': 0.0, 'half_max_red_edge_nm': 583.0}
+
+wrote figures/fig2_spectra.png
+
+stage 2 complete

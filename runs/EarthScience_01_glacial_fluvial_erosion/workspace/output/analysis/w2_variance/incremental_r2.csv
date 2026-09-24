@@ -1,0 +1,17 @@
+test,F,df1,df2,p,delta_r2,error,delta_k
+common_nested|logTI added last after method,194.112173,1,6444,1.712366903e-43,0.028374918,,
+common_nested|logTI added last after method+proc,472.1394196,1,6443,4.345250765e-101,0.06020736391,,
+common_nested|logTI added last after method+proc+method:proc (saturated cells),345.0540144,1,6441,4.504105824e-75,0.04353214371,,
+common_nested|logTI added last after method*proc interaction,3559.949992,2,6440,0,0.4495289736,,
+common_nested|logTI*method added last after method+proc,1881.696635,4,6440,0,0.4752185615,,
+common_nested|logTI added last after geology,206.6415882,1,6444,3.818364712e-46,0.02446144342,,
+"common_nested|logTI added last after geology(S,P,A)+method",,,6441,,0.01238949005,not a valid nested pair,0
+"common_nested|logTI added last after geology(S,P,A,Lat)+method",146.6824002,1,6440,2.120111202e-33,0.01704966754,,
+common_nested|Latitude added last after ti+method+geology,40.09263044,1,6440,2.585219852e-10,0.004660177493,,
+common_nested|process added last after method,646.9050698,1,6444,4.517997164e-136,0.08852487341,,
+common_nested|process added last after method+logTI,943.8286482,1,6443,1.526127841e-193,0.1203573193,,
+common_nested|process added last after method*logTI,417.745477,1,6440,5.159266481e-90,0.02637518728,,
+common_nested|method added last after logTI,89.00385098,4,6444,9.59153513e-74,0.05204159914,,
+common_nested|method added last after logTI+proc,201.6816247,4,6443,3.213512043e-163,0.1028740111,,
+common_nested|method added last after logTI+geology,27.36677848,3,6441,1.400913813e-17,0.009600873635,,
+common_nested|geology added last after logTI+method,538.0371494,3,6441,4.875200443e-312,0.1887553804,,

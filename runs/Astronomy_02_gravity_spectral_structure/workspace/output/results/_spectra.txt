@@ -1,0 +1,4 @@
+A mean-spec peak uhz 489.0 pow 0.2001 | band mean 0.0490 band max at 860.0 | comb max at 860 pow 0.0828 | per-pass peak median 557.0
+B mean-spec peak uhz 2474.0 pow 0.0404 | band mean 0.0039 band max at 1310.0 | comb max at 1310 pow 0.0056 | per-pass peak median 2736.0
+C mean-spec peak uhz 1706.0 pow 0.0668 | band mean 0.0553 band max at 1228.0 | comb max at 1210 pow 0.0573 | per-pass peak median 1553.5
+elapsed s 21.2

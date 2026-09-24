@@ -1,0 +1,267 @@
+{
+  "exhaustiveness_random_sample": {
+    "subset": "random_2000_db_molecules",
+    "n_molecules": 2000,
+    "mean_db_pairs": 6.827,
+    "mean_unique_bonds": 13.12,
+    "mean_completeness": 0.5213,
+    "median_completeness": 0.5,
+    "pct_molecules_fully_enumerated": 1.65,
+    "pct_molecules_under_half": 46.4,
+    "total_db_pairs": 13654,
+    "total_unique_bonds": 26239,
+    "pooled_completeness": 0.5204,
+    "completeness_histogram": {
+      "(0.0, 0.25]": 150,
+      "(0.25, 0.5]": 937,
+      "(0.5, 0.75]": 637,
+      "(0.75, 0.999]": 243,
+      "(0.999, 1.0]": 33
+    }
+  },
+  "exhaustiveness_benchmark_parents_in_db": {
+    "subset": "benchmark_parents_in_db",
+    "n_molecules": 259,
+    "mean_db_pairs": 5.645,
+    "mean_unique_bonds": 8.687,
+    "mean_completeness": 0.6562,
+    "median_completeness": 0.6667,
+    "pct_molecules_fully_enumerated": 10.4247,
+    "pct_molecules_under_half": 24.3243,
+    "total_db_pairs": 1462,
+    "total_unique_bonds": 2250,
+    "pooled_completeness": 0.6498,
+    "completeness_histogram": {
+      "(0.0, 0.25]": 8,
+      "(0.25, 0.5]": 80,
+      "(0.5, 0.75]": 77,
+      "(0.75, 0.999]": 67,
+      "(0.999, 1.0]": 27
+    }
+  },
+  "note": "completeness = db unique fragment pairs / symmetry-unique bonds (capped at 1.0)",
+  "benchmark_missing_pair_parent_completeness": [
+    {
+      "molecule": "C#CC#C",
+      "db_pairs": 1,
+      "unique_bonds": 3,
+      "completeness": 0.3333333333
+    },
+    {
+      "molecule": "C1CC2CCC1C2",
+      "db_pairs": 2,
+      "unique_bonds": 6,
+      "completeness": 0.3333333333
+    },
+    {
+      "molecule": "C=C=CC",
+      "db_pairs": 2,
+      "unique_bonds": 6,
+      "completeness": 0.3333333333
+    },
+    {
+      "molecule": "C=CC(C)C=C",
+      "db_pairs": 3,
+      "unique_bonds": 7,
+      "completeness": 0.4285714286
+    },
+    {
+      "molecule": "C=CC(C)CC",
+      "db_pairs": 5,
+      "unique_bonds": 11,
+      "completeness": 0.4545454545
+    },
+    {
+      "molecule": "C=CC=C",
+      "db_pairs": 1,
+      "unique_bonds": 4,
+      "completeness": 0.25
+    },
+    {
+      "molecule": "CC(C(=O)O)C(C)C(=O)O",
+      "db_pairs": 3,
+      "unique_bonds": 8,
+      "completeness": 0.375
+    },
+    {
+      "molecule": "CC(C)=C1C=CC=C1",
+      "db_pairs": 3,
+      "unique_bonds": 8,
+      "completeness": 0.375
+    },
+    {
+      "molecule": "CC(C)C(C)O",
+      "db_pairs": 3,
+      "unique_bonds": 9,
+      "completeness": 0.3333333333
+    },
+    {
+      "molecule": "CC(N)C(=O)O",
+      "db_pairs": 3,
+      "unique_bonds": 9,
+      "completeness": 0.3333333333
+    },
+    {
+      "molecule": "CC(O)C(C)O",
+      "db_pairs": 2,
+      "unique_bonds": 6,
+      "completeness": 0.3333333333
+    },
+    {
+      "molecule": "CC(O)CO",
+      "db_pairs": 5,
+      "unique_bonds": 9,
+      "completeness": 0.5555555556
+    },
+    {
+      "molecule": "CC1C=CCC1",
+      "db_pairs": 5,
+      "unique_bonds": 12,
+      "completeness": 0.4166666667
+    },
+    {
+      "molecule": "CC1C=CCCC1",
+      "db_pairs": 6,
+      "unique_bonds": 14,
+      "completeness": 0.4285714286
+    },
+    {
+      "molecule": "CC1C=Cc2ccccc21",
+      "db_pairs": 7,
+      "unique_bonds": 19,
+      "completeness": 0.3684210526
+    },
+    {
+      "molecule": "CC1CC1",
+      "db_pairs": 2,
+      "unique_bonds": 6,
+      "completeness": 0.3333333333
+    },
+    {
+      "molecule": "CC1CCC2CC1C2(C)C",
+      "db_pairs": 5,
+      "unique_bonds": 18,
+      "completeness": 0.2777777778
+    },
+    {
+      "molecule": "CC1CCCCCCC1",
+      "db_pairs": 3,
+      "unique_bonds": 11,
+      "completeness": 0.2727272727
+    },
+    {
+      "molecule": "CC1CO1",
+      "db_pairs": 2,
+      "unique_bonds": 7,
+      "completeness": 0.2857142857
+    },
+    {
+      "molecule": "CC=C=O",
+      "db_pairs": 1,
+      "unique_bonds": 5,
+      "completeness": 0.2
+    },
+    {
+      "molecule": "CCC(C)C(C)(C)C",
+      "db_pairs": 6,
+      "unique_bonds": 10,
+      "completeness": 0.6
+    },
+    {
+      "molecule": "CCC(C)C(C)C",
+      "db_pairs": 6,
+      "unique_bonds": 11,
+      "completeness": 0.5454545455
+    },
+    {
+      "molecule": "CCC(C)C(C)CC",
+      "db_pairs": 3,
+      "unique_bonds": 8,
+      "completeness": 0.375
+    },
+    {
+      "molecule": "CCC(C)CC(C)C",
+      "db_pairs": 8,
+      "unique_bonds": 13,
+      "completeness": 0.6153846154
+    },
+    {
+      "molecule": "CCC(C)CO",
+      "db_pairs": 7,
+      "unique_bonds": 11,
+      "completeness": 0.6363636364
+    },
+    {
+      "molecule": "CCC(C)O",
+      "db_pairs": 5,
+      "unique_bonds": 9,
+      "completeness": 0.5555555556
+    },
+    {
+      "molecule": "CCC(C)c1ccccc1",
+      "db_pairs": 7,
+      "unique_bonds": 14,
+      "completeness": 0.5
+    },
+    {
+      "molecule": "CCCC(C)C(C)C",
+      "db_pairs": 8,
+      "unique_bonds": 13,
+      "completeness": 0.6153846154
+    },
+    {
+      "molecule": "CCCC(C)CC",
+      "db_pairs": 9,
+      "unique_bonds": 13,
+      "completeness": 0.6923076923
+    },
+    {
+      "molecule": "CCCC(C)O",
+      "db_pairs": 7,
+      "unique_bonds": 11,
+      "completeness": 0.6363636364
+    },
+    {
+      "molecule": "CCCCCC(C)CC",
+      "db_pairs": 13,
+      "unique_bonds": 17,
+      "completeness": 0.7647058824
+    },
+    {
+      "molecule": "C[C@@H]1CCC[C@@H](C)C1",
+      "db_pairs": 4,
+      "unique_bonds": 9,
+      "completeness": 0.4444444444
+    },
+    {
+      "molecule": "C[C@H]1CCCC[C@@H]1C",
+      "db_pairs": 3,
+      "unique_bonds": 9,
+      "completeness": 0.3333333333
+    },
+    {
+      "molecule": "C[C@H]1CCCC[C@H]1C",
+      "db_pairs": 6,
+      "unique_bonds": 16,
+      "completeness": 0.375
+    },
+    {
+      "molecule": "C[C@H]1CCC[C@@H](C)C1",
+      "db_pairs": 6,
+      "unique_bonds": 16,
+      "completeness": 0.375
+    },
+    {
+      "molecule": "O=C(O)C1CCCN1",
+      "db_pairs": 5,
+      "unique_bonds": 14,
+      "completeness": 0.3571428571
+    },
+    {
+      "molecule": "c1ccc2c(c1)C2",
+      "db_pairs": 2,
+      "unique_bonds": 8,
+      "completeness": 0.25
+    }
+  ]
+}

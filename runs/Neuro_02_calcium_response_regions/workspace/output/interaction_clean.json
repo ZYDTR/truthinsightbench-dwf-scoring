@@ -1,0 +1,23 @@
+{
+  "mean_peak_width_s": {
+    "formula": "region*condition + batch (clean)",
+    "interaction_p": {
+      "C(region, Treatment(reference='region_1'))[T.region_2]:C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": 0.965193,
+      "C(region, Treatment(reference='region_1'))[T.region_2]:C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": 0.000592
+    }
+  },
+  "mean_auc_au": {
+    "formula": "region*condition + batch (clean)",
+    "interaction_p": {
+      "C(region, Treatment(reference='region_1'))[T.region_2]:C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": 0.633968,
+      "C(region, Treatment(reference='region_1'))[T.region_2]:C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": 0.194982
+    }
+  },
+  "mean_amplitude_dff0": {
+    "formula": "region*condition + batch (clean)",
+    "interaction_p": {
+      "C(region, Treatment(reference='region_1'))[T.region_2]:C(condition, Treatment(reference='baseline'))[T.neural_activity_blocked]": 0.732682,
+      "C(region, Treatment(reference='region_1'))[T.region_2]:C(condition, Treatment(reference='baseline'))[T.receptor_stimulated]": 0.056476
+    }
+  }
+}

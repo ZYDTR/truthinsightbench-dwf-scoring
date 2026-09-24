@@ -1,0 +1,42 @@
+{
+  "A": {
+    "observed_near_count_of_22": 16,
+    "observed_stacked_peak_uhz": 489.0,
+    "ar1_null_mean_count_of_22": 8.29,
+    "ar1_null_q2.5_q50_q97.5": [
+      4.0,
+      8.0,
+      12.0
+    ],
+    "ar1_null_frac_ge_observed": 0.0,
+    "track_uniform_chance_expectation": 3.315250150693189,
+    "n_null_stacked_realisations": 100
+  },
+  "B": {
+    "observed_near_count_of_22": 9,
+    "observed_stacked_peak_uhz": 2474.0,
+    "ar1_null_mean_count_of_22": 4.62,
+    "ar1_null_q2.5_q50_q97.5": [
+      2.0,
+      5.0,
+      8.0
+    ],
+    "ar1_null_frac_ge_observed": 0.01,
+    "track_uniform_chance_expectation": 3.315250150693189,
+    "n_null_stacked_realisations": 100
+  },
+  "C": {
+    "observed_near_count_of_22": 8,
+    "observed_stacked_peak_uhz": 1706.0,
+    "ar1_null_mean_count_of_22": 5.3,
+    "ar1_null_q2.5_q50_q97.5": [
+      2.0,
+      5.0,
+      9.0
+    ],
+    "ar1_null_frac_ge_observed": 0.09,
+    "track_uniform_chance_expectation": 3.315250150693189,
+    "n_null_stacked_realisations": 100
+  },
+  "runtime_sec": 260.1
+}

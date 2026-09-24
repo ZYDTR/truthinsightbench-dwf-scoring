@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Physics_05_variational_circuit_simulation",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "be6f81f69b778914006175540751b07ccf2059f39c952b25465414517165adea",
+  "workspace_input_file_count": 8,
+  "workspace_input_bytes": 46509,
+  "output_tree_sha256": "f8b4869df3ce31aa85aed0b2c0bcf5ba9d22479bd5b5cedbbb092d9abf3219fd",
+  "output_file_count": 14,
+  "output_bytes": 76381
+}

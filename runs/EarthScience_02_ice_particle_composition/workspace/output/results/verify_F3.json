@@ -1,0 +1,1858 @@
+{
+  "0_reproduction": {
+    "pooled_rho_logtot_PE": {
+      "rho": 0.6468,
+      "p": 0.00011240844126618974,
+      "n": 30
+    },
+    "pooled_rho_logtot_varnish": {
+      "rho": -0.661,
+      "p": 7.01163263453138e-05
+    },
+    "pooled_rho_PE_varnish": {
+      "rho": -0.8802,
+      "p": 1.4576899055777944e-10
+    },
+    "mean_within_group_rho_PE": 0.537,
+    "n_groups_positive_rho": 4,
+    "FE_slope_PE_per_decade": {
+      "slope": 29.85,
+      "se_cluster": 6.13,
+      "t": 4.87,
+      "p": 0.0082,
+      "df": 4,
+      "G": 5
+    },
+    "std": 0.0,
+    "per_group": {
+      "group_01": {
+        "n": 5,
+        "rho_logtot_PE": 0.3,
+        "p_rho_PE": 0.6238,
+        "rho_logtot_varnish": -0.5,
+        "ols_slope_PE_per_decade": 52.75,
+        "rank_slope_PE_per_decade": 0.3,
+        "total_range": [
+          260.0,
+          8774.0
+        ]
+      },
+      "group_02": {
+        "n": 7,
+        "rho_logtot_PE": 0.883,
+        "p_rho_PE": 0.0085,
+        "rho_logtot_varnish": -0.964,
+        "ols_slope_PE_per_decade": 33.52,
+        "rank_slope_PE_per_decade": 0.87,
+        "total_range": [
+          41.0,
+          75143.0
+        ]
+      },
+      "group_03": {
+        "n": 7,
+        "rho_logtot_PE": 0.857,
+        "p_rho_PE": 0.0137,
+        "rho_logtot_varnish": -0.786,
+        "ols_slope_PE_per_decade": 16.81,
+        "rank_slope_PE_per_decade": 0.86,
+        "total_range": [
+          33.0,
+          13794.0
+        ]
+      },
+      "group_04": {
+        "n": 5,
+        "rho_logtot_PE": 0.9,
+        "p_rho_PE": 0.0374,
+        "rho_logtot_varnish": -0.9,
+        "ols_slope_PE_per_decade": 63.32,
+        "rank_slope_PE_per_decade": 0.9,
+        "total_range": [
+          186.0,
+          4159.0
+        ]
+      },
+      "group_05": {
+        "n": 6,
+        "rho_logtot_PE": -0.257,
+        "p_rho_PE": 0.6228,
+        "rho_logtot_varnish": 0.257,
+        "ols_slope_PE_per_decade": -1.16,
+        "rank_slope_PE_per_decade": -0.26,
+        "total_range": [
+          351.0,
+          6421.0
+        ]
+      }
+    }
+  },
+  "a_abundance_restriction": {
+    "thr_0": {
+      "threshold_per_L": 0,
+      "n_kept": 30,
+      "groups_kept": [
+        "group_01",
+        "group_02",
+        "group_03",
+        "group_04",
+        "group_05"
+      ],
+      "samples_kept": [
+        "sample_001",
+        "sample_002",
+        "sample_003",
+        "sample_004",
+        "sample_005",
+        "sample_006",
+        "sample_007",
+        "sample_008",
+        "sample_009",
+        "sample_010",
+        "sample_011",
+        "sample_012",
+        "sample_013",
+        "sample_014",
+        "sample_015",
+        "sample_016",
+        "sample_017",
+        "sample_018",
+        "sample_019",
+        "sample_020",
+        "sample_021",
+        "sample_022",
+        "sample_023",
+        "sample_024",
+        "sample_025",
+        "sample_026",
+        "sample_027",
+        "sample_028",
+        "sample_029",
+        "sample_030"
+      ],
+      "FE_slope_PE": {
+        "slope": 29.85,
+        "se": 6.13,
+        "t": 4.87,
+        "p": 0.0082,
+        "df": 4,
+        "G": 5
+      },
+      "FE_slope_varnish": {
+        "slope": -17.36,
+        "se": 5.4,
+        "t": -3.22,
+        "p": 0.0323
+      },
+      "FE_slope_PEshare_of_PEplusV": {
+        "slope": 0.287,
+        "se": 0.047,
+        "t": 6.13,
+        "p": 0.0036
+      },
+      "pooled_rho_PE": {
+        "rho": 0.647,
+        "p": 0.00011240844126618974,
+        "n": 30
+      },
+      "pooled_rho_varnish": {
+        "rho": -0.661,
+        "p": 7.01163263453138e-05
+      },
+      "per_group_rho": {
+        "group_01": {
+          "n": 5,
+          "rho": 0.3,
+          "p": 0.6238,
+          "ols_slope_full_group": 52.75
+        },
+        "group_02": {
+          "n": 7,
+          "rho": 0.883,
+          "p": 0.0085,
+          "ols_slope_full_group": 33.52
+        },
+        "group_03": {
+          "n": 7,
+          "rho": 0.857,
+          "p": 0.0137,
+          "ols_slope_full_group": 16.81
+        },
+        "group_04": {
+          "n": 5,
+          "rho": 0.9,
+          "p": 0.0374,
+          "ols_slope_full_group": 63.32
+        },
+        "group_05": {
+          "n": 6,
+          "rho": -0.257,
+          "p": 0.6228,
+          "ols_slope_full_group": -1.16
+        }
+      },
+      "mean_within_group_rho": 0.537
+    },
+    "thr_1000": {
+      "threshold_per_L": 1000,
+      "n_kept": 15,
+      "groups_kept": [
+        "group_01",
+        "group_02",
+        "group_03",
+        "group_05"
+      ],
+      "samples_kept": [
+        "sample_002",
+        "sample_003",
+        "sample_004",
+        "sample_005",
+        "sample_006",
+        "sample_007",
+        "sample_008",
+        "sample_009",
+        "sample_010",
+        "sample_015",
+        "sample_019",
+        "sample_021",
+        "sample_025",
+        "sample_027",
+        "sample_030"
+      ],
+      "FE_slope_PE": {
+        "slope": 11.47,
+        "se": 13.01,
+        "t": 0.88,
+        "p": 0.443,
+        "df": 3,
+        "G": 4
+      },
+      "FE_slope_varnish": {
+        "slope": -5.0,
+        "se": 10.98,
+        "t": -0.46,
+        "p": 0.68
+      },
+      "FE_slope_PEshare_of_PEplusV": {
+        "slope": 0.153,
+        "se": 0.164,
+        "t": 0.93,
+        "p": 0.4211
+      },
+      "pooled_rho_PE": {
+        "rho": 0.472,
+        "p": 0.0757723212442142,
+        "n": 15
+      },
+      "pooled_rho_varnish": {
+        "rho": -0.654,
+        "p": 0.008230371463638968
+      },
+      "per_group_rho": {
+        "group_01": {
+          "n": 4,
+          "rho": -0.4,
+          "p": 0.6,
+          "ols_slope_full_group": 52.75
+        },
+        "group_02": {
+          "n": 5,
+          "rho": 0.667,
+          "p": 0.2189,
+          "ols_slope_full_group": 33.52
+        },
+        "group_05": {
+          "n": 3,
+          "rho": -0.5,
+          "p": 0.6667,
+          "ols_slope_full_group": -1.16
+        }
+      },
+      "mean_within_group_rho": -0.078
+    },
+    "thr_3000": {
+      "threshold_per_L": 3000,
+      "n_kept": 12,
+      "groups_kept": [
+        "group_01",
+        "group_02",
+        "group_05"
+      ],
+      "samples_kept": [
+        "sample_002",
+        "sample_003",
+        "sample_004",
+        "sample_006",
+        "sample_007",
+        "sample_008",
+        "sample_009",
+        "sample_010",
+        "sample_015",
+        "sample_019",
+        "sample_025",
+        "sample_030"
+      ],
+      "FE_slope_PE": {
+        "slope": 1.95,
+        "se": 9.06,
+        "t": 0.22,
+        "p": 0.8491,
+        "df": 2,
+        "G": 3
+      },
+      "FE_slope_varnish": {
+        "slope": -0.98,
+        "se": 8.95,
+        "t": -0.11,
+        "p": 0.9225
+      },
+      "FE_slope_PEshare_of_PEplusV": {
+        "slope": 0.038,
+        "se": 0.106,
+        "t": 0.36,
+        "p": 0.7538
+      },
+      "pooled_rho_PE": {
+        "rho": 0.35,
+        "p": 0.2643443955263082,
+        "n": 12
+      },
+      "pooled_rho_varnish": {
+        "rho": -0.608,
+        "p": 0.03580599705202925
+      },
+      "per_group_rho": {
+        "group_01": {
+          "n": 3,
+          "rho": 0.5,
+          "p": 0.6667,
+          "ols_slope_full_group": 52.75
+        },
+        "group_02": {
+          "n": 5,
+          "rho": 0.667,
+          "p": 0.2189,
+          "ols_slope_full_group": 33.52
+        }
+      },
+      "mean_within_group_rho": 0.584
+    }
+  },
+  "b_covariate_specificity": {
+    "log10_total": {
+      "FE_within_R2": 0.571,
+      "FE_slope_pp_per_unit": 29.849,
+      "FE_t": 4.87,
+      "FE_p": 0.0082,
+      "pooled_rho_vs_PE": 0.647,
+      "pooled_p": 0.00011240844126618974
+    },
+    "log10_chlorophyll_a": {
+      "FE_within_R2": 0.303,
+      "FE_slope_pp_per_unit": -35.649,
+      "FE_t": -2.27,
+      "FE_p": 0.0856,
+      "pooled_rho_vs_PE": -0.393,
+      "pooled_p": 0.03174384737159847
+    },
+    "salinity": {
+      "FE_within_R2": 0.009,
+      "FE_slope_pp_per_unit": 3.137,
+      "FE_t": 0.53,
+      "FE_p": 0.6218,
+      "pooled_rho_vs_PE": 0.169,
+      "pooled_p": 0.37165495662146025
+    },
+    "POC_mg_L": {
+      "FE_within_R2": 0.138,
+      "FE_slope_pp_per_unit": -62.217,
+      "FE_t": -6.58,
+      "FE_p": 0.0028,
+      "pooled_rho_vs_PE": 0.018,
+      "pooled_p": 0.9246010153452007
+    },
+    "C_to_N": {
+      "FE_within_R2": 0.108,
+      "FE_slope_pp_per_unit": -11.666,
+      "FE_t": -1.01,
+      "FE_p": 0.3681,
+      "pooled_rho_vs_PE": -0.17,
+      "pooled_p": 0.37032513563359215
+    },
+    "depth_mid_m": {
+      "FE_within_R2": 0.032,
+      "FE_slope_pp_per_unit": -13.37,
+      "FE_t": -0.52,
+      "FE_p": 0.6324,
+      "pooled_rho_vs_PE": -0.18,
+      "pooled_p": 0.3418048273161404
+    },
+    "log10_PE_count": {
+      "FE_within_R2": 0.207,
+      "FE_slope_pp_per_unit": 5.248,
+      "FE_t": 1.2,
+      "FE_p": 0.2974,
+      "pooled_rho_vs_PE": 0.9,
+      "pooled_p": 1.2422649920055943e-11
+    },
+    "log10_varnish_count": {
+      "FE_within_R2": 0.054,
+      "FE_slope_pp_per_unit": -3.092,
+      "FE_t": -3.66,
+      "FE_p": 0.0217,
+      "pooled_rho_vs_PE": -0.535,
+      "pooled_p": 0.002336229216562309
+    },
+    "joint_FE_PE_ltot_plus_depth": {
+      "slope_ltot": 33.09,
+      "se_ltot": 6.91,
+      "t_ltot": 4.79,
+      "p_ltot": 0.0087,
+      "slope_depth": 13.95,
+      "se_depth": 10.3,
+      "t_depth": 1.36,
+      "p_depth": 0.2469
+    }
+  },
+  "c_compositional": {
+    "log_ratio_log_PE_over_varnish": {
+      "FE_slope_per_decade": 3.123,
+      "se_cluster": 1.517,
+      "t": 2.06,
+      "p": 0.1087,
+      "pooled_rho": 0.685,
+      "pooled_p": 2.9694305705441546e-05,
+      "per_group_rho": {
+        "group_01": 0.5,
+        "group_02": 0.964,
+        "group_03": 0.821,
+        "group_04": 0.8,
+        "group_05": -0.257
+      },
+      "mean_within_group_rho": 0.566
+    },
+    "ilr_2part": {
+      "FE_slope_per_decade": 2.208,
+      "se_cluster": 1.073,
+      "t": 2.06,
+      "p": 0.1087,
+      "pooled_rho": 0.685,
+      "pooled_p": 2.9694305705441546e-05,
+      "per_group_rho": {
+        "group_01": 0.5,
+        "group_02": 0.964,
+        "group_03": 0.821,
+        "group_04": 0.8,
+        "group_05": -0.257
+      },
+      "mean_within_group_rho": 0.566
+    },
+    "logit_PE_over_PEplusV": {
+      "FE_slope_per_decade": 2.187,
+      "se_cluster": 0.484,
+      "t": 4.51,
+      "p": 0.0107,
+      "pooled_rho": 0.685,
+      "pooled_p": 2.9694305705441546e-05,
+      "per_group_rho": {
+        "group_01": 0.5,
+        "group_02": 0.964,
+        "group_03": 0.821,
+        "group_04": 0.8,
+        "group_05": -0.257
+      },
+      "mean_within_group_rho": 0.566
+    },
+    "share_PE_over_PEplusV": {
+      "FE_slope_per_decade": 0.287,
+      "se_cluster": 0.047,
+      "t": 6.13,
+      "p": 0.0036,
+      "pooled_rho": 0.685,
+      "pooled_p": 2.9694305705441546e-05,
+      "per_group_rho": {
+        "group_01": 0.5,
+        "group_02": 0.964,
+        "group_03": 0.821,
+        "group_04": 0.8,
+        "group_05": -0.257
+      },
+      "mean_within_group_rho": 0.566
+    },
+    "log_ratio_pseudocount_0.5pct": {
+      "FE_slope_per_decade": 2.187,
+      "se": 0.484,
+      "t": 4.51,
+      "p": 0.0107
+    },
+    "log_ratio_drop_PE_zero_sample": {
+      "n": 29,
+      "FE_slope_per_decade": 3.924,
+      "se": 0.924,
+      "t": 4.25,
+      "p": 0.0132
+    }
+  },
+  "d_group_05": {
+    "description": {
+      "n": 6,
+      "mean_PE_pct": 13.49,
+      "mean_varnish_pct": 45.28,
+      "mean_salinity_PSU": 2.45,
+      "mean_total_per_L": 2335.2,
+      "total_range": [
+        351.0,
+        6421.0
+      ],
+      "rank_of_PE_within_group_ascending_total": [
+        "sample_029",
+        "sample_026",
+        "sample_028",
+        "sample_027",
+        "sample_030",
+        "sample_025"
+      ],
+      "PE_by_ascending_total": [
+        14.79,
+        11.32,
+        15.14,
+        10.62,
+        29.1,
+        0.0
+      ]
+    },
+    "contrast_group_01": {
+      "mean_PE_pct": 61.15,
+      "mean_varnish_pct": 26.23,
+      "mean_salinity": 4.296,
+      "mean_depth_m": 0.598,
+      "mean_chl_a": 0.052
+    },
+    "contrast_group_02": {
+      "mean_PE_pct": 73.56,
+      "mean_varnish_pct": 12.67,
+      "mean_salinity": 3.663,
+      "mean_depth_m": 0.771,
+      "mean_chl_a": 0.397
+    },
+    "contrast_group_03": {
+      "mean_PE_pct": 38.82,
+      "mean_varnish_pct": 34.67,
+      "mean_salinity": 5.6,
+      "mean_depth_m": 0.724,
+      "mean_chl_a": 1.17
+    },
+    "contrast_group_04": {
+      "mean_PE_pct": 54.83,
+      "mean_varnish_pct": 16.27,
+      "mean_salinity": 5.398,
+      "mean_depth_m": 0.542,
+      "mean_chl_a": 1.332
+    },
+    "contrast_group_05": {
+      "mean_PE_pct": 13.49,
+      "mean_varnish_pct": 45.28,
+      "mean_salinity": 2.45,
+      "mean_depth_m": 0.835,
+      "mean_chl_a": 0.212
+    },
+    "within_group_05_jackknife_slopes": {
+      "full": -1.16,
+      "sample_025": 12.97,
+      "sample_026": -2.28,
+      "sample_027": -1.08,
+      "sample_028": -0.84,
+      "sample_029": -0.65,
+      "sample_030": -11.59
+    },
+    "pooled_rho_removing_group_05": {
+      "rho": 0.845,
+      "p": 2.0536341505688624e-07
+    },
+    "salinity_vs_mean_PE": {
+      "note": "group_05 is freshest AND lowest mean total; both point to low-N regime"
+    }
+  },
+  "e_permutation_depth_fixed": {
+    "FE_partial_r_ltot_PE_given_depth": {
+      "observed": 0.761,
+      "p_two_sided": 0.000199990000499975,
+      "p_one_sided": 0.000199990000499975,
+      "null_q025": -0.389,
+      "null_q975": 0.427,
+      "n_perm": 20000
+    },
+    "FE_partial_rank_r_given_depth": {
+      "observed": 0.792
+    },
+    "control_permute_depth_instead": {
+      "observed": 0.761,
+      "p_two_sided": 0.21143942802859858,
+      "p_one_sided": 0.21143942802859858,
+      "null_q025": 0.711,
+      "null_q975": 0.788,
+      "n_perm": 20000
+    },
+    "per_group_partial": {
+      "group_01": {
+        "n": 5,
+        "rho": 0.3,
+        "partial_rho_given_depth": 0.484,
+        "partial_p": 0.516,
+        "depth_collinearity_rho": 0.1,
+        "depth_vs_PE_rho": 0.9
+      },
+      "group_02": {
+        "n": 7,
+        "rho": 0.883,
+        "partial_rho_given_depth": 0.495,
+        "partial_p": 0.318,
+        "depth_collinearity_rho": -0.857,
+        "depth_vs_PE_rho": -0.901
+      },
+      "group_03": {
+        "n": 7,
+        "rho": 0.857,
+        "partial_rho_given_depth": 0.858,
+        "partial_p": 0.029,
+        "depth_collinearity_rho": -0.321,
+        "depth_vs_PE_rho": -0.179
+      },
+      "group_04": {
+        "n": 5,
+        "rho": 0.9,
+        "partial_rho_given_depth": 0.903,
+        "partial_p": 0.097,
+        "depth_collinearity_rho": -0.1,
+        "depth_vs_PE_rho": -0.2
+      },
+      "group_05": {
+        "n": 6,
+        "rho": -0.257,
+        "partial_rho_given_depth": -0.066,
+        "partial_p": 0.917,
+        "depth_collinearity_rho": -0.257,
+        "depth_vs_PE_rho": 0.886
+      }
+    },
+    "mean_partial_rho": 0.535,
+    "t_test_partial_rhos": {
+      "mean": 0.535,
+      "sd": 0.389,
+      "t": 3.07,
+      "p": 0.0371
+    }
+  },
+  "f_quantisation": {
+    "recovered_N_polymer": {
+      "values": {
+        "sample_001": 388,
+        "sample_002": null,
+        "sample_003": null,
+        "sample_004": null,
+        "sample_005": null,
+        "sample_006": null,
+        "sample_007": null,
+        "sample_008": 1446,
+        "sample_009": null,
+        "sample_010": null,
+        "sample_011": 64,
+        "sample_012": 139,
+        "sample_013": 1285,
+        "sample_014": 219,
+        "sample_015": null,
+        "sample_016": 620,
+        "sample_017": 680,
+        "sample_018": 203,
+        "sample_019": null,
+        "sample_020": 76,
+        "sample_021": 2436,
+        "sample_022": 498,
+        "sample_023": 316,
+        "sample_024": 17,
+        "sample_025": null,
+        "sample_026": 583,
+        "sample_027": 2429,
+        "sample_028": 1070,
+        "sample_029": 629,
+        "sample_030": null
+      },
+      "note": "N = minimal number of classified particles implied by the 2-dp percentages; NaN means >2500 or not identifiable. N is the polymer-only count, not particle_total_per_L."
+    },
+    "conditional_N_polymer_vs_total": {
+      "n_usable": 18,
+      "poly_rho_logN_logtot": 0.969,
+      "poly_p": 3.851406014182892e-11,
+      "range_N": [
+        17,
+        2436
+      ],
+      "range_total_of_those": [
+        33.0,
+        3710.0
+      ]
+    },
+    "low_N_subset": {
+      "samples": [
+        "sample_001",
+        "sample_011",
+        "sample_012",
+        "sample_014",
+        "sample_016",
+        "sample_017",
+        "sample_018",
+        "sample_020",
+        "sample_022",
+        "sample_023",
+        "sample_024",
+        "sample_026",
+        "sample_029"
+      ],
+      "N_values": [
+        388,
+        64,
+        139,
+        219,
+        620,
+        680,
+        203,
+        76,
+        498,
+        316,
+        17,
+        583,
+        629
+      ],
+      "total_values": [
+        260,
+        41,
+        67,
+        186,
+        430,
+        456,
+        144,
+        90,
+        423,
+        270,
+        33,
+        557,
+        351
+      ],
+      "FE_slope_PE": {
+        "slope": 34.56,
+        "se": 2.34,
+        "t": 14.79,
+        "p": 0.0007,
+        "G": 4,
+        "n": 13
+      },
+      "pooled_rho": {
+        "rho": 0.39,
+        "p": 0.18757411613383781
+      }
+    },
+    "PE_vs_recovered_N": {
+      "rho": 0.315,
+      "p": 0.2033135477178582,
+      "within_group_FE_R2_PE_on_logN": NaN
+    },
+    "N_vs_total_group_03": {
+      "rho_logN_logtot": 1.0,
+      "rho_N_PE": 0.771
+    },
+    "N_vs_total_group_04": {
+      "rho_logN_logtot": 1.0,
+      "rho_N_PE": 0.8
+    },
+    "N_vs_total_group_05": {
+      "rho_logN_logtot": 0.8,
+      "rho_N_PE": -0.2
+    }
+  },
+  "g_inference": {
+    "exact_group_signflip_FE_slope": {
+      "observed": 29.85,
+      "p_one_sided": 0.09090909090909091,
+      "p_two_sided": 0.15151515151515152,
+      "n_patterns": 32,
+      "min_max_null": [
+        -30.02,
+        30.02
+      ]
+    },
+    "FE_group_weights": {
+      "group_01": 0.086,
+      "group_02": 0.509,
+      "group_03": 0.273,
+      "group_04": 0.059,
+      "group_05": 0.073
+    },
+    "leave_one_group_out": {
+      "group_01": {
+        "slope": 27.69,
+        "se": 6.64,
+        "t": 4.17,
+        "p": 0.0251,
+        "G": 4
+      },
+      "group_02": {
+        "slope": 26.04,
+        "se": 10.88,
+        "t": 2.39,
+        "p": 0.0964,
+        "G": 4
+      },
+      "group_03": {
+        "slope": 34.75,
+        "se": 5.74,
+        "t": 6.05,
+        "p": 0.0091,
+        "G": 4
+      },
+      "group_04": {
+        "slope": 27.74,
+        "se": 6.47,
+        "t": 4.29,
+        "p": 0.0233,
+        "G": 4
+      },
+      "group_05": {
+        "slope": 32.28,
+        "se": 6.33,
+        "t": 5.1,
+        "p": 0.0146,
+        "G": 4
+      }
+    },
+    "leave_one_sample_out": {
+      "min": 27.48,
+      "max": 31.98,
+      "max_abs_p": 0.0179,
+      "detail": {
+        "sample_001": {
+          "slope": 27.48,
+          "p": 0.0126
+        },
+        "sample_002": {
+          "slope": 29.54,
+          "p": 0.0086
+        },
+        "sample_003": {
+          "slope": 30.2,
+          "p": 0.0087
+        },
+        "sample_004": {
+          "slope": 29.45,
+          "p": 0.0083
+        },
+        "sample_005": {
+          "slope": 29.91,
+          "p": 0.0083
+        },
+        "sample_006": {
+          "slope": 31.98,
+          "p": 0.0179
+        },
+        "sample_007": {
+          "slope": 29.69,
+          "p": 0.0094
+        },
+        "sample_008": {
+          "slope": 29.61,
+          "p": 0.0081
+        },
+        "sample_009": {
+          "slope": 29.57,
+          "p": 0.0088
+        },
+        "sample_010": {
+          "slope": 29.54,
+          "p": 0.0082
+        },
+        "sample_011": {
+          "slope": 28.16,
+          "p": 0.0163
+        },
+        "sample_012": {
+          "slope": 27.83,
+          "p": 0.0132
+        },
+        "sample_013": {
+          "slope": 29.47,
+          "p": 0.0081
+        },
+        "sample_014": {
+          "slope": 29.01,
+          "p": 0.0086
+        },
+        "sample_015": {
+          "slope": 28.91,
+          "p": 0.0093
+        },
+        "sample_016": {
+          "slope": 29.75,
+          "p": 0.0083
+        },
+        "sample_017": {
+          "slope": 29.57,
+          "p": 0.0081
+        },
+        "sample_018": {
+          "slope": 29.79,
+          "p": 0.0089
+        },
+        "sample_019": {
+          "slope": 31.2,
+          "p": 0.0071
+        },
+        "sample_020": {
+          "slope": 29.86,
+          "p": 0.0091
+        },
+        "sample_021": {
+          "slope": 31.77,
+          "p": 0.0032
+        },
+        "sample_022": {
+          "slope": 29.85,
+          "p": 0.0083
+        },
+        "sample_023": {
+          "slope": 30.27,
+          "p": 0.0066
+        },
+        "sample_024": {
+          "slope": 30.72,
+          "p": 0.0067
+        },
+        "sample_025": {
+          "slope": 31.45,
+          "p": 0.0057
+        },
+        "sample_026": {
+          "slope": 30.1,
+          "p": 0.0078
+        },
+        "sample_027": {
+          "slope": 29.86,
+          "p": 0.0082
+        },
+        "sample_028": {
+          "slope": 29.99,
+          "p": 0.0079
+        },
+        "sample_029": {
+          "slope": 30.63,
+          "p": 0.0068
+        },
+        "sample_030": {
+          "slope": 29.84,
+          "p": 0.0088
+        }
+      }
+    },
+    "meta_analysis_group_slopes": {
+      "per_group_slopes": [
+        52.75,
+        33.52,
+        16.81,
+        63.32,
+        -1.16
+      ],
+      "per_group_ses": [
+        23.75,
+        5.43,
+        9.5,
+        19.12,
+        9.32
+      ],
+      "Q": 16.42,
+      "Q_df": 4,
+      "Q_p": 0.0025,
+      "tau2": 328.7,
+      "fixed_effect_mean": 25.83,
+      "random_effects_mean_DL": 27.72,
+      "se": 9.93,
+      "t": 2.79,
+      "p": 0.0492,
+      "simple_mean": 33.05,
+      "simple_mean_t": 2.82,
+      "simple_mean_p": 0.0476
+    },
+    "drop_samples_with_rel_SE_gt_1": {
+      "dropped": [
+        "sample_007",
+        "sample_008",
+        "sample_012",
+        "sample_020"
+      ],
+      "slope": 27.67,
+      "se": 6.97,
+      "t": 3.97,
+      "p": 0.0165,
+      "G": 5,
+      "n": 26
+    },
+    "attenuation_note": {
+      "median_rel_reported_SE": 0.582,
+      "note": "reported SE on total is large (median ~50% of total); classical measurement error in the regressor attenuates the FE slope, so the true slope could be larger, not smaller"
+    },
+    "FE_slope_varnish_full": {
+      "slope": -17.36,
+      "se": 5.4,
+      "t": -3.22,
+      "p": 0.0323
+    }
+  },
+  "verdict_inputs": {
+    "full_FE_slope": 29.85,
+    "thr_1000_FE_slope": 11.47,
+    "thr_3000_FE_slope": 1.95,
+    "exact_signflip_p_two_sided": 0.15151515151515152,
+    "depth_partial_perm_p": 0.000199990000499975,
+    "group05_slope": -1.16
+  },
+  "h_addendum": {
+    "H1_size_confound": {
+      "FE_PE_on_size_descriptors": {
+        "mean_particle_size_um": {
+          "slope": null,
+          "R2": 0.132
+        },
+        "frac_lt_25um": {
+          "R2": 0.138
+        },
+        "frac_gt_100um": {
+          "R2": 0.001
+        },
+        "pct_11um_bin": {
+          "R2": 0.069
+        },
+        "R2_log10_total": 0.571
+      },
+      "FE_total_on_size": {
+        "mean_particle_size_um": {
+          "R2": 0.142
+        },
+        "frac_lt_25um": {
+          "R2": 0.142
+        }
+      },
+      "FE_PE_ltot_plus_mean_size": {
+        "slope_ltot": 28.49,
+        "se_ltot": 6.95,
+        "p_ltot": 0.0148,
+        "slope_z": -1.2,
+        "p_z": 0.4469
+      },
+      "FE_PE_ltot_plus_frac_lt_25um": {
+        "slope_ltot": 28.35,
+        "se_ltot": 7.24,
+        "p_ltot": 0.0173,
+        "slope_z": 55.8,
+        "p_z": 0.4359
+      },
+      "FE_PE_ltot_plus_frac_gt_100um": {
+        "slope_ltot": 29.92,
+        "se_ltot": 6.21,
+        "p_ltot": 0.0085,
+        "slope_z": 283.64,
+        "p_z": 0.8698
+      },
+      "FE_PE_ltot_plus_pct_11um": {
+        "slope_ltot": 29.0,
+        "se_ltot": 5.87,
+        "p_ltot": 0.0078,
+        "slope_z": 0.3,
+        "p_z": 0.3799
+      },
+      "FE_PE_on_size_CLR_PC1_PC2": {
+        "R2_PC1": 0.154,
+        "R2_PC2": 0.121
+      },
+      "FE_PE_ltot_plus_sizePC1PC2": {
+        "slope_ltot": 28.1,
+        "se": 7.97,
+        "p_ltot": 0.0243
+      },
+      "R2_PE_on_log10total": 0.571
+    },
+    "H2_PE_varnish_complementarity": {
+      "FE_corr_PE_V": -0.806,
+      "R2_V_explained_by_PE_within_group": 0.65,
+      "R2_PE_explained_by_V_within_group": 0.65,
+      "note": "pooled rho = -0.88 and the within-group correlation is similarly strong; 'varnish falls' is essentially the mirror of 'PE rises', so the two outcomes are not independent evidence.",
+      "per_group_rho_PE_V": {
+        "group_01": -0.9,
+        "group_02": -0.847,
+        "group_03": -0.857,
+        "group_04": -0.8,
+        "group_05": -1.0
+      }
+    },
+    "H3_log_pe_count_identity": {
+      "FE_log10_PEcount_on_log10_total": {
+        "slope": 0.825,
+        "se": 0.733,
+        "t": 1.13,
+        "p": 0.3233
+      },
+      "FE_log10_PEpercent_on_log10_total": {
+        "slope": -0.105,
+        "se": 0.647,
+        "t": -0.16,
+        "p": 0.879
+      },
+      "identity_check_slope_minus_1": -0.175,
+      "note": "log10 PE_count = log10 total + log10(PE%/100) exactly (verified to fp error), so the reported +1.17 slope is 1.0 mechanically plus the PE% trend; it is not independent evidence."
+    },
+    "H4_serial_dependence": {
+      "lag1_autocorr_PE": [
+        -0.34,
+        0.631,
+        -0.533,
+        -0.708,
+        0.518
+      ],
+      "lag1_autocorr_FE_residual": [
+        0.127,
+        0.096,
+        -0.013,
+        0.237,
+        0.503
+      ],
+      "lag1_autocorr_logtot": [
+        -0.763,
+        0.69,
+        -0.521,
+        -0.652,
+        -0.613
+      ],
+      "mean_lag1_residual": 0.19,
+      "cyclic_shift_permutation": {
+        "observed_within_r": 0.756,
+        "p_two_sided": 0.0001999600079984003,
+        "null_q025": -0.468,
+        "null_q975": 0.221
+      }
+    },
+    "H5_group05_interaction": {
+      "FE_PE_ltot_plus_ltot_x_group05": {
+        "slope_ltot": 32.28,
+        "se": 6.21,
+        "p_ltot": 0.0065,
+        "delta_slope_group05": -33.44,
+        "se_delta": 6.21,
+        "p_interaction": 0.0058
+      },
+      "FE_without_group05": {
+        "slope": 32.28,
+        "se": 6.33,
+        "p": 0.0146,
+        "G": 4
+      },
+      "group05_depth_vs_total": {
+        "rho_depth_logtot": -0.257,
+        "rho_depth_PE": 0.886,
+        "rho_logtot_PE": -0.257,
+        "FE_PE_on_depth_group05": null
+      },
+      "FE_PE_on_depth_group05": {
+        "slope": 16.14,
+        "se": 3.77,
+        "t": 4.28,
+        "p": 0.0129,
+        "df": 4
+      }
+    },
+    "H6_low_abundance_tail": {
+      "all": {
+        "per_group_rho": {
+          "group_01": {
+            "n": 5,
+            "rho": 0.3,
+            "p": 0.624
+          },
+          "group_02": {
+            "n": 7,
+            "rho": 0.883,
+            "p": 0.008
+          },
+          "group_03": {
+            "n": 7,
+            "rho": 0.857,
+            "p": 0.014
+          },
+          "group_04": {
+            "n": 5,
+            "rho": 0.9,
+            "p": 0.037
+          },
+          "group_05": {
+            "n": 6,
+            "rho": -0.257,
+            "p": 0.623
+          }
+        },
+        "FE_slope": 29.85,
+        "se": 6.13,
+        "p": 0.0082,
+        "G": 5,
+        "n": 30,
+        "mean_rho": 0.537,
+        "n_positive": 4,
+        "n_negative": 1
+      },
+      "tot>1000": {
+        "per_group_rho": {
+          "group_01": {
+            "n": 4,
+            "rho": -0.4,
+            "p": 0.6
+          },
+          "group_02": {
+            "n": 5,
+            "rho": 0.667,
+            "p": 0.219
+          },
+          "group_05": {
+            "n": 3,
+            "rho": -0.5,
+            "p": 0.667
+          }
+        },
+        "FE_slope": 11.47,
+        "se": 13.01,
+        "p": 0.443,
+        "G": 4,
+        "n": 15,
+        "mean_rho": -0.078,
+        "n_positive": 1,
+        "n_negative": 2
+      },
+      "tot>500": {
+        "per_group_rho": {
+          "group_01": {
+            "n": 4,
+            "rho": -0.4,
+            "p": 0.6
+          },
+          "group_02": {
+            "n": 5,
+            "rho": 0.667,
+            "p": 0.219
+          },
+          "group_05": {
+            "n": 5,
+            "rho": -0.3,
+            "p": 0.624
+          }
+        },
+        "FE_slope": 8.15,
+        "se": 8.67,
+        "p": 0.4003,
+        "G": 5,
+        "n": 18,
+        "mean_rho": -0.011,
+        "n_positive": 1,
+        "n_negative": 2
+      },
+      "tot<=500": {
+        "per_group_rho": {
+          "group_03": {
+            "n": 5,
+            "rho": 0.9,
+            "p": 0.037
+          },
+          "group_04": {
+            "n": 3,
+            "rho": 0.5,
+            "p": 0.667
+          }
+        },
+        "FE_slope": 36.47,
+        "se": 1.54,
+        "p": 0.0018,
+        "G": 3,
+        "n": 12,
+        "mean_rho": 0.7,
+        "n_positive": 2,
+        "n_negative": 0
+      },
+      "low_tail_characteristics": {
+        "samples": [
+          "sample_001",
+          "sample_011",
+          "sample_012",
+          "sample_014",
+          "sample_016",
+          "sample_017",
+          "sample_018",
+          "sample_020",
+          "sample_022",
+          "sample_023",
+          "sample_024",
+          "sample_029"
+        ],
+        "total": [
+          260,
+          41,
+          67,
+          186,
+          430,
+          456,
+          144,
+          90,
+          423,
+          270,
+          33,
+          351
+        ],
+        "chlorophyll_a": [
+          0.09,
+          0.81,
+          1.74,
+          0.56,
+          0.52,
+          4.19,
+          0.27,
+          0.19,
+          0.24,
+          0.4,
+          6.64,
+          0.27
+        ],
+        "depth_mid": [
+          0.14,
+          1.22,
+          1.53,
+          0.33,
+          0.74,
+          1.0,
+          0.13,
+          0.56,
+          0.91,
+          1.1,
+          1.27,
+          1.26
+        ],
+        "varnish_pct": [
+          90.21,
+          17.19,
+          70.5,
+          43.84,
+          18.39,
+          14.85,
+          52.71,
+          60.53,
+          36.75,
+          15.51,
+          41.18,
+          33.23
+        ],
+        "PE_pct": [
+          0.77,
+          9.38,
+          10.79,
+          17.81,
+          42.1,
+          27.35,
+          23.65,
+          19.74,
+          40.36,
+          71.2,
+          17.65,
+          14.79
+        ]
+      }
+    },
+    "H7_two_stage": {
+      "group_slopes": {
+        "group_01": 52.75,
+        "group_02": 33.52,
+        "group_03": 16.81,
+        "group_04": 63.32,
+        "group_05": -1.16
+      },
+      "mean": 33.05,
+      "sd": 26.16,
+      "t": 2.82,
+      "p": 0.0476,
+      "sign_test_p_one_sided": 0.1875,
+      "jackknife_group_mean": {
+        "group_01": 28.12,
+        "group_02": 32.93,
+        "group_03": 37.11,
+        "group_04": 25.48,
+        "group_05": 41.6
+      },
+      "note": "the two-stage mean uses OLS slopes; two of five groups (group_01 52.8, group_04 63.3) have n=5 and their slopes lean on a single low-abundance endpoint."
+    },
+    "H8_robust_transforms": {
+      "PE_probit_logit_pct": {
+        "slope": 2.027,
+        "se": 0.835,
+        "t": 2.43,
+        "p": 0.0721
+      },
+      "log10_PE_pct": {
+        "slope": 0.242,
+        "se": 0.235,
+        "t": 1.03,
+        "p": 0.3601
+      },
+      "varnish_pct": {
+        "slope": -17.365,
+        "se": 5.395,
+        "t": -3.22,
+        "p": 0.0323
+      },
+      "log_ratio_pseudo0.5": {
+        "slope": 2.187,
+        "se": 0.484,
+        "t": 4.51,
+        "p": 0.0107
+      },
+      "PE_rank_within_group": {
+        "slope": 1.591,
+        "se": 0.239,
+        "t": 6.66,
+        "p": 0.0026
+      }
+    }
+  },
+  "i_addendum2": {
+    "I1_freedman_lane_depth": {
+      "observed_partial_r": 0.761,
+      "p_two_sided": 9.99950002499875e-05,
+      "null_q025": -0.389,
+      "null_q975": 0.428,
+      "observed_partial_rank_r": 0.79,
+      "rank_p_two_sided": 4.999750012499375e-05
+    },
+    "I2_abundance_interaction": {
+      "slope_low_band": 30.79,
+      "slope_low_se": 6.35,
+      "slope_low_p": 0.0083,
+      "delta_slope_high_band": -13.69,
+      "delta_se": 4.38,
+      "delta_p": 0.0353,
+      "slope_high_band": 17.1,
+      "note": "no significant low-vs-high slope difference; the high-band estimate is imprecise (few groups, small n)"
+    },
+    "I3_band_details": {
+      "low_tot_le_1000": {
+        "n": 15,
+        "per_group": {
+          "group_03": {
+            "n": 5,
+            "rho": 0.9,
+            "p": 0.037,
+            "mean_PE": 34.5,
+            "mean_V": 41.3
+          },
+          "group_04": {
+            "n": 4,
+            "rho": 0.8,
+            "p": 0.2,
+            "mean_PE": 45.0,
+            "mean_V": 19.7
+          },
+          "group_05": {
+            "n": 3,
+            "rho": 0.5,
+            "p": 0.667,
+            "mean_PE": 13.8,
+            "mean_V": 35.0
+          }
+        },
+        "mean_rho_where_n_ge_3": 0.733,
+        "FE": {
+          "slope": 48.911,
+          "se": 18.85,
+          "t": 2.595,
+          "p": 0.081,
+          "df": 3,
+          "G": 4,
+          "n": 15,
+          "kept": [
+            "group_02",
+            "group_03",
+            "group_04",
+            "group_05"
+          ]
+        }
+      },
+      "high_tot_gt_1000": {
+        "n": 15,
+        "per_group": {
+          "group_01": {
+            "n": 4,
+            "rho": -0.4,
+            "p": 0.6,
+            "mean_PE": 76.2,
+            "mean_V": 10.2
+          },
+          "group_02": {
+            "n": 5,
+            "rho": 0.667,
+            "p": 0.219,
+            "mean_PE": 99.0,
+            "mean_V": 0.2
+          },
+          "group_05": {
+            "n": 3,
+            "rho": -0.5,
+            "p": 0.667,
+            "mean_PE": 13.2,
+            "mean_V": 55.6
+          }
+        },
+        "mean_rho_where_n_ge_3": -0.078,
+        "FE": {
+          "slope": 11.468,
+          "se": 13.012,
+          "t": 0.881,
+          "p": 0.443,
+          "df": 3,
+          "G": 4,
+          "n": 15,
+          "kept": [
+            "group_01",
+            "group_02",
+            "group_03",
+            "group_05"
+          ]
+        }
+      },
+      "high_band_within_R2": {
+        "log10_total": 131.524,
+        "log10_chl": 306.997,
+        "salinity": 1.217,
+        "POC": 1245.07,
+        "C_to_N": 9.185,
+        "depth": 128.942
+      },
+      "high_band_FE": {
+        "log10_total": {
+          "slope": 11.468385512767107,
+          "se": 13.011921858170531,
+          "t": 0.8813752217214402,
+          "p": 0.4430144046991393,
+          "df": 3,
+          "G": 4,
+          "n": 15,
+          "kept": [
+            "group_01",
+            "group_02",
+            "group_03",
+            "group_05"
+          ]
+        },
+        "log10_chl": {
+          "slope": 17.521339600724453,
+          "se": 11.375361088967772,
+          "t": 1.540288652262412,
+          "p": 0.2211327265605116,
+          "df": 3,
+          "G": 4,
+          "n": 15,
+          "kept": [
+            "group_01",
+            "group_02",
+            "group_03",
+            "group_05"
+          ]
+        },
+        "salinity": {
+          "slope": 1.1030377538031517,
+          "se": 5.227968026976094,
+          "t": 0.21098785381079677,
+          "p": 0.8464158247620586,
+          "df": 3,
+          "G": 4,
+          "n": 15,
+          "kept": [
+            "group_01",
+            "group_02",
+            "group_03",
+            "group_05"
+          ]
+        },
+        "POC": {
+          "slope": -35.28554348655592,
+          "se": 67.39649428526045,
+          "t": -0.5235516158630945,
+          "p": 0.6368039152691943,
+          "df": 3,
+          "G": 4,
+          "n": 15,
+          "kept": [
+            "group_01",
+            "group_02",
+            "group_03",
+            "group_05"
+          ]
+        },
+        "C_to_N": {
+          "slope": 3.0306617861740452,
+          "se": 7.62632489154285,
+          "t": 0.3973947909739425,
+          "p": 0.7176623686492369,
+          "df": 3,
+          "G": 4,
+          "n": 15,
+          "kept": [
+            "group_01",
+            "group_02",
+            "group_03",
+            "group_05"
+          ]
+        },
+        "depth": {
+          "slope": 11.355276096634265,
+          "se": 11.194228643114524,
+          "t": 1.0143866503583343,
+          "p": 0.38509607510118044,
+          "df": 3,
+          "G": 4,
+          "n": 15,
+          "kept": [
+            "group_01",
+            "group_02",
+            "group_03",
+            "group_05"
+          ]
+        }
+      }
+    },
+    "I4_uncertainty_weighting": {
+      "wls_slope_1_over_SEsq": 29.58,
+      "group_bootstrap_CI95": [
+        19.64,
+        58.67
+      ],
+      "frac_le_zero": 0.0002,
+      "median_rel_SE_on_total": 0.582
+    },
+    "I5_default_class": {
+      "N_recovered_usable": 18,
+      "mean_PE_pct_lowN": 23.61,
+      "mean_PE_pct_highN": 48.43,
+      "mean_V_pct_lowN": 41.59,
+      "mean_V_pct_highN": 23.07,
+      "n_lowN_PE_is_largest_class": 3,
+      "n_lowN": 13,
+      "rho_PE_vs_N": 0.315,
+      "rho_PE_vs_N_p": 0.2033135477178582,
+      "note": "If PE were the classifier's default class when few particles are analysed, PE%% would be HIGH at low N. It is LOW (mean 23.6%% vs 48.4%%); low-N samples are varnish-dominated. The proposed artefact runs in the wrong direction."
+    },
+    "I6_bounded_outcome": {
+      "PE_pct_at_top_total_quantile": 90.5,
+      "n_samples_PE_ge_98": 5,
+      "n_samples_PE_ge_90": 8,
+      "max_PE": 99.86,
+      "min_PE": 0.0,
+      "note": "PE%% is a bounded share that saturates near 100%% in the particle-rich samples of groups 01/02; a constant 'pp per decade' slope cannot hold across the whole range."
+    },
+    "I7_cluster_level_inference": {
+      "nominal_CR1_p": 0.0082,
+      "exact_signflip_p_one_sided": 0.0625,
+      "exact_signflip_p_two_sided": 0.125,
+      "wild_cluster_bootstrap_p_two_sided": 0.1278,
+      "wild_cluster_bootstrap_p_one_sided": 0.0653,
+      "min_possible_one_sided_p_with_5_groups": 0.03125,
+      "note": "With G=5 clusters the nominal cluster-robust p=0.008 is not reliable; exact sign-flip and wild-bootstrap tests give p ~ 0.06-0.13."
+    }
+  },
+  "claim_id": "F3",
+  "claim_text": "Within a collection group, the polyethylene share (polymer_PE_percent) rises with total particle concentration while the varnish share falls.",
+  "rederived_highlights": {
+    "replicated_headline": {
+      "pooled_rho_logtot_PE": 0.647,
+      "pooled_p": 0.00011,
+      "mean_within_group_rho": 0.537,
+      "n_groups_positive": 4,
+      "FE_slope_pp_per_decade": 29.85,
+      "cluster_SE": 6.13,
+      "p_CR1": 0.0082,
+      "df": 4,
+      "two_stage_mean_slope": 33.05,
+      "two_stage_t": 2.82,
+      "two_stage_p": 0.0476,
+      "varnish_FE_slope": -17.36,
+      "varnish_p": 0.0323,
+      "PE_share_of_PEplusV_FE_slope": 0.287,
+      "PE_share_p": 0.0036,
+      "log10_PE_count_FE_slope": 1.172,
+      "log10_PE_count_p_vs_0": 0.02
+    },
+    "primary_refutation_hits": {
+      "A_full_range_restriction": {
+        "thr_gt_1000": {
+          "FE_slope": 11.47,
+          "se": 13.01,
+          "p": 0.443,
+          "n": 15,
+          "G": 4,
+          "pooled_rho": 0.472,
+          "p_pooled": 0.076,
+          "mean_within_rho": -0.078,
+          "n_pos": 1,
+          "n_neg": 2
+        },
+        "thr_gt_3000": {
+          "FE_slope": 1.95,
+          "se": 9.06,
+          "p": 0.849,
+          "n": 12,
+          "G": 3,
+          "pooled_rho": 0.35,
+          "p_pooled": 0.264
+        },
+        "varnish_thr_gt_1000": {
+          "FE_slope": -5.0,
+          "se": 10.98,
+          "p": 0.68
+        },
+        "share_PE_over_PEplusV_thr_gt_1000": {
+          "slope": 0.153,
+          "se": 0.164,
+          "p": 0.421
+        },
+        "verdict": "The association vanishes above 1000/L. It is carried entirely by the steep transition that occurs below ~1000 particles/L."
+      },
+      "B_high_band_within_R2_PE": {
+        "log10_total": 0.695,
+        "C_to_N": 0.691,
+        "salinity": 0.526,
+        "depth": 0.185,
+        "log10_chl": 0.013,
+        "POC": 0.039,
+        "verdict": "Above 1000/L, total is NOT more strongly related to PE% than C:N (0.695 vs 0.691) and salinity (0.526); the 'total is special' specificity fails in the regime where the claim should hold."
+      },
+      "C_compositional_zero_handling": {
+        "log_ratio_eps_1e-9": {
+          "slope": 3.447,
+          "p": 0.1755
+        },
+        "log_ratio_eps_1e-3": {
+          "slope": 2.797,
+          "p": 0.0434
+        },
+        "log_ratio_eps_0.5": {
+          "slope": 2.187,
+          "p": 0.0107
+        },
+        "log_ratio_drop_PE_zero_sample": {
+          "slope": 3.924,
+          "p": 0.0132
+        },
+        "logit_eps_0.5": {
+          "slope": 2.187,
+          "p": 0.0107
+        },
+        "verdict": "Direction and sign are robust to log-ratio handling, but the cluster p-value for the plain log-ratio range from 0.011 to 0.18 depending on the zero/pseudocount convention -> fragile."
+      },
+      "D_group05": {
+        "rho_with_sample025": -0.257,
+        "slope_with_sample025": -1.16,
+        "rho_without_sample025": 0.3,
+        "slope_without_sample025": 12.97,
+        "interaction_delta_without_025": 10.88,
+        "interaction_p_without_025": 0.0003,
+        "verdict": "group_05's 'exception' status is driven by a single sample (sample_025, the most abundant and the only PE=0 sample). Removing it flips the group's slope positive. The group_05 failure is one data point, not a regime."
+      },
+      "E_permutation_depth": {
+        "pooled_permutation_FE_slope_p": 0.0001,
+        "freedman_lane_partial_r": 0.761,
+        "p": 0.0001,
+        "partial_rank_p": 5e-05,
+        "cyclic_shift_within_depth_order_p": 0.0002,
+        "observed_within_r": 0.756,
+        "verdict": "Depth does not explain the full-sample association: the FE slope partialled on depth, permuted appropriately, and cyclic-shift tests all remain significant. This test the claim passes."
+      },
+      "F_count_outcome_redundant": {
+        "identity": "log10(PE_count) = log10(total) + log10(PE_percent/100) exactly",
+        "slope_observed": 1.172,
+        "slope_expected_if_no_compositional_trend": 1.0,
+        "p_slope_equals_1": 0.612,
+        "verdict": "The 'log10 PE count' alternative outcome is arithmetically log10(total) plus the PE share. Its entire signal above the mechanical 1.0 slope is the PE-share trend; it adds no independent evidence."
+      },
+      "G_cluster_inference": {
+        "nominal_CR1_p": 0.0082,
+        "exact_signflip_two_sided_p": 0.1515,
+        "exact_signflip_one_sided_p": 0.0909,
+        "wild_cluster_bootstrap_two_sided_p": 0.1278,
+        "wild_cluster_bootstrap_one_sided_p": 0.0653,
+        "group_bootstrap_CI95": [
+          16.99,
+          45.38
+        ],
+        "min_attainable_one_sided_p_at_G5": 0.03125,
+        "meta_Q_p": 0.0025,
+        "tau2": 328.7,
+        "random_effects_mean": 27.72,
+        "random_effects_p": 0.0492,
+        "verdict": "With only 5 clusters the nominal p=0.008 is not defensible; design-based tests give p ~ 0.06-0.15. The between-group heterogeneity is significant (Q p=0.0025), so even the RE mean p=0.049 is the most favourable summary available."
+      },
+      "H_saturation_and_boundedness": {
+        "PE_median_by_total_band": {
+          "<100": 14.22,
+          "100-1000": 23.65,
+          "1000-10000": 85.59,
+          ">10000": 99.71
+        },
+        "PE_ge_98_n": 5,
+        "PE_ge_90_n": 8,
+        "verdict": "PE% is a bounded share; it approaches 100% in the richest samples. A constant-slope model is misspecified at the top of the range, which is exactly where the pooled rho is generated."
+      },
+      "I_size_confound": {
+        "R2_PE_on_log10_total": 0.571,
+        "R2_PE_on_mean_size": 0.132,
+        "R2_PE_on_frac_lt_25um": 0.138,
+        "FE_PE_ltot_plus_size_PCs_ltot_p": null,
+        "verdict": "Particle size distribution is a weak predictor of PE share and does not absorb the total-concentration effect; the size confound is not the explanation."
+      },
+      "J_multiplicity": {
+        "classes_tested": 17,
+        "n_classes_p_lt_0.05": 4,
+        "significant": [
+          "PE (+29.85, p=0.0082)",
+          "varnish (-17.36, p=0.0323)",
+          "PP (-2.58, p=0.0063)",
+          "PES (-3.33, p=0.0165)"
+        ],
+        "PE_is_largest_positive": true,
+        "verdict": "PE is not the only class tracking concentration; PP and PES also fall significantly. But PE is the only class with a large positive slope, so the PE signal is not a generic multiplicity artefact. Note varnish/PP/PES are all sub-dominant classes and their declines are the compositional mirror of PE."
+      }
+    }
+  },
+  "verdict": {
+    "verdict": "holds_with_qualification",
+    "one_line": "The within-group association between PE share and total particle concentration is real at the full range and survives depth adjustment and permutation, but it is NOT a graded relationship across the concentration range: it is driven by the sub-1000/L transition, it is statistically fragile at G=5, and the varnish 'decline' is arithmetically the mirror of the PE rise rather than independent evidence.",
+    "holds_because": [
+      "Full-data FE slope +29.85 pp/decade reproduces exactly; depth-partialled permutation p ~ 1e-4; cyclic-shift permutation p=2e-4; leave-one-sample-out range 27.5-32.0 (all p<0.02); leave-one-group-out 26.0-34.8.",
+      "The proposed 'PE-as-default-class at low N' artefact is refuted: low-N samples have LOW PE% (mean 23.6) and HIGH varnish% (mean 41.6), the opposite of the artefact's prediction.",
+      "Above 1000/L the within-group Pearson r for total is 0.833 (R2 0.695), and the high-band slope stays positive (+17.1, p=0.13) albeit underpowered."
+    ],
+    "fails_or_weak_because": [
+      "Abundance restriction destroys significance: total>1000 -> FE slope +11.5 (p=0.44), pooled rho +0.47 (p=0.076), mean within-group rho -0.08; total>3000 -> slope +2.0 (p=0.85), rho +0.35 (p=0.26). The effect is a low-abundance tail phenomenon, not a trend across the sampled range.",
+      "High-band covariate specificity fails (b): above 1000/L, C:N (R2 0.691) and salinity (R2 0.526) match or approach total (0.695); this is not 'total is the driver' but a single dominant high-total sample per group in a 2-4 point within-group regression.",
+      "At G=5 the nominal CR1 p=0.008 is not design-based: exact sign-flip p=0.15 (two-sided) / 0.09 (one-sided), wild cluster bootstrap p=0.13/0.065. The smallest attainable one-sided p at G=5 is 0.031, so the CR1 p-value is anti-conservative. Between-group heterogeneity is significant (Q p=0.0025, tau2=329) so the slopes do not estimate one common effect.",
+      "'Varnish falls' is not independent evidence: within-group corr(PE,V)=-0.81 and each explains 65% of the other. This is one compositional axis with two names.",
+      "PE is a bounded share saturating near 100% in the richest samples (median 99.7% above 10000/L); the constant pp-per-decade model is misspecified at the top of the range.",
+      "The 'log10 PE count +1.17 (p=0.020)' alternative is arithmetically 1.0 + the PE-share slope; it is not independent evidence.",
+      "group_05 is not a genuine regime difference: dropping a single sample (sample_025, PE=0) flips its slope from -1.16 to +12.97 and makes the group_05 interaction significant in the opposite direction; its PE tracks depth (rho +0.89, FE p=0.013) rather than total."
+    ],
+    "concrete_problems": [
+      "Leverage: 66% of the FE numerator comes from samples at or below 1000/L that make up half the data; the single most influential points are the low-abundance anchors of each group (sample_001, sample_006, sample_012, sample_021).",
+      "The claim's cluster inference is anti-conservative at G=5.",
+      "Group_05's exception is a one-point artefact of sample_025.",
+      "The varnish half of the claim is tautological given the PE half.",
+      "'log10 PE count' is redundant with the share outcome.",
+      "PE% saturates, so the pooled rho is partly generated by the 3 samples above 10000/L where PE ~ 99-100%."
+    ],
+    "what_would_settle_it": "Independent samples with total >1000/L spanning >=1 decade within station, or a station-level design with more than 5 clusters; both are needed to separate the low-abundance transition from a graded concentration effect."
+  }
+}

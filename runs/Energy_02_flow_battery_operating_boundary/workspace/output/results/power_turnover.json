@@ -1,0 +1,77 @@
+{
+  "peak_power_density": 330.0,
+  "peak_rate": 300.0,
+  "peak_at_endpoint": false,
+  "value_at_500": 250.0,
+  "decline_from_peak_pct": 24.242424242424242,
+  "rise_from_peak_to_500_pct": 32.0,
+  "dP_drate": [
+    [
+      10.0,
+      20.0,
+      1.7449999999999999
+    ],
+    [
+      20.0,
+      30.0,
+      1.7049999999999996
+    ],
+    [
+      30.0,
+      50.0,
+      1.5785
+    ],
+    [
+      50.0,
+      80.0,
+      1.5160000000000002
+    ],
+    [
+      80.0,
+      100.0,
+      1.4159999999999997
+    ],
+    [
+      100.0,
+      200.0,
+      1.227
+    ],
+    [
+      200.0,
+      300.0,
+      0.4969999999999999
+    ],
+    [
+      300.0,
+      500.0,
+      -0.4
+    ]
+  ],
+  "sign_change_bracketing_chords": [
+    200.0,
+    500.0
+  ],
+  "sign_change_at_pivot_rate": 300.0,
+  "implied_voltage_at_500": 0.5,
+  "min_measured_discharge_voltage": 0.99153,
+  "filewide_min_voltage": 0.67421,
+  "rates_with_implied_V_outside_measured_window": [
+    500.0
+  ],
+  "exact_2dp_points": [
+    10.0,
+    20.0,
+    30.0,
+    50.0,
+    80.0,
+    100.0,
+    200.0,
+    300.0,
+    500.0
+  ],
+  "fit_P_linear_in_log10R2": 0.8780155020545051,
+  "fit_P_quadratic_in_log10R2": 0.995875001136771,
+  "fit_true_powerlaw_alpha": 0.9249445583819323,
+  "fit_true_powerlaw_logR2": 0.9988647486866226,
+  "note": "fit_*_log10R2 are R2 in LINEAR power space for a polynomial in log10(rate); fit_true_powerlaw_logR2 is the genuine log-space R2 of P = C*rate^alpha. These are different statistics and must not be compared to each other."
+}

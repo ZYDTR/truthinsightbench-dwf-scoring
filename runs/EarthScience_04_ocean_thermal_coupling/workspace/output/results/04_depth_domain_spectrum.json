@@ -1,0 +1,116 @@
+{
+  "depth_top_periods_m": [
+    1.8737992971495512,
+    0.6986373165618449,
+    1.1102679191152656,
+    0.8077971922028077,
+    1.36601195559351
+  ],
+  "depth_top_powers": [
+    0.4268021258354149,
+    0.18934244510535547,
+    0.09880582399572073,
+    0.04230605582197926,
+    0.04108969608382327
+  ],
+  "age_top_periods_ka": [
+    108.28594638505278,
+    40.45523520485584,
+    79.15676959619951,
+    63.10806012545863,
+    46.97797356828194
+  ],
+  "age_top_powers": [
+    0.40030466454609304,
+    0.19109295781406463,
+    0.07058880031049847,
+    0.05037580441184707,
+    0.04000752773441505
+  ],
+  "depth_period_converted_to_age_mean_lsr_ka": [
+    106.51667392185695,
+    39.714244396965356,
+    63.11350745312009,
+    45.91946973603265,
+    77.65135266549264
+  ],
+  "depth_period_converted_to_age_local_lsr_ka": [
+    75.8657417352492,
+    47.851556913714695,
+    33.30803757345809,
+    55.32821165015712,
+    55.306622426406555
+  ],
+  "observed_max_power_depth": 0.4268021258354149,
+  "observed_max_power_age": 0.40030466454609304,
+  "null_p95_depth": 0.14744835642808501,
+  "null_p95_age": 0.1447876173596929,
+  "empirical_p_depth": 0.0033222591362126247,
+  "empirical_p_age": 0.0033222591362126247,
+  "fitted_ar1_rho": 0.7882364444808961,
+  "dominant_periodicity_present_in": "both",
+  "explanation": "The age coordinates are derived from depth by a depth-age model, so the age axis is a non-linear warping of the depth axis; a spectral peak can therefore be proxy-borne, warping-borne or red-noise. Both periodograms are computed on the observed irregular axes with a vectorised Lomb-Scargle that reproduces scipy.signal.lombscargle(precenter=True, normalize=True) to <1e-12. The depth axis is nearly uniform (median step 0.0100 m) while the age axis is strongly irregular (median step 0.460 ka) and the local sedimentation rate varies from 0.0040 to 0.0500 m/ka around the 0.01759 m/ka record mean, so equivalent periods map between the domains with a factor that is not constant. The decisive raw frequency coverage differs sharply: about 124 Rayleigh resolution elements are spanned by the 0.05-6.0 m depth scan versus only 8 by the 40-400 ka age scan. The realised AR(1) null maxima nevertheless come out almost equal (p95 0.147 vs 0.145) because the lag-1 correlation is very high per step, so the effective number of independent frequencies is far below the Rayleigh count in both domains and the nulls are directly comparable. Observed maximum power is 0.4268 in depth (null p95 0.1474, empirical p=0.003) and 0.4003 in age (null p95 0.1448, empirical p=0.003). The dominant depth period 1.874 m maps onto the dominant age period 108.3 ka essentially exactly under the record-mean sedimentation rate (106.5 ka, ratio 0.984), whereas the local sedimentation rate at the localised peak depth (2.85 m, where the band-limited power is maximal) gives 75.9 ka (ratio 0.701); this difference is itself the signature of the depth-age warping. The second depth peak (0.699 m) likewise maps to 39.7 ka under the mean rate against an age peak at 40.5 ka. Verdict: the dominant periodicity is present in both. All p-values come from AR(1) Cholesky surrogates that preserve the observed lag-1 autocorrelation (rho=0.788 per median step) and the observed sd on the same irregular axis, so no row is treated as an independent replicate; the surrogate p-values are conservative with respect to residual sampling uncertainty in rho because the null maximum is used.",
+  "n_rows_used": 593,
+  "n_surrogates": 300,
+  "scan_depth_m": [
+    0.05,
+    6.0
+  ],
+  "scan_age_ka": [
+    40.0,
+    400.0
+  ],
+  "frequency_grid_points": 4000,
+  "median_step_m": 0.010000000000000009,
+  "median_step_ka": 0.45999999999997954,
+  "mean_sedimentation_rate_m_per_ka": 0.01759160540934852,
+  "local_sedimentation_rate_min_m_per_ka": 0.003952569169960344,
+  "local_sedimentation_rate_max_m_per_ka": 0.05000000000000071,
+  "local_sedimentation_rate_q10_m_per_ka": 0.009900990099009943,
+  "local_sedimentation_rate_q90_m_per_ka": 0.04085034013605302,
+  "fitted_ar1_rho_depth": 0.7882364444808961,
+  "fitted_ar1_rho_age": 0.7882364444808961,
+  "detrended_sd": 0.3958629377437063,
+  "n_independent_freq_depth": 124.35499999999999,
+  "n_independent_freq_age": 8.01945,
+  "rayleigh_period_depth_scan_m": 6.27,
+  "null_mean_max_power_depth": 0.1005203563959739,
+  "null_mean_max_power_age": 0.0822526267346416,
+  "empirical_p_depth_dominant_peak": 0.0033222591362126247,
+  "empirical_p_age_dominant_peak": 0.0033222591362126247,
+  "depth_peak_localisation_m": [
+    2.85,
+    4.73,
+    4.08,
+    4.68,
+    2.84
+  ],
+  "depth_peak_local_lsr_m_per_ka": [
+    0.024698885877747045,
+    0.014600095830144433,
+    0.033333333333333215,
+    0.014600095830144433,
+    0.024698885877747934
+  ],
+  "depth_peak_localisation_at_record_edge": [
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "dominant_depth_peak_converted_ka_local": 75.8657417352492,
+  "dominant_age_peak_ka": 108.28594638505278,
+  "converted_over_age_peak_ratio": 0.7006056119736818,
+  "ls_validation_max_abs_diff_vs_scipy": 1.1657341758564144e-15,
+  "simulation_seed": 20220101,
+  "analysis_unit_note": "Blocks, not rows: every p-value comes from AR(1) surrogates fitted to the observed lag-1 autocorrelation and sampled on the observed irregular axis.",
+  "lsr_mean_only_sensitivity": {
+    "local_lsr_at_record_midpoint_m_per_ka": 0.013246194957592383,
+    "record_midpoint_depth_m": 3.16,
+    "dominant_peak_ka_using_midpoint_lsr": 141.45943821214385,
+    "local_lsr_spread_factor": 4.125884353741338,
+    "median_local_lsr_at_peaks_m_per_ka": 0.024698885877747045,
+    "dominant_peak_ka_using_median_peak_local_lsr": 75.8657417352492
+  }
+}

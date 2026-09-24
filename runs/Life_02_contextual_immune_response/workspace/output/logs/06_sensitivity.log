@@ -1,0 +1,160 @@
+==============================================================================
+Sensitivity analysis: resolution limits of the negative / boundary results
+==============================================================================
+alpha = 0.05 two-sided, power = 0.8
+critical values: t(.975,df=3) = 3.182446, t(.80,df=3) = 0.978472
+                  t(.975,df=6) = 2.446912, t(.80,df=6) = 0.905703
+                  t(.975,df=54) = 2.004879, t(.80,df=54) = 0.848328
+                  chi2(.95,df=2) = 5.991465, chi2(.95,df=4) = 9.487729
+                  q(.95,k=3,df=6) = 4.339195, q(.95,k=3,df=54) = 3.408232
+
+==============================================================================
+S1  MDE for the paired per-time-point contrast (n = 4 pairs)
+==============================================================================
+design: 28 pairs, 4 replicates per role x time point, times = [3.0, 6.0, 9.0, 12.0, 15.0, 18.0, 21.0]
+formula (closed form): MDE = (t_crit + t_beta) * SD / sqrt(n)
+formula (exact)      : solve delta such that power(delta) = P(T' > t_crit | df=n-1, ncp=delta*sqrt(n)/SD) + P(T' < -t_crit | df=n-1, ncp=delta*sqrt(n)/SD) = 0.80
+   t=    3  diff = -0.517 pp  SD =   5.3258  MDE(closed) =  11.0800 pp  MDE(nct) =  11.3330 pp  paired t = -0.194 (p = 0.8585)
+   t=    6  diff = -0.522 pp  SD =   5.7810  MDE(closed) =  12.0270 pp  MDE(nct) =  12.3016 pp  paired t = -0.181 (p = 0.8683)
+   t=    9  diff = +0.996 pp  SD =   5.4368  MDE(closed) =  11.3110 pp  MDE(nct) =  11.5692 pp  paired t = +0.366 (p = 0.7385)
+   t=   12  diff = -1.083 pp  SD =   9.9782  MDE(closed) =  20.7592 pp  MDE(nct) =  21.2331 pp  paired t = -0.217 (p = 0.8421)
+   t=   15  diff = +0.196 pp  SD =  10.9109  MDE(closed) =  22.6998 pp  MDE(nct) =  23.2179 pp  paired t = +0.036 (p = 0.9736)
+   t=   18  diff = -2.382 pp  SD =   6.3228  MDE(closed) =  13.1543 pp  MDE(nct) =  13.4545 pp  paired t = -0.754 (p = 0.5059)
+   t=   21  diff = -3.057 pp  SD =   8.3255  MDE(closed) =  17.3208 pp  MDE(nct) =  17.7162 pp  paired t = -0.734 (p = 0.5159)
+
+   observed paired SD: median = 6.3228 pp; pooled RMS = 7.7390 pp (sqrt of the mean of the 7 per-time-point variances)
+   MDE computed from the pooled SD: 16.1007 pp
+   median MDE across the 7 time points: closed form = 13.1543 pp; noncentral t = 13.4545 pp (noncentral-t inversion available for 7/7 time points)
+   MDE range: 11.0800 to 22.6998 pp
+   time points whose MDE is at or below 3 pp: 0/7
+
+   STATEMENT: differences smaller than 13.15 pp (median MDE; range 11.08-22.70 pp) could not have been detected by this paired design at 80% power and alpha = 0.05 two-sided with n = 4 pairs.
+
+   late-time contrast t=21: observed difference = -3.057 pp against an MDE of 17.321 pp -> observed effect is INSIDE (below) the resolution floor
+   power of the t=21 test at the observed effect size: 0.0830
+
+==============================================================================
+S2  TOST equivalence at each time point
+==============================================================================
+formula: two one-sided t tests at alpha each: p_lower = P(T_{n-1} >= (mean - low)/SE), p_upper = P(T_{n-1} <= (mean - high)/SE); TOST p = max(p_lower, p_upper); equivalence declared iff TOST p < alpha (equivalently the 90% CI lies inside [-margin, +margin])
+margins reported: (i) margin = observed paired SD at that time point
+  (margin = one SD, derived from the data), (ii) margin = 3 pp (fixed scale).
+   t=    3  diff = -0.517 pp  90% CI [-8.991, +7.958] (half-width 8.474)
+          margin = 1 SD (5.326 pp): TOST p = 0.0843 equivalent = False   | margin = 3 pp: TOST p = 0.2099 equivalent = False
+   t=    6  diff = -0.522 pp  90% CI [-9.721, +8.677] (half-width 9.199)
+          margin = 1 SD (5.781 pp): TOST p = 0.0832 equivalent = False   | margin = 3 pp: TOST p = 0.2271 equivalent = False
+   t=    9  diff = +0.996 pp  90% CI [-7.655, +9.647] (half-width 8.651)
+          margin = 1 SD (5.437 pp): TOST p = 0.1004 equivalent = False   | margin = 3 pp: TOST p = 0.2572 equivalent = False
+   t=   12  diff = -1.083 pp  90% CI [-16.960, +14.795] (half-width 15.878)
+          margin = 1 SD (9.978 pp): TOST p = 0.0863 equivalent = False   | margin = 3 pp: TOST p = 0.3632 equivalent = False
+   t=   15  diff = +0.196 pp  90% CI [-17.166, +17.558] (half-width 17.362)
+          margin = 1 SD (10.911 pp): TOST p = 0.0721 equivalent = False   | margin = 3 pp: TOST p = 0.3214 equivalent = False
+   t=   18  diff = -2.382 pp  90% CI [-12.443, +7.679] (half-width 10.061)
+          margin = 1 SD (6.323 pp): TOST p = 0.1505 equivalent = False   | margin = 3 pp: TOST p = 0.4288 equivalent = False
+   t=   21  diff = -3.057 pp  90% CI [-16.305, +10.190] (half-width 13.248)
+          margin = 1 SD (8.325 pp): TOST p = 0.1475 equivalent = False   | margin = 3 pp: TOST p = 0.5051 equivalent = False
+
+   equivalent within the 1-SD margin at 0/7 time points; equivalent within the +/-3 pp margin at 0/7 time points
+   smallest TOST p: 0.0721 (1-SD margin), 0.2099 (3 pp margin)
+   structural reason for the 1-SD margin: with n = 4 the 90% CI half-width is t(.95,3)*SD/2 = 1.1767 * SD > 1 * SD, so the CI can never fit inside a one-SD margin - equivalence within one SD is unreachable by construction at this n.
+   INTERPRETATION: failing to declare equivalence is NOT evidence of a difference. Every paired t is non-significant (all p >= 0.506); the design is too imprecise to certify either a difference or equivalence at any margin at or below one SD / 3 pp.
+
+==============================================================================
+S3  Assays needed for the compartment fold-change ordering to reach p < 0.05
+==============================================================================
+formula: S_obs(k) = W_obs * k^2 * (m^3 - m) / 12; required k = smallest k with S_obs(k) >= S_crit(k), where S_crit(k) is the permutation-null 5% critical value for k raters on m items
+exact permutation null table built for k = 2..60, m = 3 (5.55 s); S_crit(k=3) = 18.0, S_crit(k=5) = 32.0, S_crit(k=27) = 162.0, chi2-approx S_crit(k=3) = 17.97
+
+   endpoint_count: observed W = 0.7778 (S = 14.0, chi2 = 4.6667, p_chi2 = 0.0970, exact p = 0.194444)
+      observed per-assay rank vectors (1 = lowest fold change): assay_1:(3, 2, 1); assay_2:(3, 1, 2); assay_3:(3, 2, 1)
+      exact p at perfect concordance (W = 1, k = 3): 0.027778
+      assays needed, chi-square approximation: 4 (p there = 0.0446)
+      assays needed, exact permutation null: 5 (p there = 0.0085)
+      bootstrap over observed orderings (2000 draws, cap k = 40): min = 3, median = 4.0, p90 = 5.0, cap not reached in 0/2000 draws
+
+   endpoint_fraction: observed W = 0.1111 (S = 2.0, chi2 = 0.6667, p_chi2 = 0.7165, exact p = 0.944444)
+      observed per-assay rank vectors (1 = lowest fold change): assay_1:(3, 1, 2); assay_2:(3, 2, 1); assay_3:(1, 2, 3)
+      exact p at perfect concordance (W = 1, k = 3): 0.027778
+      assays needed, chi-square approximation: 27 (p there = 0.0498)
+      assays needed, exact permutation null: 27 (p there = 0.0478)
+      bootstrap over observed orderings (2000 draws, cap k = 40): min = 3, median = 14.0, p90 = 32.0, cap not reached in 198/2000 draws
+
+==============================================================================
+S4  Boundary of the intervention ordering: which orderings still give p < 0.05?
+==============================================================================
+(exact null table for k = 3, m = 5 built in 1.11 s)
+observed: 3 assays x 5 settings, S = 86.0, W = 0.9556
+   chi2 = 11.4667, df = 4, p_chi2 = 0.0218 -> p < 0.05: True
+   Friedman p = 0.0150
+   exact permutation p = 0.000903 -> p < 0.05: True
+   rank matrix (1 = lowest response):
+      assay_1: 1=1  2=5  3=3  4=2  5=4
+      assay_2: 1=1  2=4  3=3  4=2  5=5
+      assay_3: 1=1  2=5  3=3  4=2  5=4
+
+   A. all 30 single transpositions in one assay, ordered by S:
+      swap intervention_setting_2 <-> intervention_setting_5 in assay_2 S =  90.0  W = 1.0000  p_chi2 = 0.0174 [sig]  p_exact = 0.000069 [sig]
+      swap intervention_setting_2 <-> intervention_setting_5 in assay_3 S =  86.0  W = 0.9556  p_chi2 = 0.0218 [sig]  p_exact = 0.000903 [sig]
+      swap intervention_setting_2 <-> intervention_setting_5 in assay_1 S =  86.0  W = 0.9556  p_chi2 = 0.0218 [sig]  p_exact = 0.000903 [sig]
+      swap intervention_setting_3 <-> intervention_setting_4 in assay_2 S =  82.0  W = 0.9111  p_chi2 = 0.0273 [sig]  p_exact = 0.002778 [sig]
+      swap intervention_setting_1 <-> intervention_setting_4 in assay_2 S =  82.0  W = 0.9111  p_chi2 = 0.0273 [sig]  p_exact = 0.002778 [sig]
+      swap intervention_setting_3 <-> intervention_setting_4 in assay_1 S =  82.0  W = 0.9111  p_chi2 = 0.0273 [sig]  p_exact = 0.002778 [sig]
+      swap intervention_setting_1 <-> intervention_setting_4 in assay_3 S =  82.0  W = 0.9111  p_chi2 = 0.0273 [sig]  p_exact = 0.002778 [sig]
+      swap intervention_setting_3 <-> intervention_setting_4 in assay_3 S =  82.0  W = 0.9111  p_chi2 = 0.0273 [sig]  p_exact = 0.002778 [sig]
+      swap intervention_setting_1 <-> intervention_setting_4 in assay_1 S =  82.0  W = 0.9111  p_chi2 = 0.0273 [sig]  p_exact = 0.002778 [sig]
+      swap intervention_setting_3 <-> intervention_setting_5 in assay_1 S =  80.0  W = 0.8889  p_chi2 = 0.0306 [sig]  p_exact = 0.004028 [sig]
+      swap intervention_setting_3 <-> intervention_setting_5 in assay_3 S =  80.0  W = 0.8889  p_chi2 = 0.0306 [sig]  p_exact = 0.004028 [sig]
+      swap intervention_setting_2 <-> intervention_setting_3 in assay_2 S =  78.0  W = 0.8667  p_chi2 = 0.0342 [sig]  p_exact = 0.005278 [sig]
+      swap intervention_setting_3 <-> intervention_setting_5 in assay_2 S =  78.0  W = 0.8667  p_chi2 = 0.0342 [sig]  p_exact = 0.005278 [sig]
+      swap intervention_setting_2 <-> intervention_setting_3 in assay_1 S =  74.0  W = 0.8222  p_chi2 = 0.0427 [sig]  p_exact = 0.015069 [sig]
+      swap intervention_setting_2 <-> intervention_setting_3 in assay_3 S =  74.0  W = 0.8222  p_chi2 = 0.0427 [sig]  p_exact = 0.015069 [sig]
+      swap intervention_setting_1 <-> intervention_setting_3 in assay_3 S =  70.0  W = 0.7778  p_chi2 = 0.0533 [ns ]  p_exact = 0.025903 [sig]
+      swap intervention_setting_1 <-> intervention_setting_3 in assay_2 S =  70.0  W = 0.7778  p_chi2 = 0.0533 [ns ]  p_exact = 0.025903 [sig]
+      swap intervention_setting_1 <-> intervention_setting_3 in assay_1 S =  70.0  W = 0.7778  p_chi2 = 0.0533 [ns ]  p_exact = 0.025903 [sig]
+      swap intervention_setting_4 <-> intervention_setting_5 in assay_1 S =  66.0  W = 0.7333  p_chi2 = 0.0663 [ns ]  p_exact = 0.037569 [sig]
+      swap intervention_setting_4 <-> intervention_setting_5 in assay_3 S =  66.0  W = 0.7333  p_chi2 = 0.0663 [ns ]  p_exact = 0.037569 [sig]
+      swap intervention_setting_2 <-> intervention_setting_4 in assay_2 S =  62.0  W = 0.6889  p_chi2 = 0.0823 [ns ]  p_exact = 0.055903 [ns ]
+      swap intervention_setting_4 <-> intervention_setting_5 in assay_2 S =  62.0  W = 0.6889  p_chi2 = 0.0823 [ns ]  p_exact = 0.055903 [ns ]
+      swap intervention_setting_2 <-> intervention_setting_4 in assay_3 S =  56.0  W = 0.6222  p_chi2 = 0.1132 [ns ]  p_exact = 0.095903 [ns ]
+      swap intervention_setting_2 <-> intervention_setting_4 in assay_1 S =  56.0  W = 0.6222  p_chi2 = 0.1132 [ns ]  p_exact = 0.095903 [ns ]
+      swap intervention_setting_1 <-> intervention_setting_5 in assay_3 S =  44.0  W = 0.4889  p_chi2 = 0.2093 [ns ]  p_exact = 0.236042 [ns ]
+      swap intervention_setting_1 <-> intervention_setting_5 in assay_1 S =  44.0  W = 0.4889  p_chi2 = 0.2093 [ns ]  p_exact = 0.236042 [ns ]
+      swap intervention_setting_1 <-> intervention_setting_5 in assay_2 S =  38.0  W = 0.4222  p_chi2 = 0.2805 [ns ]  p_exact = 0.326042 [ns ]
+      swap intervention_setting_1 <-> intervention_setting_2 in assay_2 S =  38.0  W = 0.4222  p_chi2 = 0.2805 [ns ]  p_exact = 0.326042 [ns ]
+      swap intervention_setting_1 <-> intervention_setting_2 in assay_3 S =  30.0  W = 0.3333  p_chi2 = 0.4060 [ns ]  p_exact = 0.475208 [ns ]
+      swap intervention_setting_1 <-> intervention_setting_2 in assay_1 S =  30.0  W = 0.3333  p_chi2 = 0.4060 [ns ]  p_exact = 0.475208 [ns ]
+   -> 15/30 single swaps keep p_chi2 < 0.05; 20/30 keep p_exact < 0.05
+   -> chi-square screen boundary: the largest S that FAILS p_chi2 < 0.05 is 70.0 (p_chi2 = 0.0533); the smallest S that PASSES is 74.0 (p_chi2 = 0.0427)
+   -> exact-null boundary: the largest S that FAILS exact p < 0.05 is 62.0; exact S_crit(k=3, m=5) = 64.0
+
+   B. plausible alternative orderings:
+      observed                                                   S =  86.0  W = 0.9556  p_chi2 = 0.0218 [sig]  p_exact = 0.000903 [sig]
+      perfect concordance (all assays = assay_1 order)           S =  90.0  W = 1.0000  p_chi2 = 0.0174 [sig]  p_exact = 0.000069 [sig]
+      swap settings 2<->5 in assay_1 only                        S =  86.0  W = 0.9556  p_chi2 = 0.0218 [sig]  p_exact = 0.000903 [sig]
+      swap settings 2<->5 in assay_2 only                        S =  90.0  W = 1.0000  p_chi2 = 0.0174 [sig]  p_exact = 0.000069 [sig]
+      swap settings 2<->5 in assay_3 only                        S =  86.0  W = 0.9556  p_chi2 = 0.0218 [sig]  p_exact = 0.000903 [sig]
+      assay_1 adopts the assay_2 ordering                        S =  86.0  W = 0.9556  p_chi2 = 0.0218 [sig]  p_exact = 0.000903 [sig]
+      assay_2 adopts the assay_2 ordering                        S =  86.0  W = 0.9556  p_chi2 = 0.0218 [sig]  p_exact = 0.000903 [sig]
+      assay_3 adopts the assay_2 ordering                        S =  86.0  W = 0.9556  p_chi2 = 0.0218 [sig]  p_exact = 0.000903 [sig]
+      assay_1 fully reversed                                     S =  14.0  W = 0.1556  p_chi2 = 0.7603 [ns ]  p_exact = 0.831181 [ns ]
+      assay_2 fully reversed                                     S =  14.0  W = 0.1556  p_chi2 = 0.7603 [ns ]  p_exact = 0.831181 [ns ]
+      assay_3 fully reversed                                     S =  14.0  W = 0.1556  p_chi2 = 0.7603 [ns ]  p_exact = 0.831181 [ns ]
+      assay_2 and assay_3 orderings exchanged                    S =  86.0  W = 0.9556  p_chi2 = 0.0218 [sig]  p_exact = 0.000903 [sig]
+
+   summary: 9/12 scenarios keep p_chi2 < 0.05; 9/12 keep p_exact < 0.05
+   the chi-square approximation is anti-conservative for this design (observed W = 0.9556: p_chi2 = 0.0218 vs exact p = 0.000903); the exact null therefore keeps significance for more perturbations of the ordering than the chi-square screen does
+
+==============================================================================
+S5  Within-cell replicate resolution of log2 fold change (compartment file)
+==============================================================================
+formula: MDE_pair = q_crit(0.05, k_groups, df_error) * SD_within / sqrt(n_per_group)
+   design: 18 cells, 4 replicates per cell, df_within = 54
+   within-cell SD of log2 fold change: pooled RMS = 0.7107 log2 units, median = 0.6836 (range 0.1471 - 1.2027)
+   -> geometric SD of the per-replicate fold change = 2^0.7107 = 1.6366x
+   chi-square 95% CI on that SD (df = 54): 0.5983 - 0.8755
+   MDE between two compartment means, Tukey-style (k = 3 groups, n = 4, df_error = 6): q * SD / sqrt(n) = 4.3392 * 0.7107 / 2.0000 = 1.5420 log2 (= 2.9119x fold-change ratio)
+   MDE between two compartment means, two-sample t (df = 6): 1.6849 log2 (= 3.2151x)
+   MDE between two compartment means, Tukey with pooled df = 54: 1.2111 log2 (= 2.3152x); two-sample t with df = 54: 1.4339 log2 (= 2.7017x)
+   MDE if the same biological replicate could be paired across compartments (upper bound using SD_gap = sqrt(2)*SD_within): 2.0911 log2 (= 4.2607x)
+   observed compartment-level log2FC spread (core analysis): compartment_1 = 1.0386, compartment_2 = 0.8137, compartment_3 = 0.7596; span = 0.2790 log2 = 1.2134x
+   -> the reliable floor (1.542 log2 = 2.912x) is much larger than the entire observed compartment span (0.279 log2 = 1.213x); every bottom-two ordering gap from the core results (0.0048 - 0.3370 log2) is far below that floor, so the ordering is being read off differences the per-cell replicates cannot resolve

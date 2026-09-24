@@ -1,0 +1,37 @@
+step6_verification: adversarial recomputation, independent of output/analysis/common.py
+loaded replicated_response_panel.tsv: shape=(8232, 6) sha256=410e51b559eb4d3416f131c2eb4d8f75995ff00d3b76af7b47a0ee8b1220533d
+loaded independent_response_panel.tsv: shape=(4116, 6) sha256=f85f73bbbf15535425752c6ca2ae65e523c8dd8c06a2d5de11bf1986aaa884a1
+loaded independent_fit_error.tsv: shape=(21, 3) sha256=57b739c708fb384f7a661d85e62b67f6c5f333cab170214d6f972ca067d2564a
+rep: rows=8232 cells=2744 replicate counts min=1 max=1 bins=8 chans=7
+ind: rows=4116 cells=1372 replicate counts min=1 max=1 bins=7 chans=4
+A: 49x7 log rank1 R2=0.954983 rank2 R2=0.990196 (spectrum vs reconstruction agree=True)
+A variants: uncentred rank1=0.9975 ; 392x7 rank1=0.9556 rank2=0.9829 ; per-channel z rank1=0.5681
+B: mean a1 slope (logged, by-a2 averaged) ch0=0.016601 ch6=0.484588 ratio=29.1899
+B variants: pooled-cell ratio=29.1899 ; controlling a2+bin ratio=29.1899 ; per-a2 row range=[5.707, 43.807]
+C: shared cells=1372 ; pearson(log)=+0.016768 pearson(linear)=-0.010949 spearman(log)=+0.032428 perm p=0.5385
+C scale context: rep log sd=0.3753 ind log sd=1.3466 ; rep log mean=9.5669 ind log mean=10.2179
+D: shared cells=1372 ; pearson(CV)=0.382244 perm p=0.00005 ; mean CV rep=0.2904 ind=0.1898
+E: bin0 mean=11.117135 ; quadratic(1-7) prediction at bin0=10.168933 ; excess=+0.948202 (x2.5811)
+E bin means: bin0=11.1171, bin1=10.1630, bin2=10.1932, bin3=10.1958, bin4=10.2119, bin5=10.3990, bin6=10.5177, bin7=10.5608
+R1 i(per-channel centred): pearson=+0.069093 perm p=0.01135 (null sd=0.0273) material_positive=False
+R1 ii(global z): pearson=+0.016768 perm p=0.53727 (null sd=0.0271) material_positive=False
+R1 ii(channel z): pearson=+0.100995 perm p=0.00010 (null sd=0.0268) material_positive=True
+R1 iii(pooled ranks): pearson=+0.032428 perm p=0.23129 (null sd=0.0271) material_positive=False
+R1 iii(within-channel ranks): pearson=+0.115445 perm p=0.00010 (null sd=0.0270) material_positive=True
+R1 iv(replicate deviations): pearson=-0.091698 perm p=0.00005 (null sd=0.0157) material_positive=False
+R1 v(ind a1a2 removed, both z): pearson=-0.104513 perm p=0.00015 (null sd=0.0270) material_positive=False
+R1 vi(linear control, same treatment): pearson=-0.078584 perm p=0.00965 (null sd=0.0271) material_positive=False
+R1 vii: (a1,a2) marginal 49-point pearson=+0.2862 ; (a1,a2,chan) 196-point pearson=+0.0814
+R1 summary: any variant with substantial positive correlation: True ['ii_alt_variance_standardised_within_channel', 'iii_alt_rank_within_channel']
+R2 linear sd: pearson=+0.110822 perm p=0.00170 (null sd=0.0269)
+R2 log-space sd: pearson=+0.369200 perm p=0.00005 (null sd=0.0269)
+R2 log cv: pearson=+0.316393 perm p=0.00005 (null sd=0.0270)
+R2 cv minus (a1,a2) means: pearson=+0.199349 perm p=0.00005 (null sd=0.0270)
+R2 linear sd minus (a1,a2) means: pearson=-0.048231 perm p=0.06820 (null sd=0.0267)
+R2 cv minus (a1,a2,chan) means: pearson=+0.181708 perm p=0.00005 (null sd=0.0270)
+R2 linear sd minus (a1,a2,chan) means: pearson=-0.082054 perm p=0.00830 (null sd=0.0270)
+R2 summary: {"cv_on_original_scale_pearson": 0.3822437330306706, "linear_sd_pearson": 0.11082180957218024, "log_space_sd_pearson": 0.3691998828538102, "cv_after_a1a2_removal": 0.19934890374436456, "linear_sd_after_a1a2_removal": -0.04823081737425634, "cv_survives_a1a2_removal": true, "linear_sd_survives_a1a2_removal": false, "sharing_survives_on_linear_sd_scale": false, "material_threshold": "|r| >= 0.10 with permutation p < 0.001", "sharing_present_at_at_least_one_dispersion_scale": true}
+R3: excess range across 11 trend/comparison variants = [+0.2287, +1.1552]
+R3 all estimates: deg1_bins1_7=+1.0891, deg1_bins1_6=+1.0777, deg1_bins2_7=+1.1552, deg2_bins1_7=+0.9482, deg2_bins1_6=+0.8811, deg2_bins2_7=+0.9656, deg3_bins1_7=+0.8183, deg3_bins1_6=+0.9437, deg3_bins2_7=+0.2287, direct_mean_bins1_2=+0.9390, direct_mean_bins1_3=+0.9331
+R3 per-cell fraction positive: deg2_bins1_7=1.00, deg2_bins2_7=0.96, deg1_bins1_7=1.00, mean_bins1_2=1.00
+R3 supplementary (independent panel, bins 0-6): quadratic excess=-0.4539 ; linear=+0.1417 ; direct bins1-2=-0.6455

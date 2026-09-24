@@ -1,0 +1,7 @@
+orientation_series_id,sheet,n_concat_kept,n_norm,sum_recon,sum_norm,sum_all_55,max_abs_dx,max_abs_dy,exact,dropped_points
+orientation_series_1,Sheet_009,52,52,11240.0,11240.0,-385.0,0.0,0.0,True,"[('group_a (-35<s<-10), channel_l', -34.0, 0.0), ('group_a(-10<s<0), channel_l', -9.0, 212.0), ('group_a(0<s<20), channel_l', 1.0, 0.0)]"
+orientation_series_2,Sheet_010,52,52,15551.0,15551.0,-385.0,0.0,0.0,True,"[('group_a (-35<s<-10), channel_r', -34.0, 0.0), ('group_a(-10<s<0), channel_r', -9.0, 244.0), ('group_a(0<s<20), channel_r', 1.0, 0.0)]"
+orientation_series_3,Sheet_011,52,52,1151.0,1151.0,-385.0,0.0,0.0,True,"[('group_b (-35<s<-10), channel_l', -34.0, 0.0), ('group_b(-10<s<0), channel_l', -9.0, 9.0), ('group_b(0<s<20), channel_l', 1.0, 0.0)]"
+orientation_series_4,Sheet_012,52,52,444.0,444.0,-385.0,0.0,0.0,True,"[('group_b (-35<s<-10), channel_r', -34.0, 0.0), ('group_b(-10<s<0), channel_r', -9.0, 0.0), ('group_b(0<s<20), channel_r', 1.0, 0.0)]"
+orientation_series_5,Sheet_013,52,52,1503.0,1503.0,-385.0,0.0,0.0,True,"[('group_c (-35<s<-10), channel_l', -34.0, 0.0), ('group_c(-10<s<0), channel_l', -9.0, 18.0), ('group_c(0<s<20), channel_l', 1.0, 0.0)]"
+orientation_series_6,Sheet_014,52,52,2843.0,2843.0,-385.0,0.0,0.0,True,"[('group_c (-35<s<-10), channel_r', -34.0, 0.0), ('group_c(-10<s<0), channel_r', -9.0, 22.0), ('group_c(0<s<20), channel_r', 1.0, 0.0)]"

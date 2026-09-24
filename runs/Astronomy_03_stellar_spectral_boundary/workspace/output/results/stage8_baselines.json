@@ -1,0 +1,112 @@
+{
+  "planck_baseline": {
+    "per_slice_mid_composition": {
+      "T5300_M+0.00": {
+        "full": {
+          "max_over_min": 1720.2444224116507,
+          "rel_std": 0.8536877866661507
+        },
+        "179-250nm": {
+          "max_over_min": 24.69159028853672,
+          "rel_std": 0.8169898855671031
+        },
+        "250-400nm": {
+          "max_over_min": 47.34245127386019,
+          "rel_std": 1.0008554580360318
+        },
+        "400-850nm": {
+          "max_over_min": 2.570613384789882,
+          "rel_std": 0.1902781135956005
+        },
+        "500-850nm": {
+          "max_over_min": 1.6662052768569602,
+          "rel_std": 0.12218181980919994
+        }
+      },
+      "T5800_M+0.00": {
+        "full": {
+          "max_over_min": 530.1337662905863,
+          "rel_std": 0.8165988548395301
+        },
+        "179-250nm": {
+          "max_over_min": 19.195162227579058,
+          "rel_std": 0.746558018457811
+        },
+        "250-400nm": {
+          "max_over_min": 28.290016970217923,
+          "rel_std": 0.9350109431767164
+        },
+        "400-850nm": {
+          "max_over_min": 2.294323198728047,
+          "rel_std": 0.17738561980210926
+        },
+        "500-850nm": {
+          "max_over_min": 1.586120818445787,
+          "rel_std": 0.12133074438438193
+        }
+      },
+      "T6300_M+0.00": {
+        "full": {
+          "max_over_min": 129.51879358072165,
+          "rel_std": 0.7842452782208232
+        },
+        "179-250nm": {
+          "max_over_min": 8.22335721454339,
+          "rel_std": 0.4486692695348572
+        },
+        "250-400nm": {
+          "max_over_min": 20.597364705187214,
+          "rel_std": 0.9044235776788644
+        },
+        "400-850nm": {
+          "max_over_min": 1.9699744869577533,
+          "rel_std": 0.16572784902583285
+        },
+        "500-850nm": {
+          "max_over_min": 1.537049480524731,
+          "rel_std": 0.12046531893635559
+        }
+      }
+    },
+    "summary_mid_composition": {
+      "full_range_max_over_min": {
+        "T5300": 1720.2444224116507,
+        "T5800": 530.1337662905863,
+        "T6300": 129.51879358072165
+      },
+      "optical_only_max_over_min": {
+        "T5300": 2.570613384789882,
+        "T5800": 2.294323198728047,
+        "T6300": 1.9699744869577533
+      },
+      "optical_only_rel_std": {
+        "T5300": 0.1902781135956005,
+        "T5800": 0.17738561980210926,
+        "T6300": 0.16572784902583285
+      }
+    },
+    "verdict": "A single-temperature Planck curve does not describe any spectrum. The flux-to-Planck ratio varies by a factor of 130-1720 across 179-850 nm, and even restricted to 400-850 nm it still varies by 2.0-2.6x. Because the table's absolute unit is arbitrary, this is a statement about spectral SHAPE: the deviation from a pure continuum is far larger than any plausible scaling ambiguity, so the spectra carry strong non-continuum (line-blanketing) structure. This is a null model the data reject, not a physical measurement."
+  },
+  "random_point_validation": {
+    "n_draws": 300,
+    "method": "leave-out mean absolute error in log flux, predicting held-out wavelengths by linear interpolation from the retained points",
+    "by_hold_out_size": {
+      "hold_out_20_points": {
+        "random_mean_abs_log_err": 0.11070922738183553,
+        "contiguous_block_mean_abs_log_err": 0.27852095307379776,
+        "ratio_block_over_random": 2.515788066275456
+      },
+      "hold_out_40_points": {
+        "random_mean_abs_log_err": 0.11128305924884171,
+        "contiguous_block_mean_abs_log_err": 0.4463542362129385,
+        "ratio_block_over_random": 4.010980999496421
+      },
+      "hold_out_80_points": {
+        "random_mean_abs_log_err": 0.1194040133450534,
+        "contiguous_block_mean_abs_log_err": 0.9205138832318712,
+        "ratio_block_over_random": 7.709237381927629
+      }
+    },
+    "verdict": "Contiguous-block hold-out produces 2.5-7.7x larger prediction error than random hold-out of the same size, and the ratio grows with block size. Random hold-out therefore fails to remove information -- neighbouring wavelengths interpolate across every gap -- which is exactly the mechanism `DATA_GUIDE.md` warns about. Every robustness check in this report consequently holds out contiguous wavelength bands or whole temperature slices, never random points."
+  }
+}

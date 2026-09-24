@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "EarthScience_01_glacial_fluvial_erosion",
+  "model": "deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "19b4bc343a18496f58232d1e173af34c8dbd7580467cbf68b82a5a3cb5f28ec1",
+  "workspace_input_file_count": 28,
+  "workspace_input_bytes": 6233182,
+  "output_tree_sha256": "bdb52060d41f2b27518b2f7af5dc7bc6eac82c766a0db495a1ba59a937fe28be",
+  "output_file_count": 147,
+  "output_bytes": 6709042
+}

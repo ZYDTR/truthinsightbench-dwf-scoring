@@ -1,0 +1,280 @@
+=== POLC s01: polarization-channel shape contrast ===
+[verify] workbook blocks vs normalized views, elementwise, FILE ORDER: max |dy| = 0 (counts, exact 0), max |dx| = 4.97e-14 (bin centres, float-write rounding); identical within 1e-9 = True; all 12 series' totals match = True
+
+=== 1. weighted statistics on the ORIGINAL published grids ===
+            group regime   channel     sheet  n_source_blocks  total_events  n_events  n_bins  n_occupied_bins       q25    median       q75      iqr  q25_step  median_step  q75_step  median_density  iqr_density  mode_bin_center  mode_bin_count  frac_gt_10  min_center  max_center
+anonymous_group_1   fast channel_l Sheet_025                1         10560     10560      22               22  5.307227  7.010347 10.004722 4.697495  5.035100     7.105645 10.211463        6.991075     4.654038         5.035100            2251    0.259754    1.929282   27.811098
+anonymous_group_1   fast channel_r Sheet_027                1         14492     14492      21               21  5.602759  7.486996  9.635807 4.033049  5.295025     7.341941  9.388857        7.473992     4.021643         5.295025            2042    0.217637    2.224652   27.811098
+anonymous_group_1   slow channel_l Sheet_024                2           892       892      44               44  0.445578  0.966988  2.111659 1.666081  0.461986     0.966988  2.077992        0.966988     1.661041         0.360986              62    0.004484    0.158985   10.985917
+anonymous_group_1   slow channel_r Sheet_026                2          1303      1303      50               50  0.423884  0.889699  1.836732 1.412848  0.450658     0.856472  1.871007        0.906019     1.428333         0.450658              99    0.000767    0.146297   10.299575
+anonymous_group_2   fast channel_l Sheet_029                1           357       357      19               19  9.024077 10.739298 14.034046 5.009970  9.543184    10.558068 13.602721       10.680836     4.743248        10.558068              62    0.607843    4.468763   27.811098
+anonymous_group_2   fast channel_r Sheet_031                1            52        52      12               12 16.545896 20.601369 24.730017 8.184121 15.794882    19.800288 25.808396       20.175795     9.123423        25.808396               9    0.961538    7.784072   27.811098
+anonymous_group_2   slow channel_l Sheet_028                2           803       803      26               26  0.255142  0.352631  0.509275 0.254133  0.258523     0.359829  0.461135        0.327480     0.252873         0.258523             202    0.003736    0.244159   11.735270
+anonymous_group_2   slow channel_r Sheet_030                2           392       392      22               22  0.247835  0.263769  0.357696 0.109861  0.244159     0.262693  0.344958        0.263815     0.122894         0.244159             148    0.012755    0.244159   11.735270
+anonymous_group_3   fast channel_l Sheet_033                1           429       429      19               19  5.023418  6.790678 11.721764 6.698346  5.048053     6.082737 11.256156        6.563126     6.697536         5.048053              76    0.289044    4.013369   27.811098
+anonymous_group_3   fast channel_r Sheet_035                1           664       664      19               19  4.970770  6.340961  7.766241 2.795471  5.450727     6.467108  7.483488        6.366618     2.670696         6.467108             177    0.093373    3.417966   27.811098
+anonymous_group_3   slow channel_l Sheet_032                2          1092      1092      37               37  0.252207  0.323292  0.488648 0.236442  0.243917     0.260680  0.467606        0.311654     0.193686         0.243917             275    0.001832    0.243917   10.299575
+anonymous_group_3   slow channel_r Sheet_034                2          2201      2201      49               49  0.345699  0.456304  0.863531 0.517832  0.344148     0.460408  0.864662        0.444902     0.497933         0.460408             365    0.003635    0.243754   10.985917
+
+=== 1b. the slow series decomposed into its two source blocks ===
+            group   channel  block_index                 block_label  n_events   median      iqr  mode_bin_center  frac_gt_10  min_center  max_center
+anonymous_group_1 channel_l            0 group_a(-10<s<0), channel_l       790 1.070008 1.685810         0.360986    0.000000    0.158985    2.986996
+anonymous_group_1 channel_l            1  group_a(0<s<20), channel_l       102 0.457554 0.840884         0.219728    0.039216    0.219728   10.985917
+anonymous_group_1 channel_r            0 group_a(-10<s<0), channel_r      1126 0.977189 1.449369         0.450658    0.000000    0.146297    2.986996
+anonymous_group_1 channel_r            1  group_a(0<s<20), channel_r       177 0.496196 0.948351         0.190664    0.005650    0.190664   10.299575
+anonymous_group_2 channel_l            0 group_b(-10<s<0), channel_l       580 0.384827 0.235104         0.258523    0.000000    0.258523    2.588561
+anonymous_group_2 channel_l            1  group_b(0<s<20), channel_l       223 0.291161 0.132784         0.244159    0.013453    0.244159   11.735270
+anonymous_group_2 channel_r            0 group_b(-10<s<0), channel_r       155 0.317685 0.186466         0.262693    0.000000    0.262693    1.950306
+anonymous_group_2 channel_r            1  group_b(0<s<20), channel_r       237 0.287498 0.101519         0.244159    0.021097    0.244159   11.735270
+anonymous_group_3 channel_l            0 group_c(-10<s<0), channel_l       601 0.348597 0.330953         0.260680    0.000000    0.260680    2.847253
+anonymous_group_3 channel_l            1  group_c(0<s<20), channel_l       491 0.303917 0.179339         0.243917    0.004073    0.243917   10.299575
+anonymous_group_3 channel_r            0 group_c(-10<s<0), channel_r      1680 0.494402 0.665919         0.460408    0.000000    0.258281    2.986996
+anonymous_group_3 channel_r            1  group_c(0<s<20), channel_r       521 0.330900 0.229867         0.243754    0.015355    0.243754   10.985917
+
+--- anonymous_group_1 / fast: N_l=10560 N_r=14492 ratio_l/r=0.729
+    median l=7.0103 r=7.4870 diff=-0.4766 95% Poisson-noise CI [-0.5709,-0.3845]
+    density-median diff=-0.4829  step-median diff=-0.2363
+    IQR l=4.6975 r=4.0330 diff=+0.6644 CI [+0.5314,+0.7959]
+    frac>10 l=0.2598 r=0.2176 diff=+0.0421 CI [+0.0317,+0.0527]
+    TV=0.1801 noise 95% [0.1693,0.1915] null median=0.0275 p95=0.0344 p_shape=0.0000
+    p(median shift | same shape)=0.0000
+
+--- anonymous_group_1 / slow: N_l=892 N_r=1303 ratio_l/r=0.685
+    median l=0.9670 r=0.8897 diff=+0.0773 95% Poisson-noise CI [-0.0659,+0.2092]
+    density-median diff=+0.0610  step-median diff=+0.1105
+    IQR l=1.6661 r=1.4128 diff=+0.2532 CI [+0.0508,+0.5201]
+    frac>10 l=0.0045 r=0.0008 diff=+0.0037 CI [-0.0005,+0.0087]
+    TV=0.0854 noise 95% [0.0756,0.1366] null median=0.0592 p95=0.0821 p_shape=0.0306
+    p(median shift | same shape)=0.1676
+
+--- anonymous_group_2 / fast: N_l=357 N_r=52 ratio_l/r=6.865
+    median l=10.7393 r=20.6014 diff=-9.8621 95% Poisson-noise CI [-11.8265,-8.5130]
+    density-median diff=-9.4950  step-median diff=-9.2422
+    IQR l=5.0100 r=8.1841 diff=-3.1742 CI [-6.6432,+0.5397]
+    frac>10 l=0.6078 r=0.9615 diff=-0.3537 CI [-0.4223,-0.2757]
+    TV=0.5679 noise 95% [0.5131,0.6979] null median=0.3300 p95=0.4145 p_shape=0.0000
+    p(median shift | same shape)=0.0000
+
+--- anonymous_group_2 / slow: N_l=803 N_r=392 ratio_l/r=2.048
+    median l=0.3526 r=0.2638 diff=+0.0889 95% Poisson-noise CI [+0.0702,+0.0952]
+    density-median diff=+0.0637  step-median diff=+0.0971
+    IQR l=0.2541 r=0.1099 diff=+0.1443 CI [+0.1131,+0.1778]
+    frac>10 l=0.0037 r=0.0128 diff=-0.0090 CI [-0.0218,+0.0020]
+    TV=0.2192 noise 95% [0.1863,0.2628] null median=0.0426 p95=0.0741 p_shape=0.0000
+    p(median shift | same shape)=0.0000
+
+--- anonymous_group_3 / fast: N_l=429 N_r=664 ratio_l/r=0.646
+    median l=6.7907 r=6.3410 diff=+0.4497 95% Poisson-noise CI [+0.0201,+0.9176]
+    density-median diff=+0.1965  step-median diff=-0.3844
+    IQR l=6.6983 r=2.7955 diff=+3.9029 CI [+1.9643,+8.9077]
+    frac>10 l=0.2890 r=0.0934 diff=+0.1957 CI [+0.1472,+0.2434]
+    TV=0.2721 noise 95% [0.2370,0.3293] null median=0.1339 p95=0.1659 p_shape=0.0000
+    p(median shift | same shape)=0.0030
+
+--- anonymous_group_3 / slow: N_l=1092 N_r=2201 ratio_l/r=0.496
+    median l=0.3233 r=0.4563 diff=-0.1330 95% Poisson-noise CI [-0.1466,-0.1188]
+    density-median diff=-0.1332  step-median diff=-0.1997
+    IQR l=0.2364 r=0.5178 diff=-0.2814 CI [-0.3958,-0.1417]
+    frac>10 l=0.0018 r=0.0036 diff=-0.0018 CI [-0.0053,+0.0018]
+    TV=0.2581 noise 95% [0.2321,0.2870] null median=0.0353 p95=0.0547 p_shape=0.0000
+    p(median shift | same shape)=0.0000
+
+=== 2. paired channel contrast (bootstrap = COUNTING NOISE ONLY) ===
+            group regime  total_events_channel_l  total_events_channel_r  median_diff  median_diff_ci_lo  median_diff_ci_hi  p_median_shift_null  tv_observed  tv_null_p95  p_shape_same_tv
+anonymous_group_1   fast                   10560                   14492    -0.476649          -0.570864          -0.384471               0.0000     0.180080     0.034411           0.0000
+anonymous_group_1   slow                     892                    1303     0.077289          -0.065945           0.209167               0.1676     0.085394     0.082094           0.0306
+anonymous_group_2   fast                     357                      52    -9.862071         -11.826537          -8.512999               0.0000     0.567906     0.414496           0.0000
+anonymous_group_2   slow                     803                     392     0.088862           0.070154           0.095182               0.0000     0.219176     0.074108           0.0000
+anonymous_group_3   fast                     429                     664     0.449717           0.020070           0.917646               0.0030     0.272068     0.165941           0.0000
+anonymous_group_3   slow                    1092                    2201    -0.133012          -0.146638          -0.118794               0.0000     0.258067     0.054678           0.0000
+
+  median-definition sensitivity (diff l-r):
+            group regime  midpoint_diff  density_diff  step_diff
+anonymous_group_1   fast      -0.476649     -0.482917  -0.236296
+anonymous_group_1   slow       0.077289      0.060969   0.110516
+anonymous_group_2   fast      -9.862071     -9.494958  -9.242220
+anonymous_group_2   slow       0.088862      0.063664   0.097136
+anonymous_group_3   fast       0.449717      0.196508  -0.384371
+anonymous_group_3   slow      -0.133012     -0.133249  -0.199728
+    [group_2 fast] marginal G (r's 52 events vs l's shape over l's full support, 24 bins) = 131.97; null median = 19.13, p95 = 48.28; Monte-Carlo p = 0.0000
+    [group_2 fast] window-restricted count ratios and channel x window homogeneity (G, 5000-rep Poisson Monte Carlo):
+                  cell     window   lo   hi  events_l  events_r  ratio_l_over_r  expected_l_under_constant_ratio  expected_r_under_constant_ratio  binom_p_constant_ratio  G_joint_window  p_G_joint_window_monte_carlo  G_joint_null_median  G_joint_null_p95
+anonymous_group_2|fast -2 < s < 2 -2.0  2.0       0.0       0.0             NaN                         0.000000                         0.000000                     NaN       51.972124                           0.0             1.389314          5.782029
+anonymous_group_2|fast  0 < s < 2  0.0  2.0       0.0       0.0             NaN                         0.000000                         0.000000                     NaN       51.972124                           0.0             1.389314          5.782029
+anonymous_group_2|fast 2 < s < 12  2.0 12.0     224.0       6.0       37.333333                       200.757946                        29.242054            9.371881e-08       51.972124                           0.0             1.389314          5.782029
+anonymous_group_2|fast     s > 12 12.0  inf     133.0      46.0        2.891304                       156.242054                        22.757946            2.594921e-06       51.972124                           0.0             1.389314          5.782029
+
+    [group_2 fast] SAME test restricted to the common support (s >= 7.283 MHz/s; l keeps 333, r keeps 52):
+                                      cell     window   lo   hi  events_l  events_r  ratio_l_over_r  expected_l_under_constant_ratio  expected_r_under_constant_ratio  binom_p_constant_ratio  G_joint_window  p_G_joint_window_monte_carlo  G_joint_null_median  G_joint_null_p95
+anonymous_group_2|fast|common_support_only -2 < s < 2 -2.0  2.0       0.0       0.0             NaN                         0.000000                         0.000000                     NaN       46.571959                           0.0             1.398852          6.028821
+anonymous_group_2|fast|common_support_only  0 < s < 2  0.0  2.0       0.0       0.0             NaN                         0.000000                         0.000000                     NaN       46.571959                           0.0             1.398852          6.028821
+anonymous_group_2|fast|common_support_only 2 < s < 12  2.0 12.0     200.0       6.0       33.333333                       178.176623                        27.823377            3.498557e-07       46.571959                           0.0             1.398852          6.028821
+anonymous_group_2|fast|common_support_only     s > 12 12.0  inf     133.0      46.0        2.891304                       154.823377                        24.176623            1.416295e-05       46.571959                           0.0             1.398852          6.028821
+
+=== 3. group_2 fast: 357 (l) vs 52 (r) ===
+    N_l = 357
+    N_r = 52
+    ratio = 6.865384615384615
+    ratio_poisson_rel_se = 0.1484314308997542
+    ratio_ci_lo = 4.868068445592769
+    ratio_ci_hi = 8.862700785176461
+    support_common_lo = 7.283396230990476
+    support_common_hi = 28.3117740500856
+    channel_l_events_below_common_support = 24.0
+    channel_l_events_below_common_support_frac = 0.06722689075630252
+    channel_r_min_center = 7.784071893349884
+    channel_l_min_center = 4.468763477919518
+    common_grid_n_bins = 38
+    G_stat = 95.1371483539912
+    G_null_median = 76.8426258021552
+    G_null_p95 = 96.21268337763634
+    p_G_monte_carlo = 0.0598
+    TV_obs = 0.5679062905711888
+    TV_null_median = 0.33151019053348785
+    TV_null_p95 = 0.41615581991793243
+    p_TV_monte_carlo = 0.0002
+    TV_detectable_p95 = 0.41615581991793243
+    n_l_common = 324.9860665212615
+    n_r_common = 52.00000000000009
+    G_marginal_full_support = 131.97374192043844
+    G_marginal_null_median = 19.125908234865804
+    G_marginal_null_p95 = 48.27827309596802
+    p_G_marginal_monte_carlo = 0.0
+    r_expected_below_if_same_shape = 3.495798319327731
+    ratio_restricted_to_common_support = 6.249732048485787
+
+=== 4c. channel x drift-window homogeneity for all six cells ===
+            group regime     window  events_l  events_r  ratio_l_over_r  expected_l_under_constant_ratio  binom_p_constant_ratio  G_joint_window  p_G_joint_window_monte_carlo
+anonymous_group_1   fast -2 < s < 2      87.0       0.0             NaN                        36.846692            3.455376e-33      463.174916                        0.0000
+anonymous_group_1   fast  0 < s < 2      87.0       0.0             NaN                        36.846692            3.455376e-33      463.174916                        0.0000
+anonymous_group_1   fast 2 < s < 12    9068.0   13279.0        0.682883                      9464.517642            7.650601e-08      463.174916                        0.0000
+anonymous_group_1   fast     s > 12    1405.0    1213.0        1.158285                      1108.788973            3.267108e-31      463.174916                        0.0000
+anonymous_group_1   slow -2 < s < 2     657.0    1038.0        0.632948                       674.949871            3.852335e-01       12.171490                        0.0132
+anonymous_group_1   slow  0 < s < 2     657.0    1038.0        0.632948                       674.949871            3.852335e-01       12.171490                        0.0132
+anonymous_group_1   slow 2 < s < 12     235.0     265.0        0.886792                       199.100257            1.166887e-03       12.171490                        0.0132
+anonymous_group_1   slow     s > 12       0.0       0.0             NaN                         0.000000                     NaN       12.171490                        0.0132
+anonymous_group_2   fast -2 < s < 2       0.0       0.0             NaN                         0.000000                     NaN       51.972124                        0.0000
+anonymous_group_2   fast  0 < s < 2       0.0       0.0             NaN                         0.000000                     NaN       51.972124                        0.0000
+anonymous_group_2   fast 2 < s < 12     224.0       6.0       37.333333                       200.757946            9.371881e-08       51.972124                        0.0000
+anonymous_group_2   fast     s > 12     133.0      46.0        2.891304                       156.242054            2.594921e-06       51.972124                        0.0000
+anonymous_group_2   slow -2 < s < 2     775.0     382.0        2.028796                       776.252551            9.501134e-01        0.789909                        0.9418
+anonymous_group_2   slow  0 < s < 2     775.0     382.0        2.028796                       776.252551            9.501134e-01        0.789909                        0.9418
+anonymous_group_2   slow 2 < s < 12      28.0      10.0        2.800000                        25.494898            4.904034e-01        0.789909                        0.9418
+anonymous_group_2   slow     s > 12       0.0       0.0             NaN                         0.000000                     NaN        0.789909                        0.9418
+anonymous_group_3   fast -2 < s < 2       0.0       0.0             NaN                         0.000000                     NaN       64.343802                        0.0000
+anonymous_group_3   fast  0 < s < 2       0.0       0.0             NaN                         0.000000                     NaN       64.343802                        0.0000
+anonymous_group_3   fast 2 < s < 12     322.0     615.0        0.523577                       367.770357            2.082283e-03       64.343802                        0.0000
+anonymous_group_3   fast     s > 12     107.0      49.0        2.183673                        61.229643            1.872056e-13       64.343802                        0.0000
+anonymous_group_3   slow -2 < s < 2    1041.0    2102.0        0.495243                      1041.643723            1.000000e+00        0.050847                        0.9996
+anonymous_group_3   slow  0 < s < 2    1041.0    2102.0        0.495243                      1041.643723            1.000000e+00        0.050847                        0.9996
+anonymous_group_3   slow 2 < s < 12      51.0      99.0        0.515152                        49.712554            8.623324e-01        0.050847                        0.9996
+anonymous_group_3   slow     s > 12       0.0       0.0             NaN                         0.000000                     NaN        0.050847                        0.9996
+
+=== 4. paired workbook blocks differing only by channel ===
+            group regime  block_index   sheet_l   sheet_r                        label_l                        label_r  n_l  n_r  events_l  events_r  ratio_l_over_r  identical_x_grid     dx_l     dx_r   xmin_l    xmax_l   xmin_r    xmax_r  common_support_lo  common_support_hi  n_common_bins      G_stat  p_G_monte_carlo  G_null_p95       TV  TV_null_p95
+anonymous_group_1   fast            0 Sheet_025 Sheet_027 group_a (-35<s<-10), channel_l group_a (-35<s<-10), channel_r   26   26   10560.0   14492.0        0.728678             False 1.035273 1.023458 1.929282 27.811098 2.224652 27.811098           1.712923          28.322827             51 1383.048406           0.0000  125.634194 0.180080     0.033496
+anonymous_group_1   slow            0 Sheet_024 Sheet_026    group_a(-10<s<0), channel_l    group_a(-10<s<0), channel_r   29   29     790.0    1126.0        0.701599             False 0.101000 0.101454 0.158985  2.986996 0.146297  2.986996           0.108485           3.037496             12   21.472999           0.4815   33.653366 0.077160     0.081291
+anonymous_group_1   slow            1 Sheet_024 Sheet_026     group_a(0<s<20), channel_l     group_a(0<s<20), channel_r  108  102     102.0     177.0        0.576271             False 0.100619 0.100088 0.219728 10.985917 0.190664 10.299575           0.169419          10.349619             21   57.790363           0.0425   57.311118 0.294452     0.228709
+anonymous_group_2   fast            0 Sheet_029 Sheet_031 group_b (-35<s<-10), channel_l group_b (-35<s<-10), channel_r   24   21     357.0      52.0        6.865385             False 1.014884 1.001351 4.468763 27.811098 7.784072 27.811098           7.283396          28.311774             38   95.137148           0.0635   96.379837 0.567906     0.419059
+anonymous_group_2   slow            0 Sheet_028 Sheet_030    group_b(-10<s<0), channel_l    group_b(-10<s<0), channel_r   24   17     580.0     155.0        3.741935             False 0.101306 0.105476 0.258523  2.588561 0.262693  1.950306           0.209955           2.003044              7   71.111189           0.0000   22.000986 0.258165     0.094968
+anonymous_group_2   slow            1 Sheet_028 Sheet_030     group_b(0<s<20), channel_l     group_b(0<s<20), channel_r  115  115     223.0     237.0        0.940928              True 0.100799 0.100799 0.244159 11.735270 0.244159 11.735270           0.193760          11.785670             15   30.046408           0.4560   41.539378 0.097434     0.083543
+anonymous_group_3   fast            0 Sheet_033 Sheet_035 group_c (-35<s<-10), channel_l group_c (-35<s<-10), channel_r   24   25     429.0     664.0        0.646084             False 1.034684 1.016381 4.013369 27.811098 3.417966 27.811098           3.496027          28.319289             46  154.298067           0.0000  119.892616 0.272068     0.165165
+anonymous_group_3   slow            0 Sheet_032 Sheet_034    group_c(-10<s<0), channel_l    group_c(-10<s<0), channel_r   26   28     601.0    1680.0        0.357738             False 0.103463 0.101064 0.260680  2.847253 0.258281  2.986996           0.208949           2.898985             11  160.012755           0.0000   31.372489 0.282474     0.066692
+anonymous_group_3   slow            1 Sheet_032 Sheet_034     group_c(0<s<20), channel_l     group_c(0<s<20), channel_r  101  108     491.0     521.0        0.942418             False 0.100557 0.100394 0.243917 10.299575 0.243754 10.985917           0.193638          10.349853             19   58.461143           0.0025   47.113456 0.094586     0.074574
+
+=== 5. coarse (1.75 MHz/s) vs fine published histograms ===
+            group regime   channel coarse_sheet fine_sheet  fine_block_index                   label_coarse                     label_fine  n_coarse_bins  n_fine_bins  events_coarse  events_fine  total_diff  total_rel_diff  n_bins_fully_inside_fine_support  events_coarse_inside  events_fine_inside  G_coarse_vs_fine  G_null_p95  p_G_monte_carlo  coarse_lo  coarse_hi  fine_lo   fine_hi  max_rel_bin_dev
+anonymous_group_1   fast channel_l    Sheet_039  Sheet_025                 0 group_a (-35<s<-10), channel_l group_a (-35<s<-10), channel_l             20           26        10570.0      10560.0        10.0        0.000947                                14               10560.0        10440.262047       3674.470790   38.990457              0.0        0.0  33.250000 1.929282 27.811098         2.141510
+anonymous_group_1   fast channel_r    Sheet_040  Sheet_027                 0 group_a (-35<s<-10), channel_r group_a (-35<s<-10), channel_r             20           26        14498.0      14492.0         6.0        0.000414                                14               14485.0        14242.274703       6691.126899   40.115401              0.0        0.0  33.250000 2.224652 27.811098         9.717156
+anonymous_group_1   slow channel_l    Sheet_039  Sheet_024                 0    group_a(-10<s<0), channel_l    group_a(-10<s<0), channel_l             20           29          809.0        790.0        19.0        0.024051                                 1                   1.0          320.787655          0.000000    0.000000              1.0        0.0  33.250000 0.158985  2.986996         0.996883
+anonymous_group_1   slow channel_l    Sheet_039  Sheet_024                 1     group_a(0<s<20), channel_l     group_a(0<s<20), channel_l             20          108          122.0        102.0        20.0        0.196078                                 5                  99.0           22.000000       2396.669808   12.867106              0.0        0.0  33.250000 0.219728 10.985917        37.000000
+anonymous_group_1   slow channel_r    Sheet_040  Sheet_026                 0    group_a(-10<s<0), channel_r    group_a(-10<s<0), channel_r             20           29         1144.0       1126.0        18.0        0.015986                                 1                   1.0          461.647027          0.000000    0.000000              1.0        0.0  33.250000 0.146297  2.986996         0.997834
+anonymous_group_1   slow channel_r    Sheet_040  Sheet_026                 1     group_a(0<s<20), channel_r     group_a(0<s<20), channel_r             30          102          207.0        177.0        30.0        0.169492                                 8                 147.0           79.037345       7691.140440   13.035039              0.0        0.0  33.833332 0.190664 10.299575        64.000000
+anonymous_group_2   fast channel_l    Sheet_041  Sheet_029                 0 group_b (-35<s<-10), channel_l group_b (-35<s<-10), channel_l             20           24          352.0        357.0        -5.0       -0.014006                                13                 348.0          340.331495        597.019468   37.440581              0.0        0.0  33.250000 4.468763 27.811098        11.103055
+anonymous_group_2   fast channel_r    Sheet_042  Sheet_031                 0 group_b (-35<s<-10), channel_r group_b (-35<s<-10), channel_r             20           21           51.0         52.0        -1.0       -0.019231                                11                  20.0           45.818389        110.890082   31.049417              0.0        0.0  33.250000 7.784072 27.811098         8.655671
+anonymous_group_2   slow channel_l    Sheet_041  Sheet_028                 0    group_b(-10<s<0), channel_l    group_b(-10<s<0), channel_l             20           24          579.0        580.0        -1.0       -0.001724                                 1                   0.0           22.469608          0.000000    0.000000              1.0        0.0  33.250000 0.258523  2.588561         1.000000
+anonymous_group_2   slow channel_l    Sheet_041  Sheet_028                 1     group_b(0<s<20), channel_l     group_b(0<s<20), channel_l             20          115          222.0        223.0        -1.0       -0.004484                                 6                 196.0           15.483221       1118.803166   13.373478              0.0        0.0  33.250000 0.244159 11.735270        26.000000
+anonymous_group_2   slow channel_r    Sheet_042  Sheet_030                 0    group_b(-10<s<0), channel_r    group_b(-10<s<0), channel_r             20           17          148.0        155.0        -7.0       -0.045161                                 0                   0.0            0.000000          0.000000    0.000000              1.0        0.0  33.250000 0.262693  1.950306              NaN
+anonymous_group_2   slow channel_r    Sheet_042  Sheet_030                 1     group_b(0<s<20), channel_r     group_b(0<s<20), channel_r             20          115          234.0        237.0        -3.0       -0.012658                                 6                 198.0            8.000000       1908.297032   12.892000              0.0        0.0  33.250000 0.244159 11.735270       102.000000
+anonymous_group_3   fast channel_l    Sheet_043  Sheet_033                 0 group_c (-35<s<-10), channel_l group_c (-35<s<-10), channel_l             20           24          423.0        429.0        -6.0       -0.013986                                13                 423.0          357.684881        223.648135   37.346913              0.0        0.0  33.250000 4.013369 27.811098         9.051215
+anonymous_group_3   fast channel_r    Sheet_044  Sheet_035                 0 group_c (-35<s<-10), channel_r group_c (-35<s<-10), channel_r             20           25          663.0        664.0        -1.0       -0.001506                                13                 662.0          542.879252       1122.239948   37.641321              0.0        0.0  33.250000 3.417966 27.811098        36.030192
+anonymous_group_3   slow channel_l    Sheet_043  Sheet_032                 0    group_c(-10<s<0), channel_l    group_c(-10<s<0), channel_l             20           26          596.0        601.0        -5.0       -0.008319                                 1                   0.0           85.189359          0.000000    0.000000              1.0        0.0  33.250000 0.260680  2.847253         1.000000
+anonymous_group_3   slow channel_l    Sheet_043  Sheet_032                 1     group_c(0<s<20), channel_l     group_c(0<s<20), channel_l             20          101          491.0        491.0         0.0        0.000000                                 5                 417.0           19.448193      15661.238321    9.772014              0.0        0.0  33.250000 0.243917 10.299575       230.000000
+anonymous_group_3   slow channel_r    Sheet_044  Sheet_034                 0    group_c(-10<s<0), channel_r    group_c(-10<s<0), channel_r             20           28         1671.0       1680.0        -9.0       -0.005357                                 1                   0.0          457.112907          0.000000    0.000000              1.0        0.0  33.250000 0.258281  2.986996         1.000000
+anonymous_group_3   slow channel_r    Sheet_044  Sheet_034                 1     group_c(0<s<20), channel_r     group_c(0<s<20), channel_r             20          108          518.0        521.0        -3.0       -0.005758                                 5                 444.0           63.636950       5926.827605   12.854180              0.0        0.0  33.250000 0.243754 10.985917        69.000000
+
+=== 5b. alignment-free CDF distance and coarse-edge offset scan ===
+            group regime   channel coarse_sheet fine_sheet  fine_block_index                          label  cdf_max_abs_diff_within_overlap  best_offset_L1  best_offset_delta  best_offset_as_fraction_of_coarse_bin  L1_at_zero_offset
+anonymous_group_1   fast channel_l    Sheet_039  Sheet_025                 0 group_a (-35<s<-10), channel_l                         0.192947        0.215731          -0.875000                              -0.500000           0.489345
+anonymous_group_1   fast channel_r    Sheet_040  Sheet_027                 0 group_a (-35<s<-10), channel_r                         0.151459        0.216690          -0.875000                              -0.500000           0.392587
+anonymous_group_1   slow channel_l    Sheet_039  Sheet_024                 0    group_a(-10<s<0), channel_l                         0.996650        1.992583          -0.729167                              -0.416667           1.992583
+anonymous_group_1   slow channel_l    Sheet_039  Sheet_024                 1     group_a(0<s<20), channel_l                         0.821135        1.637094          -0.364583                              -0.208333           1.708775
+anonymous_group_1   slow channel_r    Sheet_040  Sheet_026                 0    group_a(-10<s<0), channel_r                         0.997631        1.994755           0.000000                               0.000000           1.994755
+anonymous_group_1   slow channel_r    Sheet_040  Sheet_026                 1     group_a(0<s<20), channel_r                         0.951188        1.904855          -0.048611                              -0.041667           1.904855
+anonymous_group_2   fast channel_l    Sheet_041  Sheet_029                 0 group_b (-35<s<-10), channel_l                         0.460810        0.905556           0.875000                               0.500000           0.978887
+anonymous_group_2   fast channel_r    Sheet_042  Sheet_031                 0 group_b (-35<s<-10), channel_r                         0.875569        1.587417           0.875000                               0.500000           1.713755
+anonymous_group_2   slow channel_l    Sheet_041  Sheet_028                 0    group_b(-10<s<0), channel_l                         1.000000        2.000000          -0.875000                              -0.500000           2.000000
+anonymous_group_2   slow channel_l    Sheet_041  Sheet_028                 1     group_b(0<s<20), channel_l                         0.928251        1.856502          -0.656250                              -0.375000           1.856502
+anonymous_group_2   slow channel_r    Sheet_042  Sheet_030                 0    group_b(-10<s<0), channel_r                         1.000000        2.000000          -0.875000                              -0.500000           2.000000
+anonymous_group_2   slow channel_r    Sheet_042  Sheet_030                 1     group_b(0<s<20), channel_r                         0.970464        1.940928          -0.875000                              -0.500000           1.940928
+anonymous_group_3   fast channel_l    Sheet_043  Sheet_033                 0 group_c (-35<s<-10), channel_l                         0.169605        0.374891          -0.875000                              -0.500000           0.604208
+anonymous_group_3   fast channel_r    Sheet_044  Sheet_035                 0 group_c (-35<s<-10), channel_r                         0.477656        0.918475          -0.875000                              -0.500000           1.002176
+anonymous_group_3   slow channel_l    Sheet_043  Sheet_032                 0    group_c(-10<s<0), channel_l                         1.000000        2.000000          -0.145833                              -0.083333           2.000000
+anonymous_group_3   slow channel_l    Sheet_043  Sheet_032                 1     group_c(0<s<20), channel_l                         0.985743        1.971487          -0.145833                              -0.083333           1.971487
+anonymous_group_3   slow channel_r    Sheet_044  Sheet_034                 0    group_c(-10<s<0), channel_r                         1.000000        2.000000          -0.875000                              -0.500000           2.000000
+anonymous_group_3   slow channel_r    Sheet_044  Sheet_034                 1     group_c(0<s<20), channel_r                         0.967370        1.934741          -0.802083                              -0.458333           1.934741
+
+=== 5d. wide translation scan: is the coarse/fine gap a pure origin shift? ===
+            group regime   channel coarse_sheet fine_sheet                          label  best_translation_MHz_s   min_L1  KS_at_best  L1_at_zero_offset  n_offsets_tested  L1_below_0p10_offsets
+anonymous_group_1   fast channel_l    Sheet_039  Sheet_025 group_a (-35<s<-10), channel_l                   -1.25 0.153293    0.072722           0.489345               161                      0
+anonymous_group_1   fast channel_r    Sheet_040  Sheet_027 group_a (-35<s<-10), channel_r                   -1.15 0.162086    0.049239           0.392587               161                      0
+anonymous_group_1   slow channel_l    Sheet_039  Sheet_024    group_a(-10<s<0), channel_l                   -4.00 0.770363    0.325914           1.992583               161                      0
+anonymous_group_1   slow channel_l    Sheet_039  Sheet_024     group_a(0<s<20), channel_l                    3.90 0.717213    0.655637           1.708775               161                      0
+anonymous_group_1   slow channel_r    Sheet_040  Sheet_026    group_a(-10<s<0), channel_r                    3.95 1.000000         NaN           1.994755               161                      0
+anonymous_group_1   slow channel_r    Sheet_040  Sheet_026     group_a(0<s<20), channel_r                   -4.00 1.527321    0.231214           1.904855               161                      0
+anonymous_group_2   fast channel_l    Sheet_041  Sheet_029 group_b (-35<s<-10), channel_l                    3.80 0.557600    0.076754           0.978887               161                      0
+anonymous_group_2   fast channel_r    Sheet_042  Sheet_031 group_b (-35<s<-10), channel_r                    2.75 1.500000    0.103384           1.713755               161                      0
+anonymous_group_2   slow channel_l    Sheet_041  Sheet_028    group_b(-10<s<0), channel_l                    3.55 1.000000         NaN           2.000000               161                      0
+anonymous_group_2   slow channel_l    Sheet_041  Sheet_028     group_b(0<s<20), channel_l                    2.10 0.467825    0.928251           1.856502               161                      0
+anonymous_group_2   slow channel_r    Sheet_042  Sheet_030    group_b(-10<s<0), channel_r                    2.90 1.000000         NaN           2.000000               161                      0
+anonymous_group_2   slow channel_r    Sheet_042  Sheet_030     group_b(0<s<20), channel_r                    3.20 1.264957    0.670464           1.940928               161                      0
+anonymous_group_3   fast channel_l    Sheet_043  Sheet_033 group_c (-35<s<-10), channel_l                   -0.85 0.377144    0.063326           0.604208               161                      0
+anonymous_group_3   fast channel_r    Sheet_044  Sheet_035 group_c (-35<s<-10), channel_r                   -2.30 0.681634    0.098261           1.002176               161                      0
+anonymous_group_3   slow channel_l    Sheet_043  Sheet_032    group_c(-10<s<0), channel_l                    3.80 1.000000         NaN           2.000000               161                      0
+anonymous_group_3   slow channel_l    Sheet_043  Sheet_032     group_c(0<s<20), channel_l                    2.45 0.382233    0.884502           1.971487               161                      0
+anonymous_group_3   slow channel_r    Sheet_044  Sheet_034    group_c(-10<s<0), channel_r                    3.95 1.000000         NaN           2.000000               161                      0
+anonymous_group_3   slow channel_r    Sheet_044  Sheet_034     group_c(0<s<20), channel_r                    3.10 0.842857    0.817370           1.934741               161                      0
+    offsets tested: 161 per pair, range -4..+4 MHz/s at 0.05; pairs where ANY offset brings L1 below 0.10: 0/18
+
+=== 5c. edge pile-up diagnostic (fraction of a source block in one bin) ===
+            group regime   channel  block_index                          label  n_events  first_bin_center  first_bin_count  first_bin_fraction  max_bin_center  max_bin_fraction
+anonymous_group_1   fast channel_l            0 group_a (-35<s<-10), channel_l   10560.0          1.929282             87.0            0.008239        5.035100          0.213163
+anonymous_group_1   fast channel_r            0 group_a (-35<s<-10), channel_r   14492.0          2.224652            269.0            0.018562        5.295025          0.140905
+anonymous_group_1   slow channel_l            0    group_a(-10<s<0), channel_l     790.0          0.158985             49.0            0.062025        0.360986          0.078481
+anonymous_group_1   slow channel_l            1     group_a(0<s<20), channel_l     102.0          0.219728             38.0            0.372549        0.219728          0.372549
+anonymous_group_1   slow channel_r            0    group_a(-10<s<0), channel_r    1126.0          0.146297             58.0            0.051510        0.450658          0.087922
+anonymous_group_1   slow channel_r            1     group_a(0<s<20), channel_r     177.0          0.190664             38.0            0.214689        0.190664          0.214689
+anonymous_group_2   fast channel_l            0 group_b (-35<s<-10), channel_l     357.0          4.468763              9.0            0.025210       10.558068          0.173669
+anonymous_group_2   fast channel_r            0 group_b (-35<s<-10), channel_r      52.0          7.784072              2.0            0.038462       25.808396          0.173077
+anonymous_group_2   slow channel_l            0    group_b(-10<s<0), channel_l     580.0          0.258523            202.0            0.348276        0.258523          0.348276
+anonymous_group_2   slow channel_l            1     group_b(0<s<20), channel_l     223.0          0.244159            140.0            0.627803        0.244159          0.627803
+anonymous_group_2   slow channel_r            0    group_b(-10<s<0), channel_r     155.0          0.262693             94.0            0.606452        0.262693          0.606452
+anonymous_group_2   slow channel_r            1     group_b(0<s<20), channel_r     237.0          0.244159            148.0            0.624473        0.244159          0.624473
+anonymous_group_3   fast channel_l            0 group_c (-35<s<-10), channel_l     429.0          4.013369             71.0            0.165501        5.048053          0.177156
+anonymous_group_3   fast channel_r            0 group_c (-35<s<-10), channel_r     664.0          3.417966             81.0            0.121988        6.467108          0.266566
+anonymous_group_3   slow channel_l            0    group_c(-10<s<0), channel_l     601.0          0.260680            273.0            0.454243        0.260680          0.454243
+anonymous_group_3   slow channel_l            1     group_c(0<s<20), channel_l     491.0          0.243917            275.0            0.560081        0.243917          0.560081
+anonymous_group_3   slow channel_r            0    group_c(-10<s<0), channel_r    1680.0          0.258281            245.0            0.145833        0.460408          0.217262
+anonymous_group_3   slow channel_r            1     group_c(0<s<20), channel_r     521.0          0.243754            225.0            0.431862        0.243754          0.431862
+
+=== 6. channel count ratios (l/r) per group and regime ===
+            group regime  events_l  events_r  ratio_l_over_r  ratio_rel_se  ln_ratio  ln_ratio_se
+anonymous_group_1   fast   10560.0   14492.0        0.728678      0.012795 -0.316523     0.012795
+anonymous_group_1   slow     892.0    1303.0        0.684574      0.043457 -0.378958     0.043457
+anonymous_group_2   fast     357.0      52.0        6.865385      0.148431  1.926492     0.148431
+anonymous_group_2   slow     803.0     392.0        2.048469      0.061615  0.717093     0.061615
+anonymous_group_3   fast     429.0     664.0        0.646084      0.061944 -0.436825     0.061944
+anonymous_group_3   slow    1092.0    2201.0        0.496138      0.037015 -0.700901     0.037015
+    ratio spread across groups (fast): 0.646 .. 6.865
+
+wrote polc_s00..s07 tables and 3 figures

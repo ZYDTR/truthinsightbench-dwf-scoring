@@ -1,0 +1,192 @@
+{
+  "schema": "truthinsightbench-native-artifact-registry",
+  "note": "Native artifact registry for this run. Every registered finding in Result.md resolves through the ids below to real files under output/.",
+  "files": [
+    {
+      "id": "F001",
+      "role": "executed_analysis_source",
+      "relative_path": "analysis/01_profile.py",
+      "description": "Structural profiling of all four panels: shapes, dtypes, missingness, duplicate-column detection, row-identifier detection, missingness pattern groups."
+    },
+    {
+      "id": "F002",
+      "role": "executed_analysis_source",
+      "relative_path": "analysis/02_structure.py",
+      "description": "Resolves design structure: panel 1 complete factorial, panels 3/4 series x condition block layout, exact response identities, rank-block meaning."
+    },
+    {
+      "id": "F003",
+      "role": "executed_analysis_source",
+      "relative_path": "analysis/03_core.py",
+      "description": "Core analysis: sum-to-zero contrast ANOVA decomposition of the unreplicated factorial, response identity fits, cross-panel transfer under two alignment conventions, panel-2 calibration."
+    },
+    {
+      "id": "F004",
+      "role": "executed_analysis_source",
+      "relative_path": "analysis/04_robustness.py",
+      "description": "Robustness suite: alternative functional forms for the identity, level leave-one-out, whole-condition holdout, factor-C gradient vs partition tests, transfer permutation nulls, panel-2 bootstrap and leave-one-out."
+    },
+    {
+      "id": "F005",
+      "role": "executed_analysis_source",
+      "relative_path": "analysis/05_interaction_inference.py",
+      "description": "Interaction inference for the unreplicated factorial: Tukey 1-df non-additivity, Lenth-style contrast scan, cell-interaction sparsity. Also preserves the invalid permutation test and why it was discarded."
+    },
+    {
+      "id": "F006",
+      "role": "executed_analysis_source",
+      "relative_path": "analysis/06_crosspanel.py",
+      "description": "Cross-panel correspondence: magnitude-column relations, response exhaustiveness, 13-level profile correspondence, column-role resolution."
+    },
+    {
+      "id": "F007",
+      "role": "executed_analysis_source",
+      "relative_path": "analysis/07_transfer_boundary.py",
+      "description": "Transfer boundary: 13-level identity-mapping permutation test (50000 permutations), leave-one-level-out stability, magnitude vs shape decomposition, supplied rank-block comparison."
+    },
+    {
+      "id": "F008",
+      "role": "executed_analysis_source",
+      "relative_path": "analysis/08_artifacts.py",
+      "description": "Cyclic-shift fairness check, consolidated results.json / results_summary.csv, and all three result figures."
+    },
+    {
+      "id": "F009",
+      "role": "executed_analysis_source",
+      "relative_path": "analysis/09_transfer_confound.py",
+      "description": "Confound check on the transfer claims: partial Spearman correlations controlling the magnitude columns, multi-predictor regressions, within-panel condition relations."
+    },
+    {
+      "id": "F010",
+      "role": "executed_analysis_source",
+      "relative_path": "analysis/10_figures.py",
+      "description": "Extended diagnostic figures: intervention contrast, Lenth scan, level correspondence, leave-one-level-out, rank block, calibration residual, support map."
+    },
+    {
+      "id": "F011",
+      "role": "result_evidence",
+      "relative_path": "evidence/results.json",
+      "description": "Consolidated machine-readable results for all registered findings, including panel inventory, resolved identities, per-finding numbers, robustness and counterevidence."
+    },
+    {
+      "id": "F012",
+      "role": "result_evidence",
+      "relative_path": "evidence/results_summary.csv",
+      "description": "Flat one-row-per-claim summary table of the registered findings with their robustness note."
+    },
+    {
+      "id": "F013",
+      "role": "result_evidence",
+      "relative_path": "evidence/fig_findings_1_2_3.png",
+      "description": "Figure for findings 1-3: variance decomposition of both responses, the rugged 11-level profile with bootstrap CIs and its linear fit, and the exact identity scatter."
+    },
+    {
+      "id": "F014",
+      "role": "result_evidence",
+      "relative_path": "evidence/fig_finding_4.png",
+      "description": "Figure for finding 4: the 13-level transfer success to panel 4 and failure on panel 3, the cell-level response-shape failure, and the magnitude transfer on log axes."
+    },
+    {
+      "id": "F015",
+      "role": "result_evidence",
+      "relative_path": "evidence/fig_finding_5.png",
+      "description": "Figure for finding 5: the 41 paired readings with the identity line and the fitted compressed slope, plus the difference histogram."
+    },
+    {
+      "id": "F016",
+      "role": "result_evidence",
+      "relative_path": "evidence/fig_diagnostics.png",
+      "description": "Extended diagnostics: intervention contrast in panel 3 vs panel 4, Lenth contrast scan, level correspondence, leave-one-level-out stability, supplied rank-block agreement, panel-2 calibration residual."
+    },
+    {
+      "id": "F017",
+      "role": "result_evidence",
+      "relative_path": "evidence/01_profile.json",
+      "description": "Raw structural profile payload: file hashes, per-column statistics, duplicate column pairs, missingness groups, factorial completeness."
+    },
+    {
+      "id": "F018",
+      "role": "result_evidence",
+      "relative_path": "evidence/01_column_profile.csv",
+      "description": "Per-column profile table for all four panels: counts, uniqueness, missingness, integrality, constancy."
+    },
+    {
+      "id": "F019",
+      "role": "result_evidence",
+      "relative_path": "evidence/02_structure.json",
+      "description": "Resolved structure payload: panel 1 factorial, panels 3/4 block layouts, exact identities with residuals, rank-block scans."
+    },
+    {
+      "id": "F020",
+      "role": "result_evidence",
+      "relative_path": "evidence/03_core.json",
+      "description": "Core analysis payload: contrast ANOVA decomposition, identity fits, transfer under both alignments, condition ranking agreement, variance splits, panel-2 calibration."
+    },
+    {
+      "id": "F021",
+      "role": "result_evidence",
+      "relative_path": "evidence/04_robustness.json",
+      "description": "Robustness payload: identity alternative forms, level leave-one-out, whole-condition holdout, factor-C structure tests, transfer permutation nulls, panel-2 bootstrap and leave-one-out."
+    },
+    {
+      "id": "F022",
+      "role": "result_evidence",
+      "relative_path": "evidence/05_interaction_inference.json",
+      "description": "Interaction inference payload: Tukey non-additivity, Lenth contrast scan, cell-interaction sparsity, and the preserved invalid permutation test."
+    },
+    {
+      "id": "F023",
+      "role": "result_evidence",
+      "relative_path": "evidence/06_crosspanel.json",
+      "description": "Cross-panel payload: magnitude-column relations, response exhaustiveness, 13-level profile correspondence, column roles."
+    },
+    {
+      "id": "F024",
+      "role": "result_evidence",
+      "relative_path": "evidence/07_transfer_boundary.json",
+      "description": "Transfer payload: 50000-permutation identity-mapping tests, leave-one-level-out folds, magnitude vs shape decomposition, supplied rank-block comparison."
+    },
+    {
+      "id": "F025",
+      "role": "result_evidence",
+      "relative_path": "evidence/09_transfer_confound.json",
+      "description": "Confound payload: partial Spearman correlations controlling magnitude columns, multi-predictor regressions, within-panel condition relations."
+    },
+    {
+      "id": "F026",
+      "role": "verification",
+      "relative_path": "verification/verification_registry.json",
+      "description": "Independent multi-worker verification registry: per-claim verdict, independently computed numbers, and counterevidence from six adversarial verification workers."
+    },
+    {
+      "id": "F027",
+      "role": "log",
+      "relative_path": "logs/run_log.txt",
+      "description": "Execution log of every analysis step actually run, including the ten real errors encountered and their resolutions, plus the post-analysis verification phase and the seven corrections the verification workers forced."
+    },
+    {
+      "id": "F028",
+      "role": "executed_analysis_source",
+      "relative_path": "analysis/11_eiv_correction.py",
+      "description": "Correction of the errors-in-variables argument in Finding 5: reproduces the positive control that invalidated the withdrawn lambda-sweep bound, applies de-attenuation b_OLS/r^2, and runs calibrated null simulations for three noise models including the exact-design lattice block."
+    },
+    {
+      "id": "F029",
+      "role": "result_evidence",
+      "relative_path": "evidence/11_eiv_correction.json",
+      "description": "Payload for the corrected errors-in-variables analysis: positive controls for both the withdrawn and the replacement statistic, de-attenuated slope with bootstrap CI, and calibrated p-values for the equal-noise and lattice-block null models."
+    },
+    {
+      "id": "F030",
+      "role": "verification",
+      "relative_path": "verification/V4_transfer_boundary.json",
+      "description": "Independent replication of Finding 4 by verification worker V4: rebuilt cell table, 50000-permutation null, exhaustive cyclic shifts, and the joint two-magnitude confound control."
+    },
+    {
+      "id": "F031",
+      "role": "verification",
+      "relative_path": "verification/V6_independent_structural_audit.json",
+      "description": "Independent structural audit of all four panels by worker V6; refuted the main agent's row-counter claim for numeric_feature_5, resolved numeric_feature_10, and found a second duplicate column pair."
+    }
+  ]
+}

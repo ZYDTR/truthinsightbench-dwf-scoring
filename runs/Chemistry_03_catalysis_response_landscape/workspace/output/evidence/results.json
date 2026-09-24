@@ -1,0 +1,765 @@
+{
+  "task_id": "Chemistry_03_catalysis_response_landscape",
+  "analysis_unit": "one complete reaction-condition observation (panel 1) / one complete comparison series (panels 2-4)",
+  "cyclic_shift_check": {
+    "p1B_f6_vs_p4R": {
+      "rho_by_shift": [
+        0.8626373626373626,
+        0.4450549450549451,
+        0.1868131868131868,
+        0.13186813186813187,
+        -0.06043956043956044,
+        -0.17032967032967034,
+        -0.3186813186813187,
+        -0.2857142857142857,
+        -0.15384615384615383,
+        -0.3131868131868132,
+        -0.20329670329670327,
+        -0.10989010989010989,
+        -0.010989010989010988
+      ],
+      "best_shift": 0,
+      "best_abs_rho": 0.8626373626373626,
+      "identity_shift0_rho": 0.8626373626373626,
+      "identity_is_best": true
+    },
+    "p1B_f6_vs_p3R": {
+      "rho_by_shift": [
+        0.3186813186813187,
+        0.37912087912087916,
+        -0.03296703296703297,
+        -0.33516483516483514,
+        -0.054945054945054944,
+        -0.2087912087912088,
+        -0.4340659340659341,
+        -0.46153846153846156,
+        -0.4450549450549451,
+        0.027472527472527472,
+        0.6208791208791209,
+        0.40659340659340654,
+        0.21978021978021978
+      ],
+      "best_shift": 10,
+      "best_abs_rho": 0.6208791208791209,
+      "identity_shift0_rho": 0.3186813186813187,
+      "identity_is_best": false
+    },
+    "p1B_f7_vs_p4R": {
+      "rho_by_shift": [
+        0.7802197802197801,
+        0.4945054945054945,
+        -0.04395604395604395,
+        -0.3626373626373627,
+        -0.4505494505494505,
+        -0.13186813186813187,
+        0.049450549450549455,
+        0.016483516483516484,
+        0.0879120879120879,
+        -0.14285714285714285,
+        -0.30769230769230765,
+        -0.04395604395604395,
+        0.054945054945054944
+      ],
+      "best_shift": 0,
+      "best_abs_rho": 0.7802197802197801,
+      "identity_shift0_rho": 0.7802197802197801,
+      "identity_is_best": true
+    },
+    "p1B_f7_vs_p3R": {
+      "rho_by_shift": [
+        -0.24725274725274726,
+        -0.15384615384615383,
+        -0.021978021978021976,
+        -0.14835164835164835,
+        0.010989010989010988,
+        0.016483516483516484,
+        -0.2087912087912088,
+        -0.39010989010989006,
+        -0.3131868131868132,
+        0.18131868131868134,
+        0.7472527472527472,
+        0.5,
+        0.027472527472527472
+      ],
+      "best_shift": 10,
+      "best_abs_rho": 0.7472527472527472,
+      "identity_shift0_rho": -0.24725274725274726,
+      "identity_is_best": false
+    }
+  },
+  "panels": {
+    "observation_set_1": {
+      "n_rows": 1430,
+      "n_cols": 8,
+      "design": "complete 10 x 13 x 11 factorial, single replicate per cell",
+      "identifier_columns": {
+        "observation_index": "row counter 0..1429",
+        "numeric_feature_1": "run counter 1..1430 (== observation_index + 1)",
+        "numeric_feature_5": "mixed-radix cell identifier 11*(f3 + 13*f2) + f4, decoding exactly to the (numeric_feature_2, numeric_feature_3, numeric_feature_4) cell; NOT a row counter (corrected after independent audit V6)"
+      },
+      "factor_columns": {
+        "numeric_feature_2": 10,
+        "numeric_feature_3": 13,
+        "numeric_feature_4": 11
+      },
+      "responses": [
+        "numeric_feature_6",
+        "numeric_feature_7"
+      ],
+      "missingness": "none",
+      "run_order": {
+        "factor_2_encounter_order": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          1
+        ],
+        "factor_3_encounter_order": [
+          0,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ],
+        "factor_4_encounter_order": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          1,
+          2
+        ],
+        "note": "row order is NOT the cell-index order; the same cyclic convention appears in the 13-row blocks of panels 3 and 4"
+      }
+    },
+    "observation_set_2": {
+      "n_rows": 41,
+      "n_cols": 4,
+      "design": "40 paired readings (two columns) + 1 single-valued column",
+      "numeric_feature_3": "value 0 on row 0 only (40 of 41 entries missing)",
+      "missingness": "structural; numeric_feature_3 is effectively empty"
+    },
+    "observation_set_3": {
+      "n_rows": 104,
+      "n_cols": 22,
+      "design": "8 series x 13 conditions; identifier column numeric_feature_1 present on the first row of each 13-row block (equals row//13)",
+      "responses": [
+        "numeric_feature_5 (duplicated exactly by numeric_feature_6)"
+      ],
+      "missingness": "numeric_feature_7 fully empty; numeric_feature_1/8 and numeric_feature_9..21 present only on the 8-row rank block"
+    },
+    "observation_set_4": {
+      "n_rows": 91,
+      "n_cols": 24,
+      "design": "7 series x 13 conditions; identifier column numeric_feature_1 present on the first row of each 13-row block (permuted labels)",
+      "responses": [
+        "numeric_feature_6"
+      ],
+      "missingness": "numeric_feature_7/8/9 fully empty; numeric_feature_2 single-valued; numeric_feature_10..23 present only on the 8-row rank block"
+    }
+  },
+  "resolved_identities": {
+    "panel_3_response_identity": {
+      "formula": "numeric_feature_5 = (numeric_feature_4 - numeric_feature_3) / (numeric_feature_4 + numeric_feature_3)",
+      "max_abs_residual": 2.220446049250313e-16,
+      "n_rows_exact": 104
+    },
+    "panel_4_response_identity": {
+      "formula": "numeric_feature_6 = (numeric_feature_5 - numeric_feature_4) / (numeric_feature_5 + numeric_feature_4)",
+      "max_abs_residual": 2.220446049250313e-16,
+      "n_rows_exact": 91
+    },
+    "panel_3_rank_block": {
+      "columns": "numeric_feature_9..numeric_feature_21",
+      "meaning": "ascending rank of the panel-3 response across the 8 series, one column per condition in within-series order (column j <-> condition CYCLE[j])",
+      "verification": "13/13 columns reproduce the rank vector exactly"
+    },
+    "panel_4_rank_block": {
+      "columns": "numeric_feature_11..numeric_feature_23",
+      "meaning": "ascending rank of the panel-4 response across the 7 series, one column per condition in within-series order (column 10+j <-> condition CYCLE[j-1])",
+      "verification": "13/13 columns reproduce the rank vector exactly"
+    },
+    "unresolved": [
+      "observation_set_3.numeric_feature_7 is empty",
+      "observation_set_4.numeric_feature_7/8/9 are empty",
+      "observation_set_4.numeric_feature_10 is a permutation of 0..7 with no stateable role",
+      "observation_set_4.numeric_feature_2 holds a single value 0"
+    ]
+  },
+  "findings": {
+    "D1": {
+      "title": "One factorial design hosts two different structure regimes",
+      "object": "observation_set_1.tsv, complete 10x13x11 factorial, n=1430",
+      "response_6": {
+        "eta2_main": 0.5211051985722851,
+        "eta2_2way": 0.3249633720788695,
+        "eta2_3way": 0.1539314293488454,
+        "tukey_nonadditivity_F": 763.7253077560367,
+        "tukey_nonadditivity_p": 0.0,
+        "bootstrap_eta2_3way_ci95": [
+          -0.05822041651905325,
+          0.11306437989551073
+        ]
+      },
+      "response_7": {
+        "eta2_main": 0.8869125426667429,
+        "eta2_2way": 0.07643736752583646,
+        "eta2_3way": 0.03665008980742062,
+        "tukey_nonadditivity_F": 9.862033493105338,
+        "tukey_nonadditivity_p": 0.0017225880370925761,
+        "bootstrap_eta2_3way_ci95": [
+          -0.07585250660528689,
+          -0.03196916002108702
+        ]
+      },
+      "robustness": {
+        "level_leaveout_eta2_2way_range_f6": [
+          0.3038613725965847,
+          0.3340501080065572
+        ],
+        "level_leaveout_eta2_3way_range_f6": [
+          0.14407705675903318,
+          0.16975611014940756
+        ],
+        "level_leaveout_eta2_2way_range_f7": [
+          0.07123221904021196,
+          0.0935786854910752
+        ],
+        "level_leaveout_eta2_3way_range_f7": [
+          0.032822586935997426,
+          0.045059397845383375
+        ],
+        "whole_level_holdout_mae_additive_f6": 0.3770265604005313,
+        "whole_level_holdout_mae_cell_f6": 0.3361641184792219
+      },
+      "counterevidence": {
+        "test": "within-(A,B)-cell permutation null for the 3-way interaction SS",
+        "why_invalid": "Reshuffling the response within each (A,B) block does not preserve the distribution of the cell variances, so the induced 3-way SS is far LARGER (f6: null mean 378.2 vs observed 103.8) than the observed value for any data of this shape. The test therefore has no power to reject non-additivity and is not used as evidence. It is retained here because the contract requires reporting failed tests that bear on a submitted claim.",
+        "observed_3way_ss": {
+          "numeric_feature_6": 103.82638359029579,
+          "numeric_feature_7": 6.016842008627037
+        },
+        "null_mean_3way_ss": {
+          "numeric_feature_6": 378.1840570824998,
+          "numeric_feature_7": 133.69172197489172
+        },
+        "verdict": "invalid; superseded by Tukey 1-df and Lenth-style contrast scans"
+      }
+    },
+    "D2": {
+      "title": "The dominant factor is a rugged, reproducible partition; its numeric level order is not monotone",
+      "object": "observation_set_1.tsv, factor numeric_feature_4 (11 levels), both responses",
+      "level_means_f7": [
+        0.020756995140681262,
+        -0.4750524049156575,
+        -0.11017709833999266,
+        0.4589528532684023,
+        0.5429113084853741,
+        -0.5028330383912477,
+        -0.08058493246948842,
+        0.20960845331113387,
+        -0.11663576097551755,
+        -0.1009648885310654,
+        -0.2137927720724284
+      ],
+      "between_level_range": 1.0457443468766217,
+      "within_level_sd_mean": 0.11042039375409414,
+      "between_over_within_sd_ratio": 9.47057252128163,
+      "linear_r2": 0.005508812677157891,
+      "quadratic_r2": 0.09619616643644036,
+      "best_two_group_partition_eta2": 0.12138464273862948,
+      "best_split_after_level_index": 4,
+      "split_half_reproduction_pearson": 0.9992460627843311,
+      "split_half_reproduction_spearman": 0.990909090909091,
+      "n_adjacent_pairs_with_nonoverlapping_ci": 9,
+      "profile_shared_with_other_response_pearson": -0.3302692571352771,
+      "robustness": {
+        "bootstrap_level_means_ci95": [
+          [
+            0.012190660714908782,
+            0.029248740037295447
+          ],
+          [
+            -0.5004183254874832,
+            -0.44869734776827064
+          ],
+          [
+            -0.12955796311050086,
+            -0.09204801482858892
+          ],
+          [
+            0.4477391077469593,
+            0.4698414249340395
+          ],
+          [
+            0.5139076542566751,
+            0.5698429966980058
+          ],
+          [
+            -0.5366268936688162,
+            -0.4671701855784154
+          ],
+          [
+            -0.09827397684334574,
+            -0.06320238058653467
+          ],
+          [
+            0.18423792664225988,
+            0.23396174490043206
+          ],
+          [
+            -0.1302510756568037,
+            -0.10317693281337327
+          ],
+          [
+            -0.11220721925673827,
+            -0.09024929501319874
+          ],
+          [
+            -0.22661774185443737,
+            -0.20101382627779218
+          ]
+        ],
+        "n_levels": 11,
+        "n_bootstrap": 2000
+      },
+      "counterevidence": "the profile is response-specific: the 11-level profile of numeric_feature_6 correlates only r=-0.33 with that of numeric_feature_7, so factor C does not encode one latent ordering shared by both responses"
+    },
+    "D3": {
+      "title": "The response column of panels 3 and 4 is an exact algebraic function of two magnitudes",
+      "object": "observation_set_3.tsv (n=104) and observation_set_4.tsv (n=91)",
+      "panel_3": {
+        "n": 104,
+        "max_abs_residual_of_(B-A)/(A+B)": 0.0,
+        "max_abs_residual_of_2B/(A+B)-1": 2.220446049250313e-16,
+        "exact_within_1e-12": true,
+        "range_A": [
+          0.426514,
+          45.415428
+        ],
+        "range_B": [
+          2.077936,
+          540.74408
+        ],
+        "range_R": [
+          0.5598984426877772,
+          0.8762145000860895
+        ],
+        "pearson_R_vs_AB_ratio": -0.9989209400084468,
+        "pearson_R_vs_magnitude_A": -0.021937266686722995,
+        "pearson_R_vs_magnitude_B": 0.30773379340971807
+      },
+      "panel_4": {
+        "n": 91,
+        "max_abs_residual_of_(B-A)/(A+B)": 1.1102230246251565e-16,
+        "max_abs_residual_of_2B/(A+B)-1": 2.220446049250313e-16,
+        "exact_within_1e-12": true,
+        "range_A": [
+          0.488833,
+          17.439537
+        ],
+        "range_B": [
+          3.487315,
+          191.928299
+        ],
+        "range_R": [
+          0.4390433041697307,
+          0.9079708837768418
+        ],
+        "pearson_R_vs_AB_ratio": -0.9964810485609678,
+        "pearson_R_vs_magnitude_A": 0.10656469443475304,
+        "pearson_R_vs_magnitude_B": 0.43105117740190824
+      },
+      "robustness": {
+        "n_rows_exact_to_1e-12_panel_3": 104,
+        "n_rows_exact_to_1e-12_panel_4": 91,
+        "residual_in_ulps_panel_4": 1.0,
+        "alternative_forms_panel_3": {
+          "A": {
+            "r2": 0.0004812436696843836,
+            "max_abs_resid": 0.21847394158798772
+          },
+          "B": {
+            "r2": 0.09470008760633497,
+            "max_abs_resid": 0.20084988341912757
+          },
+          "A+B": {
+            "r2": 0.07810107197580685,
+            "max_abs_resid": 0.2029722455914923
+          },
+          "A*B": {
+            "r2": 0.01785580298911993,
+            "max_abs_resid": 0.2129472924159621
+          },
+          "A/B": {
+            "r2": 0.9978430443873586,
+            "max_abs_resid": 0.01757584276995472
+          },
+          "log(B/A)": {
+            "r2": 0.9816178693273614,
+            "max_abs_resid": 0.04159766629368422
+          },
+          "sqrt(B/A)": {
+            "r2": 0.9506446997108374,
+            "max_abs_resid": 0.06766762373979351
+          },
+          "(B-A)/(A+B)": {
+            "r2": 1.0,
+            "max_abs_resid": 4.440892098500626e-16
+          },
+          "B/(A+B)": {
+            "r2": 1.0,
+            "max_abs_resid": 1.1102230246251565e-15
+          },
+          "A+B+1": {
+            "r2": 0.07810107197580718,
+            "max_abs_resid": 0.2029722455914923
+          }
+        }
+      },
+      "counterevidence": "the identity is a property of this frozen projection; it cannot be attributed to the upstream measurement design from the anonymous data alone"
+    },
+    "D4": {
+      "title": "Condition structure transfers to one panel and fails on another; response shape does not transfer between the two magnitude panels",
+      "object": "cross-panel, levels of observation_set_1 factor numeric_feature_3 (13) vs the 13 conditions of observation_set_3 and observation_set_4",
+      "level_correspondence": {
+        "p1B_f6_vs_p4_condition_R": {
+          "spearman_identity": 0.8626373626373626,
+          "pearson_identity": 0.9535140931780689,
+          "perm_p_two_sided": 0.00028,
+          "perm_p_one_sided_positive": 0.00016,
+          "perm_null_sd": 0.2893948214681029,
+          "perm_null_abs_p95": 0.5604395604395604,
+          "n_perm": 50000
+        },
+        "p1B_f7_vs_p4_condition_R": {
+          "spearman_identity": 0.7802197802197801,
+          "pearson_identity": 0.7995221912782597,
+          "perm_p_two_sided": 0.003,
+          "perm_p_one_sided_positive": 0.00144,
+          "perm_null_sd": 0.28977844628570226,
+          "perm_null_abs_p95": 0.5604395604395604,
+          "n_perm": 50000
+        },
+        "p1B_f6_vs_p3_condition_R": {
+          "spearman_identity": 0.3186813186813187,
+          "pearson_identity": 0.18482301464471765,
+          "perm_p_two_sided": 0.27958,
+          "perm_p_one_sided_positive": 0.1395,
+          "perm_null_sd": 0.28899514815056393,
+          "perm_null_abs_p95": 0.5604395604395604,
+          "n_perm": 50000
+        },
+        "p1B_f7_vs_p3_condition_R": {
+          "spearman_identity": -0.24725274725274726,
+          "pearson_identity": -0.29478040659750016,
+          "perm_p_two_sided": 0.4136,
+          "perm_p_one_sided_positive": 0.7968,
+          "perm_null_sd": 0.28826292437149964,
+          "perm_null_abs_p95": 0.5604395604395604,
+          "n_perm": 50000
+        },
+        "p3_condition_B_vs_p4_condition_B": {
+          "spearman_identity": 0.9120879120879121,
+          "pearson_identity": 0.9057303079324189,
+          "perm_p_two_sided": 4e-05,
+          "perm_p_one_sided_positive": 2e-05,
+          "perm_null_sd": 0.2892994326724341,
+          "perm_null_abs_p95": 0.5604395604395604,
+          "n_perm": 50000
+        },
+        "p3_condition_R_vs_p4_condition_R": {
+          "spearman_identity": 0.0934065934065934,
+          "pearson_identity": 0.05485200418919896,
+          "perm_p_two_sided": 0.76236,
+          "perm_p_one_sided_positive": 0.38096,
+          "perm_null_sd": 0.28738231202849246,
+          "perm_null_abs_p95": 0.554945054945055,
+          "n_perm": 50000
+        }
+      },
+      "cell_level_transfer": {
+        "n_matched_cells": 91,
+        "response_raw_pearson": -0.08648939954141258,
+        "response_condition_centred_pearson": -0.05866541579577055,
+        "response_z_rmse": 1.4659808699914254,
+        "magnitude_B_spearman": 0.5673037107819717,
+        "magnitude_B_between_condition_pearson": 0.9122739038705228,
+        "magnitude_B_within_condition_pearson": 0.21914978047474953,
+        "magnitude_A_between_condition_pearson": 0.8835847930378812,
+        "supplied_rank_block_pearson": 0.07009167084406179
+      },
+      "robustness": {
+        "leave_one_level_out_p1f6_vs_p4": {
+          "values": [
+            0.8811188811188813,
+            0.8251748251748254,
+            0.8391608391608393,
+            0.8251748251748254,
+            0.8461538461538463,
+            0.9020979020979022,
+            0.8811188811188813,
+            0.8811188811188813,
+            0.8601398601398602,
+            0.9300699300699302,
+            0.8391608391608393,
+            0.8321678321678322,
+            0.8321678321678322
+          ],
+          "min": 0.8251748251748254,
+          "max": 0.9300699300699302,
+          "n_folds": 13,
+          "all_same_sign_as_full": true
+        },
+        "leave_one_level_out_p1f6_vs_p3": {
+          "values": [
+            0.5174825174825175,
+            0.2517482517482518,
+            0.3076923076923077,
+            0.3076923076923077,
+            0.3076923076923077,
+            0.4545454545454546,
+            0.44055944055944063,
+            0.2867132867132868,
+            0.1398601398601399,
+            0.1398601398601399,
+            0.3076923076923077,
+            0.3356643356643357,
+            0.3356643356643357
+          ],
+          "min": 0.1398601398601399,
+          "max": 0.5174825174825175,
+          "n_folds": 13,
+          "all_same_sign_as_full": true
+        },
+        "cyclic_shift_check": {
+          "p1B_f6_vs_p4R": {
+            "rho_by_shift": [
+              0.8626373626373626,
+              0.4450549450549451,
+              0.1868131868131868,
+              0.13186813186813187,
+              -0.06043956043956044,
+              -0.17032967032967034,
+              -0.3186813186813187,
+              -0.2857142857142857,
+              -0.15384615384615383,
+              -0.3131868131868132,
+              -0.20329670329670327,
+              -0.10989010989010989,
+              -0.010989010989010988
+            ],
+            "best_shift": 0,
+            "best_abs_rho": 0.8626373626373626,
+            "identity_shift0_rho": 0.8626373626373626,
+            "identity_is_best": true
+          },
+          "p1B_f6_vs_p3R": {
+            "rho_by_shift": [
+              0.3186813186813187,
+              0.37912087912087916,
+              -0.03296703296703297,
+              -0.33516483516483514,
+              -0.054945054945054944,
+              -0.2087912087912088,
+              -0.4340659340659341,
+              -0.46153846153846156,
+              -0.4450549450549451,
+              0.027472527472527472,
+              0.6208791208791209,
+              0.40659340659340654,
+              0.21978021978021978
+            ],
+            "best_shift": 10,
+            "best_abs_rho": 0.6208791208791209,
+            "identity_shift0_rho": 0.3186813186813187,
+            "identity_is_best": false
+          },
+          "p1B_f7_vs_p4R": {
+            "rho_by_shift": [
+              0.7802197802197801,
+              0.4945054945054945,
+              -0.04395604395604395,
+              -0.3626373626373627,
+              -0.4505494505494505,
+              -0.13186813186813187,
+              0.049450549450549455,
+              0.016483516483516484,
+              0.0879120879120879,
+              -0.14285714285714285,
+              -0.30769230769230765,
+              -0.04395604395604395,
+              0.054945054945054944
+            ],
+            "best_shift": 0,
+            "best_abs_rho": 0.7802197802197801,
+            "identity_shift0_rho": 0.7802197802197801,
+            "identity_is_best": true
+          },
+          "p1B_f7_vs_p3R": {
+            "rho_by_shift": [
+              -0.24725274725274726,
+              -0.15384615384615383,
+              -0.021978021978021976,
+              -0.14835164835164835,
+              0.010989010989010988,
+              0.016483516483516484,
+              -0.2087912087912088,
+              -0.39010989010989006,
+              -0.3131868131868132,
+              0.18131868131868134,
+              0.7472527472527472,
+              0.5,
+              0.027472527472527472
+            ],
+            "best_shift": 10,
+            "best_abs_rho": 0.7472527472527472,
+            "identity_shift0_rho": -0.24725274725274726,
+            "identity_is_best": false
+          }
+        },
+        "leave_one_condition_out_mae_transfer": {
+          "mae_transfer": 0.06875062920317883,
+          "mae_null_predict_mean": 0.06502770107929656,
+          "skill_vs_null": -0.05725141842770087,
+          "per_condition_mae": [
+            0.05993182921331673,
+            0.09135455976784256,
+            0.0639019931450658,
+            0.05788965345659043,
+            0.07570421593137644,
+            0.07842602914850565,
+            0.061164631261216705,
+            0.05743237172174852,
+            0.07980686070835648,
+            0.06643762121963472,
+            0.07855769141457405,
+            0.05196433175001115,
+            0.07118639090308551
+          ]
+        },
+        "leave_one_series_out_condition_spearman_range": {
+          "values": [
+            -0.027472527472527472,
+            0.054945054945054944,
+            -0.09890109890109891,
+            -0.09890109890109891,
+            0.07142857142857142,
+            -0.0934065934065934,
+            -0.054945054945054944
+          ],
+          "min": -0.09890109890109891,
+          "max": 0.07142857142857142,
+          "n_folds": 7
+        },
+        "permutation_null_R_row_order": {
+          "obs_pearson_R": -0.08648939954141258,
+          "n_cells": 91,
+          "perm_p_two_sided": 0.3685,
+          "perm_null_sd": 0.08002083374922622,
+          "perm_ci95": [
+            -0.19562633082233946,
+            0.11813972684391848
+          ],
+          "condition_mean_agreement": {
+            "spearman": -0.049450549450549455,
+            "pearson": -0.16838338366827318,
+            "n_conditions": 13,
+            "spearman_perm_p": 0.887
+          },
+          "magnitude_transfer": {
+            "pearson_B": 0.4971559008608087,
+            "spearman_B": 0.5673037107819717,
+            "log_pearson_B": 0.5294218714446449,
+            "median_ratio_B4_over_B3": 0.5140926631994832
+          }
+        }
+      },
+      "counterevidence": "the response-shape failure is not evidence that the panels are unrelated: the magnitude columns agree strongly across panels (B: Spearman +0.567 at cell level, Pearson +0.912 between condition means), so the two panels share scale but not shape"
+    },
+    "D5": {
+      "title": "Two paired readings agree almost perfectly but with a reproducibly compressed slope",
+      "object": "observation_set_2.tsv, 41 paired readings, analysis unit = one comparison series",
+      "pearson": 0.9984725422598203,
+      "spearman": 0.9864111498257843,
+      "ols_slope": 0.9751578140376492,
+      "slope_ci95": [
+        0.9576807010147708,
+        0.9926349270605277
+      ],
+      "slope_ci_excludes_1": true,
+      "mean_difference": 0.4834705195121954,
+      "t_p_mean_difference_vs_0": 0.27775145291730874,
+      "max_abs_difference": 6.75,
+      "robustness": {
+        "bootstrap_slope_ci95": [
+          0.9537654536760728,
+          0.9952750266811177
+        ],
+        "bootstrap_p_slope_below_1": 0.9944,
+        "leave_one_pair_out_slope_range": [
+          0.9706077172350122,
+          0.9794407897839303
+        ],
+        "leave_one_pair_out_n_below_1": 41,
+        "slope_measured_subset_only": 0.9794389120478899,
+        "slope_lattice_subset_only": 0.9615788341071428
+      },
+      "counterevidence": "the slope deficit is small (2.5%) and its practical impact is limited: the largest single disagreement is 6.75 units and 22 of 528 pairs invert order (Spearman 0.983); a constant-offset (zero-slope-difference) explanation is not rejected (mean difference p=0.278)"
+    }
+  },
+  "corrections_log": [
+    {
+      "item": "numeric_feature_5 in panel 1",
+      "first_stated": "row counter 0..1429",
+      "corrected_to": "mixed-radix cell identifier 11*(f3+13*f2)+f4",
+      "caught_by": "independent structural audit worker V6",
+      "evidence": "output/verification/V6_independent_structural_audit.json (S1); round-trip verified"
+    },
+    {
+      "item": "errors-in-variables bound in Finding 5",
+      "first_stated": "the Deming lambda-sweep interval [0.97516, 0.97814] bounds the corrected slope away from 1",
+      "corrected_to": "the interval is ~10x too narrow to bracket the truth and was withdrawn; replaced by de-attenuation b/r^2 = 0.978144 and a calibrated lattice-block test (p = 0.022)",
+      "caught_by": "verification worker V5's positive control (V5c)",
+      "evidence": "output/analysis/11_eiv_correction.py -> evidence/11_eiv_correction.json"
+    },
+    {
+      "item": "rank-inversion count in Finding 5",
+      "first_stated": "22 of 528 pairs invert order (unlabelled scope)",
+      "corrected_to": "32 of 820 over all 41 rows; 22 of 528 is the 33-irregular-row subset",
+      "caught_by": "verification worker V5",
+      "evidence": "output/verification/V5_paired_slope_audit.json (pair_concordance); recomputed directly"
+    },
+    {
+      "item": "Finding 2 title and claim",
+      "first_stated": "'not a gradient', with the isotonic R2 (0.0977, ~18x the linear fit) cited as supporting evidence",
+      "corrected_to": "renamed to 'the numeric level order is not monotone'; the isotonic figure is now reported only as a null calibration (observed at the 41st percentile of a null with mean 0.2041, p = 0.587). The verifier's counter-proposal ('a weak but real orderable component') was itself overturned because both quantities in its '18x' comparison are below chance.",
+      "caught_by": "verification worker V2 (explicit 'REFUTED as stated'), then re-checked by the main agent"
+    },
+    {
+      "item": "Verification verdict provenance",
+      "first_stated": "verdicts presented as the independent verification workers' own conclusions",
+      "corrected_to": "the Workflow structured-return channel failed (6/6 subagents completed without calling StructuredOutput), so the registry was assembled by the main agent from the workers' on-disk artifacts. V1 and V5 verdict labels were assigned by the main agent; V2/V3/V4/V6 wrote explicit verdict fields. This is now disclosed in the registry under 'method' and 'workflow_provenance' and in Result.md section 8.",
+      "caught_by": "workflow completion metadata"
+    }
+  ]
+}

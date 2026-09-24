@@ -1,0 +1,164 @@
+{
+  "replicated_response_panel.tsv": {
+    "rows": 8232,
+    "columns": [
+      "input_axis_1_index",
+      "input_axis_2_index",
+      "signal_bin_index",
+      "output_channel_index",
+      "replicate_id",
+      "response_value"
+    ],
+    "nulls": {
+      "input_axis_1_index": 0,
+      "input_axis_2_index": 0,
+      "signal_bin_index": 0,
+      "output_channel_index": 0,
+      "replicate_id": 0,
+      "response_value": 0
+    },
+    "levels": {
+      "input_axis_1_index": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "input_axis_2_index": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "signal_bin_index": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0
+      ],
+      "output_channel_index": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "replicate_id": [
+        1.0,
+        2.0,
+        3.0
+      ]
+    },
+    "value_column": "response_value",
+    "value_min": 2447.825646514574,
+    "value_max": 29337190.4085409,
+    "complete_factorial": true
+  },
+  "independent_response_panel.tsv": {
+    "rows": 4116,
+    "columns": [
+      "input_axis_1_index",
+      "input_axis_2_index",
+      "signal_bin_index",
+      "output_channel_index",
+      "replicate_id",
+      "response_value"
+    ],
+    "nulls": {
+      "input_axis_1_index": 0,
+      "input_axis_2_index": 0,
+      "signal_bin_index": 0,
+      "output_channel_index": 0,
+      "replicate_id": 0,
+      "response_value": 0
+    },
+    "levels": {
+      "input_axis_1_index": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "input_axis_2_index": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "signal_bin_index": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "output_channel_index": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "replicate_id": [
+        1.0,
+        2.0,
+        3.0
+      ]
+    },
+    "value_column": "response_value",
+    "value_min": 4741.764279452172,
+    "value_max": 9785051.558853354,
+    "complete_factorial": true
+  },
+  "independent_fit_error.tsv": {
+    "rows": 21,
+    "columns": [
+      "input_axis_index",
+      "replicate_id",
+      "fit_error"
+    ],
+    "nulls": {
+      "input_axis_index": 0,
+      "replicate_id": 0,
+      "fit_error": 0
+    },
+    "levels": {
+      "input_axis_index": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "replicate_id": [
+        1.0,
+        2.0,
+        3.0
+      ]
+    },
+    "value_column": "fit_error",
+    "value_min": 0.1075377520873549,
+    "value_max": 0.157572418055826
+  }
+}

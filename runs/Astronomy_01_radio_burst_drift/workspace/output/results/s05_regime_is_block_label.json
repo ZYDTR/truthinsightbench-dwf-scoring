@@ -1,0 +1,24 @@
+[
+  {
+    "drift_regime":"fast",
+    "n_blocks":6,
+    "n_bins":146,
+    "dx_values":"[1.0014, 1.0149, 1.0164, 1.0235, 1.0347, 1.0353]",
+    "block_indices":"[0]",
+    "events":26554.0,
+    "events_share":0.7989289045,
+    "range_lo":1.9292821283,
+    "range_hi":27.8110983877
+  },
+  {
+    "drift_regime":"slow",
+    "n_blocks":12,
+    "n_bins":802,
+    "dx_values":"[0.1001, 0.1004, 0.1006, 0.1008, 0.101, 0.1011, 0.1013, 0.1015, 0.1035, 0.1055]",
+    "block_indices":"[0, 1]",
+    "events":6683.0,
+    "events_share":0.2010710955,
+    "range_lo":0.1462971674,
+    "range_hi":11.7352701288
+  }
+]

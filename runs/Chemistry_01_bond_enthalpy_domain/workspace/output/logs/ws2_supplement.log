@@ -1,0 +1,53 @@
+/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/state/home/.local/lib/python3.11/site-packages/scipy/stats/_stats_py.py:1251: RuntimeWarning: divide by zero encountered in divide
+  var *= (n / (n-ddof))  # to avoid error on division by zero
+/data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/state/home/.local/lib/python3.11/site-packages/scipy/stats/_stats_py.py:1251: RuntimeWarning: invalid value encountered in scalar multiply
+  var *= (n / (n-ddof))  # to avoid error on division by zero
+updated /data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws2_channel_accuracy.json
+
+--- quantum vs learned by train flag ---
+train_subset       n=331 meanD=+0.064 CI[-0.001,+0.129] sig=False medD=+0.040 wilcox_p=0.00107
+held_out_subset    n=212 meanD=-0.901 CI[-1.274,-0.555] sig=True medD=-0.145 wilcox_p=0.000148
+
+--- tail sensitivity (capping |error|) ---
+uncapped                     meanD=-0.313 CI[-0.471,-0.165] sig=True
+abs_error_capped_at_15       meanD=-0.293 CI[-0.444,-0.150] sig=True
+abs_error_capped_at_10       meanD=-0.271 CI[-0.408,-0.139] sig=True
+abs_error_capped_at_7.5      meanD=-0.243 CI[-0.363,-0.125] sig=True
+abs_error_capped_at_5        meanD=-0.171 CI[-0.265,-0.080] sig=True
+abs_error_capped_at_3        meanD=-0.072 CI[-0.132,-0.015] sig=True
+
+--- by experiment quartile ---
+Q1_weakest     n=140 meanD=-0.856 CI[-1.340,-0.411] sig=True mae_q=2.881 mae_l=3.737
+Q2             n=133 meanD=-0.399 CI[-0.712,-0.110] sig=True mae_q=2.021 mae_l=2.420
+Q3             n=134 meanD=-0.036 CI[-0.143,+0.062] sig=False mae_q=1.669 mae_l=1.705
+Q4_strongest   n=136 meanD=+0.057 CI[-0.098,+0.206] sig=False mae_q=1.789 mae_l=1.733
+
+--- by bond class ---
+C-H      n=302 meanD=-0.551 mae_q=1.991 mae_l=2.542
+C-C      n=240 meanD=-0.002 mae_q=2.234 mae_l=2.237
+H-O      n=1 meanD=-3.030 mae_q=1.650 mae_l=4.680
+
+--- reference independence ---
+{
+ "n_quantum_top": 55,
+ "n_learned_top": 55,
+ "n_reference_top": 55,
+ "quantum_and_learned_both_top": 33,
+ "quantum_and_reference_both_top": 14,
+ "learned_and_reference_both_top": 19,
+ "all_three_both_top": 9,
+ "quantum_top_also_reference_top_fraction": 0.2545454545454545,
+ "chance_fraction_if_independent": 0.1
+}
+sign agreement: {'quantum_vs_learned': 0.8655616942909761, 'quantum_vs_reference': 0.5451197053406999, 'learned_vs_reference': 0.5598526703499079}
+partial corrs: {'partial_corr_ref_learned_given_quantum': 0.05351519042925848, 'partial_corr_ref_quantum_given_learned': 0.1030469522603448, 'partial_corr_quantum_learned_given_reference': 0.7436743170345311}
+checks: {
+ "all_543_have_three_estimates": true,
+ "experiment_min_max": [
+  15.2,
+  160.2
+ ],
+ "units_are_kcal_per_mol": true,
+ "quantum_equals_db_bde_exactly_on_in_db_rows": false,
+ "max_abs_db_minus_quantum_on_in_db_rows": 6.998506930998104
+}

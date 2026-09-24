@@ -1,0 +1,126 @@
+{
+  "track": "TRACK 2 - reproducible spectral structure in the residual traces",
+  "artifacts_exist": true,
+  "script_runs": true,
+  "independent_recomputations": [
+    {
+      "quantity": "median per-pass 860-1310 uHz band percentile vs AR(1), model A",
+      "claimed": 0.471,
+      "recomputed": 0.4755,
+      "abs_diff": 0.0045
+    },
+    {
+      "quantity": "median per-pass 860-1310 uHz band percentile vs AR(1), model B",
+      "claimed": 0.0085,
+      "recomputed": 0.0075,
+      "abs_diff": 0.001
+    },
+    {
+      "quantity": "median per-pass 860-1310 uHz band percentile vs AR(1), model C",
+      "claimed": 0.7105,
+      "recomputed": 0.711,
+      "abs_diff": 0.0005
+    },
+    {
+      "quantity": "stacked global peak frequency/power, model A",
+      "claimed": "489.0 uHz / 0.20010908235811228",
+      "recomputed": "489.0 uHz / 0.20010908235811223",
+      "abs_diff": 5e-17
+    },
+    {
+      "quantity": "stacked global peak frequency/power, model B",
+      "claimed": "2474.0 uHz / 0.04038253752227732",
+      "recomputed": "2474.0 uHz / 0.04038253752227731",
+      "abs_diff": 1e-17
+    },
+    {
+      "quantity": "stacked global peak frequency/power, model C",
+      "claimed": "1706.0 uHz / 0.06682115502020337",
+      "recomputed": "1706.0 uHz / 0.06682115502020337",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "Rayleigh R at 1010 uHz (A, B, C)",
+      "claimed": [0.27785183077140785, 0.13450318667962827, 0.2984419684730587],
+      "recomputed": [0.27785183077140785, 0.13450318667962827, 0.2984419684730587],
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "Rayleigh R at 1210 uHz (A, B, C)",
+      "claimed": [0.2383286967995855, 0.04026812318115131, 0.2425778378039767],
+      "recomputed": [0.2383286967995855, 0.04026812318115131, 0.2425778378039767],
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "median per-pass spectral slope (log10 P vs log10 f), model A",
+      "claimed": -1.2217002943718072,
+      "recomputed": -1.2217002943718072,
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "pass-peak support count of 22 within 1 resolution element of stacked peak (A, B, C)",
+      "claimed": [16, 9, 8],
+      "recomputed": [16, 9, 8],
+      "abs_diff": 0
+    },
+    {
+      "quantity": "track AR(1) stacked-max null q50 (mean-of-per-pass-maxima statistic), model A",
+      "claimed": 0.24247,
+      "recomputed": 0.24297,
+      "abs_diff": 0.0005
+    },
+    {
+      "quantity": "p(stacked global peak vs AR(1)), model A",
+      "claimed": 0.99667,
+      "recomputed": "< 0.004 (0/300 with statistic-matched AR(1) null; track convention 0/150)",
+      "abs_diff": 0.993
+    },
+    {
+      "quantity": "p(stacked global peak vs AR(1)), model B",
+      "claimed": 1.0,
+      "recomputed": "< 0.004 (0/300 matched)",
+      "abs_diff": 0.996
+    },
+    {
+      "quantity": "p(stacked global peak vs AR(1)), model C",
+      "claimed": 1.0,
+      "recomputed": "0.0267 (8/300 matched; 0.053 with track surrogate convention)",
+      "abs_diff": 0.973
+    },
+    {
+      "quantity": "p(stacked band-limited (860-1310) peak vs matched AR(1)), model A",
+      "claimed": 1.0,
+      "recomputed": 0.185,
+      "abs_diff": 0.815
+    },
+    {
+      "quantity": "p(stacked band-limited (860-1310) peak vs matched AR(1)), model C",
+      "claimed": 0.994,
+      "recomputed": 0.065,
+      "abs_diff": 0.929
+    },
+    {
+      "quantity": "chance expectation for pass-peak support per 22 passes (uniform kludge vs red-noise full pipeline)",
+      "claimed": 3.3152501506931884,
+      "recomputed": "8.29 (AR(1) full-pipeline; 2.5-97.5% interval 4-12), model A",
+      "abs_diff": 4.97
+    },
+    {
+      "quantity": "max relative change of normalized LS power under the circular time shift used as a 'periodogram-preserving' null (claimed preserving => ~0)",
+      "claimed": "0 (labeled periodogram-preserving)",
+      "recomputed": "median 0.275, worst pass 0.810, across the 22 full passes",
+      "abs_diff": 0.275
+    }
+  ],
+  "problems_found": [
+    "STATISTIC MISMATCH in sec4b AR(1) stacked-peak nulls (reproduced defect, not a nuance). The null is built as (1/22)*sum_p max_f P_p,r(f) (mean of per-pass maxima) while the observed statistic is max_f (1/22)*sum_p P_p(f) (max of pass-means). I reproduced the track's null exactly with my own code (q50 0.24297 vs reported 0.24247, q95 0.2672 vs 0.26988 for model A), and the correctly matched null is ~1.7x smaller (max-of-pass-mean q50 0.0412 / q95 0.0965 / q99 0.1053 for A). Consequence: the reported p_stacked_global_peak_vs_ar1 A=0.9967, B=1.0, C=1.0 are all wrong; with a matched AR(1) null A and B have p<0.004 (0/300) and C has p=0.0267. The same mismatch applies to the band-limited variant: reported p_vs_matched_ar1_null A=1.0, C=0.994 vs recomputed 0.185 (A) and 0.065 (C). These p-values are in the machine-readable output and read as 'the stacked peaks are red-noise consistent'; under a correct null they are significant excesses.",
+    "MISLABELED NULL. sec4b phase_randomised_stacked_null is called 'periodogram-preserving (circular time shift)', but with irregular 1-minute sampling held fixed a circular shift is a time translation, not a phase randomisation; I measured the normalized LS power change over shifts: median max-relative change 0.275, worst pass 0.810 (pass_19), >0.4 for 12 of 22 passes. The null is not what the label and purpose text claim, although its stacked p for the global peak (A 0.00333) does reproduce with a matched statistic.",
+    "STATED VERDICT CLAUSE FALSE FOR MODEL B. 'pass-level 860-1310 uHz band power is consistent with an AR(1) red-noise null in all three models' is wrong for B: median per-pass percentile 0.0085, 0 of 22 passes above the median, two-sided sign test p=4.8e-7, and the out-of-sample split-half check is the same (observed ratio median 0.211 vs null percentile 0.0085, sign test p=4.8e-7). B's band power is a reproducible DEFICIT relative to AR(1); the AR(1) null fails for B (opposite sign from, but equally inconsistent as, model C's marginal excess). The track computed these numbers but never flagged the inconsistency.",
+    "INVALID CHANCE NULL for the reported 'pass-peak support' number. expected_passes_by_chance_fixed=3.315 assumes uniformly distributed pass-peak frequencies; the proper red-noise full-pipeline null gives 8.29 per 22 passes (95% interval 4-12) for model A, 4.62 (2-8) B, 5.30 (2-9) C. So the reported 16/22 (A) appears more extreme than a red-noise null supports. Moreover A's support is explained by broadband low-frequency excess, not by a line: the stacked peak is only 1.16x the local median within 1 resolution element, and per-pass peak frequencies are broadly spread (median 557 uHz, IQR 432-656).",
+    "METADATA CONTRADICTION in the output: sec4b phase_randomised_stacked_null top-level 'n_realisations': 500 while the per-model values (and the executed loop, n_sh=300) are 300; the script comment says 500. A consumer reading the top-level field is misled about the null resolution (1/500 vs 1/300).",
+    "BOUNDARY-FRAGILE COUNTS. Model C's 'passes above the AR(1) 99th percentile = 1/22' and '3/22 above q95' rest on percentiles estimated from 1000 surrogates; pass_03 model C has band percentile 0.949 (track) / 0.9565, 0.947, 0.9465, 0.9495 across four independent 1000-surrogate seeds, so the q95 count varies 3-4 of 22 across seeds. The quoted counts should carry a Monte-Carlo tolerance; the underlying conclusion (no strong line) is unaffected.",
+    "Not found (checked and absent): no p-value or CI anywhere treats the 1698 time samples or grid rows as independent - every sign test, Wilcoxon and KS in the JSON is aggregated at the 22-pass level, and sec5's uniform-phase null is a legitimate chance null; no cartesian-grid claim; no physical-uniqueness claim from information criteria; no asserted number without a code path reproducing it. I re-ran track2_spectral_tests.py in a sandbox copy on the same data: exit 0, 1127 s, and a full recursive numeric diff against output/results/spectral_tests.json gave exactly one difference (/runtime_sec 508.14 vs 1127.08), i.e. every substantive number is bit-for-bit reproducible. The band/percentile null result is not a bug: my entirely independent LS + lfilter pipeline reproduces the null findings (no in-band stacked peak for A or B, band percentiles near/below the middle for A and B, model C marginal), and the AR(1) surrogates are drawn independently of the observed series."
+  ],
+  "severity": "major",
+  "verdict": "partially_confirmed"
+}

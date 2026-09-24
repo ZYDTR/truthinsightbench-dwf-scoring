@@ -1,0 +1,129 @@
+{
+  "axis1_event_set_a": {
+    "file": "event_recording_set_a.tsv",
+    "n": 35,
+    "contiguous_index": true,
+    "mean_time": 34.97571428571428,
+    "median_time": 35.15,
+    "sd_time": 29.734977352459182,
+    "neg_time_frac": 0.14285714285714285,
+    "signal_mean": 0.04035428571428569,
+    "signal_median": -0.3628,
+    "event_state_spearman": {
+      "rho": -0.3086974532565159,
+      "p": 0.0711830338851403
+    },
+    "state_pos_mean_time": 24.166666666666668,
+    "state_neg_mean_time": 43.082499999999996,
+    "state_ttest_p": 0.06143634737548813
+  },
+  "axis2_event_set_b": {
+    "file": "event_recording_set_b.tsv",
+    "n": 556,
+    "contiguous_index": true,
+    "mean_time": 32.80521582733813,
+    "median_time": 30.275,
+    "sd_time": 27.749100297860508,
+    "neg_time_frac": 0.10611510791366907,
+    "signal_mean": 0.4851306257194245,
+    "signal_median": 0.19835,
+    "event_state_spearman": {
+      "rho": -0.21988196599416968,
+      "p": 1.6294144350879265e-07
+    },
+    "state_pos_mean_time": 26.773479729729733,
+    "state_neg_mean_time": 39.67211538461538,
+    "state_ttest_p": 3.073536627848136e-08
+  },
+  "axis3_panel": {
+    "file": "multichannel_event_panel.tsv",
+    "n_rows": 117,
+    "units_present": [
+      1,
+      2,
+      3
+    ],
+    "events_per_unit": {
+      "1": 39,
+      "2": 39,
+      "3": 39
+    },
+    "per_unit_signal_mean": {
+      "1": 0.48868717948717955,
+      "2": -0.20395641025641023,
+      "3": 0.5982743589743591
+    }
+  },
+  "axis4_unit_meanlat": {
+    "file": "unit_distance_mean_latency.tsv",
+    "n_units": 41,
+    "dist_range": [
+      0.005,
+      0.7336
+    ],
+    "meanlat_range": [
+      5.1,
+      77.8
+    ],
+    "pearson": {
+      "r": -0.19296261975608445,
+      "p": 0.22675769396961273
+    },
+    "spearman": {
+      "rho": -0.1383275261324042,
+      "p": 0.38841574025826864
+    },
+    "perm_p": 0.3793103448275862,
+    "quartile_meanlat": {
+      "(0.004, 0.0501]": 37.46054545454545,
+      "(0.0501, 0.118]": 35.35197,
+      "(0.118, 0.3]": 35.77536,
+      "(0.3, 0.734]": 30.694460000000003
+    }
+  },
+  "axis5_unit_variability": {
+    "file": "unit_distance_latency_variability.tsv",
+    "n_units": 41,
+    "pearson": {
+      "r": 0.06556760460405084,
+      "p": 0.6837930365733388
+    },
+    "spearman": {
+      "rho": -0.020052317995818594,
+      "p": 0.9009675826100705
+    },
+    "zero_sd_count": 5,
+    "perm_p": 0.8985507246376812
+  },
+  "axis6_cross_recording": {
+    "files": [
+      "event_recording_set_a.tsv",
+      "event_recording_set_b.tsv"
+    ],
+    "ks_stat": 0.11521068859198355,
+    "ks_p": 0.7295102075866976,
+    "perm_p": 1.0
+  },
+  "consistency_vs_primary": {
+    "event_state_b": {
+      "spearman_p": true,
+      "mean_pos": true
+    },
+    "event_state_a": {
+      "spearman_p": true
+    },
+    "unit_meanlat": {
+      "pearson_p": true,
+      "spearman_p": true,
+      "n_units": true
+    },
+    "unit_variability": {
+      "pearson_p": true,
+      "spearman_p": true,
+      "zero_sd_count": true
+    },
+    "cross_recording": {
+      "ks_p": true
+    }
+  }
+}

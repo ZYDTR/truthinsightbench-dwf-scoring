@@ -1,0 +1,15 @@
+row,label,class,depth_top_m,depth_w_e_m,age_ce,order
+70,event_01,named,2.0,0.78,1991.0,1
+502,event_02,named,12.96,5.88,1816.0,2
+517,unidentified_event,unidentified,13.27,6.04,1809.0,3
+796,unidentified_event,unidentified,18.9,9.25,1695.0,4
+841,unidentified_event,unidentified,19.85,9.83,1674.0,5
+907,unidentified_event,unidentified,21.24,10.71,1643.0,6
+1012,event_03,named,23.31,12.06,1595.0,7
+1305,event_04,named,29.2,16.23,1459.0,8
+1640,unidentified_event,unidentified,36.22,21.86,1286.0,9
+1660,unidentified_event,unidentified,36.59,22.18,1277.0,10
+1674,unidentified_event,unidentified,36.85,22.41,1269.0,11
+1696,event_05,named,37.28,22.78,1259.0,12
+1752,unidentified_event,unidentified,38.4,23.77,1230.0,13
+1862,unidentified_event,unidentified,40.59,25.76,1172.0,14

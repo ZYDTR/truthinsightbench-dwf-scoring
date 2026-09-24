@@ -1,0 +1,32 @@
+[artifact] results/J_curvature_robustness.json
+=== onset exclusion (quadratic curvature c, one-sided p for c<0) ===
+  main:condition_block1_1 | all_11_settings: c=-7.88e-05 p=0.0000 | T_ge_140: c=-5.97e-05 p=0.0000 | drop_120_and_140: c=-6.08e-05 p=0.0000
+  main:condition_block1_2 | all_11_settings: c=-1.34e-04 p=0.0000 | T_ge_140: c=-1.31e-04 p=0.0000 | drop_120_and_140: c=-1.38e-04 p=0.0000
+  main:condition_block1_3 | all_11_settings: c=-7.29e-05 p=0.0032 | T_ge_140: c=-1.14e-04 p=0.0000 | drop_120_and_140: c=-1.08e-04 p=0.0001
+  main:condition_block1_4 | all_11_settings: c=-4.48e-05 p=0.0000 | T_ge_140: c=-5.64e-05 p=0.0000 | drop_120_and_140: c=-6.52e-05 p=0.0000
+  main:condition_block2_1 | all_11_settings: c=-2.64e-05 p=0.0151 | T_ge_140: c=-2.64e-05 p=0.0151 | drop_120_and_140: c=-4.68e-05 p=0.0000
+  main:condition_block2_2 | all_11_settings: c=-1.85e-04 p=0.0000 | T_ge_140: c=-1.47e-04 p=0.0000 | drop_120_and_140: c=-1.50e-04 p=0.0000
+  main:condition_block2_3 | all_11_settings: c=-1.22e-04 p=0.0000 | T_ge_140: c=-1.38e-04 p=0.0000 | drop_120_and_140: c=-1.47e-04 p=0.0000
+  main:condition_block2_4 | all_11_settings: c=-1.06e-04 p=0.0000 | T_ge_140: c=-9.75e-05 p=0.0000 | drop_120_and_140: c=-1.01e-04 p=0.0000
+  check:condition_block1_1 | all_11_settings: c=-2.29e-05 p=0.0077 | T_ge_140: c=-2.29e-05 p=0.0077 | drop_120_and_140: c=-3.81e-05 p=0.0000
+  check:condition_block1_2 | all_11_settings: c=-6.42e-05 p=0.0000 | T_ge_140: c=-7.67e-05 p=0.0000 | drop_120_and_140: c=-9.49e-05 p=0.0000
+  check:condition_block1_4 | all_11_settings: c=-2.64e-05 p=0.0151 | T_ge_140: c=-2.64e-05 p=0.0151 | drop_120_and_140: c=-4.68e-05 p=0.0000
+  check:condition_block1_5 | all_11_settings: c=-1.85e-04 p=0.0000 | T_ge_140: c=-1.47e-04 p=0.0000 | drop_120_and_140: c=-1.50e-04 p=0.0000
+
+=== alternative curvature forms ===
+  main:condition_block1_1 logT-quad coef=+0.5658 (R2=0.99917) reciprocal-R2=0.79709 neg 2nd-diffs=7/8 all_neg=False
+  main:condition_block1_2 logT-quad coef=-3.7091 (R2=0.99332) reciprocal-R2=0.79882 neg 2nd-diffs=7/8 all_neg=False
+  main:condition_block1_3 logT-quad coef=-3.0401 (R2=0.99716) reciprocal-R2=0.77472 neg 2nd-diffs=6/8 all_neg=False
+  main:condition_block1_4 logT-quad coef=+0.0598 (R2=0.99859) reciprocal-R2=0.87372 neg 2nd-diffs=7/8 all_neg=False
+  main:condition_block2_1 logT-quad coef=+1.9065 (R2=0.99747) reciprocal-R2=0.90952 neg 2nd-diffs=6/8 all_neg=False
+  main:condition_block2_2 logT-quad coef=-4.8353 (R2=0.99355) reciprocal-R2=0.78349 neg 2nd-diffs=8/8 all_neg=True
+  main:condition_block2_3 logT-quad coef=-3.9483 (R2=0.99327) reciprocal-R2=0.78875 neg 2nd-diffs=8/8 all_neg=True
+  main:condition_block2_4 logT-quad coef=-1.8615 (R2=0.99811) reciprocal-R2=0.80871 neg 2nd-diffs=8/8 all_neg=True
+  check:condition_block1_1 logT-quad coef=+1.8657 (R2=0.99854) reciprocal-R2=0.91293 neg 2nd-diffs=4/8 all_neg=False
+  check:condition_block1_2 logT-quad coef=-0.8488 (R2=0.99442) reciprocal-R2=0.87846 neg 2nd-diffs=6/8 all_neg=False
+  check:condition_block1_4 logT-quad coef=+1.9065 (R2=0.99747) reciprocal-R2=0.90952 neg 2nd-diffs=6/8 all_neg=False
+  check:condition_block1_5 logT-quad coef=-4.8353 (R2=0.99355) reciprocal-R2=0.78349 neg 2nd-diffs=8/8 all_neg=True
+
+=== holdout sign test ===
+  main: c<0 in training for 8/8; quadratic beats exponential on holdout for 8/8
+  check: c<0 in training for 4/4; quadratic beats exponential on holdout for 4/4

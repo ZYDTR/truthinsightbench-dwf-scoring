@@ -1,0 +1,43 @@
+/usr/local/lib/python3.11/dist-packages/numpy/lib/_function_base_impl.py:3023: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/usr/local/lib/python3.11/dist-packages/numpy/lib/_function_base_impl.py:3024: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+measured energies aligned to dense rows: [np.float64(22.5), np.float64(23.2), np.float64(24.8), np.float64(26.4), np.float64(27.9), np.float64(29.4), np.float64(31.0), np.float64(32.5), np.float64(34.1), np.float64(35.6), np.float64(37.2), np.float64(38.7), np.float64(48.4)]
+dense complex Legendre coefficients c_k: shape (13, 9)
+
+T1: |c_k| vs F20(order k) diagonal k=0..3 = [-0.063  -0.7899 -0.161  -0.2998]
+T1: mean |r| diagonal (all 9) = 0.3631 ; off-diagonal mean |r| = 0.3525 ; off-diagonal max |r| = 0.9100
+T2: permutation p = 0.17530 (observed mean|r| over k=0..3 = 0.3284)
+T3: best order shift = -2 mean|r| = 0.6909 vs shift 0 mean|r| = 0.3284
+
+T4: one complex scale per order, F20(E,k) = s_k * c_k(E):
+   k=0 |s_k|=4.5391 (imag 1.32e+00)  var_explained=-2.51502  max_rel_resid=2.728
+   k=1 |s_k|=1.0213 (imag -1.02e+00)  var_explained=0.31411  max_rel_resid=10.937
+   k=2 |s_k|=0.7454 (imag -2.72e-01)  var_explained=-0.12328  max_rel_resid=11.991
+   k=3 |s_k|=1.5205 (imag 8.03e-01)  var_explained=-1.61802  max_rel_resid=8.339
+
+T5 controls: random pairing var-explained median -0.8060 p95 0.3067 max 0.3358
+T5 controls: shift-by-one var-explained = [-0.6718, -0.1857, -0.0976]
+
+T6: corr(F20_sum/F00_sum truncated at order n, dense beta) by n:
+   n=0  pearson=-0.8362  spearman=-0.8626
+   n=1  pearson=-0.7667  spearman=-0.6868
+   n=2  pearson=+0.3798  spearman=+0.3077
+   n=3  pearson=+0.4343  spearman=+0.5165
+   n=4  pearson=+0.5922  spearman=+0.5275
+   n=5  pearson=+0.0717  spearman=-0.3022
+   n=6  pearson=-0.4731  spearman=-0.4396
+   n=7  pearson=-0.3410  spearman=-0.3242
+   n=8  pearson=-0.4515  spearman=-0.4780
+
+T7: order-wise diagonal correlations by family:
+   F00  [-0.3135, -0.0336, -0.2093, -0.3551]  mean|r|=0.228
+   F20  [-0.063, -0.7899, -0.161, -0.2998]  mean|r|=0.328
+   F21  [nan, 0.8104, -0.7159, 0.4391]  mean|r|=nan
+   F22  [nan, nan, -0.7188, 0.3859]  mean|r|=nan
+   F11  [nan, 0.3389, 0.6837, -0.3373]  mean|r|=nan
+sha256 angle_energy_observations_datasets.tsv 55a1d9621c0e386fb44a63764a97cf81491d2bd7af0209c74e212329172df396
+sha256 angular_coefficients_datasets.tsv a47e1e06130ec2a0dc8e3a4b2b45233828b37e6ff31101dbefebfd8b9d0ac411
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/d02_order_alignment.csv
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/d02_order_alignment.json
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/d02_order_alignment.png

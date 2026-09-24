@@ -1,0 +1,390 @@
+{
+  "schema": "life02-independent-verification",
+  "task_id": "Life_02_contextual_immune_response",
+  "method": "independent recomputation from raw TSVs by three parallel sub-agents, each using its own code path (no shared helper module)",
+  "checks_total": 28,
+  "checks_agreeing": 28,
+  "checks_disagreeing": 0,
+  "checks": [
+    {
+      "unit": "compartment_response_replicates",
+      "claim": "V1a cells with fold change > 1",
+      "recomputed": 18,
+      "claimed": 18,
+      "agrees": true
+    },
+    {
+      "unit": "compartment_response_replicates",
+      "claim": "V1b replicate pairs pert > baseline",
+      "recomputed": 69,
+      "claimed": 69,
+      "agrees": true
+    },
+    {
+      "unit": "compartment_response_replicates",
+      "claim": "V1c mean cell log2 fold change",
+      "recomputed": 0.870613,
+      "claimed": 0.871,
+      "agrees": true
+    },
+    {
+      "unit": "compartment_response_replicates",
+      "claim": "V1d 95% CI of mean log2 FC (t, df=17)",
+      "recomputed": [
+        0.748984,
+        0.992242
+      ],
+      "claimed": [
+        0.749,
+        0.992
+      ],
+      "agrees": true
+    },
+    {
+      "unit": "compartment_response_replicates",
+      "claim": "V1e median cell fold change",
+      "recomputed": 1.868097,
+      "claimed": 1.868,
+      "agrees": true
+    },
+    {
+      "unit": "compartment_response_replicates",
+      "claim": "V1f min cell fold change",
+      "recomputed": 1.382399,
+      "claimed": 1.382,
+      "agrees": true
+    },
+    {
+      "unit": "compartment_response_replicates",
+      "claim": "V1f max cell fold change",
+      "recomputed": 2.531222,
+      "claimed": 2.531,
+      "agrees": true
+    },
+    {
+      "unit": "compartment_response_replicates",
+      "claim": "V1g mean FC endpoint_count",
+      "recomputed": 1.92986,
+      "claimed": 1.93,
+      "agrees": true
+    },
+    {
+      "unit": "compartment_response_replicates",
+      "claim": "V1g mean FC endpoint_fraction",
+      "recomputed": 1.7773,
+      "claimed": 1.777,
+      "agrees": true
+    },
+    {
+      "unit": "compartment_response_replicates",
+      "claim": "V1g cells per endpoint type",
+      "recomputed": [
+        9,
+        9
+      ],
+      "claimed": [
+        9,
+        9
+      ],
+      "agrees": true
+    },
+    {
+      "unit": "compartment_response_replicates",
+      "claim": "V1h paired t statistic",
+      "recomputed": 2.313046,
+      "claimed": 2.313,
+      "agrees": true
+    },
+    {
+      "unit": "compartment_response_replicates",
+      "claim": "V1h paired t p-value",
+      "recomputed": 0.049453,
+      "claimed": 0.0495,
+      "agrees": true
+    },
+    {
+      "unit": "compartment_response_replicates",
+      "claim": "V1h mean log2 delta (count - fraction)",
+      "recomputed": 0.110517,
+      "claimed": 0.111,
+      "agrees": true
+    },
+    {
+      "unit": "compartment_response_replicates",
+      "claim": "V1h strata n",
+      "recomputed": 9,
+      "claimed": 9,
+      "agrees": true
+    },
+    {
+      "unit": "intervention",
+      "claim": "V3a Kendall's W over 3x5 rank matrix",
+      "recomputed": 0.955556,
+      "agrees": true,
+      "expression": "W = 12*S/(n^2*(k^3-k)-n*T) with S=sum(col_rank_sums-mean)^2, n=3,k=5"
+    },
+    {
+      "unit": "intervention",
+      "claim": "V3b chi2 = n_assays*(n_settings-1)*W, df=4, p",
+      "recomputed": {
+        "chi2": 11.4667,
+        "df": 4,
+        "p": 0.021791
+      },
+      "agrees": true,
+      "expression": "chi2 = 3*(5-1)*W; p = scipy.stats.chi2.sf(chi2, 4)"
+    },
+    {
+      "unit": "intervention",
+      "claim": "V3c lowest-ranked setting per assay",
+      "recomputed": {
+        "assay_1": "intervention_setting_1",
+        "assay_2": "intervention_setting_1",
+        "assay_3": "intervention_setting_1"
+      },
+      "agrees": true,
+      "expression": "meanA.idxmin(axis=1) over setting columns"
+    },
+    {
+      "unit": "intervention",
+      "claim": "V3d Spearman assay_1 vs assay_3 = 1.000",
+      "recomputed": 1.0,
+      "agrees": true,
+      "expression": "scipy.stats.spearmanr(rank_assay1, rank_assay3)"
+    },
+    {
+      "unit": "intervention",
+      "claim": "V3d Spearman assay_2 vs assay_3 = 0.900",
+      "recomputed": 0.9,
+      "agrees": true,
+      "expression": "scipy.stats.spearmanr(rank_assay2, rank_assay3)"
+    },
+    {
+      "unit": "intervention",
+      "claim": "V4a class A slope 8.593, R2 0.9587",
+      "recomputed": {
+        "slope": 8.593,
+        "R2": 0.9587
+      },
+      "agrees": true,
+      "expression": "smf.ols('response_value ~ setting_index') on class A"
+    },
+    {
+      "unit": "intervention",
+      "claim": "V4b class B slope 0.191, p 0.5837",
+      "recomputed": {
+        "slope": 0.1913,
+        "p": 0.5837
+      },
+      "agrees": true,
+      "expression": "smf.ols('response_value ~ setting_index') on class B"
+    },
+    {
+      "unit": "intervention",
+      "claim": "V4c class x setting interaction F 45.415, p 4.73e-08",
+      "recomputed": {
+        "F": 45.4145,
+        "p": 4.7303240535929876e-08
+      },
+      "agrees": true,
+      "expression": "anova_lm(ols('response_value ~ C(response_class_id)*C(compound_setting_id)'), typ=2)"
+    },
+    {
+      "unit": "intervention",
+      "claim": "V4d class A slopes [8.782, 9.291, 7.706], class B [0.403, 0.825, -0.654], complete separation",
+      "recomputed": {
+        "A": {
+          "replicate_1": 8.782,
+          "replicate_2": 9.291,
+          "replicate_3": 7.706
+        },
+        "B": {
+          "replicate_1": 0.403,
+          "replicate_2": 0.825,
+          "replicate_3": -0.654
+        },
+        "min_A": 7.706,
+        "max_B": 0.825,
+        "complete_separation": true
+      },
+      "agrees": true,
+      "expression": "per (class,replicate) smf.ols('response_value ~ setting_index') slopes; min(A) > max(B)"
+    },
+    {
+      "unit": "time",
+      "claim": "V5a: no time point significant at 0.05; all 7 p>=0.05; min p=0.506",
+      "recomputed": {
+        "per_time": {
+          "3.0": {
+            "n": 4,
+            "mean_diff_pp": -0.516715,
+            "paired_sd": 5.325766,
+            "t": -0.194043,
+            "p": 0.858538
+          },
+          "6.0": {
+            "n": 4,
+            "mean_diff_pp": -0.521745,
+            "paired_sd": 5.780956,
+            "t": -0.180505,
+            "p": 0.868261
+          },
+          "9.0": {
+            "n": 4,
+            "mean_diff_pp": 0.995735,
+            "paired_sd": 5.436791,
+            "t": 0.366295,
+            "p": 0.738453
+          },
+          "12.0": {
+            "n": 4,
+            "mean_diff_pp": -1.082767,
+            "paired_sd": 9.978196,
+            "t": -0.217027,
+            "p": 0.842109
+          },
+          "15.0": {
+            "n": 4,
+            "mean_diff_pp": 0.196098,
+            "paired_sd": 10.910945,
+            "t": 0.035945,
+            "p": 0.973584
+          },
+          "18.0": {
+            "n": 4,
+            "mean_diff_pp": -2.38235,
+            "paired_sd": 6.322767,
+            "t": -0.753578,
+            "p": 0.505852
+          },
+          "21.0": {
+            "n": 4,
+            "mean_diff_pp": -3.057375,
+            "paired_sd": 8.325482,
+            "t": -0.734462,
+            "p": 0.515867
+          }
+        },
+        "min_p": 0.505852,
+        "min_p_time": 18.0,
+        "all_p_ge_0_05": true
+      },
+      "agrees": true,
+      "expression": "stats.ttest_1samp(perturbation-baseline diff per time_units, popmean=0)"
+    },
+    {
+      "unit": "time",
+      "claim": "V5b: largest |mean diff| at t=21 with -3.057 pp",
+      "recomputed": {
+        "time": 21.0,
+        "mean_diff_pp": -3.057375,
+        "t_stat": -0.734462
+      },
+      "agrees": true,
+      "expression": "wide.groupby('time_units')['diff'].mean(); abs() argmax"
+    },
+    {
+      "unit": "time",
+      "claim": "V5c: OLS slope baseline = 0.839, p<0.001",
+      "recomputed": {
+        "slope": 0.839041,
+        "p": 8.358788610253814e-06
+      },
+      "agrees": true,
+      "expression": "sm.OLS(normalized_response_percent ~ time_units) within condition_role=baseline, n=28"
+    },
+    {
+      "unit": "time",
+      "claim": "V5c: OLS slope perturbation = 0.6945, p<0.001",
+      "recomputed": {
+        "slope": 0.694484,
+        "p": 1.754192250556534e-06
+      },
+      "agrees": true,
+      "expression": "sm.OLS(normalized_response_percent ~ time_units) within condition_role=perturbation, n=28"
+    },
+    {
+      "unit": "time",
+      "claim": "V5d: time x condition_role interaction p = 0.4304",
+      "recomputed": {
+        "p": 0.430445,
+        "params": [
+          "time_units:C(condition_role)[T.perturbation]"
+        ]
+      },
+      "agrees": true,
+      "expression": "smf.mixedlm('normalized_response_percent ~ time_units * C(condition_role)', groups=replicate_id).fit()"
+    }
+  ],
+  "errors": [],
+  "adversarial_cell_level_sign_test": {
+    "description": "18 cells each contribute one sign of their mean log2 fold change, instead of pooling 72 replicate pairs",
+    "positive_cells": 18,
+    "total_cells": 18,
+    "one_sided_p": 3.81e-06,
+    "two_sided_p": 7.63e-06,
+    "pooled_pair_test_p": 1.32e-17,
+    "verdict": "conclusion unchanged: all 18 cells are up; pooling overstates precision by ~11 orders of magnitude in p but not the direction"
+  },
+  "sources": [
+    "verification_compartment.json",
+    "verification_intervention.json",
+    "verification_time.json"
+  ],
+  "artifact_sha256": {
+    "analysis/01_compartment_intervention.py": "8020f5e8418aae26615e6c66c20836df6eccbc06c28941b8ec0cd1a8d7b59fa0",
+    "analysis/02_time_resolved.py": "3138c5746f1e317d81d86997cbe6a501ee02180848ea18168f1091f987af9b0e",
+    "analysis/03_robustness.py": "943f412ece7e4fa7a09f4b571df0c2b257c7cf2d3c97f9a52cd5e29857354586",
+    "analysis/04_figures.py": "080a15bef1bb6a2603f0af21a02e2e3748a20d267dea93a7b831243fd1bce9dc",
+    "analysis/05_verification_compartment.py": "0ffc4d8e6d398e62b28b97730d40ea9d0fd9185888cede8870d5009f65291992",
+    "analysis/05_verification_intervention.py": "eb8def534a54fb64dc617eff5f55b824183b608dd248cb7879f435e73b0b5d2a",
+    "analysis/05_verification_time.py": "0425223f686118e8a8af1b575d7163a930d636f6c64ebc694009b1c43ae3bb78",
+    "analysis/06_sensitivity.py": "9a2e86748829e4d9d0e8fc4e44cf4fb35d197f95f5eb45da91d33aad11fcd86a",
+    "analysis/common.py": "3185e3e6a776100d030b7ad68d4d227b703ddddb646e284bf2287bd9ec805439",
+    "figures/fig1_compartment_fold_change.png": "8eadf8b7a3167de2260b5f6f860e5ff67b6b37d546c280c368f7711d1632031d",
+    "figures/fig2_baseline_vs_foldchange.png": "a2ac32337455bbd057bd7e9ef0a46ce6e6527c1df9d46159fc4befe65a5e0da8",
+    "figures/fig3_intervention_profiles.png": "6d420e69169f536e03d3137151bb533c3f1cb10577387842ff802c83247ea7c2",
+    "figures/fig4_time_resolved.png": "c38687b9eb7537a57489490705229e1f792dffafca9e305281219544ea6c5170",
+    "logs/01_compartment_intervention.log": "45da014f07c61b94879583ba99dead80feeac438803d0132aa3cc2ccf1798f6e",
+    "logs/02_time_resolved.log": "011f36873e66d5ae6ae017a700aa24c3feca3908b48542a489cbe3796bcc9142",
+    "logs/03_robustness.log": "d3a1eb53c570358383b722348a5cdf50bb889bb5aa55773eaecf487ac6df52da",
+    "logs/06_sensitivity.log": "e5d7e1d042f5f7914a93e02bce4b018a3785d6f1f56dfad7d3cfff0889d570f7",
+    "results/compartment_cell_effects.csv": "f8452c8029d23ff39c55e5e0b9ab2b3bb8efd14c3f466f0eb62b15d9b155c990",
+    "results/compartment_ordering_reproducibility.csv": "522498fb3192a92fae7041747b1c3905159c0f31a01a796c974804616aeb7e77",
+    "results/compartment_replicate_effects.csv": "92d4b6ce5e87657dc90213efc395af8e98d966959064f1f0a8656e5fbfbca5b1",
+    "results/core_analysis_summary.json": "dea0a7dae6e5213c90ff66e6fdc20e58806e5e52788c21507d928cce95ec94ed",
+    "results/endpoint_ordering_agreement.csv": "2d9abeba48d1c0d3577f335b3ed0f093cb8181b27ba1134bbb1145f1f7dcf105",
+    "results/endpoint_paired_deltas.csv": "447a4bd50e4c177ae2a02982178e1830ac00172b68ac22194e6d67f7a54b56a5",
+    "results/endpoint_type_comparison.csv": "73da48a81663eefe5e468ff0dbd5eb722c1491ffbf8b1451598c8aff73ad7757",
+    "results/intervention_assay_by_setting_matrix.csv": "3980e03da37f43ab476561da2dac8f0925c554752a057407d381ef6892daf44b",
+    "results/intervention_leave_one_assay_out.csv": "7bd9a7d94d60f87c905e3edbee7f4bef51ac417ee7c75dcb5a009cec773beb11",
+    "results/intervention_setting_means.csv": "ae09f2f17fa45b149745db7976667e281393391297d6bd43558c68974836c86a",
+    "results/intervention_setting_rank_spread.csv": "8183cc15f3d7e870241080f4cfeeddd049b4d537c36b3b926b9b45bd0171ca75",
+    "results/loocv_assay_predictions.csv": "e19eefa72ba10815e81222f6422f5d9d6c876c979f1f20980e4baf12be260745",
+    "results/loocv_rank_accuracy.csv": "d87372661be1d015de67e0e9e0f5f6c522f9c373e4370495c431223b8e968405",
+    "results/multi_condition_anova.csv": "f74151c0452ac31c67c53d131c5567a04cfd8ec9d06af68c337c6d573e015b7b",
+    "results/multi_condition_class_fits.csv": "e16e1b5b00fe45f6f4b8873bc0334e879908f1af0ece8577082dc96ae100cda6",
+    "results/multi_condition_setting_means.csv": "6219afa6eaa2abf6d139b9e06b884598a1acaa872995cb7c7d2761ef0e1867d8",
+    "results/robustness_assay_leave_out.csv": "46d57536e840f8fa4233abe0501af1a7981692d955612a6257a59b8947bef7d1",
+    "results/robustness_assay_precision.csv": "112ec08c1aaab5335e5a15e45ca7f0b4c1f7785dbe6caa46a608194332c3ad01",
+    "results/robustness_multicondition_replicate_slopes.csv": "da493c412bc626eb7474aaa2045408ba86ef1d9bb6760b5b52ceb034b61a1cfe",
+    "results/robustness_ordering_ambiguity.csv": "47f014ef944f542d42620f36fc6a83c1fe32464d7862617857290c759dfc2eee",
+    "results/robustness_ordering_gaps.csv": "a60fed5989bb7e6c24cd3b5ffa59b264cd2fb3d33dfdfbd787d8dc181bcd14d2",
+    "results/robustness_rank_concordance.csv": "91ebc3254228194b047cfcb5d520fdeacf27bcdaad594a451d5d9c17b28aa1f4",
+    "results/robustness_summary.json": "4b433548b8acbdd8f7d724e45329be28fc503d8ed95b2d2b5671e768517266f1",
+    "results/robustness_time_trend_loo.csv": "d983160bd28084cb78819ef8412762f594d7c1bd9e1195927710c6ccbf5f1916",
+    "results/robustness_time_trends.csv": "10878ee6e7757ad6531cbdec3d42940f1942bf46810d7c00a74acc5c3b8ea504",
+    "results/robustness_weighted_cells.csv": "8bc2f0988b58e157d98d81e2b35947462375a8bef3aa7e57361c30fc6ec01ad5",
+    "results/sensitivity_report.json": "6c0fefb1d929eff5a9ed15c10e7ba5f65c6b32b281631ac7fa9b705255aa6c36",
+    "results/time_resolved_contrasts.csv": "bc4eafa6752a9e8eaafa92494708870515ee7bb64abffad013bad6e09d248ecb",
+    "results/time_resolved_leave_one_replicate_out.csv": "f242a4ee033c0bde882406e9994fd1d4aeba07dd56033bb088d49aeba2ce6013",
+    "results/time_resolved_paired_wide.csv": "2b03ea05a43c60e1660f10f601a0ea2e53b2ab8eb3f10470d357d3f1b4f5a90a",
+    "results/time_resolved_replicate_slopes.csv": "3af42a9dd1a8651662d7ff46720b2b5bb252cd3a06e41955f439d00b42e6e5fa",
+    "results/time_resolved_segments.csv": "819c44b00b30a426a5e989ab137fb02383c81d545729f07da9a40299a21d4d00",
+    "results/time_resolved_summary.json": "f8dfe9fb99309047d49b99498949b49e75ba65c6969579a46fd0ada628c04c79",
+    "results/time_resolved_unpaired_robustness.csv": "7663ac660d3a929be6fc66e2d9b870cc7d0859333fdb7918188cc1c5529d8d13",
+    "results/verification_compartment.json": "34d0fe9f42e478379dcd58575dd27648bb7c83f0c1216758226ff6eea19c196f",
+    "results/verification_intervention.json": "bea0085eade433df335083d847dba968ae0d14f4cee5b3220ee1039e6b3442da",
+    "results/verification_time.json": "e445df0b07c56ac33f440ba7658d65d0c8d3ea5404a914214ee0cfde9c8121e4"
+  }
+}

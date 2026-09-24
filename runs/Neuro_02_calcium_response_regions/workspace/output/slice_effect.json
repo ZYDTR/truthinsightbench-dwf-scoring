@@ -1,0 +1,12 @@
+{
+  "mean_auc_au": {
+    "r2": 0.5346,
+    "slice_F_p": 0.0,
+    "n_slices": 7
+  },
+  "mean_peak_width_s": {
+    "r2": 0.4216,
+    "slice_F_p": 0.0,
+    "n_slices": 7
+  }
+}

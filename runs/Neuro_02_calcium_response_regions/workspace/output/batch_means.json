@@ -1,0 +1,74 @@
+{
+  "recording_batch_01": {
+    "mean_amplitude_dff0": 4.543,
+    "mean_time_to_peak_s": 146.256,
+    "mean_peak_width_s": 18.388,
+    "mean_peak_prominence_dff0": 3.106,
+    "mean_peak_frequency_hz": 0.003,
+    "mean_auc_au": 474.207
+  },
+  "recording_batch_02": {
+    "mean_amplitude_dff0": 2.225,
+    "mean_time_to_peak_s": 140.372,
+    "mean_peak_width_s": 9.213,
+    "mean_peak_prominence_dff0": 0.992,
+    "mean_peak_frequency_hz": 0.011,
+    "mean_auc_au": 413.211
+  },
+  "recording_batch_03": {
+    "mean_amplitude_dff0": 1.553,
+    "mean_time_to_peak_s": 124.206,
+    "mean_peak_width_s": 40.121,
+    "mean_peak_prominence_dff0": 0.51,
+    "mean_peak_frequency_hz": 0.006,
+    "mean_auc_au": 341.823
+  },
+  "recording_batch_04": {
+    "mean_amplitude_dff0": 1.683,
+    "mean_time_to_peak_s": 135.027,
+    "mean_peak_width_s": 23.14,
+    "mean_peak_prominence_dff0": 0.546,
+    "mean_peak_frequency_hz": 0.007,
+    "mean_auc_au": 364.739
+  },
+  "recording_batch_05": {
+    "mean_amplitude_dff0": 2.041,
+    "mean_time_to_peak_s": 135.538,
+    "mean_peak_width_s": 34.649,
+    "mean_peak_prominence_dff0": 0.902,
+    "mean_peak_frequency_hz": 0.005,
+    "mean_auc_au": 381.965
+  },
+  "recording_batch_06": {
+    "mean_amplitude_dff0": 1.63,
+    "mean_time_to_peak_s": 174.375,
+    "mean_peak_width_s": 29.035,
+    "mean_peak_prominence_dff0": 0.58,
+    "mean_peak_frequency_hz": 0.005,
+    "mean_auc_au": 326.28
+  },
+  "recording_batch_07": {
+    "mean_amplitude_dff0": 1.917,
+    "mean_time_to_peak_s": 134.408,
+    "mean_peak_width_s": 38.413,
+    "mean_peak_prominence_dff0": 0.776,
+    "mean_peak_frequency_hz": 0.005,
+    "mean_auc_au": 387.063
+  },
+  "recording_batch_08": {
+    "mean_amplitude_dff0": 1.708,
+    "mean_time_to_peak_s": 122.379,
+    "mean_peak_width_s": 39.593,
+    "mean_peak_prominence_dff0": 0.583,
+    "mean_peak_frequency_hz": 0.009,
+    "mean_auc_au": 362.484
+  },
+  "recording_batch_09": {
+    "mean_amplitude_dff0": 1.716,
+    "mean_time_to_peak_s": 138.034,
+    "mean_peak_width_s": 35.71,
+    "mean_peak_prominence_dff0": 0.549,
+    "mean_peak_frequency_hz": 0.007,
+    "mean_auc_au": 367.25
+  }
+}

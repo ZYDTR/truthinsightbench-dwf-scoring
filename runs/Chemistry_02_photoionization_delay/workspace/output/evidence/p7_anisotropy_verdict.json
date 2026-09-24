@@ -1,0 +1,49 @@
+{
+  "package": "p7_anisotropy",
+  "verify_script": "/data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/analysis/p7_anisotropy_verify.py",
+  "verdicts": [
+    {
+      "claim": "1. Two-term M = A(1+beta P2) fit is inadequate: median R2 0.382 (experiment) / 0.103 (theory); full expansion reaches median R2 0.9987",
+      "reproduced": true,
+      "my_value": "my medians: 2-term exp 0.3821, theory 0.1029; L<=8 of M exp 0.99874, theory 0.99366; M^2 L<=6 exp 1.0000000; sin(th)-weighted 2-term exp 0.3521 theory 0.0236",
+      "method": "even/odd symmetrised Legendre fit, scipy.linalg.lstsq(gelsy), monomial-in-cos^2(theta) basis + exact leg2poly conversion",
+      "comment": "claim's 0.9987 is the experiment L<=8 value; theory L<=8 median is 0.9937. Weighted two-term R2 is even lower, so the inadequacy verdict is not a fitting-convention artefact."
+    },
+    {
+      "claim": "2. Experiment anisotropy beta(E) rises with photon energy: Pearson 0.892, Spearman 0.872, slope 0.132/eV, min -0.274 @ 25.9 eV, max 3.11 @ 43.2 eV",
+      "reproduced": true,
+      "my_value": "my values on the M^2 L<=6 beta: r=0.8918 (p=2.3e-96), rho=0.8724, slope=0.13205 /eV (se 0.00405), kendall 0.6994, min -0.2737 @ 25.9 eV, max 3.1116 @ 43.2 eV; L<=8 variant: r=0.8521 slope=0.07139, min -0.1482 @ 25.9, max 1.9304 @ 43.3",
+      "method": "scipy.stats.linregress + spearmanr + kendalltau on the independently fitted beta series (both the M^2 L<=6 series the claim quotes and the M L<=8 series)",
+      "comment": "the same energy dependence is present in the L<=8 series, so it is not an artefact of the M^2 basis choice."
+    },
+    {
+      "claim": "3. Theory beta(E) has a weaker but significant positive trend (Pearson 0.820, slope 0.060)",
+      "reproduced": true,
+      "my_value": "my values: r=0.8195 (p=3.4e-25), slope=0.06020 /eV (se 0.00427), rho=0.8608; thinned grid (steps>=0.1 eV, n=97): r=0.8274 slope=0.06189; L<=8 variant r=0.7028 slope=0.01931",
+      "method": "scipy.stats.linregress on the independently fitted theory beta series, with a thinned-grid robustness variant",
+      "comment": "the raw theory grid contains two ~0.016 eV steps at the low-E end (min step 0.016 vs median 0.194 eV); dropping them leaves the trend essentially unchanged (r 0.827, slope 0.0619), so the trend is not a low-E grid artefact."
+    },
+    {
+      "claim": "4. At matched energies exp and theory beta agree in sign 83% of the time and correlate at r 0.85, but theory beta is systematically smaller and the difference grows with photon energy (1.19 at 38.75 eV)",
+      "reproduced": true,
+      "my_value": "pkg-style matched set (12 energies): sign agreement 0.8333 (10/12), pearson 0.8506, mean diff +0.2076, rms 0.5238, diff-vs-E spearman +0.972, diff at 38.75 eV +1.1925; strict-overlap set (11 energies, 22.5 eV dropped): sign agreement 0.8182, pearson 0.8765, mean diff +0.2493",
+      "method": "np.interp of my independently fitted beta series onto the matched energies; pearson/spearman via scipy.stats; diff-vs-E rank trend",
+      "comment": "the 22.5 eV matched point is BELOW the theory grid start (23.249 eV) and is clamped to the theory edge value; dropping it gives the strict-overlap numbers above. Also, 'systematically smaller' holds as an average only: below ~28 eV the experiment beta is smaller than theory (mean diff -0.2424 for E<=27.9), and the mean diff over E>=30 is +0.5860."
+    },
+    {
+      "claim": "5. The MEASURED CoefLeg F20/F00 anisotropy proxy anti-correlates with the dense-grid beta(E) across the 13 measured energies (Pearson -0.697, Spearman -0.720)",
+      "reproduced": true,
+      "my_value": "literal summed proxy (sum_k F20_k / sum_k F00_k) vs my dense beta: pearson -0.6972 (p=0.008084), spearman -0.7198 (p=0.005536), kendall -0.4615; without the 48.4 eV block: pearson -0.7038, spearman -0.7063. Order-consistent variant F00-family c2/c0 gives pearson +0.9674, spearman +0.9835; its single-order F20_0/F00_0 (the package's '1.32 -> 0.26' series) gives pearson -0.6009, spearman -0.4451",
+      "method": "proxy rebuilt from long-format column sums (index_1==1 for F00, index_1==3 for F20) instead of pivot indexing; scipy.stats pearsonr/spearmanr/kendalltau against my independent beta series",
+      "comment": "the stated numbers reproduce, but the sign is an artefact of the 'literal summed ratio' convention: the F20 family is not a common scaling family, and the order-consistent proxy F00_2/F00_0 correlates POSITIVELY (+0.984) with the same dense beta at essentially the same magnitude as the package's own reconciliation note. Treat the anti-correlation as a convention-dependent statement, not a physical one."
+    },
+    {
+      "claim": "6. The trend survives a permutation null (z 14.8 experiment) and leave-one-out (slope range 0.1317..0.1333)",
+      "reproduced": true,
+      "my_value": "my permutation (100000 shuffles, seed 424242): mean -0.000143, std 0.060490, z=14.745, p=0 (deterministic reference z=r*sqrt(n-1)=14.789); LOO slope range [0.13173, 0.13326], full 0.13205, most influential E=50.0 eV; theory z=8.108, LOO [0.05951, 0.06221]",
+      "method": "permutation null with a different RNG seed and 5x the permutations, plus the deterministic permutation-std reference 1/sqrt(n-1); LOO slopes via scipy.stats.linregress instead of hand-rolled normal equations",
+      "comment": "LOO range is an order of magnitude tighter than the trend itself, so no single energy drives the slope."
+    }
+  ],
+  "residual_doubt": "Every quoted number reproduced within rounding. Two caveats carried from the package's own notes and amplified here: (i) the dense experiment magnitude/beta grid is a derived spline grid, not independent measurements, so all p-values and permutation z-values overstate the true information content; (ii) claim 5's anti-correlation flips sign under an equally defensible order-consistent proxy, so it is a statement about the literal summed-ratio construction rather than about the physics. Claim 4's matched set mixes a clamped 22.5 eV point into the sign-agreement count; the strict-overlap value is reported alongside."
+}

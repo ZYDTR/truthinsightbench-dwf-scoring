@@ -1,0 +1,39 @@
+{
+  "reference_matched_vs_unmatched": {
+    "mae_matched": 5.024410876132931,
+    "mae_unmatched": 6.206603773584907,
+    "median_matched": 4.699999999999989,
+    "median_unmatched": 5.350000000000001,
+    "welch_t": -3.2131766878010817,
+    "p_welch": 0.001433203096690414,
+    "p_mannwhitney": 0.003357023908152972,
+    "cliffs_delta": -0.14910505614775124,
+    "n_matched": 331,
+    "n_unmatched": 212
+  },
+  "quantum_db_close": {
+    "n_le_0.001": 7,
+    "n_le_0.005": 51,
+    "n_le_0.01": 100,
+    "n_le_0.02": 168,
+    "n_le_0.05": 244,
+    "n_le_0.1": 268,
+    "n_le_0.5": 306,
+    "n": 331
+  },
+  "quantum_vs_learned_closeness_to_db": {
+    "median_abs_db_minus_quantum": 0.01950283300058686,
+    "median_abs_db_minus_learned": 0.1291260550077027,
+    "ratio": 0.15103716286711824,
+    "wilcoxon_p": 5.795703399052868e-17,
+    "n_quantum_closer": 243,
+    "n_learned_closer": 76
+  },
+  "experimental_value_reuse": {
+    "n_distinct": 284,
+    "n_rows": 543,
+    "n_values_used_once": 152,
+    "n_values_used_multiple": 132,
+    "max_reuse": 9
+  }
+}

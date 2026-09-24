@@ -1,0 +1,11 @@
+table,methodology,n_rows,n_rate_pos,n_interval_pos,n_both_pos,n_area_pos,er_min,er_median,er_max,ti_median
+glacial,Cosmogenic detrital,9,9,9,9,7,0.0004,0.4,7.0,7500.0
+glacial,Cosmogenic surface,99,99,99,99,99,0.0014,0.4,6.8,5000.0
+glacial,Relief,18,18,18,18,1,0.05,0.55,1000.0,900000.0
+glacial,Thermochronometric,68,68,68,68,68,0.0068,1.5,32.0,1000000.0
+glacial,Volumetric,233,233,233,233,217,0.0015,0.44,372.714,45.0
+nonglacial,Cosmogenic detrital,3470,3470,3470,3470,3470,0.000246791,0.06608025000000001,118.864,10042.25
+nonglacial,Cosmogenic surface,224,220,64,64,224,0.0,0.00026,0.108919,1410000.0
+nonglacial,Relief,7,7,7,7,0,3.0,16.0,34.0,4000010.0
+nonglacial,Thermochronometric,4,4,4,4,0,1.2,2.35,8.0,3000000.0
+nonglacial,Volumetric,2583,2583,2583,2583,2526,0.000145349,0.0660102,35.3261,5.0

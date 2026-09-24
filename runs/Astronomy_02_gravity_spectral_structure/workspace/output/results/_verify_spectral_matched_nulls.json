@@ -1,0 +1,95 @@
+{
+  "A": {
+    "observed_stacked_peak": 0.20010908235811223,
+    "matched_AR1_null_q50_q95_q99_max": [
+      0.11723171691383662,
+      0.1441525719478777,
+      0.15820507249021287,
+      0.17487178158702282
+    ],
+    "p_matched_AR1": 0.0,
+    "matched_circshift_null_q50_q95_q99_max": [
+      0.17643291673051342,
+      0.18881222196143205,
+      0.1935443659919568,
+      0.20258091609228498
+    ],
+    "p_matched_circshift": 0.0033333333333333335,
+    "n_draws": 300
+  },
+  "B": {
+    "observed_stacked_peak": 0.04038253752227731,
+    "matched_AR1_null_q50_q95_q99_max": [
+      0.02590937046293551,
+      0.031965204164205854,
+      0.03459276975613792,
+      0.0379970577507044
+    ],
+    "p_matched_AR1": 0.0,
+    "matched_circshift_null_q50_q95_q99_max": [
+      0.03976933894725295,
+      0.0438504751781723,
+      0.04501900632489308,
+      0.049811381522577115
+    ],
+    "p_matched_circshift": 0.3566666666666667,
+    "n_draws": 300
+  },
+  "C": {
+    "observed_stacked_peak": 0.06682115502020337,
+    "matched_AR1_null_q50_q95_q99_max": [
+      0.05463731625652617,
+      0.0653101707699882,
+      0.06990564942278359,
+      0.07817026588326612
+    ],
+    "p_matched_AR1": 0.02666666666666667,
+    "matched_circshift_null_q50_q95_q99_max": [
+      0.06691283400975556,
+      0.07464485437434906,
+      0.07812501541469372,
+      0.0815149366111209
+    ],
+    "p_matched_circshift": 0.5033333333333333,
+    "n_draws": 300
+  },
+  "pass_peak_support": {
+    "A": {
+      "observed_count_of_22": 16,
+      "ar1_global_search_null_mean_count_per_22": 7.682916666666667,
+      "ar1_global_search_null_q2.5_q50_q97.5": [
+        7.1000000000000005,
+        7.675000000000001,
+        8.365624999999998
+      ],
+      "frac_null_ge_observed": 0.0,
+      "naive_uniform_count": 3.3152501506931884,
+      "kludge_track_used_count": 3.3152501506931884
+    },
+    "B": {
+      "observed_count_of_22": 9,
+      "ar1_global_search_null_mean_count_per_22": 3.707083333333333,
+      "ar1_global_search_null_q2.5_q50_q97.5": [
+        3.234375,
+        3.6500000000000004,
+        4.313125
+      ],
+      "frac_null_ge_observed": 0.0,
+      "naive_uniform_count": 3.3152501506931884,
+      "kludge_track_used_count": 3.3152501506931884
+    },
+    "C": {
+      "observed_count_of_22": 8,
+      "ar1_global_search_null_mean_count_per_22": 2.9320833333333334,
+      "ar1_global_search_null_q2.5_q50_q97.5": [
+        2.44875,
+        2.9375,
+        3.313125
+      ],
+      "frac_null_ge_observed": 0.0,
+      "naive_uniform_count": 3.3152501506931884,
+      "kludge_track_used_count": 3.3152501506931884
+    }
+  },
+  "runtime_sec": 3299.7
+}

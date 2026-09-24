@@ -1,0 +1,89 @@
+{
+  "set_3": {
+    "formula_variants_max_abs_resid": {
+      "(B-A)/(B+A)": 0.0,
+      "(B-A)*(B+A)**-1": 1.1102230246251565e-16,
+      "(B-A)*np.reciprocal(B+A)": 1.1102230246251565e-16,
+      "1-2A/(A+B)": 2.220446049250313e-16,
+      "2B/(A+B)-1": 2.220446049250313e-16,
+      "B/(A+B)-A/(A+B)": 1.1102230246251565e-16,
+      "-(A-B)/(B+A)": 0.0
+    },
+    "n_variants_bit_exact": 2,
+    "exact_rational_max_dev": 2.095680010101428e-16,
+    "exact_rational_rounds_back": 47,
+    "exact_rational_within_half_ulp_last_digit": 61,
+    "hA": 5e-07,
+    "hB": 5e-08,
+    "band_halfwidth_mean": 2.716260066283509e-08,
+    "frac_R_inside_attainable_band": 1.0,
+    "n_R_inside_attainable_band": 104,
+    "max_abs_over_halfwidth": 1.7962472274230338e-07,
+    "coincidence_null_normal(mean,sd)": {
+      "hits": 0,
+      "trials": 400000,
+      "p_hat": 0.0
+    },
+    "coincidence_null_uniform(Rmin,Rmax)": {
+      "hits": 0,
+      "trials": 400000,
+      "p_hat": 0.0
+    },
+    "duplicate_columns": {
+      "numeric_feature_6": "IDENTICAL to R",
+      "numeric_feature_6==identity": "identical"
+    },
+    "corr_A_B": 0.8783870995747867,
+    "corr_A_ratioAB": 0.022067653789677823,
+    "corr_B_ratioAB": -0.30295057447136486,
+    "corr_A_sumfrac": -0.021937266686723064,
+    "corr_B_sumfrac": 0.3077337934097178,
+    "R_on_sumfrac": {
+      "slope": 2.0000000000000018,
+      "intercept": -1.0000000000000004,
+      "max_abs_resid": 1.5543122344752192e-15
+    }
+  },
+  "set_4": {
+    "formula_variants_max_abs_resid": {
+      "(B-A)/(B+A)": 0.0,
+      "(B-A)*(B+A)**-1": 1.1102230246251565e-16,
+      "(B-A)*np.reciprocal(B+A)": 1.1102230246251565e-16,
+      "1-2A/(A+B)": 2.220446049250313e-16,
+      "2B/(A+B)-1": 2.220446049250313e-16,
+      "B/(A+B)-A/(A+B)": 1.1102230246251565e-16,
+      "-(A-B)/(B+A)": 0.0
+    },
+    "n_variants_bit_exact": 2,
+    "exact_rational_max_dev": 1.8517899550133606e-16,
+    "exact_rational_rounds_back": 45,
+    "exact_rational_within_half_ulp_last_digit": 43,
+    "hA": 5e-07,
+    "hB": 5e-08,
+    "band_halfwidth_mean": 4.145203139926091e-08,
+    "frac_R_inside_attainable_band": 1.0,
+    "n_R_inside_attainable_band": 91,
+    "max_abs_over_halfwidth": 1.1308327856906546e-07,
+    "coincidence_null_normal(mean,sd)": {
+      "hits": 0,
+      "trials": 400000,
+      "p_hat": 0.0
+    },
+    "coincidence_null_uniform(Rmin,Rmax)": {
+      "hits": 0,
+      "trials": 400000,
+      "p_hat": 0.0
+    },
+    "duplicate_columns": {},
+    "corr_A_B": 0.8792589736020562,
+    "corr_A_ratioAB": -0.10269804056473487,
+    "corr_B_ratioAB": -0.41227435207997937,
+    "corr_A_sumfrac": 0.10656469443475305,
+    "corr_B_sumfrac": 0.43105117740190796,
+    "R_on_sumfrac": {
+      "slope": 2.000000000000002,
+      "intercept": -1.0000000000000009,
+      "max_abs_resid": 1.3322676295501878e-15
+    }
+  }
+}

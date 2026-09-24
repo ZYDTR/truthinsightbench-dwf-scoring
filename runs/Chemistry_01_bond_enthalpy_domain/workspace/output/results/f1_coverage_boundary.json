@@ -1,0 +1,92 @@
+{
+  "workstream": "FINDING-1-coverage",
+  "title": "Database structural domain ceiling and benchmark coverage of it",
+  "analysis_unit": "benchmark bond observation (543) and database unique fragment pair",
+  "database_inventory": {
+    "raw_rows": 484907,
+    "unique_molecules": 42577,
+    "unique_molecule_fragment_pairs": 290664,
+    "unique_bde_values": 144147,
+    "unique_bond_types": 9,
+    "row_to_pair_redundancy_factor": 1.6683,
+    "rows_per_molecule_mean": 11.3889,
+    "note": "Raw rows, unique molecules and unique fragment pairs are three different units and must not be interchanged. Repeats arise because a molecule's symmetry-equivalent bonds are stored as separate rows.",
+    "pair_keys_with_varying_bde": 0
+  },
+  "structural_domain": {
+    "element_set": [
+      "C",
+      "N",
+      "O"
+    ],
+    "n_elements": 3,
+    "heavy_atom_count_min": 1,
+    "heavy_atom_count_max": 10,
+    "heavy_atom_count_mean": 8.891514197806327,
+    "heavy_atom_count_sd": 1.2000045416704759,
+    "ceiling": 10,
+    "molecules_above_ceiling": 0,
+    "hac_definition": "RDKit GetNumHeavyAtoms on the parent SMILES"
+  },
+  "coverage_boundary": {
+    "n_benchmark_observations": 543,
+    "n_unique_benchmark_molecules": 419,
+    "A_exact_pair_in_db": 331,
+    "A_exact_pair_in_db_pct": 60.9576,
+    "B_parent_molecule_in_db": 369,
+    "B_parent_molecule_in_db_pct": 67.9558,
+    "C_parent_beyond_db_hac_ceiling": 150,
+    "C_parent_beyond_db_hac_ceiling_pct": 27.6243,
+    "D_parent_with_foreign_element": 0,
+    "D_foreign_element_examples": [],
+    "outside_domain_any_criterion": 212,
+    "benchmark_hac_max": 38,
+    "benchmark_hac_median": 8.0
+  },
+  "exhaustiveness_within_domain": {
+    "parent_in_db": 369,
+    "of_those_parent_hac_within_ceiling": 369,
+    "of_those_exact_pair_present": 331,
+    "pct_exact_when_parent_within_domain": 89.7019,
+    "exact_pair_absent_but_parent_present": 38
+  },
+  "bond_class_coverage": {
+    "database_unique_pair_counts": {
+      "C-H": 150091,
+      "C-C": 61490,
+      "C-O": 23288,
+      "C-N": 22499,
+      "H-N": 18273,
+      "H-O": 11577,
+      "N-O": 1581,
+      "N-N": 1567,
+      "O-O": 298
+    },
+    "benchmark_observation_counts": {
+      "C-H": 302,
+      "C-C": 240,
+      "H-O": 1
+    },
+    "database_classes": 9,
+    "benchmark_classes": 3,
+    "classes_with_zero_benchmark_coverage": [
+      "C-N",
+      "C-O",
+      "H-N",
+      "N-N",
+      "N-O",
+      "O-O"
+    ]
+  },
+  "labeler_validation": {
+    "agreement_on_matched_rows": 331,
+    "rows_compared": 331,
+    "note": "the bond-class labeler reproduces the database's own bond_type on every matched row"
+  },
+  "interpretation": "The database is a bounded chemical space: only C/N/O, and no molecule above 10 heavy atoms. Just under one third of the benchmark observations fall outside that space, so any claim about channel behaviour on the benchmark must be stated on the inside-domain subset or reported as an extrapolation. Within the domain the database is close to complete for the benchmark (89.7% of in-domain observations have their exact bond row).",
+  "limitations": [
+    "HAC is computed from the stored SMILES; a different protonation or tautomer choice for the same compound would shift it.",
+    "Six of the database's nine bond classes have no benchmark coverage at all, so the class-resolved error analysis is effectively a two-class comparison.",
+    "Coverage is a statement about overlap with this database, not about the chemical literature in general."
+  ]
+}

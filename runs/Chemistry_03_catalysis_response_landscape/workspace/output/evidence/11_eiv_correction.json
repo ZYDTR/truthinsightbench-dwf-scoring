@@ -1,0 +1,123 @@
+{
+  "observed": {
+    "n": 41,
+    "pearson_r": 0.9984725422598203,
+    "r_squared": 0.9969474176467886,
+    "b_OLS": 0.9751578140376492,
+    "b_RMA": 0.978143678168531,
+    "b_OLS_over_r2_deattenuated": 0.9781436781685318,
+    "max_upward_correction_pct": 0.30619291440834306
+  },
+  "positive_control_withdrawn_interval": {
+    "noise_sd_0.0": {
+      "frac_interval_contains_1": 1.0,
+      "n_sim": 3000,
+      "verdict": "ok"
+    },
+    "noise_sd_0.5": {
+      "frac_interval_contains_1": 0.041,
+      "n_sim": 3000,
+      "verdict": "interval too narrow"
+    },
+    "noise_sd_1.0": {
+      "frac_interval_contains_1": 0.07933333333333334,
+      "n_sim": 3000,
+      "verdict": "interval too narrow"
+    },
+    "noise_sd_2.0": {
+      "frac_interval_contains_1": 0.14533333333333334,
+      "n_sim": 3000,
+      "verdict": "interval too narrow"
+    },
+    "noise_sd_2.5": {
+      "frac_interval_contains_1": 0.19533333333333333,
+      "n_sim": 3000,
+      "verdict": "interval too narrow"
+    },
+    "noise_sd_3.0": {
+      "frac_interval_contains_1": 0.23866666666666667,
+      "n_sim": 3000,
+      "verdict": "interval too narrow"
+    }
+  },
+  "positive_control_deattenuation": {
+    "x_noise_sd_0.0": {
+      "frac_corrected_slope_reaches_1": 0.689,
+      "n_sim": 3000
+    },
+    "x_noise_sd_0.5": {
+      "frac_corrected_slope_reaches_1": 0.509,
+      "n_sim": 3000
+    },
+    "x_noise_sd_1.0": {
+      "frac_corrected_slope_reaches_1": 0.5036666666666667,
+      "n_sim": 3000
+    },
+    "x_noise_sd_2.0": {
+      "frac_corrected_slope_reaches_1": 0.497,
+      "n_sim": 3000
+    },
+    "x_noise_sd_2.5": {
+      "frac_corrected_slope_reaches_1": 0.488,
+      "n_sim": 3000
+    },
+    "x_noise_sd_3.0": {
+      "frac_corrected_slope_reaches_1": 0.5036666666666667,
+      "n_sim": 3000
+    }
+  },
+  "null_equal_noise_all41": {
+    "observed": 0.9751578140376492,
+    "null_mean": 0.9969777880172247,
+    "null_sd": 0.012626485257145976,
+    "p_one_sided_ge_observed": 0.0393,
+    "n_sim": 10000
+  },
+  "lattice_block": {
+    "n": 8,
+    "design_values": [
+      -60.0,
+      -40.0,
+      -20.0,
+      0.0,
+      20.0,
+      40.0,
+      60.0,
+      80.0
+    ],
+    "b_OLS": 0.9615788341071428,
+    "residual_sd_of_reading2_about_design_value": 2.483369854792168,
+    "residual_sd_about_fitted_line_incorrect": 1.6199627968354675,
+    "mean_offset_reading2_minus_design": 1.0897135875,
+    "note": "reading 1 takes exact design settings here, so no de-attenuation is needed and OLS is the correct estimator; the noise of reading 2 is measured about the design value"
+  },
+  "null_lattice_true_slope_1": {
+    "observed": 0.9615788341071428,
+    "null_mean": 0.9998962589678915,
+    "null_sd": 0.01919810737178288,
+    "p_one_sided_ge_observed": 0.0219,
+    "n_sim": 10000,
+    "sensitivity_noise_sd_2.9": {
+      "p_one_sided_ge_observed": 0.0415,
+      "n_sim": 6000
+    },
+    "sensitivity_noise_sd_3.5": {
+      "p_one_sided_ge_observed": 0.07316666666666667,
+      "n_sim": 6000
+    }
+  },
+  "bootstrap_deattenuated": {
+    "point": 0.9781436781685318,
+    "ci95": [
+      0.9570553071972266,
+      0.9981493448959008
+    ],
+    "frac_reaching_1": 0.01605,
+    "n_boot": 20000
+  },
+  "verdict": {
+    "withdrawn_argument": "the lambda-sweep interval [0.97516, 0.97814] is ~10x too narrow to bracket the truth and is not used as evidence",
+    "current_support": "de-attenuation moves the slope by at most 0.31% (b/r^2 = 0.978144); the lattice block, where reading 1 is an exact design setting, gives slope 0.9616 at calibrated p = 0.019",
+    "boundary": "the log-scale (multiplicative) test does NOT reject slope 1 (0.9328, CI [0.8426, 1.0231]); the claim is scoped to the arithmetic scale"
+  }
+}

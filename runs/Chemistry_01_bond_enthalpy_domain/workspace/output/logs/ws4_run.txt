@@ -1,0 +1,25 @@
+[ws4] wrote figure
+[common] wrote /data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws4_failures.json
+{
+  "tail": {
+    "quantum": {
+      "n_gt5": 49,
+      "n_gt10": 8,
+      "n_gt15": 3,
+      "max_abs_err": 15.74
+    },
+    "learned": {
+      "n_gt5": 71,
+      "n_gt10": 12,
+      "n_gt15": 4,
+      "max_abs_err": 25.21
+    },
+    "reference": {
+      "n_gt5": 260,
+      "n_gt10": 51,
+      "n_gt15": 12,
+      "max_abs_err": 33.4
+    }
+  },
+  "union": 61
+}

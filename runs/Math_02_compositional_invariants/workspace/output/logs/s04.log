@@ -1,0 +1,6 @@
+stage 4 ok
+  frac c3 > c2          : 0.995 violations: 5
+  c3 mean hv/ss         : 0.5657 / 0.7570
+  c3 paired Cliff delta : -0.69
+  spearman c2~c3 (ss/hv): 0.1024 / 0.4586
+  excl c2==0 (ss/hv)    : 0.0647 / 0.0339

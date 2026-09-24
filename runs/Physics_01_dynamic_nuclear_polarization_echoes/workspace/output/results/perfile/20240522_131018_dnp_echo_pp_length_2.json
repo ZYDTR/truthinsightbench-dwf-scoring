@@ -1,0 +1,14 @@
+{
+  "file": "20240522_131018_dnp_echo_pp_length_2.mat",
+  "type": "epr",
+  "f0_pts_per_sample": 0.130859375,
+  "echo_start": 189,
+  "echo_end": 791,
+  "echo_len": 603,
+  "echo_area_env": 1257237.2933333335,
+  "echo_area_signed": 595008.5355627396,
+  "echo_peak": 6110.64,
+  "echo_tau_pts": 3262.912075365648,
+  "n_avgs": 150,
+  "points": 1024
+}

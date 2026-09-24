@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Astronomy_03_stellar_spectral_boundary",
+  "model": "deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "bb896ab91e339220ed094e042e1a471102e3b9167ad583af76a2e7e6e5b7d38a",
+  "workspace_input_file_count": 9,
+  "workspace_input_bytes": 711886,
+  "output_tree_sha256": "afe622fd5b33e2a7c8a5bbc94470f3f50bfe3dd559438559b1680d559b927959",
+  "output_file_count": 46,
+  "output_bytes": 2860430
+}

@@ -1,0 +1,209 @@
+{
+  "task_id": "Physics_01_dynamic_nuclear_polarization_echoes",
+  "t0": "2024-06-26",
+  "method": "per-file parallel sub-agent processing (process_one.py) + sequential aggregation",
+  "inversion_times_ns": [
+    0,
+    132,
+    220,
+    440,
+    880,
+    2200
+  ],
+  "epr": [
+    {
+      "inv_ns": 0,
+      "file": "20240522_125527_dnp_echo_pp_length_2.mat",
+      "f0_pts_per_sample": 0.1318359375,
+      "echo_start": 185,
+      "echo_end": 795,
+      "echo_len": 611,
+      "echo_area_env": 2794068.9266666668,
+      "echo_area_signed": -1197404.5972612489,
+      "echo_peak": 12892.393333333332,
+      "echo_tau_pts": 2715.584071758956,
+      "n_avgs": 150,
+      "points": 1024
+    },
+    {
+      "inv_ns": 132,
+      "file": "20240522_130805_dnp_echo_pp_length_2.mat",
+      "f0_pts_per_sample": 0.1318359375,
+      "echo_start": 181,
+      "echo_end": 783,
+      "echo_len": 603,
+      "echo_area_env": 2286201.04,
+      "echo_area_signed": -1337116.2935085231,
+      "echo_peak": 10990.766666666666,
+      "echo_tau_pts": 8955.35099417591,
+      "n_avgs": 150,
+      "points": 1024
+    },
+    {
+      "inv_ns": 220,
+      "file": "20240522_130914_dnp_echo_pp_length_2.mat",
+      "f0_pts_per_sample": 0.1318359375,
+      "echo_start": 181,
+      "echo_end": 787,
+      "echo_len": 607,
+      "echo_area_env": 1738235.0,
+      "echo_area_signed": -1024942.7795565462,
+      "echo_peak": 8087.606666666666,
+      "echo_tau_pts": 5338.615962856004,
+      "n_avgs": 150,
+      "points": 1024
+    },
+    {
+      "inv_ns": 440,
+      "file": "20240522_131018_dnp_echo_pp_length_2.mat",
+      "f0_pts_per_sample": 0.130859375,
+      "echo_start": 189,
+      "echo_end": 791,
+      "echo_len": 603,
+      "echo_area_env": 1257237.2933333335,
+      "echo_area_signed": 595008.5355627396,
+      "echo_peak": 6110.64,
+      "echo_tau_pts": 3262.912075365648,
+      "n_avgs": 150,
+      "points": 1024
+    },
+    {
+      "inv_ns": 880,
+      "file": "20240522_131142_dnp_echo_pp_length_2.mat",
+      "f0_pts_per_sample": 0.1318359375,
+      "echo_start": 181,
+      "echo_end": 802,
+      "echo_len": 622,
+      "echo_area_env": 1252516.3133333335,
+      "echo_area_signed": -734199.1238680193,
+      "echo_peak": 5829.013333333333,
+      "echo_tau_pts": 1999.7291578421025,
+      "n_avgs": 150,
+      "points": 1024
+    },
+    {
+      "inv_ns": 2200,
+      "file": "20240522_131404_dnp_echo_pp_length_2.mat",
+      "f0_pts_per_sample": 0.1318359375,
+      "echo_start": 189,
+      "echo_end": 787,
+      "echo_len": 599,
+      "echo_area_env": 944878.76,
+      "echo_area_signed": -563908.9710197034,
+      "echo_peak": 4578.319999999999,
+      "echo_tau_pts": 2742.116772294802,
+      "n_avgs": 150,
+      "points": 1024
+    }
+  ],
+  "nmr": [
+    {
+      "inv_ns": 0,
+      "file": "20240523_1308_dnpdata_dnp_contact_swp.mat",
+      "n_indirect": 62,
+      "points_direct": 256,
+      "total_area": 786036667362.0397,
+      "early_area": 148727796385.7821,
+      "late_area": 18351714006.072666,
+      "mid_area": 618957156970.1848,
+      "early_fraction": 0.18921228813016652,
+      "late_fraction": 0.023347147490792655,
+      "fid_tau_pts_mean": 218.6456467421333
+    },
+    {
+      "inv_ns": 132,
+      "file": "20240522_1404_dnpdata_dnp_contact_swp.mat",
+      "n_indirect": 62,
+      "points_direct": 256,
+      "total_area": 772090147951.0225,
+      "early_area": 146076024638.36853,
+      "late_area": 18057387744.937916,
+      "mid_area": 607956735567.7161,
+      "early_fraction": 0.18919555575994068,
+      "late_fraction": 0.02338766760961621,
+      "fid_tau_pts_mean": 214.63692829813888
+    },
+    {
+      "inv_ns": 220,
+      "file": "20240522_1434_dnpdata_dnp_contact_swp.mat",
+      "n_indirect": 62,
+      "points_direct": 256,
+      "total_area": 804187356414.9368,
+      "early_area": 152264469712.15298,
+      "late_area": 18835918823.92395,
+      "mid_area": 633086967878.8597,
+      "early_fraction": 0.18933954693213187,
+      "late_fraction": 0.02342230162370916,
+      "fid_tau_pts_mean": 213.02155518071325
+    },
+    {
+      "inv_ns": 440,
+      "file": "20240522_1505_dnpdata_dnp_contact_swp.mat",
+      "n_indirect": 62,
+      "points_direct": 256,
+      "total_area": 988238239115.0483,
+      "early_area": 187079467281.02917,
+      "late_area": 23054557191.896225,
+      "mid_area": 778104214642.1229,
+      "early_fraction": 0.18930603965351095,
+      "late_fraction": 0.023328946684497066,
+      "fid_tau_pts_mean": 213.13211906108592
+    },
+    {
+      "inv_ns": 880,
+      "file": "20240522_1535_dnpdata_dnp_contact_swp.mat",
+      "n_indirect": 62,
+      "points_direct": 256,
+      "total_area": 934867105437.7584,
+      "early_area": 177116223509.09253,
+      "late_area": 21832273562.283268,
+      "mid_area": 735918608366.3826,
+      "early_fraction": 0.18945604405040709,
+      "late_fraction": 0.023353344486391085,
+      "fid_tau_pts_mean": 212.99373955924898
+    },
+    {
+      "inv_ns": 2200,
+      "file": "20240523_0954_dnpdata_dnp_contact_swp.mat",
+      "n_indirect": 62,
+      "points_direct": 256,
+      "total_area": 883312444630.8684,
+      "early_area": 166933588183.91766,
+      "late_area": 20610649934.735,
+      "mid_area": 695768206512.2158,
+      "early_fraction": 0.1889858896459659,
+      "late_fraction": 0.023333363024618182,
+      "fid_tau_pts_mean": 213.6924350821226
+    }
+  ],
+  "nmr_reference": [
+    {
+      "inv_ns": null,
+      "file": "20240424_1547_dnpdata_nmr_only.mat",
+      "n_indirect": 64,
+      "points_direct": 256,
+      "total_area": 50588689063.95117,
+      "early_area": 8365094813.484795,
+      "late_area": 1318215147.6070747,
+      "mid_area": 40905379102.8593,
+      "early_fraction": 0.1653550421698049,
+      "late_fraction": 0.02605750755748319,
+      "fid_tau_pts_mean": 239.9989098934692
+    }
+  ],
+  "correlations": {
+    "epr_area_vs_inv": -0.7600884991416242,
+    "nmr_area_vs_inv": 0.39765626349818617,
+    "epr_area_vs_nmr_area": -0.7767338116808145
+  },
+  "epr_area_monotonic_decreasing": true,
+  "epr_area_2200_over_0": 0.3381730318039231,
+  "epr_peak_2200_over_0": 0.3551179274187001,
+  "nmr_total_area_peak_ns": 440,
+  "nmr_total_area_440_over_0": 1.2572419075965027,
+  "nmr_early_fraction_constant": true,
+  "nmr_fid_tau_range": [
+    212.99373955924898,
+    218.6456467421333
+  ]
+}

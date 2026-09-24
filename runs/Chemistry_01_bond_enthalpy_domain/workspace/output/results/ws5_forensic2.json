@@ -1,0 +1,36 @@
+{
+  "db_key_multiplicity": {
+    "n_rows": 484907,
+    "n_unique_keys": 290664,
+    "n_multi_row_keys": 131063,
+    "rows_on_multi_row_keys": 325306,
+    "max_rows_per_key": 20,
+    "pct_rows_on_multi_row_keys": 0.6708626602626896
+  },
+  "db_multi_key_varying": {
+    "n_multi_keys": 131063,
+    "varying_bond_index": 131063,
+    "varying_delta_stereo": 0,
+    "varying_bond_type": 0,
+    "varying_bde": 0
+  },
+  "db_key_multiplicity_distribution": {
+    "1": 159601,
+    "2": 87217,
+    "3": 35700,
+    "4": 4195,
+    "6": 2930,
+    "8": 83,
+    "9": 864,
+    "10": 1,
+    "12": 58,
+    "14": 1,
+    "16": 1,
+    "18": 12,
+    "20": 1
+  },
+  "ref_found_in_db_same_fpair": 0,
+  "ref_found_in_db_anywhere": 0,
+  "db_distinct_bde_values": 144147,
+  "ref_found_in_experimental_values": 313
+}

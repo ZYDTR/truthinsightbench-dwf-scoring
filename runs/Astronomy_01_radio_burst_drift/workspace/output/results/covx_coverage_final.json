@@ -1,0 +1,69 @@
+{
+  "blocks_by_status": {
+    "absent": 50,
+    "image": 14,
+    "aggregate": 30,
+    "exact": 6,
+    "empty": 1
+  },
+  "rows_by_status": {
+    "absent": 71053,
+    "image": 0,
+    "aggregate": 1132,
+    "exact": 146,
+    "empty": 0
+  },
+  "ysum_by_status": {
+    "absent": 9135408.201141449,
+    "image": 0.0,
+    "aggregate": 39920.0,
+    "exact": 26554.0,
+    "empty": 0.0
+  },
+  "normalized_population_rows": 948,
+  "normalized_orientation_rows": 312,
+  "families": {
+    "Sheet_001/002 (cml angle vs phase angle)": {
+      "sheets": [
+        "Sheet_001",
+        "Sheet_002"
+      ],
+      "blocks": 12,
+      "rows": 67262,
+      "content": "angles in degrees: x is 'cml angle' 0-360, y is a phase angle; NOT event counts"
+    },
+    "Sheet_019/020/023/038 (radial distance / SNR)": {
+      "sheets": [
+        "Sheet_019",
+        "Sheet_020",
+        "Sheet_023",
+        "Sheet_038"
+      ],
+      "blocks": 14,
+      "rows": 3291,
+      "content": "radial profiles, fitted models and per-sheet SNR scalars"
+    },
+    "Sheet_039..044 (coarse 1.75 MHz/s drift histograms)": {
+      "sheets": [
+        "Sheet_039",
+        "Sheet_040",
+        "Sheet_041",
+        "Sheet_042",
+        "Sheet_043",
+        "Sheet_044"
+      ],
+      "blocks": 18,
+      "rows": 190,
+      "content": "event counts in 1.75 MHz/s bins over 0-33.25 MHz/s"
+    },
+    "Sheet_046/047 (group_b C variants)": {
+      "sheets": [
+        "Sheet_046",
+        "Sheet_047"
+      ],
+      "blocks": 6,
+      "rows": 130,
+      "content": "event counts on the orientation grid, ~0.81-0.97 of the base blocks"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "file": "event_recording_set_a.tsv",
+  "n": 35,
+  "contiguous_index": true,
+  "mean_time": 34.97571428571428,
+  "median_time": 35.15,
+  "sd_time": 29.734977352459182,
+  "neg_time_frac": 0.14285714285714285,
+  "signal_mean": 0.04035428571428569,
+  "signal_median": -0.3628,
+  "event_state_spearman": {
+    "rho": -0.3086974532565159,
+    "p": 0.0711830338851403
+  },
+  "state_pos_mean_time": 24.166666666666668,
+  "state_neg_mean_time": 43.082499999999996,
+  "state_ttest_p": 0.06143634737548813
+}

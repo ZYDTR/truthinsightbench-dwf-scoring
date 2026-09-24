@@ -1,0 +1,26 @@
+=== WEAK-BOND REGION (experimental BDE thresholds) ===
+--- exp < 60 : n=4  (unique parents=4, unique frag pairs=4)
+    exp range 15.2 - 59.4 (median 39.9)
+    quantum    n=  4 MAE=11.252 RMSE=11.951 bias=+8.327  t=+1.68 p=0.191  n_gt5=4 n_gt10=2
+    learned    n=  4 MAE=15.065 RMSE=16.796 bias=+15.065  t=+3.51 p=0.0391  n_gt5=3 n_gt10=3
+    reference  n=  4 MAE=11.375 RMSE=16.623 bias=-11.125  t=-1.56 p=0.217  n_gt5=2 n_gt10=2
+--- exp < 70 : n=18  (unique parents=18, unique frag pairs=18)
+    exp range 15.2 - 69.5 (median 65.3)
+    quantum    n= 18 MAE= 5.997 RMSE= 7.650 bias=+4.566  t=+3.07 p=0.00699  n_gt5=9 n_gt10=3
+    learned    n= 18 MAE= 7.527 RMSE= 9.835 bias=+6.868  t=+4.02 p=0.000884  n_gt5=10 n_gt10=4
+    reference  n= 18 MAE= 7.939 RMSE=10.671 bias=-2.750  t=-1.10 p=0.287  n_gt5=10 n_gt10=6
+--- exp < 80 : n=147  (unique parents=147, unique frag pairs=147)
+    exp range 15.2 - 79.9 (median 74.6)
+    quantum    n=147 MAE= 2.832 RMSE= 4.186 bias=+1.741  t=+5.52 p=1.47e-07  n_gt5=25 n_gt10=6
+    learned    n=147 MAE= 3.672 RMSE= 5.334 bias=+3.123  t=+8.73 p=5.39e-15  n_gt5=36 n_gt10=10
+    reference  n=147 MAE= 6.552 RMSE= 8.174 bias=+1.047  t=+1.56 p=0.121  n_gt5=89 n_gt10=25
+
+=== full-benchmark comparison ===
+quantum    MAE= 2.098 bias=+0.554
+learned    MAE= 2.411 bias=+1.079
+reference  MAE= 5.486 bias=+1.378
+
+=== correlation of signed error with experimental BDE ===
+quantum    pearson r=-0.301 (p=7.12e-13)  spearman rho=-0.313 (p=8.87e-14)
+learned    pearson r=-0.420 (p=1.15e-24)  spearman rho=-0.444 (p=1.25e-27)
+reference  pearson r=+0.147 (p=0.000579)  spearman rho=+0.062 (p=0.147)

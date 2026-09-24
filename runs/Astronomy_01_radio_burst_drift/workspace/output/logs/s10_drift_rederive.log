@@ -1,0 +1,173 @@
+==============================================================================
+s10: drift-rate re-derivation from pixel data  (unit = one event, n=5)
+==============================================================================
+event_id   time_min_s   time_max_s  frequency_min_MHz  frequency_max_MHz  reported_event_drift_rate_MHz_s  frequency_bins  time_bins
+ event_1 18243.385215 18244.483660           8.001709          16.970825                       -12.777653             425        425
+ event_2 20263.296528 20264.394893           8.001709          16.970825                       -12.452023             425        425
+ event_3 30069.745812 30070.844176           8.001709          16.970825                        -3.361425             425        425
+ event_4 30353.805023 30354.903428           8.001709          16.970825                       -16.867298             425        425
+ event_5 16717.864904 16718.963268           8.001709          16.970825                        -4.055995             425        425
+
+--- event_1 ---  grid 425x425, df=0.021154 MHz, dt=0.002591 s
+    f: 16.9708 -> 8.0017 MHz (descending), span 8.9691
+    t: 18243.3852 -> 18244.4837 s, span 1.0984 s
+    reported drift = -12.7777 MHz/s
+    signal pixels (>1.0+eps): 90613 = 50.17% of grid
+    saturated pixels (==1.5): 9493 (5.256%)
+    occupied fraction by threshold: 0.00:50.17%, 0.01:48.22%, 0.02:46.35%, 0.05:40.99%, 0.10:32.94%, 0.25:15.79%, 0.50:5.26%
+    total background-subtracted intensity = 17980.43
+    max pixel = 1.5000, min pixel = 1.0000
+    columns with any signal: 425/425; with >=5% of peak weight: 425
+    centroid slope (Theil-Sen, all cols)   =    0.4442 MHz/s  +-0.0387  (95%CI 0.370,0.521)
+    centroid slope (Theil-Sen, >=5% cols)   =    0.4442 MHz/s  +-0.0387
+    centroid slope (Huber, all cols)        =    0.4398 MHz/s
+    mask-PCA slope                          =  287.7930 MHz/s  (axis elongation 65.2)
+    weighted-PCA slope                      =  142.3436 MHz/s  (elongation 62.4)
+    slope-scan (band +-0.35 MHz)           =   -0.9982 MHz/s  (contained 8.6% of weight)
+    argmax-ridge Theil-Sen                  =    0.0327 MHz/s  +-0.1268   (Huber 0.0563)
+    connected components (8-conn, >1.0)     = 1248  (top sizes [np.int64(85103), np.int64(624), np.int64(306), np.int64(178), np.int64(164), np.int64(99)])
+    components >=1% of weight               = 1
+    separated peaks in time-integrated spec = 10
+    columns with >=2 vertical runs (>50%max)= 425/425
+    centroid residual MAD about fit         = 0.2332 MHz (median |resid| 0.1573)
+    median per-column 5-95% frequency band  = 7.9908 MHz
+
+--- event_2 ---  grid 425x425, df=0.021154 MHz, dt=0.002590 s
+    f: 16.9708 -> 8.0017 MHz (descending), span 8.9691
+    t: 20263.2965 -> 20264.3949 s, span 1.0984 s
+    reported drift = -12.4520 MHz/s
+    signal pixels (>1.0+eps): 89947 = 49.80% of grid
+    saturated pixels (==1.5): 12837 (7.107%)
+    occupied fraction by threshold: 0.00:49.80%, 0.01:48.10%, 0.02:46.41%, 0.05:41.43%, 0.10:33.85%, 0.25:17.61%, 0.50:7.11%
+    total background-subtracted intensity = 19323.57
+    max pixel = 1.5000, min pixel = 1.0000
+    columns with any signal: 425/425; with >=5% of peak weight: 425
+    centroid slope (Theil-Sen, all cols)   =    0.3307 MHz/s  +-0.0472  (95%CI 0.238,0.423)
+    centroid slope (Theil-Sen, >=5% cols)   =    0.3307 MHz/s  +-0.0472
+    centroid slope (Huber, all cols)        =    0.3124 MHz/s
+    mask-PCA slope                          =  427.8977 MHz/s  (axis elongation 65.7)
+    weighted-PCA slope                      =  196.6019 MHz/s  (elongation 64.9)
+    slope-scan (band +-0.35 MHz)           =    2.7207 MHz/s  (contained 10.3% of weight)
+    argmax-ridge Theil-Sen                  =   -0.2621 MHz/s  +-0.1484   (Huber -0.2720)
+    connected components (8-conn, >1.0)     = 1487  (top sizes [np.int64(83221), np.int64(903), np.int64(144), np.int64(108), np.int64(94), np.int64(79)])
+    components >=1% of weight               = 2
+    separated peaks in time-integrated spec = 15
+    columns with >=2 vertical runs (>50%max)= 425/425
+    centroid residual MAD about fit         = 0.3038 MHz (median |resid| 0.2049)
+    median per-column 5-95% frequency band  = 8.0532 MHz
+
+--- event_3 ---  grid 425x425, df=0.021154 MHz, dt=0.002590 s
+    f: 16.9708 -> 8.0017 MHz (descending), span 8.9691
+    t: 30069.7458 -> 30070.8442 s, span 1.0984 s
+    reported drift = -3.3614 MHz/s
+    signal pixels (>1.0+eps): 89230 = 49.40% of grid
+    saturated pixels (==1.5): 7229 (4.002%)
+    occupied fraction by threshold: 0.00:49.40%, 0.01:47.59%, 0.02:45.76%, 0.05:40.48%, 0.10:32.30%, 0.25:14.96%, 0.50:4.00%
+    total background-subtracted intensity = 17218.45
+    max pixel = 1.5000, min pixel = 1.0000
+    columns with any signal: 425/425; with >=5% of peak weight: 425
+    centroid slope (Theil-Sen, all cols)   =   -0.1865 MHz/s  +-0.0413  (95%CI -0.265,-0.103)
+    centroid slope (Theil-Sen, >=5% cols)   =   -0.1865 MHz/s  +-0.0413
+    centroid slope (Huber, all cols)        =   -0.1797 MHz/s
+    mask-PCA slope                          = 3666.7452 MHz/s  (axis elongation 65.2)
+    weighted-PCA slope                      = -1059.9659 MHz/s  (elongation 61.8)
+    slope-scan (band +-0.35 MHz)           =    2.7684 MHz/s  (contained 8.8% of weight)
+    argmax-ridge Theil-Sen                  =    0.1737 MHz/s  +-0.1019   (Huber 0.3979)
+    connected components (8-conn, >1.0)     = 1445  (top sizes [np.int64(79310), np.int64(984), np.int64(327), np.int64(307), np.int64(252), np.int64(182)])
+    components >=1% of weight               = 1
+    separated peaks in time-integrated spec = 21
+    columns with >=2 vertical runs (>50%max)= 425/425
+    centroid residual MAD about fit         = 0.2539 MHz (median |resid| 0.1712)
+    median per-column 5-95% frequency band  = 8.0659 MHz
+
+--- event_4 ---  grid 425x425, df=0.021154 MHz, dt=0.002591 s
+    f: 16.9708 -> 8.0017 MHz (descending), span 8.9691
+    t: 30353.8050 -> 30354.9034 s, span 1.0984 s
+    reported drift = -16.8673 MHz/s
+    signal pixels (>1.0+eps): 89281 = 49.43% of grid
+    saturated pixels (==1.5): 8967 (4.964%)
+    occupied fraction by threshold: 0.00:49.43%, 0.01:47.63%, 0.02:45.81%, 0.05:40.57%, 0.10:32.60%, 0.25:15.72%, 0.50:4.96%
+    total background-subtracted intensity = 17800.23
+    max pixel = 1.5000, min pixel = 1.0000
+    columns with any signal: 425/425; with >=5% of peak weight: 425
+    centroid slope (Theil-Sen, all cols)   =   -0.1550 MHz/s  +-0.0488  (95%CI -0.254,-0.062)
+    centroid slope (Theil-Sen, >=5% cols)   =   -0.1550 MHz/s  +-0.0488
+    centroid slope (Huber, all cols)        =   -0.1380 MHz/s
+    mask-PCA slope                          = -820.2957 MHz/s  (axis elongation 68.8)
+    weighted-PCA slope                      = -446.7961 MHz/s  (elongation 65.5)
+    slope-scan (band +-0.35 MHz)           =   -4.6344 MHz/s  (contained 8.7% of weight)
+    argmax-ridge Theil-Sen                  =   -0.0488 MHz/s  +-0.1066   (Huber -0.0376)
+    connected components (8-conn, >1.0)     = 1119  (top sizes [np.int64(83035), np.int64(586), np.int64(231), np.int64(228), np.int64(199), np.int64(177)])
+    components >=1% of weight               = 1
+    separated peaks in time-integrated spec = 32
+    columns with >=2 vertical runs (>50%max)= 425/425
+    centroid residual MAD about fit         = 0.3056 MHz (median |resid| 0.2061)
+    median per-column 5-95% frequency band  = 8.0786 MHz
+
+--- event_5 ---  grid 425x425, df=0.021154 MHz, dt=0.002590 s
+    f: 16.9708 -> 8.0017 MHz (descending), span 8.9691
+    t: 16717.8649 -> 16718.9633 s, span 1.0984 s
+    reported drift = -4.0560 MHz/s
+    signal pixels (>1.0+eps): 89094 = 49.33% of grid
+    saturated pixels (==1.5): 3602 (1.994%)
+    occupied fraction by threshold: 0.00:49.33%, 0.01:47.28%, 0.02:45.29%, 0.05:39.53%, 0.10:30.76%, 0.25:12.52%, 0.50:1.99%
+    total background-subtracted intensity = 15418.95
+    max pixel = 1.5000, min pixel = 1.0000
+    columns with any signal: 425/425; with >=5% of peak weight: 425
+    centroid slope (Theil-Sen, all cols)   =    0.3769 MHz/s  +-0.0391  (95%CI 0.301,0.454)
+    centroid slope (Theil-Sen, >=5% cols)   =    0.3769 MHz/s  +-0.0391
+    centroid slope (Huber, all cols)        =    0.3750 MHz/s
+    mask-PCA slope                          =  289.7199 MHz/s  (axis elongation 66.5)
+    weighted-PCA slope                      =  169.4739 MHz/s  (elongation 65.7)
+    slope-scan (band +-0.35 MHz)           =    3.3513 MHz/s  (contained 9.7% of weight)
+    argmax-ridge Theil-Sen                  =    0.4001 MHz/s  +-0.1612   (Huber 0.5727)
+    connected components (8-conn, >1.0)     = 1139  (top sizes [np.int64(83700), np.int64(166), np.int64(111), np.int64(108), np.int64(82), np.int64(77)])
+    components >=1% of weight               = 1
+    separated peaks in time-integrated spec = 2
+    columns with >=2 vertical runs (>50%max)= 425/425
+    centroid residual MAD about fit         = 0.2704 MHz (median |resid| 0.1824)
+    median per-column 5-95% frequency band  = 8.0807 MHz
+
+==============================================================================
+COMPARISON: re-derived minus reported (MHz/s) and relative error
+==============================================================================
+event_id  reported_drift  slope_centroid_theilsen  diff_slope_centroid_theilsen  relerr_slope_centroid_theilsen  slope_mask_pca  diff_slope_mask_pca  relerr_slope_mask_pca  slope_scan  slope_argmax_theilsen
+ event_1        -12.7777                   0.4442                       13.2219                         -1.0348        287.7930             300.5706               -23.5231     -0.9982                 0.0327
+ event_2        -12.4520                   0.3307                       12.7827                         -1.0266        427.8977             440.3497               -35.3637      2.7207                -0.2621
+ event_3         -3.3614                  -0.1865                        3.1749                         -0.9445       3666.7452            3670.1066             -1091.8306      2.7684                 0.1737
+ event_4        -16.8673                  -0.1550                       16.7123                         -0.9908       -820.2957            -803.4284                47.6323     -4.6344                -0.0488
+ event_5         -4.0560                   0.3769                        4.4328                         -1.0929        289.7199             293.7759               -72.4301      3.3513                 0.4001
+
+Summary across methods (unit = 5 events):
+{
+  "slope_centroid_theilsen": {
+    "max_abs_rel_err": 1.0929129624619585,
+    "median_abs_rel_err": 1.0265547651912759,
+    "median_diff": 12.782683299256673,
+    "all_within_10pct": false,
+    "within_10pct_count": 0
+  },
+  "slope_mask_pca": {
+    "max_abs_rel_err": 1091.830574806756,
+    "median_abs_rel_err": 47.63231198421002,
+    "median_diff": 300.57062436639455,
+    "all_within_10pct": false,
+    "within_10pct_count": 0
+  },
+  "slope_scan": {
+    "max_abs_rel_err": 1.826262354400811,
+    "median_abs_rel_err": 1.2184983438607824,
+    "median_diff": 11.779440637308786,
+    "all_within_10pct": false,
+    "within_10pct_count": 0
+  },
+  "slope_argmax_theilsen": {
+    "max_abs_rel_err": 1.0986502691300084,
+    "median_abs_rel_err": 1.0025612466361116,
+    "median_diff": 12.189915676721634,
+    "all_within_10pct": false,
+    "within_10pct_count": 0
+  }
+}
+
+wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/s10_drift_rederived_per_event.csv

@@ -1,0 +1,8 @@
+/.env
+/.env.*
+!/.env.example
+/scripts/__pycache__/
+/tests/__pycache__/
+/.pytest_cache/
+.DS_Store
+scoring-work/

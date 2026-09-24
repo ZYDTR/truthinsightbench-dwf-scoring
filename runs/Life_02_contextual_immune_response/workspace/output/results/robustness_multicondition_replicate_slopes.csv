@@ -1,0 +1,7 @@
+response_class_id,replicate_id,slope,intercept,r_squared
+response_class_A,replicate_1,8.782,-0.515,0.988458
+response_class_A,replicate_2,9.291,-2.71,0.998772
+response_class_A,replicate_3,7.706,4.215,0.943476
+response_class_B,replicate_1,0.403,6.835,0.440688
+response_class_B,replicate_2,0.825,4.775,0.575642
+response_class_B,replicate_3,-0.654,9.755,0.340441

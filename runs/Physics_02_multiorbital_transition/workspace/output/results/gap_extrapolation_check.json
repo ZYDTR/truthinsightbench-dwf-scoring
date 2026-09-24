@@ -1,0 +1,9 @@
+{
+  "n_blocks_dSz2": 40,
+  "n_blocks_dSz1": 40,
+  "n_overlap_pairs": 61,
+  "max_rel_diff_dSz2": 6854.47718174422,
+  "max_rel_diff_dSz1": 8102.939180052619,
+  "fit_method": "linear fit gap = a + b*(1/L); a is L->Infinity intercept",
+  "raw_reference_branch": "Jh/U=0.25 in table_008.dat (dSz=2) and table_009.dat (dSz=1)"
+}

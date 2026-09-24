@@ -1,0 +1,219 @@
+{
+  "partition": [
+    {
+      "Process": "Nonglacial",
+      "Methodology": "Cosmogenic detrital",
+      "n": 3470,
+      "sd_log10_ET": 0.03497878763050759,
+      "spread_log10_TI": 5.745426928280817,
+      "ti_range_sufficient": true,
+      "class": "product_locked"
+    },
+    {
+      "Process": "Nonglacial",
+      "Methodology": "Thermochronometric",
+      "n": 4,
+      "sd_log10_ET": 0.3060173967090473,
+      "spread_log10_TI": 0.7403626894942441,
+      "ti_range_sufficient": false,
+      "class": "insufficient_TI_range"
+    },
+    {
+      "Process": "Nonglacial",
+      "Methodology": "Cosmogenic surface",
+      "n": 64,
+      "sd_log10_ET": 0.33096597353058393,
+      "spread_log10_TI": 3.1271716180405917,
+      "ti_range_sufficient": true,
+      "class": "product_free"
+    },
+    {
+      "Process": "Nonglacial",
+      "Methodology": "Relief",
+      "n": 7,
+      "sd_log10_ET": 0.42002383083471667,
+      "spread_log10_TI": 1.3010299956639813,
+      "ti_range_sufficient": true,
+      "class": "product_free"
+    },
+    {
+      "Process": "Glacial",
+      "Methodology": "Thermochronometric",
+      "n": 68,
+      "sd_log10_ET": 0.5638376180422864,
+      "spread_log10_TI": 3.3979400086720375,
+      "ti_range_sufficient": true,
+      "class": "product_free"
+    },
+    {
+      "Process": "Glacial",
+      "Methodology": "Cosmogenic detrital",
+      "n": 9,
+      "sd_log10_ET": 0.606187644118978,
+      "spread_log10_TI": 3.4771212547196626,
+      "ti_range_sufficient": true,
+      "class": "product_free"
+    },
+    {
+      "Process": "Glacial",
+      "Methodology": "Cosmogenic surface",
+      "n": 99,
+      "sd_log10_ET": 0.9362599515937468,
+      "spread_log10_TI": 3.3392343483342106,
+      "ti_range_sufficient": true,
+      "class": "product_free"
+    },
+    {
+      "Process": "Glacial",
+      "Methodology": "Relief",
+      "n": 18,
+      "sd_log10_ET": 1.6778075379835802,
+      "spread_log10_TI": 7.305937330158725,
+      "ti_range_sufficient": true,
+      "class": "product_free"
+    },
+    {
+      "Process": "Nonglacial",
+      "Methodology": "Volumetric",
+      "n": 2583,
+      "sd_log10_ET": 1.928339857960918,
+      "spread_log10_TI": 6.766369419835537,
+      "ti_range_sufficient": true,
+      "class": "product_free"
+    },
+    {
+      "Process": "Glacial",
+      "Methodology": "Volumetric",
+      "n": 233,
+      "sd_log10_ET": 2.298617192432155,
+      "spread_log10_TI": 9.248673338211212,
+      "ti_range_sufficient": true,
+      "class": "product_free"
+    }
+  ],
+  "class_totals": {
+    "product_locked_rows": 3470,
+    "product_free_rows": 3081,
+    "total_analysed_rows": 6555,
+    "locked_share_of_rows": 0.5293668954996186,
+    "locked_strata": [
+      [
+        "Nonglacial",
+        "Cosmogenic detrital",
+        3470
+      ]
+    ]
+  },
+  "class_slopes": [
+    {
+      "class": "product_locked",
+      "n": 3470,
+      "n_reference_clusters": 166,
+      "slope": -0.9950483209181564,
+      "se": 0.0007787989063537109,
+      "r2": 0.9978800785708096,
+      "p": 0.0,
+      "cluster_boot_ci_lo": -0.998467430384932,
+      "cluster_boot_ci_hi": -0.9915367507716903
+    },
+    {
+      "class": "product_free",
+      "n": 3081,
+      "n_reference_clusters": 232,
+      "slope": 0.0630782487028106,
+      "se": 0.007217742337038697,
+      "r2": 0.024205017304206766,
+      "p": 3.782461333229021e-18,
+      "cluster_boot_ci_lo": -0.010662441823581349,
+      "cluster_boot_ci_hi": 0.14082261019313916
+    },
+    {
+      "class": "ALL pooled",
+      "n": 6555,
+      "n_reference_clusters": 401,
+      "slope": -0.022131191014995343,
+      "se": 0.0041011363280206515,
+      "r2": 0.004424205811281778,
+      "p": 7.039125873963114e-08,
+      "cluster_boot_ci_lo": -0.06898077220919617,
+      "cluster_boot_ci_hi": 0.02556573922018904
+    }
+  ],
+  "predictor_dominance_free": [
+    {
+      "predictor": "logP",
+      "n": 2980,
+      "single_predictor_r2": 0.17376101242666386,
+      "standardised_beta_marginal": 0.4168465094332282
+    },
+    {
+      "predictor": "logS",
+      "n": 2980,
+      "single_predictor_r2": 0.09719808359722282,
+      "standardised_beta_marginal": 0.3117660719148582
+    },
+    {
+      "predictor": "absLat",
+      "n": 2980,
+      "single_predictor_r2": 0.04023952888221505,
+      "standardised_beta_marginal": -0.20059792840958265
+    },
+    {
+      "predictor": "logTI",
+      "n": 2980,
+      "single_predictor_r2": 0.017852191596461786,
+      "standardised_beta_marginal": 0.13361209375076857
+    },
+    {
+      "predictor": "logA",
+      "n": 2980,
+      "single_predictor_r2": 0.0011456997030853122,
+      "standardised_beta_marginal": -0.03384818611218651
+    }
+  ],
+  "conclusion": {
+    "locked_strata_slope": {
+      "class": "product_locked",
+      "n": 3470,
+      "n_reference_clusters": 166,
+      "slope": -0.9950483209181564,
+      "se": 0.0007787989063537109,
+      "r2": 0.9978800785708096,
+      "p": 0.0,
+      "cluster_boot_ci_lo": -0.998467430384932,
+      "cluster_boot_ci_hi": -0.9915367507716903
+    },
+    "free_strata_slope": {
+      "class": "product_free",
+      "n": 3081,
+      "n_reference_clusters": 232,
+      "slope": 0.0630782487028106,
+      "se": 0.007217742337038697,
+      "r2": 0.024205017304206766,
+      "p": 3.782461333229021e-18,
+      "cluster_boot_ci_lo": -0.010662441823581349,
+      "cluster_boot_ci_hi": 0.14082261019313916
+    },
+    "interpretation": "A near -1 slope appears only in the product-locked stratum. In the product-free strata the slope is small and its cluster bootstrap interval is wide relative to the locked case."
+  },
+  "figures": [
+    "fig_product_lock_partition.png"
+  ],
+  "tables": [
+    {
+      "file": "table_product_lock_partition.csv",
+      "caption": "Strata partitioned by the thickness-spread diagnostic into product-locked and product-free.",
+      "rows": 10
+    },
+    {
+      "file": "table_class_slopes.csv",
+      "caption": "Rate/interval slope by product-lock class, with Reference-cluster bootstrap CIs.",
+      "rows": 3
+    },
+    {
+      "file": "table_predictor_dominance_free_strata.csv",
+      "caption": "Marginal explanatory power of each candidate predictor inside the product-free strata.",
+      "rows": 5
+    }
+  ]
+}

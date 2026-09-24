@@ -1,0 +1,19 @@
+group,regime,channel,coarse_sheet,fine_sheet,fine_block_index,label,cdf_max_abs_diff_within_overlap,best_offset_L1,best_offset_delta,best_offset_as_fraction_of_coarse_bin,L1_at_zero_offset
+anonymous_group_1,fast,channel_l,Sheet_039,Sheet_025,0,"group_a (-35<s<-10), channel_l",0.1929473694489141,0.2157308668414895,-0.875,-0.5,0.489344942788439
+anonymous_group_1,fast,channel_r,Sheet_040,Sheet_027,0,"group_a (-35<s<-10), channel_r",0.15145860144472156,0.21668950649679167,-0.875,-0.5,0.39258685971343427
+anonymous_group_1,slow,channel_l,Sheet_039,Sheet_024,0,"group_a(-10<s<0), channel_l",0.9966495139047042,1.9925834363411619,-0.7291666666666666,-0.41666666666666663,1.9925834363411616
+anonymous_group_1,slow,channel_l,Sheet_039,Sheet_024,1,"group_a(0<s<20), channel_l",0.8211353830300807,1.6370941819350688,-0.36458333333333326,-0.2083333333333333,1.7087753134040495
+anonymous_group_1,slow,channel_r,Sheet_040,Sheet_026,0,"group_a(-10<s<0), channel_r",0.9976306295460242,1.9947552447552446,0.0,0.0,1.9947552447552448
+anonymous_group_1,slow,channel_r,Sheet_040,Sheet_026,1,"group_a(0<s<20), channel_r",0.9511876421055526,1.9048554818635886,-0.04861110945542657,-0.04166666666666669,1.9048554818635886
+anonymous_group_2,fast,channel_l,Sheet_041,Sheet_029,0,"group_b (-35<s<-10), channel_l",0.4608100865920474,0.9055557540958035,0.875,0.5,0.9788874486958212
+anonymous_group_2,fast,channel_r,Sheet_042,Sheet_031,0,"group_b (-35<s<-10), channel_r",0.8755691714144612,1.5874174020022611,0.875,0.5,1.7137550847499765
+anonymous_group_2,slow,channel_l,Sheet_041,Sheet_028,0,"group_b(-10<s<0), channel_l",1.0,2.0,-0.875,-0.5,2.0
+anonymous_group_2,slow,channel_l,Sheet_041,Sheet_028,1,"group_b(0<s<20), channel_l",0.9282511210762332,1.8565022421524664,-0.65625,-0.375,1.8565022421524664
+anonymous_group_2,slow,channel_r,Sheet_042,Sheet_030,0,"group_b(-10<s<0), channel_r",1.0,2.0,-0.875,-0.5,2.0
+anonymous_group_2,slow,channel_r,Sheet_042,Sheet_030,1,"group_b(0<s<20), channel_r",0.9704641350210971,1.9409282700421941,-0.875,-0.5,1.940928270042194
+anonymous_group_3,fast,channel_l,Sheet_043,Sheet_033,0,"group_c (-35<s<-10), channel_l",0.16960540337308505,0.3748907663816732,-0.875,-0.5,0.6042082017168751
+anonymous_group_3,fast,channel_r,Sheet_044,Sheet_035,0,"group_c (-35<s<-10), channel_r",0.4776564318243822,0.9184750263815604,-0.875,-0.5,1.0021757228426944
+anonymous_group_3,slow,channel_l,Sheet_043,Sheet_032,0,"group_c(-10<s<0), channel_l",1.0,1.9999999999999998,-0.14583333333333326,-0.08333333333333329,1.9999999999999998
+anonymous_group_3,slow,channel_l,Sheet_043,Sheet_032,1,"group_c(0<s<20), channel_l",0.9857433808553971,1.971486761710794,-0.14583333333333326,-0.08333333333333329,1.9714867617107943
+anonymous_group_3,slow,channel_r,Sheet_044,Sheet_034,0,"group_c(-10<s<0), channel_r",1.0,2.0,-0.875,-0.5,2.0
+anonymous_group_3,slow,channel_r,Sheet_044,Sheet_034,1,"group_c(0<s<20), channel_r",0.9673704414587332,1.9347408829174666,-0.8020833333333334,-0.45833333333333337,1.9347408829174668

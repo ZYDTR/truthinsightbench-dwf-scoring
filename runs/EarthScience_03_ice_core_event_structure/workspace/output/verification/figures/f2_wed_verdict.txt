@@ -1,0 +1,74 @@
+INDEPENDENT VERIFICATION OF DRAFT FINDING 2
+core claim: c06_depth_w_e_m is a pointwise product, NOT a water-equivalent depth (WED)
+data: /data/user/conversations/conv-f07721cb-d3dc-42e9-83c7-7e986203115b/project/data/observations.tsv
+scripts (both executed): f2_wed_verification.py, f2_wed_final_table.py
+VERDICT: SUPPORTED (survives refutation attempts; one wording refinement)
+
+1. FOUR QUADRATURES of WED = integral rho dz  (rho = c05 g/cm3, rho_w = 1.0)
+   trapezoid, c01 increments         21.2218 m   (gap -5.8382 m = -27.51% of the WED)
+   left endpoint, c01 increments     21.2164 m   (gap -5.8436 m = -27.54%)
+   right endpoint, c01 increments    21.2271 m   (gap -5.8329 m = -27.48%)
+   left endpoint, c03 increments     20.8115 m   (gap -6.2485 m = -30.02%)
+   -> claim values confirmed to 4 dp. All c01-increment rules agree to 0.0107 m.
+   -> 27.5% is relative to the integral (gap/WED); as % of reported 27.060 it is 21.6%.
+
+2. ATTACKS (residual gap that remains in every case)
+   (i)   1.008/1.03 m step at index 105 (z 2.97 -> 4.00): true WED over it 0.4079 m;
+         even filling with the maximum observed density (0.644) gives 0.6633 m ->
+         21.8797 m, gap still -5.1803 m (-24.4%).
+   (ii)  density-on-other-depths: density is a strict function of depth
+         (Spearman 0.99999, max|rho - poly6(z)| 5.5e-4). Shifting the profile
+         +/-2 grid nodes moves the integral by at most 0.0298 m -> gap >= 5.8262 m.
+   (iii) sample-midpoint depth/density: trapezoid = 21.2218; midpoint-interpolated
+         rules 21.2193 (left) / 21.2249 (trap); gap >= 5.835 m. The midpoint-DEPTH
+         *product* form (c01+c03/200)*c05 integrated gives 484 m, i.e. it is not
+         the 21 m family at all.
+   (iv)  scale factor k: best least-squares k=1.2161 leaves max|resid| 1.2531 m,
+         rmse 0.5747 m; pointwise ratio c06/WED swings 0.9974 -> 1.7567 ->
+         no constant k closes it. k needed at base = 1.2751 = rho_base / mean_rho:
+         a constant scale merely presumes a constant density, which the data refute.
+   (v)   per-section: segment A (z<3 m) ratio c06/WED = 1.025; segment B (z>=4 m)
+         = 1.295. Local k over 200-row blocks ranges 1.04 -> 23.6.
+   (vi)  HARD BOUND: since 0.379 <= rho <= 0.644 and z_base = 41.98 m, ANY
+         quadrature of the observed density lies in [15.9104, 27.0351] m. Reported
+         27.060 m exceeds even the all-at-max-density bound by 0.0249 m.
+
+3. DECISIVE POINTWISE TEST (all 1931 rows)
+   X = c01*c05     : max|resid| 0.0303 m, RMSE 0.0097 m, OLS R2 0.99999893,
+                     R2 vs identity line 0.999998
+   X = c02*c05     : max|resid| 0.0240 m, RMSE 0.0078 m, OLS R2 0.99999895,
+                     R2(identity) 0.999999  (slightly BETTER than c01*c05)
+   X = integral trap: max|resid| 5.8382 m, RMSE 2.6231 m, OLS R2 0.99789495,
+                     R2(identity) 0.8819
+   X = integral left: max|resid| 5.8436 m, RMSE 2.6266 m, OLS R2 0.99790009,
+                     R2(identity) 0.8816
+   RMSE(integral)/RMSE(product) = 270.4x.
+   OLS slope for the product is b = 1.000083, a = 0.0045 (intercept ~ half a
+   rounding quantum); the integral needs b = 1.2823 and still misses by metres.
+   Provenance: c06 equals round(c02*c05, 2) on 1033/1931 rows (round(c01*c05,2):
+   767); scanning c01+offset the best offset is +0.010 m (1001 exact) = c02.
+   So the generating formula is c02*c05 (or equivalently a dense grid evaluated
+   ~0.010 m below the c01 sample top), rounded to 2 dp - every error is at most
+   2 rounding quanta (0.02 m; 3 for c01*c05, i.e. 0.03 m). The claim's
+   attribution to c01*c05 is the numerically equivalent restatement
+   (c02 = c01 + 0.01 m in all but a handful of rows).
+
+4. IS THE GAP REAL OR A METHOD ARTEFACT?  REAL.
+   - The three c01-increment rules differ by 0.0107 m, five orders of magnitude
+     below the 5.84 m gap; the c03-increment rule is only 0.41 m lower.
+   - Any reweighting inside the observed density envelope is capped at 27.0351 m.
+   - The gap equals exactly the pointwise product minus the integral:
+     27.06 - 21.22 = 5.84 m; ratio 1.275 = 0.644/0.5055.
+   - Materially different method (ice-equivalent, /0.917) still leaves 3.92 m.
+   What would have broken it (none did): a quadrature choice, step handling,
+   density re-pairing, midpoint rule, or per-section treatment closing the gap;
+   or a pointwise residual for the integral smaller than for the product.
+
+5. ONE WORDING REFINEMENT for the draft
+   (a) 27.5% is gap/WED (27.51%); relative to the reported value the gap is
+       21.6% - label the denominator.
+   (b) "quadratic (depth-curvature) relation between c06 and c01" is NOT a valid
+       discriminator: quadratic-in-depth R2 is 0.999984 for c06, 0.999984 for
+       c01*c05 and 0.999997 for the integral; all are near-quadratic because
+       density grows ~linearly. The catch is the SCALE, not the curvature.
+   (c) the product is with c02 (c01 + 0.010 m) at least as much as with c01.

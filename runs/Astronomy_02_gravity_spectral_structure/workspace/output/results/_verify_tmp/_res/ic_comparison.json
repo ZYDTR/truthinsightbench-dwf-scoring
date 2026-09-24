@@ -1,0 +1,1113 @@
+{
+  "track": "TRACK 4 - information-criterion comparison vs the supplied uniform alternative",
+  "analysis_unit": "one complete candidate spectral parameter combination; the 507 candidate rows and 250 ranked rows are NOT independent replicates, so no p-value or standard error is computed over grid rows. Uncertainty is handled by whole-slice leave-one-out sensitivity (velocity slice, frequency slice, vmax slice).",
+  "inputs": {
+    "uniform_alternative_comparison.tsv": {
+      "rows": 24,
+      "velocity_min": 0.001,
+      "velocity_max": 500.0
+    },
+    "candidate_spectrum_comparison.tsv": {
+      "rows": 507,
+      "n_frequency_amplitude_scan": 304,
+      "n_minimum_velocity_scan": 203,
+      "ic_min": 43.9,
+      "ic_max": 13553.2
+    },
+    "ranked_full_parameter_grid.tsv": {
+      "rows": 250,
+      "delta_ic_min": 0.0,
+      "delta_ic_max": 137.2,
+      "vmax_values": [
+        1,
+        3,
+        10,
+        20,
+        30,
+        50,
+        100
+      ],
+      "vmin_values": [
+        0.0,
+        0.001,
+        0.003,
+        0.01,
+        0.02,
+        0.0299999999999999,
+        0.05,
+        0.1
+      ],
+      "width_values": [
+        250,
+        275,
+        300,
+        325
+      ]
+    }
+  },
+  "q1_uniform_is_mv_diagonal": {
+    "n_uniform_rows": 24,
+    "n_diagonal_rows_in_minimum_velocity_scan": 19,
+    "n_matching_rows": 19,
+    "fraction_uniform_rows_matching": 0.7916666666666666,
+    "max_abs_difference": 0.0,
+    "bit_identical": true,
+    "n_unmatched_rows": 5,
+    "unmatched_rows": [
+      {
+        "v": 0.001,
+        "uniform_ic": 5551.0
+      },
+      {
+        "v": 0.002,
+        "uniform_ic": 5062.9
+      },
+      {
+        "v": 0.003,
+        "uniform_ic": 4467.1
+      },
+      {
+        "v": 0.005,
+        "uniform_ic": 3656.9
+      },
+      {
+        "v": 0.01,
+        "uniform_ic": 2797.3
+      }
+    ],
+    "all_matches_at_peak_frequency_microhz": 1210.0,
+    "all_matches_at_width_microhz": 300.0,
+    "candidate_family_min_vmin_evaluated": 0.01,
+    "candidate_family_min_vmax_evaluated": 0.02,
+    "candidate_family_diagonal_min_velocity": 0.02,
+    "unmatched_velocities": [
+      0.001,
+      0.002,
+      0.003,
+      0.005,
+      0.01
+    ],
+    "unmatched_velocity_below_diagonal_floor": true,
+    "unmatched_ics_absent_from_candidate_table": true,
+    "unmatched_note": "The 5 unmatched rows (v = 0.001, 0.002, 0.003, 0.005, 0.01 cm/s) are the vmax==vmin diagonal for velocities at or below the family's diagonal floor: minimum_velocity_scan evaluates the diagonal only for v >= 0.02 cm/s, so no vmax==vmin row exists at v <= 0.01. Their IC values (5551.0, 5062.9, 4467.1, 3656.9, 2797.3) appear nowhere in the 507-row candidate table, consistent with them being extrapolations of the same scan family to smaller velocities rather than a different model.",
+    "scope_of_identity": "Identity holds exactly (bit-identical IC values) at every velocity where both tables evaluate the diagonal, i.e. 19/19 = 100% of overlapping velocities (v = 0.02 ... 500 cm/s) and 19/24 = 79.2% of the uniform table's rows.",
+    "max_abs_diff_vs_mv_diagonal_table": 0.0,
+    "n_diagonal_rows_recovered_in_uniform": 19,
+    "interpretation": "19/24 uniform rows (79.2%) are numerically IDENTICAL (max |difference| = 0.0, bit-identical IC values) to the vmax==vmin diagonal slice of the minimum_velocity_scan family, all at peak_frequency = 1210 uHz and width = 300 uHz. The uniform table is therefore NOT an independent alternative model: it is a 1-D sub-slice of the very same evaluated family (the diagonal of the 2-D vmax x vmin scan). The remaining 5 rows (velocities [0.001, 0.002, 0.003, 0.005, 0.01], IC [5551.0, 5062.9, 4467.1, 3656.9, 2797.3]) are the same diagonal continued below the family's evaluated diagonal floor (vmax==vmin exists only for v >= 0.02 cm/s; 0.001-0.005 cm/s appear nowhere in the candidate table), so they are almost certainly extrapolations of the same scan, not a distinct model. Consequence: any 'uniform vs candidate' comparison at a shared velocity is a comparison of a model with itself, and the uniform table cannot serve as an independent null for a family-level IC test."
+  },
+  "q2_uniform_curve_log_velocity": {
+    "x_axis": "log10(uniform_velocity_cm_s) [dex]",
+    "n_points": 24,
+    "discrete_minimum": {
+      "velocity_cm_s": 0.1,
+      "log10_velocity": -1.0,
+      "ic": 1522.1,
+      "is_interior": true
+    },
+    "neighbours_of_minimum": [
+      {
+        "velocity_cm_s": 0.05,
+        "ic": 1677.4
+      },
+      {
+        "velocity_cm_s": 0.1,
+        "ic": 1522.1
+      },
+      {
+        "velocity_cm_s": 0.2,
+        "ic": 1919.1
+      }
+    ],
+    "n_negative_steps_before_min": 8,
+    "n_nonnegative_steps_before_min": 0,
+    "n_positive_steps_after_min": 15,
+    "n_nonpositive_steps_after_min": 0,
+    "sign_changes_in_first_difference": 1,
+    "unimodal": true,
+    "slope_ic_per_dex_min": -3652.03771218491,
+    "slope_ic_per_dex_max": 4602.159155121636,
+    "slopes_ic_per_dex": [
+      -1621.4331031145225,
+      -3383.4728832940136,
+      -3652.03771218491,
+      -2855.529390365176,
+      -1870.909903040563,
+      -1395.2992403916426,
+      -1401.8559966545365,
+      -515.8954331360079,
+      1318.8054536702825,
+      2055.752238590863,
+      2225.8408075498724,
+      2078.530408971022,
+      3002.358612159197,
+      3227.303859644163,
+      3565.4922615875826,
+      3292.6951276523537,
+      3759.7582177935165,
+      3685.0210707779333,
+      3849.0187638048496,
+      4021.5261516706414,
+      4294.588641070379,
+      4602.159155121636,
+      4281.746016791471
+    ],
+    "slope_sequence_monotone_nondecreasing": false,
+    "n_slope_inversions": 7,
+    "n_slope_inversions_segments_below_1cm_s": 4,
+    "n_slope_inversions_segments_above_1cm_s": 3,
+    "max_abs_slope_inversion_ic_per_dex": 1834.7008868062903,
+    "slope_inversions": [
+      {
+        "between_velocity": [
+          0.002,
+          0.003
+        ],
+        "slope_drop_ic_per_dex": -1762.0397801794911
+      },
+      {
+        "between_velocity": [
+          0.003,
+          0.005
+        ],
+        "slope_drop_ic_per_dex": -268.5648288908965
+      },
+      {
+        "between_velocity": [
+          0.03,
+          0.05
+        ],
+        "slope_drop_ic_per_dex": -6.556756262893941
+      },
+      {
+        "between_velocity": [
+          0.5,
+          1.0
+        ],
+        "slope_drop_ic_per_dex": -147.31039857885025
+      },
+      {
+        "between_velocity": [
+          5.0,
+          10.0
+        ],
+        "slope_drop_ic_per_dex": -272.7971339352289
+      },
+      {
+        "between_velocity": [
+          20.0,
+          30.0
+        ],
+        "slope_drop_ic_per_dex": -74.7371470155831
+      },
+      {
+        "between_velocity": [
+          300.0,
+          500.0
+        ],
+        "slope_drop_ic_per_dex": -320.41313833016466
+      }
+    ],
+    "second_difference_sign_changes": 11,
+    "convex_on_log_axis_strict": false,
+    "low_velocity_branch": {
+      "range_velocity_cm_s": [
+        0.001,
+        0.1
+      ],
+      "n_points": 9,
+      "n_decades": 2.0,
+      "total_ic_change": -4028.9,
+      "mean_slope_ic_per_dex": -2014.45,
+      "note": "steeply decreasing: IC falls from 5551.0 at 0.001 cm/s to 1522.1 at 0.1 cm/s, i.e. 4028.9 IC units lost over 2.00 decades (-2014 IC/dex mean). All 8 steps are negative."
+    },
+    "high_velocity_branch": {
+      "range_velocity_cm_s": [
+        0.1,
+        500.0
+      ],
+      "n_points": 16,
+      "n_decades": 3.6989700043360187,
+      "total_ic_change": 12031.1,
+      "mean_slope_ic_per_dex": 3252.554085568919,
+      "note": "increasing: IC rises from 1522.1 at 0.1 cm/s to 13553.2 at 500 cm/s, i.e. 12031.1 IC units gained over 3.70 decades (3253 IC/dex mean). All 15 steps are positive."
+    },
+    "quadratic_fit_full_range": {
+      "quadratic_coeffs_ic_per_dex2": [
+        830.429221034377,
+        1848.2316372631574,
+        3367.312412310816
+      ],
+      "curvature_A_ic_per_dex2": 830.429221034377,
+      "vertex_log10_velocity": -1.1128170772706028,
+      "vertex_velocity_cm_s": 0.07712282382574287,
+      "vertex_ic": 2338.940547961692,
+      "r2": 0.9821864084288319,
+      "n_points": 24,
+      "window_velocity_cm_s": [
+        0.001,
+        499.99999999999994
+      ],
+      "halfwidth_dex_for_delta_ic_2": 0.049075381738727546,
+      "halfwidth_dex_for_delta_ic_10": 0.10973588958954661
+    },
+    "quadratic_fit_local_3pt": {
+      "quadratic_coeffs_ic_per_dex2": [
+        3047.372210798297,
+        6496.199431863728,
+        4970.927221065432
+      ],
+      "curvature_A_ic_per_dex2": 3047.372210798297,
+      "vertex_log10_velocity": -1.0658690475755779,
+      "vertex_velocity_cm_s": 0.08592725781343306,
+      "vertex_ic": 1508.8782704146306,
+      "r2": 1.0,
+      "n_points": 3,
+      "window_velocity_cm_s": [
+        0.049999999999999996,
+        0.20000000000000004
+      ],
+      "halfwidth_dex_for_delta_ic_2": 0.025618414396275494,
+      "halfwidth_dex_for_delta_ic_10": 0.057284516065831244,
+      "is_inside_range": true
+    },
+    "quadratic_fit_local_5pt": {
+      "quadratic_coeffs_ic_per_dex2": [
+        1903.582530368582,
+        4191.87051287071,
+        3896.272605003357
+      ],
+      "curvature_A_ic_per_dex2": 1903.582530368582,
+      "vertex_log10_velocity": -1.101047747075893,
+      "vertex_velocity_cm_s": 0.07924142063222141,
+      "vertex_ic": 1588.5478128882755,
+      "r2": 0.9836290023313119,
+      "n_points": 7,
+      "window_velocity_cm_s": [
+        0.020000000000000004,
+        0.5
+      ],
+      "halfwidth_dex_for_delta_ic_2": 0.03241373987872741,
+      "halfwidth_dex_for_delta_ic_10": 0.07247932577383027,
+      "is_inside_range": true
+    },
+    "quadratic_fit_local_7pt": {
+      "quadratic_coeffs_ic_per_dex2": [
+        1470.4938770120555,
+        3277.2882264241794,
+        3498.9341691493355
+      ],
+      "curvature_A_ic_per_dex2": 1470.4938770120555,
+      "vertex_log10_velocity": -1.11434949769509,
+      "vertex_velocity_cm_s": 0.07685117329476851,
+      "vertex_ic": 1672.9119246904268,
+      "r2": 0.974161758456718,
+      "n_points": 9,
+      "window_velocity_cm_s": [
+        0.01,
+        1.0
+      ],
+      "halfwidth_dex_for_delta_ic_2": 0.036879361005021385,
+      "halfwidth_dex_for_delta_ic_10": 0.08246475817398279,
+      "is_inside_range": true
+    },
+    "curvature_finite_difference_ic_per_dex2": 6094.744421596573,
+    "curvature_finite_difference_window_velocity": [
+      0.05,
+      0.2
+    ],
+    "curvature_interpretation": "Local parabola curvature near the minimum is A ~ 1.5e3-3.0e3 IC per dex^2 (A = 2*1e3 implies dIC = A*(dv/v)^2, so a factor 1.2 in velocity costs ~2-4 IC units). The vertex of the local 3-point (0.05/0.1/0.2 cm/s) fit is at 0.086 cm/s with vertex IC 1508.9 (below the sampled minimum 1522.1 by 13.2, i.e. 0.9%), and the 5- and 7-point fits put the vertex at 0.079 and 0.077 cm/s. The sampled minimum at 0.1 cm/s is therefore resolved to within a factor ~1.2-1.3 in velocity, and the true continuum minimum is not excluded below the sampled grid.",
+    "r2_local_windows": {
+      "local_3pt": 1.0,
+      "local_5pt": 0.9836290023313119,
+      "local_7pt": 0.974161758456718,
+      "full_range": 0.9821864084288319
+    },
+    "smoothness_verdict": "The curve is strictly UNIMODAL: the first difference is negative for all 8 steps below v = 0.1 cm/s and positive for all 15 steps above it (exactly one sign change). It is SMOOTH but not perfectly convex on the log axis: the piecewise slope (IC per decade) rises overall from -3652 to +4602 IC/dex with 7 small local inversions (largest 1835 IC/dex, at 0.002-0.003 cm/s), i.e. local floor noise/noise-realisation structure of order a few hundred IC units, not a second basin. A local quadratic in log10(v) fits the 3 points around the minimum with R^2 = 1.000 and 7 points with R^2 = 0.974; the global quadratic is poorer (R^2 = 0.9822) because the curve is steeper than parabolic far from the minimum."
+  },
+  "q3_uniform_vs_candidate_minimum": {
+    "uniform_min": {
+      "ic": 1522.1,
+      "velocity_cm_s": 0.1,
+      "family": "uniform alternative (= vmax==vmin diagonal of minimum_velocity_scan, f = 1210 uHz, w = 300 uHz)"
+    },
+    "candidate_family_min": {
+      "ic": 43.9,
+      "candidate_family": "frequency_amplitude_scan",
+      "vmax_cm_s": 20.0,
+      "vmin_cm_s": 0.0,
+      "peak_frequency_microhz": 1010.0,
+      "width_microhz": 300.0
+    },
+    "ranked_full_grid_min": {
+      "delta_ic": 0.0,
+      "vmax_cm_s": 30.0,
+      "vmin_cm_s": 0.05,
+      "peak_frequency_microhz": 1010.0,
+      "width_microhz": 275.0,
+      "candidate_rank": 1
+    },
+    "ic_difference_uniform_minus_candidate": 1478.1999999999998,
+    "ic_ratio_uniform_over_candidate": 34.67198177676538,
+    "candidate_rows_better_than_uniform_min": 232,
+    "candidate_fraction_better_than_uniform_min": 0.45759368836291914,
+    "ranked_rows_better_than_uniform_min": 250,
+    "note": "A lower IC supports a RELATIVE ordering among the evaluated candidates only. It is not proof that the preferred family is physically unique, and in this dataset the comparison is partly circular: the uniform table is a literal sub-slice of the minimum_velocity_scan family (Q1), so family-versus-uniform is a nested comparison, not an independent model comparison."
+  },
+  "q4_delta_ic_offset_check": {
+    "key_columns": [
+      "vmax",
+      "vmin",
+      "f",
+      "w"
+    ],
+    "overlap_rows_exact_float64_key": 26,
+    "max_abs_offset_exact_key": 1.4210854715202004e-14,
+    "overlap_rows_key_rounded_1e-6": 29,
+    "max_abs_offset_rounded_key": 1.4210854715202004e-14,
+    "n_rows_offset_gt_1e-9": 0,
+    "extra_rows_recovered_by_tolerance": 3,
+    "extra_rows_detail": "The ranked file stores vmin = 0.03 as 0.0299999999999999 (2 ULP below the candidate file's 0.03 = 0x1.eb851eb851eb8p-6), which breaks exact bitwise key matching for 3 rows (vmax=20/30/50 at f=1210, w=300). All 3 have |ic - delta_ic| < 1e-13 once keys are rounded.",
+    "float_representation_difference_0.03_cm_s": 1.0061396160665481e-16,
+    "relative_offset_vs_best": 1.4210854715202004e-14,
+    "offset_summary": "29 rows overlap on the parameter tuple (26 by strict float64 equality of the stored values; +3 recovered when keys are rounded to 1e-6). Max |information_criterion - delta_information_criterion| = 1.42e-14 IC units, i.e. the offset is exactly zero to float64 rounding noise (the paired values are identical to ~14 significant digits). delta_information_criterion IS the absolute IC with offset zero, not an IC re-referenced to the grid minimum. Consequence: the ranked table's best row (delta_ic = 0.0 at vmax=30, vmin=0.05, f=1010, w=275) is absent from candidate_spectrum_comparison.tsv and is genuinely better on the same IC scale than every row of that table (min 43.9). Any claim that the candidate table's minimum is the family optimum is therefore grid-limited, not a property of the model family.",
+    "overlap_rows": [
+      {
+        "vmax": 20.0,
+        "vmin": 0.0,
+        "f": 1010.0,
+        "w": 300.0,
+        "candidate_ic": 43.9,
+        "ranked_delta_ic": 43.9,
+        "abs_offset": 0.0,
+        "candidate_rank": 40
+      },
+      {
+        "vmax": 30.0,
+        "vmin": 0.0,
+        "f": 1010.0,
+        "w": 300.0,
+        "candidate_ic": 47.2,
+        "ranked_delta_ic": 47.2,
+        "abs_offset": 0.0,
+        "candidate_rank": 46
+      },
+      {
+        "vmax": 30.0,
+        "vmin": 0.03,
+        "f": 1210.0,
+        "w": 300.0,
+        "candidate_ic": 50.7,
+        "ranked_delta_ic": 50.7,
+        "abs_offset": 0.0,
+        "candidate_rank": 48
+      },
+      {
+        "vmax": 20.0,
+        "vmin": 0.0,
+        "f": 1060.0,
+        "w": 300.0,
+        "candidate_ic": 56.7,
+        "ranked_delta_ic": 56.7,
+        "abs_offset": 0.0,
+        "candidate_rank": 60
+      },
+      {
+        "vmax": 30.0,
+        "vmin": 0.0,
+        "f": 1060.0,
+        "w": 300.0,
+        "candidate_ic": 57.3,
+        "ranked_delta_ic": 57.3,
+        "abs_offset": 0.0,
+        "candidate_rank": 63
+      },
+      {
+        "vmax": 20.0,
+        "vmin": 0.0,
+        "f": 960.0,
+        "w": 300.0,
+        "candidate_ic": 58.0,
+        "ranked_delta_ic": 58.0,
+        "abs_offset": 0.0,
+        "candidate_rank": 65
+      },
+      {
+        "vmax": 30.0,
+        "vmin": 0.05,
+        "f": 1210.0,
+        "w": 300.0,
+        "candidate_ic": 58.1,
+        "ranked_delta_ic": 58.1,
+        "abs_offset": 0.0,
+        "candidate_rank": 67
+      },
+      {
+        "vmax": 30.0,
+        "vmin": 0.02,
+        "f": 1210.0,
+        "w": 300.0,
+        "candidate_ic": 61.6,
+        "ranked_delta_ic": 61.6,
+        "abs_offset": 0.0,
+        "candidate_rank": 74
+      },
+      {
+        "vmax": 50.0,
+        "vmin": 0.03,
+        "f": 1210.0,
+        "w": 300.0,
+        "candidate_ic": 65.1,
+        "ranked_delta_ic": 65.1,
+        "abs_offset": 0.0,
+        "candidate_rank": 80
+      },
+      {
+        "vmax": 50.0,
+        "vmin": 0.05,
+        "f": 1210.0,
+        "w": 300.0,
+        "candidate_ic": 68.3,
+        "ranked_delta_ic": 68.3,
+        "abs_offset": 0.0,
+        "candidate_rank": 84
+      },
+      {
+        "vmax": 30.0,
+        "vmin": 0.0,
+        "f": 960.0,
+        "w": 300.0,
+        "candidate_ic": 72.5,
+        "ranked_delta_ic": 72.5,
+        "abs_offset": 0.0,
+        "candidate_rank": 94
+      },
+      {
+        "vmax": 50.0,
+        "vmin": 0.02,
+        "f": 1210.0,
+        "w": 300.0,
+        "candidate_ic": 73.3,
+        "ranked_delta_ic": 73.29999999999998,
+        "abs_offset": 1.4210854715202004e-14,
+        "candidate_rank": 97
+      },
+      {
+        "vmax": 30.0,
+        "vmin": 0.0,
+        "f": 1110.0,
+        "w": 300.0,
+        "candidate_ic": 76.0,
+        "ranked_delta_ic": 76.0,
+        "abs_offset": 0.0,
+        "candidate_rank": 103
+      },
+      {
+        "vmax": 30.0,
+        "vmin": 0.0,
+        "f": 1160.0,
+        "w": 300.0,
+        "candidate_ic": 80.5,
+        "ranked_delta_ic": 80.5,
+        "abs_offset": 0.0,
+        "candidate_rank": 113
+      },
+      {
+        "vmax": 30.0,
+        "vmin": 0.01,
+        "f": 1210.0,
+        "w": 300.0,
+        "candidate_ic": 81.0,
+        "ranked_delta_ic": 81.0,
+        "abs_offset": 0.0,
+        "candidate_rank": 114
+      },
+      {
+        "vmax": 50.0,
+        "vmin": 0.01,
+        "f": 1210.0,
+        "w": 300.0,
+        "candidate_ic": 88.2,
+        "ranked_delta_ic": 88.2,
+        "abs_offset": 0.0,
+        "candidate_rank": 132
+      },
+      {
+        "vmax": 20.0,
+        "vmin": 0.0,
+        "f": 1110.0,
+        "w": 300.0,
+        "candidate_ic": 93.5,
+        "ranked_delta_ic": 93.5,
+        "abs_offset": 0.0,
+        "candidate_rank": 150
+      },
+      {
+        "vmax": 10.0,
+        "vmin": 0.0,
+        "f": 960.0,
+        "w": 300.0,
+        "candidate_ic": 106.2,
+        "ranked_delta_ic": 106.2,
+        "abs_offset": 0.0,
+        "candidate_rank": 179
+      },
+      {
+        "vmax": 50.0,
+        "vmin": 0.0,
+        "f": 1110.0,
+        "w": 300.0,
+        "candidate_ic": 109.7,
+        "ranked_delta_ic": 109.7,
+        "abs_offset": 0.0,
+        "candidate_rank": 186
+      },
+      {
+        "vmax": 50.0,
+        "vmin": 0.0,
+        "f": 1160.0,
+        "w": 300.0,
+        "candidate_ic": 110.8,
+        "ranked_delta_ic": 110.8,
+        "abs_offset": 0.0,
+        "candidate_rank": 190
+      },
+      {
+        "vmax": 10.0,
+        "vmin": 0.0,
+        "f": 910.0,
+        "w": 300.0,
+        "candidate_ic": 111.5,
+        "ranked_delta_ic": 111.5,
+        "abs_offset": 0.0,
+        "candidate_rank": 194
+      },
+      {
+        "vmax": 50.0,
+        "vmin": 0.0,
+        "f": 1210.0,
+        "w": 300.0,
+        "candidate_ic": 113.6,
+        "ranked_delta_ic": 113.6,
+        "abs_offset": 0.0,
+        "candidate_rank": 198
+      },
+      {
+        "vmax": 20.0,
+        "vmin": 0.0,
+        "f": 910.0,
+        "w": 300.0,
+        "candidate_ic": 114.7,
+        "ranked_delta_ic": 114.7,
+        "abs_offset": 0.0,
+        "candidate_rank": 200
+      },
+      {
+        "vmax": 30.0,
+        "vmin": 0.0,
+        "f": 1210.0,
+        "w": 300.0,
+        "candidate_ic": 120.7,
+        "ranked_delta_ic": 120.7,
+        "abs_offset": 0.0,
+        "candidate_rank": 212
+      },
+      {
+        "vmax": 20.0,
+        "vmin": 0.03,
+        "f": 1210.0,
+        "w": 300.0,
+        "candidate_ic": 122.3,
+        "ranked_delta_ic": 122.3,
+        "abs_offset": 0.0,
+        "candidate_rank": 216
+      },
+      {
+        "vmax": 20.0,
+        "vmin": 0.05,
+        "f": 1210.0,
+        "w": 300.0,
+        "candidate_ic": 129.6,
+        "ranked_delta_ic": 129.6,
+        "abs_offset": 0.0,
+        "candidate_rank": 231
+      },
+      {
+        "vmax": 50.0,
+        "vmin": 0.0,
+        "f": 1060.0,
+        "w": 300.0,
+        "candidate_ic": 130.3,
+        "ranked_delta_ic": 130.3,
+        "abs_offset": 0.0,
+        "candidate_rank": 234
+      },
+      {
+        "vmax": 50.0,
+        "vmin": 0.0,
+        "f": 1260.0,
+        "w": 300.0,
+        "candidate_ic": 132.9,
+        "ranked_delta_ic": 132.9,
+        "abs_offset": 0.0,
+        "candidate_rank": 240
+      },
+      {
+        "vmax": 20.0,
+        "vmin": 0.02,
+        "f": 1210.0,
+        "w": 300.0,
+        "candidate_ic": 137.2,
+        "ranked_delta_ic": 137.2,
+        "abs_offset": 0.0,
+        "candidate_rank": 250
+      }
+    ]
+  },
+  "q5_best_per_family": {
+    "frequency_amplitude_scan": {
+      "n_rows": 304,
+      "best_ic": 43.9,
+      "vmax_cm_s": 20.0,
+      "vmin_cm_s": 0.0,
+      "peak_frequency_microhz": 1010.0,
+      "width_microhz": 300.0
+    },
+    "minimum_velocity_scan": {
+      "n_rows": 203,
+      "best_ic": 50.7,
+      "vmax_cm_s": 30.0,
+      "vmin_cm_s": 0.03,
+      "peak_frequency_microhz": 1210.0,
+      "width_microhz": 300.0,
+      "diagonal_subset_best_ic": 1522.1,
+      "diagonal_subset_best_velocity_cm_s": 0.1
+    },
+    "uniform_alternative": {
+      "n_rows": 24,
+      "best_ic": 1522.1,
+      "velocity_cm_s": 0.1
+    },
+    "ranked_full_grid_context": {
+      "n_rows": 250,
+      "best_delta_ic": 0.0,
+      "vmax_cm_s": 30.0,
+      "vmin_cm_s": 0.05,
+      "peak_frequency_microhz": 1010.0,
+      "width_microhz": 275.0
+    },
+    "ranking": [
+      "frequency_amplitude_scan",
+      "minimum_velocity_scan",
+      "uniform_alternative"
+    ],
+    "preferred_family": "frequency_amplitude_scan",
+    "margin_fa_over_mv": {
+      "ic_difference": 6.800000000000004,
+      "ratio": 1.1548974943052392,
+      "pct_of_best": 15.48974943052393
+    },
+    "margin_candidate_over_uniform": {
+      "ic_difference": 1478.1999999999998,
+      "ratio": 34.67198177676538
+    },
+    "nested_warning": "uniform_alternative is a literal subset of minimum_velocity_scan (Q1), so the gap 1522.1 vs 50.7 is a nested-subset gap, not an independent model comparison. The only non-nested family comparison is frequency_amplitude_scan (43.9) vs minimum_velocity_scan (50.7): Delta = 6.8 IC units, ratio 1.155 - a marginal margin.",
+    "note": "The ranked full-parameter grid (a wider, differently-sampled grid with width in {250,275,300,325} uHz) reaches delta_ic = 0.0 at (vmax=30, vmin=0.05, f=1010, w=275), better than every row of candidate_spectrum_comparison.tsv (best 43.9). Same IC scale (Q4), different grid."
+  },
+  "q6_boundary_sensitivity": {
+    "variants": {
+      "a_min_velocity_gt_0": {
+        "candidate_family": {
+          "n_rows": 203,
+          "best_ic": 50.7,
+          "family": "minimum_velocity_scan",
+          "vmax_cm_s": 30.0,
+          "vmin_cm_s": 0.03,
+          "peak_frequency_microhz": 1210.0,
+          "changed": true
+        },
+        "uniform_alternative": {
+          "n_rows": 24,
+          "best_ic": 1522.1,
+          "velocity_cm_s": 0.1,
+          "changed": false
+        },
+        "frequency_amplitude_scan_rows_retained": 0,
+        "note": "All 304 frequency_amplitude_scan rows have vmin = 0.0 exactly and are removed; the candidate minimum moves 43.9 -> 50.7 (minimum_velocity_scan). The uniform table is untouched (all 24 velocities > 0, min 1522.1 at 0.1)."
+      },
+      "b_only_rows_in_top250_ranked": {
+        "candidate_family": {
+          "n_rows": 29,
+          "best_ic": 43.9,
+          "vmax_cm_s": 20.0,
+          "vmin_cm_s": 0.0,
+          "peak_frequency_microhz": 1010.0,
+          "width_microhz": 300.0,
+          "changed": false
+        },
+        "uniform_alternative": {
+          "n_rows": 0,
+          "best_ic": null,
+          "reason": "no uniform (vmax==vmin) row appears in the top-250 ranked table: the ranked grid contains 0 rows with vmax == vmin, its vmax axis starts at 1 cm/s and its vmin axis stops at 0.1 cm/s, while the uniform velocities run 0.001-500 cm/s. The uniform table is disjoint from the ranked table's parameter support, so restriction (b) leaves the uniform minimum unchanged at 1522.1 (v = 0.1)."
+        },
+        "ranked_top250_itself": {
+          "best_delta_ic": 0.0,
+          "vmax_cm_s": 30.0,
+          "vmin_cm_s": 0.05,
+          "peak_frequency_microhz": 1010.0,
+          "width_microhz": 275.0
+        },
+        "note": "Restricting the candidate family to the 29 rows that also appear in the top-250 ranked table keeps the global optimum (43.9 at vmax=20, vmin=0, f=1010, w=300); the ranked table reaches 0.0 on a grid that additionally varies the width (w = 275 uHz, a value never evaluated in candidate_spectrum_comparison.tsv)."
+      },
+      "b_top250_by_family": {
+        "nan": 221,
+        "frequency_amplitude_scan": 18,
+        "minimum_velocity_scan": 11
+      },
+      "b_top250_family_counts": {
+        "matched_to_candidate_table": 29,
+        "not_in_candidate_table": 221
+      },
+      "c_only_best_row_per_peak_frequency": {
+        "candidate_family": {
+          "n_frequencies": 19,
+          "best_ic": 43.9,
+          "peak_frequency_microhz": 1010.0,
+          "family": "frequency_amplitude_scan",
+          "vmax_cm_s": 20.0,
+          "vmin_cm_s": 0.0,
+          "changed": false
+        },
+        "uniform_alternative": {
+          "n_velocities": 24,
+          "best_ic": 1522.1,
+          "note": "the uniform table has no peak-frequency axis: every matched row sits at f = 1210 uHz, so this restriction is a no-op and the minimum stays 1522.1 at v = 0.1 cm/s."
+        },
+        "per_frequency_minimum_ic": {
+          "610.0": 850.0,
+          "660.0": 701.9,
+          "710.0": 589.5,
+          "760.0": 496.3,
+          "810.0": 330.6,
+          "860.0": 183.2,
+          "910.0": 111.5,
+          "960.0": 58.0,
+          "1010.0": 43.9,
+          "1060.0": 56.7,
+          "1110.0": 76.0,
+          "1160.0": 80.5,
+          "1210.0": 50.7,
+          "1260.0": 132.9,
+          "1310.0": 159.6,
+          "1360.0": 163.1,
+          "1410.0": 189.4,
+          "1460.0": 215.1,
+          "1510.0": 247.2
+        },
+        "ranked_top250_best_per_peak_frequency": {
+          "best_delta_ic": 0.0,
+          "peak_frequency_microhz": 1010.0,
+          "n_frequencies": 10,
+          "note": "applying the same 'best row per peak-frequency value' rule to the ranked top-250 gives delta_ic = 0.0 at f = 1010 uHz - the same frequency as the candidate-family optimum and as the ranked global best, confirming the preferred frequency band is 860-1210 uHz with a single best value at 1010 uHz."
+        }
+      },
+      "c_per_frequency_minimum_ranked": {
+        "860.0": 92.9,
+        "910.0": 51.1,
+        "960.0": 39.9,
+        "1010.0": 0.0,
+        "1060.0": 2.0,
+        "1110.0": 16.4,
+        "1160.0": 18.5,
+        "1210.0": 50.7,
+        "1260.0": 115.7,
+        "1310.0": 109.9
+      },
+      "c_loo_uniform_argmin": {
+        "original": 0.1,
+        "values": {
+          "0.001": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "0.002": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "0.003": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "0.005": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "0.01": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "0.02": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "0.03": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "0.05": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "0.1": {
+            "argmin_velocity_cm_s": 0.05,
+            "min_ic": 1677.4
+          },
+          "0.2": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "0.3": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "0.5": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "1.0": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "2.0": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "3.0": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "5.0": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "10.0": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "20.0": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "30.0": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "50.0": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "100.0": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "200.0": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "300.0": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          },
+          "500.0": {
+            "argmin_velocity_cm_s": 0.1,
+            "min_ic": 1522.1
+          }
+        },
+        "argmin_changes_in_n_slices": 1,
+        "argmin_set": [
+          0.05,
+          0.1
+        ]
+      },
+      "c_loo_frequency_amplitude_scan_vmax": {
+        "original_vmax_cm_s": 20.0,
+        "values": {
+          "0.1": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          },
+          "0.2": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          },
+          "0.3": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          },
+          "0.5": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          },
+          "1.0": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          },
+          "2.0": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          },
+          "3.0": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          },
+          "5.0": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          },
+          "10.0": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          },
+          "20.0": {
+            "argmin_vmax_cm_s": 30.0,
+            "min_ic": 47.2
+          },
+          "30.0": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          },
+          "50.0": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          },
+          "100.0": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          },
+          "200.0": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          },
+          "300.0": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          },
+          "500.0": {
+            "argmin_vmax_cm_s": 20.0,
+            "min_ic": 43.9
+          }
+        },
+        "argmin_set": [
+          20.0,
+          30.0
+        ]
+      },
+      "c_loo_minimum_velocity_scan_vmax": {
+        "original_vmax_cm_s": 30.0,
+        "argmin_set": [
+          30.0,
+          50.0
+        ]
+      },
+      "c_loo_candidate_peak_frequency": {
+        "1010.0": {
+          "new_best_ic": 50.7,
+          "new_best_frequency_microhz": 1210.0,
+          "row_family": "minimum_velocity_scan",
+          "row_vmax_cm_s": 30.0
+        }
+      },
+      "velocity_scale_stability": {
+        "stable": true,
+        "verdict": "The preferred VELOCITY SCALE is stable. The frequency_amplitude_scan argmin is vmax = 20.0 cm/s and moves to 30.0 cm/s (a factor 1.5) only when the winning vmax = 20 slice is itself deleted; the minimum_velocity_scan argmin is vmax = 30.0 cm/s moving to 50.0 cm/s under leave-one-vmax-out; the top-29 ranked rows all use vmax in {20, 30}; the uniform slice prefers v = 0.1 cm/s moving to 0.05 cm/s (factor 2) only when 0.1 is deleted. Across every restriction (a), (b), (c) and every leave-one-out the preferred scale stays in the 0.03-0.1 cm/s band for the uniform/vmin axis and in the 20-50 cm/s band for the vmax axis. The FREQUENCY choice is less stable: dropping the winning f = 1010 uHz moves the candidate argmin to 1210 uHz (IC 50.7, +6.8 units), which is the same marginal margin as the family gap.",
+        "uniform_argmin_set_leave_one_out_cm_s": [
+          0.05,
+          0.1
+        ],
+        "frequency_amplitude_scan_argmin_set_leave_one_out_cm_s": [
+          20.0,
+          30.0
+        ],
+        "minimum_velocity_scan_argmin_set_leave_one_out_cm_s": [
+          30.0,
+          50.0
+        ]
+      }
+    }
+  },
+  "q7_ic_scale": {
+    "best_ic_candidate_family": 43.9,
+    "best_ic_ranked_full_grid": 0.0,
+    "candidate_family_ic_distribution": {
+      "mean": 2583.8761341222885,
+      "sd": 2577.6645235428273,
+      "min": 43.9,
+      "median": 1682.3,
+      "max": 13553.2,
+      "iqr": [
+        553.5,
+        3994.8
+      ]
+    },
+    "candidate_ic_iqr_width": 3441.3,
+    "interpretation_of_delta_ic": {
+      "delta_2": {
+        "pct_of_best": 4.555808656036446,
+        "pct_of_candidate_sd": 0.07758961578332675,
+        "pct_of_full_range": 0.014804616079293523,
+        "meaning": "2 IC units is 4.6% of the best value and 0.08% of the family's spread: the rank-1 (0.0) and rank-2 (2.0) rows of the ranked table are effectively tied; a 2-unit gap carries no practical weight. On the candidate table only 3 of 507 rows lie within 10 IC units of the best value (43.9), so a 2-unit gap is well inside the family's fine structure."
+      },
+      "delta_10": {
+        "pct_of_best": 22.779043280182233,
+        "n_ranked_rows_within": 4,
+        "meaning": "10 IC units is 23% of the best value - 4 of the 250 ranked rows are within 10 units of the best row, all with vmax in {20,30}, i.e. still part of the same broad optimum."
+      },
+      "delta_100": {
+        "pct_of_best": 227.79043280182233,
+        "multiple_of_best": 2.277904328018223,
+        "pct_of_candidate_iqr": 2.9058785923924098,
+        "meaning": "100 IC units is 2.3x the best value and 2.9% of the candidate family's IQR width (3441.3 IC units). It is comparable to the whole spread of the top-250 ranked table (0-137.2, so 100 units reaches rank 162 of 250) - decisively worse than the optimum at the level of the whole family, but smaller than the family's overall scatter because a third of the family has IC > 4000."
+      }
+    },
+    "scale_interpretation": "IC here is an absolute scale with values 0-13553 across the 507 candidate rows; the best value is 43.9 (candidate table) / 0.0 (ranked grid, arbitrarily zeroed at its own optimum - Q4 shows this is the same absolute scale). A difference of 2 is negligible (4.6% of the best, the top-2 ranked rows are practically tied); 10 is a mild, still-in-family difference (23% of best, 4 ranked rows within it); 100 is decisive against a candidate (2.3x the best, larger than the entire span of the top-250 ranked set). The family-level margins found here (6.8 between families; 1522.1 between the preferred candidate and the nested uniform slice) sit at the marginal and large ends respectively.",
+    "top_rank_gaps": {
+      "rank1": 0.0,
+      "rank2": 2.0,
+      "rank3": 5.7,
+      "rank10": 21.0,
+      "rank30": 38.4,
+      "rank250": 137.2
+    },
+    "n_ranked_rows_within_2_of_best": 2,
+    "n_ranked_rows_within_10_of_best": 4,
+    "n_ranked_rows_within_100_of_best": 162,
+    "n_candidate_rows_within_10_of_best": 3,
+    "n_candidate_rows_within_10pct_of_best": 2,
+    "n_candidate_rows_better_than_500": 118,
+    "winning_margin_verdict": "Preferred family margin: frequency_amplitude_scan 43.9 vs minimum_velocity_scan 50.7 = Delta 6.8 IC units (15.5% of the best value, ratio 1.155) - a MARGINAL margin, smaller than a single grid step in the ranked table (rank1 -> rank3 = 5.7). Margin over the uniform slice: 1522.1 vs 43.9 = Delta 1478.2, ratio 34.7 - a LARGE margin, but it is a NESTED-SUBSET comparison (Q1), not an independent model comparison. Within the ranked top-250, only 2 rows lie within 2 IC units of the best and 4 within 10, so the top few candidates are effectively indistinguishable on IC. Scale reading on this absolute IC axis: Delta ~2 = negligible (rank1/rank2 tied), Delta ~10 = mild/in-family (23% of best), Delta ~100 = decisive against a candidate (2.3x best). Hence the family-level preference between frequency_amplitude_scan and minimum_velocity_scan (Delta 6.8) is MARGINAL, while the preference of either over the uniform slice is LARGE but circular."
+  },
+  "summary": {
+    "uniform_is_diagonal_of_minimum_velocity_scan": true,
+    "uniform_matching_rows": 19,
+    "uniform_max_abs_diff": 0.0,
+    "uniform_min_ic": 1522.1,
+    "uniform_argmin_velocity_cm_s": 0.1,
+    "uniform_curve_unimodal": true,
+    "uniform_local_curvature_ic_per_dex2": 3047.372210798297,
+    "candidate_min_ic": 43.9,
+    "minimum_velocity_scan_min_ic": 50.7,
+    "frequency_amplitude_scan_min_ic": 43.9,
+    "ranked_full_grid_min_delta_ic": 0.0,
+    "delta_ic_offset_max_abs": 1.4210854715202004e-14,
+    "overlap_rows": 29,
+    "preferred_family_within_candidate_set": "frequency_amplitude_scan",
+    "preferred_velocity_scale_cm_s": {
+      "frequency_amplitude_scan_vmax": 20.0,
+      "minimum_velocity_scan_vmax": 30.0,
+      "uniform_velocity": 0.1
+    },
+    "preferred_velocity_scale_stable": true,
+    "preferred_peak_frequency_microhz": 1010.0,
+    "candidate_table_misses_family_optimum": "The ranked full-parameter grid reaches absolute IC 0.0 at (vmax=30, vmin=0.05, f=1010, w=275), i.e. 43.9 IC units better than the best row of candidate_spectrum_comparison.tsv. This is the same absolute scale (Q4: offset ~1e-14), so the candidate table does not contain the overall IC optimum of the evaluated family.",
+    "winning_margins": "marginal between the two candidate families (Delta 6.8 IC, ratio 1.155); large vs the nested uniform slice (Delta 1478.2, ratio 34.7) but that comparison is a nested subset of the same family, not an independent alternative"
+  }
+}

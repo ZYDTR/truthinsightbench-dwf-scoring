@@ -1,0 +1,80 @@
+/data/user/conversations/conv-67a2d991-196f-410c-8cc5-6286dad6c56d/project/output/native/analysis/run_stage_f.py:148: RuntimeWarning: divide by zero encountered in log
+  ((np.log(y[T > 0]) - np.log(logistic(T[T > 0], fc["ymax"],
+[artifact] results/F1_forward_holdout.json
+[artifact] results/F2_cross_panel_integrity.json
+[artifact] results/F3_crossing_census.json
+[artifact] results/F4_onset_vs_exponent.json
+[artifact] results/F5_saturation_boundary.json
+
+=== F1 forward holdout (fit T<=280, predict 300/320) ===
+{
+  "main": {
+    "n_curves": 8,
+    "n_logistic_beats_exponential": 8,
+    "n_logistic_beats_persistence": 7,
+    "mean_rmse_log_logistic": 0.15009797488120935,
+    "mean_rmse_log_exponential": 0.953039557874402,
+    "mean_rmse_log_persistence": 0.31817529576959136,
+    "paired_delta_rmse": [
+      0.31840979515864815,
+      1.288204952242458,
+      0.803897844011607,
+      0.40952805204223314,
+      0.14737903377319886,
+      1.4952250070130033,
+      1.2280343842828367,
+      0.7328535954215564
+    ],
+    "median_delta": 0.7683757197165817
+  },
+  "check": {
+    "n_curves": 4,
+    "n_logistic_beats_exponential": 4,
+    "n_logistic_beats_persistence": 3,
+    "mean_rmse_log_logistic": 0.10683360836778749,
+    "mean_rmse_log_exponential": 0.7336502500892836,
+    "mean_rmse_log_persistence": 0.40499621839348415,
+    "paired_delta_rmse": [
+      0.14613629504633543,
+      0.7185262310534474,
+      0.14737903377319886,
+      1.4952250070130033
+    ],
+    "median_delta": 0.4329526324133231
+  }
+}
+
+=== F2 cross-panel integrity ===
+exact duplicates: [
+  {
+    "check_curve": "condition_block1_4",
+    "identical_main_curve": "condition_block2_1",
+    "n_settings_matched": 11
+  },
+  {
+    "check_curve": "condition_block1_5",
+    "identical_main_curve": "condition_block2_2",
+    "n_settings_matched": 11
+  }
+]
+genuinely new check curves: ['condition_block1_1', 'condition_block1_2']
+shape transfer: {
+  "n_pairs": 16,
+  "mean_abs_delta_w_K": 6.84357975661632,
+  "mean_delta_w_K": 6.341151876015652,
+  "max_abs_delta_w_K": 17.011596673078564
+}
+
+=== F3 crossing census ===
+main: curves=8 pairs=28 any_reversal=12 net_flip=12 p=0.827536 spearman_first_last=(0.30952380952380953, 0.5062647055583248)
+check: curves=4 pairs=6 any_reversal=1 net_flip=3 p=0.656250 spearman_first_last=(0.4472135954999579, 0.7144732228336371)
+
+=== F4 onset vs exponent ===
+main: spearman(T10, exp_slope)=(0.9761904761904763, 0.004320536360083905)
+     apparent Ea range=[7.269724130009044, 11.390606344049944] mean=9.00 sd=1.25 kJ/mol; slope max/min=1.68
+check: spearman(T10, exp_slope)=(0.7999999999999999, 0.47010768050422047)
+     apparent Ea range=[7.269724130009044, 9.907093541438975] mean=8.85 sd=1.16 kJ/mol; slope max/min=1.48
+
+=== F5 saturation boundary ===
+main: ymax identifiable 8/8; T50>max_setting 1/8; mean delta R2 (ymax=100 vs free)=-0.00230
+check: ymax identifiable 4/4; T50>max_setting 1/4; mean delta R2 (ymax=100 vs free)=-0.00158

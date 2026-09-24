@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "EarthScience_04_ocean_thermal_coupling",
+  "model": "deepseek-v4.1-flash-max",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "fcd2df7bcbd6b9d1356945e52a77d792dca4a07bf117f3ae6c37e0382d08e2ac",
+  "workspace_input_file_count": 8,
+  "workspace_input_bytes": 51739,
+  "output_tree_sha256": "926980155f300d054c5d2af9fd146d633408eba3ea7252f3e0a002d95584eaa4",
+  "output_file_count": 61,
+  "output_bytes": 4959404
+}

@@ -1,0 +1,20 @@
+{
+  "A": {
+    "mean_fraction_of_distinct_series_in_roll_orbit": 0.9853543391352343,
+    "median_D_relative_LS_change_over_shifts": 0.2751295345711595,
+    "q90_D": 0.5497282199519716,
+    "note": "D small => shift genuinely preserves the periodogram; D large => the null does not stay on the observed periodogram"
+  },
+  "B": {
+    "mean_fraction_of_distinct_series_in_roll_orbit": 0.9725053184714952,
+    "median_D_relative_LS_change_over_shifts": 0.4639466530171742,
+    "q90_D": 0.857028531181678,
+    "note": "D small => shift genuinely preserves the periodogram; D large => the null does not stay on the observed periodogram"
+  },
+  "C": {
+    "mean_fraction_of_distinct_series_in_roll_orbit": 0.9738297629921937,
+    "median_D_relative_LS_change_over_shifts": 0.32352149869653446,
+    "q90_D": 0.7463824844966185,
+    "note": "D small => shift genuinely preserves the periodogram; D large => the null does not stay on the observed periodogram"
+  }
+}

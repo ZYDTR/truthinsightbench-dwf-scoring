@@ -1,0 +1,15 @@
+row,label,class,depth_m,nearest_other_class_depth_m,gap_m
+70,event_01,named,2.0,13.27,11.27
+502,event_02,named,12.96,13.27,0.3099999999999987
+1012,event_03,named,23.31,21.24,2.0700000000000003
+1305,event_04,named,29.2,36.22,7.02
+1696,event_05,named,37.28,36.85,0.4299999999999997
+517,unidentified_event,unidentified,13.27,12.96,0.3099999999999987
+796,unidentified_event,unidentified,18.9,23.31,4.41
+841,unidentified_event,unidentified,19.85,23.31,3.4599999999999973
+907,unidentified_event,unidentified,21.24,23.31,2.0700000000000003
+1640,unidentified_event,unidentified,36.22,37.28,1.0600000000000023
+1660,unidentified_event,unidentified,36.59,37.28,0.6899999999999977
+1674,unidentified_event,unidentified,36.85,37.28,0.4299999999999997
+1752,unidentified_event,unidentified,38.4,37.28,1.1199999999999974
+1862,unidentified_event,unidentified,40.59,37.28,3.3100000000000023

@@ -1,0 +1,21 @@
+{
+  "task_id": "Astronomy_01_radio_burst_drift",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260919T173213-98fab0",
+  "source_run_json_sha256": "385297d6bd8689a219d6ca7436894a2d3c839bbd79e38ad67f243e58eb6a429f",
+  "source_release_json_sha256": "b449ab5aba1935ba79d4d5210011421a65d6451710d5c61b53061ead4554fd51",
+  "source_latest_validation_sha256": "5e22638b415da7bcd10842278edc783989f6faaeda52d8bb4261e97bc63ea935",
+  "source_snapshot_manifest_sha256": "7d91eb55bcd4f019887e59add23e1978be7d59dfd12cde20a326e4b72de2bd1f",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 1158
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "cc6ffa9952e8599344af8d58724a49deeeb7e17147e767809eab8cf85761cc5c",
+  "output_sha256": "fbbca844b8323b6d4e9ce3f9bc64b69e99ace8ff6748f9d2c3e87ccdc5f0edff"
+}

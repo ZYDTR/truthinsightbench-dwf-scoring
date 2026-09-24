@@ -1,0 +1,136 @@
+{
+  "step": "01_data_profile",
+  "source_file": "data/observations.tsv",
+  "sha256": "dd1954d79d70fff765e91be1d1778eecb0b7f5bd3afe75a4169960e8ae46c358",
+  "integrity": {
+    "declared_sha256": "dd1954d79d70fff765e91be1d1778eecb0b7f5bd3afe75a4169960e8ae46c358",
+    "observed_sha256": "dd1954d79d70fff765e91be1d1778eecb0b7f5bd3afe75a4169960e8ae46c358",
+    "declared_bytes": 15150,
+    "observed_bytes": 15150,
+    "sha256_match": true,
+    "bytes_match": true
+  },
+  "n_rows": 621,
+  "n_columns": 4,
+  "missing_counts": {
+    "depth_m": 0,
+    "age_ka_bp_1": 0,
+    "age_ka_bp_2": 0,
+    "d18o_pdb": 28
+  },
+  "ordering": {
+    "depth_m": {
+      "strictly_increasing": true,
+      "n_nonpositive_steps": 0,
+      "min_step": 0.009999999999999787,
+      "max_step": 0.039999999999999925,
+      "median_step": 0.010000000000000009
+    },
+    "age_ka_bp_1": {
+      "strictly_increasing": true,
+      "n_nonpositive_steps": 0,
+      "min_step": 0.19999999999998863,
+      "max_step": 2.5300000000000296,
+      "median_step": 0.4500000000000455
+    },
+    "age_ka_bp_2": {
+      "strictly_increasing": true,
+      "n_nonpositive_steps": 0,
+      "min_step": 0.19999999999998863,
+      "max_step": 2.5300000000000296,
+      "median_step": 0.4550000000000125
+    }
+  },
+  "resolution": {
+    "depth_m": {
+      "n_unique": 621,
+      "quantised_to_0.01": true,
+      "min": 0.03,
+      "max": 6.3
+    },
+    "age_ka_bp_1": {
+      "n_unique": 621,
+      "quantised_to_0.01": true,
+      "min": 2.76,
+      "max": 359.18
+    },
+    "age_ka_bp_2": {
+      "n_unique": 621,
+      "quantised_to_0.01": true,
+      "min": 1.98,
+      "max": 359.18
+    },
+    "d18o_pdb": {
+      "n_unique": 162,
+      "quantised_to_0.01": true,
+      "min": 2.13,
+      "max": 4.08
+    }
+  },
+  "depth_sampling_gaps": [
+    {
+      "after_row_index": 44,
+      "depth_from_m": 0.47,
+      "depth_to_m": 0.49,
+      "gap_m": 0.020000000000000018
+    },
+    {
+      "after_row_index": 63,
+      "depth_from_m": 0.67,
+      "depth_to_m": 0.71,
+      "gap_m": 0.039999999999999925
+    },
+    {
+      "after_row_index": 312,
+      "depth_from_m": 3.19,
+      "depth_to_m": 3.21,
+      "gap_m": 0.020000000000000018
+    },
+    {
+      "after_row_index": 370,
+      "depth_from_m": 3.78,
+      "depth_to_m": 3.8,
+      "gap_m": 0.020000000000000018
+    },
+    {
+      "after_row_index": 411,
+      "depth_from_m": 4.2,
+      "depth_to_m": 4.22,
+      "gap_m": 0.019999999999999574
+    }
+  ],
+  "dual_age_coordinate_divergence": {
+    "n_rows_total": 621,
+    "n_rows_diverged": 52,
+    "frac_rows_diverged": 0.08373590982286634,
+    "max_abs_diff_ka": 1.629999999999999,
+    "signed_diff_min_ka": -1.629999999999999,
+    "signed_diff_max_ka": 0.7799999999999998,
+    "depth_max_ka": 0.55,
+    "depth_min_ka": 0.03,
+    "frac_depth_span_affected": 0.08293460925039874,
+    "age1_equals_age2_below_depth_m": 0.56
+  },
+  "missing_data_boundary": {
+    "n_missing": 28,
+    "frac_missing": 0.04508856682769726,
+    "n_complete": 593,
+    "isolated_missing_rows": 25,
+    "max_run_length": 2,
+    "depth_min_m": 0.66,
+    "depth_max_m": 6.25,
+    "age_min_ka": 41.91,
+    "age_max_ka": 353.12,
+    "missingness_concentrated_below_depth_m": 2.49
+  },
+  "analysis_unit": {
+    "declared_unit": "one contiguous depth or age interval",
+    "median_age_step_ka": 0.4500000000000455,
+    "median_depth_step_m": 0.010000000000000009,
+    "record_span_ka": 356.42,
+    "record_span_m": 6.27,
+    "n_rows": 621,
+    "note": "Rows are serially correlated at the 0.01 m / ~0.45 ka sampling step; effective independent units are contiguous intervals, not rows."
+  },
+  "duplicate_rows": 0
+}

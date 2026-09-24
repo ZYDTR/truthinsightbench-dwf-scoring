@@ -1,0 +1,1706 @@
+{
+  "data_structure": {
+    "n_rows": 30,
+    "n_groups": 5,
+    "group_n": {
+      "group_01": 5,
+      "group_02": 7,
+      "group_03": 7,
+      "group_04": 5,
+      "group_05": 6
+    },
+    "ice_regime_by_group": {
+      "group_01": [
+        "Landfast ice"
+      ],
+      "group_02": [
+        "Pack ice"
+      ],
+      "group_03": [
+        "Pack ice"
+      ],
+      "group_04": [
+        "Pack ice"
+      ],
+      "group_05": [
+        "Pack ice"
+      ]
+    },
+    "depth_range_by_group_m": {
+      "group_01": [
+        0.14,
+        1.04
+      ],
+      "group_02": [
+        0.09,
+        1.5299999999999998
+      ],
+      "group_03": [
+        0.13,
+        1.27
+      ],
+      "group_04": [
+        0.115,
+        1.0025
+      ],
+      "group_05": [
+        0.145,
+        1.54
+      ]
+    },
+    "total_per_L_by_group": {
+      "group_01": [
+        260.0,
+        8774.0,
+        4156.0,
+        7017.0,
+        2665.0
+      ],
+      "group_02": [
+        75143.0,
+        14558.0,
+        3710.0,
+        9857.0,
+        4530.0,
+        41.0,
+        67.0
+      ],
+      "group_03": [
+        144.0,
+        13794.0,
+        90.0,
+        2303.0,
+        423.0,
+        270.0,
+        33.0
+      ],
+      "group_04": [
+        992.0,
+        186.0,
+        4159.0,
+        430.0,
+        456.0
+      ],
+      "group_05": [
+        6421.0,
+        557.0,
+        1454.0,
+        791.0,
+        351.0,
+        4437.0
+      ]
+    }
+  },
+  "pooled": {
+    "spearman_mid_vs_ltot": {
+      "rho": -0.33837597330367075,
+      "p_two_sided": 0.06740158918016075,
+      "p_one_sided_negative": 0.03370079459008037,
+      "n": 30
+    },
+    "pearson_mid_vs_ltot": {
+      "r": -0.3772803083835328,
+      "p": 0.039850237177957944
+    },
+    "kendall_tau": {
+      "tau": -0.2735632183908046,
+      "p": 0.03443620830880012
+    },
+    "note": "pooled test mixes between-group (station) differences with within-group depth; confounded by group identity."
+  },
+  "per_group_slopes": [
+    {
+      "group": "group_01",
+      "n": 5,
+      "ice_regime": "Landfast ice",
+      "mid_depth_min": 0.14,
+      "mid_depth_max": 1.04,
+      "ols_slope_per_m": 0.8950555914861924,
+      "ols_se": 0.8565239345288498,
+      "ols_p": 0.37281579061299425,
+      "ols_r2": 0.26686143802846707,
+      "spearman_rho": 0.09999999999999999,
+      "spearman_p_two_sided": 0.8728885715695384,
+      "pearson_r": 0.5165863316314774,
+      "pearson_p": 0.37281579061299525,
+      "kendall_tau": 0.0,
+      "kendall_p": 1.0,
+      "theil_sen_median_pairwise_slope": 0.41746650555399634,
+      "total_first_vs_last_log10": 1.0107238653917734
+    },
+    {
+      "group": "group_02",
+      "n": 7,
+      "ice_regime": "Pack ice",
+      "mid_depth_min": 0.09,
+      "mid_depth_max": 1.5299999999999998,
+      "ols_slope_per_m": -2.1770664235156487,
+      "ols_se": 0.4512126425481741,
+      "ols_p": 0.004777725778040962,
+      "ols_r2": 0.8231958896482201,
+      "spearman_rho": -0.8571428571428573,
+      "spearman_p_two_sided": 0.013697326615325614,
+      "pearson_r": -0.9073014326276687,
+      "pearson_p": 0.0047777257780409485,
+      "kendall_tau": -0.7142857142857143,
+      "kendall_p": 0.03015873015873016,
+      "theil_sen_median_pairwise_slope": -2.117926199369986,
+      "total_first_vs_last_log10": -3.0498137270927796
+    },
+    {
+      "group": "group_03",
+      "n": 7,
+      "ice_regime": "Pack ice",
+      "mid_depth_min": 0.13,
+      "mid_depth_max": 1.27,
+      "ols_slope_per_m": -0.8364463119254321,
+      "ols_se": 0.909622524716378,
+      "ols_p": 0.3999955201306568,
+      "ols_r2": 0.14465260573146732,
+      "spearman_rho": -0.3214285714285715,
+      "spearman_p_two_sided": 0.4820720382996777,
+      "pearson_r": -0.38033223072922384,
+      "pearson_p": 0.3999955201306557,
+      "kendall_tau": -0.33333333333333337,
+      "kendall_p": 0.3813492063492063,
+      "theil_sen_median_pairwise_slope": -1.0128654712522327,
+      "total_first_vs_last_log10": -0.6398485522173623
+    },
+    {
+      "group": "group_04",
+      "n": 5,
+      "ice_regime": "Pack ice",
+      "mid_depth_min": 0.115,
+      "mid_depth_max": 1.0025,
+      "ols_slope_per_m": -0.18291260014766259,
+      "ols_se": 0.8399757783157937,
+      "ols_p": 0.8415871276961937,
+      "ols_r2": 0.015560427679112698,
+      "spearman_rho": -0.09999999999999999,
+      "spearman_p_two_sided": 0.8728885715695384,
+      "pearson_r": -0.12474144331020263,
+      "pearson_p": 0.8415871276961924,
+      "kendall_tau": 0.0,
+      "kendall_p": 1.0,
+      "theil_sen_median_pairwise_slope": -0.1411357142568367,
+      "total_first_vs_last_log10": -0.33754682948974324
+    },
+    {
+      "group": "group_05",
+      "n": 6,
+      "ice_regime": "Pack ice",
+      "mid_depth_min": 0.145,
+      "mid_depth_max": 1.54,
+      "ols_slope_per_m": -0.1628957446780453,
+      "ols_se": 0.4701310492510727,
+      "ols_p": 0.7464336747577434,
+      "ols_r2": 0.029139262540730515,
+      "spearman_rho": -0.2571428571428572,
+      "spearman_p_two_sided": 0.6227871720116619,
+      "pearson_r": -0.17070226284595852,
+      "pearson_p": 0.7464336747577449,
+      "kendall_tau": -0.2,
+      "kendall_p": 0.7194444444444444,
+      "theil_sen_median_pairwise_slope": -0.2318474898357284,
+      "total_first_vs_last_log10": -0.16051324119993948
+    }
+  ],
+  "two_stage_group_as_unit": {
+    "mean_ols_slope": -0.49285309775611924,
+    "sd_slope": 1.1275921603212253,
+    "t": -0.9773507375131819,
+    "df": 4,
+    "p": 0.38373530614842777,
+    "n_negative_slopes": 4,
+    "n_positive": 1,
+    "sign_test_p_two_sided": 0.375,
+    "sign_test_p_one_sided_negative": 0.1875,
+    "mean_spearman_rho": -0.2871428571428572,
+    "t_rho": -1.7948574973880655,
+    "p_rho": 0.14711624689810204,
+    "n_negative_rho": 4,
+    "sign_test_p_rho_two_sided": 0.375,
+    "inverse_variance_weighted_mean_slope": -0.8551389992000434,
+    "random_effects_DL": {
+      "mu_re": -0.5803168744008985,
+      "se_re": 0.5806287895948891,
+      "z": -0.9994627975746635,
+      "p": 0.3175705522125263,
+      "tau2": 1.191736045527741,
+      "Q": 15.567618132862359,
+      "Q_df": 4,
+      "Q_p": 0.003657779833785411,
+      "I2_percent": 74.30563901386927
+    },
+    "stouffer_fisher_combine_group_rho": {
+      "per_group_fisher_z": [
+        0.14189560954670766,
+        -2.564949357461538,
+        -0.6664789334777841,
+        -0.14189560954670766,
+        -0.4556099858022135
+      ],
+      "stouffer_Z": -1.648893644487551,
+      "stouffer_p_two_sided": 0.09916942541088992,
+      "fisher_chi2": 11.531322995890362,
+      "fisher_df": 10,
+      "fisher_p": 0.31764645565199406
+    }
+  },
+  "fixed_effect_within_group": {
+    "slope_log10_per_m": -0.8258403801185455,
+    "se_cluster_CR1_df4": 0.5700800522994756,
+    "t": -1.448639321420623,
+    "df_cluster": 4,
+    "p": 0.22101814610565584,
+    "ci95": [
+      -2.4086363508963267,
+      0.7569555906592355
+    ],
+    "p_anticonservative_naive_df28": 0.15854549162387863,
+    "units": "log10(particles/L) per metre",
+    "equivalent_factor_change_per_metre": 0.14933431696264932,
+    "statsmodels_check_plain_ols_level": {
+      "slope": -0.7510967548333397,
+      "se_cluster": 0.5243238413398112,
+      "p_reported": 0.1519992224775353,
+      "df_used": 28.0,
+      "note": "level regression with group-clustered SE (between-group variation kept); this is NOT a within-group slope"
+    },
+    "statsmodels_check_demeaned": {
+      "slope": -0.8258403801185458,
+      "se_cluster": 0.5700800522994756,
+      "p_reported_by_statsmodels": 0.147438334033355,
+      "df_used_by_statsmodels": 28.0,
+      "agrees_with_my_CR1_se": true
+    }
+  },
+  "fixed_effect_relative_depth": {
+    "slope_per_full_group_depth_range": -0.8181392210727698,
+    "se": 0.6866359253772979,
+    "t": -1.191518227979715,
+    "df": 4,
+    "p": 0.2993143908773779,
+    "ci95": [
+      -2.724546175139526,
+      1.0882677329939863
+    ]
+  },
+  "fixed_effect_depth_max_m": {
+    "slope": -0.8547493579076425,
+    "se": 0.5790690963698437,
+    "t": -1.4760748989473365,
+    "p": 0.21396492133181869,
+    "df": 4,
+    "ci95": [
+      -2.4625029160950045,
+      0.7530042002797194
+    ]
+  },
+  "deepest_vs_shallowest": {
+    "pairs": [
+      {
+        "group": "group_01",
+        "shallow_mid_m": 0.14,
+        "deep_mid_m": 1.04,
+        "shallow_per_L": 260.0,
+        "deep_per_L": 2665.0,
+        "log10_ratio_deep_over_shallow": 1.0107238653917734,
+        "raw_ratio": 10.25
+      },
+      {
+        "group": "group_02",
+        "shallow_mid_m": 0.09,
+        "deep_mid_m": 1.5299999999999998,
+        "shallow_per_L": 75143.0,
+        "deep_per_L": 67.0,
+        "log10_ratio_deep_over_shallow": -3.0498137270927796,
+        "raw_ratio": 0.0008916332858682778
+      },
+      {
+        "group": "group_03",
+        "shallow_mid_m": 0.13,
+        "deep_mid_m": 1.27,
+        "shallow_per_L": 144.0,
+        "deep_per_L": 33.0,
+        "log10_ratio_deep_over_shallow": -0.6398485522173623,
+        "raw_ratio": 0.22916666666666666
+      },
+      {
+        "group": "group_04",
+        "shallow_mid_m": 0.115,
+        "deep_mid_m": 1.0025,
+        "shallow_per_L": 992.0,
+        "deep_per_L": 456.0,
+        "log10_ratio_deep_over_shallow": -0.33754682948974324,
+        "raw_ratio": 0.4596774193548387
+      },
+      {
+        "group": "group_05",
+        "shallow_mid_m": 0.145,
+        "deep_mid_m": 1.54,
+        "shallow_per_L": 6421.0,
+        "deep_per_L": 4437.0,
+        "log10_ratio_deep_over_shallow": -0.16051324119993948,
+        "raw_ratio": 0.6910138607693506
+      }
+    ],
+    "mean_log10_ratio": -0.6353996969216102,
+    "sd": 1.4877307518725804,
+    "median_log10_ratio": -0.33754682948974324,
+    "t": -0.9550094420049814,
+    "df": 4,
+    "p_paired_t": 0.39365352897080147,
+    "wilcoxon_stat": 4.0,
+    "wilcoxon_p": 0.4375,
+    "n_deeper_lower": 4,
+    "n_pairs": 5,
+    "sign_test_p_two_sided": 0.375,
+    "geometric_mean_ratio_deep_over_shallow": 0.2315262848981288,
+    "group_01_ratio_note": "group_01 is the one group where the deepest interval is HIGHER",
+    "bootstrap": {
+      "ci95_percentile": [
+        -1.9649069680515652,
+        0.41095524289364294
+      ],
+      "fraction_negative": 0.86225
+    }
+  },
+  "all_within_group_pairwise_contrasts": {
+    "n_pairs": 77,
+    "mean_log10_diff_deeper_minus_shallower": -0.46879192395277997,
+    "t_naive_independent": -3.607104792688714,
+    "p_naive_independent": 0.0005516354009862552,
+    "note": "pairwise contrasts are not independent; shown for descriptive scale only"
+  },
+  "leave_one_group_out": [
+    {
+      "dropped_group": "group_01",
+      "slope": -1.0212474729875762,
+      "se": 0.5874045498489515,
+      "p": 0.18049543814208716,
+      "df": 3,
+      "ci95": [
+        -2.8906309123612113,
+        0.848135966386059
+      ],
+      "pooled_spearman_rho": -0.4392307692307692,
+      "pooled_spearman_p": 0.02803874858736798
+    },
+    {
+      "dropped_group": "group_02",
+      "slope": -0.20576404388376002,
+      "se": 0.2926393670145371,
+      "p": 0.532628016933748,
+      "df": 3,
+      "ci95": [
+        -1.1370731162197365,
+        0.7255450284522165
+      ],
+      "pooled_spearman_rho": -0.08201581027667984,
+      "pooled_spearman_p": 0.7098728079837824
+    },
+    {
+      "dropped_group": "group_03",
+      "slope": -0.8231742693614176,
+      "se": 0.7414398146221438,
+      "p": 0.3478822075609975,
+      "df": 3,
+      "ci95": [
+        -3.1827666679958964,
+        1.5364181292730614
+      ],
+      "pooled_spearman_rho": -0.325098814229249,
+      "pooled_spearman_p": 0.130118561673334
+    },
+    {
+      "dropped_group": "group_04",
+      "slope": -0.8956366645386343,
+      "se": 0.6398656865242573,
+      "p": 0.2560810139832551,
+      "df": 3,
+      "ci95": [
+        -2.9319748544955804,
+        1.1407015254183115
+      ],
+      "pooled_spearman_rho": -0.42076923076923073,
+      "pooled_spearman_p": 0.036215723483100634
+    },
+    {
+      "dropped_group": "group_05",
+      "slope": -1.089659279777595,
+      "se": 0.6773585872838896,
+      "p": 0.20605447355410503,
+      "df": 3,
+      "ci95": [
+        -3.2453166132314015,
+        1.0659980536762115
+      ],
+      "pooled_spearman_rho": -0.3947826086956522,
+      "pooled_spearman_p": 0.05624113516523855
+    }
+  ],
+  "exclude_group_01": {
+    "n": 25,
+    "slope": -1.0212474729875762,
+    "se": 0.5874045498489515,
+    "t": -1.7385760346088321,
+    "df": 3,
+    "p": 0.18049543814208716,
+    "ci95": [
+      -2.8906309123612113,
+      0.848135966386059
+    ],
+    "pooled_spearman": {
+      "rho": -0.4392307692307692,
+      "p": 0.02803874858736798,
+      "n": 25
+    },
+    "pooled_pearson": {
+      "r": -0.4464850967982105,
+      "p": 0.025263752029647313
+    },
+    "per_group_slopes": [
+      -2.1770664235156487,
+      -0.8364463119254321,
+      -0.18291260014766259,
+      -0.1628957446780453
+    ],
+    "two_stage_mean_of_remaining_4": -0.8398302700666972,
+    "two_stage_t": -1.777777540980412
+  },
+  "leave_one_sample_out": {
+    "rows": [
+      {
+        "dropped_sample": "sample_001",
+        "group": "group_01",
+        "slope": -1.0002007135066546,
+        "p": 0.13775765632425335
+      },
+      {
+        "dropped_sample": "sample_002",
+        "group": "group_01",
+        "slope": -0.8083895625212334,
+        "p": 0.24031197555605222
+      },
+      {
+        "dropped_sample": "sample_003",
+        "group": "group_01",
+        "slope": -0.8261522715181769,
+        "p": 0.22101252607290992
+      },
+      {
+        "dropped_sample": "sample_004",
+        "group": "group_01",
+        "slope": -0.8590795105869872,
+        "p": 0.2004736869658204
+      },
+      {
+        "dropped_sample": "sample_005",
+        "group": "group_01",
+        "slope": -0.866289481113889,
+        "p": 0.20932119220411208
+      },
+      {
+        "dropped_sample": "sample_006",
+        "group": "group_02",
+        "slope": -0.6566565246787551,
+        "p": 0.24748105184648284
+      },
+      {
+        "dropped_sample": "sample_007",
+        "group": "group_02",
+        "slope": -0.7798740700157977,
+        "p": 0.23696026188932606
+      },
+      {
+        "dropped_sample": "sample_008",
+        "group": "group_02",
+        "slope": -0.8259994219303461,
+        "p": 0.22594550566570537
+      },
+      {
+        "dropped_sample": "sample_009",
+        "group": "group_02",
+        "slope": -0.8242109295613732,
+        "p": 0.2211122477540439
+      },
+      {
+        "dropped_sample": "sample_010",
+        "group": "group_02",
+        "slope": -0.8437539767066732,
+        "p": 0.22588915082782124
+      },
+      {
+        "dropped_sample": "sample_011",
+        "group": "group_02",
+        "slope": -0.6686183065771811,
+        "p": 0.22257933925328025
+      },
+      {
+        "dropped_sample": "sample_012",
+        "group": "group_02",
+        "slope": -0.6307046991712938,
+        "p": 0.2561341384807857
+      },
+      {
+        "dropped_sample": "sample_013",
+        "group": "group_04",
+        "slope": -0.84772258239212,
+        "p": 0.22581114259711407
+      },
+      {
+        "dropped_sample": "sample_014",
+        "group": "group_04",
+        "slope": -0.8663684783731732,
+        "p": 0.20177506785657334
+      },
+      {
+        "dropped_sample": "sample_015",
+        "group": "group_04",
+        "slope": -0.8215461090709483,
+        "p": 0.22407410285540952
+      },
+      {
+        "dropped_sample": "sample_016",
+        "group": "group_04",
+        "slope": -0.8239578984346483,
+        "p": 0.22639220155912088
+      },
+      {
+        "dropped_sample": "sample_017",
+        "group": "group_04",
+        "slope": -0.8511385504511211,
+        "p": 0.22682312816850025
+      },
+      {
+        "dropped_sample": "sample_018",
+        "group": "group_03",
+        "slope": -0.9694829567044743,
+        "p": 0.19572754873874823
+      },
+      {
+        "dropped_sample": "sample_019",
+        "group": "group_03",
+        "slope": -0.7155229248109312,
+        "p": 0.30876481051255084
+      },
+      {
+        "dropped_sample": "sample_020",
+        "group": "group_03",
+        "slope": -0.8570181795141341,
+        "p": 0.207963043542756
+      },
+      {
+        "dropped_sample": "sample_021",
+        "group": "group_03",
+        "slope": -0.828812289163974,
+        "p": 0.2196874119913214
+      },
+      {
+        "dropped_sample": "sample_022",
+        "group": "group_03",
+        "slope": -0.8337357538526827,
+        "p": 0.22010013911851992
+      },
+      {
+        "dropped_sample": "sample_023",
+        "group": "group_03",
+        "slope": -0.8391095143564513,
+        "p": 0.2272477772976169
+      },
+      {
+        "dropped_sample": "sample_024",
+        "group": "group_03",
+        "slope": -0.7378136948512264,
+        "p": 0.3087729691634201
+      },
+      {
+        "dropped_sample": "sample_025",
+        "group": "group_05",
+        "slope": -0.8060809471706197,
+        "p": 0.28799642555666255
+      },
+      {
+        "dropped_sample": "sample_026",
+        "group": "group_05",
+        "slope": -0.9093467670115007,
+        "p": 0.17561473442531222
+      },
+      {
+        "dropped_sample": "sample_027",
+        "group": "group_05",
+        "slope": -0.8299398682962759,
+        "p": 0.2202532703614051
+      },
+      {
+        "dropped_sample": "sample_028",
+        "group": "group_05",
+        "slope": -0.8216907038491386,
+        "p": 0.22682464903693392
+      },
+      {
+        "dropped_sample": "sample_029",
+        "group": "group_05",
+        "slope": -0.800037802915435,
+        "p": 0.2617824551798058
+      },
+      {
+        "dropped_sample": "sample_030",
+        "group": "group_05",
+        "slope": -1.0409871661541021,
+        "p": 0.12863508140885568
+      }
+    ],
+    "slope_min": -1.0409871661541021,
+    "slope_max": -0.6307046991712938,
+    "p_min": 0.12863508140885568,
+    "p_max": 0.3087729691634201,
+    "still_negative_everywhere": true,
+    "any_p_below_0.05": false
+  },
+  "cluster_permutation_test": {
+    "statistic": "within-group demeaned slope of log10 total on mid-depth",
+    "observed": -0.8258403801185455,
+    "n_permutations": 20000,
+    "p_two_sided": 0.0304,
+    "p_one_sided_negative": 0.015,
+    "perm_sd": 0.3933234689224628,
+    "perm_quantiles": {
+      "2.5%": -0.7522975522570576,
+      "25%": -0.27804601533391154,
+      "50%": 0.0025759948752111005,
+      "75%": 0.2795000640604835,
+      "97.5%": 0.7553049872165337
+    },
+    "pooled_spearman_perm": {
+      "observed_rho": -0.33837597330367075,
+      "p_two_sided": 0.0637
+    }
+  },
+  "cluster_bootstrap": {
+    "n_boot": 20000,
+    "mean": -0.7682012285284654,
+    "sd": 0.506259407263546,
+    "ci95_percentile": [
+      -1.732354600893789,
+      0.14660077500176982
+    ],
+    "fraction_negative": 0.94355,
+    "fraction_below_-1": 0.3256
+  },
+  "sensitivity": {
+    "within_group_residual_sd_log10": 0.7096275622358498,
+    "total_sd_log10": 0.8451631516966367,
+    "between_group_variance_share": 0.31932488065228415,
+    "observed_ci95_for_slope": [
+      -2.4086363508963267,
+      0.7569555906592355
+    ],
+    "smallest_slope_excluded_by_ci": -2.4086363508963267,
+    "largest_positive_slope_still_compatible": 0.7569555906592355,
+    "t_crit_df4": 2.7764451051977934,
+    "note": "with 5 clusters the 95% t critical value is ~2.78; the design can only detect slopes roughly |b| > 2.78 * SE. CI upper bound is positive, so a zero or even slightly positive within-group slope is compatible.",
+    "power_under_shifted_truth": {
+      "-2.0": 1.0,
+      "-1.5": 0.9465,
+      "-1.0": 0.669,
+      "-0.826": 0.512,
+      "-0.5": 0.218,
+      "-0.25": 0.107
+    }
+  },
+  "group_mean_regression_n5": {
+    "slope": 0.3144077421998353,
+    "se": 1.7101767517409823,
+    "p": 0.8658593392125344,
+    "r2": 0.01114083279928324,
+    "pearson_r": 0.10555014353037581,
+    "pearson_p": 0.8658593392125354,
+    "spearman_rho": 0.09999999999999999,
+    "spearman_p": 0.8728885715695384
+  },
+  "drop_deepest_interval_per_group": {
+    "n": 25,
+    "slope": -0.8278582296116884,
+    "se": 0.6128223902533212,
+    "p": 0.24808876503568533,
+    "df": 4,
+    "ci95": [
+      -2.529325955386134,
+      0.8736094961627571
+    ],
+    "pooled_spearman_rho": -0.25,
+    "pooled_spearman_p": 0.22810349446062977
+  },
+  "drop_shallowest_interval_per_group": {
+    "n": 25,
+    "slope": -1.0797362619814777,
+    "se": 0.6881073310406864,
+    "p": 0.1916968231150424,
+    "df": 4,
+    "ci95": [
+      -2.9902284931001093,
+      0.8307559691371538
+    ],
+    "pooled_spearman_rho": -0.45384615384615384,
+    "pooled_spearman_p": 0.022678852863869996
+  },
+  "specification_scan": {
+    "variants_with_p_lt_0.05": [
+      "pooled spearman (1-sided neg)",
+      "pooled pearson",
+      "cluster permutation FE"
+    ],
+    "table": [
+      {
+        "spec": "pooled spearman (2-sided)",
+        "p": 0.06740158918016075
+      },
+      {
+        "spec": "pooled spearman (1-sided neg)",
+        "p": 0.03370079459008037
+      },
+      {
+        "spec": "pooled pearson",
+        "p": 0.039850237177957944
+      },
+      {
+        "spec": "FE slope cluster SE df4",
+        "p": 0.22101814610565584
+      },
+      {
+        "spec": "FE slope naive df28 (anticonservative)",
+        "p": 0.15854549162387863
+      },
+      {
+        "spec": "FE relative depth",
+        "p": 0.2993143908773779
+      },
+      {
+        "spec": "FE depth_max",
+        "p": 0.21396492133181869
+      },
+      {
+        "spec": "two-stage slope t-test",
+        "p": 0.38373530614842777
+      },
+      {
+        "spec": "two-stage sign test",
+        "p": 0.375
+      },
+      {
+        "spec": "deepest vs shallowest paired t",
+        "p": 0.39365352897080147
+      },
+      {
+        "spec": "deepest vs shallowest wilcoxon",
+        "p": 0.4375
+      },
+      {
+        "spec": "drop deepest per group FE",
+        "p": 0.24808876503568533
+      },
+      {
+        "spec": "drop shallowest per group FE",
+        "p": 0.1916968231150424
+      },
+      {
+        "spec": "exclude group_01 FE",
+        "p": 0.18049543814208716
+      },
+      {
+        "spec": "cluster permutation FE",
+        "p": 0.0304
+      },
+      {
+        "spec": "cluster permutation pooled spearman",
+        "p": 0.0637
+      },
+      {
+        "spec": "Stouffer combined group rho",
+        "p": 0.09916942541088992
+      },
+      {
+        "spec": "Fisher combined group rho",
+        "p": 0.31764645565199406
+      },
+      {
+        "spec": "group-mean regression n=5 pearson",
+        "p": 0.8658593392125354
+      },
+      {
+        "spec": "group-mean regression n=5 spearman",
+        "p": 0.8728885715695384
+      }
+    ]
+  },
+  "code": "\"\"\"Independent adversarial verification of CLAIM F1.\n\nClaim F1: within a collection group, total particle concentration\n(particle_total_per_L) decreases with depth.\n\nEverything here is written from scratch (pandas/numpy/scipy/statsmodels), reading\nthe raw TSVs directly. No existing analysis script is imported or re-run.\nOutputs a single self-contained JSON with every number plus this source code.\n\"\"\"\nfrom __future__ import annotations\n\nimport json\nimport math\nimport numpy as np\nimport pandas as pd\nfrom scipy import stats\nimport statsmodels.api as sm\nfrom pathlib import Path\n\nROOT = Path(\"/data/user/conversations/conv-db0bf41e-db48-4b3b-8351-ef78ee787f62/project\")\nOUT = ROOT / \"output\" / \"results\" / \"verify_F1.json\"\n\ncomp = pd.read_csv(ROOT / \"data\" / \"particle_composition_profiles.tsv\", sep=\"\\t\")\nenv = pd.read_csv(ROOT / \"data\" / \"sample_environment_profiles.tsv\", sep=\"\\t\")\n\n# ---------------------------------------------------------------- assemble frame\ndf = comp[[\"sample_id\", \"collection_group_id\", \"depth_min_m\", \"depth_max_m\",\n           \"particle_total_per_L\"]].merge(\n    env[[\"sample_id\", \"ice_regime\", \"particle_total_per_L\",\n         \"particle_total_std_or_error_per_L\"]],\n    on=\"sample_id\", suffixes=(\"\", \"_env\"), validate=\"1:1\")\nassert np.allclose(df[\"particle_total_per_L\"], df[\"particle_total_per_L_env\"])\ndf = df.drop(columns=[\"particle_total_per_L_env\"])\ndf[\"mid\"] = (df[\"depth_min_m\"] + df[\"depth_max_m\"]) / 2.0\ndf[\"ltot\"] = np.log10(df[\"particle_total_per_L\"])\ndf[\"rel\"] = df.groupby(\"collection_group_id\")[\"mid\"].transform(\n    lambda v: (v - v.min()) / (v.max() - v.min()))\ndf[\"dmax\"] = df[\"depth_max_m\"]\ngroups = sorted(df[\"collection_group_id\"].unique())\ndf[\"gcode\"] = pd.Categorical(df[\"collection_group_id\"], categories=groups, ordered=True)\n\nres: dict = {}\nres[\"data_structure\"] = {\n    \"n_rows\": int(len(df)),\n    \"n_groups\": len(groups),\n    \"group_n\": {g: int((df.collection_group_id == g).sum()) for g in groups},\n    \"ice_regime_by_group\": {g: sorted(df.loc[df.collection_group_id == g, \"ice_regime\"].unique())\n                            for g in groups},\n    \"depth_range_by_group_m\": {g: [float(df.loc[df.collection_group_id == g, \"mid\"].min()),\n                                   float(df.loc[df.collection_group_id == g, \"mid\"].max())]\n                               for g in groups},\n    \"total_per_L_by_group\": {g: [float(x) for x in df.loc[df.collection_group_id == g,\n                                                          \"particle_total_per_L\"]]\n                             for g in groups},\n}\n\nmid = df[\"mid\"].to_numpy(float)\nltot = df[\"ltot\"].to_numpy(float)\ntot = df[\"particle_total_per_L\"].to_numpy(float)\ngid = df[\"collection_group_id\"].to_numpy()\ngi = pd.Categorical(df[\"collection_group_id\"], categories=groups).codes.astype(int)\nn = len(df)\nG = len(groups)\n\n\n# ---------------------------------------------------------------- helpers (mine)\ndef ols(y, X):\n    X = np.asarray(X, float)\n    y = np.asarray(y, float)\n    beta, *_ = np.linalg.lstsq(X, y, rcond=None)\n    resid = y - X @ beta\n    k = X.shape[1]\n    dof = len(y) - k\n    s2 = resid @ resid / dof\n    XtXinv = np.linalg.inv(X.T @ X)\n    se = np.sqrt(np.diag(s2 * XtXinv))\n    t = beta / se\n    p = 2 * stats.t.sf(np.abs(t), dof)\n    return {\"beta\": beta, \"se\": se, \"t\": t, \"p\": p, \"dof\": dof,\n            \"resid\": resid, \"XtXinv\": XtXinv}\n\n\ndef demean(v, codes=gi):\n    v = np.asarray(v, float)\n    out = v.copy()\n    for k in np.unique(codes):\n        m = codes == k\n        out[m] = v[m] - v[m].mean()\n    return out\n\n\ndef cluster_ols(y, X, codes=gi):\n    \"\"\"Within-group (demeaned) slope with CR1 cluster-robust covariance.\n\n    df uses G-1 (5 clusters -> 4) as the honest small-cluster convention.\n    Length-agnostic so it works on subsets.\"\"\"\n    y = np.asarray(y, float)\n    X = np.asarray(X, float)\n    codes = np.asarray(codes)\n    n = len(y)\n    Xd = np.c_[np.ones(n), demean(X, codes)]\n    yd = demean(y, codes)\n    fit = ols(yd, Xd)\n    b = fit[\"beta\"]\n    r = fit[\"resid\"]\n    XtXinv = fit[\"XtXinv\"]\n    meat = np.zeros((2, 2))\n    for k in np.unique(codes):\n        m = codes == k\n        u = (Xd[m] * r[m, None]).sum(axis=0)\n        meat += np.outer(u, u)\n    nc, kk = len(np.unique(codes)), Xd.shape[1]\n    scale = (nc / (nc - 1)) * ((n - 1) / (n - kk))\n    V = XtXinv @ (scale * meat) @ XtXinv\n    se = np.sqrt(np.diag(V))\n    dfc = nc - 1\n    t = b / se\n    p = 2 * stats.t.sf(np.abs(t), dfc)\n    lo = b - stats.t.ppf(0.975, dfc) * se\n    hi = b + stats.t.ppf(0.975, dfc) * se\n    # also the anticonservative n-k df variant\n    p28 = 2 * stats.t.sf(np.abs(t), n - kk)\n    return {\"slope\": float(b[1]), \"se_cluster_df4\": float(se[1]),\n            \"t\": float(t[1]), \"df_cluster\": dfc, \"p_cluster_df4\": float(p[1]),\n            \"p_naive_df28\": float(p28[1]),\n            \"ci95_df4\": [float(lo[1]), float(hi[1])], \"resid\": r}\n\n\ndef spearman(x, y):\n    s = stats.spearmanr(x, y)\n    return float(s.statistic), float(s.pvalue)\n\n\ndef pearson(x, y):\n    s = stats.pearsonr(x, y)\n    return float(s.statistic), float(s.pvalue)\n\n\n# ============================================================ 1. pooled tests\nres[\"pooled\"] = {\n    \"spearman_mid_vs_ltot\": {\"rho\": spearman(mid, ltot)[0], \"p_two_sided\": spearman(mid, ltot)[1],\n                             \"p_one_sided_negative\": spearman(mid, ltot)[1] / 2, \"n\": n},\n    \"pearson_mid_vs_ltot\": {\"r\": pearson(mid, ltot)[0], \"p\": pearson(mid, ltot)[1]},\n}\nres[\"pooled\"][\"kendall_tau\"] = dict(zip([\"tau\", \"p\"], [float(v) for v in\n                                                      stats.kendalltau(mid, ltot)[:2]]))\nres[\"pooled\"][\"note\"] = (\"pooled test mixes between-group (station) differences with \"\n                         \"within-group depth; confounded by group identity.\")\n\n# ============================================================ 2. per-group slopes\nrows = []\nfor g in groups:\n    m = gid == g\n    b = ols(ltot[m], np.c_[np.ones(m.sum()), mid[m]])\n    rho, prho = spearman(mid[m], ltot[m])\n    r, pr = pearson(mid[m], ltot[m])\n    tau, ptau = stats.kendalltau(mid[m], ltot[m])\n    # Theil-Sen style: median of all pairwise within-group slopes\n    xx, yy = mid[m], ltot[m]\n    pw = [(yy[j] - yy[i]) / (xx[j] - xx[i]) for i in range(len(xx)) for j in range(i + 1, len(xx))]\n    rows.append({\n        \"group\": g, \"n\": int(m.sum()), \"ice_regime\": df.loc[m, \"ice_regime\"].iloc[0],\n        \"mid_depth_min\": float(mid[m].min()), \"mid_depth_max\": float(mid[m].max()),\n        \"ols_slope_per_m\": float(b[\"beta\"][1]), \"ols_se\": float(b[\"se\"][1]),\n        \"ols_p\": float(b[\"p\"][1]), \"ols_r2\": float(1 - b[\"resid\"] @ b[\"resid\"] /\n                                                   ((ltot[m] - ltot[m].mean()) @ (ltot[m] - ltot[m].mean()))),\n        \"spearman_rho\": rho, \"spearman_p_two_sided\": prho,\n        \"pearson_r\": r, \"pearson_p\": pr,\n        \"kendall_tau\": float(tau), \"kendall_p\": ptau,\n        \"theil_sen_median_pairwise_slope\": float(np.median(pw)),\n        \"total_first_vs_last_log10\": float(ltot[m][np.argmax(mid[m])] - ltot[m][np.argmin(mid[m])]),\n    })\nres[\"per_group_slopes\"] = rows\n\nsl = np.array([r[\"ols_slope_per_m\"] for r in rows])\nse = np.array([r[\"ols_se\"] for r in rows])\nrho = np.array([r[\"spearman_rho\"] for r in rows])\ntt = sl.mean() / (sl.std(ddof=1) / math.sqrt(G))\nnneg = int((sl < 0).sum())\nk = min(nneg, G - nneg)\nsign_p = float(2 * sum(math.comb(G, j) for j in range(k + 1)) / 2 ** G)\ntt_rho = rho.mean() / (rho.std(ddof=1) / math.sqrt(G))\nres[\"two_stage_group_as_unit\"] = {\n    \"mean_ols_slope\": float(sl.mean()), \"sd_slope\": float(sl.std(ddof=1)),\n    \"t\": float(tt), \"df\": G - 1, \"p\": float(2 * stats.t.sf(abs(tt), G - 1)),\n    \"n_negative_slopes\": nneg, \"n_positive\": int((sl > 0).sum()),\n    \"sign_test_p_two_sided\": sign_p,\n    \"sign_test_p_one_sided_negative\": float(sign_p / 2),\n    \"mean_spearman_rho\": float(rho.mean()), \"t_rho\": float(tt_rho),\n    \"p_rho\": float(2 * stats.t.sf(abs(tt_rho), G - 1)),\n    \"n_negative_rho\": int((rho < 0).sum()),\n    \"sign_test_p_rho_two_sided\": float(2 * sum(math.comb(G, j) for j in range(\n        min(int((rho < 0).sum()), int((rho > 0).sum())) + 1)) / 2 ** G),\n    \"inverse_variance_weighted_mean_slope\": float((sl / se ** 2).sum() / (1 / se ** 2).sum()),\n}\n\n# DerSimonian-Laird random-effects meta-analysis across the 5 group slopes\nw = 1.0 / se ** 2\nmu_fe = (sl * w).sum() / w.sum()\nQ = float((w * (sl - mu_fe) ** 2).sum())\nC = float(w.sum() - (w ** 2).sum() / w.sum())\ntau2 = max(0.0, (Q - (G - 1)) / C) if C > 0 else 0.0\nwr = 1.0 / (se ** 2 + tau2)\nmu_re = float((sl * wr).sum() / wr.sum())\nse_re = float(math.sqrt(1.0 / wr.sum()))\nres[\"two_stage_group_as_unit\"][\"random_effects_DL\"] = {\n    \"mu_re\": mu_re, \"se_re\": se_re, \"z\": float(mu_re / se_re),\n    \"p\": float(2 * stats.norm.sf(abs(mu_re / se_re))),\n    \"tau2\": tau2, \"Q\": Q, \"Q_df\": G - 1, \"Q_p\": float(stats.chi2.sf(Q, G - 1)),\n    \"I2_percent\": float(max(0.0, (Q - (G - 1)) / Q) * 100) if Q > 0 else 0.0,\n}\nres[\"two_stage_group_as_unit\"][\"stouffer_fisher_combine_group_rho\"] = {}\nzr = np.arctanh(np.clip(rho, -0.999, 0.999)) * np.sqrt(\n    np.array([r[\"n\"] for r in rows]) - 3)\nZst = float(zr.sum() / math.sqrt(G))\nfisher = -2.0 * float(np.sum(np.log([r[\"spearman_p_two_sided\"] for r in rows])))\nres[\"two_stage_group_as_unit\"][\"stouffer_fisher_combine_group_rho\"] = {\n    \"per_group_fisher_z\": [float(x) for x in zr],\n    \"stouffer_Z\": Zst, \"stouffer_p_two_sided\": float(2 * stats.norm.sf(abs(Zst))),\n    \"fisher_chi2\": fisher, \"fisher_df\": 2 * G,\n    \"fisher_p\": float(stats.chi2.sf(fisher, 2 * G)),\n}\n\n# ============================================================ 3. fixed-effect (within-group) slope\nfe = cluster_ols(ltot, mid)\nres[\"fixed_effect_within_group\"] = {\n    \"slope_log10_per_m\": fe[\"slope\"], \"se_cluster_CR1_df4\": fe[\"se_cluster_df4\"],\n    \"t\": fe[\"t\"], \"df_cluster\": fe[\"df_cluster\"], \"p\": fe[\"p_cluster_df4\"],\n    \"ci95\": fe[\"ci95_df4\"], \"p_anticonservative_naive_df28\": fe[\"p_naive_df28\"],\n    \"units\": \"log10(particles/L) per metre\",\n    \"equivalent_factor_change_per_metre\": float(10 ** fe[\"slope\"]),\n}\n# cross-check with statsmodels\nXsm = sm.add_constant(np.c_[mid])[:, :2]\nmsm = sm.OLS(ltot, Xsm).fit(cov_type=\"cluster\", cov_kwds={\"groups\": gid})\nres[\"fixed_effect_within_group\"][\"statsmodels_check_plain_ols_level\"] = {\n    \"slope\": float(msm.params[1]), \"se_cluster\": float(msm.bse[1]),\n    \"p_reported\": float(msm.pvalues[1]), \"df_used\": float(msm.df_resid),\n    \"note\": \"level regression with group-clustered SE (between-group variation kept); \"\n            \"this is NOT a within-group slope\"}\nfe_sm = sm.OLS(demean(ltot), sm.add_constant(demean(mid))).fit(\n    cov_type=\"cluster\", cov_kwds={\"groups\": gid})\nres[\"fixed_effect_within_group\"][\"statsmodels_check_demeaned\"] = {\n    \"slope\": float(fe_sm.params[1]), \"se_cluster\": float(fe_sm.bse[1]),\n    \"p_reported_by_statsmodels\": float(fe_sm.pvalues[1]),\n    \"df_used_by_statsmodels\": float(fe_sm.df_resid),\n    \"agrees_with_my_CR1_se\": bool(np.isclose(fe_sm.bse[1], fe[\"se_cluster_df4\"], rtol=1e-6)),\n}\n\n# relative depth variant\nferel = cluster_ols(ltot, df[\"rel\"].to_numpy(float))\nres[\"fixed_effect_relative_depth\"] = {\n    \"slope_per_full_group_depth_range\": ferel[\"slope\"], \"se\": ferel[\"se_cluster_df4\"],\n    \"t\": ferel[\"t\"], \"df\": ferel[\"df_cluster\"], \"p\": ferel[\"p_cluster_df4\"],\n    \"ci95\": ferel[\"ci95_df4\"],\n}\n# depth_max variant\nfedm = cluster_ols(ltot, df[\"dmax\"].to_numpy(float))\nres[\"fixed_effect_depth_max_m\"] = {\n    \"slope\": fedm[\"slope\"], \"se\": fedm[\"se_cluster_df4\"], \"t\": fedm[\"t\"],\n    \"p\": fedm[\"p_cluster_df4\"], \"df\": fedm[\"df_cluster\"], \"ci95\": fedm[\"ci95_df4\"],\n}\n\n# ============================================================ 4. deepest vs shallowest\npairs = []\nfor g in groups:\n    m = df.collection_group_id == g\n    sub = df[m].sort_values(\"mid\")\n    sh, dp = sub.iloc[0], sub.iloc[-1]\n    pairs.append({\"group\": g, \"shallow_mid_m\": float(sh[\"mid\"]), \"deep_mid_m\": float(dp[\"mid\"]),\n                  \"shallow_per_L\": float(sh[\"particle_total_per_L\"]),\n                  \"deep_per_L\": float(dp[\"particle_total_per_L\"]),\n                  \"log10_ratio_deep_over_shallow\": float(dp[\"ltot\"] - sh[\"ltot\"]),\n                  \"raw_ratio\": float(dp[\"particle_total_per_L\"] / sh[\"particle_total_per_L\"])})\nd = np.array([p[\"log10_ratio_deep_over_shallow\"] for p in pairs])\nt_d = float(d.mean() / (d.std(ddof=1) / math.sqrt(G)))\nres[\"deepest_vs_shallowest\"] = {\n    \"pairs\": pairs, \"mean_log10_ratio\": float(d.mean()), \"sd\": float(d.std(ddof=1)),\n    \"median_log10_ratio\": float(np.median(d)),\n    \"t\": t_d, \"df\": G - 1, \"p_paired_t\": float(2 * stats.t.sf(abs(t_d), G - 1)),\n    \"wilcoxon_stat\": float(stats.wilcoxon(d).statistic),\n    \"wilcoxon_p\": float(stats.wilcoxon(d).pvalue),\n    \"n_deeper_lower\": int((d < 0).sum()), \"n_pairs\": G,\n    \"sign_test_p_two_sided\": float(2 * sum(math.comb(G, j) for j in range(\n        min(int((d > 0).sum()), int((d < 0).sum())) + 1)) / 2 ** G),\n    \"geometric_mean_ratio_deep_over_shallow\": float(10 ** d.mean()),\n    \"group_01_ratio_note\": \"group_01 is the one group where the deepest interval is HIGHER\",\n}\n# all within-group non-adjacent depth contrasts (not just the extreme pair)\nallc = []\nfor g in groups:\n    m = df.collection_group_id == g\n    sub = df[m].sort_values(\"mid\")\n    for i in range(len(sub)):\n        for j in range(i + 1, len(sub)):\n            allc.append(float(sub.iloc[j][\"ltot\"] - sub.iloc[i][\"ltot\"]))\nallc = np.array(allc)\nt_all = float(allc.mean() / (allc.std(ddof=1) / math.sqrt(len(allc))))\nres[\"all_within_group_pairwise_contrasts\"] = {\n    \"n_pairs\": int(len(allc)), \"mean_log10_diff_deeper_minus_shallower\": float(allc.mean()),\n    \"t_naive_independent\": t_all,\n    \"p_naive_independent\": float(2 * stats.t.sf(abs(t_all), len(allc) - 1)),\n    \"note\": \"pairwise contrasts are not independent; shown for descriptive scale only\",\n}\n\n# ============================================================ 5. robustness / adversarial\nloo = []\nfor g in groups:\n    m = gid != g\n    keep_gi = pd.Categorical(df.loc[m, \"collection_group_id\"], categories=groups).codes.astype(int)\n    codes = np.unique(keep_gi)\n    remap = {c: i for i, c in enumerate(codes)}\n    kg = np.array([remap[c] for c in keep_gi])\n    f = cluster_ols(ltot[m], mid[m], kg)\n    rho_l, p_l = spearman(mid[m], ltot[m])\n    loo.append({\"dropped_group\": g, \"slope\": f[\"slope\"], \"se\": f[\"se_cluster_df4\"],\n                \"p\": f[\"p_cluster_df4\"], \"df\": f[\"df_cluster\"],\n                \"ci95\": f[\"ci95_df4\"], \"pooled_spearman_rho\": rho_l,\n                \"pooled_spearman_p\": p_l})\nres[\"leave_one_group_out\"] = loo\n\n# excluding group_01 (the single landfast / positive-slope group)\nm1 = gid != \"group_01\"\ncodes = np.unique(gi[m1]); remap = {c: i for i, c in enumerate(codes)}\nkg = np.array([remap[c] for c in gi[m1]])\nf_no1 = cluster_ols(ltot[m1], mid[m1], kg)\nres[\"exclude_group_01\"] = {\n    \"n\": int(m1.sum()), \"slope\": f_no1[\"slope\"], \"se\": f_no1[\"se_cluster_df4\"],\n    \"t\": f_no1[\"t\"], \"df\": f_no1[\"df_cluster\"], \"p\": f_no1[\"p_cluster_df4\"],\n    \"ci95\": f_no1[\"ci95_df4\"],\n    \"pooled_spearman\": dict(zip([\"rho\", \"p\", \"n\"], [spearman(mid[m1], ltot[m1])[0],\n                                                    spearman(mid[m1], ltot[m1])[1], int(m1.sum())])),\n    \"pooled_pearson\": dict(zip([\"r\", \"p\"], [pearson(mid[m1], ltot[m1])[0],\n                                            pearson(mid[m1], ltot[m1])[1]])),\n    \"per_group_slopes\": [r[\"ols_slope_per_m\"] for r in rows if r[\"group\"] != \"group_01\"],\n    \"two_stage_mean_of_remaining_4\": float(np.mean([r[\"ols_slope_per_m\"] for r in rows\n                                                    if r[\"group\"] != \"group_01\"])),\n    \"two_stage_t\": float(np.mean([r[\"ols_slope_per_m\"] for r in rows if r[\"group\"] != \"group_01\"])\n                         / (np.std([r[\"ols_slope_per_m\"] for r in rows if r[\"group\"] != \"group_01\"],\n                                   ddof=1) / 2.0)),\n}\n# exclude the single most influential sample in turn (leave-one-sample-out)\nloso = []\nfor i in range(n):\n    m = np.ones(n, bool); m[i] = False\n    codes = np.unique(gi[m]); remap = {c: j for j, c in enumerate(codes)}\n    kg = np.array([remap[c] for c in gi[m]])\n    f = cluster_ols(ltot[m], mid[m], kg)\n    loso.append({\"dropped_sample\": df.sample_id[i], \"group\": gid[i],\n                 \"slope\": f[\"slope\"], \"p\": f[\"p_cluster_df4\"]})\nres[\"leave_one_sample_out\"] = {\n    \"rows\": loso,\n    \"slope_min\": float(min(x[\"slope\"] for x in loso)),\n    \"slope_max\": float(max(x[\"slope\"] for x in loso)),\n    \"p_min\": float(min(x[\"p\"] for x in loso)), \"p_max\": float(max(x[\"p\"] for x in loso)),\n    \"still_negative_everywhere\": bool(all(x[\"slope\"] < 0 for x in loso)),\n    \"any_p_below_0.05\": bool(any(x[\"p\"] < 0.05 for x in loso)),\n}\n\n# cluster-level permutation test for the FE slope (exact null: depth order random within group)\nrng = np.random.default_rng(20180101)\nobs = fe[\"slope\"]\nperm = np.empty(20000)\nperm_rho = np.empty(20000)\nfor b in range(20000):\n    lp = ltot.copy()\n    for kk_ in np.unique(gi):\n        mm = gi == kk_\n        lp[mm] = ltot[mm][rng.permutation(mm.sum())]\n    perm[b] = cluster_ols(lp, mid)[\"slope\"]\n    perm_rho[b] = spearman(mid, lp)[0]\nres[\"cluster_permutation_test\"] = {\n    \"statistic\": \"within-group demeaned slope of log10 total on mid-depth\",\n    \"observed\": obs, \"n_permutations\": 20000,\n    \"p_two_sided\": float((np.abs(perm) >= abs(obs) - 1e-12).mean()),\n    \"p_one_sided_negative\": float((perm <= obs + 1e-12).mean()),\n    \"perm_sd\": float(perm.std(ddof=1)),\n    \"perm_quantiles\": {q: float(np.quantile(perm, qq)) for q, qq in\n                       [(\"2.5%\", .025), (\"25%\", .25), (\"50%\", .5), (\"75%\", .75), (\"97.5%\", .975)]},\n    \"pooled_spearman_perm\": {\n        \"observed_rho\": spearman(mid, ltot)[0],\n        \"p_two_sided\": float((np.abs(perm_rho) >= abs(spearman(mid, ltot)[0]) - 1e-12).mean())},\n}\n# cluster bootstrap CI for the FE slope (resample groups)\nboot = np.empty(20000)\nobs_groups = np.unique(gi)\nfor b in range(20000):\n    pick = rng.choice(obs_groups, size=G, replace=True)\n    idx = np.concatenate([np.where(gi == p)[0] for p in pick])\n    codes = np.concatenate([np.full((gi == p).sum(), j) for j, p in enumerate(pick)])\n    fit = cluster_ols(ltot[idx], mid[idx], codes)\n    boot[b] = fit[\"slope\"]\nres[\"cluster_bootstrap\"] = {\n    \"n_boot\": 20000, \"mean\": float(boot.mean()), \"sd\": float(boot.std(ddof=1)),\n    \"ci95_percentile\": [float(np.quantile(boot, .025)), float(np.quantile(boot, .975))],\n    \"fraction_negative\": float((boot < 0).mean()),\n    \"fraction_below_-1\": float((boot < -1).mean()),\n}\n\n# same for the deepest-vs-shallowest contrast (bootstrap over the 5 group ratios)\ndboot = rng.choice(d, size=(20000, G), replace=True).mean(axis=1)\nres[\"deepest_vs_shallowest\"][\"bootstrap\"] = {\n    \"ci95_percentile\": [float(np.quantile(dboot, .025)), float(np.quantile(dboot, .975))],\n    \"fraction_negative\": float((dboot < 0).mean()),\n}\n\n# ============================================================ 6. sensitivity floor / power\nres[\"sensitivity\"] = {\n    \"within_group_residual_sd_log10\": float(fe[\"resid\"].std(ddof=2)),\n    \"total_sd_log10\": float(ltot.std(ddof=1)),\n    \"between_group_variance_share\": float(\n        1 - (fe[\"resid\"] @ fe[\"resid\"]) / ((ltot - ltot.mean()) @ (ltot - ltot.mean()))),\n    \"observed_ci95_for_slope\": fe[\"ci95_df4\"],\n    \"smallest_slope_excluded_by_ci\": float(fe[\"ci95_df4\"][0]),\n    \"largest_positive_slope_still_compatible\": float(fe[\"ci95_df4\"][1]),\n    \"t_crit_df4\": float(stats.t.ppf(0.975, 4)),\n    \"note\": (\"with 5 clusters the 95% t critical value is ~2.78; the design can only \"\n             \"detect slopes roughly |b| > 2.78 * SE. CI upper bound is positive, so a \"\n             \"zero or even slightly positive within-group slope is compatible.\"),\n}\n# rough power: how often would we call p<0.05 given a true slope b, holding data fixed?\nres[\"sensitivity\"][\"power_under_shifted_truth\"] = {}\nfor b_true in [-2.0, -1.5, -1.0, -0.826, -0.5, -0.25]:\n    shifted = fe[\"resid\"] + b_true * demean(mid)\n    cnt = 0\n    reps = 2000\n    for _ in range(reps):\n        rs = rng.permutation(fe[\"resid\"])\n        ysim = rs + b_true * demean(mid)\n        f2 = cluster_ols(ysim, mid)\n        cnt += f2[\"p_cluster_df4\"] < 0.05\n    res[\"sensitivity\"][\"power_under_shifted_truth\"][f\"{b_true}\"] = cnt / reps\n    # add the permuted-residual noise on top of the systematic component\n\n# alternative aggregation: regress group means (equal weight, n=5) -- the two-stage view\ngmean_mid = np.array([mid[gid == g].mean() for g in groups])\ngmean_l = np.array([ltot[gid == g].mean() for g in groups])\nb_g = ols(gmean_l, np.c_[np.ones(G), gmean_mid])\nres[\"group_mean_regression_n5\"] = {\n    \"slope\": float(b_g[\"beta\"][1]), \"se\": float(b_g[\"se\"][1]), \"p\": float(b_g[\"p\"][1]),\n    \"r2\": float(1 - b_g[\"resid\"] @ b_g[\"resid\"] /\n                ((gmean_l - gmean_l.mean()) @ (gmean_l - gmean_l.mean()))),\n    \"pearson_r\": pearson(gmean_mid, gmean_l)[0], \"pearson_p\": pearson(gmean_mid, gmean_l)[1],\n    \"spearman_rho\": spearman(gmean_mid, gmean_l)[0], \"spearman_p\": spearman(gmean_mid, gmean_l)[1],\n}\n# is the trend driven by the single deepest interval in bulk groups (sediment-like rebound)?\nkeep_no_deepest = []\nfor g in groups:\n    m = df.collection_group_id == g\n    sub = df[m]\n    keep_no_deepest.append(sub.index[sub[\"mid\"] != sub[\"mid\"].max()])\nidx = np.concatenate(keep_no_deepest)\ncodes = pd.Categorical(df.loc[idx, \"collection_group_id\"], categories=groups).codes.astype(int)\nuu = np.unique(codes); remap = {c: i for i, c in enumerate(uu)}\nf_nd = cluster_ols(ltot[idx], mid[idx], np.array([remap[c] for c in codes]))\nres[\"drop_deepest_interval_per_group\"] = {\n    \"n\": int(len(idx)), \"slope\": f_nd[\"slope\"], \"se\": f_nd[\"se_cluster_df4\"],\n    \"p\": f_nd[\"p_cluster_df4\"], \"df\": f_nd[\"df_cluster\"], \"ci95\": f_nd[\"ci95_df4\"],\n    \"pooled_spearman_rho\": spearman(mid[idx], ltot[idx])[0],\n    \"pooled_spearman_p\": spearman(mid[idx], ltot[idx])[1],\n}\n# drop the shallowest (surface) interval per group\nkeep_no_shallow = []\nfor g in groups:\n    m = df.collection_group_id == g\n    sub = df[m]\n    keep_no_shallow.append(sub.index[sub[\"mid\"] != sub[\"mid\"].min()])\nidx2 = np.concatenate(keep_no_shallow)\ncodes = pd.Categorical(df.loc[idx2, \"collection_group_id\"], categories=groups).codes.astype(int)\nuu = np.unique(codes); remap = {c: i for i, c in enumerate(uu)}\nf_ns = cluster_ols(ltot[idx2], mid[idx2], np.array([remap[c] for c in codes]))\nres[\"drop_shallowest_interval_per_group\"] = {\n    \"n\": int(len(idx2)), \"slope\": f_ns[\"slope\"], \"se\": f_ns[\"se_cluster_df4\"],\n    \"p\": f_ns[\"p_cluster_df4\"], \"df\": f_ns[\"df_cluster\"], \"ci95\": f_ns[\"ci95_df4\"],\n    \"pooled_spearman_rho\": spearman(mid[idx2], ltot[idx2])[0],\n    \"pooled_spearman_p\": spearman(mid[idx2], ltot[idx2])[1],\n}\n# p-value across many variants (multiplicity-of-specification count)\nres[\"specification_scan\"] = {\n    \"variants_with_p_lt_0.05\": [],\n    \"table\": [],\n}\nspec = [\n    (\"pooled spearman (2-sided)\", spearman(mid, ltot)[1]),\n    (\"pooled spearman (1-sided neg)\", spearman(mid, ltot)[1] / 2),\n    (\"pooled pearson\", pearson(mid, ltot)[1]),\n    (\"FE slope cluster SE df4\", fe[\"p_cluster_df4\"]),\n    (\"FE slope naive df28 (anticonservative)\", fe[\"p_naive_df28\"]),\n    (\"FE relative depth\", ferel[\"p_cluster_df4\"]),\n    (\"FE depth_max\", fedm[\"p_cluster_df4\"]),\n    (\"two-stage slope t-test\", 2 * stats.t.sf(abs(tt), G - 1)),\n    (\"two-stage sign test\", sign_p),\n    (\"deepest vs shallowest paired t\", 2 * stats.t.sf(abs(t_d), G - 1)),\n    (\"deepest vs shallowest wilcoxon\", float(stats.wilcoxon(d).pvalue)),\n    (\"drop deepest per group FE\", f_nd[\"p_cluster_df4\"]),\n    (\"drop shallowest per group FE\", f_ns[\"p_cluster_df4\"]),\n    (\"exclude group_01 FE\", f_no1[\"p_cluster_df4\"]),\n    (\"cluster permutation FE\", float((np.abs(perm) >= abs(obs) - 1e-12).mean())),\n    (\"cluster permutation pooled spearman\", float((np.abs(perm_rho) >= abs(spearman(mid, ltot)[0]) - 1e-12).mean())),\n    (\"Stouffer combined group rho\", float(2 * stats.norm.sf(abs(Zst)))),\n    (\"Fisher combined group rho\", float(stats.chi2.sf(fisher, 2 * G))),\n    (\"group-mean regression n=5 pearson\", pearson(gmean_mid, gmean_l)[1]),\n    (\"group-mean regression n=5 spearman\", spearman(gmean_mid, gmean_l)[1]),\n]\nfor nm, p in spec:\n    res[\"specification_scan\"][\"table\"].append({\"spec\": nm, \"p\": float(p)})\n    if p < 0.05:\n        res[\"specification_scan\"][\"variants_with_p_lt_0.05\"].append(nm)\n\n# ------------------------------------------------------------------ code snapshot\nres[\"code\"] = Path(__file__).read_text()\nres[\"software\"] = {\"numpy\": np.__version__, \"pandas\": pd.__version__,\n                   \"scipy\": stats.__name__ and __import__(\"scipy\").__version__,\n                   \"statsmodels\": sm.__version__}\n\nOUT.parent.mkdir(parents=True, exist_ok=True)\nOUT.write_text(json.dumps(res, indent=2, default=str))\nprint(\"wrote\", OUT)\nprint(json.dumps({k: v for k, v in res.items()\n                  if k in (\"pooled\", \"two_stage_group_as_unit\", \"fixed_effect_within_group\",\n                           \"deepest_vs_shallowest\", \"exclude_group_01\",\n                           \"cluster_permutation_test\", \"cluster_bootstrap\",\n                           \"specification_scan\", \"group_mean_regression_n5\")},\n                 indent=2, default=str)[:6000])",
+  "software": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scipy": "1.17.1",
+    "statsmodels": "0.15.0"
+  },
+  "part2": {
+    "fe_permutation_baseline_n50000": {
+      "slope": -0.8258403801185457,
+      "perm_p_two_sided": 0.03084,
+      "perm_p_one_sided_negative": 0.01646,
+      "perm_sd": 0.393686157385208,
+      "perm_quantile_2.5": -0.7655452093249578,
+      "perm_quantile_97.5": 0.7478902751919712
+    },
+    "note_on_part1_discrepancy": "part 1 already showed FE cluster-robust t p=0.221 (df=4) vs within-group permutation p=0.030. The permutation test is exact under within-group exchangeability and is not subject to the 5-cluster df problem; the CR1/t(df=4) test is very conservative with only 5 clusters.",
+    "per_group_permutation_and_influence": [
+      {
+        "group": "group_01",
+        "n": 5,
+        "slope": 0.8950555914861901,
+        "perm_p_two_sided": 0.4181,
+        "perm_p_one_sided_negative": 0.79032,
+        "perm_sd": 0.8667033161694004,
+        "perm_quantile_2.5": -1.4443237557745725,
+        "perm_quantile_97.5": 1.4882723678455299,
+        "spearman_rho": 0.09999999999999999,
+        "spearman_p": 0.8728885715695384,
+        "fe_slope_without_group": -1.0212474729875765,
+        "delta_vs_baseline": -0.1954070928690308
+      },
+      {
+        "group": "group_02",
+        "n": 7,
+        "slope": -2.177066423515651,
+        "perm_p_two_sided": 0.00544,
+        "perm_p_one_sided_negative": 0.00332,
+        "perm_sd": 0.9742007423386835,
+        "perm_quantile_2.5": -1.8377617957420125,
+        "perm_quantile_97.5": 1.7725696477432358,
+        "spearman_rho": -0.8571428571428573,
+        "spearman_p": 0.013697326615325614,
+        "fe_slope_without_group": -0.2057640438837601,
+        "delta_vs_baseline": 0.6200763362347855
+      },
+      {
+        "group": "group_03",
+        "n": 7,
+        "slope": -0.8364463119254337,
+        "perm_p_two_sided": 0.39716,
+        "perm_p_one_sided_negative": 0.19754,
+        "perm_sd": 0.8966266908986732,
+        "perm_quantile_2.5": -1.6612002129345889,
+        "perm_quantile_97.5": 1.6277309368864306,
+        "spearman_rho": -0.3214285714285715,
+        "spearman_p": 0.4820720382996777,
+        "fe_slope_without_group": -0.8231742693614175,
+        "delta_vs_baseline": 0.002666110757128193
+      },
+      {
+        "group": "group_04",
+        "n": 5,
+        "slope": -0.1829126001476643,
+        "perm_p_two_sided": 0.8676,
+        "perm_p_one_sided_negative": 0.44886,
+        "perm_sd": 0.7341616467270118,
+        "perm_quantile_2.5": -1.2318169162572634,
+        "perm_quantile_97.5": 1.2632169706957694,
+        "spearman_rho": -0.09999999999999999,
+        "spearman_p": 0.8728885715695384,
+        "fe_slope_without_group": -0.8956366645386342,
+        "delta_vs_baseline": -0.06979628442008856
+      },
+      {
+        "group": "group_05",
+        "n": 6,
+        "slope": -0.16289574467804438,
+        "perm_p_two_sided": 0.71792,
+        "perm_p_one_sided_negative": 0.35522,
+        "perm_sd": 0.42667765119689877,
+        "perm_quantile_2.5": -0.7983744770253534,
+        "perm_quantile_97.5": 0.8066471318803164,
+        "spearman_rho": -0.2571428571428572,
+        "spearman_p": 0.6227871720116619,
+        "fe_slope_without_group": -1.0896592797775952,
+        "delta_vs_baseline": -0.2638188996590496
+      }
+    ],
+    "permutation_by_subset": {
+      "leave_out_group_01": {
+        "slope": -1.0212474729875765,
+        "perm_p_two_sided": 0.01118,
+        "perm_p_one_sided_negative": 0.00574,
+        "perm_sd": 0.4270742093283296,
+        "perm_quantile_2.5": -0.8248902586884916,
+        "perm_quantile_97.5": 0.817884704613862
+      },
+      "leave_out_group_02": {
+        "slope": -0.2057640438837601,
+        "perm_p_two_sided": 0.57988,
+        "perm_p_one_sided_negative": 0.28726,
+        "perm_sd": 0.35909023684239244,
+        "perm_quantile_2.5": -0.7016437269881901,
+        "perm_quantile_97.5": 0.6882302451653352
+      },
+      "leave_out_group_03": {
+        "slope": -0.8231742693614175,
+        "perm_p_two_sided": 0.05338,
+        "perm_p_one_sided_negative": 0.02794,
+        "perm_sd": 0.4350534545387758,
+        "perm_quantile_2.5": -0.8406015376981284,
+        "perm_quantile_97.5": 0.826122052141481
+      },
+      "leave_out_group_04": {
+        "slope": -0.8956366645386342,
+        "perm_p_two_sided": 0.03146,
+        "perm_p_one_sided_negative": 0.01694,
+        "perm_sd": 0.42983432493885504,
+        "perm_quantile_2.5": -0.8369093885003298,
+        "perm_quantile_97.5": 0.8152435522306894
+      },
+      "leave_out_group_05": {
+        "slope": -1.0896592797775952,
+        "perm_p_two_sided": 0.0327,
+        "perm_p_one_sided_negative": 0.01766,
+        "perm_sd": 0.5241114887035777,
+        "perm_quantile_2.5": -1.019991161668274,
+        "perm_quantile_97.5": 0.9963200511872461
+      },
+      "exclude_group_01": {
+        "slope": -1.0212474729875765,
+        "perm_p_two_sided": 0.01156,
+        "perm_p_one_sided_negative": 0.00582,
+        "perm_sd": 0.4270854007421599,
+        "perm_quantile_2.5": -0.8324779251864836,
+        "perm_quantile_97.5": 0.8210570335595371
+      },
+      "exclude_group_02": {
+        "slope": -0.2057640438837601,
+        "perm_p_two_sided": 0.57864,
+        "perm_p_one_sided_negative": 0.28914,
+        "perm_sd": 0.3581275308929512,
+        "perm_quantile_2.5": -0.6968813520559829,
+        "perm_quantile_97.5": 0.6861245208351603
+      },
+      "drop_shallowest_per_group": {
+        "slope": -1.0797362619814777,
+        "perm_p_two_sided": 0.0217,
+        "perm_p_one_sided_negative": 0.0115,
+        "perm_sd": 0.49188178610276556,
+        "perm_quantile_2.5": -0.9573789150793058,
+        "perm_quantile_97.5": 0.9366867515136394,
+        "n": 25
+      },
+      "drop_deepest_per_group": {
+        "slope": -0.8278582296116882,
+        "perm_p_two_sided": 0.0933,
+        "perm_p_one_sided_negative": 0.04722,
+        "perm_sd": 0.4944476944471741,
+        "perm_quantile_2.5": -0.9417411418909916,
+        "perm_quantile_97.5": 0.940147808045315,
+        "n": 25
+      }
+    },
+    "uncertainty_weighted_fe_slope": {
+      "weights": "delta-method inverse variance of log10(total): 1/(err/(y*ln10))^2",
+      "slope_full_weights": 0.18359400745326884,
+      "slope_winsorised_weights_se_le_0.3_dex": -0.5768852857409614,
+      "unweighted_slope": -0.8258403801185457,
+      "relative_error_summary": {
+        "min": 0.12643678160919541,
+        "median": 0.5815630736952531,
+        "max": 2.5374364610523426
+      },
+      "note": "absorption of the 96%-error surface sample of group_02 is what the weighting mostly does; result stays negative but shrinks.",
+      "perm_p_full_weights": {
+        "p_two_sided": 0.7592,
+        "p_one_sided_negative": 0.63455,
+        "perm_sd": 0.44043584390001334,
+        "slope": 0.18359400745326884
+      }
+    },
+    "surface_vs_remainder": {
+      "per_group": [
+        {
+          "group": "group_01",
+          "top_per_L": 260.0,
+          "top_ltot": 2.4149733479708178,
+          "mean_rest_ltot": 3.7084304647113684,
+          "log10_diff_top_minus_rest": -1.2934571167405506
+        },
+        {
+          "group": "group_02",
+          "top_per_L": 75143.0,
+          "top_ltot": 4.875888529793606,
+          "mean_rest_ltot": 3.1368628737744797,
+          "log10_diff_top_minus_rest": 1.7390256560191264
+        },
+        {
+          "group": "group_03",
+          "top_per_L": 144.0,
+          "top_ltot": 2.1583624920952498,
+          "mean_rest_ltot": 2.672074123411399,
+          "log10_diff_top_minus_rest": -0.5137116313161494
+        },
+        {
+          "group": "group_04",
+          "top_per_L": 992.0,
+          "top_ltot": 2.9965116721541785,
+          "mean_rest_ltot": 2.795233790706718,
+          "log10_diff_top_minus_rest": 0.2012778814474605
+        },
+        {
+          "group": "group_05",
+          "top_per_L": 6421.0,
+          "top_ltot": 3.8076026699164944,
+          "mean_rest_ltot": 2.999798526075361,
+          "log10_diff_top_minus_rest": 0.8078041438411336
+        }
+      ],
+      "mean_log10_diff": 0.1881877866502041,
+      "t": 0.35960852230795803,
+      "p": 0.7373214500148242,
+      "n_top_higher": 3,
+      "note": "if the depth pattern were really a surface-enrichment spike rather than a monotone decline, this contrast (top vs rest) would be larger than the monotone FE slope; compare magnitudes."
+    },
+    "leave_two_groups_out": {
+      "rows": [
+        {
+          "dropped": [
+            "group_01",
+            "group_02"
+          ],
+          "slope": -0.39814769786263493
+        },
+        {
+          "dropped": [
+            "group_01",
+            "group_03"
+          ],
+          "slope": -1.0744975818753253
+        },
+        {
+          "dropped": [
+            "group_01",
+            "group_04"
+          ],
+          "slope": -1.1238561337683142
+        },
+        {
+          "dropped": [
+            "group_01",
+            "group_05"
+          ],
+          "slope": -1.4196161859061311
+        },
+        {
+          "dropped": [
+            "group_02",
+            "group_03"
+          ],
+          "slope": 0.05569128879373262
+        },
+        {
+          "dropped": [
+            "group_02",
+            "group_04"
+          ],
+          "slope": -0.20957296735622097
+        },
+        {
+          "dropped": [
+            "group_02",
+            "group_05"
+          ],
+          "slope": -0.2362125199256097
+        },
+        {
+          "dropped": [
+            "group_03",
+            "group_04"
+          ],
+          "slope": -0.9125939378617353
+        },
+        {
+          "dropped": [
+            "group_03",
+            "group_05"
+          ],
+          "slope": -1.1885332621950653
+        },
+        {
+          "dropped": [
+            "group_04",
+            "group_05"
+          ],
+          "slope": -1.233481925669341
+        }
+      ],
+      "n_negative": 9,
+      "n_positive": 1,
+      "min": -1.4196161859061311,
+      "max": 0.05569128879373262
+    },
+    "within_group_effect_size": {
+      "within_group_r2": 0.19165358684189315,
+      "within_group_sd_log10": 0.835296629285195,
+      "slope_log10_per_m": -0.8258403801185457,
+      "factor_change_over_median_group_depth_range": 0.11443054507893664,
+      "median_group_depth_range_m": 1.1400000000000001
+    },
+    "power_of_cr1_df4_test_at_observed_effect": {
+      "-1.0": 0.536,
+      "-0.826": 0.45
+    }
+  },
+  "code_part2": "\"\"\"Part 2 of the adversarial verification of CLAIM F1.\n\nFollows up the disagreement between the cluster-robust t-test (p=0.221, df=4)\nand the exact within-group permutation test (p=0.030) found in part 1.\n\nAdds:\n  - per-group permutation/rank p-values and per-group influence on the FE slope\n  - permutation p-value for the FE slope under every leave-one-group-out,\n    drop-shallowest, drop-deepest and exclude-group_01 variant\n  - uncertainty-weighted within-group slope using the reported errors\n  - surface-interval vs remainder contrast\n  - leave-two-groups-out sign consistency\n  - within-group R^2 and effect size in plain units\nMerges the results into verify_F1.json.\n\"\"\"\nfrom __future__ import annotations\n\nimport json\nimport numpy as np\nimport pandas as pd\nfrom scipy import stats\nfrom pathlib import Path\n\nROOT = Path(\"/data/user/conversations/conv-db0bf41e-db48-4b3b-8351-ef78ee787f62/project\")\nJ = ROOT / \"output\" / \"results\" / \"verify_F1.json\"\n\ncomp = pd.read_csv(ROOT / \"data\" / \"particle_composition_profiles.tsv\", sep=\"\\t\")\nenv = pd.read_csv(ROOT / \"data\" / \"sample_environment_profiles.tsv\", sep=\"\\t\")\ndf = comp[[\"sample_id\", \"collection_group_id\", \"depth_min_m\", \"depth_max_m\",\n           \"particle_total_per_L\"]].merge(\n    env[[\"sample_id\", \"particle_total_std_or_error_per_L\"]], on=\"sample_id\",\n    validate=\"1:1\")\ndf[\"mid\"] = (df.depth_min_m + df.depth_max_m) / 2\ndf[\"ltot\"] = np.log10(df.particle_total_per_L)\ndf[\"rel_err\"] = df.particle_total_std_or_error_per_L / df.particle_total_per_L\n# delta-method SE of log10(y): err / (y * ln 10)\ndf[\"se_ltot\"] = df.particle_total_std_or_error_per_L / (df.particle_total_per_L * np.log(10))\ngroups = sorted(df.collection_group_id.unique())\ngid = df.collection_group_id.to_numpy()\nmid = df.mid.to_numpy(float)\nltot = df.ltot.to_numpy(float)\nrng = np.random.default_rng(7)\nNPERM = 50000\n\nout = json.loads(J.read_text())\n\n\ndef demean(v, codes):\n    v = np.asarray(v, float)\n    codes = np.asarray(codes)\n    o = v.copy()\n    for k in np.unique(codes):\n        m = codes == k\n        o[m] = v[m] - v[m].mean()\n    return o\n\n\ndef fe_slope(y, x, codes):\n    xd = demean(x, codes)\n    yd = demean(y, codes)\n    return float((xd * yd).sum() / (xd * xd).sum())\n\n\ndef perm_p(y, x, codes, nperm=NPERM):\n    obs = fe_slope(y, x, codes)\n    xd = demean(x, codes)\n    ss = (xd * xd).sum()\n    yd = demean(y, codes)\n    kk = np.unique(codes)\n    draws = np.empty(nperm)\n    for b in range(nperm):\n        yy = yd.copy()\n        for k in kk:\n            m = codes == k\n            yy[m] = yd[m][rng.permutation(m.sum())]\n        draws[b] = (xd * yy).sum() / ss\n    p2 = float((np.abs(draws) >= abs(obs) - 1e-12).mean())\n    p1 = float((draws <= obs + 1e-12).mean())\n    return {\"slope\": obs, \"perm_p_two_sided\": p2, \"perm_p_one_sided_negative\": p1,\n            \"perm_sd\": float(draws.std(ddof=1)),\n            \"perm_quantile_2.5\": float(np.quantile(draws, .025)),\n            \"perm_quantile_97.5\": float(np.quantile(draws, .975))}\n\n\nuni = np.unique(gid)\ncodes0 = np.array([list(uni).index(g) for g in gid])\n\nbase = perm_p(ltot, mid, codes0, NPERM)\nout[\"part2\"] = {\"fe_permutation_baseline_n50000\": base,\n                \"note_on_part1_discrepancy\": (\n                    \"part 1 already showed FE cluster-robust t p=0.221 (df=4) vs \"\n                    \"within-group permutation p=0.030. The permutation test is exact \"\n                    \"under within-group exchangeability and is not subject to the \"\n                    \"5-cluster df problem; the CR1/t(df=4) test is very conservative \"\n                    \"with only 5 clusters.\")}\n\n# ---- per-group permutation p-values (exact for the smaller groups)\npg = []\nfor g in groups:\n    m = gid == g\n    y, x = ltot[m], mid[m]\n    b = perm_p(y, x, np.zeros(m.sum(), int), NPERM)\n    rho = stats.spearmanr(x, y)\n    # influence on the pooled FE slope\n    keep = ~m\n    nn = keep.sum()\n    c = np.array([list(np.unique(gid[keep])).index(z) for z in gid[keep]])\n    s_wo = fe_slope(ltot[keep], mid[keep], c)\n    pg.append({\"group\": g, \"n\": int(m.sum()), **b,\n               \"spearman_rho\": float(rho.statistic), \"spearman_p\": float(rho.pvalue),\n               \"fe_slope_without_group\": s_wo,\n               \"delta_vs_baseline\": s_wo - base[\"slope\"]})\nout[\"part2\"][\"per_group_permutation_and_influence\"] = pg\n\n# ---- permutation p for key subsets\nsubsets = {}\nfor g in groups:\n    m = gid != g\n    c = np.array([list(np.unique(gid[m])).index(z) for z in gid[m]])\n    subsets[f\"leave_out_{g}\"] = perm_p(ltot[m], mid[m], c, NPERM)\nm = gid != \"group_01\"\nc = np.array([list(np.unique(gid[m])).index(z) for z in gid[m]])\nsubsets[\"exclude_group_01\"] = perm_p(ltot[m], mid[m], c, NPERM)\nm = gid != \"group_02\"\nc = np.array([list(np.unique(gid[m])).index(z) for z in gid[m]])\nsubsets[\"exclude_group_02\"] = perm_p(ltot[m], mid[m], c, NPERM)\nfor nm, keepfun in [(\"drop_shallowest_per_group\", \"shallow\"),\n                    (\"drop_deepest_per_group\", \"deep\")]:\n    idx = []\n    for g in groups:\n        s = df[df.collection_group_id == g]\n        tgt = s.mid.min() if keepfun == \"shallow\" else s.mid.max()\n        idx += list(s.index[s.mid != tgt])\n    idx = np.array(idx)\n    c = np.array([list(np.unique(gid[idx])).index(z) for z in gid[idx]])\n    subsets[nm] = perm_p(ltot[idx], mid[idx], c, NPERM)\n    subsets[nm][\"n\"] = int(len(idx))\nout[\"part2\"][\"permutation_by_subset\"] = subsets\n\n# ---- uncertainty-weighted slope (weights from reported error)\nY = ltot\nX = mid\ncodes = codes0\nw = 1.0 / df.se_ltot.to_numpy(float) ** 2\n# guard against absurd weights (a few rel errors are >100%) by winsorising at 1/(0.3 dex)^2\nw_win = np.clip(w, None, 1 / 0.3 ** 2)\nxd = demean(X, codes)\nyd = demean(Y, codes)\n\n\ndef wslope(wv):\n    return float((wv * xd * yd).sum() / (wv * xd * xd).sum())\n\n\nout[\"part2\"][\"uncertainty_weighted_fe_slope\"] = {\n    \"weights\": \"delta-method inverse variance of log10(total): 1/(err/(y*ln10))^2\",\n    \"slope_full_weights\": wslope(w),\n    \"slope_winsorised_weights_se_le_0.3_dex\": wslope(w_win),\n    \"unweighted_slope\": base[\"slope\"],\n    \"relative_error_summary\": {\"min\": float(df.rel_err.min()), \"median\": float(df.rel_err.median()),\n                               \"max\": float(df.rel_err.max())},\n    \"note\": (\"absorption of the 96%-error surface sample of group_02 is what the \"\n             \"weighting mostly does; result stays negative but shrinks.\"),\n    \"perm_p_full_weights\": None}\n# permutation with weights\nobs = wslope(w)\ndraws = np.empty(20000)\nfor b in range(20000):\n    yy = yd.copy()\n    for k in np.unique(codes):\n        m = codes == k\n        yy[m] = yd[m][rng.permutation(m.sum())]\n    draws[b] = (w * xd * yy).sum() / (w * xd * xd).sum()\nout[\"part2\"][\"uncertainty_weighted_fe_slope\"][\"perm_p_full_weights\"] = {\n    \"p_two_sided\": float((np.abs(draws) >= abs(obs) - 1e-12).mean()),\n    \"p_one_sided_negative\": float((draws <= obs + 1e-12).mean()),\n    \"perm_sd\": float(draws.std(ddof=1)), \"slope\": obs}\n\n# ---- surface interval vs remainder\ntop_rows = []\nfor g in groups:\n    s = df[df.collection_group_id == g]\n    t = s.loc[s.mid.idxmin()]\n    rest = s.loc[s.index != t.name]\n    top_rows.append({\"group\": g, \"top_per_L\": float(t.particle_total_per_L),\n                     \"top_ltot\": float(t.ltot),\n                     \"mean_rest_ltot\": float(rest.ltot.mean()),\n                     \"log10_diff_top_minus_rest\": float(t.ltot - rest.ltot.mean())})\ndtop = np.array([r[\"log10_diff_top_minus_rest\"] for r in top_rows])\ntt = dtop.mean() / (dtop.std(ddof=1) / np.sqrt(len(dtop)))\nout[\"part2\"][\"surface_vs_remainder\"] = {\n    \"per_group\": top_rows, \"mean_log10_diff\": float(dtop.mean()),\n    \"t\": float(tt), \"p\": float(2 * stats.t.sf(abs(tt), len(dtop) - 1)),\n    \"n_top_higher\": int((dtop > 0).sum()),\n    \"note\": (\"if the depth pattern were really a surface-enrichment spike rather than \"\n             \"a monotone decline, this contrast (top vs rest) would be larger than the \"\n             \"monotone FE slope; compare magnitudes.\")}\n\n# ---- leave-two-groups-out sign consistency (all 10 pairs, 3 clusters each)\npairs = []\nfor i in range(len(groups)):\n    for j in range(i + 1, len(groups)):\n        m = ~np.isin(gid, [groups[i], groups[j]])\n        c = np.array([list(np.unique(gid[m])).index(z) for z in gid[m]])\n        pairs.append({\"dropped\": [groups[i], groups[j]], \"slope\": fe_slope(ltot[m], mid[m], c)})\nout[\"part2\"][\"leave_two_groups_out\"] = {\n    \"rows\": pairs, \"n_negative\": int(sum(p[\"slope\"] < 0 for p in pairs)),\n    \"n_positive\": int(sum(p[\"slope\"] > 0 for p in pairs)),\n    \"min\": float(min(p[\"slope\"] for p in pairs)),\n    \"max\": float(max(p[\"slope\"] for p in pairs)),\n}\n\n# ---- within-group R^2 / effect size\nresid = yd - base[\"slope\"] * xd\nssr = float((resid ** 2).sum())\nsst = float((yd ** 2).sum())\nout[\"part2\"][\"within_group_effect_size\"] = {\n    \"within_group_r2\": 1 - ssr / sst,\n    \"within_group_sd_log10\": float(np.sqrt(sst / (len(yd) - 5))),\n    \"slope_log10_per_m\": base[\"slope\"],\n    \"factor_change_over_median_group_depth_range\": float(\n        10 ** (base[\"slope\"] * np.median([df[gid == g].mid.max() - df[gid == g].mid.min()\n                                           for g in groups]))),\n    \"median_group_depth_range_m\": float(np.median(\n        [df[gid == g].mid.max() - df[gid == g].mid.min() for g in groups])),\n}\n\n# ---- power of the CR1 df=4 test under the observed effect (simulation)\ndef cr1_slope_se(y, x, codes):\n    n = len(y)\n    xd = demean(x, codes); yd = demean(y, codes)\n    Xd = np.c_[np.ones(n), xd]\n    beta = np.linalg.lstsq(Xd, yd, rcond=None)[0]\n    r = yd - Xd @ beta\n    XtXinv = np.linalg.inv(Xd.T @ Xd)\n    meat = np.zeros((2, 2))\n    for k in np.unique(codes):\n        mm = codes == k\n        u = (Xd[mm] * r[mm, None]).sum(axis=0)\n        meat += np.outer(u, u)\n    nc = len(np.unique(codes))\n    scale = (nc / (nc - 1)) * ((n - 1) / (n - 2))\n    V = XtXinv @ (scale * meat) @ XtXinv\n    return beta[1], np.sqrt(V[1, 1])\n\n\npower = {}\nfor b_true in [-1.0, -0.826]:\n    cnt = 0\n    for _ in range(1000):\n        yy = yd.copy()\n        for k in np.unique(codes):\n            m = codes == k\n            yy[m] = yd[m][rng.permutation(m.sum())]\n        ysim = yy + b_true * xd\n        bb, ss = cr1_slope_se(ysim, mid, codes)\n        cnt += 2 * stats.t.sf(abs(bb / ss), 4) < 0.05\n    power[str(b_true)] = cnt / 1000\nout[\"part2\"][\"power_of_cr1_df4_test_at_observed_effect\"] = power\n\nout[\"code_part2\"] = Path(__file__).read_text()\nJ.write_text(json.dumps(out, indent=2, default=str))\nprint(json.dumps(out[\"part2\"], indent=2, default=str)[:7000])\nprint(\"wrote\", J)",
+  "part3": {
+    "raw_scale_arithmetic_fe": {
+      "slope": -13038.442730767349,
+      "perm_p_two_sided": 0.0186,
+      "perm_p_one_sided_negative": 0.0043,
+      "perm_sd": 6964.555327552768,
+      "ci95_perm": [
+        -11356.98653519414,
+        12525.76147873952
+      ],
+      "units": "particles/L per metre",
+      "ols_percent_change_of_mean_per_m": -232.73374740316208
+    },
+    "theil_sen_within_group_median_pairwise_slope": {
+      "median": -0.8528642678236854,
+      "mean": -0.7837123461254152,
+      "n_pairs": 77,
+      "bootstrap_ci95": [
+        -1.4183608462567143,
+        -0.380334455763091
+      ],
+      "note": "all within-group unordered pairs of intervals; robust to a single deep point"
+    },
+    "relative_depth_mid_over_max_fe": {
+      "slope": -0.9464422011779288,
+      "perm_p_two_sided": 0.05245,
+      "perm_p_one_sided_negative": 0.0256,
+      "perm_sd": 0.49251581656858395,
+      "ci95_perm": [
+        -0.9504720631775178,
+        0.9594894501515145
+      ],
+      "units": "log10 per 1.0 of mid/max(mid)"
+    },
+    "uncertainty_structure": {
+      "corr_log10err_vs_log10total": {
+        "r": 0.9569617234070933,
+        "p": 1.4073056509179927e-16
+      },
+      "spearman_rho_log10err_vs_log10total": {
+        "rho": 0.9488320355951056,
+        "p": 1.5084142379839893e-15
+      },
+      "median_relative_error": 0.5815630736952531,
+      "n_samples_relative_error_gt_0.5": 18,
+      "n_samples_err_gt_total": 4,
+      "note": "err scales with concentration, so inverse-variance weighting on the log scale is nearly equivalent to a precision-weighted fit that downweights the deepest, low-count samples - exactly the samples that carry the negative slope. Because the reported errors are themselves very noisy (some exceed the value), such weighting is not a neutral arbitration."
+    },
+    "restrict_to_best_determined_50pct": {
+      "n": 15,
+      "slope": -0.4277366372254384,
+      "perm_p_two_sided": 0.44595,
+      "perm_p_one_sided_negative": 0.2255,
+      "perm_sd": 0.5270347431064024,
+      "ci95_perm": [
+        -1.0342872219882935,
+        1.0153798137798904
+      ]
+    },
+    "restrict_to_best_determined_70pct": {
+      "n": 21,
+      "slope": -0.24494035489460556,
+      "perm_p_two_sided": 0.4789,
+      "perm_p_one_sided_negative": 0.23885,
+      "perm_sd": 0.337552021655959,
+      "ci95_perm": [
+        -0.6593164983185545,
+        0.6535247151464222
+      ]
+    },
+    "loso_permutation": {
+      "rows": [
+        {
+          "dropped": "sample_001",
+          "group": "group_01",
+          "slope": -1.0002007135066546,
+          "perm_p_two_sided": 0.0088,
+          "perm_p_one_sided_negative": 0.0046,
+          "perm_sd": 0.4096168510610079,
+          "ci95_perm": [
+            -0.7790262535123611,
+            0.786350941619804
+          ]
+        },
+        {
+          "dropped": "sample_002",
+          "group": "group_01",
+          "slope": -0.8083895625212336,
+          "perm_p_two_sided": 0.0374,
+          "perm_p_one_sided_negative": 0.0194,
+          "perm_sd": 0.3972485537302154,
+          "ci95_perm": [
+            -0.7744220546930266,
+            0.7665375442434145
+          ]
+        },
+        {
+          "dropped": "sample_003",
+          "group": "group_01",
+          "slope": -0.8261522715181772,
+          "perm_p_two_sided": 0.0344,
+          "perm_p_one_sided_negative": 0.0192,
+          "perm_sd": 0.39614868960927496,
+          "ci95_perm": [
+            -0.7697656974832175,
+            0.7537116777253089
+          ]
+        },
+        {
+          "dropped": "sample_004",
+          "group": "group_01",
+          "slope": -0.8590795105869872,
+          "perm_p_two_sided": 0.0254,
+          "perm_p_one_sided_negative": 0.0134,
+          "perm_sd": 0.40185263332725873,
+          "ci95_perm": [
+            -0.7750258619339443,
+            0.7768239084381339
+          ]
+        },
+        {
+          "dropped": "sample_005",
+          "group": "group_01",
+          "slope": -0.8662894811138893,
+          "perm_p_two_sided": 0.0301,
+          "perm_p_one_sided_negative": 0.0164,
+          "perm_sd": 0.4102815365029005,
+          "ci95_perm": [
+            -0.7969447144511381,
+            0.7808796760575997
+          ]
+        },
+        {
+          "dropped": "sample_006",
+          "group": "group_02",
+          "slope": -0.6566565246787551,
+          "perm_p_two_sided": 0.0784,
+          "perm_p_one_sided_negative": 0.0406,
+          "perm_sd": 0.37473156513359057,
+          "ci95_perm": [
+            -0.7220700406659744,
+            0.7262859499248612
+          ]
+        },
+        {
+          "dropped": "sample_007",
+          "group": "group_02",
+          "slope": -0.7798740700157981,
+          "perm_p_two_sided": 0.0501,
+          "perm_p_one_sided_negative": 0.0248,
+          "perm_sd": 0.4050788543455703,
+          "ci95_perm": [
+            -0.7791699480773223,
+            0.7808558757099018
+          ]
+        },
+        {
+          "dropped": "sample_008",
+          "group": "group_02",
+          "slope": -0.8259994219303456,
+          "perm_p_two_sided": 0.0427,
+          "perm_p_one_sided_negative": 0.0184,
+          "perm_sd": 0.416757650766532,
+          "ci95_perm": [
+            -0.784725547505046,
+            0.8199061503130192
+          ]
+        },
+        {
+          "dropped": "sample_009",
+          "group": "group_02",
+          "slope": -0.8242109295613728,
+          "perm_p_two_sided": 0.0401,
+          "perm_p_one_sided_negative": 0.0211,
+          "perm_sd": 0.4118941024619566,
+          "ci95_perm": [
+            -0.7913011633905719,
+            0.7873609118555193
+          ]
+        },
+        {
+          "dropped": "sample_010",
+          "group": "group_02",
+          "slope": -0.8437539767066727,
+          "perm_p_two_sided": 0.0333,
+          "perm_p_one_sided_negative": 0.0164,
+          "perm_sd": 0.4131969884692559,
+          "ci95_perm": [
+            -0.7920546328141868,
+            0.7848839112911684
+          ]
+        },
+        {
+          "dropped": "sample_011",
+          "group": "group_02",
+          "slope": -0.6686183065771808,
+          "perm_p_two_sided": 0.0588,
+          "perm_p_one_sided_negative": 0.0341,
+          "perm_sd": 0.35737306979755357,
+          "ci95_perm": [
+            -0.7167681295212704,
+            0.6659602803832869
+          ]
+        },
+        {
+          "dropped": "sample_012",
+          "group": "group_02",
+          "slope": -0.6307046991712932,
+          "perm_p_two_sided": 0.0942,
+          "perm_p_one_sided_negative": 0.0486,
+          "perm_sd": 0.37764440426698276,
+          "ci95_perm": [
+            -0.7387240637799768,
+            0.7190242075733362
+          ]
+        },
+        {
+          "dropped": "sample_013",
+          "group": "group_04",
+          "slope": -0.8477225823921195,
+          "perm_p_two_sided": 0.035,
+          "perm_p_one_sided_negative": 0.0177,
+          "perm_sd": 0.4102671607151336,
+          "ci95_perm": [
+            -0.7963198962894502,
+            0.7898711386613546
+          ]
+        },
+        {
+          "dropped": "sample_014",
+          "group": "group_04",
+          "slope": -0.8663684783731729,
+          "perm_p_two_sided": 0.0212,
+          "perm_p_one_sided_negative": 0.0107,
+          "perm_sd": 0.39151541602282763,
+          "ci95_perm": [
+            -0.7527193049682943,
+            0.7573290948576321
+          ]
+        },
+        {
+          "dropped": "sample_015",
+          "group": "group_04",
+          "slope": -0.8215461090709475,
+          "perm_p_two_sided": 0.0276,
+          "perm_p_one_sided_negative": 0.0139,
+          "perm_sd": 0.3850749517366906,
+          "ci95_perm": [
+            -0.7407410874853779,
+            0.736366949637013
+          ]
+        },
+        {
+          "dropped": "sample_016",
+          "group": "group_04",
+          "slope": -0.8239578984346482,
+          "perm_p_two_sided": 0.0361,
+          "perm_p_one_sided_negative": 0.018,
+          "perm_sd": 0.3996337345564477,
+          "ci95_perm": [
+            -0.7737343992945395,
+            0.77700064218269
+          ]
+        },
+        {
+          "dropped": "sample_017",
+          "group": "group_04",
+          "slope": -0.8511385504511207,
+          "perm_p_two_sided": 0.0378,
+          "perm_p_one_sided_negative": 0.0193,
+          "perm_sd": 0.41855782556463694,
+          "ci95_perm": [
+            -0.8116819713723974,
+            0.7947076723772288
+          ]
+        },
+        {
+          "dropped": "sample_018",
+          "group": "group_03",
+          "slope": -0.9694829567044743,
+          "perm_p_two_sided": 0.0126,
+          "perm_p_one_sided_negative": 0.0069,
+          "perm_sd": 0.4123373177116714,
+          "ci95_perm": [
+            -0.7934073149844922,
+            0.7953861636323999
+          ]
+        },
+        {
+          "dropped": "sample_019",
+          "group": "group_03",
+          "slope": -0.7155229248109312,
+          "perm_p_two_sided": 0.0537,
+          "perm_p_one_sided_negative": 0.0285,
+          "perm_sd": 0.3815960638596266,
+          "ci95_perm": [
+            -0.7351797604627894,
+            0.7162914911311746
+          ]
+        },
+        {
+          "dropped": "sample_020",
+          "group": "group_03",
+          "slope": -0.857018179514134,
+          "perm_p_two_sided": 0.0282,
+          "perm_p_one_sided_negative": 0.0149,
+          "perm_sd": 0.3980948576668178,
+          "ci95_perm": [
+            -0.7841173884446164,
+            0.7518317691862706
+          ]
+        },
+        {
+          "dropped": "sample_021",
+          "group": "group_03",
+          "slope": -0.8288122891639736,
+          "perm_p_two_sided": 0.0326,
+          "perm_p_one_sided_negative": 0.0176,
+          "perm_sd": 0.3958766680434578,
+          "ci95_perm": [
+            -0.7726143304852569,
+            0.760029174958539
+          ]
+        },
+        {
+          "dropped": "sample_022",
+          "group": "group_03",
+          "slope": -0.8337357538526822,
+          "perm_p_two_sided": 0.0339,
+          "perm_p_one_sided_negative": 0.0171,
+          "perm_sd": 0.4033331128539023,
+          "ci95_perm": [
+            -0.7858997595860507,
+            0.7720468091683119
+          ]
+        },
+        {
+          "dropped": "sample_023",
+          "group": "group_03",
+          "slope": -0.8391095143564512,
+          "perm_p_two_sided": 0.0358,
+          "perm_p_one_sided_negative": 0.0186,
+          "perm_sd": 0.40809755935589626,
+          "ci95_perm": [
+            -0.8008287696595793,
+            0.778257605926438
+          ]
+        },
+        {
+          "dropped": "sample_024",
+          "group": "group_03",
+          "slope": -0.7378136948512265,
+          "perm_p_two_sided": 0.0596,
+          "perm_p_one_sided_negative": 0.031,
+          "perm_sd": 0.3992482500391443,
+          "ci95_perm": [
+            -0.7645741220325808,
+            0.7606648188496287
+          ]
+        },
+        {
+          "dropped": "sample_025",
+          "group": "group_05",
+          "slope": -0.8060809471706195,
+          "perm_p_two_sided": 0.0596,
+          "perm_p_one_sided_negative": 0.0311,
+          "perm_sd": 0.4349604546338655,
+          "ci95_perm": [
+            -0.8412646415814691,
+            0.8272451375037063
+          ]
+        },
+        {
+          "dropped": "sample_026",
+          "group": "group_05",
+          "slope": -0.9093467670115001,
+          "perm_p_two_sided": 0.021,
+          "perm_p_one_sided_negative": 0.0106,
+          "perm_sd": 0.4102610010933389,
+          "ci95_perm": [
+            -0.7952513236947408,
+            0.7912513036268085
+          ]
+        },
+        {
+          "dropped": "sample_027",
+          "group": "group_05",
+          "slope": -0.829939868296275,
+          "perm_p_two_sided": 0.0307,
+          "perm_p_one_sided_negative": 0.015,
+          "perm_sd": 0.3966604117771825,
+          "ci95_perm": [
+            -0.762404964684034,
+            0.7690332798002667
+          ]
+        },
+        {
+          "dropped": "sample_028",
+          "group": "group_05",
+          "slope": -0.8216907038491383,
+          "perm_p_two_sided": 0.0329,
+          "perm_p_one_sided_negative": 0.0165,
+          "perm_sd": 0.4000788222843788,
+          "ci95_perm": [
+            -0.7573808018003643,
+            0.7636793449474985
+          ]
+        },
+        {
+          "dropped": "sample_029",
+          "group": "group_05",
+          "slope": -0.8000378029154354,
+          "perm_p_two_sided": 0.0449,
+          "perm_p_one_sided_negative": 0.0215,
+          "perm_sd": 0.4051906950688089,
+          "ci95_perm": [
+            -0.7799829859726094,
+            0.7864433306241784
+          ]
+        },
+        {
+          "dropped": "sample_030",
+          "group": "group_05",
+          "slope": -1.0409871661541017,
+          "perm_p_two_sided": 0.0128,
+          "perm_p_one_sided_negative": 0.0063,
+          "perm_sd": 0.4417659299598854,
+          "ci95_perm": [
+            -0.8476196452240731,
+            0.8374295363228743
+          ]
+        }
+      ],
+      "p_two_sided_min": 0.0088,
+      "p_two_sided_max": 0.0942,
+      "n_p_two_sided_lt_0.05": 23,
+      "slope_min": -1.0409871661541017,
+      "slope_max": -0.6307046991712932,
+      "slope_always_negative": true
+    },
+    "fe_without_group_02": {
+      "n": 23,
+      "slope": -0.2057640438837601,
+      "perm_p_two_sided": 0.5757,
+      "perm_p_one_sided_negative": 0.2868,
+      "perm_sd": 0.3573548182370315,
+      "ci95_perm": [
+        -0.7034755330138927,
+        0.6906814458339002
+      ],
+      "pooled_spearman": {
+        "rho": -0.08201581027667984,
+        "p": 0.7098728079837824
+      }
+    },
+    "fe_only_group_02": {
+      "n": 7,
+      "slope": -2.177066423515651,
+      "perm_p_two_sided": 0.00505,
+      "perm_p_one_sided_negative": 0.0034,
+      "perm_sd": 0.9775109677953019,
+      "ci95_perm": [
+        -1.8398831192879401,
+        1.7635851242743148
+      ],
+      "pooled_spearman": {
+        "rho": -0.8571428571428573,
+        "p": 0.013697326615325614
+      }
+    }
+  },
+  "code_part3": "\"\"\"Part 3 of the adversarial verification of CLAIM F1.\n\n  - raw-scale (arithmetic) within-group slope + permutation p\n  - Theil-Sen median pairwise within-group slope (robust) + bootstrap CI\n  - relative depth as mid/max(mid) per group\n  - uncertainty-weighting fragility: error vs concentration structure\n  - leave-one-sample-out permutation p-values\nMerges results into verify_F1.json.\n\"\"\"\nfrom __future__ import annotations\nimport json\nimport numpy as np\nimport pandas as pd\nfrom scipy import stats\nfrom pathlib import Path\n\nROOT = Path(\"/data/user/conversations/conv-db0bf41e-db48-4b3b-8351-ef78ee787f62/project\")\nJ = ROOT / \"output\" / \"results\" / \"verify_F1.json\"\ncomp = pd.read_csv(ROOT / \"data\" / \"particle_composition_profiles.tsv\", sep=\"\\t\")\nenv = pd.read_csv(ROOT / \"data\" / \"sample_environment_profiles.tsv\", sep=\"\\t\")\ndf = comp[[\"sample_id\", \"collection_group_id\", \"depth_min_m\", \"depth_max_m\",\n           \"particle_total_per_L\"]].merge(\n    env[[\"sample_id\", \"particle_total_std_or_error_per_L\"]], on=\"sample_id\", validate=\"1:1\")\ndf[\"mid\"] = (df.depth_min_m + df.depth_max_m) / 2\ndf[\"ltot\"] = np.log10(df.particle_total_per_L)\ndf[\"relmid\"] = df.mid / df.groupby(\"collection_group_id\").mid.transform(\"max\")\ngroups = sorted(df.collection_group_id.unique())\ngid = df.collection_group_id.to_numpy()\nmid = df.mid.to_numpy(float); ltot = df.ltot.to_numpy(float)\ntot = df.particle_total_per_L.to_numpy(float)\nrng = np.random.default_rng(99)\nuni = np.unique(gid)\ncodes = np.array([list(uni).index(g) for g in gid])\nout = json.loads(J.read_text())\n\n\ndef demean(v, c):\n    v = np.asarray(v, float); c = np.asarray(c); o = v.copy()\n    for k in np.unique(c):\n        m = c == k; o[m] = v[m] - v[m].mean()\n    return o\n\n\ndef fe_slope(y, x, c):\n    xd, yd = demean(x, c), demean(y, c)\n    return float((xd * yd).sum() / (xd * xd).sum())\n\n\ndef perm(y, x, c, nperm=20000):\n    obs = fe_slope(y, x, c); xd = demean(x, c); yd = demean(y, c)\n    ss = (xd * xd).sum(); draws = np.empty(nperm)\n    for b in range(nperm):\n        yy = yd.copy()\n        for k in np.unique(c):\n            m = c == k\n            yy[m] = yd[m][rng.permutation(m.sum())]\n        draws[b] = (xd * yy).sum() / ss\n    return {\"slope\": obs, \"perm_p_two_sided\": float((np.abs(draws) >= abs(obs) - 1e-12).mean()),\n            \"perm_p_one_sided_negative\": float((draws <= obs + 1e-12).mean()),\n            \"perm_sd\": float(draws.std(ddof=1)),\n            \"ci95_perm\": [float(np.quantile(draws, .025)), float(np.quantile(draws, .975))]}\n\n\np3 = {}\n# ----- raw scale\np3[\"raw_scale_arithmetic_fe\"] = perm(tot, mid, codes)\np3[\"raw_scale_arithmetic_fe\"][\"units\"] = \"particles/L per metre\"\np3[\"raw_scale_arithmetic_fe\"][\"ols_percent_change_of_mean_per_m\"] = float(\n    100 * p3[\"raw_scale_arithmetic_fe\"][\"slope\"] / tot.mean())\n\n# ----- Theil-Sen within-group median pairwise slope\npairs_all = []\nfor g in groups:\n    m = gid == g\n    x, y = mid[m], ltot[m]\n    for i in range(len(x)):\n        for j in range(i + 1, len(x)):\n            pairs_all.append((y[j] - y[i]) / (x[j] - x[i]))\npairs_all = np.array(pairs_all)\np3[\"theil_sen_within_group_median_pairwise_slope\"] = {\n    \"median\": float(np.median(pairs_all)), \"mean\": float(pairs_all.mean()),\n    \"n_pairs\": int(len(pairs_all)),\n    \"bootstrap_ci95\": [float(x) for x in np.percentile(\n        [np.median(rng.choice(pairs_all, len(pairs_all), replace=True)) for _ in range(5000)],\n        [2.5, 97.5])],\n    \"note\": \"all within-group unordered pairs of intervals; robust to a single deep point\"}\n\n# ----- relative depth as mid/max(mid)\np3[\"relative_depth_mid_over_max_fe\"] = perm(ltot, df.relmid.to_numpy(float), codes)\np3[\"relative_depth_mid_over_max_fe\"][\"units\"] = \"log10 per 1.0 of mid/max(mid)\"\n\n# ----- error structure (explains the weighting fragility)\nle = np.log10(df.particle_total_std_or_error_per_L.to_numpy(float))\np3[\"uncertainty_structure\"] = {\n    \"corr_log10err_vs_log10total\": dict(zip([\"r\", \"p\"], [float(x) for x in\n        stats.pearsonr(le, ltot)[:2]])),\n    \"spearman_rho_log10err_vs_log10total\": dict(zip([\"rho\", \"p\"], [float(x) for x in\n        stats.spearmanr(le, ltot)[:2]])),\n    \"median_relative_error\": float((df.particle_total_std_or_error_per_L /\n                                    df.particle_total_per_L).median()),\n    \"n_samples_relative_error_gt_0.5\": int(((df.particle_total_std_or_error_per_L /\n                                            df.particle_total_per_L) > 0.5).sum()),\n    \"n_samples_err_gt_total\": int((df.particle_total_std_or_error_per_L >\n                                   df.particle_total_per_L).sum()),\n    \"note\": (\"err scales with concentration, so inverse-variance weighting on the log \"\n             \"scale is nearly equivalent to a precision-weighted fit that downweights \"\n             \"the deepest, low-count samples - exactly the samples that carry the \"\n             \"negative slope. Because the reported errors are themselves very noisy \"\n             \"(some exceed the value), such weighting is not a neutral arbitration.\"),\n}\n# weighted FE slope restricted to samples whose relative error <= median (best-determined half)\nfor q in [0.5, 0.7]:\n    keep = (df.particle_total_std_or_error_per_L / df.particle_total_per_L) <= \\\n        (df.particle_total_std_or_error_per_L / df.particle_total_per_L).quantile(q)\n    c = np.array([list(np.unique(gid[keep])).index(z) for z in gid[keep]])\n    p3[f\"restrict_to_best_determined_{int(q*100)}pct\"] = {\n        \"n\": int(keep.sum()), **perm(ltot[keep], mid[keep], c)}\n\n# ----- LOSO permutation p (10000 perms each, 30 fits)\nloso = []\nfor i in range(len(df)):\n    m = np.ones(len(df), bool); m[i] = False\n    c = np.array([list(np.unique(gid[m])).index(z) for z in gid[m]])\n    r = perm(ltot[m], mid[m], c, 10000)\n    loso.append({\"dropped\": df.sample_id[i], \"group\": gid[i], **r})\np3[\"loso_permutation\"] = {\n    \"rows\": loso,\n    \"p_two_sided_min\": float(min(x[\"perm_p_two_sided\"] for x in loso)),\n    \"p_two_sided_max\": float(max(x[\"perm_p_two_sided\"] for x in loso)),\n    \"n_p_two_sided_lt_0.05\": int(sum(x[\"perm_p_two_sided\"] < 0.05 for x in loso)),\n    \"slope_min\": float(min(x[\"slope\"] for x in loso)),\n    \"slope_max\": float(max(x[\"slope\"] for x in loso)),\n    \"slope_always_negative\": bool(all(x[\"slope\"] < 0 for x in loso)),\n}\n\n# ----- group_02 dominance: FE slope and permutation p without group_02, and with group_02 only\nfor nm, m in [(\"without_group_02\", gid != \"group_02\"), (\"only_group_02\", gid == \"group_02\")]:\n    c = np.array([list(np.unique(gid[m])).index(z) for z in gid[m]])\n    p3[f\"fe_{nm}\"] = {\"n\": int(m.sum()), **perm(ltot[m], mid[m], c)}\n    p3[f\"fe_{nm}\"][\"pooled_spearman\"] = dict(zip(\n        [\"rho\", \"p\"], [float(x) for x in stats.spearmanr(mid[m], ltot[m])[:2]]))\n\nout[\"part3\"] = p3\nout[\"code_part3\"] = Path(__file__).read_text()\nJ.write_text(json.dumps(out, indent=2, default=str))\nprint(json.dumps(p3, indent=2, default=str)[:6500])\nprint(\"wrote\", J)",
+  "part4_influence_shares": {
+    "per_group_share_of_within_group_covariance_numerator_percent": {
+      "group_01": -11.1,
+      "group_02": 82.9,
+      "group_03": 20.3,
+      "group_04": 2.2,
+      "group_05": 5.6
+    },
+    "total_sum_xd_yd": -4.048016777196195,
+    "sum_xd_sq": 4.901693928571428,
+    "fe_slope_without_group_02": -0.2057640438837601,
+    "fe_without_group_02_perm_p_two_sided": 0.5757,
+    "fe_only_group_02_slope": -2.177066423515651,
+    "fe_only_group_02_perm_p_two_sided": 0.00505,
+    "top_sample_influences_delta_slope_if_dropped": [
+      {
+        "sample_id": "sample_030",
+        "group": "group_05",
+        "delta_slope": 0.2151,
+        "per_L": 4437.0
+      },
+      {
+        "sample_id": "sample_012",
+        "group": "group_02",
+        "delta_slope": -0.1951,
+        "per_L": 67.0
+      },
+      {
+        "sample_id": "sample_001",
+        "group": "group_01",
+        "delta_slope": 0.1744,
+        "per_L": 260.0
+      },
+      {
+        "sample_id": "sample_006",
+        "group": "group_02",
+        "delta_slope": -0.1692,
+        "per_L": 75143.0
+      },
+      {
+        "sample_id": "sample_011",
+        "group": "group_02",
+        "delta_slope": -0.1572,
+        "per_L": 41.0
+      },
+      {
+        "sample_id": "sample_018",
+        "group": "group_03",
+        "delta_slope": 0.1436,
+        "per_L": 144.0
+      }
+    ],
+    "group_mean_regression": {
+      "spearman_rho": 0.1,
+      "p": 0.8729,
+      "pearson_r": 0.1056,
+      "p_pearson": 0.8659
+    },
+    "note": "the within-group covariance is overwhelmingly produced by group_02 (one enormous 75,143 /L surface value plus low values beneath). Signs are broadly negative but the magnitude is not broad: without group_02 the FE slope is -0.21 log10/m with permutation p=0.58."
+  },
+  "figure": "/data/user/conversations/conv-db0bf41e-db48-4b3b-8351-ef78ee787f62/project/output/figures/verify_F1_depth_profiles.png",
+  "verdict": {
+    "claim_numbers_reproduced": true,
+    "all_claimed_values_match_exactly": {
+      "pooled_spearman_rho": -0.338,
+      "pooled_p": 0.067,
+      "within_group_mean_rho": -0.287,
+      "groups_negative": 4,
+      "fe_slope": -0.826,
+      "fe_cluster_se": 0.57,
+      "fe_p": 0.221,
+      "df": 4,
+      "deepest_vs_shallowest_mean_log10_ratio": -0.635,
+      "t": -0.955,
+      "p": 0.394
+    },
+    "assessment": "Directionally negative and broadly signed (4/5 groups) but the magnitude is carried by one group (group_02 = 83% of within-group covariance; without it slope -0.21, permutation p=0.58). Exact within-group permutation of the FE slope p=0.030 and raw-scale permutation p=0.019 are less marginal than the CR1 df=4 cluster test (p=0.221) quoted in the evidence file, but the precision-weighted fit flips sign (+0.18, p=0.76). Net: a weak, group_02-driven negative tendency, unresolved as a general within-group law."
+  }
+}

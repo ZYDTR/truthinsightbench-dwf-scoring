@@ -1,0 +1,31 @@
+{
+  "ref_equals_some_experimental_value": {
+    "observed": 313,
+    "n": 543,
+    "null_mean": 105.888,
+    "null_sd": 9.098321603460718,
+    "z": 22.763758968601532,
+    "n_perm": 2000
+  },
+  "ref_equals_exp_same_fpair_other_molecule": 0,
+  "canonical_pair_groups": {
+    "n_groups": 4,
+    "n_rows": 8,
+    "mean_spread": 1.8000000000000007,
+    "median_spread": 1.1499999999999986,
+    "max_spread": 3.9000000000000057,
+    "rms_spread": 2.173706511928418,
+    "implied_sigma": 1.5370426148939413,
+    "n_rows_same_molecule": 0
+  },
+  "canonical_pair_same_molecule_groups": {
+    "n_groups": 0,
+    "n_rows": 0,
+    "mean_spread": null,
+    "max_spread": null
+  },
+  "canonical_pair_multi_ref": {
+    "n_pairs": 539,
+    "n_pairs_multi_ref": 0
+  }
+}

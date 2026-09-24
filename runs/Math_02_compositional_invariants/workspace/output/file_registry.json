@@ -1,0 +1,211 @@
+{
+  "schema": "truthinsightbench-native-artifact-registry",
+  "task_id": "Math_02_compositional_invariants",
+  "note": "Native file registry keyed by ARTnnnn. These are file handles only. The authoritative scientific findings are Finding 1 to Finding 5 in Result.md, indexed in results/findings_registry.json.",
+  "files": [
+    {
+      "id": "ART0001",
+      "relative_path": "Result.md",
+      "bytes": 21071,
+      "sha256": "565da71e9c457cca3d457530169614e12c1f22a3a17c1a602ad9c62917d6e5f3"
+    },
+    {
+      "id": "ART0002",
+      "relative_path": "analysis/lib_composition.py",
+      "bytes": 4451,
+      "sha256": "bb38a0ec6a6871fde09b32498728e8ba146d1da4c7ed4a378ad84053a989855d"
+    },
+    {
+      "id": "ART0003",
+      "relative_path": "analysis/s01_inventory.py",
+      "bytes": 5832,
+      "sha256": "2e098b2b3f0e33266f26c52aa0905692a56a39b91fc701e11db591aa241e4753"
+    },
+    {
+      "id": "ART0004",
+      "relative_path": "analysis/s02_compositional_structure.py",
+      "bytes": 9479,
+      "sha256": "1e917b8aad5da1485d3becffc664edfe4514191e355253206c20b09b4494d25b"
+    },
+    {
+      "id": "ART0005",
+      "relative_path": "analysis/s03_covariate_association.py",
+      "bytes": 8962,
+      "sha256": "2ec92199e7a1f83c359c1453f99b1555591cb87f10833ab10e9492703f13d75c"
+    },
+    {
+      "id": "ART0006",
+      "relative_path": "analysis/s04_bias_scenarios.py",
+      "bytes": 13894,
+      "sha256": "8428c214ee9a35d7ae0dce094f75a866957692650f06907069056d989c65b8e0"
+    },
+    {
+      "id": "ART0007",
+      "relative_path": "analysis/s05_figures.py",
+      "bytes": 13064,
+      "sha256": "4f68f1d2ac05b700d1fbf50297c86d376824f3ce41636cb9883347de76cfe3ef"
+    },
+    {
+      "id": "ART0008",
+      "relative_path": "analysis/s06_holdouts.py",
+      "bytes": 15738,
+      "sha256": "2556879015d9ec5063f9886d5e946418a3d37a2d7f9544ce22c1d32fa0496f37"
+    },
+    {
+      "id": "ART0009",
+      "relative_path": "analysis/s07_applicability_boundary.py",
+      "bytes": 12420,
+      "sha256": "90fda4dbe6aa81a2f55902b89b5e7c81867c3258a6ed568188f515a71ad5034f"
+    },
+    {
+      "id": "ART0010",
+      "relative_path": "analysis/s08_findings_registry.py",
+      "bytes": 16182,
+      "sha256": "0381702957da0aafb3843684477a378d06b42c5c85cdeed475326af04f78babe"
+    },
+    {
+      "id": "ART0011",
+      "relative_path": "figures/F1_scale_dependence.png",
+      "bytes": 163618,
+      "sha256": "af9216f4c25fd8c366bc682a4b59ee5b4473f905fca6c0dacd1526378ccd390e"
+    },
+    {
+      "id": "ART0012",
+      "relative_path": "figures/F2_covariate_association.png",
+      "bytes": 282657,
+      "sha256": "f7a899a8667424bf83823154bd7dd422ff76ac0238ba2d14b1e820d27177c4e7"
+    },
+    {
+      "id": "ART0013",
+      "relative_path": "figures/F3_bias_conditions.png",
+      "bytes": 209505,
+      "sha256": "148df26b01f2931be237f5d8fa4ae4f16e95a30e496c54b8016e0bbfd61f428c"
+    },
+    {
+      "id": "ART0014",
+      "relative_path": "figures/F4_zero_driven_coupling.png",
+      "bytes": 229036,
+      "sha256": "a6ec922966520cb5d9327ecbfba04ed0bddb07a173becb03bf5c271397a12562"
+    },
+    {
+      "id": "ART0015",
+      "relative_path": "figures/F5_applicability_boundary.png",
+      "bytes": 216179,
+      "sha256": "f6db190b27f5960fc5dbf389848433bf5976f20bd9b88083adb8f55c4d95e53c"
+    },
+    {
+      "id": "ART0016",
+      "relative_path": "logs/s01.log",
+      "bytes": 143,
+      "sha256": "662a52f54bdbd791e62b08b9f2bde9f802a5d4436195b1f7e630f33cd2218209"
+    },
+    {
+      "id": "ART0017",
+      "relative_path": "logs/s02.log",
+      "bytes": 495,
+      "sha256": "2e08c335d2ba5dc96d2fa37e9abf6be9755d31c74465693cedc464fec538c176"
+    },
+    {
+      "id": "ART0018",
+      "relative_path": "logs/s03.log",
+      "bytes": 291,
+      "sha256": "f76eb27a8fad01aa457523605c167713c31c3a4cc752d58f38ef0f65a6e333d2"
+    },
+    {
+      "id": "ART0019",
+      "relative_path": "logs/s04.log",
+      "bytes": 215,
+      "sha256": "c9c32ae5ba70538bc6b1d77631de4776f90c8768e9edff01a3fbed6c5fb3f0da"
+    },
+    {
+      "id": "ART0020",
+      "relative_path": "logs/s05.log",
+      "bytes": 500,
+      "sha256": "171e937e58df78a919c0165da636f9cb39b85439bca43a4afa1715acc6396418"
+    },
+    {
+      "id": "ART0021",
+      "relative_path": "logs/s06.log",
+      "bytes": 297,
+      "sha256": "41dbf08a9050b544427c6333df0e40b05b9791b62b7c61532686d198e0630bb1"
+    },
+    {
+      "id": "ART0022",
+      "relative_path": "logs/s07.log",
+      "bytes": 287,
+      "sha256": "3a280759ecf4305ca7fed1b7037438a2687cf0e9e393a0b59acce8eb0312a89c"
+    },
+    {
+      "id": "ART0023",
+      "relative_path": "logs/s08.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "ART0024",
+      "relative_path": "reproduce.md",
+      "bytes": 4570,
+      "sha256": "254e6efa282db425851937cdb2aff998b1ef8f90885b12972cc66280993edf23"
+    },
+    {
+      "id": "ART0025",
+      "relative_path": "results/applicability_boundary.json",
+      "bytes": 6854,
+      "sha256": "a500a61060e5c3aea5939237b538359b93f9c0906f8f616d44a7187b84474d84"
+    },
+    {
+      "id": "ART0026",
+      "relative_path": "results/bias_scenarios.json",
+      "bytes": 10661,
+      "sha256": "1f031dbf710fb51e679e4f2e8da37d7b7ad0a34524be9746d5d1090b757cd9a1"
+    },
+    {
+      "id": "ART0027",
+      "relative_path": "results/compositional_structure.json",
+      "bytes": 5595,
+      "sha256": "ac71369dc3f8ef47db2819d19caeef1421b11b8101a0258bc14eafeabe5ea9fa"
+    },
+    {
+      "id": "ART0028",
+      "relative_path": "results/covariate_association.json",
+      "bytes": 4438,
+      "sha256": "67c2d52ad3206265fdbe05438906477bd97ff4a052bdd74e558c2bb362490bf1"
+    },
+    {
+      "id": "ART0029",
+      "relative_path": "results/figure_manifest.json",
+      "bytes": 1419,
+      "sha256": "4e18125ef6994bc99a351391a700ddcc7d9cde9ed38a824fbe18c601a786c283"
+    },
+    {
+      "id": "ART0030",
+      "relative_path": "results/findings_registry.json",
+      "bytes": 23037,
+      "sha256": "bc20a4dc9590831393ac0a0b6bb9663fec12d961fc9fbb6efd1318a9fe723a18"
+    },
+    {
+      "id": "ART0031",
+      "relative_path": "results/holdouts.json",
+      "bytes": 6071,
+      "sha256": "3fabdd3e90d78595077644b4de0030f4419c94bc201bace012283c1a46e80b0c"
+    },
+    {
+      "id": "ART0032",
+      "relative_path": "results/integrity.json",
+      "bytes": 632,
+      "sha256": "c837562f3553fa9236db4cb224e2fbe05b047cc2e1b58856adc87bda9f3a0b0b"
+    },
+    {
+      "id": "ART0033",
+      "relative_path": "results/inventory.json",
+      "bytes": 3952,
+      "sha256": "cee2e82b8fe3ff3587c496878d78f6ce566a94bec996b4d97d4768a1e849985d"
+    },
+    {
+      "id": "ART0034",
+      "relative_path": "results/validation_receipt.json",
+      "bytes": 11787,
+      "sha256": "cf29b8eca513d69467d158cd17774f798f33a286bc93b9ae4cabd6e1757ef9d2"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "stage_curves": {
+    "B0_record_weighted": [
+      -0.698234,
+      0.05553,
+      -0.110878,
+      0.091064,
+      0.727863,
+      0.404159,
+      0.987369,
+      1.079997,
+      1.017213,
+      0.672812,
+      0.962768,
+      1.045343,
+      0.65022,
+      1.177774,
+      0.815331,
+      0.995259,
+      1.017736,
+      1.277386
+    ],
+    "B1_family_equal": [
+      -0.864011,
+      -0.137529,
+      -0.379247,
+      -0.239095,
+      0.350653,
+      0.156786,
+      0.740226,
+      0.813296,
+      0.61606,
+      0.378845,
+      0.628842,
+      0.601036,
+      0.309521,
+      0.744673,
+      0.312878,
+      0.483356,
+      0.58313,
+      0.7793
+    ],
+    "B2_unit_equal": [
+      -0.698234,
+      0.05553,
+      -0.110878,
+      0.091064,
+      0.727863,
+      0.404159,
+      0.987369,
+      1.079997,
+      1.017213,
+      0.672812,
+      0.962768,
+      1.045343,
+      0.65022,
+      1.177774,
+      0.815331,
+      0.995259,
+      1.017736,
+      1.277386
+    ],
+    "B3_post_stratified": [
+      -0.218238,
+      0.387606,
+      0.328959,
+      0.419775,
+      0.856775,
+      0.690466,
+      1.136193,
+      1.237416,
+      1.109255,
+      0.940187,
+      1.22638,
+      1.206212,
+      1.041221,
+      1.359432,
+      1.20652,
+      1.299555,
+      1.396422,
+      1.579468
+    ],
+    "B4_within_unit_centered": [
+      0.41547,
+      0.29524,
+      0.252419,
+      0.272702,
+      0.46217,
+      0.447583,
+      0.634223,
+      0.744533,
+      0.749015,
+      0.693657,
+      0.860896,
+      0.85925,
+      0.74064,
+      0.874426,
+      0.853137,
+      0.880269,
+      0.872928,
+      1.010364
+    ]
+  },
+  "curve_vs_stage": {
+    "B0_record_weighted": {
+      "pearson_r": 0.7886,
+      "spearman_rho": 0.7461,
+      "ols_slope_per_stage": 0.07815,
+      "early_mean_stages_0_8": 0.3949,
+      "late_mean_stages_9_17": 0.9572,
+      "late_minus_early": 0.5623
+    },
+    "B1_family_equal": {
+      "pearson_r": 0.7071,
+      "spearman_rho": 0.5913,
+      "ols_slope_per_stage": 0.06105,
+      "early_mean_stages_0_8": 0.1175,
+      "late_mean_stages_9_17": 0.5357,
+      "late_minus_early": 0.4183
+    },
+    "B2_unit_equal": {
+      "pearson_r": 0.7886,
+      "spearman_rho": 0.7461,
+      "ols_slope_per_stage": 0.07815,
+      "early_mean_stages_0_8": 0.3949,
+      "late_mean_stages_9_17": 0.9572,
+      "late_minus_early": 0.5623
+    },
+    "B3_post_stratified": {
+      "pearson_r": 0.8788,
+      "spearman_rho": 0.8947,
+      "ols_slope_per_stage": 0.07646,
+      "early_mean_stages_0_8": 0.6609,
+      "late_mean_stages_9_17": 1.2506,
+      "late_minus_early": 0.5897
+    },
+    "B4_within_unit_centered": {
+      "pearson_r": 0.9217,
+      "spearman_rho": 0.9216,
+      "ols_slope_per_stage": 0.0418,
+      "early_mean_stages_0_8": 0.4748,
+      "late_mean_stages_9_17": 0.8495,
+      "late_minus_early": 0.3747
+    }
+  },
+  "unit_level": {
+    "n_units_total": 1105,
+    "n_units_multi_stage": 718,
+    "n_sign_persistent": 491,
+    "n_sign_reversing": 227
+  },
+  "per_unit_slope": {
+    "n_units": 579,
+    "mean_slope": 0.05287,
+    "median_slope": 0.05536,
+    "sd_slope": 0.13716,
+    "fraction_positive": 0.7271,
+    "ttest_vs_zero": {
+      "statistic": 9.2745,
+      "pvalue": 3.5242858783395334e-19
+    },
+    "wilcoxon_vs_zero": {
+      "statistic": 36690.0,
+      "pvalue": 8.253571753582902e-32
+    },
+    "sign_test": {
+      "n_positive": 421,
+      "n_negative": 158,
+      "pvalue_two_sided": 1.4384073656906374e-28
+    }
+  },
+  "within_unit_slope_family_clustered_bootstrap": {
+    "point": 0.04264,
+    "ci95_low": 0.02932,
+    "ci95_high": 0.05435,
+    "n_boot": 1000
+  },
+  "trend_shape_b4": {
+    "r2_linear": 0.8496,
+    "r2_quadratic": 0.8722,
+    "quadratic_curvature_coef": -0.001475,
+    "stage0_rank_of_18": 4,
+    "slope_excluding_stage0": 0.0442,
+    "pearson_excluding_stage0": 0.9247
+  },
+  "naive_confound_check": {
+    "corr_stage_rows_vs_stage_mean": -0.3458,
+    "corr_family_mean_strength_vs_n_stages_present": 0.5759
+  }
+}

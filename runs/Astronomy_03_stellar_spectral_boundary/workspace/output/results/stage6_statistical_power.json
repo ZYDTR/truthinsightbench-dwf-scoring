@@ -1,0 +1,128 @@
+{
+  "n_permutations": 300,
+  "seed": 20260919,
+  "ladder": [
+    -1.0,
+    -0.95,
+    -0.9,
+    -0.85,
+    -0.8,
+    -0.75,
+    -0.7,
+    -0.65,
+    -0.6,
+    -0.55,
+    -0.5,
+    -0.45,
+    -0.4,
+    -0.35,
+    -0.3,
+    -0.25,
+    -0.2,
+    -0.15,
+    -0.1,
+    -0.05,
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5
+  ],
+  "slope_profile_autocorrelation": {
+    "250-400nm": {
+      "n_wavelengths": 54,
+      "lag1_autocorrelation_of_slope": 0.5613014544621181,
+      "slope_mean": -0.31683058530329805,
+      "slope_std": 0.1543677330966124
+    },
+    "460-850nm": {
+      "n_wavelengths": 79,
+      "lag1_autocorrelation_of_slope": 0.6225485799908507,
+      "slope_mean": 0.058976036420437604,
+      "slope_std": 0.015466226681610606
+    }
+  },
+  "r2_vs_permutation_null": {
+    "5300": {
+      "median_r2_observed": 0.984443349367609,
+      "min_r2_observed": 0.00418901471373584,
+      "median_r2_null": 0.01382013433090226,
+      "max_r2_null_over_permutations": 0.3328766245391993,
+      "n_permutations_exceeding_observed": 0,
+      "p_value_report": "< 0.003333",
+      "p_value_is_floor_limited": true,
+      "r2_in_250_300nm": 0.9846731647464412,
+      "r2_in_400_500nm": 0.7627870699345246,
+      "r2_in_700_850nm": 0.9791408618809831,
+      "note": "the permutation destroys the ladder ordering, so this null is degenerate for a rank-1 composition family; it bounds the association, not the crossover location"
+    },
+    "5800": {
+      "median_r2_observed": 0.989851856952804,
+      "min_r2_observed": 0.08180761801150409,
+      "median_r2_null": 0.019651966407900807,
+      "max_r2_null_over_permutations": 0.34504204611964345,
+      "n_permutations_exceeding_observed": 0,
+      "p_value_report": "< 0.003333",
+      "p_value_is_floor_limited": true,
+      "r2_in_250_300nm": 0.9860729579484073,
+      "r2_in_400_500nm": 0.9159457644986404,
+      "r2_in_700_850nm": 0.9910766960727889,
+      "note": "the permutation destroys the ladder ordering, so this null is degenerate for a rank-1 composition family; it bounds the association, not the crossover location"
+    },
+    "6300": {
+      "median_r2_observed": 0.9900839887265107,
+      "min_r2_observed": 0.0033826613376928567,
+      "median_r2_null": 0.015969876696866024,
+      "max_r2_null_over_permutations": 0.2906257347963366,
+      "n_permutations_exceeding_observed": 0,
+      "p_value_report": "< 0.003333",
+      "p_value_is_floor_limited": true,
+      "r2_in_250_300nm": 0.972974733785578,
+      "r2_in_400_500nm": 0.7936060121299523,
+      "r2_in_700_850nm": 0.993359174557306,
+      "note": "the permutation destroys the ladder ordering, so this null is degenerate for a rank-1 composition family; it bounds the association, not the crossover location"
+    }
+  },
+  "cross_slice_profile_reproduction": {
+    "5300_vs_5800": 0.9487643242766717,
+    "5300_vs_6300": 0.8963841160680355,
+    "5800_vs_6300": 0.9872536022781893
+  },
+  "band_sign_agreement": {
+    "blue_250_400": {
+      "5300": {
+        "frac_negative_slope": 1.0,
+        "frac_positive_slope": 0.0
+      },
+      "5800": {
+        "frac_negative_slope": 1.0,
+        "frac_positive_slope": 0.0
+      },
+      "6300": {
+        "frac_negative_slope": 1.0,
+        "frac_positive_slope": 0.0
+      }
+    },
+    "red_460_850": {
+      "5300": {
+        "frac_negative_slope": 0.06329113924050633,
+        "frac_positive_slope": 0.9367088607594937
+      },
+      "5800": {
+        "frac_negative_slope": 0.0,
+        "frac_positive_slope": 1.0
+      },
+      "6300": {
+        "frac_negative_slope": 0.0,
+        "frac_positive_slope": 1.0
+      }
+    }
+  },
+  "interpretation": "Two independent statistics support the composition boundary. (1) Association strength: the ordered index explains median R^2 ~0.99 of the variance of log flux, against a permutation-null median of ~0.02, with no permutation of 300 reaching the observed value (so the p-value is floor-limited at < 1/300). (2) Cross-slice reproduction: the full wavelength profile of the response is reproduced independently by all three temperature slices (pairwise r = 0.90-0.99). Note that this permutation null destroys the ladder ORDER and is therefore degenerate for a rank-1 composition family; it calibrates the association, not the crossover location. For the crossover location, the informative nulls are the monotone-preserving ones in output/verification/GAP3_artefact_nulls.json, under which the boundary moves by <= 0.12 nm at 5300/5800 K."
+}

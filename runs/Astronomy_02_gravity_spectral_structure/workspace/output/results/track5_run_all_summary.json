@@ -1,0 +1,67 @@
+{
+  "interpreter": "/usr/bin/python3",
+  "python_version": "3.11.2",
+  "project": "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project",
+  "plan": [
+    "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track1_followup_checks.py",
+    "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track1_model_comparison.py",
+    "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track2_spectral_tests.py",
+    "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track3_grid_structure.py",
+    "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track4_ic_comparison.py",
+    "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track5_figures.py"
+  ],
+  "missing_tracks": [],
+  "allow_missing": true,
+  "results": [
+    {
+      "script": "track1_followup_checks.py",
+      "path": "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track1_followup_checks.py",
+      "command": "/usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track1_followup_checks.py",
+      "returncode": 0,
+      "note": "ok",
+      "elapsed_s": 110.65
+    },
+    {
+      "script": "track1_model_comparison.py",
+      "path": "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track1_model_comparison.py",
+      "command": "/usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track1_model_comparison.py",
+      "returncode": 0,
+      "note": "ok",
+      "elapsed_s": 134.14
+    },
+    {
+      "script": "track2_spectral_tests.py",
+      "path": "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track2_spectral_tests.py",
+      "command": "/usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track2_spectral_tests.py",
+      "returncode": 0,
+      "note": "ok",
+      "elapsed_s": 552.75
+    },
+    {
+      "script": "track3_grid_structure.py",
+      "path": "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track3_grid_structure.py",
+      "command": "/usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track3_grid_structure.py",
+      "returncode": 0,
+      "note": "ok",
+      "elapsed_s": 43.32
+    },
+    {
+      "script": "track4_ic_comparison.py",
+      "path": "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track4_ic_comparison.py",
+      "command": "/usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track4_ic_comparison.py",
+      "returncode": 0,
+      "note": "ok",
+      "elapsed_s": 3.81
+    },
+    {
+      "script": "track5_figures.py",
+      "path": "/data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track5_figures.py",
+      "command": "/usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track5_figures.py",
+      "returncode": 0,
+      "note": "ok",
+      "elapsed_s": 24.82
+    }
+  ],
+  "n_failed": 0,
+  "total_elapsed_s": 869.57
+}

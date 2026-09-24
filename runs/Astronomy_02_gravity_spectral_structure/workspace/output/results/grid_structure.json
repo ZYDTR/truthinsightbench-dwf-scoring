@@ -1,0 +1,902 @@
+{
+  "provenance": {
+    "script": "output/code/track3_grid_structure.py",
+    "inputs": [
+      "data/ranked_full_parameter_grid.tsv",
+      "data/candidate_spectrum_comparison.tsv",
+      "data/mode_frequency_grid.tsv",
+      "data/pass_residual_traces.tsv"
+    ],
+    "analysis_unit": "one complete candidate parameter combination; one complete pass (n=22)",
+    "independent_replicates": {
+      "passes": 22,
+      "candidate_cells_evaluated_in_table": 250
+    }
+  },
+  "1_axis_inventory": {
+    "n_rows": 250,
+    "axes": {
+      "max_velocity_cm_s": {
+        "declared_levels": 7,
+        "counts": {
+          "1.0": 2,
+          "3.0": 4,
+          "10.0": 21,
+          "20.0": 60,
+          "30.0": 99,
+          "50.0": 59,
+          "100.0": 5
+        },
+        "expected_under_uniform_250_subset": 35.714,
+        "sub_lattice_coverage": {
+          "1.0": 0.0063,
+          "3.0": 0.0125,
+          "10.0": 0.0656,
+          "20.0": 0.1875,
+          "30.0": 0.3094,
+          "50.0": 0.1844,
+          "100.0": 0.0156
+        }
+      },
+      "min_velocity_cm_s": {
+        "declared_levels": 8,
+        "counts": {
+          "0.0": 62,
+          "0.001": 13,
+          "0.003": 13,
+          "0.01": 46,
+          "0.02": 27,
+          "0.0299999999999999": 46,
+          "0.05": 21,
+          "0.1": 22
+        },
+        "expected_under_uniform_250_subset": 31.25
+      },
+      "peak_frequency_microhz": {
+        "declared_levels": 10,
+        "counts": {
+          "860.0": 2,
+          "910.0": 20,
+          "960.0": 25,
+          "1010.0": 57,
+          "1060.0": 35,
+          "1110.0": 50,
+          "1160.0": 22,
+          "1210.0": 30,
+          "1260.0": 2,
+          "1310.0": 7
+        },
+        "expected_under_uniform_250_subset": 25.0
+      },
+      "frequency_width_microhz": {
+        "declared_levels": 4,
+        "counts": {
+          "250.0": 26,
+          "275.0": 84,
+          "300.0": 108,
+          "325.0": 32
+        },
+        "expected_under_uniform_250_subset": 62.5
+      }
+    },
+    "cartesian_cells_declared": 2240,
+    "cartesian_cells_present": 250,
+    "coverage_fraction": 0.1116,
+    "rows_missing": 1990,
+    "candidate_rank_is_1_to_250_complete": true,
+    "ic_monotone_nonincreasing_in_rank": true,
+    "n_unique_ic_values": 224,
+    "ic_of_rank1": 0.0,
+    "ic_of_rank250": 137.2,
+    "peakedness": "row counts are strongly peaked at interior levels (vmax=30 -> 99/250, f=1010 -> 57/250, w=300 -> 108/250), which is the signature of an IC-ordered top-N list, not of a complete factorial design"
+  },
+  "1_truncation_evidence": {
+    "declared_lattice_cells": 2240,
+    "cells_known_independently_from_candidate_file": 105,
+    "known_cells_present_in_table": 29,
+    "table_ic_cutoff": 137.2,
+    "admission_rule_ic_lt_cutoff": "ic < 137.2",
+    "confusion_on_known_cells": {
+      "true_positive": 28,
+      "false_positive": 0,
+      "false_negative": 1
+    },
+    "smallest_ic_known_but_absent": 139.9,
+    "largest_ic_present": 137.2,
+    "rows_whose_ic_is_reproduced_exactly": {
+      "n": 29,
+      "max_abs_offset": 1.4210854715202004e-14,
+      "families": {}
+    },
+    "rows_whose_ic_exists_only_in_the_table": 221,
+    "cells_out_of_lattice_rows": 0,
+    "conclusion": "The table is the top-250 of a larger evaluated set truncated at ic = 137.2, covering 11.2% of the declared 2240-cell cartesian product; the remaining 1990 cells (88.8%) are censored to ic >= 137.2. The rank-1 cell is therefore the best *among the 250 survivors*; uniqueness over the 2240-cell space is not established by this file."
+  },
+  "2_top_cell_separation": {
+    "ic_ladder": [
+      0.0,
+      2.0,
+      5.7,
+      9.4,
+      11.9,
+      16.4,
+      17.1,
+      18.5,
+      19.3,
+      21.0,
+      22.1,
+      22.3,
+      24.8,
+      25.6,
+      25.7,
+      27.0,
+      27.3,
+      27.7,
+      28.1,
+      29.8
+    ],
+    "cumulative_top_n_max_ic": {
+      "1": {
+        "max_ic_within_top_n": 0.0
+      },
+      "2": {
+        "max_ic_within_top_n": 2.0
+      },
+      "3": {
+        "max_ic_within_top_n": 5.7
+      },
+      "5": {
+        "max_ic_within_top_n": 11.9
+      },
+      "10": {
+        "max_ic_within_top_n": 21.0
+      },
+      "20": {
+        "max_ic_within_top_n": 29.8
+      },
+      "30": {
+        "max_ic_within_top_n": 38.4
+      },
+      "50": {
+        "max_ic_within_top_n": 51.8
+      },
+      "100": {
+        "max_ic_within_top_n": 73.7
+      },
+      "250": {
+        "max_ic_within_top_n": 137.2
+      }
+    },
+    "consecutive_gaps_top20": [
+      2.0,
+      3.7,
+      3.7,
+      2.5,
+      4.499999999999998,
+      0.7000000000000028,
+      1.3999999999999986,
+      0.8000000000000007,
+      1.6999999999999993,
+      1.1000000000000014,
+      0.1999999999999993,
+      2.5,
+      0.8000000000000007,
+      0.09999999999999787,
+      1.3000000000000007,
+      0.3000000000000007,
+      0.3999999999999986,
+      0.40000000000000213,
+      1.6999999999999993
+    ],
+    "counts_within_delta_ic": {
+      "1": 1,
+      "2": 1,
+      "5": 2,
+      "10": 4,
+      "20": 9,
+      "50": 46,
+      "100": 162
+    },
+    "rank1_vs_rank2_margin": 2.0,
+    "rank1_vs_rank5_margin": 11.9,
+    "rank1_vs_rank10_margin": 21.0,
+    "best_axis_level_and_margin": {
+      "max_velocity_cm_s": {
+        "best_level": 30.0,
+        "best_level_min_ic": 0.0,
+        "second_level": 20.0,
+        "gap_to_second": 2.0,
+        "profile_min_ic_per_level": {
+          "30.0": 0.0,
+          "20.0": 2.0,
+          "50.0": 36.6,
+          "3.0": 42.6,
+          "10.0": 81.9,
+          "1.0": 117.2,
+          "100.0": 123.1
+        }
+      },
+      "min_velocity_cm_s": {
+        "best_level": 0.05,
+        "best_level_min_ic": 0.0,
+        "second_level": 0.0299999999999999,
+        "gap_to_second": 5.7,
+        "profile_min_ic_per_level": {
+          "0.05": 0.0,
+          "0.0299999999999999": 5.7,
+          "0.0": 19.3,
+          "0.02": 25.6,
+          "0.01": 32.1,
+          "0.1": 43.6,
+          "0.003": 46.0,
+          "0.001": 46.7
+        }
+      },
+      "peak_frequency_microhz": {
+        "best_level": 1010.0,
+        "best_level_min_ic": 0.0,
+        "second_level": 1060.0,
+        "gap_to_second": 2.0,
+        "profile_min_ic_per_level": {
+          "1010.0": 0.0,
+          "1060.0": 2.0,
+          "1110.0": 16.4,
+          "1160.0": 18.5,
+          "960.0": 39.9,
+          "1210.0": 50.7,
+          "910.0": 51.1,
+          "860.0": 92.9,
+          "1310.0": 109.9,
+          "1260.0": 115.7
+        }
+      },
+      "frequency_width_microhz": {
+        "best_level": 275.0,
+        "best_level_min_ic": 0.0,
+        "second_level": 300.0,
+        "gap_to_second": 2.0,
+        "profile_min_ic_per_level": {
+          "275.0": 0.0,
+          "300.0": 2.0,
+          "250.0": 17.1,
+          "325.0": 19.3
+        }
+      }
+    },
+    "single_grid_step_cost_at_optimum": {
+      "fa_family_vmax20_f1010": {
+        "minus_50uHz": 14.1,
+        "plus_50uHz": 12.8
+      },
+      "fa_family_vmax30_f1010": {
+        "minus_50uHz": 25.3,
+        "plus_50uHz": 10.1
+      },
+      "fa_family_vmax50_f1110": {
+        "minus_50uHz": 20.6,
+        "plus_50uHz": 1.1
+      },
+      "note": "delta-IC of the neighbouring 50 uHz grid frequency in the complete frequency_amplitude_scan family; the top-5 spread (11.9) is comparable to or smaller than one frequency step"
+    },
+    "verdict": "rank-1 is separated from rank-2 by delta-IC = 2.0 only; there is a single cell with delta-IC < 2, two with < 5, four with < 10 and nine with < 20. With a supplied IC step granularity of 0.1 and neighbouring 50 uHz cells costing 10-25 IC units, the rank-1 cell is not distinguishable from the top handful of cells."
+  },
+  "3_degeneracy": {
+    "frequency_amplitude_scan": {
+      "family": "vmin fixed at 0, w fixed at 300, vmax 0.1..500 (16 levels), f 610..1510 (19 levels)",
+      "is_complete_factorial": true,
+      "n_rows": 304,
+      "f_star_vs_vmax": {
+        "0.1": 610.0,
+        "0.2": 610.0,
+        "0.3": 610.0,
+        "0.5": 610.0,
+        "1.0": 660.0,
+        "2.0": 710.0,
+        "3.0": 810.0,
+        "5.0": 860.0,
+        "10.0": 960.0,
+        "20.0": 1010.0,
+        "30.0": 1010.0,
+        "50.0": 1110.0,
+        "100.0": 1310.0,
+        "200.0": 1410.0,
+        "300.0": 1460.0,
+        "500.0": 1510.0
+      },
+      "ic_star_vs_vmax": {
+        "0.1": 1888.6,
+        "0.2": 1416.9,
+        "0.3": 1165.0,
+        "0.5": 886.9,
+        "1.0": 734.7,
+        "2.0": 589.5,
+        "3.0": 463.2,
+        "5.0": 296.8,
+        "10.0": 106.2,
+        "20.0": 43.9,
+        "30.0": 47.2,
+        "50.0": 109.7,
+        "100.0": 160.4,
+        "200.0": 191.8,
+        "300.0": 226.3,
+        "500.0": 308.2
+      },
+      "loglog_fit_all_16_levels": {
+        "slope": 0.1213663690718669,
+        "A_microHz": 709.2857688037109,
+        "R2": 0.9728889093978028,
+        "max_residual_dex": 0.05587495788421215
+      },
+      "loglog_fit_vmax_ge_0.5": {
+        "n": 13,
+        "slope": 0.13537563132972166,
+        "A_microHz": 672.6809461512798,
+        "R2": 0.9881479173689189,
+        "max_residual_dex": 0.023453974987509785
+      },
+      "edge_pinned_levels": [
+        0.1,
+        0.2,
+        0.3,
+        0.5
+      ],
+      "combination_spread_f_over_vmax_pow_b": {
+        "min": 652.7147563152158,
+        "max": 806.6705539223786
+      },
+      "ic_surface_factorisation": {
+        "full_2d_R2": 0.6885,
+        "additive_R2": 0.2033,
+        "ridge_function_R2": {
+          "a=709.3,b=0.1214": 0.5545,
+          "a=672.7,b=0.1354": 0.5646,
+          "a=1000.0,b=0.0000": 0.0773,
+          "a=600.0,b=0.3500": 0.4788
+        },
+        "verdict": "the complete fa factorial does NOT factorise: additive R2 = 0.203 vs full R2 = 0.689 in log10-IC"
+      },
+      "relation": "f_star ~ 709 * (vmax/1 cm/s)^0.121 uHz (R2 = 0.973); the IC-minimising frequency rises only 610 -> 1510 uHz while vmax rises by 5000x, and the slope is 0.135 (R2 = 0.988) once the four edge-pinned levels vmax<=0.5 are dropped."
+    },
+    "minimum_velocity_scan": {
+      "family": "f fixed at 1210, w fixed at 300, vmin nested inside vmax (20 levels each of vmax 0.02..500, vmin <= vmax)",
+      "n_rows": 203,
+      "is_nested_not_factorial": true,
+      "vmin_star_vs_vmax": {
+        "0.02": 0.02,
+        "0.03": 0.03,
+        "0.05": 0.05,
+        "0.1": 0.1,
+        "0.2": 0.1,
+        "0.3": 0.1,
+        "0.5": 0.1,
+        "1.0": 0.1,
+        "2.0": 0.1,
+        "3.0": 0.1,
+        "5.0": 0.05,
+        "10.0": 0.05,
+        "20.0": 0.03,
+        "30.0": 0.03,
+        "50.0": 0.03,
+        "100.0": 0.05,
+        "200.0": 0.05,
+        "300.0": 0.1,
+        "500.0": 0.1
+      },
+      "ic_star_vs_vmax": {
+        "0.02": 2234.1,
+        "0.03": 1988.4,
+        "0.05": 1677.4,
+        "0.1": 1522.1,
+        "0.2": 1422.0,
+        "0.3": 1316.7,
+        "0.5": 1210.6,
+        "1.0": 1146.1,
+        "2.0": 1091.3,
+        "3.0": 991.3,
+        "5.0": 775.2,
+        "10.0": 389.8,
+        "20.0": 122.3,
+        "30.0": 50.7,
+        "50.0": 65.1,
+        "100.0": 167.3,
+        "200.0": 308.4,
+        "300.0": 402.0,
+        "500.0": 554.4
+      },
+      "loglog_fit_vmax_ge_0.1": {
+        "n": 16,
+        "slope": 0.009894456773213722,
+        "A_cm_s": 0.05875249208588403,
+        "R2": 0.0032567630267700265,
+        "max_residual_dex": 0.4511859117353503
+      },
+      "levels_visited": [
+        0.02,
+        0.03,
+        0.05,
+        0.1
+      ],
+      "non_monotonic": true,
+      "interior_curvature_at_vmax30": {
+        "vmin_star": 0.03,
+        "ic_star": 50.7,
+        "ic_at_lower_edge_0.01": 81.0,
+        "delta_ic_to_edge": 30.3,
+        "ic_at_upper_edge_30": 8435.6
+      },
+      "log10_ic_regressions": {
+        "log_vmax_only_R2": 0.0006,
+        "log_vmin_only_R2": 0.58,
+        "additive_R2": 0.7585,
+        "with_interaction_R2": 0.7808,
+        "interaction_gain": 0.0223
+      }
+    },
+    "verdict": "The data do not determine peak frequency and velocity scale independently. The frequency_amplitude_scan defines a shallow ridge f_star ~ 700 (vmax)^0.13 uHz (R2 = 0.97) whose residual scatter corresponds to +-1 grid step; only the combination is measured well at low vmax. The minimum_velocity_scan defines a flat, non-monotonic valley in vmin (0.03-0.1 cm/s, log-log slope -0.08, R2 = 0.20) whose floor moves by only ~30 IC units. Near the global optimum (vmax = 20-50) the frequency is pinned to 1010-1110 uHz to within one 50 uHz grid step, so the degeneracy is strong but not total."
+  },
+  "4_separability_ranked_grid": {
+    "n_rows_total": 250,
+    "rows_with_min_velocity_equal_zero": 62,
+    "log10_undefined_statement": "62 of 250 rows (24.8%) have min_velocity_cm_s == 0, for which log10 is undefined (-inf); they were dropped, leaving n = 188 rows for every model that uses log10(min_velocity).",
+    "n_rows_used": 188,
+    "model_4term": {
+      "R2": 0.0236,
+      "RMSE": 33.382,
+      "coef": [
+        -14.42138,
+        -4.43196,
+        0.0561,
+        -0.14127,
+        71.48701
+      ]
+    },
+    "model_plus_f2_w2": {
+      "R2": 0.1744,
+      "RMSE": 30.696,
+      "coef": [
+        -20.03921,
+        1.08113,
+        -2.47358,
+        -3.54759,
+        0.00117,
+        0.00592,
+        1939.46219
+      ]
+    },
+    "model_richer_1_over_v_v_1_over_vmin_vmin": {
+      "R2": 0.3832,
+      "RMSE": 26.533,
+      "coef": [
+        -124.02281,
+        -82.86713,
+        -1.83926,
+        -1.6903,
+        -68.972,
+        1.70838,
+        -0.07038,
+        1141.1015,
+        0.00086,
+        0.00269,
+        1267.98796
+      ]
+    },
+    "model_ridge_combination_only": {
+      "R2": 0.1181,
+      "RMSE": 31.725,
+      "coef": [
+        -0.01257,
+        0.00087,
+        70.25709
+      ]
+    },
+    "model_f_only_quadratic": {
+      "R2": 0.1451,
+      "RMSE": 31.236,
+      "coef": [
+        -2.40309,
+        0.00112,
+        1360.90543
+      ]
+    },
+    "model_with_interactions": {
+      "R2": 0.1382,
+      "RMSE": 31.361,
+      "coef": [
+        -38.95778,
+        -3.05145,
+        -0.921,
+        0.09172,
+        0.37737,
+        -1.25694,
+        0.0014,
+        589.78003
+      ]
+    },
+    "leave_one_vmax_level_out": {
+      "1.0": {
+        "n": 186,
+        "R2": 0.0187,
+        "coef_logvmax_logvmin_f_w_intercept": [
+          -5.4146,
+          -4.9372,
+          0.0477,
+          -0.1342,
+          64.2601
+        ]
+      },
+      "3.0": {
+        "n": 184,
+        "R2": 0.0204,
+        "coef_logvmax_logvmin_f_w_intercept": [
+          -12.7148,
+          -4.49,
+          0.0543,
+          -0.1543,
+          74.5276
+        ]
+      },
+      "10.0": {
+        "n": 172,
+        "R2": 0.0473,
+        "coef_logvmax_logvmin_f_w_intercept": [
+          -4.4289,
+          -2.5047,
+          0.0842,
+          -0.2716,
+          64.9861
+        ]
+      },
+      "20.0": {
+        "n": 146,
+        "R2": 0.0238,
+        "coef_logvmax_logvmin_f_w_intercept": [
+          -15.7864,
+          -4.2512,
+          0.0412,
+          -0.1236,
+          87.1789
+        ]
+      },
+      "30.0": {
+        "n": 110,
+        "R2": 0.0309,
+        "coef_logvmax_logvmin_f_w_intercept": [
+          -6.3826,
+          -6.4961,
+          0.0579,
+          0.079,
+          -1.2064
+        ]
+      },
+      "50.0": {
+        "n": 147,
+        "R2": 0.0673,
+        "coef_logvmax_logvmin_f_w_intercept": [
+          -33.6739,
+          -7.2549,
+          0.0786,
+          -0.215,
+          86.3008
+        ]
+      },
+      "100.0": {
+        "n": 183,
+        "R2": 0.0301,
+        "coef_logvmax_logvmin_f_w_intercept": [
+          -21.5961,
+          -4.1559,
+          0.0319,
+          -0.1377,
+          105.5479
+        ]
+      }
+    },
+    "residual_scatter_4term": {
+      "RMSE_ic_units": 33.382,
+      "sd_of_ic": 33.873
+    },
+    "verdict": "On this truncated table the surface does not separate: the 4-term linear model in (log10 vmax, log10 vmin, f, width) reaches R2 = 0.0236 with residual RMSE = 33.38 IC units against an IC spread of 33.87; adding f^2, w^2 gives R2 = 0.1744 and the richer basis (1/v, v, 1/vmin, vmin, f^2, w^2) gives R2 = 0.3832. Leave-one-vmax-level-out R2 ranges 0.019-0.067 with unstable signs/coefficients, so no separable additive structure is supported. Adding interactions nearly doubles R2 (0.024 -> 0.138), i.e. the surface is dominated by the truncation boundary and by interaction.",
+    "caveat": "R2 computed on a top-250 censored slice is not a property of the underlying IC surface; the interpretable separability numbers are the complete-factorial fits reported in section 3 (fa additive R2 = 0.203 vs full R2 = 0.689, mv family additive R2 = 0.759)."
+  },
+  "5_mode_grid_alignment": {
+    "n_mode_frequencies_total": 52,
+    "mode_range_uHz": [
+      117.62,
+      1594.9
+    ],
+    "n_modes_in_candidate_band_860_1310": 18,
+    "mode_frequencies_in_band_uHz": [
+      862.22,
+      879.97,
+      929.54,
+      940.03,
+      975.23,
+      996.81,
+      1017.5,
+      1052.19,
+      1057.53,
+      1107.42,
+      1114.83,
+      1159.02,
+      1174.54,
+      1205.98,
+      1223.69,
+      1248.44,
+      1268.39,
+      1273.24
+    ],
+    "observed": {
+      "median_offset_uHz": 5.76,
+      "mean_offset_uHz": 7.778,
+      "median_offset_percent": 0.4991,
+      "per_candidate": {
+        "860": {
+          "offset_uHz": 2.22,
+          "offset_percent": 0.2581,
+          "null_p_full_range": 0.14945,
+          "null_p_band": 0.17898
+        },
+        "910": {
+          "offset_uHz": 19.54,
+          "offset_percent": 2.1473,
+          "null_p_full_range": 0.88621,
+          "null_p_band": 0.91345
+        },
+        "960": {
+          "offset_uHz": 15.23,
+          "offset_percent": 1.5865,
+          "null_p_full_range": 0.78511,
+          "null_p_band": 0.81561
+        },
+        "1010": {
+          "offset_uHz": 7.5,
+          "offset_percent": 0.7426,
+          "null_p_full_range": 0.46927,
+          "null_p_band": 0.51635
+        },
+        "1060": {
+          "offset_uHz": 2.47,
+          "offset_percent": 0.233,
+          "null_p_full_range": 0.16673,
+          "null_p_band": 0.19604
+        },
+        "1110": {
+          "offset_uHz": 2.58,
+          "offset_percent": 0.2324,
+          "null_p_full_range": 0.175,
+          "null_p_band": 0.20564
+        },
+        "1160": {
+          "offset_uHz": 0.98,
+          "offset_percent": 0.0845,
+          "null_p_full_range": 0.06729,
+          "null_p_band": 0.07723
+        },
+        "1210": {
+          "offset_uHz": 4.02,
+          "offset_percent": 0.3322,
+          "null_p_full_range": 0.26194,
+          "null_p_band": 0.30346
+        },
+        "1260": {
+          "offset_uHz": 8.39,
+          "offset_percent": 0.6659,
+          "null_p_full_range": 0.52004,
+          "null_p_band": 0.56695
+        },
+        "1310": {
+          "offset_uHz": 14.85,
+          "offset_percent": 1.1336,
+          "null_p_full_range": 0.77248,
+          "null_p_band": 0.80295
+        }
+      }
+    },
+    "null_uniform_over_mode_range": {
+      "range_uHz": [
+        117.62,
+        1594.9
+      ],
+      "n_draws": 200000,
+      "null_median_of_median_offset_uHz": 8.083,
+      "null_median_5_95_uHz": [
+        4.186,
+        13.472
+      ],
+      "one_sided_p_observed_closer": 0.1786
+    },
+    "null_uniform_over_candidate_band": {
+      "range_uHz": [
+        860.0,
+        1310.0
+      ],
+      "n_draws": 200000,
+      "null_median_of_median_offset_uHz": 7.242,
+      "null_median_5_95_uHz": [
+        3.577,
+        12.363
+      ],
+      "one_sided_p_observed_closer": 0.2695
+    },
+    "null_rigid_50uHz_comb": {
+      "n_draws": 100000,
+      "null_median_of_median_offset_uHz": 7.335,
+      "null_median_5_95_uHz": [
+        3.15,
+        11.872
+      ],
+      "one_sided_p_observed_closer": 0.2876,
+      "best_achievable_median_uHz": 3.14,
+      "observed_comb_at_phase_zero_median_uHz": 5.76
+    },
+    "individual_candidate_multiplicity": {
+      "smallest_individual_null_p_full_range": 0.06729,
+      "candidate_achieving_it": "1160 (offset 0.98 uHz)",
+      "family_wise_p_min_over_10_candidates_full_range": 0.4991
+    },
+    "mode_spacing": {
+      "overall_median_uHz": 25.48,
+      "overall_mean_uHz": 28.966,
+      "overall_min_uHz": 0.41,
+      "overall_max_uHz": 100.18,
+      "in_band_median_uHz": 20.69,
+      "in_band_mean_uHz": 24.178,
+      "comb_spacing_uHz": 50.0,
+      "in_band_comb_ratio": 2.417,
+      "expected_uniform_nearest_distance_in_band_uHz": 12.089,
+      "interpretation": "the mode grid is 2.4x denser than the 50 uHz comb in the candidate band (median spacing 20.7 uHz vs 50 uHz), so a random frequency in the band is within ~10 uHz of some mode by construction; the observed median offset of 5.76 uHz (0.50%) is not smaller than the uniform null (7.24-8.08 uHz median, one-sided p = 0.18-0.29)."
+    },
+    "verdict": "No evidence that the candidate frequency comb is locked to the supplied mode grid: observed median nearest-mode offset 5.76 uHz vs null medians 7.24 uHz (band), 8.08 uHz (full range), 7.34 uHz (rigid-comb phase null); one-sided p = 0.27, 0.18, 0.29 respectively. The best single candidate (1160 uHz, 0.98 uHz from the 1159.02 uHz mode) has individual p = 0.067 but the family-wise probability of some candidate landing that close is 0.28."
+  },
+  "6_resolution_boundary": {
+    "n_passes": 22,
+    "pass_span_minutes": {
+      "min": 60.0,
+      "max": 79.0,
+      "median": 79.0,
+      "counts": {
+        "79.0": 19,
+        "72.0": 2,
+        "60.0": 1
+      }
+    },
+    "pass_samples": {
+      "min": 61,
+      "max": 80,
+      "median": 80
+    },
+    "one_over_T_uHz": {
+      "min": 210.97,
+      "max": 277.778,
+      "median": 210.97
+    },
+    "candidate_widths": {
+      "250": {
+        "ratio_to_median_1_over_T": 1.185,
+        "ratio_to_longest_pass_1_over_T": 1.185,
+        "ratio_to_shortest_pass_1_over_T": 0.9
+      },
+      "275": {
+        "ratio_to_median_1_over_T": 1.303,
+        "ratio_to_longest_pass_1_over_T": 1.303,
+        "ratio_to_shortest_pass_1_over_T": 0.99
+      },
+      "300": {
+        "ratio_to_median_1_over_T": 1.422,
+        "ratio_to_longest_pass_1_over_T": 1.422,
+        "ratio_to_shortest_pass_1_over_T": 1.08
+      },
+      "325": {
+        "ratio_to_median_1_over_T": 1.54,
+        "ratio_to_longest_pass_1_over_T": 1.54,
+        "ratio_to_shortest_pass_1_over_T": 1.17
+      }
+    },
+    "comb_spacing": {
+      "50uHz_over_median_1_over_T": 0.237,
+      "50uHz_over_longest_pass_1_over_T": 0.237
+    },
+    "two_sinusoid_separation_test_pass01": {
+      "50": {
+        "separation_over_1_over_T": 0.237,
+        "fraction_of_trials_resolved_two_peaks": 0.14
+      },
+      "100": {
+        "separation_over_1_over_T": 0.474,
+        "fraction_of_trials_resolved_two_peaks": 0.31
+      },
+      "211": {
+        "separation_over_1_over_T": 1.0,
+        "fraction_of_trials_resolved_two_peaks": 0.56
+      },
+      "250": {
+        "separation_over_1_over_T": 1.185,
+        "fraction_of_trials_resolved_two_peaks": 0.75
+      },
+      "275": {
+        "separation_over_1_over_T": 1.303,
+        "fraction_of_trials_resolved_two_peaks": 0.88
+      },
+      "300": {
+        "separation_over_1_over_T": 1.422,
+        "fraction_of_trials_resolved_two_peaks": 1.0
+      },
+      "325": {
+        "separation_over_1_over_T": 1.54,
+        "fraction_of_trials_resolved_two_peaks": 1.0
+      },
+      "450": {
+        "separation_over_1_over_T": 2.133,
+        "fraction_of_trials_resolved_two_peaks": 1.0
+      }
+    },
+    "per_pass_band_peak_displacement": {
+      "A": {
+        "model": "residual_model_A_mm_s",
+        "median_band_peak_uHz": 883.0,
+        "iqr_uHz": [
+          860.0,
+          1018.25
+        ],
+        "bootstrap_5_95_of_median_uHz": [
+          860.0,
+          962.0
+        ],
+        "leave_one_pass_out_range_uHz": [
+          870.0,
+          896.0
+        ]
+      },
+      "B": {
+        "model": "residual_model_B_mm_s",
+        "median_band_peak_uHz": 1207.0,
+        "iqr_uHz": [
+          1151.5,
+          1304.0
+        ],
+        "bootstrap_5_95_of_median_uHz": [
+          1161.5,
+          1283.0
+        ],
+        "leave_one_pass_out_range_uHz": [
+          1202.0,
+          1212.0
+        ]
+      },
+      "C": {
+        "model": "residual_model_C_mm_s",
+        "median_band_peak_uHz": 1111.5,
+        "iqr_uHz": [
+          948.25,
+          1241.75
+        ],
+        "bootstrap_5_95_of_median_uHz": [
+          962.0,
+          1188.0
+        ],
+        "leave_one_pass_out_range_uHz": [
+          1107.0,
+          1116.0
+        ]
+      }
+    },
+    "verdict": "Single-pass Fourier resolution 1/T = 210.97 uHz (79 min passes) to 277.78 uHz (60 min pass); the supplied candidate widths 250/275/300/325 uHz correspond to 1.19/1.30/1.42/1.54 x 1/T (and 0.90/0.99/1.08/1.17 x 1/T for the 60 min pass). The narrowest candidate (250 uHz) is only marginally resolvable within one pass: simulation with the real pass_01 timestamps produces two half-power peaks in 55%% of trials at 250 uHz but 95-100%% at 275-325 uHz. The 50 uHz comb spacing is 0.237 x 1/T, i.e. adjacent candidate frequencies are separated by a quarter of a resolution element and cannot be resolved within a single pass."
+  },
+  "7_conclusions": {
+    "supported_within_the_supplied_data": [
+      "The ranked table is a truncated top-250 ranking (11.2%% of the declared 2240-cell lattice), not a complete grid. Verified independently on the 105 lattice cells that also appear in candidate_spectrum_comparison.tsv: all 28 with ic < 137.2 are present and the smallest absent one is 139.9; the table's own maximum is 137.2.",
+      "The rank-1 cell (vmax=30, vmin=0.05, f=1010, w=275) is not uniquely determined: 1 cell within delta-IC < 2, 2 within < 5, 4 within < 10, 9 within < 20; the top-5 spread (11.9) is the size of one 50 uHz frequency step (10.1-25.3 at the optimum).",
+      "Peak frequency and velocity scale are not separately measured by the supplied families: f_star ~ 710 (vmax)^0.121 uHz over the complete frequency_amplitude_scan (R2 = 0.973, max residual 0.056 dex); the minimum_velocity_scan gives a flat, non-monotonic vmin valley (log-log slope -0.082, R2 = 0.204).",
+      "The IC surface does not factorise: on the complete fa factorial (16 x 19 = 304 rows) the additive model gives R2 = 0.203 against R2 = 0.689 for the model with interactions; on the truncated table the 4-term linear model gives R2 = 0.024 (RMSE 33.4) and even the richer basis only 0.383.",
+      "The candidate frequencies are not closer to the supplied mode grid than chance: observed median offset 5.76 uHz (0.499%), null medians 7.24/8.08/7.34 uHz, one-sided p = 0.18-0.29; the in-band mode spacing (20.7 uHz median) is 2.4x denser than the 50 uHz comb, so proximity alone is not evidence of mode locking.",
+      "A single pass resolves at best 1/T = 211 uHz; the narrowest supplied width (250 uHz) is 1.19 x 1/T (marginally resolved, 55% of simulated trials) and the 50 uHz comb is 0.237 x 1/T (unresolvable within a pass)."
+    ],
+    "relative_only_to_the_supplied_candidate_family": [
+      "Every statement naming a 'best' parameter combination is conditional on the two supplied scan families (frequency_amplitude_scan: vmin = 0, w = 300; minimum_velocity_scan: f = 1210, w = 300) and on the 2240-cell lattice step sizes (50 uHz in f, 250-325 uHz in width). Nothing here constrains a continuous optimum.",
+      "The 88.4% of the lattice that is censored to ic >= 137.2 is unknown; a cell outside the 250 could in principle be optimal. The marginal 'best axis level' values (vmax = 30, f = 1010, w = 275) inherit this selection and are not estimates of a physical optimum.",
+      "Each IC value is a single evaluation of one model on one dataset; there is no replicate IC, hence no calibrated uncertainty on a delta-IC. The only dispersion budgets available are whole-pass proxies (per-pass band peak bootstrap/LOO over the 22 passes, section 6), which is why the rank separation is reported as a margin ladder rather than a p-value.",
+      "The mode-alignment test is limited to 10 candidate frequencies in 860-1310 uHz and to the 52 supplied modes; it does not test any other frequency range or cadence.",
+      "The dead time between passes is unknown (relative_time_min is per-pass), so no coherent 22-pass stack and no 22-pass Fourier resolution are claimed; only per-pass 1/T is reported."
+    ]
+  }
+}

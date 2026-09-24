@@ -1,0 +1,187 @@
+==============================================================================
+p2_theory_dme : angular structure of the theory dense panels vs theory DMEs
+==============================================================================
+
+sha256 angle_energy_observations_datasets.tsv        55a1d9621c0e386fb44a63764a97cf81491d2bd7af0209c74e212329172df396
+sha256 angular_coefficients_datasets.tsv             a47e1e06130ec2a0dc8e3a4b2b45233828b37e6ff31101dbefebfd8b9d0ac411
+sha256 coordinate_definitions.json                   349bbd36f9de8dd1805b280c0f08270e3d1c75992efd76aa8effb603adbec23b
+sha256 dipole_matrix_elements_datasets.tsv           df51186c5de242e7b6d7aa51b30f2b75411bbea139507a3061273c23f2c01762
+
+(a) build Z_t = theory/magnitude * exp(i*theory/phase)
+  shape (99, 181) ; photon energy 23.2490 .. 41.8390 eV (99 points)
+  |Z| range 0.013382 .. 2.006189 ; arg(Z) range -3.141519 .. 3.141230 rad
+  rms |Z| over the panel: 0.681574
+
+------------------------------------------------------------------------------
+(b) Legendre Lmax scan on Z_t = magnitude*exp(i*phase), 99 energies x 181 angles
+------------------------------------------------------------------------------
+  Lmax= 0  max over energies of max|residual| = 1.951636e+00   (row-median 1.225e+00, rms 6.682e-01, median-row-relative-rms 9.738e-01)
+  Lmax= 1  max over energies of max|residual| = 1.403981e+00   (row-median 9.708e-01, rms 5.894e-01, median-row-relative-rms 8.465e-01)
+  Lmax= 2  max over energies of max|residual| = 9.580623e-01   (row-median 5.386e-01, rms 4.207e-01, median-row-relative-rms 5.558e-01)
+  Lmax= 3  max over energies of max|residual| = 1.060294e-01   (row-median 6.856e-02, rms 4.577e-02, median-row-relative-rms 4.772e-02)
+  Lmax= 4  max over energies of max|residual| = 2.608562e-02   (row-median 1.819e-02, rms 1.189e-02, median-row-relative-rms 1.885e-02)
+  Lmax= 5  max over energies of max|residual| = 5.070888e-03   (row-median 2.442e-03, rms 1.989e-03, median-row-relative-rms 1.818e-03)
+  Lmax= 6  max over energies of max|residual| = 7.769208e-04   (row-median 2.561e-04, rms 2.607e-04, median-row-relative-rms 1.999e-04)
+  Lmax= 7  max over energies of max|residual| = 2.115011e-04   (row-median 3.628e-05, rms 4.376e-05, median-row-relative-rms 2.806e-05)
+  Lmax= 8  max over energies of max|residual| = 4.077282e-05   (row-median 5.442e-06, rms 1.034e-05, median-row-relative-rms 2.535e-06)
+  Lmax= 9  max over energies of max|residual| = 8.089942e-06   (row-median 3.074e-06, rms 1.251e-06, median-row-relative-rms 1.424e-06)
+  Lmax=10  max over energies of max|residual| = 7.735239e-06   (row-median 2.787e-06, rms 8.620e-07, median-row-relative-rms 1.212e-06)
+  Lmax=11  max over energies of max|residual| = 7.831712e-06   (row-median 2.590e-06, rms 7.586e-07, median-row-relative-rms 9.670e-07)
+  Lmax=12  max over energies of max|residual| = 7.840783e-06   (row-median 2.509e-06, rms 7.031e-07, median-row-relative-rms 9.301e-07)
+  Lmax=13  max over energies of max|residual| = 7.804007e-06   (row-median 2.185e-06, rms 6.453e-07, median-row-relative-rms 8.339e-07)
+  Lmax=14  max over energies of max|residual| = 7.753075e-06   (row-median 2.109e-06, rms 5.927e-07, median-row-relative-rms 7.780e-07)
+  -> plateau rule (residual within a factor 3.0 of the Lmax=14 floor) gives L* = 9
+  -> the same rule with the p1_exp_basis cut-off Lmax=12 gives L* = 9
+  -> collapse factor L=0 residual / floor = 252304.6
+  -> floor for L*..14: max 8.089942e-06  median 7.817860e-06
+  -> largest single-step collapse is L=2 -> 3 : residual ratio 9.036e+00
+  -> factor from L=2 to L=14: 1.236e+05 ; L=0 to L=14: 2.517e+05
+  -> per-energy L* distribution (plateau rule applied row by row): L=6:5, L=7:11, L=8:41, L=9:35, L=10:6, L=11:1
+
+(b2) residual floor vs stored decimal quantization
+  magnitude min-decimals: median 15 (p05 14, p95 16)
+  phase     min-decimals: median 14 (p05 13, p95 16)
+  implied |dZ| half-step, worst case: median 2.617e-15  max 5.000e-07
+  implied |dZ| half-step, uniform-rms: median 1.386e-15  max 2.887e-07
+  observed residual floor (Lmax=14, rms over all cells): 5.926729e-07
+  observed residual floor (L*= 9, max over energies): 8.089942e-06
+  per-row: L=14 rms floor median 5.335e-07 vs per-row median stored half-step 2.449e-15
+  ratio (per-row floor / per-row stored step), median over energies: 2.023e+08
+  ratio (per-row floor / per-row stored step), max over energies: 7.005e+08
+  -> the L=14 residual floor sits ABOVE the stored-value quantization, so a
+     non-zero curvature survives even at L=14: the panel is not an exact
+     finite-degree polynomial written down at the storage precision.
+  CONTROL: re-store mag/phase at 5 significant digits (the experiment convention)
+  and refit: L=4 rms floor 1.188519e-02 (stored panel 1.188512e-02) ; L=14 rms floor 2.026781e-05 (stored 5.926729e-07).
+  -> at L=14 the 5-digit re-storage floor (2.027e-05) exceeds the stored panel floor
+     (5.927e-07) by a factor 3.420e+01, confirming the stored theory values carry far more
+     precision than the experiment convention.
+
+(b3) null / baseline comparisons
+  Lmax=0 (isotropic): max over energies of max|residual| = 1.951636e+00
+  Lmax=2            : max over energies of max|residual| = 9.580623e-01
+  Lmax=14           : max over energies of max|residual| = 7.753075e-06
+  Lmax=4            : max over energies of max|residual| = 2.608562e-02
+  improvement L2 -> L14: factor 1.236e+05
+  variance of Z_t captured by l<=0: -0.000000000000
+  variance of Z_t captured by l<=2: 0.603575868594
+  variance of Z_t captured by l<=3: 0.995308475863
+  variance of Z_t captured by l<=4: 0.999683595245
+  variance of Z_t captured by l<=6: 0.999999847803
+
+(b4) extended scan to L=90 (is the theory-like panel an EXACT low-degree polynomial?)
+  Lmax=16  max|residual| = 7.550929e-06  rms = 5.162714e-07
+  Lmax=20  max|residual| = 7.343320e-06  rms = 4.180102e-07
+  Lmax=25  max|residual| = 7.082841e-06  rms = 3.371825e-07
+  Lmax=30  max|residual| = 6.828479e-06  rms = 2.812786e-07
+  Lmax=40  max|residual| = 6.330306e-06  rms = 2.097744e-07
+  Lmax=50  max|residual| = 5.843041e-06  rms = 1.659686e-07
+  Lmax=60  max|residual| = 5.364384e-06  rms = 1.367332e-07
+  Lmax=70  max|residual| = 4.893107e-06  rms = 1.158975e-07
+  Lmax=80  max|residual| = 4.428110e-06  rms = 1.001660e-07
+  Lmax=90  max|residual| = 3.968411e-06  rms = 8.776187e-08
+  -> the residual keeps falling to the double-precision round-off level (3.968e-06) only at L~90;
+     the theory-like panel is therefore NOT an exactly finite-degree Legendre polynomial.
+
+(b5) alternative basis and robustness
+  Fourier exp(i m theta), m=-K..K: plateau degree K* = 7 (collapse 2.699e+05)
+  Fourier K=2 : max|residual| = 5.133142e-01
+  Fourier K=14: max|residual| = 7.231428e-06
+  leave-one-angle-out (row 0, L=14): max coefficient change 7.718e-09 (median 2.421e-09)
+  every-3rd-angle subsample (row 0, L=14): max coefficient change 2.563e-09
+  coefficient quantization level implied by the max stored steps: 5.234e-15
+
+------------------------------------------------------------------------------
+(c) per-energy Legendre coefficient export
+------------------------------------------------------------------------------
+  wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p2_theory_coefficients.csv  (99 rows x 49 cols)
+  median |c_l| over energies, l=0..14:
+    l= 0  median |c_l| = 1.602505e-01   (fraction of energies with |c_l|>1e-4: 1.000)
+    l= 1  median |c_l| = 4.288940e-01   (fraction of energies with |c_l|>1e-4: 1.000)
+    l= 2  median |c_l| = 7.818411e-01   (fraction of energies with |c_l|>1e-4: 1.000)
+    l= 3  median |c_l| = 8.162044e-01   (fraction of energies with |c_l|>1e-4: 1.000)
+    l= 4  median |c_l| = 1.030623e-01   (fraction of energies with |c_l|>1e-4: 1.000)
+    l= 5  median |c_l| = 3.388822e-02   (fraction of energies with |c_l|>1e-4: 0.980)
+    l= 6  median |c_l| = 4.986266e-03   (fraction of energies with |c_l|>1e-4: 0.980)
+    l= 7  median |c_l| = 5.968243e-04   (fraction of energies with |c_l|>1e-4: 0.667)
+    l= 8  median |c_l| = 8.229368e-05   (fraction of energies with |c_l|>1e-4: 0.404)
+    l= 9  median |c_l| = 5.504578e-06   (fraction of energies with |c_l|>1e-4: 0.010)
+    l=10  median |c_l| = 1.838141e-06   (fraction of energies with |c_l|>1e-4: 0.000)
+    l=11  median |c_l| = 1.411057e-06   (fraction of energies with |c_l|>1e-4: 0.000)
+    l=12  median |c_l| = 1.097434e-06   (fraction of energies with |c_l|>1e-4: 0.000)
+    l=13  median |c_l| = 9.957184e-07   (fraction of energies with |c_l|>1e-4: 0.000)
+    l=14  median |c_l| = 9.020844e-07   (fraction of energies with |c_l|>1e-4: 0.000)
+  median |c_l| from the L=4 fits: [0.160332 0.429439 0.781849 0.798602 0.100916]
+
+------------------------------------------------------------------------------
+(d) is the theory dense panel reproducible from the theory/DMEs block?
+------------------------------------------------------------------------------
+  theory/DMEs block: (34056, 10) ; 99 unique T_kin ; IE = 0.79745373 a.u.
+  m relation m = m_ini - m_final - mu holds exactly: True
+  T_kin ordering matches the ascending theory photon-energy order: True
+  DME T_kin*Ha_Eh ranges 9.1845..33.1069 eV while theory photon energies are 23.2490..41.8390 eV
+  Pearson corr(photon energy index, T_kin) = 0.989781
+  NOTE: the T_kin axis and the photon-energy axis are not the same physical
+  quantity; the matching used below is by ascending index (same ordering).
+
+  scanning 112 candidate selections at energy indices [0, 49, 98]
+
+(e) best candidates by |<Z|A>| overlap (out of 144 evaluated):
+   ov 0.8472  relres 0.5313  corr|A| +0.1172  corr|A|^2 +0.1960  carg +0.9748 | g=1 single plm m=m0 mu=0.0 mi=1.0 mf=1.0 (n=12)
+   ov 0.8472  relres 0.5313  corr|A| +0.1172  corr|A|^2 +0.1960  carg +0.9748 | g=1 single plm m=m0 mu=0.0 mi=-1.0 mf=-1.0 (n=12)
+   ov 0.8472  relres 0.5313  corr|A| +0.1172  corr|A|^2 +0.1960  carg +0.9748 | g=1 single plm m=allm mu=0.0 mi=-1.0 mf=-1.0 (n=12)
+   ov 0.8472  relres 0.5313  corr|A| +0.1172  corr|A|^2 +0.1960  carg +0.9748 | g=1 single plm m=allm mu=0.0 mi=1.0 mf=1.0 (n=12)
+   ov 0.8472  relres 0.5313  corr|A| +0.1172  corr|A|^2 +0.1960  carg +0.9748 | g=1 mu_sum plm m=m0 mu=0.0 mi=nan mf=nan (n=24)
+   ov 0.8472  relres 0.5313  corr|A| +0.1172  corr|A|^2 +0.1960  carg +0.9748 | g=1 all_mu plm m=m0 mu=nan mi=nan mf=nan (n=24)
+   ov 0.8472  relres 0.5313  corr|A| +0.1172  corr|A|^2 +0.1960  carg +0.9748 | g=1 single pl m=m0 mu=0.0 mi=-1.0 mf=-1.0 (n=12)
+   ov 0.8472  relres 0.5313  corr|A| +0.1172  corr|A|^2 +0.1960  carg +0.9748 | g=1 single pl m=allm mu=0.0 mi=-1.0 mf=-1.0 (n=12)
+   ov 0.8472  relres 0.5313  corr|A| +0.1172  corr|A|^2 +0.1960  carg +0.9748 | g=1 single pl m=allm mu=0.0 mi=1.0 mf=1.0 (n=12)
+   ov 0.8472  relres 0.5313  corr|A| +0.1172  corr|A|^2 +0.1960  carg +0.9748 | g=1 single pl m=m0 mu=0.0 mi=1.0 mf=1.0 (n=12)
+
+  best correlations found (|corr| between |A| and the stored theory magnitude):
+   corr|A| = -0.7578  corr|A|^2 = -0.7610  ov 0.5556  relres 0.8314 | i=0 g=2 all_mu plm m=allm mu=nan mi=nan mf=nan
+   corr|A| = -0.6871  corr|A|^2 = -0.6001  ov 0.4870  relres 0.8734 | i=0 g=1 single plm m=allm mu=-1.0 mi=1.0 mf=-1.0
+   corr|A| = -0.6871  corr|A|^2 = -0.6001  ov 0.4870  relres 0.8734 | i=0 g=1 single plm m=allm mu=1.0 mi=-1.0 mf=1.0
+   corr|A| = -0.5821  corr|A|^2 = -0.5180  ov 0.5002  relres 0.8659 | i=49 g=2 single plm m=allm mu=1.0 mi=1.0 mf=1.0
+   corr|A| = -0.5821  corr|A|^2 = -0.5180  ov 0.5002  relres 0.8659 | i=49 g=2 single plm m=allm mu=-1.0 mi=-1.0 mf=-1.0
+   corr|A| = -0.5820  corr|A|^2 = -0.5415  ov 0.5249  relres 0.8512 | i=0 g=2 single plm m=allm mu=-1.0 mi=1.0 mf=-1.0
+  energy idx 0: 48 candidates, 0 with rel residual < 2e-02 -> reproduces = False
+  energy idx 49: 48 candidates, 0 with rel residual < 2e-02 -> reproduces = False
+  energy idx 98: 48 candidates, 0 with rel residual < 2e-02 -> reproduces = False
+
+(f) robustness across energy: is the conclusion energy-independent?
+   idx  0 (E=23.249 eV) best: ov 0.8472 relres 0.5313 | g=1 single plm m=m0 mu=0.0 mi=-1.0 mf=-1.0
+   idx 49 (E=32.549 eV) best: ov 0.5107 relres 0.8598 | g=2 mu_sum plm m=allm mu=1.0 mi=nan mf=nan
+   idx 98 (E=41.839 eV) best: ov 0.6543 relres 0.7562 | g=2 single plm m=allm mu=1.0 mi=1.0 mf=-1.0
+   distinct winning selections across the three energies: 3
+   -> the winning channel is NOT the same across energies.
+  null N1 (m=0, gauge 1 rows with the l-ordering of the amplitudes shuffled, 600 draws):
+     overlap median 0.3949  p95 0.8472  max 0.8472
+     observed best overlap 0.8472
+  null N2 (same selection but DME rows taken from the other energies, 6 pairs):
+     overlap median 0.5539  max 0.7353 ; matched-energy mean of per-energy best 0.6707
+     -> a DME block from the WRONG energy does about as well as the matched one,
+        so the partial overlap is not evidence of energy-correct DME content.
+  null N2b (canonical m=0, mu=0, gauge-1 selection):
+     matched-energy overlaps   [0.8472 0.2097 0.3949]
+     mismatched-energy overlaps [0.7057 0.7353 0.562  0.0861 0.6575 0.0918]
+     matched mean 0.4839 vs mismatched mean 0.4731 -> matched advantage 0.0108
+  candidates with rms residual below 10x the panel's own L=14 floor (5.927e-07): 0
+
+  coefficient-space test of the single strongest structural candidate
+  (m_ini = m_final = +-1, mu = 0, m = 0, gauge 1): is
+  cZ_l / (sqrt(2l+1) d_l) constant in l?
+    idx  0 K_l= 4 : coefficient-space rel residual 0.4457 (|scale| 0.66300)
+    idx  0 K_l= 8 : coefficient-space rel residual 0.4457 (|scale| 0.66300)
+    idx  0 K_l=11 : coefficient-space rel residual 0.4457 (|scale| 0.66300)
+    idx 49 K_l= 4 : coefficient-space rel residual 0.8035 (|scale| 0.52168)
+    idx 49 K_l= 8 : coefficient-space rel residual 0.8033 (|scale| 0.52192)
+    idx 49 K_l=11 : coefficient-space rel residual 0.8033 (|scale| 0.52192)
+    idx 98 K_l= 4 : coefficient-space rel residual 0.9504 (|scale| 0.30907)
+    idx 98 K_l= 8 : coefficient-space rel residual 0.9508 (|scale| 0.30782)
+    idx 98 K_l=11 : coefficient-space rel residual 0.9508 (|scale| 0.30782)
+
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p2_theory_dme.png
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p2_theory_dme.json
+
+run complete in 159.8 s

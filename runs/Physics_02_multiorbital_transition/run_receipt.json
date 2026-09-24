@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Physics_02_multiorbital_transition",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "6e4d07ee49ab93891e42d2b88fb2ab716914b55e7f93e40c07a1468b172f73c9",
+  "workspace_input_file_count": 13,
+  "workspace_input_bytes": 6317555,
+  "output_tree_sha256": "349212e2bf813f63dd0147b400c53d8a894f1142734219e6ec628ff1969ccefe",
+  "output_file_count": 30,
+  "output_bytes": 652735
+}

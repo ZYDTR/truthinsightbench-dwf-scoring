@@ -1,0 +1,455 @@
+{
+  "schema": "independent_evidence_audit",
+  "task_id": "Life_05_developmental_interaction_structure",
+  "t0": "2022-01-01",
+  "audit_date": "2026-09-22",
+  "purpose": "Independent, claim-by-claim audit of the registered findings in output/Result.md. Each claim is tied to (a) the authoritative result artifact(s) with the exact field path(s) and value(s), (b) the analysis source that produced them, (c) an independent re-derivation (output/analysis/independent_rederr.py -> output/results/independent_rederr.json), and (d) the supporting figure(s). The audit also records what was NOT verified and the residual limitations.",
+  "data_integrity": {
+    "input_file": "data/stage_indexed_interactions.tsv",
+    "sha256": "67ab6ace870c985522f905801f0eed680818a0c73225ca113057ba12fdea992f",
+    "sha256_matches_manifest": true,
+    "sha256_matches_manifest_field": "output/results/data_audit.json.input_sha256_matches_manifest",
+    "sha256_matches_target_in_rederr": true,
+    "sha256_matches_target_field": "output/results/independent_rederr.json.integrity.sha256_matches_target",
+    "raw_rows": 5990,
+    "analysis_rows": 5920,
+    "units": 1105,
+    "families": 285,
+    "cell_pairs": 9,
+    "stages": 18,
+    "no_missing_cells": true,
+    "field": "output/results/data_audit.json.missing_cells_per_column (all 0)",
+    "dedup_note": "70 exact replicated rows in 40 groups (max multiplicity 8) collapsed to 5920; every replicate carries identical pvalue and strength.",
+    "field": "output/results/data_audit.json.rows_in_replicated_groups / n_replicated_groups / max_replicate_multiplicity / all_replicates_identical_*"
+  },
+  "findings": {
+    "1_stage_trend_and_transport": {
+      "claim": "Within-unit-centred interaction strength rises across ordered stages (slope +0.0418/stage, CI [0.0293,0.0544], r=0.922), and the stage trend transports to held-out families (MAE 0.4681 -> 0.4275, -8.7%, permutation control).",
+      "analysis_sources": [
+        "output/analysis/02_stage_trend.py",
+        "output/analysis/04_trajectories_holdout.py",
+        "output/analysis/05_structure_decomposition.py",
+        "output/analysis/13_holdout_replication.py",
+        "output/analysis/12_robustness_variants.py"
+      ],
+      "result_evidence": [
+        {
+          "claim_part": "within-unit OLS slope +0.0418 per stage",
+          "file": "output/results/stage_trend.json",
+          "field": "curve_vs_stage.B4_within_unit_centered.ols_slope_per_stage",
+          "value": 0.0418
+        },
+        {
+          "claim_part": "family-clustered bootstrap 95% CI [0.0293, 0.0544]",
+          "file": "output/results/stage_trend.json",
+          "field": "within_unit_slope_family_clustered_bootstrap.ci95_low / ci95_high",
+          "value": [0.02932, 0.05435]
+        },
+        {
+          "claim_part": "stage-curve Pearson r = 0.922 (within-unit centred)",
+          "file": "output/results/stage_trend.json",
+          "field": "curve_vs_stage.B4_within_unit_centered.pearson_r",
+          "value": 0.9217
+        },
+        {
+          "claim_part": "per-unit slopes: n=579, mean +0.0529, 72.7% positive, t(578)=9.27, p=3.5e-19, sign test 421 vs 158 p=1.4e-28",
+          "file": "output/results/stage_trend.json",
+          "field": "per_unit_slope.*",
+          "value": {"n_units": 579, "mean_slope": 0.05287, "fraction_positive": 0.7271, "ttest_vs_zero.statistic": 9.2745, "ttest_vs_zero.pvalue": 3.524e-19, "sign_test.n_positive": 421, "sign_test.n_negative": 158, "sign_test.pvalue_two_sided": 1.438e-28}
+        },
+        {
+          "claim_part": "per-stage curve values (within-unit centred, stages 0..17)",
+          "file": "output/results/stage_trend.json",
+          "field": "stage_curves.B4_within_unit_centered",
+          "value": [0.41547, 0.29524, 0.252419, 0.272702, 0.46217, 0.447583, 0.634223, 0.744533, 0.749015, 0.693657, 0.860896, 0.85925, 0.74064, 0.874426, 0.853137, 0.880269, 0.872928, 1.010364]
+        },
+        {
+          "claim_part": "leave-one-family-out holdout: MAE 0.4681 -> 0.4275, improvement 8.66%",
+          "file": "output/results/holdout_replication.json",
+          "field": "leave_one_family_out.mae_null / mae_trend / mae_improvement_pct",
+          "value": {"mae_null": 0.4680518997840495, "mae_trend": 0.42749902013105434, "mae_improvement_pct": 8.664184393163557}
+        },
+        {
+          "claim_part": "permutation control: null improvement -0.0011 +/- 0.0004, observed +0.0406, p_two=0.00399 (500 perms)",
+          "file": "output/results/holdout_replication.json",
+          "field": "leave_one_family_out.permutation_control.*",
+          "value": {"n_permutations": 500, "perm_improvement_mean": -0.00108630250890256, "perm_improvement_sd": 0.00039128773839732536, "observed_improvement": 0.040552879652995144, "p_two_sided": 0.003992015968063872, "n_perm_ge_observed": 0}
+        },
+        {
+          "claim_part": "permutation control (200 perms, independent code path 05): null -0.0011 +/- 0.0004, exceeds all",
+          "file": "output/results/structure_decomposition.json",
+          "field": "partB_stage_shuffle_control.*",
+          "value": {"n_perm": 200, "mean_improvement_under_shuffled_stage": -0.0011, "sd_improvement": 0.00039, "observed_improvement": 0.04055, "exceeds_all_permutations": true}
+        },
+        {
+          "claim_part": "cell-pair holdout: MAE 0.4681 -> 0.4271, -8.74%",
+          "file": "output/results/holdout_replication.json",
+          "field": "leave_one_cell_pair_out.mae_null / mae_trend / mae_improvement_pct",
+          "value": {"mae_null": 0.4680518997840495, "mae_trend": 0.42714132384975856, "mae_improvement_pct": 8.740606747492386}
+        },
+        {
+          "claim_part": "composition controls agree in sign: record-weighted r=0.79/+0.078, family-equal r=0.71/+0.061, post-stratified r=0.88/+0.076, within-unit r=0.92/+0.042",
+          "file": "output/results/stage_trend.json",
+          "field": "curve_vs_stage.B0_record_weighted / B1_family_equal / B3_post_stratified / B4_within_unit_centered (pearson_r, ols_slope_per_stage)",
+          "value": {"B0": {"r": 0.7886, "slope": 0.07815}, "B1": {"r": 0.7071, "slope": 0.06105}, "B3": {"r": 0.8788, "slope": 0.07646}, "B4": {"r": 0.9217, "slope": 0.0418}}
+        },
+        {
+          "claim_part": "single most fragile variant: all-18-stage units slope +0.0258 (r=0.404)",
+          "file": "output/results/robustness_variants.json",
+          "field": "restrictions (all_18_stages)",
+          "value": "slope +0.0258, r 0.404 (see robustness_variants.json)"
+        }
+      ],
+      "figures": [
+        {
+          "file": "output/figures/F1_stage_trend_and_distribution.png",
+          "observed": "Panel A: four curves (record-weighted grey dashed, family-equal blue, post-stratified red, within-unit centred green) all rise from low stage 0 to high stage 17; within-unit centred curve is the flattest and lowest in early stages (~0.4-0.5) and highest late, consistent with a +0.042/stage within-unit trend; record-weighted curve ends highest (~1.3). Panel B: strength histogram is strongly bimodal (a large mode near 0 and a smaller positive mode near +2) with a long right tail to ~6.3, consistent with a mixture of persistent family levels (SD 1.75, range [-3.51,6.30])."
+        },
+        {
+          "file": "output/figures/F4_holdout_transport.png",
+          "observed": "Panel A: three bars - unit mean (null) 0.4681 (grey), unit mean + stage trend 0.4275 (green), unit mean + shuffled stage 0.4670 (red); the shuffled-stage bar is essentially at null, confirming the gain is not an artifact of the fit, and title states improvement 8.7%, permutation p < 0.0050. Panel B: scatter of per-family MAE gain vs held-out family size (log x); points straddle 0 both above and below, with a mild positive trend toward larger families, consistent with 102 improved / 112 worsened."
+        }
+      ],
+      "independent_rederr_status": {
+        "file": "output/results/independent_rederr.json",
+        "all_matches": true,
+        "fields": {
+          "F1_slope_match": "stage_trend slope 0.0418 matches recomputed 0.042638695146873656",
+          "F1_curve_r_match": "r 0.922 matches recomputed 0.9217462302118397",
+          "F1_bootstrap_ci_match": "CI [0.0293,0.0544] matches recomputed [0.02959,0.05631]",
+          "F1_holdout_match": "mae_null 0.4681, mae_trend 0.4275, improvement 8.7%, rmse 9.3% all match; cellpair mae_trend 0.4271 matches"
+        },
+        "note": "Independent stream reads the RAW tsv (not analysis_table.tsv) and recomputes with a separate implementation; agrees with the authoritative artifacts."
+      },
+      "robustness_evidence": [
+        {"claim": "10 of 11 alternative trend definitions preserve sign/significance", "file": "output/results/robustness_variants.json"},
+        {"claim": "family-clustered vs record-level inference: all CIs block on family", "file": "output/results/stage_trend.json"}
+      ],
+      "limitations": [
+        "Stage indices are ordinal only, not metrically spaced; the per-stage 'rate' is a simplification.",
+        "Only 14 units span all 18 stages; the balanced-panel estimate (slope +0.0258, r=0.404) is materially weaker, so the trend is a distributional property, not a law.",
+        "Transport is real in aggregate but NOT uniform per family (102 improved / 112 worsened); per-family gains correlate with family size and stage coverage, so small/under-covered families are least reliably improved.",
+        "No technical covariate exists in the frozen table, so the trend cannot be separated from a stage-correlated technical drift."
+      ]
+    },
+    "2_identity_dominates_stage": {
+      "claim": "Interaction identity (family/unit), not stage, carries most of the structure: family explains 83.6% and unit 90.1% of record-level variance; stage ~1.8%.",
+      "analysis_sources": [
+        "output/analysis/01_data_audit.py",
+        "output/analysis/05_structure_decomposition.py",
+        "output/analysis/10_block_structure.py"
+      ],
+      "result_evidence": [
+        {
+          "claim_part": "family share 0.836, unit share 0.901, stage share 0.018, cell-pair 0.040",
+          "file": "output/results/data_audit.json",
+          "field": "variance_decomposition.icc_family / icc_unit / icc_cell_pair",
+          "value": {"icc_family": 0.8361548799718109, "icc_unit": 0.9006166085022724, "icc_cell_pair": 0.04025158238164727}
+        },
+        {
+          "claim_part": "record-level partition: between units 90.1%, within 9.9%, stage within-unit 1.8% (18.6% of within-unit slice)",
+          "file": "output/results/structure_decomposition.json",
+          "field": "partA_record_level_partition.*",
+          "value": {"share_between_units": 0.9006, "share_within_units_total": 0.0994, "share_stage_within_units": 0.0184, "share_stage_of_within_unit_variance": 0.1855}
+        },
+        {
+          "claim_part": "family mean SD 1.43, size median 10, max 130",
+          "file": "output/results/data_audit.json",
+          "field": "family_size.max / median",
+          "value": {"max": 130, "median": 10.0}
+        },
+        {
+          "claim_part": "family mean strength correlates +0.58 with number of stages a family occupies",
+          "file": "output/results/stage_trend.json",
+          "field": "naive_confound_check.corr_family_mean_strength_vs_n_stages_present",
+          "value": 0.5759
+        },
+        {
+          "claim_part": "stage axis explains only 1.8% of total variance (partA_record_level_partition.share_stage_within_units)",
+          "file": "output/results/structure_decomposition.json",
+          "field": "partA_record_level_partition.share_stage_within_units",
+          "value": 0.0184
+        }
+      ],
+      "figures": [
+        {
+          "file": "output/figures/F1_stage_trend_and_distribution.png",
+          "observed": "Panel B (bimodal strength distribution created by the mixture of family levels) supports the claim that identity, not stage, creates the marginal structure."
+        }
+      ],
+      "independent_rederr_status": {
+        "file": "output/results/independent_rederr.json",
+        "all_matches": true,
+        "fields": {
+          "F2_family_share_match": "family 0.836, unit 0.901, stage 0.018, family_mean_sd 1.43, size median 10, size max 130 all match"
+        }
+      },
+      "robustness_evidence": [
+        {"claim": "label shuffling preserving family size collapses between-family variance to 0.722 (z=15.2, p<=0.002)", "file": "output/results/block_structure.json"},
+        {"claim": "adjusting for stage composition retains 85% of raw between-family variance (z=13.8)", "file": "output/results/block_structure.json"},
+        {"claim": "split-half reliability of family means r=0.834", "file": "output/results/block_structure.json"}
+      ],
+      "limitations": [
+        "0.836 is a fixed-effects eta2 on unequal group sizes; a random-effects ICC is 0.829. The exact percentage is definition-dependent (both quoted).",
+        "Family identity correlates with panel coverage (+0.58), a genuine confound between 'how strong' and 'how well sampled'.",
+        "Identifiers are anonymous; no biological interpretation of 'families' is offered."
+      ]
+    },
+    "3_evidence_column_coarse_tier": {
+      "claim": "The association_pvalue column is a coarse floor/non-floor report tier, not a graded strength readout: 87.6% at floor 0.0009; the five non-floor levels are not ordered by strength; within-unit AUC 0.618.",
+      "analysis_sources": [
+        "output/analysis/03_evidence_coupling.py",
+        "output/analysis/11_evidence_tier.py"
+      ],
+      "result_evidence": [
+        {
+          "claim_part": "6 discrete levels, floor share 87.6%",
+          "file": "output/results/data_audit.json",
+          "field": "association_pvalue_levels / p_level_shares",
+          "value": {"levels": [0.0009, 0.01, 0.02, 0.03, 0.04, 0.05], "floor_share": 0.8756756756756757}
+        },
+        {
+          "claim_part": "raw rho -0.285 (p~7e-111); within-unit -0.134 (p~3e-25); within-family -0.220 (p~1e-65)",
+          "file": "output/results/evidence_coupling.json",
+          "field": "q1_p_vs_strength.raw / within_unit_centered / within_family_centered",
+          "value": {"raw": {"rho": -0.2848, "pvalue": 7.02e-111}, "within_unit_centered": {"rho": -0.1342, "pvalue": 3.32e-25}, "within_family_centered": {"rho": -0.2197, "pvalue": 1.31e-65}}
+        },
+        {
+          "claim_part": "non-floor only: rho -0.041, p=0.272 (n=736); within-unit non-floor rho +0.007, p=0.844",
+          "file": "output/results/evidence_tier.json",
+          "field": "section5_verdict.key_numbers.nonfloor_only_spearman_P_vs_S / nonfloor_only_within_unit_spearman",
+          "value": {"nonfloor_only_spearman_P_vs_S": -0.04057240582795611, "nonfloor_only_spearman_pvalue": 0.2716443947245138, "nonfloor_only_within_unit_spearman": 0.007246252796326193, "nonfloor_only_within_unit_pvalue": 0.8444110897285957}
+        },
+        {
+          "claim_part": "non-floor mean strength spans only 0.28 units vs global SD 1.75; Kruskal p=0.097",
+          "file": "output/results/evidence_tier.json",
+          "field": "section5_verdict.key_numbers.nonfloor_level_mean_strength_range / kruskal_nonfloor_levels_p_raw",
+          "value": {"nonfloor_level_mean_strength_range": 0.2816198057169777, "sd_strength_overall": 1.7486335912807351, "kruskal_nonfloor_levels_p_raw": 0.09740165242163923}
+        },
+        {
+          "claim_part": "floor/non-floor contrast: paired within-unit diff +0.371, AUC 0.618, Cohen's d 0.383",
+          "file": "output/results/evidence_tier.json",
+          "field": "section5_verdict.key_numbers.floor_vs_nonfloor_within_unit_paired_diff / floor_vs_nonfloor_auc_within_unit / cohens_d_within",
+          "value": {"floor_vs_nonfloor_within_unit_paired_diff": 0.37095239043074296, "floor_vs_nonfloor_auc_within_unit": 0.6179233290978932, "cohens_d_within": 0.38271064480191935}
+        },
+        {
+          "claim_part": "tier does not track absolute magnitude: |dev| flat across tiers, Spearman -0.078",
+          "file": "output/results/evidence_tier.json",
+          "field": "section5_verdict.key_numbers.spearman_P_vs_absdev / mean_absdev_floor / mean_absdev_nonfloor",
+          "value": {"spearman_P_vs_absdev": -0.07840477025854044, "mean_absdev_floor": 0.3845298429653877, "mean_absdev_nonfloor": 0.3663745622235361}
+        },
+        {
+          "claim_part": "variance: full 6-tier explains 0.0176 of within-unit variance (raw 0.0743); floor split 0.016; non-floor 0.008",
+          "file": "output/results/evidence_tier.json",
+          "field": "section5_verdict.key_numbers.eta2_strength_by_full_tier_within_unit / eta2_strength_by_floor_split_within_unit / eta2_nonfloor_levels_within_nonfloor",
+          "value": {"eta2_strength_by_full_tier_within_unit": 0.017568321293950837, "eta2_strength_by_floor_split_within_unit": 0.015948279726992764, "eta2_nonfloor_levels_within_nonfloor": 0.007756090092586766}
+        }
+      ],
+      "figures": [
+        {
+          "file": "output/figures/F2_evidence_tier.png",
+          "observed": "Panel A: % records at floor vs stage_index is non-monotone (rises 66% at stage 0 to a peak ~96% around stage 9, drops to ~76% at stage 14, back up to ~87% at 17) - the instrument's operating point drifts across stages. Panel B: mean strength by p-tier on log x; the floor tier (1e-3) has the highest raw mean (~0.81) while non-floor tiers (1e-2..5e-2) sit at or below ~0 and are non-monotone (0.04 highest, 0.05 lowest), within-unit centred line near zero - consistent with non-floor tiers carrying no ordered strength information."
+        }
+      ],
+      "independent_rederr_status": {
+        "file": "output/results/independent_rederr.json",
+        "all_matches": true,
+        "fields": {
+          "F3_floor_share_match": "floor share 0.876, rho_raw -0.285, rho_within -0.134, rho_nonfloor -0.041, nonfloor range 0.28 all match",
+          "floor_vs_nonfloor_within_unit_auc_match": "AUC 0.618 matches recomputed 0.6179"
+        }
+      },
+      "limitations": [
+        "The floor value 0.0009 looks like a censoring floor; if so the true p-distribution is left-censored and the floor/non-floor contrast understates the real evidence difference - not verifiable from the frozen table.",
+        "The non-floor levels may encode a different quantity (e.g., per-stage detection threshold) that the table does not distinguish.",
+        "The main-analysis artifact evidence_coupling.json retains a buggy lability count (8/22/688); the correct count (360/22/336) is in evidence_tier.json.section4_lability and independent_rederr.json.F5_lability (see finding 5)."
+      ]
+    },
+    "4_transience_and_heterogeneous_transport": {
+      "claim": "210 of 579 multi-stage (>=3) units reverse sign (transient); the family holdout transport is heterogeneous: 102 of 214 families improve, 112 worsen (sign p=0.5385), per-family gain correlates +0.34 with family size and +0.40 with stage coverage.",
+      "analysis_sources": [
+        "output/analysis/04_trajectories_holdout.py",
+        "output/analysis/05_structure_decomposition.py",
+        "output/analysis/13_holdout_replication.py"
+      ],
+      "result_evidence": [
+        {
+          "claim_part": "taxonomy: 579 units, transient sign-reversing 210 (36.3%), persistent 239, unresolved 66, emerging 49, declining 15",
+          "file": "output/results/trajectories_holdout.json",
+          "field": "partA_taxonomy.class_counts / class_shares",
+          "value": {"n_units_taxonomised": 579, "transient_sign_reversing": 210, "persistent_level": 239, "unresolved_flat": 66, "emerging": 49, "declining": 15}
+        },
+        {
+          "claim_part": "transient count threshold-invariant: 210 across all 12 threshold points",
+          "file": "output/results/trajectories_holdout.json",
+          "field": "partA_threshold_sensitivity[].transient_sign_reversing",
+          "value": 210
+        },
+        {
+          "claim_part": "sign instability corroborated: 491/718 multi-stage units constant sign, 227 reversing",
+          "file": "output/results/stage_trend.json",
+          "field": "unit_level.n_sign_persistent / n_sign_reversing",
+          "value": {"n_sign_persistent": 491, "n_sign_reversing": 227}
+        },
+        {
+          "claim_part": "heterogeneous transport: 102 improved / 112 worse / 0 tied, sign p=0.5385, n_families=214",
+          "file": "output/results/holdout_replication.json",
+          "field": "leave_one_family_out.per_group_summary.n_improved / n_worse / n_tied / sign_test_p_two_sided",
+          "value": {"n_improved": 102, "n_worse": 112, "n_tied": 0, "sign_test_p_two_sided": 0.5385040002283777}
+        },
+        {
+          "claim_part": "per-family gain correlates +0.34 with family size, +0.40 with stage count",
+          "file": "output/results/structure_decomposition.json",
+          "field": "partB_heterogeneity.corr_family_size_vs_gain / corr_n_stages_vs_gain",
+          "value": {"corr_family_size_vs_gain": 0.3386, "corr_n_stages_vs_gain": 0.4005}
+        },
+        {
+          "claim_part": "per-family MAE table (214 rows): null/trend MAE, improvement, improved/tied flags",
+          "file": "output/results/holdout_replication.json",
+          "field": "leave_one_family_out_per_family[]",
+          "value": "214 rows"
+        }
+      ],
+      "figures": [
+        {
+          "file": "output/figures/F3_trajectory_taxonomy.png",
+          "observed": "Panel A: horizontal bar chart of 5 classes among 579 units (>=3 stages): persistent level 239 (green, longest), transient sign reversing 210 (red), unresolved flat 66 (grey), emerging 49 (blue), declining 15 (orange, shortest). Panel B: threshold sensitivity - transient sign reversing (red) is flat at ~211 across all slope thresholds (0.1/0.15/0.2/0.3), while persistent (green), unresolved (grey), emerging (blue), declining (orange) move a lot (e.g., persistent 104->319, emerging 90->4), illustrating that only the sign-reversing count is threshold-invariant."
+        },
+        {
+          "file": "output/figures/F4_holdout_transport.png",
+          "observed": "Panel B: per-family MAE gain vs family size (log x); points straddle zero with a mild positive trend, title states 102 of 214 improve, 112 worsen."
+        }
+      ],
+      "independent_rederr_status": {
+        "file": "output/results/independent_rederr.json",
+        "all_matches": true,
+        "fields": {
+          "F4_transience_match": "n3=579, transient=210 match",
+          "F4_per_family_match": "102 improved / 112 worsened / sign p=0.5385040002283777 match (independent recomputation reads RAW tsv, vectorised leave-one-family-out, matches authoritative 13_holdout_replication.json)"
+        }
+      },
+      "limitations": [
+        "'Transient' = sign reversal of a value whose reliability is unmeasured (one value per unit-stage, no replicate). Cannot read as '36% of interactions genuinely switch on/off'.",
+        "Per-family gains for small families are estimated from very few records; the size correlation is partly a precision artefact.",
+        "Emerging/declining/persistent/unresolved counts are threshold-sensitive and should be read as illustrative, not estimates."
+      ]
+    },
+    "5_evidence_verdict_lability": {
+      "claim": "For the same unit across stages, strength is highly reproducible (split-half r=0.908) while the floor/non-floor evidence verdict is not (agreement 0.875, Cohen's kappa 0.122): 360 always-floor, 22 always-non-floor, 336 mixed of 718; P(floor next | floor now)=0.931, P(floor next | non-floor now)=0.708.",
+      "analysis_sources": [
+        "output/analysis/03_evidence_coupling.py",
+        "output/analysis/11_evidence_tier.py"
+      ],
+      "result_evidence": [
+        {
+          "claim_part": "state patterns: 360 always-floor, 22 always-non-floor, 336 mixed of 718; shares 0.501/0.031/0.468",
+          "file": "output/results/evidence_tier.json",
+          "field": "section4_lability.state_patterns",
+          "value": {"always_floor": 360, "always_nonfloor": 22, "mixed": 336, "share_always_floor": 0.5013927576601671, "share_always_nonfloor": 0.03064066852367688, "share_mixed": 0.467966573816156}
+        },
+        {
+          "claim_part": "transitions: P(floor next | floor now)=0.931, P(floor next | non-floor now)=0.708",
+          "file": "output/results/evidence_tier.json",
+          "field": "section4_lability.transitions_all_consecutive_observed.P_floor_next_given_floor / P_floor_next_given_nonfloor",
+          "value": {"P_floor_next_given_floor": 0.9310581768208886, "P_floor_next_given_nonfloor": 0.7082405345211581}
+        },
+        {
+          "claim_part": "split-half reliability: strength r=0.908 (>=2 obs per half 0.931); floor fraction r=0.372, kappa 0.122",
+          "file": "output/results/evidence_coupling.json",
+          "field": "q2_contrast_strength_vs_evidence_stability.*",
+          "value": {"split_half_r_strength": 0.9084, "verdict_agreement_rate_early_vs_late": 0.8747, "cohens_kappa_early_vs_late": 0.1218}
+        },
+        {
+          "claim_part": "unit-level clustering: chi2=1612, df=717, dispersion 2.25 vs i.i.d. expected 316 always-floor / 399 mixed",
+          "file": "output/results/evidence_tier.json",
+          "field": "section4_lability.unit_level_clustering / iid_benchmark_same_unit_lengths",
+          "value": {"dispersion": 2.2485153719711843, "expected_always_floor": 316.31, "expected_mixed": 399.37}
+        },
+        {
+          "claim_part": "test-retest (>=4 stages): strength split-half r=0.924, floor-fraction r=0.372, kappa 0.199",
+          "file": "output/results/evidence_tier.json",
+          "field": "section4_lability.test_retest_units_ge4_stages",
+          "value": {"strength_split_half_r": 0.9236758201145665, "floor_frac_split_half_r": 0.37170493905907653, "cohen_kappa": 0.19944354956801866}
+        }
+      ],
+      "figures": [
+        {
+          "file": "output/figures/F2_evidence_tier.png",
+          "observed": "Panel A shows the floor prevalence drifting non-monotonically across stages (consistent with a threshold-crossing account); Panel B shows the floor tier dominates in raw mean strength while within-unit centred means are near zero, consistent with the verdict being a coarse threshold flag rather than a stable strength readout."
+        }
+      ],
+      "independent_rederr_status": {
+        "file": "output/results/independent_rederr.json",
+        "all_matches": true,
+        "fields": {
+          "F5_lability_correct_match": "correct counts 360/22/336 match",
+          "F5_lability_buggy_would_match": false,
+          "F5_lability_buggy_would_match_note": "NEGATIVE CONTROL: the buggy 8/22/688 (NaN-pivot over all 18 stage columns) path does NOT reproduce the correct 360/22/336; this is intentionally false and is excluded from the all-headline roll-up.",
+          "F5_transition_match": "P(floor|floor)=0.931, P(floor|nonfloor)=0.708 match",
+          "F5_strength_split_half_match": "split-half r 0.908 matches recomputed 0.908375"
+        }
+      },
+      "limitations": [
+        "The main-analysis artifact evidence_coupling.json.q2_evidence_stability still reports the buggy 8/22/688 count (a NaN-pivot artefact: sig.all(axis=1) over all 18 stage columns requires all 18 stages observed AND floor; only 14 units have all 18 stages, 8 of which are always-floor). The correct counts (360/22/336) are in evidence_tier.json.section4_lability, independent_rederr.json, and Result.md (Finding 5). The buggy artifact is retained for provenance and flagged in evidence_tier.json.section5_verdict.conflicts_with_stated_facts.",
+        "The 22 always-non-floor units are a small cell; statistics conditioning on them are unstable and not used.",
+        "Most likely mechanical explanation is a threshold-crossing artefact (no replicate measurements to test directly)."
+      ]
+    }
+  },
+  "independent_rederr_rollup": {
+    "file": "output/results/independent_rederr.json",
+    "all_headline_numbers_reproduce": true,
+    "how_computed": "Flattens every positive match flag in summary (including nested per-check dicts F1_holdout_match, F2_family_share_match, F3_floor_share_match, F5_transition_match) and requires all to be true. It explicitly EXCLUDES the negative-control flag F5_lability_buggy_would_match, which is intentionally False (it asserts the buggy 8/22/688 path does not reproduce the correct 360/22/336). This flag is a check on bug-detection, not a headline number in Result.md, so it must not force the roll-up to False.",
+    "summary_flags": {
+      "integrity_sha_match": true,
+      "census_match": true,
+      "F1_slope_match": true,
+      "F1_curve_r_match": true,
+      "F1_bootstrap_ci_match": true,
+      "F1_holdout_match": {"mae_null": true, "mae_trend": true, "improvement_pct": true, "rmse_improvement_pct": true},
+      "F2_family_share_match": {"family_share_836": true, "unit_share_901": true, "stage_18": true, "family_mean_sd_143": true, "family_size_median_10": true, "family_size_max_130": true},
+      "F3_floor_share_match": {"floor_share_876": true, "rho_raw_-0285": true, "rho_within_-0134": true, "rho_nonfloor_-0041": true, "nonfloor_range_028": true},
+      "F4_transience_match": true,
+      "F4_per_family_match": true,
+      "F5_lability_correct_match": true,
+      "F5_lability_buggy_would_match": false,
+      "F5_transition_match": {"P_floor_given_floor_0931": true, "P_floor_given_nonfloor_0708": true},
+      "F5_strength_split_half_match": true
+    }
+  },
+  "figure_review": {
+    "method": "All four PNGs were visually inspected with the Read tool (one by one). Observations are recorded here and are consistent with the numeric artifacts.",
+    "F1_stage_trend_and_distribution": {
+      "path": "output/figures/F1_stage_trend_and_distribution.png",
+      "panel_A": "Title 'Stage trend survives composition controls'. Four line series across stage_index 0..17: record-weighted (grey dashed), family-equal (blue), post-stratified (red), within-unit centred (green). All rise from low early stages to high late stages. Within-unit centred is the flattest/lowest in early stages (~0.4-0.5) and highest late (~1.0); record-weighted ends highest (~1.3). Consistent with a within-unit +0.042/stage trend and with the composition-confounding narrative (record-weighted curve inflated by large families present late).",
+      "panel_B": "Title 'Strength distribution SD=1.75, range [-3.51, 6.30]'. Strongly bimodal histogram: large mode near 0 (and a secondary peak slightly positive), a long right tail to ~6.3, small left tail to ~-3.5. Consistent with a mixture of persistent family-specific levels.",
+      "consistency_with_report": "Panel A supports Finding 1 (trend under multiple estimators); Panel B supports Finding 2 (mixture of family levels / identity-dominated structure)."
+    },
+    "F2_evidence_tier": {
+      "path": "output/figures/F2_evidence_tier.png",
+      "panel_A": "Title 'Evidence floor prevalence is non-monotone'. % records at floor 0.0009 vs stage_index: rises from ~66% at stage 0 to a plateau/peak ~92-96% (stages 5-9), dips to ~76% at stage 14, back to ~87% at stage 17. Non-monotone, consistent with the instrument's operating point drifting across stages (range 0.294).",
+      "panel_B": "Title 'Non-floor tiers sit below the floor tier'. Mean strength by association_pvalue (log x, 6 discrete tiers). Two series: raw mean (blue circles) and within-unit centred (green squares). Raw mean highest at floor (~0.81), drops to ~-0.55 at 0.01 and ~-0.76 at 0.05; non-floor points are non-monotone. Within-unit centred line is near zero across all tiers (floor ~0.02, non-floor -0.2 to -0.3). Consistent with non-floor tiers carrying no ordered within-unit strength information.",
+      "consistency_with_report": "Supports Finding 3 (coarse floor/non-floor tier, non-ordered above floor) and Finding 5 (threshold drift / lability)."
+    },
+    "F3_trajectory_taxonomy": {
+      "path": "output/figures/F3_trajectory_taxonomy.png",
+      "panel_A": "Title 'Trajectory taxonomy'. Horizontal bars for 5 classes among 579 units (>=3 stages): persistent level 239 (green, longest), transient sign reversing 210 (red), unresolved flat 66 (grey), emerging 49 (blue), declining 15 (orange, shortest). Matches trajectories_holdout.json.partA_taxonomy.class_counts.",
+      "panel_B": "Title 'Threshold sensitivity'. Units assigned vs slope threshold (0.1/0.15/0.2/0.3; flat-SD varied 0.30/0.50/0.75). transient sign reversing (red) is flat at ~211 across all thresholds (threshold-invariant); persistent (green), unresolved (grey), emerging (blue), declining (orange) move a lot (persistent 104->319, emerging 90->4). Consistent with the claim that only the sign-reversing count is robust.",
+      "consistency_with_report": "Supports Finding 4 (210 transient, threshold-invariant; other classes threshold-sensitive)."
+    },
+    "F4_holdout_transport": {
+      "path": "output/figures/F4_holdout_transport.png",
+      "panel_A": "Title 'Family-holdout MAE improvement 8.7%, permutation p < 0.0050'. Three bars: unit mean (null) 0.4681 (grey), unit mean + stage trend 0.4275 (green), unit mean + shuffled stage 0.4670 (red). Shuffled-stage bar ~null, confirming the gain comes from the real stage trend, not the fit. Consistent with holdout_replication.json (MAE 0.4681->0.4275, -8.7%).",
+      "panel_B": "Title 'Transport is heterogeneous 102 of 214 improve, 112 worsen'. Scatter of per-family MAE gain (y, -0.4 to +0.4) vs held-out family size (log x, records). Points straddle 0 both above and below, with a mild positive trend toward larger families. Consistent with 102 improved / 112 worsened and the size correlation +0.34.",
+      "consistency_with_report": "Supports Finding 1 (transport) and Finding 4 (heterogeneous transport)."
+    }
+  },
+  "residual_limitations_and_honesty_notes": [
+    "The frozen table has one value per unit-stage with no replicates; measurement noise and true variation are not separable. This bounds Findings 4 and 5.",
+    "No external data or literature was used; all evidence is from data/stage_indexed_interactions.tsv. No T0 source-date verification was required because no external source was used.",
+    "Identifiers are anonymous; stage indices are ordinal, not metrically spaced; no causal or mechanistic claim is made.",
+    "One artifact (evidence_coupling.json.q2_evidence_stability) intentionally retains a known-incorrect lability count (8/22/688) for provenance; the correct count (360/22/336) is the one used in the report and independent stream. This is documented, not hidden.",
+    "The sign-test p-value in the per-family heterogeneity claim was corrected in Result.md from a stale '102 vs 111 excluding one floating-point tie, p=0.58' to the authoritative '102 vs 112, p=0.5385' (no tie in holdout_replication.json.per_group_summary / leave_one_family_out_per_family).",
+    "The all_headline_numbers_reproduce flag was corrected: the previous roll-up only looked at top-level bools (skipping nested match dicts) and let the intentionally-False negative control F5_lability_buggy_would_match force it to False. It now flattens all positive match flags and excludes the negative control."
+  ]
+}

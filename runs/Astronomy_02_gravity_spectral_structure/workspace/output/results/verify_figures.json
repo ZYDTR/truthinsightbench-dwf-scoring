@@ -1,0 +1,136 @@
+{
+  "track": "figures",
+  "artifacts_exist": true,
+  "script_runs": true,
+  "independent_recomputations": [
+    {
+      "quantity": "fig1/fig2 whole-pass RMS, model A (mean over 22 passes)",
+      "claimed": 0.033691753485694746,
+      "recomputed": 0.033691753485694746,
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "fig1/fig2 whole-pass RMS, model B (mean over 22 passes)",
+      "claimed": 0.020272702090083465,
+      "recomputed": 0.020272702090083465,
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "fig1/fig2 whole-pass RMS, model C (mean over 22 passes)",
+      "claimed": 0.025268553021377982,
+      "recomputed": 0.025268553021377982,
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "fig2 paired RMS difference A-B, mean and 95% bootstrap CI (B=10000, seed 20220101, resampled over the 22 passes)",
+      "claimed": "mean 0.0134190514, CI [0.0103668225, 0.0168200567], 22/22 passes > 0",
+      "recomputed": "mean 0.0134190513956113, CI [0.0103668224930669, 0.0168200567314424], 22/22 passes > 0",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "fig2/fig3 A-C and C-B paired whole-pass differences (mean, CI, n_pass_gt0)",
+      "claimed": "A-C 0.0084232005 [0.0063961827, 0.0106929006] 22/22; C-B 0.0049958509 [0.0035230352, 0.0066764960] 22/22",
+      "recomputed": "A-C 0.0084232004643168 [0.0063961826795942, 0.0106929006031186] 22/22; C-B 0.0049958509312945 [0.0035230351533197, 0.0066764959882665] 22/22",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "fig3 pass-averaged LS spectrum peak frequency, model A / B / C (uHz)",
+      "claimed": "489 / 2474 / 1706",
+      "recomputed": "489 / 2474 / 1706",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "fig3 band-mean (860-1310 uHz) power, mean and 95% pass-level bootstrap CI",
+      "claimed": "A 0.0490241344 [0.0397430987, 0.0582138576]; B 0.0039089660 [0.0020783227, 0.0061730226]; C 0.0553375303 [0.0379208936, 0.0799804474]",
+      "recomputed": "A 0.0490241343822794 [0.0397430987432887, 0.0582138576257805]; B 0.0039089660240923 [0.0020783227373367, 0.0061730225800722]; C 0.0553375302550223 [0.0379208935881146, 0.0799804474352303]",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "fig3 band-mean power difference A-B (mean, CI, passes > 0)",
+      "claimed": "0.0451151684, [0.0352788217, 0.0547301556], 21/22",
+      "recomputed": "0.0451151683581871, [0.0352788217276963, 0.0547301556089402], 21/22",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "fig5 max delta-IC of the ranked grid and factorial size (7 vmax x 8 vmin x 10 f x 4 w)",
+      "claimed": "137.2 at rank 250; 250 of 2240",
+      "recomputed": "137.2 at rank 250; 250 unique parameter combinations of 2240 (11.16%)",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "fig5 smallest consecutive top-20 margin and its rank",
+      "claimed": "0.09999999999999787 (0.1) at ranks 14-15",
+      "recomputed": "0.1 (np.diff of ic[:20] min) at ranks 14-15; rank6-7 margin 0.7 and rank10-11 margin 1.1 also confirmed",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "fig5 finite-factorial truncation check: f=860 first appears at rank",
+      "claimed": "rank 148 (annotation in fig5 panel (c) title)",
+      "recomputed": "rank 148",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "fig4 FA-family minimum IC / frequency / vmax; FA second minimum; uniform minimum IC and velocity; MV-family minimum IC",
+      "claimed": "43.9 at f=1010 uHz, vmax=20 cm/s; second min 47.2; uniform 1522.1 at v=0.10 cm/s; MV min 50.7",
+      "recomputed": "43.9 at (f=1010, vmax=20); second min 47.2; uniform 1522.1 at v=0.10 (interior, not a boundary); MV min 50.7",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "fig4 log-scale axis validity: all plotted IC values strictly positive",
+      "claimed": "implicit (LogNorm colour scale, log y axes)",
+      "recomputed": "all true: FA surface min 43.9, uniform curve min 1522.1, RMS values min 0.00768, spectra min 1e-5 (floor)",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "fig2 pass_14 zoom panel: whole-pass RMS A/B/C printed inside the panel",
+      "claimed": "0.0347 / 0.0091 / 0.0196 mm/s",
+      "recomputed": "0.03474 / 0.00906 / 0.01955 mm/s; pass_14 is rank 1 of 22 by relative mean|A-B|/mean|A| = 0.9917 (rank 2 of 22 by relative RMS separation 0.7391, behind pass_13 0.7501)",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "fig5's own truncation language: does any figure/track5 annotation claim the ranked grid is a complete cartesian grid?",
+      "claimed": "fig5 panel (a) title explicitly states '250 of 2240 factorial cells kept'; no track5 artifact claims completeness",
+      "recomputed": "confirmed by direct string search of the PNG tEXt chunks, track5_figures.py and track5_figure_annotations.json; the only cartesian-coverage language is track3_grid_structure.py, which calls it a truncated ranking",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "mode-frequency 'comb' coincidence strength if it were claimed (chance-null test run proactively)",
+      "claimed": "no coincidence or alignment claim is made anywhere in track5 (modes_in_band=18 is a count, not a test)",
+      "recomputed": "18 modes in 860-1310 uHz, 6 within 5 uHz of a 50-uHz comb line vs chance mean 3.6 (p=0.133); 1 within 2 uHz vs chance mean 1.43 (p=0.776). No track5 claim depends on this, so no missing-null problem is present",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "manifest byte sizes versus real on-disk sizes (all five PNGs)",
+      "claimed": "1935225 / 202690 / 481309 / 254273 / 322619",
+      "recomputed": "1935225 / 202690 / 481309 / 254273 / 322619; all five match the manifest exactly; no extra or missing PNGs in output/figures/",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "recorded exit codes in _run_all.log and track5_run_all_summary.json",
+      "claimed": "6/6 scripts exited 0, n_failed=0, total 869.57 s",
+      "recomputed": "log shows 0 for all six (track1_followup_checks, track1_model_comparison, track2_spectral_tests, track3_grid_structure, track4_ic_comparison, track5_figures) and EXIT=0; summary n_failed=0; the log's transcript is internally consistent with the summary",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "harness failure propagation (independent probe, not the recorded run)",
+      "claimed": "run_all.py returns 1 and records nonzero returncodes if a child fails",
+      "recomputed": "injected a probe child exiting 3: harness recorded returncode=3, note='exit 3', n_failed=1 and itself exited 1; probe artifacts removed and track5_run_all_summary.json restored to its original content (md5 0b61b1d9992089c4c5eeb87c9055e31e, n_failed=0)",
+      "abs_diff": 0.0
+    },
+    {
+      "quantity": "re-execution of track5_figures.py itself (clean slate, figures + manifest deleted first)",
+      "claimed": "the five PNGs are reproducible by /usr/bin/python3 output/code/track5_figures.py",
+      "recomputed": "exit 0 in 802 s under heavy machine load; all five PNGs regenerated bit-for-bit identical (SHA-256 equal to the pre-deletion hashes, same byte sizes); the regenerated manifest's byte fields again match disk. No figure was written by a script that did not run",
+      "abs_diff": 0.0
+    }
+  ],
+  "problems_found": [
+    "MINOR (cosmetic, fig2 only): the paired-difference annotation text is laid out with ax2.text(0.0, -0.235, va='top', transform=ax2.transAxes), i.e. its top edge sits 23.5% of the axes height BELOW the bottom of the right-hand axes. The last rows of the three difference lines (A-B, A-C, C-B) are flush against the image edge: the very last image row (y=1183) still carries ink, and the C-B line loses its final descender row relative to A-B/A-C. The text is legible (verified in pixel crops) but plainly overflows the axes and is not confined to the figure canvas.",
+    "MINOR (precision, fig1 only): the pass_14 zoom panel is titled/captioned as the pass with 'largest relative A-B separation', but this is false under the most natural metric. pass_14 is rank 1 by mean|A-B|/mean|A| (0.9917) but rank 2 by |RMS_A-RMS_B|/RMS_A (0.7391 vs pass_13 0.7501). The caption text in the code ('largest relative A-B separation') names the metric only loosely; the panel itself is legible and its printed RMS numbers are exactly correct.",
+    "MINOR (absolute vs relative): fig3 panel 2 is captioned 'the ranked-grid peak frequencies (1010-1160 uHz ridge)', but 13.2% of the ranked grid (33 of 250 rows) has f=860, so the f range of the ranked table is 860-1310 uHz. The 1010-1160 ridge is real (all top-20 rows of the ranked grid have f in 1010-1160), so the caption is right in substance and only omits the tail.",
+    "NO CONFIRMED FAILURE of the specific mode the verifier was asked to hunt: no figure is a stale artifact written by a script that did not run. Deleting all five PNGs and the manifest and re-running track5_figures.py in isolation regenerated all five with byte-identical SHA-256 digests; the manifest's five byte sizes were correct both before and after. The record also cannot be a fabricated log, because the manifest and annotations carry real values that earlier logs do not print (min_margin_value=0.09999999999999787, margins_top20, n_ranked=250, RMS CIs), and those values are independently reproduced from the TSVs here.",
+    "NO FAILURE FOUND for the pass-level blocking requirement: every uncertainty in track5 (RMS mean CIs, paired RMS CIs, band-power CIs) is a bootstrap over the 22 whole passes; no p-value or standard error anywhere in track5_figures.py treats the 1698 samples as independent, and fig5 panel (b) explicitly annotates that the grid rows 'carry NO per-row standard error -- rows are not replicates'."
+  ],
+  "severity": "minor",
+  "verdict": "confirmed"
+}

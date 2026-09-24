@@ -1,0 +1,565 @@
+{
+  "set_a": {
+    "recording": "set_a",
+    "n_events": 35,
+    "event_index_min": 1,
+    "event_index_max": 35,
+    "index_contiguous": true,
+    "relative_time_mean": 34.97571428571428,
+    "relative_time_median": 35.15,
+    "relative_time_sd": 29.734977352459182,
+    "relative_time_iqr": 40.925,
+    "relative_time_range": 124.8,
+    "negative_time_frac": 0.14285714285714285,
+    "signal_mean": 0.04035428571428569,
+    "signal_median": -0.3628,
+    "signal_sd": 2.2315018958939183
+  },
+  "set_b": {
+    "recording": "set_b",
+    "n_events": 556,
+    "event_index_min": 1,
+    "event_index_max": 556,
+    "index_contiguous": true,
+    "relative_time_mean": 32.80521582733813,
+    "relative_time_median": 30.275,
+    "relative_time_sd": 27.749100297860508,
+    "relative_time_iqr": 32.7125,
+    "relative_time_range": 137.4,
+    "negative_time_frac": 0.10611510791366907,
+    "signal_mean": 0.4851306257194245,
+    "signal_median": 0.19835,
+    "signal_sd": 2.536096632439013
+  },
+  "unit_distance_n": 41,
+  "unit_dist_range": [
+    0.005,
+    0.7336
+  ],
+  "mean_latency_range": [
+    5.1,
+    77.8
+  ],
+  "zero_sd_units": 5,
+  "event_state": {
+    "set_a": {
+      "n_events": 35,
+      "n_pos": 15,
+      "n_neg": 20,
+      "mean_time_pos": 24.166666666666668,
+      "mean_time_neg": 43.082499999999996,
+      "ttest_p": 0.06143634737548813,
+      "spearman_rho": -0.3086974532565159,
+      "spearman_p": 0.0711830338851403
+    },
+    "set_b": {
+      "n_events": 556,
+      "n_pos": 296,
+      "n_neg": 260,
+      "mean_time_pos": 26.773479729729733,
+      "mean_time_neg": 39.67211538461538,
+      "ttest_p": 3.073536627848136e-08,
+      "spearman_rho": -0.21988196599416968,
+      "spearman_p": 1.6294144350879265e-07
+    }
+  },
+  "correlations": {
+    "dist_vs_meanlat_pearson": {
+      "r": -0.19296261975608445,
+      "p": 0.22675769396961273
+    },
+    "dist_vs_meanlat_spearman": {
+      "rho": -0.1383275261324042,
+      "p": 0.38841574025826864
+    },
+    "dist_vs_latencysd_pearson": {
+      "r": 0.06556760460405084,
+      "p": 0.6837930365733388
+    },
+    "dist_vs_latencysd_spearman": {
+      "rho": -0.020052317995818594,
+      "p": 0.9009675826100705
+    },
+    "cross_recording_ks": {
+      "stat": 0.11521068859198355,
+      "p": 0.7295102075866976
+    }
+  },
+  "panel_unit_pairs": [
+    {
+      "unit_index": 1,
+      "signal_mean": 0.48868717948717955,
+      "mean_event_latency": 37.1417,
+      "pair_distance": 0.1184
+    },
+    {
+      "unit_index": 2,
+      "signal_mean": -0.20395641025641026,
+      "mean_event_latency": 35.7889,
+      "pair_distance": 0.1502
+    },
+    {
+      "unit_index": 3,
+      "signal_mean": 0.598274358974359,
+      "mean_event_latency": 39.2071,
+      "pair_distance": 0.005
+    }
+  ],
+  "robustness": [
+    {
+      "check": "leave_one_unit_out",
+      "unit": 1.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.14033771106941842,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 2.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.1352720450281426,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 3.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.10863039399624766,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 4.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.14333958724202628,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 5.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.08911819887429645,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 6.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.13114446529080678,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 7.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.1133208255159475,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 8.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.1553470919324578,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 9.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.1530956848030019,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 10.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.14484052532833022,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 11.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.150093808630394,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 12.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.13696060037523455,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 13.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.16641651031894938,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 14.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.1133208255159475,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 15.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.15253283302063794,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 16.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.15234521575984994,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 17.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.12326454033771109,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 18.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.11519699812382742,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 19.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.16285178236397752,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 20.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.10225140712945593,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 21.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.14465290806754225,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 22.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.14746716697936213,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 23.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.12701688555347093,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 24.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.1855534709193246,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 25.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.12757973733583491,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 26.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.14727954971857413,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 27.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.11519699812382742,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 28.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.1407129455909944,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 29.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.14953095684803003,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 30.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.12120075046904316,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 31.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.12983114446529084,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 32.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.12251407129455913,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 33.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.12701688555347093,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 34.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.14390243902439023,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 35.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.1407129455909944,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 36.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.14108818011257038,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 37.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.15384615384615388,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 38.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.1277673545966229,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 39.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.1855534709193246,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 40.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.0878048780487805,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "leave_one_unit_out",
+      "unit": 41.0,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.21144465290806758,
+      "r": NaN,
+      "p": NaN,
+      "value": NaN
+    },
+    {
+      "check": "alternative_scale_loglatency",
+      "unit": NaN,
+      "metric": "pearson_dist_vs_log_meanlat",
+      "rho": NaN,
+      "r": -0.14896150168306854,
+      "p": 0.3526185378935542,
+      "value": NaN
+    },
+    {
+      "check": "alternative_scale_loglatency",
+      "unit": NaN,
+      "metric": "spearman_dist_vs_log_meanlat",
+      "rho": -0.1383275261324042,
+      "r": NaN,
+      "p": 0.38841574025826864,
+      "value": NaN
+    },
+    {
+      "check": "outlier_trim_10pct",
+      "unit": NaN,
+      "metric": "pearson_dist_vs_meanlat",
+      "rho": NaN,
+      "r": -0.2593585204474885,
+      "p": 0.14497058999974344,
+      "value": NaN
+    },
+    {
+      "check": "outlier_trim_10pct",
+      "unit": NaN,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.20989304812834228,
+      "r": NaN,
+      "p": 0.2410493945892699,
+      "value": NaN
+    },
+    {
+      "check": "pairwise_concordance",
+      "unit": NaN,
+      "metric": "fraction_concordant",
+      "rho": NaN,
+      "r": NaN,
+      "p": NaN,
+      "value": 0.4573170731707317
+    },
+    {
+      "check": "primary",
+      "unit": NaN,
+      "metric": "spearman_dist_vs_meanlat",
+      "rho": -0.1383275261324042,
+      "r": NaN,
+      "p": 0.38841574025826864,
+      "value": NaN
+    },
+    {
+      "check": "primary",
+      "unit": NaN,
+      "metric": "pearson_dist_vs_meanlat",
+      "rho": NaN,
+      "r": -0.19296261975608445,
+      "p": 0.22675769396961273,
+      "value": NaN
+    },
+    {
+      "check": "primary",
+      "unit": NaN,
+      "metric": "spearman_dist_vs_latency_sd",
+      "rho": -0.020052317995818594,
+      "r": NaN,
+      "p": 0.9009675826100705,
+      "value": NaN
+    },
+    {
+      "check": "primary",
+      "unit": NaN,
+      "metric": "pearson_dist_vs_latency_sd",
+      "rho": NaN,
+      "r": 0.06556760460405084,
+      "p": 0.6837930365733388,
+      "value": NaN
+    }
+  ],
+  "pairwise_concordance": 0.4573170731707317,
+  "contiguous_events": {
+    "set_a": true,
+    "set_b": true
+  }
+}

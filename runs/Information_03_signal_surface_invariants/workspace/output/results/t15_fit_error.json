@@ -1,0 +1,43 @@
+{
+  "rows": 21,
+  "n_axes": 7,
+  "n_replicates": 3,
+  "mean": 0.12994596912981643,
+  "sd": 0.013731744017678295,
+  "min": 0.1075377520873549,
+  "max": 0.157572418055826,
+  "ss_share_axis": 0.5978047146101543,
+  "ss_share_replicate": 0.30989620318297406,
+  "residual_share_after_axis": 0.402195285389845,
+  "correlations": {
+    "rep_cv_by_a1": {
+      "pearson": 0.20860351330585317,
+      "t_df5": 0.4769442700177515,
+      "crit_005": 2.5706,
+      "perm_p": 0.656,
+      "n": 7
+    },
+    "rep_cv_by_a2": {
+      "pearson": -0.09856505879434374,
+      "t_df5": -0.22147662794518874,
+      "crit_005": 2.5706,
+      "perm_p": 0.8267,
+      "n": 7
+    },
+    "ind_cv_by_a1": {
+      "pearson": 0.3741176346302219,
+      "t_df5": 0.9020588420168766,
+      "crit_005": 2.5706,
+      "perm_p": 0.39785,
+      "n": 7
+    },
+    "ind_cv_by_a2": {
+      "pearson": -0.04688618615001627,
+      "t_df5": -0.10495612619262472,
+      "crit_005": 2.5706,
+      "perm_p": 0.92865,
+      "n": 7
+    }
+  },
+  "power_note": "fit_error has only 7 axis levels x 3 replicates. Any correlation is computed on n=7 points; the two-sided t critical value at df=5, alpha=0.05 is 2.571 and the permutation p-value floor for n=7 is 2/5040=0.0004. Positive associations are consistent with a shared noise-scale axis but are not individually significant."
+}

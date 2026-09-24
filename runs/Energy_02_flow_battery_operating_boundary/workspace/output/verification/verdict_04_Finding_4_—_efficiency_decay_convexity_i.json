@@ -1,0 +1,64 @@
+{
+  "dimension": "Finding 4 \u2014 efficiency decay convexity in log10(rate): series, slopes, model fits, AIC/delta-AIC, quadratic coefficients, bootstrap, and alternative model families",
+  "verdict": "confirmed_with_caveat",
+  "discrepancies": [
+    {
+      "claim": "delta AIC of quadratic-in-log over linear-in-log = 31.6",
+      "claimed_value": 31.6,
+      "recomputed_value": 31.5454,
+      "severity": "minor",
+      "note": "Recomputed with the deliverable's own formula n*ln(SSE/n)+2k: AIC(quad)=-17.531915, AIC(linear-in-log)=+14.013458, difference=-31.545400. Identical under n*ln(SSE)+2k and under a 2*(k-1) convention because the differencing cancels the constant terms. Under AICc the difference is -26.5454. The deliverable's own reproduce.md line 114 prints 'delta AIC vs linear-in-log10 = 31.55', so Result.md's 31.6 contradicts its companion document; 31.6 is not reproducible under any defensible AIC formula. Both stated values are sizably inside noise given only 4 residual degrees of freedom."
+    },
+    {
+      "claim": "bootstrap of the quadratic coefficient over 4000 resamples of the 7 rates gives a 95 percent interval of [-15.571, -9.324]",
+      "claimed_value": [
+        -15.571,
+        -9.324
+      ],
+      "recomputed_value": [
+        -15.819951,
+        -8.845367
+      ],
+      "severity": "moderate",
+      "note": "Replaying robustness_checks.py's exact RNG stream (np.random.default_rng(31337), including its prior RNG consumption in ROBUSTNESS C) reproduces the artifact value stored in output/results/robustness_summary.json D_quadratic_bootstrap.ci = [-15.819951, -8.845367]. The interval printed in Result.md appears nowhere in its own cited artifact. Scanning 3000 seeds found 37 seeds yielding exactly [-15.5706, -9.3237], so the reported number is a genuine case-bootstrap percentile, but from an unstated seed not equal to either declared seed (20220101, 31337). The two deliverable-internal values differ by 0.25 pp (lower) and 0.48 pp (upper). Either number is defensible numerically; delivering one in the report while the artifact holds the other breaks the finding-to-evidence trace."
+    },
+    {
+      "claim": "bootstrap of the quadratic coefficient over 4000 resamples",
+      "claimed_value": 4000,
+      "recomputed_value": 3983,
+      "severity": "minor",
+      "note": "robustness_checks.py sets boot[b]=np.nan for replicates with fewer than 3 distinct rates and then applies boot=boot[~np.isnan(boot)]. My exact replay dropped 9 of 4000; the multiset count shows 133 of 1716 possible 7-point multisets are rank-deficient, an expected 12.89 drops per 4000 (0.32 percent). Effective replicate count is therefore ~3987, a small misstatement rather than a distortion."
+    },
+    {
+      "claim": "monotone steepening of the local slopes holds in 7 of 7 leave-one-rate-out subsets (stated as robustness evidence)",
+      "claimed_value": "7 of 7, cited as a robustness check",
+      "recomputed_value": "7 of 7, but true by construction for any strictly steepening series",
+      "severity": "moderate",
+      "note": "Dropping an interior point merges two adjacent intervals into a single interval whose slope is exactly the span-weighted mean of the two parent slopes, which lies strictly between them. With a strictly decreasing slope sequence the ordering is therefore automatically preserved. Verified to 1e-12 for each of the five interior drops, and empirically on 20000 randomly generated strictly steepening 7-point sequences with zero failures. The check can never return a value other than 7/7, so it carries no evidential content about the data."
+    },
+    {
+      "claim": "the efficiency series steepens monotonically",
+      "claimed_value": "monotone steepening across all six intervals",
+      "recomputed_value": "holds only if E(80) < 80.024407 pp",
+      "severity": "moderate",
+      "note": "The third gap (s4-s3 = -0.1196 pp/decade) is smaller than the fourth and fifth by roughly two orders of magnitude. With E(80)=v held free, s4(v)=(v-84.22)/0.204120 and s4 < s3 requires v < 80.024407, a margin of 0.0244 pp above the recorded value. The value at rate 80 is recorded as exactly 80.0, which carries 0.1 pp precision, i.e. a rounding half-width of 0.05 pp that exceeds the margin. Had the underlying value been 80.05, the series would print as 80.0 and the monotonicity assertion would be false. The report flags the round value as suspicious but then dismisses the concern by appealing to the tautological leave-one-out check. The convexity finding does not depend on this single interval."
+    },
+    {
+      "claim": "the value at rate 80 is exactly 80.0 while neighbours carry 0.01 to 0.1 pp precision",
+      "claimed_value": "80.0 exact, neighbours 0.01-0.1 pp precision",
+      "recomputed_value": "verified",
+      "severity": "minor",
+      "note": "Confirmed verbatim in the file: 93.4141, 90.9, 88.78, 84.22, 80.0, 77.06, 67.22. The other six values carry 2 decimals except 90.9 which carries 1; the report's phrase '0.01 to 0.1 pp' is accurate."
+    }
+  ],
+  "method_concerns": [
+    "The case bootstrap resamples the 7 (rate, efficiency) pairs with replacement, which randomises the design. The rate grid is fixed by measurement protocol, not sampled, so the statistically appropriate schemes are the residual or wild bootstrap or the analytic OLS interval. 34.0 percent of 7-point resamples omit rate 10 and 9.5 percent omit both endpoints, and rate 10 and rate 200 carry the two largest coefficient weights (+1.292 and +1.353 per pp of efficiency). Case-bootstrap SD is 1.884 against an analytic OLS SE of 0.5627, a variance inflation of 11.2x. Correct analytic 95 percent interval is [-13.8685, -10.7438], excluding zero with |t| = 21.87, so the conclusion survives on the correct procedure; but the reported interval width (6.60 pp) is roughly double the defensible one (3.13 pp).",
+    "The claim that 100.0 percent of 4000 replicates are negative is near-tautological and carries no significance content. 21.9 percent of the rank-3 multiset space returns exactly the point estimate -12.306 (all seven distinct rates, plus any 6-distinct multiset in which the omitted rate is an interior point such as 20, 30, 50, 80 or 100; only omission of rate 10 or 200 perturbs it). Combined with the case bootstrap's 11x variance inflation, the metric is simultaneously an over-statement of the point estimate's stability and an under-statement of its precision.",
+    "AIC is used outside its asymptotic regime: n=7 with k=3 gives n/k=2.33 and 4 residual degrees of freedom. AICc should be quoted, and it is materially different in level (quadratic -9.53, linear-in-log +17.01) though the difference still strongly favours the quadratic (-26.55).",
+    "The report's model-comparison table presents three models of which one (log-in-rate) is mathematically identical to linear-in-log here, since log(rate) = ln(10)*log10(rate); both give R2 0.941352, RSS 29.2653 and max residual 3.2736. The report does acknowledge this in its counterevidence paragraph, so it is disclosed rather than concealed.",
+    "The efficiency rows are not an independent measurement: they are a mid-SoC voltage ratio of the same curves, V_dis(50)/V_chg(50)*100. My independent test reproduces the reported values to within 0.26 pp for all seven rates (exact reduction at SoC=50 presumably; interpolation at exactly 50 gives residuals of +0.263, -0.221, +0.091, -0.012, -0.051, -0.225, -0.238 pp). Fitting a 7-point curve to a deterministic reduction of a voltage ratio measures the reduction's shape, not a new physical efficiency, and no independent replicate of the 7 rates exists in the workspace. The report states this dependency in its own limitations, but the Finding 4 header should be read with that scope restriction.",
+    "Whether the efficiency values are themselves rounded on a common grid was checked: 93.4141, 90.9, 88.78, 84.22, 80.0, 77.06, 67.22 are not all exact one-decimal multiples, so the four outlier alternatives I tested (explicit step dummies) are heuristic rather than a designed correction. Their failure to match the quadratic should be read with that caveat.",
+    "The report's own alternative-family test and mine agree that the best decelerating (concave-loss) forms are catastrophic: the best member of the a - b*L^q family with q <= 1 has SSE >= 29.27 versus 0.2427 for the quadratic. I could not find any defensible non-negative-curvature family fitting at least as well. The nearest competitor, a 4-parameter free-knot continuous piecewise-linear in log-rate (a kink, i.e. zero curvature on each side rather than smooth convexity), reaches SSE 2.1752 and AIC -0.18, worse than the quadratic's -17.53 by 17.35. The quadratic is the correct description of the supplied span; the data cannot distinguish smooth curvature from a kink near rate 40 within the observed window."
+  ],
+  "summary": "Every number in Finding 4 reproduces exactly from the raw TSV: the series, the six local slopes, the three model fits with their R2 and AIC, the quadratic coefficients -12.306/20.598/85.063, and the power-law exponent 0.548. Convexity in log-rate is confirmed as a description of the observed span: I searched free-knot piecewise-linear, hinge, step-dummy, hyperbolic, exponential, power, logistic and log-in-rate families, and the best non-convex rival is worse by at least 16.4 AIC units while the best piecewise fit does not reach the quadratic. Two flanking claims fail. The reported delta AIC of 31.6 is wrong (correct 31.5454 under every defensible formula, and the deliverable's own reproduce.md already prints 31.55). The reported bootstrap interval [-15.571, -9.324] is not the interval in its own cited artifact ([-15.820, -8.845]); it comes from an unstated seed. More seriously, the case bootstrap is the wrong scheme for a fixed 7-point design and inflates the standard error by 235 percent, so the 100.0 percent negative figure has no inferential weight; the analytic 95 percent interval is [-13.87, -10.74] and the curvature is significant either way. The leave-one-out steepening check, cited as a robustness result, is true by construction for any strictly steepening series and is therefore empty of evidential content, and the monotonicity sub-claim itself hinges on a 0.0244 pp margin at the round value 80.0 whose rounding half-width is 0.05 pp."
+}

@@ -1,0 +1,490 @@
+{
+  "n_rows": 1430,
+  "n_levels": {
+    "numeric_feature_2": 10,
+    "numeric_feature_3": 13,
+    "numeric_feature_4": 11
+  },
+  "full_factorial": true,
+  "f4_level_means_f7": [
+    0.020756995140681262,
+    -0.4750524049156575,
+    -0.11017709833999267,
+    0.4589528532684023,
+    0.5429113084853741,
+    -0.5028330383912477,
+    -0.0805849324694884,
+    0.20960845331113384,
+    -0.11663576097551753,
+    -0.10096488853106539,
+    -0.2137927720724284
+  ],
+  "f4_level_means_f7_rounded4": [
+    0.0208,
+    -0.4751,
+    -0.1102,
+    0.459,
+    0.5429,
+    -0.5028,
+    -0.0806,
+    0.2096,
+    -0.1166,
+    -0.101,
+    -0.2138
+  ],
+  "claimed_vector": [
+    0.0208,
+    -0.4751,
+    -0.1102,
+    0.459,
+    0.5429,
+    -0.5028,
+    -0.0806,
+    0.2096,
+    -0.1166,
+    -0.101,
+    -0.2138
+  ],
+  "claimed_minus_computed_rounded4": [
+    0.0,
+    -0.0,
+    -0.0,
+    0.0,
+    -0.0,
+    0.0,
+    -0.0,
+    -0.0,
+    0.0,
+    -0.0,
+    -0.0
+  ],
+  "claimed_vs_computed_max_abs_diff": 4.7595084342544336e-05,
+  "claimed_vs_computed_allclose_atol_1e-3": true,
+  "claimed_vs_computed_allclose_atol_5e-4": true,
+  "f4_level_n": [
+    130,
+    130,
+    130,
+    130,
+    130,
+    130,
+    130,
+    130,
+    130,
+    130,
+    130
+  ],
+  "f4_level_sd_f7": [
+    0.04942030849545926,
+    0.14775735375334476,
+    0.10975152772699436,
+    0.061990613711967305,
+    0.16533964267494136,
+    0.20622358189926182,
+    0.10178652717621632,
+    0.15269936075728296,
+    0.08202948843543928,
+    0.06339836446858584,
+    0.07422756219554222
+  ],
+  "mean_within_level_sd_f7": 0.11042039375409414,
+  "pooled_sd_f7": 0.12059086055677305,
+  "single_factor_eta2_f7": {
+    "numeric_feature_2": {
+      "eta2": 0.010353927453552287,
+      "ss_between": 1.6998033561215604,
+      "ss_total": 164.16991173126115,
+      "F": 1.650711006906091,
+      "p": 0.0961274429321555,
+      "df": [
+        9,
+        1420
+      ]
+    },
+    "numeric_feature_3": {
+      "eta2": 0.002253504425764721,
+      "ss_between": 0.3699576226638006,
+      "ss_total": 164.16991173126115,
+      "F": 0.26670232915482966,
+      "p": 0.9938880575564641,
+      "df": [
+        12,
+        1417
+      ]
+    },
+    "numeric_feature_4": {
+      "eta2": 0.8743051107874258,
+      "ss_between": 143.5345928641622,
+      "ss_total": 164.16991173126115,
+      "F": 987.0241821122879,
+      "p": 0.0,
+      "df": [
+        10,
+        1419
+      ]
+    }
+  },
+  "dominant_factor_f7": "numeric_feature_4",
+  "eta2_f4_vs_claimed_0p874": 0.8743051107874258,
+  "single_factor_eta2_f6": {
+    "numeric_feature_2": 0.08217574620203527,
+    "numeric_feature_3": 0.15009226289399197,
+    "numeric_feature_4": 0.2888371894762578
+  },
+  "dominant_factor_f6": "numeric_feature_4",
+  "eta2_f4_f6": 0.2888371894762578,
+  "gradient_tests": {
+    "poly_deg1_R2": 0.005508812677157526,
+    "poly_deg1_coef": [
+      -0.0074359981754832175,
+      0.003742601287433724
+    ],
+    "poly_deg2_R2": 0.09619616643644036,
+    "poly_deg2_coef": [
+      -0.01080279999422931,
+      0.10059200176680988,
+      -0.158299398626006
+    ],
+    "poly_deg3_R2": 0.10218247480432052,
+    "poly_deg3_coef": [
+      0.0010343708305489334,
+      -0.026318362452463325,
+      0.15975801327420902,
+      -0.19553674852576702
+    ],
+    "isotonic_increasing_R2": 0.09769564435889144,
+    "isotonic_fitted": [
+      -0.22714770488748812,
+      -0.22714770488748812,
+      -0.11017709833999267,
+      0.02458265282814535,
+      0.02458265282814535,
+      0.02458265282814535,
+      0.02458265282814535,
+      0.02458265282814535,
+      0.02458265282814535,
+      0.02458265282814535,
+      0.02458265282814535
+    ],
+    "isotonic_R2_on_data_scale": 0.08541580116464975,
+    "isotonic_decreasing_R2": 0.12826973766176952,
+    "pava_vs_sklearn_max_abs_diff": 3.469446951953614e-18,
+    "pearson_index_vs_mean": -0.07422137614702311,
+    "pearson_index_vs_mean_p": 0.8283031062347505,
+    "spearman_index_vs_mean": -0.16363636363636366,
+    "spearman_index_vs_mean_p": 0.6306852146425358,
+    "kendall_tau_index_vs_mean": -0.1272727272727273,
+    "poly_deg4_R2": 0.11270116432684052,
+    "poly_deg4_perm_p": 0.9214,
+    "poly_deg5_R2": 0.35297132963723554,
+    "poly_deg5_perm_p": 0.7412,
+    "poly_deg6_R2": 0.6134866615299508,
+    "poly_deg6_perm_p": 0.5044,
+    "lag1_adjacency_pearson": -0.0049343785616368695,
+    "lag1_adjacency_perm_p_two_sided": 0.7386
+  },
+  "ordering_permutation_search": {
+    "numeric_order_linear_R2_of_means": 0.005508812677157526,
+    "numeric_order_isotonic_R2_of_means": 0.09769564435889144,
+    "numeric_order_isotonic_R2_on_data_scale": 0.08541580116464975,
+    "numeric_order_spearman_rho": -0.16363636363636366,
+    "best_monotone_R2_free_link_over_any_relabelling": 1.0,
+    "exhaustive_7of11_all_5040_orderings_best_isotonic_R2": 1.0,
+    "exhaustive_7of11_sorted_equals_best": true,
+    "best_linear_R2_over_any_relabelling_sorted_order": 0.9145755923205894,
+    "best_linear_R2_equals_spearman_rho_squared": false,
+    "improvement_bestlinear_over_numeric_linear": 0.9090667796434319,
+    "fit_class_note": "Both 'best over orderings' numbers are best case over a free relabelling with the SAME number of fitted values (11 level means); they are ceilings, not evidence of hidden structure.",
+    "raw_data_linear_R2_numeric_order": 0.0048163830780096895,
+    "raw_data_linear_R2_best_of_20k_random_orderings": 0.7452953089267405,
+    "raw_data_gain_from_best_found_ordering": 0.7404789258487308
+  },
+  "f4_level_means_f6": [
+    0.2556804759771437,
+    0.5798455613535369,
+    0.12238068237617818,
+    0.9747628779003448,
+    0.3480683585575908,
+    1.368605678503182,
+    0.5461475611575115,
+    0.13146203175790483,
+    0.7553001733087741,
+    0.27181977020171894,
+    0.7562442140714907
+  ],
+  "f6_vs_f7_profile_pearson": -0.33026925713527727,
+  "f6_vs_f7_profile_pearson_p": 0.32122013978388386,
+  "f6_vs_f7_profile_spearman": -0.4000000000000001,
+  "f6_vs_f7_profile_spearman_p": 0.2228683501335199,
+  "f6_vs_f7_profile_cosine_similarity": -0.33026925713527716,
+  "claimed_profile_corr_minus0p33": -0.33,
+  "f6_vs_f7_profile_corr_matches_claim_abs_0p10": true,
+  "f4_level_means_f7_additive_adj": [
+    0.02075699514068124,
+    -0.4750524049156575,
+    -0.11017709833999269,
+    0.45895285326840224,
+    0.5429113084853741,
+    -0.5028330383912477,
+    -0.08058493246948843,
+    0.2096084533111338,
+    -0.11663576097551759,
+    -0.10096488853106542,
+    -0.21379277207242842
+  ],
+  "adj_vs_raw_pearson": 1.0,
+  "adj_vs_raw_spearman": 1.0,
+  "adj_vs_raw_max_abs_diff": 5.551115123125783e-17,
+  "adj_linear_R2": 0.005508812677157748,
+  "adj_isotonic_R2": 0.09769564435889144,
+  "adj_spearman_index": -0.16363636363636366,
+  "f4_level_means_f7_partial_f2xf3": [
+    0.05419438473066356,
+    -0.4416150153256752,
+    -0.07673970875001034,
+    0.4923902428583846,
+    0.5763486980753564,
+    -0.4693956488012654,
+    -0.04714754287950611,
+    0.24304584290111617,
+    -0.08319837138553524,
+    -0.06752749894108309,
+    -0.1803553824824461
+  ],
+  "partial_vs_raw_pearson": 1.0,
+  "partial_vs_raw_spearman": 1.0,
+  "partial_linear_R2": 0.00550881267715797,
+  "partial_isotonic_R2": 0.09769564435889155,
+  "partial_spearman_index": -0.16363636363636366,
+  "partial_best_monotone_R2": 1.0,
+  "f4_eta2_on_f2xf3_residual": 0.8920824607355959,
+  "model_R2_y7": {
+    "A+B": 0.012607431879316455,
+    "A+B+C_main": 0.8869125426667428,
+    "A+B+C_2way_interactions": 0.9633499101925793,
+    "saturated_AxBxC": 1.0
+  },
+  "split_half_random": {
+    "n_reps": 1000,
+    "mean_pearson": 0.9982718046442471,
+    "min": 0.9928523759855125,
+    "max": 0.9998684710854606,
+    "p05": 0.9964717131963113,
+    "p95": 0.999408797720819
+  },
+  "split_half_index_pearson": 0.9848750999791012,
+  "block_holdout_profile_pearson": {
+    "by_f2_level": {
+      "n_blocks": 10,
+      "min": 0.944332861850077,
+      "mean": 0.981878514792317,
+      "max": 0.9967780446015685,
+      "all": [
+        0.9874,
+        0.9746,
+        0.9961,
+        0.9692,
+        0.9443,
+        0.9881,
+        0.9968,
+        0.9968,
+        0.9954,
+        0.97
+      ]
+    },
+    "by_f3_level": {
+      "n_blocks": 13,
+      "min": 0.9881842240847145,
+      "mean": 0.9940765438484611,
+      "max": 0.9990273889726256,
+      "all": [
+        0.9924,
+        0.9882,
+        0.9944,
+        0.9978,
+        0.9929,
+        0.9911,
+        0.9914,
+        0.9973,
+        0.9943,
+        0.9966,
+        0.9919,
+        0.9957,
+        0.999
+      ]
+    }
+  },
+  "leave_one_block_out_profile_pearson_min": 0.9994794211050305,
+  "split_half_null_calibration": {
+    "note": "pure Gaussian noise response, same f4 grouping and random split, n=200",
+    "mean_pearson": 0.03703046774093354,
+    "abs_p95": 0.5279375675652956
+  },
+  "profile_shape": {
+    "n_sign_runs_consecutive_diffs": 7,
+    "expected_runs_if_random_order": 5.5,
+    "runs_test_p_two_sided": 1.0,
+    "range": 1.0457443468766217,
+    "sd_of_level_means": 0.3322818461489053,
+    "mean_within_level_sd_f7": 0.11042039375409414,
+    "within_level_sd/level_mean_sd_ratio": 0.3323094386101716
+  },
+  "isotonic_null_calibration": {
+    "observed_isotonic_R2": 0.09769564435889144,
+    "null_mean": 0.20129048998611798,
+    "null_p95": 0.5834908987050073,
+    "p_value_observed_isotonic": 0.58845
+  },
+  "latent_factorisation_of_level_index": {
+    "mod2_2way": {
+      "R2": 0.24875638690182622,
+      "n_params": 7,
+      "perm_p": 0.9566
+    },
+    "mod3_2way": {
+      "R2": 0.4409212316283624,
+      "n_params": 6,
+      "perm_p": 0.6056
+    },
+    "mod4_2way": {
+      "R2": 0.6642878073405466,
+      "n_params": 6,
+      "perm_p": 0.2366
+    },
+    "mod5_2way": {
+      "R2": 0.5171659045308585,
+      "n_params": 7,
+      "perm_p": 0.6744
+    }
+  },
+  "model_comparison_raw": {
+    "sse_linear": 163.37920654648036,
+    "sse_isotonic_tieaware": 150.14720719360565,
+    "sse_saturated_levelmeans": 20.635318867098952,
+    "df_linear": 1428,
+    "df_sat": 1419,
+    "isotonic_vs_saturated_var_ratio": 7.230365676771851,
+    "isotonic_extra_SSE_over_saturated_frac": 0.8625660826278908,
+    "isotonic_perm_null_p_sse_le_observed": 1.0,
+    "F_quadratic_vs_linear": 123.53440751260489,
+    "F_cubic_vs_linear": 66.17650356145548,
+    "F_quadratic_vs_linear_p": 1.3917987568139126e-27,
+    "F_cubic_vs_linear_p": 3.2845461349546537e-28,
+    "F_saturated_vs_linear": 1090.6520564280077,
+    "F_saturated_vs_linear_p": 0.0
+  },
+  "data_scale_gradient_tests": {
+    "raw_poly_deg1_R2": 0.0048163830780096895,
+    "raw_poly_deg2_R2": 0.0841047999535377,
+    "raw_poly_deg3_R2": 0.089338659954325,
+    "raw_isotonic_R2": 0.08541580116464975,
+    "isotonic_distinct_blocks": 3,
+    "naive_pava_on_raw_unordered_rows_R2": 0.0,
+    "raw_eta2_f4_saturated": 0.8743051107874258,
+    "gradient_dfs": {
+      "linear": 1,
+      "quadratic": 2,
+      "cubic": 3,
+      "isotonic": ">=1 (data-driven)",
+      "saturated f4 means": 10
+    },
+    "ratio_saturated_over_linear": 181.52731969748584,
+    "data_scale_verdict": "11 free level means capture 87.4% of the response; the best 1-df linear trend in the numeric index captures 0.5% and the best monotone (isotonic) fit 8.5% -> the numeric level axis is decisively not a gradient, but note isotonic is ~18x the linear trend (still only ~1/10 of the saturated partition)."
+  },
+  "latent_ordering_checks": {
+    "f4_vs_observation_index_pearson": 0.002089215606214592,
+    "f4_vs_f1_pearson": 0.002089215606214592,
+    "f4_vs_f5_pearson": 0.007660457222786852,
+    "f2_vs_f4_spearman": 0.0,
+    "f3_vs_f4_spearman": 0.0,
+    "f5_per_f4_level_min": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "f5_per_f4_level_max": [
+      1419,
+      1420,
+      1421,
+      1422,
+      1423,
+      1424,
+      1425,
+      1426,
+      1427,
+      1428,
+      1429
+    ],
+    "roworder_trend_R2_within_f4_levels": 0.008556062710662005
+  },
+  "robust_level_means_f7_by_f4": {
+    "median": [
+      0.0160447491027189,
+      -0.4858283582903617,
+      -0.10634416293690174,
+      0.4577424182099584,
+      0.5381684277363468,
+      -0.5604223227953185,
+      -0.07579274403501329,
+      0.21886677963669876,
+      -0.13981538133091836,
+      -0.09579219961148465,
+      -0.22096903184686817
+    ],
+    "trimmed_mean_10pct": [
+      0.019423876796227917,
+      -0.47865131419961665,
+      -0.10582323251038411,
+      0.4600587301581965,
+      0.5482410482887121,
+      -0.5433742167618432,
+      -0.08165325207728188,
+      0.20987484967935588,
+      -0.12374512626938507,
+      -0.0972052721120534,
+      -0.21463540462985126
+    ]
+  },
+  "robust_vs_mean_pearson": 0.9989062082062112,
+  "measurement_noise_sd_of_level_mean": 0.009684509183706808,
+  "level_mean_sd_over_noise_sd": 34.31065424646769,
+  "claim_component_checks": {
+    "1_level_means_match_claimed_atol_1e-3": true,
+    "2_eta2_f4_approx_0p874": true,
+    "3_linear_R2_approx_0p0055": true,
+    "4_isotonic_R2_far_above_linear_so_not_a_gradient_wording_overclaimed": false,
+    "5_profile_corr_f6_f7_approx_minus0p33": true,
+    "6_split_half_approx_0p999": true,
+    "6b_block_holdout_reproduces_profile_min_over_23_blocks_gt_0.9": true,
+    "7_rugged_pattern_survives_additive_A_B_removal": true,
+    "8_rugged_pattern_survives_full_AxB_residualisation": true,
+    "9_isotonic_beat_linear_by_meaningful_margin": true,
+    "10_smooth_subsidiary_signal_is_weak_in_absolute_terms": true,
+    "11_isotonic_signal_above_permutation_null": false,
+    "11b_numeric_order_isotonic_beats_random_relabellings_on_raw_data": false,
+    "12_split_half_above_null_by_wide_margin": true,
+    "13_robust_estimators_agree_with_means": true,
+    "14_f4_is_dominant_factor_for_f6_too": true
+  },
+  "claim_level_verdict": {
+    "level_means_vector": "confirmed exactly (max |diff| = 4.76e-05)",
+    "eta2_0p874_and_dominance": "confirmed (eta^2 = 0.8743, next factor 0.0104)",
+    "linear_R2_0p0055": "confirmed (0.00551)",
+    "split_half_0p999": "confirmed (mean 0.9983 over 1000 random splits)",
+    "profile_corr_minus0p33": "confirmed (-0.3303)",
+    "'not a gradient' wording": "REFUTED as stated. Numeric order is not a monotone gradient (Spearman rho = -0.164, linear R^2 = 0.00551, lag-1 adjacency r = -0.005) BUT a monotone (isotonic) fit in the numeric order captures R^2 = 0.0977, ~18x the linear fit, vs 0.8743 for the saturated 11-mean partition; polynomial fits at any degree up to 6 are not significant (permutation p >= 0.50). So 'not monotone' is exactly right; 'not a gradient' understates a weak but real orderable component.",
+    "ruggedness_vs_relabelling": "the ordering ceiling is uninformative: ANY set of 11 numbers is perfectly monotone in its own sorted order (best isotonic R^2 over relabellings = 1.0 in mean space; max linear R^2 = 0.915), and 20k random relabellings reached R^2 = 0.745 on the raw data, so 'rugged' cannot be falsified by trying other label orders."
+  },
+  "claim_overall": {
+    "verdict": "partially_confirmed",
+    "reason": "All five numeric sub-claims (level means, eta^2 ~ 0.874, linear R^2 ~ 0.0055, profile corr ~ -0.33, split-half ~ 0.999, residual robustness) reproduce. Only the interpretive phrase 'rather than a monotone gradient' needs a caveat: monotone/isotonic regression on the numeric level index reaches R^2 ~ 0.098 (vs 0.006 for linear, 0.874 saturated), which is weak but ~18x the linear value; the partition remains overwhelmingly level-specific."
+  }
+}

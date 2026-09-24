@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Neuro_02_calcium_response_regions",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "27f397617021d719e198c557fb0c799fa0c06e79ab2ebdd7ab9999c0a33d8b84",
+  "workspace_input_file_count": 8,
+  "workspace_input_bytes": 197957,
+  "output_tree_sha256": "453361373f429b9bd7977a6131618c83d43363b8141d9aa3cf6ad4594e9f0445",
+  "output_file_count": 32,
+  "output_bytes": 443824
+}

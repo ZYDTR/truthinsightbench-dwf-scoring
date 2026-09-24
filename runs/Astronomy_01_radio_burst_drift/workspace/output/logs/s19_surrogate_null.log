@@ -1,0 +1,33 @@
+==========================================================================================
+s19  RIDGE-FREE SURROGATE NULL (row-rolled in time), threshold 1.05
+ANALYSIS UNIT = one complete dynamic-spectrum event (n=5); 25 surrogates/event
+==========================================================================================
+### event_1: reported -12.7777 MHz/s
+   real L(reported) = 0.08399; surrogate mean 0.09794, p95 0.10158 -> p_slope = 1.000
+   real max_m L = 0.16742 at +2.20 MHz/s; surrogate max mean 0.13008, p95 0.13764 -> p_any = 0.038
+   length-matched (cov 63.8%): real max 0.11769 at +18.20 MHz/s; surrogate mean 0.10274, p95 0.10519 -> p_len = 0.038
+### event_2: reported -12.4520 MHz/s
+   real L(reported) = 0.08609; surrogate mean 0.10546, p95 0.11084 -> p_slope = 1.000
+   real max_m L = 0.18474 at +2.20 MHz/s; surrogate max mean 0.16386, p95 0.17351 -> p_any = 0.038
+   length-matched (cov 65.9%): real max 0.11628 at +13.00 MHz/s; surrogate mean 0.11134, p95 0.11353 -> p_len = 0.038
+### event_3: reported -3.3614 MHz/s
+   real L(reported) = 0.09410; surrogate mean 0.09044, p95 0.09325 -> p_slope = 0.077
+   real max_m L = 0.12379 at +40.00 MHz/s; surrogate max mean 0.10534, p95 0.10943 -> p_any = 0.038
+   length-matched (cov 100.0%): real max 0.12301 at +1.40 MHz/s; surrogate mean 0.10534, p95 0.10943 -> p_len = 0.038
+### event_4: reported -16.8673 MHz/s
+   real L(reported) = 0.09544; surrogate mean 0.09537, p95 0.10103 -> p_slope = 0.577
+   real max_m L = 0.13592 at +2.60 MHz/s; surrogate max mean 0.11377, p95 0.11952 -> p_any = 0.038
+   length-matched (cov 48.7%): real max 0.10629 at -13.00 MHz/s; surrogate mean 0.10192, p95 0.10573 -> p_len = 0.038
+### event_5: reported -4.0560 MHz/s
+   real L(reported) = 0.08141; surrogate mean 0.08007, p95 0.08143 -> p_slope = 0.115
+   real max_m L = 0.09314 at +4.20 MHz/s; surrogate max mean 0.08943, p95 0.09077 -> p_any = 0.038
+   length-matched (cov 100.0%): real max 0.09314 at +4.20 MHz/s; surrogate mean 0.08895, p95 0.09056 -> p_len = 0.038
+
+summary:
+event_id  reported_drift  p_slope    p_any    p_len
+ event_1      -12.777653 1.000000 0.038462 0.038462
+ event_2      -12.452023 1.000000 0.038462 0.038462
+ event_3       -3.361425 0.076923 0.038462 0.038462
+ event_4      -16.867298 0.576923 0.038462 0.038462
+ event_5       -4.055995 0.115385 0.038462 0.038462
+s19 saved s19_surrogate_null.csv/.json + s19_surrogate_null.png

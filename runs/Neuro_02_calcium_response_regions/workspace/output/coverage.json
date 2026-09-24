@@ -1,0 +1,22 @@
+{
+  "region_1": {
+    "baseline": 22,
+    "neural_activity_blocked": 44,
+    "receptor_stimulated": 226
+  },
+  "region_2": {
+    "baseline": 43,
+    "neural_activity_blocked": 46,
+    "receptor_stimulated": 199
+  },
+  "region_3": {
+    "baseline": 0,
+    "neural_activity_blocked": 0,
+    "receptor_stimulated": 189
+  },
+  "region_4": {
+    "baseline": 21,
+    "neural_activity_blocked": 29,
+    "receptor_stimulated": 0
+  }
+}

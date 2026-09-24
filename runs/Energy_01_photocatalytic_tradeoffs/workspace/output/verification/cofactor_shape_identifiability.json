@@ -1,0 +1,328 @@
+{
+  "data": {
+    "loading_percent": [
+      0.2,
+      1.0,
+      3.0,
+      8.0
+    ],
+    "rate_umol_per_h": [
+      1081.0,
+      1217.0,
+      470.0,
+      268.0
+    ],
+    "n": 4,
+    "tss": 638050.0,
+    "note": "one complete curve = one independent unit; the 4 points are 4 loading conditions, not replicates. No error bars or replicate variance exist in the TSV."
+  },
+  "aicc_defined_note": "With n=4, AICc uses the correction 2k(k+1)/(n-k-1); for any 3-parameter model n-k-1=0 so AICc is formally +infinity (undefined). Only the 1- and 2-parameter models have a usable AICc.",
+  "models": [
+    {
+      "model": "constant",
+      "k": 1,
+      "rss": 638050.0,
+      "rmse": 399.39016011914964,
+      "r2": 0.0,
+      "aic": 49.91951027216893,
+      "aicc": 51.91951027216893,
+      "aicc_note": "ok",
+      "bic": 49.305804633288815,
+      "params": {
+        "c": 759.0000000361238
+      },
+      "exact_interpolation": false,
+      "delta_aicc": 0.0
+    },
+    {
+      "model": "linear a+b*x",
+      "k": 2,
+      "rss": 142391.27721965782,
+      "rmse": 188.67384372221406,
+      "r2": 0.7768336694308318,
+      "aic": 45.92015863793599,
+      "aicc": 57.92015863793599,
+      "aicc_note": "ok",
+      "bic": 44.69274736017577,
+      "params": {
+        "a": 1112.8264994275316,
+        "b": -116.00868833689566
+      },
+      "exact_interpolation": false,
+      "delta_aicc": 6.000648365767063
+    },
+    {
+      "model": "monotone power a*x^b",
+      "k": 2,
+      "rss": 248365.54027929084,
+      "rmse": 249.18143002604089,
+      "r2": 0.6107428253596257,
+      "aic": 48.14545012625677,
+      "aicc": 60.14545012625677,
+      "aicc_note": "ok",
+      "bic": 46.91803884849655,
+      "params": {
+        "a": 798.2834455408089,
+        "b": -0.26296928266400926
+      },
+      "exact_interpolation": false,
+      "delta_aicc": 8.22593985408784
+    },
+    {
+      "model": "monotone exp decay a*exp(-b*x)",
+      "k": 2,
+      "rss": 92275.87597597003,
+      "rmse": 151.884722714276,
+      "r2": 0.8553782995439698,
+      "aic": 44.18497463934026,
+      "aicc": 56.18497463934026,
+      "aicc_note": "ok",
+      "bic": 42.95756336158004,
+      "params": {
+        "a": 1249.1759210506498,
+        "b": 0.22823428202928256
+      },
+      "exact_interpolation": false,
+      "delta_aicc": 4.265464367171333
+    },
+    {
+      "model": "exp decay + offset a*exp(-b*x)+c",
+      "k": 3,
+      "rss": 89864.30584026087,
+      "rmse": 149.88687887892394,
+      "r2": 0.8591578938323629,
+      "aic": 46.07904695025484,
+      "aicc": null,
+      "aicc_note": "undefined: n-k-1=0 with n=4,k=3",
+      "bic": 44.23793003361451,
+      "params": {
+        "a": 1154.048701286652,
+        "b": 0.283796215854181,
+        "c": 116.24179327196173
+      },
+      "exact_interpolation": false,
+      "delta_aicc": null
+    },
+    {
+      "model": "saturating rise V*x/(K+x)",
+      "k": 2,
+      "rss": 638052.8998227088,
+      "rmse": 399.3910676964085,
+      "r2": -4.544820482399459e-06,
+      "aic": 51.91952845140955,
+      "aicc": 63.91952845140955,
+      "aicc_note": "ok",
+      "bic": 50.69211717364933,
+      "params": {
+        "V": 759.0007462523105,
+        "K": 1.0000000000000002e-06
+      },
+      "exact_interpolation": false,
+      "delta_aicc": 12.00001817924062
+    },
+    {
+      "model": "substrate inhibition V*x/(K+x+x^2/Ki)",
+      "k": 3,
+      "rss": 6335.691969511867,
+      "rmse": 39.79853002785362,
+      "r2": 0.990070226519063,
+      "aic": 35.47063982107831,
+      "aicc": null,
+      "aicc_note": "undefined: n-k-1=0 with n=4,k=3",
+      "bic": 33.629522904437984,
+      "params": {
+        "V": 17486.02773122071,
+        "K": 2.5989638882098878,
+        "Ki": 0.09228003990466999
+      },
+      "exact_interpolation": false,
+      "delta_aicc": null
+    },
+    {
+      "model": "plateau then linear decline (kink)",
+      "k": 3,
+      "rss": 142250.782051286,
+      "rmse": 188.58074003678504,
+      "r2": 0.777053864036853,
+      "aic": 47.91620995431162,
+      "aicc": null,
+      "aicc_note": "undefined: n-k-1=0 with n=4,k=3",
+      "bic": 46.07509303767129,
+      "params": {
+        "plateau_a": 1080.9999540988617,
+        "slope_b<0": -117.26923723059754,
+        "break_Lb": 0.3389096596368136
+      },
+      "exact_interpolation": false,
+      "delta_aicc": null
+    },
+    {
+      "model": "flat then exponential decline (two-regime)",
+      "k": 3,
+      "rss": 47475.94884885692,
+      "rmse": 108.94488153288447,
+      "r2": 0.9255921184094398,
+      "aic": 43.52673664258152,
+      "aicc": null,
+      "aicc_note": "undefined: n-k-1=0 with n=4,k=3",
+      "bic": 41.68561972594119,
+      "params": {
+        "level_a": 1120.4422797763177,
+        "decay_b": 0.3433178744195678,
+        "break_Lb": 1.0000000173452994
+      },
+      "exact_interpolation": false,
+      "delta_aicc": null
+    },
+    {
+      "model": "quadratic c0+c1*x+c2*x^2",
+      "k": 3,
+      "rss": 76587.34867386862,
+      "rmse": 138.37209678424026,
+      "r2": 0.8799665407509307,
+      "aic": 45.43957128021069,
+      "aicc": null,
+      "aicc_note": "undefined: n-k-1=0 with n=4,k=3",
+      "bic": 43.59845436357036,
+      "params": {
+        "c0": 1283.5478853749503,
+        "c1": -309.96794669190723,
+        "c2": 22.736593843077333
+      },
+      "exact_interpolation": false,
+      "delta_aicc": null
+    },
+    {
+      "model": "log-quadratic peak a-b*(lnx-lnP)^2",
+      "k": 3,
+      "rss": 89842.5971978655,
+      "rmse": 149.86877359699176,
+      "r2": 0.8591919172512099,
+      "aic": 46.0780805480907,
+      "aicc": null,
+      "aicc_note": "undefined: n-k-1=0 with n=4,k=3",
+      "bic": 44.23696363145037,
+      "params": {
+        "a": 1150.9694022369972,
+        "b": 98.28647513950362,
+        "peak_P": 0.34612988795594823
+      },
+      "exact_interpolation": false,
+      "delta_aicc": null
+    }
+  ],
+  "aicc_within_2_of_best": [
+    "constant"
+  ],
+  "aicc_undefined_models": [
+    "exp decay + offset a*exp(-b*x)+c",
+    "substrate inhibition V*x/(K+x+x^2/Ki)",
+    "plateau then linear decline (kink)",
+    "flat then exponential decline (two-regime)",
+    "quadratic c0+c1*x+c2*x^2",
+    "log-quadratic peak a-b*(lnx-lnP)^2"
+  ],
+  "within2_if_undefined_treated_as_competitive": [
+    "constant",
+    "exp decay + offset a*exp(-b*x)+c",
+    "substrate inhibition V*x/(K+x+x^2/Ki)",
+    "plateau then linear decline (kink)",
+    "flat then exponential decline (two-regime)",
+    "quadratic c0+c1*x+c2*x^2",
+    "log-quadratic peak a-b*(lnx-lnP)^2"
+  ],
+  "aic_uncorrected_within_2": [
+    "substrate inhibition V*x/(K+x+x^2/Ki)"
+  ],
+  "bic_within_2": [
+    "substrate inhibition V*x/(K+x+x^2/Ki)"
+  ],
+  "peak_location": {
+    "logquad_P=0.2": {
+      "model": "log-quadratic peak FIXED at 0.2%",
+      "k": 2,
+      "rss": 97333.12359799477,
+      "rmse": 155.99128469084,
+      "r2": 0.847452200300925,
+      "aic": 44.3984011065799,
+      "aicc": 56.3984011065799,
+      "aicc_note": "ok",
+      "bic": 43.17098982881968,
+      "params": {
+        "a": 1176.7553008533703,
+        "b": 71.01162228416163
+      },
+      "exact_interpolation": false
+    },
+    "logquad_P=1.0": {
+      "model": "log-quadratic peak FIXED at 1.0%",
+      "k": 2,
+      "rss": 379489.3155608026,
+      "rmse": 308.01352062888515,
+      "r2": 0.4052357721796057,
+      "aic": 49.84114944124648,
+      "aicc": 61.84114944124648,
+      "aicc_note": "ok",
+      "bic": 48.61373816348626,
+      "params": {
+        "a": 1079.5184630358208,
+        "b": 157.86527409584878
+      },
+      "exact_interpolation": false
+    },
+    "logquad_free_peak_P": 0.34612988795594823,
+    "logquad_free_RSS": 89842.5971978655,
+    "logquad_profile_RSS_at_0.2": 97481.42929045515,
+    "logquad_profile_RSS_at_1.0": 381532.7826915514,
+    "logquad_profile_RSS_min": 89843.84374498793,
+    "logquad_profile_P_at_RSS_min": 0.34791007064398904,
+    "logquad_profile_P_range_RSS<=1.05xmin": [
+      0.23678825549842467,
+      0.4424954163896861
+    ],
+    "quartic_interpolant_P=0.2": {
+      "P": 0.2,
+      "rss": 5.169878828456423e-24,
+      "second_derivative_at_P": 758.5507708408801,
+      "is_local_max": false,
+      "values_at_x": [
+        1081.0,
+        1217.0,
+        469.9999999999977,
+        268.0
+      ]
+    },
+    "quartic_interpolant_P=1.0": {
+      "P": 1.0,
+      "rss": 6.462348535570529e-26,
+      "second_derivative_at_P": -420.2467817896392,
+      "is_local_max": true,
+      "values_at_x": [
+        1081.0,
+        1217.0000000000002,
+        470.0000000000001,
+        268.0
+      ]
+    }
+  },
+  "axis_sensitivity": {
+    "isotonic_decreasing_RSS": 9248.0,
+    "isotonic_decreasing_fit": [
+      1149.0,
+      1149.0,
+      470.0,
+      268.0
+    ],
+    "isotonic_increasing_RSS": 638050.0,
+    "isotonic_decreasing_R2": 0.9855058381004623,
+    "isotonic_increasing_R2": 0.0,
+    "isotonic_decreasing_RSS_log10_axis": 9248.0,
+    "isotonic_invariants_identical": true,
+    "spearman_rho_linear_axis": -0.7999999999999999,
+    "spearman_rho_log10_axis": -0.7999999999999999,
+    "perm_exact_two_sided_p": 0.3333333333333333,
+    "perm_exact_one_sided_p_decreasing": 0.9583333333333334,
+    "n_permutations": 24,
+    "spearman_rho_ranked_by_axis_value": -0.7999999999999999
+  }
+}

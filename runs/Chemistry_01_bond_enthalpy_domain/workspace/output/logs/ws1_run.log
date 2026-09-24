@@ -1,0 +1,219 @@
+[  63.6s] groupby done
+
+== 1. INVENTORY ==
+{
+  "raw_rows": 484907,
+  "unique_molecules": 42577,
+  "unique_fragment_pairs_mol_f1_f2": 290664,
+  "unique_global_fragment_pairs_f1_f2": 290641,
+  "unique_bde_values": 144147,
+  "unique_bond_types": 9,
+  "unique_bond_index_values": 31,
+  "row_vs_pair_redundancy_factor": 1.6683,
+  "rows_per_molecule": 11.3889,
+  "pair_units_with_bond_type_varying": 0,
+  "pair_units_with_bde_varying": 0,
+  "global_fragment_pairs_shared_by_2_molecules": 23,
+  "extra_rows_beyond_one_per_pair": 194243,
+  "distinct_fragment_strings": 206797
+}
+[ 183.6s] inventory
+
+== 2. BOND-CLASS CENSUS (raw rows vs unique fragment pairs) ==
+bond_class  raw_rows  unique_fragment_pairs  redundancy_rows_per_pair  share_of_row_inflation_pct  mean_bde_unique_pairs  sd_bde_unique_pairs  min_bde_unique_pairs  median_bde_unique_pairs  max_bde_unique_pairs
+       C-H    321949                 150091                    2.1450                      88.476                98.1567               9.9235               16.3673                  97.1566              140.5212
+       C-C     71166                  61490                    1.1574                       4.981                91.1083              12.1110               41.3334                  88.5472              164.5335
+       H-N     27314                  18273                    1.4948                       4.654                95.5119              10.4131               41.7488                  96.1902              126.2241
+       C-N     24707                  22499                    1.0981                       1.137                86.7745              13.5079               16.6309                  84.9660              127.2274
+       C-O     24354                  23288                    1.0458                       0.549                92.2939              14.1956               19.2670                  94.4966              131.8227
+       H-O     11884                  11577                    1.0265                       0.158               101.5871              10.7279               46.5674                 104.5474              123.2296
+       N-O      1634                   1581                    1.0335                       0.027                58.9553               9.6223                7.7297                  61.4463               87.7358
+       N-N      1597                   1567                    1.0191                       0.015                62.1794              12.6383               19.3028                  63.2008               97.1466
+       O-O       302                    298                    1.0134                       0.002                41.3837               8.6625               -0.8691                  43.6662               53.9444
+total rows beyond one-per-pair: 194243  (check 194243)
+[ 208.2s] census
+
+labeler cross-check: {
+  "n_sampled_unique_pairs": 4000,
+  "n_labeler_unparsable": 0,
+  "labeler_agreement_with_db_bond_type": 4000,
+  "labeler_agreement_pct": 100.0
+}
+[ 223.9s] labeler sample
+
+== 3. STRUCTURAL DOMAIN ==
+{
+  "database_element_set": [
+    "C",
+    "N",
+    "O"
+  ],
+  "database_n_elements": 3,
+  "database_hac_min": 1,
+  "database_hac_max": 10,
+  "database_hac_mean_unique_molecules": 8.8915,
+  "database_hac_median_unique_molecules": 9.0,
+  "database_hac_sd_unique_molecules": 1.2,
+  "database_hac_mean_unique_pairs": 9.0253,
+  "hac_definition": "heavy-atom count of the parent-molecule SMILES (RDKit GetNumHeavyAtoms)",
+  "unparsable_db_molecules": 0
+}
+
+HAC distribution of database parent molecules:
+ hac  n_unique_molecules  n_unique_fragment_pairs  pct_unique_molecules  cum_pct_unique_molecules
+   1                   1                        1                0.0023                    0.0023
+   2                   7                       13                0.0164                    0.0187
+   3                  36                       92                0.0846                    0.1033
+   4                 143                      431                0.3359                    0.4392
+   5                 466                     1814                1.0945                    1.5337
+   6                1297                     6085                3.0462                    4.5799
+   7                3391                    19101                7.9644                   12.5443
+   8                7467                    47265               17.5376                   30.0819
+   9               13396                    94712               31.4630                   61.5449
+  10               16373                   121150               38.4550                   99.9999
+
+molecules per element set: {'C|N|O': 17925, 'C|O': 13633, 'C|N': 8586, 'C': 2433}
+
+== 3b. ordinary unweighted BDE summary per class (unique-pair units) ==
+bond_class                 unit      n     mean      sd     min   median      max  mean_row_weighted
+       C-H unique_fragment_pair 150091  98.1567  9.9235 16.3673  97.1566 140.5212            96.4528
+       C-C unique_fragment_pair  61490  91.1083 12.1110 41.3334  88.5472 164.5335            90.1745
+       H-N unique_fragment_pair  18273  95.5119 10.4131 41.7488  96.1902 126.2241            96.0035
+       C-N unique_fragment_pair  22499  86.7745 13.5079 16.6309  84.9660 127.2274            86.2097
+       C-O unique_fragment_pair  23288  92.2939 14.1956 19.2670  94.4966 131.8227            92.1618
+       H-O unique_fragment_pair  11577 101.5871 10.7279 46.5674 104.5474 123.2296           101.5172
+       N-O unique_fragment_pair   1581  58.9553  9.6223  7.7297  61.4463  87.7358            58.8510
+       N-N unique_fragment_pair   1567  62.1794 12.6383 19.3028  63.2008  97.1466            62.2204
+       O-O unique_fragment_pair    298  41.3837  8.6625 -0.8691  43.6662  53.9444            41.4179
+[ 232.1s] domain
+
+== 4. COVERAGE BOUNDARY ==
+{
+  "benchmark_observations": 543,
+  "benchmark_unique_molecules": 419,
+  "benchmark_unique_fragment_pairs": 543,
+  "a_exact_fragment_pair_in_db": 331,
+  "a_exact_fragment_pair_in_db_pct": 60.9576,
+  "a_exact_fragment_pair_any_fragment_order": 331,
+  "b_parent_molecule_in_db": 369,
+  "b_parent_molecule_in_db_pct": 67.9558,
+  "b_parent_molecule_absent_from_db": 174,
+  "c_parent_hac_beyond_db_max": 0,
+  "c_parent_hac_beyond_db_max_pct": 0.0,
+  "c_parent_hac_at_or_below_db_max": 369,
+  "parent_hac_missing_unparsable": 174,
+  "d_parent_with_elements_never_in_db": 0,
+  "d_parent_with_elements_never_in_db_pct": 0.0,
+  "d_foreign_element_counts": {},
+  "db_hac_max": 10,
+  "hac_cutoff_defining_boundary": 10,
+  "benchmark_hac_min": 1,
+  "benchmark_hac_max": 10,
+  "benchmark_hac_mean": 6.6829,
+  "inside_all_three_criteria": 369
+}
+[ 364.2s] coverage
+
+HAC: DB molecules vs benchmark observations
+ hac  db_unique_molecules  benchmark_observations  benchmark_inside_db  benchmark_outside_db
+   1                    1                       1                    1                     0
+   2                    7                       4                    4                     0
+   3                   36                      13                   13                     0
+   4                  143                      40                   40                     0
+   5                  466                      53                   53                     0
+   6                 1297                      70                   70                     0
+   7                 3391                      48                   48                     0
+   8                 7467                      62                   62                     0
+   9                13396                      39                   39                     0
+  10                16373                      39                   39                     0
+
+outside-DB benchmark observations (parent absent from DB):
+       observation_id     parent_structure_smiles bond_class  hac_parent  experimental_bde_kcal_mol
+bond_observation_0008                   C#CC#CC#C        C-H         NaN                      129.8
+bond_observation_0030           C/C=C/CCCC/C=C/CC        C-H         NaN                       81.6
+bond_observation_0038     C1=C(N2CCCC2)Cc2ccccc21        C-H         NaN                       83.5
+bond_observation_0039     C1=C(N2CCCC2)c2ccccc2C1        C-H         NaN                       70.3
+bond_observation_0040    C1=C(N2CCCCC2)Cc2ccccc21        C-H         NaN                       82.5
+bond_observation_0041    C1=C(N2CCCCC2)c2ccccc2C1        C-H         NaN                       72.3
+bond_observation_0042    C1=C(N2CCOCC2)Cc2ccccc21        C-H         NaN                       82.8
+bond_observation_0043    C1=C(N2CCOCC2)c2ccccc2C1        C-H         NaN                       73.4
+bond_observation_0046    C1=C(c2ccccc2)Cc2ccccc21        C-H         NaN                       79.3
+bond_observation_0047    C1=C(c2ccccc2)c2ccccc2C1        C-H         NaN                       75.3
+bond_observation_0048 C1=CC(c2ccccc2)C=C1c1ccccc1        C-H         NaN                       75.0
+bond_observation_0051     C1=CC2CCCC3=C2C(=C1)CC3        C-H         NaN                       78.8
+bond_observation_0060                 C1=CCCCC=C1        C-H         NaN                       83.0
+bond_observation_0066         C1=Cc2cccc3cccc1c23        C-H         NaN                      117.0
+bond_observation_0070             C1C2C3C2C2C1C32        C-H         NaN                      111.5
+bond_observation_0071             C1C2C3C2C2C1C32        C-H         NaN                      109.4
+bond_observation_0077                C1CC2CCC1CC2        C-H         NaN                      102.9
+bond_observation_0078            C1CCC(C2CCCC2)C1        C-H         NaN                       91.3
+bond_observation_0079          C1CCC(C2CCCCC2)CC1        C-C         NaN                       88.2
+bond_observation_0080          C1CCC(C2CCCCC2)CC1        C-H         NaN                       92.3
+
+benchmark parents with foreign elements:
+Empty DataFrame
+Columns: [observation_id, parent_structure_smiles, foreign_elements, hac_parent]
+Index: []
+[ 364.6s] outside listing
+
+== 5. EXHAUSTIVENESS WITHIN DOMAIN ==
+{
+  "benchmark_parent_in_db": 369,
+  "of_those_exact_fragment_pair_present": 331,
+  "of_those_exact_fragment_pair_absent": 38,
+  "pct_exact_when_parent_present": 89.7019,
+  "pct_pair_absent_when_parent_present": 10.2981,
+  "parent_present_pair_absent_pct_of_all_benchmark": 6.9982
+}
+
+missing-pair examples (parent in DB, fragment pair absent):
+       observation_id parent_structure_smiles fragment_a_smiles   fragment_b_smiles bond_class  hac_parent  experimental_bde_kcal_mol
+bond_observation_0007                  C#CC#C               [H]            [C]#CC#C        C-H         4.0                      128.8
+bond_observation_0075             C1CC2CCC1C2               [H]      [CH]1CC2CCC1C2        C-H         7.0                       99.1
+bond_observation_0108                  C=C=CC             [CH3]            [CH]=C=C        C-C         4.0                       86.0
+bond_observation_0119              C=CC(C)C=C               [H]        C=C[C](C)C=C        C-H         6.0                       76.6
+bond_observation_0120               C=CC(C)CC          C=C[CH]C              [CH2]C        C-C         6.0                       70.8
+bond_observation_0124                  C=CC=C               [H]            C=[C]C=C        C-H         4.0                      102.2
+bond_observation_0170    CC(C(=O)O)C(C)C(=O)O       C[CH]C(=O)O         C[CH]C(=O)O        C-C        10.0                       66.7
+bond_observation_0189         CC(C)=C1C=CC=C1               [H] [CH2]C(C)=C1C=CC=C1        C-H         8.0                       84.5
+bond_observation_0198              CC(C)C(C)O            C[CH]O              C[CH]C        C-C         6.0                       83.9
+bond_observation_0221             CC(N)C(=O)O            O=[C]O              C[CH]N        C-C         6.0                       79.2
+bond_observation_0222              CC(O)C(C)O            C[CH]O              C[CH]O        C-C         6.0                       90.5
+bond_observation_0223                 CC(O)CO            C[CH]O              [CH2]O        C-C         5.0                       86.2
+bond_observation_0235               CC1C=CCC1             [CH3]         [CH]1C=CCC1        C-C         6.0                       71.5
+bond_observation_0236              CC1C=CCCC1               [H]        C[C]1C=CCCC1        C-H         7.0                       79.5
+bond_observation_0237         CC1C=Cc2ccccc21             [CH3]   [CH]1C=Cc2ccccc21        C-C        10.0                       72.4
+bond_observation_0239                  CC1CC1               [H]          [CH2]C1CC1        C-H         4.0                       97.4
+bond_observation_0241        CC1CCC2CC1C2(C)C               [H]  C[C]1CCC2CC1C2(C)C        C-H        10.0                       90.2
+bond_observation_0248             CC1CCCCCCC1               [H]       C[C]1CCCCCCC1        C-H         9.0                       94.4
+bond_observation_0252                  CC1CO1             [CH3]            [CH]1CO1        C-C         4.0                       93.5
+bond_observation_0256                  CC=C=O             [CH3]            [CH]=C=O        C-C         4.0                       93.3
+
+db fragment-pair count of the parents that miss an exact pair:
+db_pairs_for_parent
+1     3
+2     6
+3     8
+4     1
+5     6
+6     5
+7     4
+8     2
+9     2
+13    1
+
+HAC of missing-pair benchmark rows:
+hac_parent
+4.0      6
+5.0      2
+6.0      8
+7.0      6
+8.0     10
+9.0      2
+10.0     4
+
+bond class of missing-pair rows:
+bond_class
+C-C    22
+C-H    16
+[ 369.6s] exhaustiveness

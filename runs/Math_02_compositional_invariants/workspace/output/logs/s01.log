@@ -1,0 +1,6 @@
+stage 1 ok
+  grid density      : 0.2597
+  integer values    : True
+  rows summing to 1 : 0
+  shared metric ids : 400
+  joined samples    : 489

@@ -1,0 +1,66 @@
+==============================================================================
+A) Family attack: threshold-only rules (no local-maximum filter)
+==============================================================================
+  w=  15: rank of the annotated rows by excess -> min=1, max=290; top-290 recall=15/15 (15.0% of the record called an event)
+  w=  25: rank of the annotated rows by excess -> min=1, max=768; top-768 recall=15/15 (39.8% of the record called an event)
+  w=  51: rank of the annotated rows by excess -> min=1, max=478; top-478 recall=15/15 (24.8% of the record called an event)
+  w= 101: rank of the annotated rows by excess -> min=1, max=327; top-327 recall=15/15 (16.9% of the record called an event)
+  w= 301: rank of the annotated rows by excess -> min=1, max=351; top-351 recall=15/15 (18.2% of the record called an event)
+
+  excess > k*sigma (no local-max filter), w=101:
+    k=0.1 : n_det= 741  recall=15/15  row0_in=True
+    k=0.2 : n_det= 572  recall=15/15  row0_in=True
+    k=0.3 : n_det= 442  recall=15/15  row0_in=True
+    k=0.4 : n_det= 354  recall=15/15  row0_in=True
+    k=0.5 : n_det= 287  recall=14/15  row0_in=False
+    k=0.75: n_det= 191  recall=14/15  row0_in=False
+    k=1.0 : n_det= 142  recall=14/15  row0_in=False
+
+  => 15/15 IS reachable outside the local-max family, but only by flagging hundreds of samples (~17-19% of the record).
+
+==============================================================================
+B) Enrichment: cut-size sensitivity, ties, and LM composition
+==============================================================================
+  observed excess values around the top-30 boundary:
+    rank  27 row  1676 exc=  231.580 lm=False annot=False
+    rank  28 row  1752 exc=  226.371 lm=True annot=True
+    rank  29 row  1671 exc=  221.977 lm=False annot=False
+    rank  30 row  1640 exc=  220.423 lm=True annot=True
+    rank  31 row   519 exc=  208.287 lm=False annot=False
+    rank  32 row  1308 exc=  207.136 lm=False annot=False
+    rank  33 row   516 exc=  205.388 lm=False annot=False
+    rank  34 row   796 exc=  203.777 lm=True annot=True
+    rank  35 row    70 exc=  197.051 lm=True annot=True
+  tie at the top-30 boundary: False
+  enrichment vs cut size (expected = 15*K/n):
+    top- 10: observed= 2/15  expected= 0.08  enrichment= 25.7x  p=2.45e-03
+    top- 20: observed= 5/15  expected= 0.16  enrichment= 32.2x  p=1.96e-07
+    top- 30: observed= 7/15  expected= 0.23  enrichment= 30.0x  p=6.13e-10
+    top- 50: observed=13/15  expected= 0.39  enrichment= 33.5x  p=4.49e-20
+    top-100: observed=14/15  expected= 0.78  enrichment= 18.0x  p=5.79e-18
+    top-200: observed=14/15  expected= 1.55  enrichment=  9.0x  p=1.47e-13
+  top-30 by excess: 7/30 are strict local maxima; 7 are annotated
+  of the 14 annotated strict local maxima, 6 are above the 30th-highest excess overall;
+  rank within the 579 local maxima of each annotated row:
+    row     0 reference_surface    rank_in_LM=None  (top 30 = top 5.2% of 579)
+    row    70 event_01             rank_in_LM=9  (top 30 = top 5.2% of 579)
+    row   502 event_02             rank_in_LM=1  (top 30 = top 5.2% of 579)
+    row   517 unidentified_event   rank_in_LM=4  (top 30 = top 5.2% of 579)
+    row   796 unidentified_event   rank_in_LM=8  (top 30 = top 5.2% of 579)
+    row   841 unidentified_event   rank_in_LM=16  (top 30 = top 5.2% of 579)
+    row   907 unidentified_event   rank_in_LM=13  (top 30 = top 5.2% of 579)
+    row  1012 event_03             rank_in_LM=15  (top 30 = top 5.2% of 579)
+    row  1305 event_04             rank_in_LM=3  (top 30 = top 5.2% of 579)
+    row  1640 unidentified_event   rank_in_LM=7  (top 30 = top 5.2% of 579)
+    row  1660 unidentified_event   rank_in_LM=10  (top 30 = top 5.2% of 579)
+    row  1674 unidentified_event   rank_in_LM=5  (top 30 = top 5.2% of 579)
+    row  1696 event_05             rank_in_LM=2  (top 30 = top 5.2% of 579)
+    row  1752 unidentified_event   rank_in_LM=6  (top 30 = top 5.2% of 579)
+    row  1862 unidentified_event   rank_in_LM=11  (top 30 = top 5.2% of 579)
+
+  Fraction of the 579 local maxima that are in the top-30 overall: 7/579
+  Interpretation: the overall top-30 by excess is dominated by non-local-maxima (steep rising limbs),
+  so restricting the top-30 to local maxima raises the annotated count from 7 to 14. The enrichment
+  is therefore NOT an artefact of annotated rows being local maxima - it is stronger within that class.
+
+done

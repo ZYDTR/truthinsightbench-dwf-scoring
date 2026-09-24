@@ -1,0 +1,58 @@
+n rows=621  n complete d18o=593  n rows with finite LSR & grad=547
+NaN in grad=74 (28 missing values + 2 interior neighbours each)
+
+[1] Naive per-row Pearson correlations with LSR
+    (a) LSR vs d18o level       r=-0.4072  (n=593, naive p=4.33e-25)
+    (b) LSR vs grad_d18o signed r=+0.0668  (n=547, naive p=1.18e-01)
+    (c) LSR vs |grad_d18o|      r=+0.4680  (n=547, naive p=3.97e-31)
+
+[2] Shared-denominator diagnostic (dAge = np.gradient(age), the age step)
+    dAge vs LSR          r=-0.8204  (n=621)
+    dAge vs |grad_d18o|  r=-0.3126  (n=547)
+    dAge vs  grad_d18o   r=-0.0301  (n=547)
+    1/dAge vs LSR        r=+0.9779 (rank +0.9797)
+    1/dAge vs |grad|     r=+0.4161 (rank +0.4435)
+    dAge range 0.200-2.530 ka; LSR = dDepth/dAge so both share 1/dAge
+
+[3] Partial correlation  r(LSR, |grad_d18o| . dAge)
+    controlling linearly for dAge   : r_partial=+0.3907 (n=547, naive p=2.35e-21)
+    controlling for 1/dAge (nonlin.) : r_partial=+0.3988 (naive p=2.9e-22)
+
+[4] Monte-Carlo null (values permuted in age order, n_perm=2000)
+    level       : null mean=-0.0008 sd=0.0414 | r_obs=-0.4072 p_two_sided=0.0004998
+    signed grad : null mean=-0.0002 sd=0.0277 | r_obs=+0.0668 p_two_sided=0.01699
+    |grad|      : null mean=+0.4675 sd=0.0371 | r_obs=+0.4680 p_two_sided=0.5032 (z=+0.01)
+    artifact-only channel r(LSR, position-wise mean|grad_perm|)=+0.9718
+    |grad| after dividing out the position-wise artifact: r_obs_dedn=+0.1309 vs null mean=-0.0000 sd=0.0480 p=0.005497
+
+[5] Decisive test: contiguous non-overlapping age blocks
+     width n_blk rows/blk  Pearson  Spearman block-perm p            LOO range
+         5    61      9.2  -0.4100   -0.3537       0.0009 [-0.442,-0.370]  
+       7.5    47     12.5  -0.4662   -0.4429       0.0013 [-0.508,-0.430]  
+        10    35     16.8  -0.5083   -0.4619      0.00145 [-0.544,-0.475] *
+      12.5    29     20.4  -0.4293   -0.3985        0.021 [-0.516,-0.374]  
+        15    24     24.7  -0.4405   -0.4357      0.03325 [-0.497,-0.376]  
+        20    18     32.9  -0.4996   -0.4964       0.0345 [-0.573,-0.404] *
+        25    15     39.5  -0.5939   -0.6357      0.02145 [-0.753,-0.536]  
+        30    12     49.4  +0.0940   +0.1329       0.7676 [-0.064,+0.317]  
+        40     9     65.9  -0.7433   -0.2833       0.0217 [-0.838,-0.568] *
+        50     8     74.1  -0.5753   -0.3810       0.1486 [-0.684,-0.326]  
+        60     6     98.8  -0.5008   -0.3714       0.3218 [-0.703,-0.201]  
+        80     5    118.6  -0.8512   -0.6000      0.07455 [-0.957,-0.618]  
+       100     4    148.2  +0.0576   +0.2000       0.9157 [-0.946,+0.815]  
+
+[5b] Bin-edge sensitivity 10 ka: r over 10 phase shifts in [-0.508,-0.426], median -0.465, 10/10 negative
+
+[5b] Bin-edge sensitivity 20 ka: r over 10 phase shifts in [-0.579,-0.396], median -0.529, 10/10 negative
+
+[5b] Bin-edge sensitivity 40 ka: r over 10 phase shifts in [-0.754,-0.292], median -0.588, 10/10 negative
+
+[5c] Age-trend control at 10 ka: r(LSR,d18o)=-0.508 -> partial given block age -0.510 (r(LSR,age)=+0.014, r(d18o,age)=-0.122)
+
+[5c] Age-trend control at 20 ka: r(LSR,d18o)=-0.500 -> partial given block age -0.503 (r(LSR,age)=-0.029, r(d18o,age)=-0.075)
+
+[5c] Age-trend control at 40 ka: r(LSR,d18o)=-0.743 -> partial given block age -0.765 (r(LSR,age)=-0.170, r(d18o,age)=-0.058)
+
+[verdict] shared_denominator_artifact_confirmed = True
+[verdict] inter_block_coupling_supported = True at widths [5, 7.5, 10, 12.5, 15, 20, 25, 40]
+wrote /data/user/conversations/conv-715fe573-e9f2-40bc-ac27-f8ef02db9d25/project/output/results/07_coupling_scale.json

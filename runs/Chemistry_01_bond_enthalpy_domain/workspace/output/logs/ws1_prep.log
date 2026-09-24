@@ -1,0 +1,34 @@
+[  96.6s] drop_duplicates pairs
+[ 197.3s] groupby nunique
+[ 299.5s] inventory
+{
+  "raw_rows": 484907,
+  "unique_molecules": 42577,
+  "unique_fragment_pairs_mol_f1_f2": 290664,
+  "unique_global_fragment_pairs_f1_f2": 290641,
+  "unique_bde_values": 144147,
+  "unique_bond_types": 9,
+  "unique_bond_index_values": 31,
+  "row_vs_pair_redundancy_factor": 1.6683,
+  "rows_per_molecule": 11.3889,
+  "pair_units_with_bond_type_varying": 0,
+  "pair_units_with_bde_varying": 0,
+  "extra_rows_beyond_one_per_pair": 194243,
+  "distinct_fragment_strings": 206797,
+  "duplicate_tuple_group_size_histogram": {
+    "1": 159601,
+    "2": 87217,
+    "3": 35700,
+    "4": 4195,
+    "6": 2930,
+    "8": 83,
+    "9": 864,
+    "10": 1,
+    "12": 58,
+    "14": 1,
+    "16": 1,
+    "18": 12,
+    "20": 1
+  }
+}
+[ 348.0s] saved

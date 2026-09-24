@@ -1,0 +1,95 @@
+==============================================================================
+STAGE 3  ultrafast transient traces (unit = one complete trace)
+==============================================================================
+
+------------------------------------------------------------------------------
+Rise/decay model comparison per trace (OLS on all 98 delay points)
+------------------------------------------------------------------------------
+
+formulation_1:
+     rise_then_biexponential_decay k=6 R2=0.7667 RMSE=0.1495 AICc= -357.19 dAICc=0.00
+         rise_then_stretched_decay k=5 R2=0.7431 RMSE=0.1569 AICc= -350.06 dAICc=7.13
+                    sum_two_decays k=5 R2=0.7375 RMSE=0.1586 AICc= -347.94 dAICc=9.25
+                   rise_then_decay k=4 R2=0.7304 RMSE=0.1608 AICc= -347.59 dAICc=9.60  [tau_rise=0.569 ps, tau_decay=16.67 ps, late offset c=-0.2625]
+             monoexponential_decay k=3 R2=0.4417 RMSE=0.2313 AICc= -278.48 dAICc=78.71
+                     flat_constant k=1 R2=0.0000 RMSE=0.3096 AICc= -225.66 dAICc=131.53
+
+formulation_2:
+         rise_then_stretched_decay k=5 R2=0.8158 RMSE=0.1320 AICc= -383.94 dAICc=0.00
+     rise_then_biexponential_decay k=6 R2=0.7932 RMSE=0.1399 AICc= -370.28 dAICc=13.66
+                    sum_two_decays k=5 R2=0.7765 RMSE=0.1454 AICc= -364.96 dAICc=18.98
+                   rise_then_decay k=4 R2=0.7430 RMSE=0.1560 AICc= -353.55 dAICc=30.39  [tau_rise=1.166 ps, tau_decay=40.27 ps, late offset c=-0.1773]
+             monoexponential_decay k=3 R2=0.3884 RMSE=0.2406 AICc= -270.82 dAICc=113.12
+                     flat_constant k=1 R2=0.0000 RMSE=0.3076 AICc= -226.93 dAICc=157.01
+
+------------------------------------------------------------------------------
+Windowed trace statistics with moving-block bootstrap CIs
+------------------------------------------------------------------------------
+
+formulation_1: peak 0.999 at 1.136 ps; pre-rise mean -0.0170
+  rise metrics: {'t_at_10pct_of_peak_ps': 0.77501, 't_at_50pct_of_peak_ps': 0.77501, 't_at_90pct_of_peak_ps': 1.13634}
+      delay_ge_1.0ps: n= 73 mean=+0.1857 median=+0.1883 frac_pos=0.75 95% CI [+0.0144, +0.3554] excludes_zero=True
+      delay_ge_5.0ps: n= 48 mean=+0.0096 median=+0.0721 frac_pos=0.62 95% CI [-0.1197, +0.1397] excludes_zero=False
+     delay_ge_10.0ps: n= 37 mean=-0.0557 median=+0.0146 frac_pos=0.51 95% CI [-0.1875, +0.0853] excludes_zero=False
+     delay_ge_20.0ps: n= 24 mean=-0.1662 median=-0.1610 frac_pos=0.25 95% CI [-0.2822, -0.0450] excludes_zero=True
+     delay_ge_30.0ps: n= 17 mean=-0.2502 median=-0.2542 frac_pos=0.00 95% CI [-0.3405, -0.1562] excludes_zero=True
+     delay_ge_40.0ps: n= 12 mean=-0.3079 median=-0.2979 frac_pos=0.00 95% CI [-0.3871, -0.2377] excludes_zero=True
+     delay_ge_50.0ps: n=  8 mean=-0.3548 median=-0.3403 frac_pos=0.00 95% CI [-0.4213, -0.3018] excludes_zero=True
+  readout noise (MAD of successive differences) = 0.0448; late-window mean / noise-SE = -23.01
+
+formulation_2: peak 1.001 at 2.242 ps; pre-rise mean -0.0116
+  rise metrics: {'t_at_10pct_of_peak_ps': 0.83767, 't_at_50pct_of_peak_ps': 0.90568, 't_at_90pct_of_peak_ps': 1.84302}
+      delay_ge_1.0ps: n= 73 mean=+0.4788 median=+0.5034 frac_pos=0.97 95% CI [+0.3614, +0.6424] excludes_zero=True
+      delay_ge_5.0ps: n= 48 mean=+0.3655 median=+0.3650 frac_pos=0.98 95% CI [+0.2589, +0.4666] excludes_zero=True
+     delay_ge_10.0ps: n= 37 mean=+0.3000 median=+0.2806 frac_pos=0.97 95% CI [+0.2076, +0.3967] excludes_zero=True
+     delay_ge_20.0ps: n= 24 mean=+0.2121 median=+0.2094 frac_pos=0.96 95% CI [+0.1527, +0.2650] excludes_zero=True
+     delay_ge_30.0ps: n= 17 mean=+0.1882 median=+0.1729 frac_pos=0.94 95% CI [+0.1231, +0.2481] excludes_zero=True
+     delay_ge_40.0ps: n= 12 mean=+0.1429 median=+0.1510 frac_pos=0.92 95% CI [+0.1035, +0.1694] excludes_zero=True
+     delay_ge_50.0ps: n=  8 mean=+0.1328 median=+0.1510 frac_pos=0.88 95% CI [+0.0803, +0.1765] excludes_zero=True
+  readout noise (MAD of successive differences) = 0.1211; late-window mean / noise-SE = +6.40
+
+------------------------------------------------------------------------------
+Delay-window holdout: fit rise_then_decay on early delays, predict late
+------------------------------------------------------------------------------
+  formulation_1 fit<=   5 ps (R2=0.6473): extrapolated late mean -0.1494 vs observed +0.0096  sign_ok=False
+  formulation_1 fit<=  10 ps (R2=0.6219): extrapolated late mean -0.1421 vs observed -0.0557  sign_ok=True
+  formulation_1 fit<=  20 ps (R2=0.5844): extrapolated late mean -0.1256 vs observed -0.1662  sign_ok=True
+  formulation_1 fit<=  30 ps (R2=0.5976): extrapolated late mean -0.1168 vs observed -0.2502  sign_ok=True
+  formulation_2 fit<=   5 ps (R2=0.8163): extrapolated late mean +0.0495 vs observed +0.3655  sign_ok=True
+  formulation_2 fit<=  10 ps (R2=0.8134): extrapolated late mean -0.0829 vs observed +0.3000  sign_ok=False
+  formulation_2 fit<=  20 ps (R2=0.7623): extrapolated late mean +0.0242 vs observed +0.2121  sign_ok=True
+  formulation_2 fit<=  30 ps (R2=0.7631): extrapolated late mean -0.0172 vs observed +0.1882  sign_ok=False
+
+------------------------------------------------------------------------------
+Robustness: artifact-window exclusion and late-window threshold sweep
+------------------------------------------------------------------------------
+  formulation_1: peak delay after excluding t<0.5 ps = 1.136 ps; late-window sign stable across 15-50 ps thresholds: True
+        ge_15ps: mean=-0.1080 frac_pos=0.40 sign=negative
+        ge_20ps: mean=-0.1662 frac_pos=0.25 sign=negative
+        ge_25ps: mean=-0.1991 frac_pos=0.14 sign=negative
+        ge_30ps: mean=-0.2502 frac_pos=0.00 sign=negative
+        ge_35ps: mean=-0.2754 frac_pos=0.00 sign=negative
+        ge_40ps: mean=-0.3079 frac_pos=0.00 sign=negative
+        ge_45ps: mean=-0.3292 frac_pos=0.00 sign=negative
+        ge_50ps: mean=-0.3548 frac_pos=0.00 sign=negative
+  formulation_2: peak delay after excluding t<0.5 ps = 2.242 ps; late-window sign stable across 15-50 ps thresholds: True
+        ge_15ps: mean=+0.2615 frac_pos=0.97 sign=positive
+        ge_20ps: mean=+0.2121 frac_pos=0.96 sign=positive
+        ge_25ps: mean=+0.1962 frac_pos=0.95 sign=positive
+        ge_30ps: mean=+0.1882 frac_pos=0.94 sign=positive
+        ge_35ps: mean=+0.1665 frac_pos=0.93 sign=positive
+        ge_40ps: mean=+0.1429 frac_pos=0.92 sign=positive
+        ge_45ps: mean=+0.1307 frac_pos=0.90 sign=positive
+        ge_50ps: mean=+0.1328 frac_pos=0.88 sign=positive
+
+------------------------------------------------------------------------------
+Cross-trace contrast at long delay (>=30 ps)
+------------------------------------------------------------------------------
+  f1 mean(>=30 ps) = -0.2502 95% CI [-0.3405, -0.1562] frac_pos=0.00
+  f2 mean(>=30 ps) = +0.1882 95% CI [+0.1233, +0.2477] frac_pos=0.94
+  difference f1-f2 = -0.4384 95% CI [-0.5404, -0.3188] excludes zero: True
+  Fisher exact on positivity: table=[[0, 17], [16, 1]] p=0.0000
+
+wrote figures/fig3_transients.png
+
+stage 3 complete

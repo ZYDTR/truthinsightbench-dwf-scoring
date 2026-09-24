@@ -1,0 +1,21 @@
+{
+  "task_id": "Math_02_compositional_invariants",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260920T023253-52fb87",
+  "source_run_json_sha256": "a875fc38a50ec6aa06382c8581bfd0525f81818caa5ccf7918332686a86346d8",
+  "source_release_json_sha256": "6469a3d88e7bbaabded73b8696a743ec6cabf15aba9239eb60ab4507ed8f6e26",
+  "source_latest_validation_sha256": "a6f23a12bb97c65b1552257375c63d1ef301cf5a47338f53aa8455d35663a11a",
+  "source_snapshot_manifest_sha256": "18da955bbd5a9cc07b53cb05dc3c5ded4bc24b25e3feea294ee057a9f3616158",
+  "assistant_model_messages": {
+    "deepseek-v4.1-flash-max": 197
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "bfd0de53a0e76f639814bbea011608bd0d6ffb6ffd9de792762bba6ab4450f45",
+  "output_sha256": "d95c22641855a40ac2c6f87bcfef83140b81641f98e9a0006a1d7c3d3b09a9be"
+}

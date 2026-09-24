@@ -1,0 +1,21 @@
+{
+  "task_id": "Physics_03_controlled_dynamics_forecast",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260923T131433-b99bd3",
+  "source_run_json_sha256": "2419beda3e99d013c581cc2054b544edb2140e356992206e0a9f1ba7045effaa",
+  "source_release_json_sha256": "87f1b5f7bbce87126a770a2967e71ecd283532f4c092ac7bb9ec38b6b19f41ae",
+  "source_latest_validation_sha256": "4c4ba6f4908b7ddd626eb1c576f05229cc4ff7a9b2df96e1b5dd9e8948835f03",
+  "source_snapshot_manifest_sha256": "ebac4ab167f1de4a0927054f4306688a5c7c8ee084161d97170a1112ec5cd4a5",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 180
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 4,
+  "input_sha256": "fa057599cd068d29ec8254868832ac92aa9942b0f349f8d4f81b9d66b7903bde",
+  "output_sha256": "38033528773905068283cba6569c25a2cff7003c3c63d1e87b48b17ee2d93067"
+}

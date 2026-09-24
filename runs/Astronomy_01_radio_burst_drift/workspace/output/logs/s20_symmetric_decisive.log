@@ -1,0 +1,161 @@
+============================================================================================
+s20 SYMMETRIC DECISIVE TEST (centroid anchor): is the reported slope present?
+ANALYSIS UNIT = one complete dynamic-spectrum event (n_events = 5)
+============================================================================================
+############################################################################################
+### event_1: reported -12.7777 MHz/s; a line at that slope crosses the whole 8.969 MHz band in 0.702 s (64% of the 1.0984 s window)
+--------------------------------------------------------------------------------------------
+[event_1 thr>1.01] centroid (18243.921 s, 12.038 MHz); in-band time coverage at the reported slope 63.5%
+   L(reported)=0.08678  L(mirror +12.78)=0.10472  ratio=0.8287   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 30.80, length-matched 29.17 (n=84); percentile of the mirror 89.40
+   argmax of L at +14.40 MHz/s; Lmax/L(rep) = 1.266; argmax within +-5 MHz/s of the reported slope: -7.80 MHz/s; nearest local max 0.02 MHz/s away
+--------------------------------------------------------------------------------------------
+[event_1 thr>1.05] centroid (18243.921 s, 12.021 MHz); in-band time coverage at the reported slope 63.5%
+   L(reported)=0.08468  L(mirror +12.78)=0.10244  ratio=0.8267   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 30.55, length-matched 30.36 (n=84); percentile of the mirror 86.66
+   argmax of L at +14.40 MHz/s; Lmax/L(rep) = 1.275; argmax within +-5 MHz/s of the reported slope: -7.80 MHz/s; nearest local max 0.38 MHz/s away
+--------------------------------------------------------------------------------------------
+[event_1 thr>1.2] centroid (18243.918 s, 11.780 MHz); in-band time coverage at the reported slope 63.5%
+   L(reported)=0.06337  L(mirror +12.78)=0.08337  ratio=0.7600   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 40.52, length-matched 48.21 (n=84); percentile of the mirror 97.63
+   argmax of L at -0.40 MHz/s; Lmax/L(rep) = 1.466; argmax within +-5 MHz/s of the reported slope: -7.80 MHz/s; nearest local max 0.02 MHz/s away
+############################################################################################
+### event_2: reported -12.4520 MHz/s; a line at that slope crosses the whole 8.969 MHz band in 0.720 s (66% of the 1.0984 s window)
+--------------------------------------------------------------------------------------------
+[event_2 thr>1.01] centroid (20263.825 s, 11.883 MHz); in-band time coverage at the reported slope 65.6%
+   L(reported)=0.09679  L(mirror +12.45)=0.10740  ratio=0.9012   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 43.02, length-matched 14.02 (n=82); percentile of the mirror 69.70
+   argmax of L at +2.80 MHz/s; Lmax/L(rep) = 1.460; argmax within +-5 MHz/s of the reported slope: -13.40 MHz/s; nearest local max 0.25 MHz/s away
+--------------------------------------------------------------------------------------------
+[event_2 thr>1.05] centroid (20263.825 s, 11.862 MHz); in-band time coverage at the reported slope 65.9%
+   L(reported)=0.09554  L(mirror +12.45)=0.10617  ratio=0.8999   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 45.01, length-matched 18.90 (n=82); percentile of the mirror 71.20
+   argmax of L at +2.80 MHz/s; Lmax/L(rep) = 1.469; argmax within +-5 MHz/s of the reported slope: -13.40 MHz/s; nearest local max 0.65 MHz/s away
+--------------------------------------------------------------------------------------------
+[event_2 thr>1.2] centroid (20263.820 s, 11.559 MHz); in-band time coverage at the reported slope 65.6%
+   L(reported)=0.07473  L(mirror +12.45)=0.08670  ratio=0.8619   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 51.00, length-matched 33.54 (n=82); percentile of the mirror 84.91
+   argmax of L at +2.00 MHz/s; Lmax/L(rep) = 1.743; argmax within +-5 MHz/s of the reported slope: -11.80 MHz/s; nearest local max 0.65 MHz/s away
+############################################################################################
+### event_3: reported -3.3614 MHz/s; a line at that slope crosses the whole 8.969 MHz band in 2.668 s (243% of the 1.0984 s window)
+--------------------------------------------------------------------------------------------
+[event_3 thr>1.01] centroid (30070.278 s, 12.377 MHz); in-band time coverage at the reported slope 100.0%
+   L(reported)=0.08463  L(mirror +3.36)=0.10239  ratio=0.8265   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 3.62, length-matched 10.68 (n=117); percentile of the mirror 98.63
+   argmax of L at +2.80 MHz/s; Lmax/L(rep) = 1.267; argmax within +-5 MHz/s of the reported slope: +0.20 MHz/s; nearest local max 0.24 MHz/s away
+--------------------------------------------------------------------------------------------
+[event_3 thr>1.05] centroid (30070.278 s, 12.373 MHz); in-band time coverage at the reported slope 100.0%
+   L(reported)=0.08225  L(mirror +3.36)=0.10015  ratio=0.8212   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 3.12, length-matched 9.83 (n=117); percentile of the mirror 98.38
+   argmax of L at +2.80 MHz/s; Lmax/L(rep) = 1.278; argmax within +-5 MHz/s of the reported slope: +0.20 MHz/s; nearest local max 0.24 MHz/s away
+--------------------------------------------------------------------------------------------
+[event_3 thr>1.2] centroid (30070.278 s, 12.299 MHz); in-band time coverage at the reported slope 100.0%
+   L(reported)=0.05820  L(mirror +3.36)=0.07605  ratio=0.7652   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 4.36, length-matched 8.97 (n=117); percentile of the mirror 98.88
+   argmax of L at +3.00 MHz/s; Lmax/L(rep) = 1.356; argmax within +-5 MHz/s of the reported slope: -6.60 MHz/s; nearest local max 0.24 MHz/s away
+############################################################################################
+### event_4: reported -16.8673 MHz/s; a line at that slope crosses the whole 8.969 MHz band in 0.532 s (48% of the 1.0984 s window)
+--------------------------------------------------------------------------------------------
+[event_4 thr>1.01] centroid (30354.356 s, 12.289 MHz); in-band time coverage at the reported slope 48.5%
+   L(reported)=0.10753  L(mirror +16.87)=0.09979  ratio=1.0776   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 63.97, length-matched 55.80 (n=112); percentile of the mirror 46.26
+   argmax of L at -32.60 MHz/s; Lmax/L(rep) = 1.122; argmax within +-5 MHz/s of the reported slope: -12.20 MHz/s; nearest local max 0.13 MHz/s away
+--------------------------------------------------------------------------------------------
+[event_4 thr>1.05] centroid (30354.356 s, 12.282 MHz); in-band time coverage at the reported slope 48.5%
+   L(reported)=0.10510  L(mirror +16.87)=0.09794  ratio=1.0731   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 63.47, length-matched 54.91 (n=112); percentile of the mirror 47.26
+   argmax of L at -32.60 MHz/s; Lmax/L(rep) = 1.122; argmax within +-5 MHz/s of the reported slope: -12.20 MHz/s; nearest local max 0.13 MHz/s away
+--------------------------------------------------------------------------------------------
+[event_4 thr>1.2] centroid (30354.355 s, 12.173 MHz); in-band time coverage at the reported slope 48.5%
+   L(reported)=0.08013  L(mirror +16.87)=0.07137  ratio=1.1227   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 62.72, length-matched 54.02 (n=112); percentile of the mirror 37.03
+   argmax of L at -28.80 MHz/s; Lmax/L(rep) = 1.124; argmax within +-5 MHz/s of the reported slope: -12.60 MHz/s; nearest local max 0.27 MHz/s away
+############################################################################################
+### event_5: reported -4.0560 MHz/s; a line at that slope crosses the whole 8.969 MHz band in 2.211 s (201% of the 1.0984 s window)
+--------------------------------------------------------------------------------------------
+[event_5 thr>1.01] centroid (16718.430 s, 12.419 MHz); in-band time coverage at the reported slope 100.0%
+   L(reported)=0.07377  L(mirror +4.06)=0.10017  ratio=0.7364   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 0.87, length-matched 2.99 (n=117); percentile of the mirror 98.88
+   argmax of L at +3.40 MHz/s; Lmax/L(rep) = 1.433; argmax within +-5 MHz/s of the reported slope: -1.00 MHz/s; nearest local max 2.54 MHz/s away
+--------------------------------------------------------------------------------------------
+[event_5 thr>1.05] centroid (16718.430 s, 12.415 MHz); in-band time coverage at the reported slope 100.0%
+   L(reported)=0.07142  L(mirror +4.06)=0.09817  ratio=0.7275   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 0.87, length-matched 2.99 (n=117); percentile of the mirror 98.88
+   argmax of L at +3.40 MHz/s; Lmax/L(rep) = 1.448; argmax within +-5 MHz/s of the reported slope: -1.00 MHz/s; nearest local max 2.54 MHz/s away
+--------------------------------------------------------------------------------------------
+[event_5 thr>1.2] centroid (16718.435 s, 12.349 MHz); in-band time coverage at the reported slope 100.0%
+   L(reported)=0.04657  L(mirror +4.06)=0.07182  ratio=0.6484   (exact geometric control: identical coverage)
+   percentile of m_rep: all slopes 1.12, length-matched 3.85 (n=117); percentile of the mirror 98.63
+   argmax of L at +3.20 MHz/s; Lmax/L(rep) = 1.627; argmax within +-5 MHz/s of the reported slope: -0.20 MHz/s; nearest local max 1.54 MHz/s away
+
+s20 LEAVE-ONE-OUT over the 5 events
+threshold                  statistic aggregation  full_sample   loo_min   loo_max  loo_range  crosses_boundary
+     1.01                    pct_all      median    30.798005 17.206983 36.907731  19.700748             False
+     1.01                pct_matched      median    14.024390 12.354075 21.595528   9.241453             False
+     1.01 ratio_reported_over_mirror      median     0.828674  0.827576  0.864944   0.037368             False
+     1.01         n_events_ratio_gt1       count     1.000000  0.000000  1.000000   1.000000             False
+     1.01   n_events_pct_extreme_p10       count     2.000000  1.000000  2.000000   1.000000             False
+     1.01        Lmax_over_Lreported      median     1.266587  1.266347  1.349708   0.083361             False
+     1.05                    pct_all      median    30.548628 16.832918 37.780549  20.947631             False
+     1.05                pct_matched      median    18.902439 14.365749 24.629791  10.264042             False
+     1.05 ratio_reported_over_mirror      median     0.826659  0.823940  0.863259   0.039319             False
+     1.05         n_events_ratio_gt1       count     1.000000  0.000000  1.000000   1.000000             False
+     1.05   n_events_pct_extreme_p10       count     2.000000  1.000000  2.000000   1.000000             False
+     1.05        Lmax_over_Lreported      median     1.277783  1.276189  1.363010   0.086821             False
+     1.20                    pct_all      median    40.523691 22.443890 45.760599  23.316708             False
+     1.20                pct_matched      median    33.536585 21.255472 40.875436  19.619963             False
+     1.20 ratio_reported_over_mirror      median     0.765224  0.762637  0.813546   0.050910             False
+     1.20         n_events_ratio_gt1       count     1.000000  0.000000  1.000000   1.000000             False
+     1.20   n_events_pct_extreme_p10       count     2.000000  1.000000  2.000000   1.000000             False
+     1.20        Lmax_over_Lreported      median     1.465996  1.411029  1.546431   0.135403             False
+
+s20 injection control (threshold 1.05), percentile of the reported slope:
+Empty DataFrame
+Columns: []
+Index: []
+median over events: 
+smallest injected amplitude whose median percentile reaches 90: None
+real-image percentiles (thr 1.05): event_1:30.5, event_2:45.0, event_3:3.1, event_4:63.5, event_5:0.9
+
+s20 HEADLINE: {
+ "1.01": {
+  "median_ratio_reported_over_mirror": 0.8286735567264767,
+  "n_events_ratio_gt1": 1,
+  "median_pct_all": 30.798004987531172,
+  "median_pct_matched": 14.024390243902438,
+  "n_events_extreme_p10": 2,
+  "n_events_extreme_p05": 2,
+  "median_Lmax_over_Lreported": 1.2665868492112031,
+  "n_events_argmax_within_1MHz": 1,
+  "median_nearest_localmax_dist": 0.23857494951224245
+ },
+ "1.05": {
+  "median_ratio_reported_over_mirror": 0.8266586691728295,
+  "n_events_ratio_gt1": 1,
+  "median_pct_all": 30.54862842892768,
+  "median_pct_matched": 18.902439024390244,
+  "n_events_extreme_p10": 2,
+  "n_events_extreme_p05": 2,
+  "median_Lmax_over_Lreported": 1.2777834900253209,
+  "n_events_argmax_within_1MHz": 1,
+  "median_nearest_localmax_dist": 0.3776533553450214
+ },
+ "1.20": {
+  "median_ratio_reported_over_mirror": 0.7652242246219713,
+  "n_events_ratio_gt1": 1,
+  "median_pct_all": 40.52369077306734,
+  "median_pct_matched": 33.53658536585366,
+  "n_events_extreme_p10": 2,
+  "n_events_extreme_p05": 2,
+  "median_Lmax_over_Lreported": 1.465995758626281,
+  "n_events_argmax_within_1MHz": 1,
+  "median_nearest_localmax_dist": 0.267297784082551
+ }
+}
+power-figure amplitudes plotted: [np.float64(0.01), np.float64(0.02), np.float64(0.05), np.float64(0.1), np.float64(0.25)]
+  event_1: pct_all = [45.26, 56.48, 96.38, 99.88, 99.88]
+  event_2: pct_all = [55.49, 63.47, 94.39, 99.13, 99.38]
+  event_3: pct_all = [12.84, 47.76, 98.38, 99.88, 99.88]
+  event_4: pct_all = [67.46, 78.93, 98.13, 99.63, 99.63]
+  event_5: pct_all = [1.62, 25.81, 95.39, 99.88, 99.88]
+s20 saved s20_symmetric_decisive.csv, s20_symmetric_injection.csv, s20_symmetric_leave_one_out.csv, s20_symmetric_summary.json + 2 figures

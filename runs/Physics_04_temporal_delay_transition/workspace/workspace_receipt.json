@@ -1,0 +1,11 @@
+{
+  "schema": "truthinsightbench-participant-workspace",
+  "release": "V1.0",
+  "task_id": "Physics_04_temporal_delay_transition",
+  "t0": "2023-09-25",
+  "scientific_file_count": 77,
+  "scientific_bytes": 31647875,
+  "data_manifest_sha256": "2f6300d2a747c37b1bc3b5bb753b4f44e5f3830218c18cc148e7e9e0b0122517",
+  "research_objective_sha256": "ccdc199ef6fc6a60d314ad8cf096158544a804ad7f9da51e7588acd1a40b60f3",
+  "launch_prompt_sha256": "0f4cafd2bc7a8b51b835101fa1d9032bc688caa09ac9ce12e60ff1bd4c68da3a"
+}

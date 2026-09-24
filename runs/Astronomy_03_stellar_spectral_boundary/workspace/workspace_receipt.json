@@ -1,0 +1,11 @@
+{
+  "schema": "truthinsightbench-participant-workspace",
+  "release": "V1.0",
+  "task_id": "Astronomy_03_stellar_spectral_boundary",
+  "t0": "2023-01-01",
+  "scientific_file_count": 2,
+  "scientific_bytes": 674356,
+  "data_manifest_sha256": "d14db1eabe1ebc66b0f81fc0759e5eaab0beda8d2993b2c8a5261d47155295d0",
+  "research_objective_sha256": "a9a3c86d5027d0e058f41b49b8b6ffbeb64dae26c3d85d3cefa9a7b073340969",
+  "launch_prompt_sha256": "0f4cafd2bc7a8b51b835101fa1d9032bc688caa09ac9ce12e60ff1bd4c68da3a"
+}

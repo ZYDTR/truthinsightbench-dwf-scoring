@@ -1,0 +1,7 @@
+assay_id,endpoint_type,order,fc_1st,fc_2nd,fc_3rd,gap_1_2,gap_2_3,relative_gap_2_3
+assay_1,endpoint_count,compartment_1 > compartment_2 > compartment_3,2.14067,1.71773,1.53689,0.422944,0.180841,0.105279
+assay_1,endpoint_fraction,compartment_1 > compartment_3 > compartment_2,1.90777,1.65595,1.5682,0.251817,0.0877496,0.0529904
+assay_2,endpoint_count,compartment_1 > compartment_3 > compartment_2,1.9836,1.55871,1.55152,0.424897,0.00718626,0.0046104
+assay_2,endpoint_fraction,compartment_1 > compartment_2 > compartment_3,1.82842,1.49954,1.3824,0.328885,0.117141,0.0781181
+assay_3,endpoint_count,compartment_1 > compartment_2 > compartment_3,2.53122,2.3427,2.00569,0.188519,0.337009,0.143855
+assay_3,endpoint_fraction,compartment_3 > compartment_2 > compartment_1,2.14069,2.00874,2.00398,0.131954,0.00475864,0.00236897

@@ -1,0 +1,36 @@
+loaded replicated_response_panel.tsv: shape=(8232, 6) sha256=410e51b559eb4d3416f131c2eb4d8f75995ff00d3b76af7b47a0ee8b1220533d
+loaded independent_response_panel.tsv: shape=(4116, 6) sha256=f85f73bbbf15535425752c6ca2ae65e523c8dd8c06a2d5de11bf1986aaa884a1
+loaded independent_fit_error.tsv: shape=(21, 3) sha256=57b739c708fb384f7a661d85e62b67f6c5f333cab170214d6f972ca067d2564a
+CHECK fig1.n_channels = 7
+CHECK fig1.slope_ch0 = 0.0166
+CHECK fig1.slope_ch6 = 0.4846
+CHECK fig1.slope_ratio_ch6_over_ch0 = 29.19
+CHECK fig2.rank1_r2_log = 0.9550
+CHECK fig2.rank2_r2_log = 0.9902
+CHECK fig2.norm_r2_linear = 0.9987
+CHECK fig2.norm_r2_log = 0.9550
+CHECK fig2.norm_r2_per_channel_mean = 0.9341
+CHECK fig2.norm_r2_z_scored = 0.5681
+CHECK fig3.rep_bin0_observed = 11.1171
+CHECK fig3.rep_bin0_quadratic_trend = 10.1689
+CHECK fig3.rep_bin0_excess = +0.9482
+CHECK fig3.rep_bin0_fold = 2.58
+CHECK fig3.ind_bin0_observed = 8.9324
+CHECK fig3.ind_bin0_quadratic_trend = 9.3864
+CHECK fig3.ind_bin0_excess = -0.4539
+CHECK fig3.ind_bin0_fold = 0.64
+CHECK fig4.n_cells = 1372
+CHECK fig4.cell_pearson = +0.0168
+CHECK fig4.cell_spearman = +0.0324
+CHECK fig4.cv_pearson = +0.3822
+CHECK fig4.cv_perm_p = 0.00000
+CHECK fig5.loadings = [ 0.009   0.0049 -0.0162 -0.0807 -0.2692 -0.5986 -0.7499]
+CHECK fig5.grid_sd = [0.1259 0.1731 0.2058 0.2492 0.5467 1.1639 1.4579]
+CHECK fig5.corr_abs_loadings_vs_grid_sd = +0.9978
+wrote /data/user/conversations/conv-7cd614b8-05bc-4b7d-9604-8b94ad1eeb44/project/output/results/figures/fig1_channel_amplification.png
+wrote /data/user/conversations/conv-7cd614b8-05bc-4b7d-9604-8b94ad1eeb44/project/output/results/figures/fig2_rank1_spectrum.png
+wrote /data/user/conversations/conv-7cd614b8-05bc-4b7d-9604-8b94ad1eeb44/project/output/results/figures/fig3_bin0_notch.png
+wrote /data/user/conversations/conv-7cd614b8-05bc-4b7d-9604-8b94ad1eeb44/project/output/results/figures/fig4_cross_panel_noise.png
+wrote /data/user/conversations/conv-7cd614b8-05bc-4b7d-9604-8b94ad1eeb44/project/output/results/figures/fig5_gain_axis_loadings.png
+checks emitted: 26
+figures ok: 5/5; failures: []

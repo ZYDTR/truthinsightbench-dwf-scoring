@@ -1,0 +1,23 @@
+{
+  "chance_agreement_null": {
+    "A_same_tally": 1.0,
+    "B_independent_tally": 0.005,
+    "observed_agreement_frac": 0.5,
+    "n_agree": 15,
+    "n_samples": 30
+  },
+  "falsification_check": {
+    "n_checked": 23,
+    "n_violations": 1,
+    "violations": [
+      {
+        "sample_id": "sample_025",
+        "smallest_nonzero_pct": 0.03,
+        "quantum_pp": 0.0342583076396026,
+        "note": "smallest class is below one particle at the reconstructed N; the true N must exceed the smallest consistent N"
+      }
+    ]
+  },
+  "bound_direction": "true N >= smallest consistent N => 100/N is an UPPER bound on the true quantum",
+  "uniqueness": "solution-set sizes (N<=3000) median 4 per family, up to ~190, so N is bounded not identified"
+}

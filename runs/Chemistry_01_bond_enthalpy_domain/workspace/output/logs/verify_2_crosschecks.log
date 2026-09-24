@@ -1,0 +1,17 @@
+B) HAC via CalcMolFormula over 42577 unique db molecules: min=1 max=10
+B) per-molecule HAC mismatches between formula-count and GetNumHeavyAtoms = 0
+B) raw-string element scan over unique db parent SMILES = {'C': 41890, 'N': 22603, 'O': 30871}
+B) raw-string scan row-weighted = {'C': 480939, 'N': 261034, 'O': 344716}
+B) unique db parents containing an explicit H token in SMILES: 14480
+B) beyond-HAC-10: row-filter=150  unique-mol-membership=150  vectorised=150  (agree=True)
+B) benchmark observations=543  unique (mol,f1,f2) triples=543
+B) unique fragment pairs=539  unique parent molecules=419
+B) exact triples strict=331  stereo-insensitive=331
+B) parent present strict=369 stereo-insensitive=369
+B) workbook sheets = ['Sheet_001']
+   sheet Sheet_001: 544 rows x 8 cols
+B) Sheet_001 header = ['Molecule', 'Radical 1', 'Radical 2', 'observed_value', 'estimate_quantum', 'estimate_learned', 'estimate_reference', 'in_reference_training_set']
+B) workbook rows=543  cols=['Molecule', 'Radical 1', 'Radical 2', 'observed_value', 'estimate_quantum', 'estimate_learned', 'estimate_reference', 'in_reference_training_set']
+B) workbook unique molecules=419 HAC max=38 n>10=141
+B) workbook element scan = {'C': 416, 'N': 37, 'O': 119}
+wrote crosscheck json (133.2s)

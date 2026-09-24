@@ -1,0 +1,141 @@
+{
+  "step": "02_spectral_phase",
+  "n_rows_used": 593,
+  "lomb_scargle_top_peaks": [
+    {
+      "period_ka": 108.21890008793885,
+      "power": 0.40029156345415806
+    },
+    {
+      "period_ka": 119.38360508936233,
+      "power": 0.2498413951471477
+    },
+    {
+      "period_ka": 97.29959858897944,
+      "power": 0.23106035092092528
+    },
+    {
+      "period_ka": 40.45057459639187,
+      "power": 0.19109094367885945
+    },
+    {
+      "period_ka": 29.622360271448805,
+      "power": 0.12203398609378535
+    },
+    {
+      "period_ka": 131.38961892247042,
+      "power": 0.09906662892446692
+    }
+  ],
+  "period_scan": {
+    "grid_ka": [
+      40.0,
+      300.0
+    ],
+    "best_period_ka": 108.83500000000001,
+    "r2_trend_plus_2harmonics": 0.4273473814487533,
+    "r2_fundamental_only": 0.40678676029801397,
+    "approx_95pct_period_interval_ka": [
+      106.17,
+      219.465
+    ],
+    "scan_grid_resolution_ka": 0.06499999999999773
+  },
+  "ar1_red_noise_null": {
+    "n_surrogates": 400,
+    "fitted_ar1_rho_at_median_step": 0.9162678682552691,
+    "null_r2_mean": 0.2755832535953837,
+    "null_r2_sd": 0.06577018684146166,
+    "null_r2_p95": 0.4028247536309662,
+    "null_r2_max": 0.49192349102146127,
+    "observed_r2": 0.4273473814487533,
+    "empirical_p_value": 0.022443890274314215,
+    "instruction": "empirical p uses the same 401-period scan on each surrogate"
+  },
+  "phase_stability": {
+    "n_windows": 21,
+    "window_width_ka": 150.0,
+    "phase_circular_mean_rad": -2.812149056248443,
+    "phase_resultant_length_R": 0.9892812008833956,
+    "phase_sd_rad": 0.15039417811254469,
+    "amplitude_min": 0.3268877805363754,
+    "amplitude_max": 0.47503771526595157,
+    "amplitude_ratio_max_over_min": 1.4532134376099455
+  },
+  "block_holdout": {
+    "n_blocks": 6,
+    "median_r2_out_of_sample": 0.09117423788256368,
+    "median_r2_persistence": -1.1046615512204059,
+    "mean_rmse_out_of_sample": 0.342431530286879,
+    "mean_rmse_persistence": 0.4800193291742884,
+    "n_blocks_sinusoid_beats_persistence": 4,
+    "per_block": [
+      {
+        "block": 1,
+        "age_start_ka": 2.76,
+        "age_end_ka": 62.163333333333334,
+        "n_held_out": 103,
+        "r2_out_of_sample": -0.17234146349522228,
+        "rmse_out_of_sample": 0.4098326153644805,
+        "r2_persistence_baseline": -0.021601100868033685,
+        "rmse_persistence_baseline": 0.3825781219796497,
+        "sinusoid_beats_persistence": false
+      },
+      {
+        "block": 2,
+        "age_start_ka": 62.163333333333334,
+        "age_end_ka": 121.56666666666668,
+        "n_held_out": 94,
+        "r2_out_of_sample": 0.19539041206919527,
+        "rmse_out_of_sample": 0.22047438580911496,
+        "r2_persistence_baseline": -2.608929467614045,
+        "rmse_persistence_baseline": 0.4669331812418998,
+        "sinusoid_beats_persistence": true
+      },
+      {
+        "block": 3,
+        "age_start_ka": 121.56666666666668,
+        "age_end_ka": 180.97,
+        "n_held_out": 90,
+        "r2_out_of_sample": 0.2522191178270218,
+        "rmse_out_of_sample": 0.3502287118530755,
+        "r2_persistence_baseline": -1.3253766254429564,
+        "rmse_persistence_baseline": 0.6176055915118215,
+        "sinusoid_beats_persistence": true
+      },
+      {
+        "block": 4,
+        "age_start_ka": 180.97,
+        "age_end_ka": 240.37333333333333,
+        "n_held_out": 103,
+        "r2_out_of_sample": -0.3560260132438011,
+        "rmse_out_of_sample": 0.3544533236009538,
+        "r2_persistence_baseline": -0.8839464769978556,
+        "rmse_persistence_baseline": 0.4177912332291175,
+        "sinusoid_beats_persistence": true
+      },
+      {
+        "block": 5,
+        "age_start_ka": 240.37333333333333,
+        "age_end_ka": 299.77666666666664,
+        "n_held_out": 102,
+        "r2_out_of_sample": -0.013041936304067914,
+        "rmse_out_of_sample": 0.28856911615344405,
+        "r2_persistence_baseline": -3.3204119410712964,
+        "rmse_persistence_baseline": 0.5959347575818328,
+        "sinusoid_beats_persistence": true
+      },
+      {
+        "block": 6,
+        "age_start_ka": 299.77666666666664,
+        "age_end_ka": 359.18,
+        "n_held_out": 100,
+        "r2_out_of_sample": 0.20998785814455256,
+        "rmse_out_of_sample": 0.4310310289402052,
+        "r2_persistence_baseline": 0.32211382580529235,
+        "rmse_persistence_baseline": 0.3992730895014089,
+        "sinusoid_beats_persistence": false
+      }
+    ]
+  }
+}

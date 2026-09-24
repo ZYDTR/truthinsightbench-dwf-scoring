@@ -1,0 +1,5 @@
+merged mixture_structure; w=0.4159 weight_sum=1.0031
+w CI [0.32066 0.49311] wsum CI [0.99818 1.0243 ]
+resid frac (mixture) 0.2814 (free fit) 0.2814
+resid frac bootstrap median 0.2839
+EXIT=0

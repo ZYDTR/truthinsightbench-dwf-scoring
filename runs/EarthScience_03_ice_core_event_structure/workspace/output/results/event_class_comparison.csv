@@ -1,0 +1,4 @@
+metric,named_median,unidentified_median,named_n,unidentified_n,mannwhitney_U,p_two_sided
+c04_sulfate_ug_kg,507.568,300.762,5,9,31.0,0.25707429868483
+excess_over_101_median,411.31,203.777,5,9,32.0,0.2052745036642716
+local_prominence_ug_kg,91.36699999999996,65.72799999999995,5,9,33.0,0.16151331846754216

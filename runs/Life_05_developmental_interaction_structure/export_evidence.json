@@ -1,0 +1,22 @@
+{
+  "task_id": "Life_05_developmental_interaction_structure",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260922T083216-a1a475",
+  "source_run_json_sha256": "74a5a48b2d8f20feeb56f3322bce65c02335da2b597c6bf82c7f37711285d0fb",
+  "source_release_json_sha256": "0872b241f0712032a790110c335395114b84b035e5dc4a8bde90524222877857",
+  "source_latest_validation_sha256": "a8a288b703eda205ba66675ea2a1b5809790bce5aa890f3e6024c16edf6ca244",
+  "source_snapshot_manifest_sha256": "008bce7abd13d83963f48d0a98f547b039c8d535db29bd4b46b751b583ccf234",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 330,
+    "deepseek-v4.1-flash-max": 563
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "40f5211724dc228b3956b2f8c358a5978036c8436e9a7d508a3c1121689a8b5f",
+  "output_sha256": "8c118ca86e7278cd7d54daa70d312215c2b3b3eb8723277a1d24ec2198eeaae7"
+}

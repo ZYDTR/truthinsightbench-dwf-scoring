@@ -1,0 +1,128 @@
+{
+  "schema": "truthinsightbench-native-artifact-registry",
+  "task_id": "Life_04_environmental_transfer_boundary",
+  "generated_by": "output/analysis/run_analysis.py",
+  "note": "Native artifact IDs used by Result.md to trace each registered finding to its analysis source and result evidence.",
+  "files": [
+    {
+      "id": "F001",
+      "relative_path": "analysis/run_analysis.py",
+      "role": "executed_analysis_source",
+      "description": "Primary executed analysis: payload integrity, clustering/design effect, candidate relationships, models, whole-unit holdouts."
+    },
+    {
+      "id": "F002",
+      "relative_path": "analysis/ti_lib.py",
+      "role": "executed_analysis_source",
+      "description": "Statistical library implemented from first principles (exact/permutation inference, IRLS logistic, cluster-robust covariance)."
+    },
+    {
+      "id": "F003",
+      "relative_path": "analysis/run_sensitivity.py",
+      "role": "executed_analysis_source",
+      "description": "Robustness and sensitivity runs: label-rotation test, multiplicity control, assay threshold/ranking/LOO checks."
+    },
+    {
+      "id": "F004",
+      "relative_path": "analysis/run_supplementary.py",
+      "role": "executed_analysis_source",
+      "description": "Functional form (changepoint grid, search-adjusted permutation null) and confounding/adjusted models."
+    },
+    {
+      "id": "F005",
+      "relative_path": "analysis/run_checks_figures.py",
+      "role": "executed_analysis_source",
+      "description": "Final targeted checks (complete-unit leave-out, containment asymmetry, exact binomial) and SVG figure rendering."
+    },
+    {
+      "id": "F006",
+      "relative_path": "analysis/results/results.json",
+      "role": "inspectable_result_evidence",
+      "description": "Primary machine-readable result artifact consumed by the report."
+    },
+    {
+      "id": "F007",
+      "relative_path": "analysis/results/sensitivity.json",
+      "role": "inspectable_result_evidence",
+      "description": "Robustness/sensitivity result artifact."
+    },
+    {
+      "id": "F008",
+      "relative_path": "analysis/results/supplementary.json",
+      "role": "inspectable_result_evidence",
+      "description": "Changepoint and adjusted-model result artifact."
+    },
+    {
+      "id": "F009",
+      "relative_path": "analysis/results/checks.json",
+      "role": "inspectable_result_evidence",
+      "description": "Final-targeted-check result artifact."
+    },
+    {
+      "id": "F010",
+      "relative_path": "analysis/results/unit_positivity_summary.csv",
+      "role": "inspectable_result_evidence",
+      "description": "Per-unit site counts, positive counts, and positivity proportion."
+    },
+    {
+      "id": "F011",
+      "relative_path": "analysis/results/day_threshold_sensitivity.csv",
+      "role": "inspectable_result_evidence",
+      "description": "Every illness-day threshold with its unit-blocked 2x2 table and exact p."
+    },
+    {
+      "id": "F012",
+      "relative_path": "analysis/results/leave_one_unit_out.csv",
+      "role": "inspectable_result_evidence",
+      "description": "Leave-one-unit-out holdout log-likelihoods for null, day, and assay models."
+    },
+    {
+      "id": "F013",
+      "relative_path": "analysis/results/block_holdouts.csv",
+      "role": "inspectable_result_evidence",
+      "description": "Contiguous 5-unit block holdout results."
+    },
+    {
+      "id": "F014",
+      "relative_path": "analysis/results/unit_level_analysis_table.csv",
+      "role": "inspectable_result_evidence",
+      "description": "Analysis-ready unit-level table joining all three source files."
+    },
+    {
+      "id": "F015",
+      "relative_path": "analysis/results/site_label_positivity.csv",
+      "role": "inspectable_result_evidence",
+      "description": "Positivity aggregated by site_role_id label."
+    },
+    {
+      "id": "F016",
+      "relative_path": "analysis/results/site_position_positivity.csv",
+      "role": "inspectable_result_evidence",
+      "description": "Positivity aggregated by rotation-corrected position within unit."
+    },
+    {
+      "id": "F017",
+      "relative_path": "figures/fig1_unit_level_positivity.svg",
+      "role": "inspectable_result_evidence",
+      "description": "Figure 1: per-unit positivity proportion, sorted."
+    },
+    {
+      "id": "F018",
+      "relative_path": "figures/fig2_assay_threshold.svg",
+      "role": "inspectable_result_evidence",
+      "description": "Figure 2: assay versus unit positivity with the 24.16 change point."
+    },
+    {
+      "id": "F019",
+      "relative_path": "figures/fig3_naive_vs_blocked.svg",
+      "role": "inspectable_result_evidence",
+      "description": "Figure 3: naive site-level versus unit-blocked p-values for the same contrast."
+    },
+    {
+      "id": "F020",
+      "relative_path": "figures/fig4_site_label_rotation.svg",
+      "role": "inspectable_result_evidence",
+      "description": "Figure 4: rotating site_role_id scheme per unit."
+    }
+  ]
+}

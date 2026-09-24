@@ -1,0 +1,69 @@
+==============================================================================
+STAGE 1a  data inventory and integrity check
+==============================================================================
+
+conversion_timecourses: 20 rows, columns=['formulation_id', 'illumination_time_h', 'gaseous_product_umol']
+  numeric ranges: illumination_time_h=[0,4], gaseous_product_umol=[0,9.48]
+  categorical: formulation_id=4 levels
+
+optical_action_spectra: 907 rows, columns=['measurement_role', 'wavelength_nm', 'response_au_or_percent']
+  numeric ranges: wavelength_nm=[350,800], response_au_or_percent=[-0.009,82.6]
+  categorical: measurement_role=2 levels
+
+ultrafast_transient_traces: 196 rows, columns=['formulation_id', 'delay_ps', 'normalized_transient_signal']
+  numeric ranges: delay_ps=[0.000321615,76.8937], normalized_transient_signal=[-0.46059,1.00077]
+  categorical: formulation_id=2 levels
+
+cofactor_loading_response: 4 rows, columns=['cofactor_loading_percent', 'product_evolution_rate_umol_h']
+  numeric ranges: cofactor_loading_percent=[0.2,8], product_evolution_rate_umol_h=[268,1217]
+  categorical: 
+
+analysis units: {'time_courses': 4, 'spectra_profiles': 2, 'transient_traces': 2, 'loading_conditions': 4}
+checks: {'no_missing_values': True, 'transient_delay_grid_shared': True, 'absorption_grid_step_nm': 0.5, 'action_grid_step_nm': 50.0, 'absorption_points': 901, 'action_points': 6, 'all_curves_start_at_zero_product': True}
+
+==============================================================================
+STAGE 1a  product-evolution kinetic model comparison (analysis unit = one curve)
+==============================================================================
+
+formulation_1: final product 9.4800 umol at 4 h (mean rate 2.3700 umol/h)
+  segment rates (umol/h): [2.4, 2.4, 2.44, 2.24]  last/first = 0.933
+  model ranking by AICc (lower is better; delta vs best):
+          saturation  k=3  R2=0.99990  RMSE=0.0330  AICc=-4.10  dAICc=0.00   <-- best
+           power_law  k=3  R2=0.99987  RMSE=0.0384  AICc=-2.60  dAICc=1.50
+              linear  k=3  R2=0.99981  RMSE=0.0463  AICc=-0.73  dAICc=3.37
+    induction_linear  k=3  R2=0.99979  RMSE=0.0483  AICc=-0.30  dAICc=3.80
+
+formulation_2: final product 4.1300 umol at 4 h (mean rate 1.0325 umol/h)
+  segment rates (umol/h): [1.21, 0.95, 1.0, 0.97]  last/first = 0.802
+  model ranking by AICc (lower is better; delta vs best):
+           power_law  k=3  R2=0.99970  RMSE=0.0248  AICc=-6.95  dAICc=0.00   <-- best
+          saturation  k=3  R2=0.99925  RMSE=0.0397  AICc=-2.27  dAICc=4.68
+              linear  k=3  R2=0.99802  RMSE=0.0643  AICc=2.56  dAICc=9.51
+    induction_linear  k=3  R2=0.99673  RMSE=0.0827  AICc=5.07  dAICc=12.02
+
+formulation_3: final product 0.6360 umol at 4 h (mean rate 0.1590 umol/h)
+  segment rates (umol/h): [0.124, 0.132, 0.189, 0.191]  last/first = 1.540
+  model ranking by AICc (lower is better; delta vs best):
+           power_law  k=3  R2=0.99898  RMSE=0.0072  AICc=-19.27  dAICc=0.00   <-- best
+    induction_linear  k=3  R2=0.99602  RMSE=0.0143  AICc=-12.48  dAICc=6.79
+              linear  k=3  R2=0.98923  RMSE=0.0235  AICc=-7.50  dAICc=11.77
+          saturation  k=3  R2=0.98302  RMSE=0.0295  AICc=-5.23  dAICc=14.04
+
+formulation_4: final product 0.1730 umol at 4 h (mean rate 0.0432 umol/h)
+  segment rates (umol/h): [0.0329, 0.0395, 0.0486, 0.052]  last/first = 1.581
+  model ranking by AICc (lower is better; delta vs best):
+           power_law  k=3  R2=0.99979  RMSE=0.0009  AICc=-40.29  dAICc=0.00   <-- best
+    induction_linear  k=3  R2=0.99786  RMSE=0.0029  AICc=-28.59  dAICc=11.69
+              linear  k=3  R2=0.99149  RMSE=0.0057  AICc=-21.69  dAICc=18.60
+          saturation  k=3  R2=0.98567  RMSE=0.0074  AICc=-19.09  dAICc=21.20
+
+------------------------------------------------------------------------------
+Null / simple baselines for the time courses
+------------------------------------------------------------------------------
+  baseline_1_common_linear_slope: {'per_curve_rss': {'formulation_1': 0.010720000000000106, 'formulation_2': 0.020669999999999994, 'formulation_3': 0.002763900000000003, 'formulation_4': 0.00016179099999999994}, 'per_curve_shared_slope': {'formulation_1': {'rss': 0.010719999999999973, 'slope': 2.38}, 'formulation_2': {'rss': 0.02067000000000001, 'slope': 1.0210000000000001}, 'formulation_3': {'rss': 0.0027643000000000004, 'slope': 0.1595}, 'formulation_4': {'rss': 0.00016187199999999975, 'slope': 0.043500000000000004}}, 'per_curve_rss_total': 0.0343156910000001, 'shared_slope_rss_total': 0.034316171999999985}
+  baseline_2_zero_slope: {'rss_total': 204.99452717}
+  baseline_3_shared_shape_scaled: {'scales': {'formulation_1': 1.0, 'formulation_2': 0.4401407462826148, 'formulation_3': 0.06299378097821004, 'formulation_4': 0.017199102216403254}, 'rss_total': 0.033172975994575964}
+
+wrote figures/fig1_timecourses.png
+
+stage 1a complete

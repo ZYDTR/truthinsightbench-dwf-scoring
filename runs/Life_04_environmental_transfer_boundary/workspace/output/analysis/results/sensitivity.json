@@ -1,0 +1,718 @@
+{
+  "schema": "life04-sensitivity",
+  "seed": 20200102,
+  "A_label_rotation": {
+    "rule": "within each unit site_role_id increments by +1 modulo 10 (wrapping 10 -> 1)",
+    "units_violating_rule": 0,
+    "units_tested": 30,
+    "per_unit_start_label": {
+      "unit_01": 1,
+      "unit_02": 9,
+      "unit_03": 7,
+      "unit_04": 5,
+      "unit_05": 1,
+      "unit_06": 7,
+      "unit_07": 4,
+      "unit_08": 1,
+      "unit_09": 8,
+      "unit_10": 5,
+      "unit_11": 2,
+      "unit_12": 9,
+      "unit_13": 6,
+      "unit_14": 3,
+      "unit_15": 10,
+      "unit_16": 7,
+      "unit_17": 4,
+      "unit_18": 1,
+      "unit_19": 8,
+      "unit_20": 5,
+      "unit_21": 2,
+      "unit_22": 9,
+      "unit_23": 6,
+      "unit_24": 3,
+      "unit_25": 10,
+      "unit_26": 7,
+      "unit_27": 4,
+      "unit_28": 1,
+      "unit_29": 8,
+      "unit_30": 5
+    },
+    "single_stable_location_reading_supported": false,
+    "consequence": "A given site_role_id value refers to a different physical position in different units, so between-label positivity differences cannot identify a persistent contaminated location.",
+    "label_effect_within_unit_null": {
+      "observed_max_mean_spread_across_labels": 0.24675324675324672,
+      "p_perm": 0.3791281043594782,
+      "n_perm": 200000,
+      "per_label_positivity_rate": {
+        "site_1": 0.22727272727272727,
+        "site_10": 0.2857142857142857,
+        "site_2": 0.18181818181818182,
+        "site_3": 0.2857142857142857,
+        "site_4": 0.23809523809523808,
+        "site_5": 0.2857142857142857,
+        "site_6": 0.42857142857142855,
+        "site_7": 0.23809523809523808,
+        "site_8": 0.2857142857142857,
+        "site_9": 0.19047619047619047
+      },
+      "per_label_n": {
+        "site_1": 22,
+        "site_10": 21,
+        "site_2": 22,
+        "site_3": 21,
+        "site_4": 21,
+        "site_5": 21,
+        "site_6": 21,
+        "site_7": 21,
+        "site_8": 21,
+        "site_9": 21
+      }
+    },
+    "position_in_unit_within_unit_null": {
+      "observed_max_mean_spread": 0.5714285714285714,
+      "p_perm": 0.34915325423372884,
+      "n_perm": 200000,
+      "per_position_rate": {
+        "1": 0.36666666666666664,
+        "2": 0.3333333333333333,
+        "3": 0.26666666666666666,
+        "4": 0.23333333333333334,
+        "5": 0.2,
+        "6": 0.2,
+        "7": 0.17857142857142858,
+        "8": 0.75
+      },
+      "per_position_n": {
+        "1": 30,
+        "2": 30,
+        "3": 30,
+        "4": 30,
+        "5": 30,
+        "6": 30,
+        "7": 28,
+        "8": 4
+      }
+    }
+  },
+  "B_surface_nesting": {
+    "env_positive_and_surface_positive": 13,
+    "env_positive_and_surface_zero": 4,
+    "env_negative_and_surface_positive": 0,
+    "env_negative_and_surface_zero": 13,
+    "surface_percent_values": [
+      0,
+      20,
+      40,
+      60,
+      80,
+      100
+    ],
+    "surface_percent_denominator_implied": 5,
+    "env_site_rows_per_unit": {
+      "unit_01": 8,
+      "unit_02": 8,
+      "unit_03": 8,
+      "unit_04": 6,
+      "unit_05": 6,
+      "unit_06": 7,
+      "unit_07": 7,
+      "unit_08": 7,
+      "unit_09": 7,
+      "unit_10": 7,
+      "unit_11": 7,
+      "unit_12": 7,
+      "unit_13": 7,
+      "unit_14": 7,
+      "unit_15": 7,
+      "unit_16": 7,
+      "unit_17": 7,
+      "unit_18": 7,
+      "unit_19": 7,
+      "unit_20": 7,
+      "unit_21": 7,
+      "unit_22": 7,
+      "unit_23": 7,
+      "unit_24": 7,
+      "unit_25": 7,
+      "unit_26": 7,
+      "unit_27": 7,
+      "unit_28": 7,
+      "unit_29": 7,
+      "unit_30": 8
+    },
+    "strict_containment_env_superset_of_surface": true,
+    "competing_explanations": {
+      "nested_sampling_artifact": "If the 5 surface swabs are a subset of the 6-8 environmental site rows for the same unit, then surface+ implies env+ mechanically and the perfect containment is definitional rather than independent corroboration.",
+      "independent_panels": "If the surface panel is disjoint from the environmental panel, the containment is a substantive sensitivity boundary: the environmental panel detects units that the coarser 5-swab surface panel misses."
+    },
+    "discriminable_with_frozen_fields": false,
+    "reason_not_discriminable": "No field identifies which site rows are surface samples, and the rotating site_role_id carries no role semantics.",
+    "asymmetry_is_the_data_supported_part": "Environment positivity is the more inclusive indicator in all 30 units; the reverse asymmetry (surface+ with env-) never occurs.",
+    "one_sided_exact_p_under_symmetric_null": 1.9873104383480776e-05
+  },
+  "C_multiplicity": {
+    "raw_two_sided_p": {
+      "illness_day_rho": 0.17155914220428897,
+      "stay_day_rho": 0.9514152429237854,
+      "assay_rho": 0.05449972750136249,
+      "surface_percent_rho": 3.9999800000999996e-05,
+      "symptom_fisher": 0.4268199233716475
+    },
+    "holm_adjusted_p": {
+      "surface_percent_rho": 0.00019999900000499998,
+      "assay_rho": 0.21799891000544996,
+      "illness_day_rho": 0.5146774266128669,
+      "symptom_fisher": 0.853639846743295,
+      "stay_day_rho": 0.9514152429237854
+    },
+    "n_candidate_relationships": 5,
+    "note": "two-sided permutation p = 2 x min(upper, lower) tail, capped at 1"
+  },
+  "D_assay_robustness": {
+    "median_split_gradient": {
+      "levels": [
+        {
+          "level": 0,
+          "n": 15,
+          "n_positive": 10,
+          "rate": 0.6666666666666666,
+          "assay_range": [
+            18.02,
+            29.48
+          ]
+        },
+        {
+          "level": 1,
+          "n": 15,
+          "n_positive": 7,
+          "rate": 0.4666666666666667,
+          "assay_range": [
+            30.4,
+            37.7
+          ]
+        }
+      ],
+      "top_vs_bottom_fisher_two_sided_p": 0.4621373523764433,
+      "top_vs_bottom_p_greater_positivity_in_low_assay": 0.9302901180988453
+    },
+    "tertile_gradient": {
+      "levels": [
+        {
+          "level": 0,
+          "n": 10,
+          "n_positive": 9,
+          "rate": 0.9,
+          "assay_range": [
+            18.02,
+            25.69
+          ]
+        },
+        {
+          "level": 1,
+          "n": 10,
+          "n_positive": 3,
+          "rate": 0.3,
+          "assay_range": [
+            26.33,
+            33.28
+          ]
+        },
+        {
+          "level": 2,
+          "n": 10,
+          "n_positive": 5,
+          "rate": 0.5,
+          "assay_range": [
+            34.48,
+            37.7
+          ]
+        }
+      ],
+      "top_vs_bottom_fisher_two_sided_p": 0.1408668730650155,
+      "top_vs_bottom_p_greater_positivity_in_low_assay": 0.9945820433436533
+    },
+    "quartile_gradient": {
+      "levels": [
+        {
+          "level": 0,
+          "n": 8,
+          "n_positive": 8,
+          "rate": 1.0,
+          "assay_range": [
+            18.02,
+            22.92
+          ]
+        },
+        {
+          "level": 1,
+          "n": 7,
+          "n_positive": 2,
+          "rate": 0.2857142857142857,
+          "assay_range": [
+            24.16,
+            29.48
+          ]
+        },
+        {
+          "level": 2,
+          "n": 7,
+          "n_positive": 3,
+          "rate": 0.42857142857142855,
+          "assay_range": [
+            30.4,
+            35.09
+          ]
+        },
+        {
+          "level": 3,
+          "n": 8,
+          "n_positive": 4,
+          "rate": 0.5,
+          "assay_range": [
+            35.24,
+            37.7
+          ]
+        }
+      ],
+      "top_vs_bottom_fisher_two_sided_p": 0.07692307692307693,
+      "top_vs_bottom_p_greater_positivity_in_low_assay": 1.0
+    },
+    "auc_bootstrap": {
+      "auc": 0.7058823529411765,
+      "ci95": [
+        0.497737556561086,
+        0.8778280542986425
+      ],
+      "n_boot": 20000,
+      "p_auc_leq_half": 0.026298685065746712,
+      "note": "AUC here = P(assay_positive_unit < assay_negative_unit); >0.5 means positives sit at lower assay values"
+    },
+    "leave_one_unit_out_coefficients": {
+      "day_coef_full": -0.06970289465450884,
+      "day_coef_loo_range": [
+        -0.11590316894329776,
+        -0.05612002094628688
+      ],
+      "day_coef_loo_sd": 0.011788683607844378,
+      "assay_coef_full": -0.13196550839250046,
+      "assay_coef_loo_range": [
+        -0.15523314859337783,
+        -0.12078016589517229
+      ],
+      "assay_coef_loo_sd": 0.011236176493914396,
+      "rows": [
+        {
+          "left_out": "unit_01",
+          "day_coef": -0.07250078237774733,
+          "assay_coef": -0.1257108312655239
+        },
+        {
+          "left_out": "unit_02",
+          "day_coef": -0.06494876514774263,
+          "assay_coef": -0.1235700338418502
+        },
+        {
+          "left_out": "unit_03",
+          "day_coef": -0.06494876514774263,
+          "assay_coef": -0.12341576534379489
+        },
+        {
+          "left_out": "unit_04",
+          "day_coef": -0.05612002094628688,
+          "assay_coef": -0.12242674126385551
+        },
+        {
+          "left_out": "unit_05",
+          "day_coef": -0.06202141555109235,
+          "assay_coef": -0.13729916174078688
+        },
+        {
+          "left_out": "unit_06",
+          "day_coef": -0.07953219103432144,
+          "assay_coef": -0.13412989308203835
+        },
+        {
+          "left_out": "unit_07",
+          "day_coef": -0.11590316894329776,
+          "assay_coef": -0.15033271085656552
+        },
+        {
+          "left_out": "unit_08",
+          "day_coef": -0.0575522459865293,
+          "assay_coef": -0.13850380394913936
+        },
+        {
+          "left_out": "unit_09",
+          "day_coef": -0.05977695990621128,
+          "assay_coef": -0.12082180112017925
+        },
+        {
+          "left_out": "unit_10",
+          "day_coef": -0.06046700166471208,
+          "assay_coef": -0.12177491856170401
+        },
+        {
+          "left_out": "unit_11",
+          "day_coef": -0.07832857731227545,
+          "assay_coef": -0.14433935312957585
+        },
+        {
+          "left_out": "unit_12",
+          "day_coef": -0.07832857731227545,
+          "assay_coef": -0.1402274460969194
+        },
+        {
+          "left_out": "unit_13",
+          "day_coef": -0.08216516303609357,
+          "assay_coef": -0.15041921864001617
+        },
+        {
+          "left_out": "unit_14",
+          "day_coef": -0.06334846707425001,
+          "assay_coef": -0.12341757544462001
+        },
+        {
+          "left_out": "unit_15",
+          "day_coef": -0.0648282264257326,
+          "assay_coef": -0.1260163983475215
+        },
+        {
+          "left_out": "unit_16",
+          "day_coef": -0.0670537442024526,
+          "assay_coef": -0.12305765272242014
+        },
+        {
+          "left_out": "unit_17",
+          "day_coef": -0.06632227181509362,
+          "assay_coef": -0.12363012240988044
+        },
+        {
+          "left_out": "unit_18",
+          "day_coef": -0.07250078237774735,
+          "assay_coef": -0.1451611269871038
+        },
+        {
+          "left_out": "unit_19",
+          "day_coef": -0.08373863312124069,
+          "assay_coef": -0.13162978811891302
+        },
+        {
+          "left_out": "unit_20",
+          "day_coef": -0.06382500626392984,
+          "assay_coef": -0.1236347019907527
+        },
+        {
+          "left_out": "unit_21",
+          "day_coef": -0.06797722297172737,
+          "assay_coef": -0.12716398884241323
+        },
+        {
+          "left_out": "unit_22",
+          "day_coef": -0.06494876514774263,
+          "assay_coef": -0.15378980543204793
+        },
+        {
+          "left_out": "unit_23",
+          "day_coef": -0.06382500626392984,
+          "assay_coef": -0.13832862809849683
+        },
+        {
+          "left_out": "unit_24",
+          "day_coef": -0.0837386331212407,
+          "assay_coef": -0.12078016589517229
+        },
+        {
+          "left_out": "unit_25",
+          "day_coef": -0.0837386331212407,
+          "assay_coef": -0.15523314859337783
+        },
+        {
+          "left_out": "unit_26",
+          "day_coef": -0.06435740991826519,
+          "assay_coef": -0.12346572780507317
+        },
+        {
+          "left_out": "unit_27",
+          "day_coef": -0.06435740991826519,
+          "assay_coef": -0.12390056815691954
+        },
+        {
+          "left_out": "unit_28",
+          "day_coef": -0.06632227181509362,
+          "assay_coef": -0.12365085838134954
+        },
+        {
+          "left_out": "unit_29",
+          "day_coef": -0.06711232374178011,
+          "assay_coef": -0.1472546450079772
+        },
+        {
+          "left_out": "unit_30",
+          "day_coef": -0.06494876514774263,
+          "assay_coef": -0.12562892720925894
+        }
+      ]
+    },
+    "assay_coef_permutation": {
+      "observed_coef": -0.1098278618369402,
+      "p_perm_lower_tail": 0.01809909504524774,
+      "p_perm_two_sided": 0.03619819009049548,
+      "n_perm": 20000,
+      "ridge_note": "penalty 0.05 applied identically to observed and permuted fits"
+    },
+    "alternative_models": {
+      "assay_firth": [
+        3.7568486211325602,
+        -0.11884540110287435
+      ],
+      "day_firth": [
+        0.9484056788876513,
+        -0.06280006415888584
+      ],
+      "stay_day_logistic": [
+        0.6621923351664409,
+        -0.05717777017350177
+      ]
+    }
+  },
+  "E_day_threshold_sensitivity": {
+    "n_thresholds": 28,
+    "min_p": 0.06335837928988722,
+    "max_p": 1.0,
+    "n_significant_at_0.05": 0,
+    "grid": [
+      {
+        "threshold": 3,
+        "a": 16,
+        "b": 1,
+        "c": 13,
+        "d": 0,
+        "p_two_sided": 1.0
+      },
+      {
+        "threshold": 4,
+        "a": 14,
+        "b": 3,
+        "c": 10,
+        "d": 3,
+        "p_two_sided": 1.0
+      },
+      {
+        "threshold": 5,
+        "a": 12,
+        "b": 5,
+        "c": 10,
+        "d": 3,
+        "p_two_sided": 1.0
+      },
+      {
+        "threshold": 6,
+        "a": 8,
+        "b": 9,
+        "c": 9,
+        "d": 4,
+        "p_two_sided": 0.28275666677939226
+      },
+      {
+        "threshold": 7,
+        "a": 8,
+        "b": 9,
+        "c": 9,
+        "d": 4,
+        "p_two_sided": 0.28275666677939226
+      },
+      {
+        "threshold": 8,
+        "a": 6,
+        "b": 11,
+        "c": 9,
+        "d": 4,
+        "p_two_sided": 0.13941976380230936
+      },
+      {
+        "threshold": 9,
+        "a": 5,
+        "b": 12,
+        "c": 9,
+        "d": 4,
+        "p_two_sided": 0.06335837928988722
+      },
+      {
+        "threshold": 10,
+        "a": 4,
+        "b": 13,
+        "c": 7,
+        "d": 6,
+        "p_two_sided": 0.13221960448347256
+      },
+      {
+        "threshold": 11,
+        "a": 4,
+        "b": 13,
+        "c": 7,
+        "d": 6,
+        "p_two_sided": 0.13221960448347256
+      },
+      {
+        "threshold": 12,
+        "a": 4,
+        "b": 13,
+        "c": 7,
+        "d": 6,
+        "p_two_sided": 0.13221960448347256
+      },
+      {
+        "threshold": 13,
+        "a": 4,
+        "b": 13,
+        "c": 7,
+        "d": 6,
+        "p_two_sided": 0.13221960448347256
+      },
+      {
+        "threshold": 14,
+        "a": 4,
+        "b": 13,
+        "c": 6,
+        "d": 7,
+        "p_two_sided": 0.2552866423930892
+      },
+      {
+        "threshold": 15,
+        "a": 4,
+        "b": 13,
+        "c": 6,
+        "d": 7,
+        "p_two_sided": 0.2552866423930892
+      },
+      {
+        "threshold": 16,
+        "a": 4,
+        "b": 13,
+        "c": 5,
+        "d": 8,
+        "p_two_sided": 0.4433583208395802
+      },
+      {
+        "threshold": 17,
+        "a": 4,
+        "b": 13,
+        "c": 5,
+        "d": 8,
+        "p_two_sided": 0.4433583208395802
+      },
+      {
+        "threshold": 18,
+        "a": 2,
+        "b": 15,
+        "c": 5,
+        "d": 8,
+        "p_two_sided": 0.18973180076628351
+      },
+      {
+        "threshold": 19,
+        "a": 2,
+        "b": 15,
+        "c": 4,
+        "d": 9,
+        "p_two_sided": 0.3598248494800219
+      },
+      {
+        "threshold": 20,
+        "a": 1,
+        "b": 16,
+        "c": 4,
+        "d": 9,
+        "p_two_sided": 0.13774858602444812
+      },
+      {
+        "threshold": 21,
+        "a": 1,
+        "b": 16,
+        "c": 3,
+        "d": 10,
+        "p_two_sided": 0.2903484765553731
+      },
+      {
+        "threshold": 22,
+        "a": 1,
+        "b": 16,
+        "c": 2,
+        "d": 11,
+        "p_two_sided": 0.5645320197044335
+      },
+      {
+        "threshold": 23,
+        "a": 1,
+        "b": 16,
+        "c": 2,
+        "d": 11,
+        "p_two_sided": 0.5645320197044335
+      },
+      {
+        "threshold": 24,
+        "a": 1,
+        "b": 16,
+        "c": 2,
+        "d": 11,
+        "p_two_sided": 0.5645320197044335
+      },
+      {
+        "threshold": 25,
+        "a": 1,
+        "b": 16,
+        "c": 2,
+        "d": 11,
+        "p_two_sided": 0.5645320197044335
+      },
+      {
+        "threshold": 26,
+        "a": 1,
+        "b": 16,
+        "c": 1,
+        "d": 12,
+        "p_two_sided": 1.0
+      },
+      {
+        "threshold": 27,
+        "a": 1,
+        "b": 16,
+        "c": 1,
+        "d": 12,
+        "p_two_sided": 1.0
+      },
+      {
+        "threshold": 28,
+        "a": 1,
+        "b": 16,
+        "c": 1,
+        "d": 12,
+        "p_two_sided": 1.0
+      },
+      {
+        "threshold": 29,
+        "a": 1,
+        "b": 16,
+        "c": 1,
+        "d": 12,
+        "p_two_sided": 1.0
+      },
+      {
+        "threshold": 30,
+        "a": 1,
+        "b": 16,
+        "c": 0,
+        "d": 13,
+        "p_two_sided": 1.0
+      }
+    ],
+    "note": "no single illness-day cut produces a significant unit-blocked association"
+  },
+  "F_containment_permutation": {
+    "observed_env_pos_and_surface_pos": 13,
+    "p_perm": 4.999750012499375e-05,
+    "null_mean": 7.37335,
+    "n_perm": 20000,
+    "interpretation": "exceeds the random-overlap null only because the two indicators share the unit"
+  }
+}

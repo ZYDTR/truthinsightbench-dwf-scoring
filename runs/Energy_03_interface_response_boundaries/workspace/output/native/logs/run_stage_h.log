@@ -1,0 +1,26 @@
+[artifact] results/H_shape_test.json
+===== H: shared-width vs per-curve-width, ceiling fixed at 100 =====
+
+[main] n_points=80
+  shared w + per-curve T50 : k= 9 RSS=1.95656 BIC=-253.05 w=31.21 K
+  per-curve w and T50      : k=16 RSS=0.62905 BIC=-313.15
+  nested F=18.993 df1=7 df2=63 p=0.00005
+  delta BIC (per - shared) = -60.104
+  per-curve w spread = {'min_K': 24.339510232225006, 'max_K': 36.728192931277384, 'sd_K': 4.392850979730332}
+  synthetic check: obs slope range=[0.017958916886614034, 0.0301518585736272]
+                   syn slope range=[0.016613511420152063, 0.02916429152702589]
+                   obs/syn range ratio=0.971
+                   Spearman(obs slope, syn slope)=(0.9285714285714287, 0.01422150954127839)
+                   Spearman(T50, syn slope)=(1.0, nan)
+
+[check] n_points=40
+  shared w + per-curve T50 : k= 5 RSS=0.72418 BIC=-138.33 w=33.56 K
+  per-curve w and T50      : k= 8 RSS=0.16540 BIC=-186.33
+  nested F=34.909 df1=3 df2=31 p=0.00000
+  delta BIC (per - shared) = -48.000
+  per-curve w spread = {'min_K': 24.339504932002274, 'max_K': 35.465326069338985, 'sd_K': 5.267316437722669}
+  synthetic check: obs slope range=[0.017958916886614034, 0.026575336375642033]
+                   syn slope range=[0.016031892673282176, 0.026655866807997516]
+                   obs/syn range ratio=0.811
+                   Spearman(obs slope, syn slope)=(0.7999999999999999, 0.47010768050422047)
+                   Spearman(T50, syn slope)=(1.0, nan)

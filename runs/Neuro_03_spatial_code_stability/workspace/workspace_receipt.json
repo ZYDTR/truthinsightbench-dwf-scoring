@@ -1,0 +1,11 @@
+{
+  "schema": "truthinsightbench-participant-workspace",
+  "release": "V1.0",
+  "task_id": "Neuro_03_spatial_code_stability",
+  "t0": "2021-01-01",
+  "scientific_file_count": 2,
+  "scientific_bytes": 34867,
+  "data_manifest_sha256": "c57dad04f9a907c7ff236ea2c06362801907429c05181b94781305fd7ccaf156",
+  "research_objective_sha256": "c9674dd59a937ccd00c33b363d7902991cc296a2049af019af1d30d609e1443c",
+  "launch_prompt_sha256": "0f4cafd2bc7a8b51b835101fa1d9032bc688caa09ac9ce12e60ff1bd4c68da3a"
+}

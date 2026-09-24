@@ -1,0 +1,160 @@
+{
+  "files": {
+    "anonymous_feature_counts.tsv": {
+      "rows": 82435,
+      "columns": [
+        "feature_id",
+        "sample_id",
+        "relative_count"
+      ],
+      "n_features": 600,
+      "n_samples": 529,
+      "grid_density": 0.25971959672337747
+    },
+    "anonymous_sample_covariates.tsv": {
+      "rows": 490,
+      "columns": [
+        "sample_id",
+        "continuous_covariate",
+        "coarse_group_id"
+      ],
+      "n_samples": 490,
+      "group_counts": {
+        "group_A": 97,
+        "group_B": 83,
+        "group_C": 310
+      },
+      "covariate_min": 0.03,
+      "covariate_median": 15.0,
+      "covariate_max": 83.2,
+      "n_distinct_covariate_values": 109
+    },
+    "bias_scenario_metrics.tsv": {
+      "rows": 2000,
+      "columns": [
+        "scenario_id",
+        "condition_id",
+        "metric_id",
+        "metric_value"
+      ],
+      "scenarios": {
+        "high_variance": 800,
+        "small_sample": 1200
+      },
+      "conditions": {
+        "condition_2": 1000,
+        "condition_3": 1000
+      },
+      "n_metrics": 600,
+      "metric_value_min": 0.0,
+      "metric_value_max": 0.9414225941422594
+    }
+  },
+  "analysis_units": {
+    "composition_unit": "one complete sample composition (529 units)",
+    "scenario_unit": "one simulated bias scenario x metric x condition cell (2000 units)"
+  },
+  "missingness": {
+    "zero_cells_in_grid": 0.7402804032766226,
+    "explicit_na_in_counts": 0,
+    "explicit_na_in_covariates": 0,
+    "explicit_na_in_bias": 0
+  },
+  "value_domain": {
+    "all_values_integer": true,
+    "min_value": 0,
+    "max_value": 1098836,
+    "row_sum_min": 14806,
+    "row_sum_median": 234976.0,
+    "row_sum_max": 1295174,
+    "row_sum_ratio_max_over_min": 87.47629339456977,
+    "row_sum_cv": 0.6756333944077655,
+    "n_rows_summing_to_1": 0,
+    "field_name": "relative_count",
+    "closure_interpretation": "The column is named relative_count but every value and every row sum is an exact positive integer; no row sums to 1 or 100. The closure constraint is therefore a property of the measurement (counts normalised by an unobserved per-sample total) rather than of the stored values, and library size is a free, sample-level nuisance parameter that must be modelled explicitly."
+  },
+  "sample_overlap": {
+    "counts_only": [
+      "sample_005",
+      "sample_008",
+      "sample_015",
+      "sample_047",
+      "sample_062",
+      "sample_074",
+      "sample_113",
+      "sample_123",
+      "sample_132",
+      "sample_158",
+      "sample_172",
+      "sample_174",
+      "sample_216",
+      "sample_229",
+      "sample_232",
+      "sample_235",
+      "sample_242",
+      "sample_255",
+      "sample_269",
+      "sample_285",
+      "sample_295",
+      "sample_297",
+      "sample_301",
+      "sample_370",
+      "sample_417",
+      "sample_442",
+      "sample_444",
+      "sample_460",
+      "sample_468",
+      "sample_471",
+      "sample_480",
+      "sample_481",
+      "sample_485",
+      "sample_494",
+      "sample_498",
+      "sample_507",
+      "sample_511",
+      "sample_512",
+      "sample_516",
+      "sample_522"
+    ],
+    "covariates_only": [
+      "sample_206"
+    ],
+    "n_joined": 489
+  },
+  "bias_grid": {
+    "scenarios": [
+      "high_variance",
+      "small_sample"
+    ],
+    "conditions": [
+      "condition_2",
+      "condition_3"
+    ],
+    "metrics_per_scenario": {
+      "high_variance": 400,
+      "small_sample": 600
+    },
+    "shared_metric_ids": 400,
+    "high_variance_only": 0,
+    "small_sample_only": 200,
+    "high_variance_metric_id_range": [
+      1,
+      400
+    ],
+    "small_sample_metric_id_range": [
+      1,
+      600
+    ],
+    "paired_design_available": true
+  },
+  "id_spaces": {
+    "n_feature_ids": 600,
+    "n_metric_ids_total": 600,
+    "feature_id_range": [
+      1,
+      600
+    ],
+    "metric_id_exists_without_feature": 0,
+    "note": "600 feature ids and 600 metric ids share the numeric space 1..600."
+  }
+}

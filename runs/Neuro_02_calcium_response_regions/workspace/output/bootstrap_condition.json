@@ -1,0 +1,77 @@
+{
+  "method": "stratified nonparametric bootstrap (resample cells with replacement within region,batch,slice strata; refit measure~region+condition+batch); receptor-vs-baseline coeff; 95% percentile CI + sign-flip p",
+  "n_boot": 500,
+  "seed": 42,
+  "n_cells": 580,
+  "n_strata": 29,
+  "observed_contrast": {
+    "mean_amplitude_dff0": 0.3378,
+    "mean_time_to_peak_s": -29.2926,
+    "mean_peak_width_s": 30.8473,
+    "mean_peak_prominence_dff0": 0.0673,
+    "mean_peak_frequency_hz": 0.0008,
+    "mean_auc_au": 87.9347
+  },
+  "per_measure": {
+    "mean_amplitude_dff0": {
+      "observed_contrast": 0.3378,
+      "bootstrap_mean": 0.3396,
+      "bootstrap_std": 0.0471,
+      "ci95_percentile": [
+        0.2508,
+        0.4379
+      ],
+      "sign_flip_p": 0.0
+    },
+    "mean_time_to_peak_s": {
+      "observed_contrast": -29.2926,
+      "bootstrap_mean": -29.3535,
+      "bootstrap_std": 9.382,
+      "ci95_percentile": [
+        -47.5775,
+        -10.845
+      ],
+      "sign_flip_p": 0.0
+    },
+    "mean_peak_width_s": {
+      "observed_contrast": 30.8473,
+      "bootstrap_mean": 30.9759,
+      "bootstrap_std": 1.6198,
+      "ci95_percentile": [
+        27.948,
+        34.212
+      ],
+      "sign_flip_p": 0.0
+    },
+    "mean_peak_prominence_dff0": {
+      "observed_contrast": 0.0673,
+      "bootstrap_mean": 0.0708,
+      "bootstrap_std": 0.0445,
+      "ci95_percentile": [
+        -0.0119,
+        0.1617
+      ],
+      "sign_flip_p": 0.054
+    },
+    "mean_peak_frequency_hz": {
+      "observed_contrast": 0.0008,
+      "bootstrap_mean": 0.0008,
+      "bootstrap_std": 0.0007,
+      "ci95_percentile": [
+        -0.0005,
+        0.0023
+      ],
+      "sign_flip_p": 0.13
+    },
+    "mean_auc_au": {
+      "observed_contrast": 87.9347,
+      "bootstrap_mean": 88.0346,
+      "bootstrap_std": 3.4239,
+      "ci95_percentile": [
+        80.6565,
+        94.3872
+      ],
+      "sign_flip_p": 0.0
+    }
+  }
+}

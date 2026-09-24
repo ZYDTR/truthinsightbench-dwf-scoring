@@ -1,0 +1,44 @@
+n rows used           : 593
+depth span            : 0.030 .. 6.300 m (median step 0.0100 m)
+age   span            : 2.76 .. 359.18 ka (median step 0.460 ka)
+detrended sd          : 0.3959
+mean sedimentation    : 0.017592 m/ka
+local LSR range       : 0.00395 .. 0.05000 m/ka
+
+--- DEPTH domain, LS vs depth (0.05..6.0 m) ---
+  period   1.8738 m   power 0.4268
+  period   0.6986 m   power 0.1893
+  period   1.1103 m   power 0.0988
+  period   0.8078 m   power 0.0423
+  period   1.3660 m   power 0.0411
+  observed max power  : 0.4268
+  independent freqs   : 124.4
+  AR1 rho (per step)  : 0.7882
+  null p95            : 0.1474  (mean 0.1005)
+  empirical p (max)   : 0.0033
+
+--- AGE domain, LS vs age_ka_bp_1 (40..400 ka) ---
+  period  108.286 ka  power 0.4003
+  period   40.455 ka  power 0.1911
+  period   79.157 ka  power 0.0706
+  period   63.108 ka  power 0.0504
+  period   46.978 ka  power 0.0400
+  observed max power  : 0.4003
+  independent freqs   : 8.0
+  AR1 rho (per step)  : 0.7882
+  null p95            : 0.1448  (mean 0.0823)
+  empirical p (max)   : 0.0033
+
+--- depth period -> age period conversion ---
+Traceback (most recent call last):
+  File "/data/user/conversations/conv-715fe573-e9f2-40bc-ac27-f8ef02db9d25/project/output/analysis/04_depth_domain_spectrum.py", line 361, in <module>
+    f"{age_d['peaks'][1]:.1f} ka. Verdict: the dominant periodicity is "
+^^^^^^
+  File "/data/user/conversations/conv-715fe573-e9f2-40bc-ac27-f8ef02db9d25/project/output/analysis/04_depth_domain_spectrum.py", line 231, in main
+    rayleigh_period=span)
+              ^^^^^^^^^^^^
+  File "/data/user/conversations/conv-715fe573-e9f2-40bc-ac27-f8ef02db9d25/project/output/analysis/04_depth_domain_spectrum.py", line 135, in bandlimited_peak_depth
+    """
+       
+IndexError: too many indices for array: array is 0-dimensional, but 1 were indexed
+/results/04_depth_domain_spectrum.json (total 35.9s)

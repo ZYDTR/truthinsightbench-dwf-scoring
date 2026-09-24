@@ -1,0 +1,88 @@
+==============================================================================
+Independent verification of Draft Finding 4
+data: /data/user/conversations/conv-f07721cb-d3dc-42e9-83c7-7e986203115b/project/data/observations.tsv
+==============================================================================
+rows=1931  annotated=15 at [0, 70, 502, 517, 796, 841, 907, 1012, 1305, 1640, 1660, 1674, 1696, 1752, 1862]
+
+[0] NaN in c04: 1 at row [61]
+    strict local maxima in c04 (interior): 579
+    convention 'edge-as--inf strict': annot recalled 14/15, failing rows [0]
+    convention 'plateau-start (>=  left)': annot recalled 14/15, failing rows [0]
+    CEILING under strict local maxima: 14/15; failing rows [0]
+      row 0: c04=116.396  left=nan right=130.502  label=reference_surface
+    even the plateau/edge-as--inf rule fails on: [0]
+
+[1] Independent detector grid
+    backgrounds=10 windows=[15, 25, 51, 75, 101, 301] thresholds=[0.5, 1.0, 1.5, 2.0, 2.5, 3.0]  -> 360 variants
+    variants total: 720
+    n_detected  min=4  median=19.0  max=530  ratio=132.5x
+    recall/15   min=4  median=13.5  max=14
+    variants with 15/15: 0;  with 14: 360
+    variants with 0 recall: 0
+    best variants:
+background  window   k       rule  n_det  hit
+  roll_q30      75 2.0  strict_lm     16   14
+  roll_q30      75 2.0 find_peaks     16   14
+  roll_q30     301 2.0  strict_lm     16   14
+  roll_q30     301 2.0 find_peaks     16   14
+  roll_min      75 2.5  strict_lm     17   14
+    per-annotated-row coverage across 720 variants:
+      row     0 reference_surface    detected by     0/720 variants
+      row    70 event_01             detected by   594/720 variants
+      row   502 event_02             detected by   720/720 variants
+      row   517 unidentified_event   detected by   704/720 variants
+      row   796 unidentified_event   detected by   592/720 variants
+      row   841 unidentified_event   detected by   400/720 variants
+      row   907 unidentified_event   detected by   470/720 variants
+      row  1012 event_03             detected by   370/720 variants
+      row  1305 event_04             detected by   720/720 variants
+      row  1640 unidentified_event   detected by   644/720 variants
+      row  1660 unidentified_event   detected by   480/720 variants
+      row  1674 unidentified_event   detected by   716/720 variants
+      row  1696 event_05             detected by   720/720 variants
+      row  1752 unidentified_event   detected by   630/720 variants
+      row  1862 unidentified_event   detected by   490/720 variants
+    max-count variant: {'background': 'roll_min', 'window': 301, 'k': 0.5, 'rule': 'strict_lm', 'n_det': 530, 'hit': 14}
+    min-count variant: {'background': 'roll_mean', 'window': 51, 'k': 3.0, 'rule': 'strict_lm', 'n_det': 4, 'hit': 4}
+            min   50%    max
+rule                        
+find_peaks  4.0  19.0  530.0
+strict_lm   4.0  19.0  530.0
+    annotated rows missed by EVERY variant: [0]
+
+[3] Enrichment attack: top-30 by excess vs raw value + null model
+    bg=roll_median(25): top-30-by-EXCESS contains 6/15 (40.0%) annotated
+    bg=roll_median(51): top-30-by-EXCESS contains 7/15 (46.7%) annotated
+    bg=roll_median(101): top-30-by-EXCESS contains 7/15 (46.7%) annotated
+    bg=roll_median(301): top-30-by-EXCESS contains 7/15 (46.7%) annotated
+    top-30-by-RAW-c04 contains 7/15 (46.7%)
+ row              label      c04  rank_raw  median_101  excess_101  rank_exc_101  rank_exc_101_within_lm  n_strict_lm  is_strict_lm
+   0  reference_surface  116.396       377      84.366      32.030           327                      -1          579         False
+  70           event_01  283.693        36      86.642     197.051            35                       9          579          True
+ 502           event_02 1047.754         1      95.946     951.808             1                       1          579          True
+ 517 unidentified_event  431.026        17      96.260     334.766            16                       4          579          True
+ 796 unidentified_event  300.762        35      96.985     203.777            34                       8          579          True
+ 841 unidentified_event  243.178        48      98.730     144.448            51                      16          579          True
+ 907 unidentified_event  252.461        46      99.814     152.647            45                      13          579          True
+1012           event_03  239.459        51      91.514     147.945            50                      15          579          True
+1305           event_04  507.568        12      96.258     411.310            12                       3          579          True
+1640 unidentified_event  325.436        29     105.013     220.423            30                       7          579          True
+1660 unidentified_event  281.287        37     107.468     173.819            39                      10          579          True
+1674 unidentified_event  437.023        15     105.709     331.314            17                       5          579          True
+1696           event_05  880.932         7     105.472     775.460             7                       2          579          True
+1752 unidentified_event  312.942        30      86.571     226.371            28                       6          579          True
+1862 unidentified_event  259.762        42      90.053     169.709            40                      11          579          True
+    permutation null (all rows): P(hits>= 7) = 0.00000  [null mean 0.233; exact hypergeom 6.129e-10]
+    same for raw top-30: P(hits>= 7) = 0.00000  [null mean 0.233; exact hypergeom 6.129e-10]
+    top-30 EXCESS restricted to strict local maxima -> contains 14/15 annotated
+    permutation null over 579 local maxima: P(hits >= 14) = 0.00000  [null mean 0.775; exact hypergeom 4.558e-19]
+
+[4] Structural vs tuning: recall deficit
+    annotated rows that are strict local maxima: 14/15
+    fraction of all rows that are strict local maxima: 579/1931 = 0.300; expected annotated-local-max under random draws: 4.50
+    null (15 random local maxima): mean=0.35 annotated recovered, p(>=14)=0.00e+00
+    row 0 c04=116.396, neighbour c04[1]=130.502 -> row0 > neighbour: False
+    so row 0 fails the peak test on the RAW series; any monotone transform keeps the inequality, so no peak detector can return it.
+
+wrote /data/user/conversations/conv-f07721cb-d3dc-42e9-83c7-7e986203115b/project/output/verification/figures/indep_detector_grid.csv, /data/user/conversations/conv-f07721cb-d3dc-42e9-83c7-7e986203115b/project/output/verification/figures/annotated_row_ranks.csv, /data/user/conversations/conv-f07721cb-d3dc-42e9-83c7-7e986203115b/project/output/verification/figures/indep_finding4_summary.json, /data/user/conversations/conv-f07721cb-d3dc-42e9-83c7-7e986203115b/project/output/verification/figures/finding4_verification.png
+done

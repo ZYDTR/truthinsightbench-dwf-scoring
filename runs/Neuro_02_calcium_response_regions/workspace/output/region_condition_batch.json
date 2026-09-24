@@ -1,0 +1,116 @@
+{
+  "mean_amplitude_dff0": {
+    "formula": "region + condition + batch",
+    "r2": 0.5201,
+    "n": 819,
+    "terms": {
+      "C(region, Treatment(reference='region_1'))[T.region_2]": {
+        "coef": 0.302161,
+        "p": 0.0
+      },
+      "C(region, Treatment(reference='region_1'))[T.region_3]": {
+        "coef": 0.337606,
+        "p": 0.0
+      },
+      "C(region, Treatment(reference='region_1'))[T.region_4]": {
+        "coef": 0.096776,
+        "p": 0.11679
+      }
+    }
+  },
+  "mean_time_to_peak_s": {
+    "formula": "region + condition + batch",
+    "r2": 0.2283,
+    "n": 819,
+    "terms": {
+      "C(region, Treatment(reference='region_1'))[T.region_2]": {
+        "coef": -27.212398,
+        "p": 0.0
+      },
+      "C(region, Treatment(reference='region_1'))[T.region_3]": {
+        "coef": -5.130824,
+        "p": 0.264854
+      },
+      "C(region, Treatment(reference='region_1'))[T.region_4]": {
+        "coef": 0.193423,
+        "p": 0.981197
+      }
+    }
+  },
+  "mean_peak_width_s": {
+    "formula": "region + condition + batch",
+    "r2": 0.4441,
+    "n": 819,
+    "terms": {
+      "C(region, Treatment(reference='region_1'))[T.region_2]": {
+        "coef": 10.458847,
+        "p": 0.0
+      },
+      "C(region, Treatment(reference='region_1'))[T.region_3]": {
+        "coef": 12.392484,
+        "p": 0.0
+      },
+      "C(region, Treatment(reference='region_1'))[T.region_4]": {
+        "coef": 14.089048,
+        "p": 4.6e-05
+      }
+    }
+  },
+  "mean_peak_prominence_dff0": {
+    "formula": "region + condition + batch",
+    "r2": 0.5058,
+    "n": 819,
+    "terms": {
+      "C(region, Treatment(reference='region_1'))[T.region_2]": {
+        "coef": 0.321111,
+        "p": 0.0
+      },
+      "C(region, Treatment(reference='region_1'))[T.region_3]": {
+        "coef": 0.173516,
+        "p": 0.0
+      },
+      "C(region, Treatment(reference='region_1'))[T.region_4]": {
+        "coef": 0.164086,
+        "p": 0.000771
+      }
+    }
+  },
+  "mean_peak_frequency_hz": {
+    "formula": "region + condition + batch",
+    "r2": 0.1617,
+    "n": 819,
+    "terms": {
+      "C(region, Treatment(reference='region_1'))[T.region_2]": {
+        "coef": -0.003986,
+        "p": 0.0
+      },
+      "C(region, Treatment(reference='region_1'))[T.region_3]": {
+        "coef": -0.003918,
+        "p": 0.0
+      },
+      "C(region, Treatment(reference='region_1'))[T.region_4]": {
+        "coef": -0.005278,
+        "p": 5e-06
+      }
+    }
+  },
+  "mean_auc_au": {
+    "formula": "region + condition + batch",
+    "r2": 0.4672,
+    "n": 819,
+    "terms": {
+      "C(region, Treatment(reference='region_1'))[T.region_2]": {
+        "coef": -0.23295,
+        "p": 0.958284
+      },
+      "C(region, Treatment(reference='region_1'))[T.region_3]": {
+        "coef": 20.381483,
+        "p": 8.7e-05
+      },
+      "C(region, Treatment(reference='region_1'))[T.region_4]": {
+        "coef": -7.383688,
+        "p": 0.423566
+      }
+    }
+  }
+}

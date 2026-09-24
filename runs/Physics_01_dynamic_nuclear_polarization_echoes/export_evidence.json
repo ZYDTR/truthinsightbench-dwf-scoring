@@ -1,0 +1,21 @@
+{
+  "task_id": "Physics_01_dynamic_nuclear_polarization_echoes",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260923T060240-6921bb",
+  "source_run_json_sha256": "338646eb0024cf130a5937fe1f254b9de2b21d3eb2441e419ba9871adcd3585e",
+  "source_release_json_sha256": "7a4a98f2054629d0fad76c1a065fd7eef953851230a257e004b9ba5c713a89df",
+  "source_latest_validation_sha256": "2a5964d98cd23b55749ddc2bc779d50ddf4f164506682ece281e39c3cad13144",
+  "source_snapshot_manifest_sha256": "5e11f5947d3ce7857a204f5a138e32f0da368f7bce3248f1ecee1c8437e60ebb",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 292
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 3,
+  "input_sha256": "1b2bfcf6c57dffb8df8516a91896f84dc641998562a437f2ef2279d502090bc5",
+  "output_sha256": "40b20670720871945246ddaee7bbdb315bf02552275dc443b783ff1d5f820d20"
+}

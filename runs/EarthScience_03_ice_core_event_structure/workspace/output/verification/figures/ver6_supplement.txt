@@ -1,0 +1,6 @@
+MAE c01^1.25 = 1.620 ; c06 = 8.207 ; c01 = 27.652 ; c01-quad = 3.133
+c01^1.25 beats c06 on 14/15 ; beats c01 on 15/15
+sign test c01^1.25 vs c06 two-sided p=0.0009766
+blocks where c01^1.25 wins: 5/5
+block-bootstrap MAE(c06)-MAE(c01^1.25): median 6.59 yr, 95% CI [2.70, 10.06]
+block-bootstrap MAE(c01)-MAE(c06): median 19.29 yr, 95% CI [10.98, 30.17]

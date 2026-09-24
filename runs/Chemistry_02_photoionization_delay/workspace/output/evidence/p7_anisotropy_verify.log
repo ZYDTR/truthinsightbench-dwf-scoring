@@ -1,0 +1,96 @@
+experiment magnitude (276, 181)  E 22.500..50.000  strictly increasing: True
+theory     magnitude (99, 181)  E 23.249..41.839  strictly increasing: True
+
+--- claim 1: two-term adequacy (even/odd route, scipy gelsy) --------
+exp  two-term R2 median 0.38214  (min 0.00002 max 0.68848)  frac>0.9 0.000
+theo two-term R2 median 0.10289  (min 0.00001 max 0.47142)  frac>0.9 0.000
+exp  full L<=8 R2 median 0.998737  (min 0.991924) ; M^2 L<=6 R2 median 0.999999998
+theo full L<=8 R2 median 0.993657  (min 0.956704) ; M^2 L<=6 R2 median 0.998513710
+solid-angle weighted two-term R2 median: exp 0.35208  theo 0.02364
+
+--- claim 2/3: energy dependence ------------------------------------
+exp beta (M^2, L<=6)       min -0.2737 @ 25.90 eV ; max +3.1116 @ 43.20 eV
+exp beta (M^2, L<=6)       linregress r=0.8918 (p=2.29e-96) slope=0.13205 /eV ; spearman 0.8724 (p=3.67e-87) ; kendall 0.6994
+exp beta (M,   L<=8)       min -0.1482 @ 25.90 eV ; max +1.9304 @ 43.30 eV
+exp beta (M,   L<=8)       linregress r=0.8521 (p=4.94e-79) slope=0.07139 /eV ; spearman 0.8737 (p=9.61e-88) ; kendall 0.6954
+theo beta (M^2, L<=6)      min -0.2617 @ 27.90 eV ; max +0.9388 @ 41.84 eV
+theo beta (M^2, L<=6)      linregress r=0.8195 (p=3.43e-25) slope=0.06020 /eV ; spearman 0.8608 (p=3.33e-30) ; kendall 0.7357
+theo beta (M,   L<=8)      min -0.1924 @ 27.90 eV ; max +0.3178 @ 41.84 eV
+theo beta (M,   L<=8)      linregress r=0.7028 (p=5.14e-16) slope=0.01931 /eV ; spearman 0.7241 (p=2.49e-17) ; kendall 0.6368
+theo beta thinned >=0.1eV  min -0.2617 @ 27.90 eV ; max +0.9388 @ 41.84 eV
+theo beta thinned >=0.1eV  linregress r=0.8274 (p=1.55e-25) slope=0.06189 /eV ; spearman 0.8669 (p=1.79e-30) ; kendall 0.7448
+theory grid: 99 points, 97 kept after dropping near-duplicate steps (min step 0.0160, median step 0.1940)
+
+--- claim 4: experiment vs theory at matched energies ---------------
+pkg-style (12, 22.5 eV clamped to theory edge): n=12  pearson r=0.8506 (p=0.000453) spearman=0.8462 sign_agr=0.833 mean_diff=+0.2076 rms=0.5238  diff-vs-E rho=+0.972
+strict overlap (11, no clamp): n=11  pearson r=0.8765 (p=0.0004) spearman=0.8545 sign_agr=0.818 mean_diff=+0.2493 rms=0.5418  diff-vs-E rho=+0.991
+diff at 38.75 eV (pkg-style) = +1.1925  (exp 2.0940 - theo 0.9016)
+low-E subset (E<=27.9): mean diff -0.2424 ; E>=30: mean diff +0.5860
+
+--- claim 5: measured CoefLeg F20/F00 proxy ------------------------
+literal summed ratio vs dense beta (n=13): pearson -0.6972 (p=0.008084) spearman -0.7198 (p=0.005536) kendall -0.4615
+literal summed ratio vs dense beta (no 48.4, n=12): pearson -0.7038 spearman -0.7063
+order-consistent F00-family c2/c0 vs dense beta: pearson 0.9674 (p=6.602e-08) spearman 0.9835 (p=1.611e-09)
+F20_0/F00_0 vs dense beta: pearson -0.6009 spearman -0.4451
+mixed-order F20_2/F00_0 vs dense beta: pearson 0.9063 (weights shown to change the sign; not used in the verdict)
+
+--- claim 6: permutation null and leave-one-out ---------------------
+exp  r=0.8918  perm mean -0.000143 std 0.060490 -> z=14.745 (p=0) ; reference z=r*sqrt(n-1)=14.789
+theo r=0.8195  perm mean -0.000047 std 0.101084 -> z=8.108 (p=0) ; reference z=r*sqrt(n-1)=8.113
+exp  LOO slope full 0.13205 range [0.13173, 0.13326] most-influential E=50.0
+theo LOO slope full 0.06020 range [0.05951, 0.06221] most-influential E=23.249
+
+--- route-agreement sanity check (even/odd vs raw Legendre design) --
+exp beta L<=8: max |even/odd - raw lstsq| = 1.305e-03 ; corr 0.9999997181
+exp beta M^2L6: max |even/odd - raw lstsq| = 1.233e-06 ; corr 1.0000000000
+
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p7_anisotropy_verdict.json
+reproduced: [True, True, True, True, True, True]
+experiment magnitude (276, 181)  E 22.500..50.000  strictly increasing: True
+theory     magnitude (99, 181)  E 23.249..41.839  strictly increasing: True
+
+--- claim 1: two-term adequacy (even/odd route, scipy gelsy) --------
+exp  two-term R2 median 0.38214  (min 0.00002 max 0.68848)  frac>0.9 0.000
+theo two-term R2 median 0.10289  (min 0.00001 max 0.47142)  frac>0.9 0.000
+exp  full L<=8 R2 median 0.998737  (min 0.991924) ; M^2 L<=6 R2 median 0.999999998
+theo full L<=8 R2 median 0.993657  (min 0.956704) ; M^2 L<=6 R2 median 0.998513710
+solid-angle weighted two-term R2 median: exp 0.35208  theo 0.02364
+
+--- claim 2/3: energy dependence ------------------------------------
+exp beta (M^2, L<=6)       min -0.2737 @ 25.90 eV ; max +3.1116 @ 43.20 eV
+exp beta (M^2, L<=6)       linregress r=0.8918 (p=2.29e-96) slope=0.13205 /eV ; spearman 0.8724 (p=3.67e-87) ; kendall 0.6994
+exp beta (M,   L<=8)       min -0.1482 @ 25.90 eV ; max +1.9304 @ 43.30 eV
+exp beta (M,   L<=8)       linregress r=0.8521 (p=4.94e-79) slope=0.07139 /eV ; spearman 0.8737 (p=9.61e-88) ; kendall 0.6954
+theo beta (M^2, L<=6)      min -0.2617 @ 27.90 eV ; max +0.9388 @ 41.84 eV
+theo beta (M^2, L<=6)      linregress r=0.8195 (p=3.43e-25) slope=0.06020 /eV ; spearman 0.8608 (p=3.33e-30) ; kendall 0.7357
+theo beta (M,   L<=8)      min -0.1924 @ 27.90 eV ; max +0.3178 @ 41.84 eV
+theo beta (M,   L<=8)      linregress r=0.7028 (p=5.14e-16) slope=0.01931 /eV ; spearman 0.7241 (p=2.49e-17) ; kendall 0.6368
+theo beta thinned >=0.1eV  min -0.2617 @ 27.90 eV ; max +0.9388 @ 41.84 eV
+theo beta thinned >=0.1eV  linregress r=0.8274 (p=1.55e-25) slope=0.06189 /eV ; spearman 0.8669 (p=1.79e-30) ; kendall 0.7448
+theory grid: 99 points, 97 kept after dropping near-duplicate steps (min step 0.0160, median step 0.1940)
+
+--- claim 4: experiment vs theory at matched energies ---------------
+pkg-style (12, 22.5 eV clamped to theory edge): n=12  pearson r=0.8506 (p=0.000453) spearman=0.8462 sign_agr=0.833 mean_diff=+0.2076 rms=0.5238  diff-vs-E rho=+0.972
+strict overlap (11, no clamp): n=11  pearson r=0.8765 (p=0.0004) spearman=0.8545 sign_agr=0.818 mean_diff=+0.2493 rms=0.5418  diff-vs-E rho=+0.991
+diff at 38.75 eV (pkg-style) = +1.1925  (exp 2.0940 - theo 0.9016)
+low-E subset (E<=27.9): mean diff -0.2424 ; E>=30: mean diff +0.5860
+
+--- claim 5: measured CoefLeg F20/F00 proxy ------------------------
+literal summed ratio vs dense beta (n=13): pearson -0.6972 (p=0.008084) spearman -0.7198 (p=0.005536) kendall -0.4615
+literal summed ratio vs dense beta (no 48.4, n=12): pearson -0.7038 spearman -0.7063
+order-consistent F00-family c2/c0 vs dense beta: pearson 0.9674 (p=6.602e-08) spearman 0.9835 (p=1.611e-09)
+F20_0/F00_0 vs dense beta: pearson -0.6009 spearman -0.4451
+mixed-order F20_2/F00_0 vs dense beta: pearson 0.9063 (weights shown to change the sign; not used in the verdict)
+
+--- claim 6: permutation null and leave-one-out ---------------------
+exp  r=0.8918  perm mean -0.000143 std 0.060490 -> z=14.745 (p=0) ; reference z=r*sqrt(n-1)=14.789
+theo r=0.8195  perm mean -0.000047 std 0.101084 -> z=8.108 (p=0) ; reference z=r*sqrt(n-1)=8.113
+exp  LOO slope full 0.13205 range [0.13173, 0.13326] most-influential E=50.0
+theo LOO slope full 0.06020 range [0.05951, 0.06221] most-influential E=23.249
+
+--- route-agreement sanity check (even/odd vs raw Legendre design) --
+exp beta L<=8: max |even/odd - raw lstsq| = 1.305e-03 ; corr 0.9999997181
+exp beta M^2L6: max |even/odd - raw lstsq| = 1.233e-06 ; corr 1.0000000000
+
+wrote /data/user/conversations/conv-9e234f5e-4d56-4e60-8340-10f7a5d416d0/project/output/evidence/p7_anisotropy_verdict.json
+reproduced: [True, True, True, True, True, True]

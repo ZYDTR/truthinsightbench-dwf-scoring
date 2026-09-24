@@ -1,0 +1,107 @@
+{
+  "partA_unit_level_variance": {
+    "n_units": 1105,
+    "sd_unit_means": 1.5969,
+    "ss_total": 2815.263,
+    "share_explained_by_interaction_family": 0.8798,
+    "share_explained_by_cell_pair_alone": 0.0437,
+    "share_cellpair_within_family_residual": 0.1202,
+    "n_interaction_x_cellpair_levels": 1105,
+    "degenerate_note": "a groupby on (interaction_id, cell_pair_id) equals unit_id and therefore explains 100% by construction; that figure is not reported as evidence"
+  },
+  "partA_record_level_partition": {
+    "n_records": 5920,
+    "ss_total": 18098.6413,
+    "share_between_units": 0.9006,
+    "share_within_units_total": 0.0994,
+    "share_stage_within_units": 0.0184,
+    "share_stage_of_within_unit_variance": 0.1855,
+    "note": "the stage axis organises only the within-unit slice, which is the smaller part"
+  },
+  "partB_pooled": {
+    "heldout_records": 5533,
+    "mae_null_unit_mean": 0.46805,
+    "mae_trend": 0.4275,
+    "mae_improvement": 0.04055,
+    "improvement_pct": 8.66
+  },
+  "partB_stage_shuffle_control": {
+    "n_perm": 200,
+    "mean_improvement_under_shuffled_stage": -0.0011,
+    "sd_improvement": 0.00039,
+    "max_improvement_under_shuffled_stage": -2e-05,
+    "observed_improvement": 0.04055,
+    "permutation_pvalue": 0.0,
+    "exceeds_all_permutations": true
+  },
+  "partB_heterogeneity": {
+    "n_families": 214,
+    "corr_family_size_vs_gain": 0.3386,
+    "corr_n_stages_vs_gain": 0.4005,
+    "gain_median": -0.00435,
+    "families_with_gain_gt_0": 103,
+    "families_with_gain_lt_0": 111,
+    "sign_test_pvalue": 0.6323902913164331,
+    "top5_gain_families": [
+      {
+        "family": "interaction_0205",
+        "n_records": 4,
+        "gain": 0.3887
+      },
+      {
+        "family": "interaction_0159",
+        "n_records": 5,
+        "gain": 0.3677
+      },
+      {
+        "family": "interaction_0107",
+        "n_records": 2,
+        "gain": 0.3558
+      },
+      {
+        "family": "interaction_0101",
+        "n_records": 14,
+        "gain": 0.2999
+      },
+      {
+        "family": "interaction_0098",
+        "n_records": 15,
+        "gain": 0.2597
+      }
+    ],
+    "bottom5_gain_families": [
+      {
+        "family": "interaction_0158",
+        "n_records": 3,
+        "gain": -0.3926
+      },
+      {
+        "family": "interaction_0151",
+        "n_records": 3,
+        "gain": -0.3247
+      },
+      {
+        "family": "interaction_0285",
+        "n_records": 6,
+        "gain": -0.3094
+      },
+      {
+        "family": "interaction_0279",
+        "n_records": 10,
+        "gain": -0.2926
+      },
+      {
+        "family": "interaction_0123",
+        "n_records": 13,
+        "gain": -0.2918
+      }
+    ]
+  },
+  "partC_cellpair_holdout": {
+    "n_cell_pairs": 9,
+    "mae_null_unit_mean": 0.46805,
+    "mae_trend_cellpair_holdout": 0.42714,
+    "mae_improvement": 0.04091,
+    "improvement_pct": 8.74
+  }
+}

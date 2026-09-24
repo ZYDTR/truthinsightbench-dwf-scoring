@@ -1,0 +1,11 @@
+{
+  "schema": "truthinsightbench-participant-workspace",
+  "release": "V1.0",
+  "task_id": "Astronomy_02_gravity_spectral_structure",
+  "t0": "2022-01-01",
+  "scientific_file_count": 5,
+  "scientific_bytes": 179120,
+  "data_manifest_sha256": "550d754548e5d7093940acc22df5f0e863969d9fb2ef9450e27326dc877e6cab",
+  "research_objective_sha256": "a803c655d96745556b32cd1dc1532a5910c311daa7a01896cab275408710a2db",
+  "launch_prompt_sha256": "0f4cafd2bc7a8b51b835101fa1d9032bc688caa09ac9ce12e60ff1bd4c68da3a"
+}

@@ -1,0 +1,22 @@
+{
+  "task_id": "Life_04_environmental_transfer_boundary",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260920T095628-0c1f87",
+  "source_run_json_sha256": "6ec5f62ab73b2ace25cc5c24cc407ede038f2874134e6eb4f0e83558aee54804",
+  "source_release_json_sha256": "47f232e17f14bb48a9e8b3b4bb80c67e257c234020f3a4dc012a51acbff2e8e9",
+  "source_latest_validation_sha256": "e8f704cb1a25f48e6399d44f42b5fab7981c68e0af35432a8bd12cb76c57c7a8",
+  "source_snapshot_manifest_sha256": "e750397b7e809dfff915a5d59efbb1169e6463701a2b56e26fb93a9185c14cb0",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 21,
+    "deepseek-v4.1-flash-max": 165
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "d6b33d116c42df76071bdc0bcf810fa9c81f4c7314d84426c4c8626e4336ea33",
+  "output_sha256": "d14200cc8a772e7c41d1b72080b8f3ef791db6dcc18ba4e49ce4e88fc66d09a7"
+}

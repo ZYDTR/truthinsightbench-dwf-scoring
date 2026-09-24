@@ -1,0 +1,366 @@
+{
+  "schema": "truthinsightbench-semantic-output-validation",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "output": "/data/user/conversations/conv-2333dd05-7160-499e-ae21-1a07e4fd79a2/project/output",
+  "authoritative_report": {
+    "path": "Result.md",
+    "bytes": 21071,
+    "sha256": "565da71e9c457cca3d457530169614e12c1f22a3a17c1a602ad9c62917d6e5f3"
+  },
+  "registered_findings": {
+    "count": 5,
+    "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "markers": [
+      {
+        "finding_number": 1,
+        "line": 55,
+        "marker": "## Finding 1 — No low-dimensional compositional invariant; the structure is depth-dominated",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 2,
+        "line": 106,
+        "marker": "## Finding 2 — Richness tracks the covariate and depth with opposite signs, and neither explains the other",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 3,
+        "line": 155,
+        "marker": "## Finding 3 — `condition_3 > condition_2` is a near-invariant whose exceptions are structured by scenario",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 4,
+        "line": 207,
+        "marker": "## Finding 4 — The covariate–richness association has an upper applicability boundary",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 5,
+        "line": 269,
+        "marker": "## Finding 5 — The condition coupling is zero-driven, not a monotone dose–response",
+        "heading_level": 2
+      }
+    ],
+    "traceability": [
+      {
+        "finding_number": 1,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/s02_compositional_structure.py"
+        ],
+        "result_evidence": [
+          "figures/F1_scale_dependence.png",
+          "results/compositional_structure.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 2,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/s03_covariate_association.py",
+          "analysis/s06_holdouts.py"
+        ],
+        "result_evidence": [
+          "figures/F2_covariate_association.png",
+          "results/covariate_association.json",
+          "results/holdouts.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 3,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/s04_bias_scenarios.py",
+          "analysis/s06_holdouts.py"
+        ],
+        "result_evidence": [
+          "figures/F3_bias_conditions.png",
+          "results/bias_scenarios.json",
+          "results/holdouts.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 4,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/s07_applicability_boundary.py"
+        ],
+        "result_evidence": [
+          "figures/F5_applicability_boundary.png",
+          "results/applicability_boundary.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 5,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/s04_bias_scenarios.py",
+          "analysis/s06_holdouts.py"
+        ],
+        "result_evidence": [
+          "figures/F4_zero_driven_coupling.png",
+          "results/bias_scenarios.json",
+          "results/holdouts.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      }
+    ]
+  },
+  "reproduction": {
+    "mode": "companion_markdown",
+    "document": {
+      "path": "reproduce.md",
+      "bytes": 4570,
+      "sha256": "254e6efa282db425851937cdb2aff998b1ef8f90885b12972cc66280993edf23"
+    }
+  },
+  "analysis_sources": [
+    {
+      "path": "analysis/lib_composition.py",
+      "bytes": 4451,
+      "sha256": "bb38a0ec6a6871fde09b32498728e8ba146d1da4c7ed4a378ad84053a989855d"
+    },
+    {
+      "path": "analysis/s01_inventory.py",
+      "bytes": 5832,
+      "sha256": "2e098b2b3f0e33266f26c52aa0905692a56a39b91fc701e11db591aa241e4753"
+    },
+    {
+      "path": "analysis/s02_compositional_structure.py",
+      "bytes": 9479,
+      "sha256": "1e917b8aad5da1485d3becffc664edfe4514191e355253206c20b09b4494d25b"
+    },
+    {
+      "path": "analysis/s03_covariate_association.py",
+      "bytes": 8962,
+      "sha256": "2ec92199e7a1f83c359c1453f99b1555591cb87f10833ab10e9492703f13d75c"
+    },
+    {
+      "path": "analysis/s04_bias_scenarios.py",
+      "bytes": 13894,
+      "sha256": "8428c214ee9a35d7ae0dce094f75a866957692650f06907069056d989c65b8e0"
+    },
+    {
+      "path": "analysis/s05_figures.py",
+      "bytes": 13064,
+      "sha256": "4f68f1d2ac05b700d1fbf50297c86d376824f3ce41636cb9883347de76cfe3ef"
+    },
+    {
+      "path": "analysis/s06_holdouts.py",
+      "bytes": 15738,
+      "sha256": "2556879015d9ec5063f9886d5e946418a3d37a2d7f9544ce22c1d32fa0496f37"
+    },
+    {
+      "path": "analysis/s07_applicability_boundary.py",
+      "bytes": 12420,
+      "sha256": "90fda4dbe6aa81a2f55902b89b5e7c81867c3258a6ed568188f515a71ad5034f"
+    },
+    {
+      "path": "analysis/s08_findings_registry.py",
+      "bytes": 16182,
+      "sha256": "0381702957da0aafb3843684477a378d06b42c5c85cdeed475326af04f78babe"
+    }
+  ],
+  "executed_notebooks": [],
+  "result_artifacts": [
+    {
+      "path": "figures/F1_scale_dependence.png",
+      "bytes": 163618,
+      "sha256": "af9216f4c25fd8c366bc682a4b59ee5b4473f905fca6c0dacd1526378ccd390e"
+    },
+    {
+      "path": "figures/F2_covariate_association.png",
+      "bytes": 282657,
+      "sha256": "f7a899a8667424bf83823154bd7dd422ff76ac0238ba2d14b1e820d27177c4e7"
+    },
+    {
+      "path": "figures/F3_bias_conditions.png",
+      "bytes": 209505,
+      "sha256": "148df26b01f2931be237f5d8fa4ae4f16e95a30e496c54b8016e0bbfd61f428c"
+    },
+    {
+      "path": "figures/F4_zero_driven_coupling.png",
+      "bytes": 229036,
+      "sha256": "a6ec922966520cb5d9327ecbfba04ed0bddb07a173becb03bf5c271397a12562"
+    },
+    {
+      "path": "figures/F5_applicability_boundary.png",
+      "bytes": 216179,
+      "sha256": "f6db190b27f5960fc5dbf389848433bf5976f20bd9b88083adb8f55c4d95e53c"
+    },
+    {
+      "path": "results/applicability_boundary.json",
+      "bytes": 6854,
+      "sha256": "a500a61060e5c3aea5939237b538359b93f9c0906f8f616d44a7187b84474d84"
+    },
+    {
+      "path": "results/bias_scenarios.json",
+      "bytes": 10661,
+      "sha256": "1f031dbf710fb51e679e4f2e8da37d7b7ad0a34524be9746d5d1090b757cd9a1"
+    },
+    {
+      "path": "results/compositional_structure.json",
+      "bytes": 5595,
+      "sha256": "ac71369dc3f8ef47db2819d19caeef1421b11b8101a0258bc14eafeabe5ea9fa"
+    },
+    {
+      "path": "results/covariate_association.json",
+      "bytes": 4438,
+      "sha256": "67c2d52ad3206265fdbe05438906477bd97ff4a052bdd74e558c2bb362490bf1"
+    },
+    {
+      "path": "results/holdouts.json",
+      "bytes": 6071,
+      "sha256": "3fabdd3e90d78595077644b4de0030f4419c94bc201bace012283c1a46e80b0c"
+    },
+    {
+      "path": "results/integrity.json",
+      "bytes": 632,
+      "sha256": "c837562f3553fa9236db4cb224e2fbe05b047cc2e1b58856adc87bda9f3a0b0b"
+    },
+    {
+      "path": "results/inventory.json",
+      "bytes": 3952,
+      "sha256": "cee2e82b8fe3ff3587c496878d78f6ce566a94bec996b4d97d4768a1e849985d"
+    }
+  ],
+  "native_evidence_registry": {
+    "sources": [
+      {
+        "path": "file_registry.json",
+        "bytes": 6665,
+        "sha256": "ba0eb0eb4f0e7c35bb4829c0407409a7f284dfe7255d74bfa4f1ca24a6cc3670"
+      }
+    ],
+    "resolved_ids": {
+      "ART0001": "Result.md",
+      "ART0002": "analysis/lib_composition.py",
+      "ART0003": "analysis/s01_inventory.py",
+      "ART0004": "analysis/s02_compositional_structure.py",
+      "ART0005": "analysis/s03_covariate_association.py",
+      "ART0006": "analysis/s04_bias_scenarios.py",
+      "ART0007": "analysis/s05_figures.py",
+      "ART0008": "analysis/s06_holdouts.py",
+      "ART0009": "analysis/s07_applicability_boundary.py",
+      "ART0010": "analysis/s08_findings_registry.py",
+      "ART0011": "figures/F1_scale_dependence.png",
+      "ART0012": "figures/F2_covariate_association.png",
+      "ART0013": "figures/F3_bias_conditions.png",
+      "ART0014": "figures/F4_zero_driven_coupling.png",
+      "ART0015": "figures/F5_applicability_boundary.png",
+      "ART0016": "logs/s01.log",
+      "ART0017": "logs/s02.log",
+      "ART0018": "logs/s03.log",
+      "ART0019": "logs/s04.log",
+      "ART0020": "logs/s05.log",
+      "ART0021": "logs/s06.log",
+      "ART0022": "logs/s07.log",
+      "ART0023": "logs/s08.log",
+      "ART0024": "reproduce.md",
+      "ART0025": "results/applicability_boundary.json",
+      "ART0026": "results/bias_scenarios.json",
+      "ART0027": "results/compositional_structure.json",
+      "ART0028": "results/covariate_association.json",
+      "ART0029": "results/figure_manifest.json",
+      "ART0030": "results/findings_registry.json",
+      "ART0031": "results/holdouts.json",
+      "ART0032": "results/integrity.json",
+      "ART0033": "results/inventory.json"
+    }
+  },
+  "resolved_support_files": [
+    {
+      "path": "analysis/s02_compositional_structure.py",
+      "bytes": 9479,
+      "sha256": "1e917b8aad5da1485d3becffc664edfe4514191e355253206c20b09b4494d25b"
+    },
+    {
+      "path": "analysis/s03_covariate_association.py",
+      "bytes": 8962,
+      "sha256": "2ec92199e7a1f83c359c1453f99b1555591cb87f10833ab10e9492703f13d75c"
+    },
+    {
+      "path": "analysis/s04_bias_scenarios.py",
+      "bytes": 13894,
+      "sha256": "8428c214ee9a35d7ae0dce094f75a866957692650f06907069056d989c65b8e0"
+    },
+    {
+      "path": "analysis/s06_holdouts.py",
+      "bytes": 15738,
+      "sha256": "2556879015d9ec5063f9886d5e946418a3d37a2d7f9544ce22c1d32fa0496f37"
+    },
+    {
+      "path": "analysis/s07_applicability_boundary.py",
+      "bytes": 12420,
+      "sha256": "90fda4dbe6aa81a2f55902b89b5e7c81867c3258a6ed568188f515a71ad5034f"
+    },
+    {
+      "path": "figures/F1_scale_dependence.png",
+      "bytes": 163618,
+      "sha256": "af9216f4c25fd8c366bc682a4b59ee5b4473f905fca6c0dacd1526378ccd390e"
+    },
+    {
+      "path": "figures/F2_covariate_association.png",
+      "bytes": 282657,
+      "sha256": "f7a899a8667424bf83823154bd7dd422ff76ac0238ba2d14b1e820d27177c4e7"
+    },
+    {
+      "path": "figures/F3_bias_conditions.png",
+      "bytes": 209505,
+      "sha256": "148df26b01f2931be237f5d8fa4ae4f16e95a30e496c54b8016e0bbfd61f428c"
+    },
+    {
+      "path": "figures/F4_zero_driven_coupling.png",
+      "bytes": 229036,
+      "sha256": "a6ec922966520cb5d9327ecbfba04ed0bddb07a173becb03bf5c271397a12562"
+    },
+    {
+      "path": "figures/F5_applicability_boundary.png",
+      "bytes": 216179,
+      "sha256": "f6db190b27f5960fc5dbf389848433bf5976f20bd9b88083adb8f55c4d95e53c"
+    },
+    {
+      "path": "results/applicability_boundary.json",
+      "bytes": 6854,
+      "sha256": "a500a61060e5c3aea5939237b538359b93f9c0906f8f616d44a7187b84474d84"
+    },
+    {
+      "path": "results/bias_scenarios.json",
+      "bytes": 10661,
+      "sha256": "1f031dbf710fb51e679e4f2e8da37d7b7ad0a34524be9746d5d1090b757cd9a1"
+    },
+    {
+      "path": "results/compositional_structure.json",
+      "bytes": 5595,
+      "sha256": "ac71369dc3f8ef47db2819d19caeef1421b11b8101a0258bc14eafeabe5ea9fa"
+    },
+    {
+      "path": "results/covariate_association.json",
+      "bytes": 4438,
+      "sha256": "67c2d52ad3206265fdbe05438906477bd97ff4a052bdd74e558c2bb362490bf1"
+    },
+    {
+      "path": "results/holdouts.json",
+      "bytes": 6071,
+      "sha256": "3fabdd3e90d78595077644b4de0030f4419c94bc201bace012283c1a46e80b0c"
+    }
+  ]
+}

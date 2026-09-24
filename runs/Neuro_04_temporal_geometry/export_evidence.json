@@ -1,0 +1,21 @@
+{
+  "task_id": "Neuro_04_temporal_geometry",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260923T025153-fb3988",
+  "source_run_json_sha256": "0d679fa9b883c68275dc0a1f48d62a4e8c3f262c7dc768b55f31025e0254a440",
+  "source_release_json_sha256": "437958e4cbac2b1405b3c7573714f2b2cebbdfa5886b4bbc583c1bc437778ea5",
+  "source_latest_validation_sha256": "2e230b14c94ec04856a01307f2701c19cc9c060895a9d41a341c401662c6d88e",
+  "source_snapshot_manifest_sha256": "d47be84d433a2032e0b906a0e50972634bc58f267e20e91725b1ea32c0cddb08",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 202
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "3800a1451595be92dbfeb64583b7657b94e3a2c4b30e491d9e54b0eba56c3f76",
+  "output_sha256": "86ef428e3c8e09d1fbb186889e422a9a7818701c895a0acd2f2ffb2f66e4925e"
+}

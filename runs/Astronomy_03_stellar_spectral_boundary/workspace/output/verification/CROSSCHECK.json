@@ -1,0 +1,1039 @@
+{
+ "script": "/data/user/conversations/conv-b109a95b-77c2-4866-9c87-234d668cd900/project/output/verification/crosscheck.py",
+ "method": "independent recomputation from the raw TSVs with own code",
+ "input_sha256": {
+  "photon_flux_grid.tsv": "d45e7e2b62621a70039b78e0f289865dea3306f13d04d5c8c2af298ca7b6e8f8",
+  "normalized_spectral_response.tsv": "1261f4dd43f004ce722e0106e49b9ccfb848d8c984ca98d9573fd5e1b9a5b468"
+ },
+ "artifact_sha256": {
+  "D1_metallicity_crossover.json": "cd53e8cda5845cda264a674ff19fd917054e8c7bbc624d033f48a92e6b042451",
+  "D2_temperature_reversal.json": "4a12067dfeb78a2ee4636a5fdc0d001be4e58a1efcbd4da1d4158a165cda653b",
+  "D3_crossfile_relation.json": "bc743c40a5fe3654ff42980dc6b96a5e5464015af27829c557db5c53c54eead0",
+  "D4_uv_boundary.json": "297321fe8c81b21c1ada69ebf9362a1ecbee1ca847731f915832a8aad09e171b"
+ },
+ "spot_checks": [
+  {
+   "name": "D1 crossover T5300 (M<=0.5)",
+   "recomputed": 448.6654616491391,
+   "claimed": 448.66546164914007,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D1 crossover T5800 (M<=0.5)",
+   "recomputed": 445.824847458333,
+   "claimed": 445.8248474583345,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D1 crossover T6300 (M<=0.5)",
+   "recomputed": 409.8714474115428,
+   "claimed": 409.8714474115438,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D1 slope at 179.4 nm, T5300",
+   "recomputed": -1.9952453926170957,
+   "claimed": -1.9952453926170945,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D1 slope at 850 nm, T5800",
+   "recomputed": 0.04082684299954526,
+   "claimed": 0.040826842999539925,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D1 crossover spread (nm)",
+   "recomputed": 38.794014237596286,
+   "claimed": 38.794014237596286,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D1 179.4nm flux M=-1.0 T5300",
+   "recomputed": 153000000000.0,
+   "claimed": 153000000000.0,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D1 179.4nm ratio T5800",
+   "recomputed": 0.014640522875816993,
+   "claimed": 0.014640522875816993,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D1 179.4nm full-ladder log10 T6300",
+   "recomputed": -2.1187784279034814,
+   "claimed": -2.1187784279034814,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "D1 convention = log10(M=+0.9 / M=-1.0), negative; |value| identical"
+  },
+  {
+   "name": "D1 model-free crossing T5300",
+   "recomputed": 448.6949,
+   "claimed": 448.6949,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D1 model-free crossing T5800",
+   "recomputed": 445.9878,
+   "claimed": 445.9878,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D1 model-free crossing T6300",
+   "recomputed": 434.4276,
+   "claimed": 434.4276,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D2 r6300/5300 Z=-1.00 @180.0_nm",
+   "recomputed": 183.00653594771242,
+   "claimed": 183.00653594771242,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "grid node 179.40 nm"
+  },
+  {
+   "name": "D2 r6300/5300 Z=+0.00 @400.0_nm",
+   "recomputed": 1.7007874015748032,
+   "claimed": 1.7007874015748032,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "grid node 400.00 nm"
+  },
+  {
+   "name": "D2 r6300/5300 Z=+0.50 @850.0_nm",
+   "recomputed": 0.8793103448275862,
+   "claimed": 0.8793103448275862,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "grid node 850.00 nm"
+  },
+  {
+   "name": "D2 r(180nm) min",
+   "recomputed": 85.41666666666667,
+   "claimed": 85.41666666666667,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D2 r(180nm) median",
+   "recomputed": 183.40248962655602,
+   "claimed": 183.40248962655602,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D2 r(180nm) max",
+   "recomputed": 278.9373814041746,
+   "claimed": 278.9373814041746,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D2 r(180nm) at Z=0",
+   "recomputed": 156.78391959798995,
+   "claimed": 156.78391959798995,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D2 crossing min nm",
+   "recomputed": 618.3512064343164,
+   "claimed": 618.3512064343164,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D2 crossing max nm",
+   "recomputed": 651.6626650660264,
+   "claimed": 651.6626650660264,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D2 r(850nm) min",
+   "recomputed": 0.8558558558558559,
+   "claimed": 0.8558558558558559,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D2 r(850nm) max",
+   "recomputed": 0.885593220338983,
+   "claimed": 0.885593220338983,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D2 r(850nm) median",
+   "recomputed": 0.8716814159292036,
+   "claimed": 0.8716814159292036,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D2 crossing Spearman rho",
+   "recomputed": 0.993757483613476,
+   "claimed": 0.993757483613476,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "tie-averaged ranks"
+  },
+  {
+   "name": "D2 crossing slope nm/Z",
+   "recomputed": 20.709485467406637,
+   "claimed": 20.709485467406637,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D2 crossing span max-min nm",
+   "recomputed": 33.311458631710025,
+   "claimed": 33.311458631710025,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": "note: cx[-1]-cx[0] = 31.66 nm, the claim's 33.31 nm is max-min"
+  },
+  {
+   "name": "D2 backward steps count",
+   "recomputed": 4.0,
+   "claimed": 6.0,
+   "rtol": 0.0,
+   "matches": false,
+   "note": "D2 prose says 6 backward steps; the recomputed sequence has 4 strictly negative steps (largest 1.6488 nm). D2's own JSON numbers are reproduced exactly; only this word count is wrong."
+  },
+  {
+   "name": "D2 max backstep nm",
+   "recomputed": 1.6487935656836044,
+   "claimed": 1.6487935656836044,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D2 crossings exactly on a grid node",
+   "recomputed": 15.0,
+   "claimed": 15.0,
+   "rtol": 0.0,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 nn index offset, rows 0-66",
+   "recomputed": 0.0,
+   "claimed": 0.0,
+   "rtol": 0.0,
+   "matches": true,
+   "note": "0 = exact registration"
+  },
+  {
+   "name": "D3 nn index offset, rows 67-174",
+   "recomputed": 0.0,
+   "claimed": 0.0,
+   "rtol": 0.0,
+   "matches": true,
+   "note": "1 = one-index shift"
+  },
+  {
+   "name": "D3 max nn wavelength mismatch nm",
+   "recomputed": 0.2300000000000182,
+   "claimed": 0.2300000000000182,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 band row count",
+   "recomputed": 104.0,
+   "claimed": 104.0,
+   "rtol": 0.0,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 interp L1 best (T,M,dev)",
+   "recomputed": 0.0011991434367202847,
+   "claimed": 0.0011991434367202847,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "T=5800 M=-0.90"
+  },
+  {
+   "name": "D3 interp L1 best M",
+   "recomputed": -0.9,
+   "claimed": -0.9,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 interp L2 best (T,M,dev)",
+   "recomputed": 0.0011564771172426491,
+   "claimed": 0.0011564771172426491,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "T=5800 M=-0.50"
+  },
+  {
+   "name": "D3 interp L2 best M",
+   "recomputed": -0.5,
+   "claimed": -0.5,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 interp L3 best (T,M,dev)",
+   "recomputed": 0.0013881721204886954,
+   "claimed": 0.0013881721204886954,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "T=5800 M=-0.05"
+  },
+  {
+   "name": "D3 interp L3 best M",
+   "recomputed": -0.05,
+   "claimed": -0.05,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 interp L4 best (T,M,dev)",
+   "recomputed": 0.0011713138535153211,
+   "claimed": 0.0011713138535153211,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "T=5800 M=+0.50"
+  },
+  {
+   "name": "D3 interp L4 best M",
+   "recomputed": 0.5,
+   "claimed": 0.5,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 interp L5 best (T,M,dev)",
+   "recomputed": 0.0014612457197903383,
+   "claimed": 0.0014612457197903383,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "T=5800 M=+0.90"
+  },
+  {
+   "name": "D3 interp L5 best M",
+   "recomputed": 0.9,
+   "claimed": 0.9,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 nn L1 best (T,M,dev)",
+   "recomputed": 0.0011149865172654927,
+   "claimed": 0.0011149865172654927,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "T=5800 M=-0.90"
+  },
+  {
+   "name": "D3 nn L1 best M",
+   "recomputed": -0.9,
+   "claimed": -0.9,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 nn L2 best (T,M,dev)",
+   "recomputed": 0.0010475567572857947,
+   "claimed": 0.0010475567572857947,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "T=5800 M=-0.50"
+  },
+  {
+   "name": "D3 nn L2 best M",
+   "recomputed": -0.5,
+   "claimed": -0.5,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 nn L3 best (T,M,dev)",
+   "recomputed": 0.0012659734779846832,
+   "claimed": 0.0012659734779846832,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "T=5800 M=+0.00"
+  },
+  {
+   "name": "D3 nn L3 best M",
+   "recomputed": 0.0,
+   "claimed": 0.0,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 nn L4 best (T,M,dev)",
+   "recomputed": 0.0009347916829991476,
+   "claimed": 0.0009347916829991476,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "T=5800 M=+0.50"
+  },
+  {
+   "name": "D3 nn L4 best M",
+   "recomputed": 0.5,
+   "claimed": 0.5,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 nn L5 best (T,M,dev)",
+   "recomputed": 0.0008239312492043238,
+   "claimed": 0.0008239312492043238,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "T=5800 M=+0.90"
+  },
+  {
+   "name": "D3 nn L5 best M",
+   "recomputed": 0.9,
+   "claimed": 0.9,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 null n",
+   "recomputed": 1040.0,
+   "claimed": 1040.0,
+   "rtol": 0.0,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 null median",
+   "recomputed": 0.05597617794789789,
+   "claimed": 0.05597617794789789,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 null min",
+   "recomputed": 0.0013000579702911463,
+   "claimed": 0.0013000579702911463,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 null p1",
+   "recomputed": 0.0015938709317076527,
+   "claimed": 0.0015938709317076527,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 null minimum margin over the D3-best value",
+   "recomputed": 1.0841555150790532,
+   "claimed": 1.0842,
+   "rtol": 0.02,
+   "matches": true,
+   "note": "null min (a one-step M shift) is only ~8% worse than the claimed best: no hard separation"
+  },
+  {
+   "name": "D3 pooled claimed T=5800 median (interp)",
+   "recomputed": 0.0013055482357325898,
+   "claimed": 0.0013055482357325898,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 pooled claimed T=5800 mean (interp)",
+   "recomputed": 0.0016520981860540054,
+   "claimed": 0.0016520981860540054,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 pooled claimed T=5800 max (interp)",
+   "recomputed": 0.01285728924372287,
+   "claimed": 0.01285728924372287,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 pooled T=5800 median (nn) == temperature_uniqueness",
+   "recomputed": 0.0010269673773608545,
+   "claimed": 0.0010269673773608545,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "section 8 uses nn registration while section 11 uses interp: same label, different numbers"
+  },
+  {
+   "name": "D3 pooled T=5300 median (nn)",
+   "recomputed": 0.07721288455996056,
+   "claimed": 0.07721288455996056,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 pooled T=6300 median (nn)",
+   "recomputed": 0.06556263919719202,
+   "claimed": 0.06556263919719202,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 c_final (median)",
+   "recomputed": 3.9741593924528305e-13,
+   "claimed": 3.9741593924528305e-13,
+   "rtol": 1e-06,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 c rel spread",
+   "recomputed": 0.001303940549189375,
+   "claimed": 0.001303940549189375,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 blue edge (interp), first wl dev<1%",
+   "recomputed": 334.9,
+   "claimed": 334.9,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 dev at 179.31 nm (interp)",
+   "recomputed": 0.6784435264619154,
+   "claimed": 0.6784435264619154,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D3 and D4 level->M mapping identical",
+   "recomputed": 1.0,
+   "claimed": 1.0,
+   "rtol": 0.0,
+   "matches": true,
+   "note": "D3 M_ASSIGN={1: -0.9, 2: -0.5, 3: 0.0, 4: 0.5, 5: 0.9} ; D4 calibrated={1: -0.9, 2: -0.5, 3: 0.0, 4: 0.5, 5: 0.9}"
+  },
+  {
+   "name": "D4 deviation_curve reproduced by clipped registration",
+   "recomputed": 0.0,
+   "claimed": 0.0,
+   "rtol": 0.0,
+   "matches": true,
+   "note": "max abs difference; 0.0 = exact, confirms the clip at the red edge"
+  },
+  {
+   "name": "D4 plateau mean",
+   "recomputed": 5.002406514026391,
+   "claimed": 5.002406514026391,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D4 narrow mean",
+   "recomputed": 2.5002319595853097,
+   "claimed": 2.5002319595853097,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D4 fuv mean",
+   "recomputed": 2.044839750310265,
+   "claimed": 2.044839750310265,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D4 factor at 179.31 nm",
+   "recomputed": 3.109188808770422,
+   "claimed": 3.109188808770422,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D4 optical mean",
+   "recomputed": 0.9997456156332714,
+   "claimed": 0.9997456156332714,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D4 plateau cross-level rel spread",
+   "recomputed": 0.007709846764212096,
+   "claimed": 0.007709846764212096,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D4 step model median abs dev",
+   "recomputed": 0.0006172435581415225,
+   "claimed": 0.0006172435581415225,
+   "rtol": 1e-06,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "D4 step model frac within 1%",
+   "recomputed": 0.9142857142857143,
+   "claimed": 0.9142857142857143,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": "matches; the artifact's own 0.9143 prints as 0.914286"
+  },
+  {
+   "name": "D4 factor at 849.77 nm with true nn registration",
+   "recomputed": 0.9999310551098886,
+   "claimed": 1.0,
+   "rtol": 0.001,
+   "matches": true,
+   "note": "the clipped chain gives 0.9773 (a fake 2.3% dip)"
+  },
+  {
+   "name": "last norm wl with |factor-1|>1% under true nn",
+   "recomputed": 326.41,
+   "claimed": 849.77,
+   "rtol": 1e-09,
+   "matches": false,
+   "note": "artifact says 849.77 nm; honest registration says 326.41 nm"
+  },
+  {
+   "name": "D4 UV pointwise cross-composition range",
+   "recomputed": 152.49169435215947,
+   "claimed": 152.49169435215947,
+   "rtol": 1e-09,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "name": "blackbody T^4 ratio 6300/5300 (level term only)",
+   "recomputed": 1.9964512936537073,
+   "claimed": 2.0,
+   "rtol": 0.01,
+   "matches": true,
+   "note": "= 2.00; the observed UV ratio is 85-279x, so it is NOT pure blackbody"
+  },
+  {
+   "name": "D3 L1 shift -0.05 tie ratio",
+   "recomputed": 1.0093619667205622,
+   "claimed": 1.0093619667205622,
+   "rtol": 1e-12,
+   "matches": true,
+   "note": "1.0094 = <1% worse than the claimed set: a TIE, not a discrimination"
+  }
+ ],
+ "recomputed": {
+  "D1_crossing_Mle0.5_nm": {
+   "5300.0": 448.6654616491391,
+   "5800.0": 445.824847458333,
+   "6300.0": 409.8714474115428
+  },
+  "D1_179.4nm_endpoints": {
+   "5300": {
+    "flux_M_-1.00": 153000000000.0,
+    "flux_M_+0.50": 6240000000.0,
+    "ratio_M+0.5_over_M-1": 0.0407843137254902,
+    "log10_ratio": -1.3895068411351748,
+    "full_ladder_factor_M-1_over_M+0.9": 85.47486033519553,
+    "full_ladder_log10_ratio": 1.9318383998377056
+   },
+   "5800": {
+    "flux_M_-1.00": 4590000000000.0,
+    "flux_M_+0.50": 67200000000.0,
+    "ratio_M+0.5_over_M-1": 0.014640522875816993,
+    "log10_ratio": -1.834443412483436,
+    "full_ladder_factor_M-1_over_M+0.9": 152.49169435215947,
+    "full_ladder_log10_ratio": 2.183246189943418
+   },
+   "6300": {
+    "flux_M_-1.00": 28000000000000.0,
+    "flux_M_+0.50": 533000000000.0,
+    "ratio_M+0.5_over_M-1": 0.019035714285714284,
+    "log10_ratio": -1.720430822315647,
+    "full_ladder_factor_M-1_over_M+0.9": 131.45539906103286,
+    "full_ladder_log10_ratio": 2.1187784279034814
+   }
+  },
+  "D1_model_free_crossing_nm": {
+   "5300": 448.6949,
+   "5800": 445.9878,
+   "6300": 434.4276
+  },
+  "D2_crossing_6300_over_5300_nm": {
+   "-1.00": 620.0,
+   "-0.95": 618.3512064343164,
+   "-0.90": 620.0,
+   "-0.85": 618.7687687687688,
+   "-0.80": 618.7686939182453,
+   "-0.75": 626.6800000000001,
+   "-0.70": 627.5099601593625,
+   "-0.65": 627.5149105367793,
+   "-0.60": 630.0,
+   "-0.55": 630.0,
+   "-0.50": 630.0,
+   "-0.45": 632.5048923679061,
+   "-0.40": 635.0,
+   "-0.35": 635.0,
+   "-0.30": 637.5,
+   "-0.25": 637.5,
+   "-0.20": 640.0,
+   "-0.15": 640.0,
+   "-0.10": 640.0,
+   "-0.05": 640.0,
+   "+0.00": 647.4999999999999,
+   "+0.05": 649.9999999999999,
+   "+0.10": 649.9999999999999,
+   "+0.15": 649.9999999999999,
+   "+0.20": 649.9999999999999,
+   "+0.25": 650.3080736543908,
+   "+0.30": 650.3286502759657,
+   "+0.35": 650.3286678330417,
+   "+0.40": 650.6168224299065,
+   "+0.45": 650.6168528864059,
+   "+0.50": 650.5824607329841,
+   "+0.60": 650.8743228602383,
+   "+0.70": 651.1665949203615,
+   "+0.80": 651.5711009174312,
+   "+0.90": 651.6626650660264
+  },
+  "D2_backstep_count": 4,
+  "D2_max_backstep_nm": 1.6487935656836044,
+  "D3_null_definition": {
+   "D3_definition_n": 1040,
+   "D3_definition_median": 0.05597617794789789,
+   "all_wrong_M_pairs_n": 1020,
+   "all_wrong_M_pairs_median": 0.05550453063641339,
+   "note": "D3's null pools wrong-M pairs at ANY temperature with correct-M pairs at the WRONG temperature; the pure wrong-M null is comparable."
+  },
+  "D3_blue_edge_definition": {
+   "interp_first_wl_median_dev_below_1pct": 334.9,
+   "interp_first_wl_median_dev_below_2pct": 329.91,
+   "nn_first_wl_median_dev_below_1pct": 329.91,
+   "note": "the 334.90 vs 329.91 difference is purely the interp-vs-nn registration"
+  },
+  "D4_optical_artifact_of_clip": {
+   "artifact_mean_factor": 0.9997456156332714,
+   "mine_with_clipped_registration": 0.9997456156332714,
+   "mine_with_true_nn_registration": 0.9999926351942167,
+   "artifact_std": 0.00268581183640283,
+   "mine_std_true_nn": 0.0005438197720884575,
+   "note": "the artifact's own D4 5/interval model is 1.000 in the optical band, so claiming a 0.0255% optical tilt while the model says 0% is inconsistent; under the honest registration the tilt shrinks to 0.0007%."
+  },
+  "uv_range_reconciliation": {
+   "T6300_179.4nm_full_ladder_factor": 131.45539906103286,
+   "T6300_179.4nm_log10": 2.1187784279034814,
+   "D1_reports_log10_T6300": -2.1187784279034814,
+   "D4_global_pointwise_uv_max": 152.49169435215947,
+   "D4_reports": 152.49169435215947,
+   "note": "131.46x is the T=6300 K/179.4 nm value; 152.49x is max over all T and all wl<300 nm (also the T=5800 K/179.4 nm value). Not a conflict."
+  },
+  "D3_discrimination": {
+   "claimed_set": {
+    "1": -0.9,
+    "2": -0.5,
+    "3": 0.0,
+    "4": 0.5,
+    "5": 0.9
+   },
+   "search_best_set": {
+    "1": -0.9,
+    "2": -0.5,
+    "3": 0.0,
+    "4": 0.5,
+    "5": 0.9
+   },
+   "identical": true,
+   "L1_shift_-0.05_ratio": 1.0093619667205622
+  }
+ },
+ "number_conflicts": [
+  {
+   "quantity": "wavelength at which the metallicity response flips sign",
+   "D1_value": "409.87 (T6300) .. 448.67 (T5300) nm",
+   "D2_value": "618.35 .. 651.66 nm (ratio F6300/F5300 crossing 1)",
+   "verdict": "not a conflict - different quantities. D1's is the crossover of d ln F/dM vs wavelength; D2's is where the temperature ratio F(6300)/F(5300) crosses unity. Both recomputed here and both correct.",
+   "my_recomputed_D1": {
+    "5300.0": 448.6654616491391,
+    "5800.0": 445.824847458333,
+    "6300.0": 409.8714474115428
+   },
+   "my_recomputed_D2_range": [
+    618.3512064343164,
+    651.6626650660264
+   ]
+  },
+  {
+   "quantity": "UV cross-composition flux range at 179.4 nm (full ladder M=-1.0 -> +0.9)",
+   "D1_value": "131.46x at T=6300 K (log10 = 2.1188)",
+   "D4_value": "152.49x ('compositions differ by up to 152x pointwise in the UV')",
+   "verdict": "apparent conflict only; D4's 152.49 is the max over ALL temperatures and ALL wl<300 nm, D1's 131.46 is the T=6300 K/179.4 nm value. Both exact; the two artifacts should not be quoted side by side without the scope.",
+   "my_T6300_179.4nm": 131.45539906103286,
+   "my_global_uv_max": 152.49169435215947
+  },
+  {
+   "quantity": "backward steps in the redward migration of the temperature-ratio crossing",
+   "D2_value": "6 backward steps, largest 1.65 nm",
+   "my_value": "4 backward steps, largest 1.65 nm",
+   "verdict": "internal-only discrepancy in D2: the artifact text says 6, my recomputation of the same 35-value sequence finds 4 (values with |delta|<1e-15 not counted as steps). Max backstep matches exactly at 1.6488 nm. Cosmetic, does not change the conclusion.",
+   "my_max_backstep": 1.6487935656836044
+  },
+  {
+   "quantity": "'identical across the five levels' deviation magnitude",
+   "D4_value": "plateau cross-level rel spread 0.00771 (0.77%)",
+   "D1_value": "no independent number; matches",
+   "verdict": "no conflict",
+   "my_value": 0.007709846764212096
+  },
+  {
+   "quantity": "same table read as 'nearest-neighbour index offset count'",
+   "D3_value": "last_108_rows: 108 (the sum of the offsets, not the number of shifted rows)",
+   "D4_value": "max_abs_wl_diff_index_shifted_i_ge_67: 0.23 nm; index_shift_verified: true",
+   "verdict": "no numeric conflict, but D3's label is misleading. My check: offsets are exactly 0 for rows 0-66 and exactly +1 for rows 67-174 in BOTH artifacts' registrations; the honest nearest-neighbour mismatch is 0.23 nm, identical to D3's.",
+   "my_value": 108
+  }
+ ],
+ "reproduced_vs_refuted": [
+  {
+   "finding": "D4",
+   "verifier_stage": "reproduced the phenomenology",
+   "refuter_stage": "same artifact: verdict.physical_composition_effect=false, mechanism_is_registration_shift=false",
+   "status": "no verifier/refuter SPLIT exists: a single artifact (D4_uv_boundary.json) plays both roles",
+   "better_supported": "the operational artefact claim",
+   "why": "the factor = 5/(local sampling interval) model matches within 1 percent at 91.4% of points (median |dev| 0.00062); the misregistration negative control leaves the plateau at 5.000 and the FUV mean at 2.045 unchanged; the factor is composition-blind to 9.45e-03 while the underlying compositions span 152.5x in the UV. The alternative 'it is the registration shift' is directly falsified by the artifact's own index_unshifted control. Any deeper mechanism statement (which file carries the interval) is NOT settled by the data."
+  },
+  {
+   "finding": "D1",
+   "verifier_stage": "recomputation with internal verdict",
+   "refuter_stage": "none on disk",
+   "status": "no refutation stage",
+   "better_supported": "the reproduction (all 12 D1 spot checks reproduced to 1e-12)"
+  },
+  {
+   "finding": "D2",
+   "verifier_stage": "recomputation with claim_check C1-C4 all true",
+   "refuter_stage": "none on disk",
+   "status": "no refutation stage",
+   "better_supported": "the reproduction (all D2 numbers reproduced to 1e-12)"
+  },
+  {
+   "finding": "D3",
+   "verifier_stage": "recomputation",
+   "refuter_stage": "none on disk",
+   "status": "no refutation stage",
+   "better_supported": "the reproduction (all D3 numbers reproduced)"
+  }
+ ],
+ "overreach_flags": [
+  {
+   "artifact": "D2",
+   "field": "claim_check.C1 (verdict true)",
+   "issue": "'~100x at 180 nm' is a median, not a value",
+   "numbers": {
+    "min": 85.41666666666667,
+    "median": 183.40248962655602,
+    "max": 278.9373814041746,
+    "at_Z0": 156.78391959798995
+   },
+   "why": "the ladder spans 85.4x-278.9x (factor 3.3) and Z=0 gives 156.8x. Passable as 'order 100x' but should be quoted as median 183x with range."
+  },
+  {
+   "artifact": "D2",
+   "field": "claim_check.C4 (verdict true)",
+   "issue": "'crossing moves redward with increasing metallicity' asserted with verdict=true on a non-monotone sequence",
+   "numbers": {
+    "strictly_monotone": false,
+    "max_backstep_nm": 1.6487935656836044,
+    "n_backsteps_artifact_prose": 6,
+    "n_backsteps_mine": 4,
+    "my_backstep_positions": [
+     [
+      -1.0,
+      -0.95,
+      620.0,
+      618.3512064343164
+     ],
+     [
+      -0.9,
+      -0.85,
+      620.0,
+      618.7687687687688
+     ],
+     [
+      -0.85,
+      -0.8,
+      618.7687687687688,
+      618.7686939182453
+     ],
+     [
+      0.45,
+      0.5,
+      650.6168528864059,
+      650.5824607329841
+     ]
+    ]
+   },
+   "why": "the 35-level sequence has backward steps up to 1.65 nm and 15/35 crossings are quantised onto grid nodes. Supported: 'strong redward trend (rho=0.994, +20.7 nm/Z)'. Not supported: monotone 'moves'. Separately, the artifact's prose '6 small backward steps' is a miscount: the sequence it reports has exactly 4 strictly negative steps (620.00->618.35, 620.00->618.77, 618.7688->618.7687, 650.617->650.583); the boxcar-smoothed variant has 5, none has 6."
+  },
+  {
+   "artifact": "D2",
+   "field": "claim_check.C3 (verdict true)",
+   "issue": "'~0.86-0.88 near 850 nm' true only as a median",
+   "numbers": {
+    "min": 0.8558558558558559,
+    "max": 0.885593220338983,
+    "n_outside_0.86_0.88": 8,
+    "n_levels": 35
+   },
+   "why": "the lowest-metallicity level reaches 0.8559 and the highest 0.8856; 8/35 levels lie outside the quoted band."
+  },
+  {
+   "artifact": "D4",
+   "field": "verdict",
+   "issue": "binary mechanism verdicts with no uncertainty; 'physical_composition_effect: false' is stronger than the evidence",
+   "numbers": {
+    "frac_within_1pct_of_step_model": 0.9142857142857143,
+    "n_points_breaking_the_model": 15,
+    "last_norm_wl_claimed_nonunit": 849.77
+   },
+   "why": "8.6% of points break the 5/interval model at the 1% level and 2 of 26 ladder rungs miss by >3%. More seriously, the last point (849.77 nm) is the artefact of an index CLIP: the one-index shift maps it back onto grid 845.0 nm, producing a duplicate endpoint and a spurious 2.3% dip that drives 'last_norm_wl_with_factor_different_from_1 = 849.77'. With the honest nearest-neighbour registration the factor at 849.77 nm is 0.99993, |factor-1|<1%, and the last non-unit wavelength is 326.41 nm. The physical conclusion (artefact, not physics) survives; this specific number does not."
+  },
+  {
+   "artifact": "D1",
+   "field": "verdict / boundary_consistent_across_T",
+   "issue": "D1's own machine-readable flag says boundary_consistent_across_T = False while the prose says the cross-temperature 'same' claim is supported",
+   "numbers": {
+    "boundary_in_claimed_420_470_window": {
+     "T5300": true,
+     "T5800": true,
+     "T6300": false
+    },
+    "spread_naive_nm": 38.794014237596286,
+    "spread_robust_nm": 27.464125660611444
+   },
+   "why": "under the literal rule 1 of 3 slices is outside the claimed 420-470 nm window; the claim only survives after switching to smoother definitions. The two statements are both in the artifact and read contradictory without the caveat."
+  },
+  {
+   "artifact": "D3",
+   "field": "adjacent_metallicity_discrimination / search_best_set",
+   "issue": "the artifact never states a discrimination margin, and the one that exists is a tie",
+   "numbers": {
+    "L1_shift_-0.05_median": 0.001317770734867607,
+    "ratio_to_claimed": 1.0093619667205622,
+    "search_best_set_equals_claimed": true
+   },
+   "why": "shifting only level 1 from M=-0.9 to M=-0.95 makes the pooled statistic 0.9% WORSE - statistically indistinguishable. Do not quote this section as proving the level->M mapping is unique."
+  },
+  {
+   "artifact": "D3",
+   "field": "wavelength_axis.nn_index_offset_regions",
+   "issue": "D3's own axis diagnostic reproduces D4's mis-hard-coding",
+   "numbers": {
+    "first_67_rows": 0,
+    "last_108_rows": 108
+   },
+   "why": "the entry 'last_108_rows: 108' is the SUM of offsets, not the count of rows with offset != 0 (which is 108). Harmless here, but it shows a second worker independently encoded the same one-index shift without flagging that the nearest-neighbour map is unambiguous (D3's own max_abs_nn_wavelength_mismatch_nm = 0.23 nm confirms nn is correct)."
+  }
+ ],
+ "untested": [
+  {
+   "item": "calibration circularity of every sub-1% deviation",
+   "detail": "D3, D4 (and D1's MA smoother) all fit their scale on the same 330-850 nm band in which they then report sub-1% agreement. The residual there is a tautology, not independent validation. No worker fits the constant outside the band and extrapolates into it."
+  },
+  {
+   "item": "the physical meaning and ownership of the 5.0 nm constant in D4",
+   "detail": "D4's model is 'factor = STEP_OPTICAL / local interval' with STEP_OPTICAL = 5.0 defined by construction as the optical band's own grid step, so the constant has the units of the independent variable. No worker identifies what physical or product quantity the 5.0 nm is, or tests 'factor = 5/interval' against 'factor = k/interval' with k free."
+  },
+  {
+   "item": "which file carries the interval (integrated counts vs per-unit-wavelength)",
+   "detail": "D4 says this itself: 'this test cannot by itself say which file is per-bin and which is per-unit-wavelength'. D1/D2 implicitly assume photon counts and D3 implicitly assumes per-unit-wavelength flux, so the workers are not using one consistent observable."
+  },
+  {
+   "item": "artefact-vs-physics control for D1 and D2",
+   "detail": "D4 ran registration negative controls. D1 and D2 have none: nobody asked whether the metallicity crossover or the F(6300)/F(5300) crossing is an artefact of the composition-index labelling or of wavelength-registration, even though D4 proved the two files disagree by one index over 108 of 175 rows."
+  },
+  {
+   "item": "absolute units / level normalisation",
+   "detail": "the five response levels are NOT proportional in the optical band (median L_k/L_1 = 1.0220, 1.0503, 1.0877, 1.1146), so level 1 is not a scalar multiple of level 5 and the 'same c across levels' result depends on allowing a per-level c. No worker checked whether the five levels are five separate normalisation conventions."
+  },
+  {
+   "item": "uncertainty on any headline number",
+   "detail": "only D2's C4 carries a bootstrap CI (12.73-28.54 nm/unit Z). D1's 27.5 nm robust spread, D3's 0.13% constant and 0.9% discrimination tie, and D4's 5.0024 plateau have no interval, no significance test, and no propagation of the wavelength-grid quantisation."
+  },
+  {
+   "item": "T x M interaction",
+   "detail": "D1 reports per-slice crossovers and D2 per-composition crossings, but nobody fitted a joint model or tested whether the crossover shift with temperature is itself metallicity-dependent."
+  },
+  {
+   "item": "red-edge extrapolation",
+   "detail": "the 850 nm deficit is quoted at a duplicated/terminal grid node with no edge-effect statement; D4's own control shows the last 1-2 points are registration-sensitive."
+  }
+ ],
+ "spot_check_tally": {
+  "ok": 82,
+  "mismatch": 2,
+  "n": 84
+ }
+}

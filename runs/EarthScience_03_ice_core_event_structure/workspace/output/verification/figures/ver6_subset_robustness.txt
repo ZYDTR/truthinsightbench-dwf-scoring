@@ -1,0 +1,3 @@
+all 15                   n=15  c01^1.25 MAE=   1.62  c06 MAE=   8.21  c01 MAE=  27.65  c01^1.25 wins 14/15
+10 unidentified only     n= 9  c01^1.25 MAE=   0.92  c06 MAE=   5.79  c01 MAE=   7.37  c01^1.25 wins 9/9
+5 named events only      n= 6  c01^1.25 MAE=   2.95  c06 MAE=  11.72  c01 MAE=  33.94  c01^1.25 wins 4/6

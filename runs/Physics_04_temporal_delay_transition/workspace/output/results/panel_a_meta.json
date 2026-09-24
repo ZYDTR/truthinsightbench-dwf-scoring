@@ -1,0 +1,114 @@
+{
+  "panel": "panel_a",
+  "description": "Core V(B) characterization for fig2_critical_buffer",
+  "data": {
+    "below_n": 4000,
+    "below_B_range": [
+      1.0301710520261211,
+      198.12311955388384
+    ],
+    "below_V_range": [
+      0.9678768300913214,
+      366.6686584816029
+    ],
+    "above_n": 4000,
+    "above_B_range": [
+      1.0431438558334951,
+      8.95580608250775
+    ],
+    "above_V_range": [
+      0.9293507695018278,
+      2.067315372681076
+    ],
+    "above_flat_mean": 1.064946847177334,
+    "above_flat_std": 0.055740535877059454,
+    "above_flat_cv": 0.05234114362120609,
+    "meanfield_n": 37,
+    "theory_n": 182
+  },
+  "Bc_estimate": {
+    "above_flat_mean_V": 1.064946847177334,
+    "above_flat_std": 0.055740535877059454,
+    "Bc_departure_B": 1.4166666666666665,
+    "Bc_departure_V": 1.064946847177334,
+    "below_start_B": 1.0301710520261211,
+    "below_start_V": 0.9678768300913214,
+    "overlap_B_in_1_to_2": 1.6528423675810728,
+    "overlap_V": 3.0255804418739958,
+    "note": "Bc is the low-B boundary where the rising 'below' curve departs the flat 'above' plateau (V~1.065). Departure = below-median crossing 1.25*above_mean. The transition is at the low-B boundary (B~1.0-1.2), not a sharp mid-range kink; the above regime is a flat plateau."
+  },
+  "robustness": {
+    "power_windows": {
+      "1-10": {
+        "gamma": 1.0869655168574637,
+        "a": 2.335557902563617,
+        "r2": 0.5119894374470655,
+        "n": 296
+      },
+      "1-50": {
+        "gamma": 0.6150560414982308,
+        "a": 4.355935752934172,
+        "r2": 0.7672277386912136,
+        "n": 753
+      },
+      "1-200": {
+        "gamma": 1.0040163108020421,
+        "a": 1.7402490690780146,
+        "r2": 0.9036129328210674,
+        "n": 4000
+      }
+    },
+    "leaveout_top10pct_byB": {
+      "cutoff_B": 147.75712849682301,
+      "a": 1.8398200141405197,
+      "gamma": 0.9864602312487422,
+      "r2": 0.8856421383675911,
+      "n": 3600,
+      "panel": "panel_a",
+      "curve": "robust_leaveout_byB"
+    },
+    "leaveout_top10pct_byV": {
+      "cutoff_V": 333.32730329986725,
+      "a": 1.841755113068592,
+      "gamma": 0.9860600708531295,
+      "r2": 0.8878023521757513,
+      "n": 3600,
+      "panel": "panel_a",
+      "curve": "robust_leaveout_byV"
+    },
+    "above_with_first5": {
+      "lin_a": 1.0642229385474038,
+      "lin_b": 0.00040817212587449154,
+      "lin_r2": 5.2114715896167674e-05,
+      "exp_a": 1.0626409872674527,
+      "exp_b": 0.0005218998203589203,
+      "exp_r2": -0.0005168098504595431,
+      "recip_a": 1.5209877527035969,
+      "recip_r2": -25.62413024660883
+    },
+    "above_without_first5": {
+      "lin_a": 1.064354230358061,
+      "lin_b": 0.00036614569874185345,
+      "lin_r2": 4.197230230185145e-05,
+      "exp_a": 1.0627733706605176,
+      "exp_b": 0.0004820221837647623,
+      "exp_r2": -0.0005265531350884256,
+      "recip_a": 1.522094930977656,
+      "recip_r2": -25.59185476054211
+    }
+  },
+  "explanations": {
+    "smooth_no_transition": "rejected",
+    "segmented_piecewise": "supported",
+    "nonlinear_powerlaw": "supported",
+    "no_identifiable_boundary": "rejected",
+    "finite_size_dependent": "inconclusive"
+  },
+  "verdict_rationale": {
+    "smooth_no_transition": "Above curve is flat (all trend models R2~0, CV~5%); below curve rises to V~366. No single smooth model fits both.",
+    "segmented_piecewise": "Below regime: power law gamma~1.0, R2~0.90 (near-linear). Above regime: flat plateau V~1.065. Two clearly distinct regimes.",
+    "nonlinear_powerlaw": "Below curve well fit by V=a*B^gamma with gamma~1.00, R2~0.90 full range; gamma stable across windows [1,10]/[1,50]/[1,200].",
+    "no_identifiable_boundary": "Regimes are clearly distinct (below V~366 vs above V~1.06); a low-B boundary is identifiable.",
+    "finite_size_dependent": "No system-size parameter present in these curves; not testable from this data."
+  }
+}

@@ -1,0 +1,199 @@
+[artifact] results/E_sigmoid_model.json
+
+=== per-curve logistic fits (main) ===
+             curve      ymax     +-se      T50    +-se       w   R2log  maxres
+condition_block1_1     51.99    11.26   286.90    9.77   25.93  0.9945  0.3636
+condition_block1_2     92.72     4.37   231.45    2.91   24.39  0.9983  0.1388
+condition_block1_3     63.25    13.01   260.41   13.93   32.08  0.9848  0.3709
+condition_block1_4     62.60     4.62   295.74    4.31   34.35  0.9994  0.0708
+condition_block2_1    130.55    27.09   327.23   10.22   34.03  0.9988  0.1189
+condition_block2_2     87.50     9.54   208.19    6.11   18.93  0.9859  0.4151
+condition_block2_3     93.47     1.93   237.43    1.29   25.69  0.9997  0.0552
+condition_block2_4     72.61     7.01   254.59    5.53   26.36  0.9964  0.2185
+
+=== per-curve logistic fits (check) ===
+condition_block1_1    115.73    22.48   335.58    9.79   35.94  0.9992  0.0819
+condition_block1_2     64.84     3.56   274.17    3.42   32.18  0.9993  0.0860
+condition_block1_4    130.55    27.09   327.23   10.22   34.03  0.9988  0.1189
+condition_block1_5     87.50     9.54   208.19    6.11   18.93  0.9859  0.4151
+
+ymax free summary: {
+  "main": {
+    "ymax_values": [
+      51.985077543434016,
+      92.72389650042098,
+      63.25076502866814,
+      62.5982572384344,
+      130.54536386322266,
+      87.50088364342328,
+      93.46786616274521,
+      72.60652316134791
+    ],
+    "ymax_mean": 81.83482914271207,
+    "ymax_sd": 24.929334825923185,
+    "ymax_min": 51.985077543434016,
+    "ymax_max": 130.54536386322266,
+    "mean_ymax_se": 9.855302480268955,
+    "includes_100_within_2se": false
+  },
+  "check": {
+    "ymax_values": [
+      115.73414735576694,
+      64.83590749521464,
+      130.54536386322266,
+      87.50088364342328
+    ],
+    "ymax_mean": 99.65407558940687,
+    "ymax_sd": 29.285066177938006,
+    "ymax_min": 64.83590749521464,
+    "ymax_max": 130.54536386322266,
+    "mean_ymax_se": 15.66874822743959,
+    "includes_100_within_2se": false
+  }
+}
+
+shared shape: {
+  "main": {
+    "shared_ymax": 83.10047425696307,
+    "shared_w": 28.53613105624342,
+    "per_curve": {
+      "condition_block1_1": {
+        "T50": 311.0821087945246,
+        "rmse_log": 0.19155666424050669,
+        "max_abs_resid_log": 0.5730897352797379
+      },
+      "condition_block1_2": {
+        "T50": 238.00861449470406,
+        "rmse_log": 0.20027697522634064,
+        "max_abs_resid_log": 0.45689682499754974
+      },
+      "condition_block1_3": {
+        "T50": 260.6107778630567,
+        "rmse_log": 0.2822236331074323,
+        "max_abs_resid_log": 0.6074491638025845
+      },
+      "condition_block1_4": {
+        "T50": 287.048049878299,
+        "rmse_log": 0.3179032187866923,
+        "max_abs_resid_log": 0.5004895117407978
+      },
+      "condition_block2_1": {
+        "T50": 292.9680546152961,
+        "rmse_log": 0.18344655941356006,
+        "max_abs_resid_log": 0.4299898375624579
+      },
+      "condition_block2_2": {
+        "T50": 229.81055779521023,
+        "rmse_log": 0.41751995098774647,
+        "max_abs_resid_log": 1.1321508666182776
+      },
+      "condition_block2_3": {
+        "T50": 240.4724570352357,
+        "rmse_log": 0.1495085467717317,
+        "max_abs_resid_log": 0.2032172046961893
+      },
+      "condition_block2_4": {
+        "T50": 265.3455967773066,
+        "rmse_log": 0.1253993862222488,
+        "max_abs_resid_log": 0.36560569253206343
+      }
+    },
+    "rss": 5.505626371878137,
+    "n_points": 87,
+    "k_params": 10,
+    "aic": -218.13196881577753,
+    "bic": -191.0069795105771
+  },
+  "check": {
+    "shared_ymax": 98.91311786049124,
+    "shared_w": 32.03098939997251,
+    "per_curve": {
+      "condition_block1_1": {
+        "T50": 316.53461904742284,
+        "rmse_log": 0.14280726007551478,
+        "max_abs_resid_log": 0.30856010813888934
+      },
+      "condition_block1_2": {
+        "T50": 289.89090458954786,
+        "rmse_log": 0.1469986963936392,
+        "max_abs_resid_log": 0.29911054071909327
+      },
+      "condition_block1_4": {
+        "T50": 310.3182089431643,
+        "rmse_log": 0.07461936632882292,
+        "max_abs_resid_log": 0.2127951729987918
+      },
+      "condition_block1_5": {
+        "T50": 243.58874588353305,
+        "rmse_log": 0.46719760273416594,
+        "max_abs_resid_log": 1.2962678040604523
+      }
+    },
+    "rss": 2.898324017777697,
+    "n_points": 42,
+    "k_params": 6,
+    "aic": -98.28855287684227,
+    "bic": -86.1248655488587
+  }
+}
+
+shared vs independent: [
+  {
+    "panel": "main",
+    "n_curves": 8,
+    "independent_rss": 1.202964853127291,
+    "independent_k": 32,
+    "independent_aic": -308.4573441355158,
+    "independent_bic": -229.54828433856915,
+    "shared_rss": 5.505626371878137,
+    "shared_k": 11,
+    "shared_aic": -218.13196881577753,
+    "shared_bic": -191.0069795105771,
+    "delta_bic_shared_minus_independent": 38.541304827992036,
+    "shared_ymax": 83.10047425696307,
+    "shared_w": 28.53613105624342
+  },
+  {
+    "panel": "check",
+    "n_curves": 4,
+    "independent_rss": 0.4580282998346429,
+    "independent_k": 16,
+    "independent_aic": -157.77674485118754,
+    "independent_bic": -129.97403095865366,
+    "shared_rss": 2.898324017777697,
+    "shared_k": 7,
+    "shared_aic": -98.28855287684227,
+    "shared_bic": -86.1248655488587,
+    "delta_bic_shared_minus_independent": 43.84916540979496,
+    "shared_ymax": 98.91311786049124,
+    "shared_w": 32.03098939997251
+  }
+]
+
+F tests: [
+  {
+    "panel": "main",
+    "F": 16.095214073831322,
+    "df1": 14,
+    "df2": 63,
+    "p_two_sided": 0.00016242007997511803
+  },
+  {
+    "panel": "check",
+    "F": 26.63913691385498,
+    "df1": 6,
+    "df2": 30,
+    "p_two_sided": 1.47718894524406e-05
+  }
+]
+
+transfer summary: {
+  "main": {
+    "mean_rmse_log": 1.331061301553733,
+    "n_pairs": 56
+  },
+  "check": {
+    "mean_rmse_log": 1.9610465603266236,
+    "n_pairs": 12
+  }
+}

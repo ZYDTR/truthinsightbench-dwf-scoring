@@ -1,0 +1,377 @@
+[ 462.5s] loaded
+== 2. BOND-CLASS CENSUS ==
+bond_class  raw_rows  unique_fragment_pairs  redundancy_rows_per_pair  share_of_row_inflation_pct  n_unique_molecules_with_class  mean_bde_unique_pairs  sd_bde_unique_pairs  min_bde_unique_pairs  median_bde_unique_pairs  max_bde_unique_pairs
+       C-H    321949                 150091                    2.1450                      88.476                          40852                98.1567               9.9235               16.3673                  97.1566              140.5212
+       C-C     71166                  61490                    1.1574                       4.981                          29938                91.1083              12.1110               41.3334                  88.5472              164.5335
+       H-N     27314                  18273                    1.4948                       4.654                          14876                95.5119              10.4131               41.7488                  96.1902              126.2241
+       C-N     24707                  22499                    1.0981                       1.137                          14981                86.7745              13.5079               16.6309                  84.9660              127.2274
+       C-O     24354                  23288                    1.0458                       0.549                          15345                92.2939              14.1956               19.2670                  94.4966              131.8227
+       H-O     11884                  11577                    1.0265                       0.158                          10239               101.5871              10.7279               46.5674                 104.5474              123.2296
+       N-O      1634                   1581                    1.0335                       0.027                           1554                58.9553               9.6223                7.7297                  61.4463               87.7358
+       N-N      1597                   1567                    1.0191                       0.015                           1544                62.1794              12.6383               19.3028                  63.2008               97.1466
+       O-O       302                    298                    1.0134                       0.002                            298                41.3837               8.6625               -0.8691                  43.6662               53.9444
+total rows beyond one-per-pair: 194243 == raw-pairs: 194243
+[ 502.3s] census
+
+labeler: {'n_sampled_unique_pairs': 4000, 'n_labeler_unparsable': 0, 'labeler_agreement_with_db_bond_type': 4000, 'labeler_agreement_pct': 100.0, 'benchmark_labeler_agreement': 331, 'benchmark_labeler_compared': 331}
+[ 548.1s] labeler
+
+== 3. STRUCTURAL DOMAIN ==
+{
+  "database_element_set": [
+    "C",
+    "N",
+    "O"
+  ],
+  "database_n_elements": 3,
+  "database_hac_min": 1,
+  "database_hac_max": 10,
+  "database_hac_mean_unique_molecules": 8.8915,
+  "database_hac_median_unique_molecules": 9.0,
+  "database_hac_sd_unique_molecules": 1.2,
+  "database_hac_mean_unique_pairs": 9.0253,
+  "database_hac_median_unique_pairs": 9.0,
+  "database_hac_mean_weighted_by_raw_rows": 9.0147,
+  "unparsable_db_molecules": 0,
+  "hac_definition": "heavy-atom count of parent SMILES, RDKit GetNumHeavyAtoms",
+  "pct_molecules_hac_ge_8": 87.4557,
+  "pct_molecules_hac_le_6": 4.5799
+}
+ hac  n_unique_molecules  n_unique_fragment_pairs  pct_unique_molecules  cum_pct_unique_molecules
+   1                   1                        1                0.0023                    0.0023
+   2                   7                       13                0.0164                    0.0187
+   3                  36                       92                0.0846                    0.1033
+   4                 143                      431                0.3359                    0.4392
+   5                 466                     1814                1.0945                    1.5337
+   6                1297                     6085                3.0462                    4.5799
+   7                3391                    19101                7.9644                   12.5443
+   8                7467                    47265               17.5376                   30.0819
+   9               13396                    94712               31.4630                   61.5449
+  10               16373                   121150               38.4550                   99.9999
+molecules per element set: {'C|N|O': 17925, 'C|O': 13633, 'C|N': 8586, 'C': 2433}
+
+== 3b. OLS (ordinary, unweighted) BDE summary per class on unique-pair units ==
+bond_class                 unit      n     mean      sd     min   median      max  mean_row_weighted  mean_minus_row_weighted
+       C-H unique_fragment_pair 150091  98.1567  9.9235 16.3673  97.1566 140.5212            96.4528                   1.7039
+       C-C unique_fragment_pair  61490  91.1083 12.1110 41.3334  88.5472 164.5335            90.1745                   0.9338
+       H-N unique_fragment_pair  18273  95.5119 10.4131 41.7488  96.1902 126.2241            96.0035                  -0.4916
+       C-N unique_fragment_pair  22499  86.7745 13.5079 16.6309  84.9660 127.2274            86.2097                   0.5648
+       C-O unique_fragment_pair  23288  92.2939 14.1956 19.2670  94.4966 131.8227            92.1618                   0.1321
+       H-O unique_fragment_pair  11577 101.5871 10.7279 46.5674 104.5474 123.2296           101.5172                   0.0699
+       N-O unique_fragment_pair   1581  58.9553  9.6223  7.7297  61.4463  87.7358            58.8510                   0.1043
+       N-N unique_fragment_pair   1567  62.1794 12.6383 19.3028  63.2008  97.1466            62.2204                  -0.0410
+       O-O unique_fragment_pair    298  41.3837  8.6625 -0.8691  43.6662  53.9444            41.4179                  -0.0342
+[ 580.0s] domain
+[ 641.7s] benchmark descriptors
+
+== 4. COVERAGE BOUNDARY ==
+{
+  "benchmark_observations": 543,
+  "benchmark_unique_molecules": 419,
+  "benchmark_unique_fragment_pairs": 543,
+  "a_exact_fragment_pair_in_db": 331,
+  "a_exact_fragment_pair_in_db_pct": 60.9576,
+  "a_exact_pair_any_fragment_order": 331,
+  "b_parent_molecule_in_db": 369,
+  "b_parent_molecule_in_db_pct": 67.9558,
+  "b_parent_molecule_absent": 174,
+  "c_parent_hac_beyond_db_max": 150,
+  "c_parent_hac_beyond_db_max_pct": 27.6243,
+  "c_parent_hac_at_or_below_db_max": 393,
+  "parent_hac_missing_unparsable": 0,
+  "d_parent_with_elements_never_in_db": 0,
+  "d_parent_with_elements_never_in_db_pct": 0.0,
+  "d_foreign_element_counts": {},
+  "db_hac_max": 10,
+  "hac_cutoff_defining_boundary": 10,
+  "benchmark_hac_min": 1,
+  "benchmark_hac_max": 38,
+  "benchmark_hac_mean": 9.2762,
+  "benchmark_hac_median": 8.0,
+  "benchmark_hac_sd": 5.0828,
+  "inside_db_by_parent": 369,
+  "inside_db_by_exact_pair": 331,
+  "outside_db_by_any_criterion": 174,
+  "outside_by_hac_only": 174
+}
+
+HAC: DB molecules vs benchmark observations
+ hac  db_unique_molecules  benchmark_observations  benchmark_inside_db  benchmark_outside_db  benchmark_hac_gt_db_max
+   1                    1                       1                    1                     0                        0
+   2                    7                       4                    4                     0                        0
+   3                   36                      14                   13                     1                        0
+   4                  143                      40                   40                     0                        0
+   5                  466                      54                   53                     1                        0
+   6                 1297                      76                   70                     6                        0
+   7                 3391                      55                   48                     7                        0
+   8                 7467                      65                   62                     3                        0
+   9                13396                      41                   39                     2                        0
+  10                16373                      43                   39                     4                        0
+  11                    0                      14                    0                    14                       14
+  12                    0                      25                    0                    25                       25
+  13                    0                      14                    0                    14                       14
+  14                    0                      13                    0                    13                       13
+  15                    0                      18                    0                    18                       18
+  16                    0                      12                    0                    12                       12
+  17                    0                      13                    0                    13                       13
+  18                    0                       5                    0                     5                        5
+  19                    0                       9                    0                     9                        9
+  20                    0                       5                    0                     5                        5
+  21                    0                       6                    0                     6                        6
+  22                    0                       5                    0                     5                        5
+  23                    0                       4                    0                     4                        4
+  25                    0                       3                    0                     3                        3
+  26                    0                       1                    0                     1                        1
+  32                    0                       1                    0                     1                        1
+  35                    0                       1                    0                     1                        1
+  38                    0                       1                    0                     1                        1
+
+mean HAC: DB molecules=8.892  benchmark obs=9.276  benchmark parents in DB=6.683  outside=14.776
+
+benchmark parents absent from DB:
+       observation_id     parent_structure_smiles bond_class  hac_parent  experimental_bde_kcal_mol
+bond_observation_0008                   C#CC#CC#C        C-H           6                      129.8
+bond_observation_0030           C/C=C/CCCC/C=C/CC        C-H          11                       81.6
+bond_observation_0038     C1=C(N2CCCC2)Cc2ccccc21        C-H          14                       83.5
+bond_observation_0039     C1=C(N2CCCC2)c2ccccc2C1        C-H          14                       70.3
+bond_observation_0040    C1=C(N2CCCCC2)Cc2ccccc21        C-H          15                       82.5
+bond_observation_0041    C1=C(N2CCCCC2)c2ccccc2C1        C-H          15                       72.3
+bond_observation_0042    C1=C(N2CCOCC2)Cc2ccccc21        C-H          15                       82.8
+bond_observation_0043    C1=C(N2CCOCC2)c2ccccc2C1        C-H          15                       73.4
+bond_observation_0046    C1=C(c2ccccc2)Cc2ccccc21        C-H          15                       79.3
+bond_observation_0047    C1=C(c2ccccc2)c2ccccc2C1        C-H          15                       75.3
+bond_observation_0048 C1=CC(c2ccccc2)C=C1c1ccccc1        C-H          17                       75.0
+bond_observation_0051     C1=CC2CCCC3=C2C(=C1)CC3        C-H          12                       78.8
+bond_observation_0060                 C1=CCCCC=C1        C-H           7                       83.0
+bond_observation_0066         C1=Cc2cccc3cccc1c23        C-H          12                      117.0
+bond_observation_0070             C1C2C3C2C2C1C32        C-H           7                      111.5
+bond_observation_0071             C1C2C3C2C2C1C32        C-H           7                      109.4
+bond_observation_0077                C1CC2CCC1CC2        C-H           8                      102.9
+bond_observation_0078            C1CCC(C2CCCC2)C1        C-H          10                       91.3
+bond_observation_0079          C1CCC(C2CCCCC2)CC1        C-C          12                       88.2
+bond_observation_0080          C1CCC(C2CCCCC2)CC1        C-H          12                       92.3
+
+benchmark parents with foreign elements:
+  (none)
+[ 642.8s] coverage
+
+== 5. EXHAUSTIVENESS WITHIN DOMAIN ==
+{
+  "benchmark_parent_in_db": 369,
+  "of_those_exact_fragment_pair_present": 331,
+  "of_those_exact_fragment_pair_absent": 38,
+  "pct_exact_when_parent_present": 89.7019,
+  "pct_pair_absent_when_parent_present": 10.2981,
+  "parent_present_pair_absent_pct_of_all_benchmark": 6.9982,
+  "combined_exact_coverage_of_benchmark_pct": 60.9576
+}
+
+missing-pair examples:
+       observation_id parent_structure_smiles fragment_a_smiles   fragment_b_smiles bond_class  hac_parent  db_pairs_for_parent  experimental_bde_kcal_mol
+bond_observation_0007                  C#CC#C               [H]            [C]#CC#C        C-H           4                    1                      128.8
+bond_observation_0075             C1CC2CCC1C2               [H]      [CH]1CC2CCC1C2        C-H           7                    2                       99.1
+bond_observation_0108                  C=C=CC             [CH3]            [CH]=C=C        C-C           4                    2                       86.0
+bond_observation_0119              C=CC(C)C=C               [H]        C=C[C](C)C=C        C-H           6                    3                       76.6
+bond_observation_0120               C=CC(C)CC          C=C[CH]C              [CH2]C        C-C           6                    5                       70.8
+bond_observation_0124                  C=CC=C               [H]            C=[C]C=C        C-H           4                    1                      102.2
+bond_observation_0170    CC(C(=O)O)C(C)C(=O)O       C[CH]C(=O)O         C[CH]C(=O)O        C-C          10                    3                       66.7
+bond_observation_0189         CC(C)=C1C=CC=C1               [H] [CH2]C(C)=C1C=CC=C1        C-H           8                    3                       84.5
+bond_observation_0198              CC(C)C(C)O            C[CH]O              C[CH]C        C-C           6                    3                       83.9
+bond_observation_0221             CC(N)C(=O)O            O=[C]O              C[CH]N        C-C           6                    3                       79.2
+bond_observation_0222              CC(O)C(C)O            C[CH]O              C[CH]O        C-C           6                    2                       90.5
+bond_observation_0223                 CC(O)CO            C[CH]O              [CH2]O        C-C           5                    5                       86.2
+bond_observation_0235               CC1C=CCC1             [CH3]         [CH]1C=CCC1        C-C           6                    5                       71.5
+bond_observation_0236              CC1C=CCCC1               [H]        C[C]1C=CCCC1        C-H           7                    6                       79.5
+bond_observation_0237         CC1C=Cc2ccccc21             [CH3]   [CH]1C=Cc2ccccc21        C-C          10                    7                       72.4
+bond_observation_0239                  CC1CC1               [H]          [CH2]C1CC1        C-H           4                    2                       97.4
+bond_observation_0241        CC1CCC2CC1C2(C)C               [H]  C[C]1CCC2CC1C2(C)C        C-H          10                    5                       90.2
+bond_observation_0248             CC1CCCCCCC1               [H]       C[C]1CCCCCCC1        C-H           9                    3                       94.4
+bond_observation_0252                  CC1CO1             [CH3]            [CH]1CO1        C-C           4                    2                       93.5
+bond_observation_0256                  CC=C=O             [CH3]            [CH]=C=O        C-C           4                    1                       93.3
+
+db fragment-pair count of those parents:
+db_pairs_for_parent
+1     3
+2     6
+3     8
+4     1
+5     6
+6     5
+7     4
+8     2
+9     2
+13    1
+
+HAC of missing-pair rows:
+hac_parent
+4      6
+5      2
+6      8
+7      6
+8     10
+9      2
+10     4
+
+bond class of missing-pair rows:
+bond_class
+C-C    22
+C-H    16
+[ 648.4s] exhaustiveness
+
+benchmark rows with parent HAC > db max: 150
+       observation_id                                        parent_structure_smiles  hac_parent
+bond_observation_0030                                              C/C=C/CCCC/C=C/CC          11
+bond_observation_0038                                        C1=C(N2CCCC2)Cc2ccccc21          14
+bond_observation_0039                                        C1=C(N2CCCC2)c2ccccc2C1          14
+bond_observation_0040                                       C1=C(N2CCCCC2)Cc2ccccc21          15
+bond_observation_0041                                       C1=C(N2CCCCC2)c2ccccc2C1          15
+bond_observation_0042                                       C1=C(N2CCOCC2)Cc2ccccc21          15
+bond_observation_0043                                       C1=C(N2CCOCC2)c2ccccc2C1          15
+bond_observation_0046                                       C1=C(c2ccccc2)Cc2ccccc21          15
+bond_observation_0047                                       C1=C(c2ccccc2)c2ccccc2C1          15
+bond_observation_0048                                    C1=CC(c2ccccc2)C=C1c1ccccc1          17
+bond_observation_0051                                        C1=CC2CCCC3=C2C(=C1)CC3          12
+bond_observation_0066                                            C1=Cc2cccc3cccc1c23          12
+bond_observation_0079                                             C1CCC(C2CCCCC2)CC1          12
+bond_observation_0080                                             C1CCC(C2CCCCC2)CC1          12
+bond_observation_0087                                                  C1CCCCCCCCCC1          11
+bond_observation_0088                                                 C1CCCCCCCCCCC1          12
+bond_observation_0104                                              C=C1C=CCc2ccccc21          11
+bond_observation_0106                                         C=C1c2ccccc2Cc2ccccc21          15
+bond_observation_0175                                         CC(C)(C)C1=CCc2ccccc21          13
+bond_observation_0176                                   CC(C)(C)C1c2ccccc2-c2ccccc21          17
+bond_observation_0178                                  CC(C)(C)CC1c2ccccc2-c2ccccc21          18
+bond_observation_0180                                  CC(C)(C)OC1c2ccccc2-c2ccccc21          18
+bond_observation_0181                        CC(C)(C)c1cccc(-c2cccc(C(C)(C)C)c2O)c1O          22
+bond_observation_0185                            CC(C)(c1ccccc1)C1c2ccccc2-c2ccccc21          22
+bond_observation_0186                                        CC(C)(c1ccccc1)c1ccccc1          15
+bond_observation_0199                                       CC(C)C(c1ccccc1)c1ccccc1          16
+bond_observation_0200                                      CC(C)C1c2ccccc2-c2ccccc21          16
+bond_observation_0215                              CC(C)N(C(C)C)C1c2ccccc2-c2ccccc21          20
+bond_observation_0216                                     CC(C)OC1c2ccccc2-c2ccccc21          17
+bond_observation_0217                                        CC(C)c1ccc(C(C)(C)C)cc1          13
+bond_observation_0224                                           CC(c1ccccc1)c1ccccc1          14
+bond_observation_0225                                           CC(c1ccccc1)c1ccccc1          14
+bond_observation_0228                           CC1(C)CC(C)(C)N1C1c2ccccc2-c2ccccc21          21
+bond_observation_0229                         CC1(C)CCCC(C)(C)N1C1c2ccccc2-c2ccccc21          23
+bond_observation_0238                                 CC1CC(C)N1C1c2ccccc2-c2ccccc21          19
+bond_observation_0242                               CC1CCCC(C)N1C1c2ccccc2-c2ccccc21          21
+bond_observation_0250                                                CC1CCCc2ccccc21          11
+bond_observation_0251                                               CC1CCc2ccccc2C1C          12
+bond_observation_0253                                          CC1c2ccccc2-c2ccccc21          14
+bond_observation_0254                                       CC1c2ccccc2C(C)c2ccccc21          16
+bond_observation_0283                                     CCC(C)C1c2ccccc2-c2ccccc21          17
+bond_observation_0300                                         CCC1c2ccccc2-c2ccccc21          15
+bond_observation_0323                                        CCCC1c2ccccc2-c2ccccc21          16
+bond_observation_0366                                                   CCCCCCCCCCCC          12
+bond_observation_0381                                            CCOC(=O)c1ccc(C)cc1          12
+bond_observation_0382                                            CCOC(=O)c1cccc(C)c1          12
+bond_observation_0383                                        CCOC1c2ccccc2-c2ccccc21          16
+bond_observation_0384                                   CCc1c(CC)c(CC)c(CC)c(CC)c1CC          18
+bond_observation_0387                                            CCc1ccc(C(=O)OC)cc1          12
+bond_observation_0388                                           CCc1ccc(C(C)(C)C)cc1          12
+bond_observation_0391                                               CCc1ccc2ccccc2c1          12
+bond_observation_0392                                               CCc1cccc2ccccc12          12
+bond_observation_0393                                               CCc1cccc2ccccc12          12
+bond_observation_0399                                      CN(C)C1c2ccccc2-c2ccccc21          16
+bond_observation_0400                                    CN(C)c1ccc2c(c1)Cc1ccccc1-2          16
+bond_observation_0401                              CN(Cc1ccccc1)C1c2ccccc2-c2ccccc21          22
+bond_observation_0402                               CN(c1ccccc1)C1c2ccccc2-c2ccccc21          21
+bond_observation_0405                                            COC(=O)C(C)c1ccccc1          12
+bond_observation_0406                                          COC(=O)C1=CCc2ccccc21          13
+bond_observation_0407                                          COC(=O)C1=Cc2ccccc2C1          13
+bond_observation_0410                                   COC(C#N)c1c2ccccc2cc2ccccc12          19
+bond_observation_0411                                               COC(C#N)c1ccccc1          11
+bond_observation_0413                                             COC(OC)c1ccc(C)cc1          12
+bond_observation_0414                                               COC1=CCc2ccccc21          11
+bond_observation_0415                                         COC1c2ccccc2-c2ccccc21          15
+bond_observation_0417                                   COCc1c2ccccc2c(C#N)c2ccccc12          19
+bond_observation_0418                                        COCc1c2ccccc2cc2ccccc12          17
+bond_observation_0420                                      COc1c2ccccc2c(C)c2ccccc12          17
+bond_observation_0421                        COc1ccc(C(c2ccc(OC)cc2)c2ccc(OC)cc2)cc1          25
+bond_observation_0422                            COc1ccc(C(c2ccccc2)c2ccc(OC)cc2)cc1          23
+bond_observation_0423                                COc1ccc(C(c2ccccc2)c2ccccc2)cc1          21
+bond_observation_0425                                     COc1ccc(C2=Cc3ccccc3C2)cc1          17
+bond_observation_0426                                       COc1ccc2c(c1)Cc1ccccc1-2          15
+bond_observation_0427                                COc1cccc(C(c2ccccc2)c2ccccc2)c1          21
+bond_observation_0433                                         Cc1c(C)c(C)c(C)c(C)c1C          12
+bond_observation_0434                                     Cc1c2ccccc2c(C#N)c2ccccc12          17
+bond_observation_0435                           Cc1c2ccccc2c(C(=O)c2ccccc2)c2ccccc12          23
+bond_observation_0436                                       Cc1c2ccccc2c(C)c2ccccc12          16
+bond_observation_0437                                     Cc1c2ccccc2c(C=O)c2ccccc12          17
+bond_observation_0438                                          Cc1c2ccccc2cc2ccccc12          15
+bond_observation_0439                                       Cc1cc(C(C)C)cc(C)c1C(C)C          14
+bond_observation_0440                                        Cc1cc(C)c2c(c1)C(C)CCC2          13
+bond_observation_0442                                          Cc1cc2c3c(cccc3c1)CC2          13
+bond_observation_0443                                    Cc1cc2c3ccccc3ccc2c2ccccc12          19
+bond_observation_0444                                          Cc1cc2ccccc2c2ccccc12          15
+bond_observation_0445                                               Cc1cc2ccccc2cc1C          12
+bond_observation_0447                                            Cc1ccc(C(C)(C)C)cc1          11
+bond_observation_0448                           Cc1ccc(C(c2ccc(C)cc2)c2ccc(C)cc2)cc1          22
+bond_observation_0449                              Cc1ccc(C(c2ccccc2)c2ccc(C)cc2)cc1          21
+bond_observation_0450                                 Cc1ccc(C(c2ccccc2)c2ccccc2)cc1          20
+bond_observation_0451                                 Cc1ccc(C)c2c1Cc1c(C)ccc(C)c1C2          18
+bond_observation_0453                                      Cc1ccc(C2=Cc3ccccc3C2)cc1          16
+bond_observation_0454                                           Cc1ccc(Oc2ccccc2)cc1          14
+bond_observation_0455                                             Cc1ccc2cc(C)ccc2c1          12
+bond_observation_0456                                                Cc1ccc2ccccc2c1          11
+bond_observation_0457                                                Cc1ccc2ccccc2c1          11
+bond_observation_0462                                              Cc1cccc(C)c1C(C)C          11
+bond_observation_0463                                             Cc1cccc2c(C)cccc12          12
+bond_observation_0464                                    Cc1cccc2ccc3cc4ccccc4cc3c12          19
+bond_observation_0465                                                Cc1cccc2ccccc12          11
+bond_observation_0466                                                Cc1cccc2ccccc12          11
+bond_observation_0472                                              N#CC1=CCc2ccccc21          11
+bond_observation_0473                                        N#CC1c2ccccc2-c2ccccc21          15
+bond_observation_0474                                       N#CCc1c2ccccc2cc2ccccc12          17
+bond_observation_0475                                             N#CCc1ccc2ccccc2c1          13
+bond_observation_0476                                             N#CCc1cccc2ccccc12          13
+bond_observation_0477                                      N#Cc1ccc2c(c1)Cc1ccccc1-2          15
+bond_observation_0478                                           NC(=O)C1=CCc2ccccc21          12
+bond_observation_0482                                     O=C(C(=O)c1ccccc1)c1ccccc1          16
+bond_observation_0483                             O=C(Cc1c2ccccc2cc2ccccc12)c1ccccc1          23
+bond_observation_0484                                        O=C(Cc1ccccc1)Cc1ccccc1          16
+bond_observation_0485                                         O=C(Cc1ccccc1)c1ccccc1          15
+bond_observation_0487                                      O=C(O)C(c1ccccc1)c1ccccc1          16
+bond_observation_0492                                           O=C(O)c1ccc2ccccc2c1          13
+bond_observation_0493                                           O=C(O)c1cccc2ccccc12          13
+bond_observation_0498                                          O=C(c1ccccc1)c1ccccc1          14
+bond_observation_0499           O=C1Oc2ccccc2C1(c1ccccc1)C1(c2ccccc2)C(=O)Oc2ccccc21          32
+bond_observation_0502                                        Oc1ccc(Cc2ccc(O)cc2)cc1          15
+bond_observation_0503                                           Oc1ccc(Cc2ccccc2)cc1          14
+bond_observation_0504                                    c1cc2c3c(c1)ccc1cccc(c13)C2          15
+bond_observation_0505                                           c1cc2c3c(cccc3c1)CC2          12
+bond_observation_0506                      c1ccc(-c2ccc(Cc3ccc(-c4ccccc4)cc3)cc2)cc1          25
+bond_observation_0507                                            c1ccc(-c2ccccc2)cc1          12
+bond_observation_0508                        c1ccc(C(c2ccccc2)(c2ccccc2)c2ccccc2)cc1          25
+bond_observation_0509                                  c1ccc(C(c2ccccc2)c2ccccc2)cc1          19
+bond_observation_0510                                  c1ccc(C(c2ccccc2)c2ccccc2)cc1          19
+bond_observation_0511 c1ccc(C2(C3(c4ccccc4)c4ccccc4-c4ccccc43)c3ccccc3-c3ccccc32)cc1          38
+bond_observation_0512      c1ccc(C2=C(c3ccccc3)C(c3ccccc3)C(c3ccccc3)=C2c2ccccc2)cc1          35
+bond_observation_0515                                              c1ccc(C2CCCC2)cc1          11
+bond_observation_0516                                             c1ccc(C2CCCCC2)cc1          12
+bond_observation_0517                                             c1ccc(C2CCCCC2)cc1          12
+bond_observation_0518                                 c1ccc(C2c3ccccc3-c3ccccc32)cc1          19
+bond_observation_0519                                 c1ccc(C2c3ccccc3Cc3ccccc32)cc1          20
+bond_observation_0520                       c1ccc(CC(c2ccccc2)(c2ccccc2)c2ccccc2)cc1          26
+bond_observation_0521                                c1ccc(CC2c3ccccc3-c3ccccc32)cc1          20
+bond_observation_0522                                           c1ccc(CCc2ccccc2)cc1          14
+bond_observation_0523                                           c1ccc(CCc2ccccc2)cc1          14
+bond_observation_0524                                            c1ccc(Cc2ccccc2)cc1          13
+bond_observation_0525                                            c1ccc(Cc2ccccc2)cc1          13
+bond_observation_0526                                c1ccc(OC2c3ccccc3-c3ccccc32)cc1          20
+bond_observation_0527                               c1ccc(OCc2c3ccccc3cc3ccccc23)cc1          22
+bond_observation_0528                                  c1ccc2c(c1)-c1ccccc1C2N1CCCC1          18
+bond_observation_0529                                 c1ccc2c(c1)-c1ccccc1C2N1CCCCC1          19
+bond_observation_0531                                          c1ccc2c(c1)CC1CCCCC21          13
+bond_observation_0535                                        c1ccc2c(c1)CCc1ccccc1-2          14
+bond_observation_0536                                   c1ccc2c(c1)Cc1c-2ccc2ccccc12          17
+bond_observation_0537                                   c1ccc2c(c1)Cc1cc3ccccc3cc1-2          17
+bond_observation_0538                                   c1ccc2c(c1)Cc1cccc3cccc-2c13          17
+bond_observation_0539                                         c1ccc2c(c1)Cc1ccccc1-2          13
+bond_observation_0540                                         c1ccc2c(c1)Cc1ccccc1C2          14
+[ 648.6s] hac-out
+[common] wrote /data/user/conversations/conv-75e3fc1d-c4c9-41b5-800b-05f4632eec99/project/output/results/ws1_db_coverage.json
+
+DONE
+[ 651.7s] saved

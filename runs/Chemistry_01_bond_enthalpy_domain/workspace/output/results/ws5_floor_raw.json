@@ -1,0 +1,208 @@
+{
+  "canonical_mol_bond_keys": {
+    "n_rows": 543,
+    "n_unique": 543,
+    "n_exact_replicates": 0
+  },
+  "canonical_molecule_repeats": {
+    "n_unique_molecules": 419,
+    "n_rows_on_repeated_molecules": 210
+  },
+  "bin_scatter_vs_quantum": {
+    "width_0.5": {
+      "n_groups": 491,
+      "n_obs": 5462,
+      "mean_n": 11.124236252545824,
+      "mean_within_sd": 2.5650155357138362,
+      "pooled_within_sd": 2.7530308666043917,
+      "median_within_sd": 2.360855006906685
+    },
+    "width_0.5_quantum_selfcheck": {
+      "n_groups": 491,
+      "n_obs": 5462,
+      "mean_n": 11.124236252545824,
+      "mean_within_sd": 0.13288580400786704,
+      "pooled_within_sd": 0.1380131635407939,
+      "median_within_sd": 0.13566599853277467
+    },
+    "width_1.0": {
+      "n_groups": 506,
+      "n_obs": 9991,
+      "mean_n": 19.74505928853755,
+      "mean_within_sd": 2.644495180663799,
+      "pooled_within_sd": 2.74474216868038,
+      "median_within_sd": 2.4257430735596817
+    },
+    "width_1.0_quantum_selfcheck": {
+      "n_groups": 506,
+      "n_obs": 9991,
+      "mean_n": 19.74505928853755,
+      "mean_within_sd": 0.268641836820998,
+      "pooled_within_sd": 0.27254759722093364,
+      "median_within_sd": 0.270377294281465
+    },
+    "width_2.0": {
+      "n_groups": 528,
+      "n_obs": 18282,
+      "mean_n": 34.625,
+      "mean_within_sd": 2.7816645666043107,
+      "pooled_within_sd": 2.840822462400729,
+      "median_within_sd": 2.7497707467948107
+    },
+    "width_2.0_quantum_selfcheck": {
+      "n_groups": 528,
+      "n_obs": 18282,
+      "mean_n": 34.625,
+      "mean_within_sd": 0.5357151795658152,
+      "pooled_within_sd": 0.545204768948778,
+      "median_within_sd": 0.5344489148286665
+    },
+    "width_3.0": {
+      "n_groups": 532,
+      "n_obs": 26346,
+      "mean_n": 49.52255639097744,
+      "mean_within_sd": 2.9094933406586576,
+      "pooled_within_sd": 2.9233871767040465,
+      "median_within_sd": 2.9717046621125673
+    },
+    "width_3.0_quantum_selfcheck": {
+      "n_groups": 532,
+      "n_obs": 26346,
+      "mean_n": 49.52255639097744,
+      "mean_within_sd": 0.8102403766087166,
+      "pooled_within_sd": 0.8269880484338882,
+      "median_within_sd": 0.8156743298188128
+    },
+    "width_5.0": {
+      "n_groups": 534,
+      "n_obs": 43213,
+      "mean_n": 80.92322097378278,
+      "mean_within_sd": 3.146056610076514,
+      "pooled_within_sd": 3.12168251103158,
+      "median_within_sd": 3.0763751292411965
+    },
+    "width_5.0_quantum_selfcheck": {
+      "n_groups": 534,
+      "n_obs": 43213,
+      "mean_n": 80.92322097378278,
+      "mean_within_sd": 1.3612421874294058,
+      "pooled_within_sd": 1.3865330252680879,
+      "median_within_sd": 1.368165349050357
+    }
+  },
+  "bin_scatter_vs_learned": {
+    "width_0.5": {
+      "n_groups": 478,
+      "n_obs": 6088,
+      "mean_n": 12.736401673640167,
+      "mean_within_sd": 2.907237269974166,
+      "pooled_within_sd": 3.2018549021957234,
+      "median_within_sd": 2.805479038861673
+    },
+    "width_1.0": {
+      "n_groups": 512,
+      "n_obs": 11064,
+      "mean_n": 21.609375,
+      "mean_within_sd": 3.063271494783938,
+      "pooled_within_sd": 3.2741836605507544,
+      "median_within_sd": 3.249940033847491
+    },
+    "width_2.0": {
+      "n_groups": 528,
+      "n_obs": 19515,
+      "mean_n": 36.96022727272727,
+      "mean_within_sd": 3.1592384080629214,
+      "pooled_within_sd": 3.283448315788061,
+      "median_within_sd": 3.236288734458631
+    },
+    "width_3.0": {
+      "n_groups": 532,
+      "n_obs": 27546,
+      "mean_n": 51.778195488721806,
+      "mean_within_sd": 3.2138405601441855,
+      "pooled_within_sd": 3.3314722906557668,
+      "median_within_sd": 3.269575712002136
+    },
+    "width_5.0": {
+      "n_groups": 537,
+      "n_obs": 46299,
+      "mean_n": 86.21787709497207,
+      "mean_within_sd": 3.4745488091743337,
+      "pooled_within_sd": 3.528337596028364,
+      "median_within_sd": 3.527872213238623
+    }
+  },
+  "bin_scatter_vs_experimental": {
+    "width_1.0": {
+      "n_groups": 512,
+      "n_obs": 9872,
+      "mean_n": 19.28125,
+      "mean_within_sd": 5.8441607271379645,
+      "pooled_within_sd": 5.956315113100812,
+      "median_within_sd": 5.87641737345178
+    },
+    "width_2.0": {
+      "n_groups": 526,
+      "n_obs": 18049,
+      "mean_n": 34.31368821292776,
+      "mean_within_sd": 5.9897700385888335,
+      "pooled_within_sd": 6.036228596570666,
+      "median_within_sd": 5.860019478024651
+    },
+    "width_3.0": {
+      "n_groups": 533,
+      "n_obs": 26751,
+      "mean_n": 50.189493433395874,
+      "mean_within_sd": 6.0554285499905305,
+      "pooled_within_sd": 6.075271895069285,
+      "median_within_sd": 5.855277865226869
+    }
+  },
+  "matched_pair_estimator": {
+    "tol_0.1": {
+      "n_pairs": 1002,
+      "sd_of_exp_diff": 4.031709676339716,
+      "sigma_ref_estimate": 2.8508492519152338,
+      "boot_ci_lo": 2.658396050239779,
+      "boot_ci_hi": 3.0499394962577626,
+      "median_abs_exp_diff": 1.9000000000000057,
+      "quantum_self_sd": 0.02102409873909345
+    },
+    "tol_0.25": {
+      "n_pairs": 2496,
+      "sd_of_exp_diff": 3.8976330328496953,
+      "sigma_ref_estimate": 2.7560427481047087,
+      "boot_ci_lo": 2.6300810239457135,
+      "boot_ci_hi": 2.895581406667352,
+      "median_abs_exp_diff": 1.7999999999999972,
+      "quantum_self_sd": 0.051939740267655195
+    },
+    "tol_0.5": {
+      "n_pairs": 4751,
+      "sd_of_exp_diff": 3.870113026697738,
+      "sigma_ref_estimate": 2.7365831651363646,
+      "boot_ci_lo": 2.6403550625698906,
+      "boot_ci_hi": 2.8333396987539508,
+      "median_abs_exp_diff": 1.9000000000000057,
+      "quantum_self_sd": 0.10289357307942011
+    },
+    "tol_1.0": {
+      "n_pairs": 8878,
+      "sd_of_exp_diff": 3.9743837962173565,
+      "sigma_ref_estimate": 2.810313733343226,
+      "boot_ci_lo": 2.7466962251824345,
+      "boot_ci_hi": 2.876996119375219,
+      "median_abs_exp_diff": 2.0,
+      "quantum_self_sd": 0.2065411292454193
+    },
+    "tol_2.0": {
+      "n_pairs": 17375,
+      "sd_of_exp_diff": 4.031054750601224,
+      "sigma_ref_estimate": 2.8503861494843723,
+      "boot_ci_lo": 2.807144946058283,
+      "boot_ci_hi": 2.898427150397995,
+      "median_abs_exp_diff": 2.200000000000003,
+      "quantum_self_sd": 0.4207325808504671
+    }
+  }
+}

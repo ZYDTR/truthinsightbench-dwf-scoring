@@ -1,0 +1,768 @@
+{
+  "claim_id": "C3",
+  "n_rows": 621,
+  "n_d18o": 593,
+  "hand_central_equals_np_gradient_interior_max_abs_diff": 0.024516441005797144,
+  "record": {
+    "depth_median_m": 3.17,
+    "depth_max_m": 6.3,
+    "age_max_ka": 359.18,
+    "d18o_median": 3.37,
+    "d18o_quantiles": {
+      "p1": 2.3892,
+      "p5": 2.65,
+      "p10": 2.76,
+      "p25": 3.0,
+      "p50": 3.37,
+      "min": 2.13
+    },
+    "d18o_min_ka_at": "123.16"
+  },
+  "claim_replication": {
+    "np_gradient_top": {
+      "p99": 0.04330095590502867,
+      "n_above": 7,
+      "n_episodes": 1,
+      "episodes": [
+        [
+          411,
+          417
+        ]
+      ],
+      "row_indices": [
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417
+      ],
+      "max": 0.05000000000000071,
+      "argmax_row": 413,
+      "median": 0.02198333067898295
+    },
+    "row_paired_secant_top": {
+      "p99": 0.043478260869564495,
+      "n_above": 7,
+      "n_episodes": 2,
+      "episodes": [
+        [
+          410,
+          410
+        ],
+        [
+          412,
+          417
+        ]
+      ],
+      "row_indices": [
+        410,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417
+      ],
+      "max": 0.05000000000000622,
+      "argmax_row": 412,
+      "median": 0.022222222222219503
+    },
+    "episode_rows_rows_411_417": {
+      "ages_ka": [
+        240.41,
+        240.87,
+        241.07,
+        241.27,
+        241.48,
+        241.68,
+        241.88
+      ],
+      "depths_m": [
+        4.2,
+        4.22,
+        4.23,
+        4.24,
+        4.25,
+        4.26,
+        4.27
+      ],
+      "d18o": [
+        null,
+        2.76,
+        2.97,
+        3.21,
+        2.81,
+        2.65,
+        3.42
+      ],
+      "d18o_non_nan_n": 6,
+      "d18o_min": 2.65,
+      "d18o_max": 3.42,
+      "d18o_mean": 2.97,
+      "d18o_mean_minus_record_median": -0.4,
+      "n_below_record_median": 5,
+      "interval_age_steps_ka": [
+        0.46,
+        0.2,
+        0.2,
+        0.21,
+        0.2,
+        0.2,
+        0.23
+      ],
+      "interval_depth_steps_m": [
+        0.02,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01
+      ]
+    }
+  },
+  "attackA_sampling_grid": {
+    "depth_step_counts": {
+      "0.01": 615,
+      "0.02": 4,
+      "0.04": 1
+    },
+    "enlarged_depth_step_rows": [
+      44,
+      63,
+      312,
+      370,
+      411
+    ],
+    "overlap_p99_gradient_and_enlarged_depth": [
+      411
+    ],
+    "overlap_p99_secant_and_enlarged_depth": [],
+    "p99_secant": 0.043478,
+    "p99_np_gradient": 0.043301,
+    "corr_lsr_vs_inverse_age_step": 0.9893073406650188,
+    "n_interval_slopes_at_0p01_over_0p23_atom": 3,
+    "n_interval_age_steps_le_0p23_ka": 7,
+    "n_intervals_at_age_step_0p24_ka": 47,
+    "n_distinct_interval_slopes": 77,
+    "episode_age_step_percentile_ranks": [
+      55.32,
+      0.32,
+      0.65,
+      0.81,
+      0.65,
+      0.32,
+      1.13
+    ],
+    "max_lsr_possible_at_age_step_0p24": 0.04166666666666667,
+    "note": "depth step is 0.01 m for 615/620 intervals, so LSR ranking ~ 1/age-step ranking"
+  },
+  "attackB_differentiators": {
+    "row_level": {
+      "row_paired_secant": {
+        "p99": 0.043478260869564495,
+        "n_above": 7,
+        "n_episodes": 2,
+        "episodes": [
+          [
+            410,
+            410
+          ],
+          [
+            412,
+            417
+          ]
+        ],
+        "row_indices": [
+          410,
+          412,
+          413,
+          414,
+          415,
+          416,
+          417
+        ],
+        "max": 0.05000000000000622,
+        "argmax_row": 412,
+        "median": 0.022222222222219503
+      },
+      "np_gradient": {
+        "p99": 0.04330095590502867,
+        "n_above": 7,
+        "n_episodes": 1,
+        "episodes": [
+          [
+            411,
+            417
+          ]
+        ],
+        "row_indices": [
+          411,
+          412,
+          413,
+          414,
+          415,
+          416,
+          417
+        ],
+        "max": 0.05000000000000071,
+        "argmax_row": 413,
+        "median": 0.02198333067898295
+      },
+      "hand_central_diff": {
+        "p99": 0.04329324699352406,
+        "n_above": 7,
+        "n_episodes": 1,
+        "episodes": [
+          [
+            411,
+            417
+          ]
+        ],
+        "row_indices": [
+          411,
+          412,
+          413,
+          414,
+          415,
+          416,
+          417
+        ],
+        "max": 0.05000000000000045,
+        "argmax_row": 413,
+        "median": 0.02197802197802204
+      },
+      "savgol_w3_raw_grid": {
+        "p99": 0.026092811851186053,
+        "n_above": 7,
+        "n_episodes": 5,
+        "episodes": [
+          [
+            44,
+            45
+          ],
+          [
+            63,
+            64
+          ],
+          [
+            313,
+            313
+          ],
+          [
+            371,
+            371
+          ],
+          [
+            412,
+            412
+          ]
+        ],
+        "row_indices": [
+          44,
+          45,
+          63,
+          64,
+          313,
+          371,
+          412
+        ],
+        "max": 0.0434880197519778,
+        "argmax_row": 63,
+        "median": 0.01739520790079058
+      },
+      "savgol_w5_raw_grid": {
+        "p99": 0.022613770271030044,
+        "n_above": 7,
+        "n_episodes": 3,
+        "episodes": [
+          [
+            62,
+            65
+          ],
+          [
+            371,
+            371
+          ],
+          [
+            411,
+            412
+          ]
+        ],
+        "row_indices": [
+          62,
+          63,
+          64,
+          65,
+          371,
+          411,
+          412
+        ],
+        "max": 0.03305089501150353,
+        "argmax_row": 63,
+        "median": 0.017395207900792464
+      }
+    },
+    "row_level_pct_rank_of_episode_rows": {
+      "row_paired_secant": [
+        98.87,
+        100.0,
+        99.68,
+        99.35,
+        99.68,
+        99.84,
+        99.03
+      ],
+      "np_gradient": [
+        99.03,
+        99.36,
+        100.0,
+        99.52,
+        99.68,
+        99.84,
+        99.19
+      ],
+      "hand_central_diff": [
+        99.03,
+        99.19,
+        100.0,
+        99.68,
+        99.68,
+        99.84,
+        99.36
+      ],
+      "savgol_w3_raw_grid": [
+        98.55,
+        99.03,
+        59.26,
+        17.39,
+        17.23,
+        17.07,
+        58.45
+      ],
+      "savgol_w5_raw_grid": [
+        99.36,
+        99.19,
+        97.91,
+        68.92,
+        49.6,
+        64.41,
+        68.92
+      ]
+    },
+    "uniform_grid": {
+      "uniform_grid_central": {
+        "p99": 0.04166666666666673,
+        "n_above": 15,
+        "n_episodes": 7,
+        "episodes": [
+          [
+            12,
+            12
+          ],
+          [
+            321,
+            321
+          ],
+          [
+            325,
+            325
+          ],
+          [
+            472,
+            472
+          ],
+          [
+            857,
+            857
+          ],
+          [
+            861,
+            861
+          ],
+          [
+            949,
+            957
+          ]
+        ],
+        "row_indices": [
+          12,
+          321,
+          325,
+          472,
+          857,
+          861,
+          949,
+          950,
+          951,
+          952,
+          953,
+          954,
+          955,
+          956,
+          957
+        ],
+        "max": 0.04899999999999949,
+        "argmax_row": 954,
+        "median": 0.01622421998942336,
+        "argmax_age_ka": 241.26,
+        "pct_rank_at_241ka": 99.85974754558204
+      },
+      "uniform_grid_savgol_w3": {
+        "p99": 0.041666666666667025,
+        "n_above": 15,
+        "n_episodes": 7,
+        "episodes": [
+          [
+            321,
+            321
+          ],
+          [
+            325,
+            325
+          ],
+          [
+            329,
+            329
+          ],
+          [
+            472,
+            472
+          ],
+          [
+            857,
+            857
+          ],
+          [
+            861,
+            861
+          ],
+          [
+            949,
+            957
+          ]
+        ],
+        "row_indices": [
+          321,
+          325,
+          329,
+          472,
+          857,
+          861,
+          949,
+          950,
+          951,
+          952,
+          953,
+          954,
+          955,
+          956,
+          957
+        ],
+        "max": 0.04900000000000032,
+        "argmax_row": 954,
+        "median": 0.016224219989424138,
+        "argmax_age_ka": 241.26,
+        "pct_rank_at_241ka": 99.85974754558204
+      },
+      "uniform_grid_savgol_w5": {
+        "p99": 0.04131289855072734,
+        "n_above": 15,
+        "n_episodes": 4,
+        "episodes": [
+          [
+            317,
+            317
+          ],
+          [
+            322,
+            322
+          ],
+          [
+            944,
+            945
+          ],
+          [
+            948,
+            958
+          ]
+        ],
+        "row_indices": [
+          317,
+          322,
+          944,
+          945,
+          948,
+          949,
+          950,
+          951,
+          952,
+          953,
+          954,
+          955,
+          956,
+          957,
+          958
+        ],
+        "max": 0.048826086956526904,
+        "argmax_row": 954,
+        "median": 0.01595562296972164,
+        "argmax_age_ka": 241.26,
+        "pct_rank_at_241ka": 99.85974754558204
+      },
+      "uniform_grid_savgol_w9": {
+        "p99": 0.04125444444444454,
+        "n_above": 15,
+        "n_episodes": 3,
+        "episodes": [
+          [
+            319,
+            319
+          ],
+          [
+            324,
+            324
+          ],
+          [
+            946,
+            958
+          ]
+        ],
+        "row_indices": [
+          319,
+          324,
+          946,
+          947,
+          948,
+          949,
+          950,
+          951,
+          952,
+          953,
+          954,
+          955,
+          956,
+          957,
+          958
+        ],
+        "max": 0.04713768115942021,
+        "argmax_row": 954,
+        "median": 0.015802910931945885,
+        "argmax_age_ka": 241.26,
+        "pct_rank_at_241ka": 99.85974754558204
+      }
+    },
+    "span_slopes": {
+      "W1ka": {
+        "width_ka": 1,
+        "best_slope_m_per_ka": 0.048783,
+        "best_mid_age_ka": 241.26,
+        "slope_at_241ka": 0.047152,
+        "pct_rank_of_241ka_window": 99.85935302390999,
+        "best_window_overlaps_241ka": true,
+        "best_window_is_very_close": true,
+        "n_local_maxima_above_241ka_max": 2
+      },
+      "W2ka": {
+        "width_ka": 2,
+        "best_slope_m_per_ka": 0.046386,
+        "best_mid_age_ka": 241.26,
+        "slope_at_241ka": 0.046368,
+        "pct_rank_of_241ka_window": 99.92947813822285,
+        "best_window_overlaps_241ka": true,
+        "best_window_is_very_close": true,
+        "n_local_maxima_above_241ka_max": 1
+      },
+      "W4ka": {
+        "width_ka": 4,
+        "best_slope_m_per_ka": 0.043892,
+        "best_mid_age_ka": 240.51,
+        "slope_at_241ka": 0.043854,
+        "pct_rank_of_241ka_window": 99.8581560283688,
+        "best_window_overlaps_241ka": true,
+        "best_window_is_very_close": true,
+        "n_local_maxima_above_241ka_max": 2
+      },
+      "W8ka": {
+        "width_ka": 8,
+        "best_slope_m_per_ka": 0.03834,
+        "best_mid_age_ka": 239.26,
+        "slope_at_241ka": 0.035434,
+        "pct_rank_of_241ka_window": 98.92395982783357,
+        "best_window_overlaps_241ka": true,
+        "best_window_is_very_close": false,
+        "n_local_maxima_above_241ka_max": 15
+      },
+      "W16ka": {
+        "width_ka": 16,
+        "best_slope_m_per_ka": 0.02911,
+        "best_mid_age_ka": 80.26,
+        "slope_at_241ka": 0.025194,
+        "pct_rank_of_241ka_window": 93.53891336270192,
+        "best_window_overlaps_241ka": false,
+        "best_window_is_very_close": false,
+        "n_local_maxima_above_241ka_max": 88
+      },
+      "W32ka": {
+        "width_ka": 32,
+        "best_slope_m_per_ka": 0.023018,
+        "best_mid_age_ka": 227.01,
+        "slope_at_241ka": 0.017773,
+        "pct_rank_of_241ka_window": 48.99845916795069,
+        "best_window_overlaps_241ka": true,
+        "best_window_is_very_close": false,
+        "n_local_maxima_above_241ka_max": 662
+      }
+    },
+    "row_windows": {
+      "w5": {
+        "w": 5,
+        "best_start": 412,
+        "best_end": 416,
+        "best_mean_lsr": 0.04914,
+        "p99_of_windows": 0.045008,
+        "age_range_ka": [
+          240.87,
+          241.68
+        ],
+        "overlaps_claim": true
+      },
+      "w6": {
+        "w": 6,
+        "best_start": 412,
+        "best_end": 417,
+        "best_mean_lsr": 0.048778,
+        "p99_of_windows": 0.044929,
+        "age_range_ka": [
+          240.87,
+          241.88
+        ],
+        "overlaps_claim": true
+      },
+      "w7": {
+        "w": 7,
+        "best_start": 411,
+        "best_end": 417,
+        "best_mean_lsr": 0.048021,
+        "p99_of_windows": 0.04499,
+        "age_range_ka": [
+          240.41,
+          241.88
+        ],
+        "overlaps_claim": true
+      },
+      "w8": {
+        "w": 8,
+        "best_start": 410,
+        "best_end": 417,
+        "best_mean_lsr": 0.047342,
+        "p99_of_windows": 0.045005,
+        "age_range_ka": [
+          240.18,
+          241.88
+        ],
+        "overlaps_claim": true
+      }
+    },
+    "differentiator_best_row_ages_ka": {
+      "row_paired_secant": 240.87,
+      "np_gradient": 241.07,
+      "hand_central_diff": 241.07,
+      "savgol_w3_raw_grid": 42.59,
+      "savgol_w5_raw_grid": 42.59
+    },
+    "uniform_grid_best_ages_ka": {
+      "uniform_grid_central": 241.26,
+      "uniform_grid_savgol_w3": 241.26,
+      "uniform_grid_savgol_w5": 241.26,
+      "uniform_grid_savgol_w9": 241.26
+    }
+  },
+  "d18o_block_null": {
+    "claim_6_rows_412_417": {
+      "ep_idx": [
+        412,
+        417
+      ],
+      "n_ep_rows": 6,
+      "obs_ep_mean": 2.97,
+      "obs_ring_mean": 3.3365,
+      "obs_contrast": -0.3665,
+      "p_ep_mean_le_null": 0.20333333333333334,
+      "p_contrast_le_null": 0.14333333333333334,
+      "null_p025": 2.5975,
+      "null_p975": 3.8562,
+      "null_median": 3.3225
+    },
+    "seven_rows_411_417": {
+      "ep_idx": [
+        411,
+        417
+      ],
+      "n_ep_rows": 7,
+      "obs_ep_mean": 2.9414,
+      "obs_ring_mean": 3.3384,
+      "obs_contrast": -0.397,
+      "p_ep_mean_le_null": 0.18333333333333332,
+      "p_contrast_le_null": 0.12666666666666668,
+      "null_p025": 2.6184,
+      "null_p975": 3.8719,
+      "null_median": 3.3325
+    },
+    "row410_only": {
+      "ep_idx": [
+        410,
+        410
+      ],
+      "n_ep_rows": 1,
+      "obs_ep_mean": 2.78,
+      "obs_ring_mean": 3.2831,
+      "obs_contrast": -0.5031,
+      "p_ep_mean_le_null": 0.10666666666666667,
+      "p_contrast_le_null": 0.09666666666666666,
+      "null_p025": 2.5095,
+      "null_p975": 3.9352,
+      "null_median": 3.38
+    }
+  },
+  "depth_position": {
+    "episode_mean_depth_m": 4.2386,
+    "episode_depth_percentile_of_record": 66.7,
+    "n_rows_deeper_than_episode": 203,
+    "deepest_row_depth_m": 6.3,
+    "episode_age_percentile_of_record": 66.7
+  },
+  "extra_probes": {
+    "secant_p99_rows": [
+      410,
+      412,
+      413,
+      414,
+      415,
+      416,
+      417
+    ],
+    "intervals_with_age_step_le_0p23": [
+      410,
+      412,
+      413,
+      414,
+      415,
+      416,
+      417
+    ],
+    "secant_p99_set_equals_smallest_age_step_set": true,
+    "n_rows_deeper_than_5m": 130,
+    "max_depth_m": 6.3,
+    "mean_lsr_deeper_than_5m": 0.020936,
+    "mean_lsr_record_median": 0.022222,
+    "lsr_percentile_at_5_to_6p3m": 43.4,
+    "last_deformed_rows": 78,
+    "n_age_steps_above_1ka": 78,
+    "fraction_of_intervals_at_modal_0p24_ka": 0.076,
+    "mean_age_step_in_window_230_250ka": 0.472,
+    "mean_age_step_record": 0.575
+  }
+}

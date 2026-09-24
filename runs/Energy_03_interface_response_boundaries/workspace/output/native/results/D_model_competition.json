@@ -1,0 +1,146 @@
+{
+  "models": {
+    "single_power_law": {
+      "n_points_used": 87,
+      "k_parameters_excl_sigma": 2,
+      "rss_log_space": 61.462685824047526,
+      "r2": 0.7748337428423557,
+      "adj_r2": 0.7721847280522658,
+      "resid_sd_log": 0.8503472358156888,
+      "aic": -24.23057404170631,
+      "bic": -16.83284968574256,
+      "parameter_names": [
+        "intercept",
+        "T"
+      ]
+    },
+    "curve_intercepts": {
+      "n_points_used": 87,
+      "k_parameters_excl_sigma": 9,
+      "rss_log_space": 17.133831287008494,
+      "r2": 0.9372308481163574,
+      "adj_r2": 0.9307929863847018,
+      "resid_sd_log": 0.46868379925019393,
+      "aic": -121.36222595006541,
+      "bic": -96.70314476351957,
+      "parameter_names": [
+        "intercept",
+        "curve[condition_block1_2]",
+        "curve[condition_block1_3]",
+        "curve[condition_block1_4]",
+        "curve[condition_block2_1]",
+        "curve[condition_block2_2]",
+        "curve[condition_block2_3]",
+        "curve[condition_block2_4]",
+        "T"
+      ]
+    },
+    "curve_intercepts_block_slope": {
+      "n_points_used": 87,
+      "k_parameters_excl_sigma": 10,
+      "rss_log_space": 17.076127560438945,
+      "r2": 0.9374422435664832,
+      "adj_r2": 0.9301302980093189,
+      "resid_sd_log": 0.47092238255928226,
+      "aic": -119.65572112759628,
+      "bic": -92.53073182239586,
+      "parameter_names": [
+        "intercept",
+        "curve[condition_block1_2]",
+        "curve[condition_block1_3]",
+        "curve[condition_block1_4]",
+        "curve[condition_block2_1]",
+        "curve[condition_block2_2]",
+        "curve[condition_block2_3]",
+        "curve[condition_block2_4]",
+        "T",
+        "T:block2"
+      ]
+    },
+    "curve_intercepts_curve_slopes": {
+      "n_points_used": 87,
+      "k_parameters_excl_sigma": 15,
+      "rss_log_space": 59.71467706858458,
+      "r2": 0.7812375077229394,
+      "adj_r2": 0.7387003564468444,
+      "resid_sd_log": 0.9106978175231631,
+      "aic": -0.7407344841048129,
+      "bic": 38.713795414368526,
+      "parameter_names": [
+        "intercept",
+        "curve[condition_block1_2]",
+        "curve[condition_block1_3]",
+        "curve[condition_block1_4]",
+        "curve[condition_block2_1]",
+        "curve[condition_block2_2]",
+        "curve[condition_block2_3]",
+        "curve[condition_block2_4]",
+        "T:curve[condition_block1_2]",
+        "T:curve[condition_block1_3]",
+        "T:curve[condition_block1_4]",
+        "T:curve[condition_block2_1]",
+        "T:curve[condition_block2_2]",
+        "T:curve[condition_block2_3]",
+        "T:curve[condition_block2_4]"
+      ]
+    }
+  },
+  "nested_tests": {
+    "shared_slope_vs_block_slope_interaction": {
+      "F": 0.26019874413148836,
+      "df1": 1,
+      "df2": 77,
+      "p_two_sided": 0.6114427606886452,
+      "delta_bic": -4.17241294112371
+    },
+    "curve_intercepts_vs_per_curve_slopes": {
+      "F": -8.556860297377884,
+      "df1": 6,
+      "df2": 72,
+      "p_two_sided": 0.0,
+      "delta_bic": -135.4169401778881
+    },
+    "single_global_rate_vs_curve_intercepts": {
+      "F": 28.828934120954717,
+      "df1": 7,
+      "df2": 78,
+      "p_two_sided": 7.908865504491843e-07,
+      "delta_bic": 79.87029507777702
+    }
+  },
+  "residual_summary": {
+    "curve_intercepts": {
+      "mean_resid_log": -5.058150577823831e-13,
+      "sd_resid_log": 0.44635254716486594,
+      "max_abs_resid_log": 1.3828377117918387,
+      "resid_by_curve": {
+        "condition_block1_1": -4.152032253366335e-12,
+        "condition_block1_2": 1.7157992198752418e-14,
+        "condition_block1_3": 1.588628218872724e-14,
+        "condition_block1_4": 1.290886589541432e-14,
+        "condition_block2_1": 6.261657858885883e-14,
+        "condition_block2_2": 1.4231040588377007e-14,
+        "condition_block2_3": 1.8611375067352623e-14,
+        "condition_block2_4": 1.5734888139914718e-14
+      },
+      "resid_trend_vs_T": 4.0472942012764635e-12
+    },
+    "curve_intercepts_block_slope": {
+      "mean_resid_log": -1.0612711220681209e-13,
+      "sd_resid_log": 0.445600294878495,
+      "max_abs_resid_log": 1.3430077050947444,
+      "resid_by_curve": {
+        "condition_block1_1": 2.6698643296185764e-12,
+        "condition_block1_2": -3.568700890355103e-12,
+        "condition_block1_3": 2.048260551067539e-13,
+        "condition_block1_4": 2.1301142667921755e-13,
+        "condition_block2_1": -1.5614176618328203e-13,
+        "condition_block2_2": -8.00975447584113e-14,
+        "condition_block2_3": -7.674668981136082e-14,
+        "condition_block2_4": -5.95886976126084e-14
+      },
+      "resid_trend_vs_T": 1.3163561551965437e-12
+    }
+  },
+  "n_zero_response_points_excluded_from_log_models": 1
+}

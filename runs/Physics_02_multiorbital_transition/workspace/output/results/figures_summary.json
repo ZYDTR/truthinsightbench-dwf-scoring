@@ -1,0 +1,172 @@
+{
+  "figures": {
+    "gap_vs_u": {
+      "path": "/data/user/conversations/conv-af56a8cc-3c22-4b90-8a53-8142e2d7b40e/project/output/figures/gap_vs_u.png",
+      "bytes": 306983,
+      "per_dSz": [
+        {
+          "dSz": "dSz=1",
+          "n_branches": 8,
+          "n_crossings": 6,
+          "crossings": [
+            {
+              "Jh_over_U": 0.05,
+              "u_interp": 2.641079501169135,
+              "gap_at_crossing": 7.589415207398531e-19
+            },
+            {
+              "Jh_over_U": 0.1,
+              "u_interp": 1.6623423472157943,
+              "gap_at_crossing": 1.734723475976807e-18
+            },
+            {
+              "Jh_over_U": 0.15,
+              "u_interp": 1.3035042580588698,
+              "gap_at_crossing": 2.3852447794681098e-18
+            },
+            {
+              "Jh_over_U": 0.2,
+              "u_interp": 1.11178419442227,
+              "gap_at_crossing": -2.6020852139652106e-18
+            },
+            {
+              "Jh_over_U": 0.3,
+              "u_interp": 0.9060342824676905,
+              "gap_at_crossing": 4.87890977618477e-19
+            },
+            {
+              "Jh_over_U": 0.35,
+              "u_interp": 0.8366966751281164,
+              "gap_at_crossing": -8.673617379884035e-19
+            }
+          ]
+        },
+        {
+          "dSz": "dSz=2",
+          "n_branches": 8,
+          "n_crossings": 6,
+          "crossings": [
+            {
+              "Jh_over_U": 0.05,
+              "u_interp": 2.6401692322103227,
+              "gap_at_crossing": 3.903127820947816e-18
+            },
+            {
+              "Jh_over_U": 0.1,
+              "u_interp": 1.6609088002224386,
+              "gap_at_crossing": 6.071532165918825e-18
+            },
+            {
+              "Jh_over_U": 0.15,
+              "u_interp": 1.3032621319704745,
+              "gap_at_crossing": 5.854691731421724e-18
+            },
+            {
+              "Jh_over_U": 0.2,
+              "u_interp": 1.1109093038139224,
+              "gap_at_crossing": 8.890457814381136e-18
+            },
+            {
+              "Jh_over_U": 0.3,
+              "u_interp": 0.9054638558858095,
+              "gap_at_crossing": 7.15573433840433e-18
+            },
+            {
+              "Jh_over_U": 0.35,
+              "u_interp": 0.8340058856089593,
+              "gap_at_crossing": -8.673617379884035e-19
+            }
+          ]
+        }
+      ]
+    },
+    "topological_proxy": {
+      "path": "/data/user/conversations/conv-af56a8cc-3c22-4b90-8a53-8142e2d7b40e/project/output/figures/topological_proxy.png",
+      "bytes": 72708,
+      "n_controls": 48,
+      "deg1_up_to": 1.3,
+      "deg2_from": 1.4,
+      "gap_to_2nd_min": 8.000000000008e-06,
+      "gap_to_2nd_max": 1.37206
+    },
+    "local_observables": {
+      "path": "/data/user/conversations/conv-af56a8cc-3c22-4b90-8a53-8142e2d7b40e/project/output/figures/local_observables.png",
+      "bytes": 76200,
+      "n_points": 49,
+      "moment_min": 0.750015,
+      "moment_max": 1.9703,
+      "charge_min": 0.0233708,
+      "charge_max": 0.99998
+    },
+    "correlation_heatmap": {
+      "path": "/data/user/conversations/conv-af56a8cc-3c22-4b90-8a53-8142e2d7b40e/project/output/figures/correlation_heatmap.png",
+      "bytes": 80581,
+      "grid_u": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8,
+        2.9,
+        3.0,
+        3.1,
+        3.2,
+        3.3,
+        3.4,
+        3.5,
+        3.6,
+        3.7,
+        3.8,
+        3.9,
+        4.0
+      ],
+      "grid_jh": [
+        0.0125,
+        0.025,
+        0.05,
+        0.075,
+        0.1,
+        0.125,
+        0.15,
+        0.175,
+        0.2,
+        0.225,
+        0.25,
+        0.275,
+        0.3,
+        0.325,
+        0.35,
+        0.375,
+        0.4
+      ],
+      "n_cells": 680,
+      "n_critical": 14,
+      "value_min": -3.90383e-08,
+      "value_max": 0.142165
+    }
+  },
+  "n_figures": 4
+}

@@ -1,0 +1,11 @@
+Process,Methodology,n,sd_log10_ET,spread_log10_TI,ti_range_sufficient,class
+Nonglacial,Cosmogenic detrital,3470,0.03497878763050759,5.745426928280817,True,product_locked
+Nonglacial,Thermochronometric,4,0.3060173967090473,0.7403626894942441,False,insufficient_TI_range
+Nonglacial,Cosmogenic surface,64,0.33096597353058393,3.1271716180405917,True,product_free
+Nonglacial,Relief,7,0.42002383083471667,1.3010299956639813,True,product_free
+Glacial,Thermochronometric,68,0.5638376180422864,3.3979400086720375,True,product_free
+Glacial,Cosmogenic detrital,9,0.606187644118978,3.4771212547196626,True,product_free
+Glacial,Cosmogenic surface,99,0.9362599515937468,3.3392343483342106,True,product_free
+Glacial,Relief,18,1.6778075379835802,7.305937330158725,True,product_free
+Nonglacial,Volumetric,2583,1.928339857960918,6.766369419835537,True,product_free
+Glacial,Volumetric,233,2.298617192432155,9.248673338211212,True,product_free

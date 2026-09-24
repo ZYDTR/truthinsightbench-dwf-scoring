@@ -1,0 +1,22 @@
+=== DIRECTION: worst-25 by |err|, sign of signed error ===
+  quantum    n_pos=17 n_neg= 8 binom p=0.1078  median_signed=+7.00  mean_signed=+4.64  mean|err|=9.21
+  learned    n_pos=24 n_neg= 1 binom p=1.55e-06  median_signed=+9.24  mean_signed=+10.25  mean|err|=11.07
+  reference  n_pos=16 n_neg= 9 binom p=0.2295  median_signed=+13.30  mean_signed=+2.98  mean|err|=17.25
+
+=== SIGN TEST in weak-bond region ===
+ exp<70 n=18  (n_pos overall)
+   quantum    n_pos=14 n_neg= 4 n_zero=0 binom_p=0.03088 median=+3.085 wilcoxon p=0.01041 t_p=0.006987
+   learned    n_pos=16 n_neg= 2 n_zero=0 binom_p=0.001312 median=+4.775 wilcoxon p=0.0003281 t_p=0.0008837
+   reference  n_pos= 7 n_neg=11 n_zero=0 binom_p=0.4807 median=-1.850 wilcoxon p=0.3038 t_p=0.2868
+ exp<80 n=147  (n_pos overall)
+   quantum    n_pos=107 n_neg=40 n_zero=0 binom_p=3.04e-08 median=+1.100 wilcoxon p=8.092e-09 t_p=1.473e-07
+   learned    n_pos=123 n_neg=24 n_zero=0 binom_p=3.177e-17 median=+2.210 wilcoxon p=2.804e-17 t_p=5.392e-15
+   reference  n_pos=85 n_neg=61 n_zero=1 binom_p=0.0566 median=+2.600 wilcoxon p=0.02198 t_p=0.1208
+
+=== SIGN TEST restricted to the 17 rows with ANY |err|>15 ===
+  quantum    errs=[-0.58, 0.19, 10.43, 6.99, -1.95, 2.75, -2.55, -5.93, -0.33, 15.74, 15.48, 15.69, 8.92, -5.86, -2.71, 14.76, -5.85]
+             n_pos=9 n_neg=8 binomial p=1
+  learned    errs=[-0.42, -0.15, 10.68, 7.06, -2.06, 2.64, -2.19, -4.96, -0.43, 13.66, 15.43, 16.58, 15.39, 1.88, -2.8, 25.21, 4.23]
+             n_pos=10 n_neg=7 binomial p=0.6291
+  reference  errs=[16.9, 17.1, 21.5, 15.6, 15.3, 18.6, 17.7, -20.1, 21.6, 11.3, 0.5, 10.0, -2.2, -33.4, -24.7, -11.8, -31.0]
+             n_pos=11 n_neg=6 binomial p=0.3323

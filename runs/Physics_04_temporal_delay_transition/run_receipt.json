@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202609-mixed",
+  "task_id": "Physics_04_temporal_delay_transition",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "fbc073b9018225da9e2c20ca9dd8a205c41c321ae69e89210437b198876e9c23",
+  "workspace_input_file_count": 84,
+  "workspace_input_bytes": 31709854,
+  "output_tree_sha256": "3ccd7e9c25b802a9d3bc58eeb618b9b6f12f07ef78f73ace386b09c69fff8f41",
+  "output_file_count": 17,
+  "output_bytes": 343316
+}

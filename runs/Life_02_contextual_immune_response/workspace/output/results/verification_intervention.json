@@ -1,0 +1,92 @@
+{
+  "unit": "intervention",
+  "checks": [
+    {
+      "claim": "V3a Kendall's W over 3x5 rank matrix",
+      "recomputed": 0.955556,
+      "agrees": true,
+      "expression": "W = 12*S/(n^2*(k^3-k)-n*T) with S=sum(col_rank_sums-mean)^2, n=3,k=5"
+    },
+    {
+      "claim": "V3b chi2 = n_assays*(n_settings-1)*W, df=4, p",
+      "recomputed": {
+        "chi2": 11.4667,
+        "df": 4,
+        "p": 0.021791
+      },
+      "agrees": true,
+      "expression": "chi2 = 3*(5-1)*W; p = scipy.stats.chi2.sf(chi2, 4)"
+    },
+    {
+      "claim": "V3c lowest-ranked setting per assay",
+      "recomputed": {
+        "assay_1": "intervention_setting_1",
+        "assay_2": "intervention_setting_1",
+        "assay_3": "intervention_setting_1"
+      },
+      "agrees": true,
+      "expression": "meanA.idxmin(axis=1) over setting columns"
+    },
+    {
+      "claim": "V3d Spearman assay_1 vs assay_3 = 1.000",
+      "recomputed": 1.0,
+      "agrees": true,
+      "expression": "scipy.stats.spearmanr(rank_assay1, rank_assay3)"
+    },
+    {
+      "claim": "V3d Spearman assay_2 vs assay_3 = 0.900",
+      "recomputed": 0.9,
+      "agrees": true,
+      "expression": "scipy.stats.spearmanr(rank_assay2, rank_assay3)"
+    },
+    {
+      "claim": "V4a class A slope 8.593, R2 0.9587",
+      "recomputed": {
+        "slope": 8.593,
+        "R2": 0.9587
+      },
+      "agrees": true,
+      "expression": "smf.ols('response_value ~ setting_index') on class A"
+    },
+    {
+      "claim": "V4b class B slope 0.191, p 0.5837",
+      "recomputed": {
+        "slope": 0.1913,
+        "p": 0.5837
+      },
+      "agrees": true,
+      "expression": "smf.ols('response_value ~ setting_index') on class B"
+    },
+    {
+      "claim": "V4c class x setting interaction F 45.415, p 4.73e-08",
+      "recomputed": {
+        "F": 45.4145,
+        "p": 4.7303240535929876e-08
+      },
+      "agrees": true,
+      "expression": "anova_lm(ols('response_value ~ C(response_class_id)*C(compound_setting_id)'), typ=2)"
+    },
+    {
+      "claim": "V4d class A slopes [8.782, 9.291, 7.706], class B [0.403, 0.825, -0.654], complete separation",
+      "recomputed": {
+        "A": {
+          "replicate_1": 8.782,
+          "replicate_2": 9.291,
+          "replicate_3": 7.706
+        },
+        "B": {
+          "replicate_1": 0.403,
+          "replicate_2": 0.825,
+          "replicate_3": -0.654
+        },
+        "min_A": 7.706,
+        "max_B": 0.825,
+        "complete_separation": true
+      },
+      "agrees": true,
+      "expression": "per (class,replicate) smf.ols('response_value ~ setting_index') slopes; min(A) > max(B)"
+    }
+  ],
+  "conclusion": "All checks verified: 9/9 claims agree with recomputation from raw TSVs.",
+  "errors": []
+}

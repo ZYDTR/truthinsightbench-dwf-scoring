@@ -1,0 +1,4 @@
+left_out_assay,n_cells,mean_log2fc,ci_low,ci_high
+assay_1,12,0.905317,0.733264,1.07737
+assay_2,12,0.957215,0.813935,1.1005
+assay_3,12,0.749308,0.630147,0.868468

@@ -1,0 +1,84 @@
+/usr/local/lib/python3.11/dist-packages/numpy/lib/_function_base_impl.py:3023: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/usr/local/lib/python3.11/dist-packages/numpy/lib/_function_base_impl.py:3024: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+==============================================================================
+A  Sheet_001 / Sheet_002 - are the y columns related?
+  group_a (channel_l)    n= 11517 r=-0.9728 slope=-0.26881 R2=0.94642 max|dev|=13.74 med|dY mod360|=12.248 med|sum mod360|=166.792
+  group_a(channel_r)     n= 15856 r=-0.9176 slope=-0.26154 R2=0.84197 max|dev|=13.96 med|dY mod360|=11.685 med|sum mod360|=171.935
+  Gan(channel_l)         n=  1207 r=+1.0000 slope=+0.24666 R2=1.00000 max|dev|=0.005449 med|dY mod360|=104.862 med|sum mod360|=124.049
+  Gan(channel_r)         n=   493 r=+1.0000 slope=+0.24666 R2=1.00000 max|dev|=0.004487 med|dY mod360|=105.929 med|sum mod360|=119.598
+  group_c (channel_l)    n=  1656 r=+0.3428 slope=+0.21407 R2=0.11753 max|dev|=110 med|dY mod360|=137.547 med|sum mod360|=65.570
+  group_c (channel_r)    n=  2902 r=+0.7203 slope=+0.41933 R2=0.51879 max|dev|=112.8 med|dY mod360|=133.509 med|sum mod360|=67.509
+==============================================================================
+C  coarse (Sheet_039..044) vs fine blocks: distributional distance
+  Sheet_039 group_a (-35<s<-10), channel_l   ncoarse=20 nfine= 26 tot    10570 vs    10560  mean  9.389 vs  7.918 (shift +1.471)  peak@7.00 vs 5.04  W1=1.533 TV=0.245
+  Sheet_039 group_a(-10<s<0), channel_l      ncoarse=20 nfine= 29 tot      809 vs      790  mean  8.194 vs  1.319 (shift +6.875)  peak@5.25 vs 0.36  W1=6.054 TV=0.996
+  Sheet_039 group_a(0<s<20), channel_l       ncoarse=20 nfine=108 tot      122 vs      102  mean  8.420 vs  1.684 (shift +6.736)  peak@5.25 vs 0.22  W1=6.659 TV=0.854
+  Sheet_040 group_a (-35<s<-10), channel_r   ncoarse=20 nfine= 26 tot    14498 vs    14492  mean  9.636 vs  7.798 (shift +1.838)  peak@7.00 vs 5.30  W1=1.902 TV=0.196
+  Sheet_040 group_a(-10<s<0), channel_r      ncoarse=20 nfine= 29 tot     1144 vs     1126  mean  8.863 vs  1.219 (shift +7.644)  peak@7.00 vs 0.45  W1=6.823 TV=0.997
+  Sheet_040 group_a(0<s<20), channel_r       ncoarse=30 nfine=102 tot      207 vs      177  mean  9.891 vs  1.097 (shift +8.795)  peak@7.00 vs 0.19  W1=8.714 TV=0.952
+  Sheet_041 group_b (-35<s<-10), channel_l   ncoarse=20 nfine= 24 tot      352 vs      357  mean  8.775 vs 12.790 (shift -4.015)  peak@5.25 vs 10.56  W1=4.054 TV=0.489
+  Sheet_041 group_b(-10<s<0), channel_l      ncoarse=20 nfine= 24 tot      579 vs      580  mean  7.323 vs  0.460 (shift +6.863)  peak@5.25 vs 0.26  W1=6.067 TV=1.000
+  Sheet_041 group_b(0<s<20), channel_l       ncoarse=20 nfine=115 tot      222 vs      223  mean  7.757 vs  0.863 (shift +6.894)  peak@5.25 vs 0.24  W1=6.891 TV=0.928
+  Sheet_042 group_b (-35<s<-10), channel_r   ncoarse=20 nfine= 21 tot       51 vs       52  mean  7.583 vs 20.224 (shift -12.641)  peak@5.25 vs 25.81  W1=12.898 TV=0.857
+  Sheet_042 group_b(-10<s<0), channel_r      ncoarse=20 nfine= 17 tot      148 vs      155  mean  8.407 vs  0.472 (shift +7.935)  peak@5.25 vs 0.26  W1=7.161 TV=1.000
+  Sheet_042 group_b(0<s<20), channel_r       ncoarse=20 nfine=115 tot      234 vs      237  mean  8.040 vs  0.610 (shift +7.429)  peak@5.25 vs 0.24  W1=7.392 TV=0.970
+  Sheet_043 group_c (-35<s<-10), channel_l   ncoarse=20 nfine= 24 tot      423 vs      429  mean  8.973 vs  9.949 (shift -0.976)  peak@5.25 vs 5.05  W1=2.372 TV=0.302
+  Sheet_043 group_c(-10<s<0), channel_l      ncoarse=20 nfine= 26 tot      596 vs      601  mean  7.581 vs  0.600 (shift +6.982)  peak@5.25 vs 0.26  W1=6.194 TV=1.000
+  Sheet_043 group_c(0<s<20), channel_l       ncoarse=20 nfine=101 tot      491 vs      491  mean  7.488 vs  0.480 (shift +7.008)  peak@5.25 vs 0.24  W1=7.001 TV=0.986
+  Sheet_044 group_c (-35<s<-10), channel_r   ncoarse=20 nfine= 25 tot      663 vs      664  mean 11.558 vs  7.194 (shift +4.364)  peak@7.00 vs 6.47  W1=4.548 TV=0.501
+  Sheet_044 group_c(-10<s<0), channel_r      ncoarse=20 nfine= 28 tot     1671 vs     1680  mean  7.789 vs  0.743 (shift +7.046)  peak@5.25 vs 0.46  W1=6.233 TV=1.000
+  Sheet_044 group_c(0<s<20), channel_r       ncoarse=20 nfine=108 tot      518 vs      521  mean  7.730 vs  0.720 (shift +7.010)  peak@5.25 vs 0.24  W1=6.986 TV=0.967
+==============================================================================
+D  Sheet_046/047 variants - per-bin ratio structure
+  Sheet_046 b0 vs channel_l: n=20 R=0.9384 ratio mean=0.8784 sd=0.2027 cv=0.231 min=0.333 max=1.000 r(ratio,base)=+0.310 r=0.99459 chi2_bin/dof=6.63
+  Sheet_046 b0 vs channel_r: n=11 R=6.4423 ratio mean=5.4640 sd=6.9206 cv=1.267 min=0.125 max=24.000 r(ratio,base)=-0.597 r=-0.04797 chi2_bin/dof=1012775591715976.38
+  Sheet_046 b1 vs channel_l: n= 7 R=0.9690 ratio mean=0.7189 sd=0.1923 cv=0.267 min=0.500 max=1.000 r(ratio,base)=-0.560 r=0.79239 chi2_bin/dof=474.19
+  Sheet_046 b1 vs channel_r: n= 7 R=3.6258 ratio mean=2.1969 sd=1.9624 cv=0.893 min=0.000 max=5.286 r(ratio,base)=-0.016 r=0.59394 chi2_bin/dof=9323884356573014.00
+  Sheet_046 b2 vs channel_l: n= 9 R=0.8072 ratio mean=0.8184 sd=0.3076 cv=0.376 min=0.000 max=1.000 r(ratio,base)=-0.020 r=0.99912 chi2_bin/dof=2.82
+  Sheet_046 b2 vs channel_r: n= 7 R=0.7595 ratio mean=1.7010 sd=1.9602 cv=1.152 min=0.000 max=6.000 r(ratio,base)=-0.297 r=0.99846 chi2_bin/dof=31.79
+  Sheet_047 b0 vs channel_l: n=20 R=0.1345 ratio mean=0.3115 sd=0.6106 cv=1.960 min=0.000 max=2.667 r(ratio,base)=-0.303 r=0.03042 chi2_bin/dof=15.42
+  Sheet_047 b0 vs channel_r: n=11 R=0.9231 ratio mean=0.9258 sd=0.1313 cv=0.142 min=0.600 max=1.000 r(ratio,base)=-0.041 r=0.98706 chi2_bin/dof=1.28
+  Sheet_047 b1 vs channel_l: n= 7 R=0.2500 ratio mean=0.6476 sd=1.1746 cv=1.814 min=0.000 max=3.500 r(ratio,base)=-0.346 r=0.68233 chi2_bin/dof=27.71
+  Sheet_047 b1 vs channel_r: n= 7 R=0.9355 ratio mean=0.6301 sd=0.3388 cv=0.538 min=0.000 max=1.000 r(ratio,base)=-0.023 r=0.80980 chi2_bin/dof=59.02
+  Sheet_047 b2 vs channel_l: n= 9 R=0.8879 ratio mean=0.4821 sd=0.5623 cv=1.166 min=0.000 max=1.667 r(ratio,base)=+0.383 r=0.99744 chi2_bin/dof=19.31
+  Sheet_047 b2 vs channel_r: n= 7 R=0.8354 ratio mean=0.7767 sd=0.3346 cv=0.431 min=0.000 max=1.000 r(ratio,base)=+0.107 r=0.99712 chi2_bin/dof=3.28
+==============================================================================
+E  linear-fit matrix over the 14 image sheets + 5 events
+  top 18 pairs by |r|:
+    Sheet_003  event_1    r=+1.0000 R2=1.0000 slope=+1.0000 mae=0.0000
+    Sheet_004  event_2    r=+1.0000 R2=1.0000 slope=+1.0000 mae=0.0000
+    Sheet_005  event_3    r=+1.0000 R2=1.0000 slope=+1.0000 mae=0.0000
+    Sheet_006  event_4    r=+1.0000 R2=1.0000 slope=+1.0000 mae=0.0000
+    Sheet_007  event_5    r=+1.0000 R2=1.0000 slope=+1.0000 mae=0.0000
+    Sheet_017  Sheet_018  r=+0.8762 R2=0.7678 slope=+0.8335 mae=3.9523
+    Sheet_015  Sheet_016  r=+0.2393 R2=0.0573 slope=+0.0822 mae=4.1140
+    Sheet_015  Sheet_017  r=+0.0912 R2=0.0083 slope=+0.1394 mae=9.4187
+    Sheet_003  Sheet_015  r=+0.0812 R2=0.0066 slope=+0.2126 mae=4.1019
+    Sheet_015  event_1    r=+0.0812 R2=0.0066 slope=+0.0311 mae=4.1019
+    Sheet_008  Sheet_017  r=+0.0809 R2=0.0065 slope=+0.3173 mae=5.3160
+    Sheet_004  Sheet_015  r=+0.0798 R2=0.0064 slope=+0.1936 mae=4.0894
+    Sheet_015  event_2    r=+0.0798 R2=0.0064 slope=+0.0329 mae=4.0894
+    Sheet_008  Sheet_015  r=+0.0522 R2=0.0027 slope=+0.1339 mae=4.1027
+    Sheet_015  event_4    r=+0.0467 R2=0.0022 slope=+0.0176 mae=4.1049
+    Sheet_006  Sheet_015  r=+0.0467 R2=0.0022 slope=+0.1242 mae=4.1049
+    Sheet_004  Sheet_005  r=+0.0448 R2=0.0020 slope=+0.0402 mae=0.1440
+    Sheet_004  event_3    r=+0.0448 R2=0.0020 slope=+0.0402 mae=0.1440
+  bounds-sharing pair tests (positive partner vs signed partner):
+    Sheet_015+Sheet_016: r(A,B)=+0.2193 std(A+B)=0.4434 std(A-B)=0.3870 mean(A+B)=6.3035 slope(B on A)=+0.0757
+    Sheet_017+Sheet_018: r(A,B)=+0.8724 std(A+B)=1.1553 std(A-B)=0.3028 mean(A+B)=-4.5068 slope(B on A)=+0.8326
+    Sheet_021+Sheet_022: r(A,B)=-0.0003 std(A+B)=0.5663 std(A-B)=0.5664 mean(A+B)=0.8350 slope(B on A)=-0.0013
+    Sheet_036+Sheet_037: r(A,B)=+0.0051 std(A+B)=0.5758 std(A-B)=0.5744 mean(A+B)=0.8315 slope(B on A)=+0.0215
+  row/column profile structure of the 9 unrepresented images:
+    Sheet_008: grand_mean=+1.1001 sd(row means)=0.0253 sd(col means)=0.0164 first-row mean=+1.0823 last-row mean=+1.0863
+    Sheet_015: grand_mean=+5.2131 sd(row means)=0.3742 sd(col means)=0.0250 first-row mean=+4.6920 last-row mean=+5.3982
+    Sheet_016: grand_mean=+1.0903 sd(row means)=0.0186 sd(col means)=0.0112 first-row mean=+1.0907 last-row mean=+1.0825
+    Sheet_017: grand_mean=-4.2231 sd(row means)=0.2006 sd(col means)=0.1017 first-row mean=-4.4282 last-row mean=-4.3878
+    Sheet_018: grand_mean=-0.2838 sd(row means)=0.0216 sd(col means)=0.1313 first-row mean=-0.2882 last-row mean=-0.2601
+    Sheet_021: grand_mean=+1.0834 sd(row means)=0.0081 sd(col means)=0.0083 first-row mean=+1.0846 last-row mean=+1.0855
+    Sheet_022: grand_mean=-0.2484 sd(row means)=0.0178 sd(col means)=0.0203 first-row mean=-0.2470 last-row mean=-0.2378
+    Sheet_036: grand_mean=+1.0893 sd(row means)=0.0084 sd(col means)=0.0365 first-row mean=+1.1443 last-row mean=+1.0891
+    Sheet_037: grand_mean=-0.2578 sd(row means)=0.0285 sd(col means)=0.0685 first-row mean=-0.2554 last-row mean=-0.2660
+  wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/figures/covx_image_pairs.png
+wrote /data/user/conversations/conv-02a7c52b-6f08-461b-b10b-65392ab66dba/project/output/results/covx_mechanisms.json

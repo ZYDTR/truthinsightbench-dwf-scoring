@@ -1,0 +1,99 @@
+run_all: interpreter  /usr/bin/python3
+run_all: python       3.11.2
+run_all: code dir     /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code
+run_all: plan         6 script(s)
+  - /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track1_followup_checks.py
+  - /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track1_model_comparison.py
+  - /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track2_spectral_tests.py
+  - /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track3_grid_structure.py
+  - /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track4_ic_comparison.py
+  - /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track5_figures.py
+
+==============================================================================
+run_all: RUN /usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track1_followup_checks.py
+run_all: cwd /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project
+==============================================================================
+merged mixture_structure; w=0.4159 weight_sum=1.0031
+w CI [0.32066 0.49311] wsum CI [0.99818 1.0243 ]
+resid frac (mixture) 0.2814 (free fit) 0.2814
+resid frac bootstrap median 0.2839
+run_all: RESULT track1_followup_checks.py -> ok in 110.6 s
+
+==============================================================================
+run_all: RUN /usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track1_model_comparison.py
+run_all: cwd /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project
+==============================================================================
+[    0.3s] loaded 1698 rows, 22 passes
+[    0.3s] gap passes (>1.5 min spacing): ['pass_02', 'pass_03', 'pass_09', 'pass_10', 'pass_15', 'pass_18', 'pass_19']
+[    0.4s] item1 done: median raw ratios B/A=0.5413, C/A=0.6741, B/C=0.8174
+[    0.7s] item2 done
+[    2.8s] item3 done: P(B/A<1)=1.0000, P(C/A<1)=1.0000, P(B/C<1)=1.0000
+[    2.9s] item4 done
+[    3.2s] item5 done
+[   63.3s] item6 done
+[   63.3s] item7 done
+[   63.5s] item8 done
+[   63.8s] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/results/model_comparison.json
+JSON_OK 74137
+run_all: RESULT track1_model_comparison.py -> ok in 134.1 s
+
+==============================================================================
+run_all: RUN /usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track2_spectral_tests.py
+run_all: cwd /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project
+==============================================================================
+wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/results/spectral_tests.json
+statement: NO reproducible localized spectral line at 860-1310 uHz. Median per-pass band percentile A=0.471, B=0.009, C=0.710; passes above the AR(1) 99th percentile A=0/22, B=0/22, C=1/22; stacked peaks at A=489 uHz, B=2474 uHz, C=1706 uHz.
+runtime_sec 508.14
+run_all: RESULT track2_spectral_tests.py -> ok in 552.7 s
+
+==============================================================================
+run_all: RUN /usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track3_grid_structure.py
+run_all: cwd /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project
+==============================================================================
+wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/results/grid_structure.json
+run_all: RESULT track3_grid_structure.py -> ok in 43.3 s
+
+==============================================================================
+run_all: RUN /usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track4_ic_comparison.py
+run_all: cwd /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project
+==============================================================================
+wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/results/ic_comparison.json
+Q1 matching rows: 19 / 24 max|diff| = 0.0
+Q2 uniform min: 1522.1 at v = 0.1 unimodal: True
+Q3 ratio uniform/candidate: 34.67198177676538
+Q4 overlap: 29 max offset: 1.4210854715202004e-14
+Q5 bests: FA 43.9 MV 50.7 uniform 1522.1 ranked 0.0
+run_all: RESULT track4_ic_comparison.py -> ok in 3.8 s
+
+==============================================================================
+run_all: RUN /usr/bin/python3 /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/code/track5_figures.py
+run_all: cwd /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project
+==============================================================================
+[track5] stats (incl. 66 LS transforms) in 1.6 s
+[track5] fig1 in 7.3 s
+[track5] fig2 in 2.8 s
+[track5] fig3 in 1.8 s
+[track5] fig4 in 2.4 s
+[track5] fig5 in 2.1 s
+[track5] backend=Agg matplotlib=3.11.2
+[track5] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig1_residual_traces.png (1935225 bytes)
+[track5] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig2_per_pass_rms.png (202690 bytes)
+[track5] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig3_periodograms.png (481309 bytes)
+[track5] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig4_ic_surfaces.png (254273 bytes)
+[track5] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/fig5_grid_coverage.png (322619 bytes)
+[track5] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/figures/figures_manifest.json
+[track5] wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/results/track5_figure_annotations.json
+[track5] done in 18.0 s
+run_all: RESULT track5_figures.py -> ok in 24.8 s
+
+==============================================================================
+run_all: SUMMARY
+     0  track1_followup_checks.py                ok                          110.7 s
+     0  track1_model_comparison.py               ok                          134.1 s
+     0  track2_spectral_tests.py                 ok                          552.8 s
+     0  track3_grid_structure.py                 ok                           43.3 s
+     0  track4_ic_comparison.py                  ok                            3.8 s
+     0  track5_figures.py                        ok                           24.8 s
+run_all: 6/6 scripts exited 0, total 869.5 s
+run_all: wrote /data/user/conversations/conv-49e02279-325a-4108-acbf-a2a32676ae52/project/output/results/track5_run_all_summary.json
+EXIT=0

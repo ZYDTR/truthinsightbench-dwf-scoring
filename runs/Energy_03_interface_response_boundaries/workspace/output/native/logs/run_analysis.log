@@ -1,0 +1,157 @@
+/data/user/conversations/conv-67a2d991-196f-410c-8cc5-6286dad6c56d/project/output/native/analysis/run_analysis.py:349: RuntimeWarning: invalid value encountered in sqrt
+  p = float(2.0 * ts.student_t_sf(np.sqrt(F), df2))  # two-sided on t = sqrt(F)
+[artifact] results/A_integrity_inventory.json
+[artifact] results/B_ordering_crossings.json
+[artifact] results/C_growth_and_exponents.json
+[artifact] results/D_model_competition.json
+
+=== STAGE A ===
+{
+  "anonymous_condition_response_curves.tsv": {
+    "rows": 88,
+    "columns": [
+      "condition_id",
+      "temperature_like_setting",
+      "rate_like_response"
+    ],
+    "n_unique_conditions": 8,
+    "condition_ids": [
+      "condition_block1_1",
+      "condition_block1_2",
+      "condition_block1_3",
+      "condition_block1_4",
+      "condition_block2_1",
+      "condition_block2_2",
+      "condition_block2_3",
+      "condition_block2_4"
+    ],
+    "n_unique_settings": 11,
+    "settings": [
+      120.0,
+      140.0,
+      160.0,
+      180.0,
+      200.0,
+      220.0,
+      240.0,
+      260.0,
+      280.0,
+      300.0,
+      320.0
+    ],
+    "setting_step": 20.0,
+    "balanced_panel": true,
+    "missing_cells": 0,
+    "duplicate_(condition,setting)_rows": 0,
+    "response_min": 0.0,
+    "response_max": 93.01486,
+    "n_zero_responses": 1,
+    "zero_response_rows": [
+      {
+        "condition_id": "condition_block2_1",
+        "temperature_like_setting": 120.0
+      }
+    ]
+  },
+  "independent_condition_check_curves.tsv": {
+    "rows": 44,
+    "columns": [
+      "condition_id",
+      "temperature_like_setting",
+      "rate_like_response"
+    ],
+    "n_unique_conditions": 4,
+    "condition_ids": [
+      "condition_block1_1",
+      "condition_block1_2",
+      "condition_block1_4",
+      "condition_block1_5"
+    ],
+    "n_unique_settings": 11,
+    "settings": [
+      120.0,
+      140.0,
+      160.0,
+      180.0,
+      200.0,
+      220.0,
+      240.0,
+      260.0,
+      280.0,
+      300.0,
+      320.0
+    ],
+    "setting_step": 20.0,
+    "balanced_panel": true,
+    "missing_cells": 0,
+    "duplicate_(condition,setting)_rows": 0,
+    "response_min": 0.0,
+    "response_max": 93.01486,
+    "n_zero_responses": 2,
+    "zero_response_rows": [
+      {
+        "condition_id": 
+
+=== STAGE B (summary) ===
+main non-monotone curves: 1 | pairs with sign change: 12 | distinct threshold vectors: 8 | invariant-rank curves: 0 / 8
+check non-monotone curves: 0 | pairs with sign change: 1 | distinct threshold vectors: 4 | invariant-rank curves: 0 / 4
+
+=== STAGE C (main slopes) ===
+condition_block1_1 slope=0.03015/K R2=0.9897 B(y320/y140)=217.32
+condition_block1_2 slope=0.02047/K R2=0.9046 B(y320/y140)=38.05
+condition_block1_3 slope=0.02177/K R2=0.9310 B(y320/y140)=54.33
+condition_block1_4 slope=0.02379/K R2=0.9853 B(y320/y140)=67.46
+condition_block2_1 slope=0.02658/K R2=0.9951 B(y320/y140)=96.14
+condition_block2_2 slope=0.01796/K R2=0.8523 B(y320/y140)=26.45
+condition_block2_3 slope=0.02136/K R2=0.9025 B(y320/y140)=44.36
+condition_block2_4 slope=0.02394/K R2=0.9592 B(y320/y140)=72.07
+cross-block slope test: {
+  "mean_block1": 0.02404746734158033,
+  "mean_block2": 0.022457321199066863,
+  "ratio_block2_over_block1": 0.9338746937493931,
+  "all_block2_slopes_exceed_all_block1_slopes": false,
+  "permutation_gap": {
+    "p": 0.7285714285714285,
+    "method": "exact_complete_enumeration",
+    "enumerated_assignments": 70,
+    "rejecting_assignments": 51,
+    "left_group_size": 4,
+    "direction": 1,
+    "observed_statistic_sum_block2": 0.08982928479626745
+  }
+}
+
+check panel slopes:
+condition_block1_1 slope=0.02545/K R2=0.9965
+condition_block1_2 slope=0.02284/K R2=0.9696
+condition_block1_4 slope=0.02658/K R2=0.9951
+condition_block1_5 slope=0.01796/K R2=0.8523
+
+=== STAGE D ===
+                  single_power_law k=  2 R2=0.77483 AIC=-24.23 BIC=-16.83
+                  curve_intercepts k=  9 R2=0.93723 AIC=-121.36 BIC=-96.70
+      curve_intercepts_block_slope k= 10 R2=0.93744 AIC=-119.66 BIC=-92.53
+     curve_intercepts_curve_slopes k= 15 R2=0.78124 AIC=-0.74 BIC=38.71
+{
+  "shared_slope_vs_block_slope_interaction": {
+    "F": 0.26019874413148836,
+    "df1": 1,
+    "df2": 77,
+    "p_two_sided": 0.6114427606886452,
+    "delta_bic": -4.17241294112371
+  },
+  "curve_intercepts_vs_per_curve_slopes": {
+    "F": -8.556860297377884,
+    "df1": 6,
+    "df2": 72,
+    "p_two_sided": 0.0,
+    "delta_bic": -135.4169401778881
+  },
+  "single_global_rate_vs_curve_intercepts": {
+    "F": 28.828934120954717,
+    "df1": 7,
+    "df2": 78,
+    "p_two_sided": 7.908865504491843e-07,
+    "delta_bic": 79.87029507777702
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "locality": {
+    "A": {
+      "stacked_peak_uhz": 489.0,
+      "power_at_peak": 0.20010908235811223,
+      "median_power_within_1_res_of_peak": 0.172470301963226,
+      "median_power_outer_700uhz": 0.06972457966370615,
+      "peak_over_local_median": 1.160252403342921,
+      "peak_over_outer_median": 2.8699933843025422,
+      "band_860_1310_median": 0.04426687463127566
+    },
+    "B": {
+      "stacked_peak_uhz": 2474.0,
+      "power_at_peak": 0.04038253752227731,
+      "median_power_within_1_res_of_peak": 0.027320371492554396,
+      "median_power_outer_700uhz": 0.020135423741644416,
+      "peak_over_local_median": 1.478110849747513,
+      "peak_over_outer_median": 2.0055469425635915,
+      "band_860_1310_median": 0.004006553728671167
+    },
+    "C": {
+      "stacked_peak_uhz": 1706.0,
+      "power_at_peak": 0.06682115502020337,
+      "median_power_within_1_res_of_peak": 0.06159700228503517,
+      "median_power_outer_700uhz": 0.0505517039148255,
+      "peak_over_local_median": 1.0848118015710222,
+      "peak_over_outer_median": 1.3218378382020564,
+      "band_860_1310_median": 0.05503816156856792
+    }
+  },
+  "matched_AR1_track_convention": {
+    "A": {
+      "observed_stacked_peak": 0.20010908235811223,
+      "track_convention_matched_AR1_q50_q95_q99_max": [
+        0.11996724242339771,
+        0.14373094133097095,
+        0.16618901308842357,
+        0.19511342998960998
+      ],
+      "p_matched_AR1_track_convention": 0.0,
+      "n_draws": 150
+    },
+    "B": {
+      "observed_stacked_peak": 0.04038253752227731,
+      "track_convention_matched_AR1_q50_q95_q99_max": [
+        0.025908699239844298,
+        0.031959113718408635,
+        0.03548530051150682,
+        0.03690983165289649
+      ],
+      "p_matched_AR1_track_convention": 0.0,
+      "n_draws": 150
+    },
+    "C": {
+      "observed_stacked_peak": 0.06682115502020337,
+      "track_convention_matched_AR1_q50_q95_q99_max": [
+        0.05406226541593703,
+        0.06697186627951945,
+        0.07153811797705832,
+        0.0734596577380734
+      ],
+      "p_matched_AR1_track_convention": 0.05333333333333334,
+      "n_draws": 150
+    }
+  },
+  "runtime_sec": 333.1
+}

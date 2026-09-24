@@ -1,0 +1,62 @@
+{
+  "generated_by": "output/analysis/common/prepare_data.py",
+  "inputs": {
+    "glacial_erosion_Earth.tsv": {
+      "bytes": 117004,
+      "sha256": "b49192d77082fd431963ca67278d9face1079e8054711b84296554573c24e2cf"
+    },
+    "nonglacial_erosion_Earth.tsv": {
+      "bytes": 1662513,
+      "sha256": "214063142d936c3a5408583b682397042392b4d46e0443e30c88811fbe9fee89"
+    }
+  },
+  "row_counts": {
+    "Glacial": 427,
+    "Nonglacial": 6288
+  },
+  "missingness": {
+    "Glacial": {
+      "Compilation": 0,
+      "Reference": 0,
+      "Reference DOI": 60,
+      "Locality": 0,
+      "Region": 0,
+      "Methodology": 0,
+      "Type": 0,
+      "Area (km2)": 35,
+      "Time interval (yr)": 0,
+      "Erosion rate (mm/yr)": 0,
+      "Slope (m/km)": 2,
+      "Precipitation (mm/yr)": 2,
+      "Latitude": 2,
+      "Longitude": 2,
+      "Exhumation (m)": 346
+    },
+    "Nonglacial": {
+      "Compilation": 0,
+      "Reference": 0,
+      "Reference DOI": 375,
+      "Locality": 0,
+      "Region": 0,
+      "Methodology": 0,
+      "Type": 0,
+      "Area (km2)": 68,
+      "Time interval (yr)": 160,
+      "Erosion rate (mm/yr)": 0,
+      "Slope (m/km)": 0,
+      "Precipitation (mm/yr)": 0,
+      "Latitude": 0,
+      "Longitude": 0,
+      "Exhumation (m)": 6277
+    }
+  },
+  "parse_anomalies": {
+    "nonpositive_erosion_rate_rows": 4,
+    "nonpositive_or_missing_time_interval_rows": 160,
+    "rows_with_exhumation_and_identity_checked": 92,
+    "rows_satisfying_E_times_T_equals_exhumation": 28,
+    "unique_site_keys": 5115,
+    "unique_references": 417,
+    "unique_compilations": 17
+  }
+}

@@ -1,0 +1,11 @@
+condition,var_a,var_b,corr,p,n
+matrix_perturbed,spatial_regularity_score,speed_modulation_score,-0.09581511819673551,0.45881345843851656,62
+matrix_perturbed,information_rate,spatial_regularity_score,0.22980035574125804,0.07237444573205587,62
+matrix_perturbed,average_rate_hz,in_field_rate_hz,0.9381317612659659,2.5314729318859953e-29,62
+matrix_perturbed,in_field_rate_hz,out_of_field_rate_hz,0.8407619141469765,1.2441126855450829e-17,62
+matrix_perturbed,information_rate,average_rate_hz,0.18012023637017166,0.1612463059776737,62
+reference,spatial_regularity_score,speed_modulation_score,-0.24324520180865367,0.03950230266226639,72
+reference,information_rate,spatial_regularity_score,0.071429875908285,0.551003331725257,72
+reference,average_rate_hz,in_field_rate_hz,0.9381460754067037,5.769438249884422e-34,72
+reference,in_field_rate_hz,out_of_field_rate_hz,0.8333454365505967,1.075356071573172e-19,72
+reference,information_rate,average_rate_hz,0.5561700681367493,3.9321521172742926e-07,72
