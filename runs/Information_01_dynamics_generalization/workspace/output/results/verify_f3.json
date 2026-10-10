@@ -1,0 +1,289 @@
+{
+  "task": "adversarial verification of Finding 3 (paired OOD state-shift)",
+  "source": {
+    "json": "/data/user/conversations/conv-07581fcf-2edd-4246-8da8-dc035efd1751/project/data/source_data/computational_observations.json",
+    "graphs": {
+      "training_graph": "/data/user/conversations/conv-07581fcf-2edd-4246-8da8-dc035efd1751/project/data/source_data/er_n_100_p_01.npy",
+      "equivalent_novel_graph": "/data/user/conversations/conv-07581fcf-2edd-4246-8da8-dc035efd1751/project/data/source_data/er_n_100_p_01_alt.npy",
+      "higher_degree_graph": "/data/user/conversations/conv-07581fcf-2edd-4246-8da8-dc035efd1751/project/data/source_data/er_n_100_p_06.npy"
+    }
+  },
+  "predeclared_alpha": 0.001,
+  "graphs_verified": {
+    "training_graph": {
+      "shape": [
+        100,
+        100
+      ],
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "symmetric": true,
+      "no_self_loops": true,
+      "unique_vals": [
+        0.0,
+        1.0
+      ],
+      "mean_degree": 9.48
+    },
+    "equivalent_novel_graph": {
+      "shape": [
+        100,
+        100
+      ],
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "symmetric": true,
+      "no_self_loops": true,
+      "unique_vals": [
+        0.0,
+        1.0
+      ],
+      "mean_degree": 9.54
+    },
+    "higher_degree_graph": {
+      "shape": [
+        100,
+        100
+      ],
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "symmetric": true,
+      "no_self_loops": true,
+      "unique_vals": [
+        0.0,
+        1.0
+      ],
+      "mean_degree": 58.82
+    }
+  },
+  "per_graph": {
+    "training_graph": {
+      "graph_file": "er_n_100_p_01.npy",
+      "node_count": 100,
+      "mean_degree_stored": 9.479999542236328,
+      "mean_degree_recomputed_from_npy": 9.48,
+      "in_domain": {
+        "mean": 0.5234569856822491,
+        "median": 0.5182521343231201,
+        "p95": 0.6351876378059387,
+        "max": 0.8481136560440063,
+        "count": 1000
+      },
+      "out_of_domain": {
+        "mean": 1.7787519165277481,
+        "median": 1.770909309387207,
+        "p95": 2.3744255065917965,
+        "max": 3.067986011505127,
+        "count": 1000
+      },
+      "recomputed": {
+        "ratio_from_means": 3.3980861182116175,
+        "increase_pp_from_means": 1.255294930845499,
+        "wilcoxon_z_normalapprox": 27.39302486213321,
+        "wilcoxon_p_normalapprox": 1.6604349684395464e-165,
+        "wilcoxon_p_exact_log10": -600.3113621048072,
+        "wilcoxon_W1_max": 500500.0
+      },
+      "stored_vs_recomputed": {
+        "ratio": {
+          "stored": 3.3980861182116175,
+          "recomputed": 3.3980861182116175,
+          "match": true
+        },
+        "increase_pp": {
+          "stored": 1.255294930845499,
+          "recomputed": 1.255294930845499,
+          "match": true
+        },
+        "wilcoxon_stat": {
+          "stored": 500500.0,
+          "expected_W1_max": 500500.0,
+          "match": true
+        },
+        "wilcoxon_p": {
+          "stored": 1.6629295594672565e-165,
+          "normalapprox_recomputed": 1.6604349684395464e-165,
+          "match_to_1e-12": true
+        }
+      },
+      "p_below_alpha": true,
+      "p_below_alpha_normalapprox": true,
+      "fraction_pairs_worse": 1.0,
+      "out_of_domain_median_gt_in_domain_max": true,
+      "cross_check_vs_diagnostic": {
+        "in_mean_equal": true,
+        "out_mean_equal": true,
+        "ratio_equal": true,
+        "p_equal": true,
+        "fraction_equal": true,
+        "stat_equal": true
+      },
+      "cross_check_all_equal": true
+    },
+    "equivalent_novel_graph": {
+      "graph_file": "er_n_100_p_01_alt.npy",
+      "node_count": 100,
+      "mean_degree_stored": 9.539999961853027,
+      "mean_degree_recomputed_from_npy": 9.54,
+      "in_domain": {
+        "mean": 0.5262036546170712,
+        "median": 0.5199289321899414,
+        "p95": 0.6521057873964309,
+        "max": 0.845321536064148,
+        "count": 1000
+      },
+      "out_of_domain": {
+        "mean": 1.7866984773278236,
+        "median": 1.778967797756195,
+        "p95": 2.382759881019592,
+        "max": 2.960495948791504,
+        "count": 1000
+      },
+      "recomputed": {
+        "ratio_from_means": 3.3954505288034142,
+        "increase_pp_from_means": 1.2604948227107524,
+        "wilcoxon_z_normalapprox": 27.39302486213321,
+        "wilcoxon_p_normalapprox": 1.6604349684395464e-165,
+        "wilcoxon_p_exact_log10": -600.3113621048072,
+        "wilcoxon_W1_max": 500500.0
+      },
+      "stored_vs_recomputed": {
+        "ratio": {
+          "stored": 3.3954505288034142,
+          "recomputed": 3.3954505288034142,
+          "match": true
+        },
+        "increase_pp": {
+          "stored": 1.2604948227107524,
+          "recomputed": 1.2604948227107524,
+          "match": true
+        },
+        "wilcoxon_stat": {
+          "stored": 500500.0,
+          "expected_W1_max": 500500.0,
+          "match": true
+        },
+        "wilcoxon_p": {
+          "stored": 1.6629295594672565e-165,
+          "normalapprox_recomputed": 1.6604349684395464e-165,
+          "match_to_1e-12": true
+        }
+      },
+      "p_below_alpha": true,
+      "p_below_alpha_normalapprox": true,
+      "fraction_pairs_worse": 1.0,
+      "out_of_domain_median_gt_in_domain_max": true,
+      "cross_check_vs_diagnostic": {
+        "in_mean_equal": true,
+        "out_mean_equal": true,
+        "ratio_equal": true,
+        "p_equal": true,
+        "fraction_equal": true,
+        "stat_equal": true
+      },
+      "cross_check_all_equal": true
+    },
+    "higher_degree_graph": {
+      "graph_file": "er_n_100_p_06.npy",
+      "node_count": 100,
+      "mean_degree_stored": 58.81999969482422,
+      "mean_degree_recomputed_from_npy": 58.82,
+      "in_domain": {
+        "mean": 0.4838190803527832,
+        "median": 0.47819411754608154,
+        "p95": 0.5699975997209549,
+        "max": 0.7559947967529297,
+        "count": 1000
+      },
+      "out_of_domain": {
+        "mean": 1.8046146411895752,
+        "median": 1.8117749691009521,
+        "p95": 2.4098721623420714,
+        "max": 2.806302070617676,
+        "count": 1000
+      },
+      "recomputed": {
+        "ratio_from_means": 3.7299369009459404,
+        "increase_pp_from_means": 1.320795560836792,
+        "wilcoxon_z_normalapprox": 27.39302486213321,
+        "wilcoxon_p_normalapprox": 1.6604349684395464e-165,
+        "wilcoxon_p_exact_log10": -600.3113621048072,
+        "wilcoxon_W1_max": 500500.0
+      },
+      "stored_vs_recomputed": {
+        "ratio": {
+          "stored": 3.7299369009459404,
+          "recomputed": 3.7299369009459404,
+          "match": true
+        },
+        "increase_pp": {
+          "stored": 1.320795560836792,
+          "recomputed": 1.320795560836792,
+          "match": true
+        },
+        "wilcoxon_stat": {
+          "stored": 500500.0,
+          "expected_W1_max": 500500.0,
+          "match": true
+        },
+        "wilcoxon_p": {
+          "stored": 1.6629295594672565e-165,
+          "normalapprox_recomputed": 1.6604349684395464e-165,
+          "match_to_1e-12": true
+        }
+      },
+      "p_below_alpha": true,
+      "p_below_alpha_normalapprox": true,
+      "fraction_pairs_worse": 1.0,
+      "out_of_domain_median_gt_in_domain_max": true,
+      "cross_check_vs_diagnostic": {
+        "in_mean_equal": true,
+        "out_mean_equal": true,
+        "ratio_equal": true,
+        "p_equal": true,
+        "fraction_equal": true,
+        "stat_equal": true
+      },
+      "cross_check_all_equal": true
+    }
+  },
+  "refutation_tests": {
+    "any_graph_not_worse": false,
+    "all_p_below_alpha_stored": true,
+    "all_p_below_alpha_normalapprox": true,
+    "all_cross_check_equal": true,
+    "all_ratio_recomputed_match": true,
+    "all_increase_recomputed_match": true,
+    "wilcoxon_p_stored_matches_normalapprox": true
+  },
+  "high_degree_amplification": {
+    "ratio_low_min": 3.3954505288034142,
+    "ratio_high": 3.7299369009459404,
+    "amplification_abs": 0.3344863721425262,
+    "amplification_rel": 0.09851015919834416,
+    "in_domain_means": {
+      "training_graph": 0.5234569856822491,
+      "equivalent_novel_graph": 0.5262036546170712,
+      "higher_degree_graph": 0.4838190803527832
+    },
+    "out_domain_means": {
+      "training_graph": 1.7787519165277481,
+      "equivalent_novel_graph": 1.7866984773278236,
+      "higher_degree_graph": 1.8046146411895752
+    },
+    "out_high_minus_low_min": 0.02586272466182704,
+    "note": "high-degree ratio is higher mainly because its in-domain baseline is LOWER (0.4838 vs 0.5235/0.5262); out-domain means are within 0.026 pp of each other."
+  },
+  "wilcoxon_p_characterization": {
+    "reported_p": 1.6629295594672565e-165,
+    "reported_p_is_normal_approx": true,
+    "reported_p_exact_log10": -600.3113621048072,
+    "reported_p_exact_underflows_float64": true,
+    "note": "1.66e-165 is the NORMAL-APPROXIMATION paired-Wilcoxon p (scipy method='normal', continuity correction) at the max rank-sum (all 1000 pairs same sign). The EXACT one-sided p 1/C(2000,1000) ~ 10^-600 underflows float64."
+  },
+  "verdict": "CONFIRMED with a nuance. All four sub-claims are reproduced from raw summaries: (1) OOD paired error is 3.395-3.730x in-domain on all 3 graphs (within the claimed 3.4-3.7 band, low-degree actually 3.395-3.398 which is just below the stated 3.4 lower bound); (2) all pairs worse (fraction=1.0, Wilcoxon stat = max W1 = 500500); (3) p ~ 1.66e-165 < alpha 0.001 (this is the NORMAL-APPROX paired-Wilcoxon p, not exact); (4) high-degree graph amplifies most (3.730). Refutation attempts all failed to refute the core claim. The high-degree 'amplification' is REAL but MILD: its ratio lift is driven by a LOWER in-domain baseline (0.4838 vs 0.5235/0.5262), and the raw out-domain means differ by only 0.026 pp between high- and low-degree graphs.",
+  "counter_evidence": "1) The exact one-sided Wilcoxon p = 1/C(2000,1000) ~ 1e-600 underflows float64; the reported 1.66e-165 is a NORMAL-APPROXIMATION value (scipy method='normal', continuity correction) at the max rank-sum, not the exact combinatorial p. Both are < 0.001, so the significance claim stands, but the quoted 1.66e-165 is an approximation. 2) The '100% of pairs worse' claim rests on stored fraction=1.0 and W1=max; the raw per-pair arrays are NOT in the portable JSON (only SHA256 hashes), so this is an internal-consistency check, not a direct per-pair re-derivation. 3) High-degree amplification is mild (ratio 3.730 vs 3.395-3.398, a 0.33 pp absolute / ~9.9% relative lift) and largely attributable to a lower in-domain baseline rather than a genuinely different OOD failure. 4) Low-degree ratio 3.395-3.398 sits just below the claimed '3.4' lower bound; the 3.4-3.7 band is a loose rounding of 3.395-3.730."
+}

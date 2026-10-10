@@ -1,0 +1,21 @@
+design_series	aggregate_state_id	peak_wavelength_nm	fwhm_nm	max_intensity
+reference_series	state_1	1132.0		0.02019
+reference_series	state_2	1129.0		0.019
+reference_series	state_3	1122.0		0.01749
+reference_series	state_4	1117.0		0.01615
+reference_series	state_5	1117.0		0.0142
+series_A	state_1	1028.0	308.94968553459125	0.07519
+series_A	state_2	1026.0	325.5163636363635	0.05655
+series_A	state_3	1026.0	339.4309523809524	0.0489
+series_A	state_4	1028.0	364.98039215686265	0.03726
+series_A	state_5	1020.0	405.40350877192986	0.0289
+series_B	state_1	1030.0	324.17632850241546	0.06439
+series_B	state_2	1030.0	326.4013513513513	0.05785
+series_B	state_3	1026.0	342.66666666666663	0.04774
+series_B	state_4	1027.0	363.192546583851	0.03806
+series_B	state_5	1028.0		0.02249
+series_C	state_1	1029.0	333.78125	0.05334
+series_C	state_2	1027.0	340.5791245791246	0.04736
+series_C	state_3	1034.0	350.9125	0.03943
+series_C	state_4	1028.0	389.5958333333334	0.03201
+series_C	state_5	1023.0		0.02305

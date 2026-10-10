@@ -1,0 +1,4 @@
+graph,source,mean_degree,in_domain_mean,out_domain_mean,mean_error_ratio,fraction_pairs_greater,wilcoxon_p
+training_graph,er_n_100_p_01.npy,9.479999542236328,0.523457,1.778752,3.398086,1.0,1.6629295594672565e-165
+equivalent_novel_graph,er_n_100_p_01_alt.npy,9.539999961853027,0.526204,1.786698,3.395451,1.0,1.6629295594672565e-165
+higher_degree_graph,er_n_100_p_06.npy,58.81999969482422,0.483819,1.804615,3.729937,1.0,1.6629295594672565e-165

@@ -1,0 +1,24 @@
+{
+  "task_id": "Information_01_dynamics_generalization",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20260924T060729-37960c",
+  "source_run_json_sha256": "25dc2a8775de043db919800889d41ee3b2c1b913d8e078dcbc9659414b91c45a",
+  "source_release_json_sha256": "6ab911f611ff1b1bc7cc9233ed486e424856367b757123da1177f7d72d9c7ec1",
+  "source_latest_validation_sha256": "8661852f21fb4595bb28cc97476da1d8112e23afdd77dcd014a54717d5c6f8c7",
+  "source_snapshot_manifest_sha256": "ad8d6c72a45b668da20d3a8ce759217836f8b66e87bdbab8c145f9440019fc5d",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 379
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": false,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 3,
+  "input_sha256": "cce06fbacb7bdd5a2903b76f0be38fdd6dc03296f4af77997be8ad6f3ce94a78",
+  "output_sha256": "242528ef46a7c58f0ca5d381ac3208e5249aa77ae90af2c1b4691f0f47cff844",
+  "export_version": "20261010-40",
+  "source_attempt": "20260924T032255Z-cca30ea7",
+  "source_release_at": "2026-09-24T06:13:39.675336+00:00"
+}

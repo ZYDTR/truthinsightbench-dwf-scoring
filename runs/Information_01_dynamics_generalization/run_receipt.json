@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202610-bonsai",
+  "task_id": "Information_01_dynamics_generalization",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "cce06fbacb7bdd5a2903b76f0be38fdd6dc03296f4af77997be8ad6f3ce94a78",
+  "workspace_input_file_count": 17,
+  "workspace_input_bytes": 1416094,
+  "output_tree_sha256": "242528ef46a7c58f0ca5d381ac3208e5249aa77ae90af2c1b4691f0f47cff844",
+  "output_file_count": 23,
+  "output_bytes": 158658
+}

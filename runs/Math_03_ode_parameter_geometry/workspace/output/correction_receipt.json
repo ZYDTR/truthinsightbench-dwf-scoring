@@ -1,0 +1,34 @@
+{
+  "type": "structured_correction_receipt",
+  "schema": "truthinsightbench-correction-receipt",
+  "run": {
+    "command": "cd /data/user/conversations/conv-c59f3f82-1c0f-4cac-9a42-86dc073cd65e/project && python3 output/verify_corrections.py",
+    "source": "output/verify_corrections.py",
+    "data_read_only": true,
+    "raw_journal_edited": false,
+    "data_edited": false
+  },
+  "defect": {
+    "field": "spectrum_models.linear_slope",
+    "original_structured_output": "child a969cb6de8ccb25aa StructuredOutput (raw JSONL) / journal.jsonl result",
+    "defect_description": "The child's StructuredOutput transmitted the raw-scale linear slope with the e-05 scientific-notation exponent dropped. The value -4.285991340480605 is off by a factor of 1e5 from the true value -4.285991340480605e-05. The child's own JSON artifact (robustness_a.json) carried the correct value.",
+    "true_value": -4.285991340480605e-05,
+    "artifact_value": -4.285991340480605e-05,
+    "structured_output_value": -4.285991340480605,
+    "ratio_artifact_over_true": 1.0,
+    "ratio_true_over_structured_output": 1e-05,
+    "artifact_matches_true": true,
+    "structured_output_matches_true": false,
+    "affects_any_finding": false,
+    "reason_not_affecting": "The raw-scale linear fit is the WORST of the three spectrum models (R2=0.225 vs exponential 0.642 vs power-law 0.332) and is not used for any conclusion. Finding 1 rests on the ~36-order span, the best-fit R2 and steep tail, none of which depend on this field.",
+    "resolution": "Use the artifact / recomputed value (-4.285991340480605e-05) for any citation; the StructuredOutput value is a transcription artifact, not a different computation. Original raw JSONL and journal.jsonl are preserved unmodified."
+  },
+  "consistency_checks": {
+    "robustness_b_note_flag_consistent": true,
+    "verification_report_best_model_attribution": "robustness_a.json",
+    "verification_report_batch_leaveout_attribution": "robustness_a.json",
+    "correction_evidence_provenance_points_to": "recomputed_values.json",
+    "all_consistency_checks_passed": true
+  },
+  "status": "PASS"
+}

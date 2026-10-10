@@ -1,0 +1,24 @@
+{
+  "task_id": "Math_03_ode_parameter_geometry",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20261009T221655-655070",
+  "source_run_json_sha256": "bdb89bd1c336a4a596f296b327fa5831b30d33cbabba39a86ce8bc1a32f73256",
+  "source_release_json_sha256": "85d4fc77db327f744be0ea63e557e41860807f18aaca8bda073e676e229ab8c0",
+  "source_latest_validation_sha256": "5bcc10f6604c974a688a644531036ea5a3d3556133132fc5d5b23cf61528f6dc",
+  "source_snapshot_manifest_sha256": "d51793560080ff1a20f9e4d46e4224dfe40d4cddbdb2a089a666786cfda4c4c1",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 455
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 4,
+  "input_sha256": "82e5a785bd27271b9b02307edb11f950ac6d8c024746eda3762ed785f9772b24",
+  "output_sha256": "e421375a90479bd479c28bd0dbfd70f7504746c931d0c374f3a5dd61bc940d17",
+  "export_version": "20261010-40",
+  "source_attempt": "20261009T201206Z-ff7d041d",
+  "source_release_at": "2026-10-09T22:22:00.784513+00:00"
+}

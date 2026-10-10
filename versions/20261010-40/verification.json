@@ -1,0 +1,62 @@
+{
+  "schema": "tib-scoring-extension-verification.v1",
+  "version": "20261010-40",
+  "verified_date_utc": "2026-10-10",
+  "base_commit": "ace8ab84c407201a089a45ff7e572092c6f27f87",
+  "unit_tests": {"passed": 13, "failed": 0, "original_tests_unchanged": true},
+  "source_cross_check": {
+    "released_sources": 13,
+    "source_receipt_hashes_matched": 52,
+    "registered_input_files_matched": 188,
+    "frozen_output_files_matched": 265,
+    "input_trees_matched": 13,
+    "output_trees_matched": 13,
+    "bonsai_only_sources": 13,
+    "private_source_modified": false
+  },
+  "dry_run": {
+    "passed": true,
+    "exit_code": 0,
+    "status": "READY",
+    "mode": "dry_run",
+    "run_count": 40,
+    "registered_findings": 177,
+    "scoring_atoms": 5133,
+    "external_model_called": false,
+    "scientific_scores_produced": false
+  },
+  "preservation": {
+    "protected_files_checked": 2686,
+    "original_scoring_asset_files": 588,
+    "old_27_and_original_scoring_files_unchanged": true,
+    "original_manifest_preserved_verbatim": true,
+    "original_export_and_scoring_wrappers_unchanged": true
+  },
+  "privacy": {
+    "passed_for_documented_scope": true,
+    "known_credential_values_checked": 52,
+    "credential_matches": 0,
+    "new_exports_raw_runtime_logs": 0,
+    "new_exports_workstation_paths": 0,
+    "unchanged_legacy_runtime_log_files": 2,
+    "unchanged_legacy_compiled_cache_files_with_workstation_path": 1,
+    "full_repository_has_no_legacy_logs_or_paths": false,
+    "scope_receipt": "versions/20261010-40/privacy_scope.json"
+  },
+  "shipping_preflight": {
+    "authored_packaging_whitespace_check_exit_code": 0,
+    "frozen_artifact_trailing_whitespace_warnings": 73145,
+    "frozen_artifact_files_with_warnings": 60,
+    "all_whitespace_warnings_in_immutable_workspace_artifacts": true,
+    "source_bytes_preserved_not_reformatted": true,
+    "added_run_files_omitted_by_ignore": 0,
+    "protected_files_in_diff": 0,
+    "api_runtime_database_migration_gates": "Not applicable: scoring archive only, no runtime or database changes.",
+    "rollback": "Revert the extension commit; no private harness or runtime changes were made."
+  },
+  "limits": {
+    "scientific_scoring": "Not performed; requires an explicitly configured authorized judge endpoint.",
+    "platform_exit_code": "DWF compatibility normalization, not a captured SAP process exit code.",
+    "raw_validation_stdout_and_private_source_paths_published": false
+  }
+}

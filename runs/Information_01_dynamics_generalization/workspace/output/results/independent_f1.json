@@ -1,0 +1,119 @@
+{
+  "source_file": "/data/user/conversations/conv-07581fcf-2edd-4246-8da8-dc035efd1751/project/data/source_data/computational_observations.json",
+  "derived_from": "data/source_data/computational_observations.json (actions[0].panels + diagnostic_panels.within_domain)",
+  "panel_stats": {
+    "stored_training_pairs": {
+      "mean_percent": 0.5227990772657924,
+      "median_percent": 0.5170993804931641,
+      "p95_percent": 0.6468101739883423,
+      "max_percent": 0.9147898554801941
+    },
+    "training_graph_uniform": {
+      "mean_percent": 0.5195625541806221,
+      "median_percent": 0.5130850076675415,
+      "p95_percent": 0.635201022028923,
+      "max_percent": 0.8383224606513977
+    },
+    "equivalent_graph_uniform": {
+      "mean_percent": 0.5216103667616844,
+      "median_percent": 0.5152369141578674,
+      "p95_percent": 0.6506923258304596,
+      "max_percent": 0.7921144366264343
+    },
+    "equivalent_graph_beta_5_2": {
+      "mean_percent": 0.5017262067198753,
+      "median_percent": 0.4937167167663574,
+      "p95_percent": 0.6410298854112625,
+      "max_percent": 0.8555389046669006
+    },
+    "higher_degree_graph_uniform": {
+      "mean_percent": 0.4826001844406128,
+      "median_percent": 0.4774283617734909,
+      "p95_percent": 0.5681188613176346,
+      "max_percent": 0.6996594667434692
+    },
+    "higher_degree_graph_beta_5_2": {
+      "mean_percent": 0.4929088059961796,
+      "median_percent": 0.4829605370759964,
+      "p95_percent": 0.598538076877594,
+      "max_percent": 0.7133451700210571
+    }
+  },
+  "panel_means": {
+    "stored_training_pairs": 0.5227990772657924,
+    "training_graph_uniform": 0.5195625541806221,
+    "equivalent_graph_uniform": 0.5216103667616844,
+    "equivalent_graph_beta_5_2": 0.5017262067198753,
+    "higher_degree_graph_uniform": 0.4826001844406128,
+    "higher_degree_graph_beta_5_2": 0.4929088059961796
+  },
+  "overall_spread_pp": 0.04019889282517963,
+  "new_graph_spread_pp": 0.03901018232107156,
+  "max_p95_minus_median_pp": 0.14731316864490507,
+  "max_p95_minus_median_panel": "equivalent_graph_beta_5_2",
+  "p95_minus_median_by_panel": {
+    "stored_training_pairs": 0.12971079349517822,
+    "training_graph_uniform": 0.12211601436138153,
+    "equivalent_graph_uniform": 0.13545541167259212,
+    "equivalent_graph_beta_5_2": 0.14731316864490507,
+    "higher_degree_graph_uniform": 0.09069049954414365,
+    "higher_degree_graph_beta_5_2": 0.11557753980159757
+  },
+  "baseline": {
+    "name": "stored_training_pairs",
+    "mean_percent": 0.5227990772657924
+  },
+  "new_graph_diff_from_baseline_pp": {
+    "training_graph_uniform": -0.0032365230851703064,
+    "equivalent_graph_uniform": -0.0011887105041080703,
+    "equivalent_graph_beta_5_2": -0.02107287054591711,
+    "higher_degree_graph_uniform": -0.04019889282517963,
+    "higher_degree_graph_beta_5_2": -0.029890271269612856
+  },
+  "consistency_equal": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "consistency_details": [
+    {
+      "mapping": "training_graph.uniform_0_1 vs training_graph_uniform",
+      "diagnostic_mean_percent": 0.5195625541806221,
+      "action_panel_mean_percent": 0.5195625541806221,
+      "exact_mean_equal": true
+    },
+    {
+      "mapping": "equivalent_novel_graph.uniform_0_1 vs equivalent_graph_uniform",
+      "diagnostic_mean_percent": 0.5216103667616844,
+      "action_panel_mean_percent": 0.5216103667616844,
+      "exact_mean_equal": true
+    },
+    {
+      "mapping": "equivalent_novel_graph.beta_5_2 vs equivalent_graph_beta_5_2",
+      "diagnostic_mean_percent": 0.5017262067198753,
+      "action_panel_mean_percent": 0.5017262067198753,
+      "exact_mean_equal": true
+    },
+    {
+      "mapping": "higher_degree_graph.uniform_0_1 vs higher_degree_graph_uniform",
+      "diagnostic_mean_percent": 0.4826001844406128,
+      "action_panel_mean_percent": 0.4826001844406128,
+      "exact_mean_equal": true
+    },
+    {
+      "mapping": "higher_degree_graph.beta_5_2 vs higher_degree_graph_beta_5_2",
+      "diagnostic_mean_percent": 0.4929088059961796,
+      "action_panel_mean_percent": 0.4929088059961796,
+      "exact_mean_equal": true
+    }
+  ],
+  "new_graph_panels": [
+    "training_graph_uniform",
+    "equivalent_graph_uniform",
+    "equivalent_graph_beta_5_2",
+    "higher_degree_graph_uniform",
+    "higher_degree_graph_beta_5_2"
+  ]
+}

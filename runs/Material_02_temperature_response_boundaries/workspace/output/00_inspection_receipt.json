@@ -1,0 +1,150 @@
+{
+  "files": [
+    {
+      "filename": "bulk_magnetization_300K.tsv",
+      "rows": 373,
+      "columns": [
+        "time_s",
+        "temperature_K",
+        "field_Oe",
+        "magnetic_moment_emu",
+        "moment_std_err_emu"
+      ],
+      "ranges": {
+        "time_s": {
+          "min": 3784619440.80365,
+          "max": 3784625121.47008
+        },
+        "temperature_K": {
+          "min": 299.900024414063,
+          "max": 300.167205810547
+        },
+        "field_Oe": {
+          "min": -49999.76171875,
+          "max": 49999.91015625
+        },
+        "magnetic_moment_emu": {
+          "min": -0.0037750347479396,
+          "max": 0.0037733282209239
+        },
+        "moment_std_err_emu": {
+          "min": 2.96323770988519e-08,
+          "max": 0.000132227249847248
+        }
+      },
+      "missing_values": 0,
+      "field_direction": "loop"
+    },
+    {
+      "filename": "bulk_magnetization_860K.tsv",
+      "rows": 2501,
+      "columns": [
+        "time_s",
+        "temperature_K",
+        "field_Oe",
+        "magnetic_moment_emu",
+        "moment_std_err_emu"
+      ],
+      "ranges": {
+        "time_s": {
+          "min": 3839651416.0,
+          "max": 3839680129.0
+        },
+        "temperature_K": {
+          "min": 859.918457,
+          "max": 860.086731
+        },
+        "field_Oe": {
+          "min": -49999.67969,
+          "max": 50000.20313
+        },
+        "magnetic_moment_emu": {
+          "min": -0.00334052,
+          "max": 0.003341188
+        },
+        "moment_std_err_emu": {
+          "min": 2.09e-08,
+          "max": 4.69e-06
+        }
+      },
+      "missing_values": 0,
+      "field_direction": "loop"
+    },
+    {
+      "filename": "bulk_magnetization_870K.tsv",
+      "rows": 2501,
+      "columns": [
+        "time_s",
+        "temperature_K",
+        "field_Oe",
+        "magnetic_moment_emu",
+        "moment_std_err_emu"
+      ],
+      "ranges": {
+        "time_s": {
+          "min": 3839620121.0,
+          "max": 3839649977.0
+        },
+        "temperature_K": {
+          "min": 869.8839111,
+          "max": 870.1184692
+        },
+        "field_Oe": {
+          "min": -49999.73828,
+          "max": 49999.8125
+        },
+        "magnetic_moment_emu": {
+          "min": -0.003316975,
+          "max": 0.003337899
+        },
+        "moment_std_err_emu": {
+          "min": 3.37e-08,
+          "max": 4.55e-05
+        }
+      },
+      "missing_values": 0,
+      "field_direction": "loop"
+    },
+    {
+      "filename": "electric_switching_corrected.tsv",
+      "rows": 176,
+      "columns": [
+        "sequence_coordinate",
+        "polarization_like_signal"
+      ],
+      "ranges": {
+        "sequence_coordinate": {
+          "min": -23.466666666666665,
+          "max": 23.466666666666665
+        },
+        "polarization_like_signal": {
+          "min": -0.188460001450349,
+          "max": 0.199729441252501
+        }
+      },
+      "missing_values": 0,
+      "field_direction": "loop"
+    },
+    {
+      "filename": "electric_current_voltage.tsv",
+      "rows": 176,
+      "columns": [
+        "sequence_coordinate",
+        "current_or_voltage_signal"
+      ],
+      "ranges": {
+        "sequence_coordinate": {
+          "min": -176.0,
+          "max": 176.0
+        },
+        "current_or_voltage_signal": {
+          "min": -184.5601,
+          "max": 165.214
+        }
+      },
+      "missing_values": 0,
+      "field_direction": "loop"
+    }
+  ],
+  "notes": "This is the FINAL faithful Inspect receipt for TruthInsightBench task Material_02_temperature_response_boundaries. Prior Inspect receipts dropped scientific-notation exponents in the moment_std_err_emu ranges when hand-writing the StructuredOutput JSON tool-call input (a transcription error, NOT a serialization error): original Inspect child a52a2a4d544fda753 (server error, never emitted); recovery child wf_6979c8db-8a5; and consistency child wf_746eb039-d28 all wrote e.g. 2.96323770988519e-08 as 2.96323770988519, 2.09e-08 as 2.09, and 3.37e-08 as 3.37, so on the 300K file the reported min was greater than its max. The raw data, the children's Python/Bash output, and any Python json.dump file retain full precision; only the hand-written StructuredOutput JSON dropped the exponents. This receipt stores the moment_std_err_emu min/max as full-precision STRINGS (e.g. '2.96323770988519e-08') copied character-for-character from Python repr() of the float, to preserve the exact values. The authoritative numeric machine receipt (numbers at full float precision via json.dump) is output/00_inspection_receipt.json. All prior receipts and journals are preserved as history."
+}

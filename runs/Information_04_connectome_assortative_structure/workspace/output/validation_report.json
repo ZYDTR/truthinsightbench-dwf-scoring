@@ -1,0 +1,291 @@
+{
+  "schema": "truthinsightbench-semantic-output-validation",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "output": "/data/user/conversations/conv-88510242-47d4-46dc-a7c4-b833ab46f409/project/output",
+  "authoritative_report": {
+    "path": "Result.md",
+    "bytes": 14673,
+    "sha256": "a1bda43beb8d3917d460c75a4e5d78b9195609325d27fb4b37af1f5360f4cd5c"
+  },
+  "registered_findings": {
+    "count": 5,
+    "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "markers": [
+      {
+        "finding_number": 1,
+        "line": 12,
+        "marker": "## Finding 1: Node strength and mean connection distance are strongly and robustly positively associated, within every system",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 2,
+        "line": 30,
+        "marker": "## Finding 2: The spatial (coord_y) gradient on strength is real only overall, but is system-dependent and sign-inconsistent across systems",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 3,
+        "line": 48,
+        "marker": "## Finding 3: Mean homophily is unassociated with node strength, distance, coordinates, and all five annotations (null effect)",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 4,
+        "line": 66,
+        "marker": "## Finding 4: Trimming monotonically reduces the assortative z-score in every system–annotation pair, but FDR significance is patchy",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 5,
+        "line": 84,
+        "marker": "## Finding 5: The three profile tables live in different coordinate spaces and scale, and the annotation profile is internally structured (moderately correlated annotations)",
+        "heading_level": 2
+      }
+    ],
+    "traceability": [
+      {
+        "finding_number": 1,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "f1_strength_distance.py"
+        ],
+        "result_evidence": [
+          "f1_strength_distance_result.json",
+          "figures.png",
+          "final_results.json",
+          "results.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 2,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "f2_spatial_gradient.py"
+        ],
+        "result_evidence": [
+          "f2_spatial_gradient_result.json",
+          "final_results.json",
+          "results.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 3,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "f3_homophily_null.py"
+        ],
+        "result_evidence": [
+          "f3_homophily_null_result.json",
+          "final_results.json",
+          "results.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 4,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "f4_trimming.py"
+        ],
+        "result_evidence": [
+          "f4_trimming_result.json",
+          "final_results.json",
+          "results.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 5,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "f5_profiles_annotations.py"
+        ],
+        "result_evidence": [
+          "f5_profiles_annotations_result.json",
+          "final_results.json",
+          "results.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      }
+    ]
+  },
+  "reproduction": {
+    "mode": "companion_markdown",
+    "document": {
+      "path": "reproduce.md",
+      "bytes": 3096,
+      "sha256": "bef4c4e35b0b70161f30fbd1ab775db9dd84f768da6b26db2b010d8ceba9dce2"
+    }
+  },
+  "analysis_sources": [
+    {
+      "path": "aggregate.py",
+      "bytes": 2209,
+      "sha256": "fe662f6674a3904936b28185dd5684e2bd6556fad21b3f007545b844e40ca1d2"
+    },
+    {
+      "path": "analysis.py",
+      "bytes": 10000,
+      "sha256": "6d8b9094bb95beafb1cdff5e796e5a186933f27ed5237e9f52627dafc62d0687"
+    },
+    {
+      "path": "f1_strength_distance.py",
+      "bytes": 2110,
+      "sha256": "c1c017d1b201ec8a61c5ed5c2110e9522e5425e6fb97c6bde40cf79ee8a6ede7"
+    },
+    {
+      "path": "f2_spatial_gradient.py",
+      "bytes": 6285,
+      "sha256": "6a81015314054e800b339c27c489e72c9d48e021f139217aea5e3b3c86542930"
+    },
+    {
+      "path": "f3_homophily_null.py",
+      "bytes": 2992,
+      "sha256": "88bdc703b16b5e041bd98834b459e0468673e260aa6a7754daa0caf0c5890a50"
+    },
+    {
+      "path": "f4_trimming.py",
+      "bytes": 1573,
+      "sha256": "7dc89ab16acffdb73b508686ed2d5bd79583a59510a81d84a716860e6f4b48a5"
+    },
+    {
+      "path": "f5_profiles_annotations.py",
+      "bytes": 1855,
+      "sha256": "f2345cdae90a7447ff0f8656f55962ce2f1d2203d01a67da19e32ce96e25c537"
+    },
+    {
+      "path": "make_figure.py",
+      "bytes": 2282,
+      "sha256": "fe90b2a0724fd170240c55784c4aab40ce6c214c0f2c92c807a2863894ea97b1"
+    }
+  ],
+  "executed_notebooks": [],
+  "result_artifacts": [
+    {
+      "path": "f1_strength_distance_result.json",
+      "bytes": 297,
+      "sha256": "b1627243ee073a7f56f67d25887fd6aba6573fc8974a0b501202897f2b56116d"
+    },
+    {
+      "path": "f2_spatial_gradient_result.json",
+      "bytes": 1414,
+      "sha256": "232c2a9fe4798e19addb761ca8204c4506e8ea35eeb3a0e5ce2af0a992f55355"
+    },
+    {
+      "path": "f3_homophily_null_result.json",
+      "bytes": 1500,
+      "sha256": "06e45971256ee35fb5d8882f14503a287901d9b436d02c301862e3e035e5d3d6"
+    },
+    {
+      "path": "f4_trimming_result.json",
+      "bytes": 4759,
+      "sha256": "e0463d288e1b2da9459b360994234e034193009ab129bca4d9a511462bb0626b"
+    },
+    {
+      "path": "f5_profiles_annotations_result.json",
+      "bytes": 1265,
+      "sha256": "df8a8daf7c40204af3cdba7fe94c3bbacd61e48be3e8ad2b0155f3f978269a87"
+    },
+    {
+      "path": "figures.png",
+      "bytes": 174162,
+      "sha256": "9f6ebf8100bc445acc6a74e3d3339c464e8683dd39c1a59f46e75494a2a74002"
+    },
+    {
+      "path": "final_results.json",
+      "bytes": 10964,
+      "sha256": "44eb2163185355b649d7f1c24b857e99edb2076d71b8df748a1306a7afbdc281"
+    },
+    {
+      "path": "results.json",
+      "bytes": 18765,
+      "sha256": "682048ad54fcaf11d1d0536ade92f18f224dbecd94b927a1484f762a728bd204"
+    }
+  ],
+  "native_evidence_registry": {
+    "sources": [],
+    "resolved_ids": {}
+  },
+  "resolved_support_files": [
+    {
+      "path": "f1_strength_distance.py",
+      "bytes": 2110,
+      "sha256": "c1c017d1b201ec8a61c5ed5c2110e9522e5425e6fb97c6bde40cf79ee8a6ede7"
+    },
+    {
+      "path": "f1_strength_distance_result.json",
+      "bytes": 297,
+      "sha256": "b1627243ee073a7f56f67d25887fd6aba6573fc8974a0b501202897f2b56116d"
+    },
+    {
+      "path": "f2_spatial_gradient.py",
+      "bytes": 6285,
+      "sha256": "6a81015314054e800b339c27c489e72c9d48e021f139217aea5e3b3c86542930"
+    },
+    {
+      "path": "f2_spatial_gradient_result.json",
+      "bytes": 1414,
+      "sha256": "232c2a9fe4798e19addb761ca8204c4506e8ea35eeb3a0e5ce2af0a992f55355"
+    },
+    {
+      "path": "f3_homophily_null.py",
+      "bytes": 2992,
+      "sha256": "88bdc703b16b5e041bd98834b459e0468673e260aa6a7754daa0caf0c5890a50"
+    },
+    {
+      "path": "f3_homophily_null_result.json",
+      "bytes": 1500,
+      "sha256": "06e45971256ee35fb5d8882f14503a287901d9b436d02c301862e3e035e5d3d6"
+    },
+    {
+      "path": "f4_trimming.py",
+      "bytes": 1573,
+      "sha256": "7dc89ab16acffdb73b508686ed2d5bd79583a59510a81d84a716860e6f4b48a5"
+    },
+    {
+      "path": "f4_trimming_result.json",
+      "bytes": 4759,
+      "sha256": "e0463d288e1b2da9459b360994234e034193009ab129bca4d9a511462bb0626b"
+    },
+    {
+      "path": "f5_profiles_annotations.py",
+      "bytes": 1855,
+      "sha256": "f2345cdae90a7447ff0f8656f55962ce2f1d2203d01a67da19e32ce96e25c537"
+    },
+    {
+      "path": "f5_profiles_annotations_result.json",
+      "bytes": 1265,
+      "sha256": "df8a8daf7c40204af3cdba7fe94c3bbacd61e48be3e8ad2b0155f3f978269a87"
+    },
+    {
+      "path": "figures.png",
+      "bytes": 174162,
+      "sha256": "9f6ebf8100bc445acc6a74e3d3339c464e8683dd39c1a59f46e75494a2a74002"
+    },
+    {
+      "path": "final_results.json",
+      "bytes": 10964,
+      "sha256": "44eb2163185355b649d7f1c24b857e99edb2076d71b8df748a1306a7afbdc281"
+    },
+    {
+      "path": "results.json",
+      "bytes": 18765,
+      "sha256": "682048ad54fcaf11d1d0536ade92f18f224dbecd94b927a1484f762a728bd204"
+    }
+  ]
+}

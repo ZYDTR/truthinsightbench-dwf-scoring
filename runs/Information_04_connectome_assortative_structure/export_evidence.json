@@ -1,0 +1,24 @@
+{
+  "task_id": "Information_04_connectome_assortative_structure",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20261008T135510-a7a558",
+  "source_run_json_sha256": "cbf6db5044e2ee819bc5fa7a0016ead62e97ba6283100a6e72f923ca0918754a",
+  "source_release_json_sha256": "290b801fd9a93dc4569d31bc0322e88e435726ea612d234914147d0642c175f5",
+  "source_latest_validation_sha256": "11e3f89fa9786420a268caa9693dce8f9570a4ca70719f0efc14abc448699d2a",
+  "source_snapshot_manifest_sha256": "55c2dcc53513e724ca71a110b4c5968cbd6a71acaeba5c1a9789cdf6baae9ab4",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 156
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 5,
+  "input_sha256": "d49f601170f97434dca0ab7bbb56881d3299d08bf41922205f43f147710b446a",
+  "output_sha256": "652eb2b43fc4444e3e7b1de9d036bb477ae1f5aa63ecbf2caaf54818eacd5228",
+  "export_version": "20261010-40",
+  "source_attempt": "20261008T123910Z-383331d4",
+  "source_release_at": "2026-10-08T14:11:40.796928+00:00"
+}

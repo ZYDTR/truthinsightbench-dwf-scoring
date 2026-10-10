@@ -1,0 +1,17 @@
+{
+  "source_file": "/data/user/conversations/conv-638e4581-a722-4918-95a5-b7bfc57d6954/project/output/../data/source_data/computational_observations.json",
+  "family_B_action_id": "directed_disconnected_efficiency_lower_boundary",
+  "n_cases_familyB": 190,
+  "familyB_E_eq_density": {
+    "tolerance": 1e-12,
+    "e_eq_density_all": true,
+    "max_abs_diff": 0.0,
+    "violations": []
+  },
+  "universal_bound_E_ge_density_minus_1e12": {
+    "total_cases_checked": 222,
+    "holds": true,
+    "violations": []
+  },
+  "familyA_case_count": 32
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "truthinsightbench-participant-workspace",
+  "release": "V1.0",
+  "task_id": "Life_01_dual_sensor_fusion",
+  "t0": "2024-01-01",
+  "scientific_file_count": 22,
+  "scientific_bytes": 3204857,
+  "data_manifest_sha256": "2d19aeb5a5e80f6a3650a755dcf56569d83e08a527357a895d13b06df8e9de9f",
+  "research_objective_sha256": "65e34ccfef96f9bc836cad3f27cad0f97238c4a57c8ad0374faa83b1d631a95f",
+  "launch_prompt_sha256": "0f4cafd2bc7a8b51b835101fa1d9032bc688caa09ac9ce12e60ff1bd4c68da3a"
+}

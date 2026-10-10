@@ -1,0 +1,24 @@
+{
+  "family": "connectivity_contrast",
+  "source_file": "/data/user/conversations/conv-638e4581-a722-4918-95a5-b7bfc57d6954/project/data/source_data/computational_observations.json",
+  "tolerance": 1e-12,
+  "family_A_directed_sparse_flower_boundary": {
+    "n_cases": 32,
+    "all_sc_gt_density": true,
+    "min_gap_sc": 0.18362521317066774,
+    "max_ratio_sc": 3.598039215686274,
+    "violations": [],
+    "gap_stats": {
+      "min": 0.18362521317066774,
+      "max": 0.41666666666666674,
+      "mean": 0.31261265811133915
+    }
+  },
+  "family_B_directed_disconnected_efficiency_lower_boundary": {
+    "n_cases": 190,
+    "all_dag_eq_density": true,
+    "max_abs_gap_dag": 0.0,
+    "violations": [],
+    "stored_density_mismatches": []
+  }
+}

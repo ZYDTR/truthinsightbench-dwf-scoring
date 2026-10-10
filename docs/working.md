@@ -2,6 +2,19 @@
 
 ## Changelog
 
+### 2026-10-10
+
+- Extended the archive to all 40 released tasks by adding 13 independent-attempt exports with 49 findings; the full package has 177 findings.
+- Preserved all 2,686 originally published submission/scoring files byte-for-byte, including all 588 original scoring-asset files. Kept the original adapter and scoring wrappers unchanged.
+- Preserved the original 27-task manifest verbatim and added the explicitly versioned `20261010-40` extension ledger, source receipt commitments, privacy scope, and sanitized verification receipt.
+- Resolved a historical aggregate scoring-tree checksum discrepancy by binding the new manifest to the actual unchanged published tree; did not rewrite the historical manifest or scorer files.
+- The original evaluator dry-run prepared 40/40 runs and 5,133 scoring atoms without an external model call. Scientific scoring remains opt-in and unperformed.
+- Unit tests passed (13/13), including the two original tests; source cross-checks verified all 13 new input/output trees and 52 source receipt hashes.
+- The full publication audit checked 52 exact locally configured credential values and common credential patterns; no match was found. New exports contain no raw runtime logs or workstation paths.
+- The owner explicitly requested that old tasks be left alone after disclosure of two already-published Energy_03 Workflow journals and an original compiled scoring cache containing a workstation path. Those three files remain unchanged under exact-hash legacy exceptions; the repository is not represented as globally free of historical logs or paths.
+- Moved a newly generated validation cache outside the publication tree, retained the original tracked cache, and ignored future compiled caches. Added extension/audit tests and a fresh-clone verification gate before pushing.
+- Authored packaging files passed the Git whitespace check. The whole staged archive reports 73,145 trailing-whitespace warnings in 60 frozen scientific artifact files (including original CRLF data); retained their exact source bytes rather than reformatting scientific evidence.
+
 ### 2026-09-24
 
 - Established a scoring-only project separate from the live DWF harness, with public-release checks.

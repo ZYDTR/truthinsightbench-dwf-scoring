@@ -1,0 +1,245 @@
+{
+  "F1_conductivity_robustness": {
+    "ratio_median": 34.14493262942243,
+    "ratio_mean": 34.80976384823788,
+    "ratio_median_of_means": 34.80976384823788,
+    "min_pairwise_ratio": 10.044166431837777,
+    "max_pairwise_ratio": 80.258312866225,
+    "no_overlap": true,
+    "lopo_ratio_median": [
+      40.9739,
+      27.3159,
+      40.9739,
+      27.3159,
+      40.9739,
+      27.3159
+    ],
+    "lopo_ratio_mean": [
+      39.4898,
+      33.5315,
+      36.2782,
+      28.0802,
+      39.4053,
+      32.0736
+    ],
+    "lopo_min_pairwise_ratio": [
+      10.4162,
+      10.0442,
+      10.0442,
+      10.0442,
+      10.0442,
+      10.0442
+    ],
+    "lopo_ref_removed_ratio_mean": [
+      34.1466,
+      36.462,
+      33.1834,
+      35.6336
+    ]
+  },
+  "F2_local_current_robustness": {
+    "modified_membrane": {
+      "median": 106.59158,
+      "mean": 136.12407178660052,
+      "n": 806
+    },
+    "reference_membrane": {
+      "median": 1.43914,
+      "mean": 2.5630297058823532,
+      "n": 476
+    },
+    "median_ratio": 74.06616451491863,
+    "mean_ratio": 53.110610257144174,
+    "reference_max": 23.739,
+    "modified_p10": 0.07643,
+    "overlap_low_tail": "reference_max > modified_p10",
+    "threshold_frac_gt": {
+      "1": {
+        "modified_membrane": 0.7121588089330024,
+        "reference_membrane": 0.6050420168067226
+      },
+      "5": {
+        "modified_membrane": 0.6377171215880894,
+        "reference_membrane": 0.13445378151260504
+      },
+      "10": {
+        "modified_membrane": 0.6042183622828784,
+        "reference_membrane": 0.05672268907563025
+      },
+      "50": {
+        "modified_membrane": 0.5310173697270472,
+        "reference_membrane": 0.0
+      },
+      "100": {
+        "modified_membrane": 0.5049627791563276,
+        "reference_membrane": 0.0
+      },
+      "200": {
+        "modified_membrane": 0.45037220843672454,
+        "reference_membrane": 0.0
+      }
+    },
+    "log1p_ratio_modified_vs_ref": 3.370673334970456
+  },
+  "F3_bias_current_robustness": {
+    "modified_membrane": {
+      "n": 437,
+      "slope_S": 1.0091351152683415e-09,
+      "R2": 0.9996591685822782,
+      "I_over_V_mean_S": 1.0813662554357953e-09,
+      "I_over_V_median_S": 1.0493822674418605e-09
+    },
+    "reference_membrane": {
+      "n": 10,
+      "slope_S": 9.744925774262776e-11,
+      "R2": 0.9999999996124113,
+      "I_over_V_mean_S": 9.74507085917644e-11,
+      "I_over_V_median_S": 9.745025e-11
+    },
+    "slope_ratio": 10.355493090912585,
+    "IoverV_ratio": 11.096545844174416,
+    "IoverV_median_ratio": 10.768389690553493,
+    "reference_mirror_asymmetry_A": 2.4638626000000003e-12,
+    "modified_mirror_asymmetry_A": 4.43966573076923e-12,
+    "both_linear": true
+  },
+  "F4_condition_response_robustness": {
+    "Ar": {
+      "mean": -0.11818181818181817,
+      "ci95": [
+        -0.3554046621196447,
+        0.11904102575600839
+      ],
+      "excludes_zero": false,
+      "median": -0.15
+    },
+    "Kr": {
+      "mean": -0.07272727272727274,
+      "ci95": [
+        -0.4216862534799307,
+        0.2762317080253852
+      ],
+      "excludes_zero": false,
+      "median": 0.0
+    },
+    "Ne": {
+      "mean": -0.04999999999999998,
+      "ci95": [
+        -0.37982893637873444,
+        0.27982893637873446
+      ],
+      "excludes_zero": false,
+      "median": 0.1
+    },
+    "Xe": {
+      "mean": -0.19363636363636366,
+      "ci95": [
+        -0.4969591826955031,
+        0.10968645542277577
+      ],
+      "excludes_zero": false,
+      "median": -0.3
+    },
+    "overall_mean": -0.10863636363636366,
+    "overall_ci95": [
+      -0.2579498419395573,
+      0.04067711466682998
+    ],
+    "any_gas_significant": false,
+    "lopo_gas_mean": {
+      "Xe": -0.0803,
+      "Kr": -0.1206,
+      "Ar": -0.1055,
+      "Ne": -0.1282
+    },
+    "per_device_mean": {
+      "device_01": -0.4875,
+      "device_02": 0.2,
+      "device_03": 0.1125,
+      "device_04": -0.1,
+      "device_05": -0.175,
+      "device_06": -0.2375,
+      "device_07": -0.4,
+      "device_08": -0.2125,
+      "device_09": -0.225,
+      "device_10": 0.23,
+      "device_11": 0.1
+    }
+  },
+  "F5_time_response_robustness": {
+    "per_device": {
+      "device_01": {
+        "slope_per_day": 0.007272727272727281,
+        "R2_linear": 0.031515151515151496,
+        "R2_quadratic": 0.9991191112508515
+      },
+      "device_02": {
+        "slope_per_day": -0.023015873015873017,
+        "R2_linear": 0.08865696816360957,
+        "R2_quadratic": 0.7050240443708384
+      },
+      "device_03": {
+        "slope_per_day": -0.011075757575757577,
+        "R2_linear": 0.08950230806852544,
+        "R2_quadratic": 0.399815954455363
+      },
+      "device_04": {
+        "slope_per_day": 0.02782608695652174,
+        "R2_linear": 0.333913043478261,
+        "R2_quadratic": 0.5943692870201098
+      },
+      "device_05": {
+        "slope_per_day": 0.025942028985507255,
+        "R2_linear": 0.3377180500658761,
+        "R2_quadratic": 0.672979447122043
+      },
+      "device_06": {
+        "slope_per_day": 0.021047120418848164,
+        "R2_linear": 0.18002005124206288,
+        "R2_quadratic": 0.2274217998537954
+      },
+      "device_07": {
+        "slope_per_day": 0.0025641025641025615,
+        "R2_linear": 0.08012820512820518,
+        "R2_quadratic": 0.13540668582987347
+      },
+      "device_08": {
+        "slope_per_day": -0.007974358974358968,
+        "R2_linear": 0.02875058707425948,
+        "R2_quadratic": 0.9206523268199314
+      },
+      "device_09": {
+        "slope_per_day": -0.025445026178010463,
+        "R2_linear": 0.20140525606698845,
+        "R2_quadratic": 0.9730248393424084
+      }
+    },
+    "mean_slope": 0.0019045611615229978,
+    "std_slope": 0.02025007666934404,
+    "lopo_mean_slope": [
+      0.00123,
+      0.00502,
+      0.00353,
+      -0.00134,
+      -0.0011,
+      -0.00049,
+      0.00182,
+      0.00314,
+      0.00532
+    ],
+    "lopo_mean_slope_range": [
+      -0.02545,
+      -0.02545,
+      -0.02545,
+      -0.02545,
+      -0.02545,
+      -0.02545,
+      -0.02545,
+      -0.02545,
+      -0.02302
+    ],
+    "frac_positive": 0.5555555555555556,
+    "frac_negative": 0.4444444444444444,
+    "quadratic_R2_mean": 0.6253126106739127
+  }
+}

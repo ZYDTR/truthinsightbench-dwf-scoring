@@ -1,8 +1,8 @@
 {
   "schema": "tib-dwf-scoring-export",
   "created_at": "2026-09-24T05:40:05.534223+00:00",
-  "task_count": 27,
-  "registered_finding_count": 128,
+  "task_count": 40,
+  "registered_finding_count": 177,
   "tasks": [
     "Astronomy_01_radio_burst_drift",
     "Astronomy_02_gravity_spectral_structure",
@@ -18,11 +18,24 @@
     "Energy_02_flow_battery_operating_boundary",
     "Energy_03_interface_response_boundaries",
     "Energy_04_biohybrid_operating_tradeoffs",
+    "Information_01_dynamics_generalization",
+    "Information_02_network_path_boundaries",
     "Information_03_signal_surface_invariants",
+    "Information_04_connectome_assortative_structure",
+    "Life_01_dual_sensor_fusion",
     "Life_02_contextual_immune_response",
+    "Life_03_nutrient_response_kinetics",
     "Life_04_environmental_transfer_boundary",
     "Life_05_developmental_interaction_structure",
+    "Material_01_binary_superlattice",
+    "Material_02_temperature_response_boundaries",
+    "Material_03_membrane_selective_permeation",
+    "Material_04_nir_emission_structure",
+    "Math_01_governing_equation_discovery",
     "Math_02_compositional_invariants",
+    "Math_03_ode_parameter_geometry",
+    "Math_04_anomalous_diffusion_change_points",
+    "Neuro_01_self_organization_prediction",
     "Neuro_02_calcium_response_regions",
     "Neuro_03_spatial_code_stability",
     "Neuro_04_temporal_geometry",
@@ -32,9 +45,13 @@
     "Physics_04_temporal_delay_transition",
     "Physics_05_variational_circuit_simulation"
   ],
-  "scoring_assets_sha256": "157eb63e27668a6412d4895b28ca9ad6d0da9f75887c9b15b79bff7ae027dd95",
+  "scoring_assets_sha256": "d2a25c97a325af2c7da25bf216c545f8e6b1a09d3c992c3fc075989aaf6f1a54",
   "models": [
     "bonsai2-27b-pq2",
     "deepseek-v4.1-flash-max"
-  ]
+  ],
+  "export_version": "20261010-40",
+  "extended_at": "2026-10-10T08:48:26.432685+00:00",
+  "base_manifest": "versions/20260924-27/export_manifest.json",
+  "extension_manifest": "versions/20261010-40/extension_manifest.json"
 }

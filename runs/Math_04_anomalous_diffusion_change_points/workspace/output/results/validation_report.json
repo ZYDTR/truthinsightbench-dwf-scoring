@@ -1,0 +1,45 @@
+{
+  "n_traj": 240,
+  "n_nonstationary": 143,
+  "n_stationary": 97,
+  "null_test": {
+    "n_nonstat_with_p_lt_0_05": 73,
+    "frac_all_p_lt_0_05": 0.3458333333333333,
+    "corr_p_vs_nonstat": -0.43359879074586344
+  },
+  "cross_validation": {
+    "cv_accuracy": 0.6333333333333333,
+    "cv_chance": 0.5958333333333333,
+    "k": 2,
+    "seed": 42,
+    "n_folds": 240
+  },
+  "bootstrap_ci": {
+    "frac_nonstat": [
+      0.5965166666666667,
+      0.5373958333333333,
+      0.6542708333333332
+    ],
+    "median_cp": [
+      48.208,
+      32.0,
+      64.0
+    ],
+    "m32_over_32": [
+      0.18208407019420722,
+      0.14491589714577224,
+      0.22231736781595846
+    ]
+  },
+  "failure_boundaries": {
+    "early_cp_steps_le_16_frac": 0.26573426573426573,
+    "late_cp_steps_ge_96_frac": 0.24475524475524477,
+    "weak_contrast_abslogratio_lt_0_5_frac": 0.0,
+    "endpoint_abs_mean_weak_minus_rest": 0.0,
+    "endpoint_note": "weak-contrast set is empty (all nonstationary have ratio>=2.0, |log(ratio)|>=0.693>0.5); difference undefined, reported as 0.0"
+  },
+  "cross_agreement": {
+    "active_flag_vs_nonstat_point_biserial": 0.08510532147158453,
+    "quiet_then_active_nonstat_frac": 0.0
+  }
+}

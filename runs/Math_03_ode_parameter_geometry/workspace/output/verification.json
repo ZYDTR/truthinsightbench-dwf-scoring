@@ -1,0 +1,34 @@
+{
+  "findings": [
+    {
+      "finding_id": 1,
+      "topic": "SPECTRUM is extremely ill-conditioned (log_sv spans ~36 orders; linear-in-index R2~0.64, power-law weaker, steep tail)",
+      "verdict": "supported",
+      "key_robustness_number": "span_orders10=36.32; best linear-in-index (exponential) R2=0.642 vs power-law R2=0.332; tail_slope=-0.060 vs early_slope=-0.004 (nonlinear_decay=true)",
+      "weakened": false
+    },
+    {
+      "finding_id": 2,
+      "topic": "TRAJECTORY behavior is weakly/essentially uncorrelated with the singular spectrum",
+      "verdict": "supported",
+      "key_robustness_number": "slope-sv corr fam0=-0.163, fam1=-0.047, pooled=-0.069; reg slope=-0.0007; leave-one-out lof reproduces each family's value",
+      "weakened": false
+    },
+    {
+      "finding_id": 3,
+      "topic": "MEASUREMENT-SIMULATION agreement is strong (corr~0.765, near-zero bias) but does not establish parameter identifiability",
+      "verdict": "supported",
+      "key_robustness_number": "corr_meas_sim=0.765 (winsor 0.768, outlier-excl 0.813); bias_near_zero=true (t=-0.14, p>0.05); corr_by_quantile non-constant [0.58,0.35,0.12,0.07,0.19] supports the identifiability caveat",
+      "weakened": false
+    },
+    {
+      "finding_id": 4,
+      "topic": "SOLVER FAMILY is a significant source of convergence difference (fam1 converges more, diff fam0-fam1 ~+0.22, tight bootstrap CI)",
+      "verdict": "supported",
+      "key_robustness_number": "diff fam0-fam1=+0.219, bootstrap CI95 [0.216,0.223] excludes 0; sign-test p=1.0; 95.6% favor fam0; batch leave-out stable (fam1 converges more in all 4 batches)",
+      "weakened": false
+    }
+  ],
+  "unresolved": [],
+  "overall": "All four ground-truth findings are supported and none is materially weakened. Robustness confirms the ~36-order, non-linear, steep-tail ill-conditioning of the spectrum; a near-null (lof-stable) trajectory-spectrum relationship; strong, near-zero-bias measurement-simulation agreement whose non-constant quantile correlation backs the identifiability caveat; and a real, tight-CI solver-family convergence difference with fam1 converging more, stable across all four parameter batches. No robustness check materially weakens any finding."
+}

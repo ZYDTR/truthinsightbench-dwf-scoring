@@ -1,0 +1,59 @@
+{
+  "er_n_100_p_01.npy": {
+    "path": "/data/user/conversations/conv-07581fcf-2edd-4246-8da8-dc035efd1751/project/data/source_data/er_n_100_p_01.npy",
+    "sha256": "d9b5123e8a09e273524991d28f988a07197fa7a4e2b3230a70bf04914f841c8d",
+    "dtype": "int64",
+    "shape": [
+      100,
+      100
+    ],
+    "node_count": 100,
+    "symmetric": true,
+    "self_loops": 0,
+    "off_diag_edges": 474,
+    "degree": "[13. 10. 10.  8.  9.  9.  9.  9.  7.  7. 12. 13. 14. 10.  6. 11.  9. 10.\n  5.  6.  8. 12.  9.  3. 16. 11.  4. 12. 11.  8. 14. 12. 10. 13. 13.  8.\n  8. 15.  7. 12.  9.  5. 11.  7. 12. 13.  5.  4.  6.  9. 12.  9. 10.  7.\n  9.  9. 10. 12. 10. 14.  5.  9.  6. 13.  7. 11. 15.  7.  9. 10. 10.  9.\n 11.  9. 13. 11. 10.  7.  9. 10. 10.  6. 12.  8. 13.  7.  9. 12.  7.  7.\n 15.  8.  6. 13.  7.  8. 12.  8.  6.  7.]",
+    "mean_degree_incl_self": 9.48,
+    "mean_degree_excl_self": 9.48,
+    "degree_min": 3.0,
+    "degree_median": 9.0,
+    "degree_max": 16.0
+  },
+  "er_n_100_p_01_alt.npy": {
+    "path": "/data/user/conversations/conv-07581fcf-2edd-4246-8da8-dc035efd1751/project/data/source_data/er_n_100_p_01_alt.npy",
+    "sha256": "4f8c6604ff870ce43667e3affe1da01dc7971f7acd552ca29363d2e3435ca1d8",
+    "dtype": "int64",
+    "shape": [
+      100,
+      100
+    ],
+    "node_count": 100,
+    "symmetric": true,
+    "self_loops": 0,
+    "off_diag_edges": 477,
+    "degree": "[10. 14. 13.  9.  8.  8. 10.  8.  8. 15. 11.  7. 15.  8.  4.  7. 14.  4.\n 10.  9. 10.  8.  9.  4.  6.  7.  6. 10. 12.  2.  7.  6.  7. 10. 14. 11.\n  6.  8.  9. 19. 14.  9. 10. 11. 12. 10.  6.  8.  7.  4. 13.  9. 12.  9.\n 15. 13. 10. 12.  3. 11. 13.  8.  8. 11. 10. 13.  9.  8. 12.  4.  4. 10.\n  8. 13.  6. 11. 12. 10.  9.  6. 10.  8. 12.  7. 12.  8. 13. 10. 11. 10.\n  6. 15. 11.  7. 14. 10. 12.  7. 13. 12.]",
+    "mean_degree_incl_self": 9.54,
+    "mean_degree_excl_self": 9.54,
+    "degree_min": 2.0,
+    "degree_median": 10.0,
+    "degree_max": 19.0
+  },
+  "er_n_100_p_06.npy": {
+    "path": "/data/user/conversations/conv-07581fcf-2edd-4246-8da8-dc035efd1751/project/data/source_data/er_n_100_p_06.npy",
+    "sha256": "ad03d570f668538e16afb936135f2ddc5423ecf09be9c3c46e3868c12d414ffd",
+    "dtype": "int64",
+    "shape": [
+      100,
+      100
+    ],
+    "node_count": 100,
+    "symmetric": true,
+    "self_loops": 0,
+    "off_diag_edges": 2941,
+    "degree": "[56. 66. 55. 59. 60. 51. 57. 55. 57. 62. 63. 60. 70. 62. 61. 53. 42. 57.\n 55. 66. 56. 56. 58. 63. 57. 68. 58. 66. 60. 57. 64. 60. 66. 60. 59. 56.\n 56. 58. 53. 53. 53. 51. 59. 58. 53. 49. 64. 63. 68. 52. 66. 63. 63. 55.\n 53. 63. 55. 58. 56. 62. 61. 58. 67. 54. 54. 66. 71. 59. 59. 61. 58. 62.\n 64. 52. 63. 65. 64. 51. 58. 58. 52. 60. 66. 59. 56. 62. 61. 52. 53. 63.\n 59. 57. 57. 57. 60. 66. 53. 59. 53. 57.]",
+    "mean_degree_incl_self": 58.82,
+    "mean_degree_excl_self": 58.82,
+    "degree_min": 42.0,
+    "degree_median": 58.5,
+    "degree_max": 71.0
+  }
+}

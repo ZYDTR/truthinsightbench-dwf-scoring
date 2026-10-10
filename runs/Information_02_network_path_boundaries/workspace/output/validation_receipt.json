@@ -1,0 +1,181 @@
+{
+  "schema": "truthinsightbench-semantic-output-validation",
+  "passed": false,
+  "errors": [
+    "missing_reproducible_method_or_executed_notebook_trace"
+  ],
+  "warnings": [],
+  "output": "/data/user/conversations/conv-638e4581-a722-4918-95a5-b7bfc57d6954/project/output",
+  "authoritative_report": {
+    "path": "Result.md",
+    "bytes": 12336,
+    "sha256": "db7386fcc46ec3f3809ac734e83da0d27062fe4a32d774314b2f1a93a9bc1f4e"
+  },
+  "registered_findings": {
+    "count": 3,
+    "numbers": [
+      1,
+      2,
+      3
+    ],
+    "markers": [
+      {
+        "finding_number": 1,
+        "line": 58,
+        "marker": "## Finding 1: In the strongly-connected family, arc count is a monotone lever, with exact closed-form extrema at L=N (directed cycle) and L=2N−2",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 2,
+        "line": 96,
+        "marker": "## Finding 2: In the disconnected/DAG family, global efficiency equals density exactly, and E ≥ density holds universally — a strict lower boundary",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 3,
+        "line": 129,
+        "marker": "## Finding 3: Connectivity is the driver of E>density — strongly-connected graphs strictly exceed density, while the DAG family attains the lower bound",
+        "heading_level": 2
+      }
+    ],
+    "traceability": [
+      {
+        "finding_number": 1,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis_flower.py"
+        ],
+        "result_evidence": [
+          "cases.csv",
+          "figure_boundaries.svg",
+          "results.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 2,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis_flower.py"
+        ],
+        "result_evidence": [
+          "cases.csv",
+          "figure_boundaries.svg",
+          "results.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 3,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis_flower.py"
+        ],
+        "result_evidence": [
+          "cases.csv",
+          "figure_boundaries.svg",
+          "results.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      }
+    ]
+  },
+  "reproduction": {
+    "mode": null,
+    "document": null
+  },
+  "analysis_sources": [
+    {
+      "path": "analysis_flower.py",
+      "bytes": 13087,
+      "sha256": "ebd0599e002f8e8d4ada50211cb4779064f784acef0ded59d13dbbb371e029e0"
+    },
+    {
+      "path": "compute_connectivity_independent.py",
+      "bytes": 3202,
+      "sha256": "e0eff3dd2f031f3036c2307b08f2fa8d2cf670bc8b6f3ed5543bc05b91ae60e8"
+    },
+    {
+      "path": "compute_familyA_independent.py",
+      "bytes": 7880,
+      "sha256": "c73b623ed5d28ac17c59c37f3c4bdba24077d7465646e153087ca88f274330bc"
+    },
+    {
+      "path": "compute_familyB_independent.py",
+      "bytes": 3511,
+      "sha256": "fe6bf2d0fc6187bf983ebb913aa03f689d5ce832f345367db29c1b6f340ea826"
+    },
+    {
+      "path": "make_artifacts.py",
+      "bytes": 9744,
+      "sha256": "77f96616c5ed5dcc06c5281ff80771241aa0f4ce5ca65fa788455285d381ec9b"
+    }
+  ],
+  "executed_notebooks": [],
+  "result_artifacts": [
+    {
+      "path": "cases.csv",
+      "bytes": 22992,
+      "sha256": "1cc5f8ecd01c1e3628e576057d334c762338019250fc5cc5312c6fe58d3821b0"
+    },
+    {
+      "path": "evidence_artifacts.json",
+      "bytes": 633,
+      "sha256": "378e2a5ffcee5b922b98ab69411721575a34bd074198da3d5e462de22c8b6471"
+    },
+    {
+      "path": "evidence_connectivity.json",
+      "bytes": 743,
+      "sha256": "504ea77c3dbe8eae0c74afb925a30f4c4509111defb4a258e8e087653c51db60"
+    },
+    {
+      "path": "evidence_familyA.json",
+      "bytes": 639,
+      "sha256": "1a0896cb84c8eb3d44ed1cff2ff836b85a7f51826c79bbabd104c2d33e316606"
+    },
+    {
+      "path": "evidence_familyB.json",
+      "bytes": 542,
+      "sha256": "28e29bd38bb835a2494078ee6dd23e108aa0f372910347f9010426a18e8ff155"
+    },
+    {
+      "path": "figure_boundaries.svg",
+      "bytes": 32661,
+      "sha256": "3362fb248042fc4b84e04619bec66431e0bc8fa5070f3ab4694254ee65fa0106"
+    },
+    {
+      "path": "results.json",
+      "bytes": 1637,
+      "sha256": "b3ee08265775fead70ccaef9af5601a1fe546b4e25fe77ed0357c48ac2d028eb"
+    }
+  ],
+  "native_evidence_registry": {
+    "sources": [],
+    "resolved_ids": {}
+  },
+  "resolved_support_files": [
+    {
+      "path": "analysis_flower.py",
+      "bytes": 13087,
+      "sha256": "ebd0599e002f8e8d4ada50211cb4779064f784acef0ded59d13dbbb371e029e0"
+    },
+    {
+      "path": "cases.csv",
+      "bytes": 22992,
+      "sha256": "1cc5f8ecd01c1e3628e576057d334c762338019250fc5cc5312c6fe58d3821b0"
+    },
+    {
+      "path": "figure_boundaries.svg",
+      "bytes": 32661,
+      "sha256": "3362fb248042fc4b84e04619bec66431e0bc8fa5070f3ab4694254ee65fa0106"
+    },
+    {
+      "path": "results.json",
+      "bytes": 1637,
+      "sha256": "b3ee08265775fead70ccaef9af5601a1fe546b4e25fe77ed0357c48ac2d028eb"
+    }
+  ]
+}

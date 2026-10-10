@@ -1,0 +1,11 @@
+{
+  "schema": "truthinsightbench-participant-workspace",
+  "release": "V1.0",
+  "task_id": "Math_04_anomalous_diffusion_change_points",
+  "t0": "2021-01-01",
+  "scientific_file_count": 1,
+  "scientific_bytes": 184564,
+  "data_manifest_sha256": "652fdffadaf7371ee06e53390e48e2d146f0a56c9cce5d5af34b1933f9c7d88c",
+  "research_objective_sha256": "42bd3d084d4232d2a6bd4269c969f177b43a4089e39ce2ba57a8b957e6c64468",
+  "launch_prompt_sha256": "0f4cafd2bc7a8b51b835101fa1d9032bc688caa09ac9ce12e60ff1bd4c68da3a"
+}

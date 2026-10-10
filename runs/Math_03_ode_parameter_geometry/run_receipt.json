@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202610-bonsai",
+  "task_id": "Math_03_ode_parameter_geometry",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "82e5a785bd27271b9b02307edb11f950ac6d8c024746eda3762ed785f9772b24",
+  "workspace_input_file_count": 10,
+  "workspace_input_bytes": 1302259,
+  "output_tree_sha256": "e421375a90479bd479c28bd0dbfd70f7504746c931d0c374f3a5dd61bc940d17",
+  "output_file_count": 25,
+  "output_bytes": 2322543
+}

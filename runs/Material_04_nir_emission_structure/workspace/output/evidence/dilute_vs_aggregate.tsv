@@ -1,0 +1,16 @@
+design_series	aggregate_state_id	dilute_peak_wavelength_nm	aggregate_state_peak_wavelength_nm	delta_nm_dilute_minus_aggregate
+series_A	state_1	1031.0	1028.0	3.0
+series_A	state_2	1031.0	1026.0	5.0
+series_A	state_3	1031.0	1026.0	5.0
+series_A	state_4	1031.0	1028.0	3.0
+series_A	state_5	1031.0	1020.0	11.0
+series_B	state_1	1029.0	1030.0	-1.0
+series_B	state_2	1029.0	1030.0	-1.0
+series_B	state_3	1029.0	1026.0	3.0
+series_B	state_4	1029.0	1027.0	2.0
+series_B	state_5	1029.0	1028.0	1.0
+series_C	state_1	1034.0	1029.0	5.0
+series_C	state_2	1034.0	1027.0	7.0
+series_C	state_3	1034.0	1034.0	0.0
+series_C	state_4	1034.0	1028.0	6.0
+series_C	state_5	1034.0	1023.0	11.0

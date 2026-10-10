@@ -1,0 +1,38 @@
+{
+  "task_id": "Math_03_ode_parameter_geometry",
+  "t0": "2022-01-01",
+  "status": "complete",
+  "validator": {"command": "python3 validate_output.py output", "exit_code": 0, "passed": true, "errors": [], "warnings": []},
+  "findings": 4,
+  "findings_verdict": "all supported",
+  "native_workflow": {
+    "analysis_run": {"run_id": "wf_49eb84e7-6da", "children": 3, "mode": "serial (max 1 active child)", "errors": 0},
+    "correction_verification_runs": [
+      {
+        "run_id": "wf_50967646-0d1",
+        "children": 1,
+        "mode": "serial (max 1 active child)",
+        "child_structured_output": "genuine tool_use (line 50) -> same-ID tool_result (line 51, non-error)",
+        "note": "Returned PASS and correctly characterized the original e-05 defect, but its own numeric fields artifact_value and recomputed_true_value transmitted WITHOUT the e-05 exponent (1e5 too large), inconsistent with the actual artifact, its own Bash stdout, and its own reason text. A PASS label proved mechanism/format, not content consistency."
+      },
+      {
+        "run_id": "wf_2feb8b02-fb7",
+        "children": 1,
+        "mode": "serial (max 1 active child)",
+        "child_structured_output": "genuine tool_use (line 7) -> same-ID tool_result (line 8, non-error); string-typed value fields so the e-05 exponent is preserved verbatim",
+        "status": "PASS",
+        "note": "Corrected, fully consistent receipt: all value fields are strings copied verbatim from the actual sources (artifact, child Bash stdout, and the child's own transmitted StructuredOutput). The main agent independently re-verified every field against the sources after return."
+      }
+    ]
+  },
+  "data_integrity": "all 3 data files match data_manifest.json full 64-char SHA-256; no corruption; correction of an early manual transcription recorded",
+  "authoritative_report": "output/Result.md",
+  "reproduction": "Reproduction + Methods sections in Result.md; run analysis.py, robustness_a.py, robustness_b.py, verify_corrections.py, verify_consistency.py",
+  "correction_evidence": {
+    "structured_receipt": "output/correction_receipt.json (StructuredOutput linear_slope defect, status PASS)",
+    "recomputation": "output/recomputed_values.json (independent recomputation + command/source)",
+    "verifiers": ["output/verify_corrections.py", "output/verify_consistency.py"],
+    "native_verification": "Two serial native-Workflow children; the final one (wf_2feb8b02-fb7) returned a string-based, fully consistent correction receipt via its own native StructuredOutput. Main agent re-verified every field against the actual artifact, the child's raw StructuredOutput, and the child's raw Bash stdout.",
+    "provenance": "original raw JSONL and journal.jsonl preserved unmodified (original defect tool_use_id FCXnbxxpCS9pEaGM97dE8l79lvuclmno in wf_49eb84e7-6da and first-correction defect tool_use_id Jz9uTFSb91De57bUXzqxvto1Z0vD3eHL in wf_50967646-0d1 both intact); data/ unchanged"
+  }
+}

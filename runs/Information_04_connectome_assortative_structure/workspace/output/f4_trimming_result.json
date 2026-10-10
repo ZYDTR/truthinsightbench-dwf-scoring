@@ -1,0 +1,195 @@
+{
+  "n_pairs": 14,
+  "pairs": {
+    "system_01/annotation_01": {
+      "assort_z": {
+        "tp1": 0.7486054531809068,
+        "tp_peak": 0.7486054531809068,
+        "tp_last": -1.760842724377057,
+        "declines_with_trim": true
+      },
+      "assort_p_fdr": {
+        "min_p": 0.0,
+        "n_sig": 13,
+        "ever_sig": true
+      }
+    },
+    "system_01/annotation_02": {
+      "assort_z": {
+        "tp1": 3.197970692530586,
+        "tp_peak": 3.197970692530586,
+        "tp_last": -0.9579395689018462,
+        "declines_with_trim": true
+      },
+      "assort_p_fdr": {
+        "min_p": 0.0087527777777777,
+        "n_sig": 1,
+        "ever_sig": true
+      }
+    },
+    "system_01/annotation_04": {
+      "assort_z": {
+        "tp1": 1.58793782048978,
+        "tp_peak": 1.58793782048978,
+        "tp_last": -1.276052811979649,
+        "declines_with_trim": true
+      },
+      "assort_p_fdr": {
+        "min_p": 0.2768541666666667,
+        "n_sig": 0,
+        "ever_sig": false
+      }
+    },
+    "system_01/annotation_05": {
+      "assort_z": {
+        "tp1": 5.702294015461785,
+        "tp_peak": 5.702294015461785,
+        "tp_last": -1.671804163989983,
+        "declines_with_trim": true
+      },
+      "assort_p_fdr": {
+        "min_p": 0.0,
+        "n_sig": 3,
+        "ever_sig": true
+      }
+    },
+    "system_01/annotation_06": {
+      "assort_z": {
+        "tp1": 3.645751528253349,
+        "tp_peak": 3.645751528253349,
+        "tp_last": -0.5640112194377547,
+        "declines_with_trim": true
+      },
+      "assort_p_fdr": {
+        "min_p": 0.003425,
+        "n_sig": 3,
+        "ever_sig": true
+      }
+    },
+    "system_02/annotation_01": {
+      "assort_z": {
+        "tp1": -0.0218282921050331,
+        "tp_peak": -0.0218282921050331,
+        "tp_last": -2.129198984771469,
+        "declines_with_trim": true
+      },
+      "assort_p_fdr": {
+        "min_p": 0.0154125,
+        "n_sig": 5,
+        "ever_sig": true
+      }
+    },
+    "system_02/annotation_02": {
+      "assort_z": {
+        "tp1": -1.501923467344016,
+        "tp_peak": -1.3863249913834,
+        "tp_last": -2.16473336516673,
+        "declines_with_trim": true
+      },
+      "assort_p_fdr": {
+        "min_p": 0.0154125,
+        "n_sig": 7,
+        "ever_sig": true
+      }
+    },
+    "system_02/annotation_04": {
+      "assort_z": {
+        "tp1": 0.0188029176791592,
+        "tp_peak": 0.1907602807822719,
+        "tp_last": -0.439112965415724,
+        "declines_with_trim": true
+      },
+      "assort_p_fdr": {
+        "min_p": 0.0977266666666666,
+        "n_sig": 0,
+        "ever_sig": false
+      }
+    },
+    "system_02/annotation_05": {
+      "assort_z": {
+        "tp1": 2.02981510871887,
+        "tp_peak": 2.083505608128758,
+        "tp_last": -2.50779518710553,
+        "declines_with_trim": true
+      },
+      "assort_p_fdr": {
+        "min_p": 0.03510625,
+        "n_sig": 4,
+        "ever_sig": true
+      }
+    },
+    "system_02/annotation_06": {
+      "assort_z": {
+        "tp1": -0.0659673028232214,
+        "tp_peak": -0.0591539751291183,
+        "tp_last": -2.422070106714993,
+        "declines_with_trim": true
+      },
+      "assort_p_fdr": {
+        "min_p": 0.0350111111111111,
+        "n_sig": 5,
+        "ever_sig": true
+      }
+    },
+    "system_03/annotation_03": {
+      "assort_z": {
+        "tp1": 3.889840033765104,
+        "tp_peak": 4.832420697450331,
+        "tp_last": -1.614514311712519,
+        "declines_with_trim": true
+      },
+      "assort_p_fdr": {
+        "min_p": 0.0,
+        "n_sig": 4,
+        "ever_sig": true
+      }
+    },
+    "system_03/annotation_05": {
+      "assort_z": {
+        "tp1": 3.729785523373824,
+        "tp_peak": 3.729785523373824,
+        "tp_last": -1.515107772169084,
+        "declines_with_trim": true
+      },
+      "assort_p_fdr": {
+        "min_p": 0.00165,
+        "n_sig": 7,
+        "ever_sig": true
+      }
+    },
+    "system_03/annotation_06": {
+      "assort_z": {
+        "tp1": 1.057239504475711,
+        "tp_peak": 2.017665097362867,
+        "tp_last": 0.4290678584593243,
+        "declines_with_trim": true
+      },
+      "assort_p_fdr": {
+        "min_p": 0.1312666666666666,
+        "n_sig": 0,
+        "ever_sig": false
+      }
+    },
+    "system_04/annotation_02": {
+      "assort_z": {
+        "tp1": 1.244171086753957,
+        "tp_peak": 1.244171086753957,
+        "tp_last": -1.402154825026932,
+        "declines_with_trim": true
+      },
+      "assort_p_fdr": {
+        "min_p": 0.0786,
+        "n_sig": 0,
+        "ever_sig": false
+      }
+    }
+  },
+  "all_assort_z_decline": true,
+  "never_significant_pairs": [
+    "system_01/annotation_04",
+    "system_02/annotation_04",
+    "system_03/annotation_06",
+    "system_04/annotation_02"
+  ],
+  "n_rows": 28
+}

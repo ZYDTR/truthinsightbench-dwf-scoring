@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202610-bonsai",
+  "task_id": "Life_01_dual_sensor_fusion",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "51cfd9e1e0724eedcaae504f919c3c3b6157a29856f968fc5c1685797278d50f",
+  "workspace_input_file_count": 29,
+  "workspace_input_bytes": 3252349,
+  "output_tree_sha256": "a976e30120b075db9c15017e200dfbc21c4bbb03d7c3e866d6cab59f9695591e",
+  "output_file_count": 15,
+  "output_bytes": 155998
+}

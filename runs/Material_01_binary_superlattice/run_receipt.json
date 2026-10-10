@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202610-bonsai",
+  "task_id": "Material_01_binary_superlattice",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "6b9efd7597f361729df7bb8a2d84fe1bb0e8fc407f81b5fe547da34a47f49005",
+  "workspace_input_file_count": 24,
+  "workspace_input_bytes": 96185,
+  "output_tree_sha256": "ca1ef625904cb4074fd6cc4816df1d50b7b5787f0c8a749c8fabc2c805af6108",
+  "output_file_count": 21,
+  "output_bytes": 113966
+}

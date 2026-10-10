@@ -1,0 +1,24 @@
+{
+  "task_id": "Life_01_dual_sensor_fusion",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20261009T082323-9f882b",
+  "source_run_json_sha256": "a381d9d0f8bf23e625066ba338d979dececaa0f7ba09e52780e5a65b0e33a0a1",
+  "source_release_json_sha256": "78a7d5e64b0376fb3138a36de19eb35a44207744e7085197b74a6b81aacfa518",
+  "source_latest_validation_sha256": "1d9025df3c021b8b32fa2b6eb51e861f66a8dbfa2a25445d74977cdf25a17973",
+  "source_snapshot_manifest_sha256": "b2b9cab8a9fdf0f837c706a18f1479b0827e9017c866653f6edc34f7123d458a",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 761
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 4,
+  "input_sha256": "51cfd9e1e0724eedcaae504f919c3c3b6157a29856f968fc5c1685797278d50f",
+  "output_sha256": "a976e30120b075db9c15017e200dfbc21c4bbb03d7c3e866d6cab59f9695591e",
+  "export_version": "20261010-40",
+  "source_attempt": "20261009T033114Z-c6ea2f49",
+  "source_release_at": "2026-10-09T08:26:38.264044+00:00"
+}

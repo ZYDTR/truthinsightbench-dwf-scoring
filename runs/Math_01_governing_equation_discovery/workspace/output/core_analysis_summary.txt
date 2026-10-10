@@ -1,0 +1,108 @@
+CORE ANALYSIS SUMMARY
+Task: Math_01_governing_equation_discovery
+Data: synthetic_field (101 x 201, t in [0,10], x in [-5,5]) + experimental_field (5 x 38 x 3, t=[0,12,24,36,48] h, x=25..1875 step 50)
+Script: output/analysis.py -> output/results.json
+Note: 3 bugs were fixed in analysis.py before a clean run (exit 0):
+  (1) validate_holdout() used the time index `i` as a spatial index for U_xx (broadcast error); rewritten with vectorized U_tt/U_xx over the full grid.
+  (2) Fourier phase fit passed a 1-D t_s to lstsq; reshaped to 2-D (t_s[:, None]).
+  (3) Temporal growth-rate fit used a zero-intercept model (A=t[:,None]) which returned a spurious NEGATIVE slope; added an intercept column. With the intercept the growth rates are positive and consistent with the observed increasing means.
+
+================================================================
+1) WHICH PDE CANDIDATES FIT WELL (rel_resid < 0.3)
+================================================================
+NO candidate meets the rel_resid < 0.3 threshold in the synthetic field, and NONE meets it in the experimental field either. The data do not cleanly satisfy any single candidate PDE.
+
+Synthetic field (interior 19208 points):
+  wave         c2=0.079859, rel_resid=0.8642
+  damped_wave  gamma=-0.068197, c2=-0.080030, rel_resid=0.8628
+  heat         D=-0.002516, rel_resid=0.9998
+  adv_diff     c=-0.000578, D=-0.002520, rel_resid=0.9998
+  rxn_diff     D=-0.000282, k=0.043389, rel_resid=0.9987
+  kdv          a=-0.700636, b=0.061685, rel_resid=0.8818
+  burgers      a=-0.700636, D=0.061685, rel_resid=0.8818
+  general_wave a=0.044872, b=0.102135, c=-0.685659, d=0.007047, e=-0.001688, rel_resid=0.6835
+  general_heat a=0.107519, b=0.003851, c=0.363997, d=-0.995982, e=0.000933, rel_resid=0.8161
+  Best: general_wave (5-term) rel_resid=0.6835; pure wave is 0.8642.
+
+Experimental field (per channel, interior points):
+  ch0: heat D=9.32 (0.9992), adv_diff c=-0.535 D=8.93 (0.9978), rxn_diff D=31.07 k=0.0309 (0.4078), wave c2=9.92 (0.8856)
+  ch1: heat D=9.72 (0.9994), adv_diff c=-0.915 D=10.35 (0.9940), rxn_diff D=51.45 k=0.0249 (0.5039), wave c2=15.90 (0.7743)
+  ch2: heat D=23.98 (0.9966), adv_diff c=-0.864 D=23.05 (0.9914), rxn_diff D=37.61 k=0.0245 (0.5376), wave c2=12.25 (0.9096)
+  Best: rxn_diff (rel_resid 0.408-0.538) -- still above the 0.3 bar.
+
+Specific PDE spot-checks (synthetic):
+  U_tt=U_xx        rel_resid=6.2945
+  U_tt=0.07*U_xx   rel_resid=0.8736
+  U_t=0.05*U_xx    rel_resid=1.1114
+  KdV U_t+U*U_x+U_xx=0  rel_resid=10.1757
+
+================================================================
+2) FAILURE BOUNDARY CHARACTERISTICS
+================================================================
+Residual defined as r = U_tt - U_xx (i.e. the c2=1 wave residual):
+  Overall: min=-48.504, max=48.504, std=4.697
+  |r|>0.1 : 17846/20301 points (87.9%)
+  |r|>0.5 :  9310/20301 points (45.9%)
+  |r|>1.0 :  5176/20301 points (25.5%)
+  Max |r| at t=5.9, x=4.9 (near +x edge), value 48.5.
+
+By time (mean |r|):  t=1.0:0.869, t=2.5:2.849, t=3.0:3.598 (peak), t=5.0:1.438.
+The residual is NOT concentrated at the spatial boundaries: at t=1,2.5,5,7.5 the boundary |r| is 0.000000 while the interior is 0.95-2.86 (ratio 0.000). The spatial boundaries are exactly zero (U=0 at x=+/-5 for all t), so the "failure" is global/interior: the field truly does not satisfy U_tt=U_xx, and the residual is largest where the pulse amplitude is largest (around t=3, Umax~1.5). This is a field-wide mismatch, not a boundary artifact.
+
+================================================================
+3) HOLDOUT VALIDATION (wave equation, contiguous time)
+================================================================
+  Forward (train t=0..60, test t=60..100): c2_train=0.075806, rel_resid_test=0.8980
+  Reverse (train t=40..100, test t=0..40): c2_train=0.064372, rel_resid_test=0.8187
+Both are poor (>0.3) and the two c2 estimates disagree (0.064 vs 0.076), so the wave equation does not generalize to held-out times.
+
+================================================================
+4) INITIAL CONDITION STRUCTURE (synthetic)
+================================================================
+  U(0,x) = all zeros: True
+  U_t(0,x) forward-diff max = 0.049814
+  U_t(0,x) antisymmetric (odd): True  (U_t(0,0)=0)
+  U_t(0,x) ~ a*x: a=-0.002446, rel_resid=0.9798 (poor)
+  U_t(0,x) is NOT a single sin(k*x) (best sin fit rel_resid ~8)
+  Shape: zero at both boundaries x=+/-5 and at x=0; a positive lobe for x<0 and a negative (antisymmetric) lobe for x>0, peaking ~0.0497. First 10 samples (x=-5..-4.5): [0.0000,0.0266,0.0397,0.0457,0.0483,0.0493,0.0497,0.0497,0.0495,0.0492].
+  Interpretation: a smooth odd "initial velocity" IC (zero displacement, odd peaked velocity), the classic setup that launches a dispersive pulse.
+
+================================================================
+5) FOURIER / DISPERSION (synthetic)
+================================================================
+  99 modes retained (amp_max>0.1), k ~ 0.10..9.85.
+  Linear dispersion w=c*k+d: c=0.019067, d=0.351304, rel_resid=0.7687 (poor -> non-linear dispersion).
+  Linear damping gamma=c*k+d: c=0.011893, d=-0.101526.
+  Low-k modes dominate amplitude (k~0.20: A0=30.95, amp_max=101.6; k~0.10: amp_max=73.5) and show larger damping (gamma ~ -0.058 to -0.15); high-k modes (k~9.5-9.8) have tiny amplitude (amp_max~0.245) and near-zero damping (gamma~-0.005).
+  Most modes have phase_resid > 1 (non-linear phase evolution).
+
+Forcing term f = U_tt - c2*U_xx with c2=0.079859:
+  f range [-3.2637, 3.2637], std=0.6529; f is time- and space-dependent (FFT shows several modes per time slice), not separable, not proportional to U (f/U mean=2.21, std=36.77) nor to U_xx (f/U_xx mean=-1.04, std=105.67).
+
+================================================================
+6) EXPERIMENTAL FIELD (cell-density, 3 replicate channels)
+================================================================
+  Values are small (cell density ~0.0006-0.00165 in source units).
+  Peak values grow over 48 h: ch0 0.000615->0.001594; ch1 0.000755->0.001650; ch2 0.000811->0.001650.
+  Log-linear mean growth rate (with intercept, fixed): ch0=0.029455/h, ch1=0.025233/h, ch2=0.025061/h.
+  Peak positions (source coordinate): ch0 [425,25,25,75,25]; ch1 [1725,1875,25,75,25]; ch2 [25,25,25,25,25] (mostly near the left edge).
+  Channel similarity: rel_diff ch0-vs-ch1=0.2115, ch0-vs-ch2=0.2294, ch1-vs-ch2=0.1513; max_diff ~0.0005. Best shift=1 with rel_diff 0.21-0.26 (not a clean spatial shift).
+  Best PDE is rxn_diff but none is <0.3; heat/adv-diff/wave are all poor (0.77-0.99).
+
+================================================================
+7) KEY NUMERICAL FINDINGS
+================================================================
+  - No single candidate PDE fits the synthetic field (best 0.684; pure wave 0.864). The field is a dispersive pulse launched from U(0)=0, U_t(0)=odd bump, peaking at t~3 (Umax~1.51) then decaying.
+  - The c2=1 wave residual is large everywhere in the interior (87.9% of points |r|>0.1) and is NOT a spatial-boundary effect (boundary r=0).
+  - Wave c2 estimates are unstable across splits (0.064-0.076) and fail holdout (rel_resid 0.82-0.90).
+  - The experimental profile is best modeled by reaction-diffusion (rel_resid ~0.41-0.54) with a positive mean growth rate ~0.025-0.029 /h; channels are similar but not identical (rel_diff 0.15-0.23).
+
+================================================================
+8) ISSUES / LIMITATIONS
+================================================================
+  - Bugs fixed: (1) spatial-derivative index error in holdout; (2) 1-D vs 2-D in phase lstsq; (3) zero-intercept growth fit giving a spurious negative slope.
+  - rel_resid is a single scalar per candidate and can understate fit quality; no candidate clears the 0.3 bar, so "no good PDE" is the honest conclusion rather than a specific one.
+  - The 5-point-stencil wave fit was initially degenerate (c2~-7.7e-13, rel_resid=1.0) because the 5-point "second derivative" was coded with first-derivative coefficients. It was corrected to the O(dx^4) central 5-point second derivative (-U[i+2]+16U[i+1]-30U[i]+16U[i-1]-U[i-2])/(12h^2) fit over the common interior [2:-2,2:-2]; it now returns c2=0.075497, rel_resid=0.8682, consistent with output/robustness.py.
+  - Experimental analysis uses only 5 time points, so second-in-time derivatives are very coarse; PDE fits on the experimental field are therefore low-confidence.
+  - The experimental space grid is sparse (38 points, 50-unit spacing) and the coordinate_definitions.json explicitly says not to invent a physical space unit; all experimental "D" coefficients are in source-assay/hour^2 units.
+  - Fourier phase fits are sensitive to noise at low amplitude (high-k modes); phase_resid>1 for most modes.

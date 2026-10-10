@@ -1,0 +1,396 @@
+{
+  "metadata": {
+    "task_id": "Life_03_nutrient_response_kinetics",
+    "alpha": 0.05,
+    "states": [
+      "background_state",
+      "perturbed_state"
+    ],
+    "n_timecourse_replicates_per_state": {
+      "background_state": 4,
+      "perturbed_state": 4
+    },
+    "note": "Robustness checks on the frozen bundled data; replicate indices are aligned across states (replicate_1..4 in the time course)."
+  },
+  "a_loo_peak_response": {
+    "peak_time_full_data": {
+      "background_state": 20.0,
+      "perturbed_state": 20.0
+    },
+    "per_state_peak_means": {
+      "background_state": {
+        "records": [
+          {
+            "replicate_dropped": "replicate_1",
+            "n_kept_replicates": 3,
+            "peak_time_recomputed": 20.0,
+            "peak_mean_recomputed": 11.221243,
+            "peak_mean_at_fixed_peak": 11.221243,
+            "peak_time_changed": 0
+          },
+          {
+            "replicate_dropped": "replicate_2",
+            "n_kept_replicates": 3,
+            "peak_time_recomputed": 20.0,
+            "peak_mean_recomputed": 11.726439666666666,
+            "peak_mean_at_fixed_peak": 11.726439666666666,
+            "peak_time_changed": 0
+          },
+          {
+            "replicate_dropped": "replicate_3",
+            "n_kept_replicates": 3,
+            "peak_time_recomputed": 20.0,
+            "peak_mean_recomputed": 10.207006,
+            "peak_mean_at_fixed_peak": 10.207006,
+            "peak_time_changed": 0
+          },
+          {
+            "replicate_dropped": "replicate_4",
+            "n_kept_replicates": 3,
+            "peak_time_recomputed": 20.0,
+            "peak_mean_recomputed": 10.241639333333334,
+            "peak_mean_at_fixed_peak": 10.241639333333334,
+            "peak_time_changed": 0
+          }
+        ],
+        "min_peak_mean": 10.207006,
+        "max_peak_mean": 11.726439666666666,
+        "range_peak_mean": 1.5194336666666661
+      },
+      "perturbed_state": {
+        "records": [
+          {
+            "replicate_dropped": "replicate_1",
+            "n_kept_replicates": 3,
+            "peak_time_recomputed": 20.0,
+            "peak_mean_recomputed": 10.759216333333333,
+            "peak_mean_at_fixed_peak": 10.759216333333333,
+            "peak_time_changed": 0
+          },
+          {
+            "replicate_dropped": "replicate_2",
+            "n_kept_replicates": 3,
+            "peak_time_recomputed": 20.0,
+            "peak_mean_recomputed": 11.912213000000001,
+            "peak_mean_at_fixed_peak": 11.912213000000001,
+            "peak_time_changed": 0
+          },
+          {
+            "replicate_dropped": "replicate_3",
+            "n_kept_replicates": 3,
+            "peak_time_recomputed": 20.0,
+            "peak_mean_recomputed": 12.823409666666668,
+            "peak_mean_at_fixed_peak": 12.823409666666668,
+            "peak_time_changed": 0
+          },
+          {
+            "replicate_dropped": "replicate_4",
+            "n_kept_replicates": 3,
+            "peak_time_recomputed": 20.0,
+            "peak_mean_recomputed": 13.73792,
+            "peak_mean_at_fixed_peak": 13.73792,
+            "peak_time_changed": 0
+          }
+        ],
+        "min_peak_mean": 10.759216333333333,
+        "max_peak_mean": 13.73792,
+        "range_peak_mean": 2.978703666666668
+      }
+    },
+    "matched_leave_out_state_difference": [
+      {
+        "replicate_dropped": "replicate_1",
+        "perturbed_peak_mean": 10.759216333333333,
+        "background_peak_mean": 11.221243,
+        "state_difference": -0.4620266666666666,
+        "t_pvalue": 0.8425934169650874,
+        "mannwhitney_u_pvalue": 1.0,
+        "cohens_d": -0.1729606965444304,
+        "sign": "negative",
+        "t_significant": 0
+      },
+      {
+        "replicate_dropped": "replicate_2",
+        "perturbed_peak_mean": 11.912213000000001,
+        "background_peak_mean": 11.726439666666666,
+        "state_difference": 0.18577333333333534,
+        "t_pvalue": 0.9507211761680144,
+        "mannwhitney_u_pvalue": 1.0,
+        "cohens_d": 0.053696315325726385,
+        "sign": "positive",
+        "t_significant": 0
+      },
+      {
+        "replicate_dropped": "replicate_3",
+        "perturbed_peak_mean": 12.823409666666668,
+        "background_peak_mean": 10.207006,
+        "state_difference": 2.6164036666666686,
+        "t_pvalue": 0.4196607993470539,
+        "mannwhitney_u_pvalue": 0.7,
+        "cohens_d": 0.7337164721457954,
+        "sign": "positive",
+        "t_significant": 0
+      },
+      {
+        "replicate_dropped": "replicate_4",
+        "perturbed_peak_mean": 13.73792,
+        "background_peak_mean": 10.241639333333332,
+        "state_difference": 3.496280666666669,
+        "t_pvalue": 0.19319092775014096,
+        "mannwhitney_u_pvalue": 0.2,
+        "cohens_d": 1.2758223707086334,
+        "sign": "positive",
+        "t_significant": 0
+      }
+    ],
+    "full_data_state_difference": {
+      "perturbed_peak_mean": 12.30818975,
+      "background_peak_mean": 10.849082,
+      "difference": 1.4591077500000011,
+      "t_pvalue": 0.5349194824145979,
+      "mannwhitney_u_pvalue": 0.6857142857142857
+    },
+    "summary": {
+      "full_data_difference_sign": "positive",
+      "full_data_significant_t": 0,
+      "n_leave_outs_negative": 1,
+      "n_leave_outs_significant_t": 0,
+      "sign_changes": 1,
+      "significance_changes": 0,
+      "min_state_difference": -0.4620266666666666,
+      "max_state_difference": 3.496280666666669,
+      "range_state_difference": 3.9583073333333356,
+      "peak_time_stable_under_loo": 0
+    }
+  },
+  "b_alternative_test_peak": {
+    "test": "perturbed_state vs background_state peak signaling response (n=4 vs n=4 each)",
+    "t_test": {
+      "t_statistic": 0.65805712922546,
+      "t_pvalue": 0.5349194824145979,
+      "significant": 0
+    },
+    "mann_whitney_u": {
+      "u_statistic": 10.0,
+      "u_pvalue": 0.6857142857142857,
+      "significant": 0
+    },
+    "cohens_d": 0.4653166584834749,
+    "means": {
+      "perturbed": 12.30818975,
+      "background": 10.849082
+    },
+    "significance_differs": 0,
+    "conclusion": "t-test and Mann-Whitney U give the same significance conclusion (non-significant) for the peak state difference."
+  },
+  "c_threshold_sensitivity": {
+    "state_difference_by_timepoint": {
+      "t0": {
+        "time_min": 0.0,
+        "perturbed_mean": 1.37493925,
+        "background_mean": 1.0,
+        "perturbed_minus_background": 0.37493924999999995,
+        "sign": "positive"
+      },
+      "peak": {
+        "time_min": 20.0,
+        "perturbed_mean": 12.30818975,
+        "background_mean": 10.849082,
+        "perturbed_minus_background": 1.4591077500000011,
+        "sign": "positive"
+      },
+      "t_last": {
+        "time_min": 30.0,
+        "perturbed_mean": 11.16635225,
+        "background_mean": 10.1906805,
+        "perturbed_minus_background": 0.9756717500000001,
+        "sign": "positive"
+      }
+    },
+    "sign_changes": 0,
+    "timepoints_analyzed": [
+      0.0,
+      20.0,
+      30.0
+    ],
+    "all_signs": [
+      "positive",
+      "positive",
+      "positive"
+    ],
+    "conclusion": "Sign of the perturbed-minus-background difference is consistent (all positive) across t=0, peak, and last time point."
+  },
+  "d_tissue_holdout": {
+    "definition": "perturbed_state minus background_state mean uptake, within a single tissue (holdout)",
+    "full_data_overall_state_difference": {
+      "perturbed_mean": 694.1998428333333,
+      "background_mean": 753.0038936666666,
+      "perturbed_minus_background": -58.80405083333335,
+      "t_pvalue": 0.8162510502113801,
+      "significant_t": 0,
+      "cohens_d": -0.13774286113962234
+    },
+    "full_data_per_tissue_state_difference": {
+      "tissue_1": {
+        "perturbed_minus_background": -6.853367333333381
+      },
+      "tissue_2": {
+        "perturbed_minus_background": -110.75473433333332
+      }
+    },
+    "holdout_tissue_2_only": {
+      "perturbed_mean": 296.0242143333333,
+      "background_mean": 406.7789486666666,
+      "perturbed_minus_background": -110.75473433333332,
+      "t_statistic": -1.3808741889823317,
+      "t_pvalue": 0.23945359567012456,
+      "mannwhitney_u_pvalue": 0.4,
+      "cohens_d": -1.1274790539954205,
+      "n_perturbed": 3,
+      "n_background": 3,
+      "significant_t": 0
+    },
+    "holdout_tissue_1_only": {
+      "perturbed_mean": 1092.3754713333333,
+      "background_mean": 1099.2288386666667,
+      "perturbed_minus_background": -6.853367333333381,
+      "t_statistic": -0.0498409765191463,
+      "t_pvalue": 0.9626386004906082,
+      "mannwhitney_u_pvalue": 1.0,
+      "cohens_d": -0.04069498691798203,
+      "n_perturbed": 3,
+      "n_background": 3,
+      "significant_t": 0
+    },
+    "comparison": {
+      "tissue_2_holdout_vs_full_tissue_2": 1,
+      "tissue_1_holdout_vs_full_tissue_1": 1,
+      "note": "Per-tissue state difference is, by construction, unchanged by holding out the other tissue; the meaningful comparison is against the full-data OVERALL state difference, which is dominated by tissue_2."
+    },
+    "conclusion": "Tissue-specific state differences: tissue_2 (d_tissue2=-110.755, p=0.239) is a large negative perturbed-minus-background difference (non-significant, n=3 each); tissue_1 (d_tissue1=-6.853, p=0.963) is near zero and non-significant. The full-data overall state difference is -58.804 (t-p={d['full_data_overall_state_difference']['t_pvalue']:.3f}), driven by tissue_2. Tissue structure is therefore preserved under single-tissue holdout."
+  },
+  "e_state_holdout": {
+    "definition": "tissue_1 minus tissue_2 mean uptake within a single state (holdout)",
+    "full_data_overall_tissue_difference": {
+      "tissue_1_mean": 1095.802155,
+      "tissue_2_mean": 351.4015815,
+      "tissue_1_minus_tissue_2": 744.4005735000001
+    },
+    "full_data_per_state_tissue_difference": {
+      "background_state": 692.4498900000001,
+      "perturbed_state": 796.351257
+    },
+    "holdout_background_only": {
+      "tissue_1_mean": 1099.2288386666667,
+      "tissue_2_mean": 406.7789486666666,
+      "tissue_1_minus_tissue_2": 692.4498900000001,
+      "paired_t_statistic": 16.17306234364788,
+      "paired_t_pvalue": 0.003801313068385881,
+      "significant": 1,
+      "tissue_1_greater_than_tissue_2": 1
+    },
+    "holdout_perturbed_only": {
+      "tissue_1_mean": 1092.3754713333333,
+      "tissue_2_mean": 296.0242143333333,
+      "tissue_1_minus_tissue_2": 796.351257,
+      "paired_t_statistic": 11.55300330733432,
+      "paired_t_pvalue": 0.007409052421814741,
+      "significant": 1,
+      "tissue_1_greater_than_tissue_2": 1
+    },
+    "comparison": {
+      "consistent_tissue_1_gt_tissue_2": 1,
+      "note": "Tissue_1 exceeds tissue_2 in both states and overall; the overall tissue difference is between the two state-specific values."
+    },
+    "conclusion": "Tissue uptake is tissue-structured (tissue_1 > tissue_2) in both background_state (692.450) and perturbed_state (796.351) and overall (744.401); both state-specific differences are highly significant in the paired test. Tissue structure is robust to state holdout."
+  },
+  "f_baseline_kruskalwallis": {
+    "per_measure": {
+      "anatomical_measure_1": {
+        "n_perturbed": 7,
+        "n_background": 12,
+        "perturbed_mean": 7.432857142857143,
+        "background_mean": 8.039166666666665,
+        "perturbed_minus_background": -0.6063095238095215,
+        "t_test": {
+          "t_statistic": -0.7993383366602127,
+          "pvalue": 0.4351212775730936,
+          "significant": 0
+        },
+        "kruskal_wallis": {
+          "H_statistic": 0.11428571428572099,
+          "pvalue": 0.7353166906373332,
+          "significant": 0
+        },
+        "agrees_with_t_test": 1
+      },
+      "anatomical_measure_2": {
+        "n_perturbed": 7,
+        "n_background": 12,
+        "perturbed_mean": 8.345714285714285,
+        "background_mean": 9.948333333333332,
+        "perturbed_minus_background": -1.6026190476190472,
+        "t_test": {
+          "t_statistic": -2.713252290132752,
+          "pvalue": 0.014760762965763665,
+          "significant": 1
+        },
+        "kruskal_wallis": {
+          "H_statistic": 7.7854007274551575,
+          "pvalue": 0.005267010683006303,
+          "significant": 1
+        },
+        "agrees_with_t_test": 1
+      },
+      "anatomical_measure_3": {
+        "n_perturbed": 7,
+        "n_background": 12,
+        "perturbed_mean": 119.87857142857142,
+        "background_mean": 172.71500000000003,
+        "perturbed_minus_background": -52.83642857142861,
+        "t_test": {
+          "t_statistic": -6.417628320475655,
+          "pvalue": 6.3710706101072706e-06,
+          "significant": 1
+        },
+        "kruskal_wallis": {
+          "H_statistic": 12.600000000000009,
+          "pvalue": 0.00038574675568200635,
+          "significant": 1
+        },
+        "agrees_with_t_test": 1
+      },
+      "anatomical_measure_4": {
+        "n_perturbed": 7,
+        "n_background": 12,
+        "perturbed_mean": 40.682857142857145,
+        "background_mean": 52.58416666666667,
+        "perturbed_minus_background": -11.901309523809523,
+        "t_test": {
+          "t_statistic": -4.279267914854259,
+          "pvalue": 0.0005071139361177682,
+          "significant": 1
+        },
+        "kruskal_wallis": {
+          "H_statistic": 8.749999999999986,
+          "pvalue": 0.003096020549959042,
+          "significant": 1
+        },
+        "agrees_with_t_test": 1
+      }
+    },
+    "all_agree": 1,
+    "conclusion": "Kruskal-Wallis agrees with the t-test conclusion for all anatomical measures. Significant measures by both tests: anatomical_measure_2, anatomical_measure_3, anatomical_measure_4; non-significant by both: anatomical_measure_1."
+  },
+  "summary": {
+    "a_loo_peak_sign_changes": 1,
+    "a_loo_peak_significance_changes": 0,
+    "a_loo_peak_significant_any": 0,
+    "b_peak_significance_differs": 0,
+    "c_threshold_sign_changes": 0,
+    "d_tissue_state_diff_significant": 0,
+    "e_tissue_structure_consistent": 1,
+    "f_kruskalwallis_all_agree": 1,
+    "overall_note": "Peak-response state difference is non-significant and its sign is not stable under leave-one-replicate-out (driven by one replicate), consistent with the underpowered null. Tissue structure and baseline phenotype effects are robust and nonparametric tests agree with t-tests."
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "graphs": {
+    "training_graph": {
+      "source": "er_n_100_p_01.npy",
+      "mean_degree": 9.479999542236328,
+      "uniform": {
+        "mean": 0.5195625541806221,
+        "median": 0.5130850076675415,
+        "p95": 0.635201022028923
+      },
+      "beta_5_2": {
+        "mean": 0.49761531978845597,
+        "median": 0.49468623101711273,
+        "p95": 0.6239485025405884
+      },
+      "boundary": {
+        "mean": 0.978878260076046,
+        "median": 0.9744293987751007,
+        "p95": 1.2596428096294403
+      },
+      "boundary_over_uniform_ratio": 1.884,
+      "boundary_over_beta52_ratio": 1.9671,
+      "median_boundary_over_uniform_ratio": 1.8992
+    },
+    "equivalent_novel_graph": {
+      "source": "er_n_100_p_01_alt.npy",
+      "mean_degree": 9.539999961853027,
+      "uniform": {
+        "mean": 0.5216103667616844,
+        "median": 0.5152369141578674,
+        "p95": 0.6506923258304596
+      },
+      "beta_5_2": {
+        "mean": 0.5017262067198753,
+        "median": 0.4937167167663574,
+        "p95": 0.6410298854112625
+      },
+      "boundary": {
+        "mean": 0.976703080266714,
+        "median": 0.9653545320034027,
+        "p95": 1.3041491627693171
+      },
+      "boundary_over_uniform_ratio": 1.8725,
+      "boundary_over_beta52_ratio": 1.9467,
+      "median_boundary_over_uniform_ratio": 1.8736
+    },
+    "higher_degree_graph": {
+      "source": "er_n_100_p_06.npy",
+      "mean_degree": 58.81999969482422,
+      "uniform": {
+        "mean": 0.4826001844406128,
+        "median": 0.4774283617734909,
+        "p95": 0.5681188613176346
+      },
+      "beta_5_2": {
+        "mean": 0.4929088059961796,
+        "median": 0.4829605370759964,
+        "p95": 0.598538076877594
+      },
+      "boundary": {
+        "mean": 0.9679508385062218,
+        "median": 0.9598067998886108,
+        "p95": 1.2933677554130554
+      },
+      "boundary_over_uniform_ratio": 2.0057,
+      "boundary_over_beta52_ratio": 1.9638,
+      "median_boundary_over_uniform_ratio": 2.0104
+    }
+  },
+  "summary": {
+    "boundary_over_uniform_ratio_range": [
+      1.8725,
+      2.0057
+    ],
+    "boundary_over_beta52_ratio_range": [
+      1.9467,
+      1.9671
+    ],
+    "boundary_mean_range": [
+      0.968,
+      0.9789
+    ],
+    "uniform_mean_range": [
+      0.4826,
+      0.5216
+    ]
+  }
+}

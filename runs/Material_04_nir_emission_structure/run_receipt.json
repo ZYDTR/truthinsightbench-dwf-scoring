@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202610-bonsai",
+  "task_id": "Material_04_nir_emission_structure",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "5baa69b0741a4a09fce1cd43402951fe0c19f078e1e65866f4eef81477e31b4e",
+  "workspace_input_file_count": 10,
+  "workspace_input_bytes": 606289,
+  "output_tree_sha256": "59d40fdb1cc768e7da29f447d6bf7c4b4f6381543974d31678f98325b2995914",
+  "output_file_count": 19,
+  "output_bytes": 94025
+}

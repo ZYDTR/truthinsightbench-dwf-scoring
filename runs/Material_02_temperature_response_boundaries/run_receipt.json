@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202610-bonsai",
+  "task_id": "Material_02_temperature_response_boundaries",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "db4e0e13081d4c3e43c5d7463d4fbce1d4490185d19d9ca553663fe129955ad4",
+  "workspace_input_file_count": 12,
+  "workspace_input_bytes": 374331,
+  "output_tree_sha256": "21d5eade1e52f5a9e830763a63375e6e491a4c041fdcc97a237318cc094177c8",
+  "output_file_count": 14,
+  "output_bytes": 111132
+}

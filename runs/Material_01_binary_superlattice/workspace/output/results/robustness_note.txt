@@ -1,0 +1,29 @@
+METHOD
+- Parsed 14 binary .xyz configs (C and H2). Box from header 'Box dimension: N(p)*N(p)*M(f)';
+  used the (p) cubic box for periodic (min-image) distance in x,y; z is free (f), no wrap.
+- c = first local maximum of the 1D all-pair distance histogram (0.5-wide bins).
+- same_frac = same-type pairs / (same-type + cross-type pairs) with d <= cutoff,
+  where cutoff in {c, 0.9c, 1.1c, 1.3c, 1.6c, 2.0c}.
+- Equal-size subset = R2==3 (structures 01-04; 9 C + 9 H2 each).
+- Alternate fixed cutoff = 0.5 * median(c) over the equal-size structures.
+
+RESULTS (equal-size R2=3, same_frac vs chi)
+- At c=6.25 (all four): chi 0.4->0.359, 0.6->0.490, 0.8->0.604, 1.0->0.875.
+  The fraction is strictly INCREASING in chi (Spearman = +1.0), not decreasing.
+- Trend (increasing) holds at 1.1c, 1.3c, and 2.0c.
+- Does NOT hold at 1.6c: 0.468, 0.615, 0.478, 0.667 (chi 0.4,0.6,0.8,1.0) - non-monotonic.
+- At 0.9c all pair counts are zero (min pair distance ~6.11 > 5.625) -> degenerate.
+- Fixed alt cutoff 3.125 also degenerate (all counts zero).
+
+LIMITATIONS / HONEST READ
+- The data show same-type fraction INCREASING with chi, so the 'monotonically decrease'
+  hypothesis is REJECTED. This is physically consistent: larger chi = stronger unlike-pair
+  repulsion -> more demixing -> more same-type NN clustering (chi=1.0 most clustered).
+- Robustness is partial, not universal: the (increasing) trend is clean at c, 1.1c, 1.3c,
+  2.0c but breaks at 1.6c and is degenerate/empty at 0.9c and the fixed 3.125 cutoff.
+  It therefore does NOT hold across ALL tested cutoffs.
+- Mixed-size (R2 != 3) leave-one-size-out: no clean directional chi->clustering trend.
+  Grouped mean same_frac at own c: chi 0.2->1.000, 0.4->0.600, 0.6->0.500, 0.8->0.830
+  (non-monotonic, Spearman ~ -0.4). Confounded by varying R2, particle count, and c.
+  Reported, not forced.
+- Only 4 equal-size points; 'monotonic' is descriptive, not a statistical claim.

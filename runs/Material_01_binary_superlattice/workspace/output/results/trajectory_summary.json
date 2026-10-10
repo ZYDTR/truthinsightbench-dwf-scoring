@@ -1,0 +1,26 @@
+{
+  "n_frames": 34,
+  "n_particles_per_frame": [
+    12
+  ],
+  "particle_composition": "6 CH4 + 6 H2 = 6:6",
+  "energy_frame0": 6.95026,
+  "energy_final": -4.15068,
+  "energy_min": -4.15068,
+  "energy_min_frame": 33,
+  "final_frame_is_min": true,
+  "frames_within_05_of_min": 2,
+  "xyz_frames_total": 36,
+  "oscillation": {
+    "start_frame": 14,
+    "n_osc_frames": 20,
+    "oscillation_amplitude": 0.21067,
+    "pre_tail_monotonic_descent": false
+  },
+  "final_frame_packing": {
+    "frame": 33,
+    "nn_peak": 5.95,
+    "mean_nn": 6.1108,
+    "z_shells": 2
+  }
+}

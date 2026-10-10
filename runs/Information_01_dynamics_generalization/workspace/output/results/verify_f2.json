@@ -1,0 +1,49 @@
+{
+  "per_graph": {
+    "training_graph": {
+      "raw_means": {
+        "uniform_0_1": 0.5195625541806221,
+        "beta_5_2": 0.49761531978845597,
+        "beta_0_5_0_5_boundary": 0.978878260076046
+      },
+      "boundary_over_uniform": 1.8840431285887975,
+      "boundary_over_beta_5_2": 1.9671385127213976
+    },
+    "equivalent_novel_graph": {
+      "raw_means": {
+        "uniform_0_1": 0.5216103667616844,
+        "beta_5_2": 0.5017262067198753,
+        "beta_0_5_0_5_boundary": 0.976703080266714
+      },
+      "boundary_over_uniform": 1.872476358800887,
+      "boundary_over_beta_5_2": 1.9466853977034304
+    },
+    "higher_degree_graph": {
+      "raw_means": {
+        "uniform_0_1": 0.4826001844406128,
+        "beta_5_2": 0.4929088059961796,
+        "beta_0_5_0_5_boundary": 0.9679508385062218
+      },
+      "boundary_over_uniform": 2.0056992718065043,
+      "boundary_over_beta_5_2": 1.9637523751477146
+    }
+  },
+  "ratio_ranges": {
+    "boundary_over_uniform": {
+      "min": 1.872476358800887,
+      "max": 2.0056992718065043
+    },
+    "boundary_over_beta_5_2": {
+      "min": 1.9466853977034304,
+      "max": 1.9671385127213976
+    }
+  },
+  "summary": {
+    "uniform_mean": 0.507924368460973,
+    "beta_5_2_mean": 0.49741677750150365,
+    "boundary_mean": 0.9745107262829938,
+    "boundary_over_uniform": 1.9186138464586615,
+    "boundary_over_beta_5_2": 1.959143258452009
+  },
+  "verdict": "refuted"
+}

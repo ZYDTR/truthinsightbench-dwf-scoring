@@ -1,0 +1,28 @@
+{
+  "N": 30480,
+  "n_nonstationary": 143,
+  "models": {
+    "stationary-global": {
+      "LL": -15268.790727105352,
+      "BIC": 30547.906280220504,
+      "k": 1
+    },
+    "stationary-per-traj": {
+      "LL": 3766.6659391042276,
+      "BIC": -5055.373635856315,
+      "k": 240
+    },
+    "piecewise": {
+      "LL": 34827.14671565169,
+      "BIC": -61270.5347113453,
+      "k": 812
+    },
+    "smooth": {
+      "LL": -15268.095857498938,
+      "BIC": 35502.43302571196,
+      "k": 481
+    }
+  },
+  "best_model": "piecewise",
+  "fraction_piecewise_beats_stationary_gt10": 0.375
+}

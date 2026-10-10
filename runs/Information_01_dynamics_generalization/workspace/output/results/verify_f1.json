@@ -1,0 +1,333 @@
+{
+  "source": {
+    "file": "/data/user/conversations/conv-07581fcf-2edd-4246-8da8-dc035efd1751/project/data/source_data/computational_observations.json",
+    "sha256": "e800c69b7075d3fd816f518fa2bd366e4722f62a3537fde439f61a3b3a4767bd",
+    "hash_match_manifest": true,
+    "action_id": "network_dynamics_ood_generalization_within_domain",
+    "panel_count": 6,
+    "note": "panel-level error stats are from the raw JSON; the per-pair errors are only recoverable by torch model replay, which is not available in this environment (torch not installed). All derived quantities below are recomputed independently."
+  },
+  "baseline": {
+    "name": "stored_training_pairs",
+    "mean_pp": 0.5227990772657924,
+    "median_pp": 0.5170993804931641,
+    "p95_pp": 0.6468101739883423,
+    "max_pp": 0.9147898554801941
+  },
+  "recomputed_numbers": {
+    "panel_stats": {
+      "stored_training_pairs": {
+        "count": 900,
+        "mean_percent": 0.5227990772657924,
+        "median_percent": 0.5170993804931641,
+        "p95_percent": 0.6468101739883423,
+        "max_percent": 0.9147898554801941,
+        "sample_metrics_float64_sha256": "4dd5b39db8fd916766a1f1023a5d391479e53dec32e53cb2ae50f9f84ae79968"
+      },
+      "training_graph_uniform": {
+        "seed": 20260813,
+        "count": 1000,
+        "mean_percent": 0.5195625541806221,
+        "median_percent": 0.5130850076675415,
+        "p95_percent": 0.635201022028923,
+        "max_percent": 0.8383224606513977,
+        "sample_metrics_float64_sha256": "b0f48e05efd311b17bb0a007072503df10dd5ab46e563872865a08682945089e"
+      },
+      "equivalent_graph_uniform": {
+        "seed": 20260913,
+        "count": 1000,
+        "mean_percent": 0.5216103667616844,
+        "median_percent": 0.5152369141578674,
+        "p95_percent": 0.6506923258304596,
+        "max_percent": 0.7921144366264343,
+        "sample_metrics_float64_sha256": "c7390d88fc9b0ecb69ae4d07008b032e7e89ca40e3d95c05ef2460633ddd3ce5"
+      },
+      "equivalent_graph_beta_5_2": {
+        "seed": 20260914,
+        "count": 1000,
+        "mean_percent": 0.5017262067198753,
+        "median_percent": 0.4937167167663574,
+        "p95_percent": 0.6410298854112625,
+        "max_percent": 0.8555389046669006,
+        "sample_metrics_float64_sha256": "78590dfe9daa891996a3074f4107c649b9a642c8b69169bf3a3233faaa8c4d2a"
+      },
+      "higher_degree_graph_uniform": {
+        "seed": 20261013,
+        "count": 1000,
+        "mean_percent": 0.4826001844406128,
+        "median_percent": 0.4774283617734909,
+        "p95_percent": 0.5681188613176346,
+        "max_percent": 0.6996594667434692,
+        "sample_metrics_float64_sha256": "b4cd8fb36f17e3a029440d60332826b81e90de4e1735bc7f2fa7d2d4dbee00bb"
+      },
+      "higher_degree_graph_beta_5_2": {
+        "seed": 20261014,
+        "count": 1000,
+        "mean_percent": 0.4929088059961796,
+        "median_percent": 0.4829605370759964,
+        "p95_percent": 0.598538076877594,
+        "max_percent": 0.7133451700210571,
+        "sample_metrics_float64_sha256": "2bf27ead9e1098e23f9a8404e19b97e7846cd3ddc9ade98525f25e50fcec0295"
+      }
+    },
+    "panel_means_pp": {
+      "stored_training_pairs": 0.5227990772657924,
+      "training_graph_uniform": 0.5195625541806221,
+      "equivalent_graph_uniform": 0.5216103667616844,
+      "equivalent_graph_beta_5_2": 0.5017262067198753,
+      "higher_degree_graph_uniform": 0.4826001844406128,
+      "higher_degree_graph_beta_5_2": 0.4929088059961796
+    },
+    "min_mean_pp": 0.4826001844406128,
+    "max_mean_pp": 0.5227990772657924,
+    "min_mean_panel": "higher_degree_graph_uniform",
+    "max_mean_panel": "stored_training_pairs",
+    "span_all_6_means_pp": 0.04019889282517963,
+    "span_new_5_means_pp": 0.03901018232107156,
+    "diff_vs_baseline_pp": {
+      "training_graph_uniform": -0.0032365230851703064,
+      "equivalent_graph_uniform": -0.0011887105041080703,
+      "equivalent_graph_beta_5_2": -0.02107287054591711,
+      "higher_degree_graph_uniform": -0.04019889282517963,
+      "higher_degree_graph_beta_5_2": -0.029890271269612856
+    },
+    "p95_minus_median_pp": {
+      "stored_training_pairs": 0.12971079349517822,
+      "training_graph_uniform": 0.12211601436138153,
+      "equivalent_graph_uniform": 0.13545541167259212,
+      "equivalent_graph_beta_5_2": 0.14731316864490507,
+      "higher_degree_graph_uniform": 0.09069049954414365,
+      "higher_degree_graph_beta_5_2": 0.11557753980159757
+    },
+    "p95_minus_median_max_pp": 0.14731316864490507,
+    "p95_minus_median_max_panel": "equivalent_graph_beta_5_2",
+    "p95_minus_median_min_pp": 0.09069049954414365,
+    "p95_minus_median_min_panel": "higher_degree_graph_uniform",
+    "between_graph_vs_within_panel_ratio_vs_max": 0.27288051159959853,
+    "between_graph_vs_within_panel_ratio_vs_min": 0.4432536266449034,
+    "graph_avg_means_pp": {
+      "training_graph": 0.5085889369845391,
+      "equivalent_novel_graph": 0.5116682867407798,
+      "higher_degree_graph": 0.4877544952183962
+    },
+    "graph_avg_spread_pp": 0.0239137915223836
+  },
+  "claim_checks": {
+    "a_span_at_most_0p05pp": true,
+    "a_observed_span_pp": 0.04019889282517963,
+    "a_observed_range_pp": [
+      0.4826001844406128,
+      0.5227990772657924
+    ],
+    "b_no_new_graph_worse_than_baseline": true,
+    "c_between_graph_spread_smaller_than_within_panel": true
+  },
+  "refutation_attempts": {
+    "R1_any_new_graph_mean_above_baseline": {
+      "any_positive_diff": false,
+      "max_diff_pp": -0.0011887105041080703,
+      "panel": "equivalent_graph_uniform",
+      "diffs_pp": {
+        "training_graph_uniform": -0.0032365230851703064,
+        "equivalent_graph_uniform": -0.0011887105041080703,
+        "equivalent_graph_beta_5_2": -0.02107287054591711,
+        "higher_degree_graph_uniform": -0.04019889282517963,
+        "higher_degree_graph_beta_5_2": -0.029890271269612856
+      }
+    },
+    "R2_mean_span_above_0p05pp": {
+      "span_all_6_pp": 0.04019889282517963,
+      "span_new_5_pp": 0.03901018232107156,
+      "all_6_within_0p05": true,
+      "new_5_within_0p05": true
+    },
+    "R3_higher_degree_inverts_direction": {
+      "higher_degree_means_pp": [
+        0.4826001844406128,
+        0.4929088059961796
+      ],
+      "baseline_pp": 0.5227990772657924,
+      "worse_than_baseline": false,
+      "is_lowest_mean": true
+    },
+    "R4_diagnostic_vs_action_exact": {
+      "all_exact": true,
+      "details": [
+        {
+          "map": "training_graph.uniform_0_1->training_graph_uniform",
+          "diag": 0.5195625541806221,
+          "action": 0.5195625541806221,
+          "exact": true,
+          "abs_diff": 0.0
+        },
+        {
+          "map": "equivalent_novel_graph.uniform_0_1->equivalent_graph_uniform",
+          "diag": 0.5216103667616844,
+          "action": 0.5216103667616844,
+          "exact": true,
+          "abs_diff": 0.0
+        },
+        {
+          "map": "equivalent_novel_graph.beta_5_2->equivalent_graph_beta_5_2",
+          "diag": 0.5017262067198753,
+          "action": 0.5017262067198753,
+          "exact": true,
+          "abs_diff": 0.0
+        },
+        {
+          "map": "higher_degree_graph.uniform_0_1->higher_degree_graph_uniform",
+          "diag": 0.4826001844406128,
+          "action": 0.4826001844406128,
+          "exact": true,
+          "abs_diff": 0.0
+        },
+        {
+          "map": "higher_degree_graph.beta_5_2->higher_degree_graph_beta_5_2",
+          "diag": 0.4929088059961796,
+          "action": 0.4929088059961796,
+          "exact": true,
+          "abs_diff": 0.0
+        }
+      ]
+    },
+    "R5_new_graph_p95_above_baseline_p95": {
+      "baseline_p95_pp": 0.6468101739883423,
+      "any": true,
+      "diffs_pp": {
+        "training_graph_uniform": -0.01160915195941925,
+        "equivalent_graph_uniform": 0.003882151842117265,
+        "equivalent_graph_beta_5_2": -0.005780288577079795,
+        "higher_degree_graph_uniform": -0.07869131267070772,
+        "higher_degree_graph_beta_5_2": -0.04827209711074831
+      }
+    },
+    "R6_boundary_scope_probe": {
+      "boundary_means_pp": {
+        "training_graph": 0.978878260076046,
+        "equivalent_novel_graph": 0.976703080266714,
+        "higher_degree_graph": 0.9679508385062218
+      },
+      "span_incl_boundary_pp": 0.49627807563543314,
+      "note": "boundary state dists are not among the 6 within-domain graph panels"
+    },
+    "R7_graph_level_mean_spread_pp": {
+      "graph_avg_means_pp": {
+        "training_graph": 0.5085889369845391,
+        "equivalent_novel_graph": 0.5116682867407798,
+        "higher_degree_graph": 0.4877544952183962
+      },
+      "spread_pp": 0.0239137915223836
+    },
+    "R8_raw_npy_graph_identity": {
+      "graphs": {
+        "er_n_100_p_01.npy": {
+          "sha256": "d9b5123e8a09e273524991d28f988a07197fa7a4e2b3230a70bf04914f841c8d",
+          "shape": [
+            100,
+            100
+          ],
+          "dtype": "int64",
+          "symmetric": true,
+          "self_loops": 0,
+          "offdiag_edges": 474,
+          "node_count": 100,
+          "mean_degree": 9.48,
+          "deg_min": 3.0,
+          "deg_max": 16.0,
+          "matches_expected": true
+        },
+        "er_n_100_p_01_alt.npy": {
+          "sha256": "4f8c6604ff870ce43667e3affe1da01dc7971f7acd552ca29363d2e3435ca1d8",
+          "shape": [
+            100,
+            100
+          ],
+          "dtype": "int64",
+          "symmetric": true,
+          "self_loops": 0,
+          "offdiag_edges": 477,
+          "node_count": 100,
+          "mean_degree": 9.54,
+          "deg_min": 2.0,
+          "deg_max": 19.0,
+          "matches_expected": true
+        },
+        "er_n_100_p_06.npy": {
+          "sha256": "ad03d570f668538e16afb936135f2ddc5423ecf09be9c3c46e3868c12d414ffd",
+          "shape": [
+            100,
+            100
+          ],
+          "dtype": "int64",
+          "symmetric": true,
+          "self_loops": 0,
+          "offdiag_edges": 2941,
+          "node_count": 100,
+          "mean_degree": 58.82,
+          "deg_min": 42.0,
+          "deg_max": 71.0,
+          "matches_expected": true
+        }
+      },
+      "npy_match_expected": true,
+      "json_mean_degree_match_expected": true
+    },
+    "R9_raw_json_hash": {
+      "sha256": "e800c69b7075d3fd816f518fa2bd366e4722f62a3537fde439f61a3b3a4767bd",
+      "manifest_sha256": "e800c69b7075d3fd816f518fa2bd366e4722f62a3537fde439f61a3b3a4767bd",
+      "match": true
+    }
+  },
+  "verdict": "confirmed",
+  "agreement_with_main_agent_output": {
+    "main_agent_readable": true,
+    "panel_mean_checks": [
+      {
+        "panel": "stored_training_pairs",
+        "main_mean": 0.5227990772657924,
+        "recomputed_mean": 0.5227990772657924,
+        "exact": true
+      },
+      {
+        "panel": "training_graph_uniform",
+        "main_mean": 0.5195625541806221,
+        "recomputed_mean": 0.5195625541806221,
+        "exact": true
+      },
+      {
+        "panel": "equivalent_graph_uniform",
+        "main_mean": 0.5216103667616844,
+        "recomputed_mean": 0.5216103667616844,
+        "exact": true
+      },
+      {
+        "panel": "equivalent_graph_beta_5_2",
+        "main_mean": 0.5017262067198753,
+        "recomputed_mean": 0.5017262067198753,
+        "exact": true
+      },
+      {
+        "panel": "higher_degree_graph_uniform",
+        "main_mean": 0.4826001844406128,
+        "recomputed_mean": 0.4826001844406128,
+        "exact": true
+      },
+      {
+        "panel": "higher_degree_graph_beta_5_2",
+        "main_mean": 0.4929088059961796,
+        "recomputed_mean": 0.4929088059961796,
+        "exact": true
+      }
+    ],
+    "main_all_spread_pp": 0.040199,
+    "recomputed_all_spread_pp": 0.04019889282517963,
+    "main_new_spread_pp": 0.03901,
+    "recomputed_new_spread_pp": 0.03901018232107156,
+    "main_p95med_max_pp": 0.147313,
+    "recomputed_p95med_max_pp": 0.14731316864490507,
+    "main_ratio": 0.2729,
+    "recomputed_ratio": 0.27288051159959853,
+    "all_numbers_match": true,
+    "match_note": "main-agent means are bit-identical; derived spreads match to 6 dp; ratio matches to 4 dp (main-agent rounding). No substantive disagreement."
+  }
+}

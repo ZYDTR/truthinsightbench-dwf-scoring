@@ -1,0 +1,28 @@
+{
+  "schema": "tib-scoring-publication-privacy-scope.v1",
+  "scope": "New 13 exports must contain no credentials or original runtime logs. Preserve all originally published 27 task files and original scoring assets byte-for-byte.",
+  "legacy_exception_authorization": "User explicitly requested that old tasks be left alone after being informed of the two original Workflow journals and old compiled cache.",
+  "preserved_legacy_exceptions": [
+    {
+      "path": "runs/Energy_03_interface_response_boundaries/workspace/output/native/provenance/verifier_verdicts/round1_journal.jsonl",
+      "issue": "raw_log_file"
+    },
+    {
+      "path": "runs/Energy_03_interface_response_boundaries/workspace/output/native/provenance/verifier_verdicts/round1_journal.jsonl",
+      "issue": "serialized_runtime_log"
+    },
+    {
+      "path": "runs/Energy_03_interface_response_boundaries/workspace/output/native/provenance/verifier_verdicts/round2_journal.jsonl",
+      "issue": "raw_log_file"
+    },
+    {
+      "path": "runs/Energy_03_interface_response_boundaries/workspace/output/native/provenance/verifier_verdicts/round2_journal.jsonl",
+      "issue": "serialized_runtime_log"
+    },
+    {
+      "path": "TruthInsightBench/agents/__pycache__/workspace_integrity.cpython-314.pyc",
+      "issue": "workstation_path"
+    }
+  ],
+  "legacy_exception_guard": "Each exception is allowed only while its file hash exactly matches the originally published Git baseline bound by extension_manifest.json. No credential-match exception is allowed."
+}

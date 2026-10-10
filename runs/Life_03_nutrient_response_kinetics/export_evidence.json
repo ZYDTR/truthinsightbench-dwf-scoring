@@ -1,0 +1,24 @@
+{
+  "task_id": "Life_03_nutrient_response_kinetics",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20261009T092323-c76e1f",
+  "source_run_json_sha256": "59d3bd2103935544f524fe098293335f7acc702a026c8dc406d8ada7ef0a745f",
+  "source_release_json_sha256": "cd9b56eeed7bdb8d218f8478f41a6347cf02cefe5ba2ceb7183dea23936f8d3a",
+  "source_latest_validation_sha256": "af75ce954f547e9ca7d15e106af14db6e75fd1ecafdf5258184ed09664e37cdf",
+  "source_snapshot_manifest_sha256": "d66255e3a47c18cf3f1ec90cbf69bbf62540db6241a8b97db8f9d13749f59e2c",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 240
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 3,
+  "input_sha256": "4b5c898543988d48433b1ecfc795d40b5d4ee63bb6354b56196cff847505750b",
+  "output_sha256": "f1a8587a1670e06205d824dfa1be5f4969909aaa869b327e81f9279ccc3523b8",
+  "export_version": "20261010-40",
+  "source_attempt": "20261009T083232Z-9345bf07",
+  "source_release_at": "2026-10-09T09:25:49.381994+00:00"
+}

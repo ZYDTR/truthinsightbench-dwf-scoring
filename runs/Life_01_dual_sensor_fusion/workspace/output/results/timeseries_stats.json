@@ -1,0 +1,133 @@
+{
+  "table10": {
+    "Ca_green": {
+      "n_bins": 51,
+      "first_mean": 0.065,
+      "last_mean": 0.23,
+      "max_mean": 0.25,
+      "min_mean": 0.049,
+      "mean_of_means": 0.1278,
+      "sd_of_means": 0.0512,
+      "trend": "rises then plateaus (first 0.065, last 0.230, peak 0.250)"
+    },
+    "Alexa_647N": {
+      "n_bins": 51,
+      "first_mean": 0.0543,
+      "last_mean": 0.942,
+      "max_mean": 0.9957,
+      "min_mean": 0.034,
+      "mean_of_means": 0.3501,
+      "sd_of_means": 0.0336,
+      "trend": "rises then plateaus (first 0.054, last 0.942, peak 0.996)"
+    },
+    "Transmittance": {
+      "n_bins": 51,
+      "first_mean": 0.913,
+      "last_mean": 0.897,
+      "max_mean": 0.9837,
+      "min_mean": 0.7713,
+      "mean_of_means": 0.9047,
+      "sd_of_means": 0.06,
+      "trend": "rises then plateaus (first 0.913, last 0.897, peak 0.984)"
+    }
+  },
+  "table12": {
+    "block_B": {
+      "n_rows": 1001,
+      "time_range": [
+        0.0,
+        10.0
+      ],
+      "final": {
+        "SensorA": 100.0,
+        "SensorB": 100.0
+      },
+      "t99": {
+        "SensorA": 8.36,
+        "SensorB": 2.31
+      }
+    },
+    "block_C": {
+      "n_rows": 31,
+      "time_range": [
+        0.0,
+        2.5
+      ],
+      "final": {
+        "SensorA": 100.0,
+        "SensorB": 100.0,
+        "calcium": 100.0
+      },
+      "t99": {
+        "SensorA": 0.8,
+        "SensorB": 0.5
+      }
+    }
+  },
+  "table13": {
+    "6FC_single": {
+      "final": {
+        "SensorA": 100.0,
+        "SensorB_Scheme1": 100.0,
+        "SensorB_Scheme2": 99.9001
+      },
+      "n_rows": 267,
+      "t_final": 5.325,
+      "contrast": "6FC single: SensorA and SensorB(Scheme1) hit 100, but SensorB(Scheme2) lags at 99.90 at t=5.325"
+    },
+    "12FC_single": {
+      "final": {
+        "SensorA": 100.0,
+        "SensorB_Scheme1": 100.0,
+        "SensorB_Scheme2": 100.0
+      },
+      "n_rows": 267,
+      "t_final": 5.325,
+      "contrast": "12FC single: all three signals (SensorA, SensorB Scheme1/2) reach 100 by t=5.325"
+    },
+    "6FC_dual": {
+      "final": {
+        "SensorA": 100.0,
+        "SensorB_Scheme1": 100.0,
+        "SensorB_Scheme2": 100.0
+      },
+      "n_rows": 267,
+      "t_final": 5.325,
+      "contrast": "6FC dual: all three signals (SensorA, SensorB Scheme1/2) reach 100 by t=5.325"
+    }
+  },
+  "table15": {
+    "lipid_None": {
+      "n": 300,
+      "min": 0.112,
+      "max": 1.0,
+      "first": 0.112,
+      "last": 0.978,
+      "trend": "rises then plateaus"
+    },
+    "lipid_SensorB": {
+      "n": 300,
+      "min": 0.018,
+      "max": 0.907,
+      "first": 0.018,
+      "last": 0.884,
+      "trend": "rises then plateaus"
+    },
+    "target_None": {
+      "n": 250,
+      "min": 0.406,
+      "max": 1.0,
+      "first": 1.0,
+      "last": 0.469,
+      "trend": "decays"
+    },
+    "target_SensorB": {
+      "n": 250,
+      "min": 0.453,
+      "max": 1.0,
+      "first": 1.0,
+      "last": 0.5,
+      "trend": "decays"
+    }
+  }
+}

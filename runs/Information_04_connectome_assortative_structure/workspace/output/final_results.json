@@ -1,0 +1,423 @@
+{
+  "f1_strength_distance": {
+    "overall": {
+      "r": 0.6482945503891566,
+      "t": 24.052867360069776,
+      "p": 0.0,
+      "n": 800
+    },
+    "per_system_r": {
+      "0": 0.6715406505946153,
+      "1": 0.6560438235653991,
+      "2": 0.564830302567232,
+      "3": 0.6427428929262355
+    },
+    "robust_same_direction": true,
+    "n_nodes": 800
+  },
+  "f2_spatial_gradient": {
+    "overall": {
+      "strength_coord_y": {
+        "r": 0.26007165722076897,
+        "t": 7.6085520788595336,
+        "p": 0.0,
+        "n": 800
+      },
+      "distance_coord_y": {
+        "r": 0.20050966093775374,
+        "t": 5.781590239426607,
+        "p": 0.0,
+        "n": 800
+      },
+      "strength_coord_x": {
+        "r": -0.017196439324488003,
+        "t": -0.48585223075585454,
+        "p": 0.0,
+        "n": 800
+      },
+      "strength_coord_z": {
+        "r": -0.11845304031256332,
+        "t": -3.369892559040062,
+        "p": 0.0,
+        "n": 800
+      }
+    },
+    "per_system": {
+      "strength_coord_y": {
+        "0": -0.12744852290584224,
+        "1": 0.4594532158250328,
+        "2": -0.12369701378878134,
+        "3": 0.3405972016861692
+      },
+      "distance_coord_y": {
+        "0": -0.2135663025328698,
+        "1": 0.3363872967882182,
+        "2": -0.22887871758437964,
+        "3": 0.17892743495824992
+      }
+    },
+    "sign_conflict": true,
+    "quadrant_means": {
+      "strength": {
+        "0": 11.120519367910626,
+        "1": 13.959415302446406,
+        "2": 11.171184711191911,
+        "3": 14.020728854963155
+      },
+      "distance": {
+        "0": 27.846755565141173,
+        "1": 33.01644308056312,
+        "2": 28.64942958022121,
+        "3": 31.692034606134015
+      }
+    },
+    "n_nodes": 800,
+    "sign_pattern": {
+      "strength_coord_y": [
+        "-",
+        "+",
+        "-",
+        "+"
+      ],
+      "distance_coord_y": [
+        "-",
+        "+",
+        "-",
+        "+"
+      ]
+    }
+  },
+  "f3_homophily_null": {
+    "per_col": {
+      "node_strength": {
+        "r": 0.14537734579973066,
+        "t": 4.150846624159323,
+        "p": 3.312476952033183e-05,
+        "n": 800
+      },
+      "mean_connection_distance": {
+        "r": 0.11408171491429663,
+        "t": 3.243860211485584,
+        "p": 0.0011792160289013642,
+        "n": 800
+      },
+      "coord_x": {
+        "r": 0.03304199202949899,
+        "t": 0.9339096712590302,
+        "p": 0.35035048963843507,
+        "n": 800
+      },
+      "coord_y": {
+        "r": -0.024777187979471187,
+        "t": -0.7001430965734848,
+        "p": 0.4838379439861933,
+        "n": 800
+      },
+      "coord_z": {
+        "r": -0.0388213774219545,
+        "t": -1.0974882911024357,
+        "p": 0.2724279964318135,
+        "n": 800
+      },
+      "annotation_1": {
+        "r": 0.13534686731739853,
+        "t": 3.8589078805859165,
+        "p": 0.00011389485558455092,
+        "n": 800
+      },
+      "annotation_2": {
+        "r": 0.009858606008196451,
+        "t": 0.2785082487117911,
+        "p": 0.7806222338793445,
+        "n": 800
+      },
+      "annotation_3": {
+        "r": -0.04710190765298706,
+        "t": -1.3320552488077781,
+        "p": 0.18284203423136147,
+        "n": 800
+      },
+      "annotation_4": {
+        "r": -0.03995626839310204,
+        "t": -1.1296224650603452,
+        "p": 0.2586353407286125,
+        "n": 800
+      },
+      "annotation_5": {
+        "r": 0.01910081153639636,
+        "t": 0.5396752530841566,
+        "p": 0.5894210092305341,
+        "n": 800
+      }
+    },
+    "max_abs_r": 0.14537734579973066,
+    "all_null_lt_0.15": true,
+    "n_nodes": 800
+  },
+  "f4_trimming": {
+    "n_pairs": 14,
+    "pairs": {
+      "system_01/annotation_01": {
+        "assort_z": {
+          "tp1": 0.7486054531809068,
+          "tp_peak": 0.7486054531809068,
+          "tp_last": -1.760842724377057,
+          "declines_with_trim": true
+        },
+        "assort_p_fdr": {
+          "min_p": 0.0,
+          "n_sig": 13,
+          "ever_sig": true
+        }
+      },
+      "system_01/annotation_02": {
+        "assort_z": {
+          "tp1": 3.197970692530586,
+          "tp_peak": 3.197970692530586,
+          "tp_last": -0.9579395689018462,
+          "declines_with_trim": true
+        },
+        "assort_p_fdr": {
+          "min_p": 0.0087527777777777,
+          "n_sig": 1,
+          "ever_sig": true
+        }
+      },
+      "system_01/annotation_04": {
+        "assort_z": {
+          "tp1": 1.58793782048978,
+          "tp_peak": 1.58793782048978,
+          "tp_last": -1.276052811979649,
+          "declines_with_trim": true
+        },
+        "assort_p_fdr": {
+          "min_p": 0.2768541666666667,
+          "n_sig": 0,
+          "ever_sig": false
+        }
+      },
+      "system_01/annotation_05": {
+        "assort_z": {
+          "tp1": 5.702294015461785,
+          "tp_peak": 5.702294015461785,
+          "tp_last": -1.671804163989983,
+          "declines_with_trim": true
+        },
+        "assort_p_fdr": {
+          "min_p": 0.0,
+          "n_sig": 3,
+          "ever_sig": true
+        }
+      },
+      "system_01/annotation_06": {
+        "assort_z": {
+          "tp1": 3.645751528253349,
+          "tp_peak": 3.645751528253349,
+          "tp_last": -0.5640112194377547,
+          "declines_with_trim": true
+        },
+        "assort_p_fdr": {
+          "min_p": 0.003425,
+          "n_sig": 3,
+          "ever_sig": true
+        }
+      },
+      "system_02/annotation_01": {
+        "assort_z": {
+          "tp1": -0.0218282921050331,
+          "tp_peak": -0.0218282921050331,
+          "tp_last": -2.129198984771469,
+          "declines_with_trim": true
+        },
+        "assort_p_fdr": {
+          "min_p": 0.0154125,
+          "n_sig": 5,
+          "ever_sig": true
+        }
+      },
+      "system_02/annotation_02": {
+        "assort_z": {
+          "tp1": -1.501923467344016,
+          "tp_peak": -1.3863249913834,
+          "tp_last": -2.16473336516673,
+          "declines_with_trim": true
+        },
+        "assort_p_fdr": {
+          "min_p": 0.0154125,
+          "n_sig": 7,
+          "ever_sig": true
+        }
+      },
+      "system_02/annotation_04": {
+        "assort_z": {
+          "tp1": 0.0188029176791592,
+          "tp_peak": 0.1907602807822719,
+          "tp_last": -0.439112965415724,
+          "declines_with_trim": true
+        },
+        "assort_p_fdr": {
+          "min_p": 0.0977266666666666,
+          "n_sig": 0,
+          "ever_sig": false
+        }
+      },
+      "system_02/annotation_05": {
+        "assort_z": {
+          "tp1": 2.02981510871887,
+          "tp_peak": 2.083505608128758,
+          "tp_last": -2.50779518710553,
+          "declines_with_trim": true
+        },
+        "assort_p_fdr": {
+          "min_p": 0.03510625,
+          "n_sig": 4,
+          "ever_sig": true
+        }
+      },
+      "system_02/annotation_06": {
+        "assort_z": {
+          "tp1": -0.0659673028232214,
+          "tp_peak": -0.0591539751291183,
+          "tp_last": -2.422070106714993,
+          "declines_with_trim": true
+        },
+        "assort_p_fdr": {
+          "min_p": 0.0350111111111111,
+          "n_sig": 5,
+          "ever_sig": true
+        }
+      },
+      "system_03/annotation_03": {
+        "assort_z": {
+          "tp1": 3.889840033765104,
+          "tp_peak": 4.832420697450331,
+          "tp_last": -1.614514311712519,
+          "declines_with_trim": true
+        },
+        "assort_p_fdr": {
+          "min_p": 0.0,
+          "n_sig": 4,
+          "ever_sig": true
+        }
+      },
+      "system_03/annotation_05": {
+        "assort_z": {
+          "tp1": 3.729785523373824,
+          "tp_peak": 3.729785523373824,
+          "tp_last": -1.515107772169084,
+          "declines_with_trim": true
+        },
+        "assort_p_fdr": {
+          "min_p": 0.00165,
+          "n_sig": 7,
+          "ever_sig": true
+        }
+      },
+      "system_03/annotation_06": {
+        "assort_z": {
+          "tp1": 1.057239504475711,
+          "tp_peak": 2.017665097362867,
+          "tp_last": 0.4290678584593243,
+          "declines_with_trim": true
+        },
+        "assort_p_fdr": {
+          "min_p": 0.1312666666666666,
+          "n_sig": 0,
+          "ever_sig": false
+        }
+      },
+      "system_04/annotation_02": {
+        "assort_z": {
+          "tp1": 1.244171086753957,
+          "tp_peak": 1.244171086753957,
+          "tp_last": -1.402154825026932,
+          "declines_with_trim": true
+        },
+        "assort_p_fdr": {
+          "min_p": 0.0786,
+          "n_sig": 0,
+          "ever_sig": false
+        }
+      }
+    },
+    "all_assort_z_decline": true,
+    "never_significant_pairs": [
+      "system_01/annotation_04",
+      "system_02/annotation_04",
+      "system_03/annotation_06",
+      "system_04/annotation_02"
+    ],
+    "n_rows": 28
+  },
+  "f5_profiles_annotations": {
+    "profile_b": {
+      "n_nodes": 213,
+      "coord_coord_x_min": 1175.0,
+      "coord_coord_x_max": 12850.0,
+      "coord_coord_y_min": 625.0,
+      "coord_coord_y_max": 7350.0,
+      "coord_coord_z_min": 1090.0,
+      "coord_coord_z_max": 5640.0,
+      "annotation_1_min": -0.1705922171803685,
+      "annotation_1_max": 0.1771365073853495
+    },
+    "profile_c": {
+      "n_nodes": 39,
+      "coord_coord_x_min": -24.86749887466431,
+      "coord_coord_x_max": -1.817915916442871,
+      "coord_coord_y_min": -36.65202331542969,
+      "coord_coord_y_max": 23.92389106750488,
+      "coord_coord_z_min": -13.44134092330933,
+      "coord_coord_z_max": 19.65958404541016,
+      "annotation_1_min": 1.655477217172715,
+      "annotation_1_max": 3.282208574806405,
+      "annotation_2_min": 0.9813352465629578,
+      "annotation_2_max": 1.48067307472229,
+      "annotation_3_min": 1.348119378089905,
+      "annotation_3_max": 2.580817222595215
+    },
+    "annotation_pairwise": {
+      "1_2": 0.6041178442533945,
+      "1_3": -0.09164199702479726,
+      "1_4": 0.4921619660497939,
+      "1_5": -0.3981116926996915,
+      "2_3": -0.44602884821857663,
+      "2_4": 0.755430940895722,
+      "2_5": -0.7401703013924282,
+      "3_4": -0.34520784707250707,
+      "3_5": 0.5469743615847737,
+      "4_5": -0.6355833829674794
+    },
+    "n_nodes_a": 800
+  },
+  "meta": {
+    "task_id": "Information_04_connectome_assortative_structure",
+    "n_nodes": 800,
+    "n_systems": 4,
+    "nodes_per_system": 200,
+    "n_artifacts_loaded": 5,
+    "missing": [],
+    "findings_to_evidence": {
+      "1": {
+        "artifact": "f1_strength_distance_result.json",
+        "script": "f1_strength_distance.py"
+      },
+      "2": {
+        "artifact": "f2_spatial_gradient_result.json",
+        "script": "f2_spatial_gradient.py"
+      },
+      "3": {
+        "artifact": "f3_homophily_null_result.json",
+        "script": "f3_homophily_null.py"
+      },
+      "4": {
+        "artifact": "f4_trimming_result.json",
+        "script": "f4_trimming.py"
+      },
+      "5": {
+        "artifact": "f5_profiles_annotations_result.json",
+        "script": "f5_profiles_annotations.py"
+      }
+    }
+  }
+}

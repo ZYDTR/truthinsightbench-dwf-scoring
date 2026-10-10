@@ -1,0 +1,11 @@
+{
+  "schema": "truthinsightbench-participant-workspace",
+  "release": "V1.0",
+  "task_id": "Material_03_membrane_selective_permeation",
+  "t0": "2023-01-01",
+  "scientific_file_count": 6,
+  "scientific_bytes": 101433,
+  "data_manifest_sha256": "c06cc593c5d744408aea1b6517423a4c801584939ae446b0a386051805c972f6",
+  "research_objective_sha256": "31c6be00ee243a781b56e47ebd1c91fc7a76df1a2b83e489ba6bb8a13062b18c",
+  "launch_prompt_sha256": "0f4cafd2bc7a8b51b835101fa1d9032bc688caa09ac9ce12e60ff1bd4c68da3a"
+}

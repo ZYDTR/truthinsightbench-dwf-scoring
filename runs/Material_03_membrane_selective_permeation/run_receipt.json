@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202610-bonsai",
+  "task_id": "Material_03_membrane_selective_permeation",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "1260cc48aad62d88456a30123f3dec6c0feb4f0164b46a3b1afbca4f13551036",
+  "workspace_input_file_count": 13,
+  "workspace_input_bytes": 141357,
+  "output_tree_sha256": "3a666beaaf1a95a8dbbc0eb39c6e6cd713d6babacaf424bdb29244234c2a2667",
+  "output_file_count": 7,
+  "output_bytes": 73543
+}

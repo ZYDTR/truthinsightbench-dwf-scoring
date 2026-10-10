@@ -1,0 +1,69 @@
+{
+  "n_action_panels": 6,
+  "n_ood_graphs": 3,
+  "within_cross_check": {
+    "training_graph_uniform": {
+      "action_mean": 0.519562554181,
+      "diag_mean": 0.519562554181,
+      "equal": true
+    },
+    "equivalent_graph_uniform": {
+      "action_mean": 0.521610366762,
+      "diag_mean": 0.521610366762,
+      "equal": true
+    },
+    "equivalent_graph_beta_5_2": {
+      "action_mean": 0.50172620672,
+      "diag_mean": 0.50172620672,
+      "equal": true
+    },
+    "higher_degree_graph_uniform": {
+      "action_mean": 0.482600184441,
+      "diag_mean": 0.482600184441,
+      "equal": true
+    },
+    "higher_degree_graph_beta_5_2": {
+      "action_mean": 0.492908805996,
+      "diag_mean": 0.492908805996,
+      "equal": true
+    }
+  },
+  "ood_cross_check": {
+    "training_graph": {
+      "in_domain_mean": [
+        0.523456985682,
+        0.523456985682
+      ],
+      "out_domain_mean": [
+        1.778751916528,
+        1.778751916528
+      ],
+      "ratio_equal": true,
+      "wilcoxon_p_equal": true
+    },
+    "equivalent_novel_graph": {
+      "in_domain_mean": [
+        0.526203654617,
+        0.526203654617
+      ],
+      "out_domain_mean": [
+        1.786698477328,
+        1.786698477328
+      ],
+      "ratio_equal": true,
+      "wilcoxon_p_equal": true
+    },
+    "higher_degree_graph": {
+      "in_domain_mean": [
+        0.483819080353,
+        0.483819080353
+      ],
+      "out_domain_mean": [
+        1.80461464119,
+        1.80461464119
+      ],
+      "ratio_equal": true,
+      "wilcoxon_p_equal": true
+    }
+  }
+}

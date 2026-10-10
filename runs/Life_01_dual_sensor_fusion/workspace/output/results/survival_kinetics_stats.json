@@ -1,0 +1,165 @@
+{
+  "survival_curves": {
+    "None": [
+      {
+        "bin_s": 0.147,
+        "survival_pct": 53.1067,
+        "survival_pct_sd": 1.5366
+      },
+      {
+        "bin_s": 1.029,
+        "survival_pct": 19.1833,
+        "survival_pct_sd": 1.443
+      },
+      {
+        "bin_s": 3.087,
+        "survival_pct": 11.5367,
+        "survival_pct_sd": 1.1738
+      },
+      {
+        "bin_s": 5.145,
+        "survival_pct": 11.5367,
+        "survival_pct_sd": 1.1738
+      },
+      {
+        "bin_s": 9.996,
+        "survival_pct": 9.0133,
+        "survival_pct_sd": 1.8825
+      }
+    ],
+    "1:800 SensorB": [
+      {
+        "bin_s": 0.147,
+        "survival_pct": 96.82,
+        "survival_pct_sd": 3.5865
+      },
+      {
+        "bin_s": 1.029,
+        "survival_pct": 56.6267,
+        "survival_pct_sd": 0.2974
+      },
+      {
+        "bin_s": 3.087,
+        "survival_pct": 38.8967,
+        "survival_pct_sd": 0.2312
+      },
+      {
+        "bin_s": 5.145,
+        "survival_pct": 37.0933,
+        "survival_pct_sd": 0.5036
+      },
+      {
+        "bin_s": 9.996,
+        "survival_pct": 35.16,
+        "survival_pct_sd": 1.3388
+      }
+    ],
+    "1:200 SensorB": [
+      {
+        "bin_s": 0.147,
+        "survival_pct": 96.5533,
+        "survival_pct_sd": 3.6658
+      },
+      {
+        "bin_s": 1.029,
+        "survival_pct": 95.3067,
+        "survival_pct_sd": 2.8242
+      },
+      {
+        "bin_s": 3.087,
+        "survival_pct": 93.6167,
+        "survival_pct_sd": 1.6687
+      },
+      {
+        "bin_s": 5.145,
+        "survival_pct": 92.3733,
+        "survival_pct_sd": 0.2403
+      },
+      {
+        "bin_s": 9.996,
+        "survival_pct": 90.88,
+        "survival_pct_sd": 1.5024
+      }
+    ]
+  },
+  "table07": {
+    "SensorAWT": {
+      "no_Ca2_basal": {
+        "total_fusion": {
+          "mean": 88.834,
+          "sd": 1.817768,
+          "n": 5
+        },
+        "fusion_first_two_frames": {
+          "mean": 64.218,
+          "sd": 2.58555,
+          "n": 5
+        }
+      },
+      "0.5uM_Ca2_basal": {
+        "total_fusion": {
+          "mean": 82.736667,
+          "sd": 13.680279,
+          "n": 3
+        },
+        "fusion_first_two_frames": {
+          "mean": 64.633333,
+          "sd": 6.045001,
+          "n": 3
+        }
+      }
+    },
+    "SensorAWT + 1:200 SensorB": {
+      "no_Ca2_basal": {
+        "total_fusion": {
+          "mean": 90.56,
+          "sd": 4.972178,
+          "n": 5
+        },
+        "fusion_first_two_frames": {
+          "mean": 8.326,
+          "sd": 6.688612,
+          "n": 5
+        }
+      },
+      "0.5uM_Ca2_basal": {
+        "total_fusion": {
+          "mean": 89.473333,
+          "sd": 5.513269,
+          "n": 3
+        },
+        "fusion_first_two_frames": {
+          "mean": 32.446667,
+          "sd": 3.995001,
+          "n": 3
+        }
+      }
+    },
+    "SensorADA + 1:200 SensorB": {
+      "no_Ca2_basal": {
+        "total_fusion": {
+          "mean": 73.374,
+          "sd": 9.168592,
+          "n": 5
+        },
+        "fusion_first_two_frames": {
+          "mean": 9.192,
+          "sd": 1.954474,
+          "n": 5
+        }
+      },
+      "0.5uM_Ca2_basal": {
+        "total_fusion": {
+          "mean": 72.433333,
+          "sd": 5.553326,
+          "n": 3
+        },
+        "fusion_first_two_frames": {
+          "mean": 32.386667,
+          "sd": 1.106451,
+          "n": 3
+        }
+      }
+    }
+  }
+}

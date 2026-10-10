@@ -1,0 +1,19 @@
+{
+  "n_nonstationary_16": 143,
+  "n_nonstationary_8": 162,
+  "cp_median": 48.0,
+  "cp_min": 16.0,
+  "cp_max": 112.0,
+  "pre_var_median": 0.18888051889317048,
+  "post_var_median": 0.05173494445822457,
+  "ratio_median_nonstat": 5.7171814401808145,
+  "threshold_sensitivity": {
+    "logLR_only": 162,
+    "ratio2": 143,
+    "ratio3": 103,
+    "ratio5": 76,
+    "ratio10": 60
+  },
+  "leave_one_block_agreement": 0.9296875,
+  "leave_one_block_nonstat_ge6_frac": 0.9440559440559441
+}

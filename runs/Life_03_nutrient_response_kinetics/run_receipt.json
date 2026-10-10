@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202610-bonsai",
+  "task_id": "Life_03_nutrient_response_kinetics",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "4b5c898543988d48433b1ecfc795d40b5d4ee63bb6354b56196cff847505750b",
+  "workspace_input_file_count": 11,
+  "workspace_input_bytes": 45899,
+  "output_tree_sha256": "f1a8587a1670e06205d824dfa1be5f4969909aaa869b327e81f9279ccc3523b8",
+  "output_file_count": 7,
+  "output_bytes": 99334
+}

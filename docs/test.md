@@ -1,6 +1,8 @@
 # Verification strategy
 
-- Unit tests check snapshot selection and mixed-model labeling in the no-overwrite export adapter.
-- Integration validation runs `scripts/validate_exports.py` against all 27 run roots using the unmodified benchmark evaluator in dry-run mode. This checks hashes, task registry identity, output submission format, and cohort assembly without a judge call.
+- Unit tests check snapshot selection and mixed-model labeling in the original adapter, independent-attempt identity/ambiguity and no-overwrite views in the extension adapter, and SDK/Workflow-log detection plus workstation-path patterns in the publication audit.
+- Integration validation runs `scripts/validate_exports.py` against all 40 run roots using the unmodified benchmark evaluator in dry-run mode. This checks hashes, task registry identity, output submission format, and cohort assembly without a judge call. Set `PYTHONDONTWRITEBYTECODE=1` so subprocesses do not add compiled caches to the immutable scoring tree.
 - Full scientific scoring is opt-in because it needs an authorized external judge endpoint and pinned judge model. No score is claimed from a dry-run.
-- Before pushing, inspect the repository scope, scan for credentials and unexpected private runtime data, confirm every exported task has a true source release and validation receipt, and verify GitHub repository visibility is public.
+- Before pushing, inspect the staged publication scope, scan for credentials and unexpected private runtime data, confirm every new exported task has a true source release and validation receipt, verify all 2,686 protected files against the first published commit, and verify GitHub repository visibility and remote identity. Test a fresh local Git clone before pushing.
+- The strict new-export privacy gate rejects any new raw runtime log or workstation path. The owner-approved old journal/cache exceptions are exact-file, exact-hash allowlist entries, not general suppressions; no credential match may be waived. The audit must report these legacy exceptions explicitly.
+- Record sanitized results in `versions/20261010-40/verification.json`: 40 dry-run-ready runs, 177 findings, 5,133 atoms, no judge call, frozen-base preservation, and explicit privacy scope. Do not publish raw validation stdout or private source paths.

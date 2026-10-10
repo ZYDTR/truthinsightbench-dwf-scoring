@@ -1,0 +1,5 @@
+design_series	n_points	composition_min	composition_max	response_min	response_max	ols_slope_au_per_frac	ols_intercept_au	ols_r2	spearman_rho	n_sign_changes_first_diffs	quadratic_curvature_coeff
+series_A	5	0.027	0.091	10.59	20.89	164.010801	6.21501	0.990978	1.0	0	-429.171757
+series_B	5	0.017	0.091	9.24	18.87	130.573732	7.126838	0.999119	1.0	0	-167.797885
+series_C	5	0.025	0.084	9.42	16.47	120.889846	6.642304	0.990298	1.0	0	-621.39664
+reference_series	5	0.01	0.118	5.35	6.05	6.350313	5.29374	0.998468	1.0	0	1.641695

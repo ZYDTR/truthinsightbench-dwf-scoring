@@ -1,0 +1,24 @@
+{
+  "task_id": "Material_02_temperature_response_boundaries",
+  "source_run_status": "RELEASED",
+  "source_snapshot": "20261009T153000-aad4e7",
+  "source_run_json_sha256": "190a5ce01ca45d7c6d0a4b59d3d9389182bd1d17dd69b40f6018c46d00527bbb",
+  "source_release_json_sha256": "46c9724bc56882681edd404d2bda9da1b9ed9bc5846a97f3a68638f9d4316b81",
+  "source_latest_validation_sha256": "222f9857a6a4ef707a924ab0b0109b959704e5de9113f7dca0ad016d7360efe7",
+  "source_snapshot_manifest_sha256": "8f770dad86c3e22086f6ec93874254d9b62256d07a9da7fb6108fce8a9cacc9c",
+  "assistant_model_messages": {
+    "bonsai2-27b-pq2": 955
+  },
+  "release_checks": {
+    "idle_confirmed": true,
+    "jsonl_result_event": true,
+    "output_nonempty": true,
+    "worker_stopped_by_release": true
+  },
+  "registered_findings": 3,
+  "input_sha256": "db4e0e13081d4c3e43c5d7463d4fbce1d4490185d19d9ca553663fe129955ad4",
+  "output_sha256": "21d5eade1e52f5a9e830763a63375e6e491a4c041fdcc97a237318cc094177c8",
+  "export_version": "20261010-40",
+  "source_attempt": "20261009T112429Z-d270f126",
+  "source_release_at": "2026-10-09T15:34:06.938268+00:00"
+}

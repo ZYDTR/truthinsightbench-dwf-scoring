@@ -1,0 +1,11 @@
+{
+  "schema": "truthinsightbench-participant-workspace",
+  "release": "V1.0",
+  "task_id": "Math_03_ode_parameter_geometry",
+  "t0": "2022-01-01",
+  "scientific_file_count": 3,
+  "scientific_bytes": 1264724,
+  "data_manifest_sha256": "f80cfde8a1b3b819891038801c541d40624aaedc4c5e4d298626fd8cba645dfb",
+  "research_objective_sha256": "539a2c3ae7d3119da0cc86e558f2427e7c994db1c095b65d92bc0b538ab20602",
+  "launch_prompt_sha256": "0f4cafd2bc7a8b51b835101fa1d9032bc688caa09ac9ce12e60ff1bd4c68da3a"
+}

@@ -1,0 +1,137 @@
+{
+  "task": "independent rederivation of Finding 3 (paired out-of-domain state shift)",
+  "source_file": "/data/user/conversations/conv-07581fcf-2edd-4246-8da8-dc035efd1751/project/data/source_data/computational_observations.json",
+  "predeclared_alpha": 0.001,
+  "graphs": {
+    "training_graph": {
+      "pair_count": 1000,
+      "in_domain": {
+        "mean": 0.5234569856822491,
+        "median": 0.5182521343231201,
+        "p95": 0.6351876378059387,
+        "max": 0.8481136560440063
+      },
+      "out_of_domain": {
+        "mean": 1.7787519165277481,
+        "median": 1.770909309387207,
+        "p95": 2.3744255065917965,
+        "max": 3.067986011505127
+      },
+      "mean_error_ratio": 3.3980861182116175,
+      "derived_mean_error_ratio_from_means": 3.3980861182116175,
+      "ratio_matches": true,
+      "mean_error_increase_percent_points": 1.255294930845499,
+      "derived_increase_from_means": 1.255294930845499,
+      "increase_matches": true,
+      "fraction_pairs_shifted_error_greater": 1.0,
+      "paired_wilcoxon_statistic": 500500.0,
+      "derived_wilcoxon_stat_from_fraction": 500500.0,
+      "wilcoxon_stat_matches": true,
+      "paired_wilcoxon_one_sided_p_value": 1.6629295594672565e-165,
+      "p_below_alpha": true,
+      "cross_check_vs_diagnostic": {
+        "in_domain_mean_equal": true,
+        "out_domain_mean_equal": true,
+        "ratio_equal": true,
+        "p_value_equal": true
+      },
+      "cross_check_all_equal": true
+    },
+    "equivalent_novel_graph": {
+      "pair_count": 1000,
+      "in_domain": {
+        "mean": 0.5262036546170712,
+        "median": 0.5199289321899414,
+        "p95": 0.6521057873964309,
+        "max": 0.845321536064148
+      },
+      "out_of_domain": {
+        "mean": 1.7866984773278236,
+        "median": 1.778967797756195,
+        "p95": 2.382759881019592,
+        "max": 2.960495948791504
+      },
+      "mean_error_ratio": 3.3954505288034142,
+      "derived_mean_error_ratio_from_means": 3.3954505288034142,
+      "ratio_matches": true,
+      "mean_error_increase_percent_points": 1.2604948227107524,
+      "derived_increase_from_means": 1.2604948227107524,
+      "increase_matches": true,
+      "fraction_pairs_shifted_error_greater": 1.0,
+      "paired_wilcoxon_statistic": 500500.0,
+      "derived_wilcoxon_stat_from_fraction": 500500.0,
+      "wilcoxon_stat_matches": true,
+      "paired_wilcoxon_one_sided_p_value": 1.6629295594672565e-165,
+      "p_below_alpha": true,
+      "cross_check_vs_diagnostic": {
+        "in_domain_mean_equal": true,
+        "out_domain_mean_equal": true,
+        "ratio_equal": true,
+        "p_value_equal": true
+      },
+      "cross_check_all_equal": true
+    },
+    "higher_degree_graph": {
+      "pair_count": 1000,
+      "in_domain": {
+        "mean": 0.4838190803527832,
+        "median": 0.47819411754608154,
+        "p95": 0.5699975997209549,
+        "max": 0.7559947967529297
+      },
+      "out_of_domain": {
+        "mean": 1.8046146411895752,
+        "median": 1.8117749691009521,
+        "p95": 2.4098721623420714,
+        "max": 2.806302070617676
+      },
+      "mean_error_ratio": 3.7299369009459404,
+      "derived_mean_error_ratio_from_means": 3.7299369009459404,
+      "ratio_matches": true,
+      "mean_error_increase_percent_points": 1.320795560836792,
+      "derived_increase_from_means": 1.320795560836792,
+      "increase_matches": true,
+      "fraction_pairs_shifted_error_greater": 1.0,
+      "paired_wilcoxon_statistic": 500500.0,
+      "derived_wilcoxon_stat_from_fraction": 500500.0,
+      "wilcoxon_stat_matches": true,
+      "paired_wilcoxon_one_sided_p_value": 1.6629295594672565e-165,
+      "p_below_alpha": true,
+      "cross_check_vs_diagnostic": {
+        "in_domain_mean_equal": true,
+        "out_domain_mean_equal": true,
+        "ratio_equal": true,
+        "p_value_equal": true
+      },
+      "cross_check_all_equal": true
+    }
+  },
+  "summary": {
+    "graph_count": 3,
+    "ratios": {
+      "training_graph": 3.3980861182116175,
+      "equivalent_novel_graph": 3.3954505288034142,
+      "higher_degree_graph": 3.7299369009459404
+    },
+    "in_domain_means": {
+      "training_graph": 0.5234569856822491,
+      "equivalent_novel_graph": 0.5262036546170712,
+      "higher_degree_graph": 0.4838190803527832
+    },
+    "out_domain_means": {
+      "training_graph": 1.7787519165277481,
+      "equivalent_novel_graph": 1.7866984773278236,
+      "higher_degree_graph": 1.8046146411895752
+    },
+    "all_p_below_alpha": true,
+    "cross_check_equal": [
+      true,
+      true,
+      true
+    ],
+    "all_cross_check_equal": true,
+    "all_ratio_recomputed_from_means_match": true,
+    "all_increase_recomputed_from_means_match": true,
+    "all_wilcoxon_stat_rederived_match": true
+  }
+}

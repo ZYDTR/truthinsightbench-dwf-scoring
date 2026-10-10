@@ -1,0 +1,481 @@
+{
+  "stats": {
+    "source_table_01__None": {
+      "source": "source_table_01",
+      "condition": "None",
+      "total_fusion": {
+        "source": "source_table_01",
+        "condition": "None",
+        "metric": "total_fusion",
+        "mean": 88.826,
+        "sd": 1.9957,
+        "n_runs": 5,
+        "runs": [
+          90.9,
+          86.5,
+          90.69,
+          88.87,
+          87.17
+        ]
+      },
+      "fusion_first_two_frames": {
+        "source": "source_table_01",
+        "condition": "None",
+        "metric": "fusion_first_two_frames",
+        "mean": 64.214,
+        "sd": 2.5837,
+        "n_runs": 5,
+        "runs": [
+          63.63,
+          66.66,
+          60.47,
+          63.64,
+          66.67
+        ]
+      }
+    },
+    "source_table_01__1: 200 SensorA": {
+      "source": "source_table_01",
+      "condition": "1: 200 SensorA",
+      "total_fusion": {
+        "source": "source_table_01",
+        "condition": "1: 200 SensorA",
+        "metric": "total_fusion",
+        "mean": 89.936,
+        "sd": 2.4556,
+        "n_runs": 5,
+        "runs": [
+          91.27,
+          86.36,
+          92.96,
+          89.32,
+          89.77
+        ]
+      },
+      "fusion_first_two_frames": {
+        "source": "source_table_01",
+        "condition": "1: 200 SensorA",
+        "metric": "fusion_first_two_frames",
+        "mean": 65.476,
+        "sd": 2.5076,
+        "n_runs": 5,
+        "runs": [
+          64.28,
+          64.44,
+          62.5,
+          67.74,
+          68.42
+        ]
+      }
+    },
+    "source_table_01__1:2000 SensorB": {
+      "source": "source_table_01",
+      "condition": "1:2000 SensorB",
+      "total_fusion": {
+        "source": "source_table_01",
+        "condition": "1:2000 SensorB",
+        "metric": "total_fusion",
+        "mean": 87.572,
+        "sd": 3.1016,
+        "n_runs": 5,
+        "runs": [
+          88.37,
+          86.04,
+          83.33,
+          91.66,
+          88.46
+        ]
+      },
+      "fusion_first_two_frames": {
+        "source": "source_table_01",
+        "condition": "1:2000 SensorB",
+        "metric": "fusion_first_two_frames",
+        "mean": 50.288,
+        "sd": 10.102,
+        "n_runs": 5,
+        "runs": [
+          55.81,
+          44.19,
+          35.42,
+          58.33,
+          57.69
+        ]
+      }
+    },
+    "source_table_01__1:800 SensorB": {
+      "source": "source_table_01",
+      "condition": "1:800 SensorB",
+      "total_fusion": {
+        "source": "source_table_01",
+        "condition": "1:800 SensorB",
+        "metric": "total_fusion",
+        "mean": 88.446,
+        "sd": 4.5304,
+        "n_runs": 5,
+        "runs": [
+          84.61,
+          88.63,
+          94.0,
+          91.66,
+          83.33
+        ]
+      },
+      "fusion_first_two_frames": {
+        "source": "source_table_01",
+        "condition": "1:800 SensorB",
+        "metric": "fusion_first_two_frames",
+        "mean": 21.444,
+        "sd": 5.5526,
+        "n_runs": 5,
+        "runs": [
+          15.38,
+          20.45,
+          20.0,
+          20.83,
+          30.56
+        ]
+      }
+    },
+    "source_table_01__1:400 SensorB": {
+      "source": "source_table_01",
+      "condition": "1:400 SensorB",
+      "total_fusion": {
+        "source": "source_table_01",
+        "condition": "1:400 SensorB",
+        "metric": "total_fusion",
+        "mean": 87.872,
+        "sd": 3.1059,
+        "n_runs": 5,
+        "runs": [
+          90.0,
+          84.0,
+          89.36,
+          90.9,
+          85.1
+        ]
+      },
+      "fusion_first_two_frames": {
+        "source": "source_table_01",
+        "condition": "1:400 SensorB",
+        "metric": "fusion_first_two_frames",
+        "mean": 15.818,
+        "sd": 7.3952,
+        "n_runs": 5,
+        "runs": [
+          11.11,
+          14.29,
+          26.19,
+          7.5,
+          20.0
+        ]
+      }
+    },
+    "source_table_01__1:200 SensorB": {
+      "source": "source_table_01",
+      "condition": "1:200 SensorB",
+      "total_fusion": {
+        "source": "source_table_01",
+        "condition": "1:200 SensorB",
+        "metric": "total_fusion",
+        "mean": 89.944,
+        "sd": 2.9123,
+        "n_runs": 5,
+        "runs": [
+          87.97,
+          94.03,
+          92.05,
+          87.8,
+          87.87
+        ]
+      },
+      "fusion_first_two_frames": {
+        "source": "source_table_01",
+        "condition": "1:200 SensorB",
+        "metric": "fusion_first_two_frames",
+        "mean": 8.326,
+        "sd": 6.6886,
+        "n_runs": 5,
+        "runs": [
+          5.71,
+          9.3,
+          4.08,
+          19.51,
+          3.03
+        ]
+      }
+    },
+    "source_table_03__None": {
+      "source": "source_table_03",
+      "condition": "None",
+      "total_fusion": {
+        "source": "source_table_03",
+        "condition": "None",
+        "metric": "total_fusion",
+        "mean": 88.826,
+        "sd": 1.9957,
+        "n_runs": 5,
+        "runs": [
+          90.9,
+          86.5,
+          90.69,
+          88.87,
+          87.17
+        ]
+      },
+      "fusion_first_two_frames": {
+        "source": "source_table_03",
+        "condition": "None",
+        "metric": "fusion_first_two_frames",
+        "mean": 64.218,
+        "sd": 2.5856,
+        "n_runs": 5,
+        "runs": [
+          63.64,
+          66.67,
+          60.47,
+          63.64,
+          66.67
+        ]
+      }
+    },
+    "source_table_03__1: 800 SensorBDA": {
+      "source": "source_table_03",
+      "condition": "1: 800 SensorBDA",
+      "total_fusion": {
+        "source": "source_table_03",
+        "condition": "1: 800 SensorBDA",
+        "metric": "total_fusion",
+        "mean": 60.88,
+        "sd": 7.599,
+        "n_runs": 5,
+        "runs": [
+          70.53,
+          51.51,
+          55.71,
+          60.94,
+          65.71
+        ]
+      },
+      "fusion_first_two_frames": {
+        "source": "source_table_03",
+        "condition": "1: 800 SensorBDA",
+        "metric": "fusion_first_two_frames",
+        "mean": 47.392,
+        "sd": 6.5137,
+        "n_runs": 5,
+        "runs": [
+          53.7,
+          42.3,
+          39.34,
+          48.0,
+          53.62
+        ]
+      }
+    },
+    "source_table_03__1:200 SensorBDA": {
+      "source": "source_table_03",
+      "condition": "1:200 SensorBDA",
+      "total_fusion": {
+        "source": "source_table_03",
+        "condition": "1:200 SensorBDA",
+        "metric": "total_fusion",
+        "mean": 18.654,
+        "sd": 2.4245,
+        "n_runs": 5,
+        "runs": [
+          18.87,
+          21.79,
+          14.97,
+          18.77,
+          18.87
+        ]
+      },
+      "fusion_first_two_frames": {
+        "source": "source_table_03",
+        "condition": "1:200 SensorBDA",
+        "metric": "fusion_first_two_frames",
+        "mean": 12.784,
+        "sd": 2.5383,
+        "n_runs": 5,
+        "runs": [
+          12.55,
+          15.54,
+          8.71,
+          13.16,
+          13.96
+        ]
+      }
+    },
+    "source_table_04__None": {
+      "source": "source_table_04",
+      "condition": "None",
+      "total_fusion": {
+        "source": "source_table_04",
+        "condition": "None",
+        "metric": "total_fusion",
+        "mean": 4.84,
+        "sd": 1.0678,
+        "n_runs": 5,
+        "runs": [
+          5.07,
+          5.38,
+          4.68,
+          3.12,
+          5.95
+        ]
+      },
+      "fusion_first_two_frames": {
+        "source": "source_table_04",
+        "condition": "None",
+        "metric": "fusion_first_two_frames",
+        "mean": 2.412,
+        "sd": 0.9455,
+        "n_runs": 5,
+        "runs": [
+          3.25,
+          2.35,
+          1.85,
+          1.18,
+          3.43
+        ]
+      }
+    },
+    "source_table_04__1: 800 SensorB": {
+      "source": "source_table_04",
+      "condition": "1: 800 SensorB",
+      "total_fusion": {
+        "source": "source_table_04",
+        "condition": "1: 800 SensorB",
+        "metric": "total_fusion",
+        "mean": 37.09,
+        "sd": 8.4523,
+        "n_runs": 5,
+        "runs": [
+          39.01,
+          49.37,
+          25.86,
+          36.22,
+          34.99
+        ]
+      },
+      "fusion_first_two_frames": {
+        "source": "source_table_04",
+        "condition": "1: 800 SensorB",
+        "metric": "fusion_first_two_frames",
+        "mean": 12.496,
+        "sd": 2.4105,
+        "n_runs": 5,
+        "runs": [
+          12.5,
+          14.86,
+          10.14,
+          10.03,
+          14.95
+        ]
+      }
+    },
+    "source_table_04__1:200 SensorB": {
+      "source": "source_table_04",
+      "condition": "1:200 SensorB",
+      "total_fusion": {
+        "source": "source_table_04",
+        "condition": "1:200 SensorB",
+        "metric": "total_fusion",
+        "mean": 73.374,
+        "sd": 9.1686,
+        "n_runs": 5,
+        "runs": [
+          72.43,
+          87.89,
+          62.71,
+          70.09,
+          73.75
+        ]
+      },
+      "fusion_first_two_frames": {
+        "source": "source_table_04",
+        "condition": "1:200 SensorB",
+        "metric": "fusion_first_two_frames",
+        "mean": 9.192,
+        "sd": 1.9545,
+        "n_runs": 5,
+        "runs": [
+          9.22,
+          11.65,
+          6.8,
+          7.82,
+          10.47
+        ]
+      }
+    },
+    "source_table_08__None": {
+      "source": "source_table_08",
+      "condition": "None",
+      "total_fusion": {
+        "source": "source_table_08",
+        "condition": "None",
+        "metric": "total_fusion",
+        "mean": 88.826,
+        "sd": 1.9957,
+        "n_runs": 5,
+        "runs": [
+          90.9,
+          86.5,
+          90.69,
+          88.87,
+          87.17
+        ]
+      },
+      "fusion_first_two_frames": null
+    },
+    "source_table_08__1:200 SensorBdoubleTMD": {
+      "source": "source_table_08",
+      "condition": "1:200 SensorBdoubleTMD",
+      "total_fusion": {
+        "source": "source_table_08",
+        "condition": "1:200 SensorBdoubleTMD",
+        "metric": "total_fusion",
+        "mean": 89.944,
+        "sd": 2.9123,
+        "n_runs": 5,
+        "runs": [
+          87.97,
+          94.03,
+          92.05,
+          87.8,
+          87.87
+        ]
+      },
+      "fusion_first_two_frames": null
+    },
+    "source_table_08__1:200 SensorBsingleTMD": {
+      "source": "source_table_08",
+      "condition": "1:200 SensorBsingleTMD",
+      "total_fusion": {
+        "source": "source_table_08",
+        "condition": "1:200 SensorBsingleTMD",
+        "metric": "total_fusion",
+        "mean": 88.14,
+        "sd": 2.8003,
+        "n_runs": 3,
+        "runs": [
+          85.05,
+          90.51,
+          88.86,
+          null,
+          null
+        ]
+      },
+      "fusion_first_two_frames": null
+    }
+  },
+  "cross_check": {
+    "derived_file": "data/derived_for_navigation/fusion_dose_independent_runs.csv",
+    "checked_source_block": "source_table_01 / Source block B",
+    "tolerance": 0.01,
+    "n_values_checked": 60,
+    "n_values_mismatched_gt_tolerance": 0,
+    "max_abs_diff": 0.0,
+    "passed": true
+  }
+}

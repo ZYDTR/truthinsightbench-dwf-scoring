@@ -1,0 +1,91 @@
+{
+  "panels": {
+    "stored_training_pairs": {
+      "count": 900,
+      "mean": 0.5227990772657924,
+      "median": 0.5170993804931641,
+      "p95": 0.6468101739883423,
+      "max": 0.9147898554801941
+    },
+    "training_graph_uniform": {
+      "count": 1000,
+      "mean": 0.5195625541806221,
+      "median": 0.5130850076675415,
+      "p95": 0.635201022028923,
+      "max": 0.8383224606513977
+    },
+    "equivalent_graph_uniform": {
+      "count": 1000,
+      "mean": 0.5216103667616844,
+      "median": 0.5152369141578674,
+      "p95": 0.6506923258304596,
+      "max": 0.7921144366264343
+    },
+    "equivalent_graph_beta_5_2": {
+      "count": 1000,
+      "mean": 0.5017262067198753,
+      "median": 0.4937167167663574,
+      "p95": 0.6410298854112625,
+      "max": 0.8555389046669006
+    },
+    "higher_degree_graph_uniform": {
+      "count": 1000,
+      "mean": 0.4826001844406128,
+      "median": 0.4774283617734909,
+      "p95": 0.5681188613176346,
+      "max": 0.6996594667434692
+    },
+    "higher_degree_graph_beta_5_2": {
+      "count": 1000,
+      "mean": 0.4929088059961796,
+      "median": 0.4829605370759964,
+      "p95": 0.598538076877594,
+      "max": 0.7133451700210571
+    }
+  },
+  "robustness": {
+    "all_panel_mean_spread_pp": 0.040199,
+    "new_graph_mean_spread_pp": 0.03901,
+    "new_graph_mean_range": [
+      0.4826,
+      0.52161
+    ],
+    "new_graph_means": {
+      "training_graph_uniform": 0.519563,
+      "equivalent_graph_uniform": 0.52161,
+      "equivalent_graph_beta_5_2": 0.501726,
+      "higher_degree_graph_uniform": 0.4826,
+      "higher_degree_graph_beta_5_2": 0.492909
+    },
+    "max_p95_across_panels": 0.650692,
+    "within_panel_p95_minus_median_max_pp": 0.147313,
+    "graph_type_spread_vs_within_panel_spread": 0.2729,
+    "new_graph_mean_higher_than_training": [
+      [
+        "equivalent_graph_beta_5_2",
+        0.501726,
+        -0.021073
+      ],
+      [
+        "equivalent_graph_uniform",
+        0.52161,
+        -0.001189
+      ],
+      [
+        "higher_degree_graph_beta_5_2",
+        0.492909,
+        -0.02989
+      ],
+      [
+        "higher_degree_graph_uniform",
+        0.4826,
+        -0.040199
+      ],
+      [
+        "training_graph_uniform",
+        0.519563,
+        -0.003237
+      ]
+    ]
+  }
+}

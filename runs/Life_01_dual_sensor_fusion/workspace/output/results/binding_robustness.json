@@ -1,0 +1,186 @@
+{
+  "preserved_file_matched": {
+    "bool": true,
+    "max_diff": 4.0512953536353535e-07,
+    "tolerance": 0.01,
+    "per_table": {
+      "source_table_05.csv": {
+        "tolerance": 0.01,
+        "max_diff_mean_or_sd": 3.008311479923975e-07,
+        "matches": true
+      },
+      "source_table_11.csv": {
+        "tolerance": 0.01,
+        "max_diff_mean_or_sd": 4.0512953536353535e-07,
+        "matches": true
+      }
+    }
+  },
+  "natural_log_fit": {
+    "source_table_05.csv": {
+      "model": "log(bound) = intercept + slope * concentration (natural log)",
+      "slope": -0.05186085534606832,
+      "intercept": 2.1341694017992103,
+      "r2": 0.9202956084598265,
+      "n_points": 9,
+      "half_conc_interp_uM": 4.237562189054726,
+      "half_conc_fit_uM": 3.8726325204349568,
+      "preserved_slope": -0.05186086,
+      "preserved_intercept": 2.1341694,
+      "preserved_r2": 0.92029561,
+      "preserved_half_concentration_uM": 4.237562,
+      "slope_diff_vs_preserved": 4.653931684472923e-09,
+      "intercept_diff_vs_preserved": 1.7992101142283445e-09,
+      "r2_diff_vs_preserved": -1.5401735442566178e-09
+    },
+    "source_table_11.csv": {
+      "model": "log(bound) = intercept + slope * concentration (natural log)",
+      "slope": 0.07437976650827653,
+      "intercept": -0.11938882286848447,
+      "r2": 0.9005446170874079,
+      "n_points": 9,
+      "half_conc_interp_uM": 21.960740959119498,
+      "half_conc_fit_uM": 28.068442610156687,
+      "preserved_slope": 0.07437977,
+      "preserved_intercept": -0.11938882,
+      "preserved_r2": 0.90054462,
+      "preserved_half_concentration_uM": 21.960741,
+      "slope_diff_vs_preserved": -3.4917234659204155e-09,
+      "intercept_diff_vs_preserved": -2.868484463847132e-09,
+      "r2_diff_vs_preserved": -2.9125921674477695e-09
+    }
+  },
+  "power_law_fit": {
+    "source_table_05.csv": {
+      "model": "log(bound) = intercept + exponent * log(concentration) (power-law)",
+      "exponent": -0.8718616681619886,
+      "intercept": 3.1395233946858245,
+      "r2": 0.9720734125234066,
+      "n_points_used": 8,
+      "note": "excluded conc<=0 points",
+      "vs_natural_log": {
+        "natural_log_slope": -0.05186085534606832,
+        "natural_log_intercept": 2.1341694017992103,
+        "natural_log_r2": 0.9202956084598265
+      }
+    },
+    "source_table_11.csv": {
+      "model": "log(bound) = intercept + exponent * log(concentration) (power-law)",
+      "exponent": 0.7994976969157376,
+      "intercept": -0.6969478017100013,
+      "r2": 0.8137086426873672,
+      "n_points_used": 9,
+      "note": "all positive concentrations used",
+      "vs_natural_log": {
+        "natural_log_slope": 0.07437976650827653,
+        "natural_log_intercept": -0.11938882286848447,
+        "natural_log_r2": 0.9005446170874079
+      }
+    }
+  },
+  "leave_out": {
+    "source_table_05.csv": {
+      "highest": {
+        "n_points": 8,
+        "dropped_conc_uM": 60.0,
+        "natural_log_fit": {
+          "slope": -0.05499509274767098,
+          "intercept": 2.1719258034389495,
+          "r2": 0.8977692222225523
+        },
+        "half_value_uM": 6.9125,
+        "half_conc_interp": {
+          "value": 4.237562189054726,
+          "ok": true,
+          "change_pct_vs_original": 0.0,
+          "changes_gt_20": false
+        },
+        "half_conc_fit": {
+          "value": 4.3384677553907895,
+          "change_pct_vs_original": 12.02890365914482,
+          "changes_gt_20": false
+        }
+      },
+      "lowest": {
+        "n_points": 8,
+        "dropped_conc_uM": 0.0,
+        "natural_log_fit": {
+          "slope": -0.04774293973888356,
+          "intercept": 1.9609322977531753,
+          "r2": 0.9272355636447532
+        },
+        "half_value_uM": 6.9125,
+        "half_conc_interp": {
+          "value": 4.237562189054726,
+          "ok": true,
+          "change_pct_vs_original": 0.0,
+          "changes_gt_20": false
+        },
+        "half_conc_fit": {
+          "value": 0.5781154460885256,
+          "change_pct_vs_original": -85.071771126283,
+          "changes_gt_20": true
+        }
+      }
+    },
+    "source_table_11.csv": {
+      "highest": {
+        "n_points": 8,
+        "dropped_conc_uM": 45.0,
+        "natural_log_fit": {
+          "slope": 0.09607790555769223,
+          "intercept": -0.3415364369458345,
+          "r2": 0.9627675217307062
+        },
+        "half_value_uM": 7.1587499999999995,
+        "half_conc_interp": {
+          "value": 21.960740959119498,
+          "ok": true,
+          "change_pct_vs_original": 0.0,
+          "changes_gt_20": false
+        },
+        "half_conc_fit": {
+          "value": 24.041654616260843,
+          "change_pct_vs_original": -14.346317855336704,
+          "changes_gt_20": false
+        }
+      },
+      "lowest": {
+        "n_points": 8,
+        "dropped_conc_uM": 1.0,
+        "natural_log_fit": {
+          "slope": 0.0715133911946646,
+          "intercept": -0.0367416679926725,
+          "r2": 0.8816294984915451
+        },
+        "half_value_uM": 7.1587499999999995,
+        "half_conc_interp": {
+          "value": 21.960740959119498,
+          "ok": true,
+          "change_pct_vs_original": 0.0,
+          "changes_gt_20": false
+        },
+        "half_conc_fit": {
+          "value": 28.037784521512037,
+          "change_pct_vs_original": -0.10922618354876566,
+          "changes_gt_20": false
+        }
+      }
+    }
+  },
+  "monotonic": {
+    "source_table_05.csv": true,
+    "source_table_11.csv": false
+  },
+  "max_adjacent_increase": {
+    "source_table_05.csv": null,
+    "source_table_11.csv": 5.088
+  },
+  "errors": [],
+  "notes": [
+    "Independent re-parse of source_table_05.csv and source_table_11.csv; means/SD recomputed from the 4 run columns (ddof=1), workbook Mean/S.D. columns not used as evidence.",
+    "half-concentration computed two ways: (a) linear interpolation of the raw bound-vs-conc curve (this reproduces the preserved half_concentration_uM), and (b) from the natural-log fit, hc=(ln(hv)-intercept)/slope. hv is held fixed (ref/2) across all leave-out re-fits.",
+    "power-law (log-log) fit excludes conc<=0 points (source_table_05.csv has a 0 uM point).",
+    "leave_out.highest drops the highest concentration; leave_out.lowest drops the lowest concentration (sensitivity check)."
+  ]
+}

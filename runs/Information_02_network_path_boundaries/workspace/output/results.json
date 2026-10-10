@@ -1,0 +1,52 @@
+{
+  "task_id": "Information_02_network_path_boundaries",
+  "n_cases_familyA_strongly_connected": 32,
+  "n_cases_familyB_dag_disconnected": 190,
+  "familyA_node_sizes": [
+    6,
+    8,
+    10,
+    12
+  ],
+  "familyA_arc_range": [
+    6,
+    22
+  ],
+  "familyA_max_abs_path_error_vs_author": 0.0,
+  "familyA_max_abs_eff_error_vs_author": 7.771561172376096e-16,
+  "familyA_all_strongly_connected": true,
+  "familyA_sparse_regime_diameter_above_two": true,
+  "familyA_monotonicity_in_L_holds": true,
+  "familyA_leave_one_out_N_holds": true,
+  "familyA_leave_one_out_L_holds": true,
+  "familyA_cycle_extremum_L=N": {
+    "diam": "N-1",
+    "path": "N/2",
+    "eff": "H_{N-1}/(N-1)",
+    "verified_exact": true
+  },
+  "familyA_diameter_reaches_2_only_at_L": {
+    "6": 10,
+    "8": 14,
+    "10": 18,
+    "12": 22
+  },
+  "familyA_reference_n8_l11_reproduces_net": {
+    "path_match": true,
+    "eff_match": true,
+    "diam_match": true,
+    "path": 2.3392857142857144,
+    "eff": 0.5178571428571429,
+    "diam": 4
+  },
+  "familyA_E_strictly_gt_density_all_cases": true,
+  "familyB_max_abs_E_minus_density": 0.0,
+  "familyB_E_equals_density_all_cases": true,
+  "familyB_max_abs_eff_error_vs_author": 0.0,
+  "familyB_constructions": {
+    "range1_complete_DAG_prefix": 158,
+    "range2_bilateralised_M_forward": 32
+  },
+  "universal_bound_E_ge_density_holds_all_222_cases": true,
+  "boundary_characterization": "E == density iff the set of reachable ordered pairs equals the arc set (transitively-reduced / no redundant reachability). Strongly connected graphs strictly exceed density; transitively-reduced and complete-DAG families attain it."
+}

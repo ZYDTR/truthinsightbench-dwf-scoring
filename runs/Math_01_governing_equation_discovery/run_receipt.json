@@ -1,0 +1,20 @@
+{
+  "schema": "truthinsightbench-agent-run-receipt",
+  "release": "V1.0",
+  "agent_id": "sap-dwf-202610-bonsai",
+  "task_id": "Math_01_governing_equation_discovery",
+  "model": "bonsai2-27b-pq2",
+  "status": "completed",
+  "platform_exit_code": 0,
+  "platform_exit_code_basis": "DWF adapter: released run plus passing input/output validation; not a captured process exit code",
+  "output_validation_passed": true,
+  "workspace_input_integrity_passed": true,
+  "workspace": "workspace",
+  "output_path": "workspace/output",
+  "workspace_input_tree_sha256": "901f1e660b0e6b1ea7a4773d8475e48855e78232a63adeaf0dea501b75400a4e",
+  "workspace_input_file_count": 9,
+  "workspace_input_bytes": 190638,
+  "output_tree_sha256": "25b851abe35195c9bb0ad789447a799f08c533b5e9e3e83b3fa5b12dd10c71df",
+  "output_file_count": 12,
+  "output_bytes": 687100
+}

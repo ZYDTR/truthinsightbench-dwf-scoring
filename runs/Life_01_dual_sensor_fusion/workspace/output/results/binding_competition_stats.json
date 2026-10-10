@@ -1,0 +1,270 @@
+{
+  "tables": {
+    "source_table_05.csv": {
+      "source_file": "source_table_05.csv",
+      "role": "competitor",
+      "n_concentrations": 9,
+      "n_runs": 4,
+      "per_concentration": [
+        {
+          "concentration_uM": 0.0,
+          "runs": [
+            13.79,
+            14.52,
+            12.05,
+            14.94
+          ],
+          "mean_uM": 13.825,
+          "sd_uM": 1.27516
+        },
+        {
+          "concentration_uM": 2.0,
+          "runs": [
+            11.57,
+            13.14,
+            9.99,
+            10.94
+          ],
+          "mean_uM": 11.41,
+          "sd_uM": 1.323606
+        },
+        {
+          "concentration_uM": 5.0,
+          "runs": [
+            5.41,
+            6.54,
+            6.28,
+            3.29
+          ],
+          "mean_uM": 5.38,
+          "sd_uM": 1.474743
+        },
+        {
+          "concentration_uM": 10.0,
+          "runs": [
+            3.34,
+            4.3,
+            2.37,
+            3.06
+          ],
+          "mean_uM": 3.2675,
+          "sd_uM": 0.799974
+        },
+        {
+          "concentration_uM": 20.0,
+          "runs": [
+            2.15,
+            3.39,
+            0.91,
+            2.21
+          ],
+          "mean_uM": 2.165,
+          "sd_uM": 1.0129
+        },
+        {
+          "concentration_uM": 30.0,
+          "runs": [
+            1.32,
+            2.45,
+            0.19,
+            1.42
+          ],
+          "mean_uM": 1.345,
+          "sd_uM": 0.923995
+        },
+        {
+          "concentration_uM": 40.0,
+          "runs": [
+            0.96,
+            1.65,
+            0.18,
+            1.12
+          ],
+          "mean_uM": 0.9775,
+          "sd_uM": 0.607968
+        },
+        {
+          "concentration_uM": 50.0,
+          "runs": [
+            0.74,
+            1.14,
+            0.02,
+            1.27
+          ],
+          "mean_uM": 0.7925,
+          "sd_uM": 0.56222
+        },
+        {
+          "concentration_uM": 60.0,
+          "runs": [
+            0.42,
+            0.49,
+            0.44,
+            0.47
+          ],
+          "mean_uM": 0.455,
+          "sd_uM": 0.031091
+        }
+      ],
+      "fit_logbound_vs_conc": {
+        "model": "log(bound) = intercept + slope * concentration (natural log)",
+        "slope": -0.05186086,
+        "intercept": 2.1341694,
+        "r2": 0.92029561
+      },
+      "full_binding_reference": {
+        "value_uM": 13.825,
+        "basis": "mean bound at 0 uM (no competitor)",
+        "half_value_uM": 6.9125
+      },
+      "half_concentration_uM": 4.237562,
+      "curve_direction": "decreasing"
+    },
+    "source_table_11.csv": {
+      "source_file": "source_table_11.csv",
+      "role": "ligand",
+      "n_concentrations": 9,
+      "n_runs": 4,
+      "per_concentration": [
+        {
+          "concentration_uM": 1.0,
+          "runs": [
+            0.704,
+            0.867,
+            0.263,
+            1.218
+          ],
+          "mean_uM": 0.763,
+          "sd_uM": 0.396368
+        },
+        {
+          "concentration_uM": 2.0,
+          "runs": [
+            1.198,
+            2.024,
+            0.028,
+            1.112
+          ],
+          "mean_uM": 1.0905,
+          "sd_uM": 0.819013
+        },
+        {
+          "concentration_uM": 5.0,
+          "runs": [
+            1.235,
+            2.466,
+            0.004,
+            1.147
+          ],
+          "mean_uM": 1.213,
+          "sd_uM": 1.00607
+        },
+        {
+          "concentration_uM": 10.0,
+          "runs": [
+            1.544,
+            2.53,
+            0.558,
+            1.414
+          ],
+          "mean_uM": 1.5115,
+          "sd_uM": 0.807685
+        },
+        {
+          "concentration_uM": 15.0,
+          "runs": [
+            2.109,
+            2.542,
+            0.876,
+            3.042
+          ],
+          "mean_uM": 2.14225,
+          "sd_uM": 0.926255
+        },
+        {
+          "concentration_uM": 20.0,
+          "runs": [
+            5.133,
+            6.086,
+            4.18,
+            5.255
+          ],
+          "mean_uM": 5.1635,
+          "sd_uM": 0.780509
+        },
+        {
+          "concentration_uM": 25.0,
+          "runs": [
+            10.216,
+            12.357,
+            8.475,
+            9.958
+          ],
+          "mean_uM": 10.2515,
+          "sd_uM": 1.599634
+        },
+        {
+          "concentration_uM": 30.0,
+          "runs": [
+            12.159,
+            13.881,
+            10.937,
+            11.311
+          ],
+          "mean_uM": 12.072,
+          "sd_uM": 1.309885
+        },
+        {
+          "concentration_uM": 45.0,
+          "runs": [
+            14.336,
+            16.211,
+            13.461,
+            13.262
+          ],
+          "mean_uM": 14.3175,
+          "sd_uM": 1.345778
+        }
+      ],
+      "fit_logbound_vs_conc": {
+        "model": "log(bound) = intercept + slope * concentration (natural log)",
+        "slope": 0.07437977,
+        "intercept": -0.11938882,
+        "r2": 0.90054462
+      },
+      "full_binding_reference": {
+        "value_uM": 14.3175,
+        "basis": "mean bound at highest concentration (ligand saturation; no 0 uM measured)",
+        "half_value_uM": 7.15875
+      },
+      "half_concentration_uM": 21.960741,
+      "curve_direction": "increasing"
+    }
+  },
+  "cross_check": {
+    "file": "binding_competition_runs.csv",
+    "n_rows": 36,
+    "tolerance": 0.01,
+    "vs_source_table_05.csv": {
+      "n_compared": 36,
+      "n_within_tolerance": 36,
+      "max_abs_diff": 0.0,
+      "matches": true
+    },
+    "vs_source_table_11.csv": {
+      "n_compared": 20,
+      "n_within_tolerance": 0,
+      "max_abs_diff": 11.431000000000001,
+      "matches": false
+    },
+    "best_match": "source_table_05.csv (SensorA Conc, competitor)",
+    "best_match_max_abs_diff": 0.0,
+    "best_match_within_tolerance": true
+  },
+  "notes": [
+    "Column mapping per file headers (and per task): source_table_05.csv = SensorA Conc (competitor, decreasing); source_table_11.csv = CPX-FusionComplex Conc (ligand, increasing).",
+    "source_table_05.csv contains 9 data rows (0-60 uM), not the 8 (0-50 uM) listed in the task; the cross-check file also includes 60 uM, so all 9 rows were parsed. Task row ranges (05: 11-18, 11: 9-17) are off by ~1 row from the actual data rows.",
+    "Recomputed mean/SD use the sample standard deviation (ddof=1) over the 4 runs; these agree with the published mean/s.d. columns within rounding.",
+    "Cross-check file binding_competition_runs.csv matches source_table_05.csv (SensorA, competitor) per-run values; it is a competitor curve, so it does not match table_11."
+  ]
+}

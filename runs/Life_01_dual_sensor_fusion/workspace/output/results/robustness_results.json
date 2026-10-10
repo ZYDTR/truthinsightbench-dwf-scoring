@@ -1,0 +1,27 @@
+{
+  "F1": {
+    "direction_preserved": true,
+    "effect_size": 41.962,
+    "detail": "Block B first-two-frames (5 runs, ddof=1) per SensorB dose (concentrations low->high = X 2000->200): 1:2000 SensorB: 50.29 (loo<25% all runs=False) | 1:800 SensorB: 21.44 (loo<25% all runs=True) | 1:400 SensorB: 15.82 (loo<25% all runs=True) | 1:200 SensorB: 8.33 (loo<25% all runs=True); high doses ['1:200 SensorB', '1:400 SensorB', '1:800 SensorB'] stay <25% after every leave-one-run-out (max loo=22.96). Total fusion near-flat: [88.8, 89.9, 87.6, 88.4, 87.9, 89.9]. Alternative early window (block C, bins<=0.294s) sums per cond: {'None': 160.54, '1:200 SensorA': 163.7, '1:2000 SensorB': 125.72, '1:800 SensorB': 53.61, '1:400 SensorB': 39.54, '1:200 SensorB': 20.815}. Direction decreasing w/ concentration: loo=True, earlywin=True. Direction preserved=True; effect_size (drop low->high conc, loo) = 41.962%"
+  },
+  "F2": {
+    "monotonic_negative": true,
+    "effect_size": -0.051861,
+    "detail": "Competitor (source_table_05.csv): monotonic-decreasing=True, natural-log slope=-0.051861 (<0), power-law exponent=-0.871862; leave-out of highest conc keeps slope negative (-0.054995). Ligand (source_table_11.csv): monotonic-increasing=True, natural-log slope=0.074380 (expected for a ligand, NOT part of the decay-with-competitor finding). Reference slopes (binding_robustness.json): 05=-0.051861, 11=0.074380. Competitor binding decays monotonically with competitor -> confirmed. Note: 'negative for BOTH tables' is FALSE (ligand is +); the finding concerns the competitor table, which is negative and monotonic."
+  },
+  "F3": {
+    "positive": true,
+    "effect_size": 15.91,
+    "detail": "Per-condition (early 0.5uM - early noCa2+) from table_07 block A (ddof=1 from run columns): SensorAWT: early_noCa2=64.218, early_0.5uM=64.633, diff=0.415, total_change=-6.097 | SensorAWT + 1:200 SensorB: early_noCa2=8.326, early_0.5uM=32.447, diff=24.121, total_change=-1.087 | SensorADA + 1:200 SensorB: early_noCa2=9.192, early_0.5uM=32.387, diff=23.195, total_change=-0.941 | All positive=True; mean diff=15.91; max|total_fusion change|=6.097. Ca2+ basal promotes early fusion in all 3 conditions (total largely unchanged)."
+  },
+  "F4": {
+    "declared_null": true,
+    "effect_size": 0.196,
+    "detail": "Mean docked (vs None=2.520) from table_09 block A (ddof=1, runs only): {'None': {'mean': 2.52, 'sd': 0.198}, 'SensorA (1:200)': {'mean': 2.324, 'sd': 0.102}, 'SensorB (1:2000)': {'mean': 2.44, 'sd': 0.181}, 'SensorB (1:800)': {'mean': 2.364, 'sd': 0.121}, 'SensorB (1:400)': {'mean': 2.642, 'sd': 0.15}, 'SensorB (1:200)': {'mean': 2.522, 'sd': 0.157}}; diffs vs None: {'SensorA (1:200)': -0.196, 'SensorB (1:2000)': -0.08, 'SensorB (1:800)': -0.156, 'SensorB (1:400)': 0.122, 'SensorB (1:200)': 0.002}; max|diff|=0.196; all|diff|<0.5 -> True."
+  },
+  "errors": [],
+  "notes": [
+    "Independent re-parse of raw CSVs; all means/SD from run columns with ddof=1 (workbook Mean/S.D. not used). Dose = concentration where the 1:X ratio means higher concentration = lower X; 'high dose' = X in {200,400,800}.",
+    "JSON mapping confirmed: 'binding_robustness.json' holds the BINDING competition stats (source_table_05.csv/05.csv natural_log_fit, monotonic, leave_out); 'fusion_dose_stats.json' holds the FUSION dose stats (source_table_01/03/04/08). Raw CSVs are authoritative; JSONs only cross-checked."
+  ]
+}

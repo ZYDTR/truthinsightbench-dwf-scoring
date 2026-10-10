@@ -1,0 +1,26 @@
+========================================================================
+MATERIAL_02_TEMPERATURE_RESPONSE_BOUNDARIES — ANALYSIS SUMMARY
+========================================================================
+
+[ MAGNETIC ]
+   T(=K)          n       sus_full    sus_central         peak_m     hysteresis    loop_full    remanence
+--------------------------------------
+    300K        373     9.2366e-08     1.3672e-07      0.0037733      0.0074203      1.16307    0.0004305
+    860K       2501     6.8740e-08     7.4504e-08      0.0033412      0.0064921      0.26750   -0.0000321
+    870K       2501     6.7163e-08     7.0177e-08      0.0033379      0.0064205      4.62565   -0.0000145
+   300K: coercive=-265.803 Oe  loop_central=0.91151  peak_m=0.0037733 emu
+   860K: coercive=25.449 Oe  loop_central=0.05835  peak_m=0.0033412 emu
+   870K: coercive=30.299 Oe  loop_central=0.57039  peak_m=0.0033379 emu
+
+[ ELECTRICAL ]
+   switching: n=176  loop_area=9.2085  hysteresis_present=True  std=0.1567
+   current_voltage: n=176  loop_area=35703.6301  hysteresis_present=True  std=78.2661
+   comparison: same_index_corr=-0.00107  coord_ratio=7.50  deriv_R2=0.9976 deriv_corr=0.9988  integral_corr=-0.9172
+
+[ KEY RESULTS ]
+  Phase transition (FM->PM) at or below 860K: remanence drops from +0.000431 emu (300K) to -0.000032 emu (860K), coercive field from -265.8 Oe to 25.4 Oe.
+  860K and 870K are indistinguishable (paramagnetic), confirming transition at or below 860K.
+  300K has the largest peak moment (0.0037733 emu) and largest hysteresis (0.0074203 emu).
+  Electrical: current_voltage proportional to d(polarization)/dcoordinate on the ascending branch (R2=0.9976), consistent with current ~ dP/dt.
+
+Results written to 01_magnetic_results.json and 03_electrical_results.json

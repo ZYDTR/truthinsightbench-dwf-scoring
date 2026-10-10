@@ -1,0 +1,355 @@
+{
+  "internal_consistency": {
+    "n_action_panels": 6,
+    "n_ood_graphs": 3,
+    "within_cross_check": {
+      "training_graph_uniform": {
+        "action_mean": 0.519562554181,
+        "diag_mean": 0.519562554181,
+        "equal": true
+      },
+      "equivalent_graph_uniform": {
+        "action_mean": 0.521610366762,
+        "diag_mean": 0.521610366762,
+        "equal": true
+      },
+      "equivalent_graph_beta_5_2": {
+        "action_mean": 0.50172620672,
+        "diag_mean": 0.50172620672,
+        "equal": true
+      },
+      "higher_degree_graph_uniform": {
+        "action_mean": 0.482600184441,
+        "diag_mean": 0.482600184441,
+        "equal": true
+      },
+      "higher_degree_graph_beta_5_2": {
+        "action_mean": 0.492908805996,
+        "diag_mean": 0.492908805996,
+        "equal": true
+      }
+    },
+    "ood_cross_check": {
+      "training_graph": {
+        "in_domain_mean": [
+          0.523456985682,
+          0.523456985682
+        ],
+        "out_domain_mean": [
+          1.778751916528,
+          1.778751916528
+        ],
+        "ratio_equal": true,
+        "wilcoxon_p_equal": true
+      },
+      "equivalent_novel_graph": {
+        "in_domain_mean": [
+          0.526203654617,
+          0.526203654617
+        ],
+        "out_domain_mean": [
+          1.786698477328,
+          1.786698477328
+        ],
+        "ratio_equal": true,
+        "wilcoxon_p_equal": true
+      },
+      "higher_degree_graph": {
+        "in_domain_mean": [
+          0.483819080353,
+          0.483819080353
+        ],
+        "out_domain_mean": [
+          1.80461464119,
+          1.80461464119
+        ],
+        "ratio_equal": true,
+        "wilcoxon_p_equal": true
+      }
+    }
+  },
+  "finding1_within_domain_graph_invariance": {
+    "panels": {
+      "stored_training_pairs": {
+        "count": 900,
+        "mean": 0.5227990772657924,
+        "median": 0.5170993804931641,
+        "p95": 0.6468101739883423,
+        "max": 0.9147898554801941
+      },
+      "training_graph_uniform": {
+        "count": 1000,
+        "mean": 0.5195625541806221,
+        "median": 0.5130850076675415,
+        "p95": 0.635201022028923,
+        "max": 0.8383224606513977
+      },
+      "equivalent_graph_uniform": {
+        "count": 1000,
+        "mean": 0.5216103667616844,
+        "median": 0.5152369141578674,
+        "p95": 0.6506923258304596,
+        "max": 0.7921144366264343
+      },
+      "equivalent_graph_beta_5_2": {
+        "count": 1000,
+        "mean": 0.5017262067198753,
+        "median": 0.4937167167663574,
+        "p95": 0.6410298854112625,
+        "max": 0.8555389046669006
+      },
+      "higher_degree_graph_uniform": {
+        "count": 1000,
+        "mean": 0.4826001844406128,
+        "median": 0.4774283617734909,
+        "p95": 0.5681188613176346,
+        "max": 0.6996594667434692
+      },
+      "higher_degree_graph_beta_5_2": {
+        "count": 1000,
+        "mean": 0.4929088059961796,
+        "median": 0.4829605370759964,
+        "p95": 0.598538076877594,
+        "max": 0.7133451700210571
+      }
+    },
+    "robustness": {
+      "all_panel_mean_spread_pp": 0.040199,
+      "new_graph_mean_spread_pp": 0.03901,
+      "new_graph_mean_range": [
+        0.4826,
+        0.52161
+      ],
+      "new_graph_means": {
+        "training_graph_uniform": 0.519563,
+        "equivalent_graph_uniform": 0.52161,
+        "equivalent_graph_beta_5_2": 0.501726,
+        "higher_degree_graph_uniform": 0.4826,
+        "higher_degree_graph_beta_5_2": 0.492909
+      },
+      "max_p95_across_panels": 0.650692,
+      "within_panel_p95_minus_median_max_pp": 0.147313,
+      "graph_type_spread_vs_within_panel_spread": 0.2729,
+      "new_graph_mean_higher_than_training": [
+        [
+          "equivalent_graph_beta_5_2",
+          0.501726,
+          -0.021073
+        ],
+        [
+          "equivalent_graph_uniform",
+          0.52161,
+          -0.001189
+        ],
+        [
+          "higher_degree_graph_beta_5_2",
+          0.492909,
+          -0.02989
+        ],
+        [
+          "higher_degree_graph_uniform",
+          0.4826,
+          -0.040199
+        ],
+        [
+          "training_graph_uniform",
+          0.519563,
+          -0.003237
+        ]
+      ]
+    }
+  },
+  "finding2_boundary_distribution_degradation": {
+    "graphs": {
+      "training_graph": {
+        "source": "er_n_100_p_01.npy",
+        "mean_degree": 9.479999542236328,
+        "uniform": {
+          "mean": 0.5195625541806221,
+          "median": 0.5130850076675415,
+          "p95": 0.635201022028923
+        },
+        "beta_5_2": {
+          "mean": 0.49761531978845597,
+          "median": 0.49468623101711273,
+          "p95": 0.6239485025405884
+        },
+        "boundary": {
+          "mean": 0.978878260076046,
+          "median": 0.9744293987751007,
+          "p95": 1.2596428096294403
+        },
+        "boundary_over_uniform_ratio": 1.884,
+        "boundary_over_beta52_ratio": 1.9671,
+        "median_boundary_over_uniform_ratio": 1.8992
+      },
+      "equivalent_novel_graph": {
+        "source": "er_n_100_p_01_alt.npy",
+        "mean_degree": 9.539999961853027,
+        "uniform": {
+          "mean": 0.5216103667616844,
+          "median": 0.5152369141578674,
+          "p95": 0.6506923258304596
+        },
+        "beta_5_2": {
+          "mean": 0.5017262067198753,
+          "median": 0.4937167167663574,
+          "p95": 0.6410298854112625
+        },
+        "boundary": {
+          "mean": 0.976703080266714,
+          "median": 0.9653545320034027,
+          "p95": 1.3041491627693171
+        },
+        "boundary_over_uniform_ratio": 1.8725,
+        "boundary_over_beta52_ratio": 1.9467,
+        "median_boundary_over_uniform_ratio": 1.8736
+      },
+      "higher_degree_graph": {
+        "source": "er_n_100_p_06.npy",
+        "mean_degree": 58.81999969482422,
+        "uniform": {
+          "mean": 0.4826001844406128,
+          "median": 0.4774283617734909,
+          "p95": 0.5681188613176346
+        },
+        "beta_5_2": {
+          "mean": 0.4929088059961796,
+          "median": 0.4829605370759964,
+          "p95": 0.598538076877594
+        },
+        "boundary": {
+          "mean": 0.9679508385062218,
+          "median": 0.9598067998886108,
+          "p95": 1.2933677554130554
+        },
+        "boundary_over_uniform_ratio": 2.0057,
+        "boundary_over_beta52_ratio": 1.9638,
+        "median_boundary_over_uniform_ratio": 2.0104
+      }
+    },
+    "summary": {
+      "boundary_over_uniform_ratio_range": [
+        1.8725,
+        2.0057
+      ],
+      "boundary_over_beta52_ratio_range": [
+        1.9467,
+        1.9671
+      ],
+      "boundary_mean_range": [
+        0.968,
+        0.9789
+      ],
+      "uniform_mean_range": [
+        0.4826,
+        0.5216
+      ]
+    }
+  },
+  "finding3_ood_paired_state_shift": {
+    "graphs": {
+      "training_graph": {
+        "source": "er_n_100_p_01.npy",
+        "node_count": 100,
+        "mean_degree": 9.479999542236328,
+        "paired_seed": 20263013,
+        "pair_count": 1000,
+        "in_domain": {
+          "mean": 0.5234569856822491,
+          "median": 0.5182521343231201,
+          "p95": 0.6351876378059387,
+          "max": 0.8481136560440063
+        },
+        "out_of_domain": {
+          "mean": 1.7787519165277481,
+          "median": 1.770909309387207,
+          "p95": 2.3744255065917965,
+          "max": 3.067986011505127
+        },
+        "mean_error_ratio": 3.3980861182116175,
+        "mean_error_increase_pp": 1.255294930845499,
+        "median_error_increase_pp": 1.261370837688446,
+        "fraction_pairs_shifted_error_greater": 1.0,
+        "wilcoxon_stat": 500500.0,
+        "wilcoxon_p": 1.6629295594672565e-165,
+        "predeclared_alpha": 0.001,
+        "out_domain_median_vs_in_domain_max": 2.088
+      },
+      "equivalent_novel_graph": {
+        "source": "er_n_100_p_01_alt.npy",
+        "node_count": 100,
+        "mean_degree": 9.539999961853027,
+        "paired_seed": 20263113,
+        "pair_count": 1000,
+        "in_domain": {
+          "mean": 0.5262036546170712,
+          "median": 0.5199289321899414,
+          "p95": 0.6521057873964309,
+          "max": 0.845321536064148
+        },
+        "out_of_domain": {
+          "mean": 1.7866984773278236,
+          "median": 1.778967797756195,
+          "p95": 2.382759881019592,
+          "max": 2.960495948791504
+        },
+        "mean_error_ratio": 3.3954505288034142,
+        "mean_error_increase_pp": 1.2604948227107524,
+        "median_error_increase_pp": 1.2542794346809387,
+        "fraction_pairs_shifted_error_greater": 1.0,
+        "wilcoxon_stat": 500500.0,
+        "wilcoxon_p": 1.6629295594672565e-165,
+        "predeclared_alpha": 0.001,
+        "out_domain_median_vs_in_domain_max": 2.104
+      },
+      "higher_degree_graph": {
+        "source": "er_n_100_p_06.npy",
+        "node_count": 100,
+        "mean_degree": 58.81999969482422,
+        "paired_seed": 20263213,
+        "pair_count": 1000,
+        "in_domain": {
+          "mean": 0.4838190803527832,
+          "median": 0.47819411754608154,
+          "p95": 0.5699975997209549,
+          "max": 0.7559947967529297
+        },
+        "out_of_domain": {
+          "mean": 1.8046146411895752,
+          "median": 1.8117749691009521,
+          "p95": 2.4098721623420714,
+          "max": 2.806302070617676
+        },
+        "mean_error_ratio": 3.7299369009459404,
+        "mean_error_increase_pp": 1.320795560836792,
+        "median_error_increase_pp": 1.3355647027492523,
+        "fraction_pairs_shifted_error_greater": 1.0,
+        "wilcoxon_stat": 500500.0,
+        "wilcoxon_p": 1.6629295594672565e-165,
+        "predeclared_alpha": 0.001,
+        "out_domain_median_vs_in_domain_max": 2.397
+      }
+    },
+    "summary": {
+      "mean_error_ratio_range": [
+        3.3955,
+        3.7299
+      ],
+      "all_graphs_directionally_worse": true,
+      "minimum_mean_error_ratio": 3.3954505288034142,
+      "maximum_one_sided_p_value": 1.6629295594672565e-165,
+      "predeclared_alpha": 0.001,
+      "all_p_below_alpha": true,
+      "all_fraction_pairs_greater_1.0": true,
+      "graph_heterogeneity_note": {
+        "largest_ratio_graph": "higher_degree_graph",
+        "ratio_by_graph": {
+          "equivalent_novel_graph": 3.3955,
+          "higher_degree_graph": 3.7299,
+          "training_graph": 3.3981
+        }
+      }
+    }
+  }
+}

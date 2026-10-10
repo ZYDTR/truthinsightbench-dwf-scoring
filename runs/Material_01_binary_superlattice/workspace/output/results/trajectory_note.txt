@@ -1,0 +1,52 @@
+Trajectory Analysis Note - 6:6 (6 CH4 + 6 H2) accepted-local-minimum trajectory
+============================================================================
+Method
+------
+- Parsed LM_ENERGIES_32.txt into (frame, energy) pairs: 34 frames (0..33).
+- Parsed LM_MOVIE_32.xyz into per-frame (count, types, coords). The XYZ file
+  actually contains 36 frames; the last 2
+  frames (energy -4.15068) are repeats of the converged frame 33
+  (minor coordinate jitter only). Energy frame i is mapped to XYZ frame i for i=0..33.
+- Composition confirmed: 6 CH4 + 6 H2 = 6 CH4 + 6 H2 = 6:6 in every frame.
+- Energy stats computed: frame-0, final, global minimum (+frame), final==min?,
+  count of frames within 0.05 of the minimum.
+- Convergence behavior: checked monotonicity of the pre-tail descent and
+  quantified the amplitude of the tail oscillation window.
+- Packing descriptors for the final frame:
+  * nn_peak  = first peak of the all-pair distance histogram (bin 0.5, cut 20)
+  * mean_nn  = mean of per-particle nearest-neighbor distances
+  * z_shells = number of z-layers from gap clustering of z coords
+  (threshold = mean(gap)+2*std(gap))
+
+Findings
+--------
+n_frames = 34; particles per frame = [12]
+frame-0 energy = 6.95026
+final energy   = -4.15068
+global min     = -4.15068 at frame 33
+final frame is the global minimum: True
+frames within 0.05 of min: 2 of 34
+
+Convergence: energy descends from 6.950 to near -4.151.
+The pre-tail segment (frames 0..13) is non-monotonic
+descent; from frame 14 onward the energy oscillates within about
+0.2107 around the minimum (band ~-4.1507..-3.9007),
+i.e. a local minimum with dynamical oscillation rather than a single frozen point.
+
+Final-frame packing descriptors (frame 33):
+  nn_peak  = 5.9500
+  mean_nn  = 6.1108
+  z_shells = 2
+  (final frame shows a 2-layer geometry: CH4 around z~ -2.1 and H2 around z~ +2.1)
+
+Limitations
+-----------
+- Only per-frame accepted energies are stored; no per-frame energy error/step size
+  is available, so "convergence" is judged by energy alone.
+- The trajectory is a sequence of accepted local minima from a stochastic
+  search (e.g. basin-hopping / annealing-like); the final frame is a minimum
+  of the potential, not a true zero-temperature ground-state proof.
+- Packing descriptors are simple global descriptors (no force field); z-layering
+  threshold is heuristic (mean+2*std of z gaps).
+- The last 2 XYZ frames duplicate frame 33 (identical energy); they were counted
+  as repeats, not as new independent frames.

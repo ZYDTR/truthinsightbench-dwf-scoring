@@ -1,0 +1,77 @@
+{
+  "task": "independent_graph_verify",
+  "all_checks_passed": true,
+  "hash_match": [
+    true,
+    true,
+    true
+  ],
+  "graphs": {
+    "er_n_100_p_01.npy": {
+      "file": "er_n_100_p_01.npy",
+      "path": "/data/user/conversations/conv-07581fcf-2edd-4246-8da8-dc035efd1751/project/data/source_data/er_n_100_p_01.npy",
+      "shape": [
+        100,
+        100
+      ],
+      "shape_is_100x100": true,
+      "dtype": "int64",
+      "dtype_is_int64": true,
+      "symmetric": true,
+      "zero_diagonal": true,
+      "nonzero_off_diagonal_entries": 948,
+      "undirected_edges": 474,
+      "mean_degree": 9.48,
+      "degree_min": 3,
+      "degree_median": 9.0,
+      "degree_max": 16,
+      "sha256": "d9b5123e8a09e273524991d28f988a07197fa7a4e2b3230a70bf04914f841c8d",
+      "expected_sha256": "d9b5123e8a09e273524991d28f988a07197fa7a4e2b3230a70bf04914f841c8d",
+      "hash_match": true
+    },
+    "er_n_100_p_01_alt.npy": {
+      "file": "er_n_100_p_01_alt.npy",
+      "path": "/data/user/conversations/conv-07581fcf-2edd-4246-8da8-dc035efd1751/project/data/source_data/er_n_100_p_01_alt.npy",
+      "shape": [
+        100,
+        100
+      ],
+      "shape_is_100x100": true,
+      "dtype": "int64",
+      "dtype_is_int64": true,
+      "symmetric": true,
+      "zero_diagonal": true,
+      "nonzero_off_diagonal_entries": 954,
+      "undirected_edges": 477,
+      "mean_degree": 9.54,
+      "degree_min": 2,
+      "degree_median": 10.0,
+      "degree_max": 19,
+      "sha256": "4f8c6604ff870ce43667e3affe1da01dc7971f7acd552ca29363d2e3435ca1d8",
+      "expected_sha256": "4f8c6604ff870ce43667e3affe1da01dc7971f7acd552ca29363d2e3435ca1d8",
+      "hash_match": true
+    },
+    "er_n_100_p_06.npy": {
+      "file": "er_n_100_p_06.npy",
+      "path": "/data/user/conversations/conv-07581fcf-2edd-4246-8da8-dc035efd1751/project/data/source_data/er_n_100_p_06.npy",
+      "shape": [
+        100,
+        100
+      ],
+      "shape_is_100x100": true,
+      "dtype": "int64",
+      "dtype_is_int64": true,
+      "symmetric": true,
+      "zero_diagonal": true,
+      "nonzero_off_diagonal_entries": 5882,
+      "undirected_edges": 2941,
+      "mean_degree": 58.82,
+      "degree_min": 42,
+      "degree_median": 58.5,
+      "degree_max": 71,
+      "sha256": "ad03d570f668538e16afb936135f2ddc5423ecf09be9c3c46e3868c12d414ffd",
+      "expected_sha256": "ad03d570f668538e16afb936135f2ddc5423ecf09be9c3c46e3868c12d414ffd",
+      "hash_match": true
+    }
+  }
+}

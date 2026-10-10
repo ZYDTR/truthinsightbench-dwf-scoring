@@ -1,0 +1,5 @@
+subset	n_series	mean_peak_shift_nm	std_peak_shift_nm	min_peak_shift_nm	max_peak_shift_nm	all_negative	sign_consistent_vs_full	magnitude_within_50pct_vs_full	rel_mean_vs_full	A_shift	B_shift	C_shift
+A+B	2	-5.0	3.0	-8.0	-2.0	True	True	True	0.9375	-8.0	-2.0	-6.0
+A+C	2	-7.0	1.0	-8.0	-6.0	True	True	True	1.3125	-8.0	-2.0	-6.0
+B+C	2	-4.0	2.0	-6.0	-2.0	True	True	True	0.75	-8.0	-2.0	-6.0
+A+B+C	3	-5.333333333333333	2.494438257849294	-8.0	-2.0	True	True	True	1.0	-8.0	-2.0	-6.0

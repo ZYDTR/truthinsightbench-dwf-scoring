@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" font-family="Helvetica, Arial, sans-serif">
+<rect width="900" height="620" fill="white"/>
+<text x="450" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#222222">Same-type NN fraction vs interfacial preference (Chi), equal-size 9C/9H2</text>
+<text x="450" y="60" text-anchor="middle" font-size="12" fill="#666666">Same-type NN pair fraction at first-peak cutoff (c = first local max of all-pair distance histogram)</text>
+<line x1="130" y1="500.0" x2="770" y2="500.0" stroke="#e8e8e8" stroke-width="1"/>
+<line x1="130" y1="418.0" x2="770" y2="418.0" stroke="#e8e8e8" stroke-width="1"/>
+<line x1="130" y1="336.0" x2="770" y2="336.0" stroke="#e8e8e8" stroke-width="1"/>
+<line x1="130" y1="254.0" x2="770" y2="254.0" stroke="#e8e8e8" stroke-width="1"/>
+<line x1="130" y1="172.0" x2="770" y2="172.0" stroke="#e8e8e8" stroke-width="1"/>
+<line x1="130" y1="90.0" x2="770" y2="90.0" stroke="#e8e8e8" stroke-width="1"/>
+<line x1="210.0" y1="90" x2="210.0" y2="500" stroke="#f0f0f0" stroke-width="1"/>
+<line x1="290.0" y1="90" x2="290.0" y2="500" stroke="#f0f0f0" stroke-width="1"/>
+<line x1="370.0" y1="90" x2="370.0" y2="500" stroke="#f0f0f0" stroke-width="1"/>
+<line x1="450.0" y1="90" x2="450.0" y2="500" stroke="#f0f0f0" stroke-width="1"/>
+<line x1="530.0" y1="90" x2="530.0" y2="500" stroke="#f0f0f0" stroke-width="1"/>
+<line x1="610.0" y1="90" x2="610.0" y2="500" stroke="#f0f0f0" stroke-width="1"/>
+<line x1="690.0" y1="90" x2="690.0" y2="500" stroke="#f0f0f0" stroke-width="1"/>
+<line x1="130" y1="500" x2="770" y2="500" stroke="#444444" stroke-width="1.5"/>
+<line x1="130" y1="90" x2="130" y2="500" stroke="#444444" stroke-width="1.5"/>
+<line x1="123" y1="500.0" x2="130" y2="500.0" stroke="#444444" stroke-width="1"/>
+<text x="120" y="500.0" text-anchor="end" font-size="13" fill="#333333">0.0</text>
+<line x1="123" y1="418.0" x2="130" y2="418.0" stroke="#444444" stroke-width="1"/>
+<text x="120" y="418.0" text-anchor="end" font-size="13" fill="#333333">0.2</text>
+<line x1="123" y1="336.0" x2="130" y2="336.0" stroke="#444444" stroke-width="1"/>
+<text x="120" y="336.0" text-anchor="end" font-size="13" fill="#333333">0.4</text>
+<line x1="123" y1="254.0" x2="130" y2="254.0" stroke="#444444" stroke-width="1"/>
+<text x="120" y="254.0" text-anchor="end" font-size="13" fill="#333333">0.6</text>
+<line x1="123" y1="172.0" x2="130" y2="172.0" stroke="#444444" stroke-width="1"/>
+<text x="120" y="172.0" text-anchor="end" font-size="13" fill="#333333">0.8</text>
+<line x1="123" y1="90.0" x2="130" y2="90.0" stroke="#444444" stroke-width="1"/>
+<text x="120" y="90.0" text-anchor="end" font-size="13" fill="#333333">1.0</text>
+<line x1="210.0" y1="500" x2="210.0" y2="507" stroke="#444444" stroke-width="1"/>
+<text x="210.0" y="524" text-anchor="middle" font-size="13" fill="#333333">0.4</text>
+<line x1="290.0" y1="500" x2="290.0" y2="507" stroke="#444444" stroke-width="1"/>
+<text x="290.0" y="524" text-anchor="middle" font-size="13" fill="#333333">0.5</text>
+<line x1="370.0" y1="500" x2="370.0" y2="507" stroke="#444444" stroke-width="1"/>
+<text x="370.0" y="524" text-anchor="middle" font-size="13" fill="#333333">0.6</text>
+<line x1="450.0" y1="500" x2="450.0" y2="507" stroke="#444444" stroke-width="1"/>
+<text x="450.0" y="524" text-anchor="middle" font-size="13" fill="#333333">0.7</text>
+<line x1="530.0" y1="500" x2="530.0" y2="507" stroke="#444444" stroke-width="1"/>
+<text x="530.0" y="524" text-anchor="middle" font-size="13" fill="#333333">0.8</text>
+<line x1="610.0" y1="500" x2="610.0" y2="507" stroke="#444444" stroke-width="1"/>
+<text x="610.0" y="524" text-anchor="middle" font-size="13" fill="#333333">0.9</text>
+<line x1="690.0" y1="500" x2="690.0" y2="507" stroke="#444444" stroke-width="1"/>
+<text x="690.0" y="524" text-anchor="middle" font-size="13" fill="#333333">1.0</text>
+<text x="450" y="555" text-anchor="middle" font-size="15" font-weight="bold" fill="#222222">Chi (interfacial preference)</text>
+<text x="75" y="295" text-anchor="middle" font-size="15" font-weight="bold" fill="#222222" transform="rotate(-90 75,295)">Same-type NN pair fraction (first-peak cutoff)</text>
+<polyline points="210.0,352.8 370.0,299.2 530.0,252.4 690.0,141.2" fill="none" stroke="#d4493a" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="210.0" cy="352.8" r="7" fill="#d4493a" stroke="#ffffff" stroke-width="2"/>
+<text x="220.0" y="340.8" text-anchor="start" font-size="13" fill="#333333">0.359</text>
+<text x="210.0" y="376.81" text-anchor="middle" font-size="11" fill="#888888">structure_04</text>
+<circle cx="370.0" cy="299.2" r="7" fill="#d4493a" stroke="#ffffff" stroke-width="2"/>
+<text x="380.0" y="287.2" text-anchor="start" font-size="13" fill="#333333">0.490</text>
+<text x="370.0" y="323.182" text-anchor="middle" font-size="11" fill="#888888">structure_03</text>
+<circle cx="530.0" cy="252.4" r="7" fill="#d4493a" stroke="#ffffff" stroke-width="2"/>
+<text x="540.0" y="240.4" text-anchor="start" font-size="13" fill="#333333">0.604</text>
+<text x="530.0" y="276.442" text-anchor="middle" font-size="11" fill="#888888">structure_02</text>
+<circle cx="690.0" cy="141.2" r="7" fill="#d4493a" stroke="#ffffff" stroke-width="2"/>
+<text x="700.0" y="129.2" text-anchor="start" font-size="13" fill="#333333">0.875</text>
+<text x="690.0" y="165.25" text-anchor="middle" font-size="11" fill="#888888">structure_01</text>
+<text x="764" y="116" text-anchor="end" font-size="13" fill="#d4493a" font-weight="bold">Monotonic increase in chi</text>
+<text x="764" y="134" text-anchor="end" font-size="11" fill="#666666">(Spearman = +1.0; 4 equal-size points)</text>
+<text x="900" y="606" text-anchor="end" font-size="11" fill="#999999">c = first local max of 1D all-pair distance histogram (0.5-wide bins); same_type = same-type pairs / (same + cross pairs) within c</text>
+</svg>

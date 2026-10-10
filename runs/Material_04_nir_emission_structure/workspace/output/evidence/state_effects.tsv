@@ -1,0 +1,5 @@
+design_series	state_1_peak_wavelength_nm	state_5_peak_wavelength_nm	peak_shift_state5_minus_state1_nm	state_1_fwhm_nm	state_5_fwhm_nm	fwhm_change_state5_minus_state1_nm	state_1_max_intensity	state_5_max_intensity	intensity_ratio_state5_over_state1
+reference_series	1132.0	1117.0	-15.0				0.02019	0.0142	0.703318474492323
+series_A	1028.0	1020.0	-8.0	308.94968553459125	405.40350877192986	96.45382323733861	0.07519	0.0289	0.3843596222901981
+series_B	1030.0	1028.0	-2.0	324.17632850241546			0.06439	0.02249	0.34927783817362945
+series_C	1029.0	1023.0	-6.0	333.78125			0.05334	0.02305	0.43213348331458573

@@ -1,0 +1,270 @@
+{
+  "schema": "truthinsightbench-semantic-output-validation",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "output": "/data/user/conversations/conv-8a8fd561-97b4-4af7-9671-12640fdbd642/project/output",
+  "authoritative_report": {
+    "path": "Result.md",
+    "bytes": 24240,
+    "sha256": "457ec363e7045463318d60295fcd5fb52e403d7ef1dc5d208bbfcdbc7217a1cf"
+  },
+  "registered_findings": {
+    "count": 4,
+    "numbers": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "markers": [
+      {
+        "finding_number": 1,
+        "line": 24,
+        "marker": "## Finding 1: Long-wavelength response increases monotonically and nearly linearly with composition fraction for every design series",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 2,
+        "line": 90,
+        "marker": "## Finding 2: From state_1 to state_5 the aggregate peak shifts to shorter wavelength (negative/blue shift), peak intensity drops, and (where computable) the band broadens — across all series",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 3,
+        "line": 165,
+        "marker": "## Finding 3: The dilute-state peak is not consistently offset from the aggregate-state peaks; the dilute-minus-aggregate sign and magnitude flip across series and states (conditional conflict)",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 4,
+        "line": 227,
+        "marker": "## Finding 4: Spectral-width (FWHM) and peak-position metrics are method- and band-sensitive; FWHM is undefined for 7 of 20 states and fails the 900–1250 nm band validation (applicability boundary)",
+        "heading_level": 2
+      }
+    ],
+    "traceability": [
+      {
+        "finding_number": 1,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/core_analysis.py",
+          "analysis/robustness.py"
+        ],
+        "result_evidence": [
+          "evidence/composition_effects.tsv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 2,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/core_analysis.py"
+        ],
+        "result_evidence": [
+          "evidence/robustness_band.tsv",
+          "evidence/robustness_fwhm.tsv",
+          "evidence/robustness_leaveout.tsv",
+          "evidence/robustness_peak.tsv",
+          "evidence/spectral_summary.tsv",
+          "evidence/state_by_state.tsv",
+          "evidence/state_effects.tsv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 3,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/core_analysis.py"
+        ],
+        "result_evidence": [
+          "evidence/dilute_summary.tsv",
+          "evidence/dilute_vs_aggregate.tsv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 4,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis/robustness.py"
+        ],
+        "result_evidence": [
+          "evidence/figure_availability.tsv",
+          "evidence/robustness_band.tsv",
+          "evidence/robustness_fwhm.tsv",
+          "evidence/robustness_peak.tsv",
+          "evidence/spectral_summary.tsv",
+          "evidence/state_by_state.tsv",
+          "evidence/state_effects.tsv"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      }
+    ]
+  },
+  "reproduction": {
+    "mode": "companion_markdown",
+    "document": {
+      "path": "reproduce.md",
+      "bytes": 5258,
+      "sha256": "82386198df3fbe01610b9ec38cb517fcecc4f4f4b83af53882213ad0083fed1b"
+    }
+  },
+  "analysis_sources": [
+    {
+      "path": "analysis/core_analysis.py",
+      "bytes": 8346,
+      "sha256": "a0bf607287f843cdc1af65330f87d591d2114cda393afc3a481d1e6239a8e26c"
+    },
+    {
+      "path": "analysis/explore_data.py",
+      "bytes": 7320,
+      "sha256": "3efb022735d8c7565a63a64afb1b71d2b39dd7d7644421744319149c94423580"
+    },
+    {
+      "path": "analysis/make_figures.py",
+      "bytes": 10458,
+      "sha256": "3fc83adfd2df7df677fbd6a80ca189d62da30e3b768e6b8e135c88d6b7791e1d"
+    },
+    {
+      "path": "analysis/robustness.py",
+      "bytes": 13307,
+      "sha256": "06cf19a925d362fe02baffa941ef3d19b85731fba46966d3a47a38906ef77848"
+    }
+  ],
+  "executed_notebooks": [],
+  "result_artifacts": [
+    {
+      "path": "evidence/composition_effects.tsv",
+      "bytes": 516,
+      "sha256": "5cc09d2755dc88a3acbbd82e81ba14488d2cfbf7b8a0f91a98054c3a21d91606"
+    },
+    {
+      "path": "evidence/dilute_summary.tsv",
+      "bytes": 251,
+      "sha256": "b74da68555c4c5db30e6f000a9728671cf0732712c746822fdb9c070ad3ca3ea"
+    },
+    {
+      "path": "evidence/dilute_vs_aggregate.tsv",
+      "bytes": 655,
+      "sha256": "c21c9c8116cd89f679cfaba7a74e710c59e80636081a163b803acd85ba339100"
+    },
+    {
+      "path": "evidence/figure_availability.tsv",
+      "bytes": 7345,
+      "sha256": "c5c65656b677fe7b31064543401c7594cd151382bbef9c0cea88a14c35e99569"
+    },
+    {
+      "path": "evidence/robustness_band.tsv",
+      "bytes": 1325,
+      "sha256": "411b80b16184159c08481143dfbd21723776b09c83bb6e877be21c27e97d4599"
+    },
+    {
+      "path": "evidence/robustness_fwhm.tsv",
+      "bytes": 828,
+      "sha256": "dad30c02b3c5ae77ad1f09571fa6b33fc0f52a04661c81af923fa5d5a1eedac5"
+    },
+    {
+      "path": "evidence/robustness_leaveout.tsv",
+      "bytes": 471,
+      "sha256": "656cf78a823d0837e284792ca0d8fecbb99d5aaca73ca52bd7d7f283d66fc497"
+    },
+    {
+      "path": "evidence/robustness_peak.tsv",
+      "bytes": 1870,
+      "sha256": "26e9902dd95f38d5ae0201decfa81af69d7f6e5f27978c3370f7b338cccd93f4"
+    },
+    {
+      "path": "evidence/spectral_summary.tsv",
+      "bytes": 1746,
+      "sha256": "6d4a5b1fb33e33823949ef5490fb82454a0f5d4e6bc335fbbda7ff02563fe1a4"
+    },
+    {
+      "path": "evidence/state_by_state.tsv",
+      "bytes": 977,
+      "sha256": "2fa853b755d86aa667944116a8c94270fe523efd68604d6602f0cbc53012b120"
+    },
+    {
+      "path": "evidence/state_effects.tsv",
+      "bytes": 600,
+      "sha256": "ab51df058e9abf1e51b60978c65cae5d10fefa2399e64137e1122da59aeef004"
+    }
+  ],
+  "native_evidence_registry": {
+    "sources": [],
+    "resolved_ids": {}
+  },
+  "resolved_support_files": [
+    {
+      "path": "analysis/core_analysis.py",
+      "bytes": 8346,
+      "sha256": "a0bf607287f843cdc1af65330f87d591d2114cda393afc3a481d1e6239a8e26c"
+    },
+    {
+      "path": "analysis/robustness.py",
+      "bytes": 13307,
+      "sha256": "06cf19a925d362fe02baffa941ef3d19b85731fba46966d3a47a38906ef77848"
+    },
+    {
+      "path": "evidence/composition_effects.tsv",
+      "bytes": 516,
+      "sha256": "5cc09d2755dc88a3acbbd82e81ba14488d2cfbf7b8a0f91a98054c3a21d91606"
+    },
+    {
+      "path": "evidence/dilute_summary.tsv",
+      "bytes": 251,
+      "sha256": "b74da68555c4c5db30e6f000a9728671cf0732712c746822fdb9c070ad3ca3ea"
+    },
+    {
+      "path": "evidence/dilute_vs_aggregate.tsv",
+      "bytes": 655,
+      "sha256": "c21c9c8116cd89f679cfaba7a74e710c59e80636081a163b803acd85ba339100"
+    },
+    {
+      "path": "evidence/figure_availability.tsv",
+      "bytes": 7345,
+      "sha256": "c5c65656b677fe7b31064543401c7594cd151382bbef9c0cea88a14c35e99569"
+    },
+    {
+      "path": "evidence/robustness_band.tsv",
+      "bytes": 1325,
+      "sha256": "411b80b16184159c08481143dfbd21723776b09c83bb6e877be21c27e97d4599"
+    },
+    {
+      "path": "evidence/robustness_fwhm.tsv",
+      "bytes": 828,
+      "sha256": "dad30c02b3c5ae77ad1f09571fa6b33fc0f52a04661c81af923fa5d5a1eedac5"
+    },
+    {
+      "path": "evidence/robustness_leaveout.tsv",
+      "bytes": 471,
+      "sha256": "656cf78a823d0837e284792ca0d8fecbb99d5aaca73ca52bd7d7f283d66fc497"
+    },
+    {
+      "path": "evidence/robustness_peak.tsv",
+      "bytes": 1870,
+      "sha256": "26e9902dd95f38d5ae0201decfa81af69d7f6e5f27978c3370f7b338cccd93f4"
+    },
+    {
+      "path": "evidence/spectral_summary.tsv",
+      "bytes": 1746,
+      "sha256": "6d4a5b1fb33e33823949ef5490fb82454a0f5d4e6bc335fbbda7ff02563fe1a4"
+    },
+    {
+      "path": "evidence/state_by_state.tsv",
+      "bytes": 977,
+      "sha256": "2fa853b755d86aa667944116a8c94270fe523efd68604d6602f0cbc53012b120"
+    },
+    {
+      "path": "evidence/state_effects.tsv",
+      "bytes": 600,
+      "sha256": "ab51df058e9abf1e51b60978c65cae5d10fefa2399e64137e1122da59aeef004"
+    }
+  ]
+}

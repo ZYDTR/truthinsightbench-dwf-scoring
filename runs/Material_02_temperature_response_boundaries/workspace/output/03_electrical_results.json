@@ -1,0 +1,85 @@
+{
+  "switching": {
+    "n_points": 176,
+    "coordinate_range": [
+      -23.466666666666665,
+      23.466666666666665
+    ],
+    "signal_range": [
+      -0.188460001450349,
+      0.199729441252501
+    ],
+    "mean": 0.012149738484680468,
+    "std": 0.15674836147334187,
+    "min": -0.188460001450349,
+    "max": 0.199729441252501,
+    "loop_or_unidirectional": "loop",
+    "area_under_curve": -9.128641266374256,
+    "loop_area": 9.208508521697016,
+    "hysteresis_present": true,
+    "hysteresis_mean_abs_diff": 0.22783525005445154,
+    "hysteresis_max_abs_diff": 0.34923164871285,
+    "hysteresis_area_between_branches": 5.191545948905651,
+    "robustness": {
+      "original_area": 9.208508521697016,
+      "trimmed_5pct": 9.170922553585015,
+      "trimmed_5pct_change_pct": -0.40816564401761096,
+      "min_subtracted": 9.208508521697018,
+      "min_subtracted_change_pct": 1.92903860078406e-14,
+      "mean_subtracted": 9.208508521697016,
+      "mean_subtracted_change_pct": 0.0
+    }
+  },
+  "current_voltage": {
+    "n_points": 176,
+    "coordinate_range": [
+      -176.0,
+      176.0
+    ],
+    "signal_range": [
+      -184.5601,
+      165.214
+    ],
+    "mean": -0.9187026895832612,
+    "std": 78.26614008773798,
+    "min": -184.5601,
+    "max": 165.214,
+    "loop_or_unidirectional": "loop",
+    "area_under_curve": 35673.68532450001,
+    "loop_area": 35703.63009116668,
+    "hysteresis_present": true,
+    "hysteresis_mean_abs_diff": 79.70051588988775,
+    "hysteresis_max_abs_diff": 196.82792666666668,
+    "hysteresis_area_between_branches": 21188.015035927972,
+    "robustness": {
+      "original_area": 35703.63009116668,
+      "trimmed_5pct": 36490.05030450001,
+      "trimmed_5pct_change_pct": 2.2026337695222113,
+      "min_subtracted": 35703.63009116667,
+      "min_subtracted_change_pct": -2.0378761474967073e-14,
+      "mean_subtracted": 35703.63009116667,
+      "mean_subtracted_change_pct": -2.0378761474967073e-14
+    }
+  },
+  "comparison": {
+    "relationship": "Both files are closed loops of 176 points sampled on the same coordinate sequence with x2 = 7.50 * x1 (current_voltage coordinate ~7.5x larger). Switching is a smooth normalized polarization-like loop; current_voltage is a noisier raw electrical loop. Same-index correlation is near zero because the loop is traversed in the same direction, but on the monotonic ascending branch current_voltage is strongly proportional to the derivative of switching, consistent with current ~ rate of change of polarization.",
+    "same_index_corr": -0.0010728017504127922,
+    "coordinate_ratio": 7.5,
+    "derivative_slope": 6279.471314730305,
+    "derivative_intercept": -1.6171208401147295,
+    "derivative_r2": 0.9976178426425377,
+    "derivative_corr": 0.9988082111409268,
+    "integral_corr": -0.9171881956484845
+  },
+  "findings": [
+    "Both electrical files are closed loops; hysteresis is present in both.",
+    "Switching loop area (shoelace) = 9.2085; current_voltage loop area = 35703.63.",
+    "Coordinates are proportional: current_voltage coordinate = 7.50 * switching coordinate.",
+    "Same-index signal correlation = -0.001073; signals are independent traces at the same coordinates.",
+    "Switching is smooth/normalized (std 0.1567); current_voltage is noisy (std 78.3).",
+    "Derivative check: on the ascending branch current_voltage is strongly proportional to the derivative of switching (R2=0.9976, corr=0.9988).",
+    "Background (mean/min) subtraction leaves the shoelace hysteresis area essentially unchanged (shift-invariant).",
+    "Trimming 5% of the points changes the loop area by <3% for both files."
+  ],
+  "notes": "loop_area computed via shoelace closed-polygon area (shift-invariant). Files share an identical 176-point coordinate sequence with a 7.5 scaling."
+}

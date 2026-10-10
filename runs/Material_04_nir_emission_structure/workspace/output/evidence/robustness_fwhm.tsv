@@ -1,0 +1,21 @@
+design_series	aggregate_state_id	fwhm_50nm	fwhm_30nm	fwhm_20nm	rel_change_30_vs_50	rel_change_20_vs_50
+reference_series	state_1					
+reference_series	state_2					
+reference_series	state_3					
+reference_series	state_4					
+reference_series	state_5					
+series_A	state_1	308.94968553459125	425.35305555555556		0.3767712850056657	
+series_A	state_2	325.5163636363635				
+series_A	state_3	339.43095238095236				
+series_A	state_4	364.98039215686265				
+series_A	state_5	405.40350877192986				
+series_B	state_1	324.17632850241546				
+series_B	state_2	326.4013513513513				
+series_B	state_3	342.66666666666663				
+series_B	state_4	363.192546583851				
+series_B	state_5					
+series_C	state_1	333.78125				
+series_C	state_2	340.5791245791246				
+series_C	state_3	350.9125				
+series_C	state_4	389.5958333333334				
+series_C	state_5					

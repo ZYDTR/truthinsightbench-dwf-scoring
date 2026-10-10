@@ -1,0 +1,21 @@
+design_series	aggregate_state_id	peak_full_nm	fwhm_full_nm	peak_900_1250_nm	fwhm_900_1250_nm	peak_shift_full_minus_restricted_nm	fwhm_shift_full_minus_restricted_nm	peak_same
+reference_series	state_1	1132.0		1132.0		0.0		True
+reference_series	state_2	1129.0		1129.0		0.0		True
+reference_series	state_3	1122.0		1122.0		0.0		True
+reference_series	state_4	1117.0		1117.0		0.0		True
+reference_series	state_5	1117.0		1117.0		0.0		True
+series_A	state_1	1028.0	308.94968553459125	1028.0	308.94968553459125	0.0	0.0	True
+series_A	state_2	1026.0	325.5163636363635	1026.0	325.5163636363635	0.0	0.0	True
+series_A	state_3	1026.0	339.43095238095236	1026.0		0.0		True
+series_A	state_4	1028.0	364.98039215686265	1028.0		0.0		True
+series_A	state_5	1020.0	405.40350877192986	1020.0		0.0		True
+series_B	state_1	1030.0	324.17632850241546	1030.0		0.0		True
+series_B	state_2	1030.0	326.4013513513513	1030.0		0.0		True
+series_B	state_3	1026.0	342.66666666666663	1026.0		0.0		True
+series_B	state_4	1027.0	363.192546583851	1027.0		0.0		True
+series_B	state_5	1028.0		1028.0		0.0		True
+series_C	state_1	1029.0	333.78125	1029.0		0.0		True
+series_C	state_2	1027.0	340.5791245791246	1027.0		0.0		True
+series_C	state_3	1034.0	350.9125	1034.0		0.0		True
+series_C	state_4	1028.0	389.5958333333334	1028.0		0.0		True
+series_C	state_5	1023.0		1023.0		0.0		True

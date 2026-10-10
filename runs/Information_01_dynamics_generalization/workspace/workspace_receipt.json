@@ -1,0 +1,11 @@
+{
+  "schema": "truthinsightbench-participant-workspace",
+  "release": "V1.0",
+  "task_id": "Information_01_dynamics_generalization",
+  "t0": "2024-10-02",
+  "scientific_file_count": 10,
+  "scientific_bytes": 1374837,
+  "data_manifest_sha256": "d7be2c1e76a9a26299f9c4823b95535c826e9f02a864fef048bf67d7dda6683c",
+  "research_objective_sha256": "4e37c4cbff9741aae9c0d25af90b5a1de25bd91644f5ee4e5618502820ca86b3",
+  "launch_prompt_sha256": "0f4cafd2bc7a8b51b835101fa1d9032bc688caa09ac9ce12e60ff1bd4c68da3a"
+}

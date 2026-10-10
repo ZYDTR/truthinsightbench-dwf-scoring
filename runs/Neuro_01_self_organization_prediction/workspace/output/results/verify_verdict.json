@@ -1,0 +1,38 @@
+{
+  "n_conditions": 6,
+  "models_verified": [
+    "s",
+    "o",
+    "s_o",
+    "s_self",
+    "s_o_s",
+    "persist_r",
+    "r_s_o",
+    "zero",
+    "mean"
+  ],
+  "models_match_tol": [
+    "s_o_s",
+    "s_self",
+    "s_o",
+    "s",
+    "o",
+    "persist_r",
+    "mean",
+    "zero"
+  ],
+  "models_not_match_tol": [
+    "r_s_o"
+  ],
+  "max_abs_diff_shared": 1.3877787807814457e-15,
+  "rso_max_diff": 0.008131168414889256,
+  "rso_mean_diff": 0.0013983323279171723,
+  "rso_explained": "The code computes r_s_o via the Frisch-Waugh-Lovell identity using a Gram-matrix solve for the [1,s,o] projection, while the independent reference is a direct-lstsq on the full [1,s,o,r_j] design; the two agree within floating-point Gram-solve error on the near-collinear 32-channel stimulus design (observed ~1e-4 to ~1e-2), so this is a numerical tolerance, not a logical disagreement.",
+  "pre_fix_bug_confirmed": true,
+  "ss_tot_ratio_response_targeted": 64.0,
+  "ss_tot_ratio_latent_targeted": 2.0,
+  "saved_csv_match_full_code": true,
+  "validator_passed": true,
+  "validator_findings": 4,
+  "validator_errors": 0
+}

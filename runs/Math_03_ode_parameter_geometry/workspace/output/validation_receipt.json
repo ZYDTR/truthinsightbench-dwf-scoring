@@ -1,0 +1,260 @@
+{
+  "schema": "truthinsightbench-semantic-output-validation",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "output": "/data/user/conversations/conv-c59f3f82-1c0f-4cac-9a42-86dc073cd65e/project/output",
+  "authoritative_report": {
+    "path": "Result.md",
+    "bytes": 12996,
+    "sha256": "656912c7e7cbca04169be584a6c5c5b0b47e436121c34637646b1759acb0c94d"
+  },
+  "registered_findings": {
+    "count": 4,
+    "numbers": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "markers": [
+      {
+        "finding_number": 1,
+        "line": 35,
+        "marker": "## Finding 1: The singular-value spectrum is extremely ill-conditioned",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 2,
+        "line": 62,
+        "marker": "## Finding 2: Trajectory behavior is essentially uncorrelated with the singular spectrum",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 3,
+        "line": 84,
+        "marker": "## Finding 3: Measurement–simulation agreement is strong and unbiased, but does not establish",
+        "heading_level": 2
+      },
+      {
+        "finding_number": 4,
+        "line": 109,
+        "marker": "## Finding 4: Solver family is a real source of convergence difference (family 1 converges more)",
+        "heading_level": 2
+      }
+    ],
+    "traceability": [
+      {
+        "finding_number": 1,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis.py"
+        ],
+        "result_evidence": [
+          "figures/spectrum.png",
+          "result_tables_spectrum.tsv",
+          "results.json",
+          "robustness_a.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 2,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis.py"
+        ],
+        "result_evidence": [
+          "figures/trajectory.png",
+          "result_tables_trajectories.tsv",
+          "results.json",
+          "robustness_a.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 3,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis.py"
+        ],
+        "result_evidence": [
+          "figures/robustness_b.png",
+          "result_tables_pairs.tsv",
+          "results.json",
+          "robustness_b.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      },
+      {
+        "finding_number": 4,
+        "resolved_native_tokens": [],
+        "analysis_sources": [
+          "analysis.py"
+        ],
+        "result_evidence": [
+          "figures/robustness_a.png",
+          "result_tables_trajectories.tsv",
+          "results.json",
+          "robustness_a.json",
+          "robustness_b.json"
+        ],
+        "executed_notebook_evidence": [],
+        "passed": true
+      }
+    ]
+  },
+  "reproduction": {
+    "mode": "section_in_authoritative_report",
+    "document": null
+  },
+  "analysis_sources": [
+    {
+      "path": "analysis.py",
+      "bytes": 10572,
+      "sha256": "beaaabb42f3a43e4fa36a3653c458f403fbaa4c0d3d49db24cbd0c205087c5d3"
+    },
+    {
+      "path": "robustness_a.py",
+      "bytes": 15258,
+      "sha256": "ba731d21504c32407169e8d9641521baf3325cec2422bfc14efd855cd35fffc3"
+    },
+    {
+      "path": "robustness_b.py",
+      "bytes": 18015,
+      "sha256": "8126845aa8b892b7fd1134c0aabe4c43e798e40f2f3e5c572b10c0e5a5afeba8"
+    }
+  ],
+  "executed_notebooks": [],
+  "result_artifacts": [
+    {
+      "path": "figures/convergence_vs_sv.png",
+      "bytes": 40745,
+      "sha256": "8c9780516f584466edadcfcd6302a77c36c279893564e2f0680f3e091a9a1eaf"
+    },
+    {
+      "path": "figures/robustness_a.png",
+      "bytes": 145884,
+      "sha256": "84beacf7a5662ea335721abba4be93ec3c8e3f48e817e40aff3bfc3185d5c564"
+    },
+    {
+      "path": "figures/robustness_b.png",
+      "bytes": 156891,
+      "sha256": "aedc075d5123b22b968c32f1189b10c6831d0a79585702ca3ce4ce896976f89d"
+    },
+    {
+      "path": "figures/spectrum.png",
+      "bytes": 37297,
+      "sha256": "27900441b82da4145b91e0dce0cf5e38be2e4d4d3778d203c4ca75755779ccfb"
+    },
+    {
+      "path": "figures/trajectory.png",
+      "bytes": 61793,
+      "sha256": "b8d95c889660aa8e0b2b62ede63d11ec88728bc6f72490d4ec7d91c189aa51be"
+    },
+    {
+      "path": "result_tables_pairs.tsv",
+      "bytes": 598489,
+      "sha256": "d12c337855634b76adda955203a70ac7affdfa3914cc9201e118ed72769615a4"
+    },
+    {
+      "path": "result_tables_spectrum.tsv",
+      "bytes": 101820,
+      "sha256": "fe885cd3e7dc7ffbea64f79d0fcdf2a9844f412fe8a4e3bd06b8ed0892509b59"
+    },
+    {
+      "path": "result_tables_summary.tsv",
+      "bytes": 402,
+      "sha256": "c500f2fd5679fd46976346d1696fada67bb8f45b7745d0fb779367b23c9fcbb8"
+    },
+    {
+      "path": "result_tables_trajectories.tsv",
+      "bytes": 1073968,
+      "sha256": "9fbddb2ebaa09dc4f0986dac03d9d5fdd29f8a4af25903a56850c260dba6b9ee"
+    },
+    {
+      "path": "results.json",
+      "bytes": 3105,
+      "sha256": "814e9d067b0902f2ef7e89098ba7a8e342001c465d55280fae8c7972eda2c73f"
+    },
+    {
+      "path": "robustness_a.json",
+      "bytes": 4798,
+      "sha256": "483b15fa452baed31c84c4ced4a8ba8c5bd2c38d490c2419d8dbb96275531d15"
+    },
+    {
+      "path": "robustness_b.json",
+      "bytes": 3879,
+      "sha256": "eaa1bc4e09384e48fc15c0dacf386e0abc28537bb3eb6d0ded7b0d45047062ad"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 2239,
+      "sha256": "2a3b708d4c234a97508e3039a8a5120ce6c5d84e04550525f5daacb90c0a35ba"
+    }
+  ],
+  "native_evidence_registry": {
+    "sources": [],
+    "resolved_ids": {}
+  },
+  "resolved_support_files": [
+    {
+      "path": "analysis.py",
+      "bytes": 10572,
+      "sha256": "beaaabb42f3a43e4fa36a3653c458f403fbaa4c0d3d49db24cbd0c205087c5d3"
+    },
+    {
+      "path": "figures/robustness_a.png",
+      "bytes": 145884,
+      "sha256": "84beacf7a5662ea335721abba4be93ec3c8e3f48e817e40aff3bfc3185d5c564"
+    },
+    {
+      "path": "figures/robustness_b.png",
+      "bytes": 156891,
+      "sha256": "aedc075d5123b22b968c32f1189b10c6831d0a79585702ca3ce4ce896976f89d"
+    },
+    {
+      "path": "figures/spectrum.png",
+      "bytes": 37297,
+      "sha256": "27900441b82da4145b91e0dce0cf5e38be2e4d4d3778d203c4ca75755779ccfb"
+    },
+    {
+      "path": "figures/trajectory.png",
+      "bytes": 61793,
+      "sha256": "b8d95c889660aa8e0b2b62ede63d11ec88728bc6f72490d4ec7d91c189aa51be"
+    },
+    {
+      "path": "result_tables_pairs.tsv",
+      "bytes": 598489,
+      "sha256": "d12c337855634b76adda955203a70ac7affdfa3914cc9201e118ed72769615a4"
+    },
+    {
+      "path": "result_tables_spectrum.tsv",
+      "bytes": 101820,
+      "sha256": "fe885cd3e7dc7ffbea64f79d0fcdf2a9844f412fe8a4e3bd06b8ed0892509b59"
+    },
+    {
+      "path": "result_tables_trajectories.tsv",
+      "bytes": 1073968,
+      "sha256": "9fbddb2ebaa09dc4f0986dac03d9d5fdd29f8a4af25903a56850c260dba6b9ee"
+    },
+    {
+      "path": "results.json",
+      "bytes": 3105,
+      "sha256": "814e9d067b0902f2ef7e89098ba7a8e342001c465d55280fae8c7972eda2c73f"
+    },
+    {
+      "path": "robustness_a.json",
+      "bytes": 4798,
+      "sha256": "483b15fa452baed31c84c4ced4a8ba8c5bd2c38d490c2419d8dbb96275531d15"
+    },
+    {
+      "path": "robustness_b.json",
+      "bytes": 3879,
+      "sha256": "eaa1bc4e09384e48fc15c0dacf386e0abc28537bb3eb6d0ded7b0d45047062ad"
+    }
+  ]
+}

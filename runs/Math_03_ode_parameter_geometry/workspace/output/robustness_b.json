@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "n_parameters": 4232,
+    "n_families": 2,
+    "n_modes": 4232,
+    "n_pairs": 13000,
+    "n_bins_log_sv": 20,
+    "n_quantiles": 5,
+    "n_bootstrap_reps": 3000,
+    "bootstrap_seed": 42,
+    "log_sv_base": "natural",
+    "flat_threshold": 0.01
+  },
+  "measurement": {
+    "baseline_mean": -0.00019493135904656792,
+    "baseline_abs_mean": 0.11801794087522209,
+    "baseline_corr": 0.7648078903065622,
+    "winsor_mean": -0.0021789167379745564,
+    "winsor_corr": 0.7680481687099464,
+    "outlier_excl_mean": 0.009789444205930177,
+    "outlier_excl_abs_mean": 0.10174952370331845,
+    "outlier_excl_corr": 0.8127418853353611,
+    "rel_mean": -0.00986369900705991,
+    "rel_frac_abs_lt_05": 0.957076923076923,
+    "corr_by_quantile": [
+      0.5762548955908421,
+      0.3542814986229951,
+      0.12427214691020289,
+      0.07153486176760826,
+      0.18929251886042417
+    ],
+    "bias_near_zero": true,
+    "corr_constant": false
+  },
+  "solver": {
+    "lof_without_fam0": -0.04673789808812674,
+    "lof_without_fam1": -0.1633827420319441,
+    "frac_fam0_gt_fam1": 0.9560491493383743,
+    "fam0_conv_lowsv_bin0": 1.0,
+    "fam1_conv_lowsv_bin0": 1.0,
+    "bootstrap_ci95": [
+      0.2160679549748494,
+      0.2229942789900067
+    ],
+    "sign_test_p": 1.0,
+    "solver_effect_real": true
+  },
+  "methods": {
+    "winsor": "clip meas and sim each at its own 5/95 percentile, then error mean and Pearson corr",
+    "outlier_excl": "drop bottom 10% and top 10% of pairs by |err| (keep middle 80%)",
+    "corr_by_quantile": "5 equal-frequency bins of sim value",
+    "lof_without_famX": "pooled slope-sv corr computed on the family other than famX",
+    "frac_fam0_gt_fam1": "mean(tot0 > tot1) over parameters",
+    "log_sv_bins": "20 equal-width bins on log_sv axis; lowest-SV bin = bin 0",
+    "bootstrap": "seed 42, 3000 parameter resamples of (mean tot0 - mean tot1); CI95 = 2.5/97.5 percentiles; sign_test_p = frac replicates with sign of diff",
+    "conclusions": {
+      "bias_near_zero": "two-sided normal test of mean err == 0 (p>0.05) AND |err_mean|/err_std < 0.1",
+      "corr_constant": "max-min of the 5 quantile correlations < 0.05",
+      "solver_effect_real": "bootstrap 95% CI for (mean tot0 - mean tot1) excludes 0"
+    },
+    "correlation_by_quantile_values": [
+      0.5762548955908421,
+      0.3542814986229951,
+      0.12427214691020289,
+      0.07153486176760826,
+      0.18929251886042417
+    ],
+    "corr_spread": 0.5047200338232338,
+    "t_stat": -0.1403028563148048,
+    "p_two": 1.0,
+    "p_one": 0.5557896461820557,
+    "winsor_err_ref": 0.0004823649010156255,
+    "fam0_corr_slope_sv": -0.1633827420319441,
+    "fam1_corr_slope_sv": -0.04673789808812674,
+    "conv0_by_bin": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.9333333333333333,
+      1.0,
+      1.0,
+      0.8333333333333334,
+      0.9545454545454546,
+      0.9745222929936306,
+      1.0,
+      1.0,
+      0.995260663507109,
+      0.9930434782608696,
+      1.0,
+      0.9910246821241586,
+      0.99375
+    ],
+    "conv1_by_bin": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.9936305732484076,
+      1.0,
+      1.0,
+      0.9976303317535545,
+      0.9982608695652174,
+      1.0,
+      0.9992520568436799,
+      0.9975
+    ]
+  },
+  "conclusions": {
+    "bias_is_near_zero": true,
+    "correlation_is_roughly_constant": false,
+    "solver_effect_is_real": true,
+    "note": "Bias (mean meas-sim) is near zero and insensitive to winsorization/outlier exclusion; meas-sim correlation is high overall (0.765) but NOT constant across simulation-value quantiles (corr_by_quantile=[0.576, 0.354, 0.124, 0.072, 0.189], spread=0.505, corr_constant=False). The fam0-vs-fam1 total-change difference is strongly positive and real (bootstrap CI excludes 0, sign-test p=1.0, 95.60% of parameters favor fam0); fam1 converges in the lowest-SV regime."
+  }
+}

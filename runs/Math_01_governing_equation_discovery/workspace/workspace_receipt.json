@@ -1,0 +1,11 @@
+{
+  "schema": "truthinsightbench-participant-workspace",
+  "release": "V1.0",
+  "task_id": "Math_01_governing_equation_discovery",
+  "t0": "2020-01-01",
+  "scientific_file_count": 2,
+  "scientific_bytes": 150920,
+  "data_manifest_sha256": "73a4b388b57117cb527c91def4920f191d4f93d7e4ee1a4a8e8c79bf42cd35d7",
+  "research_objective_sha256": "65c55bffb0e4668062247ccafa746dd3796069413d9b92c3abee7eb788900a73",
+  "launch_prompt_sha256": "0f4cafd2bc7a8b51b835101fa1d9032bc688caa09ac9ce12e60ff1bd4c68da3a"
+}

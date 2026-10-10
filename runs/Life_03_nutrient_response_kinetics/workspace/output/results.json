@@ -1,0 +1,525 @@
+{
+  "metadata": {
+    "task_id": "Life_03_nutrient_response_kinetics",
+    "files_loaded": {
+      "timecourse": {
+        "path": "/data/user/conversations/conv-934c9ec3-5973-4ed7-b05d-85b0bca120ef/project/data/nutrient_response_timecourse.tsv",
+        "rows": 40,
+        "columns": [
+          "system_state_id",
+          "time_min",
+          "replicate_id",
+          "normalized_signaling_response"
+        ]
+      },
+      "circulating_input": {
+        "path": "/data/user/conversations/conv-934c9ec3-5973-4ed7-b05d-85b0bca120ef/project/data/circulating_input_measurement.tsv",
+        "rows": 16,
+        "columns": [
+          "input_condition_role",
+          "system_state_id",
+          "replicate_id",
+          "measured_abundance_au"
+        ]
+      },
+      "tissue_uptake": {
+        "path": "/data/user/conversations/conv-934c9ec3-5973-4ed7-b05d-85b0bca120ef/project/data/tissue_uptake_measurement.tsv",
+        "rows": 12,
+        "columns": [
+          "tissue_id",
+          "system_state_id",
+          "replicate_id",
+          "uptake_measurement_au"
+        ]
+      },
+      "baseline": {
+        "path": "/data/user/conversations/conv-934c9ec3-5973-4ed7-b05d-85b0bca120ef/project/data/baseline_system_phenotype.tsv",
+        "rows": 76,
+        "columns": [
+          "anatomical_measure_id",
+          "system_state_id",
+          "replicate_id",
+          "measurement_value"
+        ]
+      }
+    },
+    "system_states": [
+      "background_state",
+      "perturbed_state"
+    ],
+    "n_input_roles": 2,
+    "input_roles": [
+      "nutrient_input",
+      "pre_input"
+    ],
+    "n_tissues": 2,
+    "tissues": [
+      "tissue_1",
+      "tissue_2"
+    ],
+    "n_anatomical_measures": 4,
+    "anatomical_measures": [
+      "anatomical_measure_1",
+      "anatomical_measure_2",
+      "anatomical_measure_3",
+      "anatomical_measure_4"
+    ],
+    "analysis_unit": "one biological replicate within a system state, tissue, input condition, or time course; repeated measures sharing a state are nested",
+    "note": "No missing values in any file (verified at load time)."
+  },
+  "time_course_kinetics": {
+    "by_state": {
+      "background_state": {
+        "n_rows": 20,
+        "n_replicates": 4,
+        "time_points_min": [
+          0.0,
+          5.0,
+          10.0,
+          20.0,
+          30.0
+        ],
+        "mean_response_by_time": {
+          "0.0": 1.0,
+          "5.0": 2.6146355000000003,
+          "10.0": 7.427175,
+          "20.0": 10.849082,
+          "30.0": 10.1906805
+        },
+        "std_response_by_time": {
+          "0.0": 0.40971391392612805,
+          "5.0": 1.1383032657499494,
+          "10.0": 2.04825209992683,
+          "20.0": 2.2513385806512245,
+          "30.0": 2.2867515944845582
+        },
+        "overall_mean": 6.4163146,
+        "overall_std_ddof1": 4.3691225759830035,
+        "peak_time_min": 20.0,
+        "peak_mean_response": 10.849082
+      },
+      "perturbed_state": {
+        "n_rows": 20,
+        "n_replicates": 4,
+        "time_points_min": [
+          0.0,
+          5.0,
+          10.0,
+          20.0,
+          30.0
+        ],
+        "mean_response_by_time": {
+          "0.0": 1.37493925,
+          "5.0": 3.6255535,
+          "10.0": 7.78104,
+          "20.0": 12.30818975,
+          "30.0": 11.16635225
+        },
+        "std_response_by_time": {
+          "0.0": 0.16197437370023493,
+          "5.0": 0.8822949001086126,
+          "10.0": 1.3602512289117779,
+          "20.0": 3.820613713413975,
+          "30.0": 3.2671903278668832
+        },
+        "overall_mean": 7.2512149500000005,
+        "overall_std_ddof1": 4.807953601812922,
+        "peak_time_min": 20.0,
+        "peak_mean_response": 12.30818975
+      }
+    },
+    "state_difference_by_time_min": {
+      "0.0": 0.37493924999999995,
+      "5.0": 1.0109179999999998,
+      "10.0": 0.3538649999999999,
+      "20.0": 1.4591077500000011,
+      "30.0": 0.9756717500000001
+    },
+    "state_difference_note": "perturbed_state mean minus background_state mean at each time point"
+  },
+  "circulating_input": {
+    "group_means": {
+      "background_state|pre_input": {
+        "mean_abundance_au": 1082.6466666666665,
+        "std_abundance_au_ddof1": 632.6742642413498,
+        "n": 3
+      },
+      "perturbed_state|pre_input": {
+        "mean_abundance_au": 1071.835,
+        "std_abundance_au_ddof1": 195.80608119599694,
+        "n": 4
+      },
+      "background_state|nutrient_input": {
+        "mean_abundance_au": 8164.6925,
+        "std_abundance_au_ddof1": 4210.258595299304,
+        "n": 4
+      },
+      "perturbed_state|nutrient_input": {
+        "mean_abundance_au": 10857.932,
+        "std_abundance_au_ddof1": 4153.9719151096815,
+        "n": 5
+      }
+    },
+    "state_difference_by_condition": {
+      "background_state|nutrient_input": {
+        "perturbed_minus_background": 2693.2395000000006
+      },
+      "perturbed_state|nutrient_input": {
+        "perturbed_minus_background": 2693.2395000000006
+      },
+      "background_state|pre_input": {
+        "perturbed_minus_background": -10.811666666666497
+      },
+      "perturbed_state|pre_input": {
+        "perturbed_minus_background": -10.811666666666497
+      }
+    },
+    "condition_difference_by_state": {
+      "background_state": {
+        "nutrient_input_minus_pre_input": 7082.045833333334
+      },
+      "perturbed_state": {
+        "nutrient_input_minus_pre_input": 9786.097000000002
+      }
+    },
+    "state_difference_note": "perturbed_state minus background_state mean abundance at each condition",
+    "condition_difference_note": "nutrient_input minus pre_input mean abundance at each state"
+  },
+  "tissue_uptake": {
+    "group_means": {
+      "tissue_1|background_state": {
+        "mean_uptake_au": 1099.2288386666667,
+        "std_uptake_au_ddof1": 152.25468637256824,
+        "n": 3
+      },
+      "tissue_1|perturbed_state": {
+        "mean_uptake_au": 1092.3754713333333,
+        "std_uptake_au_ddof1": 183.14234446180402,
+        "n": 3
+      },
+      "tissue_2|background_state": {
+        "mean_uptake_au": 406.7789486666666,
+        "std_uptake_au_ddof1": 80.34091174795445,
+        "n": 3
+      },
+      "tissue_2|perturbed_state": {
+        "mean_uptake_au": 296.0242143333333,
+        "std_uptake_au_ddof1": 113.33341694070958,
+        "n": 3
+      }
+    },
+    "tissue_difference_by_state": {
+      "background_state": {
+        "tissue_1_minus_tissue_2": 692.4498900000001
+      },
+      "perturbed_state": {
+        "tissue_1_minus_tissue_2": 796.351257
+      }
+    },
+    "state_difference_by_tissue": {
+      "tissue_1": {
+        "perturbed_minus_background": -6.853367333333381
+      },
+      "tissue_2": {
+        "perturbed_minus_background": -110.75473433333332
+      }
+    },
+    "tissue_difference_note": "tissue_1 minus tissue_2 mean uptake at each state",
+    "state_difference_note": "perturbed_state minus background_state mean uptake at each tissue"
+  },
+  "baseline_phenotype": {
+    "group_means": {
+      "anatomical_measure_1|background_state": {
+        "mean_measurement_value": 8.039166666666665,
+        "std_measurement_value_ddof1": 1.8586185404186302,
+        "n": 12
+      },
+      "anatomical_measure_1|perturbed_state": {
+        "mean_measurement_value": 7.432857142857143,
+        "std_measurement_value_ddof1": 0.93474977553201,
+        "n": 7
+      },
+      "anatomical_measure_2|background_state": {
+        "mean_measurement_value": 9.948333333333332,
+        "std_measurement_value_ddof1": 1.4542466549156419,
+        "n": 12
+      },
+      "anatomical_measure_2|perturbed_state": {
+        "mean_measurement_value": 8.345714285714285,
+        "std_measurement_value_ddof1": 0.7021599329416138,
+        "n": 7
+      },
+      "anatomical_measure_3|background_state": {
+        "mean_measurement_value": 172.71500000000003,
+        "std_measurement_value_ddof1": 17.799151409802967,
+        "n": 12
+      },
+      "anatomical_measure_3|perturbed_state": {
+        "mean_measurement_value": 119.87857142857142,
+        "std_measurement_value_ddof1": 16.3782614345677,
+        "n": 7
+      },
+      "anatomical_measure_4|background_state": {
+        "mean_measurement_value": 52.58416666666667,
+        "std_measurement_value_ddof1": 5.599380579920236,
+        "n": 12
+      },
+      "anatomical_measure_4|perturbed_state": {
+        "mean_measurement_value": 40.682857142857145,
+        "std_measurement_value_ddof1": 6.277599632252533,
+        "n": 7
+      }
+    },
+    "state_difference_by_measure": {
+      "anatomical_measure_1": {
+        "perturbed_minus_background": -0.6063095238095215
+      },
+      "anatomical_measure_2": {
+        "perturbed_minus_background": -1.6026190476190472
+      },
+      "anatomical_measure_3": {
+        "perturbed_minus_background": -52.83642857142861
+      },
+      "anatomical_measure_4": {
+        "perturbed_minus_background": -11.901309523809523
+      }
+    },
+    "state_difference_note": "perturbed_state minus background_state mean value at each anatomical measure"
+  },
+  "correlations": {
+    "by_state": {
+      "background_state": {
+        "n_pairs": 4,
+        "replicates": [
+          "replicate_1",
+          "replicate_2",
+          "replicate_3",
+          "replicate_4"
+        ],
+        "peak_time_min": 20.0,
+        "baseline_mean_per_replicate": [
+          59.17,
+          59.755,
+          59.8375,
+          59.6075
+        ],
+        "peak_response_per_replicate": [
+          9.732599,
+          8.217009,
+          12.77531,
+          12.67141
+        ],
+        "r": 0.27055316694326004,
+        "p": 0.7294468330567399
+      },
+      "perturbed_state": {
+        "n_pairs": 4,
+        "replicates": [
+          "replicate_1",
+          "replicate_2",
+          "replicate_3",
+          "replicate_4"
+        ],
+        "peak_time_min": 20.0,
+        "baseline_mean_per_replicate": [
+          43.3125,
+          45.76,
+          35.167500000000004,
+          39.465
+        ],
+        "peak_response_per_replicate": [
+          16.95511,
+          13.49612,
+          10.76253,
+          8.018999
+        ],
+        "r": 0.6027665812161982,
+        "p": 0.3972334187838018
+      }
+    },
+    "pooled": {
+      "n_pairs": 8,
+      "pooled_r": -0.09991934853442178,
+      "pooled_p": 0.8138944646043681,
+      "definition": "pool all matched (state, replicate) pairs across both states and compute Pearson r"
+    },
+    "robustness": {
+      "background_state": {
+        "leave_one_out_r": {
+          "replicate_1": -0.14129975933362937,
+          "replicate_2": 0.9505057935408059,
+          "replicate_3": -0.06238446501823257,
+          "replicate_4": 0.2999691907021922
+        }
+      },
+      "perturbed_state": {
+        "leave_one_out_r": {
+          "replicate_1": 0.5899513641182962,
+          "replicate_2": 0.6525674889492222,
+          "replicate_3": 0.7039610556017104,
+          "replicate_4": 0.6868702731657843
+        }
+      }
+    },
+    "robustness_note": "leave-one-out Pearson r per state (drop each replicate, recompute r on remaining pairs)"
+  },
+  "statistical_tests": {
+    "tests": {
+      "time_course_peak_response": {
+        "label": "perturbed_state vs background_state peak signaling response",
+        "a_mean": 12.30818975,
+        "a_std_ddof1": 3.8206137134139744,
+        "a_n": 4,
+        "b_mean": 10.849082,
+        "b_std_ddof1": 2.2513385806512236,
+        "b_n": 4,
+        "t_statistic": 0.65805712922546,
+        "t_pvalue": 0.5349194824145979,
+        "mannwhitney_u_statistic": 10.0,
+        "mannwhitney_u_pvalue": 0.6857142857142857,
+        "cohens_d": 0.4653166584834749
+      },
+      "circulating_input_pre_input": {
+        "label": "perturbed_state vs background_state pre_input",
+        "a_mean": 1071.835,
+        "a_std_ddof1": 195.80608119599694,
+        "a_n": 4,
+        "b_mean": 1082.6466666666665,
+        "b_std_ddof1": 632.6742642413498,
+        "b_n": 3,
+        "t_statistic": -0.03308054397404793,
+        "t_pvalue": 0.9748903037889688,
+        "mannwhitney_u_statistic": 8.0,
+        "mannwhitney_u_pvalue": 0.6285714285714286,
+        "cohens_d": -0.02526568279856498
+      },
+      "circulating_input_nutrient_input": {
+        "label": "perturbed_state vs background_state nutrient_input",
+        "a_mean": 10857.932,
+        "a_std_ddof1": 4153.9719151096815,
+        "a_n": 5,
+        "b_mean": 8164.6925,
+        "b_std_ddof1": 4210.258595299304,
+        "b_n": 4,
+        "t_statistic": 0.9609057223476767,
+        "t_pvalue": 0.36860781176599144,
+        "mannwhitney_u_statistic": 13.0,
+        "mannwhitney_u_pvalue": 0.5555555555555556,
+        "cohens_d": 0.644595154541383
+      },
+      "tissue_uptake_tissue_1": {
+        "label": "perturbed_state vs background_state tissue_1",
+        "a_mean": 1092.3754713333333,
+        "a_std_ddof1": 183.14234446180402,
+        "a_n": 3,
+        "b_mean": 1099.2288386666667,
+        "b_std_ddof1": 152.25468637256824,
+        "b_n": 3,
+        "t_statistic": -0.0498409765191463,
+        "t_pvalue": 0.9626386004906082,
+        "mannwhitney_u_statistic": 5.0,
+        "mannwhitney_u_pvalue": 1.0,
+        "cohens_d": -0.04069498691798203
+      },
+      "tissue_uptake_tissue_2": {
+        "label": "perturbed_state vs background_state tissue_2",
+        "a_mean": 296.0242143333333,
+        "a_std_ddof1": 113.33341694070958,
+        "a_n": 3,
+        "b_mean": 406.7789486666666,
+        "b_std_ddof1": 80.34091174795445,
+        "b_n": 3,
+        "t_statistic": -1.3808741889823317,
+        "t_pvalue": 0.23945359567012456,
+        "mannwhitney_u_statistic": 2.0,
+        "mannwhitney_u_pvalue": 0.4,
+        "cohens_d": -1.1274790539954205
+      },
+      "baseline_anatomical_measure_1": {
+        "label": "perturbed_state vs background_state anatomical_measure_1",
+        "a_mean": 7.432857142857143,
+        "a_std_ddof1": 0.93474977553201,
+        "a_n": 7,
+        "b_mean": 8.039166666666665,
+        "b_std_ddof1": 1.8586185404186302,
+        "b_n": 12,
+        "t_statistic": -0.7993383366602127,
+        "t_pvalue": 0.4351212775730936,
+        "mannwhitney_u_statistic": 38.0,
+        "mannwhitney_u_pvalue": 0.7732396602365642,
+        "cohens_d": -0.38016120879737436
+      },
+      "baseline_anatomical_measure_2": {
+        "label": "perturbed_state vs background_state anatomical_measure_2",
+        "a_mean": 8.345714285714285,
+        "a_std_ddof1": 0.7021599329416138,
+        "a_n": 7,
+        "b_mean": 9.948333333333332,
+        "b_std_ddof1": 1.4542466549156419,
+        "b_n": 12,
+        "t_statistic": -2.713252290132752,
+        "t_pvalue": 0.014760762965763665,
+        "mannwhitney_u_statistic": 9.0,
+        "mannwhitney_u_pvalue": 0.00599679030297212,
+        "cohens_d": -1.2904088582799649
+      },
+      "baseline_anatomical_measure_3": {
+        "label": "perturbed_state vs background_state anatomical_measure_3",
+        "a_mean": 119.87857142857142,
+        "a_std_ddof1": 16.3782614345677,
+        "a_n": 7,
+        "b_mean": 172.71500000000003,
+        "b_std_ddof1": 17.799151409802967,
+        "b_n": 12,
+        "t_statistic": -6.417628320475655,
+        "t_pvalue": 6.3710706101072706e-06,
+        "mannwhitney_u_statistic": 0.0,
+        "mannwhitney_u_pvalue": 3.9691990156386444e-05,
+        "cohens_d": -3.0521910785837667
+      },
+      "baseline_anatomical_measure_4": {
+        "label": "perturbed_state vs background_state anatomical_measure_4",
+        "a_mean": 40.682857142857145,
+        "a_std_ddof1": 6.277599632252533,
+        "a_n": 7,
+        "b_mean": 52.58416666666667,
+        "b_std_ddof1": 5.599380579920236,
+        "b_n": 12,
+        "t_statistic": -4.279267914854259,
+        "t_pvalue": 0.0005071139361177682,
+        "mannwhitney_u_statistic": 7.0,
+        "mannwhitney_u_pvalue": 0.00178613955703739,
+        "cohens_d": -2.0351978488557707
+      }
+    },
+    "methods": {
+      "t_test": "independent two-sample Student t-test (scipy.stats.ttest_ind, equal_var=True)",
+      "mannwhitney_u": "scipy.stats.mannwhitneyu, alternative='two-sided'",
+      "cohens_d": "(mean_perturbed - mean_background) / pooled standard deviation"
+    }
+  },
+  "robustness": {
+    "time_course_peak_response_matched_leave_one_out": {
+      "0": {
+        "t_pvalue": 0.8425934169650874,
+        "mannwhitney_u_pvalue": 1.0,
+        "cohens_d": -0.1729606965444304
+      },
+      "1": {
+        "t_pvalue": 0.9507211761680144,
+        "mannwhitney_u_pvalue": 1.0,
+        "cohens_d": 0.053696315325726385
+      },
+      "2": {
+        "t_pvalue": 0.4196607993470539,
+        "mannwhitney_u_pvalue": 0.7,
+        "cohens_d": 0.7337164721457954
+      },
+      "3": {
+        "t_pvalue": 0.19319092775014096,
+        "mannwhitney_u_pvalue": 0.2,
+        "cohens_d": 1.2758223707086334
+      }
+    }
+  }
+}

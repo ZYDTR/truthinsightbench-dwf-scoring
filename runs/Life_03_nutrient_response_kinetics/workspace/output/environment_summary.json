@@ -1,0 +1,88 @@
+{
+  "python_version": "3.11.2",
+  "packages": {
+    "pandas": {
+      "import": true,
+      "version": "3.0.5"
+    },
+    "numpy": {
+      "import": true,
+      "version": "2.4.6"
+    },
+    "scipy": {
+      "import": false
+    },
+    "matplotlib": {
+      "import": false
+    },
+    "statsmodels": {
+      "import": false
+    }
+  },
+  "files": {
+    "nutrient_response_timecourse.tsv": {
+      "rows": 40,
+      "columns": [
+        "system_state_id",
+        "time_min",
+        "replicate_id",
+        "normalized_signaling_response"
+      ],
+      "dtypes": {
+        "system_state_id": "str",
+        "time_min": "float64",
+        "replicate_id": "str",
+        "normalized_signaling_response": "float64"
+      },
+      "total_missing_values": 0
+    },
+    "circulating_input_measurement.tsv": {
+      "rows": 16,
+      "columns": [
+        "input_condition_role",
+        "system_state_id",
+        "replicate_id",
+        "measured_abundance_au"
+      ],
+      "dtypes": {
+        "input_condition_role": "str",
+        "system_state_id": "str",
+        "replicate_id": "str",
+        "measured_abundance_au": "float64"
+      },
+      "total_missing_values": 0
+    },
+    "tissue_uptake_measurement.tsv": {
+      "rows": 12,
+      "columns": [
+        "tissue_id",
+        "system_state_id",
+        "replicate_id",
+        "uptake_measurement_au"
+      ],
+      "dtypes": {
+        "tissue_id": "str",
+        "system_state_id": "str",
+        "replicate_id": "str",
+        "uptake_measurement_au": "float64"
+      },
+      "total_missing_values": 0
+    },
+    "baseline_system_phenotype.tsv": {
+      "rows": 76,
+      "columns": [
+        "anatomical_measure_id",
+        "system_state_id",
+        "replicate_id",
+        "measurement_value"
+      ],
+      "dtypes": {
+        "anatomical_measure_id": "str",
+        "system_state_id": "str",
+        "replicate_id": "str",
+        "measurement_value": "float64"
+      },
+      "total_missing_values": 0
+    }
+  }
+}

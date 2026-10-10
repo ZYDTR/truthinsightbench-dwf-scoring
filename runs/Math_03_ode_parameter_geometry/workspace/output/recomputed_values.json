@@ -1,0 +1,29 @@
+{
+  "purpose": "Independent recomputation (this run, from data/ only) to verify the child artifacts. Values are reproduced here so the correction-evidence Provenance claim is itself reproducible. The recomputation command and its executable source are recorded below.",
+  "source_data": [
+    "data/singular_value_spectrum.tsv",
+    "data/parameter_trajectories.tsv",
+    "data/measurement_simulation_pairs.tsv"
+  ],
+  "recomputation_command": "cd /data/user/conversations/conv-c59f3f82-1c0f-4cac-9a42-86dc073cd65e/project && python3 output/verify_corrections.py",
+  "executable_source": "output/verify_corrections.py",
+  "spectrum_models": {
+    "linear_raw_scale_slope": -4.285991340480605e-05,
+    "linear_raw_scale_R2": 0.22538580157963262,
+    "powerlaw_loglog_slope": -7.75088982404608,
+    "powerlaw_loglog_R2": 0.3321509033747969,
+    "exponential_log_index_slope": -0.008774119724963426,
+    "exponential_log_index_R2": 0.641630268176409,
+    "best_model": "exponential",
+    "span_orders10": 36.32128653572685,
+    "early_slope": -0.004316761249815842,
+    "tail_slope": -0.059967013580774865
+  },
+  "cross_check": {
+    "robustness_a_json_linear_slope": -4.285991340480605e-05,
+    "robustness_a_matches_recomputation": true,
+    "structured_output_journal_value": -4.285991340480605,
+    "structured_output_note": "dropped the e-05 exponent; 1e5 off from the true value",
+    "affects_any_finding": false
+  }
+}

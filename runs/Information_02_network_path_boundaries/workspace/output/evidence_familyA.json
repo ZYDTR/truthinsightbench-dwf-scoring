@@ -1,0 +1,29 @@
+{
+  "family": "A_strongly_connected",
+  "monotonicity_holds": true,
+  "monotonicity_violations": [],
+  "cycle_extremum_ok": true,
+  "cycle_detail": [],
+  "diam2_only_at_max": true,
+  "diam2_L_values": [
+    10,
+    14,
+    18,
+    22
+  ],
+  "reference": {
+    "n_nodes": 8,
+    "n_arcs": 11,
+    "avg_path": 2.3392857142857144,
+    "global_efficiency": 0.5178571428571427,
+    "diameter": 4,
+    "strongly_connected": true,
+    "stored_path": 2.3392857142857144,
+    "stored_eff": 0.5178571428571429,
+    "stored_diam": 4.0,
+    "path_match": true,
+    "eff_match": true,
+    "diam_match": true,
+    "reference_matches_stored": true
+  }
+}
