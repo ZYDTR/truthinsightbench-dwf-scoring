@@ -1,0 +1,43 @@
+{
+  "schema": "tib-historical-manual-review-publication.v1",
+  "review_date": "2026-09-24",
+  "published_date": "2026-10-10",
+  "evaluation_type": "manual_provisional_review_not_original_evaluator",
+  "task_count": 27,
+  "registered_finding_count": 128,
+  "mean": 66.30740740740741,
+  "median": 68.2,
+  "covered_exports_manifest": "versions/20260924-27/export_manifest.json",
+  "coverage": "Exactly the original 27 DWF exports; excludes the later 13 additions and all first-round Conversation scores.",
+  "source_commit_for_reviewed_exports": "ace8ab84c407201a089a45ff7e572092c6f27f87",
+  "source_report_sha256": "e25ea1ad01997d6ec633a7b968fd7c96dae263ef839da391a385eecca00b9bc1",
+  "source_summary_sha256": "1a4dcfe6c6bc6412c4857ed9cd47cd0bb43491a0021d667f6a7db7f42694a156",
+  "published_file_sha256": {
+    "truthinsightbench_manual_scores.xlsx": "e0cdd17352a98a31552e0e74acb0e641d348051b0e9978391a88a34116ca0d04",
+    "review_report_zh.md": "e25ea1ad01997d6ec633a7b968fd7c96dae263ef839da391a385eecca00b9bc1",
+    "review_summary.json": "0530471211c5b9599027b5a58084b4656dc584e5ea876eba2d7eb6b11fe4bb6d"
+  },
+  "preservation": {
+    "workbook_byte_identical_to_source": true,
+    "report_byte_identical_to_source": true,
+    "summary_numeric_and_review_content_unchanged": true,
+    "summary_metadata_change": "source is a repository-relative review_report_zh.md instead of a private workstation path; JSON serialization may differ.",
+    "original_local_files_modified": false,
+    "registered_runs_and_original_scorer_modified": false
+  },
+  "verification": {
+    "workbook_sheets": 8,
+    "cached_summary_fields_compared_with_json": 270,
+    "cached_error_cells": 0,
+    "known_credential_values_checked": 52,
+    "expanded_xlsx_archive_privacy_issues": 0,
+    "macro_or_external_workbook_links_present": false,
+    "workbook_recalculated": false,
+    "new_scientific_scoring_performed": false
+  },
+  "limits": [
+    "Historical manual provisional scores, not original Evaluator judge results.",
+    "Novelty item 5.2 was unverified and provisionally assigned zero in the original review.",
+    "The source report names additional JSON/CSV/recomputation files that were not found in the supplied local archive; they are not invented or claimed as part of this publication."
+  ]
+}

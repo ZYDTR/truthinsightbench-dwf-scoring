@@ -2,7 +2,7 @@
 
 Public, self-contained scoring package for **all 40 released TruthInsightBench V1.0 DWF tasks**, covering **177 registered findings**. It contains the original evaluator and frozen scoring assets, the registered task inputs, the submitted outputs, and integrity-bound run receipts. `export_manifest.json` lists the exact included tasks and input/output commitments.
 
-The tasks are **ready to score, not already scored**. The original 27 exports (128 findings) remain byte-identical to commit `ace8ab84c407201a089a45ff7e572092c6f27f87`. Their model provenance is mixed: early runs used DeepSeek, later runs used Bonsai, and a few snapshots contain both. The versioned extension adds the remaining 13 released tasks (49 findings), whose observed assistant model is `bonsai2-27b-pq2`. Each `runs/<task_id>/export_evidence.json` records model counts read from source SDK JSONL; those SDK logs are not copied into the package.
+All 40 exports are ready for the original Evaluator's formal scoring. A historical **manual provisional review of the original 27** is also preserved below; it is separate from an original Evaluator judge run. The original 27 exports (128 findings) remain byte-identical to commit `ace8ab84c407201a089a45ff7e572092c6f27f87`. Their model provenance is mixed: early runs used DeepSeek, later runs used Bonsai, and a few snapshots contain both. The versioned extension adds the remaining 13 released tasks (49 findings), whose observed assistant model is `bonsai2-27b-pq2`. Each `runs/<task_id>/export_evidence.json` records model counts read from source SDK JSONL; those SDK logs are not copied into the package.
 
 ## Layout
 
@@ -16,6 +16,18 @@ The tasks are **ready to score, not already scored**. The original 27 exports (1
 - `scripts/export_completed.py`: unchanged original 27-task, no-overwrite adapter.
 - `scripts/extend_completed.py`: one-time versioned extension adapter; resolves released independent attempts and refuses existing destinations.
 - `scripts/audit_exports.py`: read-only credential, runtime-log, and frozen-base audit.
+- `reports/manual_review_20260924/`: historical manual provisional scores for the original 27 DWF exports.
+
+## Historical manual scores: original 27 DWF tasks
+
+The review dated **2026-09-24** covers exactly the original 27 DWF exports and 128 registered findings. Its mean is **66.3/100** and median **68.2**. These are historical manual provisional scores, not original Evaluator judge results. The later 13 additions are outside this review, and the earlier Conversation round's scores are not mixed into it.
+
+- [Excel score workbook](reports/manual_review_20260924/truthinsightbench_manual_scores.xlsx)
+- [Chinese per-task review report](reports/manual_review_20260924/review_report_zh.md)
+- [Machine-readable score summary](reports/manual_review_20260924/review_summary.json)
+- [Publication provenance and hash receipt](reports/manual_review_20260924/publication_manifest.json)
+
+The Excel workbook and review report are byte-identical to the local historical archive. The JSON summary preserves all scores and review content; its private `source` path is replaced with a relative report filename. Workbook formulas and cached values were retained, with 270 cached summary fields checked against the JSON. This publication does not recalculate or rejudge the historical review. Novelty item 5.2 was unverified and provisionally assigned zero, as explained in the report. Additional JSON/CSV files mentioned by that report were not found in the supplied local archive and are not represented as included files.
 
 ## Validate without a judge call
 
@@ -41,7 +53,7 @@ The scoring work directory must be empty. The final results are written to `scor
 
 ## Receipt semantics and limits
 
-The original evaluator expects an Agent-run `platform_exit_code=0`. SAP DWF runs instead have release, validation, and frozen snapshot receipts rather than an Agent-run process exit code. The adapter sets the required zero **only as a compatibility normalization** after checking `RELEASED`, passing validation, unchanged registered inputs, and a frozen nonempty output. It is **not** evidence that a platform process emitted exit code zero. Original release flags, including any false or unavailable `jsonl_result_event`, are preserved in `export_evidence.json`. No result is represented as a measured score until the judge path actually runs.
+The original evaluator expects an Agent-run `platform_exit_code=0`. SAP DWF runs instead have release, validation, and frozen snapshot receipts rather than an Agent-run process exit code. The adapter sets the required zero **only as a compatibility normalization** after checking `RELEASED`, passing validation, unchanged registered inputs, and a frozen nonempty output. It is **not** evidence that a platform process emitted exit code zero. Original release flags, including any false or unavailable `jsonl_result_event`, are preserved in `export_evidence.json`. No manual-review or dry-run result is represented as an original Evaluator score.
 
 The evaluator and task assets are copied unchanged from TruthInsightBench V1.0. The export adapter and documentation are new. The original Apache-2.0 license and third-party notices are retained under `TruthInsightBench/`.
 

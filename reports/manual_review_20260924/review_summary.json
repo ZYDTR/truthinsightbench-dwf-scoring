@@ -1,0 +1,1469 @@
+{
+  "source": "review_report_zh.md",
+  "source_sha256": "e25ea1ad01997d6ec633a7b968fd7c96dae263ef839da391a385eecca00b9bc1",
+  "evaluation_type": "人工审阅暂评分，非原Evaluator执行结果",
+  "task_count": 27,
+  "registered_finding_count": 128,
+  "mean": 66.30740740740741,
+  "median": 68.2,
+  "min": 47.6,
+  "max": 72.6,
+  "score_bands": {
+    "70及以上": 3,
+    "60至不足70": 20,
+    "不足60": 4
+  },
+  "target_score_counts": {
+    "0.0": 2,
+    "2.5": 3,
+    "5.0": 18,
+    "7.5": 2,
+    "10.0": 2
+  },
+  "mean_target_score": 4.907407407407407,
+  "yield_full_count": 23,
+  "domain_summary": {
+    "Astronomy": {
+      "count": 3,
+      "mean": 67.2
+    },
+    "Chemistry": {
+      "count": 3,
+      "mean": 67.83333333333333
+    },
+    "EarthScience": {
+      "count": 4,
+      "mean": 68.85
+    },
+    "Energy": {
+      "count": 4,
+      "mean": 70.25
+    },
+    "Information": {
+      "count": 1,
+      "mean": 66.9
+    },
+    "Life": {
+      "count": 3,
+      "mean": 69.26666666666667
+    },
+    "Math": {
+      "count": 1,
+      "mean": 69.8
+    },
+    "Neuro": {
+      "count": 3,
+      "mean": 67
+    },
+    "Physics": {
+      "count": 5,
+      "mean": 56.66
+    }
+  },
+  "full_novelty_scenario_mean": 71.25555555555556,
+  "no_dedup_scenario_mean": 66.45555555555555,
+  "tasks": [
+    {
+      "task_id": "Astronomy_01_radio_burst_drift",
+      "score": 62.1,
+      "s1": 66.5,
+      "s2": 61,
+      "yield": 10,
+      "target_a": 0,
+      "target_b": 0,
+      "target_score": 0,
+      "penalty": 0,
+      "full_novelty_scenario": 66.9,
+      "no_dedup_scenario": 62.1,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "Astronomy_02_gravity_spectral_structure",
+      "score": 70.6,
+      "s1": 66.5,
+      "s2": 66,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 1,
+      "target_score": 7.5,
+      "penalty": 0,
+      "full_novelty_scenario": 75.4,
+      "no_dedup_scenario": 70.6,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "Astronomy_03_stellar_spectral_boundary",
+      "score": 68.9,
+      "s1": 67.5,
+      "s2": 67,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 73.7,
+      "no_dedup_scenario": 68.9,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "Chemistry_01_bond_enthalpy_domain",
+      "score": 67.1,
+      "s1": 66.5,
+      "s2": 61,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 71.9,
+      "no_dedup_scenario": 67.1,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "Chemistry_02_photoionization_delay",
+      "score": 66.3,
+      "s1": 67.5,
+      "s2": 66.5,
+      "yield": 10,
+      "target_a": 0,
+      "target_b": 0.5,
+      "target_score": 2.5,
+      "penalty": 0,
+      "full_novelty_scenario": 71.1,
+      "no_dedup_scenario": 66.3,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "Chemistry_03_catalysis_response_landscape",
+      "score": 70.1,
+      "s1": 69,
+      "s2": 68.5,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 74.9,
+      "no_dedup_scenario": 70.1,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "EarthScience_01_glacial_fluvial_erosion",
+      "score": 68.2,
+      "s1": 66.5,
+      "s2": 66.5,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 73,
+      "no_dedup_scenario": 68.2,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "EarthScience_02_ice_particle_composition",
+      "score": 68.2,
+      "s1": 66.5,
+      "s2": 66.5,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 73,
+      "no_dedup_scenario": 68.2,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "EarthScience_03_ice_core_event_structure",
+      "score": 69.2,
+      "s1": 68,
+      "s2": 67,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 74,
+      "no_dedup_scenario": 69.2,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "EarthScience_04_ocean_thermal_coupling",
+      "score": 69.8,
+      "s1": 68.5,
+      "s2": 68.5,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 74.6,
+      "no_dedup_scenario": 69.8,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "Energy_01_photocatalytic_tradeoffs",
+      "score": 69.8,
+      "s1": 68.5,
+      "s2": 68.5,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 74.6,
+      "no_dedup_scenario": 69.8,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "Energy_02_flow_battery_operating_boundary",
+      "score": 69.2,
+      "s1": 68.5,
+      "s2": 65.5,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 74,
+      "no_dedup_scenario": 69.2,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "Energy_03_interface_response_boundaries",
+      "score": 69.4,
+      "s1": 68.5,
+      "s2": 66.5,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 74.2,
+      "no_dedup_scenario": 69.4,
+      "observed_models": [
+        "bonsai2-27b-pq2",
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "bonsai2-27b-pq2"
+    },
+    {
+      "task_id": "Energy_04_biohybrid_operating_tradeoffs",
+      "score": 72.6,
+      "s1": 66.5,
+      "s2": 63.5,
+      "yield": 10,
+      "target_a": 1,
+      "target_b": 1,
+      "target_score": 10,
+      "penalty": 0,
+      "full_novelty_scenario": 77.4,
+      "no_dedup_scenario": 72.6,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "Information_03_signal_surface_invariants",
+      "score": 66.9,
+      "s1": 68.5,
+      "s2": 66.5,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0,
+      "target_score": 2.5,
+      "penalty": 0,
+      "full_novelty_scenario": 71.7,
+      "no_dedup_scenario": 66.9,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "Life_02_contextual_immune_response",
+      "score": 69.8,
+      "s1": 68.5,
+      "s2": 68.5,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 74.6,
+      "no_dedup_scenario": 69.8,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "Life_04_environmental_transfer_boundary",
+      "score": 68.2,
+      "s1": 66.5,
+      "s2": 66.5,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 73,
+      "no_dedup_scenario": 68.2,
+      "observed_models": [
+        "bonsai2-27b-pq2",
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "bonsai2-27b-pq2"
+    },
+    {
+      "task_id": "Life_05_developmental_interaction_structure",
+      "score": 69.8,
+      "s1": 68.5,
+      "s2": 68.5,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 74.6,
+      "no_dedup_scenario": 69.8,
+      "observed_models": [
+        "bonsai2-27b-pq2",
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "bonsai2-27b-pq2"
+    },
+    {
+      "task_id": "Math_02_compositional_invariants",
+      "score": 69.8,
+      "s1": 68.5,
+      "s2": 68.5,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 74.6,
+      "no_dedup_scenario": 69.8,
+      "observed_models": [
+        "deepseek-v4.1-flash-max"
+      ],
+      "model_group": "deepseek-v4.1-flash-max"
+    },
+    {
+      "task_id": "Neuro_02_calcium_response_regions",
+      "score": 65.7,
+      "s1": 63.5,
+      "s2": 63,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 70.5,
+      "no_dedup_scenario": 65.7,
+      "observed_models": [
+        "bonsai2-27b-pq2"
+      ],
+      "model_group": "bonsai2-27b-pq2"
+    },
+    {
+      "task_id": "Neuro_03_spatial_code_stability",
+      "score": 68.2,
+      "s1": 66.5,
+      "s2": 66.5,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 73,
+      "no_dedup_scenario": 68.2,
+      "observed_models": [
+        "bonsai2-27b-pq2"
+      ],
+      "model_group": "bonsai2-27b-pq2"
+    },
+    {
+      "task_id": "Neuro_04_temporal_geometry",
+      "score": 67.1,
+      "s1": 66.5,
+      "s2": 61,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 0,
+      "full_novelty_scenario": 71.9,
+      "no_dedup_scenario": 67.1,
+      "observed_models": [
+        "bonsai2-27b-pq2"
+      ],
+      "model_group": "bonsai2-27b-pq2"
+    },
+    {
+      "task_id": "Physics_01_dynamic_nuclear_polarization_echoes",
+      "score": 47.6,
+      "s1": 53,
+      "s2": 49,
+      "yield": 6,
+      "target_a": 0,
+      "target_b": 0,
+      "target_score": 0,
+      "penalty": 0,
+      "full_novelty_scenario": 54.4,
+      "no_dedup_scenario": 47.6,
+      "observed_models": [
+        "bonsai2-27b-pq2"
+      ],
+      "model_group": "bonsai2-27b-pq2"
+    },
+    {
+      "task_id": "Physics_02_multiorbital_transition",
+      "score": 54.4,
+      "s1": 56.5,
+      "s2": 52.5,
+      "yield": 10,
+      "target_a": 0.5,
+      "target_b": 0.5,
+      "target_score": 5,
+      "penalty": 5,
+      "full_novelty_scenario": 59.2,
+      "no_dedup_scenario": 54.4,
+      "observed_models": [
+        "bonsai2-27b-pq2"
+      ],
+      "model_group": "bonsai2-27b-pq2"
+    },
+    {
+      "task_id": "Physics_03_controlled_dynamics_forecast",
+      "score": 59.4,
+      "s1": 56,
+      "s2": 51.5,
+      "yield": 8,
+      "target_a": 0.5,
+      "target_b": 1,
+      "target_score": 7.5,
+      "penalty": 0,
+      "full_novelty_scenario": 64.2,
+      "no_dedup_scenario": 61.4,
+      "observed_models": [
+        "bonsai2-27b-pq2"
+      ],
+      "model_group": "bonsai2-27b-pq2"
+    },
+    {
+      "task_id": "Physics_04_temporal_delay_transition",
+      "score": 54.4,
+      "s1": 55.5,
+      "s2": 53,
+      "yield": 8,
+      "target_a": 0,
+      "target_b": 0.5,
+      "target_score": 2.5,
+      "penalty": 0,
+      "full_novelty_scenario": 61.2,
+      "no_dedup_scenario": 54.4,
+      "observed_models": [
+        "bonsai2-27b-pq2"
+      ],
+      "model_group": "bonsai2-27b-pq2"
+    },
+    {
+      "task_id": "Physics_05_variational_circuit_simulation",
+      "score": 67.5,
+      "s1": 62,
+      "s2": 61.5,
+      "yield": 8,
+      "target_a": 1,
+      "target_b": 1,
+      "target_score": 10,
+      "penalty": 0,
+      "full_novelty_scenario": 72.3,
+      "no_dedup_scenario": 69.5,
+      "observed_models": [
+        "bonsai2-27b-pq2"
+      ],
+      "model_group": "bonsai2-27b-pq2"
+    }
+  ],
+  "findings": [
+    {
+      "task_id": "Astronomy_01_radio_burst_drift",
+      "finding_id": "F1",
+      "title": "像素重建不能恢复公布漂移",
+      "score": 66.5,
+      "review": "45个方法×事件组合无一达到10%误差；正对照、阈值与删事件分析有用，但同源重建不是独立观测。"
+    },
+    {
+      "task_id": "Astronomy_01_radio_burst_drift",
+      "finding_id": "F2",
+      "title": "快慢分支受分箱与来源影响",
+      "score": 61,
+      "review": "分箱宽度相差约10倍，样本重叠削弱独立分支解释；自举失败及拟合退化已保留。"
+    },
+    {
+      "task_id": "Astronomy_01_radio_burst_drift",
+      "finding_id": "F3",
+      "title": "规范化数据丢失来源信息",
+      "score": 58.5,
+      "review": "表格、聚合、图像及空块的来源盘点有意义；212/11240约1.886%，不是2.8%，辅助数量降档。"
+    },
+    {
+      "task_id": "Astronomy_01_radio_burst_drift",
+      "finding_id": "F4",
+      "title": "偏振分布差异及检验",
+      "score": 60.5,
+      "review": "可见CSV支持分布差异，但把观测自举上界与置换零假设95%阈值混用；主差异方向保留，区间/数量解释不得满分。"
+    },
+    {
+      "task_id": "Astronomy_01_radio_burst_drift",
+      "finding_id": "F5",
+      "title": "无法映射的图像限制复核",
+      "score": 58.5,
+      "review": "9幅未映射图像及仅5个事件限制结论；低相关不能替代来源身份核验。"
+    },
+    {
+      "task_id": "Astronomy_02_gravity_spectral_structure",
+      "finding_id": "F1",
+      "title": "B<C<A的噪声幅度排序",
+      "score": 65,
+      "review": "22/22配对排序、区间与删频段结果一致；保留中位数比值与总体RMS比值的区别。"
+    },
+    {
+      "task_id": "Astronomy_02_gravity_spectral_structure",
+      "finding_id": "F2",
+      "title": "固定谱网格与模型选择优势",
+      "score": 66,
+      "review": "19/24个诊断量落在同一网格下限；IC差1478.2可核对，但不是多份独立实验证据。"
+    },
+    {
+      "task_id": "Astronomy_02_gravity_spectral_structure",
+      "finding_id": "F3",
+      "title": "未检出稳健窄谱特征",
+      "score": 66.5,
+      "review": "AR(1)背景和全扫描校正后，多数条件不显著；负结果限定在实际搜索带宽。"
+    },
+    {
+      "task_id": "Astronomy_02_gravity_spectral_structure",
+      "finding_id": "F4",
+      "title": "分辨率与检测功效边界",
+      "score": 61,
+      "review": "分辨率高于候选间隔，限制可分辨性；不同噪声设定下功效不宜混为统一保证。"
+    },
+    {
+      "task_id": "Astronomy_02_gravity_spectral_structure",
+      "finding_id": "F5",
+      "title": "截断网格和参数退化",
+      "score": 65.5,
+      "review": "频率、宽度与速度强耦合，局部IC比较不能充当置信域；交互模型和截断敏感性支持这一边界。"
+    },
+    {
+      "task_id": "Astronomy_03_stellar_spectral_boundary",
+      "finding_id": "F1",
+      "title": "金属丰度效应存在波段换号",
+      "score": 65,
+      "review": "紫外和可见区方向不同，交叉点随温度移动；无辨别力的交叉点零模型已撤回。"
+    },
+    {
+      "task_id": "Astronomy_03_stellar_spectral_boundary",
+      "finding_id": "F2",
+      "title": "温度比值随波长交叉",
+      "score": 66.5,
+      "review": "35个丰度条件及黑体基线支持交叉结构；量化与同源依赖已限定。"
+    },
+    {
+      "task_id": "Astronomy_03_stellar_spectral_boundary",
+      "finding_id": "F3",
+      "title": "归一化曲线可追溯至特定温度谱",
+      "score": 67.5,
+      "review": "校准窗口与窗外检验分开，舍入误差量级匹配；没有独立来源的新数据。"
+    },
+    {
+      "task_id": "Astronomy_03_stellar_spectral_boundary",
+      "finding_id": "F4",
+      "title": "紫外重分箱产生近五倍因子",
+      "score": 67,
+      "review": "约5.001的比例在重分箱解释下成立，并比较了平移与求和替代；限定为处理来源证据。"
+    },
+    {
+      "task_id": "Chemistry_01_bond_enthalpy_domain",
+      "finding_id": "F1",
+      "title": "数据库结构域与基准覆盖缺口",
+      "score": 60,
+      "review": "完整数据库和基准的分子/键层级分开；域外27.62%和6类未覆盖结论有定位证据。"
+    },
+    {
+      "task_id": "Chemistry_01_bond_enthalpy_domain",
+      "finding_id": "F2",
+      "title": "量子与学习排序取决于区域",
+      "score": 59,
+      "review": "大分子/域外优势有支持，小分子差异不显著；旧显著性表与改正文字并存，且大小与域外身份混杂。"
+    },
+    {
+      "task_id": "Chemistry_01_bond_enthalpy_domain",
+      "finding_id": "F3",
+      "title": "参考异质性与误差下限的条件解释",
+      "score": 60.5,
+      "review": "两种估计依赖非真实重复或误差独立假设；已承认非高斯及真BDE差异，不能把2.83视为实测噪声。"
+    },
+    {
+      "task_id": "Chemistry_01_bond_enthalpy_domain",
+      "finding_id": "F4",
+      "title": "传统参考通道较差且分键类反向偏差",
+      "score": 61,
+      "review": "MAE及两类相反偏差稳健；两类均值异号本身不充分证明总体误差分布双峰。"
+    },
+    {
+      "task_id": "Chemistry_01_bond_enthalpy_domain",
+      "finding_id": "F5",
+      "title": "弱键高估受选择效应影响但有残差",
+      "score": 66.5,
+      "review": "改用预测值分层后高估缩小约54%，分子聚类区间仍偏正；回归均值替代得到实际检验。"
+    },
+    {
+      "task_id": "Chemistry_02_photoionization_delay",
+      "finding_id": "F1",
+      "title": "实验复振幅的低阶角向结构",
+      "score": 65,
+      "review": "低阶模型和留出角度检验充分；残差约9.56e-5并非数学意义的精确相等。"
+    },
+    {
+      "task_id": "Chemistry_02_photoionization_delay",
+      "finding_id": "F2",
+      "title": "理论角结构不能由简单映射解释",
+      "score": 61.5,
+      "review": "测试多种基底与匹配，保留匹配控制失败；degree20/22残差不同，精确阶数与Nyquist措辞过强。"
+    },
+    {
+      "task_id": "Chemistry_02_photoionization_delay",
+      "finding_id": "F3",
+      "title": "相位导数匹配半Wigner延迟约定",
+      "score": 66.5,
+      "review": "能量轴与系数二的竞争约定被显式比较；结论限定为给定数据的定义一致性。"
+    },
+    {
+      "task_id": "Chemistry_02_photoionization_delay",
+      "finding_id": "F4",
+      "title": "稠密曲线并非可见稀疏块的简单插值",
+      "score": 67.5,
+      "review": "多种插值与能量偏移远大于舍入误差；只能排除已测试生成路径。"
+    },
+    {
+      "task_id": "Chemistry_02_photoionization_delay",
+      "finding_id": "F5",
+      "title": "实验—理论对应不具能量特异性；早先跨表示冲突来自求和顺序",
+      "score": 60,
+      "review": "修正复振幅与幅度/强度求和顺序后，原跨表示冲突撤回，按阶幅值对应仍成立；共同单调能量趋势尚未排除，因此不能把对应写成能量特异的机制验证或独立验证。"
+    },
+    {
+      "task_id": "Chemistry_03_catalysis_response_landscape",
+      "finding_id": "F1",
+      "title": "两块因子网格的主效应集中度不同",
+      "score": 68.5,
+      "review": "完整因子网格、删水平与留出误差支持结构差异；未重复设计不能估实验噪声。"
+    },
+    {
+      "task_id": "Chemistry_03_catalysis_response_landscape",
+      "finding_id": "F2",
+      "title": "强因子效应不等于单调效应",
+      "score": 69,
+      "review": "线性、保序和类别基线比较区分幅度与顺序；分半稳定性支持非单调边界。"
+    },
+    {
+      "task_id": "Chemistry_03_catalysis_response_landscape",
+      "finding_id": "F3",
+      "title": "归一化响应来自成对通道的代数比",
+      "score": 65.5,
+      "review": "(B−A)/(B+A)匹配两块数据，并比较A/B等替代；是代数结构而非新增机制。"
+    },
+    {
+      "task_id": "Chemistry_03_catalysis_response_landscape",
+      "finding_id": "F4",
+      "title": "面板间转移仅在局部成立",
+      "score": 68.5,
+      "review": "独立面板预测与常数基线比较，明确部分指标失败；强相关不保证较低预测误差。"
+    },
+    {
+      "task_id": "Chemistry_03_catalysis_response_landscape",
+      "finding_id": "F5",
+      "title": "成对读数比例差异与测量误差边界",
+      "score": 66.5,
+      "review": "普通和分块估计均低于1；误差变量修正已纠正，仍不能把共同噪声当独立重复。"
+    },
+    {
+      "task_id": "EarthScience_01_glacial_fluvial_erosion",
+      "finding_id": "F1",
+      "title": "宇宙成因率与时间乘积近固定厚度",
+      "score": 66.5,
+      "review": "重建原始量、研究级斜率与单位检查支持定义耦合；子集和总体的厚度统计不可替换。"
+    },
+    {
+      "task_id": "EarthScience_01_glacial_fluvial_erosion",
+      "finding_id": "F2",
+      "title": "去掉乘积约束后时间趋势不稳健",
+      "score": 66.5,
+      "review": "研究聚类后区间跨零，与逐行显著性不同；有力界定伪独立的影响。"
+    },
+    {
+      "task_id": "EarthScience_01_glacial_fluvial_erosion",
+      "finding_id": "F3",
+      "title": "方法影响在各层级都大于过程",
+      "score": 53,
+      "review": "无调整比较支持方法较强，但加入模型最后时0.103<0.120，完整病例亦反向；『每层都更强』不由证据推出。"
+    },
+    {
+      "task_id": "EarthScience_01_glacial_fluvial_erosion",
+      "finding_id": "F4",
+      "title": "侵蚀过程差异高度依赖分层",
+      "score": 66.5,
+      "review": "5个方法层中3正2负且差异跨度大；匹配与地理混杂分析支持条件性而非统一过程效应。"
+    },
+    {
+      "task_id": "EarthScience_01_glacial_fluvial_erosion",
+      "finding_id": "F5",
+      "title": "研究内聚类大幅降低独立信息量",
+      "score": 65,
+      "review": "研究内相关约0.726，研究级与逐行结果不同；有效样本量只是设计效应近似。"
+    },
+    {
+      "task_id": "EarthScience_02_ice_particle_composition",
+      "finding_id": "F1",
+      "title": "深度趋势受站点杠杆影响",
+      "score": 66.5,
+      "review": "五站整组置换及删站结论不显著；把深度效应限制在实际统计功效内。"
+    },
+    {
+      "task_id": "EarthScience_02_ice_particle_composition",
+      "finding_id": "F2",
+      "title": "叶绿素与丰度的负关系不够稳健",
+      "score": 66.5,
+      "review": "常规聚类回归偏负，但仅五组的精确/删组检验不足显著；未用单一p值强行定论。"
+    },
+    {
+      "task_id": "EarthScience_02_ice_particle_composition",
+      "finding_id": "F3",
+      "title": "聚乙烯占比变化集中于低丰度区",
+      "score": 61,
+      "review": "分段边界有数值支持，高丰度段斜率接近零；个别方向措辞和『精确』重建表述需降档。"
+    },
+    {
+      "task_id": "EarthScience_02_ice_particle_composition",
+      "finding_id": "F4",
+      "title": "组成与派生计数具有量化约束",
+      "score": 63.5,
+      "review": "百分比量化及计数残差表明派生列不是独立测量；明确近似量化而非逐项严格整数。"
+    },
+    {
+      "task_id": "EarthScience_02_ice_particle_composition",
+      "finding_id": "F5",
+      "title": "粒径与丰度方向的报告矛盾",
+      "score": 45.5,
+      "review": "所列负相关与『低丰度更陡』标题的方向不一致；分箱后低功效不能证明无效应。此处扣内容分，未完成原始曲线复算，不加P。"
+    },
+    {
+      "task_id": "EarthScience_03_ice_core_event_structure",
+      "finding_id": "F1",
+      "title": "列间几何依赖被过度等同于不独立",
+      "score": 49,
+      "review": "确有累积、深度和密度关系，但唯一深度上可拟合函数不能证明随机独立性丧失；若干『精确』关系仍有残差。"
+    },
+    {
+      "task_id": "EarthScience_03_ice_core_event_structure",
+      "finding_id": "F2",
+      "title": "水当量积分与所给累计量不一致",
+      "score": 68,
+      "review": "物理积分约21.222，对照累计27.060；左右端点、冰当量替代均不足弥合。解释仍取决于列含义。"
+    },
+    {
+      "task_id": "EarthScience_03_ice_core_event_structure",
+      "finding_id": "F3",
+      "title": "背景硫酸盐的深度趋势较弱",
+      "score": 62.5,
+      "review": "GLS和分块检验不支持强趋势，正对照有价值；80%功效界不等于已排除某幅度效应。"
+    },
+    {
+      "task_id": "EarthScience_03_ice_core_event_structure",
+      "finding_id": "F4",
+      "title": "事件数量对检测合同高度敏感",
+      "score": 67,
+      "review": "720种设置可产生极不一致的事件数量；位置富集不等于恢复固定事件目录。"
+    },
+    {
+      "task_id": "EarthScience_03_ice_core_event_structure",
+      "finding_id": "F5",
+      "title": "已命名与未命名事件差异未定",
+      "score": 59,
+      "review": "精确检验和宽区间不支持稳定组间幅度差；标题中的位置差异未获后续检验支持。"
+    },
+    {
+      "task_id": "EarthScience_04_ocean_thermal_coupling",
+      "finding_id": "F1",
+      "title": "约109千年的宽周期结构",
+      "score": 64.5,
+      "review": "年龄/深度两轴与AR(1)搜索支持宽结构，分箱与留出结果较弱；217千年并非109千年的二次谐波。"
+    },
+    {
+      "task_id": "EarthScience_04_ocean_thermal_coupling",
+      "finding_id": "F2",
+      "title": "双坐标相位吻合但并非独立重复",
+      "score": 68.5,
+      "review": "分离区段相位一致，并承认坐标高度共源和幅度随窗变化；不将重叠窗当新证据。"
+    },
+    {
+      "task_id": "EarthScience_04_ocean_thermal_coupling",
+      "finding_id": "F3",
+      "title": "年龄坐标差异局限于浅部",
+      "score": 65.5,
+      "review": "删浅部和对抗性年龄处理定位了坐标敏感边界；局部一致不能外推所有变换稳健。"
+    },
+    {
+      "task_id": "EarthScience_04_ocean_thermal_coupling",
+      "finding_id": "F4",
+      "title": "沉积速率尖峰依赖年龄差分处理",
+      "score": 67,
+      "review": "不同网格估计与原始平滑不一致，支持加工边界；不能直接宣称快速沉积事件。"
+    },
+    {
+      "task_id": "EarthScience_04_ocean_thermal_coupling",
+      "finding_id": "F5",
+      "title": "变化率耦合主要来自共同分母",
+      "score": 68.5,
+      "review": "保结构零模型复现多数正相关；同时保留速率与水平的负相关，区分两个不同命题。"
+    },
+    {
+      "task_id": "Energy_01_photocatalytic_tradeoffs",
+      "finding_id": "F1",
+      "title": "动力学形状分组可辨而函数形式未定",
+      "score": 68.5,
+      "review": "各曲线仅5点；模型竞争、留点失败与AICc边界保留，未把拟合优胜解释为唯一机制。"
+    },
+    {
+      "task_id": "Energy_01_photocatalytic_tradeoffs",
+      "finding_id": "F2",
+      "title": "红端作用衰减不能由吸收限制解释",
+      "score": 68.5,
+      "review": "留出红端预测严重失配，多个竞争模型和转换凹性分析有区分力；不越界指认机制。"
+    },
+    {
+      "task_id": "Energy_01_photocatalytic_tradeoffs",
+      "finding_id": "F3",
+      "title": "两条瞬态轨迹的长期响应不同",
+      "score": 68.5,
+      "review": "多个处理伪影与模型被比较；仍只有两条完整轨迹，数百延迟点不是重复实验。"
+    },
+    {
+      "task_id": "Energy_01_photocatalytic_tradeoffs",
+      "finding_id": "F4",
+      "title": "负载仅有局部采样峰而非可识别最优",
+      "score": 65,
+      "review": "4个设置给出内点峰，删点与模型比较不能固定连续最优位置；对不确定性保持克制。"
+    },
+    {
+      "task_id": "Energy_01_photocatalytic_tradeoffs",
+      "finding_id": "F5",
+      "title": "跨模态映射受身份缺口限制",
+      "score": 60,
+      "review": "仅两种配方能跨模态连接且排序相反；无标识、不同量纲的数据不应拼接成通用规律。"
+    },
+    {
+      "task_id": "Energy_02_flow_battery_operating_boundary",
+      "finding_id": "F1",
+      "title": "充放电间隙总体加大且有局部例外",
+      "score": 65.5,
+      "review": "全点比较揭示少量放电曲线交叉，改正了最初全域单调表述；模板重复不是独立采样。"
+    },
+    {
+      "task_id": "Energy_02_flow_battery_operating_boundary",
+      "finding_id": "F2",
+      "title": "效率汇总与中SOC电压比近似相容",
+      "score": 65.5,
+      "review": "比较替代映射与留出误差，主动剔除排序置换伪检验；舍入解释未获过度奖励。"
+    },
+    {
+      "task_id": "Energy_02_flow_battery_operating_boundary",
+      "finding_id": "F3",
+      "title": "功率峰局限于给定设置且末端不兼容",
+      "score": 65,
+      "review": "300处功率330为观测峰，删除峰后不稳定；末端隐含电压超出曲线范围，有明确范围边界。"
+    },
+    {
+      "task_id": "Energy_02_flow_battery_operating_boundary",
+      "finding_id": "F4",
+      "title": "效率损失具有曲率",
+      "score": 65,
+      "review": "局部斜率与二次/幂函数均支持非线性下降；没有量测重复，局部导数对舍入敏感。"
+    },
+    {
+      "task_id": "Energy_02_flow_battery_operating_boundary",
+      "finding_id": "F5",
+      "title": "循环衰减可见但分段改变未定",
+      "score": 68.5,
+      "review": "分块区间支持负斜率，变化点在分块零模型中不显著；不能把平台窗口当稳健机制。"
+    },
+    {
+      "task_id": "Energy_03_interface_response_boundaries",
+      "finding_id": "F1",
+      "title": "对数曲线高温弯曲普遍存在",
+      "score": 66.5,
+      "review": "12条高温对数曲线曲率均负；原尺度不是全部同向，已限定分析尺度。"
+    },
+    {
+      "task_id": "Energy_03_interface_response_boundaries",
+      "finding_id": "F2",
+      "title": "有效斜率存在条件差异",
+      "score": 66.5,
+      "review": "斜率范围与比例经更正，仍不能区分本征能量与接近饱和的位置效应。"
+    },
+    {
+      "task_id": "Energy_03_interface_response_boundaries",
+      "finding_id": "F3",
+      "title": "中间区间排序比端点稳定",
+      "score": 65,
+      "review": "分温区和删条件分析定位排序边界；端点相关弱，不支持全范围不变序。"
+    },
+    {
+      "task_id": "Energy_03_interface_response_boundaries",
+      "finding_id": "F4",
+      "title": "留出预测偏向饱和模型但天花板未观测",
+      "score": 68.5,
+      "review": "训练≤280、预测300/320的比较有实质性分离；上限位置仍欠稳定，不等于已测得天花板。"
+    },
+    {
+      "task_id": "Energy_03_interface_response_boundaries",
+      "finding_id": "F5",
+      "title": "核对数据部分为完全重复",
+      "score": 63.5,
+      "review": "2/4轨迹逐值重复，另外共享曲线只是近似；直接否定把核对集全部视为新独立证据。"
+    },
+    {
+      "task_id": "Energy_04_biohybrid_operating_tradeoffs",
+      "finding_id": "F1",
+      "title": "拼接区段结构不能证明时间轴仅局部有效",
+      "score": 50.5,
+      "review": "三段值域与支持集不同是可观测事实，但时间取值少不自动意味着无效；只保留分段数据结构结论。"
+    },
+    {
+      "task_id": "Energy_04_biohybrid_operating_tradeoffs",
+      "finding_id": "F2",
+      "title": "同一时间出现分支差异",
+      "score": 61,
+      "review": "共享时间读数相差很大，支持路径/来源差异；不能在未知实验身份下唯一认定物理迟滞。"
+    },
+    {
+      "task_id": "Energy_04_biohybrid_operating_tradeoffs",
+      "finding_id": "F3",
+      "title": "条件耦合主要由尾段与合并驱动",
+      "score": 66.5,
+      "review": "基线近零相关、尾段强相关而差分后减弱；分段/切点敏感性支持条件边界。"
+    },
+    {
+      "task_id": "Energy_04_biohybrid_operating_tradeoffs",
+      "finding_id": "F4",
+      "title": "拟合列是支持表示而非新增测量",
+      "score": 57,
+      "review": "拟合与原始高度相关并更平滑；第三列0.945不等于严格单调，且平滑器来源未被唯一识别。"
+    },
+    {
+      "task_id": "Energy_04_biohybrid_operating_tradeoffs",
+      "finding_id": "F5",
+      "title": "剂量最优未定而扰动响应排序清楚",
+      "score": 63.5,
+      "review": "三剂量无误差不能定最优；控制稳定且b>a衰减明显。SD非SE及时间相关性限制合并显著性。"
+    },
+    {
+      "task_id": "Information_03_signal_surface_invariants",
+      "finding_id": "F1",
+      "title": "对数响应近似单增益轴",
+      "score": 68.5,
+      "review": "秩一解释率约0.955，异方差零模型和完整留出检验有区分力；其尺度依赖由F2明确。"
+    },
+    {
+      "task_id": "Information_03_signal_surface_invariants",
+      "finding_id": "F2",
+      "title": "归一化改变低维结构强弱",
+      "score": 66.5,
+      "review": "原尺度、对数和按通道标准化结果不同；是F1的适用边界，不应误写成任意归一化都稳健。"
+    },
+    {
+      "task_id": "Information_03_signal_surface_invariants",
+      "finding_id": "F3",
+      "title": "两面板同网格水平并不直接复现",
+      "score": 65,
+      "review": "共同网格上r≈0.0168且转移R²<0；对齐、重标度和弱共享成分均报告。逐格推断仍需系统级独立性限定。"
+    },
+    {
+      "task_id": "Information_03_signal_surface_invariants",
+      "finding_id": "F4",
+      "title": "跨面板噪声量存在有限共享",
+      "score": 59,
+      "review": "控制边际后相关仍在，但CV(log响应)不是原响应的尺度不变CV；不能仅据此断言乘性噪声机制。"
+    },
+    {
+      "task_id": "Information_03_signal_surface_invariants",
+      "finding_id": "F5",
+      "title": "零信号箱有面板依赖的边界",
+      "score": 66.5,
+      "review": "基线箱的偏离和换号是局部而非通用关系；方法与完整单位扰动支持边界定位。"
+    },
+    {
+      "task_id": "Life_02_contextual_immune_response",
+      "finding_id": "F1",
+      "title": "扰动提高各细胞的平均响应",
+      "score": 65,
+      "review": "18/18单元增加且不同汇总定义同向；共享assay下的18单元检验不能充当18次独立实验。"
+    },
+    {
+      "task_id": "Life_02_contextual_immune_response",
+      "finding_id": "F2",
+      "title": "组织区室排序不可靠地跨assay转移",
+      "score": 68.5,
+      "review": "留一assay外预测与常数基线比较直接检验转移，失败被纳入最终结论。"
+    },
+    {
+      "task_id": "Life_02_contextual_immune_response",
+      "finding_id": "F3",
+      "title": "计数与比例方向同向但排序不一致",
+      "score": 65,
+      "review": "18单元两端点均增加，某assay排序反向；端点差异边缘显著被如实限定。"
+    },
+    {
+      "task_id": "Life_02_contextual_immune_response",
+      "finding_id": "F4",
+      "title": "时间轨迹差异未检出且功效不足",
+      "score": 68.5,
+      "review": "明确最小可检测效应远高于观测差，不把不显著当等效。"
+    },
+    {
+      "task_id": "Life_02_contextual_immune_response",
+      "finding_id": "F5",
+      "title": "干预排序较一致但样本规模小",
+      "score": 68.5,
+      "review": "精确与渐近检验及交换敏感性并列；只有三个assay，不能无限推广排名。"
+    },
+    {
+      "task_id": "Life_04_environmental_transfer_boundary",
+      "finding_id": "F1",
+      "title": "采样层级与角色编码限制独立性",
+      "score": 65.5,
+      "review": "30个单位含212个位点，ICC与编码重复支持层级边界；不将逐位点当同量独立受试对象。"
+    },
+    {
+      "task_id": "Life_04_environmental_transfer_boundary",
+      "finding_id": "F2",
+      "title": "assay关联强于普遍单调梯度",
+      "score": 66.5,
+      "review": "阈值关联和单调/多重检验结论不同；以单位分组检验避免放大样本数。"
+    },
+    {
+      "task_id": "Life_04_environmental_transfer_boundary",
+      "finding_id": "F3",
+      "title": "病程关联在单位级检验中消失",
+      "score": 66.5,
+      "review": "逐位点显著与单位置换p≈0.255形成直接对照；阈值搜索已纳入零模型。"
+    },
+    {
+      "task_id": "Life_04_environmental_transfer_boundary",
+      "finding_id": "F4",
+      "title": "表面与症状读数不能充当独立复现",
+      "score": 57.5,
+      "review": "表面阳性为环境阳性子集且症状分组很小；20%量化步长不能唯一证明分母恰为5。"
+    },
+    {
+      "task_id": "Life_04_environmental_transfer_boundary",
+      "finding_id": "F5",
+      "title": "综合层级校正再次限定显著性",
+      "score": 66.5,
+      "review": "Holm与单位级重估有用，但病程关联丢失是F3的同一核心结论；综合汇总不另计独立发现数量。"
+    },
+    {
+      "task_id": "Life_05_developmental_interaction_structure",
+      "finding_id": "F1",
+      "title": "阶段效应为家族内有限增量",
+      "score": 68.5,
+      "review": "家族聚类与214家族留出有支持；使用单位均值的条件预测不是冷启动预测，均衡子集变弱已报告。"
+    },
+    {
+      "task_id": "Life_05_developmental_interaction_structure",
+      "finding_id": "F2",
+      "title": "家族和单位差异主导总体方差",
+      "score": 66.5,
+      "review": "ICC、方差分解和分半结果一致；不能分开生物差异与技术漂移的限制明确。"
+    },
+    {
+      "task_id": "Life_05_developmental_interaction_structure",
+      "finding_id": "F3",
+      "title": "离散化p值与强度并非同一证据",
+      "score": 66.5,
+      "review": "87.6%落在最小p值档，非地板数据关联弱；用受限置换而非把离散证据当连续精度。"
+    },
+    {
+      "task_id": "Life_05_developmental_interaction_structure",
+      "finding_id": "F4",
+      "title": "交互方向存在广泛家族异质性",
+      "score": 68.5,
+      "review": "符号翻转和留家族结果显示非普遍效应；分类阈值及102/214改善边界已列出。"
+    },
+    {
+      "task_id": "Life_05_developmental_interaction_structure",
+      "finding_id": "F5",
+      "title": "强度连续而显著性标签不稳定",
+      "score": 66.5,
+      "review": "强度r≈0.908而标签κ≈0.122；先前缺失填充错误已纠正，不处罚已撤回数值。"
+    },
+    {
+      "task_id": "Math_02_compositional_invariants",
+      "finding_id": "F1",
+      "title": "简单线性组成不变量不足",
+      "score": 68.5,
+      "review": "CLR、伪计数及PCA结果排除特定低维线性解释；不据此否定所有非线性不变量。"
+    },
+    {
+      "task_id": "Math_02_compositional_invariants",
+      "finding_id": "F2",
+      "title": "协变量与丰富度关系经控制仍存在",
+      "score": 68.5,
+      "review": "深度控制、稀释、删组及保序留出检验支持正关联；少量深度方向措辞不影响主结论。"
+    },
+    {
+      "task_id": "Math_02_compositional_invariants",
+      "finding_id": "F3",
+      "title": "场景仅保留次序而不能数值转移",
+      "score": 68.5,
+      "review": "场景排序在多数配对保留，直接转移R²为负；清楚区分序关系与尺度可迁移性。"
+    },
+    {
+      "task_id": "Math_02_compositional_invariants",
+      "finding_id": "F4",
+      "title": "丰富度关联在高协变量段饱和",
+      "score": 68.5,
+      "review": "阈值上下相关不同且差异区间不含零；分段模型与完整留出支持局部边界。"
+    },
+    {
+      "task_id": "Math_02_compositional_invariants",
+      "finding_id": "F5",
+      "title": "部分组成相关由零值驱动",
+      "score": 67,
+      "review": "去零后相关显著缩小，对组成约束与零值处理做了实际比较；未外推因果机制。"
+    },
+    {
+      "task_id": "Neuro_02_calcium_response_regions",
+      "finding_id": "F1",
+      "title": "刺激对多响应量的影响相对稳定",
+      "score": 57.5,
+      "review": "平衡子集及删batch保持多项方向；细胞嵌套与批次相关使逐细胞显著性不能获满分。"
+    },
+    {
+      "task_id": "Neuro_02_calcium_response_regions",
+      "finding_id": "F2",
+      "title": "区域差异部分独立于条件覆盖",
+      "score": 63,
+      "review": "宽度/频率在平衡及删batch后仍有差别；AUC不稳健与覆盖不足被保留。"
+    },
+    {
+      "task_id": "Neuro_02_calcium_response_regions",
+      "finding_id": "F3",
+      "title": "年龄与批次不可分离",
+      "score": 63.5,
+      "review": "年龄与batch一一对应，设计矩阵秩缺失及VIF支持不可识别性；个别显著批次数量表述不准确。"
+    },
+    {
+      "task_id": "Neuro_02_calcium_response_regions",
+      "finding_id": "F4",
+      "title": "年龄效应不能被普遍推广",
+      "score": 63,
+      "review": "只有部分响应量出现年龄关联，且被批次混杂限制；不将拟合系数解释成独立年龄机制。"
+    },
+    {
+      "task_id": "Neuro_03_spatial_code_stability",
+      "finding_id": "F1",
+      "title": "新环境稳定性在动物级下降",
+      "score": 66.5,
+      "review": "区分单元与动物平均，动物级汇总仍偏负；只有3个对照稳定性动物，范围必须受限。"
+    },
+    {
+      "task_id": "Neuro_03_spatial_code_stability",
+      "finding_id": "F2",
+      "title": "信息量下降在动物级证据较弱",
+      "score": 66.5,
+      "review": "逐单元与动物p值不同，保留动物级约0.074的不确定性而不宣称强显著。"
+    },
+    {
+      "task_id": "Neuro_03_spatial_code_stability",
+      "finding_id": "F3",
+      "title": "规则性不显著不能证明真零效应",
+      "score": 46,
+      "review": "把未拒绝写成『真零』缺少等效检验或充分功效，且区间很宽；核心推论不获支持分。"
+    },
+    {
+      "task_id": "Neuro_03_spatial_code_stability",
+      "finding_id": "F4",
+      "title": "部分空间指标显著性受分析单位影响",
+      "score": 66.5,
+      "review": "方向/场内响应在动物层级变弱，体现伪重复风险；原p≈0.056也不应称已显著。"
+    },
+    {
+      "task_id": "Neuro_04_temporal_geometry",
+      "finding_id": "F1",
+      "title": "距离与平均延迟无明显单调关系",
+      "score": 66.5,
+      "review": "41个单位的Pearson、Spearman、置换、区间及删点一致；限定为未支持简单单调关系。"
+    },
+    {
+      "task_id": "Neuro_04_temporal_geometry",
+      "finding_id": "F2",
+      "title": "距离与延迟离散度关联很弱",
+      "score": 61,
+      "review": "两相关量近零；零方差不自动意味着确定性，个别关于均值可用性的表述与F1矛盾。"
+    },
+    {
+      "task_id": "Neuro_04_temporal_geometry",
+      "finding_id": "F3",
+      "title": "事件前后信号有条件差别",
+      "score": 55.5,
+      "review": "B组二分差异较强而A组较弱；事件嵌套与序列相关未由普通置换充分处理。"
+    },
+    {
+      "task_id": "Neuro_04_temporal_geometry",
+      "finding_id": "F4",
+      "title": "两组边际分布未检出显著差异",
+      "score": 57,
+      "review": "KS不显著不能构成等效或通用分布不变性，小组样本量仅35。"
+    },
+    {
+      "task_id": "Neuro_04_temporal_geometry",
+      "finding_id": "F5",
+      "title": "跨文件只有三个单位可匹配",
+      "score": 55,
+      "review": "重叠不足以稳定外推，但n=3并不意味着相关系数数学上不可计算；保留覆盖边界，扣过强措辞。"
+    },
+    {
+      "task_id": "Physics_01_dynamic_nuclear_polarization_echoes",
+      "finding_id": "F1",
+      "title": "EPR整条包络随反转时间衰减",
+      "score": 53,
+      "review": "六个条件的包络幅度下降可描述；不等于定位每条轨迹中2*t_inv处的回波，也没有独立重复误差。"
+    },
+    {
+      "task_id": "Physics_01_dynamic_nuclear_polarization_echoes",
+      "finding_id": "F2",
+      "title": "NMR积分对反转时间呈局部非单调",
+      "score": 49,
+      "review": "固定相位下440条件峰值可见，但相位一变最优不同；只有六点，无重复不足以称『并非噪声』。"
+    },
+    {
+      "task_id": "Physics_01_dynamic_nuclear_polarization_echoes",
+      "finding_id": "F3",
+      "title": "EPR与NMR聚合量反向关联",
+      "score": 38.5,
+      "review": "仅六个条件r≈−0.78，双侧显著性不足约0.05且共用扫参；不能据此证明普遍耦合或排除噪声。"
+    },
+    {
+      "task_id": "Physics_02_multiorbital_transition",
+      "finding_id": "F1",
+      "title": "能隙过阈值具有分支依赖",
+      "score": 52.5,
+      "review": "6/8分支越过阈值，支持有限范围差异；不同分支起点不直接反驳中位曲线的共同起点。"
+    },
+    {
+      "task_id": "Physics_02_multiorbital_transition",
+      "finding_id": "F2",
+      "title": "最低纠缠谱简并在有限网格改变",
+      "score": 50,
+      "review": "最低层级从1到2的变化可描述；不等于全谱多重简并率，更不能独自确认热力学相变。"
+    },
+    {
+      "task_id": "Physics_02_multiorbital_transition",
+      "finding_id": "F3",
+      "title": "局域矩增大而电荷波动下降",
+      "score": 51.5,
+      "review": "单调趋势有数据支持；光滑有限网格无法据以排除临界行为。"
+    },
+    {
+      "task_id": "Physics_02_multiorbital_transition",
+      "finding_id": "F4",
+      "title": "有限网格相关长度不宜作相区证据",
+      "score": 56.5,
+      "review": "极少近零逆相关长度及负值伪影支持稳健性警告；没有形成独立相图验证。"
+    },
+    {
+      "task_id": "Physics_02_multiorbital_transition",
+      "finding_id": "F5",
+      "title": "外推不一致的主要数值由系数错误造成",
+      "score": 25.5,
+      "review": "polyfit斜率/截距错置导致错误外推值与残差；核心数值、幅度和解释归零，另按持存确定性错误扣5分。"
+    },
+    {
+      "task_id": "Physics_03_controlled_dynamics_forecast",
+      "finding_id": "F1",
+      "title": "主频预测在各扫描上误差较小",
+      "score": 51.5,
+      "review": "三扫描的绝对/相对频率误差列明；FFT分辨率和有效匹配覆盖率限制精度解释。"
+    },
+    {
+      "task_id": "Physics_03_controlled_dynamics_forecast",
+      "finding_id": "F2",
+      "title": "全轨迹预测质量随条件明显下降",
+      "score": 56,
+      "review": "三条相关约0.9595/0.8595/0.6687及归一化误差量化了局部差异；无独立重复或稳健外推。"
+    },
+    {
+      "task_id": "Physics_03_controlled_dynamics_forecast",
+      "finding_id": "F3",
+      "title": "频率近似不保证完整波形准确",
+      "score": 44.5,
+      "review": "定性区分频率与波形合理，但直接比较不同量纲的MAE和RMSE不能建立大小矛盾。"
+    },
+    {
+      "task_id": "Physics_03_controlled_dynamics_forecast",
+      "finding_id": "F4",
+      "title": "第三条件的频率优势需区分绝对与相对误差",
+      "score": 40,
+      "review": "第三条件绝对MAE最小，但相对误差0.00491大于第一条件0.00305；过强『最准确』解释降分，与F3同属跨指标解离。"
+    },
+    {
+      "task_id": "Physics_04_temporal_delay_transition",
+      "finding_id": "F1",
+      "title": "分段转变的核心变量映射未成立",
+      "score": 27.5,
+      "review": "脚本直接把below_bc两条Plot列作为B和V；真正B,V表随B下降，报告则上涨。未解决语义冲突就排除理论，核心证据不通过；未全量重放，暂不另加P。"
+    },
+    {
+      "task_id": "Physics_04_temporal_delay_transition",
+      "finding_id": "F2",
+      "title": "相关时间随条件大幅缩短",
+      "score": 53,
+      "review": "积分和指数拟合的约33–37倍变化同向；五点临界拟合病态，正确未把β≈544当物理指数。"
+    },
+    {
+      "task_id": "Physics_04_temporal_delay_transition",
+      "finding_id": "F3",
+      "title": "有限尺寸变化可见而精确外推未定",
+      "score": 55.5,
+      "review": "1/N与自由指数外推明显不同；删小尺寸结果支持收敛趋势，而非唯一热力学临界值。"
+    },
+    {
+      "task_id": "Physics_04_temporal_delay_transition",
+      "finding_id": "F4",
+      "title": "真实网络延迟总体下降但非严格单调",
+      "score": 48.5,
+      "review": "两网络下降有支持；78–82%相邻下降不是严格单调，端点比约1.34万和0.36万而不是10万。"
+    },
+    {
+      "task_id": "Physics_04_temporal_delay_transition",
+      "finding_id": "F5",
+      "title": "辅助临界现象不能证明没有时间漂移",
+      "score": 38.5,
+      "review": "低R²不是无漂移的等效证据，非零趋势在27k点上尤其需处理自相关；『一致』也不排除强竞争解释。"
+    },
+    {
+      "task_id": "Physics_05_variational_circuit_simulation",
+      "finding_id": "F1",
+      "title": "冻结案例的精确成本层近机器精度",
+      "score": 61.5,
+      "review": "从12个冻结观测可直接核对最小值及舍入误差；是对提供数据的正确分析，不是本次重新实现量子模拟。"
+    },
+    {
+      "task_id": "Physics_05_variational_circuit_simulation",
+      "finding_id": "F2",
+      "title": "叠加层数后全态保真度降低",
+      "score": 59.5,
+      "review": "3/3案例p2低于p1，但不能据门级较高保真度断言误差只集中在最后阶段，累积误差仍是竞争解释。"
+    },
+    {
+      "task_id": "Physics_05_variational_circuit_simulation",
+      "finding_id": "F3",
+      "title": "三个图案例均满足冻结门槛",
+      "score": 62,
+      "review": "逐案例重算p1≥0.94、p2≥0.92、压缩≥0.95全部通过；阈值来自输入观测合同，不是参与者新做的分离验证。"
+    },
+    {
+      "task_id": "Physics_05_variational_circuit_simulation",
+      "finding_id": "F4",
+      "title": "优化角度记录一致需查明记录机制",
+      "score": 54,
+      "review": "初始/优化角度逐值相同与步数并存是可审计现象；输出cost非零不能证明cost改变，也不能排除记录别名或原地更新。"
+    }
+  ],
+  "model_groups": {
+    "deepseek-v4.1-flash-max": {
+      "count": 16,
+      "mean": 68.6625,
+      "task_ids": [
+        "Astronomy_01_radio_burst_drift",
+        "Astronomy_02_gravity_spectral_structure",
+        "Astronomy_03_stellar_spectral_boundary",
+        "Chemistry_01_bond_enthalpy_domain",
+        "Chemistry_02_photoionization_delay",
+        "Chemistry_03_catalysis_response_landscape",
+        "EarthScience_01_glacial_fluvial_erosion",
+        "EarthScience_02_ice_particle_composition",
+        "EarthScience_03_ice_core_event_structure",
+        "EarthScience_04_ocean_thermal_coupling",
+        "Energy_01_photocatalytic_tradeoffs",
+        "Energy_02_flow_battery_operating_boundary",
+        "Energy_04_biohybrid_operating_tradeoffs",
+        "Information_03_signal_surface_invariants",
+        "Life_02_contextual_immune_response",
+        "Math_02_compositional_invariants"
+      ]
+    },
+    "bonsai2-27b-pq2": {
+      "count": 11,
+      "mean": 62.88181818181818,
+      "task_ids": [
+        "Energy_03_interface_response_boundaries",
+        "Life_04_environmental_transfer_boundary",
+        "Life_05_developmental_interaction_structure",
+        "Neuro_02_calcium_response_regions",
+        "Neuro_03_spatial_code_stability",
+        "Neuro_04_temporal_geometry",
+        "Physics_01_dynamic_nuclear_polarization_echoes",
+        "Physics_02_multiorbital_transition",
+        "Physics_03_controlled_dynamics_forecast",
+        "Physics_04_temporal_delay_transition",
+        "Physics_05_variational_circuit_simulation"
+      ]
+    }
+  },
+  "model_grouping_rule": "按用户指定汇报口径，运行记录出现Bonsai即计入Bonsai；原始模型观测单独保留。"
+}

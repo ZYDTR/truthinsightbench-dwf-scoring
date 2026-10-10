@@ -2,6 +2,14 @@
 
 ## Changelog
 
+### 2026-10-10: historical manual review publication
+
+- Added the original 27-task DWF manual provisional review under `reports/manual_review_20260924/`: unchanged Excel workbook, unchanged Chinese review report, sanitized JSON score summary, and source/publication hash receipt.
+- Preserved all historical score values and review judgments. Replaced only the JSON summary's private source-path metadata with a repository-relative report filename; original local files remain unchanged.
+- Checked all 270 cached summary fields across the workbook's 27 task rows against JSON scores, retained all eight sheets and formulas, and found zero cached error cells. No workbook recalculation or scientific regrading was performed.
+- Scanned expanded XLSX entries as well as ordinary publishable files for credential patterns, 52 exact private credential values, workstation paths, and runtime-log rows. Kept the earlier documented legacy exceptions unchanged.
+- The historical review covers exactly the original 27 exports, with mean 66.3 and median 68.2; it excludes the later 13 additions and the separate first-round Conversation scores. Additional review files merely named in the old report are not fabricated or claimed as included.
+
 ### 2026-10-10
 
 - Extended the archive to all 40 released tasks by adding 13 independent-attempt exports with 49 findings; the full package has 177 findings.
