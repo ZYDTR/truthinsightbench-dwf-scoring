@@ -2,6 +2,15 @@
 
 ## Changelog
 
+### 2026-10-20: Life_03 clean participant input
+
+- Added `clean_tasks/Life_03_nutrient_response_kinetics/` as a separate participant-input package with clean-run instructions and a publication hash ledger.
+- Used the original V1.0 workspace assembler: preserved all seven task files and three public runner files, then generated the standard workspace receipt. The four data files contain 144 rows and 7,685 bytes.
+- Kept historical `runs/`, scoring assets, export manifests, and published scores unchanged. The new workspace contains no answers, previous outputs, evaluator assets, model configuration, or runtime logs.
+- Verified all seven original task files against both the frozen source and the existing published run inputs; all three public runner files also match their source bytes. Registry checks, data hashes, row counts, and the empty-output check passed.
+- Existing unit tests passed (13/13). The publication audit passed with no new issues, checked 40 exact locally configured credential values, and confirmed all 2,686 protected historical files remain unchanged; the previously documented legacy exceptions remain unchanged.
+- Preserved the four original TSV files' CRLF line endings to retain their registered hashes; Git's default whitespace check flags those 148 source lines. Authored packaging files pass the whitespace check.
+
 ### 2026-10-10: historical manual review publication
 
 - Added the original 27-task DWF manual provisional review under `reports/manual_review_20260924/`: unchanged Excel workbook, unchanged Chinese review report, sanitized JSON score summary, and source/publication hash receipt.

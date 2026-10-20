@@ -17,6 +17,11 @@ All 40 exports are ready for the original Evaluator's formal scoring. A historic
 - `scripts/extend_completed.py`: one-time versioned extension adapter; resolves released independent attempts and refuses existing destinations.
 - `scripts/audit_exports.py`: read-only credential, runtime-log, and frozen-base audit.
 - `reports/manual_review_20260924/`: historical manual provisional scores for the original 27 DWF exports.
+- `clean_tasks/Life_03_nutrient_response_kinetics/`: original participant input and public launch/validation files for a separate clean run; contains no historical answers.
+
+## Clean task input: Life_03
+
+[Nutrient-response kinetics — original task and clean-run instructions](clean_tasks/Life_03_nutrient_response_kinetics/README.md) packages the original seven task files plus the public contract, launch prompt, validator, and workspace receipt. All original input bytes are preserved. Copy only its `workspace/` into a separate participant environment; the rest of this repository contains historical answers and evaluator material. This addition does not change the 40 frozen exports or perform a new scientific run or grading.
 
 ## Historical manual scores: original 27 DWF tasks
 
