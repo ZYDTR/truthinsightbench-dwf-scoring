@@ -2,6 +2,16 @@
 
 ## Changelog
 
+### 2026-10-20: Teach Through Breakdown publication
+
+- Added the teaching Skill, four original reference contracts, Agent metadata, HTML generator, and bundle validator under `skills/teach-through-breakdown/`; added a discoverable Skill index and portable usage instructions.
+- Adapted workstation-specific paths and conditional workspace integration; retained teaching contracts and rendering behavior. Added a self-contained evidence/delegation reference and a small wrapper for the original prose lint.
+- Bundled `marked` 17.0.5 runtime files and the fixed `grapeot/writing-skill` source at `c68f46620711e10f2c16f1f39bfab5badcbae59f`, with their original MIT licenses. Excluded environment examples, caches, and repository-only Agent instructions.
+- Detached-copy verification found an existing CLI entry-point bug: symlinked paths silently skipped execution. The public copy now compares resolved file identities; a regression test covers actual execution and nonzero argument errors through a symlink.
+- Generator self-tests, a detached-copy HTML/manifest round trip, stale-HTML rejection, clean/dirty prose-lint cases, the new symlink regression, and all 16 bundled writing-skill tests passed. Runtime checks used only bundled dependencies, with environment overrides cleared and no npm/pip installation.
+- Publication audit passed with no new issues and 40 exact credential values checked; all 2,686 protected historical files and the 11 Life_03 workspace hashes remain unchanged. Authored files pass the whitespace check; one upstream test's existing blank line at EOF is preserved to retain exact source bytes.
+- This publishes reusable tooling; it does not run a scientific task, grade an answer, or certify a new article's reader/browser acceptance. Historical scoring inputs and the clean Life_03 task remain unchanged.
+
 ### 2026-10-20: Life_03 clean participant input
 
 - Added `clean_tasks/Life_03_nutrient_response_kinetics/` as a separate participant-input package with clean-run instructions and a publication hash ledger.

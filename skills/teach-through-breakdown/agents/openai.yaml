@@ -1,0 +1,4 @@
+interface:
+  display_name: "Teach Through Breakdown"
+  short_description: "把复杂主题写成真正教会读者的解释、术语卡与交互阅读器"
+  default_prompt: "使用 $teach-through-breakdown，把这个复杂主题写成能真正教会读者的自包含解释文档、术语卡和独立 HTML 阅读器。"

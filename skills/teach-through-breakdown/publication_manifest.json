@@ -1,0 +1,305 @@
+{
+  "schema": "teach-through-breakdown-publication.v1",
+  "publication_date": "2026-10-20",
+  "source_skill": "rules/skills/teach-through-breakdown",
+  "source_files": [
+    {
+      "path": "SKILL.md",
+      "source_sha256": "332ccf406e1983df8ea9a93e21da02b8cbe9409784d3ced1cf2170d0805c3053",
+      "published_sha256": "9d6afc57c4a0f1441acaf03f015aabee305d2227b6b3cc4d11e86388bf4d66c0",
+      "byte_identical": false
+    },
+    {
+      "path": "agents/openai.yaml",
+      "source_sha256": "84d3df61da7502d5bf3beed20c352a09a57594535235322221005e754ede0391",
+      "published_sha256": "84d3df61da7502d5bf3beed20c352a09a57594535235322221005e754ede0391",
+      "byte_identical": true
+    },
+    {
+      "path": "references/acceptance-contract.md",
+      "source_sha256": "2c1becd338cc7d92c532183b505f8dfdc0c5cefe10676d7da0eb562204f42557",
+      "published_sha256": "736cd5ca0bdae592e4d95e297fe2c86b35f6fdf6545a35acd3b277371cf0476c",
+      "byte_identical": false
+    },
+    {
+      "path": "references/output-contract.md",
+      "source_sha256": "90441f06dbc4f836d70ca132e39d1ec688b644c39c3f83360c9b0352e8c4e197",
+      "published_sha256": "ce15c8dfbc407132af731ff5ec127088e8286b0db2f39b969f71ef220ab58054",
+      "byte_identical": false
+    },
+    {
+      "path": "references/reader-visual-design.md",
+      "source_sha256": "2b8185b7e613a2827b4f0d0b96d4d60244fa83493879927b536f700ed78a7333",
+      "published_sha256": "2b8185b7e613a2827b4f0d0b96d4d60244fa83493879927b536f700ed78a7333",
+      "byte_identical": true
+    },
+    {
+      "path": "references/term-card-method.md",
+      "source_sha256": "4c637b415595adbadcdbdbab4326f72501b36e5b587cff2639eee2a260880051",
+      "published_sha256": "4c637b415595adbadcdbdbab4326f72501b36e5b587cff2639eee2a260880051",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/build_term_card_reader.mjs",
+      "source_sha256": "4e170c00fc28b2c63abb59794dacdc7c251cb7e2be2bda9983f9125a22f59c8a",
+      "published_sha256": "5eae190e44ea24dd62446d62c98c77235017bf1ccc42e424aa9c4ba0c3dae320",
+      "byte_identical": false
+    },
+    {
+      "path": "scripts/validate_explainer_bundle.py",
+      "source_sha256": "c10f1e27bd2aeeae5cf1f0766838de6ec194868a753b84686c79c14ca08e9c5c",
+      "published_sha256": "c10f1e27bd2aeeae5cf1f0766838de6ec194868a753b84686c79c14ca08e9c5c",
+      "byte_identical": true
+    }
+  ],
+  "portable_changes": [
+    "Skill-relative command paths and evidence/delegation integration",
+    "Bundled marked loader; removed workstation-specific fallback",
+    "CLI entry comparison resolves symlinks",
+    "Bundled prose-lint wrapper and fixed-version workflow links"
+  ],
+  "dependencies": [
+    {
+      "name": "marked",
+      "version": "17.0.5",
+      "source": "https://www.npmjs.com/package/marked/v/17.0.5",
+      "license": "vendor/marked/LICENSE.md",
+      "runtime_transitive_dependencies": []
+    },
+    {
+      "name": "writing-skill",
+      "source": "https://github.com/grapeot/writing-skill",
+      "commit": "c68f46620711e10f2c16f1f39bfab5badcbae59f",
+      "license": "vendor/writing-skill/LICENSE",
+      "runtime_transitive_dependencies": [],
+      "excluded_upstream_files": [
+        ".env.example",
+        ".gitignore",
+        "AGENTS.md"
+      ]
+    }
+  ],
+  "checks": {
+    "generator_self_test": "PASS",
+    "symlink_cli_regression": "PASS",
+    "detached_copy_without_installs": "PASS",
+    "html_manifest_roundtrip": "PASS",
+    "stale_html_rejection": "PASS",
+    "prose_lint_positive_and_negative": "PASS",
+    "bundled_writing_skill_tests": 16,
+    "new_article_browser_acceptance": "NOT_RUN",
+    "new_article_independent_cold_read": "NOT_RUN"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3389,
+      "sha256": "4a07ebd31492270500f36ff4631864cec7ba8c083ba4838a12eb948c1f72c8d8"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 11189,
+      "sha256": "9d6afc57c4a0f1441acaf03f015aabee305d2227b6b3cc4d11e86388bf4d66c0"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 321,
+      "sha256": "84d3df61da7502d5bf3beed20c352a09a57594535235322221005e754ede0391"
+    },
+    {
+      "path": "references/acceptance-contract.md",
+      "bytes": 7209,
+      "sha256": "736cd5ca0bdae592e4d95e297fe2c86b35f6fdf6545a35acd3b277371cf0476c"
+    },
+    {
+      "path": "references/output-contract.md",
+      "bytes": 7397,
+      "sha256": "ce15c8dfbc407132af731ff5ec127088e8286b0db2f39b969f71ef220ab58054"
+    },
+    {
+      "path": "references/portable-context.md",
+      "bytes": 3133,
+      "sha256": "dcfa6e31c50746042004ac20c3d94b0da5d794c30cab2af55ca4ccc85e39981d"
+    },
+    {
+      "path": "references/reader-visual-design.md",
+      "bytes": 5801,
+      "sha256": "2b8185b7e613a2827b4f0d0b96d4d60244fa83493879927b536f700ed78a7333"
+    },
+    {
+      "path": "references/term-card-method.md",
+      "bytes": 6316,
+      "sha256": "4c637b415595adbadcdbdbab4326f72501b36e5b587cff2639eee2a260880051"
+    },
+    {
+      "path": "scripts/build_term_card_reader.mjs",
+      "bytes": 58552,
+      "sha256": "5eae190e44ea24dd62446d62c98c77235017bf1ccc42e424aa9c4ba0c3dae320"
+    },
+    {
+      "path": "scripts/lint_external_prose.py",
+      "bytes": 390,
+      "sha256": "5e8e2043607a49f7d846a5d1da75c7895172832141d4d2a07703d8909e62513c"
+    },
+    {
+      "path": "scripts/validate_explainer_bundle.py",
+      "bytes": 17177,
+      "sha256": "c10f1e27bd2aeeae5cf1f0766838de6ec194868a753b84686c79c14ca08e9c5c"
+    },
+    {
+      "path": "tests/test_cli_portability.py",
+      "bytes": 1199,
+      "sha256": "b0e4a889575fb4271c65e3518f30ada7edf5bfe1d0b47fcd8b8a8b38d87a0084"
+    },
+    {
+      "path": "vendor/marked/LICENSE.md",
+      "bytes": 2942,
+      "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c"
+    },
+    {
+      "path": "vendor/marked/lib/marked.esm.js",
+      "bytes": 41661,
+      "sha256": "0b4487359ce6b85108708e7a532e1242a27f4718241e7b2de109ac6cd307d2dc"
+    },
+    {
+      "path": "vendor/marked/lib/marked.esm.js.map",
+      "bytes": 156618,
+      "sha256": "46accb14e33fc16ac736a7e2ca8c4202ee9af8e5b172a60089842be46acfe03b"
+    },
+    {
+      "path": "vendor/marked/package.json",
+      "bytes": 3396,
+      "sha256": "b0f610de98f9df7f779bc101af02209f20939dd232dc47af59d3df3162a04fc5"
+    },
+    {
+      "path": "vendor/writing-skill/LICENSE",
+      "bytes": 1063,
+      "sha256": "59a2a6278fb544227fab7ccb0f4eceedcb27b1728fae07ad4833d4b74ff1a8f6"
+    },
+    {
+      "path": "vendor/writing-skill/README.md",
+      "bytes": 4849,
+      "sha256": "7050cefaeb9b15d98ed5be08be8934ec42a8ae6234eed2d10c131b225d20f92e"
+    },
+    {
+      "path": "vendor/writing-skill/docs/prd.md",
+      "bytes": 3307,
+      "sha256": "1d44a8e79a4f47957045565010d4f9dbbdf79f79c4c15f12e06653820df305ca"
+    },
+    {
+      "path": "vendor/writing-skill/docs/rfc.md",
+      "bytes": 6129,
+      "sha256": "3b2e6ec1b43209830a75ae078d94642c47b439f79e3872ed27c8c6d91948b616"
+    },
+    {
+      "path": "vendor/writing-skill/docs/test.md",
+      "bytes": 1953,
+      "sha256": "cea88db6621964003fc753ae6c5d71572163374f6403240ac416196e18b9a722"
+    },
+    {
+      "path": "vendor/writing-skill/docs/working.md",
+      "bytes": 1393,
+      "sha256": "b5f904dc9cc8344db8eedd6730cbb629b6831b7a18c1f44716f5804a29663ed2"
+    },
+    {
+      "path": "vendor/writing-skill/pyproject.toml",
+      "bytes": 808,
+      "sha256": "43880238840beda609baed2fe947b5ea9421fe073669978fff12550de00df05d"
+    },
+    {
+      "path": "vendor/writing-skill/skills/bestpractice_external_prose.md",
+      "bytes": 12750,
+      "sha256": "98145b8be141e48c096e2aa727963df89775c142898ea76752e22b1097bf3798"
+    },
+    {
+      "path": "vendor/writing-skill/skills/external_prose_lint.md",
+      "bytes": 3339,
+      "sha256": "254bac0a8fa9550fac8c9a2e66014559524fed5bd28a5926e9a6e20db2f1d91d"
+    },
+    {
+      "path": "vendor/writing-skill/skills/reference_writing_thesis_catalog.md",
+      "bytes": 3714,
+      "sha256": "05c1ef57bdfe80f94aff7a9172f1c38dc3f55d5f72ff17949ff9dc89b4d6ae53"
+    },
+    {
+      "path": "vendor/writing-skill/skills/workflow_external_writing.md",
+      "bytes": 8354,
+      "sha256": "780f4085cfbebcc31d86257122561d8bee8ead9a3a92eba7180f6988f793b70b"
+    },
+    {
+      "path": "vendor/writing-skill/skills/workflow_internal_writing.md",
+      "bytes": 14443,
+      "sha256": "c1ed445c7fef4bcfe461721c5a8d48bc5dba823f8b22ee82ef8f1809d3f0b0b1"
+    },
+    {
+      "path": "vendor/writing-skill/skills/writing_workflows.md",
+      "bytes": 6154,
+      "sha256": "0cfabb31a991a48af8eeab5a948b85b67d5de4e19d1e6756a1352295f2c8ab6b"
+    },
+    {
+      "path": "vendor/writing-skill/skills_en/bestpractice_external_prose.md",
+      "bytes": 16133,
+      "sha256": "88388e0d1149d00db8e3904a4c1bd4099e96de9935714aaa24018e29a97687e6"
+    },
+    {
+      "path": "vendor/writing-skill/skills_en/external_prose_lint.md",
+      "bytes": 3781,
+      "sha256": "115672e5b1cceb3f2a33a4a67f55ba9e62894f737d6bcaa23386e8c599f01a5d"
+    },
+    {
+      "path": "vendor/writing-skill/skills_en/reference_writing_thesis_catalog.md",
+      "bytes": 3986,
+      "sha256": "5c43b5f0de47d31e2349981f554d5be1c3c8e4c2093fac232fee4b83e99be006"
+    },
+    {
+      "path": "vendor/writing-skill/skills_en/workflow_external_writing.md",
+      "bytes": 27785,
+      "sha256": "53ab341e41efe686301e682a1d42b33471eb3343d5455dc0f8e017b5070db4d9"
+    },
+    {
+      "path": "vendor/writing-skill/skills_en/workflow_internal_writing.md",
+      "bytes": 18432,
+      "sha256": "71e5de54d710065c548de7ffb5eb6e068f522c9b7da44fccbe13165b38836816"
+    },
+    {
+      "path": "vendor/writing-skill/src/writing_skill/__init__.py",
+      "bytes": 541,
+      "sha256": "7524cbbd511f09ce38f853ace23aa58e719b20fce30c2ef345cc85898de7d9a6"
+    },
+    {
+      "path": "vendor/writing-skill/src/writing_skill/external_prose_lint_cli.py",
+      "bytes": 2154,
+      "sha256": "ef7365af1b4c85a60bdad631d916694dbb33d2564b0d5894e629150a7b50937f"
+    },
+    {
+      "path": "vendor/writing-skill/src/writing_skill/formatter.py",
+      "bytes": 3068,
+      "sha256": "72499f7e8c2564e2b53dafbf02a4fd577107b5638038971e5f43131eb3b14338"
+    },
+    {
+      "path": "vendor/writing-skill/src/writing_skill/models.py",
+      "bytes": 1466,
+      "sha256": "ec7f80852c53792abb8f9a1dddc68bee9475d8edbc2a97307535880222de2ce3"
+    },
+    {
+      "path": "vendor/writing-skill/src/writing_skill/rules.py",
+      "bytes": 8452,
+      "sha256": "6cc2154a314500d551fac5c48965765da678efd676243039e6c6415a5a88a889"
+    },
+    {
+      "path": "vendor/writing-skill/src/writing_skill/scanner.py",
+      "bytes": 12413,
+      "sha256": "3b5bac6f43800d8388e5e4b033cf7c7577a02741065bb1f4091dec209c06c0fb"
+    },
+    {
+      "path": "vendor/writing-skill/tests/test_external_prose_lint_cli.py",
+      "bytes": 7093,
+      "sha256": "b3730e0ed5dabbd021a7eb7b19031b8f073f14e8f0b3d8d200c7c162515695cd"
+    },
+    {
+      "path": "vendor/writing-skill/tests/test_modules.py",
+      "bytes": 1955,
+      "sha256": "3180c64e21cd6b625532c978683f5ec8b89fb52a238da4a4212f1038ce634b25"
+    }
+  ]
+}
