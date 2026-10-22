@@ -19,6 +19,7 @@ All 40 exports are ready for the original Evaluator's formal scoring. A historic
 - `reports/manual_review_20260924/`: historical manual provisional scores for the original 27 DWF exports.
 - `clean_tasks/Life_03_nutrient_response_kinetics/`: original participant input and public launch/validation files for a separate clean run; contains no historical answers.
 - `skills/teach-through-breakdown/`: portable explanation Skill with interactive reader generation, validators, writing workflows, and bundled runtime dependencies. See the [Skill index](skills/INDEX.md).
+- `harnesses/scientific-evidence/4.0.2/`: [frozen scientific Agent context package](harnesses/scientific-evidence/4.0.2/README.md), including the system prompt, project entrypoints, core Skill, and all eight reference modules. These are the original participant-facing V4.0.2 instructions; runtime and operator infrastructure are separate.
 
 ## Clean task input: Life_03
 

@@ -2,6 +2,14 @@
 
 ## Changelog
 
+### 2026-10-22: Scientific Evidence 4.0.2 context publication
+
+- Added the frozen participant-facing context under `harnesses/scientific-evidence/4.0.2/`: the system prompt, project CLAUDE.md, two context entrypoints, core Skill, and all eight reference modules. All 13 original files (40,244 bytes) match source commit `ef5f1d78ffde83662df42da813a250360a5f8ef1`; per-file hashes are recorded in the publication manifest.
+- Added package installation/dependency instructions and links from the repository README and Skill index. Kept runtime/operator infrastructure separate and identified this as the historical V4.0.2 version, without mixing in V5 or claiming reliable scientific acceptance.
+- Verified 21 relative links in the package and Skill index. A temporary clean task assembly retained all 11 public Life_03 input files and all 12 project context files byte-for-byte, including the hidden `.claude/` directory. The system prompt remains an explicitly configured host input.
+- Publication audit passed: no new privacy issues, 40 exact credential values checked, and all 2,686 protected historical files unchanged. Previously documented legacy exceptions remain unchanged. This release changes no scoring logic or scientific artifacts and starts no model, test conversation, or scoring run.
+- The working tree was clean and based on current `origin/main` before this scoped addition. Reverting the publication commit removes the context package and its navigation entries; there is no runtime deployment or database change.
+
 ### 2026-10-20: Teach Through Breakdown publication
 
 - Added the teaching Skill, four original reference contracts, Agent metadata, HTML generator, and bundle validator under `skills/teach-through-breakdown/`; added a discoverable Skill index and portable usage instructions.

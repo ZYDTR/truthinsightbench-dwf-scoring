@@ -1,0 +1,86 @@
+{
+  "schema": "scientific-evidence-context-publication.v1",
+  "name": "scientific-evidence",
+  "version": "4.0.2",
+  "published_date": "2026-10-22",
+  "scope": "Frozen participant-facing context package: system prompt, project entrypoints, core Skill, and eight reference modules.",
+  "source_revision": "ef5f1d78ffde83662df42da813a250360a5f8ef1",
+  "source_tag": "tib-scientific-context-v4.0.2-20261021",
+  "source_subdirectory": "experiments/shared-context-v4-20261021/subject",
+  "source_modified": false,
+  "file_count": 13,
+  "bytes": 40244,
+  "files": [
+    {
+      "path": "project/.claude/skills/scientific-evidence/SKILL.md",
+      "bytes": 6895,
+      "sha256": "23a777c0028fe2bda28e5251822eed99cc5cdafc47a639090b3d8a86f67e232c"
+    },
+    {
+      "path": "project/.claude/skills/scientific-evidence/references/analysis-state.md",
+      "bytes": 3188,
+      "sha256": "43b5a1e263fe08c9e559e9d085db1b8e8ccd6e1f1ffad8db2f4ac16d8f353983"
+    },
+    {
+      "path": "project/.claude/skills/scientific-evidence/references/data-design.md",
+      "bytes": 3038,
+      "sha256": "8d2fc80d71aa94a6dbfe39394bc26c9b2fc5e2bf0458c9b49a1c1419060ab644"
+    },
+    {
+      "path": "project/.claude/skills/scientific-evidence/references/delegation-contract.md",
+      "bytes": 5519,
+      "sha256": "b8e44fd5be25b970369c010d45ee097f1ca82c57481a8b5022ba4fb3f0adc028"
+    },
+    {
+      "path": "project/.claude/skills/scientific-evidence/references/delivery.md",
+      "bytes": 4630,
+      "sha256": "22c174f63fcdca52f259adbb57754f038fd67950fd8dbdb984731d848cf48a01"
+    },
+    {
+      "path": "project/.claude/skills/scientific-evidence/references/inference.md",
+      "bytes": 4098,
+      "sha256": "7baec1bd9b78c657bb44c115b6ac37799d5f88bbc9357206f76e194c6bf499de"
+    },
+    {
+      "path": "project/.claude/skills/scientific-evidence/references/question-coverage.md",
+      "bytes": 2243,
+      "sha256": "7ae087f41fb5a916cfade22857996100bb401fff29b314543fb24755286faf29"
+    },
+    {
+      "path": "project/.claude/skills/scientific-evidence/references/separated-validation.md",
+      "bytes": 2318,
+      "sha256": "2de5b47353ebd72ff331aa8fa60e39a16808d2483e9cfb978133569f2aa86974"
+    },
+    {
+      "path": "project/.claude/skills/scientific-evidence/references/verification.md",
+      "bytes": 3770,
+      "sha256": "2e59cfda6ae51a19d9dda271d6191873c9120761a933c162b8c87184761f1b00"
+    },
+    {
+      "path": "project/CLAUDE.md",
+      "bytes": 635,
+      "sha256": "86551e33245a46e997e3797bb06a68813bba6803a97b39783f220ae7177a661d"
+    },
+    {
+      "path": "project/context/INDEX.md",
+      "bytes": 961,
+      "sha256": "52dca8591f650b13d7399b327101f209ae429fef66d744ed82a021efbe43f857"
+    },
+    {
+      "path": "project/context/delegation.md",
+      "bytes": 273,
+      "sha256": "db3fd2874ce9d385f859901931cdf3638dc534e9adc6f316d59a83fba50fe4b6"
+    },
+    {
+      "path": "system_prompt.md",
+      "bytes": 2676,
+      "sha256": "16f66475beb07c923739279545ce490d9881f8481a03608f29aed9667f97a3a4"
+    }
+  ],
+  "runtime_dependencies": [
+    "An agent runtime able to read and write the current task workspace and execute task-appropriate analysis tools.",
+    "Native general-purpose subagents are required to satisfy the delegation and independent-verification criteria; at most four concurrent, one level only.",
+    "The selected task supplies its own public input data, research objective, data guide, task contract, launch prompt, manifest, and output validator."
+  ],
+  "validation_scope": "Publication identity, relative-link closure, and static installation layout; no new model run or scoring."
+}
